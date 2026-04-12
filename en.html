@@ -9,9 +9,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--kb:#003FA2;--kg:#00923F;--kd:#00204D;--bg:#F3F4F8;--card:#FFF;--txt:#1A1D2E;--txt2:#6E7191;--bdr:#E2E5EF;--ok:#0D7C3F;--ok-bg:#E6F4EC;--t-txt:#3366CC;--t-txt-bg:#EBF0FA;--t-photo:#D35400;--t-photo-bg:#FDF0E6;--t-sign:#7D3C98;--t-sign-bg:#F3EBF9;--t-vid:#117A65;--t-vid-bg:#E5F5F1;--shadow:0 1px 4px rgba(0,20,60,.05);--r:12px}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+.sticky-top{position:sticky;top:0;z-index:100}
 .lsw{display:flex;gap:4px;padding:6px 12px;background:var(--kd);overflow-x:auto;-webkit-overflow-scrolling:touch}.lsw::-webkit-scrollbar{display:none}
 .lg{padding:4px 10px;border-radius:14px;font-size:11px;color:rgba(255,255,255,.6);text-decoration:none;white-space:nowrap;font-weight:500}.lg.on{background:rgba(255,255,255,.15);color:#fff}
-.hd{background:var(--kb);color:#fff;padding:12px 16px 10px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,32,77,.2)}
+.hd{background:var(--kb);color:#fff;padding:12px 16px 10px;box-shadow:0 2px 12px rgba(0,32,77,.2)}
 .hd-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
 .hd h1{font-size:15px;font-weight:800;letter-spacing:-.5px}
 .hd .badge{font-size:9px;background:rgba(255,255,255,.15);padding:3px 8px;border-radius:12px;font-weight:500}
@@ -51,10 +52,12 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 </style>
 </head>
 <body>
+<div class="sticky-top">
 <div class="lsw"><a href="index.html" class="lg">🇰🇷 한국어</a><a href="en.html" class="lg on">🇺🇸 English</a><a href="cn.html" class="lg">🇨🇳 中文</a><a href="vn.html" class="lg">🇻🇳 Tiếng Việt</a></div>
 <div class="hd">
 <div class="hd-row"><h1>🚗 Driver's License Question Bank</h1><span class="badge">Effective 2026.3.9</span></div>
 <div class="sb"><input type="text" id="si" placeholder="Number or keyword search"><button onclick="go()">Search</button></div>
+</div>
 </div>
 <div class="tabs" id="tp">
 <button class="tab on" data-f="all"><span class="ic">📚</span>All<span class="num">990</span></button>
