@@ -2,934 +2,3121 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>외국인 운전면허 학과시험 교재</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0A2463;--blue:#1565C0;--sky:#42A5F5;--green:#2E7D32;--green-bg:#E8F5E9;--amber:#F9A825;--amber-bg:#FFF8E1;--red:#C62828;--red-bg:#FFEBEE;--purple:#6A1B9A;--gray:#546E7A;--gray-light:#ECEFF1;--text:#1A2540;--bg:#F5F7FA;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg);line-height:1.75;font-size:15px;}
+  /* ===== CSS VARIABLES ===== */
+  :root {
+    --bg: #f8f6f1;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text-sub: #555;
+    --accent: #1e40af;
+    --accent-light: #dbeafe;
+    --green: #059669;
+    --green-light: #d1fae5;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --yellow: #d97706;
+    --yellow-light: #fef3c7;
+    --orange: #ea580c;
+    --orange-light: #fff7ed;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --border: #e5e2d9;
+    --shadow: 0 1px 3px rgba(0,0,0,.08);
+    --radius: 12px;
+    --font-title: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
 
-/* 네비게이션 + 언어바 래퍼 */
-.sticky-top{position:sticky;top:0;z-index:100;}
-.topnav{background:var(--navy);padding:8px 16px;display:flex;align-items:center;gap:10px;overflow-x:auto;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.3);-webkit-overflow-scrolling:touch}.topnav::-webkit-scrollbar{display:none}
-.topnav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:12px;font-weight:500;padding:6px 10px;border-radius:20px;transition:.2s;flex-shrink:0;}
-.topnav a:hover{color:#fff;background:rgba(255,255,255,.15);}
-.topnav .brand{font-family:'Black Han Sans';font-size:15px;color:var(--amber);margin-right:4px;flex-shrink:0;}
-.lsw{display:flex;gap:4px;padding:6px 12px;background:#00204D;overflow-x:auto;-webkit-overflow-scrolling:touch}.lsw::-webkit-scrollbar{display:none}
-.lg{padding:5px 12px;border-radius:14px;font-size:11px;color:rgba(255,255,255,.6);text-decoration:none;white-space:nowrap;font-weight:500;min-height:28px;display:inline-flex;align-items:center}.lg.on{background:rgba(255,255,255,.15);color:#fff}
-.container{max-width:860px;margin:0 auto;padding:24px 20px 80px;}
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* 중요도 범례 */
-.importance-legend{background:#fff;border:2px solid var(--amber);border-radius:12px;padding:14px 20px;margin:16px 0 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;}
-.importance-legend .il-title{font-weight:900;color:var(--navy);white-space:nowrap;}
-.il-item{display:flex;align-items:center;gap:4px;}
-.il-stars{color:var(--amber);font-size:16px;letter-spacing:-1px;}
+  /* ===== HEADER ===== */
+  .header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+    color: #fff;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: .25rem; }
+  .header p { font-size: .85rem; opacity: .85; }
 
-/* 챕터 헤더 */
-.ch-header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:28px 24px;border-radius:16px;margin:40px 0 20px;position:relative;overflow:hidden;scroll-margin-top:90px;}
-.ch-header::after{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.05);top:-50px;right:-30px;}
-.ch-num{font-size:12px;color:rgba(255,255,255,.6);font-weight:700;letter-spacing:2px;}
-.ch-title-row{display:flex;align-items:center;gap:12px;margin:4px 0 6px;}
-.ch-title{font-family:'Black Han Sans';font-size:26px;line-height:1.3;}
-.ch-stars{color:var(--amber);font-size:22px;letter-spacing:-2px;flex-shrink:0;}
-.ch-desc{font-size:12px;color:rgba(255,255,255,.65);line-height:1.5;}
-.ch-header.green{background:linear-gradient(135deg,#1B5E20,var(--green));}
-.ch-header.amber-h{background:linear-gradient(135deg,#E65100,#F57C00);}
-.ch-header.red-h{background:linear-gradient(135deg,#880E4F,#AD1457);}
-.ch-header.purple-h{background:linear-gradient(135deg,#4A148C,var(--purple));}
-.ch-header.teal-h{background:linear-gradient(135deg,#004D40,#00796B);}
+  /* ===== NAV TABS ===== */
+  .nav-tabs {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    padding: 0 .5rem;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tabs a {
+    flex-shrink: 0;
+    padding: .75rem 1rem;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--text-sub);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all .2s;
+  }
+  .nav-tabs a:hover,
+  .nav-tabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-h2{font-size:19px;font-weight:900;color:var(--navy);margin:28px 0 10px;padding-bottom:6px;border-bottom:3px solid var(--navy);}
-h3{font-size:15px;font-weight:700;color:var(--blue);margin:18px 0 6px;}
-p{margin:8px 0;}
+  /* ===== MAIN CONTENT ===== */
+  .content { max-width: 720px; margin: 0 auto; padding: 0 1rem 3rem; }
 
-/* 박스 */
-.box{padding:14px 18px;border-radius:10px;margin:14px 0;font-size:14px;}
-.box-tip{background:var(--amber-bg);border-left:4px solid var(--amber);}
-.box-warn{background:var(--red-bg);border-left:4px solid var(--red);}
-.box-info{background:var(--green-bg);border-left:4px solid var(--green);}
-.box-law{background:#E8EAF6;border-left:4px solid #3F51B5;font-size:13px;}
-.box-label{font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:1px;}
-.box-tip .box-label{color:#E65100;} .box-warn .box-label{color:var(--red);} .box-info .box-label{color:var(--green);} .box-law .box-label{color:#283593;}
+  /* ===== CHAPTER HEADER ===== */
+  .chapter-header {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow);
+  }
+  .chapter-header .ch-num {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .chapter-header h2 { font-size: 1.35rem; font-weight: 800; margin: .25rem 0; }
+  .chapter-header .ch-desc { font-size: .9rem; color: var(--text-sub); }
+  .chapter-header .ch-stars { color: var(--yellow); margin-top: .5rem; font-size: .85rem; }
 
-/* 테이블 */
-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;}
-th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600;font-size:12px;}
-td{padding:8px 12px;border-bottom:1px solid #ddd;}
-tr:nth-child(even) td{background:#f8f9fc;}
+  /* ===== SECTION ===== */
+  .section {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+  }
+  .section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: .75rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1rem 0 .5rem;
+  }
+  .section p { margin-bottom: .75rem; font-size: .95rem; }
+  .section ul, .section ol { padding-left: 1.25rem; margin-bottom: .75rem; }
+  .section li { margin-bottom: .35rem; font-size: .93rem; }
 
-/* 삽화 */
-.illust{text-align:center;margin:18px 0;padding:14px;background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.06);}
-.illust-caption{font-size:11px;color:var(--gray);margin-top:6px;}
+  /* ===== INFO BOXES ===== */
+  .box {
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin: .75rem 0;
+    font-size: .9rem;
+    line-height: 1.65;
+  }
+  .box-law { background: var(--accent-light); border-left: 3px solid var(--accent); }
+  .box-warn { background: var(--red-light); border-left: 3px solid var(--red); }
+  .box-tip { background: var(--green-light); border-left: 3px solid var(--green); }
+  .box-foreign { background: var(--orange-light); border-left: 3px solid var(--orange); }
+  .box-compare { background: var(--purple-light); border-left: 3px solid var(--purple); }
+  .box-exam { background: var(--yellow-light); border-left: 3px solid var(--yellow); }
+  .box .box-title {
+    font-weight: 700;
+    margin-bottom: .35rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
 
-/* 점멸 애니메이션 */
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:.15;}}
-.blink-yellow{animation:blink 1s ease-in-out infinite;}
-.blink-red{animation:blink 1s ease-in-out infinite;}
+  /* ===== TABLES ===== */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: .75rem 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .88rem;
+    min-width: 320px;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    padding: .6rem .75rem;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  td {
+    padding: .55rem .75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fafaf7; }
 
-/* 연습문제 */
-.quiz-section{background:#fff;border-radius:12px;padding:18px 22px;margin:18px 0;box-shadow:0 1px 4px rgba(0,0,0,.06);}
-.q-item{margin:14px 0;padding:10px 0;border-bottom:1px solid #eee;}
-.q-item:last-child{border-bottom:none;}
-.q-num{font-weight:900;color:var(--blue);font-size:13px;}
-.q-text{font-weight:600;margin:4px 0 6px;font-size:14px;}
-.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:3px 14px;margin-bottom:6px;font-size:13px;}
-.q-answer{font-size:12px;color:var(--green);font-weight:600;}
+  /* ===== SIGNAL CARDS ===== */
+  .signal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+    margin: .75rem 0;
+  }
+  @media (min-width: 480px) {
+    .signal-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .signal-card {
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .signal-card .signal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 0 auto .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .signal-card .signal-name { font-weight: 700; font-size: .95rem; margin-bottom: .25rem; }
+  .signal-card .signal-desc { font-size: .83rem; color: var(--text-sub); line-height: 1.5; }
 
-/* 문제은행 배너 */
-.quiz-banner{background:linear-gradient(135deg,var(--amber),#FF8F00);color:var(--navy);padding:18px 22px;border-radius:12px;margin:24px 0;display:flex;align-items:center;gap:14px;text-decoration:none;transition:.2s;}
-.quiz-banner:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(249,168,37,.4);}
-.quiz-banner .qb-icon{font-size:28px;flex-shrink:0;}
-.quiz-banner .qb-text{flex:1;}
-.quiz-banner .qb-title{font-family:'Black Han Sans';font-size:17px;}
-.quiz-banner .qb-desc{font-size:12px;opacity:.8;margin-top:2px;}
-.quiz-banner .qb-btn{background:var(--navy);color:#fff;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:700;flex-shrink:0;}
+  .sig-green { background: #ecfdf5; }
+  .sig-green .signal-icon { background: #22c55e; color: #fff; }
+  .sig-green .signal-icon.signal-arrow { background: transparent; }
+  .sig-yellow { background: #fffbeb; }
+  .sig-yellow .signal-icon { background: #eab308; color: #fff; }
+  .sig-red { background: #fef2f2; }
+  .sig-red .signal-icon { background: #ef4444; color: #fff; }
 
-/* 용어 */
-.term-o{color:var(--green);font-weight:700;}
-.term-x{text-decoration:line-through;color:var(--red);font-size:13px;}
+  /* ===== FLOW DIAGRAM ===== */
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: .75rem 0;
+    font-size: .88rem;
+  }
+  .flow-step {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 700;
+    padding: .5rem .9rem;
+    border-radius: 8px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .flow-step.step-red { background: var(--red-light); color: var(--red); }
+  .flow-step.step-green { background: var(--green-light); color: var(--green); }
+  .flow-step.step-yellow { background: var(--yellow-light); color: var(--yellow); }
+  .flow-arrow { font-size: 1.1rem; color: var(--text-sub); flex-shrink: 0; }
 
-/* SVG 반응형 */
-.illust svg{width:100%;height:auto;}
+  /* ===== SIGN SHAPES ===== */
+  .sign-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+    margin: .75rem 0;
+  }
+  @media (min-width: 480px) {
+    .sign-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .sign-item { text-align: center; }
+  .sign-item svg { margin: 0 auto .4rem; display: block; }
+  .sign-label { font-size: .82rem; font-weight: 600; }
+  .sign-sub { font-size: .75rem; color: var(--text-sub); }
 
-/* 테이블 반응형 래퍼 */
-.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0;}
-.table-wrap table{min-width:360px;}
+  /* ===== QUIZ ===== */
+  .quiz {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: .75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .quiz-q {
+    font-weight: 700;
+    font-size: .95rem;
+    margin-bottom: .75rem;
+    display: flex;
+    gap: .5rem;
+  }
+  .quiz-q .q-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .78rem;
+  }
+  .quiz-opts { margin-bottom: .75rem; }
+  .quiz-opt {
+    display: block;
+    padding: .5rem .75rem;
+    margin-bottom: .35rem;
+    border-radius: 8px;
+    font-size: .9rem;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: all .2s;
+  }
+  .quiz-opt:hover { background: var(--accent-light); }
+  .quiz-opt.selected { background: var(--accent-light); border-color: var(--accent); }
+  .quiz-opt.correct { background: var(--green-light); border-color: var(--green); }
+  .quiz-opt.wrong { background: var(--red-light); border-color: var(--red); }
+  .quiz-answer {
+    display: none;
+    padding: .75rem;
+    border-radius: 8px;
+    background: var(--green-light);
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+  .quiz-answer.show { display: block; }
 
-/* 모바일 최적화 — 태블릿 */
-@media(max-width:768px){
-  body{font-size:14px;}
-  .topnav{padding:6px 10px;gap:6px;}
-  .topnav a{font-size:11px;padding:8px 10px;min-height:36px;display:flex;align-items:center;}
-  .topnav .brand{font-size:14px;}
-  .lsw{padding:5px 10px;gap:3px;}
-  .lg{padding:5px 10px;font-size:11px;min-height:30px;}
-  .container{padding:16px 14px 60px;}
-  .ch-header{padding:22px 18px;margin:28px 0 16px;}
-  .ch-title{font-size:22px;}
-  .ch-stars{font-size:18px;}
-  h2{font-size:17px;margin:22px 0 8px;}
-  .box{padding:12px 14px;font-size:13px;}
-  .quiz-section{padding:14px 16px;}
-}
+  /* ===== COMPARISON TABLE ===== */
+  .compare-table { margin: .75rem 0; }
+  .compare-table th { font-size: .8rem; }
+  .compare-table td { font-size: .83rem; }
+  .compare-table .flag { font-size: 1.1rem; }
 
-/* 모바일 최적화 — 스마트폰 */
-@media(max-width:480px){
-  body{font-size:13px;line-height:1.65;}
-  .topnav{padding:5px 8px;gap:4px;}
-  .topnav a{font-size:10px;padding:7px 8px;}
-  .topnav .brand{font-size:13px;margin-right:2px;}
-  .lsw{padding:4px 8px;gap:3px;}
-  .lg{padding:4px 8px;font-size:10px;min-height:26px;}
-  .container{padding:10px 10px 50px;}
-  .ch-header{padding:18px 14px;margin:20px 0 12px;border-radius:12px;}
-  .ch-title{font-size:19px;}
-  .ch-num{font-size:10px;}
-  .ch-desc{font-size:11px;}
-  .ch-stars{font-size:16px;}
-  h2{font-size:16px;margin:18px 0 6px;padding-bottom:4px;}
-  h3{font-size:14px;}
-  p{font-size:13px;margin:6px 0;}
-  .box{padding:10px 12px;font-size:12px;border-radius:8px;}
-  .box-label{font-size:10px;}
-  .box-law{font-size:12px;}
-  table{font-size:12px;}
-  th{padding:6px 8px;font-size:11px;}
-  td{padding:6px 8px;}
-  .importance-legend{padding:10px 14px;font-size:11px;flex-direction:column;align-items:flex-start;gap:6px;border-radius:8px;}
-  .il-stars{font-size:14px;}
-  .q-opts{grid-template-columns:1fr;gap:2px;}
-  .q-text{font-size:13px;}
-  .q-num{font-size:12px;}
-  .q-answer{font-size:11px;}
-  .quiz-banner{flex-direction:column;text-align:center;padding:14px 16px;gap:10px;}
-  .quiz-banner .qb-title{font-size:15px;}
-  .quiz-banner .qb-desc{font-size:11px;}
-  .quiz-banner .qb-btn{width:100%;text-align:center;padding:10px;}
-  .illust{padding:8px;border-radius:8px;}
-  .illust-caption{font-size:10px;}
-  .quiz-section{padding:12px 12px;margin:12px 0;border-radius:8px;}
-}
+  /* ===== SCENARIO CARDS ===== */
+  .scenario {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: .75rem 0;
+  }
+  .scenario-title {
+    font-weight: 700;
+    font-size: .92rem;
+    color: var(--accent);
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
+  .scenario-body { font-size: .88rem; }
+  .scenario-body .do { color: var(--green); font-weight: 600; }
+  .scenario-body .dont { color: var(--red); font-weight: 600; }
+
+  /* ===== FOOTER RESOURCES ===== */
+  .resources {
+    background: linear-gradient(135deg, #1e3a5f, #1e40af);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .resources h4 { font-size: 1rem; margin-bottom: .75rem; }
+  .resources a {
+    display: block;
+    background: rgba(255,255,255,.15);
+    color: #fff;
+    text-decoration: none;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: background .2s;
+  }
+  .resources a:hover { background: rgba(255,255,255,.25); }
+
+  /* ===== PRIORITY INDICATOR ===== */
+  .priority {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: .78rem;
+    font-weight: 700;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+  }
+  .priority-high { background: #fee2e2; color: #dc2626; }
+  .priority-mid { background: #fef3c7; color: #d97706; }
+
+  /* ===== STEP INDICATOR ===== */
+  .steps { margin: .75rem 0; }
+  .step-item {
+    display: flex;
+    gap: .75rem;
+    padding: .75rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .step-item:last-child { border-bottom: none; }
+  .step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .85rem;
+  }
+  .step-content { flex: 1; font-size: .9rem; }
+  .step-content strong { color: var(--accent); }
+
+  /* ===== MOBILE OPTIMIZATIONS ===== */
+  @media (max-width: 480px) {
+    body { font-size: 15px; }
+    .header { padding: 1.25rem 1rem; }
+    .header h1 { font-size: 1.15rem; }
+    .content { padding: 0 .75rem 2rem; }
+    .section { padding: 1rem; }
+    .chapter-header { padding: 1.25rem; }
+    .chapter-header h2 { font-size: 1.2rem; }
+    table { font-size: .82rem; }
+    th, td { padding: .45rem .5rem; }
+    .signal-card { padding: .75rem; }
+    .sign-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .header, .nav-tabs { position: static; }
+    .quiz-answer { display: block !important; }
+    body { font-size: 12pt; }
+  }
 </style>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- 네비게이션 -->
-<div class="sticky-top">
-<nav class="topnav">
-  <span class="brand">🚗 외국인 면허 교재</span>
-  <a href="#ch1">1장</a><a href="#ch2">2장</a><a href="#ch3">3장</a><a href="#ch4">4장</a><a href="#ch5">5장</a><a href="#ch6">6장</a><a href="#ch7">7장</a><a href="#ch8">8장</a><a href="#ch9">9장</a><a href="#ch10">10장</a>
-</nav>
-<div class="lsw"><a href="textbook.html" class="lg on">🇰🇷 한국어</a><a href="textbook_en.html" class="lg">🇺🇸 English</a><a href="textbook_cn.html" class="lg">🇨🇳 中文</a><a href="textbook_vn.html" class="lg">🇻🇳 Tiếng Việt</a></div>
-</div>
-
-<div class="container">
-
-<div class="importance-legend">
-  <div class="il-title">📌 챕터별 중요도</div>
-  <div class="il-item"><span class="il-stars">★★★</span> 최다 출제</div>
-  <div class="il-item"><span class="il-stars">★★</span> 자주 출제</div>
-  <div class="il-item"><span class="il-stars">★</span> 기본 학습</div>
-</div>
-
-<!-- ===== 1장 ===== -->
-<div class="ch-header teal-h" id="ch1">
-  <div class="ch-num">CHAPTER 01</div>
-  <div class="ch-title-row"><div class="ch-title">학과시험 안내</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">시험 구성, 합격 기준, 응시 언어, 용어 규칙</div>
-</div>
-
-<h2>1-1. 운전면허 취득 절차</h2>
-<p>한국에서 운전면허를 취득하려면 4단계를 순서대로 거칩니다.</p>
-<div class="illust">
-<svg viewBox="0 0 700 55" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="65" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">신체검사</text>
-  <text x="128" y="32" font-size="12" fill="#999">→</text>
-  <rect x="140" y="8" width="110" height="38" rx="8" fill="#1565C0"/><text x="195" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">학과시험</text>
-  <text x="258" y="32" font-size="12" fill="#999">→</text>
-  <rect x="270" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="325" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">기능시험</text>
-  <text x="388" y="32" font-size="12" fill="#999">→</text>
-  <rect x="400" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="455" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">도로주행</text>
-  <text x="518" y="32" font-size="12" fill="#999">→</text>
-  <rect x="530" y="8" width="110" height="38" rx="8" fill="#4CAF50"/><text x="585" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">면허 발급!</text>
-</svg>
-</div>
-
-<h2>1-2. 학과시험 구성 (2025.2.24 개정, 2026.3.9 시행)</h2>
-<p>학과시험은 <strong>40문항</strong>을 <strong>40분</strong> 안에 풀어야 합니다. 5가지 유형으로 구성됩니다.</p>
-<div class="table-wrap"><table>
-  <tr><th>유형</th><th>문항 수</th><th>배점</th><th>설명</th></tr>
-  <tr><td>📝 문장형</td><td>21문항</td><td>46점</td><td>텍스트 기반 4지선다</td></tr>
-  <tr><td>🖼️ 일러스트형</td><td>6문항</td><td>18점</td><td>상황 그림 보고 판단</td></tr>
-  <tr><td>📷 사진형</td><td>7문항</td><td>21점</td><td>실제 도로 사진 보고 판단</td></tr>
-  <tr><td>🚸 안전표지형</td><td>5문항</td><td>10점</td><td>표지판 보고 의미 선택</td></tr>
-  <tr><td>🎬 동영상형</td><td>1문항</td><td>5점</td><td>영상 보고 위험 판단</td></tr>
-  <tr style="font-weight:900;background:#E3F2FD"><td>합계</td><td>40문항</td><td>100점</td><td></td></tr>
-</table></div>
-
-<h2>1-3. 합격 기준 및 시험 정보</h2>
-<div class="table-wrap"><table>
-  <tr><th>항목</th><th>내용</th></tr>
-  <tr><td>제한 시간</td><td><strong>40분</strong> (50분 아님!)</td></tr>
-  <tr><td>합격 (1종 보통)</td><td><strong>70점</strong> 이상</td></tr>
-  <tr><td>합격 (2종 보통)</td><td><strong>60점</strong> 이상</td></tr>
-  <tr><td>응시 언어</td><td>4개: 한국어, 영어, 중국어, 베트남어</td></tr>
-  <tr><td>도로주행시험</td><td><strong>한국어·영어만</strong> 가능</td></tr>
-</table></div>
-
-<h2>1-4. 용어 규칙</h2>
-<p>한국 도로교통법은 정확한 법률 용어를 사용합니다. 시험에서도 이 용어가 그대로 출제됩니다.</p>
-<div class="table-wrap"><table>
-  <tr><th>일상 표현 (✕)</th><th>법률 용어 (○)</th><th>의미</th></tr>
-  <tr><td class="term-x">차선변경</td><td class="term-o">차로변경</td><td>같은 방향 다른 차로로 이동</td></tr>
-  <tr><td class="term-x">인도</td><td class="term-o">보도</td><td>보행자가 걷는 도로 부분</td></tr>
-  <tr><td class="term-x">클락션</td><td class="term-o">경음기</td><td>자동차 경적</td></tr>
-  <tr><td class="term-x">깜빡이</td><td class="term-o">방향지시등</td><td>방향전환 신호등</td></tr>
-  <tr><td class="term-x">안전벨트</td><td class="term-o">안전띠</td><td>좌석 고정 벨트</td></tr>
-  <tr><td class="term-x">표지판</td><td class="term-o">안전표지</td><td>도로 교통안전 표지</td></tr>
-</table></div>
-
-<div class="box box-tip">
-  <div class="box-label">💡 합격 전략</div>
-  문장형 21문항(46점)이 가장 비중이 크므로 핵심 내용을 충분히 학습하세요. 안전표지형 5문항(10점)은 표지판의 <strong>모양과 색상</strong>만 구별하면 대부분 맞출 수 있어 가성비가 높습니다.
-</div>
-
-
-<!-- ===== 2장 ===== -->
-<div class="ch-header" id="ch2">
-  <div class="ch-num">CHAPTER 02</div>
-  <div class="ch-title-row"><div class="ch-title">신호등과 안전표지 완전 정복</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">학과시험 약 10~12문항 출제 영역</div>
-</div>
-
-<h2>2-1. 신호의 핵심 원칙 — 우선순위</h2>
-<p>도로교통법 제5조에 따라 모든 도로 이용자는 교통안전시설의 신호를 따라야 합니다. <strong>신호위반은 12대 중과실</strong>에 해당하여 형사 처벌을 받을 수 있습니다.</p>
-
-<div class="box box-tip">
-  <div class="box-label">💡 시험 빈출</div>
-  <strong>신호기 vs 경찰공무원 수신호가 다를 때?</strong> → <strong>수신호가 우선</strong> (제5조 제2항)<br><br>
-  <strong>경찰보조자</strong> (시행령 제6조): 모범운전자, 군사경찰, 소방공무원<br>
-  ⚠️ 공사장 자원봉사자·고속도로 안전순찰원 등은 경찰보조자가 <strong>아닙니다</strong>
-</div>
-
-<div class="illust">
-<svg viewBox="0 0 500 60" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;">
-  <rect x="10" y="10" width="130" height="40" rx="20" fill="#C62828"/><text x="75" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">① 수신호 (최우선)</text>
-  <text x="150" y="35" font-size="16" fill="#999">→</text>
-  <rect x="165" y="10" width="130" height="40" rx="20" fill="#1565C0"/><text x="230" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">② 신호기</text>
-  <text x="305" y="35" font-size="16" fill="#999">→</text>
-  <rect x="320" y="10" width="130" height="40" rx="20" fill="#546E7A"/><text x="385" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">③ 안전표지</text>
-</svg>
-</div>
-
-<h2>2-2. 차량 신호등 (시행규칙 [별표2])</h2>
-
-<div class="illust">
-<svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="15" y="10" width="210" height="120" rx="14" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.5"/>
-  <circle cx="60" cy="55" r="26" fill="#4CAF50"/>
-  <text x="100" y="42" font-size="14" font-weight="900" fill="#1B5E20">녹색</text>
-  <text x="100" y="60" font-size="11" fill="#333">직진 또는 우회전</text>
-  <text x="100" y="76" font-size="10" fill="#666">비보호좌회전 표시시</text>
-  <text x="100" y="90" font-size="10" fill="#666">좌회전도 가능</text>
-
-  <rect x="245" y="10" width="210" height="120" rx="14" fill="#FFF8E1" stroke="#FFC107" stroke-width="1.5"/>
-  <circle cx="290" cy="55" r="26" fill="#FFC107"/>
-  <text x="330" y="42" font-size="14" font-weight="900" fill="#E65100">황색</text>
-  <text x="330" y="60" font-size="11" fill="#333">정지선 직전에 정지</text>
-  <text x="330" y="76" font-size="10" fill="#666">이미 진입 시 신속 통과</text>
-  <text x="330" y="90" font-size="10" fill="#666">우회전 가능 (보행자 주의)</text>
-
-  <rect x="475" y="10" width="210" height="120" rx="14" fill="#FFEBEE" stroke="#F44336" stroke-width="1.5"/>
-  <circle cx="520" cy="55" r="26" fill="#F44336"/>
-  <text x="560" y="42" font-size="14" font-weight="900" fill="#B71C1C">적색</text>
-  <text x="560" y="60" font-size="11" fill="#333">정지</text>
-  <text x="560" y="78" font-size="10" fill="#C62828" font-weight="600">일시정지 후 우회전 가능</text>
-  <text x="560" y="94" font-size="9" fill="#666">(우회전삼색등 적색이면 불가)</text>
-</svg>
-</div>
-
-<h3>녹색 등화에서의 좌회전 금지</h3>
-<p>녹색 등화는 "직진 또는 우회전"을 의미합니다. <strong>비보호좌회전 표지 없는 교차로에서 녹색 등화일 때 좌회전하면 신호위반</strong>입니다.</p>
-<div class="box box-law">
-  <div class="box-label">📜 판례 (대법원 2004도5848)</div>
-  녹색·황색·적색의 삼색등 신호기가 설치되어 있고 비보호좌회전이나 유턴 표시가 없는 교차로에서 차마의 좌회전 또는 유턴은 허용되지 않는다.
-</div>
-
-<h3>적색 등화에서의 우회전 ⚠️</h3>
-<p>한국은 많은 나라와 달리 적색 등화에서 <strong>우회전이 허용</strong>됩니다 (RTOR: Right Turn On Red). 유럽·일본은 적색 시 모든 방향 통행 금지입니다.</p>
-<div class="box box-warn">
-  <div class="box-label">⚠️ 적색 등화 시 우회전 방법</div>
-  1. 정지선·횡단보도·교차로 직전에서 <strong>반드시 일시정지</strong><br>
-  2. 다른 차마의 교통을 <strong>방해하지 않아야</strong> 함<br>
-  3. 보행자 없으면 보행신호 녹색이어도 횡단보도 통과 가능 (2022년 개정)<br><br>
-  <strong>예외: 우회전 삼색등 적색이면 우회전 불가!</strong> ([별표2] 비고 제3호)
-</div>
-
-<h3>황색 등화</h3>
-<p>정지선 직전에 정지해야 합니다. 이미 교차로에 진입했으면 신속히 통과합니다. <strong>황색 등화에서 무리하게 진입하면 신호위반</strong>입니다.</p>
-
-<h2>2-3. 점멸 등화</h2>
-<div class="illust">
-<svg viewBox="0 0 520 110" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
-  <rect x="10" y="10" width="240" height="90" rx="14" fill="#FFF8E1" stroke="#F9A825" stroke-width="2"/>
-  <circle cx="60" cy="55" r="24" fill="#FFC107" class="blink-yellow"/>
-  <text x="100" y="42" font-size="14" font-weight="900" fill="#E65100">황색 점멸</text>
-  <text x="100" y="62" font-size="12" fill="#333">주의하면서 진행</text>
-  <text x="100" y="80" font-size="10" fill="#666">"노란불 깜빡 = 조심 GO"</text>
-
-  <rect x="270" y="10" width="240" height="90" rx="14" fill="#FFEBEE" stroke="#C62828" stroke-width="2"/>
-  <circle cx="320" cy="55" r="24" fill="#F44336" class="blink-red"/>
-  <text x="360" y="42" font-size="14" font-weight="900" fill="#B71C1C">적색 점멸</text>
-  <text x="360" y="62" font-size="12" fill="#333">일시정지 후 진행</text>
-  <text x="360" y="80" font-size="10" fill="#666">"빨간불 깜빡 = 멈추고 GO"</text>
-</svg>
-</div>
-
-<h2>2-4. 보행자 신호등</h2>
-<div class="table-wrap"><table>
-  <tr><th>등화</th><th>의미</th><th>보행자 행동</th></tr>
-  <tr><td style="color:#4CAF50;font-weight:700">녹색</td><td>횡단 가능</td><td>횡단보도를 건널 수 있음</td></tr>
-  <tr><td style="color:#4CAF50;font-weight:700">녹색 점멸</td><td>횡단 시작 금지</td><td>건너기 <strong>시작하면 안 됨</strong>. 건너는 중이면 빨리 완료 또는 보도 복귀</td></tr>
-  <tr><td style="color:#F44336;font-weight:700">적색</td><td>횡단 금지</td><td>건너면 안 됨</td></tr>
-</table></div>
-<div class="box box-tip">
-  <div class="box-label">💡 외국인이 자주 틀리는 포인트</div>
-  "녹색 점멸이면 아직 녹색이니까 빨리 건너면 되나?" → <strong>아닙니다!</strong> 녹색 점멸은 <strong>새로 건너기를 시작하면 안 되는</strong> 신호입니다.
-</div>
-
-<h2>2-5. 자전거 신호등</h2>
-<p>자전거 주행 신호등이 설치된 곳에서는 그 신호를 따릅니다. 없으면 <strong>차량 신호등</strong>을 따릅니다 ([별표2] 비고 제1호). 자전거 횡단도에 별도 신호등이 없으면 <strong>보행자 신호등</strong>을 따릅니다 (비고 제2호).</p>
-
-<h2>2-6. 안전표지 4종류 (시행규칙 [별표6])</h2>
-<p><strong>안전표지</strong>란 교통안전에 필요한 주의·규제·지시 등을 표시하는 표지판이나 노면 표시입니다 (제2조 제16호).</p>
-
-<div class="illust">
-<svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;">
-  <g transform="translate(30,5)">
-    <polygon points="75,8 145,125 5,125" fill="#E53935" stroke="#E53935" stroke-width="2" stroke-linejoin="round"/>
-    <polygon points="75,22 133,118 17,118" fill="#FFD600" stroke="none"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">주의</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">황색+적색 테두리</text>
-  </g>
-  <g transform="translate(195,5)">
-    <circle cx="75" cy="68" r="58" fill="#fff" stroke="#E53935" stroke-width="7"/>
-    <line x1="34" y1="109" x2="116" y2="27" stroke="#E53935" stroke-width="7" stroke-linecap="round"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">규제</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">백색+적색 테두리</text>
-  </g>
-  <g transform="translate(370,5)">
-    <circle cx="75" cy="68" r="58" fill="#1565C0" stroke="#0D47A1" stroke-width="3"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">지시</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">청색 바탕+백색</text>
-  </g>
-  <g transform="translate(545,5)">
-    <circle cx="75" cy="60" r="52" fill="#fff" stroke="#333" stroke-width="2.5"/>
-    <rect x="45" y="115" width="60" height="18" rx="2" fill="#fff" stroke="#333" stroke-width="2"/>
-    <text x="75" y="155" text-anchor="middle" font-size="16" font-weight="900" fill="#333">보조</text>
-    <text x="75" y="173" text-anchor="middle" font-size="10" fill="#666">백색+흑색 문자</text>
-  </g>
-</svg>
-<div class="illust-caption">안전표지 4종류 (시행규칙 [별표6])</div>
-</div>
-
-<div class="table-wrap"><table>
-  <tr><th>종류</th><th>모양</th><th>색상</th><th>의미</th></tr>
-  <tr><td><strong>주의</strong></td><td>삼각형</td><td>황색 바탕 + 적색 테두리 + 흑색 기호</td><td>위험 경고</td></tr>
-  <tr><td><strong>규제</strong></td><td>원형</td><td>백색 바탕 + 적색 테두리 + 흑색 기호</td><td>금지·제한</td></tr>
-  <tr><td><strong>지시</strong></td><td>원형·사각</td><td>청색 바탕 + 백색 기호</td><td>방향·방법 안내</td></tr>
-  <tr><td><strong>보조</strong></td><td>직사각형</td><td>백색 바탕 + 흑색 문자</td><td>본 표지 보충 설명</td></tr>
-</table></div>
-
-<h3>자주 출제되는 안전표지</h3>
-<p><strong>주의표지</strong>: 교차로 있음, 굽은 도로, 미끄러운 도로, 낙석, 어린이 보호, 도로공사<br>
-<strong>규제표지</strong>: 통행금지, 진입금지, 방향별 금지, 주·정차금지, 주차금지, 속도제한, 앞지르기 금지<br>
-<strong>지시표지</strong>: 직진, 우회전, 좌회전, 자동차전용도로, 횡단보도, 일방통행</p>
-
-<h2>2-7. 노면표시 — 중앙선과 차선</h2>
-<div class="illust">
-<svg viewBox="0 0 700 110" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <rect x="30" y="24" width="120" height="7" rx="1" fill="#F9A825"/>
-  <text x="90" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#E65100">황색 실선 = 중앙선</text>
-  <text x="90" y="65" text-anchor="middle" font-size="9" fill="#C62828">넘기 금지 (12대 중과실)</text>
-
-  <rect x="185" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <line x1="205" y1="28" x2="225" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="233" y1="28" x2="253" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="261" y1="28" x2="281" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="289" y1="28" x2="309" y2="28" stroke="#F9A825" stroke-width="5"/>
-  <text x="265" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#E65100">황색 점선 = 중앙선</text>
-  <text x="265" y="65" text-anchor="middle" font-size="9" fill="#4CAF50">앞지르기 가능</text>
-
-  <rect x="360" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <rect x="380" y="24" width="120" height="5" rx="1" fill="#999"/>
-  <text x="440" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#333">백색 실선 = 차선</text>
-  <text x="440" y="65" text-anchor="middle" font-size="9" fill="#C62828">차로변경 제한</text>
-
-  <rect x="535" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <line x1="555" y1="27" x2="575" y2="27" stroke="#999" stroke-width="4"/><line x1="583" y1="27" x2="603" y2="27" stroke="#999" stroke-width="4"/><line x1="611" y1="27" x2="631" y2="27" stroke="#999" stroke-width="4"/><line x1="639" y1="27" x2="659" y2="27" stroke="#999" stroke-width="4"/>
-  <text x="615" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#333">백색 점선 = 차선</text>
-  <text x="615" y="65" text-anchor="middle" font-size="9" fill="#4CAF50">차로변경 가능</text>
-
-  <rect x="10" y="78" width="685" height="26" rx="6" fill="#E3F2FD"/>
-  <text x="355" y="96" text-anchor="middle" font-size="11" fill="#1565C0" font-weight="600">📌 중앙선 = 황색 / 차선 = 백색 | <tspan fill="#4CAF50">차로변경(O)</tspan> <tspan fill="#C62828" text-decoration="line-through">차선변경(X)</tspan></text>
-</svg>
-</div>
-
-<h2>2-8. 연습 문제</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">신호기와 경찰공무원 수신호가 다를 때?</div><div class="q-opts"><span>① 신호기</span><span>② 수신호</span><span>③ 둘 다 무시</span><span>④ 자기 판단</span></div><div class="q-answer">→ ② (제5조 제2항)</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">적색 등화에서 우회전하려면?</div><div class="q-opts"><span>① 그대로 통과</span><span>② 일시정지 후 가능</span><span>③ 절대 불가</span><span>④ 서행 통과</span></div><div class="q-answer">→ ② (우회전 삼색등 적색이면 불가)</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">보행자 녹색 점멸 시 보행자 행동?</div><div class="q-opts"><span>① 빨리 횡단 시작</span><span>② 시작 금지, 횡단 중이면 신속 완료</span><span>③ 정지</span><span>④ 뛰어서 건넘</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">노란 삼각형 안전표지?</div><div class="q-opts"><span>① 금지</span><span>② 지시</span><span>③ 위험 주의</span><span>④ 보조</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">중앙선 색상?</div><div class="q-opts"><span>① 백색</span><span>② 황색</span><span>③ 적색</span><span>④ 청색</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q6</div><div class="q-text">우회전 삼색등 적색 시 우회전?</div><div class="q-opts"><span>① 가능</span><span>② 일시정지 후 가능</span><span>③ 서행 후 가능</span><span>④ 불가</span></div><div class="q-answer">→ ④ ([별표2] 비고 제3호)</div></div>
-<div class="q-item"><div class="q-num">Q7</div><div class="q-text">황색 점멸등 의미?</div><div class="q-opts"><span>① 일시정지 후 진행</span><span>② 주의하면서 진행</span><span>③ 정지</span><span>④ 빨리 통과</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== 3장 ===== -->
-<div class="ch-header green" id="ch3">
-  <div class="ch-num">CHAPTER 03</div>
-  <div class="ch-title-row"><div class="ch-title">교차로 통행</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">좌·우회전 방법, 양보 규칙, 회전교차로</div>
-</div>
-
-<h2>3-1. 좌회전 방법 (제25조 제2항)</h2>
-<div class="box box-law">
-  <div class="box-label">📜 법 원문</div>
-  "모든 차의 운전자는 교차로에서 좌회전을 하려는 경우에는 <strong>미리 도로의 중앙선을 따라 서행하면서</strong> 교차로의 <strong>중심 안쪽</strong>을 이용하여 좌회전하여야 한다. 다만, 시·도경찰청장이 교차로의 상황에 따라 특히 필요하다고 인정하여 지정한 곳에서는 교차로의 중심 바깥쪽을 통과할 수 있다."
-</div>
-<p>쉽게 말하면: 좌회전 전에 미리 중앙선 쪽 차로(가장 안쪽)로 이동하여 서행하고, 교차로에서는 중심의 <strong>안쪽</strong>을 돌아 좌회전합니다.</p>
-
-<div class="illust">
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;">
-  <rect x="150" y="0" width="100" height="300" fill="#ddd"/><rect x="0" y="100" width="400" height="100" fill="#ddd"/>
-  <line x1="200" y1="0" x2="200" y2="100" stroke="#F9A825" stroke-width="3"/><line x1="200" y1="200" x2="200" y2="300" stroke="#F9A825" stroke-width="3"/>
-  <line x1="0" y1="150" x2="150" y2="150" stroke="#F9A825" stroke-width="3"/><line x1="250" y1="150" x2="400" y2="150" stroke="#F9A825" stroke-width="3"/>
-  <circle cx="200" cy="150" r="6" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="3"/><text x="212" y="148" font-size="9" fill="#666">중심</text>
-  <path d="M215,275 L215,168 Q215,152 198,152 L90,152" fill="none" stroke="#4CAF50" stroke-width="4" marker-end="url(#ag)"/>
-  <text x="105" y="138" font-size="11" fill="#4CAF50" font-weight="700">✅ 중심 안쪽</text>
-  <path d="M215,275 L215,195 Q215,115 165,115 L55,115" fill="none" stroke="#F44336" stroke-width="2.5" stroke-dasharray="6" opacity=".5"/>
-  <text x="55" y="105" font-size="10" fill="#F44336" font-weight="700">✕ 바깥쪽</text>
-  <rect x="208" y="258" width="14" height="22" rx="3" fill="#1565C0"/>
-  <defs><marker id="ag" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#4CAF50"/></marker></defs>
-</svg>
-<div class="illust-caption">좌회전: 미리 중앙선 쪽 차로 이동 → 교차로 중심 안쪽 이용</div>
-</div>
-
-<h2>3-2. 우회전 방법 (제25조 제1항)</h2>
-<div class="box box-law">
-  <div class="box-label">📜 법 원문</div>
-  "모든 차의 운전자는 교차로에서 우회전을 하려는 경우에는 미리 도로의 <strong>우측 가장자리</strong>를 서행하면서 우회전하여야 한다. 이 경우 우회전하는 차의 운전자는 신호에 따라 정지하거나 진행하는 보행자 또는 자전거등에 주의하여야 한다."
-</div>
-
-<h2>3-3. 교통정리 없는 교차로 — 양보 규칙 (제26조)</h2>
-<div class="table-wrap"><table>
-  <tr><th>조항</th><th>상황</th><th>양보 규칙</th></tr>
-  <tr><td>제1항</td><td>이미 진입한 차 vs 진입하려는 차</td><td><strong>이미 진입한 차</strong>가 우선</td></tr>
-  <tr><td>제2항</td><td>넓은 도로 vs 좁은 도로</td><td><strong>넓은 도로</strong> 차가 우선</td></tr>
-  <tr><td>제3항</td><td>폭이 같을 때 동시 진입</td><td><strong>우측 도로</strong> 차에게 양보</td></tr>
-  <tr><td>제4항</td><td>좌회전 vs 직진·우회전</td><td><strong>직진·우회전</strong> 차가 우선</td></tr>
-</table></div>
-<div class="box box-tip">
-  <div class="box-label">💡 기억법</div>
-  "먼저 진입 > 넓은 도로 > 오른쪽 차 > 직진·우회전이 좌회전보다 우선"
-</div>
-
-<h2>3-4. 회전교차로 (제25조의2)</h2>
-<div class="box box-info">
-  <div class="box-label">✅ 회전교차로 핵심</div>
-  • <strong>반시계방향</strong>으로 통행<br>• 진입 시 <strong>서행 또는 일시정지</strong><br>• 이미 안에 있는 차에게 <strong>양보</strong><br>• 반대 방향 진행 = 위반 (대법원 2017도9392)
-</div>
-
-<h2>3-5. 서행·일시정지 장소 (제31조)</h2>
-<div class="table-wrap"><table>
-  <tr><th>구분</th><th>장소</th></tr>
-  <tr><td><strong>서행</strong></td><td>교통정리 없는 교차로 / 구부러진 곳 / 고갯마루 / 가파른 내리막 / 안전표지 지정</td></tr>
-  <tr><td><strong>일시정지</strong></td><td>좌우 확인 불가 또는 교통 빈번한 교차로 / 안전표지 지정</td></tr>
-</table></div>
-
-<h2>3-6. 교차로 꼬리물기 금지 (제25조 제5항)</h2>
-<p>진행하려는 진로 앞쪽 상황 때문에 교차로 안에서 정지하게 되어 다른 차의 통행을 방해할 우려가 있으면, 그 교차로에 <strong>들어가서는 안 됩니다</strong>.</p>
-
-<h2>3-7. 연습 문제</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">교통정리 없는 교차로에서 폭이 같을 때?</div><div class="q-opts"><span>① 먼저 도착한 차</span><span>② 왼쪽 차</span><span>③ 오른쪽 차</span><span>④ 큰 차</span></div><div class="q-answer">→ ③ (제26조 제3항)</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">회전교차로 통행 방향?</div><div class="q-opts"><span>① 시계방향</span><span>② 반시계방향</span><span>③ 양방향</span><span>④ 직진만</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">좌회전 시 교차로의 어느 쪽?</div><div class="q-opts"><span>① 중심 바깥쪽</span><span>② 중심 안쪽</span><span>③ 우측 가장자리</span><span>④ 좌측 가장자리</span></div><div class="q-answer">→ ② (제25조 제2항)</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">좌회전 차 vs 직진 차?</div><div class="q-opts"><span>① 좌회전 우선</span><span>② 직진 우선</span><span>③ 큰 차 우선</span><span>④ 동시 진행</span></div><div class="q-answer">→ ② (제26조 제4항)</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">교통정리 없고 교통 빈번한 교차로에서?</div><div class="q-opts"><span>① 서행</span><span>② 일시정지</span><span>③ 속도 유지</span><span>④ 경음기</span></div><div class="q-answer">→ ② (제31조 제2항)</div></div>
-</div>
-
-
-<!-- ===== 4장 ===== -->
-<div class="ch-header" id="ch4">
-  <div class="ch-num">CHAPTER 04</div>
-  <div class="ch-title-row"><div class="ch-title">속도와 안전거리</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">도로별 속도 제한, 서행, 앞지르기 금지 장소</div>
-</div>
-
-<h2>4-1. 속도 제한</h2>
-<div class="table-wrap"><table>
-  <tr><th>도로</th><th>최고 속도</th><th>최저 속도</th></tr>
-  <tr><td>고속도로 (편도 2차로+)</td><td>100~120km/h</td><td>50km/h</td></tr>
-  <tr><td>고속도로 (편도 1차로)</td><td>80km/h</td><td>50km/h</td></tr>
-  <tr><td>자동차전용도로</td><td>90km/h</td><td>30km/h</td></tr>
-  <tr><td>일반도로 (편도 2차로+)</td><td>80km/h</td><td>-</td></tr>
-  <tr><td>일반도로 (기타)</td><td>60km/h</td><td>-</td></tr>
-  <tr style="color:#C62828;font-weight:700"><td>어린이·노인·장애인 보호구역</td><td>30km/h</td><td>-</td></tr>
-</table></div>
-<p>⚠️ 안전표지로 다른 속도가 지정된 경우, <strong>안전표지의 속도</strong>를 따릅니다.</p>
-
-<h2>4-2. 서행</h2>
-<p><strong>서행</strong> = 즉시 정지시킬 수 있는 정도의 느린 속도 (제2조 제28호). "시속 몇 km"라는 구체적 수치가 아닙니다. 교통안전시설에서는 <strong>"천천히"</strong>라는 문구를 사용합니다.</p>
-
-<h2>4-3. 안전거리 (제19조)</h2>
-<p>앞차가 갑자기 정지해도 충돌을 피할 수 있는 거리를 확보해야 합니다. 속도가 빠를수록, 악천후일수록 <strong>더 넓게</strong> 확보합니다. 고속도로 100km/h 주행 시 약 100m 이상 필요합니다.</p>
-
-<h2>4-4. 앞지르기 금지 장소 (제22조 제3항)</h2>
-<div class="box box-warn">
-  <div class="box-label">⚠️ 법 조문 그대로 (4개 호)</div>
-  <strong>1호.</strong> 교차로<br>
-  <strong>2호.</strong> 터널 안<br>
-  <strong>3호.</strong> 다리 위<br>
-  <strong>4호.</strong> 도로의 구부러진 곳, 비탈길의 고갯마루 부근 또는 가파른 비탈길의 내리막 등 시·도경찰청장이 안전표지로 지정한 곳
-</div>
-<p>앞지르기는 앞차의 <strong>좌측</strong>으로 합니다 (제21조). 앞차가 좌회전 위해 중앙선 쪽으로 붙어 있을 때는 <strong>우측</strong>으로 앞지르기 가능합니다.</p>
-
-<h2>4-5. 연습 문제</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">어린이 보호구역 최고 속도?</div><div class="q-opts"><span>① 50km/h</span><span>② 40km/h</span><span>③ 30km/h</span><span>④ 20km/h</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">앞지르기 금지 아닌 곳?</div><div class="q-opts"><span>① 교차로</span><span>② 터널</span><span>③ 직선 도로</span><span>④ 다리 위</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">"서행"의 정의?</div><div class="q-opts"><span>① 시속 20km</span><span>② 시속 30km</span><span>③ 즉시 정지 가능한 느린 속도</span><span>④ 시속 10km</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">앞지르기는 앞차의 어느 쪽?</div><div class="q-opts"><span>① 좌측</span><span>② 우측</span><span>③ 어느 쪽이든</span><span>④ 상황에 따라</span></div><div class="q-answer">→ ①</div></div>
-</div>
-
-
-<!-- ===== 5장 ===== -->
-<div class="ch-header green" id="ch5">
-  <div class="ch-num">CHAPTER 05</div>
-  <div class="ch-title-row"><div class="ch-title">보행자 보호</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">한국 도로교통법의 핵심 가치 — 보행자 보호 위반 시 12대 중과실</div>
-</div>
-
-<h2>5-1. 보행자 통행 방법 (제8조, 제10조)</h2>
-<p><strong>보도가 있는 도로</strong>: 보행자는 보도로 통행합니다.<br>
-<strong>보도가 없는 도로</strong>: 길가장자리구역 또는 도로의 <strong>좌측 가장자리</strong>로 통행합니다 (제8조). 좌측이 위험하면 우측도 가능합니다.<br>
-<strong>횡단</strong>: 횡단보도가 있는 곳에서는 반드시 횡단보도로 건너야 합니다 (제10조).</p>
-
-<h2>5-2. 횡단보도에서의 보행자 보호 (제27조)</h2>
-
-<h3>핵심 원칙 — 보행자 횡단 중이면 반드시 일시정지</h3>
-<div class="table-wrap"><table>
-  <tr><th>상황</th><th>조항</th><th>운전자 의무</th></tr>
-  <tr><td>신호 있는 횡단보도에서 보행자 횡단 중</td><td>제27조 제1항</td><td><strong>일시정지</strong></td></tr>
-  <tr><td>신호 없는 횡단보도에서 보행자 횡단 중·횡단하려 할 때</td><td>제27조 제6항</td><td><strong>일시정지</strong></td></tr>
-  <tr><td>횡단보도 없는 도로에서 보행자 횡단 중</td><td>제27조 제5항</td><td>안전거리 두고 <strong>일시정지</strong></td></tr>
-</table></div>
-<div class="box box-warn">
-  <div class="box-label">⚠️ 보행자 보호 위반의 결과</div>
-  횡단보도 보행자 보호 의무를 위반하여 사고를 내면 교통사고처리특례법상 <strong>12대 중과실</strong>에 해당합니다. 보험 가입 여부와 관계없이 <strong>형사 처벌</strong>을 받습니다.
-</div>
-
-<h2>5-3. 보도 침범 금지 (제13조)</h2>
-<p>차마는 <strong>보도를 침범해서는 안 됩니다</strong>. 보도 침범은 12대 중과실입니다. 건물 진입을 위해 불가피하게 보도를 횡단하는 경우에는 보도 직전에서 <strong>일시정지</strong> 후 보행자 통행을 방해하지 않도록 해야 합니다.</p>
-
-<h2>5-4. 어린이 보호구역 — 스쿨존 (제12조)</h2>
-<p>초등학교, 유치원, 어린이집 등 주변 도로에 지정됩니다.</p>
-<div class="table-wrap"><table>
-  <tr><th>항목</th><th>내용</th></tr>
-  <tr><td>최고 속도</td><td><strong>30km/h</strong> (공동부령 제9조)</td></tr>
-  <tr><td>주·정차</td><td>안전표지 지정 구간 <strong>금지</strong></td></tr>
-  <tr><td>사고 시</td><td><strong>12대 중과실</strong> → 형사 처벌</td></tr>
-  <tr><td>범칙금·벌점 (08~20시)</td><td>일반 도로의 <strong>최대 2배</strong></td></tr>
-</table></div>
-
-<h2>5-5. 노인·장애인 보호구역 (제12조의2)</h2>
-<p>노인복지시설, 장애인복지시설, 공원, 생활체육시설 등 주변 반경 300m에 지정됩니다. 어린이 보호구역과 마찬가지로 <strong>30km/h 이하</strong>, 범칙금·벌점 2배가 적용됩니다.</p>
-
-<h2>5-6. 보행자전용도로·보행자우선도로</h2>
-<p><strong>보행자전용도로</strong>: 보행자만 다닐 수 있는 도로 (제2조 제31호). 차마 통행 원칙 금지.<br>
-<strong>보행자우선도로</strong>: 차도·보도 미분리 도로에서 보행자가 우선하는 도로 (제2조 제31호의2). 차량 속도 30km/h 이하 제한.</p>
-
-<h2>5-7. 연습 문제</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">횡단보도에서 보행자 횡단 시 운전자?</div><div class="q-opts"><span>① 서행</span><span>② 경음기</span><span>③ 일시정지</span><span>④ 속도 유지</span></div><div class="q-answer">→ ③ (제27조)</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">어린이 보호구역 속도와 사고 시?</div><div class="q-opts"><span>① 50km/h, 보험처리</span><span>② 30km/h, 형사처벌</span><span>③ 40km/h, 과태료</span><span>④ 60km/h, 벌금</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">보도 횡단하여 건물 진입 시?</div><div class="q-opts"><span>① 서행</span><span>② 경음기</span><span>③ 보도 직전 일시정지</span><span>④ 그대로 진입</span></div><div class="q-answer">→ ③ (제13조)</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">보도 없는 도로에서 보행자 통행 방향?</div><div class="q-opts"><span>① 우측</span><span>② 좌측</span><span>③ 중앙</span><span>④ 아무 쪽</span></div><div class="q-answer">→ ② (제8조)</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">보호구역 08~20시 신호위반 벌점은 일반 대비?</div><div class="q-opts"><span>① 같음</span><span>② 1.5배</span><span>③ 2배</span><span>④ 3배</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-
-<!-- ===== 6장 ===== -->
-<div class="ch-header red-h" id="ch6">
-  <div class="ch-num">CHAPTER 06</div>
-  <div class="ch-title-row"><div class="ch-title">음주운전과 처벌</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">2019년 강화된 기준 수치를 정확히 기억하세요</div>
-</div>
-
-<h2>6-1. 음주운전 금지 (제44조)</h2>
-<p>누구든지 술에 취한 상태에서 자동차등을 운전하여서는 안 됩니다. "누구든지"이므로 면허 유무와 관계없이 적용됩니다.</p>
-
-<div class="box box-law">
-  <div class="box-label">📜 법 원문 (제44조 제4항)</div>
-  "제1항에 따라 운전이 금지되는 술에 취한 상태의 기준은 운전자의 혈중알코올농도가 <strong>0.03퍼센트 이상</strong>인 경우로 한다."
-</div>
-
-<h2>6-2. 처벌 기준</h2>
-<div class="illust">
-<svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="5" width="210" height="90" rx="12" fill="#FFF8E1" stroke="#F9A825" stroke-width="2"/>
-  <text x="115" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#E65100">0.03% ~ 0.08%</text>
-  <text x="115" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#E65100">면허 정지</text>
-  <text x="115" y="75" text-anchor="middle" font-size="10" fill="#666">(100일) / 1년↓징역·500만원↓벌금</text>
-
-  <rect x="245" y="5" width="210" height="90" rx="12" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
-  <text x="350" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#C62828">0.08% ~ 0.2%</text>
-  <text x="350" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#C62828">면허 취소</text>
-  <text x="350" y="75" text-anchor="middle" font-size="9" fill="#666">1~2년 징역 / 500만~1천만원</text>
-
-  <rect x="480" y="5" width="210" height="90" rx="12" fill="#B71C1C"/>
-  <text x="585" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#FFCDD2">0.2% 이상</text>
-  <text x="585" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">면허 취소</text>
-  <text x="585" y="75" text-anchor="middle" font-size="9" fill="#FFCDD2">2~5년 징역 / 1천만~2천만원</text>
-</svg>
-<div class="illust-caption">2019년 개정: 기준 0.05% → <strong>0.03%</strong>로 강화 (소주 1~2잔으로 초과 가능)</div>
-</div>
-
-<h2>6-3. 음주 측정과 거부</h2>
-<p>경찰공무원은 <strong>호흡조사</strong>로 음주 여부를 측정할 수 있으며, 운전자는 이에 <strong>응해야</strong> 합니다 (제44조 제2항). 결과에 불복 시 <strong>혈액 채취</strong>로 재측정 가능 (운전자 동의 필요).</p>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ 음주 측정 거부 시</div>
-  <strong>1~5년 이하 징역</strong> 또는 <strong>500만~2천만 원 벌금</strong> + 면허 <strong>취소</strong><br>
-  거부해도 처벌 회피 불가! 오히려 <strong>더 무거운 처벌</strong>을 받습니다.
-</div>
-
-<h2>6-4. 음주운전의 성립 범위</h2>
-<p>도로뿐 아니라 <strong>주차장 등 도로 외의 장소</strong>에서도 성립합니다. 운전 거리가 30cm이더라도 음주운전입니다 (대법원 2007도678). 시동을 걸어 발진 조작을 완료하면 운전 개시로 봅니다.</p>
-
-<h2>6-5. 약물 운전 (제45조)</h2>
-<p>마약·향정신성의약품 등 약물 영향 하 운전도 동일하게 처벌됩니다.</p>
-
-<h2>6-6. 연습 문제</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">면허 취소 혈중알코올농도 기준?</div><div class="q-opts"><span>① 0.03%</span><span>② 0.05%</span><span>③ 0.08%</span><span>④ 0.1%</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">음주 측정 거부 시?</div><div class="q-opts"><span>① 벌금만</span><span>② 면허 정지</span><span>③ 경고</span><span>④ 면허 취소+형사처벌</span></div><div class="q-answer">→ ④</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">현행 음주운전 기준?</div><div class="q-opts"><span>① 0.01%</span><span>② 0.03%</span><span>③ 0.05%</span><span>④ 0.08%</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== 7장 ===== -->
-<div class="ch-header amber-h" id="ch7">
-  <div class="ch-num">CHAPTER 07</div>
-  <div class="ch-title-row"><div class="ch-title">긴급상황 대처</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">사고 시 조치, 긴급차 양보, 철길건널목, 고장 시</div>
-</div>
-
-<h2>7-1. 교통사고 발생 시 조치 (제54조)</h2>
-<div class="illust">
-<svg viewBox="0 0 700 70" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="10" width="140" height="50" rx="8" fill="#1565C0"/><text x="80" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">① 즉시 정차</text>
-  <text x="160" y="40" font-size="14" fill="#999">→</text>
-  <rect x="175" y="10" width="140" height="50" rx="8" fill="#2E7D32"/><text x="245" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">② 부상자 구호</text>
-  <text x="325" y="40" font-size="14" fill="#999">→</text>
-  <rect x="340" y="10" width="150" height="50" rx="8" fill="#E65100"/><text x="415" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">③ 신고 ☎112·119</text>
-  <text x="500" y="40" font-size="14" fill="#999">→</text>
-  <rect x="515" y="10" width="140" height="50" rx="8" fill="#6A1B9A"/><text x="585" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">④ 현장 보존</text>
-</svg>
-</div>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ 도주(뺑소니)의 결과</div>
-  • 피해자 사망 후 도주: <strong>무기 또는 5년 이상 징역</strong><br>
-  • 피해자 부상 후 도주: <strong>1~30년 징역</strong> 또는 <strong>500만~3천만원 벌금</strong><br>
-  • 가벼운 접촉사고라도 현장 이탈 시 뺑소니!
-</div>
-
-<h2>7-2. 긴급자동차 양보 (제29조)</h2>
-<p>긴급자동차(소방차, 구급차, 경찰차 등)가 접근할 때:</p>
-<div class="table-wrap"><table>
-  <tr><th>상황</th><th>행동</th></tr>
-  <tr><td>교차로 또는 그 부근</td><td>교차로를 <strong>피하여 일시정지</strong></td></tr>
-  <tr><td>교차로 아닌 곳</td><td><strong>우측 가장자리</strong>에 일시정지</td></tr>
-</table></div>
-
-<h2>7-3. 철길건널목 (제24조)</h2>
-<p>모든 차는 건널목 앞에서 <strong>일시정지</strong> 후 안전 확인 후 통과합니다. 차단기 하강·경보기 작동 시 <strong>절대 진입 금지</strong>입니다. 위반 시 <strong>12대 중과실</strong>입니다.</p>
-<p>건널목 안에서 고장 시: ① 승객 대피 → ② 비상 신호 발신 → ③ 차량 밖으로 이동</p>
-
-<h2>7-4. 고장 시 조치 (제66조)</h2>
-<p>우측 정차 → 비상점멸등 → 고속도로에서 차 뒤쪽 <strong>100m 이상</strong>에 삼각 경고판 설치. 야간에는 사방 500m 지점에서 식별 가능한 적색 표시 설치.</p>
-
-<h2>7-5. 연습 문제</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">사고 후 가장 먼저?</div><div class="q-opts"><span>① 보험사 연락</span><span>② 즉시 정차+구호</span><span>③ 차 이동</span><span>④ 목격자 확보</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">긴급차가 교차로에 접근 시?</div><div class="q-opts"><span>① 빨리 통과</span><span>② 교차로 피하여 일시정지</span><span>③ 좌측 비켜줌</span><span>④ 속도 높임</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">철길건널목 앞에서?</div><div class="q-opts"><span>① 서행</span><span>② 경음기 후 통과</span><span>③ 일시정지+안전확인</span><span>④ 빨리 통과</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">고속도로 고장 시 삼각 경고판 거리?</div><div class="q-opts"><span>① 50m</span><span>② 100m</span><span>③ 150m</span><span>④ 200m</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== 8장 ===== -->
-<div class="ch-header purple-h" id="ch8">
-  <div class="ch-num">CHAPTER 08</div>
-  <div class="ch-title-row"><div class="ch-title">한국 교통문화 이해</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">안전띠, 핸드폰, 주·정차, 야간 운전</div>
-</div>
-
-<h2>8-1. 기본</h2>
-<p><strong>우측통행</strong> (제13조) / 좌핸들 / 속도 km/h. 영국·일본·호주 등 좌측통행 국가에서 오신 분들은 특히 주의하세요.</p>
-
-<h2>8-2. 필수 준수 사항</h2>
-<div class="table-wrap"><table>
-  <tr><th>항목</th><th>의무</th><th>올바른 용어</th></tr>
-  <tr><td>좌석벨트</td><td><strong>전 좌석</strong> 착용 (제50조) — 뒷좌석 포함</td><td><span class="term-o">안전띠</span></td></tr>
-  <tr><td>방향전환</td><td>차로변경·회전·정차 시 사용 (제38조)</td><td><span class="term-o">방향지시등</span></td></tr>
-  <tr><td>경적</td><td>위험 방지 시만 (제49조)</td><td><span class="term-o">경음기</span></td></tr>
-  <tr><td>핸드폰</td><td>손에 들고 사용 <strong>금지</strong> (제49조). 핸즈프리·거치대 이용</td><td>-</td></tr>
-</table></div>
-
-<h2>8-3. 주·정차 규정</h2>
-<h3>주차와 정차의 차이</h3>
-<p><strong>주차</strong>: 계속 정지 또는 운전자가 떠나 즉시 출발 불가 (제2조 제24호)<br>
-<strong>정차</strong>: 5분 이내 정지, 운전자가 차에 있으며 즉시 출발 가능 (제2조 제25호)</p>
-
-<h3>금지 장소·거리 (제32조)</h3>
-<div class="table-wrap"><table>
-  <tr><th>장소</th><th>거리</th></tr>
-  <tr><td>교차로·횡단보도·건널목·도로모퉁이</td><td><strong>5m</strong> 이내</td></tr>
-  <tr><td>안전지대 사방</td><td><strong>10m</strong> 이내</td></tr>
-  <tr><td>버스 정류소 표지판</td><td><strong>10m</strong> 이내</td></tr>
-  <tr><td>화재경보기</td><td><strong>3m</strong> 이내</td></tr>
-  <tr><td>터널 안, 다리 위</td><td>전 구간</td></tr>
-</table></div>
-
-<div class="box box-tip">
-  <div class="box-label">💡 시험 빈출</div>
-  <strong>"주차금지" 표지에서 5분 정차?</strong> → <strong>허용</strong> (주차금지 ≠ 정차금지)<br>
-  <strong>"주·정차 금지" 표지에서 잠깐 정차?</strong> → <strong>위반</strong>
-</div>
-
-<h2>8-4. 야간 운전 (제37조)</h2>
-<p>마주 오는 차 또는 앞차 바로 뒤를 따를 때 → 전조등 <strong>하향 전환</strong>. 상향등으로 상대방 시야 방해 시 사고 위험이 크게 증가합니다.</p>
-
-
-<!-- ===== 9장 ===== -->
-<div class="ch-header" id="ch9">
-  <div class="ch-num">CHAPTER 09</div>
-  <div class="ch-title-row"><div class="ch-title">기능시험·도로주행시험 합격 전략</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">시험 절차, 합격 기준, 감점·실격 항목, 합격 팁</div>
-</div>
-
-<h2>9-1. 합격 기준</h2>
-<div class="table-wrap"><table>
-  <tr><th>시험</th><th>1종</th><th>2종</th></tr>
-  <tr><td>학과 (40문항/40분)</td><td><strong>70점</strong></td><td><strong>60점</strong></td></tr>
-  <tr><td>기능</td><td><strong>80점</strong></td><td><strong>80점</strong></td></tr>
-  <tr><td>도로주행</td><td><strong>70점</strong></td><td><strong>70점</strong></td></tr>
-</table></div>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ 도로주행시험 응시 언어</div>
-  <strong>한국어·영어</strong>만 가능 (중국어·베트남어 불가)
-</div>
-
-<h2>9-2. 기능시험 감점 항목</h2>
-<p>출발 전 안전띠 미착용, 방향지시등 미사용, 급출발·급정지, 코스 이탈, 지정 위치 정지 실패 등에서 감점됩니다.</p>
-
-<h2>9-3. 도로주행시험 실격·감점</h2>
-<p><strong>즉시 실격</strong>: 신호 위반, 중앙선 침범, 사고 발생<br>
-<strong>감점</strong>: 안전띠 미착용, 방향지시등 미사용, 안전 확인 미실시, 속도 위반</p>
-
-<h2>9-4. 합격 팁 5가지</h2>
-<p>1. <strong>안전띠</strong> 시동 전 착용 — 불필요한 감점 방지<br>
-2. <strong>방향지시등</strong> 모든 방향전환 시 미리 켜기<br>
-3. 속도 제한 <strong>엄수</strong> — 과속은 큰 감점 또는 실격<br>
-4. 황색 등화에 <strong>무리하게 진입하지 않기</strong><br>
-5. 좌·우 확인, 사이드미러 확인 — <strong>과장스럽게 고개 돌려</strong> 확인하는 것이 좋음</p>
-
-
-<!-- ===== 10장 (기존 50문제 그대로) ===== -->
-<div class="ch-header red-h" id="ch10">
-  <div class="ch-num">CHAPTER 10</div>
-  <div class="ch-title-row"><div class="ch-title">실전 문제풀이 핵심 50문제</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">40문항/40분 · 합격: 1종 70점 / 2종 60점</div>
-</div>
-
-<div class="quiz-section">
-<h3>📝 문장형 대비 (Q1~Q21)</h3>
-
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">신호기 신호와 경찰공무원 수신호가 다를 때?</div><div class="q-opts"><span>① 신호기</span><span>② 수신호</span><span>③ 둘 다 무시</span><span>④ 자기 판단</span></div><div class="q-answer">→ ② (제5조 제2항)</div></div>
-
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">음주운전 기준 혈중알코올농도는?</div><div class="q-opts"><span>① 0.01%</span><span>② 0.03%</span><span>③ 0.05%</span><span>④ 0.08%</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">교통사고 후 가장 먼저 할 일은?</div><div class="q-opts"><span>① 보험사 연락</span><span>② 목격자 확보</span><span>③ 즉시 정차 후 부상자 구호</span><span>④ 차량 수리</span></div><div class="q-answer">→ ③ (제54조)</div></div>
-
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">어린이 보호구역 최고 속도는?</div><div class="q-opts"><span>① 60km/h</span><span>② 50km/h</span><span>③ 40km/h</span><span>④ 30km/h</span></div><div class="q-answer">→ ④</div></div>
-
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">앞지르기 금지 장소가 아닌 곳은?</div><div class="q-opts"><span>① 교차로</span><span>② 터널 안</span><span>③ 직선 도로</span><span>④ 다리 위</span></div><div class="q-answer">→ ③ (제22조 제3항)</div></div>
-
-<div class="q-item"><div class="q-num">Q6</div><div class="q-text">횡단보도에서 보행자 횡단 시 운전자 의무는?</div><div class="q-opts"><span>① 서행</span><span>② 경음기</span><span>③ 일시정지</span><span>④ 속도 유지</span></div><div class="q-answer">→ ③ (제27조)</div></div>
-
-<div class="q-item"><div class="q-num">Q7</div><div class="q-text">음주 측정 거부 시?</div><div class="q-opts"><span>① 경고</span><span>② 면허 정지</span><span>③ 벌금만</span><span>④ 면허 취소+형사 처벌</span></div><div class="q-answer">→ ④</div></div>
-
-<div class="q-item"><div class="q-num">Q8</div><div class="q-text">긴급차가 교차로에 접근할 때?</div><div class="q-opts"><span>① 빨리 통과</span><span>② 교차로 피하여 일시정지</span><span>③ 좌측 비켜줌</span><span>④ 속도 높임</span></div><div class="q-answer">→ ② (제29조)</div></div>
-
-<div class="q-item"><div class="q-num">Q9</div><div class="q-text">서행 장소가 아닌 곳은?</div><div class="q-opts"><span>① 교통정리 없는 교차로</span><span>② 구부러진 곳</span><span>③ 직선 고속도로</span><span>④ 가파른 내리막</span></div><div class="q-answer">→ ③ (제31조)</div></div>
-
-<div class="q-item"><div class="q-num">Q10</div><div class="q-text">철길건널목 앞에서?</div><div class="q-opts"><span>① 서행 통과</span><span>② 경음기 후 통과</span><span>③ 일시정지 후 안전 확인</span><span>④ 빨리 통과</span></div><div class="q-answer">→ ③ (제24조)</div></div>
-
-<div class="q-item"><div class="q-num">Q11</div><div class="q-text">야간 마주오는 차 → 전조등?</div><div class="q-opts"><span>① 상향</span><span>② 하향</span><span>③ 끄기</span><span>④ 비상등</span></div><div class="q-answer">→ ② (제37조)</div></div>
-
-<div class="q-item"><div class="q-num">Q12</div><div class="q-text">운전 중 이동전화 사용?</div><div class="q-opts"><span>① 자유 가능</span><span>② 손에 들고 사용 금지</span><span>③ 적색 신호시만 가능</span><span>④ 규정 없음</span></div><div class="q-answer">→ ② (제49조)</div></div>
-
-<div class="q-item"><div class="q-num">Q13</div><div class="q-text">교통정리 없는 교차로, 도로 폭 같을 때 우선권?</div><div class="q-opts"><span>① 왼쪽 차</span><span>② 오른쪽 차</span><span>③ 먼저 도착한 차</span><span>④ 큰 차</span></div><div class="q-answer">→ ② (제26조 제3항)</div></div>
-
-<div class="q-item"><div class="q-num">Q14</div><div class="q-text">좌회전 시 교차로의 어느 쪽?</div><div class="q-opts"><span>① 중심 바깥쪽</span><span>② 중심 안쪽</span><span>③ 좌측 가장자리</span><span>④ 우측 가장자리</span></div><div class="q-answer">→ ② (제25조 제2항)</div></div>
-
-<div class="q-item"><div class="q-num">Q15</div><div class="q-text">회전교차로 통행 방향?</div><div class="q-opts"><span>① 시계방향</span><span>② 반시계방향</span><span>③ 아무 방향</span><span>④ 직진만</span></div><div class="q-answer">→ ② (제25조의2)</div></div>
-
-<div class="q-item"><div class="q-num">Q16</div><div class="q-text">"서행"의 정의?</div><div class="q-opts"><span>① 시속 20km</span><span>② 시속 30km</span><span>③ 즉시 정지시킬 수 있는 느린 속도</span><span>④ 시속 10km</span></div><div class="q-answer">→ ③ (제2조 제28호)</div></div>
-
-<div class="q-item"><div class="q-num">Q17</div><div class="q-text">보도 횡단하여 건물 진입 시?</div><div class="q-opts"><span>① 서행</span><span>② 경음기</span><span>③ 보도 직전 일시정지</span><span>④ 그대로 진입</span></div><div class="q-answer">→ ③ (제13조)</div></div>
-
-<div class="q-item"><div class="q-num">Q18</div><div class="q-text">교차로 주·정차 금지 거리?</div><div class="q-opts"><span>① 3m</span><span>② 5m</span><span>③ 10m</span><span>④ 15m</span></div><div class="q-answer">→ ② (제32조)</div></div>
-
-<div class="q-item"><div class="q-num">Q19</div><div class="q-text">안전띠 착용 대상?</div><div class="q-opts"><span>① 운전자만</span><span>② 앞좌석만</span><span>③ 전 좌석</span><span>④ 뒷좌석 선택</span></div><div class="q-answer">→ ③ (제50조)</div></div>
-
-<div class="q-item"><div class="q-num">Q20</div><div class="q-text">고속도로 고장 시 삼각 경고판 거리?</div><div class="q-opts"><span>① 50m</span><span>② 100m</span><span>③ 150m</span><span>④ 200m</span></div><div class="q-answer">→ ② (제66조)</div></div>
-
-<div class="q-item"><div class="q-num">Q21</div><div class="q-text">앞지르기는 앞차의 어느 쪽?</div><div class="q-opts"><span>① 좌측</span><span>② 우측</span><span>③ 어느 쪽이든</span><span>④ 상황에 따라</span></div><div class="q-answer">→ ① (제21조)</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🖼️ 일러스트형·사진형 대비 (Q22~Q34)</h3>
-
-<div class="q-item"><div class="q-num">Q22</div><div class="q-text">녹색 등화에서 할 수 있는 것?</div><div class="q-opts"><span>① 직진 또는 우회전</span><span>② 좌회전</span><span>③ 유턴</span><span>④ 모든 방향</span></div><div class="q-answer">→ ①</div></div>
-
-<div class="q-item"><div class="q-num">Q23</div><div class="q-text">적색 등화에서 우회전?</div><div class="q-opts"><span>① 그대로 통과</span><span>② 일시정지 후 가능</span><span>③ 절대 불가</span><span>④ 서행 통과</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q24</div><div class="q-text">우회전 삼색등 적색 시 우회전?</div><div class="q-opts"><span>① 가능</span><span>② 일시정지 후 가능</span><span>③ 서행 후 가능</span><span>④ 불가</span></div><div class="q-answer">→ ④ ([별표2] 비고 제3호)</div></div>
-
-<div class="q-item"><div class="q-num">Q25</div><div class="q-text">황색 점멸등?</div><div class="q-opts"><span>① 일시정지 후 진행</span><span>② 주의하면서 진행</span><span>③ 정지</span><span>④ 빨리 통과</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q26</div><div class="q-text">적색 점멸등?</div><div class="q-opts"><span>① 주의하면서 진행</span><span>② 일시정지 후 진행</span><span>③ 정지</span><span>④ 서행</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q27</div><div class="q-text">보행자 신호 녹색 점멸 시?</div><div class="q-opts"><span>① 빨리 횡단 시작</span><span>② 시작 금지, 횡단 중이면 신속 완료</span><span>③ 그 자리 정지</span><span>④ 뛰어서 건넘</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q28</div><div class="q-text">노란 삼각형 안전표지?</div><div class="q-opts"><span>① 금지</span><span>② 방향 지시</span><span>③ 위험 주의</span><span>④ 속도 제한</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q29</div><div class="q-text">빨간 테두리 원형 안전표지?</div><div class="q-opts"><span>① 주의</span><span>② 규제(금지·제한)</span><span>③ 지시</span><span>④ 보조</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q30</div><div class="q-text">파란 원형 안전표지?</div><div class="q-opts"><span>① 주의</span><span>② 규제</span><span>③ 지시(방향·방법)</span><span>④ 보조</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q31</div><div class="q-text">중앙선 색상?</div><div class="q-opts"><span>① 백색</span><span>② 황색</span><span>③ 적색</span><span>④ 청색</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q32</div><div class="q-text">백색 점선?</div><div class="q-opts"><span>① 차로변경 가능</span><span>② 차로변경 금지</span><span>③ 중앙선</span><span>④ 정지선</span></div><div class="q-answer">→ ①</div></div>
-
-<div class="q-item"><div class="q-num">Q33</div><div class="q-text">백색 실선?</div><div class="q-opts"><span>① 차로변경 가능</span><span>② 차로변경 제한</span><span>③ 중앙선</span><span>④ 횡단보도</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q34</div><div class="q-text">황색 실선 중앙선?</div><div class="q-opts"><span>① 앞지르기 가능</span><span>② 넘어가면 안 됨</span><span>③ 차로변경 가능</span><span>④ 서행 구간</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🚸 안전표지형 대비 (Q35~Q39)</h3>
-
-<div class="q-item"><div class="q-num">Q35</div><div class="q-text">"주차금지" 표지에서 5분 정차?</div><div class="q-opts"><span>① 위반</span><span>② 허용</span><span>③ 벌금</span><span>④ 10분까지 가능</span></div><div class="q-answer">→ ② (주차금지 ≠ 정차금지)</div></div>
-
-<div class="q-item"><div class="q-num">Q36</div><div class="q-text">"주·정차 금지" 표지에서 잠깐 정차?</div><div class="q-opts"><span>① 허용</span><span>② 3분 이내 가능</span><span>③ 위반</span><span>④ 탑승자 있으면 가능</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q37</div><div class="q-text">"속도제한 50" 도로에서?</div><div class="q-opts"><span>① 50 이상</span><span>② 50 이하</span><span>③ 정확히 50</span><span>④ 60 이하</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q38</div><div class="q-text">"앞지르기 금지" 구간에서?</div><div class="q-opts"><span>① 허용</span><span>② 서행하면 가능</span><span>③ 위반</span><span>④ 대형차만 금지</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q39</div><div class="q-text">"일방통행" 도로에서 반대 방향?</div><div class="q-opts"><span>① 허용</span><span>② 서행하면 가능</span><span>③ 위반</span><span>④ 야간에만 가능</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🎬 종합 대비 (Q40~Q50)</h3>
-
-<div class="q-item"><div class="q-num">Q40</div><div class="q-text">고속도로 최고 속도? (편도 2차로+)</div><div class="q-opts"><span>① 80km/h</span><span>② 100km/h</span><span>③ 100~120km/h</span><span>④ 130km/h</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q41</div><div class="q-text">방향지시등의 올바른 용어?</div><div class="q-opts"><span>① 깜빡이</span><span>② 턴시그널</span><span>③ 방향지시등</span><span>④ 방향등</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q42</div><div class="q-text">"차로변경"의 올바른 표현?</div><div class="q-opts"><span>① 차선변경</span><span>② 차로변경</span><span>③ 레인체인지</span><span>④ 차선이동</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q43</div><div class="q-text">버스 정류소 주·정차 금지 거리?</div><div class="q-opts"><span>① 3m</span><span>② 5m</span><span>③ 10m</span><span>④ 15m</span></div><div class="q-answer">→ ③ (제32조)</div></div>
-
-<div class="q-item"><div class="q-num">Q44</div><div class="q-text">넓은 도로 vs 좁은 도로 교차 시?</div><div class="q-opts"><span>① 좁은 도로 우선</span><span>② 넓은 도로 우선</span><span>③ 먼저 온 차</span><span>④ 왼쪽 차</span></div><div class="q-answer">→ ② (제26조 제2항)</div></div>
-
-<div class="q-item"><div class="q-num">Q45</div><div class="q-text">학과시험 문항 수와 시간?</div><div class="q-opts"><span>① 50문항/50분</span><span>② 40문항/50분</span><span>③ 40문항/40분</span><span>④ 30문항/30분</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q46</div><div class="q-text">1종 보통 합격 기준?</div><div class="q-opts"><span>① 60점</span><span>② 70점</span><span>③ 80점</span><span>④ 90점</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q47</div><div class="q-text">2종 보통 합격 기준?</div><div class="q-opts"><span>① 50점</span><span>② 60점</span><span>③ 70점</span><span>④ 80점</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q48</div><div class="q-text">적색 등화 우회전 조건?</div><div class="q-opts"><span>① 서행하면 가능</span><span>② 보행자 없으면 바로 통과</span><span>③ 일시정지 후 다른 차 방해 없이</span><span>④ 언제든 가능</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q49</div><div class="q-text">경찰보조자가 아닌 사람?</div><div class="q-opts"><span>① 모범운전자</span><span>② 군사경찰</span><span>③ 소방공무원</span><span>④ 공사장 자원봉사자</span></div><div class="q-answer">→ ④ (시행령 제6조)</div></div>
-
-<div class="q-item"><div class="q-num">Q50</div><div class="q-text">도로주행시험 응시 가능 언어?</div><div class="q-opts"><span>① 4개 모두</span><span>② 한국어만</span><span>③ 한국어·영어만</span><span>④ 한국어·영어·중국어</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-<!-- 문제은행 배너 (마지막에만) -->
-<a href="https://evergreenedu-collab.github.io/quiz/" target="_blank" class="quiz-banner" style="margin-top:36px;">
-  <div class="qb-icon">🏆</div>
-  <div class="qb-text">
-    <div class="qb-title">문제은행 980문제 전체 풀어보기</div>
-    <div class="qb-desc">한국어 · English · 中文 · Tiếng Việt 4개 언어 지원<br>문장형·일러스트형·사진형·안전표지형·동영상형 5가지 유형 필터 제공</div>
-  </div>
-  <div class="qb-btn">문제은행 바로가기 →</div>
-</a>
-
-<div style="text-align:center;padding:40px 0 20px;color:var(--gray);font-size:11px;line-height:1.8;">
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <h1>🚗 외국인 운전면허 학과시험 교재</h1>
   <p>한국도로교통공단(KoRoad) 교육본부</p>
-  <p>본 교재는 도로교통법·시행령·시행규칙 및 2024년 도로교통법 해설집을 근거로 작성되었습니다.</p>
-  <p>© 2026 외국인 운전면허 취득 AI튜터 프로젝트</p>
 </div>
 
+<!-- ===== NAV ===== -->
+<div class="nav-tabs">
+  <a href="#ch1">1장</a>
+  <a href="#ch2" class="active">2장</a>
+  <a href="#ch3">3장</a>
+  <a href="#ch4">4장</a>
+  <a href="#ch5">5장</a>
+  <a href="#ch6">6장</a>
+  <a href="#ch7">7장</a>
+  <a href="#ch8">8장</a>
+  <a href="#ch9">9장</a>
+  <a href="#ch10">10장</a>
 </div>
+
+<div class="content">
+
+<!-- ============================================================ -->
+<!-- CHAPTER 01 — 학과시험 안내와 면허 제도 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch1">
+  <span class="ch-num">CHAPTER 01</span>
+  <h2>학과시험 안내와 면허 제도</h2>
+  <p class="ch-desc">운전면허의 종류, 외국 면허 교환, 시험 구성·비용·합격 기준</p>
+  <p class="ch-stars">★ 시험 전 반드시 이해해야 할 기본</p>
+</div>
+
+<!-- 1-1 면허 종류 -->
+<div class="section" id="s1-1">
+  <h3>1-1. 운전면허의 종류 (도로교통법 제80조)</h3>
+  <p>한국의 운전면허는 크게 <strong>제1종·제2종·연습면허</strong>로 구분되며, 면허 종류에 따라 운전할 수 있는 차량이 다릅니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>면허 종류</th><th>세부 구분</th><th>운전 가능 차량</th></tr>
+      <tr>
+        <td rowspan="4"><strong>제1종</strong><br>(업무용·대형)</td>
+        <td>대형</td>
+        <td>승용차, 승합차, 화물차(적재중량 제한 없음), 건설기계 일부, 특수차(대형견인·구난 제외)</td>
+      </tr>
+      <tr>
+        <td>보통</td>
+        <td>승용차, 승차정원 15인 이하 승합차, 적재중량 12톤 미만 화물차, 10톤 미만 특수차</td>
+      </tr>
+      <tr>
+        <td>소형</td>
+        <td>3륜 화물차, 3륜 승용차</td>
+      </tr>
+      <tr>
+        <td>특수</td>
+        <td>대형견인차, 소형견인차, 구난차</td>
+      </tr>
+      <tr>
+        <td rowspan="3"><strong>제2종</strong><br>(자가용)</td>
+        <td>보통</td>
+        <td>승용차, 승차정원 10인 이하 승합차, 적재중량 4톤 이하 화물차</td>
+      </tr>
+      <tr>
+        <td>소형</td>
+        <td>이륜차 중 배기량 125cc 초과</td>
+      </tr>
+      <tr>
+        <td>원동기장치자전거</td>
+        <td>125cc 이하 이륜차, 전동킥보드(PM) 등</td>
+      </tr>
+      <tr>
+        <td><strong>연습면허</strong></td>
+        <td>1종·2종 보통</td>
+        <td>도로주행시험 응시를 위한 임시면허 (1년 유효)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 1종 vs 2종, 어느 쪽을 받아야 할까?</div>
+    <strong>자가용 승용차만 운전</strong>할 거라면 <strong>2종 보통</strong>으로 충분합니다. 시험이 상대적으로 쉽고 비용도 동일합니다.<br>
+    <strong>화물차·승합차(11~15인승)·업무용</strong>을 운전할 필요가 있으면 <strong>1종 보통</strong>을 추천합니다.<br>
+    ⚠️ 2종 면허로는 11인승 이상 승합차(카니발 11인승 포함)를 운전할 수 없습니다.
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 자동(오토) vs 수동(스틱)</div>
+    한국 면허는 <strong>자동변속기 한정(AT) 면허</strong>와 <strong>일반(수동 포함) 면허</strong>로 나뉩니다.<br>
+    • AT 면허: 자동변속기 차량만 운전 가능. 시험이 더 쉽고 대부분의 외국인이 선택.<br>
+    • 일반 면허: 수동·자동 모두 운전 가능.<br>
+    본국에서 수동 면허가 있다면 한국에서도 일반 면허를 받는 것이 유리합니다.
+  </div>
+</div>
+
+<!-- 1-2 외국 면허 교환 -->
+<div class="section" id="s1-2">
+  <h3>1-2. 외국 면허 교환(인정) 제도</h3>
+  <p>본국에서 이미 운전면허를 소지한 외국인은 일정 조건을 충족하면 <strong>학과·기능·도로주행시험 없이</strong> 한국 면허로 교환할 수 있습니다 (도로교통법 제84조).</p>
+
+  <h4>교환 가능 조건</h4>
+  <ol>
+    <li>본국에서 발급한 <strong>유효한 운전면허증</strong> 소지 (한국식 2종 보통 이상 상당)</li>
+    <li>한국과 <strong>면허 인정 협약을 체결</strong>한 국가의 면허 (국가·주별로 다름)</li>
+    <li>외국인등록(F/E/D 비자 등) 또는 재외국민 거소 신고</li>
+    <li>본국에서 <strong>실제로 거주하며 면허를 취득</strong>했음을 증명 (여권 출입국 기록 등)</li>
+  </ol>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 국가별 교환 범위가 다릅니다</div>
+    • <strong>전면 인정국(학과·기능·도로주행 면제)</strong>: 일본, 독일, 프랑스, 영국, 호주 등 대부분의 OECD 국가, 대만 — <strong>2종 보통</strong>으로 바로 교환<br>
+    • <strong>부분 인정국(학과만 치르면 됨)</strong>: 국가별로 다름. 공단에 문의 필요<br>
+    • <strong>미인정국</strong>: 학과·기능·도로주행시험을 모두 처음부터 응시해야 함<br><br>
+    ※ <strong>미국·중국·베트남</strong>의 경우 주(州)·성(省)별로 협약 여부가 달라 반드시 확인이 필요합니다.
+  </div>
+
+  <h4>교환 시 제출 서류</h4>
+  <ul>
+    <li>외국 운전면허증 원본 + 한글 번역 공증본 (또는 아포스티유)</li>
+    <li>여권 원본 및 사본 (출입국 기록 포함)</li>
+    <li>외국인등록증</li>
+    <li>증명사진 (3.5×4.5cm) 2매</li>
+    <li>수수료 약 <strong>8,000원</strong></li>
+    <li>시력·신체검사 (운전면허시험장 내 검사실)</li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 교환 후 유의사항</div>
+    외국 면허를 교환하면 원본 면허증은 <strong>공단에 반납</strong>되며, 본국 귀국 후 다시 돌려받을 수 있습니다. 교환으로 발급된 한국 면허는 국내에서만 유효하며, 국제운전면허증(IDP) 발급을 원하면 별도 신청해야 합니다.
+  </div>
+</div>
+
+<!-- 1-3 학과시험 구성 -->
+<div class="section" id="s1-3">
+  <h3>1-3. 학과시험 구성과 합격 기준</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>구분</th><th>제1종 보통</th><th>제2종 보통</th></tr>
+      <tr><td>문제 수</td><td>40문제</td><td>40문제</td></tr>
+      <tr><td>시험 시간</td><td>40분</td><td>40분</td></tr>
+      <tr><td>출제 형식</td><td colspan="2">4지선다(단답) + 5지선다(안전표지·동영상) 혼합</td></tr>
+      <tr><td>합격 기준</td><td><strong>70점 이상</strong></td><td><strong>60점 이상</strong></td></tr>
+      <tr><td>언어 지원</td><td colspan="2">한국어·영어·중국어·베트남어·일본어·태국어·캄보디아어·러시아어 등</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 학과시험 출제 영역(980문제 문제은행 기준)</div>
+    ① 운전면허 제도·관리(약 5%)<br>
+    ② 교통법규·벌칙(약 30%) — <strong>최다 출제</strong><br>
+    ③ 안전운전(약 20%)<br>
+    ④ 자동차 관리·구조(약 5%)<br>
+    ⑤ 교통사고 처리·응급처치(약 10%)<br>
+    ⑥ 신호·표지·노면표시(약 15%) — 2장 학습 필수<br>
+    ⑦ 교차로 통행·양보(약 10%) — 3장 학습 필수<br>
+    ⑧ 안전표지·동영상 문제(약 5%)
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 번역 품질</div>
+    학과시험 번역본(영어·중국어·베트남어 등)은 <strong>한국 법률 용어</strong>를 직역한 경우가 많아 어색할 수 있습니다. 애매하면 한국어 원문을 함께 확인하세요. 특히 <strong>"서행(slow down)", "일시정지(temporary stop)", "양보(yield)"</strong> 같은 용어는 정확한 법적 의미를 이해해야 오답을 피할 수 있습니다.
+  </div>
+</div>
+
+<!-- 1-4 면허 취득 단계와 비용 -->
+<div class="section" id="s1-4">
+  <h3>1-4. 면허 취득 단계와 비용</h3>
+
+  <div class="flow">
+    <div class="flow-step step-green">① 교통안전교육</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step">② 신체검사</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">③ 학과시험</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">④ 기능시험</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">⑤ 연습면허</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-red">⑥ 도로주행시험</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">⑦ 면허증 발급</div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>단계</th><th>내용</th><th>수수료(원)</th></tr>
+      <tr><td>교통안전교육</td><td>신규 응시자 의무 1시간 (현장 또는 온라인)</td><td>무료</td></tr>
+      <tr><td>신체검사</td><td>시력·색맹·청력 등 (시험장 내 검사실)</td><td>약 6,000</td></tr>
+      <tr><td><strong>학과시험</strong></td><td>40문제, 70점(1종)/60점(2종)</td><td><strong>10,000</strong></td></tr>
+      <tr><td><strong>기능시험</strong></td><td>시험장 내 코스 주행 (T주차·경사로 등)</td><td><strong>44,000</strong></td></tr>
+      <tr><td><strong>도로주행시험</strong></td><td>실제 도로에서 약 5km 주행</td><td><strong>25,000</strong></td></tr>
+      <tr><td><strong>면허증 발급</strong></td><td>모바일 면허증 포함</td><td><strong>8,000</strong></td></tr>
+      <tr><td colspan="2" style="text-align:right;"><strong>총 합계(재시험 없을 때)</strong></td><td><strong>약 93,000</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 재시험 비용</div>
+    불합격 시 각 단계의 시험은 <strong>재응시 수수료</strong>를 다시 내야 합니다. 예를 들어 도로주행을 3번 떨어지면 도로주행 수수료 25,000원 × 3 = 75,000원이 추가로 발생합니다. 한 번에 합격하는 것이 비용·시간 모두 절약입니다.
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 도로주행시험 언어</div>
+    기능시험은 <strong>자동 음성 시스템</strong>으로 한국어·영어·중국어·베트남어 등 다국어 지원됩니다. 그러나 <strong>도로주행시험은 한국어와 영어만</strong> 가능합니다(일부 시험장은 영어 시험관 예약 필요). 베트남·중국 등 모국어로 응시할 수 없으니 미리 기본적인 한국어 운전 용어("직진·좌회전·우회전·정지·서행")를 익혀두세요.
+  </div>
+</div>
+
+<!-- 1-5 면허 관리·갱신 -->
+<div class="section" id="s1-5">
+  <h3>1-5. 면허 관리와 갱신 (제87조)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>구분</th><th>1종 보통</th><th>2종 보통</th></tr>
+      <tr><td>최초 갱신 기간</td><td>취득 후 10년</td><td>취득 후 10년</td></tr>
+      <tr><td>이후 갱신 주기</td><td><strong>10년마다</strong></td><td><strong>10년마다</strong></td></tr>
+      <tr><td>적성검사</td><td>갱신 시 신체검사 포함</td><td>만 75세부터 5년마다</td></tr>
+      <tr><td>65세~74세</td><td colspan="2">갱신 주기 <strong>5년</strong>으로 단축</td></tr>
+      <tr><td>75세 이상</td><td colspan="2">갱신 주기 <strong>3년</strong>, 인지검사·교육 의무</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 갱신 기간 도과 시</div>
+    갱신 기간이 지나면 <strong>과태료(20,000원)</strong>가 부과되고, 1년이 더 지나면 면허가 <strong>취소</strong>됩니다. 취소된 면허는 학과·기능·도로주행을 다시 응시해야 합니다.
+  </div>
+</div>
+
+<!-- 1-6 연습문제 -->
+<div class="section" id="s1-6">
+  <h3>1-6. 연습 문제</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>2종 보통 학과시험의 합격 기준 점수는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 50점</label>
+      <label class="quiz-opt" data-idx="2">② 60점</label>
+      <label class="quiz-opt" data-idx="3">③ 70점</label>
+      <label class="quiz-opt" data-idx="4">④ 80점</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 2종 보통은 60점 이상, 1종 보통은 70점 이상이 합격.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>11인승 카니발을 운전할 수 있는 면허는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 2종 보통</label>
+      <label class="quiz-opt" data-idx="2">② 2종 소형</label>
+      <label class="quiz-opt" data-idx="3">③ 1종 보통 이상</label>
+      <label class="quiz-opt" data-idx="4">④ 원동기장치자전거</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 2종 보통은 10인승까지만 가능. 11인승 이상 승합차는 1종 보통 이상이 필요.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>도로주행시험을 치르기 위해 반드시 먼저 받아야 하는 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 국제운전면허증</label>
+      <label class="quiz-opt" data-idx="2">② 연습면허</label>
+      <label class="quiz-opt" data-idx="3">③ 정식 면허증</label>
+      <label class="quiz-opt" data-idx="4">④ 임시운전증명서</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 학과·기능 시험 합격 후 연습면허를 받아야 도로주행시험에 응시할 수 있다.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>학과시험 응시료는 얼마인가?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 5,000원</label>
+      <label class="quiz-opt" data-idx="2">② 10,000원</label>
+      <label class="quiz-opt" data-idx="3">③ 25,000원</label>
+      <label class="quiz-opt" data-idx="4">④ 44,000원</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 학과 1만원, 기능 4.4만원, 도로주행 2.5만원, 발급 0.8만원.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>외국 면허를 한국 면허로 교환할 때 필요 없는 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 외국 면허증 원본 + 번역 공증</label>
+      <label class="quiz-opt" data-idx="2">② 여권 및 출입국 기록</label>
+      <label class="quiz-opt" data-idx="3">③ 외국인등록증</label>
+      <label class="quiz-opt" data-idx="4">④ 본국 경찰서 발급 무사고 증명서</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 무사고 증명서는 필수 서류가 아님. 단, 본국에서 실제 거주·취득했다는 사실을 여권 출입국 기록으로 확인한다.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>만 75세 이상 운전자의 면허 갱신 주기는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10년</label>
+      <label class="quiz-opt" data-idx="2">② 5년</label>
+      <label class="quiz-opt" data-idx="3">③ 3년</label>
+      <label class="quiz-opt" data-idx="4">④ 1년</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 75세 이상은 3년마다 갱신 + 인지검사·교통안전교육 의무.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 02 — 신호등과 안전표지 완전 정복 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch2">
+  <span class="ch-num">CHAPTER 02</span>
+  <h2>신호등과 안전표지 완전 정복</h2>
+  <p class="ch-desc">차량·보행자 신호, 점멸등, 안전표지 4종, 노면표시 — 학과시험 약 10~12문항 출제</p>
+  <p class="ch-stars">★★★ 최다 출제 영역</p>
+</div>
+
+<!-- 2-1 신호 우선순위 -->
+<div class="section" id="s2-1">
+  <h3>2-1. 신호의 핵심 원칙 — 우선순위</h3>
+  <p>도로교통법 <strong>제5조</strong>에 따라 모든 도로 이용자는 교통안전시설의 신호를 따라야 합니다. <strong>신호위반은 12대 중과실</strong>에 해당하여 보험 가입 여부와 관계없이 형사 처벌을 받을 수 있습니다.</p>
+
+  <div class="flow">
+    <div class="flow-step step-red">① 수신호 (최우선)</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">② 신호기</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">③ 안전표지</div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 시험 핵심 포인트</div>
+    <strong>Q. 신호기 신호와 경찰공무원 수신호가 다를 때?</strong><br>
+    → <strong>수신호가 우선</strong> (제5조 제2항)<br><br>
+    <strong>Q. 경찰보조자의 범위는?</strong> (시행령 제6조)<br>
+    ✅ 경찰보조자: 모범운전자, 군사경찰, 소방공무원<br>
+    ❌ 경찰보조자 아님: 공사장 자원봉사자, 고속도로 안전순찰원, 주차 안내원
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의</div>
+    많은 나라에서는 교통경찰의 수신호가 비상 시에만 사용됩니다. 한국에서는 <strong>출퇴근 시간대에도</strong> 경찰공무원이 수신호로 교통을 정리하는 경우가 흔합니다. 이때 신호등과 수신호가 다르더라도 <strong>반드시 수신호를 따르세요</strong>.
+  </div>
+</div>
+
+<!-- 2-2 차량 신호등 -->
+<div class="section" id="s2-2">
+  <h3>2-2. 차량 신호등 (시행규칙 [별표2])</h3>
+  <p>한국의 차량 신호등은 <strong>세로 배열</strong>이 기본입니다. 위에서부터 적색 → 황색 → 녹색 순서이며, 좌회전 화살표 등이 추가되기도 합니다.</p>
+
+  <div class="signal-grid">
+    <div class="signal-card sig-green">
+      <div class="signal-icon"></div>
+      <div class="signal-name">녹색 등화</div>
+      <div class="signal-desc"><strong>직진 또는 우회전</strong> 가능<br>비보호좌회전 표지 있으면 좌회전도 가능</div>
+    </div>
+    <div class="signal-card sig-yellow">
+      <div class="signal-icon"></div>
+      <div class="signal-name">황색 등화</div>
+      <div class="signal-desc"><strong>정지선 직전 정지</strong><br>이미 진입했으면 신속 통과</div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-icon"></div>
+      <div class="signal-name">적색 등화</div>
+      <div class="signal-desc"><strong>정지</strong><br>일시정지 후 우회전 가능 (조건부)</div>
+    </div>
+    <div class="signal-card sig-green">
+      <div class="signal-icon signal-arrow"><svg viewBox="0 0 56 56" width="56" height="56"><circle cx="28" cy="28" r="25" fill="none" stroke="#22c55e" stroke-width="4"/><path d="M40 28H18M18 28L26 20M18 28L26 36" fill="none" stroke="#22c55e" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-name">녹색 화살표</div>
+      <div class="signal-desc"><strong>화살표 방향만</strong> 진행 가능<br>다른 방향 진행 불가</div>
+    </div>
+  </div>
+
+  <!-- 녹색 등화 상세 -->
+  <h4>🟢 녹색 등화의 의미 — 좌회전은 안 됩니다!</h4>
+  <p>녹색 등화는 <strong>"직진 또는 우회전"</strong>을 의미합니다. 많은 외국인이 녹색이면 모든 방향으로 갈 수 있다고 착각하지만, <strong>비보호좌회전 표지가 없는 교차로에서 녹색 등화 시 좌회전하면 신호위반</strong>입니다.</p>
+
+  <div class="box box-law">
+    <div class="box-title">📜 대법원 판례 (2004도5848)</div>
+    녹색·황색·적색의 삼색등 신호기가 설치되어 있고 비보호좌회전이나 유턴 표시가 없는 교차로에서 차마의 <strong>좌회전 또는 유턴은 허용되지 않는다</strong>.
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 다른 나라와의 차이</div>
+    <strong>미국·캐나다:</strong> 녹색 등화에서 좌회전 가능 (대향차 양보 후)<br>
+    <strong>중국:</strong> 녹색 등화에서 좌회전 가능<br>
+    <strong>유럽·일본:</strong> 좌회전 화살표 신호가 있을 때만 좌회전<br>
+    <strong>한국:</strong> 좌회전 화살표 또는 비보호좌회전 표지가 있을 때만 가능
+  </div>
+
+  <!-- 비보호좌회전 -->
+  <h4>🟢 비보호좌회전이란?</h4>
+  <p>"비보호"란 <strong>신호에 의해 보호받지 못한다</strong>는 뜻입니다. 비보호좌회전 표지가 있는 교차로에서는 <strong>직진 신호(녹색)</strong>일 때, <strong>맞은편 직진 차량이 없으면</strong> 좌회전할 수 있습니다.</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 절대 주의</div>
+    • 비보호좌회전은 <strong>직진 신호(녹색)일 때만</strong> 가능합니다<br>
+    • <strong>적색 신호에서 비보호좌회전 = 신호위반</strong> (범칙금 6만원, 벌점 15점)<br>
+    • 사고 시 비보호좌회전 차량의 과실이 <strong>80% 이상</strong>
+  </div>
+
+  <!-- 황색 등화 상세 -->
+  <h4>🟡 황색 등화 — "멈춰야 할까, 가야 할까?"</h4>
+  <p><strong>원칙: 정지선 직전에서 정지</strong>해야 합니다. 다만, 정지선에 너무 가까워 안전하게 멈출 수 없을 때(이미 교차로에 진입한 경우)에는 <strong>신속히 통과</strong>합니다.</p>
+  <p>⚠️ 황색 등화에서 <strong>가속하여 무리하게 진입하면 신호위반</strong>입니다. "노란불이니까 빨리 지나가자"는 <strong>위험한 착각</strong>입니다.</p>
+
+  <!-- 적색 등화 우회전 상세 -->
+  <h4 id="rtor">🔴 적색 등화에서의 우회전 (RTOR) — 가장 중요!</h4>
+  <p>한국은 적색 등화에서 <strong>우회전이 허용</strong>되는 나라입니다 (Right Turn On Red). 하지만 무조건 가능한 것이 아니라 <strong>엄격한 조건</strong>이 있습니다.</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>반드시 일시정지</strong> — 정지선·횡단보도·교차로 직전에서 바퀴가 완전히 멈춰야 합니다 (속도계 0km/h)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>보행자 확인</strong> — 횡단보도에 보행자가 <strong>있거나 건너려고 하면</strong> 보행자가 완전히 건넌 후까지 대기</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>다른 차 확인</strong> — 신호에 따라 진행하는 다른 차마의 교통을 <strong>방해하지 않아야</strong> 합니다</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>서행하며 우회전</strong> — 모든 조건이 충족되면 서행하면서 우회전</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 우회전 불가 상황</div>
+    <strong>① 우회전 삼색등 적색</strong> — 우회전 전용 신호등이 설치된 곳에서 적색이면 <strong>절대 우회전 불가!</strong> ([별표2] 비고 제3호)<br>
+    <strong>② "우회전 금지" 안전표지</strong> — 표지가 있으면 어떤 신호든 우회전 불가<br>
+    <strong>③ 직진 차량이 우회전을 막고 있을 때</strong> — 신호 대기 중인 차량에게 경음기를 울리면 범칙금 4만원
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 적색 우회전 — 국가별 비교</div>
+    <div class="table-wrap">
+      <table class="compare-table">
+        <tr><th>국가</th><th>적색 시 우회전</th><th>비고</th></tr>
+        <tr><td><span class="flag">🇰🇷</span> 한국</td><td>✅ 가능 (일시정지 후)</td><td>2023년부터 정지 의무 강화</td></tr>
+        <tr><td><span class="flag">🇺🇸</span> 미국</td><td>✅ 가능 (대부분 주)</td><td>뉴욕시 등 일부 금지</td></tr>
+        <tr><td><span class="flag">🇨🇳</span> 중국</td><td>✅ 가능</td><td>별도 표지 없으면 허용</td></tr>
+        <tr><td><span class="flag">🇻🇳</span> 베트남</td><td>⚠️ 표지에 따라</td><td>우회전 허용 표지 있을 때만</td></tr>
+        <tr><td><span class="flag">🇯🇵</span> 일본</td><td>❌ 원칙 금지</td><td>좌측통행, 좌회전에 해당</td></tr>
+        <tr><td><span class="flag">🇬🇧</span> 영국</td><td>❌ 금지</td><td>좌측통행</td></tr>
+        <tr><td><span class="flag">🇩🇪</span> 독일</td><td>❌ 원칙 금지</td><td>녹색 화살표 표지 있으면 가능</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 실전 시나리오 -->
+  <h4>📍 실전 시나리오로 이해하기</h4>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 시나리오 1: 적색 신호, 횡단보도에 보행자 없음</div>
+    <div class="scenario-body">
+      <span class="do">✅ 올바른 행동:</span> 정지선에서 일시정지 → 좌우 보행자 없음 확인 → 다른 차 교통 방해 없음 확인 → 서행하며 우회전<br>
+      <span class="dont">❌ 잘못된 행동:</span> 멈추지 않고 그대로 우회전 → <strong>신호위반 단속 대상</strong>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 시나리오 2: 녹색 신호, 우회전 후 두 번째 횡단보도에 보행자</div>
+    <div class="scenario-body">
+      <span class="do">✅ 올바른 행동:</span> 첫 번째 횡단보도 서행 통과 → 두 번째 횡단보도 앞에서 <strong>일시정지</strong> → 보행자 횡단 완료 후 진행<br>
+      <span class="dont">❌ 잘못된 행동:</span> "녹색이니까 괜찮겠지" → 보행자 보호 의무 위반 (사고 시 <strong>100% 과실</strong>)
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 시나리오 3: 우회전 삼색등이 적색</div>
+    <div class="scenario-body">
+      <span class="do">✅ 올바른 행동:</span> 정지선에서 정지하고 <strong>녹색 화살표가 켜질 때까지 대기</strong><br>
+      <span class="dont">❌ 잘못된 행동:</span> "보행자도 없고 차도 없으니까…" → <strong>절대 안 됨! 신호위반</strong>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 시험 빈출 — 반드시 기억!</div>
+    <strong>1.</strong> 적색 시 우회전 = 반드시 <strong>일시정지 후</strong> 가능<br>
+    <strong>2.</strong> 우회전 삼색등 적색 = <strong>우회전 절대 불가</strong><br>
+    <strong>3.</strong> 보행자가 없어도 보행신호 녹색이면? → 2022년 개정으로 <strong>통과 가능</strong> (단, 보행자가 건너려 하면 일시정지)
+  </div>
+</div>
+
+<!-- 2-3 점멸 등화 -->
+<div class="section" id="s2-3">
+  <h3>2-3. 점멸 등화</h3>
+  <p>점멸(깜빡이는) 등화는 주로 <strong>교통량이 적은 시간대</strong>(심야·새벽)나 <strong>보조 도로</strong>에서 사용됩니다.</p>
+
+  <div class="signal-grid">
+    <div class="signal-card sig-yellow">
+      <div class="signal-icon" style="animation: blink 1s infinite;"></div>
+      <div class="signal-name">황색 점멸</div>
+      <div class="signal-desc"><strong>주의하면서 진행</strong><br>"노란 깜빡 = 조심 GO"<br>주로 주도로(넓은 도로)에 설치</div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-icon" style="animation: blink 1s infinite;"></div>
+      <div class="signal-name">적색 점멸</div>
+      <div class="signal-desc"><strong>일시정지 후 진행</strong><br>"빨간 깜빡 = 멈추고 GO"<br>주로 보조 도로(좁은 도로)에 설치</div>
+    </div>
+  </div>
+  <style>@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }</style>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 기억법</div>
+    황색 점멸 = <strong>"주의"</strong> 하면서 서행 통과 (멈추지 않아도 됨)<br>
+    적색 점멸 = <strong>"정지"</strong> 후 안전 확인하고 진행 (반드시 멈춤)<br><br>
+    ⚠️ 교차로에서 한쪽은 황색 점멸, 다른 쪽은 적색 점멸인 경우가 많습니다. <strong>적색 점멸 쪽이 양보</strong>합니다.
+  </div>
+</div>
+
+<!-- 2-4 보행자 신호 -->
+<div class="section" id="s2-4">
+  <h3>2-4. 보행자 신호등</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>등화</th><th>의미</th><th>보행자 행동</th></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 녹색</td><td>횡단 가능</td><td>횡단보도를 건널 수 있음</td></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 녹색 점멸</td><td><strong>횡단 시작 금지</strong></td><td>건너기 <strong>시작하면 안 됨</strong>. 건너는 중이면 빨리 완료 또는 보도 복귀</td></tr>
+      <tr><td style="color:#ef4444;font-weight:700;">🔴 적색</td><td>횡단 금지</td><td>건너면 안 됨</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인이 가장 많이 틀리는 문제</div>
+    <strong>"녹색 점멸이면 아직 녹색이니까 빨리 건너면 되나요?"</strong><br>
+    → <strong>아닙니다!</strong> 녹색 점멸은 <strong>새로 건너기를 시작하면 안 되는</strong> 신호입니다.<br>
+    이미 건너는 중인 사람은 빨리 건너거나 가까운 보도로 돌아가야 합니다.<br><br>
+    <strong>운전자 관점:</strong> 보행자 신호가 녹색 점멸이라고 해서 바로 출발하면 안 됩니다. 아직 횡단 중인 보행자가 있을 수 있습니다.
+  </div>
+
+  <h4>보행자 신호와 차량의 관계 (2022년 개정 핵심)</h4>
+  <p>2022년 개정으로 <strong>보행자 보호 의무가 대폭 강화</strong>되었습니다:</p>
+  <ul>
+    <li>보행자가 횡단보도를 <strong>"건너려고 하는 때"</strong>(보도에 서 있을 때)에도 운전자는 일시정지해야 합니다</li>
+    <li>어린이 보호구역 내 신호 없는 횡단보도에서는 보행자가 <strong>없더라도 일시정지</strong></li>
+    <li>보행자가 없으면 보행신호가 녹색이어도 <strong>차량은 횡단보도를 통과할 수 있습니다</strong></li>
+  </ul>
+
+  <div class="box box-law">
+    <div class="box-title">📜 핵심 법 조항</div>
+    <strong>제27조 제1항:</strong> 보행자가 횡단보도를 통행하고 있을 때 → 일시정지<br>
+    <strong>제27조 제6항:</strong> 신호기 없는 횡단보도에서 보행자가 횡단하고 있거나 <strong>횡단하려 할 때</strong> → 일시정지<br>
+    위반 시 = <strong>12대 중과실</strong> (형사 처벌)
+  </div>
+</div>
+
+<!-- 2-5 자전거 신호 -->
+<div class="section" id="s2-5">
+  <h3>2-5. 자전거 신호등</h3>
+  <p>자전거도 <strong>차마</strong>에 해당하므로 신호를 따라야 합니다.</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>상황</th><th>따르는 신호</th><th>근거</th></tr>
+      <tr><td>자전거 전용 신호등 있음</td><td><strong>자전거 신호등</strong></td><td>[별표2] 비고 제1호</td></tr>
+      <tr><td>자전거 신호등 없음, 차도 주행</td><td><strong>차량 신호등</strong></td><td>[별표2] 비고 제1호</td></tr>
+      <tr><td>자전거 횡단도, 별도 신호 없음</td><td><strong>보행자 신호등</strong></td><td>[별표2] 비고 제2호</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 2-6 안전표지 -->
+<div class="section" id="s2-6">
+  <h3>2-6. 안전표지 4종류 (시행규칙 [별표6])</h3>
+  <p><strong>안전표지</strong>란 교통안전에 필요한 주의·규제·지시 등을 표시하는 표지판이나 노면 표시입니다 (제2조 제16호). 시험에서는 <strong>모양과 색상만으로 종류를 구별</strong>하는 문제가 출제됩니다.</p>
+
+  <div class="sign-grid">
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <!-- 주의: 적색 테두리 삼각형 + 황색(주황) 내부 -->
+        <polygon points="36,6 66,62 6,62" fill="#fbbf24" stroke="#dc2626" stroke-width="4" stroke-linejoin="round"/>
+        <text x="36" y="48" text-anchor="middle" font-size="14" font-weight="800" fill="#1a1a1a">!</text>
+      </svg>
+      <div class="sign-label">주의표지</div>
+      <div class="sign-sub">황색 삼각형<br>+ 적색 테두리</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <!-- 규제: 백색 원 + 적색 테두리 + 적색 사선(금지) -->
+        <circle cx="36" cy="36" r="28" fill="#fff" stroke="#dc2626" stroke-width="5"/>
+        <line x1="16" y1="16" x2="56" y2="56" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="sign-label">규제표지</div>
+      <div class="sign-sub">백색 원형<br>+ 적색 테두리 + 사선</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <!-- 지시: 청색 원 (꽉 채움) -->
+        <circle cx="36" cy="36" r="30" fill="#2563eb"/>
+      </svg>
+      <div class="sign-label">지시표지</div>
+      <div class="sign-sub">청색 원형·사각<br>+ 백색 기호</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <!-- 보조: 백색 직사각형 + 흑색 테두리 -->
+        <rect x="8" y="16" width="56" height="40" rx="4" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+        <text x="36" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">보조</text>
+      </svg>
+      <div class="sign-label">보조표지</div>
+      <div class="sign-sub">백색 직사각형<br>+ 흑색 문자</div>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 시험 공식 — 3초 판별법</div>
+    <strong>삼각형 + 노란색 → 주의</strong> (위험을 경고)<br>
+    <strong>원형 + 빨간 테두리 → 규제</strong> (금지·제한)<br>
+    <strong>원형·사각 + 파란색 → 지시</strong> (방향·방법 안내)<br>
+    <strong>직사각형 + 흰색 → 보조</strong> (본 표지 보충 설명)<br><br>
+    💡 <strong>"노삼 / 빨원 / 파지 / 흰보"</strong>로 외우세요!
+  </div>
+
+  <h4>자주 출제되는 안전표지</h4>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>종류</th><th>대표 표지</th><th>시험 포인트</th></tr>
+      <tr>
+        <td><strong>주의</strong></td>
+        <td>교차로, 굽은 도로, 미끄러운 도로, 낙석, 어린이 보호, 도로공사</td>
+        <td>"위험하니 조심하세요" = 서행·주의</td>
+      </tr>
+      <tr>
+        <td><strong>규제</strong></td>
+        <td>통행금지, 진입금지, 주·정차금지, 주차금지, 속도제한, 앞지르기금지, 높이제한, 중량제한</td>
+        <td>"하지 마세요" = 위반 시 처벌</td>
+      </tr>
+      <tr>
+        <td><strong>지시</strong></td>
+        <td>직진, 우회전, 좌회전, 자동차전용도로, 횡단보도, 일방통행, 자전거전용, 회전교차로</td>
+        <td>"이렇게 하세요" = 방향·방법 안내</td>
+      </tr>
+      <tr>
+        <td><strong>보조</strong></td>
+        <td>거리표시, 구역표시, 시간제한, 차종제한</td>
+        <td>주의·규제·지시 표지와 함께 설치</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 한국만의 특수한 표지</div>
+    <strong>① 어린이 보호구역 (스쿨존) 표지:</strong> 다른 나라보다 규제가 강력합니다. 30km/h + 사고 시 12대 중과실 + 범칙금 2배<br>
+    <strong>② "서행" 표지:</strong> 한국에서 서행은 "즉시 정지 가능한 느린 속도"로, 구체적 수치가 아닙니다<br>
+    <strong>③ 자동차전용도로 표지:</strong> 자동차전용도로에서는 보행자·자전거·이륜차(125cc 미만) 통행 금지
+  </div>
+</div>
+
+<!-- 2-7 노면표시 -->
+<div class="section" id="s2-7">
+  <h3>2-7. 노면표시 — 중앙선과 차선</h3>
+  <p>도로 바닥에 그려진 선(노면표시)은 <strong>색상과 형태</strong>로 의미가 완전히 달라집니다. 이것은 시험에서 매우 자주 출제됩니다.</p>
+
+  <h4>핵심 구분: 중앙선 = 황색 / 차선 = 백색</h4>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>구분</th><th>색상</th><th>실선</th><th>점선</th></tr>
+      <tr>
+        <td><strong>중앙선</strong><br>(반대 방향 구분)</td>
+        <td style="color:#d97706;font-weight:700;">황색 (노란색)</td>
+        <td>넘기 금지<br><span class="priority priority-high">12대 중과실</span></td>
+        <td>앞지르기 가능<br>(반대편으로 넘어가서)</td>
+      </tr>
+      <tr>
+        <td><strong>차선</strong><br>(같은 방향 차로 구분)</td>
+        <td style="font-weight:700;">백색 (흰색)</td>
+        <td>차로변경 제한</td>
+        <td>차로변경 가능</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 중앙선 침범 = 12대 중과실</div>
+    황색 실선 중앙선을 넘으면 <strong>12대 중과실</strong>로 형사 처벌을 받습니다. 추월하려고 중앙선을 넘는 행위는 매우 위험하고 <strong>중대한 법 위반</strong>입니다.<br><br>
+    <strong>편도 1차로</strong> = 단선 중앙선 (노란 실선 1줄)<br>
+    <strong>편도 2차로 이상</strong> = 복선 중앙선 (노란 실선 2줄)
+  </div>
+
+  <h4>기타 중요한 노면표시</h4>
+  <div class="table-wrap">
+    <table>
+      <tr><th>표시</th><th>의미</th><th>시험 포인트</th></tr>
+      <tr><td>백색 정지선</td><td>신호 대기 위치</td><td>정지선을 넘어서 정지하면 위반</td></tr>
+      <tr><td>백색 지그재그선</td><td>서행 구간</td><td>횡단보도 전방에 주로 설치</td></tr>
+      <tr><td>황색 복선</td><td>주·정차 금지</td><td>도로 가장자리에 노란 이중선</td></tr>
+      <tr><td>황색 단선 (점선)</td><td>주·정차 시간 제한</td><td>탄력적 금지 (시간대에 따라)</td></tr>
+      <tr><td>청색 선</td><td><strong>버스전용차로</strong></td><td>청색 실선으로 구분된 차로는 버스만 통행 가능. 일반 차량 진입 시 범칙금 부과</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 용어 주의!</div>
+    <strong>차로변경(○)</strong> 차선변경(✕) — "차로"는 차가 다니는 길, "차선"은 차로를 구분하는 선<br>
+    <strong>반대편 차로(○)</strong> 반대차선(✕) — 반대 방향의 차로를 말할 때<br>
+    시험에서 이 용어를 혼동하면 오답이 됩니다!
+  </div>
+</div>
+
+<!-- 2-8 가변차로·우회전 전용 신호등 (NEW) -->
+<div class="section" id="s2-8">
+  <h3>2-8. 우회전 전용 신호등과 가변차로 (NEW)</h3>
+  
+  <h4>우회전 전용 신호등 (2023년 도입)</h4>
+  <p>보행자와 우회전 차량 사이의 사고가 많았던 교차로에 <strong>우회전 전용 삼색등</strong>이 설치되고 있습니다. 도로 오른쪽 가장자리에 위치합니다.</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>신호</th><th>의미</th></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 녹색 화살표</td><td>우회전 가능 (보행자 주의)</td></tr>
+      <tr><td style="color:#eab308;font-weight:700;">🟡 황색</td><td>정지 준비</td></tr>
+      <tr><td style="color:#ef4444;font-weight:700;">🔴 적색</td><td><strong>우회전 절대 금지</strong> — 일반 우회전 규칙과 다름!</td></tr>
+    </table>
+  </div>
+
+  <h4>가변차로</h4>
+  <p>출퇴근 시간에 따라 차로의 진행 방향이 바뀌는 도로입니다. 가변차로 표시(전광판)를 반드시 확인해야 합니다.</p>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의</div>
+    한국 도시의 1차로(가장 왼쪽)는 교차로에서 갑자기 <strong>좌회전 전용 차로</strong>로 바뀌는 경우가 매우 많습니다. 직진하려면 2차로 이상에서 주행하는 것이 안전합니다. 도로 바닥의 화살표를 항상 확인하세요.
+  </div>
+</div>
+
+<!-- 2-9 연습문제 (보강) -->
+<div class="section" id="s2-9">
+  <h3>2-9. 연습 문제</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>신호기와 경찰공무원 수신호가 다를 때 따라야 하는 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 신호기</label>
+      <label class="quiz-opt" data-idx="2">② 수신호</label>
+      <label class="quiz-opt" data-idx="3">③ 둘 다 무시</label>
+      <label class="quiz-opt" data-idx="4">④ 자기 판단</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 수신호가 최우선 (제5조 제2항)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>적색 등화에서 우회전하려면 어떻게 해야 하나요?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 그대로 통과</label>
+      <label class="quiz-opt" data-idx="2">② 일시정지 후 안전 확인 후 가능</label>
+      <label class="quiz-opt" data-idx="3">③ 절대 불가</label>
+      <label class="quiz-opt" data-idx="4">④ 서행 통과</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 반드시 일시정지 후, 보행자·다른 차량 확인 후 우회전 가능. 단, 우회전 삼색등 적색이면 불가!</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>우회전 삼색등(우회전 전용 신호등)이 적색일 때 우회전은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 가능</label>
+      <label class="quiz-opt" data-idx="2">② 일시정지 후 가능</label>
+      <label class="quiz-opt" data-idx="3">③ 서행 후 가능</label>
+      <label class="quiz-opt" data-idx="4">④ 불가</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 우회전 삼색등 적색이면 우회전 절대 불가! ([별표2] 비고 제3호)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>보행자 녹색 점멸 신호에서 보행자의 올바른 행동은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 빨리 횡단 시작</label>
+      <label class="quiz-opt" data-idx="2">② 횡단 시작 금지, 횡단 중이면 신속 완료</label>
+      <label class="quiz-opt" data-idx="3">③ 그 자리에 정지</label>
+      <label class="quiz-opt" data-idx="4">④ 뛰어서 건넘</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 녹색 점멸 = 새로 건너기 시작 금지. 건너는 중이면 빨리 완료 또는 보도 복귀.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>노란 삼각형 안전표지의 종류는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 규제표지</label>
+      <label class="quiz-opt" data-idx="2">② 지시표지</label>
+      <label class="quiz-opt" data-idx="3">③ 주의표지</label>
+      <label class="quiz-opt" data-idx="4">④ 보조표지</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 황색 삼각형 + 적색 테두리 = 주의표지 (위험 경고)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>중앙선의 색상은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 백색</label>
+      <label class="quiz-opt" data-idx="2">② 황색</label>
+      <label class="quiz-opt" data-idx="3">③ 적색</label>
+      <label class="quiz-opt" data-idx="4">④ 청색</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 중앙선 = 황색(노란색), 차선 = 백색(흰색)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>황색 점멸등의 의미는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 일시정지 후 진행</label>
+      <label class="quiz-opt" data-idx="2">② 주의하면서 진행</label>
+      <label class="quiz-opt" data-idx="3">③ 정지</label>
+      <label class="quiz-opt" data-idx="4">④ 빨리 통과</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 황색 점멸 = 주의하면서 진행 / 적색 점멸 = 일시정지 후 진행</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q8</span><span>비보호좌회전이 가능한 때는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 직진 신호(녹색)이고 맞은편 차량이 없을 때</label>
+      <label class="quiz-opt" data-idx="2">② 적색 신호에서 차량이 없을 때</label>
+      <label class="quiz-opt" data-idx="3">③ 황색 신호에서</label>
+      <label class="quiz-opt" data-idx="4">④ 어떤 신호에서든 가능</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 비보호좌회전은 직진 신호(녹색)일 때만 가능. 적색 시 좌회전 = 신호위반!</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q9</span><span>경찰보조자가 아닌 사람은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 모범운전자</label>
+      <label class="quiz-opt" data-idx="2">② 군사경찰</label>
+      <label class="quiz-opt" data-idx="3">③ 소방공무원</label>
+      <label class="quiz-opt" data-idx="4">④ 공사장 자원봉사자</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 경찰보조자: 모범운전자, 군사경찰, 소방공무원 (시행령 제6조). 공사장 자원봉사자·고속도로 안전순찰원 등은 해당 안 됨.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q10</span><span>녹색 등화에서 할 수 없는 것은? (비보호좌회전 표지 없는 교차로)</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 직진</label>
+      <label class="quiz-opt" data-idx="2">② 우회전</label>
+      <label class="quiz-opt" data-idx="3">③ 좌회전</label>
+      <label class="quiz-opt" data-idx="4">④ 직진 후 차로변경</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 녹색 등화 = 직진 또는 우회전만 가능. 비보호좌회전 표지 없으면 좌회전 = 신호위반!</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 03 — 교차로 통행 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch3">
+  <span class="ch-num">CHAPTER 03</span>
+  <h2>교차로 통행</h2>
+  <p class="ch-desc">좌·우회전 방법, 양보 규칙, 유턴, 회전교차로, 꼬리물기 금지</p>
+  <p class="ch-stars">★★★ 최다 출제 영역</p>
+</div>
+
+<!-- 3-1 좌회전 -->
+<div class="section" id="s3-1">
+  <h3>3-1. 좌회전 방법 (제25조 제2항)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 법 원문</div>
+    "모든 차의 운전자는 교차로에서 좌회전을 하려는 경우에는 <strong>미리 도로의 중앙선을 따라 서행하면서</strong> 교차로의 <strong>중심 안쪽</strong>을 이용하여 좌회전하여야 한다."
+  </div>
+
+  <p>쉽게 말하면 3단계입니다:</p>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>미리 좌측 차로로 이동</strong> — 좌회전하기 전에 가장 안쪽(중앙선 쪽) 차로로 미리 차로변경합니다. 교차로 직전에서 갑자기 차로를 바꾸면 위험합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>좌회전 신호 확인</strong> — 좌회전 화살표 신호가 나올 때까지 정지선에서 대기합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>교차로 중심 안쪽으로 서행</strong> — 교차로 중심의 <strong>안쪽</strong>을 돌아 좌회전합니다. 바깥쪽으로 크게 돌면 안 됩니다 (시·도경찰청장이 지정한 곳은 예외).</div>
+    </div>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 좌회전 신호 체계</div>
+    한국은 대부분의 교차로에서 <strong>별도의 좌회전 신호(녹색 화살표)</strong>가 있습니다. 미국·캐나다처럼 녹색 등화에서 자유롭게 좌회전하는 것이 <strong>허용되지 않습니다</strong>.<br><br>
+    <strong>좌회전 신호 순서 (일반적):</strong><br>
+    ① 좌회전 화살표 → ② 직진 녹색 → ③ 황색 → ④ 적색<br>
+    (일부 교차로는 직진 후 좌회전 순서)
+  </div>
+</div>
+
+<!-- 3-2 우회전 -->
+<div class="section" id="s3-2">
+  <h3>3-2. 우회전 방법 (제25조 제1항)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 법 원문</div>
+    "모든 차의 운전자는 교차로에서 우회전을 하려는 경우에는 미리 도로의 <strong>우측 가장자리</strong>를 서행하면서 우회전하여야 한다. 이 경우 우회전하는 차의 운전자는 신호에 따라 정지하거나 진행하는 <strong>보행자 또는 자전거등</strong>에 주의하여야 한다."
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>미리 우측 차로로 이동</strong> — 우회전 30m 전에 방향지시등을 켜고 우측 가장자리 차로로 이동</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>첫 번째 횡단보도 확인</strong> — 적색 신호면 일시정지, 녹색이면 보행자 확인 후 서행</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>서행하며 우회전</strong> — 도로 우측 가장자리를 따라 서행</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>두 번째 횡단보도 확인</strong> — 보행자가 있거나 건너려 하면 <strong>일시정지</strong></div>
+    </div>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 우회전 요약표</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>전방 차량 신호</th><th>보행자 상태</th><th>운전자 행동</th></tr>
+        <tr><td style="color:#ef4444;font-weight:700;">적색</td><td>무관</td><td><strong>무조건 일시정지</strong> 후 안전 확인 후 우회전</td></tr>
+        <tr><td style="color:#22c55e;font-weight:700;">녹색</td><td>보행자 없음</td><td><strong>서행</strong>하며 우회전</td></tr>
+        <tr><td style="color:#22c55e;font-weight:700;">녹색</td><td>보행자 있음/있으려 함</td><td><strong>일시정지</strong> → 보행자 횡단 완료 후 진행</td></tr>
+        <tr><td colspan="2">우회전 삼색등 적색</td><td><strong>우회전 절대 금지</strong></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 3-3 유턴 (NEW) -->
+<div class="section" id="s3-3">
+  <h3>3-3. 유턴 (U-Turn) 규정 (NEW)</h3>
+  <p>유턴은 <strong>아무 곳에서나 할 수 없습니다</strong>. 반드시 유턴 허용 표지가 있는 곳에서만 가능합니다.</p>
+
+  <h4>유턴이 가능한 조건</h4>
+  <ol>
+    <li><strong>유턴 허용 안전표지</strong>가 설치된 곳</li>
+    <li>중앙선이 <strong>점선</strong>(넘어갈 수 있음)인 구간</li>
+    <li>좌회전 신호 또는 <strong>보행자 신호가 녹색</strong>일 때 (보행자 없으면)</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 유턴 금지</div>
+    • 유턴 금지 표지가 있는 곳<br>
+    • 중앙선이 <strong>황색 실선</strong>인 곳 (넘기 금지 = 12대 중과실)<br>
+    • 교차로 내에서 유턴 (유턴 표지가 교차로에 있는 경우 제외)<br>
+    • 적색 신호에서 유턴
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의</div>
+    <strong>미국:</strong> 대부분 교차로에서 유턴 가능 (금지 표지 없으면)<br>
+    <strong>한국:</strong> 유턴 허용 표지가 있을 때만 가능 (원칙적으로 금지)<br><br>
+    한국의 유턴 규칙은 미국과 <strong>정반대</strong>입니다! "금지 표지가 없으니 괜찮겠지"가 아니라, <strong>"허용 표지가 없으면 안 된다"</strong>로 생각하세요.
+  </div>
+</div>
+
+<!-- 3-4 양보 규칙 -->
+<div class="section" id="s3-4">
+  <h3>3-4. 교통정리 없는 교차로 — 양보 규칙 (제26조)</h3>
+  <p>신호등이 없는 교차로에서는 누가 먼저 지나가는지를 정하는 <strong>4가지 양보 규칙</strong>이 있습니다. 순서대로 적용됩니다.</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>이미 진입한 차 우선</strong> (제26조 제1항)<br>이미 교차로에 들어와 있는 차가 진입하려는 차보다 우선합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>넓은 도로 우선</strong> (제26조 제2항)<br>넓은 도로에서 오는 차가 좁은 도로에서 오는 차보다 우선합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>우측 차에게 양보</strong> (제26조 제3항)<br>도로 폭이 같을 때 동시에 도착하면, <strong>오른쪽에서 오는 차</strong>에게 양보합니다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>직진·우회전 > 좌회전</strong> (제26조 제4항)<br>좌회전하려는 차는 직진·우회전하려는 차에게 양보합니다.</div>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 기억법</div>
+    <strong>"먼저 진입 → 넓은 도로 → 오른쪽 → 직진이 좌회전보다 우선"</strong><br><br>
+    시험 출제 패턴: "교통정리가 없고 <strong>도로 폭이 같은</strong> 교차로에서 동시에 진입할 때 우선권은?" → <strong>오른쪽에서 오는 차</strong> (제26조 제3항)
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 다른 나라와의 비교</div>
+    <strong>미국:</strong> "Right of way" — 먼저 도착한 차 우선, 동시 도착 시 오른쪽 차<br>
+    <strong>유럽:</strong> "Priority to the right" — 오른쪽에서 오는 차 우선 (한국과 유사)<br>
+    <strong>영국·일본:</strong> 좌측통행이므로 왼쪽 차 우선<br>
+    <strong>한국:</strong> 유럽과 유사하지만 "이미 진입 > 넓은 도로 > 우측 > 직진" 순서
+  </div>
+</div>
+
+<!-- 3-5 회전교차로 -->
+<div class="section" id="s3-5">
+  <h3>3-5. 회전교차로 (제25조의2)</h3>
+  <p>회전교차로(라운드어바웃)는 신호등 없이 차량이 원형으로 돌아가는 교차로입니다.</p>
+
+  <div class="flow">
+    <div class="flow-step">반시계방향 통행</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">진입 시 서행/일시정지</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">안에 있는 차 우선</div>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 회전교차로 핵심 규칙</div>
+    • <strong>반시계방향</strong>으로 통행 (한국은 우측통행이므로)<br>
+    • 진입할 때 <strong>서행 또는 일시정지</strong><br>
+    • 이미 회전 중인 차에게 <strong>양보</strong><br>
+    • 반대 방향으로 진행하면 <strong>위반</strong> (대법원 2017도9392)<br>
+    • 회전교차로 안에서는 <strong>다른 차를 앞지르기 금지</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의</div>
+    <strong>영국·호주:</strong> 시계방향 회전 (좌측통행이므로)<br>
+    <strong>한국·미국·유럽:</strong> 반시계방향 회전<br><br>
+    영국, 호주, 일본 등에서 오신 분들은 회전 방향이 <strong>반대</strong>입니다! 처음에는 매우 어색할 수 있으니 특히 주의하세요.
+  </div>
+</div>
+
+<!-- 3-6 서행·일시정지 장소 -->
+<div class="section" id="s3-6">
+  <h3>3-6. 서행·일시정지 장소 (제31조)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>구분</th><th>장소</th><th>기억법</th></tr>
+      <tr>
+        <td><strong>서행</strong><br>(제31조 제1항)</td>
+        <td>
+          • 교통정리 없는 교차로<br>
+          • 도로가 구부러진 곳<br>
+          • 고갯마루 부근<br>
+          • 가파른 내리막<br>
+          • 안전표지 "서행" 지정
+        </td>
+        <td>"교 구 고 가"<br>(교차로, 구부러진, 고갯마루, 가파른)</td>
+      </tr>
+      <tr>
+        <td><strong>일시정지</strong><br>(제31조 제2항)</td>
+        <td>
+          • 좌우 확인 불가 교차로<br>
+          • 교통 빈번한 교차로<br>
+          • 안전표지 "일시정지" 지정
+        </td>
+        <td>"좌우가 안 보이거나 차가 많으면 멈춘다"</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 시험 함정</div>
+    Q. "교통정리가 없는 교차로에서는?" → <strong>서행</strong> (일시정지 아님!)<br>
+    Q. "교통정리가 없고 교통이 빈번한 교차로에서는?" → <strong>일시정지</strong><br>
+    Q. "좌우 확인이 어려운 교차로에서는?" → <strong>일시정지</strong><br><br>
+    "교통정리 없음"만으로는 서행, "교통 빈번" 또는 "좌우 확인 불가"가 추가되면 일시정지!
+  </div>
+</div>
+
+<!-- 3-7 교차로 꼬리물기 -->
+<div class="section" id="s3-7">
+  <h3>3-7. 교차로 꼬리물기 금지 (제25조 제5항)</h3>
+  <p>진행하려는 진로 앞쪽 상황 때문에 교차로 안에서 정지하게 되어 <strong>다른 차의 통행을 방해할 우려가 있으면</strong>, 그 교차로에 들어가서는 안 됩니다.</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 실제 도로에서</div>
+    한국의 출퇴근 시간대에는 교차로 꼬리물기가 매우 흔합니다. 하지만 이것은 <strong>명백한 법 위반</strong>이며, 시험에서도 자주 출제됩니다. 녹색 신호라도 교차로 건너편이 막혀 있으면 <strong>진입하지 마세요</strong>.
+  </div>
+</div>
+
+<!-- 3-8 자전거의 교차로 좌회전 (NEW) -->
+<div class="section" id="s3-8">
+  <h3>3-8. 자전거의 교차로 좌회전 (제25조 제3항) (NEW)</h3>
+  <p>자전거는 일반 차량과 <strong>좌회전 방법이 다릅니다</strong>:</p>
+  <ul>
+    <li>자전거: 도로의 <strong>우측 가장자리</strong>로 붙어 서행하면서 교차로의 <strong>가장자리 부분</strong>을 이용하여 좌회전 (2단계 좌회전)</li>
+    <li>일반 차량: 중앙선 따라 교차로 중심 안쪽으로 좌회전</li>
+  </ul>
+  <div class="box box-tip">
+    <div class="box-title">💡 자전거 2단계 좌회전</div>
+    ① 직진 방향으로 교차로를 건넌다 → ② 멈춰서 방향을 왼쪽으로 바꾼다 → ③ 다시 신호에 따라 직진<br>
+    이 방법은 자전거 운전자의 안전을 위한 것입니다.
+  </div>
+</div>
+
+<!-- 3-9 연습문제 -->
+<div class="section" id="s3-9">
+  <h3>3-9. 연습 문제</h3>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>교통정리 없는 교차로에서 도로 폭이 같을 때 우선권은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 먼저 도착한 차</label>
+      <label class="quiz-opt" data-idx="2">② 왼쪽에서 오는 차</label>
+      <label class="quiz-opt" data-idx="3">③ 오른쪽에서 오는 차</label>
+      <label class="quiz-opt" data-idx="4">④ 큰 차</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 도로 폭이 같을 때 우측 도로의 차에게 양보 (제26조 제3항)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>회전교차로의 통행 방향은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 시계방향</label>
+      <label class="quiz-opt" data-idx="2">② 반시계방향</label>
+      <label class="quiz-opt" data-idx="3">③ 양방향</label>
+      <label class="quiz-opt" data-idx="4">④ 직진만</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 한국은 우측통행이므로 반시계방향 (제25조의2)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>좌회전 시 교차로의 어느 쪽을 이용해야 하나요?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 중심 바깥쪽</label>
+      <label class="quiz-opt" data-idx="2">② 중심 안쪽</label>
+      <label class="quiz-opt" data-idx="3">③ 우측 가장자리</label>
+      <label class="quiz-opt" data-idx="4">④ 좌측 가장자리</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 미리 중앙선을 따라 서행, 교차로 중심 안쪽 이용 (제25조 제2항)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>좌회전 차와 직진 차가 만났을 때?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 좌회전 우선</label>
+      <label class="quiz-opt" data-idx="2">② 직진 우선</label>
+      <label class="quiz-opt" data-idx="3">③ 큰 차 우선</label>
+      <label class="quiz-opt" data-idx="4">④ 동시 진행</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 직진·우회전 차가 좌회전 차보다 우선 (제26조 제4항)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>교통정리 없고 교통이 빈번한 교차로에서의 의무는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 서행</label>
+      <label class="quiz-opt" data-idx="2">② 일시정지</label>
+      <label class="quiz-opt" data-idx="3">③ 속도 유지</label>
+      <label class="quiz-opt" data-idx="4">④ 경음기 사용</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 교통 빈번 또는 좌우 확인 불가 교차로 = 일시정지 (제31조 제2항)</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>한국에서 유턴이 가능한 곳은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 유턴 허용 안전표지가 있는 곳</label>
+      <label class="quiz-opt" data-idx="2">② 금지 표지가 없는 곳은 어디서든</label>
+      <label class="quiz-opt" data-idx="3">③ 모든 교차로</label>
+      <label class="quiz-opt" data-idx="4">④ 넓은 도로에서 자유롭게</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 한국에서 유턴은 허용 표지가 있는 곳에서만 가능. 미국과 반대!</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>녹색 신호에서 교차로 건너편이 막혀 있으면?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 빨리 진입하여 자리 확보</label>
+      <label class="quiz-opt" data-idx="2">② 서행하며 진입</label>
+      <label class="quiz-opt" data-idx="3">③ 교차로에 진입하지 않음</label>
+      <label class="quiz-opt" data-idx="4">④ 경음기로 앞차에 신호</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 교차로 안에서 정지하여 다른 차 통행을 방해할 우려가 있으면 진입 금지 (제25조 제5항, 꼬리물기 금지)</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 04 — 속도와 안전거리·앞지르기 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch4">
+  <span class="ch-num">CHAPTER 04</span>
+  <h2>속도와 안전거리·앞지르기</h2>
+  <p class="ch-desc">도로별 속도 제한, 악천후 감속, 정지거리, 앞지르기 방법·금지 — 학과시험 7~9문항 출제</p>
+  <p class="ch-stars">★★★ 고빈출·12대 중과실 연결</p>
+</div>
+
+<!-- 4-1 법정 속도 -->
+<div class="section" id="s4-1">
+  <h3>4-1. 도로별 법정 속도 (시행규칙 제19조)</h3>
+  <p>도로교통법은 도로의 종류와 차로 수에 따라 <strong>최고 속도</strong>와 <strong>최저 속도</strong>를 정하고 있습니다. 안전표지에 별도 표시가 있으면 그 속도가 우선합니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>도로 구분</th><th>최고 속도</th><th>최저 속도</th></tr>
+      <tr><td>일반도로 (주거·상업·공업지역)</td><td>50km/h 이내<br>(지정 시 60km/h)</td><td>없음</td></tr>
+      <tr><td>일반도로 (그 밖)</td><td>60km/h 이내</td><td>없음</td></tr>
+      <tr><td>자동차전용도로</td><td>90km/h</td><td>30km/h</td></tr>
+      <tr><td>고속도로 편도 1차로</td><td>80km/h</td><td>50km/h</td></tr>
+      <tr><td>고속도로 편도 2차로 이상</td><td><strong>100km/h</strong><br>(화물·특수 80km/h)</td><td>50km/h</td></tr>
+      <tr><td>지정 고속도로</td><td><strong>110~120km/h</strong></td><td>50km/h</td></tr>
+      <tr><td><strong>어린이 보호구역</strong></td><td><strong>30km/h</strong></td><td>—</td></tr>
+      <tr><td><strong>노인·장애인 보호구역</strong></td><td><strong>30km/h</strong></td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-law">
+    <div class="box-title">📜 제17조 제3항</div>
+    "자동차등의 운전자는 제1항과 제2항에 따른 최고 속도보다 빠르게 운전하거나 최저 속도보다 느리게 운전하여서는 아니 된다."
+  </div>
+</div>
+
+<!-- 4-2 악천후 감속 -->
+<div class="section" id="s4-2">
+  <h3>4-2. 악천후 시 감속 의무 (시행규칙 제19조 제2항)</h3>
+  <p>비·눈·안개 등으로 노면이 미끄럽거나 시야가 나빠지면 <strong>법정 최고속도에서 자동으로 감속</strong>해야 합니다. 표지판이 없어도 법으로 감속 의무가 있습니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>기상 상황</th><th>감속 비율</th><th>예시 (최고 100km/h 도로)</th></tr>
+      <tr><td>비가 내려 노면이 젖어 있는 경우</td><td><strong>20% 감속</strong></td><td>80km/h</td></tr>
+      <tr><td>눈이 20mm 미만 쌓인 경우</td><td><strong>20% 감속</strong></td><td>80km/h</td></tr>
+      <tr><td>폭우·폭설·안개로 가시거리 100m 이내</td><td><strong>50% 감속</strong></td><td>50km/h</td></tr>
+      <tr><td>노면이 얼어붙은 경우</td><td><strong>50% 감속</strong></td><td>50km/h</td></tr>
+      <tr><td>눈이 20mm 이상 쌓인 경우</td><td><strong>50% 감속</strong></td><td>50km/h</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 시험 함정 — 20% vs 50%</div>
+    "비가 내려 젖었다" = <strong>20%</strong><br>
+    "폭우로 가시거리 100m 이내" = <strong>50%</strong><br>
+    "눈 20mm 미만" = <strong>20%</strong> / "20mm 이상" = <strong>50%</strong><br>
+    "노면이 얼었다" = <strong>무조건 50%</strong><br><br>
+    💡 기억법: <strong>"젖으면 2할, 얼면·막히면 반토막"</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의</div>
+    미국·유럽의 일부 국가에서는 감속 의무가 "권고"인 반면, 한국에서는 <strong>법적 의무</strong>입니다. 비 오는 날 100km/h 고속도로에서 100km/h 그대로 주행하면 <strong>속도 위반</strong>이 됩니다(단속 기준은 체감상 다르지만, 사고 시 과실 책정에 결정적 영향).
+  </div>
+</div>
+
+<!-- 4-3 안전거리 -->
+<div class="section" id="s4-3">
+  <h3>4-3. 안전거리와 정지거리 (제19조)</h3>
+  <p>안전거리는 <strong>앞차가 갑자기 멈춰도 추돌하지 않을 거리</strong>입니다. 일반적으로 속도(km/h)의 숫자만큼을 미터로 확보한다고 기억하면 됩니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>속도</th><th>공주거리<br>(인지·반응)</th><th>제동거리<br>(브레이크)</th><th>정지거리<br>(합계)</th><th>권장 안전거리</th></tr>
+      <tr><td>60km/h</td><td>약 11m</td><td>약 22m</td><td>약 33m</td><td><strong>약 60m</strong> (건조)</td></tr>
+      <tr><td>80km/h</td><td>약 14m</td><td>약 38m</td><td>약 52m</td><td><strong>약 80m</strong></td></tr>
+      <tr><td>100km/h</td><td>약 17m</td><td>약 63m</td><td>약 80m</td><td><strong>약 100m</strong></td></tr>
+      <tr><td>120km/h</td><td>약 20m</td><td>약 80m</td><td>약 100m</td><td><strong>약 120m</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 쉬운 기억법 — "속도의 숫자 = 미터"</div>
+    <strong>시속 60 → 60m, 시속 100 → 100m</strong> 간격<br>
+    젖은 노면: <strong>2배</strong> (100km/h → 200m)<br>
+    빙판: <strong>3배 이상</strong><br><br>
+    💡 3초 법칙: 앞차가 특정 지점을 통과한 뒤 내 차가 같은 지점에 도달하기까지 <strong>"하나, 둘, 셋"</strong>을 셀 수 있으면 안전.
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 추돌 사고는 뒤차 과실 100%</div>
+    한국은 일반적으로 <strong>앞차 추돌 = 뒤차 100% 과실</strong>로 판정합니다. "앞차가 급정거했다"는 변명은 거의 받아들여지지 않습니다. 안전거리를 반드시 확보하세요.
+  </div>
+</div>
+
+<!-- 4-4 앞지르기 -->
+<div class="section" id="s4-4">
+  <h3>4-4. 앞지르기 방법과 금지 (제21조·제22조)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 제21조 — 앞지르기 방법</div>
+    ① 모든 차의 운전자는 다른 차를 앞지르려면 앞차의 <strong>좌측</strong>으로 통행하여야 한다.<br>
+    ② 자전거 등의 운전자는 앞차가 다른 차를 앞지르고 있거나 앞지르려고 하는 경우에는 앞차의 <strong>우측</strong>으로 통행할 수 있다.<br>
+    ③ 앞지르기를 당하는 차의 운전자는 <strong>속도를 높이거나 가로막는 등의 방해 행위</strong>를 하여서는 아니 된다.
+  </div>
+
+  <h4>앞지르기 방법 요약</h4>
+  <ol>
+    <li>방향지시등(왼쪽)을 켜고 <strong>뒷차·옆차 확인</strong></li>
+    <li>반대편 차로의 안전 확인 (편도 1차로에서만 해당)</li>
+    <li><strong>좌측으로</strong> 이동하여 앞지르기</li>
+    <li>앞차와 <strong>충분한 거리</strong>를 확보한 후 우측으로 복귀</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 앞지르기 금지 장소 (제22조 제3항) — 12대 중과실</div>
+    ① <strong>교차로</strong><br>
+    ② <strong>터널 안</strong><br>
+    ③ <strong>다리 위</strong><br>
+    ④ <strong>안전표지로 지정한 곳</strong> (도로의 구부러진 곳, 비탈길의 고갯마루 부근, 가파른 비탈길의 내리막 등)<br><br>
+    💡 기억법: <strong>"교 터 다 표"</strong> (교차로·터널·다리·표지 지정)
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 앞지르기 금지 대상·시기 (제22조 제1항·제2항)</div>
+    • <strong>긴급자동차</strong>를 앞지르기 → 금지<br>
+    • 앞차가 다른 차를 <strong>앞지르고 있는 때</strong> → 금지<br>
+    • 앞차가 <strong>좌측으로 진로를 바꾸려는 때</strong> (예: 좌회전 대기) → 금지. 단, 이 경우 앞차의 <strong>우측으로</strong> 앞지르기 가능<br>
+    • 반대 방향·뒤에서 오는 차의 통행을 방해할 우려가 있을 때 → 금지<br>
+    • 뒤차가 자신을 앞지르고 있을 때 → 금지<br><br>
+    앞지르기 방법·시기·장소 위반은 <strong>12대 중과실</strong>로 사고 시 형사 처벌됩니다.
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 앞지르기 — 국가별 비교</div>
+    <strong>🇰🇷 한국:</strong> 좌측 앞지르기 원칙. 교차로·터널·다리·지정 장소 금지<br>
+    <strong>🇺🇸 미국:</strong> 주(州)별로 다르지만 대부분 좌측 원칙. 고속도로에서 우측 앞지르기 허용하는 주 많음<br>
+    <strong>🇩🇪 독일:</strong> 무제한 구간(아우토반)에서도 우측 앞지르기 금지, 좌측 원칙 엄격<br>
+    <strong>🇯🇵 일본·🇬🇧 영국:</strong> 좌측통행 → <strong>우측으로</strong> 앞지르기 (방향 반대!)
+  </div>
+</div>
+
+<!-- 4-5 속도 단속 -->
+<div class="section" id="s4-5">
+  <h3>4-5. 속도 단속 시스템</h3>
+  <p>한국의 속도 단속은 세계적으로 <strong>촘촘하고 엄격</strong>하기로 유명합니다. 외국인 운전자가 가장 많이 적발되는 항목입니다.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>단속 유형</th><th>작동 방식</th><th>특징</th></tr>
+      <tr><td><strong>고정식 카메라</strong></td><td>특정 지점에서 순간 속도 측정</td><td>내비 앱이 대부분 경고함</td></tr>
+      <tr><td><strong>이동식 카메라</strong></td><td>레이저 또는 경찰 차량에 탑재</td><td>예고 없이 설치·이동</td></tr>
+      <tr><td><strong>구간 단속</strong></td><td>구간 진입·진출 시간으로 <strong>평균 속도</strong> 계산</td><td>터널·고속도로에 확산 중</td></tr>
+      <tr><td><strong>암행 순찰차</strong></td><td>일반 승용차로 위장, 차량 내 카메라</td><td>고속도로 위주</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 속도위반 범칙금·벌점 (승용차 기준)</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>초과 속도</th><th>범칙금</th><th>벌점</th></tr>
+        <tr><td>20km/h 이하</td><td>3만원</td><td>0</td></tr>
+        <tr><td>20~40km/h</td><td>6만원</td><td>15점</td></tr>
+        <tr><td>40~60km/h</td><td>9만원</td><td>30점</td></tr>
+        <tr><td>60~80km/h</td><td>12만원</td><td>60점</td></tr>
+        <tr><td><strong>80km/h 초과</strong></td><td><strong>형사 처벌</strong></td><td>벌점 80점</td></tr>
+      </table>
+    </div>
+    ⚠️ <strong>20km/h 초과 = 12대 중과실</strong> → 사고 시 형사 처벌<br>
+    ⚠️ 어린이 보호구역(30km/h 구역)에서는 <strong>범칙금·벌점 2배</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 내비 앱 필수</div>
+    <strong>T-map, Kakao Map, Naver Map</strong>이 한국의 대표 내비 앱입니다. 모두 단속 카메라 위치를 실시간 경고합니다. 영어 지원이 있으니 반드시 설치하세요. 렌터카도 대부분 지원.<br><br>
+    구글 맵은 한국에서 <strong>자동차 내비게이션</strong> 기능이 거의 작동하지 않습니다(정부 지도 반출 제한).
+  </div>
+</div>
+
+<!-- 4-6 연습문제 -->
+<div class="section" id="s4-6">
+  <h3>4-6. 연습 문제</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>비가 내려 노면이 젖은 경우 최고속도의 몇 %를 줄여야 하는가?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ 감속 의무 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 비로 젖은 노면·눈 20mm 미만 = 20% 감속.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>폭우로 가시거리가 100m 이내일 때 감속 비율은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ 운행 금지</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 가시거리 100m 이내, 노면 결빙, 눈 20mm 이상 = 50% 감속.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>앞지르기가 금지된 장소가 아닌 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 교차로</label>
+      <label class="quiz-opt" data-idx="2">② 터널 안</label>
+      <label class="quiz-opt" data-idx="3">③ 편도 2차로 이상 고속도로 직선 구간</label>
+      <label class="quiz-opt" data-idx="4">④ 다리 위</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 교차로·터널·다리·안전표지 지정 장소가 금지 장소. 고속도로 직선에서는 앞지르기 가능.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>앞지르기의 원칙적인 방향은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 좌측</label>
+      <label class="quiz-opt" data-idx="2">② 우측</label>
+      <label class="quiz-opt" data-idx="3">③ 가까운 쪽</label>
+      <label class="quiz-opt" data-idx="4">④ 비어 있는 쪽</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 제21조 제1항, 앞지르기는 원칙적으로 좌측으로 한다.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>편도 2차로 이상 고속도로에서 승용차의 최고 속도는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 80km/h</label>
+      <label class="quiz-opt" data-idx="2">② 100km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 110km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 120km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 기본 100km/h. 지정 구간은 110~120km/h, 화물·특수는 80km/h.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>앞지르기를 당하는 차의 의무는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 속도를 높여 방해</label>
+      <label class="quiz-opt" data-idx="2">② 경음기를 울림</label>
+      <label class="quiz-opt" data-idx="3">③ 중앙선을 넘어 피함</label>
+      <label class="quiz-opt" data-idx="4">④ 속도를 높이지 않고 방해하지 않음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 제21조 제3항. 앞지르기당하는 차는 속도를 높이는 등 방해 행위를 해서는 안 된다.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 05 — 보행자 보호 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch5">
+  <span class="ch-num">CHAPTER 05</span>
+  <h2>보행자 보호 의무</h2>
+  <p class="ch-desc">횡단보도·보행자 우선도로·어린이·노인 보호구역 — 2022년 개정 핵심</p>
+  <p class="ch-stars">★★★ 12대 중과실·고빈출</p>
+</div>
+
+<!-- 5-1 2022 개정 핵심 -->
+<div class="section" id="s5-1">
+  <h3>5-1. 2022년 보행자 보호 개정 핵심 (제27조)</h3>
+  <p>2022년 7월 도로교통법 개정으로 <strong>보행자 보호 의무가 대폭 강화</strong>되었습니다. 외국인이 가장 많이 실수하는 영역입니다.</p>
+
+  <div class="box box-law">
+    <div class="box-title">📜 제27조 — 보행자 보호</div>
+    ① 모든 차의 운전자는 보행자가 횡단보도를 통행하고 있을 때에는 그 횡단보도 앞에서 <strong>일시정지</strong>하여야 한다.<br>
+    ③ 모든 차의 운전자는 교통정리를 하고 있지 아니하는 교차로 또는 그 부근에서 보행자가 횡단하고 있을 때에는 <strong>보행자의 통행을 방해하여서는 아니 된다</strong>.<br>
+    ⑥ 모든 차의 운전자는 신호기 등이 없는 횡단보도 부근에서 보행자가 횡단하고 있거나 <strong>횡단하려고 하는 때</strong>에는 일시정지하여야 한다.<br>
+    ⑦ 도로 외의 곳(아파트 단지, 주차장 등)을 운전하는 경우에도 보행자의 안전에 유의하여야 한다.
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 핵심 변화 — "건너려는 때"도 보호 대상</div>
+    과거: <strong>건너는 중</strong>인 보행자만 보호<br>
+    현재: 보도에 서서 <strong>건너려고 하는 때</strong>부터 보호 → 운전자는 일시정지 의무<br><br>
+    ⚠️ 횡단보도 앞에서 <strong>보행자가 보도에 서 있으면</strong>, 아직 발을 내딛지 않았어도 정지해야 합니다. 위반 후 사고 시 <strong>12대 중과실</strong>.
+  </div>
+</div>
+
+<!-- 5-2 어린이·노인·장애인 보호구역 -->
+<div class="section" id="s5-2">
+  <h3>5-2. 어린이·노인·장애인 보호구역 (제12조·제12조의2)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>구분</th><th>지정 범위</th><th>제한 속도</th><th>주요 규제</th></tr>
+      <tr><td><strong>어린이 보호구역</strong></td><td>초등학교·유치원·어린이집 주변 <strong>반경 300m</strong></td><td><strong>30km/h</strong></td><td>주·정차 금지, 신호 없는 횡단보도 일시정지 의무</td></tr>
+      <tr><td>노인 보호구역</td><td>경로당·노인시설 주변 300m</td><td>30km/h</td><td>주·정차 제한 가능</td></tr>
+      <tr><td>장애인 보호구역</td><td>특수학교·장애인시설 주변</td><td>30km/h</td><td>주·정차 제한 가능</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 민식이법 — 어린이 보호구역 사고의 가중 처벌</div>
+    어린이 보호구역에서 <strong>어린이(13세 미만)를 상해</strong>입히면: 1년 이상 15년 이하 징역 또는 500~3000만원 벌금<br>
+    <strong>사망</strong> 시: 무기 또는 3년 이상 징역<br><br>
+    ⚠️ 범칙금·벌점 <strong>2배</strong> 부과 (예: 30km/h 구역에서 20km/h 초과 → 범칙금 12만원)<br>
+    ⚠️ 신호 없는 횡단보도에서는 <strong>보행자 유무와 관계없이 일시정지</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 스쿨존은 절대 과속 금지</div>
+    한국의 어린이 보호구역은 세계에서 가장 규제가 강한 편입니다. 아침·저녁 등하교 시간에 실수로 30km/h를 넘기면 <strong>많은 액수의 범칙금</strong>과 벌점을 받게 됩니다. 네비앱이 "어린이 보호구역 진입"을 알리면 반드시 계기판을 확인하세요.
+  </div>
+</div>
+
+<!-- 5-3 보행자 우선도로 -->
+<div class="section" id="s5-3">
+  <h3>5-3. 보행자 우선도로 (제2조 제31호의2, 제27조의2) — 2022년 신설</h3>
+  <p>차도와 보도가 구분되지 않은 도로에서 보행자의 안전을 위해 <strong>"보행자 우선도로"</strong> 제도가 신설되었습니다.</p>
+
+  <ul>
+    <li>보행자는 도로의 <strong>전 부분</strong>을 통행할 수 있음</li>
+    <li>차량은 보행자 옆을 지날 때 <strong>안전한 거리</strong>를 두고 서행</li>
+    <li>보행자의 통행을 방해하거나 위험을 주지 말 것</li>
+    <li>속도 제한: <strong>20km/h 이하</strong></li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 보행자 우선도로 판별법</div>
+    보통 <strong>차도·보도 미분리</strong>된 좁은 골목길이 지정됩니다. 노면에 "보행자 우선도로" 표시나 안전표지로 알려줍니다.
+  </div>
+</div>
+
+<!-- 5-4 보행자 통행 방법 -->
+<div class="section" id="s5-4">
+  <h3>5-4. 보행자의 통행 방법 (제8조·제10조)</h3>
+  <ul>
+    <li>보도가 있는 도로 → <strong>보도</strong>로 통행</li>
+    <li>보도가 없는 도로 → 길 가장자리(<strong>좌측</strong>)로 통행 — 마주 오는 차를 볼 수 있도록</li>
+    <li>횡단보도가 있으면 반드시 횡단보도로 횡단</li>
+    <li>횡단보도가 없는 장소 → <strong>가장 짧은 거리</strong>로 횡단, 차의 진로를 방해하지 말 것</li>
+  </ul>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 보행자 사망률 — 한국의 현실</div>
+    한국의 교통사고 사망자 중 <strong>보행자 비율</strong>은 OECD 평균의 약 <strong>2배</strong>입니다. 특히 고령 보행자 사망이 많아 보행자 보호가 교통정책의 최우선 과제입니다.<br><br>
+    <strong>🇺🇸 미국:</strong> 보행자 사망 비율이 낮지만 보행 인구 자체가 적음<br>
+    <strong>🇪🇺 유럽:</strong> 보행자 보호 문화가 강함, 차량이 먼저 멈춤<br>
+    <strong>🇰🇷 한국:</strong> 도심 내 좁은 골목이 많아 사고 위험 높음 → 운전자의 예방 운전 필수
+  </div>
+</div>
+
+<!-- 5-5 연습문제 -->
+<div class="section" id="s5-5">
+  <h3>5-5. 연습 문제</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>보행자가 횡단보도 앞 보도에 서서 건너려고 할 때 운전자의 의무는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 그대로 통과</label>
+      <label class="quiz-opt" data-idx="2">② 일시정지 후 보행자 우선 통과</label>
+      <label class="quiz-opt" data-idx="3">③ 경음기로 주의</label>
+      <label class="quiz-opt" data-idx="4">④ 서행만</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 2022년 개정, 제27조 제6항. 건너려는 때부터 보호 대상.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>어린이 보호구역의 제한 속도는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 20km/h</label>
+      <label class="quiz-opt" data-idx="2">② 25km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 30km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 40km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 어린이·노인·장애인 보호구역 모두 30km/h.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>보도가 없는 도로에서 보행자의 통행 위치는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 좌측 가장자리 (마주 오는 차를 볼 수 있도록)</label>
+      <label class="quiz-opt" data-idx="2">② 우측 가장자리</label>
+      <label class="quiz-opt" data-idx="3">③ 중앙</label>
+      <label class="quiz-opt" data-idx="4">④ 어느 쪽이든 자유</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 제8조. 마주 오는 차를 볼 수 있도록 좌측 가장자리 통행.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>어린이 보호구역 내 속도 위반 범칙금·벌점은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 일반 도로와 동일</label>
+      <label class="quiz-opt" data-idx="2">② 일반 도로의 2배</label>
+      <label class="quiz-opt" data-idx="3">③ 일반 도로의 절반</label>
+      <label class="quiz-opt" data-idx="4">④ 벌점만 부과</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 어린이 보호구역 위반은 범칙금·벌점 모두 2배.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>아파트 단지 내 도로에서 보행자 보호 의무는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 도로교통법상 보행자 안전에 유의할 의무 있음</label>
+      <label class="quiz-opt" data-idx="2">② 도로가 아니므로 의무 없음</label>
+      <label class="quiz-opt" data-idx="3">③ 관리사무소 규정만 적용</label>
+      <label class="quiz-opt" data-idx="4">④ 아파트 주민에게만 적용</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 2022년 개정 제27조 제7항. 도로 외의 곳(아파트 단지·주차장)에서도 보행자 보호 의무.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>보행자 우선도로의 제한 속도는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10km/h</label>
+      <label class="quiz-opt" data-idx="2">② 15km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 20km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 30km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 보행자 우선도로는 20km/h 이하로 서행, 보행자가 전 부분을 통행할 수 있다.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 06 — 음주·약물운전과 처벌 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch6">
+  <span class="ch-num">CHAPTER 06</span>
+  <h2>음주·약물운전과 처벌</h2>
+  <p class="ch-desc">혈중알코올농도 기준, 처벌 수위, 윤창호법·2회 가중처벌, 약물운전</p>
+  <p class="ch-stars">★★★ 12대 중과실·최고 수준 처벌</p>
+</div>
+
+<!-- 6-1 혈중알코올 기준 -->
+<div class="section" id="s6-1">
+  <h3>6-1. 혈중알코올농도 기준 (제44조)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 제44조 제4항</div>
+    "술에 취한 상태의 기준은 운전자의 혈중알코올농도가 <strong>0.03% 이상</strong>인 경우로 한다."
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>혈중알코올농도</th><th>구분</th><th>처벌</th></tr>
+      <tr><td><strong>0.03% 이상 0.08% 미만</strong></td><td>단순 음주</td><td>1년 이하 징역 또는 500만원 이하 벌금, 면허 <strong>정지 100일</strong></td></tr>
+      <tr><td><strong>0.08% 이상 0.2% 미만</strong></td><td>중간</td><td>1년~2년 징역 또는 500~1000만원 벌금, 면허 <strong>취소</strong></td></tr>
+      <tr><td><strong>0.2% 이상</strong></td><td>만취</td><td>2년~5년 징역 또는 1000~2000만원 벌금, 면허 <strong>취소</strong></td></tr>
+      <tr><td><strong>측정 거부</strong></td><td>—</td><td>1년~5년 징역 또는 500~2000만원 벌금, 면허 <strong>취소</strong></td></tr>
+      <tr><td><strong>2회 이상 위반</strong></td><td>윤창호법</td><td>2년~6년 징역 또는 1000~3000만원 벌금</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 0.03%는 매우 엄격</div>
+    한국의 0.03% 기준은 세계적으로 가장 엄격한 편입니다. 성인 남성이 <strong>소주 1~2잔</strong>만 마셔도 초과할 수 있습니다. "조금만 마셨는데 괜찮겠지"가 가장 위험한 생각입니다.<br><br>
+    <strong>🇺🇸 미국:</strong> 대부분 주 0.08% (상업 운전자 0.04%)<br>
+    <strong>🇯🇵 일본:</strong> 0.03%<br>
+    <strong>🇨🇳 중국:</strong> 0.02% (한국보다 더 엄격)<br>
+    <strong>🇩🇪 독일:</strong> 0.05%<br>
+    <strong>🇻🇳 베트남:</strong> <strong>0.00%</strong> (어떤 음주든 금지)
+  </div>
+</div>
+
+<!-- 6-2 측정 과정 -->
+<div class="section" id="s6-2">
+  <h3>6-2. 음주 측정 과정과 거부</h3>
+  <ol>
+    <li><strong>호흡 측정</strong> — 경찰관의 음주감지기(알코올 센서)에 입김을 불어 측정</li>
+    <li>감지 시 <strong>정밀 호흡 측정기</strong>(채혈식)로 재측정</li>
+    <li>운전자가 호흡 측정 결과에 이의를 제기하면 <strong>혈액 검사</strong> (본인 동의)</li>
+    <li>혈액 검사 결과가 최종 증거</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 측정 거부도 처벌</div>
+    경찰공무원의 음주 측정 요구에 응하지 않으면 <strong>음주 측정 거부죄</strong>로 0.08~0.2% 수준의 처벌(1~5년 징역, 면허 취소)을 받습니다. 피해간다고 생각하지 마세요.
+  </div>
+</div>
+
+<!-- 6-3 음주 관련 처벌 확장 -->
+<div class="section" id="s6-3">
+  <h3>6-3. 방조·약물·도로 외 장소</h3>
+
+  <h4>동승자 처벌 (음주운전 방조)</h4>
+  <p>음주운전인 줄 알면서 <strong>차량을 제공하거나 동승</strong>한 사람도 음주운전 방조죄로 처벌됩니다(형법 제32조 + 도로교통법 제44조).</p>
+
+  <h4>약물운전 (제45조)</h4>
+  <div class="box box-law">
+    <div class="box-title">📜 제45조</div>
+    "자동차등 운전자는 술에 취한 상태 외에 <strong>과로, 질병 또는 약물</strong>의 영향과 그 밖의 사유로 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차등을 운전하여서는 아니 된다."
+  </div>
+  <p>대상 약물: 마약류, 대마, 환각물질, <strong>감기약·수면제·안정제</strong> 등도 포함. 위반 시 3년 이하 징역 또는 1000만원 이하 벌금.</p>
+
+  <h4>도로 외 장소에서도 성립</h4>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 주차장에서도 음주운전</div>
+    2011년 법 개정으로 <strong>아파트 주차장, 사유지 주차장</strong>에서도 음주운전이 성립합니다. "주차장에서 차만 옮겼을 뿐"이라는 변명은 통하지 않습니다(대법원 2017도17762).
+  </div>
+</div>
+
+<!-- 6-4 대리운전 문화 -->
+<div class="section" id="s6-4">
+  <h3>6-4. 한국의 대리운전 문화</h3>
+  <p>한국은 대리운전 문화가 매우 발달한 나라입니다. 술을 마신 사람이 자신의 차를 스스로 운전할 수 없을 때 <strong>대리운전기사</strong>를 불러 집까지 운전을 맡깁니다.</p>
+
+  <ul>
+    <li>이용 방법: 스마트폰 앱(카카오T 대리, 티맵 대리 등) 또는 전화 호출</li>
+    <li>요금: 거리에 따라 보통 15,000~40,000원</li>
+    <li>식당·술집 앞에 대리운전 전단지·전화번호 많음</li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 외국인도 쉽게 이용</div>
+    카카오T 앱은 영어를 지원합니다. 본인 차량 번호, 목적지만 입력하면 기사가 현장에 옵니다. 요금은 앱 결제 또는 현금. 한국에 사는 외국인은 반드시 설치해두세요.
+  </div>
+</div>
+
+<!-- 6-5 연습문제 -->
+<div class="section" id="s6-5">
+  <h3>6-5. 연습 문제</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>한국의 음주운전 혈중알코올농도 처벌 기준은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 0.02% 이상</label>
+      <label class="quiz-opt" data-idx="2">② 0.03% 이상</label>
+      <label class="quiz-opt" data-idx="3">③ 0.05% 이상</label>
+      <label class="quiz-opt" data-idx="4">④ 0.08% 이상</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 한국은 0.03% 이상부터 음주운전. 세계적으로 엄격한 편.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>음주 측정을 거부한 경우의 처벌은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 처벌 없음</label>
+      <label class="quiz-opt" data-idx="2">② 범칙금만</label>
+      <label class="quiz-opt" data-idx="3">③ 1~5년 징역 또는 500~2000만원 벌금 + 면허 취소</label>
+      <label class="quiz-opt" data-idx="4">④ 경고 후 재측정</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 측정 거부는 0.08~0.2% 수준의 처벌을 받는다.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>아파트 주차장에서 술에 취해 차를 조금 옮겼다. 처벌은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 음주운전 성립, 처벌 대상</label>
+      <label class="quiz-opt" data-idx="2">② 도로가 아니므로 처벌 없음</label>
+      <label class="quiz-opt" data-idx="3">③ 경고만</label>
+      <label class="quiz-opt" data-idx="4">④ 차 주인에게만 통보</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 도로 외 장소에서도 음주운전이 성립한다(도로교통법 제44조).</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>감기약을 먹고 졸음 운전 중 사고가 났다. 이에 해당하는 규정은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 제44조(음주운전)</label>
+      <label class="quiz-opt" data-idx="2">② 제45조(과로·약물 운전)</label>
+      <label class="quiz-opt" data-idx="3">③ 제46조(공동위험행위)</label>
+      <label class="quiz-opt" data-idx="4">④ 해당 규정 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 제45조는 과로·질병·약물로 정상 운전이 불가능한 상태의 운전을 금지한다.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>음주운전 사실을 알고도 차량을 제공하거나 동승한 사람의 책임은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 음주운전 방조죄로 처벌</label>
+      <label class="quiz-opt" data-idx="2">② 처벌 없음</label>
+      <label class="quiz-opt" data-idx="3">③ 범칙금 5만원</label>
+      <label class="quiz-opt" data-idx="4">④ 보험료 인상만</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 방조죄는 본범과 동일 수준의 처벌을 받을 수 있다.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 07 — 교통사고·긴급상황 대처 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch7">
+  <span class="ch-num">CHAPTER 07</span>
+  <h2>교통사고·긴급상황 대처</h2>
+  <p class="ch-desc">사고 후 조치, 2차 사고 예방, 12대 중과실, 긴급차 양보, 고장·화재 대처</p>
+  <p class="ch-stars">★★★ 12대 중과실 전체 수록</p>
+</div>
+
+<!-- 7-1 사고 후 조치 -->
+<div class="section" id="s7-1">
+  <h3>7-1. 교통사고 후 조치 (제54조)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 제54조 제1항·제2항</div>
+    ① 차의 운전자 그 밖의 승무원은 교통사고가 발생하였을 때에는 즉시 정차하여 <strong>사상자를 구호하는 등 필요한 조치</strong>를 취하여야 한다.<br>
+    ② 운전자등은 경찰공무원이 현장에 있을 때에는 그 경찰공무원에게, 경찰공무원이 현장에 없을 때에는 <strong>가장 가까운 경찰관서</strong>에 지체 없이 신고하여야 한다.
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>즉시 정차</strong> — 사고 현장을 벗어나면 '뺑소니'가 될 수 있다.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>부상자 확인 · 119 호출</strong> — 인명 피해가 있으면 최우선</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>2차 사고 방지</strong> — 비상등 점등 → 삼각 경고판 설치 → 차량 밖 안전한 곳(가드레일 밖)으로 대피</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>112 신고</strong> — 경찰에 사고 신고. 쌍방 경상이면 자동차 보험사에 연락 후 경찰 출동은 선택</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content"><strong>현장 증거 보존</strong> — 사진 촬영(다양한 각도), 상대 차량 번호·보험사 확인</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 뺑소니(특가법) — 가장 무거운 처벌</div>
+    사고 후 도주하면 <strong>특정범죄가중처벌법</strong> 적용:<br>
+    • 부상 도주: 1년 이상 징역 또는 500~3000만원 벌금<br>
+    • <strong>사망 후 도주</strong>: 5년 이상 징역 또는 <strong>무기징역</strong>까지 가능<br>
+    • 사체 유기 후 도주: 사형, 무기 또는 5년 이상 징역<br><br>
+    ⚠️ 외국인도 예외 없음. 귀국 후에도 인터폴 수배 가능.
+  </div>
+</div>
+
+<!-- 7-2 12대 중과실 -->
+<div class="section" id="s7-2">
+  <h3>7-2. 교통사고처리특례법 12대 중과실</h3>
+  <p>교통사고처리특례법은 <strong>보험에 가입되어 있으면 대부분의 경과실 사고</strong>는 형사 처벌을 면제합니다. 하지만 다음 12가지 경우는 보험 가입 여부와 관계없이 <strong>반드시 형사 처벌</strong>을 받습니다.</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 12대 중과실 전체 목록</div>
+    <ol>
+      <li><strong>신호위반</strong> — 신호기 신호·수신호·안전표지 위반</li>
+      <li><strong>중앙선 침범</strong> — 황색 실선 침범, 반대편 차로 진입</li>
+      <li><strong>속도위반 (제한속도 20km/h 초과)</strong></li>
+      <li><strong>앞지르기 방법·금지시기·금지장소 위반</strong> (교차로·터널·다리 등)</li>
+      <li><strong>철길건널목 통과방법 위반</strong> — 일시정지 의무 위반</li>
+      <li><strong>횡단보도 보행자 보호 의무 위반</strong></li>
+      <li><strong>무면허 운전</strong> — 면허 미소지·취소·정지 기간 운전</li>
+      <li><strong>음주운전</strong> (0.03% 이상) · 약물운전</li>
+      <li><strong>보도 침범</strong> — 보도 통행 위반</li>
+      <li><strong>승객 추락 방지 의무 위반</strong> — 문 열고 출발 등</li>
+      <li><strong>어린이 보호구역 안전운전 의무 위반</strong> — 13세 미만 상해</li>
+      <li><strong>화물 고정조치 위반</strong> (적재 불량) — 2017년 추가</li>
+    </ol>
+    💡 기억법: <strong>"신중속앞철 횡무음보 승어화"</strong>
+  </div>
+</div>
+
+<!-- 7-3 2차 사고 예방 -->
+<div class="section" id="s7-3">
+  <h3>7-3. 2차 사고 예방 (고속도로)</h3>
+  <p>고속도로에서 1차 사고 후 도로 위에 머무르면 <strong>뒤따르는 차량에 의한 2차 사고</strong> 위험이 매우 큽니다. 2차 사고는 1차 사고보다 치명률이 훨씬 높습니다(약 6배).</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>비상등 점등</strong> 즉시</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">가능하면 차량을 <strong>갓길</strong>로 이동</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>삼각 경고판</strong> 설치: 주간 차량 후방 <strong>100m</strong>, 야간 <strong>200m</strong>(고속도로는 가급적 500m)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">승객 전원 <strong>가드레일 밖</strong>으로 대피</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">한국도로공사 콜센터 <strong>1588-2504</strong> 또는 112 신고</div>
+    </div>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 차 안에 있지 마세요</div>
+    사고 후 차 안에 앉아 보험사를 기다리는 것은 매우 위험합니다. 특히 고속도로에서는 <strong>차량 밖 가드레일 너머</strong>로 즉시 대피하세요.
+  </div>
+</div>
+
+<!-- 7-4 긴급자동차 양보 -->
+<div class="section" id="s7-4">
+  <h3>7-4. 긴급자동차 양보 (제29조)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>상황</th><th>일반 차의 의무</th></tr>
+      <tr><td>교차로 또는 그 부근에서 긴급차 접근</td><td><strong>교차로를 피하여</strong> 도로의 우측 가장자리에 일시정지</td></tr>
+      <tr><td>교차로 외의 도로에서 긴급차 접근</td><td>긴급차가 우선 통행할 수 있도록 <strong>진로 양보</strong> (서행 또는 정지)</td></tr>
+      <tr><td>일방통행로에서</td><td>우측 가장자리로 피하기 어려우면 <strong>좌측</strong> 가장자리로 피함</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 긴급자동차의 종류</div>
+    소방차, 구급차, 혈액 공급차, 경찰 순찰차, 군 작전 수행 차량 등. <strong>경광등 + 사이렌</strong>을 작동해야 긴급자동차로 인정.
+  </div>
+</div>
+
+<!-- 7-5 고장 시 조치 -->
+<div class="section" id="s7-5">
+  <h3>7-5. 고장·화재 시 조치 (시행규칙 제40조)</h3>
+  <ul>
+    <li>고장 시 안전한 곳(갓길)으로 이동, 비상등 점등</li>
+    <li><strong>삼각 경고판</strong>: 차량 후방 100m 이상, 야간 200m 이상</li>
+    <li>야간에는 <strong>적색 섬광신호</strong>·<strong>전기제등</strong>을 차량 후방 500m 지점에 설치</li>
+    <li>엔진 화재 시: 차량에서 즉시 탈출 → 119 신고 → 후방 차량 경고</li>
+    <li>철길건널목 고장 시: <strong>차량 내 승객 대피 → 건널목 비상벨</strong> 작동 → 신호기나 깃발로 기관사에게 알림</li>
+  </ul>
+</div>
+
+<!-- 7-6 외국인 신고 -->
+<div class="section" id="s7-6">
+  <h3>7-6. 외국인 사고 신고와 통역</h3>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 긴급 연락처</div>
+    <strong>☎ 112</strong> — 경찰 (영어·중국어·일본어 통역 연결 가능)<br>
+    <strong>☎ 119</strong> — 소방·구급 (다국어 통역)<br>
+    <strong>☎ 1588-5644</strong> — BBB 코리아 다국어 통역 서비스 (24시간, 20개 언어)<br>
+    <strong>☎ 1345</strong> — 법무부 외국인종합안내센터<br>
+    <strong>☎ 1588-2504</strong> — 한국도로공사 고속도로 콜센터
+  </div>
+</div>
+
+<!-- 7-7 연습문제 -->
+<div class="section" id="s7-7">
+  <h3>7-7. 연습 문제</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>교통사고 후 운전자가 가장 먼저 해야 할 일은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 보험사에 전화</label>
+      <label class="quiz-opt" data-idx="2">② 정차하여 사상자 구호</label>
+      <label class="quiz-opt" data-idx="3">③ 현장 촬영</label>
+      <label class="quiz-opt" data-idx="4">④ 상대와 합의</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 제54조 제1항. 즉시 정차 및 사상자 구호가 최우선.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>12대 중과실이 아닌 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 신호위반</label>
+      <label class="quiz-opt" data-idx="2">② 중앙선 침범</label>
+      <label class="quiz-opt" data-idx="3">③ 주·정차 위반</label>
+      <label class="quiz-opt" data-idx="4">④ 무면허 운전</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 주·정차 위반은 12대 중과실에 포함되지 않는다.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>고속도로 사고 후 가장 먼저 해야 할 2차 사고 예방 조치는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 차 안에서 대기</label>
+      <label class="quiz-opt" data-idx="2">② 비상등 켜고 삼각 경고판 설치 후 가드레일 밖 대피</label>
+      <label class="quiz-opt" data-idx="3">③ 상대방과 다투기</label>
+      <label class="quiz-opt" data-idx="4">④ 차량 촬영만</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 비상등 → 삼각 경고판 → 차량 밖 안전한 곳 대피가 원칙.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>교차로 부근에서 긴급자동차가 접근할 때 일반 차의 의무는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 교차로를 피하여 우측 가장자리에 일시정지</label>
+      <label class="quiz-opt" data-idx="2">② 그대로 통과</label>
+      <label class="quiz-opt" data-idx="3">③ 긴급차를 따라가기</label>
+      <label class="quiz-opt" data-idx="4">④ 중앙선으로 피함</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 제29조. 교차로 부근에서는 교차로를 피하여 우측 가장자리에 일시정지.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>주간 고장 시 삼각 경고판을 설치할 위치는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 차량 바로 뒤</label>
+      <label class="quiz-opt" data-idx="2">② 차량 후방 100m 이상</label>
+      <label class="quiz-opt" data-idx="3">③ 차량 전방</label>
+      <label class="quiz-opt" data-idx="4">④ 설치 의무 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 주간 100m, 야간 200m(고속도로 권장 500m).</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>외국인 운전자가 사고 시 이용할 수 있는 24시간 다국어 통역 번호는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 119</label>
+      <label class="quiz-opt" data-idx="2">② 112</label>
+      <label class="quiz-opt" data-idx="3">③ 1588-5644 (BBB)</label>
+      <label class="quiz-opt" data-idx="4">④ 1345</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — BBB 코리아는 24시간 무료 다국어 통역 서비스를 제공한다.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 08 — 한국 교통문화 이해 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch8">
+  <span class="ch-num">CHAPTER 08</span>
+  <h2>주·정차·등화·한국 교통문화</h2>
+  <p class="ch-desc">주·정차 금지, 주차 문화, 전조등 규정, 경적 사용, 내비 앱</p>
+  <p class="ch-stars">★★ 실생활과 시험 모두 필수</p>
+</div>
+
+<!-- 8-1 주차·정차 구별 -->
+<div class="section" id="s8-1">
+  <h3>8-1. 주차와 정차의 구별 (제2조)</h3>
+  <div class="box box-law">
+    <div class="box-title">📜 제2조 제24호·제25호</div>
+    <strong>정차(停車)</strong>: 차가 <strong>5분을 초과하지 않고</strong> 정지하는 것으로서 주차 외의 정지 상태<br>
+    <strong>주차(駐車)</strong>: 차를 계속하여 정지, <strong>5분을 초과</strong>하거나 운전자가 차에서 떠나 즉시 운전할 수 없는 상태
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 5분 법칙</div>
+    운전자가 차에 <strong>있고</strong> 5분 이내 = 정차<br>
+    운전자가 차에 <strong>없거나</strong> 5분 초과 = 주차<br>
+    짐을 내리는 짧은 시간도 운전자가 차를 떠나면 주차에 해당.
+  </div>
+</div>
+
+<!-- 8-2 주·정차 금지 -->
+<div class="section" id="s8-2">
+  <h3>8-2. 주·정차 금지 장소 (제32조·제33조)</h3>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 정차·주차 금지 장소 (제32조)</div>
+    ① <strong>교차로·횡단보도·건널목</strong> 또는 보도와 차도가 구분된 도로의 <strong>보도</strong><br>
+    ② 교차로의 가장자리나 도로의 모퉁이로부터 <strong>5m 이내</strong><br>
+    ③ 안전지대 사방으로부터 <strong>10m 이내</strong><br>
+    ④ <strong>버스정류장</strong> 표지판·선으로부터 <strong>10m 이내</strong><br>
+    ⑤ <strong>건널목 가장자리</strong>·횡단보도로부터 <strong>10m 이내</strong><br>
+    ⑥ 안전표지로 주·정차 금지를 표시한 곳<br>
+    ⑦ 시·도경찰청장이 지정한 곳
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 주차 금지 장소 (제33조) — 정차는 가능</div>
+    ① <strong>터널 안</strong> 및 <strong>다리 위</strong><br>
+    ② <strong>소방시설</strong>(소화전·지하식·투하식 소화전 등)로부터 <strong>5m 이내</strong><br>
+    ③ 도로공사 구역의 양쪽 가장자리로부터 5m 이내<br>
+    ④ 시·도경찰청장이 지정한 곳
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 5m / 10m 암기법</div>
+    <strong>5m 이내 정·주차 금지</strong>: 교차로 모퉁이<br>
+    <strong>5m 이내 주차 금지</strong>: 소방시설<br>
+    <strong>10m 이내 정·주차 금지</strong>: 안전지대, 버스정류장, 건널목·횡단보도<br><br>
+    💡 <strong>"교5, 방5, 버스·안전지대·건널목은 10"</strong>
+  </div>
+</div>
+
+<!-- 8-3 한국 주차 문화 -->
+<div class="section" id="s8-3">
+  <h3>8-3. 한국의 주차 문화</h3>
+
+  <ul>
+    <li><strong>후진 주차</strong>(뒷바퀴 먼저)가 기본 — 좁은 주차장에서 출차 시 시야 확보를 위해</li>
+    <li><strong>이중 주차</strong>: 공간 부족 시 다른 차 앞에 임시로 주차. 반드시 <strong>전화번호를 대시보드에 표시</strong>하고 사이드 브레이크는 풀어 차량이 밀릴 수 있도록 함</li>
+    <li><strong>기계식 주차장</strong>: 사이드미러 접기, 정확한 정렬이 필수. 실수 시 수백만 원 수리비</li>
+    <li><strong>발렛 주차</strong>: 고급 식당·호텔에서 제공, 보통 3,000~5,000원 팁</li>
+    <li><strong>공영주차장·민영주차장</strong>: 시간당 1,000~4,000원. 서울 도심은 더 비쌈</li>
+  </ul>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 이중 주차 번호 표시</div>
+    번호 표시 없이 이중 주차하면 <strong>주차 방해</strong>로 민원·과태료 대상이 될 수 있습니다. 최근에는 QR코드·모바일 번호 공개 서비스(카카오·티맵 주차)도 사용됩니다. 스마트폰 앱으로 미리 준비하세요.
+  </div>
+</div>
+
+<!-- 8-4 등화 규정 -->
+<div class="section" id="s8-4">
+  <h3>8-4. 등화(전조등) 사용 규정 (제37조)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>상황</th><th>켜야 하는 등화</th></tr>
+      <tr><td>밤(해진 후 ~ 해뜨기 전)</td><td>전조등·차폭등·미등·번호등</td></tr>
+      <tr><td>터널 안</td><td>전조등·차폭등·미등·번호등</td></tr>
+      <tr><td>비·눈·안개로 어두울 때</td><td>전조등·차폭등·미등</td></tr>
+      <tr><td>밤 주·정차</td><td>차폭등·미등</td></tr>
+      <tr><td>마주 오는 차와 교행할 때</td><td><strong>하향등</strong>으로 변경 (상향등 금지)</td></tr>
+      <tr><td>앞차 바로 뒤를 따를 때</td><td><strong>하향등</strong>으로 변경</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 상향등(High Beam) 사용</div>
+    한국에서는 <strong>상대방의 시야를 방해하는 상향등 사용</strong>이 법 위반입니다(제37조 제2항). 도시에서는 거의 사용하지 않으며, 한적한 시골길에서만 쓰세요. 상대 차가 상향등으로 신호를 보내면 "내 상향등을 꺼달라" 또는 "앞에 위험 있음"의 의미일 수 있습니다.
+  </div>
+</div>
+
+<!-- 8-5 경음기 -->
+<div class="section" id="s8-5">
+  <h3>8-5. 경음기(경적) 사용 (제49조 제1항 제8호)</h3>
+  <div class="box box-law">
+    <div class="box-title">📜 제49조</div>
+    "운전자는 운전 중 <strong>정당한 사유 없이</strong> 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다... 8. 경음기를 울리거나 속도를 높이거나 그 밖의 행위로 다른 사람에게 <strong>위해를 끼치거나 교통상의 위험</strong>을 발생하게 하는 행위"
+  </div>
+  <p>경음기는 <strong>위험을 방지하기 위하여 부득이한 경우</strong>에만 사용해야 합니다. 앞차의 지체에 짜증나서, 신호 대기 중 출발 재촉 등 <strong>일상적 사용은 위법</strong>입니다.</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 한국 도로에서 들리는 경적</div>
+    실제 한국 도로에서는 경적이 자주 울립니다. 하지만 그것은 대부분 <strong>법 위반</strong>입니다. 경적으로 인한 범칙금은 4만원 + 벌점 10점. 신호 대기 중 경음기로 출발 재촉 = 범칙금 4만원.
+  </div>
+</div>
+
+<!-- 8-6 연습문제 -->
+<div class="section" id="s8-6">
+  <h3>8-6. 연습 문제</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>주차와 정차를 나누는 시간 기준은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3분</label>
+      <label class="quiz-opt" data-idx="2">② 5분</label>
+      <label class="quiz-opt" data-idx="3">③ 10분</label>
+      <label class="quiz-opt" data-idx="4">④ 시간 무관</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 5분 이하·운전자가 차에 있음 = 정차, 그 외 = 주차.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>소방시설로부터 주차 금지 거리는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3m</label>
+      <label class="quiz-opt" data-idx="2">② 4m</label>
+      <label class="quiz-opt" data-idx="3">③ 5m</label>
+      <label class="quiz-opt" data-idx="4">④ 10m</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 제33조, 소방시설로부터 5m 이내 주차 금지.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>버스정류장으로부터 정·주차 금지 거리는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3m</label>
+      <label class="quiz-opt" data-idx="2">② 5m</label>
+      <label class="quiz-opt" data-idx="3">③ 7m</label>
+      <label class="quiz-opt" data-idx="4">④ 10m</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 제32조, 버스정류장·건널목·횡단보도로부터 10m 이내 정·주차 금지.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>마주 오는 차와 교행할 때의 등화는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 상향등</label>
+      <label class="quiz-opt" data-idx="2">② 하향등</label>
+      <label class="quiz-opt" data-idx="3">③ 전조등 끔</label>
+      <label class="quiz-opt" data-idx="4">④ 비상등</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 상향등은 상대 시야 방해. 하향등으로 전환.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>신호 대기 중 앞차에 경음기로 출발을 재촉한 경우?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 범칙금 대상 (제49조 위반)</label>
+      <label class="quiz-opt" data-idx="2">② 정당한 경음기 사용</label>
+      <label class="quiz-opt" data-idx="3">③ 관행으로 허용</label>
+      <label class="quiz-opt" data-idx="4">④ 처벌 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 정당한 사유 없는 경음기 사용은 제49조 위반(범칙금 4만원).</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>터널 안에서의 조치는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 전조등 소등</label>
+      <label class="quiz-opt" data-idx="2">② 전조등·차폭등·미등 점등, 주차·앞지르기 금지</label>
+      <label class="quiz-opt" data-idx="3">③ 상향등 점등</label>
+      <label class="quiz-opt" data-idx="4">④ 비상등만</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 터널 안은 등화 점등 + 주차·앞지르기 금지.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 09 — 기능시험·도로주행시험 합격 전략 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch9">
+  <span class="ch-num">CHAPTER 09</span>
+  <h2>기능시험·도로주행시험 합격 전략</h2>
+  <p class="ch-desc">시험 코스 상세 팁, 감점·실격 항목, 음성안내 이해</p>
+  <p class="ch-stars">★★ 실기 대비 핵심</p>
+</div>
+
+<!-- 9-1 기능시험 -->
+<div class="section" id="s9-1">
+  <h3>9-1. 기능시험(장내 기능) 개요</h3>
+  <p>학과시험 합격 후 <strong>시험장 내 코스</strong>에서 차량을 직접 운전하며 기본 조작 능력을 평가하는 시험입니다. 2종 보통 기준 <strong>80점 이상</strong>이 합격.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>코스</th><th>내용</th><th>주의 포인트</th></tr>
+      <tr><td>출발 전 기기 조작</td><td>안전띠·방향지시등·기어 변경·전조등·와이퍼·비상등</td><td>음성 지시에 정확히 반응. 순서·명칭 익히기</td></tr>
+      <tr><td><strong>직각 주차(T-주차)</strong></td><td>주차 공간에 후진으로 진입</td><td>사이드미러로 선 확인, 한 번에 주차 성공이 이상적</td></tr>
+      <tr><td><strong>경사로</strong></td><td>오르막에서 정지 후 재출발 (밀림 방지)</td><td>사이드브레이크 활용, <strong>50cm 이상</strong> 뒤로 밀리면 실격</td></tr>
+      <tr><td><strong>교차로 통과</strong></td><td>신호 준수, 좌·우 확인</td><td>적색 정지선 넘기면 실격</td></tr>
+      <tr><td><strong>가속 구간</strong></td><td>지정된 속도(20km/h 이상) 도달</td><td>속도 부족 감점</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 기능시험 주요 실격(즉시 실격) 항목</div>
+    ① 안전띠 미착용<br>
+    ② 신호 위반 (적색 정지선 통과)<br>
+    ③ 경사로에서 <strong>50cm 이상 밀림</strong><br>
+    ④ 코스 이탈 (경계선 통과)<br>
+    ⑤ 지정 시간(6분) 초과<br>
+    ⑥ 장치 조작 실수(시동 꺼짐 3회 이상)
+  </div>
+</div>
+
+<!-- 9-2 도로주행시험 -->
+<div class="section" id="s9-2">
+  <h3>9-2. 도로주행시험 개요</h3>
+  <p>연습면허 취득 후 <strong>실제 도로</strong>에서 시험관 동승 하에 약 5km를 주행하며 평가합니다. <strong>70점 이상</strong> 합격.</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 도로주행시험 주요 실격·대감점 항목</div>
+    <strong>실격(즉시 불합격)</strong><br>
+    ① 신호 위반<br>
+    ② 중앙선 침범<br>
+    ③ 보행자 보호 의무 위반<br>
+    ④ 음주·약물 상태 응시<br>
+    ⑤ 시험관 지시 불이행<br>
+    ⑥ 안전거리 미확보로 추돌 위험 상황 발생<br><br>
+    <strong>대감점(5~10점)</strong><br>
+    • 차로 변경 시 방향지시등 미작동<br>
+    • 속도 위반(10km/h 초과)<br>
+    • 주차 시 연석·장애물 접촉<br>
+    • 급정거·급출발
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 합격 팁 — "방어 운전 마인드"</div>
+    도로주행은 <strong>안전</strong>을 최우선으로 봅니다. 빠른 속도보다 <strong>안전한 속도·충분한 안전거리·방향지시등 100% 사용</strong>이 중요합니다. 애매하면 <strong>서행·일시정지</strong>가 정답입니다.
+  </div>
+</div>
+
+<!-- 9-3 외국인 언어 -->
+<div class="section" id="s9-3">
+  <h3>9-3. 외국인 응시 언어·음성 안내</h3>
+  <ul>
+    <li><strong>기능시험 음성 안내</strong>: 한국어·영어·중국어·베트남어 등 다국어 지원. 응시 전 언어를 선택합니다.</li>
+    <li><strong>도로주행시험</strong>: 한국어와 영어만 지원. 베트남·중국어 모국어 응시자는 기본 한국어 운전 용어를 미리 외워야 합니다.</li>
+    <li>자주 나오는 지시어: "직진", "좌회전", "우회전", "정지", "서행", "차로 변경", "주차", "출발"</li>
+  </ul>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 외국인 주의 — 시험 전날 준비</div>
+    • 시험장 차량(시험 대차)은 본인 차와 조작이 다를 수 있음 → 사전에 시험장에서 연습<br>
+    • 도로주행은 <strong>시험 코스가 고정</strong>되어 있지 않음(당일 추첨). 시험장 주변 도로 1~2코스를 운전연습소에서 연습하는 것이 안정적<br>
+    • 운전전문학원에서 <strong>"학원차 대차"</strong> 옵션으로 익숙한 차량으로 응시 가능
+  </div>
+</div>
+
+<!-- 9-4 연습문제 -->
+<div class="section" id="s9-4">
+  <h3>9-4. 연습 문제</h3>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>기능시험에서 경사로 재출발 시 실격되는 밀림 기준은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10cm 이상</label>
+      <label class="quiz-opt" data-idx="2">② 30cm 이상</label>
+      <label class="quiz-opt" data-idx="3">③ 50cm 이상</label>
+      <label class="quiz-opt" data-idx="4">④ 1m 이상</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 경사로에서 50cm 이상 밀리면 즉시 실격.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>도로주행시험의 합격 기준 점수는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 60점</label>
+      <label class="quiz-opt" data-idx="2">② 70점</label>
+      <label class="quiz-opt" data-idx="3">③ 80점</label>
+      <label class="quiz-opt" data-idx="4">④ 90점</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 도로주행 70점, 기능 80점.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>도로주행시험에서 즉시 실격되는 행동이 아닌 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 신호 위반</label>
+      <label class="quiz-opt" data-idx="2">② 중앙선 침범</label>
+      <label class="quiz-opt" data-idx="3">③ 보행자 보호 의무 위반</label>
+      <label class="quiz-opt" data-idx="4">④ 방향지시등 1회 미작동</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 방향지시등 미작동은 대감점이지만 즉시 실격은 아님.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>도로주행시험에서 지원되는 언어는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 한국어만</label>
+      <label class="quiz-opt" data-idx="2">② 한국어·영어</label>
+      <label class="quiz-opt" data-idx="3">③ 8개 언어</label>
+      <label class="quiz-opt" data-idx="4">④ 모든 외국어</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 기능시험은 다국어, 도로주행은 한국어·영어만 가능.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>기능시험에서 안전띠를 매지 않았을 때?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 즉시 실격</label>
+      <label class="quiz-opt" data-idx="2">② 5점 감점</label>
+      <label class="quiz-opt" data-idx="3">③ 경고 후 계속</label>
+      <label class="quiz-opt" data-idx="4">④ 영향 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 안전띠 미착용은 즉시 실격 항목.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 10 — 실전 문제풀이 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch10">
+  <span class="ch-num">CHAPTER 10</span>
+  <h2>실전 문제풀이</h2>
+  <p class="ch-desc">출제 비중이 높은 핵심 주제 30문제 — 비보호좌회전·유턴·2022 개정·우회전 삼색등·2차 사고·양보 복합</p>
+  <p class="ch-stars">★★★ 시험 직전 최종 점검</p>
+</div>
+
+<div class="section" id="s10-1">
+  <h3>10-1. 핵심 30문제</h3>
+  <p>각 문제는 앞 장들에서 다룬 핵심 내용을 종합합니다. 틀린 문제는 해당 장으로 돌아가 다시 학습하세요.</p>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>비보호좌회전 표지가 있는 교차로에서 좌회전이 가능한 신호는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 직진 녹색, 맞은편 차 없음</label>
+      <label class="quiz-opt" data-idx="2">② 적색</label>
+      <label class="quiz-opt" data-idx="3">③ 황색</label>
+      <label class="quiz-opt" data-idx="4">④ 모든 신호</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 비보호좌회전은 녹색 신호일 때만 가능. 적색 좌회전 = 신호위반.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>비보호좌회전 중 사고가 발생했을 때 좌회전 차의 과실 비율은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 30%</label>
+      <label class="quiz-opt" data-idx="2">② 50%</label>
+      <label class="quiz-opt" data-idx="3">③ 80% 이상</label>
+      <label class="quiz-opt" data-idx="4">④ 0%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 통상 비보호좌회전 차의 과실이 80% 이상으로 인정된다.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>한국에서 유턴이 가능한 경우는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 유턴 허용 표지가 있고 해당 신호·조건을 충족할 때</label>
+      <label class="quiz-opt" data-idx="2">② 금지 표지가 없으면 어디서든</label>
+      <label class="quiz-opt" data-idx="3">③ 모든 교차로</label>
+      <label class="quiz-opt" data-idx="4">④ 차량이 적은 시간대 어디서든</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 한국은 유턴 허용 표지가 있는 곳에서만 가능. 미국과 정반대.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>유턴 표지는 있지만 중앙선이 황색 실선이면?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 유턴 가능</label>
+      <label class="quiz-opt" data-idx="2">② 서행으로 가능</label>
+      <label class="quiz-opt" data-idx="3">③ 보행자 없으면 가능</label>
+      <label class="quiz-opt" data-idx="4">④ 유턴 불가 (중앙선 침범 = 12대 중과실)</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 표지가 있더라도 실제 지정 구간에서만 유효. 일반 황색 실선은 넘기 금지.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>2022년 보행자 보호 개정의 핵심은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 보행자 무시 허용</label>
+      <label class="quiz-opt" data-idx="2">② "건너려는 때"도 보호, 도로 외 장소에도 의무 확대</label>
+      <label class="quiz-opt" data-idx="3">③ 신호 없는 횡단보도 폐지</label>
+      <label class="quiz-opt" data-idx="4">④ 어린이 보호구역 폐지</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 건너는 중뿐 아니라 건너려는 때부터 보호, 아파트·주차장 등에도 의무.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>어린이 보호구역 내 신호 없는 횡단보도에서 운전자의 의무는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 보행자 유무 관계 없이 일시정지</label>
+      <label class="quiz-opt" data-idx="2">② 서행</label>
+      <label class="quiz-opt" data-idx="3">③ 보행자 있을 때만 정지</label>
+      <label class="quiz-opt" data-idx="4">④ 경적 사용</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 어린이 보호구역 내 신호 없는 횡단보도 = 무조건 일시정지.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>우회전 전용 삼색등이 적색일 때 우회전은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 일시정지 후 가능</label>
+      <label class="quiz-opt" data-idx="2">② 서행 후 가능</label>
+      <label class="quiz-opt" data-idx="3">③ 보행자 없으면 가능</label>
+      <label class="quiz-opt" data-idx="4">④ 절대 불가</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 우회전 삼색등 적색은 우회전 절대 금지. 일반 우회전 규칙과 다름.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q8</span><span>고속도로 사고 후 2차 사고 예방의 올바른 순서는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 차 안 대기 → 보험사 전화</label>
+      <label class="quiz-opt" data-idx="2">② 비상등 → 삼각 경고판 → 가드레일 밖 대피 → 신고</label>
+      <label class="quiz-opt" data-idx="3">③ 상대와 합의 → 촬영</label>
+      <label class="quiz-opt" data-idx="4">④ 차량 이동만</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 2차 사고 예방은 비상등·경고판·대피가 핵심.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q9</span><span>교통정리 없는 교차로에서 도로 폭이 다를 때 우선권은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 좁은 도로</label>
+      <label class="quiz-opt" data-idx="2">② 먼저 본 차</label>
+      <label class="quiz-opt" data-idx="3">③ 넓은 도로</label>
+      <label class="quiz-opt" data-idx="4">④ 큰 차</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 제26조 제2항. 넓은 도로 우선.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q10</span><span>도로 폭이 같고 좌회전·직진·우회전 차가 동시 도착. 우선 순위는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 좌회전 > 직진 > 우회전</label>
+      <label class="quiz-opt" data-idx="2">② 직진·우회전 > 좌회전, 동시 시 우측 차</label>
+      <label class="quiz-opt" data-idx="3">③ 동시 진행</label>
+      <label class="quiz-opt" data-idx="4">④ 좌회전 우선</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 직진·우회전이 좌회전보다 우선(제26조 제4항), 동시 도착 시 우측 차 양보(제3항).</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q11</span><span>고속도로 편도 2차로 이상에서 승용차의 최고 속도는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 80km/h</label>
+      <label class="quiz-opt" data-idx="2">② 100km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 110km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 제한 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 기본 100km/h, 지정 110~120.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q12</span><span>노면이 얼어붙은 경우 법정 감속 비율은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ 감속 의무 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 노면 결빙·가시거리 100m 이내·눈 20mm 이상 = 50% 감속.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q13</span><span>음주운전 처벌 기준(혈중알코올농도)은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 0.02%</label>
+      <label class="quiz-opt" data-idx="2">② 0.03%</label>
+      <label class="quiz-opt" data-idx="3">③ 0.05%</label>
+      <label class="quiz-opt" data-idx="4">④ 0.08%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 한국은 0.03% 이상.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q14</span><span>황색 실선 중앙선을 넘어 앞지르기 하다 사고 발생. 이에 해당하는 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 12대 중과실(중앙선 침범 + 앞지르기 위반)</label>
+      <label class="quiz-opt" data-idx="2">② 단순 과실</label>
+      <label class="quiz-opt" data-idx="3">③ 보험 처리만 가능</label>
+      <label class="quiz-opt" data-idx="4">④ 벌점 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 황색 실선 중앙선 침범은 12대 중과실, 앞지르기 방법 위반도 12대 중과실.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q15</span><span>회전교차로에서의 통행 원칙은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 진입 차 우선</label>
+      <label class="quiz-opt" data-idx="2">② 큰 차 우선</label>
+      <label class="quiz-opt" data-idx="3">③ 시계방향 회전</label>
+      <label class="quiz-opt" data-idx="4">④ 반시계방향 회전, 회전 중인 차 우선</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 반시계방향, 회전 중인 차 우선(제25조의2).</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q16</span><span>녹색 신호에서 교차로 건너편이 꽉 막혀 있으면?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 진입하여 자리 확보</label>
+      <label class="quiz-opt" data-idx="2">② 서행 진입</label>
+      <label class="quiz-opt" data-idx="3">③ 교차로에 들어가지 않음(꼬리물기 금지)</label>
+      <label class="quiz-opt" data-idx="4">④ 경적 사용</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 제25조 제5항, 꼬리물기 금지.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q17</span><span>다음 중 12대 중과실이 아닌 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 신호위반</label>
+      <label class="quiz-opt" data-idx="2">② 음주운전</label>
+      <label class="quiz-opt" data-idx="3">③ 화물 고정조치 위반</label>
+      <label class="quiz-opt" data-idx="4">④ 주·정차 위반</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 주·정차 위반은 12대 중과실에 포함되지 않는다.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q18</span><span>황색 점멸 신호의 의미는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 일시정지</label>
+      <label class="quiz-opt" data-idx="2">② 주의하며 진행</label>
+      <label class="quiz-opt" data-idx="3">③ 정지</label>
+      <label class="quiz-opt" data-idx="4">④ 속도 유지</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 황색 점멸 = 주의 진행 / 적색 점멸 = 일시정지 후 진행.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q19</span><span>중앙선의 색상은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 백색</label>
+      <label class="quiz-opt" data-idx="2">② 황색</label>
+      <label class="quiz-opt" data-idx="3">③ 청색</label>
+      <label class="quiz-opt" data-idx="4">④ 적색</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 중앙선 = 황색, 차선 = 백색.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q20</span><span>청색(파란색) 노면표시의 의미는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 장애인 전용주차</label>
+      <label class="quiz-opt" data-idx="2">② 화물차 전용</label>
+      <label class="quiz-opt" data-idx="3">③ 버스전용차로</label>
+      <label class="quiz-opt" data-idx="4">④ 자전거 전용</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 청색 실선은 버스전용차로. 일반 차량 진입 시 범칙금.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q21</span><span>안전지대 사방으로부터 정·주차 금지 거리는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10m</label>
+      <label class="quiz-opt" data-idx="2">② 5m</label>
+      <label class="quiz-opt" data-idx="3">③ 3m</label>
+      <label class="quiz-opt" data-idx="4">④ 거리 제한 없음</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 제32조. 안전지대·버스정류장·건널목·횡단보도 = 10m.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q22</span><span>속도위반으로 12대 중과실이 되는 초과 기준은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10km/h 초과</label>
+      <label class="quiz-opt" data-idx="2">② 20km/h 초과</label>
+      <label class="quiz-opt" data-idx="3">③ 40km/h 초과</label>
+      <label class="quiz-opt" data-idx="4">④ 60km/h 초과</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 제한속도 20km/h 초과는 12대 중과실.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q23</span><span>보행자 녹색 점멸 신호에서 보행자의 행동은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 빨리 건너기 시작</label>
+      <label class="quiz-opt" data-idx="2">② 그 자리에 정지</label>
+      <label class="quiz-opt" data-idx="3">③ 건너기 시작 금지, 건너는 중이면 신속 완료</label>
+      <label class="quiz-opt" data-idx="4">④ 경적 울림</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 녹색 점멸은 새로 건너기 금지.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q24</span><span>어린이 보호구역의 범칙금·벌점은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 일반과 동일</label>
+      <label class="quiz-opt" data-idx="2">② 일반의 2배</label>
+      <label class="quiz-opt" data-idx="3">③ 1.5배</label>
+      <label class="quiz-opt" data-idx="4">④ 면제</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 2배 부과.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q25</span><span>적색 신호 시 일반 우회전 조건이 아닌 것은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 일시정지</label>
+      <label class="quiz-opt" data-idx="2">② 보행자 통행 방해 없음</label>
+      <label class="quiz-opt" data-idx="3">③ 다른 차 통행 방해 없음</label>
+      <label class="quiz-opt" data-idx="4">④ 경음기 사용</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ④</strong> — 경음기 사용은 조건이 아니며 오히려 사용 시 범칙금 대상.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q26</span><span>교통사고 시 사상자 구호 후 가장 먼저 할 일은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 경찰(112)·구급(119) 신고</label>
+      <label class="quiz-opt" data-idx="2">② 보험사 전화</label>
+      <label class="quiz-opt" data-idx="3">③ 현장 이탈</label>
+      <label class="quiz-opt" data-idx="4">④ 상대와 합의</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 제54조 제2항에 따른 신고 의무.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q27</span><span>아파트 단지 내 도로에서 보행자를 친 경우?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 도로가 아니므로 불문</label>
+      <label class="quiz-opt" data-idx="2">② 관리사무소 규정만 적용</label>
+      <label class="quiz-opt" data-idx="3">③ 2022년 개정으로 보행자 보호 의무 적용</label>
+      <label class="quiz-opt" data-idx="4">④ 민사 책임만</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 제27조 제7항, 도로 외 장소도 보호 의무.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q28</span><span>마주 오는 차와 교행 시 등화는?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 상향등</label>
+      <label class="quiz-opt" data-idx="2">② 하향등</label>
+      <label class="quiz-opt" data-idx="3">③ 소등</label>
+      <label class="quiz-opt" data-idx="4">④ 비상등</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ②</strong> — 제37조, 상대 시야 방해 방지.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q29</span><span>앞차가 좌회전하려고 할 때 앞지르기 방향은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 우측으로 앞지르기 가능</label>
+      <label class="quiz-opt" data-idx="2">② 좌측으로</label>
+      <label class="quiz-opt" data-idx="3">③ 앞지르기 금지</label>
+      <label class="quiz-opt" data-idx="4">④ 중앙선 침범</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ①</strong> — 앞차가 좌측으로 진로 변경 중일 때 예외적으로 우측 앞지르기 허용.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q30</span><span>경찰보조자에 해당하지 않는 사람은?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 모범운전자</label>
+      <label class="quiz-opt" data-idx="2">② 군사경찰</label>
+      <label class="quiz-opt" data-idx="3">③ 고속도로 안전순찰원</label>
+      <label class="quiz-opt" data-idx="4">④ 소방공무원</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>정답: ③</strong> — 시행령 제6조. 모범운전자·군사경찰·소방공무원만 경찰보조자.</div>
+  </div>
+</div>
+
+
+<!-- ===== RESOURCES FOOTER ===== -->
+<div class="resources">
+  <h4>📚 학습 리소스</h4>
+  <a href="https://evergreenedu-collab.github.io/quiz/textbook.html">📖 교재로 공부하기</a>
+  <a href="https://evergreenedu-collab.github.io/quiz/">✏️ 문제은행 980문제 연습하기</a>
+  <p style="font-size:.8rem;opacity:.7;margin-top:.5rem;">한국도로교통공단(KoRoad) 교육본부 | © 2026</p>
+</div>
+
+</div><!-- end .content -->
+
+<!-- ===== QUIZ INTERACTION JS ===== -->
+<script>
+document.querySelectorAll('.quiz').forEach(quiz => {
+  const answer = parseInt(quiz.dataset.answer);
+  const answerBox = quiz.querySelector('.quiz-answer');
+  quiz.querySelectorAll('.quiz-opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      // 이미 답변 표시되었으면 무시
+      if (answerBox.classList.contains('show')) return;
+      const idx = parseInt(opt.dataset.idx);
+      // 모든 옵션 비활성화
+      quiz.querySelectorAll('.quiz-opt').forEach(o => {
+        o.style.pointerEvents = 'none';
+      });
+      if (idx === answer) {
+        opt.classList.add('correct');
+      } else {
+        opt.classList.add('wrong');
+        // 정답 표시
+        quiz.querySelector(`[data-idx="${answer}"]`).classList.add('correct');
+      }
+      answerBox.classList.add('show');
+    });
+  });
+});
+
+// Nav tab active state
+const sections = document.querySelectorAll('.chapter-header');
+const navLinks = document.querySelectorAll('.nav-tabs a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>
