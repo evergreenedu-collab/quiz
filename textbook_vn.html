@@ -2,934 +2,2943 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Giáo trình thi lý thuyết GPLX cho người nước ngoài</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Giáo trình thi lý thuyết bằng lái xe Hàn Quốc — dành cho người nước ngoài</title>
 <style>
-:root{--navy:#0A2463;--blue:#1565C0;--sky:#42A5F5;--green:#2E7D32;--green-bg:#E8F5E9;--amber:#F9A825;--amber-bg:#FFF8E1;--red:#C62828;--red-bg:#FFEBEE;--purple:#6A1B9A;--gray:#546E7A;--gray-light:#ECEFF1;--text:#1A2540;--bg:#F5F7FA;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Noto Sans',sans-serif;color:var(--text);background:var(--bg);line-height:1.75;font-size:15px;}
+  /* ===== CSS VARIABLES ===== */
+  :root {
+    --bg: #f8f6f1;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text-sub: #555;
+    --accent: #1e40af;
+    --accent-light: #dbeafe;
+    --green: #059669;
+    --green-light: #d1fae5;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --yellow: #d97706;
+    --yellow-light: #fef3c7;
+    --orange: #ea580c;
+    --orange-light: #fff7ed;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --border: #e5e2d9;
+    --shadow: 0 1px 3px rgba(0,0,0,.08);
+    --radius: 12px;
+    --font-title: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
 
-/* Thanh điều hướng */
-.sticky-top{position:sticky;top:0;z-index:100;}
-.topnav{background:var(--navy);padding:8px 16px;display:flex;align-items:center;gap:10px;overflow-x:auto;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.3);-webkit-overflow-scrolling:touch}.topnav::-webkit-scrollbar{display:none}
-.topnav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:12px;font-weight:500;padding:6px 10px;border-radius:20px;transition:.2s;flex-shrink:0;}
-.topnav a:hover{color:#fff;background:rgba(255,255,255,.15);}
-.topnav .brand{font-family:'Black Han Sans';font-size:15px;color:var(--amber);margin-right:4px;flex-shrink:0;}
-.lsw{display:flex;gap:4px;padding:6px 12px;background:#00204D;overflow-x:auto;-webkit-overflow-scrolling:touch}.lsw::-webkit-scrollbar{display:none}
-.lg{padding:5px 12px;border-radius:14px;font-size:11px;color:rgba(255,255,255,.6);text-decoration:none;white-space:nowrap;font-weight:500;min-height:28px;display:inline-flex;align-items:center}.lg.on{background:rgba(255,255,255,.15);color:#fff}
-.container{max-width:860px;margin:0 auto;padding:24px 20px 80px;}
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* Chú thích mức độ quan trọng */
-.importance-legend{background:#fff;border:2px solid var(--amber);border-radius:12px;padding:14px 20px;margin:16px 0 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;}
-.importance-legend .il-title{font-weight:900;color:var(--navy);white-space:nowrap;}
-.il-item{display:flex;align-items:center;gap:4px;}
-.il-stars{color:var(--amber);font-size:16px;letter-spacing:-1px;}
+  /* ===== HEADER ===== */
+  .header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+    color: #fff;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: .25rem; }
+  .header p { font-size: .85rem; opacity: .85; }
 
-/* Tiêu đề chương */
-.ch-header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:28px 24px;border-radius:16px;margin:40px 0 20px;position:relative;overflow:hidden;scroll-margin-top:90px;}
-.ch-header::after{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.05);top:-50px;right:-30px;}
-.ch-num{font-size:12px;color:rgba(255,255,255,.6);font-weight:700;letter-spacing:2px;}
-.ch-title-row{display:flex;align-items:center;gap:12px;margin:4px 0 6px;}
-.ch-title{font-family:'Black Han Sans';font-size:26px;line-height:1.3;}
-.ch-stars{color:var(--amber);font-size:22px;letter-spacing:-2px;flex-shrink:0;}
-.ch-desc{font-size:12px;color:rgba(255,255,255,.65);line-height:1.5;}
-.ch-header.green{background:linear-gradient(135deg,#1B5E20,var(--green));}
-.ch-header.amber-h{background:linear-gradient(135deg,#E65100,#F57C00);}
-.ch-header.red-h{background:linear-gradient(135deg,#880E4F,#AD1457);}
-.ch-header.purple-h{background:linear-gradient(135deg,#4A148C,var(--purple));}
-.ch-header.teal-h{background:linear-gradient(135deg,#004D40,#00796B);}
+  /* ===== NAV TABS ===== */
+  .nav-tabs {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    padding: 0 .5rem;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tabs a {
+    flex-shrink: 0;
+    padding: .75rem 1rem;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--text-sub);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all .2s;
+  }
+  .nav-tabs a:hover,
+  .nav-tabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-h2{font-size:19px;font-weight:900;color:var(--navy);margin:28px 0 10px;padding-bottom:6px;border-bottom:3px solid var(--navy);}
-h3{font-size:15px;font-weight:700;color:var(--blue);margin:18px 0 6px;}
-p{margin:8px 0;}
+  /* ===== MAIN CONTENT ===== */
+  .content { max-width: 720px; margin: 0 auto; padding: 0 1rem 3rem; }
 
-/* Hộp */
-.box{padding:14px 18px;border-radius:10px;margin:14px 0;font-size:14px;}
-.box-tip{background:var(--amber-bg);border-left:4px solid var(--amber);}
-.box-warn{background:var(--red-bg);border-left:4px solid var(--red);}
-.box-info{background:var(--green-bg);border-left:4px solid var(--green);}
-.box-law{background:#E8EAF6;border-left:4px solid #3F51B5;font-size:13px;}
-.box-label{font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:1px;}
-.box-tip .box-label{color:#E65100;} .box-warn .box-label{color:var(--red);} .box-info .box-label{color:var(--green);} .box-law .box-label{color:#283593;}
+  /* ===== CHAPTER HEADER ===== */
+  .chapter-header {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow);
+  }
+  .chapter-header .ch-num {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .chapter-header h2 { font-size: 1.35rem; font-weight: 800; margin: .25rem 0; }
+  .chapter-header .ch-desc { font-size: .9rem; color: var(--text-sub); }
+  .chapter-header .ch-stars { color: var(--yellow); margin-top: .5rem; font-size: .85rem; }
 
-/* Bảng */
-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;}
-th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600;font-size:12px;}
-td{padding:8px 12px;border-bottom:1px solid #ddd;}
-tr:nth-child(even) td{background:#f8f9fc;}
+  /* ===== SECTION ===== */
+  .section {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+  }
+  .section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: .75rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1rem 0 .5rem;
+  }
+  .section p { margin-bottom: .75rem; font-size: .95rem; }
+  .section ul, .section ol { padding-left: 1.25rem; margin-bottom: .75rem; }
+  .section li { margin-bottom: .35rem; font-size: .93rem; }
 
-/* Hình minh họa */
-.illust{text-align:center;margin:18px 0;padding:14px;background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.06);}
-.illust-caption{font-size:11px;color:var(--gray);margin-top:6px;}
+  /* ===== INFO BOXES ===== */
+  .box {
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin: .75rem 0;
+    font-size: .9rem;
+    line-height: 1.65;
+  }
+  .box-law { background: var(--accent-light); border-left: 3px solid var(--accent); }
+  .box-warn { background: var(--red-light); border-left: 3px solid var(--red); }
+  .box-tip { background: var(--green-light); border-left: 3px solid var(--green); }
+  .box-foreign { background: var(--orange-light); border-left: 3px solid var(--orange); }
+  .box-compare { background: var(--purple-light); border-left: 3px solid var(--purple); }
+  .box-exam { background: var(--yellow-light); border-left: 3px solid var(--yellow); }
+  .box .box-title {
+    font-weight: 700;
+    margin-bottom: .35rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
 
-/* Hiệu ứng nhấp nháy */
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:.15;}}
-.blink-yellow{animation:blink 1s ease-in-out infinite;}
-.blink-red{animation:blink 1s ease-in-out infinite;}
+  /* ===== TABLES ===== */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: .75rem 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .88rem;
+    min-width: 320px;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    padding: .6rem .75rem;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  td {
+    padding: .55rem .75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fafaf7; }
 
-/* Bài tập */
-.quiz-section{background:#fff;border-radius:12px;padding:18px 22px;margin:18px 0;box-shadow:0 1px 4px rgba(0,0,0,.06);}
-.q-item{margin:14px 0;padding:10px 0;border-bottom:1px solid #eee;}
-.q-item:last-child{border-bottom:none;}
-.q-num{font-weight:900;color:var(--blue);font-size:13px;}
-.q-text{font-weight:600;margin:4px 0 6px;font-size:14px;}
-.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:3px 14px;margin-bottom:6px;font-size:13px;}
-.q-answer{font-size:12px;color:var(--green);font-weight:600;}
+  /* ===== SIGNAL CARDS ===== */
+  .signal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+    margin: .75rem 0;
+  }
+  @media (min-width: 480px) {
+    .signal-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .signal-card {
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .signal-card .signal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 0 auto .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .signal-card .signal-name { font-weight: 700; font-size: .95rem; margin-bottom: .25rem; }
+  .signal-card .signal-desc { font-size: .83rem; color: var(--text-sub); line-height: 1.5; }
 
-/* Banner ngân hàng câu hỏi */
-.quiz-banner{background:linear-gradient(135deg,var(--amber),#FF8F00);color:var(--navy);padding:18px 22px;border-radius:12px;margin:24px 0;display:flex;align-items:center;gap:14px;text-decoration:none;transition:.2s;}
-.quiz-banner:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(249,168,37,.4);}
-.quiz-banner .qb-icon{font-size:28px;flex-shrink:0;}
-.quiz-banner .qb-text{flex:1;}
-.quiz-banner .qb-title{font-family:'Black Han Sans';font-size:17px;}
-.quiz-banner .qb-desc{font-size:12px;opacity:.8;margin-top:2px;}
-.quiz-banner .qb-btn{background:var(--navy);color:#fff;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:700;flex-shrink:0;}
+  .sig-green { background: #ecfdf5; }
+  .sig-green .signal-icon { background: #22c55e; color: #fff; }
+  .sig-green .signal-icon.signal-arrow { background: transparent; }
+  .sig-yellow { background: #fffbeb; }
+  .sig-yellow .signal-icon { background: #eab308; color: #fff; }
+  .sig-red { background: #fef2f2; }
+  .sig-red .signal-icon { background: #ef4444; color: #fff; }
 
-/* Thuật ngữ */
-.term-o{color:var(--green);font-weight:700;}
-.term-x{text-decoration:line-through;color:var(--red);font-size:13px;}
+  /* ===== FLOW DIAGRAM ===== */
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: .75rem 0;
+    font-size: .88rem;
+  }
+  .flow-step {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 700;
+    padding: .5rem .9rem;
+    border-radius: 8px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .flow-step.step-red { background: var(--red-light); color: var(--red); }
+  .flow-step.step-green { background: var(--green-light); color: var(--green); }
+  .flow-step.step-yellow { background: var(--yellow-light); color: var(--yellow); }
+  .flow-arrow { font-size: 1.1rem; color: var(--text-sub); flex-shrink: 0; }
 
-/* SVG responsive */
-.illust svg{width:100%;height:auto;}
+  /* ===== SIGN SHAPES ===== */
+  .sign-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+    margin: .75rem 0;
+  }
+  @media (min-width: 480px) {
+    .sign-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .sign-item { text-align: center; }
+  .sign-item svg { margin: 0 auto .4rem; display: block; }
+  .sign-label { font-size: .82rem; font-weight: 600; }
+  .sign-sub { font-size: .75rem; color: var(--text-sub); }
 
-/* Bảng responsive */
-.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0;}
-.table-wrap table{min-width:360px;}
+  /* ===== QUIZ ===== */
+  .quiz {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: .75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .quiz-q {
+    font-weight: 700;
+    font-size: .95rem;
+    margin-bottom: .75rem;
+    display: flex;
+    gap: .5rem;
+  }
+  .quiz-q .q-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .78rem;
+  }
+  .quiz-opts { margin-bottom: .75rem; }
+  .quiz-opt {
+    display: block;
+    padding: .5rem .75rem;
+    margin-bottom: .35rem;
+    border-radius: 8px;
+    font-size: .9rem;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: all .2s;
+  }
+  .quiz-opt:hover { background: var(--accent-light); }
+  .quiz-opt.selected { background: var(--accent-light); border-color: var(--accent); }
+  .quiz-opt.correct { background: var(--green-light); border-color: var(--green); }
+  .quiz-opt.wrong { background: var(--red-light); border-color: var(--red); }
+  .quiz-answer {
+    display: none;
+    padding: .75rem;
+    border-radius: 8px;
+    background: var(--green-light);
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+  .quiz-answer.show { display: block; }
 
-/* Tối ưu di động — Máy tính bảng */
-@media(max-width:768px){
-  body{font-size:14px;}
-  .topnav{padding:6px 10px;gap:6px;}
-  .topnav a{font-size:11px;padding:8px 10px;min-height:36px;display:flex;align-items:center;}
-  .topnav .brand{font-size:14px;}
-  .lsw{padding:5px 10px;gap:3px;}
-  .lg{padding:5px 10px;font-size:11px;min-height:30px;}
-  .container{padding:16px 14px 60px;}
-  .ch-header{padding:22px 18px;margin:28px 0 16px;}
-  .ch-title{font-size:22px;}
-  .ch-stars{font-size:18px;}
-  h2{font-size:17px;margin:22px 0 8px;}
-  .box{padding:12px 14px;font-size:13px;}
-  .quiz-section{padding:14px 16px;}
-}
+  /* ===== COMPARISON TABLE ===== */
+  .compare-table { margin: .75rem 0; }
+  .compare-table th { font-size: .8rem; }
+  .compare-table td { font-size: .83rem; }
+  .compare-table .flag { font-size: 1.1rem; }
 
-/* Tối ưu di động — Điện thoại */
-@media(max-width:480px){
-  body{font-size:13px;line-height:1.65;}
-  .topnav{padding:5px 8px;gap:4px;}
-  .topnav a{font-size:10px;padding:7px 8px;}
-  .topnav .brand{font-size:13px;margin-right:2px;}
-  .lsw{padding:4px 8px;gap:3px;}
-  .lg{padding:4px 8px;font-size:10px;min-height:26px;}
-  .container{padding:10px 10px 50px;}
-  .ch-header{padding:18px 14px;margin:20px 0 12px;border-radius:12px;}
-  .ch-title{font-size:19px;}
-  .ch-num{font-size:10px;}
-  .ch-desc{font-size:11px;}
-  .ch-stars{font-size:16px;}
-  h2{font-size:16px;margin:18px 0 6px;padding-bottom:4px;}
-  h3{font-size:14px;}
-  p{font-size:13px;margin:6px 0;}
-  .box{padding:10px 12px;font-size:12px;border-radius:8px;}
-  .box-label{font-size:10px;}
-  .box-law{font-size:12px;}
-  table{font-size:12px;}
-  th{padding:6px 8px;font-size:11px;}
-  td{padding:6px 8px;}
-  .importance-legend{padding:10px 14px;font-size:11px;flex-direction:column;align-items:flex-start;gap:6px;border-radius:8px;}
-  .il-stars{font-size:14px;}
-  .q-opts{grid-template-columns:1fr;gap:2px;}
-  .q-text{font-size:13px;}
-  .q-num{font-size:12px;}
-  .q-answer{font-size:11px;}
-  .quiz-banner{flex-direction:column;text-align:center;padding:14px 16px;gap:10px;}
-  .quiz-banner .qb-title{font-size:15px;}
-  .quiz-banner .qb-desc{font-size:11px;}
-  .quiz-banner .qb-btn{width:100%;text-align:center;padding:10px;}
-  .illust{padding:8px;border-radius:8px;}
-  .illust-caption{font-size:10px;}
-  .quiz-section{padding:12px 12px;margin:12px 0;border-radius:8px;}
-}
+  /* ===== SCENARIO CARDS ===== */
+  .scenario {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: .75rem 0;
+  }
+  .scenario-title {
+    font-weight: 700;
+    font-size: .92rem;
+    color: var(--accent);
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
+  .scenario-body { font-size: .88rem; }
+  .scenario-body .do { color: var(--green); font-weight: 600; }
+  .scenario-body .dont { color: var(--red); font-weight: 600; }
+
+  /* ===== FOOTER RESOURCES ===== */
+  .resources {
+    background: linear-gradient(135deg, #1e3a5f, #1e40af);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .resources h4 { font-size: 1rem; margin-bottom: .75rem; }
+  .resources a {
+    display: block;
+    background: rgba(255,255,255,.15);
+    color: #fff;
+    text-decoration: none;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: background .2s;
+  }
+  .resources a:hover { background: rgba(255,255,255,.25); }
+
+  /* ===== PRIORITY INDICATOR ===== */
+  .priority {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: .78rem;
+    font-weight: 700;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+  }
+  .priority-high { background: #fee2e2; color: #dc2626; }
+  .priority-mid { background: #fef3c7; color: #d97706; }
+
+  /* ===== STEP INDICATOR ===== */
+  .steps { margin: .75rem 0; }
+  .step-item {
+    display: flex;
+    gap: .75rem;
+    padding: .75rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .step-item:last-child { border-bottom: none; }
+  .step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .85rem;
+  }
+  .step-content { flex: 1; font-size: .9rem; }
+  .step-content strong { color: var(--accent); }
+
+  /* ===== MOBILE OPTIMIZATIONS ===== */
+  @media (max-width: 480px) {
+    body { font-size: 15px; }
+    .header { padding: 1.25rem 1rem; }
+    .header h1 { font-size: 1.15rem; }
+    .content { padding: 0 .75rem 2rem; }
+    .section { padding: 1rem; }
+    .chapter-header { padding: 1.25rem; }
+    .chapter-header h2 { font-size: 1.2rem; }
+    table { font-size: .82rem; }
+    th, td { padding: .45rem .5rem; }
+    .signal-card { padding: .75rem; }
+    .sign-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .header, .nav-tabs { position: static; }
+    .quiz-answer { display: block !important; }
+    body { font-size: 12pt; }
+  }
 </style>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- Thanh điều hướng -->
-<div class="sticky-top">
-<nav class="topnav">
-  <span class="brand">🚗 Giáo trình GPLX cho người nước ngoài</span>
-  <a href="#ch1">Ch.1</a><a href="#ch2">Ch.2</a><a href="#ch3">Ch.3</a><a href="#ch4">Ch.4</a><a href="#ch5">Ch.5</a><a href="#ch6">Ch.6</a><a href="#ch7">Ch.7</a><a href="#ch8">Ch.8</a><a href="#ch9">Ch.9</a><a href="#ch10">Ch.10</a>
-</nav>
-<div class="lsw"><a href="textbook.html" class="lg">🇰🇷 한국어</a><a href="textbook_en.html" class="lg">🇺🇸 English</a><a href="textbook_cn.html" class="lg">🇨🇳 中文</a><a href="textbook_vn.html" class="lg on">🇻🇳 Tiếng Việt</a></div>
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <h1>🚗 Giáo trình thi lý thuyết bằng lái xe Hàn Quốc — Người nước ngoài</h1>
+  <p>Cơ quan Giao thông Đường bộ Hàn Quốc (KoRoad) — Trung tâm Đào tạo</p>
 </div>
 
-<div class="container">
-
-<div class="importance-legend">
-  <div class="il-title">📌 Mức độ quan trọng theo chương</div>
-  <div class="il-item"><span class="il-stars">★★★</span> Thi nhiều nhất</div>
-  <div class="il-item"><span class="il-stars">★★</span> Thi thường xuyên</div>
-  <div class="il-item"><span class="il-stars">★</span> Học cơ bản</div>
+<!-- ===== NAV ===== -->
+<div class="nav-tabs">
+  <a href="#ch1">Chương 1</a>
+  <a href="#ch2" class="active">Chương 2</a>
+  <a href="#ch3">Chương 3</a>
+  <a href="#ch4">Chương 4</a>
+  <a href="#ch5">Chương 5</a>
+  <a href="#ch6">Chương 6</a>
+  <a href="#ch7">Chương 7</a>
+  <a href="#ch8">Chương 8</a>
+  <a href="#ch9">Chương 9</a>
+  <a href="#ch10">Chương 10</a>
 </div>
 
-<!-- ===== Chương 1 ===== -->
-<div class="ch-header teal-h" id="ch1">
-  <div class="ch-num">CHAPTER 01</div>
-  <div class="ch-title-row"><div class="ch-title">Hướng dẫn thi lý thuyết</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">Cấu trúc đề thi, tiêu chuẩn đậu, ngôn ngữ thi, quy tắc thuật ngữ</div>
+<div class="content">
+
+<!-- ============================================================ -->
+<!-- Chương 1 — Giới thiệu kỳ thi & hệ thống bằng lái -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch1">
+  <span class="ch-num">Chương 1</span>
+  <h2>Giới thiệu kỳ thi lý thuyết &amp; Hệ thống bằng lái</h2>
+  <p class="ch-desc">Phân loại bằng lái, đổi bằng nước ngoài, cấu trúc - chi phí - tiêu chuẩn đậu</p>
+  <p class="ch-stars">★ Kiến thức cơ bản trước kỳ thi</p>
 </div>
 
-<h2>1-1. Quy trình lấy giấy phép lái xe</h2>
-<p>Để lấy giấy phép lái xe (GPLX) tại Hàn Quốc, bạn cần trải qua 4 bước theo thứ tự.</p>
-<div class="illust">
-<svg viewBox="0 0 700 55" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="65" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">Khám sức khỏe</text>
-  <text x="128" y="32" font-size="12" fill="#999">→</text>
-  <rect x="140" y="8" width="110" height="38" rx="8" fill="#1565C0"/><text x="195" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Thi lý thuyết</text>
-  <text x="258" y="32" font-size="12" fill="#999">→</text>
-  <rect x="270" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="325" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">Thi kỹ năng</text>
-  <text x="388" y="32" font-size="12" fill="#999">→</text>
-  <rect x="400" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="455" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">Thi lái trên đường</text>
-  <text x="518" y="32" font-size="12" fill="#999">→</text>
-  <rect x="530" y="8" width="110" height="38" rx="8" fill="#4CAF50"/><text x="585" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Cấp GPLX!</text>
-</svg>
-</div>
-
-<h2>1-2. Cấu trúc đề thi lý thuyết (Sửa đổi 2025.2.24, áp dụng 2026.3.9)</h2>
-<p>Bài thi lý thuyết gồm <strong>40 câu hỏi</strong> phải hoàn thành trong <strong>40 phút</strong>. Đề thi gồm 5 dạng câu hỏi.</p>
-<div class="table-wrap"><table>
-  <tr><th>Dạng</th><th>Số câu</th><th>Điểm</th><th>Mô tả</th></tr>
-  <tr><td>📝 Dạng văn bản</td><td>21 câu</td><td>46 điểm</td><td>Trắc nghiệm 4 đáp án dựa trên văn bản</td></tr>
-  <tr><td>🖼️ Dạng hình minh họa</td><td>6 câu</td><td>18 điểm</td><td>Xem tranh tình huống và phán đoán</td></tr>
-  <tr><td>📷 Dạng ảnh chụp</td><td>7 câu</td><td>21 điểm</td><td>Xem ảnh đường thật và phán đoán</td></tr>
-  <tr><td>🚸 Dạng biển báo giao thông</td><td>5 câu</td><td>10 điểm</td><td>Xem biển báo và chọn ý nghĩa</td></tr>
-  <tr><td>🎬 Dạng video</td><td>1 câu</td><td>5 điểm</td><td>Xem video và phán đoán nguy hiểm</td></tr>
-  <tr style="font-weight:900;background:#E3F2FD"><td>Tổng cộng</td><td>40 câu</td><td>100 điểm</td><td></td></tr>
-</table></div>
-
-<h2>1-3. Tiêu chuẩn đậu và thông tin thi</h2>
-<div class="table-wrap"><table>
-  <tr><th>Hạng mục</th><th>Nội dung</th></tr>
-  <tr><td>Thời gian giới hạn</td><td><strong>40 phút</strong> (không phải 50 phút!)</td></tr>
-  <tr><td>Đậu (Hạng 1 phổ thông)</td><td><strong>70 điểm</strong> trở lên</td></tr>
-  <tr><td>Đậu (Hạng 2 phổ thông)</td><td><strong>60 điểm</strong> trở lên</td></tr>
-  <tr><td>Ngôn ngữ thi</td><td>4 ngôn ngữ: Tiếng Hàn, Tiếng Anh, Tiếng Trung, Tiếng Việt</td></tr>
-  <tr><td>Thi lái trên đường</td><td>Chỉ <strong>Tiếng Hàn · Tiếng Anh</strong></td></tr>
-</table></div>
-
-<h2>1-4. Quy tắc thuật ngữ</h2>
-<p>Luật Giao thông Đường bộ Hàn Quốc sử dụng các thuật ngữ pháp luật chính xác. Trong kỳ thi cũng sẽ sử dụng đúng các thuật ngữ này.</p>
-<div class="table-wrap"><table>
-  <tr><th>Cách nói thông thường (✕)</th><th>Thuật ngữ pháp luật (○)</th><th>Ý nghĩa</th></tr>
-  <tr><td class="term-x">차선변경 (Đổi vạch)</td><td class="term-o">차로변경 (Chuyển làn)</td><td>Di chuyển sang làn khác cùng chiều</td></tr>
-  <tr><td class="term-x">인도 (Lề đường)</td><td class="term-o">보도 (Vỉa hè)</td><td>Phần đường dành cho người đi bộ</td></tr>
-  <tr><td class="term-x">클락션 (Klaxon)</td><td class="term-o">경음기 (Còi xe)</td><td>Còi ô tô</td></tr>
-  <tr><td class="term-x">깜빡이 (Đèn nháy)</td><td class="term-o">방향지시등 (Đèn xi-nhan)</td><td>Đèn tín hiệu chuyển hướng</td></tr>
-  <tr><td class="term-x">안전벨트 (Safety belt)</td><td class="term-o">안전띠 (Dây an toàn)</td><td>Dây đai ghế ngồi</td></tr>
-  <tr><td class="term-x">표지판 (Bảng hiệu)</td><td class="term-o">안전표지 (Biển báo giao thông)</td><td>Biển báo an toàn giao thông đường bộ</td></tr>
-</table></div>
-
-<div class="box box-tip">
-  <div class="box-label">💡 Chiến lược đậu thi</div>
-  Dạng văn bản 21 câu (46 điểm) chiếm tỷ trọng lớn nhất, hãy học kỹ nội dung trọng tâm. Dạng biển báo giao thông 5 câu (10 điểm) chỉ cần phân biệt <strong>hình dạng và màu sắc</strong> biển báo là có thể trả lời đúng hầu hết, rất hiệu quả.
-</div>
-
-
-<!-- ===== Chương 2 ===== -->
-<div class="ch-header" id="ch2">
-  <div class="ch-num">CHAPTER 02</div>
-  <div class="ch-title-row"><div class="ch-title">Nắm vững đèn tín hiệu và biển báo giao thông</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">Phần thi khoảng 10~12 câu</div>
-</div>
-
-<h2>2-1. Nguyên tắc cốt lõi của tín hiệu — Thứ tự ưu tiên</h2>
-<p>Theo Điều 5 Luật Giao thông Đường bộ, tất cả người tham gia giao thông phải tuân theo tín hiệu của thiết bị an toàn giao thông. <strong>Vi phạm tín hiệu thuộc 12 lỗi vi phạm nghiêm trọng</strong> và có thể bị truy cứu trách nhiệm hình sự.</p>
-
-<div class="box box-tip">
-  <div class="box-label">💡 Hay ra thi</div>
-  <strong>Khi tín hiệu đèn và hiệu lệnh của cảnh sát khác nhau?</strong> → <strong>Hiệu lệnh cảnh sát được ưu tiên</strong> (Điều 5 Khoản 2)<br><br>
-  <strong>Người hỗ trợ cảnh sát</strong> (Nghị định thi hành Điều 6): Lái xe mẫu mực, cảnh sát quân sự, công chức cứu hỏa<br>
-  ⚠️ Tình nguyện viên công trường · nhân viên tuần tra an toàn đường cao tốc <strong>không phải</strong> là người hỗ trợ cảnh sát
-</div>
-
-<div class="illust">
-<svg viewBox="0 0 500 60" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;">
-  <rect x="10" y="10" width="130" height="40" rx="20" fill="#C62828"/><text x="75" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">① Hiệu lệnh (Ưu tiên)</text>
-  <text x="150" y="35" font-size="16" fill="#999">→</text>
-  <rect x="165" y="10" width="130" height="40" rx="20" fill="#1565C0"/><text x="230" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">② Đèn tín hiệu</text>
-  <text x="305" y="35" font-size="16" fill="#999">→</text>
-  <rect x="320" y="10" width="130" height="40" rx="20" fill="#546E7A"/><text x="385" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">③ Biển báo</text>
-</svg>
-</div>
-
-<h2>2-2. Đèn tín hiệu cho xe (Quy tắc thi hành [Bảng 2])</h2>
-
-<div class="illust">
-<svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="15" y="10" width="210" height="120" rx="14" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.5"/>
-  <circle cx="60" cy="55" r="26" fill="#4CAF50"/>
-  <text x="100" y="42" font-size="14" font-weight="900" fill="#1B5E20">Xanh</text>
-  <text x="100" y="60" font-size="11" fill="#333">Đi thẳng hoặc rẽ phải</text>
-  <text x="100" y="76" font-size="10" fill="#666">Nếu có biển rẽ trái</text>
-  <text x="100" y="90" font-size="10" fill="#666">không bảo vệ: được rẽ trái</text>
-
-  <rect x="245" y="10" width="210" height="120" rx="14" fill="#FFF8E1" stroke="#FFC107" stroke-width="1.5"/>
-  <circle cx="290" cy="55" r="26" fill="#FFC107"/>
-  <text x="330" y="42" font-size="14" font-weight="900" fill="#E65100">Vàng</text>
-  <text x="330" y="60" font-size="11" fill="#333">Dừng trước vạch dừng</text>
-  <text x="330" y="76" font-size="10" fill="#666">Đã vào: đi qua nhanh</text>
-  <text x="330" y="90" font-size="10" fill="#666">Rẽ phải được (chú ý người đi bộ)</text>
-
-  <rect x="475" y="10" width="210" height="120" rx="14" fill="#FFEBEE" stroke="#F44336" stroke-width="1.5"/>
-  <circle cx="520" cy="55" r="26" fill="#F44336"/>
-  <text x="560" y="42" font-size="14" font-weight="900" fill="#B71C1C">Đỏ</text>
-  <text x="560" y="60" font-size="11" fill="#333">Dừng lại</text>
-  <text x="560" y="78" font-size="10" fill="#C62828" font-weight="600">Dừng tạm thời rồi rẽ phải được</text>
-  <text x="560" y="94" font-size="9" fill="#666">(Nếu đèn rẽ phải 3 màu đỏ: không được)</text>
-</svg>
-</div>
-
-<h3>Cấm rẽ trái khi đèn xanh</h3>
-<p>Đèn xanh có nghĩa là "đi thẳng hoặc rẽ phải". <strong>Rẽ trái khi đèn xanh ở ngã tư không có biển rẽ trái không bảo vệ là vi phạm tín hiệu</strong>.</p>
-<div class="box box-law">
-  <div class="box-label">📜 Án lệ (Tòa án Tối cao 2004도5848)</div>
-  Tại ngã tư có lắp đèn tín hiệu ba màu xanh · vàng · đỏ mà không có biển rẽ trái không bảo vệ hoặc quay đầu, thì xe không được phép rẽ trái hoặc quay đầu.
-</div>
-
-<h3>Rẽ phải khi đèn đỏ ⚠️</h3>
-<p>Khác với nhiều nước, Hàn Quốc <strong>cho phép rẽ phải khi đèn đỏ</strong> (RTOR: Right Turn On Red). Châu Âu · Nhật Bản cấm đi tất cả các hướng khi đèn đỏ.</p>
-<div class="box box-warn">
-  <div class="box-label">⚠️ Cách rẽ phải khi đèn đỏ</div>
-  1. <strong>Bắt buộc dừng tạm thời</strong> trước vạch dừng · lối đi bộ · ngã tư<br>
-  2. Không được <strong>cản trở giao thông</strong> của các xe khác<br>
-  3. Nếu không có người đi bộ, có thể đi qua lối đi bộ ngay cả khi đèn xanh cho người đi bộ (sửa đổi 2022)<br><br>
-  <strong>Ngoại lệ: Nếu đèn rẽ phải 3 màu đỏ thì không được rẽ phải!</strong> ([Bảng 2] Ghi chú Khoản 3)
-</div>
-
-<h3>Đèn vàng</h3>
-<p>Phải dừng ngay trước vạch dừng. Nếu đã vào ngã tư thì đi qua nhanh chóng. <strong>Cố tình vào khi đèn vàng là vi phạm tín hiệu</strong>.</p>
-
-<h2>2-3. Đèn nhấp nháy</h2>
-<div class="illust">
-<svg viewBox="0 0 520 110" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
-  <rect x="10" y="10" width="240" height="90" rx="14" fill="#FFF8E1" stroke="#F9A825" stroke-width="2"/>
-  <circle cx="60" cy="55" r="24" fill="#FFC107" class="blink-yellow"/>
-  <text x="100" y="42" font-size="14" font-weight="900" fill="#E65100">Vàng nhấp nháy</text>
-  <text x="100" y="62" font-size="12" fill="#333">Chú ý và tiếp tục đi</text>
-  <text x="100" y="80" font-size="10" fill="#666">"Vàng nháy = Cẩn thận ĐI"</text>
-
-  <rect x="270" y="10" width="240" height="90" rx="14" fill="#FFEBEE" stroke="#C62828" stroke-width="2"/>
-  <circle cx="320" cy="55" r="24" fill="#F44336" class="blink-red"/>
-  <text x="360" y="42" font-size="14" font-weight="900" fill="#B71C1C">Đỏ nhấp nháy</text>
-  <text x="360" y="62" font-size="12" fill="#333">Dừng tạm thời rồi đi</text>
-  <text x="360" y="80" font-size="10" fill="#666">"Đỏ nháy = Dừng rồi ĐI"</text>
-</svg>
-</div>
-
-<h2>2-4. Đèn tín hiệu cho người đi bộ</h2>
-<div class="table-wrap"><table>
-  <tr><th>Đèn</th><th>Ý nghĩa</th><th>Hành động của người đi bộ</th></tr>
-  <tr><td style="color:#4CAF50;font-weight:700">Xanh</td><td>Được qua đường</td><td>Có thể đi qua lối đi bộ</td></tr>
-  <tr><td style="color:#4CAF50;font-weight:700">Xanh nhấp nháy</td><td>Cấm bắt đầu qua đường</td><td><strong>Không được bắt đầu</strong> qua đường. Nếu đang qua thì hoàn thành nhanh hoặc quay lại vỉa hè</td></tr>
-  <tr><td style="color:#F44336;font-weight:700">Đỏ</td><td>Cấm qua đường</td><td>Không được qua đường</td></tr>
-</table></div>
-<div class="box box-tip">
-  <div class="box-label">💡 Điểm người nước ngoài hay nhầm</div>
-  "Đèn xanh nhấp nháy thì vẫn xanh, qua nhanh được không?" → <strong>Không!</strong> Đèn xanh nhấp nháy là tín hiệu <strong>không được bắt đầu qua đường mới</strong>.
-</div>
-
-<h2>2-5. Đèn tín hiệu cho xe đạp</h2>
-<p>Nơi có lắp đèn tín hiệu xe đạp thì tuân theo đèn đó. Nếu không có thì tuân theo <strong>đèn tín hiệu xe cơ giới</strong> ([Bảng 2] Ghi chú Khoản 1). Nếu lối qua đường cho xe đạp không có đèn riêng thì tuân theo <strong>đèn cho người đi bộ</strong> (Ghi chú Khoản 2).</p>
-
-<h2>2-6. 4 loại biển báo giao thông (Quy tắc thi hành [Bảng 6])</h2>
-<p><strong>Biển báo giao thông</strong> là biển báo hoặc vạch kẻ đường hiển thị các nội dung chú ý · quy định · chỉ dẫn cần thiết cho an toàn giao thông (Điều 2 Khoản 16).</p>
-
-<div class="illust">
-<svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;">
-  <g transform="translate(30,5)">
-    <polygon points="75,8 145,125 5,125" fill="#E53935" stroke="#E53935" stroke-width="2" stroke-linejoin="round"/>
-    <polygon points="75,22 133,118 17,118" fill="#FFD600" stroke="none"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">Cảnh báo</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">Vàng + viền đỏ</text>
-  </g>
-  <g transform="translate(195,5)">
-    <circle cx="75" cy="68" r="58" fill="#fff" stroke="#E53935" stroke-width="7"/>
-    <line x1="34" y1="109" x2="116" y2="27" stroke="#E53935" stroke-width="7" stroke-linecap="round"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">Cấm</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">Trắng + viền đỏ</text>
-  </g>
-  <g transform="translate(370,5)">
-    <circle cx="75" cy="68" r="58" fill="#1565C0" stroke="#0D47A1" stroke-width="3"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">Chỉ dẫn</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">Nền xanh + trắng</text>
-  </g>
-  <g transform="translate(545,5)">
-    <circle cx="75" cy="60" r="52" fill="#fff" stroke="#333" stroke-width="2.5"/>
-    <rect x="45" y="115" width="60" height="18" rx="2" fill="#fff" stroke="#333" stroke-width="2"/>
-    <text x="75" y="155" text-anchor="middle" font-size="16" font-weight="900" fill="#333">Phụ trợ</text>
-    <text x="75" y="173" text-anchor="middle" font-size="10" fill="#666">Trắng + chữ đen</text>
-  </g>
-</svg>
-<div class="illust-caption">4 loại biển báo giao thông (Quy tắc thi hành [Bảng 6])</div>
-</div>
-
-<div class="table-wrap"><table>
-  <tr><th>Loại</th><th>Hình dạng</th><th>Màu sắc</th><th>Ý nghĩa</th></tr>
-  <tr><td><strong>Cảnh báo</strong></td><td>Tam giác</td><td>Nền vàng + viền đỏ + ký hiệu đen</td><td>Cảnh báo nguy hiểm</td></tr>
-  <tr><td><strong>Cấm</strong></td><td>Hình tròn</td><td>Nền trắng + viền đỏ + ký hiệu đen</td><td>Cấm · hạn chế</td></tr>
-  <tr><td><strong>Chỉ dẫn</strong></td><td>Tròn · vuông</td><td>Nền xanh + ký hiệu trắng</td><td>Hướng dẫn hướng · cách đi</td></tr>
-  <tr><td><strong>Phụ trợ</strong></td><td>Hình chữ nhật</td><td>Nền trắng + chữ đen</td><td>Bổ sung cho biển chính</td></tr>
-</table></div>
-
-<h3>Biển báo giao thông thường ra thi</h3>
-<p><strong>Biển cảnh báo</strong>: Có ngã tư, đường cong, đường trơn, đá rơi, bảo vệ trẻ em, công trình đường bộ<br>
-<strong>Biển cấm</strong>: Cấm đi, cấm vào, cấm theo hướng, cấm đỗ và dừng xe, cấm đỗ xe, giới hạn tốc độ, cấm vượt xe<br>
-<strong>Biển chỉ dẫn</strong>: Đi thẳng, rẽ phải, rẽ trái, đường dành riêng cho ô tô, lối đi bộ, đường một chiều</p>
-
-<h2>2-7. Vạch kẻ đường — Vạch trung tâm và Vạch phân làn</h2>
-<div class="illust">
-<svg viewBox="0 0 700 110" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <rect x="30" y="24" width="120" height="7" rx="1" fill="#F9A825"/>
-  <text x="90" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#E65100">Vạch vàng liền = Vạch trung tâm</text>
-  <text x="90" y="65" text-anchor="middle" font-size="9" fill="#C62828">Cấm vượt (12 lỗi nghiêm trọng)</text>
-
-  <rect x="185" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <line x1="205" y1="28" x2="225" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="233" y1="28" x2="253" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="261" y1="28" x2="281" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="289" y1="28" x2="309" y2="28" stroke="#F9A825" stroke-width="5"/>
-  <text x="265" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#E65100">Vạch vàng đứt = Vạch trung tâm</text>
-  <text x="265" y="65" text-anchor="middle" font-size="9" fill="#4CAF50">Được vượt xe</text>
-
-  <rect x="360" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <rect x="380" y="24" width="120" height="5" rx="1" fill="#999"/>
-  <text x="440" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#333">Vạch trắng liền = Vạch phân làn</text>
-  <text x="440" y="65" text-anchor="middle" font-size="9" fill="#C62828">Hạn chế chuyển làn</text>
-
-  <rect x="535" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <line x1="555" y1="27" x2="575" y2="27" stroke="#999" stroke-width="4"/><line x1="583" y1="27" x2="603" y2="27" stroke="#999" stroke-width="4"/><line x1="611" y1="27" x2="631" y2="27" stroke="#999" stroke-width="4"/><line x1="639" y1="27" x2="659" y2="27" stroke="#999" stroke-width="4"/>
-  <text x="615" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#333">Vạch trắng đứt = Vạch phân làn</text>
-  <text x="615" y="65" text-anchor="middle" font-size="9" fill="#4CAF50">Được chuyển làn</text>
-
-  <rect x="10" y="78" width="685" height="26" rx="6" fill="#E3F2FD"/>
-  <text x="355" y="96" text-anchor="middle" font-size="11" fill="#1565C0" font-weight="600">📌 Vạch trung tâm = Vàng / Vạch phân làn = Trắng | <tspan fill="#4CAF50">Chuyển làn (O)</tspan> <tspan fill="#C62828" text-decoration="line-through">Đổi vạch (X)</tspan></text>
-</svg>
-</div>
-
-<h2>2-8. Bài tập</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">Khi đèn tín hiệu và hiệu lệnh cảnh sát khác nhau?</div><div class="q-opts"><span>① Đèn tín hiệu</span><span>② Hiệu lệnh cảnh sát</span><span>③ Bỏ qua cả hai</span><span>④ Tự phán đoán</span></div><div class="q-answer">→ ② (Điều 5 Khoản 2)</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">Muốn rẽ phải khi đèn đỏ?</div><div class="q-opts"><span>① Đi thẳng qua</span><span>② Dừng tạm thời rồi đi</span><span>③ Tuyệt đối không được</span><span>④ Đi chậm qua</span></div><div class="q-answer">→ ② (Nếu đèn rẽ phải 3 màu đỏ thì không được)</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">Hành động của người đi bộ khi đèn xanh nhấp nháy?</div><div class="q-opts"><span>① Nhanh chóng bắt đầu qua đường</span><span>② Cấm bắt đầu, nếu đang qua thì hoàn thành nhanh</span><span>③ Đứng lại</span><span>④ Chạy qua</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">Biển báo tam giác vàng?</div><div class="q-opts"><span>① Cấm</span><span>② Chỉ dẫn</span><span>③ Cảnh báo nguy hiểm</span><span>④ Phụ trợ</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">Màu của vạch trung tâm?</div><div class="q-opts"><span>① Trắng</span><span>② Vàng</span><span>③ Đỏ</span><span>④ Xanh dương</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q6</div><div class="q-text">Rẽ phải khi đèn rẽ phải 3 màu đỏ?</div><div class="q-opts"><span>① Được</span><span>② Dừng tạm thời rồi được</span><span>③ Đi chậm rồi được</span><span>④ Không được</span></div><div class="q-answer">→ ④ ([Bảng 2] Ghi chú Khoản 3)</div></div>
-<div class="q-item"><div class="q-num">Q7</div><div class="q-text">Ý nghĩa đèn vàng nhấp nháy?</div><div class="q-opts"><span>① Dừng tạm thời rồi đi</span><span>② Chú ý và tiếp tục đi</span><span>③ Dừng lại</span><span>④ Đi qua nhanh</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== Chương 3 ===== -->
-<div class="ch-header green" id="ch3">
-  <div class="ch-num">CHAPTER 03</div>
-  <div class="ch-title-row"><div class="ch-title">Đi qua ngã tư</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">Cách rẽ trái · phải, quy tắc nhường đường, vòng xuyến</div>
-</div>
-
-<h2>3-1. Cách rẽ trái (Điều 25 Khoản 2)</h2>
-<div class="box box-law">
-  <div class="box-label">📜 Nguyên văn luật</div>
-  "Tất cả người lái xe khi rẽ trái tại ngã tư phải <strong>đi chậm dọc theo vạch trung tâm từ trước</strong> và rẽ trái bằng cách đi qua <strong>bên trong tâm</strong> ngã tư. Tuy nhiên, tại những nơi Giám đốc Công an tỉnh/thành phố chỉ định do tình trạng ngã tư đặc biệt cần thiết, có thể đi qua bên ngoài tâm ngã tư."
-</div>
-<p>Nói đơn giản: Trước khi rẽ trái, hãy di chuyển sang làn gần vạch trung tâm nhất (làn trong cùng) và đi chậm, tại ngã tư rẽ trái qua <strong>bên trong</strong> tâm.</p>
-
-<div class="illust">
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;">
-  <rect x="150" y="0" width="100" height="300" fill="#ddd"/><rect x="0" y="100" width="400" height="100" fill="#ddd"/>
-  <line x1="200" y1="0" x2="200" y2="100" stroke="#F9A825" stroke-width="3"/><line x1="200" y1="200" x2="200" y2="300" stroke="#F9A825" stroke-width="3"/>
-  <line x1="0" y1="150" x2="150" y2="150" stroke="#F9A825" stroke-width="3"/><line x1="250" y1="150" x2="400" y2="150" stroke="#F9A825" stroke-width="3"/>
-  <circle cx="200" cy="150" r="6" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="3"/><text x="212" y="148" font-size="9" fill="#666">Tâm</text>
-  <path d="M215,275 L215,168 Q215,152 198,152 L90,152" fill="none" stroke="#4CAF50" stroke-width="4" marker-end="url(#ag)"/>
-  <text x="105" y="138" font-size="11" fill="#4CAF50" font-weight="700">✅ Bên trong tâm</text>
-  <path d="M215,275 L215,195 Q215,115 165,115 L55,115" fill="none" stroke="#F44336" stroke-width="2.5" stroke-dasharray="6" opacity=".5"/>
-  <text x="55" y="105" font-size="10" fill="#F44336" font-weight="700">✕ Bên ngoài</text>
-  <rect x="208" y="258" width="14" height="22" rx="3" fill="#1565C0"/>
-  <defs><marker id="ag" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#4CAF50"/></marker></defs>
-</svg>
-<div class="illust-caption">Rẽ trái: Di chuyển trước sang làn gần vạch trung tâm → Đi qua bên trong tâm ngã tư</div>
-</div>
-
-<h2>3-2. Cách rẽ phải (Điều 25 Khoản 1)</h2>
-<div class="box box-law">
-  <div class="box-label">📜 Nguyên văn luật</div>
-  "Tất cả người lái xe khi rẽ phải tại ngã tư phải đi chậm dọc theo <strong>mép phải</strong> đường từ trước và rẽ phải. Trong trường hợp này, người lái xe rẽ phải phải chú ý đến người đi bộ hoặc xe đạp đang dừng hoặc đi theo tín hiệu."
-</div>
-
-<h2>3-3. Ngã tư không có điều khiển giao thông — Quy tắc nhường đường (Điều 26)</h2>
-<div class="table-wrap"><table>
-  <tr><th>Khoản</th><th>Tình huống</th><th>Quy tắc nhường đường</th></tr>
-  <tr><td>Khoản 1</td><td>Xe đã vào vs xe sắp vào</td><td><strong>Xe đã vào</strong> được ưu tiên</td></tr>
-  <tr><td>Khoản 2</td><td>Đường rộng vs đường hẹp</td><td>Xe trên <strong>đường rộng</strong> được ưu tiên</td></tr>
-  <tr><td>Khoản 3</td><td>Đường cùng độ rộng, vào cùng lúc</td><td>Nhường cho xe từ <strong>bên phải</strong></td></tr>
-  <tr><td>Khoản 4</td><td>Rẽ trái vs đi thẳng · rẽ phải</td><td>Xe <strong>đi thẳng · rẽ phải</strong> được ưu tiên</td></tr>
-</table></div>
-<div class="box box-tip">
-  <div class="box-label">💡 Cách nhớ</div>
-  "Vào trước > Đường rộng > Xe bên phải > Đi thẳng · rẽ phải ưu tiên hơn rẽ trái"
-</div>
-
-<h2>3-4. Vòng xuyến (Điều 25-2)</h2>
-<div class="box box-info">
-  <div class="box-label">✅ Điểm chính về vòng xuyến</div>
-  • Đi theo hướng <strong>ngược chiều kim đồng hồ</strong><br>• Khi vào phải <strong>đi chậm hoặc dừng tạm thời</strong><br>• <strong>Nhường đường</strong> cho xe đã ở trong vòng xuyến<br>• Đi ngược hướng = vi phạm (Tòa án Tối cao 2017도9392)
-</div>
-
-<h2>3-5. Nơi phải đi chậm · dừng tạm thời (Điều 31)</h2>
-<div class="table-wrap"><table>
-  <tr><th>Phân loại</th><th>Địa điểm</th></tr>
-  <tr><td><strong>Đi chậm</strong></td><td>Ngã tư không điều khiển giao thông / Đường cong / Đỉnh dốc / Dốc xuống / Nơi biển báo chỉ định</td></tr>
-  <tr><td><strong>Dừng tạm thời</strong></td><td>Ngã tư không thể nhìn trái phải hoặc giao thông đông đúc / Nơi biển báo chỉ định</td></tr>
-</table></div>
-
-<h2>3-6. Cấm kẹt đuôi trong ngã tư (Điều 25 Khoản 5)</h2>
-<p>Nếu do tình trạng phía trước hướng đi mà xe có thể phải dừng trong ngã tư gây cản trở giao thông cho xe khác, thì <strong>không được vào</strong> ngã tư đó.</p>
-
-<h2>3-7. Bài tập</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">Tại ngã tư không điều khiển giao thông, đường cùng rộng?</div><div class="q-opts"><span>① Xe đến trước</span><span>② Xe bên trái</span><span>③ Xe bên phải</span><span>④ Xe lớn</span></div><div class="q-answer">→ ③ (Điều 26 Khoản 3)</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">Hướng đi trong vòng xuyến?</div><div class="q-opts"><span>① Thuận chiều kim đồng hồ</span><span>② Ngược chiều kim đồng hồ</span><span>③ Cả hai hướng</span><span>④ Chỉ đi thẳng</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">Khi rẽ trái, đi qua phía nào của ngã tư?</div><div class="q-opts"><span>① Bên ngoài tâm</span><span>② Bên trong tâm</span><span>③ Mép phải</span><span>④ Mép trái</span></div><div class="q-answer">→ ② (Điều 25 Khoản 2)</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">Xe rẽ trái vs xe đi thẳng?</div><div class="q-opts"><span>① Rẽ trái ưu tiên</span><span>② Đi thẳng ưu tiên</span><span>③ Xe lớn ưu tiên</span><span>④ Đi cùng lúc</span></div><div class="q-answer">→ ② (Điều 26 Khoản 4)</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">Tại ngã tư không điều khiển, giao thông đông đúc?</div><div class="q-opts"><span>① Đi chậm</span><span>② Dừng tạm thời</span><span>③ Giữ tốc độ</span><span>④ Bấm còi</span></div><div class="q-answer">→ ② (Điều 31 Khoản 2)</div></div>
-</div>
-
-
-<!-- ===== Chương 4 ===== -->
-<div class="ch-header" id="ch4">
-  <div class="ch-num">CHAPTER 04</div>
-  <div class="ch-title-row"><div class="ch-title">Tốc độ và khoảng cách an toàn</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">Giới hạn tốc độ theo loại đường, đi chậm, nơi cấm vượt xe</div>
-</div>
-
-<h2>4-1. Giới hạn tốc độ</h2>
-<div class="table-wrap"><table>
-  <tr><th>Đường</th><th>Tốc độ tối đa</th><th>Tốc độ tối thiểu</th></tr>
-  <tr><td>Đường cao tốc (2 làn một chiều+)</td><td>100~120km/h</td><td>50km/h</td></tr>
-  <tr><td>Đường cao tốc (1 làn một chiều)</td><td>80km/h</td><td>50km/h</td></tr>
-  <tr><td>Đường dành riêng cho ô tô</td><td>90km/h</td><td>30km/h</td></tr>
-  <tr><td>Đường thường (2 làn một chiều+)</td><td>80km/h</td><td>-</td></tr>
-  <tr><td>Đường thường (khác)</td><td>60km/h</td><td>-</td></tr>
-  <tr style="color:#C62828;font-weight:700"><td>Khu vực bảo vệ trẻ em · người cao tuổi · người khuyết tật</td><td>30km/h</td><td>-</td></tr>
-</table></div>
-<p>⚠️ Nếu biển báo giao thông chỉ định tốc độ khác, hãy tuân theo <strong>tốc độ trên biển báo</strong>.</p>
-
-<h2>4-2. Đi chậm (Tốc độ có thể dừng ngay lập tức)</h2>
-<p><strong>Đi chậm</strong> = Tốc độ chậm đủ để dừng ngay lập tức (Điều 2 Khoản 28). Không phải con số cụ thể "bao nhiêu km/h". Trên biển báo giao thông sử dụng từ <strong>"Chậm"</strong>.</p>
-
-<h2>4-3. Khoảng cách an toàn (Điều 19)</h2>
-<p>Phải giữ khoảng cách đủ để tránh va chạm ngay cả khi xe phía trước dừng đột ngột. Tốc độ càng nhanh, thời tiết càng xấu thì phải giữ khoảng cách <strong>càng xa</strong>. Khi chạy 100km/h trên đường cao tốc cần khoảng 100m trở lên.</p>
-
-<h2>4-4. Nơi cấm vượt xe (Điều 22 Khoản 3)</h2>
-<div class="box box-warn">
-  <div class="box-label">⚠️ Đúng theo điều luật (4 khoản)</div>
-  <strong>Khoản 1.</strong> Ngã tư<br>
-  <strong>Khoản 2.</strong> Trong hầm<br>
-  <strong>Khoản 3.</strong> Trên cầu<br>
-  <strong>Khoản 4.</strong> Đường cong, đỉnh dốc hoặc dốc xuống và các nơi Giám đốc Công an tỉnh/thành phố chỉ định bằng biển báo
-</div>
-<p>Vượt xe phải đi qua <strong>bên trái</strong> xe phía trước (Điều 21). Khi xe phía trước đang áp sát vạch trung tâm để rẽ trái, có thể vượt qua <strong>bên phải</strong>.</p>
-
-<h2>4-5. Bài tập</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">Tốc độ tối đa trong khu vực bảo vệ trẻ em?</div><div class="q-opts"><span>① 50km/h</span><span>② 40km/h</span><span>③ 30km/h</span><span>④ 20km/h</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">Nơi nào không cấm vượt xe?</div><div class="q-opts"><span>① Ngã tư</span><span>② Hầm</span><span>③ Đường thẳng</span><span>④ Trên cầu</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">Định nghĩa "đi chậm"?</div><div class="q-opts"><span>① 20km/h</span><span>② 30km/h</span><span>③ Tốc độ chậm có thể dừng ngay</span><span>④ 10km/h</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">Vượt xe đi qua bên nào của xe phía trước?</div><div class="q-opts"><span>① Bên trái</span><span>② Bên phải</span><span>③ Bên nào cũng được</span><span>④ Tùy tình huống</span></div><div class="q-answer">→ ①</div></div>
-</div>
-
-
-<!-- ===== Chương 5 ===== -->
-<div class="ch-header green" id="ch5">
-  <div class="ch-num">CHAPTER 05</div>
-  <div class="ch-title-row"><div class="ch-title">Bảo vệ người đi bộ</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">Giá trị cốt lõi của Luật GTĐB Hàn Quốc — Vi phạm bảo vệ người đi bộ thuộc 12 lỗi nghiêm trọng</div>
-</div>
-
-<h2>5-1. Cách đi của người đi bộ (Điều 8, Điều 10)</h2>
-<p><strong>Đường có vỉa hè</strong>: Người đi bộ đi trên vỉa hè.<br>
-<strong>Đường không có vỉa hè</strong>: Đi trên khu vực mép đường hoặc <strong>mép trái</strong> đường (Điều 8). Nếu bên trái nguy hiểm có thể đi bên phải.<br>
-<strong>Qua đường</strong>: Nơi có lối đi bộ phải qua đường tại lối đi bộ (Điều 10).</p>
-
-<h2>5-2. Bảo vệ người đi bộ tại lối đi bộ (Điều 27)</h2>
-
-<h3>Nguyên tắc cốt lõi — Khi người đi bộ đang qua đường phải dừng tạm thời</h3>
-<div class="table-wrap"><table>
-  <tr><th>Tình huống</th><th>Điều khoản</th><th>Nghĩa vụ của tài xế</th></tr>
-  <tr><td>Người đi bộ đang qua tại lối đi bộ có tín hiệu</td><td>Điều 27 Khoản 1</td><td><strong>Dừng tạm thời</strong></td></tr>
-  <tr><td>Người đi bộ đang qua hoặc sắp qua tại lối đi bộ không có tín hiệu</td><td>Điều 27 Khoản 6</td><td><strong>Dừng tạm thời</strong></td></tr>
-  <tr><td>Người đi bộ đang qua đường không có lối đi bộ</td><td>Điều 27 Khoản 5</td><td>Giữ khoảng cách an toàn và <strong>dừng tạm thời</strong></td></tr>
-</table></div>
-<div class="box box-warn">
-  <div class="box-label">⚠️ Hậu quả vi phạm bảo vệ người đi bộ</div>
-  Vi phạm nghĩa vụ bảo vệ người đi bộ tại lối đi bộ gây tai nạn thuộc <strong>12 lỗi vi phạm nghiêm trọng</strong> theo Luật Đặc biệt về Xử lý Tai nạn Giao thông. Bất kể có bảo hiểm hay không, đều bị <strong>truy cứu trách nhiệm hình sự</strong>.
-</div>
-
-<h2>5-3. Cấm xâm phạm vỉa hè (Điều 13)</h2>
-<p>Xe <strong>không được xâm phạm vỉa hè</strong>. Xâm phạm vỉa hè thuộc 12 lỗi vi phạm nghiêm trọng. Khi bất đắc dĩ phải băng qua vỉa hè để vào tòa nhà, phải <strong>dừng tạm thời</strong> ngay trước vỉa hè và không được cản trở người đi bộ.</p>
-
-<h2>5-4. Khu vực bảo vệ trẻ em — School Zone (Điều 12)</h2>
-<p>Được chỉ định tại các đường xung quanh trường tiểu học, mẫu giáo, nhà trẻ, v.v.</p>
-<div class="table-wrap"><table>
-  <tr><th>Hạng mục</th><th>Nội dung</th></tr>
-  <tr><td>Tốc độ tối đa</td><td><strong>30km/h</strong> (Nghị định liên bộ Điều 9)</td></tr>
-  <tr><td>Đỗ và dừng xe</td><td><strong>Cấm</strong> tại khu vực biển báo chỉ định</td></tr>
-  <tr><td>Khi gây tai nạn</td><td><strong>12 lỗi nghiêm trọng</strong> → Truy cứu hình sự</td></tr>
-  <tr><td>Phạt tiền · điểm phạt (08~20 giờ)</td><td><strong>Gấp 2 lần</strong> so với đường thường</td></tr>
-</table></div>
-
-<h2>5-5. Khu vực bảo vệ người cao tuổi · người khuyết tật (Điều 12-2)</h2>
-<p>Được chỉ định trong bán kính 300m xung quanh cơ sở phúc lợi người cao tuổi, cơ sở phúc lợi người khuyết tật, công viên, cơ sở thể thao. Giống khu vực bảo vệ trẻ em, áp dụng <strong>30km/h trở xuống</strong>, phạt tiền · điểm phạt gấp 2 lần.</p>
-
-<h2>5-6. Đường dành riêng cho người đi bộ · Đường ưu tiên người đi bộ</h2>
-<p><strong>Đường dành riêng cho người đi bộ</strong>: Đường chỉ dành cho người đi bộ (Điều 2 Khoản 31). Nguyên tắc cấm xe.<br>
-<strong>Đường ưu tiên người đi bộ</strong>: Đường không phân tách xe · vỉa hè, người đi bộ được ưu tiên (Điều 2 Khoản 31-2). Xe bị giới hạn tốc độ 30km/h trở xuống.</p>
-
-<h2>5-7. Bài tập</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">Khi người đi bộ đang qua tại lối đi bộ, tài xế?</div><div class="q-opts"><span>① Đi chậm</span><span>② Bấm còi</span><span>③ Dừng tạm thời</span><span>④ Giữ tốc độ</span></div><div class="q-answer">→ ③ (Điều 27)</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">Tốc độ khu vực bảo vệ trẻ em và khi gây tai nạn?</div><div class="q-opts"><span>① 50km/h, xử lý bảo hiểm</span><span>② 30km/h, truy cứu hình sự</span><span>③ 40km/h, phạt hành chính</span><span>④ 60km/h, phạt tiền</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">Khi băng qua vỉa hè để vào tòa nhà?</div><div class="q-opts"><span>① Đi chậm</span><span>② Bấm còi</span><span>③ Dừng tạm thời ngay trước vỉa hè</span><span>④ Đi thẳng vào</span></div><div class="q-answer">→ ③ (Điều 13)</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">Hướng đi của người đi bộ trên đường không có vỉa hè?</div><div class="q-opts"><span>① Bên phải</span><span>② Bên trái</span><span>③ Giữa đường</span><span>④ Bên nào cũng được</span></div><div class="q-answer">→ ② (Điều 8)</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">Điểm phạt vi phạm tín hiệu trong khu vực bảo vệ 08~20 giờ so với thường?</div><div class="q-opts"><span>① Bằng nhau</span><span>② Gấp 1,5 lần</span><span>③ Gấp 2 lần</span><span>④ Gấp 3 lần</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-
-<!-- ===== Chương 6 ===== -->
-<div class="ch-header red-h" id="ch6">
-  <div class="ch-num">CHAPTER 06</div>
-  <div class="ch-title-row"><div class="ch-title">Lái xe khi say rượu và hình phạt</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">Hãy nhớ chính xác các mức tiêu chuẩn được tăng cường từ năm 2019</div>
-</div>
-
-<h2>6-1. Cấm lái xe khi say rượu (Điều 44)</h2>
-<p>Không ai được lái xe trong trạng thái say rượu. Vì quy định "không ai" nên áp dụng bất kể có giấy phép hay không.</p>
-
-<div class="box box-law">
-  <div class="box-label">📜 Nguyên văn luật (Điều 44 Khoản 4)</div>
-  "Tiêu chuẩn trạng thái say rượu bị cấm lái xe theo Khoản 1 là khi nồng độ cồn trong máu (BAC) của người lái xe từ <strong>0,03% trở lên</strong>."
-</div>
-
-<h2>6-2. Mức hình phạt</h2>
-<div class="illust">
-<svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="5" width="210" height="90" rx="12" fill="#FFF8E1" stroke="#F9A825" stroke-width="2"/>
-  <text x="115" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#E65100">0,03% ~ 0,08%</text>
-  <text x="115" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#E65100">Đình chỉ GPLX</text>
-  <text x="115" y="75" text-anchor="middle" font-size="10" fill="#666">(100 ngày) / Tù ≤1 năm · Phạt ≤5 triệu won</text>
-
-  <rect x="245" y="5" width="210" height="90" rx="12" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
-  <text x="350" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#C62828">0,08% ~ 0,2%</text>
-  <text x="350" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#C62828">Tước GPLX</text>
-  <text x="350" y="75" text-anchor="middle" font-size="9" fill="#666">Tù 1~2 năm / 5~10 triệu won</text>
-
-  <rect x="480" y="5" width="210" height="90" rx="12" fill="#B71C1C"/>
-  <text x="585" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#FFCDD2">0,2% trở lên</text>
-  <text x="585" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">Tước GPLX</text>
-  <text x="585" y="75" text-anchor="middle" font-size="9" fill="#FFCDD2">Tù 2~5 năm / 10~20 triệu won</text>
-</svg>
-<div class="illust-caption">Sửa đổi 2019: Tiêu chuẩn từ 0,05% → <strong>0,03%</strong> (có thể vượt chỉ với 1~2 ly soju)</div>
-</div>
-
-<h2>6-3. Đo nồng độ cồn và từ chối</h2>
-<p>Cảnh sát có thể kiểm tra nồng độ cồn bằng <strong>đo hơi thở</strong>, và người lái xe <strong>phải tuân thủ</strong> (Điều 44 Khoản 2). Nếu không đồng ý kết quả, có thể <strong>xét nghiệm máu</strong> để đo lại (cần sự đồng ý của tài xế).</p>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ Khi từ chối đo nồng độ cồn</div>
-  <strong>Tù từ 1~5 năm</strong> hoặc <strong>phạt 5~20 triệu won</strong> + <strong>Tước</strong> GPLX<br>
-  Từ chối cũng không tránh được hình phạt! Ngược lại bị <strong>phạt nặng hơn</strong>.
-</div>
-
-<h2>6-4. Phạm vi thành lập tội lái xe khi say</h2>
-<p>Không chỉ trên đường mà còn thành lập tội ở <strong>bãi đỗ xe và các nơi khác ngoài đường</strong>. Dù lái chỉ 30cm cũng là lái xe khi say (Tòa án Tối cao 2007도678). Khi khởi động xe và hoàn thành thao tác xuất phát thì coi như bắt đầu lái xe.</p>
-
-<h2>6-5. Lái xe dưới ảnh hưởng ma túy (Điều 45)</h2>
-<p>Lái xe dưới ảnh hưởng của ma túy · thuốc hướng thần cũng bị xử phạt tương tự.</p>
-
-<h2>6-6. Bài tập</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">Mức nồng độ cồn trong máu bị tước GPLX?</div><div class="q-opts"><span>① 0,03%</span><span>② 0,05%</span><span>③ 0,08%</span><span>④ 0,1%</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">Khi từ chối đo nồng độ cồn?</div><div class="q-opts"><span>① Chỉ phạt tiền</span><span>② Đình chỉ GPLX</span><span>③ Cảnh cáo</span><span>④ Tước GPLX + truy cứu hình sự</span></div><div class="q-answer">→ ④</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">Tiêu chuẩn lái xe khi say hiện hành?</div><div class="q-opts"><span>① 0,01%</span><span>② 0,03%</span><span>③ 0,05%</span><span>④ 0,08%</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== Chương 7 ===== -->
-<div class="ch-header amber-h" id="ch7">
-  <div class="ch-num">CHAPTER 07</div>
-  <div class="ch-title-row"><div class="ch-title">Xử lý tình huống khẩn cấp</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">Xử lý khi tai nạn, nhường đường xe khẩn cấp, đường ngang đường sắt, khi hỏng xe</div>
-</div>
-
-<h2>7-1. Xử lý khi xảy ra tai nạn giao thông (Điều 54)</h2>
-<div class="illust">
-<svg viewBox="0 0 700 70" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="10" width="140" height="50" rx="8" fill="#1565C0"/><text x="80" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">① Dừng ngay</text>
-  <text x="160" y="40" font-size="14" fill="#999">→</text>
-  <rect x="175" y="10" width="140" height="50" rx="8" fill="#2E7D32"/><text x="245" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">② Cứu người bị thương</text>
-  <text x="325" y="40" font-size="14" fill="#999">→</text>
-  <rect x="340" y="10" width="150" height="50" rx="8" fill="#E65100"/><text x="415" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">③ Báo ☎112·119</text>
-  <text x="500" y="40" font-size="14" fill="#999">→</text>
-  <rect x="515" y="10" width="140" height="50" rx="8" fill="#6A1B9A"/><text x="585" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">④ Bảo vệ hiện trường</text>
-</svg>
-</div>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ Hậu quả bỏ trốn (Hit-and-run)</div>
-  • Nạn nhân tử vong rồi bỏ trốn: <strong>Tù chung thân hoặc từ 5 năm trở lên</strong><br>
-  • Nạn nhân bị thương rồi bỏ trốn: <strong>Tù 1~30 năm</strong> hoặc <strong>phạt 5~30 triệu won</strong><br>
-  • Dù chỉ va chạm nhẹ mà rời hiện trường cũng là bỏ trốn!
-</div>
-
-<h2>7-2. Nhường đường cho xe khẩn cấp (Điều 29)</h2>
-<p>Khi xe khẩn cấp (xe cứu hỏa, xe cứu thương, xe cảnh sát, v.v.) tiếp cận:</p>
-<div class="table-wrap"><table>
-  <tr><th>Tình huống</th><th>Hành động</th></tr>
-  <tr><td>Tại ngã tư hoặc gần ngã tư</td><td><strong>Tránh ngã tư và dừng tạm thời</strong></td></tr>
-  <tr><td>Ngoài ngã tư</td><td>Dừng tạm thời tại <strong>mép phải</strong></td></tr>
-</table></div>
-
-<h2>7-3. Đường ngang đường sắt (Điều 24)</h2>
-<p>Tất cả xe phải <strong>dừng tạm thời</strong> trước đường ngang, xác nhận an toàn rồi mới qua. Khi rào chắn hạ xuống · còi báo hoạt động thì <strong>tuyệt đối cấm vào</strong>. Vi phạm thuộc <strong>12 lỗi nghiêm trọng</strong>.</p>
-<p>Khi hỏng xe trong đường ngang: ① Sơ tán hành khách → ② Phát tín hiệu khẩn cấp → ③ Di chuyển ra khỏi xe</p>
-
-<h2>7-4. Xử lý khi hỏng xe (Điều 66)</h2>
-<p>Dừng bên phải → Bật đèn nháy khẩn cấp → Trên đường cao tốc đặt biển cảnh báo tam giác cách phía sau xe <strong>100m trở lên</strong>. Ban đêm phải đặt biển đỏ nhìn thấy được từ 500m.</p>
-
-<h2>7-5. Bài tập</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">Việc đầu tiên sau tai nạn?</div><div class="q-opts"><span>① Liên hệ bảo hiểm</span><span>② Dừng ngay + cứu người</span><span>③ Di chuyển xe</span><span>④ Tìm nhân chứng</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">Xe khẩn cấp tiếp cận ngã tư?</div><div class="q-opts"><span>① Đi qua nhanh</span><span>② Tránh ngã tư và dừng tạm thời</span><span>③ Tránh sang trái</span><span>④ Tăng tốc</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">Trước đường ngang đường sắt?</div><div class="q-opts"><span>① Đi chậm</span><span>② Bấm còi rồi qua</span><span>③ Dừng tạm thời + xác nhận an toàn</span><span>④ Qua nhanh</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">Khoảng cách biển cảnh báo tam giác khi hỏng xe trên cao tốc?</div><div class="q-opts"><span>① 50m</span><span>② 100m</span><span>③ 150m</span><span>④ 200m</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== Chương 8 ===== -->
-<div class="ch-header purple-h" id="ch8">
-  <div class="ch-num">CHAPTER 08</div>
-  <div class="ch-title-row"><div class="ch-title">Tìm hiểu văn hóa giao thông Hàn Quốc</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">Dây an toàn, điện thoại, đỗ và dừng xe, lái xe ban đêm</div>
-</div>
-
-<h2>8-1. Cơ bản</h2>
-<p><strong>Đi bên phải</strong> (Điều 13) / Tay lái bên trái / Tốc độ km/h. Những người đến từ các nước đi bên trái như Anh · Nhật · Úc hãy đặc biệt chú ý.</p>
-
-<h2>8-2. Quy định bắt buộc</h2>
-<div class="table-wrap"><table>
-  <tr><th>Hạng mục</th><th>Nghĩa vụ</th><th>Thuật ngữ đúng</th></tr>
-  <tr><td>Dây đai</td><td>Đeo <strong>tất cả ghế</strong> (Điều 50) — kể cả ghế sau</td><td><span class="term-o">안전띠 (Dây an toàn)</span></td></tr>
-  <tr><td>Chuyển hướng</td><td>Bật khi chuyển làn · rẽ · dừng (Điều 38)</td><td><span class="term-o">방향지시등 (Đèn xi-nhan)</span></td></tr>
-  <tr><td>Còi</td><td>Chỉ khi phòng tránh nguy hiểm (Điều 49)</td><td><span class="term-o">경음기 (Còi xe)</span></td></tr>
-  <tr><td>Điện thoại</td><td><strong>Cấm</strong> cầm tay sử dụng (Điều 49). Dùng rảnh tay · giá đỡ</td><td>-</td></tr>
-</table></div>
-
-<h2>8-3. Quy định đỗ và dừng xe</h2>
-<h3>Sự khác nhau giữa đỗ xe và dừng xe</h3>
-<p><strong>Đỗ xe</strong>: Dừng liên tục hoặc tài xế rời đi không thể xuất phát ngay (Điều 2 Khoản 24)<br>
-<strong>Dừng xe</strong>: Dừng dưới 5 phút, tài xế ở trong xe có thể xuất phát ngay (Điều 2 Khoản 25)</p>
-
-<h3>Nơi cấm · khoảng cách (Điều 32)</h3>
-<div class="table-wrap"><table>
-  <tr><th>Địa điểm</th><th>Khoảng cách</th></tr>
-  <tr><td>Ngã tư · lối đi bộ · đường ngang · góc đường</td><td>Trong <strong>5m</strong></td></tr>
-  <tr><td>Bốn phía khu vực an toàn</td><td>Trong <strong>10m</strong></td></tr>
-  <tr><td>Biển trạm xe buýt</td><td>Trong <strong>10m</strong></td></tr>
-  <tr><td>Hộp báo cháy</td><td>Trong <strong>3m</strong></td></tr>
-  <tr><td>Trong hầm, trên cầu</td><td>Toàn bộ</td></tr>
-</table></div>
-
-<div class="box box-tip">
-  <div class="box-label">💡 Hay ra thi</div>
-  <strong>Dừng xe 5 phút tại biển "Cấm đỗ xe"?</strong> → <strong>Được phép</strong> (Cấm đỗ ≠ Cấm dừng)<br>
-  <strong>Dừng xe chút tại biển "Cấm đỗ và dừng xe"?</strong> → <strong>Vi phạm</strong>
-</div>
-
-<h2>8-4. Lái xe ban đêm (Điều 37)</h2>
-<p>Khi có xe đi ngược chiều hoặc đi ngay sau xe phía trước → Chuyển đèn pha sang <strong>chiếu gần</strong>. Đèn chiếu xa gây chói mắt đối phương làm tăng nguy cơ tai nạn rất lớn.</p>
-
-
-<!-- ===== Chương 9 ===== -->
-<div class="ch-header" id="ch9">
-  <div class="ch-num">CHAPTER 09</div>
-  <div class="ch-title-row"><div class="ch-title">Chiến lược đậu thi kỹ năng · thi lái trên đường</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">Quy trình thi, tiêu chuẩn đậu, hạng mục trừ điểm · loại, mẹo đậu thi</div>
-</div>
-
-<h2>9-1. Tiêu chuẩn đậu</h2>
-<div class="table-wrap"><table>
-  <tr><th>Bài thi</th><th>Hạng 1</th><th>Hạng 2</th></tr>
-  <tr><td>Lý thuyết (40 câu/40 phút)</td><td><strong>70 điểm</strong></td><td><strong>60 điểm</strong></td></tr>
-  <tr><td>Kỹ năng</td><td><strong>80 điểm</strong></td><td><strong>80 điểm</strong></td></tr>
-  <tr><td>Lái trên đường</td><td><strong>70 điểm</strong></td><td><strong>70 điểm</strong></td></tr>
-</table></div>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ Ngôn ngữ thi lái trên đường</div>
-  Chỉ có <strong>Tiếng Hàn · Tiếng Anh</strong> (Tiếng Trung · Tiếng Việt không có)
-</div>
-
-<h2>9-2. Hạng mục trừ điểm thi kỹ năng</h2>
-<p>Bị trừ điểm khi: không đeo dây an toàn trước khi xuất phát, không bật đèn xi-nhan, xuất phát/dừng đột ngột, lệch khỏi đường thi, không dừng đúng vị trí chỉ định, v.v.</p>
-
-<h2>9-3. Loại · trừ điểm thi lái trên đường</h2>
-<p><strong>Loại ngay</strong>: Vi phạm tín hiệu, xâm phạm vạch trung tâm, gây tai nạn<br>
-<strong>Trừ điểm</strong>: Không đeo dây an toàn, không bật đèn xi-nhan, không kiểm tra an toàn, vi phạm tốc độ</p>
-
-<h2>9-4. 5 mẹo đậu thi</h2>
-<p>1. <strong>Dây an toàn</strong> đeo trước khi khởi động — tránh bị trừ điểm không cần thiết<br>
-2. <strong>Đèn xi-nhan</strong> bật sớm mỗi khi chuyển hướng<br>
-3. <strong>Tuân thủ nghiêm ngặt</strong> giới hạn tốc độ — chạy quá tốc độ bị trừ nhiều hoặc loại<br>
-4. <strong>Không cố vào</strong> khi đèn vàng<br>
-5. Kiểm tra trái · phải, gương chiếu hậu — <strong>quay đầu một cách rõ ràng</strong> để kiểm tra sẽ tốt hơn</p>
-
-
-<!-- ===== Chương 10 (50 câu hỏi thực hành) ===== -->
-<div class="ch-header red-h" id="ch10">
-  <div class="ch-num">CHAPTER 10</div>
-  <div class="ch-title-row"><div class="ch-title">50 câu hỏi trọng tâm luyện thi thực tế</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">40 câu/40 phút · Đậu: Hạng 1 70 điểm / Hạng 2 60 điểm</div>
-</div>
-
-<div class="quiz-section">
-<h3>📝 Luyện dạng văn bản (Q1~Q21)</h3>
-
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">Khi đèn tín hiệu và hiệu lệnh cảnh sát khác nhau?</div><div class="q-opts"><span>① Đèn tín hiệu</span><span>② Hiệu lệnh cảnh sát</span><span>③ Bỏ qua cả hai</span><span>④ Tự phán đoán</span></div><div class="q-answer">→ ② (Điều 5 Khoản 2)</div></div>
-
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">Tiêu chuẩn nồng độ cồn trong máu khi lái xe say?</div><div class="q-opts"><span>① 0,01%</span><span>② 0,03%</span><span>③ 0,05%</span><span>④ 0,08%</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">Việc đầu tiên phải làm sau tai nạn giao thông?</div><div class="q-opts"><span>① Liên hệ bảo hiểm</span><span>② Tìm nhân chứng</span><span>③ Dừng ngay và cứu người bị thương</span><span>④ Sửa xe</span></div><div class="q-answer">→ ③ (Điều 54)</div></div>
-
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">Tốc độ tối đa trong khu vực bảo vệ trẻ em?</div><div class="q-opts"><span>① 60km/h</span><span>② 50km/h</span><span>③ 40km/h</span><span>④ 30km/h</span></div><div class="q-answer">→ ④</div></div>
-
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">Nơi nào không cấm vượt xe?</div><div class="q-opts"><span>① Ngã tư</span><span>② Trong hầm</span><span>③ Đường thẳng</span><span>④ Trên cầu</span></div><div class="q-answer">→ ③ (Điều 22 Khoản 3)</div></div>
-
-<div class="q-item"><div class="q-num">Q6</div><div class="q-text">Nghĩa vụ của tài xế khi người đi bộ đang qua lối đi bộ?</div><div class="q-opts"><span>① Đi chậm</span><span>② Bấm còi</span><span>③ Dừng tạm thời</span><span>④ Giữ tốc độ</span></div><div class="q-answer">→ ③ (Điều 27)</div></div>
-
-<div class="q-item"><div class="q-num">Q7</div><div class="q-text">Khi từ chối đo nồng độ cồn?</div><div class="q-opts"><span>① Cảnh cáo</span><span>② Đình chỉ GPLX</span><span>③ Chỉ phạt tiền</span><span>④ Tước GPLX + truy cứu hình sự</span></div><div class="q-answer">→ ④</div></div>
-
-<div class="q-item"><div class="q-num">Q8</div><div class="q-text">Khi xe khẩn cấp tiếp cận ngã tư?</div><div class="q-opts"><span>① Đi qua nhanh</span><span>② Tránh ngã tư và dừng tạm thời</span><span>③ Tránh sang trái</span><span>④ Tăng tốc</span></div><div class="q-answer">→ ② (Điều 29)</div></div>
-
-<div class="q-item"><div class="q-num">Q9</div><div class="q-text">Nơi nào không phải đi chậm?</div><div class="q-opts"><span>① Ngã tư không điều khiển</span><span>② Đường cong</span><span>③ Đường cao tốc thẳng</span><span>④ Dốc xuống</span></div><div class="q-answer">→ ③ (Điều 31)</div></div>
-
-<div class="q-item"><div class="q-num">Q10</div><div class="q-text">Trước đường ngang đường sắt?</div><div class="q-opts"><span>① Đi chậm qua</span><span>② Bấm còi rồi qua</span><span>③ Dừng tạm thời rồi xác nhận an toàn</span><span>④ Qua nhanh</span></div><div class="q-answer">→ ③ (Điều 24)</div></div>
-
-<div class="q-item"><div class="q-num">Q11</div><div class="q-text">Ban đêm có xe đi ngược chiều → đèn pha?</div><div class="q-opts"><span>① Chiếu xa</span><span>② Chiếu gần</span><span>③ Tắt</span><span>④ Đèn nháy khẩn cấp</span></div><div class="q-answer">→ ② (Điều 37)</div></div>
-
-<div class="q-item"><div class="q-num">Q12</div><div class="q-text">Sử dụng điện thoại khi lái xe?</div><div class="q-opts"><span>① Tự do sử dụng</span><span>② Cấm cầm tay sử dụng</span><span>③ Chỉ được khi đèn đỏ</span><span>④ Không có quy định</span></div><div class="q-answer">→ ② (Điều 49)</div></div>
-
-<div class="q-item"><div class="q-num">Q13</div><div class="q-text">Ngã tư không điều khiển, đường cùng rộng, ai ưu tiên?</div><div class="q-opts"><span>① Xe bên trái</span><span>② Xe bên phải</span><span>③ Xe đến trước</span><span>④ Xe lớn</span></div><div class="q-answer">→ ② (Điều 26 Khoản 3)</div></div>
-
-<div class="q-item"><div class="q-num">Q14</div><div class="q-text">Rẽ trái qua phía nào của ngã tư?</div><div class="q-opts"><span>① Bên ngoài tâm</span><span>② Bên trong tâm</span><span>③ Mép trái</span><span>④ Mép phải</span></div><div class="q-answer">→ ② (Điều 25 Khoản 2)</div></div>
-
-<div class="q-item"><div class="q-num">Q15</div><div class="q-text">Hướng đi trong vòng xuyến?</div><div class="q-opts"><span>① Thuận chiều kim đồng hồ</span><span>② Ngược chiều kim đồng hồ</span><span>③ Hướng nào cũng được</span><span>④ Chỉ đi thẳng</span></div><div class="q-answer">→ ② (Điều 25-2)</div></div>
-
-<div class="q-item"><div class="q-num">Q16</div><div class="q-text">Định nghĩa "đi chậm"?</div><div class="q-opts"><span>① 20km/h</span><span>② 30km/h</span><span>③ Tốc độ chậm có thể dừng ngay lập tức</span><span>④ 10km/h</span></div><div class="q-answer">→ ③ (Điều 2 Khoản 28)</div></div>
-
-<div class="q-item"><div class="q-num">Q17</div><div class="q-text">Khi băng qua vỉa hè để vào tòa nhà?</div><div class="q-opts"><span>① Đi chậm</span><span>② Bấm còi</span><span>③ Dừng tạm thời ngay trước vỉa hè</span><span>④ Đi thẳng vào</span></div><div class="q-answer">→ ③ (Điều 13)</div></div>
-
-<div class="q-item"><div class="q-num">Q18</div><div class="q-text">Khoảng cách cấm đỗ và dừng xe tại ngã tư?</div><div class="q-opts"><span>① 3m</span><span>② 5m</span><span>③ 10m</span><span>④ 15m</span></div><div class="q-answer">→ ② (Điều 32)</div></div>
-
-<div class="q-item"><div class="q-num">Q19</div><div class="q-text">Đối tượng phải đeo dây an toàn?</div><div class="q-opts"><span>① Chỉ tài xế</span><span>② Chỉ ghế trước</span><span>③ Tất cả ghế</span><span>④ Ghế sau tùy chọn</span></div><div class="q-answer">→ ③ (Điều 50)</div></div>
-
-<div class="q-item"><div class="q-num">Q20</div><div class="q-text">Khoảng cách biển cảnh báo tam giác khi hỏng xe trên cao tốc?</div><div class="q-opts"><span>① 50m</span><span>② 100m</span><span>③ 150m</span><span>④ 200m</span></div><div class="q-answer">→ ② (Điều 66)</div></div>
-
-<div class="q-item"><div class="q-num">Q21</div><div class="q-text">Vượt xe đi qua bên nào của xe phía trước?</div><div class="q-opts"><span>① Bên trái</span><span>② Bên phải</span><span>③ Bên nào cũng được</span><span>④ Tùy tình huống</span></div><div class="q-answer">→ ① (Điều 21)</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🖼️ Luyện dạng hình minh họa · ảnh chụp (Q22~Q34)</h3>
-
-<div class="q-item"><div class="q-num">Q22</div><div class="q-text">Khi đèn xanh được làm gì?</div><div class="q-opts"><span>① Đi thẳng hoặc rẽ phải</span><span>② Rẽ trái</span><span>③ Quay đầu</span><span>④ Tất cả hướng</span></div><div class="q-answer">→ ①</div></div>
-
-<div class="q-item"><div class="q-num">Q23</div><div class="q-text">Rẽ phải khi đèn đỏ?</div><div class="q-opts"><span>① Đi thẳng qua</span><span>② Dừng tạm thời rồi đi</span><span>③ Tuyệt đối không được</span><span>④ Đi chậm qua</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q24</div><div class="q-text">Rẽ phải khi đèn rẽ phải 3 màu đỏ?</div><div class="q-opts"><span>① Được</span><span>② Dừng tạm thời rồi được</span><span>③ Đi chậm rồi được</span><span>④ Không được</span></div><div class="q-answer">→ ④ ([Bảng 2] Ghi chú Khoản 3)</div></div>
-
-<div class="q-item"><div class="q-num">Q25</div><div class="q-text">Đèn vàng nhấp nháy?</div><div class="q-opts"><span>① Dừng tạm thời rồi đi</span><span>② Chú ý và tiếp tục đi</span><span>③ Dừng lại</span><span>④ Đi qua nhanh</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q26</div><div class="q-text">Đèn đỏ nhấp nháy?</div><div class="q-opts"><span>① Chú ý và tiếp tục đi</span><span>② Dừng tạm thời rồi đi</span><span>③ Dừng lại</span><span>④ Đi chậm</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q27</div><div class="q-text">Khi đèn xanh cho người đi bộ nhấp nháy?</div><div class="q-opts"><span>① Nhanh chóng bắt đầu qua đường</span><span>② Cấm bắt đầu, nếu đang qua thì hoàn thành nhanh</span><span>③ Đứng tại chỗ</span><span>④ Chạy qua</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q28</div><div class="q-text">Biển báo tam giác vàng?</div><div class="q-opts"><span>① Cấm</span><span>② Chỉ hướng</span><span>③ Cảnh báo nguy hiểm</span><span>④ Giới hạn tốc độ</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q29</div><div class="q-text">Biển báo tròn viền đỏ?</div><div class="q-opts"><span>① Cảnh báo</span><span>② Cấm (cấm · hạn chế)</span><span>③ Chỉ dẫn</span><span>④ Phụ trợ</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q30</div><div class="q-text">Biển báo tròn xanh dương?</div><div class="q-opts"><span>① Cảnh báo</span><span>② Cấm</span><span>③ Chỉ dẫn (hướng · cách)</span><span>④ Phụ trợ</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q31</div><div class="q-text">Màu vạch trung tâm?</div><div class="q-opts"><span>① Trắng</span><span>② Vàng</span><span>③ Đỏ</span><span>④ Xanh dương</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q32</div><div class="q-text">Vạch trắng đứt?</div><div class="q-opts"><span>① Được chuyển làn</span><span>② Cấm chuyển làn</span><span>③ Vạch trung tâm</span><span>④ Vạch dừng</span></div><div class="q-answer">→ ①</div></div>
-
-<div class="q-item"><div class="q-num">Q33</div><div class="q-text">Vạch trắng liền?</div><div class="q-opts"><span>① Được chuyển làn</span><span>② Hạn chế chuyển làn</span><span>③ Vạch trung tâm</span><span>④ Lối đi bộ</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q34</div><div class="q-text">Vạch vàng liền (vạch trung tâm)?</div><div class="q-opts"><span>① Được vượt xe</span><span>② Không được vượt qua</span><span>③ Được chuyển làn</span><span>④ Khu vực đi chậm</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🚸 Luyện dạng biển báo giao thông (Q35~Q39)</h3>
-
-<div class="q-item"><div class="q-num">Q35</div><div class="q-text">Dừng xe 5 phút tại biển "Cấm đỗ xe"?</div><div class="q-opts"><span>① Vi phạm</span><span>② Được phép</span><span>③ Phạt tiền</span><span>④ Được đến 10 phút</span></div><div class="q-answer">→ ② (Cấm đỗ ≠ Cấm dừng)</div></div>
-
-<div class="q-item"><div class="q-num">Q36</div><div class="q-text">Dừng xe chút tại biển "Cấm đỗ và dừng xe"?</div><div class="q-opts"><span>① Được phép</span><span>② Được dưới 3 phút</span><span>③ Vi phạm</span><span>④ Được nếu có người trên xe</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q37</div><div class="q-text">Trên đường "Giới hạn tốc độ 50"?</div><div class="q-opts"><span>① Trên 50</span><span>② Dưới 50</span><span>③ Đúng 50</span><span>④ Dưới 60</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q38</div><div class="q-text">Trong khu vực "Cấm vượt xe"?</div><div class="q-opts"><span>① Được phép</span><span>② Đi chậm thì được</span><span>③ Vi phạm</span><span>④ Chỉ cấm xe lớn</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q39</div><div class="q-text">Đi ngược chiều trên đường "Một chiều"?</div><div class="q-opts"><span>① Được phép</span><span>② Đi chậm thì được</span><span>③ Vi phạm</span><span>④ Chỉ ban đêm được</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🎬 Luyện tổng hợp (Q40~Q50)</h3>
-
-<div class="q-item"><div class="q-num">Q40</div><div class="q-text">Tốc độ tối đa đường cao tốc? (2 làn một chiều+)</div><div class="q-opts"><span>① 80km/h</span><span>② 100km/h</span><span>③ 100~120km/h</span><span>④ 130km/h</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q41</div><div class="q-text">Thuật ngữ đúng của đèn xi-nhan?</div><div class="q-opts"><span>① 깜빡이 (Đèn nháy)</span><span>② Turn signal</span><span>③ 방향지시등 (Đèn xi-nhan)</span><span>④ 방향등</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q42</div><div class="q-text">Cách nói đúng của "chuyển làn"?</div><div class="q-opts"><span>① 차선변경 (Đổi vạch)</span><span>② 차로변경 (Chuyển làn)</span><span>③ Lane change</span><span>④ 차선이동</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q43</div><div class="q-text">Khoảng cách cấm đỗ và dừng xe tại trạm xe buýt?</div><div class="q-opts"><span>① 3m</span><span>② 5m</span><span>③ 10m</span><span>④ 15m</span></div><div class="q-answer">→ ③ (Điều 32)</div></div>
-
-<div class="q-item"><div class="q-num">Q44</div><div class="q-text">Đường rộng vs đường hẹp giao nhau?</div><div class="q-opts"><span>① Đường hẹp ưu tiên</span><span>② Đường rộng ưu tiên</span><span>③ Xe đến trước</span><span>④ Xe bên trái</span></div><div class="q-answer">→ ② (Điều 26 Khoản 2)</div></div>
-
-<div class="q-item"><div class="q-num">Q45</div><div class="q-text">Số câu và thời gian thi lý thuyết?</div><div class="q-opts"><span>① 50 câu/50 phút</span><span>② 40 câu/50 phút</span><span>③ 40 câu/40 phút</span><span>④ 30 câu/30 phút</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q46</div><div class="q-text">Tiêu chuẩn đậu Hạng 1 phổ thông?</div><div class="q-opts"><span>① 60 điểm</span><span>② 70 điểm</span><span>③ 80 điểm</span><span>④ 90 điểm</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q47</div><div class="q-text">Tiêu chuẩn đậu Hạng 2 phổ thông?</div><div class="q-opts"><span>① 50 điểm</span><span>② 60 điểm</span><span>③ 70 điểm</span><span>④ 80 điểm</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q48</div><div class="q-text">Điều kiện rẽ phải khi đèn đỏ?</div><div class="q-opts"><span>① Đi chậm thì được</span><span>② Không có người đi bộ thì qua luôn</span><span>③ Dừng tạm thời rồi không cản trở xe khác</span><span>④ Lúc nào cũng được</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q49</div><div class="q-text">Ai không phải là người hỗ trợ cảnh sát?</div><div class="q-opts"><span>① Lái xe mẫu mực</span><span>② Cảnh sát quân sự</span><span>③ Công chức cứu hỏa</span><span>④ Tình nguyện viên công trường</span></div><div class="q-answer">→ ④ (Nghị định thi hành Điều 6)</div></div>
-
-<div class="q-item"><div class="q-num">Q50</div><div class="q-text">Ngôn ngữ thi lái trên đường?</div><div class="q-opts"><span>① Cả 4 ngôn ngữ</span><span>② Chỉ Tiếng Hàn</span><span>③ Chỉ Tiếng Hàn · Tiếng Anh</span><span>④ Tiếng Hàn · Tiếng Anh · Tiếng Trung</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-<!-- Banner ngân hàng câu hỏi (cuối cùng) -->
-<a href="https://evergreenedu-collab.github.io/quiz/" target="_blank" class="quiz-banner" style="margin-top:36px;">
-  <div class="qb-icon">🏆</div>
-  <div class="qb-text">
-    <div class="qb-title">Luyện tập toàn bộ 980 câu hỏi</div>
-    <div class="qb-desc">Tiếng Hàn · English · 中文 · Tiếng Việt — Hỗ trợ 4 ngôn ngữ<br>Cung cấp bộ lọc 5 dạng: Văn bản · Hình minh họa · Ảnh chụp · Biển báo · Video</div>
+<!-- 1-1 -->
+<div class="section" id="s1-1">
+  <h3>1-1. Phân loại bằng lái xe (Điều 80 Luật Giao thông Đường bộ)</h3>
+  <p>Bằng lái Hàn Quốc chia thành <strong>Hạng 1, Hạng 2, và bằng tập lái</strong>. Mỗi loại cho phép lái những phương tiện khác nhau.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Loại bằng</th><th>Phân loại nhỏ</th><th>Xe được lái</th></tr>
+      <tr>
+        <td rowspan="4"><strong>Hạng 1</strong><br>(Thương mại - Lớn)</td>
+        <td>Lớn</td>
+        <td>Xe con, xe khách, xe tải (không giới hạn tải trọng), một số xe công trình, xe đặc chủng (trừ kéo lớn/cứu hộ)</td>
+      </tr>
+      <tr>
+        <td>Phổ thông</td>
+        <td>Xe con, xe khách dưới 15 chỗ, tải dưới 12 tấn, đặc chủng dưới 10 tấn</td>
+      </tr>
+      <tr>
+        <td>Nhỏ</td>
+        <td>Xe tải 3 bánh, xe con 3 bánh</td>
+      </tr>
+      <tr>
+        <td>Đặc chủng</td>
+        <td>Xe kéo lớn, xe kéo nhỏ, xe cứu hộ</td>
+      </tr>
+      <tr>
+        <td rowspan="3"><strong>Hạng 2</strong><br>(Dân dụng)</td>
+        <td>Phổ thông</td>
+        <td>Xe con, xe khách dưới 10 chỗ, xe tải dưới 4 tấn</td>
+      </tr>
+      <tr>
+        <td>Nhỏ</td>
+        <td>Xe máy trên 125cc</td>
+      </tr>
+      <tr>
+        <td>Mô-tô (PM)</td>
+        <td>Xe máy dưới 125cc, xe điện kickboard (PM), v.v.</td>
+      </tr>
+      <tr>
+        <td><strong>Bằng tập lái</strong></td>
+        <td>Hạng 1/2 phổ thông</td>
+        <td>Bằng tạm thời để dự thi đường trường (hiệu lực 1 năm)</td>
+      </tr>
+    </table>
   </div>
-  <div class="qb-btn">Vào ngân hàng câu hỏi →</div>
-</a>
 
-<div style="text-align:center;padding:40px 0 20px;color:var(--gray);font-size:11px;line-height:1.8;">
-  <p>Công đoàn Giao thông Đường bộ Hàn Quốc (KoRoad) Ban Giáo dục</p>
-  <p>Giáo trình này được biên soạn dựa trên Luật Giao thông Đường bộ · Nghị định thi hành · Quy tắc thi hành và Sách giải thích Luật GTĐB năm 2024.</p>
-  <p>© 2026 Dự án AI Tutor lấy GPLX cho người nước ngoài</p>
+  <div class="box box-tip">
+    <div class="box-title">💡 Hạng 1 hay Hạng 2?</div>
+    Nếu chỉ lái <strong>xe con cá nhân</strong>, <strong>Hạng 2 phổ thông</strong> là đủ. Đề thi dễ hơn, phí tương tự.<br>
+    Nếu cần lái <strong>xe tải, xe khách 11~15 chỗ, xe công vụ</strong>, hãy chọn <strong>Hạng 1 phổ thông</strong>.<br>
+    ⚠️ Bằng Hạng 2 không lái được xe khách 11 chỗ trở lên (kể cả Carnival 11 chỗ).
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý cho người nước ngoài — Số tự động vs Số sàn</div>
+    Bằng Hàn Quốc chia thành <strong>Số tự động (AT)</strong> và <strong>Phổ thông (gồm cả số sàn)</strong>.<br>
+    • Bằng AT: chỉ lái xe số tự động. Đề dễ hơn, phần lớn người nước ngoài chọn loại này.<br>
+    • Bằng phổ thông: lái được cả số sàn và tự động.<br>
+    Nếu ở quê nhà bạn đã có bằng số sàn, lấy bằng phổ thông tại Hàn sẽ thuận lợi hơn.
+  </div>
 </div>
 
+<!-- 1-2 -->
+<div class="section" id="s1-2">
+  <h3>1-2. Đổi bằng nước ngoài (Điều 84)</h3>
+  <p>Người nước ngoài đã có bằng lái hợp lệ ở nước mình, nếu đáp ứng điều kiện, có thể <strong>đổi sang bằng Hàn Quốc mà không cần thi lý thuyết, sa hình hoặc đường trường</strong>.</p>
+
+  <h4>Điều kiện đổi bằng</h4>
+  <ol>
+    <li>Có <strong>bằng lái hợp lệ</strong> do nước sở tại cấp (tương đương Hạng 2 phổ thông trở lên)</li>
+    <li>Bằng cấp bởi quốc gia có <strong>thỏa thuận công nhận bằng lái</strong> với Hàn Quốc (tùy quốc gia/bang)</li>
+    <li>Có thẻ đăng ký người nước ngoài (visa F/E/D, v.v.) hoặc giấy đăng ký cư trú kiều bào</li>
+    <li>Chứng minh được rằng bạn <strong>thực sự cư trú</strong> tại nước sở tại khi lấy bằng (sổ hộ chiếu xuất nhập cảnh)</li>
+  </ol>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Phạm vi công nhận khác nhau theo quốc gia</div>
+    • <strong>Công nhận toàn phần (miễn mọi kỳ thi)</strong>: Nhật, Đức, Pháp, Anh, Úc, hầu hết OECD, Đài Loan — đổi thẳng sang <strong>Hạng 2 phổ thông</strong><br>
+    • <strong>Công nhận một phần (chỉ thi lý thuyết)</strong>: tùy nước, hỏi KoRoad<br>
+    • <strong>Không công nhận</strong>: phải thi lại từ đầu<br><br>
+    ※ <strong>🇻🇳 Việt Nam, 🇺🇸 Mỹ, 🇨🇳 Trung Quốc</strong>: phụ thuộc tỉnh/bang, hãy kiểm tra trước.
+  </div>
+
+  <h4>Hồ sơ cần nộp</h4>
+  <ul>
+    <li>Bản gốc bằng lái nước ngoài + bản dịch tiếng Hàn có công chứng (hoặc Apostille)</li>
+    <li>Hộ chiếu gốc và bản sao (gồm dấu xuất nhập cảnh)</li>
+    <li>Thẻ đăng ký người nước ngoài</li>
+    <li>2 ảnh chân dung (3.5 × 4.5 cm)</li>
+    <li>Lệ phí khoảng <strong>8.000 KRW</strong></li>
+    <li>Khám thị lực và sức khỏe (tại trung tâm sát hạch)</li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Sau khi đổi bằng</div>
+    Bằng gốc sẽ bị <strong>KoRoad giữ lại</strong>, bạn có thể nhận lại khi rời Hàn Quốc. Bằng đổi chỉ có giá trị tại Hàn; muốn có Bằng quốc tế (IDP) phải xin riêng.
+  </div>
 </div>
+
+<!-- 1-3 -->
+<div class="section" id="s1-3">
+  <h3>1-3. Cấu trúc kỳ thi lý thuyết &amp; tiêu chuẩn đậu</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Mục</th><th>Hạng 1 phổ thông</th><th>Hạng 2 phổ thông</th></tr>
+      <tr><td>Số câu hỏi</td><td>40 câu</td><td>40 câu</td></tr>
+      <tr><td>Thời gian</td><td>40 phút</td><td>40 phút</td></tr>
+      <tr><td>Hình thức</td><td colspan="2">Trắc nghiệm 4 lựa chọn + 5 lựa chọn (biển báo / video)</td></tr>
+      <tr><td>Tiêu chuẩn đậu</td><td><strong>70 điểm trở lên</strong></td><td><strong>60 điểm trở lên</strong></td></tr>
+      <tr><td>Ngôn ngữ hỗ trợ</td><td colspan="2">Hàn, Anh, Trung, Việt, Nhật, Thái, Khmer, Nga, ...</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Lĩnh vực ra đề (theo ngân hàng 980 câu)</div>
+    ① Hệ thống bằng lái (~5%)<br>
+    ② Luật giao thông &amp; chế tài (~30%) — <strong>nhiều nhất</strong><br>
+    ③ Lái xe an toàn (~20%)<br>
+    ④ Cấu tạo &amp; bảo dưỡng xe (~5%)<br>
+    ⑤ Xử lý tai nạn &amp; sơ cấp cứu (~10%)<br>
+    ⑥ Tín hiệu, biển báo, vạch kẻ đường (~15%) — học Chương 2<br>
+    ⑦ Giao lộ &amp; nhường đường (~10%) — học Chương 3<br>
+    ⑧ Câu hỏi biển báo / video (~5%)
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý cho người nước ngoài — chất lượng bản dịch</div>
+    Bản dịch (Anh, Trung, Việt) thường dịch sát từ ngữ pháp lý Hàn Quốc, có thể khó hiểu. Khi mơ hồ hãy đối chiếu với bản tiếng Hàn. Đặc biệt các từ <strong>"đi chậm (서행)", "dừng tạm thời (일시정지)", "nhường đường (양보)"</strong> có nghĩa pháp lý chính xác — phải hiểu đúng.
+  </div>
+</div>
+
+<!-- 1-4 -->
+<div class="section" id="s1-4">
+  <h3>1-4. Các bước lấy bằng &amp; chi phí</h3>
+
+  <div class="flow">
+    <div class="flow-step step-green">①Giáo dục an toàn</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step">②Khám sức khỏe</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">③Lý thuyết</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">④Sa hình</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">⑤Bằng tập lái</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-red">⑥Đường trường</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">⑦Cấp bằng</div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Bước</th><th>Nội dung</th><th>Lệ phí (KRW)</th></tr>
+      <tr><td>Giáo dục an toàn</td><td>1 giờ bắt buộc (trực tiếp hoặc online)</td><td>Miễn phí</td></tr>
+      <tr><td>Khám sức khỏe</td><td>Thị lực, sắc giác, thính giác</td><td>~6.000</td></tr>
+      <tr><td><strong>Lý thuyết</strong></td><td>40 câu, 70(C1)/60(C2)</td><td><strong>10.000</strong></td></tr>
+      <tr><td><strong>Sa hình</strong></td><td>Lái trong khu vực sát hạch (T-park, dốc...)</td><td><strong>44.000</strong></td></tr>
+      <tr><td><strong>Đường trường</strong></td><td>Lái thật ~5 km</td><td><strong>25.000</strong></td></tr>
+      <tr><td><strong>Cấp bằng</strong></td><td>Bao gồm bằng số</td><td><strong>8.000</strong></td></tr>
+      <tr><td colspan="2" style="text-align:right;"><strong>Tổng (không trượt)</strong></td><td><strong>~93.000</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Phí thi lại</div>
+    Mỗi lần trượt đều phải nộp lại lệ phí. Ví dụ thi đường trường trượt 3 lần = 25.000 × 3 = thêm 75.000 KRW. Đậu ngay lần đầu là cách tiết kiệm nhất.
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý cho người nước ngoài — ngôn ngữ thi</div>
+    Sa hình có <strong>hướng dẫn giọng đa ngôn ngữ</strong> (Hàn, Anh, Trung, Việt...). Tuy nhiên <strong>thi đường trường chỉ có Hàn và Anh</strong>. Người Việt/Trung không thể thi bằng tiếng mẹ đẻ — hãy học trước các lệnh tiếng Hàn cơ bản: <strong>"đi thẳng (직진), rẽ trái (좌회전), rẽ phải (우회전), dừng (정지), đi chậm (서행)"</strong>.
+  </div>
+</div>
+
+<!-- 1-5 -->
+<div class="section" id="s1-5">
+  <h3>1-5. Quản lý &amp; gia hạn bằng lái (Điều 87)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Mục</th><th>Hạng 1</th><th>Hạng 2</th></tr>
+      <tr><td>Lần gia hạn đầu</td><td>Sau 10 năm</td><td>Sau 10 năm</td></tr>
+      <tr><td>Chu kỳ tiếp theo</td><td><strong>Mỗi 10 năm</strong></td><td><strong>Mỗi 10 năm</strong></td></tr>
+      <tr><td>Khám sức khỏe</td><td>Bao gồm khi gia hạn</td><td>Từ 75 tuổi mỗi 5 năm</td></tr>
+      <tr><td>65–74 tuổi</td><td colspan="2">Rút ngắn còn <strong>5 năm</strong></td></tr>
+      <tr><td>75 tuổi trở lên</td><td colspan="2"><strong>3 năm</strong>, bắt buộc khám nhận thức &amp; giáo dục</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Quá hạn gia hạn</div>
+    Quá hạn sẽ bị phạt <strong>20.000 KRW</strong>. Sau 1 năm nữa bằng sẽ bị <strong>hủy</strong> và phải thi lại từ đầu.
+  </div>
+</div>
+
+<!-- 1-6 -->
+<div class="section" id="s1-6">
+  <h3>1-6. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Điểm đậu kỳ thi lý thuyết Hạng 2 phổ thông?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 50</label>
+      <label class="quiz-opt" data-idx="2">② 60</label>
+      <label class="quiz-opt" data-idx="3">③ 70</label>
+      <label class="quiz-opt" data-idx="4">④ 80</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong> — Hạng 2: 60+, Hạng 1: 70+.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Bằng nào lái được Carnival 11 chỗ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Hạng 2 phổ thông</label>
+      <label class="quiz-opt" data-idx="2">② Hạng 2 nhỏ</label>
+      <label class="quiz-opt" data-idx="3">③ Hạng 1 phổ thông trở lên</label>
+      <label class="quiz-opt" data-idx="4">④ Mô-tô</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong> — Hạng 2 chỉ tới 10 chỗ.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Trước khi thi đường trường phải có?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Bằng quốc tế</label>
+      <label class="quiz-opt" data-idx="2">② Bằng tập lái</label>
+      <label class="quiz-opt" data-idx="3">③ Bằng chính thức</label>
+      <label class="quiz-opt" data-idx="4">④ Giấy lái tạm</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong> — Đậu lý thuyết &amp; sa hình → nhận bằng tập lái → thi đường trường.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Lệ phí thi lý thuyết?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 5.000 KRW</label>
+      <label class="quiz-opt" data-idx="2">② 10.000 KRW</label>
+      <label class="quiz-opt" data-idx="3">③ 25.000 KRW</label>
+      <label class="quiz-opt" data-idx="4">④ 44.000 KRW</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Giấy tờ KHÔNG cần khi đổi bằng?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Bằng gốc + dịch công chứng</label>
+      <label class="quiz-opt" data-idx="2">② Hộ chiếu &amp; dấu xuất nhập cảnh</label>
+      <label class="quiz-opt" data-idx="3">③ Thẻ đăng ký người nước ngoài</label>
+      <label class="quiz-opt" data-idx="4">④ Giấy chứng nhận không tai nạn của cảnh sát quê nhà</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong> — Không bắt buộc.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Chu kỳ gia hạn bằng từ 75 tuổi?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10 năm</label>
+      <label class="quiz-opt" data-idx="2">② 5 năm</label>
+      <label class="quiz-opt" data-idx="3">③ 3 năm</label>
+      <label class="quiz-opt" data-idx="4">④ 1 năm</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 2 — Đèn tín hiệu &amp; Biển báo -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch2">
+  <span class="ch-num">Chương 2</span>
+  <h2>Làm chủ đèn tín hiệu &amp; biển báo</h2>
+  <p class="ch-desc">Đèn xe / người đi bộ, đèn nháy, 4 loại biển báo, vạch kẻ — khoảng 10–12 câu</p>
+  <p class="ch-stars">★★★ Khu vực ra đề nhiều nhất</p>
+</div>
+
+<!-- 2-1 -->
+<div class="section" id="s2-1">
+  <h3>2-1. Nguyên tắc cốt lõi — thứ tự ưu tiên tín hiệu</h3>
+  <p>Theo <strong>Điều 5</strong> Luật Giao thông Đường bộ, mọi người tham gia giao thông phải tuân theo thiết bị an toàn. <strong>Vi phạm tín hiệu thuộc 12 lỗi nghiêm trọng</strong>, bị xử lý hình sự bất kể có bảo hiểm.</p>
+
+  <div class="flow">
+    <div class="flow-step step-red">①Hiệu lệnh tay (cao nhất)</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">②Đèn tín hiệu</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">③Biển báo</div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Trọng điểm thi</div>
+    <strong>Hỏi: Đèn và hiệu lệnh tay khác nhau, theo cái nào?</strong><br>
+    → <strong>Hiệu lệnh tay</strong> (Điều 5 Khoản 2)<br><br>
+    <strong>Hỏi: Phụ tá cảnh sát?</strong> (Nghị định Điều 6)<br>
+    ✅ Có: tài xế gương mẫu, quân cảnh, lính cứu hỏa<br>
+    ❌ Không: tình nguyện viên công trường, tuần tra cao tốc, bãi đỗ xe
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý cho người nước ngoài</div>
+    Ở nhiều nước cảnh sát chỉ điều khiển bằng tay khi khẩn cấp. Tại Hàn Quốc <strong>vào giờ cao điểm</strong> rất hay thấy cảnh sát điều khiển bằng tay. Khi đèn và tay không trùng, <strong>hãy theo hiệu lệnh tay</strong>.
+  </div>
+</div>
+
+<!-- 2-2 -->
+<div class="section" id="s2-2">
+  <h3>2-2. Đèn tín hiệu xe (Quy tắc thi hành Bảng 2)</h3>
+  <p>Đèn xe tại Hàn Quốc thường <strong>xếp dọc</strong>: đỏ - vàng - xanh từ trên xuống.</p>
+
+  <div class="signal-grid">
+    <div class="signal-card sig-green">
+      <div class="signal-icon"></div>
+      <div class="signal-name">Đèn xanh</div>
+      <div class="signal-desc"><strong>Đi thẳng hoặc rẽ phải</strong><br>Có biển "rẽ trái không bảo vệ" mới được rẽ trái</div>
+    </div>
+    <div class="signal-card sig-yellow">
+      <div class="signal-icon"></div>
+      <div class="signal-name">Đèn vàng</div>
+      <div class="signal-desc"><strong>Dừng trước vạch dừng</strong><br>Đã vào giao lộ thì nhanh chóng qua</div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-icon"></div>
+      <div class="signal-name">Đèn đỏ</div>
+      <div class="signal-desc"><strong>Dừng</strong><br>Có thể rẽ phải sau khi dừng hẳn (có điều kiện)</div>
+    </div>
+    <div class="signal-card sig-green">
+      <div class="signal-icon signal-arrow"><svg viewBox="0 0 56 56" width="56" height="56"><circle cx="28" cy="28" r="25" fill="none" stroke="#22c55e" stroke-width="4"/><path d="M40 28H18M18 28L26 20M18 28L26 36" fill="none" stroke="#22c55e" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-name">Mũi tên xanh</div>
+      <div class="signal-desc"><strong>Chỉ đi theo hướng mũi tên</strong></div>
+    </div>
+  </div>
+
+  <h4>🟢 Đèn xanh KHÔNG được rẽ trái!</h4>
+  <p>Đèn xanh có nghĩa <strong>"đi thẳng hoặc rẽ phải"</strong>. Nhiều người nước ngoài tưởng đèn xanh đi được mọi hướng, nhưng <strong>rẽ trái khi không có biển "không bảo vệ" = vi phạm tín hiệu</strong>.</p>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Án lệ Tòa án Tối cao 2004Do5848</div>
+    Tại giao lộ có đèn 3 màu (đỏ-vàng-xanh) và không có biển rẽ trái không bảo vệ hoặc quay đầu, xe <strong>không được rẽ trái hay quay đầu</strong>.
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 So sánh với các nước</div>
+    <strong>🇻🇳 Việt Nam:</strong> Đèn xanh có thể rẽ trái nếu không có biển cấm<br>
+    <strong>🇺🇸 Mỹ · 🇨🇦 Canada:</strong> Rẽ trái khi đèn xanh (sau khi nhường xe ngược chiều)<br>
+    <strong>🇨🇳 Trung Quốc:</strong> Đèn xanh có thể rẽ trái<br>
+    <strong>🇯🇵 Nhật · 🇪🇺 Châu Âu:</strong> Phải có mũi tên rẽ trái<br>
+    <strong>🇰🇷 Hàn Quốc:</strong> Phải có mũi tên hoặc biển "rẽ trái không bảo vệ"
+  </div>
+
+  <h4>🟢 "Rẽ trái không bảo vệ" là gì?</h4>
+  <p>"Không bảo vệ" nghĩa là <strong>không được tín hiệu bảo vệ</strong>. Nơi có biển này, được rẽ trái khi <strong>đèn xanh đi thẳng</strong> và <strong>không có xe ngược chiều</strong>.</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Lưu ý nghiêm</div>
+    • Chỉ được rẽ trái khi <strong>đèn xanh</strong><br>
+    • <strong>Đèn đỏ rẽ trái không bảo vệ = vi phạm tín hiệu</strong> (phạt 60.000 KRW, trừ 15 điểm)<br>
+    • Trong tai nạn, xe rẽ trái không bảo vệ thường chịu lỗi <strong>80% trở lên</strong>
+  </div>
+
+  <h4>🟡 Đèn vàng — "dừng hay đi?"</h4>
+  <p><strong>Nguyên tắc: dừng trước vạch dừng.</strong> Nếu đã quá gần không thể dừng an toàn, hãy <strong>đi qua nhanh</strong>.</p>
+  <p>⚠️ Tăng tốc vượt đèn vàng = vi phạm tín hiệu. "Vàng phải nhanh" là quan niệm sai lầm.</p>
+
+  <h4 id="rtor">🔴 Rẽ phải khi đèn đỏ (RTOR) — quan trọng nhất!</h4>
+  <p>Hàn Quốc cho phép <strong>rẽ phải khi đèn đỏ</strong>, nhưng có <strong>điều kiện nghiêm ngặt</strong>.</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Phải dừng hẳn</strong> — bánh xe dừng hoàn toàn (0 km/h) trước vạch / vạch người đi bộ / giao lộ</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Quan sát người đi bộ</strong> — nếu có ai đang hoặc <strong>sắp qua đường</strong>, đợi họ qua hẳn</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Quan sát các xe khác</strong> — không <strong>cản trở</strong> các xe đang đi theo tín hiệu</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>Rẽ phải chậm</strong> sau khi đủ điều kiện</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Khi KHÔNG được rẽ phải</div>
+    <strong>① Đèn 3 màu rẽ phải đỏ</strong> — tại giao lộ có đèn rẽ phải riêng, đỏ = <strong>tuyệt đối không rẽ!</strong> (Bảng 2, ghi chú 3)<br>
+    <strong>② Biển "Cấm rẽ phải"</strong> — không rẽ trong mọi tình huống<br>
+    <strong>③ Xe phía trước chặn</strong> — bấm còi xe đang chờ đèn = phạt 40.000 KRW
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 RTOR — so sánh các nước</div>
+    <div class="table-wrap">
+      <table class="compare-table">
+        <tr><th>Nước</th><th>RTOR</th><th>Ghi chú</th></tr>
+        <tr><td><span class="flag">🇻🇳</span> Việt Nam</td><td>⚠️ Theo biển</td><td>Chỉ khi có biển cho phép</td></tr>
+        <tr><td><span class="flag">🇰🇷</span> Hàn Quốc</td><td>✅ Có (sau khi dừng hẳn)</td><td>Quy định nghiêm hơn từ 2023</td></tr>
+        <tr><td><span class="flag">🇺🇸</span> Mỹ</td><td>✅ Đa số tiểu bang</td><td>NYC v.v. cấm</td></tr>
+        <tr><td><span class="flag">🇨🇳</span> Trung Quốc</td><td>✅ Có</td><td>Trừ khi có biển cấm</td></tr>
+        <tr><td><span class="flag">🇯🇵</span> Nhật</td><td>❌ Cấm</td><td>Đi bên trái</td></tr>
+        <tr><td><span class="flag">🇬🇧</span> Anh</td><td>❌ Cấm</td><td>Đi bên trái</td></tr>
+        <tr><td><span class="flag">🇩🇪</span> Đức</td><td>❌ Cấm</td><td>Chỉ khi có biển mũi tên xanh</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h4>📍 Tình huống thực tế</h4>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 Tình huống 1: Đèn đỏ, không có người đi bộ</div>
+    <div class="scenario-body">
+      <span class="do">✅ Đúng:</span> Dừng hẳn → kiểm tra người đi bộ → kiểm tra xe khác → rẽ phải chậm<br>
+      <span class="dont">❌ Sai:</span> Không dừng mà rẽ → <strong>vi phạm tín hiệu</strong>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 Tình huống 2: Đèn xanh, có người đi bộ ở vạch thứ hai</div>
+    <div class="scenario-body">
+      <span class="do">✅ Đúng:</span> Qua vạch 1 chậm → <strong>dừng hẳn</strong> ở vạch 2 → đợi người đi bộ qua xong<br>
+      <span class="dont">❌ Sai:</span> "Đèn xanh thì cứ đi" → vi phạm bảo vệ người đi bộ (lỗi <strong>100%</strong>)
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 Tình huống 3: Đèn 3 màu rẽ phải đỏ</div>
+    <div class="scenario-body">
+      <span class="do">✅ Đúng:</span> Dừng tại vạch và <strong>chờ mũi tên xanh</strong><br>
+      <span class="dont">❌ Sai:</span> "Không có ai..." → <strong>TUYỆT ĐỐI KHÔNG! Vi phạm tín hiệu</strong>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Phải nhớ!</div>
+    <strong>1.</strong> RTOR = bắt buộc <strong>dừng hẳn trước</strong><br>
+    <strong>2.</strong> Đèn 3 màu rẽ phải đỏ = <strong>cấm rẽ phải</strong><br>
+    <strong>3.</strong> Đèn người đi bộ xanh nhưng không có ai? → Sửa đổi 2022 cho phép <strong>đi qua</strong> (nhưng nếu có người sắp qua phải dừng)
+  </div>
+</div>
+
+<!-- 2-3 -->
+<div class="section" id="s2-3">
+  <h3>2-3. Đèn nhấp nháy</h3>
+  <p>Đèn nháy chủ yếu dùng vào <strong>giờ ít xe</strong> (đêm khuya / sáng sớm) hoặc <strong>đường phụ</strong>.</p>
+
+  <div class="signal-grid">
+    <div class="signal-card sig-yellow">
+      <div class="signal-icon" style="animation: blink 1s infinite;"></div>
+      <div class="signal-name">Vàng nháy</div>
+      <div class="signal-desc"><strong>Đi cẩn thận</strong><br>"Vàng nháy = cẩn thận GO"<br>Thường ở đường chính</div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-icon" style="animation: blink 1s infinite;"></div>
+      <div class="signal-name">Đỏ nháy</div>
+      <div class="signal-desc"><strong>Dừng hẳn rồi đi</strong><br>"Đỏ nháy = dừng rồi GO"<br>Thường ở đường phụ</div>
+    </div>
+  </div>
+  <style>@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }</style>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Cách nhớ</div>
+    Vàng nháy = <strong>"chú ý"</strong> đi chậm qua (không cần dừng)<br>
+    Đỏ nháy = <strong>"dừng"</strong> rồi mới đi (bắt buộc dừng)<br><br>
+    ⚠️ Tại nhiều giao lộ một bên vàng, một bên đỏ. <strong>Bên đỏ phải nhường.</strong>
+  </div>
+</div>
+
+<!-- 2-4 -->
+<div class="section" id="s2-4">
+  <h3>2-4. Đèn tín hiệu người đi bộ</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Tín hiệu</th><th>Ý nghĩa</th><th>Hành động</th></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 Xanh</td><td>Được qua</td><td>Có thể đi qua vạch</td></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 Xanh nháy</td><td><strong>KHÔNG bắt đầu qua</strong></td><td>Đang qua thì nhanh chóng đi nốt hoặc trở về vỉa hè</td></tr>
+      <tr><td style="color:#ef4444;font-weight:700;">🔴 Đỏ</td><td>Cấm qua</td><td>Không được qua</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lỗi sai phổ biến</div>
+    <strong>"Xanh nháy thì có thể chạy qua nhanh không?"</strong><br>
+    → <strong>KHÔNG!</strong> Xanh nháy nghĩa là <strong>không nên bắt đầu qua mới</strong>.<br><br>
+    <strong>Người lái xe:</strong> Khi đèn người đi bộ xanh nháy, đừng vội đi — có thể vẫn còn người đang qua đường.
+  </div>
+
+  <h4>Đèn người đi bộ &amp; xe (cốt lõi sửa đổi 2022)</h4>
+  <p>Sửa đổi 2022 <strong>tăng cường mạnh nghĩa vụ bảo vệ người đi bộ</strong>:</p>
+  <ul>
+    <li>Khi người đi bộ <strong>"sắp qua đường"</strong> (đứng ở lề), người lái phải dừng tạm</li>
+    <li>Vạch người đi bộ không đèn trong khu bảo vệ trẻ em — phải dừng <strong>kể cả khi không có ai</strong></li>
+    <li>Không có người, đèn xanh người đi bộ vẫn xanh, xe vẫn <strong>có thể qua</strong></li>
+  </ul>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Điều khoản chính</div>
+    <strong>Điều 27 Khoản 1:</strong> Người đi bộ đang qua vạch → dừng tạm<br>
+    <strong>Điều 27 Khoản 6:</strong> Vạch không đèn, người đang qua hoặc <strong>sắp qua</strong> → dừng tạm<br>
+    Vi phạm = <strong>12 lỗi nghiêm trọng</strong>
+  </div>
+</div>
+
+<!-- 2-5 -->
+<div class="section" id="s2-5">
+  <h3>2-5. Đèn xe đạp</h3>
+  <p>Xe đạp cũng là <strong>phương tiện</strong>, phải tuân theo tín hiệu.</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Tình huống</th><th>Tín hiệu phải theo</th><th>Căn cứ</th></tr>
+      <tr><td>Có đèn xe đạp riêng</td><td><strong>Đèn xe đạp</strong></td><td>Bảng 2 ghi chú 1</td></tr>
+      <tr><td>Không có đèn xe đạp, đi trên lòng đường</td><td><strong>Đèn xe</strong></td><td>Bảng 2 ghi chú 1</td></tr>
+      <tr><td>Vạch xe đạp, không có đèn riêng</td><td><strong>Đèn người đi bộ</strong></td><td>Bảng 2 ghi chú 2</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 2-6 -->
+<div class="section" id="s2-6">
+  <h3>2-6. 4 loại biển báo (Quy tắc Bảng 6)</h3>
+  <p><strong>Biển báo</strong> là biển hoặc vạch chỉ dẫn cảnh báo / cấm / chỉ thị (Điều 2 mục 16). Đề thi yêu cầu <strong>nhận biết loại chỉ qua hình dạng và màu sắc</strong>.</p>
+
+  <div class="sign-grid">
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <polygon points="36,6 66,62 6,62" fill="#fbbf24" stroke="#dc2626" stroke-width="4" stroke-linejoin="round"/>
+        <text x="36" y="48" text-anchor="middle" font-size="14" font-weight="800" fill="#1a1a1a">!</text>
+      </svg>
+      <div class="sign-label">Cảnh báo</div>
+      <div class="sign-sub">Tam giác vàng<br>+ viền đỏ</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <circle cx="36" cy="36" r="28" fill="#fff" stroke="#dc2626" stroke-width="5"/>
+        <line x1="16" y1="16" x2="56" y2="56" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="sign-label">Cấm</div>
+      <div class="sign-sub">Tròn trắng<br>+ viền đỏ + gạch chéo</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <circle cx="36" cy="36" r="30" fill="#2563eb"/>
+      </svg>
+      <div class="sign-label">Chỉ dẫn</div>
+      <div class="sign-sub">Tròn / vuông xanh<br>+ ký hiệu trắng</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <rect x="8" y="16" width="56" height="40" rx="4" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+        <text x="36" y="42" text-anchor="middle" font-size="10" font-weight="700" fill="#1a1a1a">phụ</text>
+      </svg>
+      <div class="sign-label">Phụ trợ</div>
+      <div class="sign-sub">Hình chữ nhật trắng<br>+ chữ đen</div>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Phân loại trong 3 giây</div>
+    <strong>Tam giác + vàng → Cảnh báo</strong><br>
+    <strong>Tròn + viền đỏ → Cấm</strong><br>
+    <strong>Tròn/vuông + xanh → Chỉ dẫn</strong><br>
+    <strong>Chữ nhật + trắng → Phụ trợ</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý — biển đặc thù Hàn Quốc</div>
+    <strong>① Khu bảo vệ trẻ em (school zone):</strong> Quy định nghiêm hơn nhiều nước. 30 km/h + tai nạn = lỗi nghiêm trọng + phạt gấp đôi<br>
+    <strong>② Biển "Đi chậm":</strong> Hàn Quốc không quy định con số cụ thể, chỉ "tốc độ có thể dừng ngay"<br>
+    <strong>③ Đường ô tô chuyên dùng:</strong> Cấm người đi bộ, xe đạp, xe máy dưới 125cc
+  </div>
+</div>
+
+<!-- 2-7 -->
+<div class="section" id="s2-7">
+  <h3>2-7. Vạch kẻ đường — Tim đường &amp; vạch làn</h3>
+  <p>Màu sắc và hình dạng vạch quyết định ý nghĩa hoàn toàn khác nhau. Đây là phần đề thi rất hay ra.</p>
+
+  <h4>Cốt lõi: Tim đường = vàng / Vạch làn = trắng</h4>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Loại</th><th>Màu</th><th>Liền</th><th>Đứt</th></tr>
+      <tr>
+        <td><strong>Tim đường</strong></td>
+        <td style="color:#d97706;font-weight:700;">Vàng</td>
+        <td>Cấm vượt qua<br><span class="priority priority-high">12 lỗi nặng</span></td>
+        <td>Có thể vượt (qua phía đối diện)</td>
+      </tr>
+      <tr>
+        <td><strong>Vạch làn</strong></td>
+        <td style="font-weight:700;">Trắng</td>
+        <td>Hạn chế chuyển làn</td>
+        <td>Có thể chuyển làn</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Vượt tim đường vàng = 12 lỗi nặng</div>
+    Vượt qua tim đường vàng liền là <strong>12 lỗi nghiêm trọng</strong>, bị xử lý hình sự.
+  </div>
+
+  <h4>Vạch quan trọng khác</h4>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Vạch</th><th>Ý nghĩa</th><th>Trọng tâm</th></tr>
+      <tr><td>Vạch dừng trắng</td><td>Vị trí dừng đèn</td><td>Vượt vạch = vi phạm</td></tr>
+      <tr><td>Vạch zigzag trắng</td><td>Khu vực giảm tốc</td><td>Trước vạch người đi bộ</td></tr>
+      <tr><td>Vàng đôi</td><td>Cấm dừng đỗ</td><td>Vạch đôi vàng ven đường</td></tr>
+      <tr><td>Vàng đứt đơn</td><td>Hạn chế giờ</td><td>Cấm theo giờ</td></tr>
+      <tr><td>Vạch xanh dương</td><td><strong>Làn xe buýt riêng</strong></td><td>Xe thường vào sẽ bị phạt</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 2-8 -->
+<div class="section" id="s2-8">
+  <h3>2-8. Đèn rẽ phải riêng &amp; làn đảo chiều (NEW)</h3>
+
+  <h4>Đèn rẽ phải riêng (từ 2023)</h4>
+  <p>Đèn 3 màu chuyên dụng cho rẽ phải, đặt bên phải đường tại các giao lộ hay xảy ra va chạm với người đi bộ.</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Tín hiệu</th><th>Ý nghĩa</th></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 Mũi tên xanh</td><td>Được rẽ phải (chú ý người đi bộ)</td></tr>
+      <tr><td style="color:#eab308;font-weight:700;">🟡 Vàng</td><td>Chuẩn bị dừng</td></tr>
+      <tr><td style="color:#ef4444;font-weight:700;">🔴 Đỏ</td><td><strong>CẤM rẽ phải</strong> — khác với quy tắc RTOR thường!</td></tr>
+    </table>
+  </div>
+
+  <h4>Làn đảo chiều</h4>
+  <p>Làn đường mà chiều đi thay đổi theo giờ. Hãy luôn nhìn bảng điện tử trên cao.</p>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý cho người nước ngoài</div>
+    Tại các thành phố Hàn Quốc, làn 1 (sát trái) thường đột ngột thành <strong>làn rẽ trái riêng</strong>. Muốn đi thẳng nên ở làn 2 trở ra.
+  </div>
+</div>
+
+<!-- 2-9 -->
+<div class="section" id="s2-9">
+  <h3>2-9. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Đèn và hiệu lệnh tay khác nhau, theo cái nào?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đèn</label>
+      <label class="quiz-opt" data-idx="2">② Hiệu lệnh tay</label>
+      <label class="quiz-opt" data-idx="3">③ Bỏ cả hai</label>
+      <label class="quiz-opt" data-idx="4">④ Tự quyết</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Cách rẽ phải khi đèn đỏ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đi thẳng qua</label>
+      <label class="quiz-opt" data-idx="2">② Dừng hẳn rồi đi sau khi an toàn</label>
+      <label class="quiz-opt" data-idx="3">③ Tuyệt đối không</label>
+      <label class="quiz-opt" data-idx="4">④ Chậm qua</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Đèn 3 màu rẽ phải đỏ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Được</label>
+      <label class="quiz-opt" data-idx="2">② Dừng rồi được</label>
+      <label class="quiz-opt" data-idx="3">③ Chậm rồi được</label>
+      <label class="quiz-opt" data-idx="4">④ Cấm</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Đèn người đi bộ xanh nháy, người đi bộ phải?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Bắt đầu qua nhanh</label>
+      <label class="quiz-opt" data-idx="2">② Không bắt đầu mới; nếu đang qua thì nhanh chóng hoàn thành</label>
+      <label class="quiz-opt" data-idx="3">③ Đứng yên</label>
+      <label class="quiz-opt" data-idx="4">④ Chạy qua</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Biển tam giác vàng thuộc loại?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Cấm</label>
+      <label class="quiz-opt" data-idx="2">② Chỉ dẫn</label>
+      <label class="quiz-opt" data-idx="3">③ Cảnh báo</label>
+      <label class="quiz-opt" data-idx="4">④ Phụ trợ</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Màu tim đường?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Trắng</label>
+      <label class="quiz-opt" data-idx="2">② Vàng</label>
+      <label class="quiz-opt" data-idx="3">③ Đỏ</label>
+      <label class="quiz-opt" data-idx="4">④ Xanh</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>Ý nghĩa đèn vàng nháy?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Dừng rồi đi</label>
+      <label class="quiz-opt" data-idx="2">② Đi cẩn thận</label>
+      <label class="quiz-opt" data-idx="3">③ Dừng</label>
+      <label class="quiz-opt" data-idx="4">④ Đi nhanh</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q8</span><span>Khi nào được rẽ trái không bảo vệ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đèn xanh thẳng và không có xe ngược chiều</label>
+      <label class="quiz-opt" data-idx="2">② Đèn đỏ không có xe</label>
+      <label class="quiz-opt" data-idx="3">③ Đèn vàng</label>
+      <label class="quiz-opt" data-idx="4">④ Mọi đèn</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q9</span><span>Ai KHÔNG phải phụ tá cảnh sát?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Tài xế gương mẫu</label>
+      <label class="quiz-opt" data-idx="2">② Quân cảnh</label>
+      <label class="quiz-opt" data-idx="3">③ Lính cứu hỏa</label>
+      <label class="quiz-opt" data-idx="4">④ Tình nguyện viên công trường</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q10</span><span>Đèn xanh ở giao lộ không có biển không-bảo-vệ, hành động KHÔNG được làm?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đi thẳng</label>
+      <label class="quiz-opt" data-idx="2">② Rẽ phải</label>
+      <label class="quiz-opt" data-idx="3">③ Rẽ trái</label>
+      <label class="quiz-opt" data-idx="4">④ Đi thẳng rồi chuyển làn</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 3 — Giao lộ -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch3">
+  <span class="ch-num">Chương 3</span>
+  <h2>Đi qua giao lộ</h2>
+  <p class="ch-desc">Rẽ trái/phải, nhường đường, quay đầu, vòng xoay, cấm tắc giao lộ</p>
+  <p class="ch-stars">★★★ Khu vực ra đề nhiều nhất</p>
+</div>
+
+<!-- 3-1 -->
+<div class="section" id="s3-1">
+  <h3>3-1. Cách rẽ trái (Điều 25 Khoản 2)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Văn bản</div>
+    "Khi muốn rẽ trái tại giao lộ, người lái phải <strong>đi sát tim đường, đi chậm</strong>, và rẽ trái qua <strong>phía trong tâm</strong> giao lộ."
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Chuyển sang làn trái sớm</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Chờ tín hiệu rẽ trái</strong> — mũi tên xanh</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Rẽ chậm qua phía trong tâm</strong> giao lộ</div>
+    </div>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý — hệ thống tín hiệu rẽ trái Hàn Quốc</div>
+    Hầu hết giao lộ Hàn Quốc có <strong>mũi tên rẽ trái riêng</strong>. Không được rẽ trái tự do trên đèn xanh như Mỹ/Canada.
+  </div>
+</div>
+
+<!-- 3-2 -->
+<div class="section" id="s3-2">
+  <h3>3-2. Cách rẽ phải (Điều 25 Khoản 1)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Văn bản</div>
+    "Khi muốn rẽ phải tại giao lộ, người lái phải đi sát <strong>mép phải đường, đi chậm</strong>, và chú ý <strong>người đi bộ hoặc xe đạp</strong>."
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Chuyển làn phải sớm</strong> — bật xi-nhan trước 30 m</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Kiểm tra vạch người đi bộ thứ nhất</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Rẽ phải chậm</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>Kiểm tra vạch thứ hai</strong> — có người đang/sắp qua thì <strong>dừng tạm</strong></div>
+    </div>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Bảng tóm tắt</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Đèn xe</th><th>Người đi bộ</th><th>Hành động</th></tr>
+        <tr><td style="color:#ef4444;font-weight:700;">Đỏ</td><td>—</td><td><strong>Bắt buộc dừng hẳn</strong></td></tr>
+        <tr><td style="color:#22c55e;font-weight:700;">Xanh</td><td>không</td><td><strong>Đi chậm</strong></td></tr>
+        <tr><td style="color:#22c55e;font-weight:700;">Xanh</td><td>có/sắp qua</td><td><strong>Dừng tạm</strong> chờ qua</td></tr>
+        <tr><td colspan="2">Đèn 3 màu rẽ phải đỏ</td><td><strong>CẤM</strong></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 3-3 -->
+<div class="section" id="s3-3">
+  <h3>3-3. Quy định quay đầu (NEW)</h3>
+  <p>Không được tùy ý quay đầu, chỉ ở nơi có biển cho phép.</p>
+
+  <h4>Điều kiện quay đầu</h4>
+  <ol>
+    <li>Có <strong>biển cho phép quay đầu</strong></li>
+    <li>Tim đường là <strong>vạch đứt</strong> (được vượt qua)</li>
+    <li>Tín hiệu rẽ trái hoặc <strong>đèn người đi bộ xanh</strong> (không có người)</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Cấm quay đầu</div>
+    • Có biển cấm<br>
+    • Tim đường vàng liền (vi phạm = 12 lỗi nặng)<br>
+    • Trong giao lộ (trừ khi có biển)<br>
+    • Đèn đỏ
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý cho người nước ngoài</div>
+    <strong>🇺🇸 Mỹ:</strong> Hầu hết giao lộ được quay đầu (trừ khi có biển cấm)<br>
+    <strong>🇰🇷 Hàn Quốc:</strong> Chỉ ở nơi có biển cho phép<br><br>
+    Quy tắc Hàn Quốc <strong>ngược lại</strong> với Mỹ.
+  </div>
+</div>
+
+<!-- 3-4 -->
+<div class="section" id="s3-4">
+  <h3>3-4. Quy tắc nhường đường tại giao lộ không đèn (Điều 26)</h3>
+  <p>Tại giao lộ không đèn áp dụng 4 quy tắc theo thứ tự:</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Xe đã vào trước được ưu tiên</strong> (Khoản 1)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Đường rộng được ưu tiên</strong> (Khoản 2)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Nhường xe bên phải</strong> (Khoản 3)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>Đi thẳng / rẽ phải &gt; rẽ trái</strong> (Khoản 4)</div>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Cách nhớ</div>
+    <strong>"Vào trước → Rộng → Phải → Thẳng trên trái"</strong>
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 So sánh</div>
+    <strong>🇻🇳 Việt Nam:</strong> Nhường xe đến từ bên phải (giống Hàn)<br>
+    <strong>🇺🇸 Mỹ:</strong> Đến trước được đi trước; đồng thời thì xe bên phải<br>
+    <strong>🇪🇺 Châu Âu:</strong> Xe bên phải ưu tiên<br>
+    <strong>🇰🇷 Hàn Quốc:</strong> Vào trước &gt; rộng &gt; phải &gt; thẳng
+  </div>
+</div>
+
+<!-- 3-5 -->
+<div class="section" id="s3-5">
+  <h3>3-5. Vòng xoay (Điều 25-2)</h3>
+  <p>Vòng xoay là giao lộ tròn không đèn.</p>
+
+  <div class="flow">
+    <div class="flow-step">Ngược chiều kim đồng hồ</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">Vào: chậm/dừng</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">Xe trong vòng ưu tiên</div>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Quy tắc cốt lõi</div>
+    • <strong>Ngược kim đồng hồ</strong><br>
+    • Vào vòng phải <strong>chậm hoặc dừng tạm</strong><br>
+    • Nhường xe <strong>đã ở trong vòng</strong><br>
+    • Cấm vượt trong vòng
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý</div>
+    <strong>🇬🇧 Anh · 🇦🇺 Úc:</strong> Theo chiều kim đồng hồ (đi bên trái)<br>
+    <strong>🇰🇷 Hàn · 🇻🇳 Việt · 🇺🇸 Mỹ · 🇪🇺 Châu Âu:</strong> Ngược kim đồng hồ
+  </div>
+</div>
+
+<!-- 3-6 -->
+<div class="section" id="s3-6">
+  <h3>3-6. Nơi phải đi chậm / dừng tạm (Điều 31)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Loại</th><th>Nơi</th></tr>
+      <tr>
+        <td><strong>Đi chậm</strong></td>
+        <td>Giao lộ không đèn, đường cong, đỉnh dốc, dốc xuống gắt, biển "đi chậm"</td>
+      </tr>
+      <tr>
+        <td><strong>Dừng tạm</strong></td>
+        <td>Giao lộ tầm nhìn kém, giao lộ đông xe, biển "dừng tạm"</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- 3-7 -->
+<div class="section" id="s3-7">
+  <h3>3-7. Cấm tắc giao lộ (Điều 25 Khoản 5)</h3>
+  <p>Nếu có thể phải dừng trong giao lộ và <strong>cản trở xe khác</strong>, không được vào.</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Trên đường thực tế</div>
+    Vào giờ cao điểm Hàn Quốc tắc giao lộ rất phổ biến nhưng là <strong>vi phạm rõ ràng</strong>. Đèn xanh nhưng phía bên kia bị tắc thì <strong>đừng vào</strong>.
+  </div>
+</div>
+
+<!-- 3-8 -->
+<div class="section" id="s3-8">
+  <h3>3-8. Xe đạp tại giao lộ (Điều 25 Khoản 3)</h3>
+  <p>Xe đạp rẽ trái khác xe ô tô:</p>
+  <ul>
+    <li>Xe đạp: đi sát mép phải, rẽ trái <strong>2 giai đoạn</strong></li>
+    <li>Ô tô: theo tim đường, rẽ qua phía trong tâm</li>
+  </ul>
+</div>
+
+<!-- 3-9 -->
+<div class="section" id="s3-9">
+  <h3>3-9. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Giao lộ không đèn, đường cùng độ rộng, ai ưu tiên?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Xe đến trước</label>
+      <label class="quiz-opt" data-idx="2">② Xe bên trái</label>
+      <label class="quiz-opt" data-idx="3">③ Xe bên phải</label>
+      <label class="quiz-opt" data-idx="4">④ Xe lớn</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Hướng đi trong vòng xoay?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Theo kim đồng hồ</label>
+      <label class="quiz-opt" data-idx="2">② Ngược kim đồng hồ</label>
+      <label class="quiz-opt" data-idx="3">③ Hai chiều</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ thẳng</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Khi rẽ trái, đi qua phần nào của giao lộ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Phía ngoài tâm</label>
+      <label class="quiz-opt" data-idx="2">② Phía trong tâm</label>
+      <label class="quiz-opt" data-idx="3">③ Mép phải</label>
+      <label class="quiz-opt" data-idx="4">④ Mép trái</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Xe rẽ trái gặp xe đi thẳng?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Rẽ trái trước</label>
+      <label class="quiz-opt" data-idx="2">② Đi thẳng trước</label>
+      <label class="quiz-opt" data-idx="3">③ Xe lớn trước</label>
+      <label class="quiz-opt" data-idx="4">④ Cùng đi</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Giao lộ không đèn, đông xe, nghĩa vụ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đi chậm</label>
+      <label class="quiz-opt" data-idx="2">② Dừng tạm</label>
+      <label class="quiz-opt" data-idx="3">③ Giữ tốc độ</label>
+      <label class="quiz-opt" data-idx="4">④ Bấm còi</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Tại Hàn Quốc nơi nào được quay đầu?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Có biển cho phép quay đầu</label>
+      <label class="quiz-opt" data-idx="2">② Bất cứ đâu không có biển cấm</label>
+      <label class="quiz-opt" data-idx="3">③ Mọi giao lộ</label>
+      <label class="quiz-opt" data-idx="4">④ Đường rộng tự do</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>Đèn xanh nhưng giao lộ phía bên kia tắc?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Lao vào chiếm chỗ</label>
+      <label class="quiz-opt" data-idx="2">② Vào chậm</label>
+      <label class="quiz-opt" data-idx="3">③ Không vào giao lộ</label>
+      <label class="quiz-opt" data-idx="4">④ Bấm còi</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 4 — Tốc độ, khoảng cách an toàn &amp; vượt xe -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch4">
+  <span class="ch-num">Chương 4</span>
+  <h2>Tốc độ, khoảng cách an toàn &amp; vượt xe</h2>
+  <p class="ch-desc">Giới hạn tốc độ, giảm tốc khi thời tiết xấu, khoảng cách phanh, vượt xe</p>
+  <p class="ch-stars">★★★ Liên quan 12 lỗi nặng</p>
+</div>
+
+<!-- 4-1 -->
+<div class="section" id="s4-1">
+  <h3>4-1. Tốc độ luật định (Quy tắc Điều 19)</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Loại đường</th><th>Tối đa</th><th>Tối thiểu</th></tr>
+      <tr><td>Đường thường (khu dân cư/thương mại/công nghiệp)</td><td>50 km/h<br>(60 nếu được chỉ định)</td><td>—</td></tr>
+      <tr><td>Đường thường khác</td><td>60 km/h</td><td>—</td></tr>
+      <tr><td>Đường ô tô chuyên dùng</td><td>90 km/h</td><td>30 km/h</td></tr>
+      <tr><td>Cao tốc 1 làn/chiều</td><td>80 km/h</td><td>50 km/h</td></tr>
+      <tr><td>Cao tốc 2+ làn/chiều</td><td><strong>100 km/h</strong><br>(tải/đặc chủng 80)</td><td>50 km/h</td></tr>
+      <tr><td>Cao tốc chỉ định</td><td><strong>110~120 km/h</strong></td><td>50 km/h</td></tr>
+      <tr><td><strong>Khu bảo vệ trẻ em</strong></td><td><strong>30 km/h</strong></td><td>—</td></tr>
+      <tr><td><strong>Khu bảo vệ người già/khuyết tật</strong></td><td><strong>30 km/h</strong></td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Điều 17 Khoản 3</div>
+    "Người lái không được vượt quá tốc độ tối đa hoặc dưới tốc độ tối thiểu."
+  </div>
+</div>
+
+<!-- 4-2 -->
+<div class="section" id="s4-2">
+  <h3>4-2. Bắt buộc giảm tốc khi thời tiết xấu (Quy tắc Điều 19 Khoản 2)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Thời tiết</th><th>Tỷ lệ giảm</th><th>Ví dụ (đường 100 km/h)</th></tr>
+      <tr><td>Mưa, mặt đường ướt</td><td><strong>Giảm 20%</strong></td><td>80 km/h</td></tr>
+      <tr><td>Tuyết &lt; 20 mm</td><td><strong>Giảm 20%</strong></td><td>80 km/h</td></tr>
+      <tr><td>Mưa lớn, tầm nhìn &lt; 100 m</td><td><strong>Giảm 50%</strong></td><td>50 km/h</td></tr>
+      <tr><td>Mặt đường đóng băng</td><td><strong>Giảm 50%</strong></td><td>50 km/h</td></tr>
+      <tr><td>Tuyết ≥ 20 mm</td><td><strong>Giảm 50%</strong></td><td>50 km/h</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý — đây là nghĩa vụ pháp lý</div>
+    Tại Hàn Quốc đây là <strong>luật bắt buộc</strong>. Khi mưa to vẫn chạy 100 km/h trên đường 100 km/h là vi phạm tốc độ.
+  </div>
+</div>
+
+<!-- 4-3 -->
+<div class="section" id="s4-3">
+  <h3>4-3. Khoảng cách an toàn &amp; phanh (Điều 19)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Tốc độ</th><th>Phản ứng</th><th>Phanh</th><th>Tổng dừng</th><th>Khoảng cách đề xuất</th></tr>
+      <tr><td>60</td><td>~11m</td><td>~22m</td><td>~33m</td><td><strong>~60m</strong></td></tr>
+      <tr><td>80</td><td>~14m</td><td>~38m</td><td>~52m</td><td><strong>~80m</strong></td></tr>
+      <tr><td>100</td><td>~17m</td><td>~63m</td><td>~80m</td><td><strong>~100m</strong></td></tr>
+      <tr><td>120</td><td>~20m</td><td>~80m</td><td>~100m</td><td><strong>~120m</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Mẹo nhớ — "số tốc độ = mét"</div>
+    60 km/h → 60 m, 100 km/h → 100 m<br>
+    Đường ướt: <strong>×2</strong>; băng: <strong>×3+</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Đâm sau = lỗi 100% xe sau</div>
+    Hàn Quốc nói chung quy <strong>xe sau 100% lỗi</strong> khi đâm đuôi. "Xe trước phanh gấp" gần như không được chấp nhận.
+  </div>
+</div>
+
+<!-- 4-4 -->
+<div class="section" id="s4-4">
+  <h3>4-4. Vượt xe (Điều 21·22)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Điều 21</div>
+    ① Vượt phải sang <strong>bên trái</strong> xe trước.<br>
+    ② Xe đạp có thể vượt bên phải khi xe trước đang/sắp vượt.<br>
+    ③ Xe bị vượt không được tăng tốc hoặc cản trở.
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Nơi cấm vượt (Điều 22 Khoản 3) — 12 lỗi nặng</div>
+    ① <strong>Giao lộ</strong> ② <strong>Trong hầm</strong> ③ <strong>Trên cầu</strong> ④ <strong>Nơi có biển</strong>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Đối tượng/thời điểm cấm vượt</div>
+    • Vượt <strong>xe ưu tiên</strong><br>
+    • Xe trước đang vượt<br>
+    • Xe trước đang chuyển làn trái → có thể vượt từ bên phải<br>
+    • Xe sau đang vượt mình
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 So sánh</div>
+    <strong>🇻🇳 Việt Nam:</strong> Vượt bên trái, cấm ở giao lộ/cầu/hầm tương tự<br>
+    <strong>🇰🇷 Hàn Quốc:</strong> Bên trái nguyên tắc<br>
+    <strong>🇩🇪 Đức:</strong> Cấm vượt phải kể cả Autobahn không giới hạn<br>
+    <strong>🇯🇵 Nhật · 🇬🇧 Anh:</strong> Vượt bên phải (đi trái)
+  </div>
+</div>
+
+<!-- 4-5 -->
+<div class="section" id="s4-5">
+  <h3>4-5. Hệ thống xử phạt tốc độ</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Loại</th><th>Cách hoạt động</th></tr>
+      <tr><td><strong>Camera cố định</strong></td><td>Đo điểm</td></tr>
+      <tr><td><strong>Camera di động</strong></td><td>Laser hoặc xe cảnh sát</td></tr>
+      <tr><td><strong>Đo đoạn</strong></td><td>Tốc độ trung bình theo thời gian</td></tr>
+      <tr><td><strong>Xe ngầm</strong></td><td>Xe thường có camera trong</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Phạt vượt tốc (xe con)</div>
+    ≤20 km/h: 30.000 KRW · 20–40: 60.000 + 15đ · 40–60: 90.000 + 30đ · 60–80: 120.000 + 60đ · 80+: hình sự<br>
+    ⚠️ Vượt 20 km/h+ = <strong>12 lỗi nặng</strong><br>
+    ⚠️ Khu trẻ em phạt &amp; trừ điểm <strong>×2</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý — phải dùng app dẫn đường</div>
+    <strong>T-map, Kakao Map, Naver Map</strong> báo camera theo thời gian thực, có tiếng Anh. Google Maps không hoạt động cho lái xe ở Hàn Quốc.
+  </div>
+</div>
+
+<!-- 4-6 -->
+<div class="section" id="s4-6">
+  <h3>4-6. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Mặt đường ướt do mưa, giảm bao nhiêu %?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ Không cần</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Mưa lớn, tầm nhìn dưới 100 m?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ Cấm chạy</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Đâu KHÔNG phải nơi cấm vượt?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Giao lộ</label>
+      <label class="quiz-opt" data-idx="2">② Trong hầm</label>
+      <label class="quiz-opt" data-idx="3">③ Đoạn thẳng cao tốc 2 làn</label>
+      <label class="quiz-opt" data-idx="4">④ Trên cầu</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Chiều vượt xe nguyên tắc?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Bên trái</label>
+      <label class="quiz-opt" data-idx="2">② Bên phải</label>
+      <label class="quiz-opt" data-idx="3">③ Bên gần</label>
+      <label class="quiz-opt" data-idx="4">④ Bên trống</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Tốc độ tối đa xe con cao tốc 2+ làn?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 80</label>
+      <label class="quiz-opt" data-idx="2">② 100</label>
+      <label class="quiz-opt" data-idx="3">③ 110</label>
+      <label class="quiz-opt" data-idx="4">④ 120</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Nghĩa vụ của xe bị vượt?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Tăng tốc cản</label>
+      <label class="quiz-opt" data-idx="2">② Bấm còi</label>
+      <label class="quiz-opt" data-idx="3">③ Vượt tim đường tránh</label>
+      <label class="quiz-opt" data-idx="4">④ Không tăng tốc, không cản</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 5 — Bảo vệ người đi bộ -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch5">
+  <span class="ch-num">Chương 5</span>
+  <h2>Nghĩa vụ bảo vệ người đi bộ</h2>
+  <p class="ch-desc">Vạch người đi bộ, đường ưu tiên người đi bộ, khu trẻ em / người già — sửa đổi 2022</p>
+  <p class="ch-stars">★★★ 12 lỗi nặng · tần suất cao</p>
+</div>
+
+<!-- 5-1 -->
+<div class="section" id="s5-1">
+  <h3>5-1. Cốt lõi sửa đổi 2022 (Điều 27)</h3>
+  <p>Sửa đổi 7/2022 <strong>tăng mạnh nghĩa vụ bảo vệ người đi bộ</strong>.</p>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Điều 27</div>
+    ① Khi có người đang qua vạch, người lái phải <strong>dừng tạm</strong>.<br>
+    ⑥ Tại vạch không đèn, người đang hoặc <strong>sắp qua</strong> → dừng tạm.<br>
+    ⑦ Cả ngoài đường (chung cư, bãi đỗ) cũng phải chú ý an toàn người đi bộ.
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Thay đổi cốt lõi — "sắp qua" cũng được bảo vệ</div>
+    Cũ: chỉ bảo vệ người <strong>đang qua</strong><br>
+    Mới: bảo vệ từ khi người đứng ở lề <strong>sắp qua</strong> → phải dừng<br><br>
+    ⚠️ Vi phạm + tai nạn = <strong>12 lỗi nặng</strong>.
+  </div>
+</div>
+
+<!-- 5-2 -->
+<div class="section" id="s5-2">
+  <h3>5-2. Khu bảo vệ trẻ em / người già / khuyết tật (Điều 12, 12-2)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Loại</th><th>Phạm vi</th><th>Tốc độ</th></tr>
+      <tr><td><strong>Khu trẻ em</strong></td><td>~<strong>300 m</strong> quanh trường tiểu học/mẫu giáo</td><td><strong>30 km/h</strong></td></tr>
+      <tr><td>Khu người già</td><td>~300 m quanh viện dưỡng lão</td><td>30 km/h</td></tr>
+      <tr><td>Khu khuyết tật</td><td>Quanh trường/cơ sở đặc biệt</td><td>30 km/h</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 "Luật Min-sik" — gia tăng hình phạt</div>
+    Gây thương tích trẻ em (dưới 13) trong khu trẻ em: 1–15 năm tù hoặc 5–30 triệu KRW<br>
+    <strong>Tử vong</strong>: chung thân hoặc 3+ năm<br>
+    ⚠️ Phạt &amp; trừ điểm <strong>×2</strong><br>
+    ⚠️ Vạch người đi bộ không đèn → <strong>luôn phải dừng</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Không bao giờ vượt tốc trong khu trẻ em</div>
+    Khu bảo vệ trẻ em Hàn Quốc thuộc loại nghiêm nhất thế giới. Khi app dẫn đường thông báo, hãy nhìn ngay đồng hồ tốc độ.
+  </div>
+</div>
+
+<!-- 5-3 -->
+<div class="section" id="s5-3">
+  <h3>5-3. Đường ưu tiên người đi bộ (Điều 27-2) — mới 2022</h3>
+  <ul>
+    <li>Người đi bộ có thể dùng <strong>toàn bộ</strong> mặt đường</li>
+    <li>Xe phải giữ <strong>khoảng cách an toàn</strong>, đi chậm</li>
+    <li>Tốc độ tối đa: <strong>20 km/h</strong></li>
+  </ul>
+</div>
+
+<!-- 5-4 -->
+<div class="section" id="s5-4">
+  <h3>5-4. Cách đi của người đi bộ (Điều 8, 10)</h3>
+  <ul>
+    <li>Có vỉa hè → đi <strong>vỉa hè</strong></li>
+    <li>Không có vỉa hè → đi <strong>mép trái</strong> (nhìn xe ngược chiều)</li>
+    <li>Có vạch người đi bộ thì dùng vạch</li>
+  </ul>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 Tỷ lệ tử vong người đi bộ — thực tế Hàn Quốc</div>
+    Tỷ lệ người đi bộ tử vong giao thông tại Hàn Quốc khoảng <strong>gấp đôi</strong> trung bình OECD.<br><br>
+    <strong>🇻🇳 Việt Nam:</strong> Văn hóa giao thông xe máy nhiều, người đi bộ thiệt thòi<br>
+    <strong>🇪🇺 Châu Âu:</strong> Văn hóa nhường người đi bộ mạnh<br>
+    <strong>🇰🇷 Hàn Quốc:</strong> Nhiều ngõ hẹp đô thị → cần lái phòng thủ
+  </div>
+</div>
+
+<!-- 5-5 -->
+<div class="section" id="s5-5">
+  <h3>5-5. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Người đi bộ đứng ở lề chuẩn bị qua vạch. Người lái phải?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đi qua</label>
+      <label class="quiz-opt" data-idx="2">② Dừng tạm và nhường</label>
+      <label class="quiz-opt" data-idx="3">③ Bấm còi</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ chậm lại</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Tốc độ giới hạn khu bảo vệ trẻ em?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 20</label>
+      <label class="quiz-opt" data-idx="2">② 25</label>
+      <label class="quiz-opt" data-idx="3">③ 30</label>
+      <label class="quiz-opt" data-idx="4">④ 40</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Đường không vỉa hè, người đi bộ đi ở đâu?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Mép trái (nhìn xe ngược chiều)</label>
+      <label class="quiz-opt" data-idx="2">② Mép phải</label>
+      <label class="quiz-opt" data-idx="3">③ Giữa</label>
+      <label class="quiz-opt" data-idx="4">④ Tự do</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Phạt và trừ điểm trong khu trẻ em?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Như thường</label>
+      <label class="quiz-opt" data-idx="2">② Gấp đôi</label>
+      <label class="quiz-opt" data-idx="3">③ Một nửa</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ trừ điểm</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Đường nội bộ chung cư có nghĩa vụ bảo vệ người đi bộ không?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Có (Luật giao thông)</label>
+      <label class="quiz-opt" data-idx="2">② Không phải đường, không có nghĩa vụ</label>
+      <label class="quiz-opt" data-idx="3">③ Chỉ áp dụng quy định BQL</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ áp dụng cư dân</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong> — Sửa đổi 2022 Điều 27 Khoản 7.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Tốc độ giới hạn đường ưu tiên người đi bộ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10</label>
+      <label class="quiz-opt" data-idx="2">② 15</label>
+      <label class="quiz-opt" data-idx="3">③ 20</label>
+      <label class="quiz-opt" data-idx="4">④ 30</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 6 — Lái xe khi say rượu / dùng thuốc -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch6">
+  <span class="ch-num">Chương 6</span>
+  <h2>Lái xe khi say rượu &amp; thuốc</h2>
+  <p class="ch-desc">Nồng độ cồn, mức xử phạt, tái phạm, lái xe khi dùng thuốc</p>
+  <p class="ch-stars">★★★ Hình phạt nặng nhất</p>
+</div>
+
+<!-- 6-1 -->
+<div class="section" id="s6-1">
+  <h3>6-1. Nồng độ cồn (Điều 44)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Điều 44 Khoản 4</div>
+    "Tình trạng say rượu được tính từ nồng độ cồn trong máu <strong>0,03% trở lên</strong>."
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>BAC</th><th>Loại</th><th>Hình phạt</th></tr>
+      <tr><td><strong>0,03–0,08%</strong></td><td>Đơn giản</td><td>Tù tới 1 năm hoặc tới 5 triệu KRW, treo bằng <strong>100 ngày</strong></td></tr>
+      <tr><td><strong>0,08–0,2%</strong></td><td>Trung</td><td>1–2 năm tù hoặc 5–10 triệu, hủy bằng</td></tr>
+      <tr><td><strong>0,2%+</strong></td><td>Nặng</td><td>2–5 năm hoặc 10–20 triệu, hủy</td></tr>
+      <tr><td><strong>Từ chối thử</strong></td><td>—</td><td>1–5 năm hoặc 5–20 triệu, hủy</td></tr>
+      <tr><td><strong>Tái phạm 2 lần+</strong></td><td>Luật Yoon</td><td>2–6 năm hoặc 10–30 triệu</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Lưu ý — 0,03% là rất nghiêm</div>
+    Hàn Quốc 0,03% là một trong những mức nghiêm nhất thế giới. Nam giới chỉ cần <strong>1–2 ly soju</strong> đã vượt.<br><br>
+    <strong>🇻🇳 Việt Nam:</strong> <strong>0,00%</strong> (cấm tuyệt đối)<br>
+    <strong>🇨🇳 Trung Quốc:</strong> 0,02% (nghiêm hơn Hàn)<br>
+    <strong>🇯🇵 Nhật:</strong> 0,03%<br>
+    <strong>🇺🇸 Mỹ:</strong> 0,08%<br>
+    <strong>🇩🇪 Đức:</strong> 0,05%
+  </div>
+</div>
+
+<!-- 6-2 -->
+<div class="section" id="s6-2">
+  <h3>6-2. Quy trình thử &amp; từ chối</h3>
+  <ol>
+    <li>Thổi <strong>cảm biến cồn</strong></li>
+    <li>Có cồn → đo lại bằng máy chính xác</li>
+    <li>Nếu phản đối → <strong>xét nghiệm máu</strong> (đồng ý)</li>
+    <li>Kết quả máu là chứng cứ cuối</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Từ chối cũng là tội</div>
+    Từ chối thử = bị xử lý ở mức 0,08–0,2% (1–5 năm tù, hủy bằng).
+  </div>
+</div>
+
+<!-- 6-3 -->
+<div class="section" id="s6-3">
+  <h3>6-3. Tiếp tay · thuốc · ngoài đường</h3>
+
+  <h4>Người ngồi cùng / cung cấp xe</h4>
+  <p>Biết là say mà vẫn cho mượn xe hoặc đi cùng → bị xử lý đồng phạm.</p>
+
+  <h4>Lái xe khi dùng thuốc (Điều 45)</h4>
+  <div class="box box-law">
+    <div class="box-title">📜 Điều 45</div>
+    "Người lái không được lái xe khi bị <strong>mệt mỏi, bệnh, thuốc</strong> ảnh hưởng làm không thể lái bình thường."
+  </div>
+  <p>Bao gồm cả <strong>thuốc cảm, thuốc ngủ, thuốc an thần</strong>. Phạt: tới 3 năm tù hoặc 10 triệu KRW.</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Bãi đỗ chung cư cũng tính lái say</div>
+    Sau sửa đổi 2011, lái say tại <strong>bãi đỗ chung cư hoặc tư nhân</strong> cũng bị xử lý. "Chỉ dịch chuyển một chút" không phải lý do.
+  </div>
+</div>
+
+<!-- 6-4 -->
+<div class="section" id="s6-4">
+  <h3>6-4. Văn hóa Daeri (lái xe thuê) tại Hàn Quốc</h3>
+  <p>Hàn Quốc có dịch vụ <strong>tài xế đại lý (Daeri)</strong> rất phát triển. Sau khi uống, gọi tài xế đại lý lái xe của bạn về nhà.</p>
+  <ul>
+    <li>App: Kakao T Daeri, T-map Daeri</li>
+    <li>Giá: thường 15.000–40.000 KRW</li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Người nước ngoài cũng dễ dùng</div>
+    Kakao T hỗ trợ tiếng Anh.
+  </div>
+</div>
+
+<!-- 6-5 -->
+<div class="section" id="s6-5">
+  <h3>6-5. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>BAC xử phạt tại Hàn Quốc?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 0,02%</label>
+      <label class="quiz-opt" data-idx="2">② 0,03%</label>
+      <label class="quiz-opt" data-idx="3">③ 0,05%</label>
+      <label class="quiz-opt" data-idx="4">④ 0,08%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Phạt từ chối thử nồng độ cồn?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Không phạt</label>
+      <label class="quiz-opt" data-idx="2">② Chỉ phạt tiền</label>
+      <label class="quiz-opt" data-idx="3">③ 1–5 năm tù hoặc 5–20 triệu, hủy bằng</label>
+      <label class="quiz-opt" data-idx="4">④ Cảnh cáo, thử lại</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Lái say tại bãi đỗ chung cư?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Vẫn xử lý lái say</label>
+      <label class="quiz-opt" data-idx="2">② Không phải đường, không phạt</label>
+      <label class="quiz-opt" data-idx="3">③ Chỉ cảnh cáo</label>
+      <label class="quiz-opt" data-idx="4">④ Báo chủ xe</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Uống thuốc cảm, lái xe buồn ngủ và gây tai nạn — áp dụng?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Điều 44 (rượu)</label>
+      <label class="quiz-opt" data-idx="2">② Điều 45 (mệt/thuốc)</label>
+      <label class="quiz-opt" data-idx="3">③ Điều 46</label>
+      <label class="quiz-opt" data-idx="4">④ Không có</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Người biết tài xế say nhưng vẫn cho mượn xe / ngồi cùng?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Bị xử lý đồng phạm</label>
+      <label class="quiz-opt" data-idx="2">② Không bị</label>
+      <label class="quiz-opt" data-idx="3">③ Phạt 50.000</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ tăng phí bảo hiểm</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 7 — Tai nạn &amp; tình huống khẩn cấp -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch7">
+  <span class="ch-num">Chương 7</span>
+  <h2>Tai nạn &amp; xử lý khẩn cấp</h2>
+  <p class="ch-desc">Xử lý sau tai nạn, phòng tai nạn thứ cấp, 12 lỗi nặng, nhường xe ưu tiên</p>
+  <p class="ch-stars">★★★ Toàn danh sách 12 lỗi</p>
+</div>
+
+<!-- 7-1 -->
+<div class="section" id="s7-1">
+  <h3>7-1. Xử lý sau tai nạn (Điều 54)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Điều 54</div>
+    ① Sau khi tai nạn, phải lập tức dừng và <strong>cứu hộ người bị thương</strong>.<br>
+    ② Báo cảnh sát hiện trường hoặc đồn gần nhất ngay lập tức.
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Dừng ngay</strong> — bỏ chạy = tội bỏ trốn</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Cứu người bị thương · gọi 119</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Phòng tai nạn thứ cấp</strong> — đèn khẩn → tam giác → đi sau hộ lan</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>Báo 112</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content"><strong>Lưu chứng cứ</strong> — chụp ảnh nhiều góc</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Bỏ trốn — hình phạt nặng nhất</div>
+    Áp dụng Luật Đặc biệt:<br>
+    • Bị thương + bỏ trốn: 1 năm trở lên hoặc 5–30 triệu KRW<br>
+    • <strong>Tử vong + bỏ trốn</strong>: 5 năm tới <strong>chung thân</strong><br>
+    ⚠️ Người nước ngoài cũng không ngoại lệ. Có thể bị Interpol truy nã.
+  </div>
+</div>
+
+<!-- 7-2 -->
+<div class="section" id="s7-2">
+  <h3>7-2. 12 lỗi nặng</h3>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Toàn danh sách</div>
+    <ol>
+      <li>Vi phạm tín hiệu</li>
+      <li>Vượt tim đường</li>
+      <li>Vượt tốc 20 km/h+</li>
+      <li>Vi phạm cách/lúc/nơi vượt xe</li>
+      <li>Vi phạm qua đường sắt</li>
+      <li>Vi phạm bảo vệ người đi bộ vạch</li>
+      <li>Lái xe không bằng</li>
+      <li>Lái say (0,03%+) / dùng thuốc</li>
+      <li>Đi vào vỉa hè</li>
+      <li>Không ngăn hành khách rơi</li>
+      <li>Vi phạm an toàn khu trẻ em</li>
+      <li>Vi phạm cố định hàng hóa (2017)</li>
+    </ol>
+  </div>
+</div>
+
+<!-- 7-3 -->
+<div class="section" id="s7-3">
+  <h3>7-3. Phòng tai nạn thứ cấp (cao tốc)</h3>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Bật đèn khẩn cấp</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">Di chuyển sang <strong>làn khẩn cấp</strong> nếu được</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Tam giác cảnh báo</strong>: ban ngày <strong>100 m</strong>, ban đêm <strong>200 m</strong> (cao tốc nên 500 m)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">Mọi người tản ra <strong>sau hộ lan</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">Tổng đài cao tốc <strong>1588-2504</strong> hoặc 112</div>
+    </div>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Đừng ngồi trong xe</div>
+    Trên cao tốc, hãy thoát ra sau hộ lan ngay.
+  </div>
+</div>
+
+<!-- 7-4 -->
+<div class="section" id="s7-4">
+  <h3>7-4. Nhường xe ưu tiên (Điều 29)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Tình huống</th><th>Nghĩa vụ</th></tr>
+      <tr><td>Tại / gần giao lộ</td><td><strong>Tránh giao lộ</strong>, dừng sát mép phải</td></tr>
+      <tr><td>Ngoài giao lộ</td><td>Nhường (chậm hoặc dừng)</td></tr>
+      <tr><td>Đường một chiều</td><td>Khó phải → tránh sang trái</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 7-5 -->
+<div class="section" id="s7-5">
+  <h3>7-5. Xử lý sự cố (Quy tắc Điều 40)</h3>
+  <ul>
+    <li>Di chuyển nơi an toàn, đèn khẩn</li>
+    <li><strong>Tam giác</strong>: ngày ≥100 m, đêm ≥200 m</li>
+    <li>Đêm thêm <strong>đèn nháy đỏ</strong> sau 500 m</li>
+    <li>Cháy động cơ: rời xe → 119</li>
+    <li>Đường sắt sự cố: <strong>sơ tán hành khách → chuông báo → vẫy cờ/đèn</strong></li>
+  </ul>
+</div>
+
+<!-- 7-6 -->
+<div class="section" id="s7-6">
+  <h3>7-6. Báo cáo &amp; phiên dịch</h3>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Số liên lạc khẩn cấp</div>
+    <strong>☎ 112</strong> — Cảnh sát<br>
+    <strong>☎ 119</strong> — Cứu hỏa / cấp cứu<br>
+    <strong>☎ 1588-5644</strong> — BBB Korea phiên dịch 24h (20 ngôn ngữ, có tiếng Việt)<br>
+    <strong>☎ 1345</strong> — Trung tâm hỗ trợ người nước ngoài<br>
+    <strong>☎ 1588-2504</strong> — Cao tốc
+  </div>
+</div>
+
+<!-- 7-7 -->
+<div class="section" id="s7-7">
+  <h3>7-7. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Việc đầu tiên người lái phải làm sau tai nạn?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Gọi bảo hiểm</label>
+      <label class="quiz-opt" data-idx="2">② Dừng xe và cứu người bị thương</label>
+      <label class="quiz-opt" data-idx="3">③ Chụp ảnh</label>
+      <label class="quiz-opt" data-idx="4">④ Thương lượng</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Không thuộc 12 lỗi nặng?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Vi phạm tín hiệu</label>
+      <label class="quiz-opt" data-idx="2">② Vượt tim đường</label>
+      <label class="quiz-opt" data-idx="3">③ Đỗ xe sai quy định</label>
+      <label class="quiz-opt" data-idx="4">④ Lái không bằng</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Phòng tai nạn thứ cấp trên cao tốc, ưu tiên?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Ngồi trong xe</label>
+      <label class="quiz-opt" data-idx="2">② Đèn khẩn → tam giác → ra sau hộ lan</label>
+      <label class="quiz-opt" data-idx="3">③ Cãi nhau</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ chụp ảnh</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Xe ưu tiên đến gần giao lộ — bạn phải?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Tránh giao lộ, dừng sát mép phải</label>
+      <label class="quiz-opt" data-idx="2">② Đi tiếp</label>
+      <label class="quiz-opt" data-idx="3">③ Theo sau xe ưu tiên</label>
+      <label class="quiz-opt" data-idx="4">④ Tránh vào tim đường</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Tam giác cảnh báo ban ngày đặt ở đâu?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Sát đuôi xe</label>
+      <label class="quiz-opt" data-idx="2">② Sau xe ≥100 m</label>
+      <label class="quiz-opt" data-idx="3">③ Trước xe</label>
+      <label class="quiz-opt" data-idx="4">④ Không cần</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Tổng đài phiên dịch 24/7 cho người nước ngoài?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 119</label>
+      <label class="quiz-opt" data-idx="2">② 112</label>
+      <label class="quiz-opt" data-idx="3">③ 1588-5644 (BBB)</label>
+      <label class="quiz-opt" data-idx="4">④ 1345</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 8 — Văn hóa giao thông Hàn Quốc -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch8">
+  <span class="ch-num">Chương 8</span>
+  <h2>Đỗ xe · đèn · văn hóa giao thông Hàn Quốc</h2>
+  <p class="ch-desc">Cấm đỗ, văn hóa đỗ xe, đèn pha, còi, app dẫn đường</p>
+  <p class="ch-stars">★★ Vừa thi vừa đời sống</p>
+</div>
+
+<!-- 8-1 -->
+<div class="section" id="s8-1">
+  <h3>8-1. Phân biệt đỗ và dừng (Điều 2)</h3>
+  <div class="box box-law">
+    <div class="box-title">📜 Điều 2 (24)(25)</div>
+    <strong>Dừng (정차)</strong>: dừng không quá <strong>5 phút</strong><br>
+    <strong>Đỗ (주차)</strong>: dừng tiếp tục, vượt 5 phút hoặc người lái rời xe
+  </div>
+</div>
+
+<!-- 8-2 -->
+<div class="section" id="s8-2">
+  <h3>8-2. Nơi cấm đỗ / dừng (Điều 32, 33)</h3>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Cấm dừng và đỗ (Điều 32)</div>
+    ① Giao lộ, vạch người đi bộ, đường sắt, vỉa hè<br>
+    ② Trong <strong>5 m</strong> mép giao lộ<br>
+    ③ Trong <strong>10 m</strong> 4 phía đảo an toàn<br>
+    ④ Trong <strong>10 m</strong> bến xe buýt<br>
+    ⑤ Trong <strong>10 m</strong> đường sắt / vạch người đi bộ
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Cấm đỗ (Điều 33) — dừng được</div>
+    ① Trong hầm, trên cầu<br>
+    ② Trong <strong>5 m</strong> thiết bị PCCC<br>
+    ③ Trong 5 m công trình
+  </div>
+</div>
+
+<!-- 8-3 -->
+<div class="section" id="s8-3">
+  <h3>8-3. Văn hóa đỗ xe Hàn Quốc</h3>
+  <ul>
+    <li><strong>Lùi đỗ</strong> là mặc định</li>
+    <li><strong>Đỗ kép</strong>: để số điện thoại trên táp-lô, nhả phanh tay</li>
+    <li>Bãi cơ giới: gập gương, căn chuẩn</li>
+    <li>Valet: tip 3.000–5.000 KRW</li>
+    <li>Bãi công cộng / tư nhân: 1.000–4.000 KRW/giờ</li>
+  </ul>
+</div>
+
+<!-- 8-4 -->
+<div class="section" id="s8-4">
+  <h3>8-4. Đèn xe (Điều 37)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Tình huống</th><th>Đèn cần bật</th></tr>
+      <tr><td>Ban đêm</td><td>Pha, đèn vị trí, đuôi, biển số</td></tr>
+      <tr><td>Trong hầm</td><td>Pha, vị trí, đuôi, biển số</td></tr>
+      <tr><td>Mưa/tuyết/sương mù</td><td>Pha, vị trí, đuôi</td></tr>
+      <tr><td>Đỗ ban đêm</td><td>Đèn vị trí, đuôi</td></tr>
+      <tr><td>Gặp xe ngược chiều</td><td><strong>Đèn cốt</strong></td></tr>
+      <tr><td>Theo sát xe trước</td><td><strong>Đèn cốt</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Đèn pha (high beam)</div>
+    Sử dụng đèn pha gây chói cho xe khác là vi phạm (Điều 37 Khoản 2).
+  </div>
+</div>
+
+<!-- 8-5 -->
+<div class="section" id="s8-5">
+  <h3>8-5. Sử dụng còi (Điều 49 Khoản 1 Mục 8)</h3>
+  <div class="box box-law">
+    <div class="box-title">📜 Điều 49</div>
+    "Người lái không được, <strong>không có lý do chính đáng</strong>, bấm còi gây nguy hiểm cho người khác."
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Còi ở đường Hàn Quốc</div>
+    Trên thực tế còi ở Hàn Quốc rất nhiều nhưng phần lớn là <strong>vi phạm</strong>. Phạt: 40.000 KRW + trừ 10 điểm.
+  </div>
+</div>
+
+<!-- 8-6 -->
+<div class="section" id="s8-6">
+  <h3>8-6. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Thời gian phân biệt dừng/đỗ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3 phút</label>
+      <label class="quiz-opt" data-idx="2">② 5 phút</label>
+      <label class="quiz-opt" data-idx="3">③ 10 phút</label>
+      <label class="quiz-opt" data-idx="4">④ Không phụ thuộc thời gian</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Khoảng cách cấm đỗ tính từ thiết bị PCCC?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3m</label>
+      <label class="quiz-opt" data-idx="2">② 4m</label>
+      <label class="quiz-opt" data-idx="3">③ 5m</label>
+      <label class="quiz-opt" data-idx="4">④ 10m</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Khoảng cách cấm dừng/đỗ tính từ bến xe buýt?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3m</label>
+      <label class="quiz-opt" data-idx="2">② 5m</label>
+      <label class="quiz-opt" data-idx="3">③ 7m</label>
+      <label class="quiz-opt" data-idx="4">④ 10m</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Đèn nào khi gặp xe ngược chiều?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đèn pha</label>
+      <label class="quiz-opt" data-idx="2">② Đèn cốt</label>
+      <label class="quiz-opt" data-idx="3">③ Tắt đèn</label>
+      <label class="quiz-opt" data-idx="4">④ Đèn khẩn cấp</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Bấm còi giục xe trước khi đèn đỏ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Vi phạm Điều 49, bị phạt</label>
+      <label class="quiz-opt" data-idx="2">② Sử dụng còi hợp pháp</label>
+      <label class="quiz-opt" data-idx="3">③ Thói quen được chấp nhận</label>
+      <label class="quiz-opt" data-idx="4">④ Không phạt</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Trong hầm phải làm gì?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Tắt đèn</label>
+      <label class="quiz-opt" data-idx="2">② Bật đèn, cấm đỗ, cấm vượt</label>
+      <label class="quiz-opt" data-idx="3">③ Bật đèn pha</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ đèn khẩn cấp</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 9 — Chiến lược thi sa hình &amp; đường trường -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch9">
+  <span class="ch-num">Chương 9</span>
+  <h2>Chiến lược thi sa hình &amp; đường trường</h2>
+  <p class="ch-desc">Mẹo từng bài, lỗi loại / lỗi trừ điểm, hướng dẫn giọng</p>
+  <p class="ch-stars">★★ Chuẩn bị thực hành</p>
+</div>
+
+<!-- 9-1 -->
+<div class="section" id="s9-1">
+  <h3>9-1. Tổng quan thi sa hình</h3>
+  <p>Sau khi đậu lý thuyết, lái xe trong khu vực kín. Hạng 2: <strong>80 điểm trở lên</strong>.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Bài</th><th>Nội dung</th><th>Lưu ý</th></tr>
+      <tr><td>Thao tác trước khi đi</td><td>Dây an toàn, xi-nhan, số, đèn, gạt mưa, đèn khẩn</td><td>Theo lệnh giọng</td></tr>
+      <tr><td><strong>Đỗ T</strong></td><td>Lùi vào ô đỗ</td><td>Quan sát gương, mong vào 1 lần</td></tr>
+      <tr><td><strong>Dốc</strong></td><td>Dừng giữa dốc rồi đề pa</td><td>Trượt <strong>≥50 cm</strong> = trượt</td></tr>
+      <tr><td>Giao lộ</td><td>Theo tín hiệu, quan sát hai bên</td><td>Vượt vạch dừng = trượt</td></tr>
+      <tr><td>Đoạn tăng tốc</td><td>Đạt ≥20 km/h</td><td>Thiếu tốc độ trừ điểm</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Lỗi trượt sa hình</div>
+    ① Không dây an toàn<br>
+    ② Vi phạm tín hiệu<br>
+    ③ Trượt dốc <strong>≥50 cm</strong><br>
+    ④ Ra khỏi đường<br>
+    ⑤ Quá thời gian (6 phút)<br>
+    ⑥ Tắt máy ≥3 lần
+  </div>
+</div>
+
+<!-- 9-2 -->
+<div class="section" id="s9-2">
+  <h3>9-2. Tổng quan thi đường trường</h3>
+  <p>Sau khi có bằng tập lái, thi trên đường thật ~5 km. Đậu: <strong>70+</strong>.</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Lỗi trượt / trừ điểm nặng</div>
+    <strong>Trượt</strong>: vi phạm tín hiệu, vượt tim, vi phạm bảo vệ người đi bộ, lái khi say/dùng thuốc, không nghe giám khảo, gây nguy cơ đâm sau<br>
+    <strong>Trừ nặng</strong>: chuyển làn không xi-nhan, vượt 10+ km/h, đụng lề, phanh/đề pa gấp
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Mẹo đậu — tâm lý lái phòng thủ</div>
+    Đường trường ưu tiên <strong>an toàn</strong>, không phải tốc độ.
+  </div>
+</div>
+
+<!-- 9-3 -->
+<div class="section" id="s9-3">
+  <h3>9-3. Ngôn ngữ thi</h3>
+  <ul>
+    <li>Sa hình: hỗ trợ Hàn, Anh, Trung, Việt...</li>
+    <li>Đường trường: chỉ Hàn và Anh</li>
+    <li>Lệnh phổ biến: "đi thẳng, rẽ trái, rẽ phải, dừng, đi chậm, chuyển làn, đỗ xe, xuất phát"</li>
+  </ul>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Người Việt cần học trước các lệnh tiếng Hàn cơ bản</div>
+    Vì đường trường không thi tiếng Việt.
+  </div>
+</div>
+
+<!-- 9-4 -->
+<div class="section" id="s9-4">
+  <h3>9-4. Câu hỏi luyện tập</h3>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Trượt dốc bao nhiêu thì trượt sa hình?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10cm</label>
+      <label class="quiz-opt" data-idx="2">② 30cm</label>
+      <label class="quiz-opt" data-idx="3">③ 50cm</label>
+      <label class="quiz-opt" data-idx="4">④ 1m</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Điểm đậu đường trường?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 60</label>
+      <label class="quiz-opt" data-idx="2">② 70</label>
+      <label class="quiz-opt" data-idx="3">③ 80</label>
+      <label class="quiz-opt" data-idx="4">④ 90</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Đâu KHÔNG phải lỗi trượt đường trường?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Vi phạm tín hiệu</label>
+      <label class="quiz-opt" data-idx="2">② Vượt tim đường</label>
+      <label class="quiz-opt" data-idx="3">③ Vi phạm bảo vệ người đi bộ</label>
+      <label class="quiz-opt" data-idx="4">④ Quên xi-nhan 1 lần</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Ngôn ngữ hỗ trợ thi đường trường?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Chỉ Hàn</label>
+      <label class="quiz-opt" data-idx="2">② Hàn &amp; Anh</label>
+      <label class="quiz-opt" data-idx="3">③ 8 thứ tiếng</label>
+      <label class="quiz-opt" data-idx="4">④ Mọi ngoại ngữ</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Không thắt dây an toàn khi thi sa hình?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Trượt ngay</label>
+      <label class="quiz-opt" data-idx="2">② Trừ 5 điểm</label>
+      <label class="quiz-opt" data-idx="3">③ Cảnh cáo</label>
+      <label class="quiz-opt" data-idx="4">④ Không ảnh hưởng</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- Chương 10 — Bài tập thực chiến -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch10">
+  <span class="ch-num">Chương 10</span>
+  <h2>Bài tập thực chiến</h2>
+  <p class="ch-desc">30 câu trọng tâm — rẽ trái không bảo vệ, quay đầu, sửa đổi 2022, đèn rẽ phải, tai nạn thứ cấp, nhường đường</p>
+  <p class="ch-stars">★★★ Ôn cuối trước thi</p>
+</div>
+
+<div class="section" id="s10-1">
+  <h3>10-1. 30 câu cốt lõi</h3>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Có biển "rẽ trái không bảo vệ", được rẽ trái khi?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đèn xanh thẳng &amp; không có xe ngược chiều</label>
+      <label class="quiz-opt" data-idx="2">② Đèn đỏ</label>
+      <label class="quiz-opt" data-idx="3">③ Đèn vàng</label>
+      <label class="quiz-opt" data-idx="4">④ Mọi đèn</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Tỷ lệ lỗi của xe rẽ trái không bảo vệ trong tai nạn?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 30%</label>
+      <label class="quiz-opt" data-idx="2">② 50%</label>
+      <label class="quiz-opt" data-idx="3">③ 80%+</label>
+      <label class="quiz-opt" data-idx="4">④ 0%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Tại Hàn Quốc, được quay đầu khi?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Có biển cho phép &amp; đáp ứng tín hiệu/điều kiện</label>
+      <label class="quiz-opt" data-idx="2">② Bất cứ đâu không có biển cấm</label>
+      <label class="quiz-opt" data-idx="3">③ Mọi giao lộ</label>
+      <label class="quiz-opt" data-idx="4">④ Lúc ít xe</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Có biển quay đầu nhưng tim đường vàng liền?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Được quay đầu</label>
+      <label class="quiz-opt" data-idx="2">② Chậm thì được</label>
+      <label class="quiz-opt" data-idx="3">③ Không có người được</label>
+      <label class="quiz-opt" data-idx="4">④ Không được (vượt tim = lỗi nặng)</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Cốt lõi sửa đổi bảo vệ người đi bộ 2022?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Có thể bỏ qua người đi bộ</label>
+      <label class="quiz-opt" data-idx="2">② "Sắp qua" cũng được bảo vệ; mở rộng tới ngoài đường</label>
+      <label class="quiz-opt" data-idx="3">③ Bỏ vạch không đèn</label>
+      <label class="quiz-opt" data-idx="4">④ Bỏ khu trẻ em</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Tại vạch không đèn trong khu trẻ em, người lái?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Luôn dừng dù có hay không có người</label>
+      <label class="quiz-opt" data-idx="2">② Đi chậm</label>
+      <label class="quiz-opt" data-idx="3">③ Chỉ dừng khi có người</label>
+      <label class="quiz-opt" data-idx="4">④ Bấm còi</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>Đèn 3 màu rẽ phải đỏ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Sau khi dừng được</label>
+      <label class="quiz-opt" data-idx="2">② Chậm được</label>
+      <label class="quiz-opt" data-idx="3">③ Không có người được</label>
+      <label class="quiz-opt" data-idx="4">④ Tuyệt đối không</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q8</span><span>Trình tự phòng tai nạn thứ cấp cao tốc?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Ngồi trong xe → bảo hiểm</label>
+      <label class="quiz-opt" data-idx="2">② Đèn khẩn → tam giác → ra sau hộ lan → báo</label>
+      <label class="quiz-opt" data-idx="3">③ Cãi nhau → chụp ảnh</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ chuyển xe</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q9</span><span>Giao lộ không đèn, đường khác độ rộng — ai ưu tiên?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Đường hẹp</label>
+      <label class="quiz-opt" data-idx="2">② Người thấy trước</label>
+      <label class="quiz-opt" data-idx="3">③ Đường rộng</label>
+      <label class="quiz-opt" data-idx="4">④ Xe lớn</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q10</span><span>Đường cùng độ rộng, xe trái/thẳng/phải đến cùng lúc — thứ tự?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Trái &gt; thẳng &gt; phải</label>
+      <label class="quiz-opt" data-idx="2">② Thẳng/phải &gt; trái, cùng lúc nhường phải</label>
+      <label class="quiz-opt" data-idx="3">③ Cùng đi</label>
+      <label class="quiz-opt" data-idx="4">④ Trái trước</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q11</span><span>Tốc độ tối đa xe con cao tốc 2+ làn?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 80</label>
+      <label class="quiz-opt" data-idx="2">② 100</label>
+      <label class="quiz-opt" data-idx="3">③ 110</label>
+      <label class="quiz-opt" data-idx="4">④ Không giới hạn</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q12</span><span>Đường đóng băng, giảm bao nhiêu?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ Không cần</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q13</span><span>BAC xử phạt Hàn Quốc?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 0,02%</label>
+      <label class="quiz-opt" data-idx="2">② 0,03%</label>
+      <label class="quiz-opt" data-idx="3">③ 0,05%</label>
+      <label class="quiz-opt" data-idx="4">④ 0,08%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q14</span><span>Vượt tim đường vàng để vượt xe và gây tai nạn?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 12 lỗi nặng (vượt tim + vi phạm vượt xe)</label>
+      <label class="quiz-opt" data-idx="2">② Lỗi thường</label>
+      <label class="quiz-opt" data-idx="3">③ Bảo hiểm xử lý</label>
+      <label class="quiz-opt" data-idx="4">④ Không trừ</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q15</span><span>Nguyên tắc trong vòng xoay?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Xe vào trước</label>
+      <label class="quiz-opt" data-idx="2">② Xe lớn trước</label>
+      <label class="quiz-opt" data-idx="3">③ Theo kim đồng hồ</label>
+      <label class="quiz-opt" data-idx="4">④ Ngược kim đồng hồ; xe trong vòng ưu tiên</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q16</span><span>Đèn xanh, giao lộ phía bên kia bị tắc?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Lao vào</label>
+      <label class="quiz-opt" data-idx="2">② Vào chậm</label>
+      <label class="quiz-opt" data-idx="3">③ Không vào giao lộ</label>
+      <label class="quiz-opt" data-idx="4">④ Bấm còi</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q17</span><span>Không thuộc 12 lỗi nặng?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Vi phạm tín hiệu</label>
+      <label class="quiz-opt" data-idx="2">② Lái say</label>
+      <label class="quiz-opt" data-idx="3">③ Cố định hàng hóa</label>
+      <label class="quiz-opt" data-idx="4">④ Đỗ xe sai</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q18</span><span>Vàng nháy nghĩa là?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Dừng tạm</label>
+      <label class="quiz-opt" data-idx="2">② Đi cẩn thận</label>
+      <label class="quiz-opt" data-idx="3">③ Dừng</label>
+      <label class="quiz-opt" data-idx="4">④ Giữ tốc độ</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q19</span><span>Màu tim đường?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Trắng</label>
+      <label class="quiz-opt" data-idx="2">② Vàng</label>
+      <label class="quiz-opt" data-idx="3">③ Xanh</label>
+      <label class="quiz-opt" data-idx="4">④ Đỏ</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q20</span><span>Vạch xanh dương nghĩa là?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Chỗ đỗ người khuyết tật</label>
+      <label class="quiz-opt" data-idx="2">② Xe tải</label>
+      <label class="quiz-opt" data-idx="3">③ Làn xe buýt riêng</label>
+      <label class="quiz-opt" data-idx="4">④ Xe đạp</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q21</span><span>Khoảng cách cấm dừng/đỗ tính từ đảo an toàn?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10m</label>
+      <label class="quiz-opt" data-idx="2">② 5m</label>
+      <label class="quiz-opt" data-idx="3">③ 3m</label>
+      <label class="quiz-opt" data-idx="4">④ Không giới hạn</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q22</span><span>Vượt tốc trở thành 12 lỗi nặng?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Vượt 10 km/h</label>
+      <label class="quiz-opt" data-idx="2">② Vượt 20 km/h</label>
+      <label class="quiz-opt" data-idx="3">③ Vượt 40 km/h</label>
+      <label class="quiz-opt" data-idx="4">④ Vượt 60 km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q23</span><span>Đèn người đi bộ xanh nháy, người đi bộ phải?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Bắt đầu qua nhanh</label>
+      <label class="quiz-opt" data-idx="2">② Đứng yên</label>
+      <label class="quiz-opt" data-idx="3">③ Không bắt đầu mới; nếu đang qua thì hoàn thành nhanh</label>
+      <label class="quiz-opt" data-idx="4">④ Bấm còi</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q24</span><span>Phạt &amp; trừ điểm khu trẻ em?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Như thường</label>
+      <label class="quiz-opt" data-idx="2">② Gấp đôi</label>
+      <label class="quiz-opt" data-idx="3">③ 1,5 lần</label>
+      <label class="quiz-opt" data-idx="4">④ Miễn</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q25</span><span>Đâu KHÔNG phải điều kiện rẽ phải khi đèn đỏ thường?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Dừng hẳn</label>
+      <label class="quiz-opt" data-idx="2">② Không cản trở người đi bộ</label>
+      <label class="quiz-opt" data-idx="3">③ Không cản trở xe khác</label>
+      <label class="quiz-opt" data-idx="4">④ Bấm còi</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q26</span><span>Sau khi cứu hộ người bị thương, bước tiếp theo?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Báo cảnh sát 112 / cứu thương 119</label>
+      <label class="quiz-opt" data-idx="2">② Gọi bảo hiểm</label>
+      <label class="quiz-opt" data-idx="3">③ Rời hiện trường</label>
+      <label class="quiz-opt" data-idx="4">④ Thương lượng</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q27</span><span>Đâm người đi bộ trong khuôn viên chung cư?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Không phải đường, không trách nhiệm</label>
+      <label class="quiz-opt" data-idx="2">② Chỉ áp dụng quy định BQL</label>
+      <label class="quiz-opt" data-idx="3">③ Áp dụng nghĩa vụ bảo vệ người đi bộ 2022</label>
+      <label class="quiz-opt" data-idx="4">④ Chỉ dân sự</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q28</span><span>Đèn nào khi gặp xe ngược chiều?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Pha</label>
+      <label class="quiz-opt" data-idx="2">② Cốt</label>
+      <label class="quiz-opt" data-idx="3">③ Tắt</label>
+      <label class="quiz-opt" data-idx="4">④ Khẩn cấp</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q29</span><span>Khi xe trước chuẩn bị rẽ trái — vượt theo phía nào?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Có thể vượt phía bên phải</label>
+      <label class="quiz-opt" data-idx="2">② Bên trái</label>
+      <label class="quiz-opt" data-idx="3">③ Cấm vượt</label>
+      <label class="quiz-opt" data-idx="4">④ Vượt tim đường</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q30</span><span>Ai KHÔNG phải phụ tá cảnh sát?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Tài xế gương mẫu</label>
+      <label class="quiz-opt" data-idx="2">② Quân cảnh</label>
+      <label class="quiz-opt" data-idx="3">③ Tuần tra cao tốc</label>
+      <label class="quiz-opt" data-idx="4">④ Lính cứu hỏa</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Đáp án: ③</strong></div>
+  </div>
+</div>
+
+
+<!-- ===== RESOURCES FOOTER ===== -->
+<div class="resources">
+  <h4>📚 Tài nguyên học tập</h4>
+  <a href="https://evergreenedu-collab.github.io/quiz/textbook_vn.html">📖 Học bằng giáo trình</a>
+  <a href="https://evergreenedu-collab.github.io/quiz/vn.html">✏️ Luyện 980 câu hỏi ngân hàng đề</a>
+  <p style="font-size:.8rem;opacity:.7;margin-top:.5rem;">Cơ quan Giao thông Đường bộ Hàn Quốc (KoRoad) — Trung tâm Đào tạo | © 2026</p>
+</div>
+
+</div><!-- end .content -->
+
+<!-- ===== QUIZ INTERACTION JS ===== -->
+<script>
+document.querySelectorAll('.quiz').forEach(quiz => {
+  const answer = parseInt(quiz.dataset.answer);
+  const answerBox = quiz.querySelector('.quiz-answer');
+  quiz.querySelectorAll('.quiz-opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      // 이미 답변 표시되었으면 무시
+      if (answerBox.classList.contains('show')) return;
+      const idx = parseInt(opt.dataset.idx);
+      // 모든 옵션 비활성화
+      quiz.querySelectorAll('.quiz-opt').forEach(o => {
+        o.style.pointerEvents = 'none';
+      });
+      if (idx === answer) {
+        opt.classList.add('correct');
+      } else {
+        opt.classList.add('wrong');
+        // 정답 표시
+        quiz.querySelector(`[data-idx="${answer}"]`).classList.add('correct');
+      }
+      answerBox.classList.add('show');
+    });
+  });
+});
+
+// Nav tab active state
+const sections = document.querySelectorAll('.chapter-header');
+const navLinks = document.querySelectorAll('.nav-tabs a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>
