@@ -2,934 +2,3065 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>外国人驾照笔试教材</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>韩国驾驶执照笔试教材（外国人版）</title>
 <style>
-:root{--navy:#0A2463;--blue:#1565C0;--sky:#42A5F5;--green:#2E7D32;--green-bg:#E8F5E9;--amber:#F9A825;--amber-bg:#FFF8E1;--red:#C62828;--red-bg:#FFEBEE;--purple:#6A1B9A;--gray:#546E7A;--gray-light:#ECEFF1;--text:#1A2540;--bg:#F5F7FA;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Noto Sans SC',sans-serif;color:var(--text);background:var(--bg);line-height:1.75;font-size:15px;}
+  /* ===== CSS VARIABLES ===== */
+  :root {
+    --bg: #f8f6f1;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text-sub: #555;
+    --accent: #1e40af;
+    --accent-light: #dbeafe;
+    --green: #059669;
+    --green-light: #d1fae5;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --yellow: #d97706;
+    --yellow-light: #fef3c7;
+    --orange: #ea580c;
+    --orange-light: #fff7ed;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --border: #e5e2d9;
+    --shadow: 0 1px 3px rgba(0,0,0,.08);
+    --radius: 12px;
+    --font-title: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
 
-/* 导航栏 */
-.sticky-top{position:sticky;top:0;z-index:100;}
-.topnav{background:var(--navy);padding:8px 16px;display:flex;align-items:center;gap:10px;overflow-x:auto;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.3);-webkit-overflow-scrolling:touch}.topnav::-webkit-scrollbar{display:none}
-.topnav a{color:rgba(255,255,255,.75);text-decoration:none;font-size:12px;font-weight:500;padding:6px 10px;border-radius:20px;transition:.2s;flex-shrink:0;}
-.topnav a:hover{color:#fff;background:rgba(255,255,255,.15);}
-.topnav .brand{font-family:'Black Han Sans';font-size:15px;color:var(--amber);margin-right:4px;flex-shrink:0;}
-.lsw{display:flex;gap:4px;padding:6px 12px;background:#00204D;overflow-x:auto;-webkit-overflow-scrolling:touch}.lsw::-webkit-scrollbar{display:none}
-.lg{padding:5px 12px;border-radius:14px;font-size:11px;color:rgba(255,255,255,.6);text-decoration:none;white-space:nowrap;font-weight:500;min-height:28px;display:inline-flex;align-items:center}.lg.on{background:rgba(255,255,255,.15);color:#fff}
-.container{max-width:860px;margin:0 auto;padding:24px 20px 80px;}
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* 重要度图例 */
-.importance-legend{background:#fff;border:2px solid var(--amber);border-radius:12px;padding:14px 20px;margin:16px 0 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;}
-.importance-legend .il-title{font-weight:900;color:var(--navy);white-space:nowrap;}
-.il-item{display:flex;align-items:center;gap:4px;}
-.il-stars{color:var(--amber);font-size:16px;letter-spacing:-1px;}
+  /* ===== HEADER ===== */
+  .header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+    color: #fff;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: .25rem; }
+  .header p { font-size: .85rem; opacity: .85; }
 
-/* 章节标题 */
-.ch-header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:28px 24px;border-radius:16px;margin:40px 0 20px;position:relative;overflow:hidden;scroll-margin-top:90px;}
-.ch-header::after{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.05);top:-50px;right:-30px;}
-.ch-num{font-size:12px;color:rgba(255,255,255,.6);font-weight:700;letter-spacing:2px;}
-.ch-title-row{display:flex;align-items:center;gap:12px;margin:4px 0 6px;}
-.ch-title{font-family:'Black Han Sans';font-size:26px;line-height:1.3;}
-.ch-stars{color:var(--amber);font-size:22px;letter-spacing:-2px;flex-shrink:0;}
-.ch-desc{font-size:12px;color:rgba(255,255,255,.65);line-height:1.5;}
-.ch-header.green{background:linear-gradient(135deg,#1B5E20,var(--green));}
-.ch-header.amber-h{background:linear-gradient(135deg,#E65100,#F57C00);}
-.ch-header.red-h{background:linear-gradient(135deg,#880E4F,#AD1457);}
-.ch-header.purple-h{background:linear-gradient(135deg,#4A148C,var(--purple));}
-.ch-header.teal-h{background:linear-gradient(135deg,#004D40,#00796B);}
+  /* ===== NAV TABS ===== */
+  .nav-tabs {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    padding: 0 .5rem;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tabs a {
+    flex-shrink: 0;
+    padding: .75rem 1rem;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--text-sub);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all .2s;
+  }
+  .nav-tabs a:hover,
+  .nav-tabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-h2{font-size:19px;font-weight:900;color:var(--navy);margin:28px 0 10px;padding-bottom:6px;border-bottom:3px solid var(--navy);}
-h3{font-size:15px;font-weight:700;color:var(--blue);margin:18px 0 6px;}
-p{margin:8px 0;}
+  /* ===== MAIN CONTENT ===== */
+  .content { max-width: 720px; margin: 0 auto; padding: 0 1rem 3rem; }
 
-/* 提示框 */
-.box{padding:14px 18px;border-radius:10px;margin:14px 0;font-size:14px;}
-.box-tip{background:var(--amber-bg);border-left:4px solid var(--amber);}
-.box-warn{background:var(--red-bg);border-left:4px solid var(--red);}
-.box-info{background:var(--green-bg);border-left:4px solid var(--green);}
-.box-law{background:#E8EAF6;border-left:4px solid #3F51B5;font-size:13px;}
-.box-label{font-size:11px;font-weight:700;margin-bottom:4px;letter-spacing:1px;}
-.box-tip .box-label{color:#E65100;} .box-warn .box-label{color:var(--red);} .box-info .box-label{color:var(--green);} .box-law .box-label{color:#283593;}
+  /* ===== CHAPTER HEADER ===== */
+  .chapter-header {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow);
+  }
+  .chapter-header .ch-num {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .chapter-header h2 { font-size: 1.35rem; font-weight: 800; margin: .25rem 0; }
+  .chapter-header .ch-desc { font-size: .9rem; color: var(--text-sub); }
+  .chapter-header .ch-stars { color: var(--yellow); margin-top: .5rem; font-size: .85rem; }
 
-/* 表格 */
-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;}
-th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600;font-size:12px;}
-td{padding:8px 12px;border-bottom:1px solid #ddd;}
-tr:nth-child(even) td{background:#f8f9fc;}
+  /* ===== SECTION ===== */
+  .section {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+  }
+  .section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: .75rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1rem 0 .5rem;
+  }
+  .section p { margin-bottom: .75rem; font-size: .95rem; }
+  .section ul, .section ol { padding-left: 1.25rem; margin-bottom: .75rem; }
+  .section li { margin-bottom: .35rem; font-size: .93rem; }
 
-/* 插图 */
-.illust{text-align:center;margin:18px 0;padding:14px;background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.06);}
-.illust-caption{font-size:11px;color:var(--gray);margin-top:6px;}
+  /* ===== INFO BOXES ===== */
+  .box {
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin: .75rem 0;
+    font-size: .9rem;
+    line-height: 1.65;
+  }
+  .box-law { background: var(--accent-light); border-left: 3px solid var(--accent); }
+  .box-warn { background: var(--red-light); border-left: 3px solid var(--red); }
+  .box-tip { background: var(--green-light); border-left: 3px solid var(--green); }
+  .box-foreign { background: var(--orange-light); border-left: 3px solid var(--orange); }
+  .box-compare { background: var(--purple-light); border-left: 3px solid var(--purple); }
+  .box-exam { background: var(--yellow-light); border-left: 3px solid var(--yellow); }
+  .box .box-title {
+    font-weight: 700;
+    margin-bottom: .35rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
 
-/* 闪烁动画 */
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:.15;}}
-.blink-yellow{animation:blink 1s ease-in-out infinite;}
-.blink-red{animation:blink 1s ease-in-out infinite;}
+  /* ===== TABLES ===== */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: .75rem 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .88rem;
+    min-width: 320px;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    padding: .6rem .75rem;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  td {
+    padding: .55rem .75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fafaf7; }
 
-/* 练习题 */
-.quiz-section{background:#fff;border-radius:12px;padding:18px 22px;margin:18px 0;box-shadow:0 1px 4px rgba(0,0,0,.06);}
-.q-item{margin:14px 0;padding:10px 0;border-bottom:1px solid #eee;}
-.q-item:last-child{border-bottom:none;}
-.q-num{font-weight:900;color:var(--blue);font-size:13px;}
-.q-text{font-weight:600;margin:4px 0 6px;font-size:14px;}
-.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:3px 14px;margin-bottom:6px;font-size:13px;}
-.q-answer{font-size:12px;color:var(--green);font-weight:600;}
+  /* ===== SIGNAL CARDS ===== */
+  .signal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+    margin: .75rem 0;
+  }
+  @media (min-width: 480px) {
+    .signal-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .signal-card {
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .signal-card .signal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 0 auto .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .signal-card .signal-name { font-weight: 700; font-size: .95rem; margin-bottom: .25rem; }
+  .signal-card .signal-desc { font-size: .83rem; color: var(--text-sub); line-height: 1.5; }
 
-/* 题库横幅 */
-.quiz-banner{background:linear-gradient(135deg,var(--amber),#FF8F00);color:var(--navy);padding:18px 22px;border-radius:12px;margin:24px 0;display:flex;align-items:center;gap:14px;text-decoration:none;transition:.2s;}
-.quiz-banner:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(249,168,37,.4);}
-.quiz-banner .qb-icon{font-size:28px;flex-shrink:0;}
-.quiz-banner .qb-text{flex:1;}
-.quiz-banner .qb-title{font-family:'Black Han Sans';font-size:17px;}
-.quiz-banner .qb-desc{font-size:12px;opacity:.8;margin-top:2px;}
-.quiz-banner .qb-btn{background:var(--navy);color:#fff;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:700;flex-shrink:0;}
+  .sig-green { background: #ecfdf5; }
+  .sig-green .signal-icon { background: #22c55e; color: #fff; }
+  .sig-green .signal-icon.signal-arrow { background: transparent; }
+  .sig-yellow { background: #fffbeb; }
+  .sig-yellow .signal-icon { background: #eab308; color: #fff; }
+  .sig-red { background: #fef2f2; }
+  .sig-red .signal-icon { background: #ef4444; color: #fff; }
 
-/* 术语 */
-.term-o{color:var(--green);font-weight:700;}
-.term-x{text-decoration:line-through;color:var(--red);font-size:13px;}
+  /* ===== FLOW DIAGRAM ===== */
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: .75rem 0;
+    font-size: .88rem;
+  }
+  .flow-step {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 700;
+    padding: .5rem .9rem;
+    border-radius: 8px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .flow-step.step-red { background: var(--red-light); color: var(--red); }
+  .flow-step.step-green { background: var(--green-light); color: var(--green); }
+  .flow-step.step-yellow { background: var(--yellow-light); color: var(--yellow); }
+  .flow-arrow { font-size: 1.1rem; color: var(--text-sub); flex-shrink: 0; }
 
-/* SVG 自适应 */
-.illust svg{width:100%;height:auto;}
+  /* ===== SIGN SHAPES ===== */
+  .sign-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+    margin: .75rem 0;
+  }
+  @media (min-width: 480px) {
+    .sign-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .sign-item { text-align: center; }
+  .sign-item svg { margin: 0 auto .4rem; display: block; }
+  .sign-label { font-size: .82rem; font-weight: 600; }
+  .sign-sub { font-size: .75rem; color: var(--text-sub); }
 
-/* 表格自适应 */
-.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0;}
-.table-wrap table{min-width:360px;}
+  /* ===== QUIZ ===== */
+  .quiz {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: .75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .quiz-q {
+    font-weight: 700;
+    font-size: .95rem;
+    margin-bottom: .75rem;
+    display: flex;
+    gap: .5rem;
+  }
+  .quiz-q .q-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .78rem;
+  }
+  .quiz-opts { margin-bottom: .75rem; }
+  .quiz-opt {
+    display: block;
+    padding: .5rem .75rem;
+    margin-bottom: .35rem;
+    border-radius: 8px;
+    font-size: .9rem;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: all .2s;
+  }
+  .quiz-opt:hover { background: var(--accent-light); }
+  .quiz-opt.selected { background: var(--accent-light); border-color: var(--accent); }
+  .quiz-opt.correct { background: var(--green-light); border-color: var(--green); }
+  .quiz-opt.wrong { background: var(--red-light); border-color: var(--red); }
+  .quiz-answer {
+    display: none;
+    padding: .75rem;
+    border-radius: 8px;
+    background: var(--green-light);
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+  .quiz-answer.show { display: block; }
 
-/* 移动端优化 — 平板 */
-@media(max-width:768px){
-  body{font-size:14px;}
-  .topnav{padding:6px 10px;gap:6px;}
-  .topnav a{font-size:11px;padding:8px 10px;min-height:36px;display:flex;align-items:center;}
-  .topnav .brand{font-size:14px;}
-  .lsw{padding:5px 10px;gap:3px;}
-  .lg{padding:5px 10px;font-size:11px;min-height:30px;}
-  .container{padding:16px 14px 60px;}
-  .ch-header{padding:22px 18px;margin:28px 0 16px;}
-  .ch-title{font-size:22px;}
-  .ch-stars{font-size:18px;}
-  h2{font-size:17px;margin:22px 0 8px;}
-  .box{padding:12px 14px;font-size:13px;}
-  .quiz-section{padding:14px 16px;}
-}
+  /* ===== COMPARISON TABLE ===== */
+  .compare-table { margin: .75rem 0; }
+  .compare-table th { font-size: .8rem; }
+  .compare-table td { font-size: .83rem; }
+  .compare-table .flag { font-size: 1.1rem; }
 
-/* 移动端优化 — 手机 */
-@media(max-width:480px){
-  body{font-size:13px;line-height:1.65;}
-  .topnav{padding:5px 8px;gap:4px;}
-  .topnav a{font-size:10px;padding:7px 8px;}
-  .topnav .brand{font-size:13px;margin-right:2px;}
-  .lsw{padding:4px 8px;gap:3px;}
-  .lg{padding:4px 8px;font-size:10px;min-height:26px;}
-  .container{padding:10px 10px 50px;}
-  .ch-header{padding:18px 14px;margin:20px 0 12px;border-radius:12px;}
-  .ch-title{font-size:19px;}
-  .ch-num{font-size:10px;}
-  .ch-desc{font-size:11px;}
-  .ch-stars{font-size:16px;}
-  h2{font-size:16px;margin:18px 0 6px;padding-bottom:4px;}
-  h3{font-size:14px;}
-  p{font-size:13px;margin:6px 0;}
-  .box{padding:10px 12px;font-size:12px;border-radius:8px;}
-  .box-label{font-size:10px;}
-  .box-law{font-size:12px;}
-  table{font-size:12px;}
-  th{padding:6px 8px;font-size:11px;}
-  td{padding:6px 8px;}
-  .importance-legend{padding:10px 14px;font-size:11px;flex-direction:column;align-items:flex-start;gap:6px;border-radius:8px;}
-  .il-stars{font-size:14px;}
-  .q-opts{grid-template-columns:1fr;gap:2px;}
-  .q-text{font-size:13px;}
-  .q-num{font-size:12px;}
-  .q-answer{font-size:11px;}
-  .quiz-banner{flex-direction:column;text-align:center;padding:14px 16px;gap:10px;}
-  .quiz-banner .qb-title{font-size:15px;}
-  .quiz-banner .qb-desc{font-size:11px;}
-  .quiz-banner .qb-btn{width:100%;text-align:center;padding:10px;}
-  .illust{padding:8px;border-radius:8px;}
-  .illust-caption{font-size:10px;}
-  .quiz-section{padding:12px 12px;margin:12px 0;border-radius:8px;}
-}
+  /* ===== SCENARIO CARDS ===== */
+  .scenario {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: .75rem 0;
+  }
+  .scenario-title {
+    font-weight: 700;
+    font-size: .92rem;
+    color: var(--accent);
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
+  .scenario-body { font-size: .88rem; }
+  .scenario-body .do { color: var(--green); font-weight: 600; }
+  .scenario-body .dont { color: var(--red); font-weight: 600; }
+
+  /* ===== FOOTER RESOURCES ===== */
+  .resources {
+    background: linear-gradient(135deg, #1e3a5f, #1e40af);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .resources h4 { font-size: 1rem; margin-bottom: .75rem; }
+  .resources a {
+    display: block;
+    background: rgba(255,255,255,.15);
+    color: #fff;
+    text-decoration: none;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: background .2s;
+  }
+  .resources a:hover { background: rgba(255,255,255,.25); }
+
+  /* ===== PRIORITY INDICATOR ===== */
+  .priority {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: .78rem;
+    font-weight: 700;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+  }
+  .priority-high { background: #fee2e2; color: #dc2626; }
+  .priority-mid { background: #fef3c7; color: #d97706; }
+
+  /* ===== STEP INDICATOR ===== */
+  .steps { margin: .75rem 0; }
+  .step-item {
+    display: flex;
+    gap: .75rem;
+    padding: .75rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .step-item:last-child { border-bottom: none; }
+  .step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .85rem;
+  }
+  .step-content { flex: 1; font-size: .9rem; }
+  .step-content strong { color: var(--accent); }
+
+  /* ===== MOBILE OPTIMIZATIONS ===== */
+  @media (max-width: 480px) {
+    body { font-size: 15px; }
+    .header { padding: 1.25rem 1rem; }
+    .header h1 { font-size: 1.15rem; }
+    .content { padding: 0 .75rem 2rem; }
+    .section { padding: 1rem; }
+    .chapter-header { padding: 1.25rem; }
+    .chapter-header h2 { font-size: 1.2rem; }
+    table { font-size: .82rem; }
+    th, td { padding: .45rem .5rem; }
+    .signal-card { padding: .75rem; }
+    .sign-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .header, .nav-tabs { position: static; }
+    .quiz-answer { display: block !important; }
+    body { font-size: 12pt; }
+  }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- 导航栏 -->
-<div class="sticky-top">
-<nav class="topnav">
-  <span class="brand">🚗 外国人驾照教材</span>
-  <a href="#ch1">第1章</a><a href="#ch2">第2章</a><a href="#ch3">第3章</a><a href="#ch4">第4章</a><a href="#ch5">第5章</a><a href="#ch6">第6章</a><a href="#ch7">第7章</a><a href="#ch8">第8章</a><a href="#ch9">第9章</a><a href="#ch10">第10章</a>
-</nav>
-<div class="lsw"><a href="textbook.html" class="lg">🇰🇷 한국어</a><a href="textbook_en.html" class="lg">🇺🇸 English</a><a href="textbook_cn.html" class="lg on">🇨🇳 中文</a><a href="textbook_vn.html" class="lg">🇻🇳 Tiếng Việt</a></div>
-</div>
-
-<div class="container">
-
-<div class="importance-legend">
-  <div class="il-title">📌 各章重要度</div>
-  <div class="il-item"><span class="il-stars">★★★</span> 高频考题</div>
-  <div class="il-item"><span class="il-stars">★★</span> 常考考题</div>
-  <div class="il-item"><span class="il-stars">★</span> 基础学习</div>
-</div>
-
-<!-- ===== 第1章 ===== -->
-<div class="ch-header teal-h" id="ch1">
-  <div class="ch-num">CHAPTER 01</div>
-  <div class="ch-title-row"><div class="ch-title">笔试指南</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">考试结构、合格标准、应试语言、术语规则</div>
-</div>
-
-<h2>1-1. 驾照取得流程</h2>
-<p>在韩国取得驾照需要按顺序完成4个步骤。</p>
-<div class="illust">
-<svg viewBox="0 0 700 55" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="65" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">体检</text>
-  <text x="128" y="32" font-size="12" fill="#999">→</text>
-  <rect x="140" y="8" width="110" height="38" rx="8" fill="#1565C0"/><text x="195" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">笔试</text>
-  <text x="258" y="32" font-size="12" fill="#999">→</text>
-  <rect x="270" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="325" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">技能考试</text>
-  <text x="388" y="32" font-size="12" fill="#999">→</text>
-  <rect x="400" y="8" width="110" height="38" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/><text x="455" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#1565C0">道路驾驶</text>
-  <text x="518" y="32" font-size="12" fill="#999">→</text>
-  <rect x="530" y="8" width="110" height="38" rx="8" fill="#4CAF50"/><text x="585" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">领取驾照！</text>
-</svg>
-</div>
-
-<h2>1-2. 笔试结构（2025.2.24修订，2026.3.9实施）</h2>
-<p>笔试需要在<strong>40分钟</strong>内完成<strong>40道题</strong>。由5种题型组成。</p>
-<div class="table-wrap"><table>
-  <tr><th>题型</th><th>题数</th><th>分值</th><th>说明</th></tr>
-  <tr><td>📝 文字型</td><td>21题</td><td>46分</td><td>文本四选一</td></tr>
-  <tr><td>🖼️ 插图型</td><td>6题</td><td>18分</td><td>看情景图判断</td></tr>
-  <tr><td>📷 照片型</td><td>7题</td><td>21分</td><td>看实际道路照片判断</td></tr>
-  <tr><td>🚸 交通标志型</td><td>5题</td><td>10分</td><td>看标志选择含义</td></tr>
-  <tr><td>🎬 视频型</td><td>1题</td><td>5分</td><td>看视频判断危险</td></tr>
-  <tr style="font-weight:900;background:#E3F2FD"><td>合计</td><td>40题</td><td>100分</td><td></td></tr>
-</table></div>
-
-<h2>1-3. 合格标准及考试信息</h2>
-<div class="table-wrap"><table>
-  <tr><th>项目</th><th>内容</th></tr>
-  <tr><td>限时</td><td><strong>40分钟</strong>（不是50分钟！）</td></tr>
-  <tr><td>合格（第1类普通）</td><td><strong>70分</strong>以上</td></tr>
-  <tr><td>合格（第2类普通）</td><td><strong>60分</strong>以上</td></tr>
-  <tr><td>应试语言</td><td>4种：韩语、英语、中文、越南语</td></tr>
-  <tr><td>道路驾驶考试</td><td><strong>仅限韩语·英语</strong></td></tr>
-</table></div>
-
-<h2>1-4. 术语规则</h2>
-<p>韩国道路交通法使用准确的法律术语。考试中也直接使用这些术语出题。</p>
-<div class="table-wrap"><table>
-  <tr><th>日常用语 (✕)</th><th>法律术语 (○)</th><th>含义</th></tr>
-  <tr><td class="term-x">차선변경（换车线）</td><td class="term-o">차로변경（变更车道）</td><td>向同方向其他车道移动</td></tr>
-  <tr><td class="term-x">인도（人道）</td><td class="term-o">보도（人行道）</td><td>行人行走的道路部分</td></tr>
-  <tr><td class="term-x">클락션（喇叭俗称）</td><td class="term-o">경음기（喇叭）</td><td>汽车鸣笛装置</td></tr>
-  <tr><td class="term-x">깜빡이（闪灯俗称）</td><td class="term-o">방향지시등（转向灯）</td><td>转向信号灯</td></tr>
-  <tr><td class="term-x">안전벨트（安全带俗称）</td><td class="term-o">안전띠（安全带）</td><td>座椅固定带</td></tr>
-  <tr><td class="term-x">표지판（标志牌俗称）</td><td class="term-o">안전표지（交通标志）</td><td>道路交通安全标志</td></tr>
-</table></div>
-
-<div class="box box-tip">
-  <div class="box-label">💡 合格策略</div>
-  文字型21题（46分）比重最大，请充分学习核心内容。交通标志型5题（10分）只要能区分标志的<strong>形状和颜色</strong>就能答对大部分，性价比很高。
-</div>
-
-
-<!-- ===== 第2章 ===== -->
-<div class="ch-header" id="ch2">
-  <div class="ch-num">CHAPTER 02</div>
-  <div class="ch-title-row"><div class="ch-title">信号灯与交通标志全面掌握</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">笔试约10~12题出题范围</div>
-</div>
-
-<h2>2-1. 信号的核心原则 — 优先顺序</h2>
-<p>根据道路交通法第5条，所有道路使用者必须遵守交通安全设施的信号。<strong>违反信号属于12大重大过失</strong>，可能受到刑事处罚。</p>
-
-<div class="box box-tip">
-  <div class="box-label">💡 高频考点</div>
-  <strong>信号灯与交警手势信号不同时？</strong> → <strong>手势信号优先</strong>（第5条第2款）<br><br>
-  <strong>警察辅助人员</strong>（施行令第6条）：模范驾驶员、军事警察、消防公务员<br>
-  ⚠️ 工地志愿者·高速公路安全巡逻员等<strong>不是</strong>警察辅助人员
-</div>
-
-<div class="illust">
-<svg viewBox="0 0 500 60" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;">
-  <rect x="10" y="10" width="130" height="40" rx="20" fill="#C62828"/><text x="75" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">① 手势信号（最优先）</text>
-  <text x="150" y="35" font-size="16" fill="#999">→</text>
-  <rect x="165" y="10" width="130" height="40" rx="20" fill="#1565C0"/><text x="230" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">② 信号灯</text>
-  <text x="305" y="35" font-size="16" fill="#999">→</text>
-  <rect x="320" y="10" width="130" height="40" rx="20" fill="#546E7A"/><text x="385" y="35" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">③ 交通标志</text>
-</svg>
-</div>
-
-<h2>2-2. 车辆信号灯（施行规则 [附表2]）</h2>
-
-<div class="illust">
-<svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="15" y="10" width="210" height="120" rx="14" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.5"/>
-  <circle cx="60" cy="55" r="26" fill="#4CAF50"/>
-  <text x="100" y="42" font-size="14" font-weight="900" fill="#1B5E20">绿灯</text>
-  <text x="100" y="60" font-size="11" fill="#333">直行或右转</text>
-  <text x="100" y="76" font-size="10" fill="#666">有非保护左转标志时</text>
-  <text x="100" y="90" font-size="10" fill="#666">也可左转</text>
-
-  <rect x="245" y="10" width="210" height="120" rx="14" fill="#FFF8E1" stroke="#FFC107" stroke-width="1.5"/>
-  <circle cx="290" cy="55" r="26" fill="#FFC107"/>
-  <text x="330" y="42" font-size="14" font-weight="900" fill="#E65100">黄灯</text>
-  <text x="330" y="60" font-size="11" fill="#333">在停止线前停车</text>
-  <text x="330" y="76" font-size="10" fill="#666">已进入时迅速通过</text>
-  <text x="330" y="90" font-size="10" fill="#666">可右转（注意行人）</text>
-
-  <rect x="475" y="10" width="210" height="120" rx="14" fill="#FFEBEE" stroke="#F44336" stroke-width="1.5"/>
-  <circle cx="520" cy="55" r="26" fill="#F44336"/>
-  <text x="560" y="42" font-size="14" font-weight="900" fill="#B71C1C">红灯</text>
-  <text x="560" y="60" font-size="11" fill="#333">停车</text>
-  <text x="560" y="78" font-size="10" fill="#C62828" font-weight="600">暂时停车后可右转</text>
-  <text x="560" y="94" font-size="9" fill="#666">（右转三色灯红灯时不可）</text>
-</svg>
-</div>
-
-<h3>绿灯时禁止左转</h3>
-<p>绿灯表示"直行或右转"。<strong>在没有非保护左转标志的交叉路口绿灯时左转属于违反信号</strong>。</p>
-<div class="box box-law">
-  <div class="box-label">📜 判例（大法院 2004도5848）</div>
-  在设有绿色·黄色·红色三色信号灯且没有非保护左转或调头标志的交叉路口，车辆不得左转或调头。
-</div>
-
-<h3>红灯时右转 ⚠️</h3>
-<p>与许多国家不同，韩国<strong>允许红灯右转</strong>（RTOR: Right Turn On Red）。欧洲·日本红灯时禁止所有方向通行。</p>
-<div class="box box-warn">
-  <div class="box-label">⚠️ 红灯时右转方法</div>
-  1. 在停止线·人行横道·交叉路口前<strong>必须暂时停车</strong><br>
-  2. 不得<strong>妨碍</strong>其他车辆通行<br>
-  3. 没有行人时即使行人信号为绿灯也可通过人行横道（2022年修订）<br><br>
-  <strong>例外：右转三色灯红灯时不可右转！</strong>（[附表2] 备注第3号）
-</div>
-
-<h3>黄灯</h3>
-<p>应在停止线前停车。如已进入交叉路口则迅速通过。<strong>黄灯时强行进入属于违反信号</strong>。</p>
-
-<h2>2-3. 闪烁信号灯</h2>
-<div class="illust">
-<svg viewBox="0 0 520 110" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
-  <rect x="10" y="10" width="240" height="90" rx="14" fill="#FFF8E1" stroke="#F9A825" stroke-width="2"/>
-  <circle cx="60" cy="55" r="24" fill="#FFC107" class="blink-yellow"/>
-  <text x="100" y="42" font-size="14" font-weight="900" fill="#E65100">黄色闪烁</text>
-  <text x="100" y="62" font-size="12" fill="#333">注意通行</text>
-  <text x="100" y="80" font-size="10" fill="#666">"黄灯闪烁 = 小心通过"</text>
-
-  <rect x="270" y="10" width="240" height="90" rx="14" fill="#FFEBEE" stroke="#C62828" stroke-width="2"/>
-  <circle cx="320" cy="55" r="24" fill="#F44336" class="blink-red"/>
-  <text x="360" y="42" font-size="14" font-weight="900" fill="#B71C1C">红色闪烁</text>
-  <text x="360" y="62" font-size="12" fill="#333">暂时停车后通行</text>
-  <text x="360" y="80" font-size="10" fill="#666">"红灯闪烁 = 停后再走"</text>
-</svg>
-</div>
-
-<h2>2-4. 行人信号灯</h2>
-<div class="table-wrap"><table>
-  <tr><th>信号</th><th>含义</th><th>行人行为</th></tr>
-  <tr><td style="color:#4CAF50;font-weight:700">绿灯</td><td>可以过马路</td><td>可通过人行横道</td></tr>
-  <tr><td style="color:#4CAF50;font-weight:700">绿灯闪烁</td><td>禁止开始过马路</td><td><strong>不可开始</strong>过马路。正在过马路时尽快完成或返回人行道</td></tr>
-  <tr><td style="color:#F44336;font-weight:700">红灯</td><td>禁止过马路</td><td>不得过马路</td></tr>
-</table></div>
-<div class="box box-tip">
-  <div class="box-label">💡 外国人常犯的错误</div>
-  "绿灯闪烁还是绿灯，快跑过去就行了吧？" → <strong>不对！</strong> 绿灯闪烁表示<strong>不可开始新的过马路</strong>。
-</div>
-
-<h2>2-5. 自行车信号灯</h2>
-<p>在设有自行车行驶信号灯的地方应遵守该信号。没有时遵守<strong>车辆信号灯</strong>（[附表2] 备注第1号）。自行车横道没有单独信号灯时遵守<strong>行人信号灯</strong>（备注第2号）。</p>
-
-<h2>2-6. 交通标志4种类（施行规则 [附表6]）</h2>
-<p><strong>交通标志</strong>是表示交通安全所需的注意·管制·指示等的标志牌或路面标记（第2条第16号）。</p>
-
-<div class="illust">
-<svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;">
-  <g transform="translate(30,5)">
-    <polygon points="75,8 145,125 5,125" fill="#E53935" stroke="#E53935" stroke-width="2" stroke-linejoin="round"/>
-    <polygon points="75,22 133,118 17,118" fill="#FFD600" stroke="none"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">警告</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">黄色+红色边框</text>
-  </g>
-  <g transform="translate(195,5)">
-    <circle cx="75" cy="68" r="58" fill="#fff" stroke="#E53935" stroke-width="7"/>
-    <line x1="34" y1="109" x2="116" y2="27" stroke="#E53935" stroke-width="7" stroke-linecap="round"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">管制</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">白色+红色边框</text>
-  </g>
-  <g transform="translate(370,5)">
-    <circle cx="75" cy="68" r="58" fill="#1565C0" stroke="#0D47A1" stroke-width="3"/>
-    <text x="75" y="150" text-anchor="middle" font-size="16" font-weight="900" fill="#333">指示</text>
-    <text x="75" y="168" text-anchor="middle" font-size="10" fill="#666">蓝底+白色</text>
-  </g>
-  <g transform="translate(545,5)">
-    <circle cx="75" cy="60" r="52" fill="#fff" stroke="#333" stroke-width="2.5"/>
-    <rect x="45" y="115" width="60" height="18" rx="2" fill="#fff" stroke="#333" stroke-width="2"/>
-    <text x="75" y="155" text-anchor="middle" font-size="16" font-weight="900" fill="#333">辅助</text>
-    <text x="75" y="173" text-anchor="middle" font-size="10" fill="#666">白底+黑色文字</text>
-  </g>
-</svg>
-<div class="illust-caption">交通标志4种类（施行规则 [附表6]）</div>
-</div>
-
-<div class="table-wrap"><table>
-  <tr><th>种类</th><th>形状</th><th>颜色</th><th>含义</th></tr>
-  <tr><td><strong>警告</strong></td><td>三角形</td><td>黄底 + 红色边框 + 黑色符号</td><td>危险警告</td></tr>
-  <tr><td><strong>管制</strong></td><td>圆形</td><td>白底 + 红色边框 + 黑色符号</td><td>禁止·限制</td></tr>
-  <tr><td><strong>指示</strong></td><td>圆形·方形</td><td>蓝底 + 白色符号</td><td>方向·方法引导</td></tr>
-  <tr><td><strong>辅助</strong></td><td>长方形</td><td>白底 + 黑色文字</td><td>主标志补充说明</td></tr>
-</table></div>
-
-<h3>常考的交通标志</h3>
-<p><strong>警告标志</strong>：有交叉路口、弯道、湿滑路面、落石、儿童保护、道路施工<br>
-<strong>管制标志</strong>：禁止通行、禁止驶入、分方向禁止、禁止停车及临时停车、禁止停车、限速、禁止超车<br>
-<strong>指示标志</strong>：直行、右转、左转、汽车专用道路、人行横道、单行道</p>
-
-<h2>2-7. 路面标记 — 中央线和车道线</h2>
-<div class="illust">
-<svg viewBox="0 0 700 110" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <rect x="30" y="24" width="120" height="7" rx="1" fill="#F9A825"/>
-  <text x="90" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#E65100">黄色实线 = 中央线</text>
-  <text x="90" y="65" text-anchor="middle" font-size="9" fill="#C62828">禁止越线（12大重大过失）</text>
-
-  <rect x="185" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <line x1="205" y1="28" x2="225" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="233" y1="28" x2="253" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="261" y1="28" x2="281" y2="28" stroke="#F9A825" stroke-width="5"/><line x1="289" y1="28" x2="309" y2="28" stroke="#F9A825" stroke-width="5"/>
-  <text x="265" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#E65100">黄色虚线 = 中央线</text>
-  <text x="265" y="65" text-anchor="middle" font-size="9" fill="#4CAF50">可超车</text>
-
-  <rect x="360" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <rect x="380" y="24" width="120" height="5" rx="1" fill="#999"/>
-  <text x="440" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#333">白色实线 = 车道线</text>
-  <text x="440" y="65" text-anchor="middle" font-size="9" fill="#C62828">限制变更车道</text>
-
-  <rect x="535" y="5" width="160" height="60" rx="8" fill="#F5F5F5"/>
-  <line x1="555" y1="27" x2="575" y2="27" stroke="#999" stroke-width="4"/><line x1="583" y1="27" x2="603" y2="27" stroke="#999" stroke-width="4"/><line x1="611" y1="27" x2="631" y2="27" stroke="#999" stroke-width="4"/><line x1="639" y1="27" x2="659" y2="27" stroke="#999" stroke-width="4"/>
-  <text x="615" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#333">白色虚线 = 车道线</text>
-  <text x="615" y="65" text-anchor="middle" font-size="9" fill="#4CAF50">可变更车道</text>
-
-  <rect x="10" y="78" width="685" height="26" rx="6" fill="#E3F2FD"/>
-  <text x="355" y="96" text-anchor="middle" font-size="11" fill="#1565C0" font-weight="600">📌 中央线 = 黄色 / 车道线 = 白色 | <tspan fill="#4CAF50">变更车道(O)</tspan> <tspan fill="#C62828" text-decoration="line-through">换车线(X)</tspan></text>
-</svg>
-</div>
-
-<h2>2-8. 练习题</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">信号灯与交警手势信号不同时？</div><div class="q-opts"><span>① 信号灯</span><span>② 手势信号</span><span>③ 都忽略</span><span>④ 自行判断</span></div><div class="q-answer">→ ②（第5条第2款）</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">红灯时右转应该？</div><div class="q-opts"><span>① 直接通过</span><span>② 暂时停车后可通过</span><span>③ 绝对不可</span><span>④ 慢行通过</span></div><div class="q-answer">→ ②（右转三色灯红灯时不可）</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">行人绿灯闪烁时行人应该？</div><div class="q-opts"><span>① 快跑过马路</span><span>② 禁止开始过马路，正在过马路时尽快完成</span><span>③ 停止</span><span>④ 跑着过</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">黄色三角形交通标志？</div><div class="q-opts"><span>① 禁止</span><span>② 指示</span><span>③ 危险警告</span><span>④ 辅助</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">中央线颜色？</div><div class="q-opts"><span>① 白色</span><span>② 黄色</span><span>③ 红色</span><span>④ 蓝色</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q6</div><div class="q-text">右转三色灯红灯时右转？</div><div class="q-opts"><span>① 可以</span><span>② 暂时停车后可以</span><span>③ 慢行后可以</span><span>④ 不可</span></div><div class="q-answer">→ ④（[附表2] 备注第3号）</div></div>
-<div class="q-item"><div class="q-num">Q7</div><div class="q-text">黄色闪烁灯的含义？</div><div class="q-opts"><span>① 暂时停车后通行</span><span>② 注意通行</span><span>③ 停车</span><span>④ 快速通过</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== 第3章 ===== -->
-<div class="ch-header green" id="ch3">
-  <div class="ch-num">CHAPTER 03</div>
-  <div class="ch-title-row"><div class="ch-title">交叉路口通行</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">左·右转方法、让行规则、环形交叉路口</div>
-</div>
-
-<h2>3-1. 左转方法（第25条第2款）</h2>
-<div class="box box-law">
-  <div class="box-label">📜 法律原文</div>
-  "所有车辆的驾驶员在交叉路口左转时，应<strong>提前沿道路中央线慢行</strong>，利用交叉路口的<strong>中心内侧</strong>进行左转。但在市·道警察厅长根据交叉路口情况认为特别需要而指定的地方，可以通过交叉路口中心外侧。"
-</div>
-<p>简单来说：左转前提前移到中央线一侧的车道（最内侧），慢行进入交叉路口后，沿中心的<strong>内侧</strong>转弯左转。</p>
-
-<div class="illust">
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;">
-  <rect x="150" y="0" width="100" height="300" fill="#ddd"/><rect x="0" y="100" width="400" height="100" fill="#ddd"/>
-  <line x1="200" y1="0" x2="200" y2="100" stroke="#F9A825" stroke-width="3"/><line x1="200" y1="200" x2="200" y2="300" stroke="#F9A825" stroke-width="3"/>
-  <line x1="0" y1="150" x2="150" y2="150" stroke="#F9A825" stroke-width="3"/><line x1="250" y1="150" x2="400" y2="150" stroke="#F9A825" stroke-width="3"/>
-  <circle cx="200" cy="150" r="6" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="3"/><text x="212" y="148" font-size="9" fill="#666">中心</text>
-  <path d="M215,275 L215,168 Q215,152 198,152 L90,152" fill="none" stroke="#4CAF50" stroke-width="4" marker-end="url(#ag)"/>
-  <text x="105" y="138" font-size="11" fill="#4CAF50" font-weight="700">✅ 中心内侧</text>
-  <path d="M215,275 L215,195 Q215,115 165,115 L55,115" fill="none" stroke="#F44336" stroke-width="2.5" stroke-dasharray="6" opacity=".5"/>
-  <text x="55" y="105" font-size="10" fill="#F44336" font-weight="700">✕ 外侧</text>
-  <rect x="208" y="258" width="14" height="22" rx="3" fill="#1565C0"/>
-  <defs><marker id="ag" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#4CAF50"/></marker></defs>
-</svg>
-<div class="illust-caption">左转：提前移至中央线一侧车道 → 利用交叉路口中心内侧</div>
-</div>
-
-<h2>3-2. 右转方法（第25条第1款）</h2>
-<div class="box box-law">
-  <div class="box-label">📜 法律原文</div>
-  "所有车辆的驾驶员在交叉路口右转时，应提前沿道路的<strong>右侧边缘</strong>慢行进行右转。此时，右转车辆的驾驶员应注意根据信号停止或通行的行人或自行车等。"
-</div>
-
-<h2>3-3. 无交通管制的交叉路口 — 让行规则（第26条）</h2>
-<div class="table-wrap"><table>
-  <tr><th>条款</th><th>情况</th><th>让行规则</th></tr>
-  <tr><td>第1款</td><td>已进入车辆 vs 准备进入车辆</td><td><strong>已进入的车辆</strong>优先</td></tr>
-  <tr><td>第2款</td><td>宽道路 vs 窄道路</td><td><strong>宽道路</strong>的车辆优先</td></tr>
-  <tr><td>第3款</td><td>道路宽度相同时同时进入</td><td>向<strong>右侧道路</strong>的车辆让行</td></tr>
-  <tr><td>第4款</td><td>左转 vs 直行·右转</td><td><strong>直行·右转</strong>车辆优先</td></tr>
-</table></div>
-<div class="box box-tip">
-  <div class="box-label">💡 记忆口诀</div>
-  "先进入 > 宽道路 > 右侧车 > 直行·右转优先于左转"
-</div>
-
-<h2>3-4. 环形交叉路口（第25条之2）</h2>
-<div class="box box-info">
-  <div class="box-label">✅ 环形交叉路口核心</div>
-  • <strong>逆时针方向</strong>通行<br>• 进入时<strong>慢行或暂时停车</strong><br>• 向已在环内的车辆<strong>让行</strong><br>• 反方向行驶 = 违规（大法院 2017도9392）
-</div>
-
-<h2>3-5. 慢行·暂时停车地点（第31条）</h2>
-<div class="table-wrap"><table>
-  <tr><th>区分</th><th>地点</th></tr>
-  <tr><td><strong>慢行</strong></td><td>无交通管制的交叉路口 / 弯道 / 山顶 / 陡下坡 / 交通标志指定处</td></tr>
-  <tr><td><strong>暂时停车</strong></td><td>左右视野不良或交通繁忙的交叉路口 / 交通标志指定处</td></tr>
-</table></div>
-
-<h2>3-6. 禁止在交叉路口内堵塞（第25条第5款）</h2>
-<p>因前方进路的交通状况可能导致在交叉路口内停车并妨碍其他车辆通行时，<strong>不得驶入</strong>该交叉路口。</p>
-
-<h2>3-7. 练习题</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">无交通管制的交叉路口道路宽度相同时？</div><div class="q-opts"><span>① 先到的车</span><span>② 左侧车</span><span>③ 右侧车</span><span>④ 大车</span></div><div class="q-answer">→ ③（第26条第3款）</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">环形交叉路口通行方向？</div><div class="q-opts"><span>① 顺时针</span><span>② 逆时针</span><span>③ 双向</span><span>④ 仅直行</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">左转时走交叉路口的哪一侧？</div><div class="q-opts"><span>① 中心外侧</span><span>② 中心内侧</span><span>③ 右侧边缘</span><span>④ 左侧边缘</span></div><div class="q-answer">→ ②（第25条第2款）</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">左转车 vs 直行车？</div><div class="q-opts"><span>① 左转优先</span><span>② 直行优先</span><span>③ 大车优先</span><span>④ 同时通行</span></div><div class="q-answer">→ ②（第26条第4款）</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">无交通管制且交通繁忙的交叉路口？</div><div class="q-opts"><span>① 慢行</span><span>② 暂时停车</span><span>③ 保持速度</span><span>④ 鸣喇叭</span></div><div class="q-answer">→ ②（第31条第2款）</div></div>
-</div>
-
-
-<!-- ===== 第4章 ===== -->
-<div class="ch-header" id="ch4">
-  <div class="ch-num">CHAPTER 04</div>
-  <div class="ch-title-row"><div class="ch-title">速度与安全距离</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">各类道路限速、慢行、禁止超车地点</div>
-</div>
-
-<h2>4-1. 速度限制</h2>
-<div class="table-wrap"><table>
-  <tr><th>道路</th><th>最高速度</th><th>最低速度</th></tr>
-  <tr><td>高速公路（单向2车道+）</td><td>100~120km/h</td><td>50km/h</td></tr>
-  <tr><td>高速公路（单向1车道）</td><td>80km/h</td><td>50km/h</td></tr>
-  <tr><td>汽车专用道路</td><td>90km/h</td><td>30km/h</td></tr>
-  <tr><td>一般道路（单向2车道+）</td><td>80km/h</td><td>-</td></tr>
-  <tr><td>一般道路（其他）</td><td>60km/h</td><td>-</td></tr>
-  <tr style="color:#C62828;font-weight:700"><td>儿童·老人·残疾人保护区域</td><td>30km/h</td><td>-</td></tr>
-</table></div>
-<p>⚠️ 交通标志指定了不同速度时，应遵守<strong>交通标志的速度</strong>。</p>
-
-<h2>4-2. 慢行</h2>
-<p><strong>慢行（能立即停车的速度）</strong> = 能够立即停车的缓慢速度（第2条第28号）。不是具体的"时速多少km"。交通安全设施使用<strong>"慢行"</strong>的标记。</p>
-
-<h2>4-3. 安全距离（第19条）</h2>
-<p>必须保持即使前车突然停车也能避免碰撞的距离。速度越快、天气越恶劣，距离需<strong>越远</strong>。高速公路100km/h行驶时需约100m以上。</p>
-
-<h2>4-4. 禁止超车地点（第22条第3款）</h2>
-<div class="box box-warn">
-  <div class="box-label">⚠️ 法律条文原文（4项）</div>
-  <strong>第1号.</strong> 交叉路口<br>
-  <strong>第2号.</strong> 隧道内<br>
-  <strong>第3号.</strong> 桥上<br>
-  <strong>第4号.</strong> 道路弯道、坡道山顶附近或陡坡下坡等市·道警察厅长以交通标志指定的地方
-</div>
-<p>超车应从前车的<strong>左侧</strong>进行（第21条）。当前车因左转而靠近中央线时，可从<strong>右侧</strong>超车。</p>
-
-<h2>4-5. 练习题</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">儿童保护区域最高速度？</div><div class="q-opts"><span>① 50km/h</span><span>② 40km/h</span><span>③ 30km/h</span><span>④ 20km/h</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">不属于禁止超车地点的是？</div><div class="q-opts"><span>① 交叉路口</span><span>② 隧道</span><span>③ 直线道路</span><span>④ 桥上</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">"慢行"的定义？</div><div class="q-opts"><span>① 时速20km</span><span>② 时速30km</span><span>③ 能立即停车的缓慢速度</span><span>④ 时速10km</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">超车应从前车的哪一侧？</div><div class="q-opts"><span>① 左侧</span><span>② 右侧</span><span>③ 任一侧</span><span>④ 视情况而定</span></div><div class="q-answer">→ ①</div></div>
-</div>
-
-
-<!-- ===== 第5章 ===== -->
-<div class="ch-header green" id="ch5">
-  <div class="ch-num">CHAPTER 05</div>
-  <div class="ch-title-row"><div class="ch-title">行人保护</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">韩国道路交通法的核心价值 — 违反行人保护属于12大重大过失</div>
-</div>
-
-<h2>5-1. 行人通行方法（第8条、第10条）</h2>
-<p><strong>有人行道的道路</strong>：行人应在人行道上通行。<br>
-<strong>没有人行道的道路</strong>：在路边区域或道路的<strong>左侧边缘</strong>通行（第8条）。左侧危险时也可走右侧。<br>
-<strong>横穿</strong>：有人行横道的地方必须通过人行横道过马路（第10条）。</p>
-
-<h2>5-2. 人行横道上的行人保护（第27条）</h2>
-
-<h3>核心原则 — 行人正在过马路时必须暂时停车</h3>
-<div class="table-wrap"><table>
-  <tr><th>情况</th><th>条款</th><th>驾驶员义务</th></tr>
-  <tr><td>有信号的人行横道上行人正在过马路</td><td>第27条第1款</td><td><strong>暂时停车</strong></td></tr>
-  <tr><td>无信号的人行横道上行人正在或准备过马路</td><td>第27条第6款</td><td><strong>暂时停车</strong></td></tr>
-  <tr><td>无人行横道的道路上行人正在过马路</td><td>第27条第5款</td><td>保持安全距离<strong>暂时停车</strong></td></tr>
-</table></div>
-<div class="box box-warn">
-  <div class="box-label">⚠️ 违反行人保护的后果</div>
-  违反人行横道行人保护义务导致事故的，属于交通事故处理特例法上的<strong>12大重大过失</strong>。无论是否有保险，均将受到<strong>刑事处罚</strong>。
-</div>
-
-<h2>5-3. 禁止侵入人行道（第13条）</h2>
-<p>车辆<strong>不得侵入人行道</strong>。侵入人行道属于12大重大过失。因进入建筑物不得不横穿人行道时，应在人行道前<strong>暂时停车</strong>，不得妨碍行人通行。</p>
-
-<h2>5-4. 儿童保护区域 — 学区（第12条）</h2>
-<p>设置在小学、幼儿园、托儿所等周边道路。</p>
-<div class="table-wrap"><table>
-  <tr><th>项目</th><th>内容</th></tr>
-  <tr><td>最高速度</td><td><strong>30km/h</strong>（联合部令第9条）</td></tr>
-  <tr><td>停车及临时停车</td><td>交通标志指定区间<strong>禁止</strong></td></tr>
-  <tr><td>发生事故时</td><td><strong>12大重大过失</strong> → 刑事处罚</td></tr>
-  <tr><td>罚款·扣分（08~20时）</td><td>一般道路的<strong>最高2倍</strong></td></tr>
-</table></div>
-
-<h2>5-5. 老人·残疾人保护区域（第12条之2）</h2>
-<p>设置在养老福利设施、残疾人福利设施、公园、体育设施等周边半径300m。与儿童保护区域一样，适用<strong>30km/h以下</strong>、罚款·扣分2倍。</p>
-
-<h2>5-6. 行人专用道路·行人优先道路</h2>
-<p><strong>行人专用道路</strong>：仅行人通行的道路（第2条第31号）。原则上禁止车辆通行。<br>
-<strong>行人优先道路</strong>：车道·人行道未分离的道路中行人优先的道路（第2条第31号之2）。车辆限速30km/h以下。</p>
-
-<h2>5-7. 练习题</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">人行横道上行人过马路时驾驶员应该？</div><div class="q-opts"><span>① 慢行</span><span>② 鸣喇叭</span><span>③ 暂时停车</span><span>④ 保持速度</span></div><div class="q-answer">→ ③（第27条）</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">儿童保护区域速度和事故时？</div><div class="q-opts"><span>① 50km/h，保险处理</span><span>② 30km/h，刑事处罚</span><span>③ 40km/h，罚款</span><span>④ 60km/h，罚金</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">横穿人行道进入建筑物时？</div><div class="q-opts"><span>① 慢行</span><span>② 鸣喇叭</span><span>③ 人行道前暂时停车</span><span>④ 直接驶入</span></div><div class="q-answer">→ ③（第13条）</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">没有人行道的道路上行人通行方向？</div><div class="q-opts"><span>① 右侧</span><span>② 左侧</span><span>③ 中间</span><span>④ 任意一侧</span></div><div class="q-answer">→ ②（第8条）</div></div>
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">保护区域08~20时违反信号扣分与一般相比？</div><div class="q-opts"><span>① 相同</span><span>② 1.5倍</span><span>③ 2倍</span><span>④ 3倍</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-
-<!-- ===== 第6章 ===== -->
-<div class="ch-header red-h" id="ch6">
-  <div class="ch-num">CHAPTER 06</div>
-  <div class="ch-title-row"><div class="ch-title">酒驾与处罚</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">请准确记住2019年强化后的标准数值</div>
-</div>
-
-<h2>6-1. 禁止酒后驾车（第44条）</h2>
-<p>任何人不得在醉酒状态下驾驶机动车。因为是"任何人"，所以无论是否持有驾照均适用。</p>
-
-<div class="box box-law">
-  <div class="box-label">📜 法律原文（第44条第4款）</div>
-  "根据第1款禁止驾驶的醉酒状态标准为驾驶员血液酒精浓度（BAC）达到<strong>0.03%以上</strong>的情况。"
-</div>
-
-<h2>6-2. 处罚标准</h2>
-<div class="illust">
-<svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="5" width="210" height="90" rx="12" fill="#FFF8E1" stroke="#F9A825" stroke-width="2"/>
-  <text x="115" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#E65100">0.03% ~ 0.08%</text>
-  <text x="115" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#E65100">驾照暂扣</text>
-  <text x="115" y="75" text-anchor="middle" font-size="10" fill="#666">（100天）/ 1年↓有期徒刑·500万韩元↓罚金</text>
-
-  <rect x="245" y="5" width="210" height="90" rx="12" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
-  <text x="350" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#C62828">0.08% ~ 0.2%</text>
-  <text x="350" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#C62828">驾照吊销</text>
-  <text x="350" y="75" text-anchor="middle" font-size="9" fill="#666">1~2年有期徒刑 / 500万~1000万韩元</text>
-
-  <rect x="480" y="5" width="210" height="90" rx="12" fill="#B71C1C"/>
-  <text x="585" y="30" text-anchor="middle" font-size="12" font-weight="700" fill="#FFCDD2">0.2%以上</text>
-  <text x="585" y="55" text-anchor="middle" font-size="17" font-weight="900" fill="#fff">驾照吊销</text>
-  <text x="585" y="75" text-anchor="middle" font-size="9" fill="#FFCDD2">2~5年有期徒刑 / 1000万~2000万韩元</text>
-</svg>
-<div class="illust-caption">2019年修订：标准从0.05% → <strong>0.03%</strong>（1~2杯烧酒即可超标）</div>
-</div>
-
-<h2>6-3. 酒精检测与拒绝</h2>
-<p>交警可通过<strong>呼气检测</strong>测定是否饮酒，驾驶员<strong>必须配合</strong>（第44条第2款）。对结果不服时可通过<strong>抽血检测</strong>重新测定（需驾驶员同意）。</p>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ 拒绝酒精检测时</div>
-  <strong>1~5年以下有期徒刑</strong>或<strong>500万~2000万韩元罚金</strong> + 驾照<strong>吊销</strong><br>
-  即使拒绝也无法逃避处罚！反而会受到<strong>更重的处罚</strong>。
-</div>
-
-<h2>6-4. 酒驾的成立范围</h2>
-<p>不仅在道路上，在<strong>停车场等道路以外的场所</strong>也成立。即使驾驶距离只有30cm也是酒驾（大法院 2007도678）。发动引擎完成起步操作即视为开始驾驶。</p>
-
-<h2>6-5. 药物驾驶（第45条）</h2>
-<p>在麻醉药品·精神药品等药物影响下驾驶也同样受到处罚。</p>
-
-<h2>6-6. 练习题</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">驾照吊销的血液酒精浓度（BAC）标准？</div><div class="q-opts"><span>① 0.03%</span><span>② 0.05%</span><span>③ 0.08%</span><span>④ 0.1%</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">拒绝酒精检测时？</div><div class="q-opts"><span>① 仅罚金</span><span>② 驾照暂扣</span><span>③ 警告</span><span>④ 驾照吊销+刑事处罚</span></div><div class="q-answer">→ ④</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">现行酒驾标准？</div><div class="q-opts"><span>① 0.01%</span><span>② 0.03%</span><span>③ 0.05%</span><span>④ 0.08%</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== 第7章 ===== -->
-<div class="ch-header amber-h" id="ch7">
-  <div class="ch-num">CHAPTER 07</div>
-  <div class="ch-title-row"><div class="ch-title">紧急情况应对</div><div class="ch-stars">★★</div></div>
-  <div class="ch-desc">事故处置、紧急车辆让行、铁路道口、故障时</div>
-</div>
-
-<h2>7-1. 交通事故发生时的处置（第54条）</h2>
-<div class="illust">
-<svg viewBox="0 0 700 70" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
-  <rect x="10" y="10" width="140" height="50" rx="8" fill="#1565C0"/><text x="80" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">① 立即停车</text>
-  <text x="160" y="40" font-size="14" fill="#999">→</text>
-  <rect x="175" y="10" width="140" height="50" rx="8" fill="#2E7D32"/><text x="245" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">② 救助伤员</text>
-  <text x="325" y="40" font-size="14" fill="#999">→</text>
-  <rect x="340" y="10" width="150" height="50" rx="8" fill="#E65100"/><text x="415" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">③ 报警 ☎112·119</text>
-  <text x="500" y="40" font-size="14" fill="#999">→</text>
-  <rect x="515" y="10" width="140" height="50" rx="8" fill="#6A1B9A"/><text x="585" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">④ 保护现场</text>
-</svg>
-</div>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ 逃逸（肇事逃逸）的后果</div>
-  • 被害人死亡后逃逸：<strong>无期徒刑或5年以上有期徒刑</strong><br>
-  • 被害人受伤后逃逸：<strong>1~30年有期徒刑</strong>或<strong>500万~3000万韩元罚金</strong><br>
-  • 即使是轻微接触事故离开现场也是肇事逃逸！
-</div>
-
-<h2>7-2. 紧急车辆让行（第29条）</h2>
-<p>紧急车辆（消防车、救护车、警车等）接近时：</p>
-<div class="table-wrap"><table>
-  <tr><th>情况</th><th>行为</th></tr>
-  <tr><td>交叉路口或其附近</td><td>避开交叉路口<strong>暂时停车</strong></td></tr>
-  <tr><td>非交叉路口处</td><td>靠<strong>右侧边缘</strong>暂时停车</td></tr>
-</table></div>
-
-<h2>7-3. 铁路道口（第24条）</h2>
-<p>所有车辆在道口前必须<strong>暂时停车</strong>确认安全后通过。栏杆下降·警报器响时<strong>绝对禁止进入</strong>。违反属于<strong>12大重大过失</strong>。</p>
-<p>在道口内故障时：① 乘客撤离 → ② 发送紧急信号 → ③ 将车辆移至外</p>
-
-<h2>7-4. 故障时的处置（第66条）</h2>
-<p>靠右停车 → 开启双闪 → 在高速公路车辆后方<strong>100m以上</strong>处放置三角警告牌。夜间应在500m处可辨识的地方放置红色标志。</p>
-
-<h2>7-5. 练习题</h2>
-<div class="quiz-section">
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">事故后最先应该？</div><div class="q-opts"><span>① 联系保险公司</span><span>② 立即停车+救助伤员</span><span>③ 移动车辆</span><span>④ 寻找目击者</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">紧急车辆接近交叉路口时？</div><div class="q-opts"><span>① 快速通过</span><span>② 避开交叉路口暂时停车</span><span>③ 向左让行</span><span>④ 加速</span></div><div class="q-answer">→ ②</div></div>
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">铁路道口前应该？</div><div class="q-opts"><span>① 慢行</span><span>② 鸣喇叭后通过</span><span>③ 暂时停车+确认安全</span><span>④ 快速通过</span></div><div class="q-answer">→ ③</div></div>
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">高速公路故障时三角警告牌距离？</div><div class="q-opts"><span>① 50m</span><span>② 100m</span><span>③ 150m</span><span>④ 200m</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-
-<!-- ===== 第8章 ===== -->
-<div class="ch-header purple-h" id="ch8">
-  <div class="ch-num">CHAPTER 08</div>
-  <div class="ch-title-row"><div class="ch-title">了解韩国交通文化</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">安全带、手机、停车及临时停车、夜间驾驶</div>
-</div>
-
-<h2>8-1. 基本事项</h2>
-<p><strong>右侧通行</strong>（第13条）/ 左舵 / 速度单位km/h。来自英国·日本·澳大利亚等左侧通行国家的朋友请特别注意。</p>
-
-<h2>8-2. 必须遵守事项</h2>
-<div class="table-wrap"><table>
-  <tr><th>项目</th><th>义务</th><th>正确术语</th></tr>
-  <tr><td>安全带</td><td><strong>全部座位</strong>系好（第50条）— 包括后排</td><td><span class="term-o">안전띠（安全带）</span></td></tr>
-  <tr><td>转向</td><td>变更车道·转弯·临时停车时使用（第38条）</td><td><span class="term-o">방향지시등（转向灯）</span></td></tr>
-  <tr><td>喇叭</td><td>仅在防止危险时使用（第49条）</td><td><span class="term-o">경음기（喇叭）</span></td></tr>
-  <tr><td>手机</td><td>禁止手持使用（第49条）。请使用免提·支架</td><td>-</td></tr>
-</table></div>
-
-<h2>8-3. 停车及临时停车规定</h2>
-<h3>停车与临时停车的区别</h3>
-<p><strong>停车</strong>：持续停止或驾驶员离开无法立即出发（第2条第24号）<br>
-<strong>临时停车（5分钟以内）</strong>：5分钟以内停止，驾驶员在车内且可立即出发（第2条第25号）</p>
-
-<h3>禁止地点·距离（第32条）</h3>
-<div class="table-wrap"><table>
-  <tr><th>地点</th><th>距离</th></tr>
-  <tr><td>交叉路口·人行横道·道口·道路转角</td><td><strong>5m</strong>以内</td></tr>
-  <tr><td>安全地带四周</td><td><strong>10m</strong>以内</td></tr>
-  <tr><td>公交站牌</td><td><strong>10m</strong>以内</td></tr>
-  <tr><td>火灾报警器</td><td><strong>3m</strong>以内</td></tr>
-  <tr><td>隧道内、桥上</td><td>全区间</td></tr>
-</table></div>
-
-<div class="box box-tip">
-  <div class="box-label">💡 高频考点</div>
-  <strong>"禁止停车"标志处临时停车5分钟？</strong> → <strong>允许</strong>（禁止停车 ≠ 禁止临时停车）<br>
-  <strong>"禁止停车及临时停车"标志处短暂停车？</strong> → <strong>违规</strong>
-</div>
-
-<h2>8-4. 夜间驾驶（第37条）</h2>
-<p>会车或紧跟前车时 → 前照灯<strong>切换为近光</strong>。使用远光灯妨碍对方视线时事故风险大幅增加。</p>
-
-
-<!-- ===== 第9章 ===== -->
-<div class="ch-header" id="ch9">
-  <div class="ch-num">CHAPTER 09</div>
-  <div class="ch-title-row"><div class="ch-title">技能考试·道路驾驶考试合格策略</div><div class="ch-stars">★</div></div>
-  <div class="ch-desc">考试流程、合格标准、扣分·淘汰项目、合格技巧</div>
-</div>
-
-<h2>9-1. 合格标准</h2>
-<div class="table-wrap"><table>
-  <tr><th>考试</th><th>第1类</th><th>第2类</th></tr>
-  <tr><td>笔试（40题/40分钟）</td><td><strong>70分</strong></td><td><strong>60分</strong></td></tr>
-  <tr><td>技能</td><td><strong>80分</strong></td><td><strong>80分</strong></td></tr>
-  <tr><td>道路驾驶</td><td><strong>70分</strong></td><td><strong>70分</strong></td></tr>
-</table></div>
-
-<div class="box box-warn">
-  <div class="box-label">⚠️ 道路驾驶考试应试语言</div>
-  <strong>仅限韩语·英语</strong>（中文·越南语不可）
-</div>
-
-<h2>9-2. 技能考试扣分项目</h2>
-<p>出发前未系安全带、未使用转向灯、急起步·急刹车、偏离路线、未在指定位置停车等会被扣分。</p>
-
-<h2>9-3. 道路驾驶考试淘汰·扣分</h2>
-<p><strong>直接淘汰</strong>：违反信号、越过中央线、发生事故<br>
-<strong>扣分</strong>：未系安全带、未使用转向灯、未进行安全确认、超速</p>
-
-<h2>9-4. 5个合格技巧</h2>
-<p>1. <strong>安全带</strong> 发动前系好 — 防止不必要扣分<br>
-2. <strong>转向灯</strong> 每次转向前提前打开<br>
-3. 严格遵守<strong>速度限制</strong> — 超速会大幅扣分或淘汰<br>
-4. 黄灯时<strong>不要勉强进入</strong><br>
-5. 左右确认、侧视镜确认 — <strong>夸张地转头</strong>确认效果更好</p>
-
-
-<!-- ===== 第10章（原50题） ===== -->
-<div class="ch-header red-h" id="ch10">
-  <div class="ch-num">CHAPTER 10</div>
-  <div class="ch-title-row"><div class="ch-title">实战练习核心50题</div><div class="ch-stars">★★★</div></div>
-  <div class="ch-desc">40题/40分钟 · 合格：第1类70分 / 第2类60分</div>
-</div>
-
-<div class="quiz-section">
-<h3>📝 文字型备考（Q1~Q21）</h3>
-
-<div class="q-item"><div class="q-num">Q1</div><div class="q-text">信号灯信号与交警手势信号不同时？</div><div class="q-opts"><span>① 信号灯</span><span>② 手势信号</span><span>③ 都忽略</span><span>④ 自行判断</span></div><div class="q-answer">→ ②（第5条第2款）</div></div>
-
-<div class="q-item"><div class="q-num">Q2</div><div class="q-text">酒驾标准血液酒精浓度（BAC）是？</div><div class="q-opts"><span>① 0.01%</span><span>② 0.03%</span><span>③ 0.05%</span><span>④ 0.08%</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q3</div><div class="q-text">交通事故后最先应该做什么？</div><div class="q-opts"><span>① 联系保险公司</span><span>② 寻找目击者</span><span>③ 立即停车并救助伤员</span><span>④ 修理车辆</span></div><div class="q-answer">→ ③（第54条）</div></div>
-
-<div class="q-item"><div class="q-num">Q4</div><div class="q-text">儿童保护区域最高速度是？</div><div class="q-opts"><span>① 60km/h</span><span>② 50km/h</span><span>③ 40km/h</span><span>④ 30km/h</span></div><div class="q-answer">→ ④</div></div>
-
-<div class="q-item"><div class="q-num">Q5</div><div class="q-text">不属于禁止超车地点的是？</div><div class="q-opts"><span>① 交叉路口</span><span>② 隧道内</span><span>③ 直线道路</span><span>④ 桥上</span></div><div class="q-answer">→ ③（第22条第3款）</div></div>
-
-<div class="q-item"><div class="q-num">Q6</div><div class="q-text">人行横道上行人过马路时驾驶员的义务是？</div><div class="q-opts"><span>① 慢行</span><span>② 鸣喇叭</span><span>③ 暂时停车</span><span>④ 保持速度</span></div><div class="q-answer">→ ③（第27条）</div></div>
-
-<div class="q-item"><div class="q-num">Q7</div><div class="q-text">拒绝酒精检测时？</div><div class="q-opts"><span>① 警告</span><span>② 驾照暂扣</span><span>③ 仅罚金</span><span>④ 驾照吊销+刑事处罚</span></div><div class="q-answer">→ ④</div></div>
-
-<div class="q-item"><div class="q-num">Q8</div><div class="q-text">紧急车辆接近交叉路口时？</div><div class="q-opts"><span>① 快速通过</span><span>② 避开交叉路口暂时停车</span><span>③ 向左让行</span><span>④ 加速</span></div><div class="q-answer">→ ②（第29条）</div></div>
-
-<div class="q-item"><div class="q-num">Q9</div><div class="q-text">不属于慢行地点的是？</div><div class="q-opts"><span>① 无交通管制的交叉路口</span><span>② 弯道</span><span>③ 直线高速公路</span><span>④ 陡下坡</span></div><div class="q-answer">→ ③（第31条）</div></div>
-
-<div class="q-item"><div class="q-num">Q10</div><div class="q-text">铁路道口前应该？</div><div class="q-opts"><span>① 慢行通过</span><span>② 鸣喇叭后通过</span><span>③ 暂时停车后确认安全</span><span>④ 快速通过</span></div><div class="q-answer">→ ③（第24条）</div></div>
-
-<div class="q-item"><div class="q-num">Q11</div><div class="q-text">夜间会车时 → 前照灯？</div><div class="q-opts"><span>① 远光</span><span>② 近光</span><span>③ 关闭</span><span>④ 双闪</span></div><div class="q-answer">→ ②（第37条）</div></div>
-
-<div class="q-item"><div class="q-num">Q12</div><div class="q-text">驾驶中使用手机？</div><div class="q-opts"><span>① 可自由使用</span><span>② 禁止手持使用</span><span>③ 仅红灯时可用</span><span>④ 无规定</span></div><div class="q-answer">→ ②（第49条）</div></div>
-
-<div class="q-item"><div class="q-num">Q13</div><div class="q-text">无交通管制的交叉路口，道路宽度相同时优先权？</div><div class="q-opts"><span>① 左侧车</span><span>② 右侧车</span><span>③ 先到的车</span><span>④ 大车</span></div><div class="q-answer">→ ②（第26条第3款）</div></div>
-
-<div class="q-item"><div class="q-num">Q14</div><div class="q-text">左转时走交叉路口的哪一侧？</div><div class="q-opts"><span>① 中心外侧</span><span>② 中心内侧</span><span>③ 左侧边缘</span><span>④ 右侧边缘</span></div><div class="q-answer">→ ②（第25条第2款）</div></div>
-
-<div class="q-item"><div class="q-num">Q15</div><div class="q-text">环形交叉路口通行方向？</div><div class="q-opts"><span>① 顺时针</span><span>② 逆时针</span><span>③ 任意方向</span><span>④ 仅直行</span></div><div class="q-answer">→ ②（第25条之2）</div></div>
-
-<div class="q-item"><div class="q-num">Q16</div><div class="q-text">"慢行"的定义？</div><div class="q-opts"><span>① 时速20km</span><span>② 时速30km</span><span>③ 能立即停车的缓慢速度</span><span>④ 时速10km</span></div><div class="q-answer">→ ③（第2条第28号）</div></div>
-
-<div class="q-item"><div class="q-num">Q17</div><div class="q-text">横穿人行道进入建筑物时？</div><div class="q-opts"><span>① 慢行</span><span>② 鸣喇叭</span><span>③ 人行道前暂时停车</span><span>④ 直接驶入</span></div><div class="q-answer">→ ③（第13条）</div></div>
-
-<div class="q-item"><div class="q-num">Q18</div><div class="q-text">交叉路口禁止停车及临时停车的距离？</div><div class="q-opts"><span>① 3m</span><span>② 5m</span><span>③ 10m</span><span>④ 15m</span></div><div class="q-answer">→ ②（第32条）</div></div>
-
-<div class="q-item"><div class="q-num">Q19</div><div class="q-text">安全带的系戴对象？</div><div class="q-opts"><span>① 仅驾驶员</span><span>② 仅前排</span><span>③ 全部座位</span><span>④ 后排可选</span></div><div class="q-answer">→ ③（第50条）</div></div>
-
-<div class="q-item"><div class="q-num">Q20</div><div class="q-text">高速公路故障时三角警告牌距离？</div><div class="q-opts"><span>① 50m</span><span>② 100m</span><span>③ 150m</span><span>④ 200m</span></div><div class="q-answer">→ ②（第66条）</div></div>
-
-<div class="q-item"><div class="q-num">Q21</div><div class="q-text">超车应从前车的哪一侧？</div><div class="q-opts"><span>① 左侧</span><span>② 右侧</span><span>③ 任一侧</span><span>④ 视情况而定</span></div><div class="q-answer">→ ①（第21条）</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🖼️ 插图型·照片型备考（Q22~Q34）</h3>
-
-<div class="q-item"><div class="q-num">Q22</div><div class="q-text">绿灯时可以做什么？</div><div class="q-opts"><span>① 直行或右转</span><span>② 左转</span><span>③ 调头</span><span>④ 所有方向</span></div><div class="q-answer">→ ①</div></div>
-
-<div class="q-item"><div class="q-num">Q23</div><div class="q-text">红灯时右转？</div><div class="q-opts"><span>① 直接通过</span><span>② 暂时停车后可通过</span><span>③ 绝对不可</span><span>④ 慢行通过</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q24</div><div class="q-text">右转三色灯红灯时右转？</div><div class="q-opts"><span>① 可以</span><span>② 暂时停车后可以</span><span>③ 慢行后可以</span><span>④ 不可</span></div><div class="q-answer">→ ④（[附表2] 备注第3号）</div></div>
-
-<div class="q-item"><div class="q-num">Q25</div><div class="q-text">黄色闪烁灯？</div><div class="q-opts"><span>① 暂时停车后通行</span><span>② 注意通行</span><span>③ 停车</span><span>④ 快速通过</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q26</div><div class="q-text">红色闪烁灯？</div><div class="q-opts"><span>① 注意通行</span><span>② 暂时停车后通行</span><span>③ 停车</span><span>④ 慢行</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q27</div><div class="q-text">行人信号绿灯闪烁时？</div><div class="q-opts"><span>① 快跑过马路</span><span>② 禁止开始过马路，正在过马路时尽快完成</span><span>③ 原地停止</span><span>④ 跑着过</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q28</div><div class="q-text">黄色三角形交通标志？</div><div class="q-opts"><span>① 禁止</span><span>② 方向指示</span><span>③ 危险警告</span><span>④ 限速</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q29</div><div class="q-text">红色边框圆形交通标志？</div><div class="q-opts"><span>① 警告</span><span>② 管制（禁止·限制）</span><span>③ 指示</span><span>④ 辅助</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q30</div><div class="q-text">蓝色圆形交通标志？</div><div class="q-opts"><span>① 警告</span><span>② 管制</span><span>③ 指示（方向·方法）</span><span>④ 辅助</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q31</div><div class="q-text">中央线颜色？</div><div class="q-opts"><span>① 白色</span><span>② 黄色</span><span>③ 红色</span><span>④ 蓝色</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q32</div><div class="q-text">白色虚线？</div><div class="q-opts"><span>① 可变更车道</span><span>② 禁止变更车道</span><span>③ 中央线</span><span>④ 停止线</span></div><div class="q-answer">→ ①</div></div>
-
-<div class="q-item"><div class="q-num">Q33</div><div class="q-text">白色实线？</div><div class="q-opts"><span>① 可变更车道</span><span>② 限制变更车道</span><span>③ 中央线</span><span>④ 人行横道</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q34</div><div class="q-text">黄色实线中央线？</div><div class="q-opts"><span>① 可超车</span><span>② 不可越线</span><span>③ 可变更车道</span><span>④ 慢行区间</span></div><div class="q-answer">→ ②</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🚸 交通标志型备考（Q35~Q39）</h3>
-
-<div class="q-item"><div class="q-num">Q35</div><div class="q-text">"禁止停车"标志处临时停车5分钟？</div><div class="q-opts"><span>① 违规</span><span>② 允许</span><span>③ 罚金</span><span>④ 10分钟以内可以</span></div><div class="q-answer">→ ②（禁止停车 ≠ 禁止临时停车）</div></div>
-
-<div class="q-item"><div class="q-num">Q36</div><div class="q-text">"禁止停车及临时停车"标志处短暂停车？</div><div class="q-opts"><span>① 允许</span><span>② 3分钟以内可以</span><span>③ 违规</span><span>④ 有乘客时可以</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q37</div><div class="q-text">"限速50"的道路上？</div><div class="q-opts"><span>① 50以上</span><span>② 50以下</span><span>③ 正好50</span><span>④ 60以下</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q38</div><div class="q-text">"禁止超车"区间？</div><div class="q-opts"><span>① 允许</span><span>② 慢行时可以</span><span>③ 违规</span><span>④ 仅大型车禁止</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q39</div><div class="q-text">"单行道"上反方向行驶？</div><div class="q-opts"><span>① 允许</span><span>② 慢行时可以</span><span>③ 违规</span><span>④ 仅夜间可以</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-<div class="quiz-section">
-<h3>🎬 综合备考（Q40~Q50）</h3>
-
-<div class="q-item"><div class="q-num">Q40</div><div class="q-text">高速公路最高速度？（单向2车道+）</div><div class="q-opts"><span>① 80km/h</span><span>② 100km/h</span><span>③ 100~120km/h</span><span>④ 130km/h</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q41</div><div class="q-text">转向灯的正确术语？</div><div class="q-opts"><span>① 깜빡이（闪灯俗称）</span><span>② 턴시그널（Turn Signal）</span><span>③ 방향지시등（转向灯）</span><span>④ 방향등（方向灯）</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q42</div><div class="q-text">"变更车道"的正确表达？</div><div class="q-opts"><span>① 차선변경（换车线）</span><span>② 차로변경（变更车道）</span><span>③ 레인체인지（Lane Change）</span><span>④ 차선이동（车线移动）</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q43</div><div class="q-text">公交站禁止停车及临时停车的距离？</div><div class="q-opts"><span>① 3m</span><span>② 5m</span><span>③ 10m</span><span>④ 15m</span></div><div class="q-answer">→ ③（第32条）</div></div>
-
-<div class="q-item"><div class="q-num">Q44</div><div class="q-text">宽道路 vs 窄道路交叉时？</div><div class="q-opts"><span>① 窄道路优先</span><span>② 宽道路优先</span><span>③ 先到的车</span><span>④ 左侧车</span></div><div class="q-answer">→ ②（第26条第2款）</div></div>
-
-<div class="q-item"><div class="q-num">Q45</div><div class="q-text">笔试题数和时间？</div><div class="q-opts"><span>① 50题/50分钟</span><span>② 40题/50分钟</span><span>③ 40题/40分钟</span><span>④ 30题/30分钟</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q46</div><div class="q-text">第1类普通合格标准？</div><div class="q-opts"><span>① 60分</span><span>② 70分</span><span>③ 80分</span><span>④ 90分</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q47</div><div class="q-text">第2类普通合格标准？</div><div class="q-opts"><span>① 50分</span><span>② 60分</span><span>③ 70分</span><span>④ 80分</span></div><div class="q-answer">→ ②</div></div>
-
-<div class="q-item"><div class="q-num">Q48</div><div class="q-text">红灯右转条件？</div><div class="q-opts"><span>① 慢行即可</span><span>② 无行人时直接通过</span><span>③ 暂时停车后不妨碍其他车辆</span><span>④ 随时可以</span></div><div class="q-answer">→ ③</div></div>
-
-<div class="q-item"><div class="q-num">Q49</div><div class="q-text">不属于警察辅助人员的是？</div><div class="q-opts"><span>① 模范驾驶员</span><span>② 军事警察</span><span>③ 消防公务员</span><span>④ 工地志愿者</span></div><div class="q-answer">→ ④（施行令第6条）</div></div>
-
-<div class="q-item"><div class="q-num">Q50</div><div class="q-text">道路驾驶考试可用语言？</div><div class="q-opts"><span>① 全部4种</span><span>② 仅韩语</span><span>③ 仅韩语·英语</span><span>④ 韩语·英语·中文</span></div><div class="q-answer">→ ③</div></div>
-</div>
-
-<!-- 题库横幅（仅在最后） -->
-<a href="https://evergreenedu-collab.github.io/quiz/" target="_blank" class="quiz-banner" style="margin-top:36px;">
-  <div class="qb-icon">🏆</div>
-  <div class="qb-text">
-    <div class="qb-title">练习全部980道题目</div>
-    <div class="qb-desc">韩语·English·中文·Tiếng Việt 4种语言支持<br>文字型·插图型·照片型·交通标志型·视频型 5种题型筛选</div>
-  </div>
-  <div class="qb-btn">进入题库 →</div>
-</a>
-
-<div style="text-align:center;padding:40px 0 20px;color:var(--gray);font-size:11px;line-height:1.8;">
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <h1>🚗 韩国驾驶执照笔试教材（外国人版）</h1>
   <p>韩国道路交通公团（KoRoad）教育本部</p>
-  <p>本教材根据道路交通法·施行令·施行规则及2024年道路交通法解说集编写。</p>
-  <p>© 2026 外国人驾照取得AI导师项目</p>
 </div>
 
+<!-- ===== NAV ===== -->
+<div class="nav-tabs">
+  <a href="#ch1">第1章</a>
+  <a href="#ch2" class="active">第2章</a>
+  <a href="#ch3">第3章</a>
+  <a href="#ch4">第4章</a>
+  <a href="#ch5">第5章</a>
+  <a href="#ch6">第6章</a>
+  <a href="#ch7">第7章</a>
+  <a href="#ch8">第8章</a>
+  <a href="#ch9">第9章</a>
+  <a href="#ch10">第10章</a>
 </div>
+
+<div class="content">
+
+<!-- ============================================================ -->
+<!-- 第1章 — 笔试介绍与驾照制度 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch1">
+  <span class="ch-num">第1章</span>
+  <h2>笔试介绍与驾照制度</h2>
+  <p class="ch-desc">驾照分类、外国驾照换发、考试结构·费用·合格标准</p>
+  <p class="ch-stars">★ 考试前必须了解的基础</p>
+</div>
+
+<!-- 1-1 -->
+<div class="section" id="s1-1">
+  <h3>1-1. 驾驶执照的种类（《道路交通法》第80条）</h3>
+  <p>韩国驾照分为<strong>第一类、第二类、练习驾照</strong>三大类，可驾驶车辆因类别不同而异。</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>驾照类别</th><th>细分</th><th>可驾车辆</th></tr>
+      <tr>
+        <td rowspan="4"><strong>第一类</strong><br>（业务·大型）</td>
+        <td>大型</td>
+        <td>轿车、面包车、货车（无载重限制）、部分工程机械、特殊车（大型牵引·救援除外）</td>
+      </tr>
+      <tr>
+        <td>普通</td>
+        <td>轿车、15座以下面包车、12吨以下货车、10吨以下特殊车</td>
+      </tr>
+      <tr>
+        <td>小型</td>
+        <td>三轮货车、三轮乘用车</td>
+      </tr>
+      <tr>
+        <td>特殊</td>
+        <td>大型牵引车、小型牵引车、救援车</td>
+      </tr>
+      <tr>
+        <td rowspan="3"><strong>第二类</strong><br>（自家用）</td>
+        <td>普通</td>
+        <td>轿车、10座以下面包车、4吨以下货车</td>
+      </tr>
+      <tr>
+        <td>小型</td>
+        <td>排量超过125cc的两轮车</td>
+      </tr>
+      <tr>
+        <td>原动机自行车</td>
+        <td>125cc以下两轮车、电动滑板车（PM）等</td>
+      </tr>
+      <tr>
+        <td><strong>练习驾照</strong></td>
+        <td>第一/二类普通</td>
+        <td>用于参加路考的临时驾照（有效期1年）</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 第一类还是第二类？</div>
+    只开<strong>私家轿车</strong>，<strong>第二类普通</strong>足够。考试更简单，费用相同。<br>
+    要驾驶<strong>货车、11~15座面包车、业务用车</strong>，需选<strong>第一类普通</strong>。<br>
+    ⚠️ 第二类无法驾驶11座以上面包车（包括11座Carnival）。
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 自动挡 vs 手动挡</div>
+    韩国驾照分为<strong>自动挡限定（AT）</strong>与<strong>普通（含手动）</strong>两种。<br>
+    • AT驾照：仅限自动挡车辆，考试更容易，多数外国人选择此类<br>
+    • 普通驾照：手动·自动都可以开<br>
+    若您在本国持有手动挡驾照，建议在韩国考普通驾照。
+  </div>
+</div>
+
+<!-- 1-2 -->
+<div class="section" id="s1-2">
+  <h3>1-2. 外国驾照换发（认可）制度</h3>
+  <p>在本国已持有驾照的外国人，符合条件可<strong>免学科·技能·路考</strong>直接换发韩国驾照（《道路交通法》第84条）。</p>
+
+  <h4>换发条件</h4>
+  <ol>
+    <li>持有本国签发的<strong>有效驾照</strong>（相当于韩国第二类普通以上）</li>
+    <li>来自与韩国签订<strong>驾照互认协议</strong>的国家（按国家/州不同）</li>
+    <li>持有外国人登录证（F/E/D签证等）或在外国民居住申报</li>
+    <li>能证明本人<strong>实际在本国居住期间取得</strong>该驾照（护照出入境记录等）</li>
+  </ol>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 各国换发范围不同</div>
+    • <strong>全面认可（学科·技能·路考全免）</strong>：日本、德国、法国、英国、澳大利亚等多数OECD国家、台湾 — 直接换为<strong>第二类普通</strong><br>
+    • <strong>部分认可（仅需考学科）</strong>：因国家而异，请向公团确认<br>
+    • <strong>不认可</strong>：必须从头参加学科·技能·路考<br><br>
+    ※ <strong>美国·中国·越南</strong>：因州/省不同协议范围各异，必须事先确认。
+  </div>
+
+  <h4>所需材料</h4>
+  <ul>
+    <li>外国驾照原件 + 韩文翻译公证（或加注海牙认证）</li>
+    <li>护照原件及复印件（含出入境记录）</li>
+    <li>外国人登录证</li>
+    <li>证件照（3.5×4.5cm）2张</li>
+    <li>手续费约 <strong>8,000韩元</strong></li>
+    <li>视力·身体检查（在驾照考试场内检查室）</li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 换发后注意事项</div>
+    换发时，原驾照将由<strong>公团代为保管</strong>，回国时可领回。换发的韩国驾照仅在韩国境内有效；如需国际驾照（IDP）须另行申请。
+  </div>
+</div>
+
+<!-- 1-3 -->
+<div class="section" id="s1-3">
+  <h3>1-3. 笔试结构与合格标准</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>项目</th><th>第一类普通</th><th>第二类普通</th></tr>
+      <tr><td>题数</td><td>40题</td><td>40题</td></tr>
+      <tr><td>考试时间</td><td>40分钟</td><td>40分钟</td></tr>
+      <tr><td>题型</td><td colspan="2">4选1（文字）+ 5选1（标志·视频）混合</td></tr>
+      <tr><td>合格标准</td><td><strong>70分以上</strong></td><td><strong>60分以上</strong></td></tr>
+      <tr><td>支持语言</td><td colspan="2">韩语、英语、中文、越南语、日语、泰语、高棉语、俄语等</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 笔试出题领域（按980题题库）</div>
+    ① 驾照制度与管理（约5%）<br>
+    ② 交通法规与处罚（约30%） — <strong>出题最多</strong><br>
+    ③ 安全驾驶（约20%）<br>
+    ④ 汽车结构与保养（约5%）<br>
+    ⑤ 事故处理与急救（约10%）<br>
+    ⑥ 信号·标志·路面标线（约15%） — 第2章必学<br>
+    ⑦ 路口通行·让行（约10%） — 第3章必学<br>
+    ⑧ 标志·视频题（约5%）
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 翻译质量</div>
+    考试译本（英、中、越等）多为<strong>韩国法律用语</strong>的直译，可能拗口。模糊时请对照韩文原文。特别是<strong>"慢行（서행）"、"暂时停车（일시정지）"、"让行（양보）"</strong>等词汇有精确的法律含义，务必准确理解以避免错答。
+  </div>
+</div>
+
+<!-- 1-4 -->
+<div class="section" id="s1-4">
+  <h3>1-4. 取得驾照的步骤与费用</h3>
+
+  <div class="flow">
+    <div class="flow-step step-green">①交通安全教育</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step">②身体检查</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">③学科考试</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">④技能考试</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">⑤练习驾照</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-red">⑥路考</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">⑦驾照发放</div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>步骤</th><th>说明</th><th>费用（韩元）</th></tr>
+      <tr><td>交通安全教育</td><td>新申请人必修1小时（线下或线上）</td><td>免费</td></tr>
+      <tr><td>身体检查</td><td>视力·色觉·听力等</td><td>约6,000</td></tr>
+      <tr><td><strong>学科考试</strong></td><td>40题，70分(C1)/60分(C2)</td><td><strong>10,000</strong></td></tr>
+      <tr><td><strong>技能考试</strong></td><td>考试场内场地驾驶（T字停车·坡道等）</td><td><strong>44,000</strong></td></tr>
+      <tr><td><strong>路考</strong></td><td>实际道路约5公里</td><td><strong>25,000</strong></td></tr>
+      <tr><td><strong>驾照发放</strong></td><td>含手机驾照</td><td><strong>8,000</strong></td></tr>
+      <tr><td colspan="2" style="text-align:right;"><strong>合计（不含补考）</strong></td><td><strong>约93,000</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 补考费用</div>
+    每次补考都要重新缴费。例如路考3次未过 = 25,000×3 = 额外75,000韩元。一次合格最省时间和金钱。
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 路考语言</div>
+    技能考试有<strong>多语言语音引导</strong>（韩、英、中、越等）。但<strong>路考仅支持韩语和英语</strong>（部分考场需提前预约英语考官）。中越母语考生无法用母语应试，请提前掌握基本韩语驾驶用语：<strong>"直行（직진）、左转（좌회전）、右转（우회전）、停车（정지）、慢行（서행）"</strong>。
+  </div>
+</div>
+
+<!-- 1-5 -->
+<div class="section" id="s1-5">
+  <h3>1-5. 驾照管理与更新（第87条）</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>项目</th><th>第一类普通</th><th>第二类普通</th></tr>
+      <tr><td>首次更新期间</td><td>取得后10年</td><td>取得后10年</td></tr>
+      <tr><td>之后更新周期</td><td><strong>每10年</strong></td><td><strong>每10年</strong></td></tr>
+      <tr><td>适应性检查</td><td>更新时含身体检查</td><td>满75岁起每5年</td></tr>
+      <tr><td>65~74岁</td><td colspan="2">更新周期缩短为<strong>5年</strong></td></tr>
+      <tr><td>75岁以上</td><td colspan="2">更新周期<strong>3年</strong>，须做认知检查·教育</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 错过更新期限</div>
+    逾期未更新将处<strong>20,000韩元罚款</strong>，再过1年驾照<strong>注销</strong>。注销后须重新参加学科·技能·路考。
+  </div>
+</div>
+
+<!-- 1-6 练习题 -->
+<div class="section" id="s1-6">
+  <h3>1-6. 练习题</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>第二类普通笔试合格分数？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 50分</label>
+      <label class="quiz-opt" data-idx="2">② 60分</label>
+      <label class="quiz-opt" data-idx="3">③ 70分</label>
+      <label class="quiz-opt" data-idx="4">④ 80分</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 第二类60分以上，第一类70分以上合格。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>能驾驶11座Carnival面包车的驾照是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 第二类普通</label>
+      <label class="quiz-opt" data-idx="2">② 第二类小型</label>
+      <label class="quiz-opt" data-idx="3">③ 第一类普通以上</label>
+      <label class="quiz-opt" data-idx="4">④ 原动机自行车</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 第二类普通仅限10座以下，11座以上须第一类普通以上。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>参加路考前必须先取得？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 国际驾照</label>
+      <label class="quiz-opt" data-idx="2">② 练习驾照</label>
+      <label class="quiz-opt" data-idx="3">③ 正式驾照</label>
+      <label class="quiz-opt" data-idx="4">④ 临时驾驶证明</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 学科·技能合格后取得练习驾照，方可参加路考。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>学科考试报名费？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 5,000韩元</label>
+      <label class="quiz-opt" data-idx="2">② 10,000韩元</label>
+      <label class="quiz-opt" data-idx="3">③ 25,000韩元</label>
+      <label class="quiz-opt" data-idx="4">④ 44,000韩元</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 学科1万、技能4.4万、路考2.5万、发放0.8万。</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>外国驾照换发时不需要的材料是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 外国驾照原件 + 翻译公证</label>
+      <label class="quiz-opt" data-idx="2">② 护照及出入境记录</label>
+      <label class="quiz-opt" data-idx="3">③ 外国人登录证</label>
+      <label class="quiz-opt" data-idx="4">④ 本国警察出具的无事故证明</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong> — 无事故证明非必需。本国居住与取得情况通过护照出入境记录核实。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>满75岁以上驾驶人的驾照更新周期？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10年</label>
+      <label class="quiz-opt" data-idx="2">② 5年</label>
+      <label class="quiz-opt" data-idx="3">③ 3年</label>
+      <label class="quiz-opt" data-idx="4">④ 1年</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 75岁以上每3年更新 + 必修认知检查·安全教育。</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第2章 — 信号灯与安全标志 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch2">
+  <span class="ch-num">第2章</span>
+  <h2>信号灯与安全标志全攻略</h2>
+  <p class="ch-desc">车辆/行人信号、闪烁灯、4类安全标志、路面标线 — 笔试约出10~12题</p>
+  <p class="ch-stars">★★★ 出题最多领域</p>
+</div>
+
+<!-- 2-1 -->
+<div class="section" id="s2-1">
+  <h3>2-1. 信号的核心原则 — 优先顺序</h3>
+  <p>根据《道路交通法》<strong>第5条</strong>，所有道路使用者必须遵守交通安全设施信号。<strong>信号违反属12项重大过失</strong>，无论是否投保都会受到刑事处罚。</p>
+
+  <div class="flow">
+    <div class="flow-step step-red">①手势（最优先）</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">②信号灯</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">③安全标志</div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 考试重点</div>
+    <strong>问：信号灯与警察手势不一致时？</strong><br>
+    → <strong>手势优先</strong>（第5条第2款）<br><br>
+    <strong>问：警察辅助人员的范围？</strong>（施行令第6条）<br>
+    ✅ 是：模范驾驶员、宪兵、消防公务员<br>
+    ❌ 否：工地志愿者、高速公路安全巡逻员、停车场引导员
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意</div>
+    很多国家警察手势仅在紧急情况下使用。在韩国，<strong>上下班时段</strong>警察用手势疏导交通的情况很常见。即使信号灯与手势不一致，也<strong>必须服从手势</strong>。
+  </div>
+</div>
+
+<!-- 2-2 -->
+<div class="section" id="s2-2">
+  <h3>2-2. 车辆信号灯（施行规则[别表2]）</h3>
+  <p>韩国车辆信号灯通常<strong>纵向排列</strong>，从上至下：红 → 黄 → 绿，可附加左转箭头等。</p>
+
+  <div class="signal-grid">
+    <div class="signal-card sig-green">
+      <div class="signal-icon"></div>
+      <div class="signal-name">绿灯</div>
+      <div class="signal-desc"><strong>直行或右转</strong>可<br>有"非保护左转"标志才能左转</div>
+    </div>
+    <div class="signal-card sig-yellow">
+      <div class="signal-icon"></div>
+      <div class="signal-name">黄灯</div>
+      <div class="signal-desc"><strong>停车线前停车</strong><br>已进入路口的迅速通过</div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-icon"></div>
+      <div class="signal-name">红灯</div>
+      <div class="signal-desc"><strong>停止</strong><br>暂时停车后可右转（有条件）</div>
+    </div>
+    <div class="signal-card sig-green">
+      <div class="signal-icon signal-arrow"><svg viewBox="0 0 56 56" width="56" height="56"><circle cx="28" cy="28" r="25" fill="none" stroke="#22c55e" stroke-width="4"/><path d="M40 28H18M18 28L26 20M18 28L26 36" fill="none" stroke="#22c55e" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-name">绿色箭头</div>
+      <div class="signal-desc"><strong>仅按箭头方向</strong>通行<br>其它方向不可</div>
+    </div>
+  </div>
+
+  <h4>🟢 绿灯不能左转！</h4>
+  <p>绿灯表示<strong>"直行或右转"</strong>。许多外国人误以为绿灯即可任意方向通行，但<strong>无"非保护左转"标志的路口在绿灯时左转 = 信号违反</strong>。</p>
+
+  <div class="box box-law">
+    <div class="box-title">📜 大法院判例（2004도5848）</div>
+    在设有红、黄、绿三色信号灯且无非保护左转或掉头标志的路口，车辆<strong>不得左转或掉头</strong>。
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 与他国差异</div>
+    <strong>🇨🇳 中国：</strong>绿灯可左转<br>
+    <strong>🇺🇸 美国·🇨🇦 加拿大：</strong>绿灯可左转（让对向直行车）<br>
+    <strong>🇪🇺 欧洲·🇯🇵 日本：</strong>仅在左转箭头亮时可左转<br>
+    <strong>🇰🇷 韩国：</strong>有左转箭头或"非保护左转"标志才能左转
+  </div>
+
+  <h4>🟢 什么是"非保护左转"？</h4>
+  <p>"非保护"意为<strong>不受信号保护</strong>。设有"非保护左转"标志的路口，可在<strong>绿灯（直行）</strong>且<strong>无对向直行车</strong>时左转。</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 严格注意</div>
+    • 非保护左转<strong>仅在绿灯时</strong>可执行<br>
+    • <strong>红灯时非保护左转 = 信号违反</strong>（罚款6万韩元、扣15分）<br>
+    • 事故时非保护左转方过失通常<strong>80%以上</strong>
+  </div>
+
+  <h4>🟡 黄灯 — "停还是走？"</h4>
+  <p><strong>原则：在停车线前停车。</strong>但若已贴近停车线无法安全停车（已驶入路口），应<strong>迅速通过</strong>。</p>
+  <p>⚠️ 黄灯时<strong>加速强行进入即信号违反</strong>。"黄灯快冲"是<strong>危险错觉</strong>。</p>
+
+  <h4 id="rtor">🔴 红灯右转（RTOR）— 最重要！</h4>
+  <p>韩国允许<strong>红灯右转</strong>，但有<strong>严格条件</strong>。</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>必须完全停车</strong> — 在停车线/人行横道/路口前车轮完全停止（速度0）</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>查看行人</strong> — 若行人正在或<strong>将要过</strong>人行横道，等其完全通过</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>查看其他车辆</strong> — 不得<strong>妨碍</strong>按信号通行的其他车辆</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>慢行右转</strong> — 满足条件后慢速右转</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 不可右转的情况</div>
+    <strong>① 右转专用三色灯红灯</strong> — 装有专用右转信号的路口红灯时<strong>绝对不可右转！</strong>（[别表2]备注3）<br>
+    <strong>② "禁止右转"安全标志</strong> — 任何信号下都不可右转<br>
+    <strong>③ 直行车挡住右转</strong> — 对等待信号的车辆鸣笛 = 罚款4万韩元
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 红灯右转 — 各国比较</div>
+    <div class="table-wrap">
+      <table class="compare-table">
+        <tr><th>国家</th><th>红灯可否右转</th><th>备注</th></tr>
+        <tr><td><span class="flag">🇨🇳</span> 中国</td><td>✅ 可（无禁止标志时）</td><td>多数城市许可</td></tr>
+        <tr><td><span class="flag">🇰🇷</span> 韩国</td><td>✅ 可（须先停车）</td><td>2023年起强化停车义务</td></tr>
+        <tr><td><span class="flag">🇺🇸</span> 美国</td><td>✅ 可（多数州）</td><td>纽约市等部分城市禁止</td></tr>
+        <tr><td><span class="flag">🇻🇳</span> 越南</td><td>⚠️ 视标志</td><td>仅在允许标志处</td></tr>
+        <tr><td><span class="flag">🇯🇵</span> 日本</td><td>❌ 原则禁止</td><td>左侧通行，相当于左转</td></tr>
+        <tr><td><span class="flag">🇬🇧</span> 英国</td><td>❌ 禁止</td><td>左侧通行</td></tr>
+        <tr><td><span class="flag">🇩🇪</span> 德国</td><td>❌ 原则禁止</td><td>有绿色箭头标志才可</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h4>📍 实战场景</h4>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 场景1：红灯，无行人</div>
+    <div class="scenario-body">
+      <span class="do">✅ 正确：</span>停车线前完全停车 → 确认无行人 → 确认不妨碍他车 → 慢速右转<br>
+      <span class="dont">❌ 错误：</span>不停车直接右转 → <strong>信号违反查处对象</strong>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 场景2：绿灯，右转后第二条人行横道有行人</div>
+    <div class="scenario-body">
+      <span class="do">✅ 正确：</span>第一条人行横道慢行通过 → 第二条前<strong>暂时停车</strong> → 行人通过后再行进<br>
+      <span class="dont">❌ 错误：</span>"绿灯没问题" → 违反行人保护义务（事故时<strong>100%过失</strong>）
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 场景3：右转三色灯红灯</div>
+    <div class="scenario-body">
+      <span class="do">✅ 正确：</span>停车线停车，<strong>等待绿色箭头</strong>亮起<br>
+      <span class="dont">❌ 错误：</span>"既无行人又无车" → <strong>绝对不可！信号违反</strong>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 必记考点</div>
+    <strong>1.</strong> 红灯右转 = 必须<strong>先完全停车</strong><br>
+    <strong>2.</strong> 右转专用三色灯红灯 = <strong>绝对不可右转</strong><br>
+    <strong>3.</strong> 行人不在但行人灯绿？→ 2022年修订后<strong>可通过</strong>（但行人将过时必须暂停）
+  </div>
+</div>
+
+<!-- 2-3 -->
+<div class="section" id="s2-3">
+  <h3>2-3. 闪烁信号灯</h3>
+  <p>闪烁信号主要在<strong>车流稀少时段</strong>（深夜·凌晨）或<strong>支路</strong>使用。</p>
+
+  <div class="signal-grid">
+    <div class="signal-card sig-yellow">
+      <div class="signal-icon" style="animation: blink 1s infinite;"></div>
+      <div class="signal-name">黄色闪烁</div>
+      <div class="signal-desc"><strong>注意通行</strong><br>"黄闪 = 小心GO"<br>主要装在主路</div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-icon" style="animation: blink 1s infinite;"></div>
+      <div class="signal-name">红色闪烁</div>
+      <div class="signal-desc"><strong>暂停后通行</strong><br>"红闪 = 停后GO"<br>主要装在支路</div>
+    </div>
+  </div>
+  <style>@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }</style>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 记忆法</div>
+    黄闪 = <strong>"注意"</strong>慢行通过（不必停车）<br>
+    红闪 = <strong>"停车"</strong>后确认安全再行进（必须停）<br><br>
+    ⚠️ 路口常常一边黄闪、一边红闪，<strong>红闪一侧让行</strong>。
+  </div>
+</div>
+
+<!-- 2-4 -->
+<div class="section" id="s2-4">
+  <h3>2-4. 行人信号灯</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>信号</th><th>含义</th><th>行人行为</th></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 绿</td><td>可过</td><td>可走人行横道</td></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 绿色闪烁</td><td><strong>禁止开始过马路</strong></td><td><strong>不可新开始</strong>过路。已在过路者快速完成或返回路边</td></tr>
+      <tr><td style="color:#ef4444;font-weight:700;">🔴 红</td><td>禁止过路</td><td>不可过</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人最易答错的题</div>
+    <strong>"绿色闪烁还是绿灯，可以快过吗？"</strong><br>
+    → <strong>不可！</strong>绿色闪烁是<strong>不应新开始过路</strong>的信号。<br>
+    已在过路者应快速通过或退回最近的路边。<br><br>
+    <strong>驾驶员视角：</strong>行人灯绿色闪烁时不要立刻起步，可能仍有行人在过路。
+  </div>
+
+  <h4>行人信号与车辆的关系（2022年修订核心）</h4>
+  <p>2022年修订后，<strong>行人保护义务大幅强化</strong>：</p>
+  <ul>
+    <li>行人<strong>"将要过路"</strong>（站在路边）时驾驶员也须暂时停车</li>
+    <li>儿童保护区内的无信号人行横道，行人<strong>不在也须暂停</strong></li>
+    <li>无行人时，行人灯绿也<strong>可通过</strong></li>
+  </ul>
+
+  <div class="box box-law">
+    <div class="box-title">📜 关键法条</div>
+    <strong>第27条第1款：</strong>行人正在过人行横道时 → 暂时停车<br>
+    <strong>第27条第6款：</strong>无信号人行横道处行人正在或<strong>将要过路</strong>时 → 暂时停车<br>
+    违反 = <strong>12项重大过失</strong>（刑事处罚）
+  </div>
+</div>
+
+<!-- 2-5 -->
+<div class="section" id="s2-5">
+  <h3>2-5. 自行车信号灯</h3>
+  <p>自行车也属<strong>车马</strong>，须遵守信号。</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>情形</th><th>遵守的信号</th><th>依据</th></tr>
+      <tr><td>有自行车专用信号灯</td><td><strong>自行车信号灯</strong></td><td>[别表2]备注1</td></tr>
+      <tr><td>无自行车信号灯，行驶车道</td><td><strong>车辆信号灯</strong></td><td>[别表2]备注1</td></tr>
+      <tr><td>自行车横道，无单独信号</td><td><strong>行人信号灯</strong></td><td>[别表2]备注2</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 2-6 -->
+<div class="section" id="s2-6">
+  <h3>2-6. 4类安全标志（施行规则[别表6]）</h3>
+  <p><strong>安全标志</strong>是表示交通安全所需的注意·限制·指示等信息的标牌或路面标线（第2条第16号）。考试要求<strong>仅凭形状和颜色</strong>识别类别。</p>
+
+  <div class="sign-grid">
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <polygon points="36,6 66,62 6,62" fill="#fbbf24" stroke="#dc2626" stroke-width="4" stroke-linejoin="round"/>
+        <text x="36" y="48" text-anchor="middle" font-size="14" font-weight="800" fill="#1a1a1a">!</text>
+      </svg>
+      <div class="sign-label">注意标志</div>
+      <div class="sign-sub">黄色三角<br>+红色边框</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <circle cx="36" cy="36" r="28" fill="#fff" stroke="#dc2626" stroke-width="5"/>
+        <line x1="16" y1="16" x2="56" y2="56" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="sign-label">限制标志</div>
+      <div class="sign-sub">白色圆形<br>+红色边框+斜线</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <circle cx="36" cy="36" r="30" fill="#2563eb"/>
+      </svg>
+      <div class="sign-label">指示标志</div>
+      <div class="sign-sub">蓝色圆/方<br>+白色图案</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <rect x="8" y="16" width="56" height="40" rx="4" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+        <text x="36" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">辅助</text>
+      </svg>
+      <div class="sign-label">辅助标志</div>
+      <div class="sign-sub">白色矩形<br>+黑色文字</div>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 3秒辨别法</div>
+    <strong>三角+黄 → 注意</strong>（提示危险）<br>
+    <strong>圆+红边 → 限制</strong>（禁止·限定）<br>
+    <strong>圆/方+蓝 → 指示</strong>（方向·方法）<br>
+    <strong>矩形+白 → 辅助</strong>（补充主标志）
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 韩国独有标志</div>
+    <strong>① 儿童保护区（学校区）：</strong>规定比多数国家严格。30km/h + 事故 = 12项重大过失 + 罚款2倍<br>
+    <strong>② "慢行"标志：</strong>韩国"慢行"指"可立即停车的低速"，无具体数值<br>
+    <strong>③ 汽车专用道路：</strong>禁止行人、自行车、125cc以下两轮车通行
+  </div>
+</div>
+
+<!-- 2-7 -->
+<div class="section" id="s2-7">
+  <h3>2-7. 路面标线 — 中线与车道线</h3>
+  <p>路面线条颜色和形状不同，含义完全不同，是高频考点。</p>
+
+  <h4>核心区分：中线 = 黄色 / 车道线 = 白色</h4>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>类型</th><th>颜色</th><th>实线</th><th>虚线</th></tr>
+      <tr>
+        <td><strong>中线</strong><br>（分隔对向）</td>
+        <td style="color:#d97706;font-weight:700;">黄色</td>
+        <td>禁止越线<br><span class="priority priority-high">12项重大过失</span></td>
+        <td>可越线超车</td>
+      </tr>
+      <tr>
+        <td><strong>车道线</strong><br>（分同向车道）</td>
+        <td style="font-weight:700;">白色</td>
+        <td>禁止变道</td>
+        <td>可变道</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 越中线 = 12项重大过失</div>
+    越过黄色实线中线属<strong>12项重大过失</strong>，将受刑事处罚。为超车越过中线极其危险且<strong>严重违法</strong>。<br><br>
+    <strong>单向单车道</strong> = 单线中线（1条黄实线）<br>
+    <strong>单向2车道以上</strong> = 复线中线（2条黄实线）
+  </div>
+
+  <h4>其他重要路面标线</h4>
+  <div class="table-wrap">
+    <table>
+      <tr><th>标线</th><th>含义</th><th>考点</th></tr>
+      <tr><td>白色停车线</td><td>信号等待位置</td><td>越线停车 = 违反</td></tr>
+      <tr><td>白色锯齿线</td><td>慢行区间</td><td>常设于人行横道前</td></tr>
+      <tr><td>黄色复线</td><td>禁止停·驻车</td><td>路边黄色双线</td></tr>
+      <tr><td>黄色单虚线</td><td>限时停·驻车</td><td>按时段弹性禁止</td></tr>
+      <tr><td>蓝线</td><td><strong>公交专用车道</strong></td><td>蓝色实线划分的车道仅限公交。一般车辆驶入将被处罚</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 用语注意</div>
+    <strong>"车道（차로）"</strong>=车行驶的路。<strong>"车线（차선）"</strong>=区分车道的线。"变道"是"차로변경"，混淆即错答。
+  </div>
+</div>
+
+<!-- 2-8 -->
+<div class="section" id="s2-8">
+  <h3>2-8. 右转专用信号灯与可变车道（NEW）</h3>
+
+  <h4>右转专用信号灯（2023年起设置）</h4>
+  <p>事故频发的路口正在加装<strong>右转专用三色灯</strong>，设于道路右侧。</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>信号</th><th>含义</th></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 绿色箭头</td><td>可右转（注意行人）</td></tr>
+      <tr><td style="color:#eab308;font-weight:700;">🟡 黄</td><td>准备停车</td></tr>
+      <tr><td style="color:#ef4444;font-weight:700;">🔴 红</td><td><strong>绝对禁止右转</strong> — 与一般红灯右转规则不同！</td></tr>
+    </table>
+  </div>
+
+  <h4>可变车道</h4>
+  <p>按上下班时段改变行驶方向的车道。务必查看可变车道电子告示。</p>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意</div>
+    韩国城市1车道（最左侧）在路口常突变为<strong>左转专用</strong>。如要直行请在2车道及以上行驶。务必查看路面箭头。
+  </div>
+</div>
+
+<!-- 2-9 练习题 -->
+<div class="section" id="s2-9">
+  <h3>2-9. 练习题</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>信号灯与警察手势不同时应遵守的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 信号灯</label>
+      <label class="quiz-opt" data-idx="2">② 手势</label>
+      <label class="quiz-opt" data-idx="3">③ 都不顾</label>
+      <label class="quiz-opt" data-idx="4">④ 自行判断</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 手势优先（第5条第2款）。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>红灯如何右转？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 直接通过</label>
+      <label class="quiz-opt" data-idx="2">② 完全停车并确认安全后</label>
+      <label class="quiz-opt" data-idx="3">③ 绝对不可</label>
+      <label class="quiz-opt" data-idx="4">④ 慢速通过</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 必须先完全停车，确认行人/车辆后右转。但右转专用灯红时不可！</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>右转专用三色灯红灯时？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 可</label>
+      <label class="quiz-opt" data-idx="2">② 停车后可</label>
+      <label class="quiz-opt" data-idx="3">③ 慢速后可</label>
+      <label class="quiz-opt" data-idx="4">④ 不可</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong> — 绝对禁止（[别表2]备注3）。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>行人灯绿色闪烁时行人应？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 快速开始过路</label>
+      <label class="quiz-opt" data-idx="2">② 不可新开始；已在过路则迅速完成</label>
+      <label class="quiz-opt" data-idx="3">③ 原地停留</label>
+      <label class="quiz-opt" data-idx="4">④ 跑步过路</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 绿闪 = 禁止新开始过路。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>黄色三角形安全标志属于？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 限制</label>
+      <label class="quiz-opt" data-idx="2">② 指示</label>
+      <label class="quiz-opt" data-idx="3">③ 注意</label>
+      <label class="quiz-opt" data-idx="4">④ 辅助</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 黄三角+红边 = 注意标志。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>中线的颜色？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 白</label>
+      <label class="quiz-opt" data-idx="2">② 黄</label>
+      <label class="quiz-opt" data-idx="3">③ 红</label>
+      <label class="quiz-opt" data-idx="4">④ 蓝</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 中线黄，车道线白。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>黄色闪烁含义？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 暂停后通行</label>
+      <label class="quiz-opt" data-idx="2">② 注意通行</label>
+      <label class="quiz-opt" data-idx="3">③ 停止</label>
+      <label class="quiz-opt" data-idx="4">④ 快速通过</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 黄闪=注意 / 红闪=暂停后通行。</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q8</span><span>非保护左转可执行的情况？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 直行绿灯且无对向车</label>
+      <label class="quiz-opt" data-idx="2">② 红灯无车</label>
+      <label class="quiz-opt" data-idx="3">③ 黄灯</label>
+      <label class="quiz-opt" data-idx="4">④ 任何信号</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong> — 仅在绿灯时可执行。</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q9</span><span>不属于警察辅助人员的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 模范驾驶员</label>
+      <label class="quiz-opt" data-idx="2">② 宪兵</label>
+      <label class="quiz-opt" data-idx="3">③ 消防公务员</label>
+      <label class="quiz-opt" data-idx="4">④ 工地志愿者</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong> — 仅模范驾驶员、宪兵、消防公务员（施行令第6条）。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q10</span><span>无非保护左转标志的路口绿灯时不可做的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 直行</label>
+      <label class="quiz-opt" data-idx="2">② 右转</label>
+      <label class="quiz-opt" data-idx="3">③ 左转</label>
+      <label class="quiz-opt" data-idx="4">④ 直行后变道</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 绿灯仅可直行或右转。</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第3章 — 路口通行 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch3">
+  <span class="ch-num">第3章</span>
+  <h2>路口通行</h2>
+  <p class="ch-desc">左/右转方法、让行规则、掉头、环形路口、禁堵路口</p>
+  <p class="ch-stars">★★★ 出题最多领域</p>
+</div>
+
+<!-- 3-1 -->
+<div class="section" id="s3-1">
+  <h3>3-1. 左转方法（第25条第2款）</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 法条原文</div>
+    "所有车辆驾驶人在路口左转时，应<strong>预先沿道路中线慢行</strong>，并由路口<strong>中心内侧</strong>左转。"
+  </div>
+
+  <p>简化为3步：</p>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>预先变到左侧车道</strong> — 不要在路口前临时变道</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>等左转信号</strong> — 等绿色箭头亮起</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>沿路口中心内侧慢行</strong> — 不可外圈大转</div>
+    </div>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 韩国左转信号体系</div>
+    韩国大多数路口设有<strong>专用左转信号（绿色箭头）</strong>。像美国、加拿大那样在绿灯时自由左转<strong>不允许</strong>。<br><br>
+    <strong>典型左转信号顺序：</strong><br>
+    ① 左转箭头 → ② 直行绿 → ③ 黄 → ④ 红
+  </div>
+</div>
+
+<!-- 3-2 -->
+<div class="section" id="s3-2">
+  <h3>3-2. 右转方法（第25条第1款）</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 法条原文</div>
+    "所有车辆在路口右转时，应预先沿道路<strong>右侧边缘</strong>慢行，并应注意按信号停止或通行的<strong>行人或自行车等</strong>。"
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>提前右变道</strong> — 右转30米前打方向灯</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>查看第一条人行横道</strong> — 红灯停车，绿灯确认行人后慢行</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>慢行右转</strong> — 沿右侧边缘</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>查看第二条人行横道</strong> — 行人正在或将要过路时<strong>暂停</strong></div>
+    </div>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 右转一览</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>前方车辆信号</th><th>行人状态</th><th>驾驶员行动</th></tr>
+        <tr><td style="color:#ef4444;font-weight:700;">红</td><td>无关</td><td><strong>必须暂停</strong>后右转</td></tr>
+        <tr><td style="color:#22c55e;font-weight:700;">绿</td><td>无行人</td><td><strong>慢行</strong>右转</td></tr>
+        <tr><td style="color:#22c55e;font-weight:700;">绿</td><td>有/将要过</td><td><strong>暂停</strong> → 行人通过后</td></tr>
+        <tr><td colspan="2">右转专用三色灯红</td><td><strong>绝对禁止</strong></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 3-3 -->
+<div class="section" id="s3-3">
+  <h3>3-3. 掉头规定（NEW）</h3>
+  <p>掉头<strong>不能随意进行</strong>，必须在有掉头允许标志处。</p>
+
+  <h4>可掉头条件</h4>
+  <ol>
+    <li>设有<strong>掉头允许安全标志</strong></li>
+    <li>中线为<strong>虚线</strong>（可越线）</li>
+    <li>左转信号或<strong>行人灯绿</strong>（无行人）</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 禁止掉头</div>
+    • 有禁止掉头标志处<br>
+    • 中线为<strong>黄色实线</strong>（越线 = 12项重大过失）<br>
+    • 路口内（除该路口设有掉头标志外）<br>
+    • 红灯时
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意</div>
+    <strong>🇺🇸 美国：</strong>无禁止标志的路口大多可掉头<br>
+    <strong>🇰🇷 韩国：</strong>仅在允许标志处可掉头（原则禁止）<br><br>
+    韩国掉头规则与美国<strong>完全相反</strong>！请记住<strong>"无允许标志即禁止"</strong>。
+  </div>
+</div>
+
+<!-- 3-4 -->
+<div class="section" id="s3-4">
+  <h3>3-4. 无信号路口的让行规则（第26条）</h3>
+  <p>无信号灯路口适用4条让行规则，按顺序应用。</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>已进入者优先</strong>（第26条第1款）</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>宽路优先</strong>（第26条第2款）</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>让右方车</strong>（第26条第3款）<br>道路宽度相同同时到达时，让<strong>右侧来车</strong>。</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>直行/右转 &gt; 左转</strong>（第26条第4款）</div>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 记忆法</div>
+    <strong>"先入 → 宽路 → 右方 → 直行优先于左转"</strong><br><br>
+    高频考题："无信号且道路宽度相同的路口同时到达时优先权属于？" → <strong>右侧来车</strong>（第26条第3款）
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 各国比较</div>
+    <strong>🇨🇳 中国：</strong>无灯路口"先到先行，同时到让右方"，与韩国接近<br>
+    <strong>🇺🇸 美国：</strong>"Right of way" — 先到先行，同时到让右<br>
+    <strong>🇪🇺 欧洲：</strong>"右侧优先"，与韩国相似<br>
+    <strong>🇰🇷 韩国：</strong>"先入&gt;宽路&gt;右&gt;直行优先"
+  </div>
+</div>
+
+<!-- 3-5 -->
+<div class="section" id="s3-5">
+  <h3>3-5. 环形路口（第25条之2）</h3>
+  <p>环形路口为无信号灯的圆形路口。</p>
+
+  <div class="flow">
+    <div class="flow-step">逆时针通行</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">进入时慢行/暂停</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">环内车优先</div>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 环形路口要点</div>
+    • <strong>逆时针</strong>通行（韩国右侧通行）<br>
+    • 进入时<strong>慢行或暂停</strong><br>
+    • 让<strong>已在环内</strong>的车辆<br>
+    • 反向行驶 = <strong>违反</strong>（大法院2017도9392）<br>
+    • 环内<strong>禁止超车</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意</div>
+    <strong>🇬🇧 英国·🇦🇺 澳大利亚：</strong>顺时针（左侧通行）<br>
+    <strong>🇰🇷 韩国·🇨🇳 中国·🇺🇸 美国·🇪🇺 欧洲：</strong>逆时针<br><br>
+    来自英国、澳大利亚、日本的驾驶人，方向<strong>相反</strong>，请格外注意。
+  </div>
+</div>
+
+<!-- 3-6 -->
+<div class="section" id="s3-6">
+  <h3>3-6. 应慢行/暂停的场所（第31条）</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>类型</th><th>场所</th><th>记忆法</th></tr>
+      <tr>
+        <td><strong>慢行</strong><br>（第31条第1款）</td>
+        <td>
+          • 无信号路口<br>
+          • 弯道<br>
+          • 山顶附近<br>
+          • 陡下坡<br>
+          • "慢行"标志处
+        </td>
+        <td>"路·弯·顶·陡"</td>
+      </tr>
+      <tr>
+        <td><strong>暂时停车</strong><br>（第31条第2款）</td>
+        <td>
+          • 左右视野不良路口<br>
+          • 交通频繁路口<br>
+          • "暂停"标志处
+        </td>
+        <td>"看不见或太忙必停"</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 考试陷阱</div>
+    问："无信号路口？" → <strong>慢行</strong>（不是暂停！）<br>
+    问："无信号且交通频繁路口？" → <strong>暂停</strong><br>
+    问："左右视野不良路口？" → <strong>暂停</strong>
+  </div>
+</div>
+
+<!-- 3-7 -->
+<div class="section" id="s3-7">
+  <h3>3-7. 禁止堵塞路口（第25条第5款）</h3>
+  <p>因前方情况会在路口内停车并<strong>妨碍其他车辆</strong>时，<strong>禁止</strong>进入该路口。</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 实际道路上</div>
+    韩国早晚高峰堵路口情况常见，但是<strong>明确违法</strong>，考试常出。绿灯时若对面已堵，<strong>不要进入</strong>。
+  </div>
+</div>
+
+<!-- 3-8 -->
+<div class="section" id="s3-8">
+  <h3>3-8. 自行车的路口左转（第25条第3款）（NEW）</h3>
+  <p>自行车与一般车辆<strong>左转方法不同</strong>：</p>
+  <ul>
+    <li>自行车：靠道路<strong>右侧边缘</strong>慢行，沿路口<strong>边缘部分</strong>左转（两阶段左转）</li>
+    <li>一般车辆：沿中线、由路口中心内侧左转</li>
+  </ul>
+  <div class="box box-tip">
+    <div class="box-title">💡 自行车两阶段左转</div>
+    ① 沿直行方向通过路口 → ② 停下，把车头转向左方 → ③ 按新信号再直行<br>
+    此方法是为骑车人安全。
+  </div>
+</div>
+
+<!-- 3-9 -->
+<div class="section" id="s3-9">
+  <h3>3-9. 练习题</h3>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>无信号路口道路宽度相同时优先权属于？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 先到的车</label>
+      <label class="quiz-opt" data-idx="2">② 左方来车</label>
+      <label class="quiz-opt" data-idx="3">③ 右方来车</label>
+      <label class="quiz-opt" data-idx="4">④ 大车</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 让右方车（第26条第3款）。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>环形路口的通行方向？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 顺时针</label>
+      <label class="quiz-opt" data-idx="2">② 逆时针</label>
+      <label class="quiz-opt" data-idx="3">③ 双向</label>
+      <label class="quiz-opt" data-idx="4">④ 仅直行</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 韩国右侧通行 → 逆时针。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>左转时应使用路口的哪一侧？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 中心外侧</label>
+      <label class="quiz-opt" data-idx="2">② 中心内侧</label>
+      <label class="quiz-opt" data-idx="3">③ 右侧边缘</label>
+      <label class="quiz-opt" data-idx="4">④ 左侧边缘</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 沿中线慢行，由路口中心内侧左转（第25条第2款）。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>左转车与直行车相遇时？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 左转优先</label>
+      <label class="quiz-opt" data-idx="2">② 直行优先</label>
+      <label class="quiz-opt" data-idx="3">③ 大车优先</label>
+      <label class="quiz-opt" data-idx="4">④ 同时通行</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 直行/右转优先于左转（第26条第4款）。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>无信号且交通频繁路口的义务？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 慢行</label>
+      <label class="quiz-opt" data-idx="2">② 暂停</label>
+      <label class="quiz-opt" data-idx="3">③ 保持速度</label>
+      <label class="quiz-opt" data-idx="4">④ 鸣笛</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 交通频繁或视野不良路口须暂停（第31条第2款）。</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>韩国可掉头的地方？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 设有掉头允许安全标志处</label>
+      <label class="quiz-opt" data-idx="2">② 无禁止标志即可</label>
+      <label class="quiz-opt" data-idx="3">③ 任何路口</label>
+      <label class="quiz-opt" data-idx="4">④ 宽路自由</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong> — 韩国仅在允许标志处可掉头。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>绿灯时路口对面已堵，应？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 抢先进入占位</label>
+      <label class="quiz-opt" data-idx="2">② 慢行进入</label>
+      <label class="quiz-opt" data-idx="3">③ 不进入路口</label>
+      <label class="quiz-opt" data-idx="4">④ 鸣笛</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 禁止堵塞路口（第25条第5款）。</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第4章 — 速度·安全距离·超车 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch4">
+  <span class="ch-num">第4章</span>
+  <h2>速度·安全距离·超车</h2>
+  <p class="ch-desc">道路速度上限、恶劣天气减速、停车距离、超车规定 — 出题7~9题</p>
+  <p class="ch-stars">★★★ 12项重大过失关联</p>
+</div>
+
+<!-- 4-1 -->
+<div class="section" id="s4-1">
+  <h3>4-1. 法定速度（施行规则第19条）</h3>
+  <p>《道路交通法》按道路类别和车道数规定<strong>最高/最低速度</strong>，标志另有规定的从其规定。</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>道路类型</th><th>最高</th><th>最低</th></tr>
+      <tr><td>一般道路（住宅·商业·工业区）</td><td>50km/h<br>（指定60km/h）</td><td>无</td></tr>
+      <tr><td>一般道路（其他）</td><td>60km/h</td><td>无</td></tr>
+      <tr><td>汽车专用道路</td><td>90km/h</td><td>30km/h</td></tr>
+      <tr><td>高速公路单向1车道</td><td>80km/h</td><td>50km/h</td></tr>
+      <tr><td>高速公路单向2车道以上</td><td><strong>100km/h</strong><br>（货/特殊80）</td><td>50km/h</td></tr>
+      <tr><td>指定高速公路</td><td><strong>110~120km/h</strong></td><td>50km/h</td></tr>
+      <tr><td><strong>儿童保护区</strong></td><td><strong>30km/h</strong></td><td>—</td></tr>
+      <tr><td><strong>老人/残疾人保护区</strong></td><td><strong>30km/h</strong></td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-law">
+    <div class="box-title">📜 第17条第3款</div>
+    "汽车等驾驶员不得超过最高速度或低于最低速度行驶。"
+  </div>
+</div>
+
+<!-- 4-2 -->
+<div class="section" id="s4-2">
+  <h3>4-2. 恶劣天气减速义务（施行规则第19条第2款）</h3>
+  <p>雨、雪、雾导致路面湿滑或视线变差时，须自动从法定最高速度减速，无标志也是法律义务。</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>天气状况</th><th>减速比例</th><th>例（最高100km/h道路）</th></tr>
+      <tr><td>下雨路面湿</td><td><strong>减20%</strong></td><td>80km/h</td></tr>
+      <tr><td>积雪不足20mm</td><td><strong>减20%</strong></td><td>80km/h</td></tr>
+      <tr><td>暴雨/暴雪/雾，能见度100m以内</td><td><strong>减50%</strong></td><td>50km/h</td></tr>
+      <tr><td>路面结冰</td><td><strong>减50%</strong></td><td>50km/h</td></tr>
+      <tr><td>积雪20mm以上</td><td><strong>减50%</strong></td><td>50km/h</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 20% vs 50%</div>
+    "湿了" = <strong>20%</strong><br>
+    "暴雨能见度&lt;100m" = <strong>50%</strong><br>
+    "雪&lt;20mm" = <strong>20%</strong>，"≥20mm" = <strong>50%</strong><br>
+    "结冰" = 一律<strong>50%</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意</div>
+    在韩国这是<strong>法定义务</strong>，不是建议。雨天100km/h道路上仍开100km/h即<strong>速度违反</strong>，事故时影响过失认定。
+  </div>
+</div>
+
+<!-- 4-3 -->
+<div class="section" id="s4-3">
+  <h3>4-3. 安全距离与停车距离（第19条）</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>速度</th><th>反应距离</th><th>制动距离</th><th>停车距离</th><th>建议距离</th></tr>
+      <tr><td>60km/h</td><td>约11m</td><td>约22m</td><td>约33m</td><td><strong>约60m</strong>(干燥)</td></tr>
+      <tr><td>80km/h</td><td>约14m</td><td>约38m</td><td>约52m</td><td><strong>约80m</strong></td></tr>
+      <tr><td>100km/h</td><td>约17m</td><td>约63m</td><td>约80m</td><td><strong>约100m</strong></td></tr>
+      <tr><td>120km/h</td><td>约20m</td><td>约80m</td><td>约100m</td><td><strong>约120m</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 简易记忆 — "速度数字 = 米数"</div>
+    时速60 → 60m；时速100 → 100m<br>
+    湿路面：<strong>2倍</strong><br>
+    冰面：<strong>3倍以上</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 追尾后车100%过失</div>
+    韩国一般认定<strong>追尾事故 = 后车100%过失</strong>。"前车急刹"的辩解几乎不被采纳。务必保持安全距离。
+  </div>
+</div>
+
+<!-- 4-4 -->
+<div class="section" id="s4-4">
+  <h3>4-4. 超车方法与禁止（第21条·第22条）</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 第21条 — 超车方法</div>
+    ①车辆驾驶员超车应从前车<strong>左侧</strong>通过。<br>
+    ②自行车等可在前车正在或将要超车时从前车<strong>右侧</strong>通过。<br>
+    ③被超车的驾驶员<strong>不得加速或阻碍</strong>。
+  </div>
+
+  <h4>超车步骤</h4>
+  <ol>
+    <li>打左转灯，<strong>查后/侧</strong></li>
+    <li>查对向车道（仅单向单车道情形）</li>
+    <li>向<strong>左侧</strong>移动并超车</li>
+    <li>与前车保持<strong>足够距离</strong>后再回右</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 禁止超车场所（第22条第3款）— 12项重大过失</div>
+    ① <strong>路口</strong>　② <strong>隧道内</strong>　③ <strong>桥上</strong>　④ <strong>标志指定处</strong>（弯道、坡顶、陡下坡等）<br><br>
+    💡 记忆：<strong>"路·隧·桥·标"</strong>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 禁止超车的对象/时机（第22条第1·2款）</div>
+    • 超<strong>紧急车辆</strong> → 禁止<br>
+    • 前车<strong>正在超车</strong> → 禁止<br>
+    • 前车<strong>正变向左方</strong>（如等左转） → 禁止；此时可从<strong>右侧</strong>超车<br>
+    • 后车正在超你 → 禁止<br><br>
+    超车方法/时机/场所违反皆属<strong>12项重大过失</strong>。
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 各国比较</div>
+    <strong>🇨🇳 中国：</strong>左侧超车原则，禁止超车的场所与韩国类似<br>
+    <strong>🇰🇷 韩国：</strong>左侧超车，路口/隧道/桥/标志处禁止<br>
+    <strong>🇺🇸 美国：</strong>多数州左侧原则，部分高速允许右侧超车<br>
+    <strong>🇩🇪 德国：</strong>无限速的Autobahn也禁止右侧超车<br>
+    <strong>🇯🇵 日本·🇬🇧 英国：</strong>左侧通行 → 从<strong>右侧</strong>超车
+  </div>
+</div>
+
+<!-- 4-5 -->
+<div class="section" id="s4-5">
+  <h3>4-5. 速度查处系统</h3>
+  <p>韩国速度查处密度和严格度世界知名，是外国驾驶员最常被罚的项目。</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>查处类型</th><th>原理</th><th>特点</th></tr>
+      <tr><td><strong>固定测速</strong></td><td>定点瞬时速度</td><td>导航多有提示</td></tr>
+      <tr><td><strong>移动测速</strong></td><td>激光或警车</td><td>无预告设置</td></tr>
+      <tr><td><strong>区间测速</strong></td><td>按进出区间时间计<strong>平均速度</strong></td><td>隧道/高速正在普及</td></tr>
+      <tr><td><strong>暗访警车</strong></td><td>普通车伪装，车内摄像</td><td>多在高速</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 超速罚款·扣分（轿车）</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>超速</th><th>罚款</th><th>扣分</th></tr>
+        <tr><td>≤20km/h</td><td>3万韩元</td><td>0</td></tr>
+        <tr><td>20~40</td><td>6万</td><td>15</td></tr>
+        <tr><td>40~60</td><td>9万</td><td>30</td></tr>
+        <tr><td>60~80</td><td>12万</td><td>60</td></tr>
+        <tr><td><strong>80以上</strong></td><td><strong>刑事处罚</strong></td><td>80</td></tr>
+      </table>
+    </div>
+    ⚠️ <strong>超20km/h = 12项重大过失</strong><br>
+    ⚠️ 儿童保护区内罚款·扣分<strong>2倍</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 必装导航APP</div>
+    <strong>T-map、Kakao Map、Naver Map</strong>是韩国主流导航，均实时提示测速点，支持英文。Google Maps在韩国不能进行汽车导航。
+  </div>
+</div>
+
+<!-- 4-6 -->
+<div class="section" id="s4-6">
+  <h3>4-6. 练习题</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>下雨路面湿时减速比例？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ 无须减速</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 雨湿/雪&lt;20mm = 减20%。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>暴雨能见度100m内的减速比例？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ 不可行驶</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 能见度&lt;100m、结冰、雪≥20mm = 减50%。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>下列不属于禁超场所的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 路口</label>
+      <label class="quiz-opt" data-idx="2">② 隧道内</label>
+      <label class="quiz-opt" data-idx="3">③ 高速2车道以上直线段</label>
+      <label class="quiz-opt" data-idx="4">④ 桥上</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 路口/隧道/桥/标志处禁止；高速直线段可超车。</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>超车的原则方向？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 左侧</label>
+      <label class="quiz-opt" data-idx="2">② 右侧</label>
+      <label class="quiz-opt" data-idx="3">③ 近的一侧</label>
+      <label class="quiz-opt" data-idx="4">④ 空的一侧</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong> — 第21条第1款。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>高速2车道以上轿车最高速度？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 80km/h</label>
+      <label class="quiz-opt" data-idx="2">② 100km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 110km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 120km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 默认100，指定段110~120。</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>被超车驾驶员的义务？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 加速阻挡</label>
+      <label class="quiz-opt" data-idx="2">② 鸣笛</label>
+      <label class="quiz-opt" data-idx="3">③ 越中线避让</label>
+      <label class="quiz-opt" data-idx="4">④ 不加速不阻碍</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong> — 第21条第3款。</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第5章 — 行人保护 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch5">
+  <span class="ch-num">第5章</span>
+  <h2>行人保护义务</h2>
+  <p class="ch-desc">人行横道、行人优先道路、儿童·老年保护区 — 2022年修订核心</p>
+  <p class="ch-stars">★★★ 12项重大过失·高频</p>
+</div>
+
+<!-- 5-1 -->
+<div class="section" id="s5-1">
+  <h3>5-1. 2022年行人保护修订核心（第27条）</h3>
+  <p>2022年7月修订后<strong>行人保护义务大幅强化</strong>，是外国驾驶员最易出错的领域。</p>
+
+  <div class="box box-law">
+    <div class="box-title">📜 第27条</div>
+    ① 行人正在过人行横道时驾驶员应在其前<strong>暂停</strong>。<br>
+    ③ 在无信号路口及其附近，行人正在过路时驾驶员不得<strong>妨碍</strong>。<br>
+    ⑥ 无信号人行横道处行人正在或<strong>将要过路</strong>时应暂停。<br>
+    ⑦ 在道路以外场所（公寓·停车场）也须留意行人安全。
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 核心变化 — "将要过"也受保护</div>
+    旧：仅<strong>正在过路</strong>者受保护<br>
+    新：站在路边<strong>将要过路</strong>者起即受保护 → 须暂停<br><br>
+    ⚠️ 行人站于路边即未踏出，也须停车。违反 + 事故 = <strong>12项重大过失</strong>。
+  </div>
+</div>
+
+<!-- 5-2 -->
+<div class="section" id="s5-2">
+  <h3>5-2. 儿童/老年/残疾人保护区（第12条·第12条之2）</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>类别</th><th>范围</th><th>限速</th><th>主要规定</th></tr>
+      <tr><td><strong>儿童保护区</strong></td><td>小学/幼儿园/托儿所周边<strong>半径300米</strong></td><td><strong>30km/h</strong></td><td>禁停车，无信号人行横道必停</td></tr>
+      <tr><td>老年保护区</td><td>老年设施周边300米</td><td>30km/h</td><td>可限制停车</td></tr>
+      <tr><td>残疾人保护区</td><td>特殊学校/设施周边</td><td>30km/h</td><td>可限制停车</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 民植法 — 儿童保护区事故加重处罚</div>
+    在儿童保护区内致儿童（13岁以下）伤害：1~15年有期徒刑或500~3000万韩元罚金<br>
+    致<strong>死</strong>：无期或3年以上<br><br>
+    ⚠️ 罚款·扣分<strong>2倍</strong><br>
+    ⚠️ 无信号人行横道处<strong>不论行人有无均需暂停</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 学校区绝不能超速</div>
+    韩国儿童保护区是世界上最严格的之一。早晚高峰稍超30km/h即面临<strong>巨额罚款</strong>。导航提示"儿童保护区"时立即查看时速。
+  </div>
+</div>
+
+<!-- 5-3 -->
+<div class="section" id="s5-3">
+  <h3>5-3. 行人优先道路（第2条第31号之2、第27条之2）— 2022年新设</h3>
+  <p>对于车道与人行道未分离的道路，新设<strong>"行人优先道路"</strong>制度。</p>
+
+  <ul>
+    <li>行人可使用道路<strong>全部</strong>区域</li>
+    <li>车辆经过行人时须保持<strong>安全距离</strong>并慢行</li>
+    <li>不得妨碍或威胁行人</li>
+    <li>限速：<strong>20km/h以下</strong></li>
+  </ul>
+</div>
+
+<!-- 5-4 -->
+<div class="section" id="s5-4">
+  <h3>5-4. 行人通行方法（第8条·第10条）</h3>
+  <ul>
+    <li>有人行道 → 走<strong>人行道</strong></li>
+    <li>无人行道 → 走道路<strong>左侧</strong>边缘（看到对向来车）</li>
+    <li>设有人行横道时必须由人行横道过路</li>
+    <li>无人行横道处 → 以<strong>最短距离</strong>过路</li>
+  </ul>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 行人死亡率 — 韩国现实</div>
+    韩国交通事故死亡者中<strong>行人比例</strong>约为OECD平均的<strong>2倍</strong>，老年行人死亡尤多。<br><br>
+    <strong>🇨🇳 中国：</strong>大城市行人保护意识增强，但城乡差距大<br>
+    <strong>🇺🇸 美国：</strong>步行人口少<br>
+    <strong>🇪🇺 欧洲：</strong>行人优先文化强<br>
+    <strong>🇰🇷 韩国：</strong>城市狭窄巷道多，必须防御性驾驶
+  </div>
+</div>
+
+<!-- 5-5 -->
+<div class="section" id="s5-5">
+  <h3>5-5. 练习题</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>行人站在人行横道路边将要过路时驾驶员应？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 直接通过</label>
+      <label class="quiz-opt" data-idx="2">② 暂停让行</label>
+      <label class="quiz-opt" data-idx="3">③ 鸣笛提醒</label>
+      <label class="quiz-opt" data-idx="4">④ 仅慢行</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 2022年修订第27条第6款。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>儿童保护区限速？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 20km/h</label>
+      <label class="quiz-opt" data-idx="2">② 25km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 30km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 40km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 儿童/老年/残疾人保护区均30km/h。</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>无人行道道路上行人通行位置？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 左侧（面对来车）</label>
+      <label class="quiz-opt" data-idx="2">② 右侧</label>
+      <label class="quiz-opt" data-idx="3">③ 中央</label>
+      <label class="quiz-opt" data-idx="4">④ 任何一侧</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong> — 第8条。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>儿童保护区超速罚款·扣分？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 与一般道路相同</label>
+      <label class="quiz-opt" data-idx="2">② 一般道路2倍</label>
+      <label class="quiz-opt" data-idx="3">③ 一般道路一半</label>
+      <label class="quiz-opt" data-idx="4">④ 仅扣分</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 罚款·扣分皆2倍。</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>公寓小区内道路驾驶人对行人有保护义务吗？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 有（道交法）</label>
+      <label class="quiz-opt" data-idx="2">② 不算道路无义务</label>
+      <label class="quiz-opt" data-idx="3">③ 仅适用管委会规定</label>
+      <label class="quiz-opt" data-idx="4">④ 仅适用居民</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong> — 2022年修订第27条第7款。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>行人优先道路限速？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10km/h</label>
+      <label class="quiz-opt" data-idx="2">② 15km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 20km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 30km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 20km/h以下，行人可使用道路全部。</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第6章 — 酒驾·药驾 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch6">
+  <span class="ch-num">第6章</span>
+  <h2>酒驾·药驾与处罚</h2>
+  <p class="ch-desc">血液酒精浓度标准、处罚级别、累犯加重、药驾</p>
+  <p class="ch-stars">★★★ 最严处罚</p>
+</div>
+
+<!-- 6-1 -->
+<div class="section" id="s6-1">
+  <h3>6-1. 血液酒精浓度（第44条）</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 第44条第4款</div>
+    "醉酒状态以血液酒精浓度<strong>0.03%以上</strong>为准。"
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>BAC</th><th>类别</th><th>处罚</th></tr>
+      <tr><td><strong>0.03%~0.08%</strong></td><td>单纯</td><td>1年以下徒刑或500万韩元以下罚金，吊销<strong>100天</strong></td></tr>
+      <tr><td><strong>0.08%~0.2%</strong></td><td>中</td><td>1~2年徒刑或500~1000万罚金，<strong>注销驾照</strong></td></tr>
+      <tr><td><strong>0.2%以上</strong></td><td>严重</td><td>2~5年徒刑或1000~2000万罚金，<strong>注销</strong></td></tr>
+      <tr><td><strong>拒检</strong></td><td>—</td><td>1~5年徒刑或500~2000万罚金，<strong>注销</strong></td></tr>
+      <tr><td><strong>2次以上违反</strong></td><td>尹昌浩法</td><td>2~6年徒刑或1000~3000万罚金</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 0.03%极严</div>
+    韩国0.03%标准属世界最严之一。成年男性<strong>1~2杯烧酒</strong>即可超标。"只喝一点点"是最危险的想法。<br><br>
+    <strong>🇨🇳 中国：</strong>0.02%（比韩国还严）<br>
+    <strong>🇯🇵 日本：</strong>0.03%<br>
+    <strong>🇺🇸 美国：</strong>0.08%（商用驾驶员0.04%）<br>
+    <strong>🇩🇪 德国：</strong>0.05%<br>
+    <strong>🇻🇳 越南：</strong><strong>0.00%</strong>（任何饮酒都禁止）
+  </div>
+</div>
+
+<!-- 6-2 -->
+<div class="section" id="s6-2">
+  <h3>6-2. 测试过程与拒检</h3>
+  <ol>
+    <li><strong>呼气筛查</strong>（酒精传感器）</li>
+    <li>阳性后用<strong>精密呼气仪</strong>复测</li>
+    <li>对结果有异议可<strong>抽血检测</strong>（本人同意）</li>
+    <li>血液结果为最终证据</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 拒检也是犯罪</div>
+    拒绝警方测试 = <strong>拒检罪</strong>，按0.08~0.2%级处罚（1~5年徒刑、注销）。
+  </div>
+</div>
+
+<!-- 6-3 -->
+<div class="section" id="s6-3">
+  <h3>6-3. 协助·药物·非道路场所</h3>
+
+  <h4>同乘人处罚（酒驾协助）</h4>
+  <p>明知酒驾仍<strong>提供车辆或同乘</strong>，作为协助犯一并受罚。</p>
+
+  <h4>药物驾驶（第45条）</h4>
+  <div class="box box-law">
+    <div class="box-title">📜 第45条</div>
+    "汽车等驾驶员不得在因<strong>过劳、疾病或药物</strong>等原因可能无法正常驾驶的状态下驾驶汽车等。"
+  </div>
+  <p>包括毒品、大麻、致幻物质，以及<strong>感冒药、安眠药、安定剂</strong>等。处罚：3年以下徒刑或1000万韩元以下罚金。</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 停车场内也算酒驾</div>
+    2011年修订后，<strong>公寓/私人停车场</strong>也成立酒驾。"只挪了一下车"不是借口（大法院2017도17762）。
+  </div>
+</div>
+
+<!-- 6-4 -->
+<div class="section" id="s6-4">
+  <h3>6-4. 韩国代驾文化</h3>
+  <p>韩国代驾文化非常发达，喝酒后请<strong>代驾司机</strong>把您的车开回家。</p>
+
+  <ul>
+    <li>使用方式：智能手机APP（Kakao T 代驾、T-map 代驾）或电话呼叫</li>
+    <li>价格：通常15,000~40,000韩元</li>
+    <li>餐厅·酒馆门口随处可见代驾电话</li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 外国人也可方便使用</div>
+    Kakao T支持英文。输入车牌和目的地即可呼叫司机，APP结算或现金均可。
+  </div>
+</div>
+
+<!-- 6-5 -->
+<div class="section" id="s6-5">
+  <h3>6-5. 练习题</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>韩国酒驾BAC标准？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 0.02%以上</label>
+      <label class="quiz-opt" data-idx="2">② 0.03%以上</label>
+      <label class="quiz-opt" data-idx="3">③ 0.05%以上</label>
+      <label class="quiz-opt" data-idx="4">④ 0.08%以上</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>拒绝酒驾测试的处罚？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 无</label>
+      <label class="quiz-opt" data-idx="2">② 仅罚款</label>
+      <label class="quiz-opt" data-idx="3">③ 1~5年徒刑或500~2000万罚金，吊销</label>
+      <label class="quiz-opt" data-idx="4">④ 警告复测</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>公寓停车场内醉酒挪车，处罚？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 成立酒驾，受罚</label>
+      <label class="quiz-opt" data-idx="2">② 不算道路无罚</label>
+      <label class="quiz-opt" data-idx="3">③ 仅警告</label>
+      <label class="quiz-opt" data-idx="4">④ 仅通知车主</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong> — 第44条。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>服感冒药后犯困驾驶导致事故，适用？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 第44条（酒驾）</label>
+      <label class="quiz-opt" data-idx="2">② 第45条（过劳/药物）</label>
+      <label class="quiz-opt" data-idx="3">③ 第46条</label>
+      <label class="quiz-opt" data-idx="4">④ 无相应规定</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>明知酒驾仍提供车辆或同乘者？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 协助犯处罚</label>
+      <label class="quiz-opt" data-idx="2">② 不处罚</label>
+      <label class="quiz-opt" data-idx="3">③ 罚款5万</label>
+      <label class="quiz-opt" data-idx="4">④ 仅保险费上调</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第7章 — 事故与紧急情况 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch7">
+  <span class="ch-num">第7章</span>
+  <h2>交通事故与紧急情况应对</h2>
+  <p class="ch-desc">事故后处置、二次事故预防、12项重大过失、紧急车让行、故障</p>
+  <p class="ch-stars">★★★ 12项重大过失全表</p>
+</div>
+
+<!-- 7-1 -->
+<div class="section" id="s7-1">
+  <h3>7-1. 事故后处置（第54条）</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 第54条</div>
+    ① 事故发生后驾驶员及乘务员应立即停车并<strong>救助伤者</strong>。<br>
+    ② 应向现场警察或就近警局<strong>立即报告</strong>。
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>立即停车</strong> — 离开现场可能构成肇事逃逸</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>查看伤者·拨119</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>预防二次事故</strong> — 双闪 → 三角警示牌 → 撤至护栏外</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>报警112</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content"><strong>留存证据</strong> — 多角度拍照，记录车牌·保险</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 肇事逃逸 — 最重处罚</div>
+    适用《特定犯罪加重处罚法》：<br>
+    • 致伤逃逸：1年以上徒刑或500~3000万罚金<br>
+    • <strong>致死逃逸</strong>：5年以上至<strong>无期</strong><br>
+    • 弃尸逃逸：死刑、无期或5年以上<br><br>
+    ⚠️ 外国人无例外，回国后仍可被国际刑警通缉。
+  </div>
+</div>
+
+<!-- 7-2 -->
+<div class="section" id="s7-2">
+  <h3>7-2. 12项重大过失</h3>
+  <p>《交通事故处理特例法》一般免除参保驾驶人轻过失事故的刑事责任，但下列12种<strong>无论是否参保都要受刑事处罚</strong>。</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 12项重大过失全表</div>
+    <ol>
+      <li><strong>信号违反</strong></li>
+      <li><strong>越中线</strong></li>
+      <li><strong>超速（超限速20km/h以上）</strong></li>
+      <li><strong>超车方法/时机/场所违反</strong></li>
+      <li><strong>铁路道口通行方法违反</strong></li>
+      <li><strong>人行横道行人保护义务违反</strong></li>
+      <li><strong>无证驾驶</strong></li>
+      <li><strong>酒驾</strong>（0.03%以上）·药驾</li>
+      <li><strong>侵入人行道</strong></li>
+      <li><strong>未防止乘客坠落义务</strong></li>
+      <li><strong>儿童保护区安全驾驶违反</strong></li>
+      <li><strong>货物固定违反</strong>（2017新增）</li>
+    </ol>
+  </div>
+</div>
+
+<!-- 7-3 -->
+<div class="section" id="s7-3">
+  <h3>7-3. 二次事故预防（高速公路）</h3>
+  <p>高速一次事故后停留路面被后车追撞的<strong>二次事故</strong>致死率约<strong>6倍</strong>于一次事故。</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>立即开双闪</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">尽量将车移至<strong>应急车道</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>三角警示牌</strong>：白天后方<strong>100米</strong>，夜间<strong>200米</strong>（高速尽量500米）</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">乘员全部撤至<strong>护栏外</strong></div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">韩国道路公社 <strong>1588-2504</strong> 或112</div>
+    </div>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 不要待在车内</div>
+    事故后坐在车内等保险公司极其危险，特别是高速。请立刻撤至护栏外。
+  </div>
+</div>
+
+<!-- 7-4 -->
+<div class="section" id="s7-4">
+  <h3>7-4. 紧急车让行（第29条）</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>情形</th><th>义务</th></tr>
+      <tr><td>路口及附近紧急车接近</td><td><strong>避开路口</strong>，靠右暂停</td></tr>
+      <tr><td>路口外接近</td><td>让行（慢行或停车）</td></tr>
+      <tr><td>单行道</td><td>难以靠右时<strong>靠左</strong>避让</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 紧急车种类</div>
+    消防车、救护车、献血车、警车、军事行动车等。须开<strong>警示灯+警笛</strong>方为紧急车。
+  </div>
+</div>
+
+<!-- 7-5 -->
+<div class="section" id="s7-5">
+  <h3>7-5. 故障·火灾时处置（施行规则第40条）</h3>
+  <ul>
+    <li>移至安全处（应急车道），双闪</li>
+    <li><strong>三角警示牌</strong>：后方≥100米，夜间≥200米</li>
+    <li>夜间另在后方500米设<strong>红色闪光信号/电气灯</strong></li>
+    <li>发动机起火：立即下车 → 119 → 警示后方</li>
+    <li>铁路道口故障：<strong>疏散乘员 → 按警铃 → 用旗或灯通知司机</strong></li>
+  </ul>
+</div>
+
+<!-- 7-6 -->
+<div class="section" id="s7-6">
+  <h3>7-6. 外国人事故报警与翻译</h3>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 紧急联系电话</div>
+    <strong>☎ 112</strong> — 警察（英/中/日翻译可接通）<br>
+    <strong>☎ 119</strong> — 消防/急救（多语翻译）<br>
+    <strong>☎ 1588-5644</strong> — BBB Korea 24小时多语翻译（20语种）<br>
+    <strong>☎ 1345</strong> — 法务部外国人服务中心<br>
+    <strong>☎ 1588-2504</strong> — 韩国道路公社高速公路服务
+  </div>
+</div>
+
+<!-- 7-7 -->
+<div class="section" id="s7-7">
+  <h3>7-7. 练习题</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>事故后驾驶员最先要做的？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 打保险电话</label>
+      <label class="quiz-opt" data-idx="2">② 停车救助伤者</label>
+      <label class="quiz-opt" data-idx="3">③ 拍照</label>
+      <label class="quiz-opt" data-idx="4">④ 与对方协商</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 第54条第1款。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>下列不属于12项重大过失的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 信号违反</label>
+      <label class="quiz-opt" data-idx="2">② 越中线</label>
+      <label class="quiz-opt" data-idx="3">③ 违章停车</label>
+      <label class="quiz-opt" data-idx="4">④ 无证驾驶</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>高速事故后预防二次事故首选？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 车内等待</label>
+      <label class="quiz-opt" data-idx="2">② 双闪→警示牌→撤至护栏外</label>
+      <label class="quiz-opt" data-idx="3">③ 与对方争吵</label>
+      <label class="quiz-opt" data-idx="4">④ 仅拍照</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>路口附近紧急车接近时？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 避开路口靠右暂停</label>
+      <label class="quiz-opt" data-idx="2">② 直接通过</label>
+      <label class="quiz-opt" data-idx="3">③ 跟随紧急车</label>
+      <label class="quiz-opt" data-idx="4">④ 靠中线避让</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong> — 第29条。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>白天故障时三角警示牌位置？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 车后紧靠</label>
+      <label class="quiz-opt" data-idx="2">② 后方100米以上</label>
+      <label class="quiz-opt" data-idx="3">③ 车前</label>
+      <label class="quiz-opt" data-idx="4">④ 无须设置</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 白天100米，夜间200米。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>外国人24小时多语翻译电话？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 119</label>
+      <label class="quiz-opt" data-idx="2">② 112</label>
+      <label class="quiz-opt" data-idx="3">③ 1588-5644 (BBB)</label>
+      <label class="quiz-opt" data-idx="4">④ 1345</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第8章 — 韩国交通文化 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch8">
+  <span class="ch-num">第8章</span>
+  <h2>停·驻车·灯光·韩国交通文化</h2>
+  <p class="ch-desc">禁停规定、停车文化、灯光规定、喇叭使用、导航APP</p>
+  <p class="ch-stars">★★ 生活与考试必备</p>
+</div>
+
+<!-- 8-1 -->
+<div class="section" id="s8-1">
+  <h3>8-1. 停车与驻车区别（第2条）</h3>
+  <div class="box box-law">
+    <div class="box-title">📜 第2条（24）（25）</div>
+    <strong>停车（정차）</strong>：<strong>不超过5分钟</strong>的临时停止<br>
+    <strong>驻车（주차）</strong>：持续停止，<strong>超过5分钟</strong>，或驾驶员离开车辆无法立即驾驶
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 5分钟规则</div>
+    驾驶员<strong>在车</strong>且≤5分钟 = 停车<br>
+    驾驶员<strong>不在</strong>或&gt;5分钟 = 驻车
+  </div>
+</div>
+
+<!-- 8-2 -->
+<div class="section" id="s8-2">
+  <h3>8-2. 禁停·禁驻场所（第32条·第33条）</h3>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 禁止停车与驻车（第32条）</div>
+    ① <strong>路口·人行横道·铁路道口·人行道</strong><br>
+    ② 路口边缘或道路转角<strong>5米</strong>内<br>
+    ③ 安全岛四方<strong>10米</strong>内<br>
+    ④ <strong>公交车站</strong>标志/标线<strong>10米</strong>内<br>
+    ⑤ 铁路道口边或人行横道<strong>10米</strong>内<br>
+    ⑥ 标志规定的禁止处<br>
+    ⑦ 警察厅长指定处
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 禁止驻车（第33条）— 停车可</div>
+    ① <strong>隧道内</strong>·<strong>桥上</strong><br>
+    ② <strong>消防设施</strong>5米内<br>
+    ③ 道路施工区两侧5米内<br>
+    ④ 警察厅长指定处
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 5米/10米记忆</div>
+    <strong>5米禁停驻</strong>：路口转角<br>
+    <strong>5米禁驻</strong>：消防设施<br>
+    <strong>10米禁停驻</strong>：安全岛、公交车站、铁路道口、人行横道
+  </div>
+</div>
+
+<!-- 8-3 -->
+<div class="section" id="s8-3">
+  <h3>8-3. 韩国停车文化</h3>
+
+  <ul>
+    <li><strong>倒车入位</strong>是默认 — 出库视野好</li>
+    <li><strong>双重停车</strong>：留电话于仪表台，松手刹便于推车</li>
+    <li><strong>机械车库</strong>：折后视镜、对准</li>
+    <li><strong>代客泊车</strong>：高级餐厅/酒店常见，小费3000~5000韩元</li>
+    <li><strong>公/私营停车场</strong>：每小时1000~4000韩元，市中心更贵</li>
+  </ul>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 双重停车要留号码</div>
+    不留号码会被投诉甚至罚款。可使用Kakao/T-map停车的二维码或电话共享服务。
+  </div>
+</div>
+
+<!-- 8-4 -->
+<div class="section" id="s8-4">
+  <h3>8-4. 灯光规定（第37条）</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>情况</th><th>应开灯光</th></tr>
+      <tr><td>夜间（日落后~日出前）</td><td>大灯、车宽灯、尾灯、牌照灯</td></tr>
+      <tr><td>隧道内</td><td>大灯、车宽灯、尾灯、牌照灯</td></tr>
+      <tr><td>雨/雪/雾导致变暗</td><td>大灯、车宽灯、尾灯</td></tr>
+      <tr><td>夜间停驻</td><td>车宽灯、尾灯</td></tr>
+      <tr><td>会车时</td><td><strong>近光</strong>（禁用远光）</td></tr>
+      <tr><td>紧跟前车</td><td><strong>近光</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 远光灯</div>
+    在韩国<strong>使用妨碍他人视线的远光灯</strong>属违法（第37条第2款）。城市几乎不用。对方闪远光通常意味着"请关远光"或"前方有危险"。
+  </div>
+</div>
+
+<!-- 8-5 -->
+<div class="section" id="s8-5">
+  <h3>8-5. 喇叭使用（第49条第1款8号）</h3>
+  <div class="box box-law">
+    <div class="box-title">📜 第49条</div>
+    "驾驶人不得在<strong>无正当理由</strong>下鸣笛、加速等给他人造成<strong>危害或交通危险</strong>。"
+  </div>
+  <p>喇叭仅可在<strong>避免危险所必需</strong>时使用。前车慢、催促起步等属违法。</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意</div>
+    韩国路上喇叭声很多，但多为<strong>违法</strong>。鸣笛违法 = 4万韩元 + 扣10分。
+  </div>
+</div>
+
+<!-- 8-6 -->
+<div class="section" id="s8-6">
+  <h3>8-6. 练习题</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>区分停车/驻车的时间？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3分</label>
+      <label class="quiz-opt" data-idx="2">② 5分</label>
+      <label class="quiz-opt" data-idx="3">③ 10分</label>
+      <label class="quiz-opt" data-idx="4">④ 与时间无关</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>距消防设施禁驻距离？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3米</label>
+      <label class="quiz-opt" data-idx="2">② 4米</label>
+      <label class="quiz-opt" data-idx="3">③ 5米</label>
+      <label class="quiz-opt" data-idx="4">④ 10米</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 第33条。</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>距公交车站禁停驻距离？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3米</label>
+      <label class="quiz-opt" data-idx="2">② 5米</label>
+      <label class="quiz-opt" data-idx="3">③ 7米</label>
+      <label class="quiz-opt" data-idx="4">④ 10米</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong> — 第32条。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>会车时灯光？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 远光</label>
+      <label class="quiz-opt" data-idx="2">② 近光</label>
+      <label class="quiz-opt" data-idx="3">③ 关大灯</label>
+      <label class="quiz-opt" data-idx="4">④ 双闪</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>红灯时鸣笛催前车起步属于？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 违反第49条，罚款</label>
+      <label class="quiz-opt" data-idx="2">② 正当鸣笛</label>
+      <label class="quiz-opt" data-idx="3">③ 习俗允许</label>
+      <label class="quiz-opt" data-idx="4">④ 无处罚</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>隧道内的措施？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 关大灯</label>
+      <label class="quiz-opt" data-idx="2">② 开大灯·禁停车·禁超车</label>
+      <label class="quiz-opt" data-idx="3">③ 开远光</label>
+      <label class="quiz-opt" data-idx="4">④ 仅双闪</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第9章 — 技能/路考合格策略 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch9">
+  <span class="ch-num">第9章</span>
+  <h2>技能考·路考合格策略</h2>
+  <p class="ch-desc">考试科目要点、扣分/不及格项、语音引导</p>
+  <p class="ch-stars">★★ 实操备考</p>
+</div>
+
+<!-- 9-1 -->
+<div class="section" id="s9-1">
+  <h3>9-1. 技能考试（场内）概述</h3>
+  <p>笔试合格后在考场内驾驶车辆完成基本操作。第二类普通<strong>80分以上合格</strong>。</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>科目</th><th>内容</th><th>提示</th></tr>
+      <tr><td>起步前操作</td><td>安全带、转向灯、换挡、灯光、雨刷、双闪</td><td>按语音指令、记顺序与名称</td></tr>
+      <tr><td><strong>T字停车</strong></td><td>倒车入位</td><td>用后视镜看线，争取一次成功</td></tr>
+      <tr><td><strong>坡道</strong></td><td>坡上停车后再起步（防溜）</td><td>用手刹，<strong>溜≥50厘米</strong>不及格</td></tr>
+      <tr><td><strong>路口通行</strong></td><td>遵守信号、左右查看</td><td>红灯越停车线 = 不及格</td></tr>
+      <tr><td><strong>加速段</strong></td><td>达到指定速度（≥20km/h）</td><td>速度不足扣分</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 技能考主要不及格项</div>
+    ① 未系安全带<br>
+    ② 信号违反（红灯越停车线）<br>
+    ③ 坡道溜车<strong>≥50厘米</strong><br>
+    ④ 离开赛道（越界线）<br>
+    ⑤ 超时（6分钟）<br>
+    ⑥ 操作失误（熄火3次以上）
+  </div>
+</div>
+
+<!-- 9-2 -->
+<div class="section" id="s9-2">
+  <h3>9-2. 路考概述</h3>
+  <p>取得练习驾照后，在实际道路约5公里行驶，考官同车评分。<strong>70分以上合格</strong>。</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 路考不及格/重扣分项</div>
+    <strong>不及格</strong><br>
+    ① 信号违反<br>
+    ② 越中线<br>
+    ③ 行人保护违反<br>
+    ④ 酒/药驾应试<br>
+    ⑤ 不听考官指令<br>
+    ⑥ 跟车过近导致追尾风险<br><br>
+    <strong>重扣分（5~10分）</strong><br>
+    • 变道未打灯<br>
+    • 超速10km/h+<br>
+    • 停车碰路缘<br>
+    • 急停急起
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 合格诀窍 — 防御驾驶心态</div>
+    路考首重<strong>安全</strong>。安全速度·充足距离·100%打灯比快重要。模糊时<strong>慢行/暂停</strong>就是答案。
+  </div>
+</div>
+
+<!-- 9-3 -->
+<div class="section" id="s9-3">
+  <h3>9-3. 外国人语言与语音引导</h3>
+  <ul>
+    <li>技能考语音：韩、英、中、越等多语支持</li>
+    <li>路考：仅韩语和英语</li>
+    <li>常见指令："直行（직진）、左转（좌회전）、右转（우회전）、停车（정지）、慢行（서행）"</li>
+  </ul>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ 外国人注意 — 考前准备</div>
+    • 考场车与自家车操控可能不同 → 提前在考场练习<br>
+    • 路考路线不固定（当日抽签） → 在驾校练习考场周边1~2条路线更稳<br>
+    • 驾校提供"借车应试"服务，可用熟悉的车应考
+  </div>
+</div>
+
+<!-- 9-4 -->
+<div class="section" id="s9-4">
+  <h3>9-4. 练习题</h3>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>技能考坡道溜车多少不及格？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10cm</label>
+      <label class="quiz-opt" data-idx="2">② 30cm</label>
+      <label class="quiz-opt" data-idx="3">③ 50cm</label>
+      <label class="quiz-opt" data-idx="4">④ 1m</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>路考合格分？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 60</label>
+      <label class="quiz-opt" data-idx="2">② 70</label>
+      <label class="quiz-opt" data-idx="3">③ 80</label>
+      <label class="quiz-opt" data-idx="4">④ 90</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 路考70，技能80。</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>下列不属于路考不及格项的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 信号违反</label>
+      <label class="quiz-opt" data-idx="2">② 越中线</label>
+      <label class="quiz-opt" data-idx="3">③ 行人保护违反</label>
+      <label class="quiz-opt" data-idx="4">④ 一次未打转向灯</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>路考语言支持？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 仅韩语</label>
+      <label class="quiz-opt" data-idx="2">② 韩语·英语</label>
+      <label class="quiz-opt" data-idx="3">③ 8种</label>
+      <label class="quiz-opt" data-idx="4">④ 所有外语</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>技能考未系安全带？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 立即不及格</label>
+      <label class="quiz-opt" data-idx="2">② 扣5分</label>
+      <label class="quiz-opt" data-idx="3">③ 警告后继续</label>
+      <label class="quiz-opt" data-idx="4">④ 无影响</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- 第10章 — 实战练习 -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch10">
+  <span class="ch-num">第10章</span>
+  <h2>实战练习</h2>
+  <p class="ch-desc">高频核心30题 — 非保护左转·掉头·2022修订·右转专用灯·二次事故·让行</p>
+  <p class="ch-stars">★★★ 考前最终复习</p>
+</div>
+
+<div class="section" id="s10-1">
+  <h3>10-1. 核心30题</h3>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>有非保护左转标志的路口可左转的信号？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 直行绿灯且无对向车</label>
+      <label class="quiz-opt" data-idx="2">② 红灯</label>
+      <label class="quiz-opt" data-idx="3">③ 黄灯</label>
+      <label class="quiz-opt" data-idx="4">④ 任何信号</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>非保护左转事故时左转方过失？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 30%</label>
+      <label class="quiz-opt" data-idx="2">② 50%</label>
+      <label class="quiz-opt" data-idx="3">③ 80%以上</label>
+      <label class="quiz-opt" data-idx="4">④ 0%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>韩国可掉头的情况？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 有允许标志且符合信号/条件</label>
+      <label class="quiz-opt" data-idx="2">② 无禁止标志即可</label>
+      <label class="quiz-opt" data-idx="3">③ 任何路口</label>
+      <label class="quiz-opt" data-idx="4">④ 车少时随意</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>有掉头标志但中线为黄实线？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 可掉头</label>
+      <label class="quiz-opt" data-idx="2">② 慢行可</label>
+      <label class="quiz-opt" data-idx="3">③ 无行人可</label>
+      <label class="quiz-opt" data-idx="4">④ 不可（越中线＝重大过失）</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>2022年行人保护修订核心？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 可忽视行人</label>
+      <label class="quiz-opt" data-idx="2">② "将要过路"也保护，扩展至非道路场所</label>
+      <label class="quiz-opt" data-idx="3">③ 取消无信号人行横道</label>
+      <label class="quiz-opt" data-idx="4">④ 取消儿童保护区</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>儿童保护区无信号人行横道驾驶员义务？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 不论行人有无均暂停</label>
+      <label class="quiz-opt" data-idx="2">② 慢行</label>
+      <label class="quiz-opt" data-idx="3">③ 仅有行人时停</label>
+      <label class="quiz-opt" data-idx="4">④ 鸣笛</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>右转专用三色灯红时？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 暂停后可</label>
+      <label class="quiz-opt" data-idx="2">② 慢行后可</label>
+      <label class="quiz-opt" data-idx="3">③ 无行人可</label>
+      <label class="quiz-opt" data-idx="4">④ 绝对不可</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q8</span><span>高速事故二次预防顺序？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 车内等→保险电话</label>
+      <label class="quiz-opt" data-idx="2">② 双闪→警示牌→护栏外撤离→报警</label>
+      <label class="quiz-opt" data-idx="3">③ 与对方协商→拍照</label>
+      <label class="quiz-opt" data-idx="4">④ 仅挪车</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q9</span><span>无信号路口宽度不同时优先权？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 窄路</label>
+      <label class="quiz-opt" data-idx="2">② 先看到的</label>
+      <label class="quiz-opt" data-idx="3">③ 宽路</label>
+      <label class="quiz-opt" data-idx="4">④ 大车</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 第26条第2款。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q10</span><span>等宽路口左转/直行/右转同到顺序？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 左&gt;直&gt;右</label>
+      <label class="quiz-opt" data-idx="2">② 直/右&gt;左，同时让右</label>
+      <label class="quiz-opt" data-idx="3">③ 同时</label>
+      <label class="quiz-opt" data-idx="4">④ 左优先</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong> — 第26条第3·4款。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q11</span><span>高速2车道以上轿车最高速度？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 80</label>
+      <label class="quiz-opt" data-idx="2">② 100km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 110</label>
+      <label class="quiz-opt" data-idx="4">④ 不限</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q12</span><span>路面结冰减速比例？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ 无须减速</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q13</span><span>韩国酒驾BAC标准？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 0.02%</label>
+      <label class="quiz-opt" data-idx="2">② 0.03%</label>
+      <label class="quiz-opt" data-idx="3">③ 0.05%</label>
+      <label class="quiz-opt" data-idx="4">④ 0.08%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q14</span><span>越黄实线超车致事故属于？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 12项重大过失（越中线+超车违反）</label>
+      <label class="quiz-opt" data-idx="2">② 一般过失</label>
+      <label class="quiz-opt" data-idx="3">③ 仅保险</label>
+      <label class="quiz-opt" data-idx="4">④ 无扣分</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q15</span><span>环形路口通行原则？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 进入车优先</label>
+      <label class="quiz-opt" data-idx="2">② 大车优先</label>
+      <label class="quiz-opt" data-idx="3">③ 顺时针</label>
+      <label class="quiz-opt" data-idx="4">④ 逆时针；环内车优先</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q16</span><span>绿灯路口对面已堵？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 抢入</label>
+      <label class="quiz-opt" data-idx="2">② 慢入</label>
+      <label class="quiz-opt" data-idx="3">③ 不进入路口</label>
+      <label class="quiz-opt" data-idx="4">④ 鸣笛</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 第25条第5款。</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q17</span><span>不属12项重大过失的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 信号违反</label>
+      <label class="quiz-opt" data-idx="2">② 酒驾</label>
+      <label class="quiz-opt" data-idx="3">③ 货物固定违反</label>
+      <label class="quiz-opt" data-idx="4">④ 违章停车</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q18</span><span>黄色闪烁含义？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 暂停</label>
+      <label class="quiz-opt" data-idx="2">② 注意通行</label>
+      <label class="quiz-opt" data-idx="3">③ 停止</label>
+      <label class="quiz-opt" data-idx="4">④ 保速</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q19</span><span>中线颜色？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 白</label>
+      <label class="quiz-opt" data-idx="2">② 黄</label>
+      <label class="quiz-opt" data-idx="3">③ 蓝</label>
+      <label class="quiz-opt" data-idx="4">④ 红</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q20</span><span>蓝色路面标线含义？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 残疾人停车</label>
+      <label class="quiz-opt" data-idx="2">② 货车专用</label>
+      <label class="quiz-opt" data-idx="3">③ 公交专用车道</label>
+      <label class="quiz-opt" data-idx="4">④ 自行车专用</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q21</span><span>距安全岛禁停驻距离？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10米</label>
+      <label class="quiz-opt" data-idx="2">② 5米</label>
+      <label class="quiz-opt" data-idx="3">③ 3米</label>
+      <label class="quiz-opt" data-idx="4">④ 无限制</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q22</span><span>构成12项重大过失的超速？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 超10km/h</label>
+      <label class="quiz-opt" data-idx="2">② 超20km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 超40km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 超60km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q23</span><span>行人灯绿色闪烁行人应？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 快开始过路</label>
+      <label class="quiz-opt" data-idx="2">② 原地不动</label>
+      <label class="quiz-opt" data-idx="3">③ 不可新开始；正在过路则迅速完成</label>
+      <label class="quiz-opt" data-idx="4">④ 鸣笛</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q24</span><span>儿童保护区罚款·扣分？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 同一般</label>
+      <label class="quiz-opt" data-idx="2">② 一般的2倍</label>
+      <label class="quiz-opt" data-idx="3">③ 1.5倍</label>
+      <label class="quiz-opt" data-idx="4">④ 免除</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q25</span><span>下列不属于一般红灯右转条件的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 完全停车</label>
+      <label class="quiz-opt" data-idx="2">② 不妨碍行人</label>
+      <label class="quiz-opt" data-idx="3">③ 不妨碍其他车</label>
+      <label class="quiz-opt" data-idx="4">④ 鸣笛</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：④</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q26</span><span>救护伤者后下一步？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 报警112/急救119</label>
+      <label class="quiz-opt" data-idx="2">② 打保险</label>
+      <label class="quiz-opt" data-idx="3">③ 离开现场</label>
+      <label class="quiz-opt" data-idx="4">④ 协商</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong> — 第54条第2款。</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q27</span><span>公寓小区内撞行人？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 非道路无责</label>
+      <label class="quiz-opt" data-idx="2">② 仅管委会规定</label>
+      <label class="quiz-opt" data-idx="3">③ 适用2022年行人保护义务</label>
+      <label class="quiz-opt" data-idx="4">④ 仅民事</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 第27条第7款。</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q28</span><span>会车时灯光？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 远光</label>
+      <label class="quiz-opt" data-idx="2">② 近光</label>
+      <label class="quiz-opt" data-idx="3">③ 关闭</label>
+      <label class="quiz-opt" data-idx="4">④ 双闪</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：②</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q29</span><span>前车将要左转时超车方向？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 可从右侧超车</label>
+      <label class="quiz-opt" data-idx="2">② 左侧</label>
+      <label class="quiz-opt" data-idx="3">③ 禁超</label>
+      <label class="quiz-opt" data-idx="4">④ 越中线</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：①</strong></div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q30</span><span>不属警察辅助人员的是？</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 模范驾驶员</label>
+      <label class="quiz-opt" data-idx="2">② 宪兵</label>
+      <label class="quiz-opt" data-idx="3">③ 高速公路安全巡逻员</label>
+      <label class="quiz-opt" data-idx="4">④ 消防公务员</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>答案：③</strong> — 仅模范驾驶员、宪兵、消防（施行令第6条）。</div>
+  </div>
+</div>
+
+
+<!-- ===== RESOURCES FOOTER ===== -->
+<div class="resources">
+  <h4>📚 学习资源</h4>
+  <a href="https://evergreenedu-collab.github.io/quiz/textbook_cn.html">📖 用教材学习</a>
+  <a href="https://evergreenedu-collab.github.io/quiz/cn.html">✏️ 题库980题练习</a>
+  <p style="font-size:.8rem;opacity:.7;margin-top:.5rem;">韩国道路交通公团（KoRoad）教育本部 | © 2026</p>
+</div>
+
+</div><!-- end .content -->
+
+<!-- ===== QUIZ INTERACTION JS ===== -->
+<script>
+document.querySelectorAll('.quiz').forEach(quiz => {
+  const answer = parseInt(quiz.dataset.answer);
+  const answerBox = quiz.querySelector('.quiz-answer');
+  quiz.querySelectorAll('.quiz-opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      // 이미 답변 표시되었으면 무시
+      if (answerBox.classList.contains('show')) return;
+      const idx = parseInt(opt.dataset.idx);
+      // 모든 옵션 비활성화
+      quiz.querySelectorAll('.quiz-opt').forEach(o => {
+        o.style.pointerEvents = 'none';
+      });
+      if (idx === answer) {
+        opt.classList.add('correct');
+      } else {
+        opt.classList.add('wrong');
+        // 정답 표시
+        quiz.querySelector(`[data-idx="${answer}"]`).classList.add('correct');
+      }
+      answerBox.classList.add('show');
+    });
+  });
+});
+
+// Nav tab active state
+const sections = document.querySelectorAll('.chapter-header');
+const navLinks = document.querySelectorAll('.nav-tabs a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>
