@@ -25,6 +25,9 @@
 ├── scripts/            # 자동화 스크립트 (이 가이드의 핵심)
 │   ├── refresh_pdf.py   # PDF → HTML 데이터 자동 갱신
 │   └── match_images.py  # 이미지 위치 매칭·추출
+├── html_to_txt.py      # HTML → gpt_files/quiz_bank_*.txt 변환 (GPTs 동기화)
+├── gpt_files/         # ChatGPT GPTs 학습 텍스트 (4개 언어, HTML 정본 추출본)
+│   └── quiz_bank_{ko,en,cn,vn}.txt
 └── UPDATE_GUIDE.md     # 사용자분용 한국어 갱신 가이드 (꼭 함께 읽으세요)
 ```
 
@@ -86,6 +89,18 @@ PDF 페이지에서 어떤 이미지가 어느 문항인지 자동 매칭:
 
 **향후 갱신 시**: 이 알고리즘이 정확히 작동하므로, 새 PDF에 대해서도 동일하게 자동 매칭 가능.
 
+## GPTs 텍스트 동기화 (html_to_txt.py 안에 구현)
+
+ChatGPT GPTs 학습용 4개 언어 텍스트 (`gpt_files/quiz_bank_{ko,en,cn,vn}.txt`) 를 HTML 정본에서 자동 생성:
+
+1. 4개 HTML 의 `const Q=[...]` 추출 → 1000문항씩 sort
+2. **한국어 해설(`e`)·이미지(`imgs`) 매핑**을 만들어 비한국어 HTML 의 빈 필드에 자동 주입
+   - en/cn/vn 의 `e` 는 전부 빈 문자열 → 한국어 해설 그대로 복사 (GPTs 가 사용자 질문 언어로 번역 응답)
+   - en HTML 5개(Q737/Q789/Q841/Q863/Q865), cn HTML 2개(Q889/Q919) 의 `imgs` 누락 → 한국어 imgs 복사
+3. 사용자 양식 (`===== 문제 N =====` / `유형` / `질문` / `이미지` / `①~④` / `정답` / `해설`) 으로 출력, UTF-8/LF
+
+**향후 갱신 시**: HTML 갱신이 완료되면 **반드시 `py html_to_txt.py` 를 실행** 해서 4개 txt 를 동시 갱신할 것. 같은 PR 에 묶어 머지.
+
 ## 안전 절차 (모든 작업의 표준)
 
 1. **작업 시작 전 백업**:
@@ -106,8 +121,19 @@ PDF 페이지에서 어떤 이미지가 어느 문항인지 자동 매칭:
 
 ## 미해결·향후 작업
 
-- (현재 없음) 모든 미해결 작업 PR #1~#7로 완료
+- (현재 없음) 모든 미해결 작업 PR #1~#9 로 완료 (PR #9: GPTs txt 동기화 자동화)
 - 새 PDF 갱신 시: `UPDATE_GUIDE.md` 절차 참조
+
+### 다음 갱신 시 Claude 가 자동으로 수행할 순서
+
+1. 백업 + 작업 브랜치
+2. `python scripts/refresh_pdf.py` → PDF 1000문항 추출·비교, 사용자 승인
+3. HTML 4개 갱신 + 카운터 재계산 + (필요 시) `python scripts/match_images.py`
+4. **`py html_to_txt.py` 자동 실행 → `gpt_files/quiz_bank_*.txt` 4개 동기화** (절대 빠뜨리지 말 것)
+5. 검증 (4파일 Q=1000, V=35, E≈996, I=285 일관) → PR 생성 (HTML + gpt_files 같은 PR)
+6. 사용자분 PR 검토·머지
+7. 머지 후 바탕화면(`C:\Users\user\OneDrive\바탕 화면\`) 에 새 4 파일 자동 복사
+8. 사용자분에게 ChatGPT GPTs Knowledge 재업로드 절차 안내 (기존 4파일 삭제 → 새 4파일 업로드 → Save)
 
 ## 관련 GitHub 저장소
 
