@@ -61,9 +61,17 @@ def format_question(q):
     return "\n".join(lines)
 
 
-def convert(html_path, out_path):
+def convert(html_path, out_path, ko_expl=None, ko_imgs=None):
     Q = extract_Q(html_path)
     Q.sort(key=lambda x: x["n"])
+    if ko_expl is not None:
+        for q in Q:
+            if not (q.get("e") or "").strip():
+                q["e"] = ko_expl.get(q["n"], "")
+    if ko_imgs is not None:
+        for q in Q:
+            if not (q.get("imgs") or []):
+                q["imgs"] = ko_imgs.get(q["n"], [])
     body = "\n\n".join(format_question(q) for q in Q) + "\n"
     with open(out_path, "w", encoding="utf-8", newline="\n") as f:
         f.write(body)
@@ -72,8 +80,13 @@ def convert(html_path, out_path):
 
 
 def main():
+    ko_Q = extract_Q(os.path.join(REPO, "index.html"))
+    ko_expl = {q["n"]: (q.get("e") or "").strip() for q in ko_Q}
+    ko_imgs = {q["n"]: list(q.get("imgs") or []) for q in ko_Q}
     for html_name, txt_name in TARGETS:
-        convert(os.path.join(REPO, html_name), os.path.join(OUT_DIR, txt_name))
+        expl_inj = None if html_name == "index.html" else ko_expl
+        imgs_inj = None if html_name == "index.html" else ko_imgs
+        convert(os.path.join(REPO, html_name), os.path.join(OUT_DIR, txt_name), expl_inj, imgs_inj)
 
 
 if __name__ == "__main__":
