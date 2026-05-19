@@ -55,6 +55,7 @@
   /* ===== NAV TABS ===== */
   .nav-tabs {
     display: flex;
+    justify-content: safe center;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -419,6 +420,11 @@
   .lsw::-webkit-scrollbar{display:none}
   .lsw .lg{padding:4px 10px;border-radius:14px;font-size:11px;color:rgba(255,255,255,.6);text-decoration:none;white-space:nowrap;font-weight:500;flex-shrink:0}
   .lsw .lg.on{background:rgba(255,255,255,.15);color:#fff}
+.nav-strip{display:flex;gap:8px;padding:8px 12px;max-width:640px;margin:0 auto;background:#fff;border-bottom:1px solid #E2E5EF}
+.nav-strip .chip{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:44px;box-sizing:border-box;padding:10px;border-radius:18px;font-size:13px;font-weight:700;text-decoration:none;font-family:inherit;line-height:1.25}
+.nav-strip .chip-sib{background:#F3F4F8;color:#4A4D63;border:1.5px solid #E2E5EF}
+.nav-strip .chip-ai{background:linear-gradient(135deg,#003FA2,#2563EB);color:#fff;box-shadow:0 2px 8px rgba(0,32,77,.22)}
+.tt{position:fixed;bottom:18px;right:18px;width:46px;height:46px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:18px;cursor:pointer;box-shadow:0 3px 10px rgba(0,32,77,.25);display:none;z-index:100}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -432,6 +438,11 @@
 <div class="header">
   <h1>🚗 韩国驾驶执照笔试教材（外国人版）</h1>
   <p>韩国道路交通公团（KoRoad）教育本部</p>
+</div>
+
+<div class="nav-strip">
+<a class="chip chip-sib" href="cn.html">📝 开始做题</a>
+<a class="chip chip-ai" href="https://chatgpt.com/g/g-69db8d23db70819186a5872bbc3ea890-driver-s-license-ai-tutor-for-foreigners" target="_blank" rel="noopener" aria-label="向 AI 导师提问，在新窗口中打开">🤖 向 AI 导师提问</a>
 </div>
 
 <!-- ===== NAV ===== -->
@@ -3067,5 +3078,7 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 sections.forEach(s => observer.observe(s));
 </script>
+<button class="tt" id="tt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('tt').style.display=window.scrollY>400?'block':'none';});</script>
 </body>
 </html>
