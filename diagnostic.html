@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>진단평가 — 외국인 운전면허 학과시험</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--kb:#003FA2;--kb2:#2563EB;--bg:#F3F4F8;--card:#FFF;--txt:#1A1D2E;--txt2:#6E7191;--bdr:#E2E5EF;--ok:#0D7C3F;--ok-bg:#E6F4EC;--no:#C0392B;--no-bg:#FBEAE8;--r:14px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt);font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%}
+#app{max-width:640px;margin:0 auto;padding:16px 14px 60px}
+h1{font-size:1.25rem;font-weight:900;margin:.2rem 0}
+h2{font-size:1.05rem;font-weight:700;margin:1.2rem 0 .5rem}
+p{margin:.5rem 0}
+.hd{background:linear-gradient(135deg,var(--kb),var(--kb2));color:#fff;border-radius:var(--r);padding:18px 16px;text-align:center;margin-bottom:14px}
+.hd .sub{font-size:.82rem;opacity:.9}
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:16px;margin-bottom:12px}
+.notice{background:#FBFAF3;border:1px solid #E8E2C8;border-radius:10px;padding:12px 14px;font-size:.84rem;color:#5A5333}
+.notice b{color:#3A3520}
+label.chk{display:flex;gap:8px;align-items:flex-start;font-weight:700;cursor:pointer;margin:10px 0}
+label.chk input{margin-top:3px;width:18px;height:18px;flex:none}
+.fld{margin:12px 0}
+.fld>span{display:block;font-weight:700;font-size:.9rem;margin-bottom:5px}
+select,input[type=text]{width:100%;padding:11px 10px;border:1.5px solid var(--bdr);border-radius:10px;font-size:15px;font-family:inherit;background:#fff}
+.ages{display:flex;flex-wrap:wrap;gap:7px}
+.ages label{flex:1;min-width:78px;text-align:center;border:1.5px solid var(--bdr);border-radius:10px;padding:9px 4px;font-size:.86rem;font-weight:700;cursor:pointer}
+.ages label.on{border-color:var(--kb);background:#EBF0FA;color:var(--kb)}
+.ages input{display:none}
+.btn{display:block;width:100%;border:none;border-radius:12px;padding:14px;font-size:1rem;font-weight:900;font-family:inherit;cursor:pointer;margin-top:10px;min-height:50px;text-decoration:none;text-align:center}
+.btn-main{background:linear-gradient(135deg,var(--kb),var(--kb2));color:#fff;box-shadow:0 3px 10px rgba(0,32,77,.22)}
+.btn-sub{background:#F3F4F8;color:#4A4D63;border:1.5px solid var(--bdr)}
+.btn:disabled{opacity:.5}
+.q{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:14px;margin-bottom:11px}
+.q-head{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.q-idx{background:var(--kb);color:#fff;font-weight:900;border-radius:8px;min-width:30px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.85rem}
+.q-type{font-size:.72rem;font-weight:700;color:var(--txt2);border:1px solid var(--bdr);border-radius:6px;padding:2px 7px}
+.q-body{font-weight:500;margin-bottom:9px}
+.q img{max-width:100%;border-radius:8px;margin:5px 0;border:1px solid var(--bdr)}
+.opt{display:flex;gap:9px;align-items:flex-start;border:1.5px solid var(--bdr);border-radius:10px;padding:10px;margin:6px 0;cursor:pointer}
+.opt.sel{border-color:var(--kb);background:#EBF0FA}
+.opt input{margin-top:2px;width:18px;height:18px;flex:none}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)}
+.opt.bad{border-color:var(--no);background:var(--no-bg)}
+.q.correct{border-color:var(--ok)}
+.q.wrong{border-color:var(--no)}
+.tag{display:inline-block;font-size:.74rem;font-weight:900;border-radius:6px;padding:2px 8px}
+.tag.ok{background:var(--ok-bg);color:var(--ok)}
+.tag.no{background:var(--no-bg);color:var(--no)}
+.expl{font-size:.84rem;color:var(--txt2);background:#F7F8FB;border-radius:8px;padding:9px 11px;margin-top:8px}
+.score-big{text-align:center;font-size:2.6rem;font-weight:900;color:var(--kb);margin:.2rem 0}
+.gain{text-align:center;background:var(--ok-bg);color:var(--ok);font-weight:900;border-radius:12px;padding:14px;font-size:1.1rem;margin:10px 0}
+.gain.flat{background:#F3F4F8;color:var(--txt2)}
+.linkbtn{display:block;text-align:center;margin-top:10px;color:var(--kb);font-size:.86rem;font-weight:700;text-decoration:underline;cursor:pointer}
+.reset{text-align:center;margin-top:22px}
+.reset a{color:var(--txt2);font-size:.78rem;text-decoration:underline;cursor:pointer}
+.center{text-align:center}
+.muted{color:var(--txt2);font-size:.86rem}
+</style>
+</head>
+<body>
+<div id="app"><p class="center muted" style="margin-top:40px">…</p></div>
+<script>
+"use strict";
+var I18N={
+ko:{title:"학습 효과 진단평가",sub:"외국인 운전면허 학과시험",
+loading:"문항을 불러오는 중…",loadErr:"문항을 불러오지 못했습니다. 잠시 후 새로고침해 주세요.",
+formTitle:"시작 전 안내",
+notice:"<b>학습 효과 분석</b>을 위해 간단한 정보를 받습니다. 수집 항목: 익명 ID(자동 생성), 국적, 연령대, 진단 시각·점수, 출제된 문항 번호와 사용자 답안. 이 정보는 <b>이 브라우저에만 저장</b>되며 외부 서버로 전송되지 않습니다(익명 처리, 개인 식별 안 함). 동의하지 않으셔도 문제은행 학습은 자유롭게 이용할 수 있고, 저장 정보는 화면 아래 ‘새로 시작’으로 언제든 삭제할 수 있습니다.",
+agree:"위 내용에 동의하고 진단평가에 참여합니다.",
+nat:"국적",natPick:"— 선택 —",age:"연령대",
+ages:["10대","20대","30대","40대","50대","60대 이상"],
+toPre:"사전진단 시작",
+preTitle:"사전진단 (학습 전)",preBody:"지금 실력을 먼저 진단합니다. 무작위 10문항이며 약 3~4분 걸립니다. 학습 후 ‘사후진단’과 비교해 향상도를 확인할 수 있습니다.",
+postTitle:"사후진단 (학습 후)",postBody:"그동안 학습하셨죠? 사후진단으로 향상도를 확인해 보세요. 사전진단과 겹치지 않는 10문항이 출제됩니다.",
+start:"진단 시작",
+multi:"복수 정답 — 해당하는 것을 모두 선택",single:"하나만 선택",
+submit:"채점하기",
+unanswered:"개 문항이 미응답입니다. 그대로 채점할까요?",
+resultPre:"사전진단 결과",resultPost:"사후진단 결과",
+gainUp:"사전 대비 {g}%p 향상!",gainFlat:"사전과 동일",gainDown:"사전 대비 {g}%p",
+preWas:"사전진단: {s}점 ({p}%)",
+review:"문항별 확인",ansCorrect:"정답",ansWrong:"오답",ansNone:"미응답",
+yours:"내 답",correct:"정답",expl:"해설",
+afterPre:"이제 학습할 차례입니다. 문제은행·교재로 공부한 뒤 다시 방문해 사후진단을 받아보세요.",
+afterPost:"수고하셨습니다! 계속 학습하려면 아래로 이동하세요.",
+goQuiz:"📝 문제은행 풀기",goBook:"📘 디지털 교재",
+reset:"다른 사람이에요 / 새로 시작",resetAsk:"저장된 진단 기록을 삭제하고 처음부터 시작할까요?",
+done:"진단 완료",doneBody:"이미 사전·사후진단을 마치셨습니다. 아래에서 결과를 다시 볼 수 있습니다.",
+viewResult:"결과 다시 보기",viewPreResult:"사전 결과 다시 보기",
+imgAlt:"문항 {n} 참고 이미지",
+T:{"문장형":"문장형","사진형":"사진형","표지판형":"표지판형"}},
+en:{title:"Learning Effectiveness Diagnostic",sub:"Korean Driver's License Written Test for Foreigners",
+loading:"Loading questions…",loadErr:"Could not load questions. Please refresh shortly.",
+formTitle:"Before you start",
+notice:"We collect basic info to <b>analyze learning effectiveness</b>. Collected: anonymous ID (auto-generated), nationality, age group, diagnostic timestamps and scores, question numbers used and your answers. This is <b>stored only in this browser</b> and not sent to any server (anonymous, not personally identifying). You may use the question bank freely without agreeing, and you can delete stored data anytime via ‘Start over’ below.",
+agree:"I agree to the above and will take the diagnostic.",
+nat:"Nationality",natPick:"— Select —",age:"Age group",
+ages:["Teens","20s","30s","40s","50s","60+"],
+toPre:"Start pre-test",
+preTitle:"Pre-test (before studying)",preBody:"This checks your current level first. 10 random questions, about 3–4 minutes. After studying, the post-test shows your improvement.",
+postTitle:"Post-test (after studying)",postBody:"Have you been studying? Take the post-test to see your improvement. 10 questions not used in the pre-test.",
+start:"Start",
+multi:"Multiple answers — select all that apply",single:"Select one",
+submit:"Grade",
+unanswered:" question(s) unanswered. Grade anyway?",
+resultPre:"Pre-test result",resultPost:"Post-test result",
+gainUp:"+{g}%p vs pre-test!",gainFlat:"Same as pre-test",gainDown:"{g}%p vs pre-test",
+preWas:"Pre-test: {s} ({p}%)",
+review:"Question review",ansCorrect:"Correct",ansWrong:"Wrong",ansNone:"No answer",
+yours:"Your answer",correct:"Correct answer",expl:"Explanation",
+afterPre:"Now it's time to study. Practice with the question bank and textbook, then come back for the post-test.",
+afterPost:"Well done! Continue studying below.",
+goQuiz:"📝 Question bank",goBook:"📘 Study textbook",
+reset:"Different person / Start over",resetAsk:"Delete saved diagnostic records and start over?",
+done:"Diagnostic complete",doneBody:"You have finished both the pre- and post-tests. You can review your result below.",
+viewResult:"View result again",viewPreResult:"View pre-test result",
+imgAlt:"Reference image for question {n}",
+T:{"문장형":"Text","사진형":"Photo","표지판형":"Sign"}},
+cn:{title:"学习效果诊断评估",sub:"外国人韩国驾照笔试",
+loading:"正在加载题目…",loadErr:"题目加载失败，请稍后刷新。",
+formTitle:"开始前说明",
+notice:"为<b>分析学习效果</b>收集简单信息。收集项目：匿名ID（自动生成）、国籍、年龄段、诊断时间·分数、所用题目编号及您的答案。此信息<b>仅保存在本浏览器</b>，不会发送到外部服务器（匿名处理，不识别个人）。不同意也可自由使用题库学习，可随时通过下方‘重新开始’删除已存信息。",
+agree:"我同意以上内容并参加诊断评估。",
+nat:"国籍",natPick:"— 选择 —",age:"年龄段",
+ages:["10多岁","20多岁","30多岁","40多岁","50多岁","60岁以上"],
+toPre:"开始学前诊断",
+preTitle:"学前诊断（学习前）",preBody:"先诊断目前实力。随机10题，约3~4分钟。学习后可与‘学后诊断’对比查看提升程度。",
+postTitle:"学后诊断（学习后）",postBody:"这段时间学习了吗？做学后诊断查看提升程度。出题为与学前诊断不重复的10题。",
+start:"开始诊断",
+multi:"多选题 — 选出所有正确项",single:"单选",
+submit:"评分",
+unanswered:"题未作答。仍要评分吗？",
+resultPre:"学前诊断结果",resultPost:"学后诊断结果",
+gainUp:"比学前提升{g}%p！",gainFlat:"与学前相同",gainDown:"比学前{g}%p",
+preWas:"学前诊断：{s}分（{p}%）",
+review:"逐题确认",ansCorrect:"正确",ansWrong:"错误",ansNone:"未作答",
+yours:"我的答案",correct:"正确答案",expl:"解析",
+afterPre:"现在开始学习。用题库和教材学习后，再次访问做学后诊断。",
+afterPost:"辛苦了！继续学习请前往下方。",
+goQuiz:"📝 做题库",goBook:"📘 数字教材",
+reset:"换人了 / 重新开始",resetAsk:"删除已保存的诊断记录并从头开始吗？",
+done:"诊断完成",doneBody:"您已完成学前和学后诊断。可在下方再次查看结果。",
+viewResult:"再次查看结果",viewPreResult:"再看学前结果",
+imgAlt:"题目{n}参考图",
+T:{"문장형":"文字","사진형":"图片","표지판형":"标志"}},
+vn:{title:"Đánh giá chẩn đoán hiệu quả học tập",sub:"Thi lý thuyết bằng lái xe Hàn Quốc cho người nước ngoài",
+loading:"Đang tải câu hỏi…",loadErr:"Không tải được câu hỏi. Vui lòng tải lại sau giây lát.",
+formTitle:"Trước khi bắt đầu",
+notice:"Chúng tôi thu thập thông tin cơ bản để <b>phân tích hiệu quả học tập</b>. Thu thập: ID ẩn danh (tự tạo), quốc tịch, nhóm tuổi, thời gian và điểm chẩn đoán, số câu hỏi đã dùng và câu trả lời của bạn. Thông tin này <b>chỉ lưu trên trình duyệt này</b>, không gửi đến máy chủ nào (ẩn danh, không nhận dạng cá nhân). Bạn vẫn dùng ngân hàng câu hỏi tự do nếu không đồng ý, và có thể xóa dữ liệu bất cứ lúc nào qua ‘Bắt đầu lại’ bên dưới.",
+agree:"Tôi đồng ý với nội dung trên và tham gia đánh giá.",
+nat:"Quốc tịch",natPick:"— Chọn —",age:"Nhóm tuổi",
+ages:["Tuổi teen","20-29","30-39","40-49","50-59","60+"],
+toPre:"Bắt đầu chẩn đoán trước",
+preTitle:"Chẩn đoán trước (trước khi học)",preBody:"Kiểm tra trình độ hiện tại trước. 10 câu ngẫu nhiên, khoảng 3–4 phút. Sau khi học, chẩn đoán sau sẽ cho thấy mức tiến bộ.",
+postTitle:"Chẩn đoán sau (sau khi học)",postBody:"Bạn đã học chưa? Làm chẩn đoán sau để xem mức tiến bộ. 10 câu không trùng với chẩn đoán trước.",
+start:"Bắt đầu",
+multi:"Nhiều đáp án — chọn tất cả đáp án đúng",single:"Chọn một",
+submit:"Chấm điểm",
+unanswered:" câu chưa trả lời. Vẫn chấm điểm?",
+resultPre:"Kết quả chẩn đoán trước",resultPost:"Kết quả chẩn đoán sau",
+gainUp:"+{g}%p so với trước!",gainFlat:"Bằng chẩn đoán trước",gainDown:"{g}%p so với trước",
+preWas:"Chẩn đoán trước: {s} điểm ({p}%)",
+review:"Xem lại từng câu",ansCorrect:"Đúng",ansWrong:"Sai",ansNone:"Chưa trả lời",
+yours:"Đáp án của bạn",correct:"Đáp án đúng",expl:"Giải thích",
+afterPre:"Giờ là lúc học. Luyện tập với ngân hàng câu hỏi và giáo trình, rồi quay lại làm chẩn đoán sau.",
+afterPost:"Làm tốt lắm! Tiếp tục học ở bên dưới.",
+goQuiz:"📝 Ngân hàng câu hỏi",goBook:"📘 Giáo trình",
+reset:"Người khác / Bắt đầu lại",resetAsk:"Xóa hồ sơ chẩn đoán đã lưu và bắt đầu lại?",
+done:"Hoàn tất chẩn đoán",doneBody:"Bạn đã hoàn thành cả chẩn đoán trước và sau. Có thể xem lại kết quả bên dưới.",
+viewResult:"Xem lại kết quả",viewPreResult:"Xem kết quả trước",
+imgAlt:"Hình câu {n}",
+T:{"문장형":"Chữ","사진형":"Ảnh","표지판형":"Biển báo"}}
+};
+var COUNTRIES=[
+{c:"VN",ko:"베트남",en:"Vietnam",cn:"越南",vn:"Việt Nam"},
+{c:"CN",ko:"중국",en:"China",cn:"中国",vn:"Trung Quốc"},
+{c:"UZ",ko:"우즈베키스탄",en:"Uzbekistan",cn:"乌兹别克斯坦",vn:"Uzbekistan"},
+{c:"KH",ko:"캄보디아",en:"Cambodia",cn:"柬埔寨",vn:"Campuchia"},
+{c:"NP",ko:"네팔",en:"Nepal",cn:"尼泊尔",vn:"Nepal"},
+{c:"MM",ko:"미얀마",en:"Myanmar",cn:"缅甸",vn:"Myanmar"},
+{c:"PH",ko:"필리핀",en:"Philippines",cn:"菲律宾",vn:"Philippines"},
+{c:"TH",ko:"태국",en:"Thailand",cn:"泰国",vn:"Thái Lan"},
+{c:"ID",ko:"인도네시아",en:"Indonesia",cn:"印度尼西亚",vn:"Indonesia"},
+{c:"MN",ko:"몽골",en:"Mongolia",cn:"蒙古",vn:"Mông Cổ"},
+{c:"LK",ko:"스리랑카",en:"Sri Lanka",cn:"斯里兰卡",vn:"Sri Lanka"},
+{c:"BD",ko:"방글라데시",en:"Bangladesh",cn:"孟加拉国",vn:"Bangladesh"},
+{c:"US",ko:"미국",en:"USA",cn:"美国",vn:"Hoa Kỳ"},
+{c:"RU",ko:"러시아",en:"Russia",cn:"俄罗斯",vn:"Nga"},
+{c:"OTHER",ko:"기타",en:"Other",cn:"其他",vn:"Khác"}
+];
+var QUIZ_LINK={ko:"index.html",en:"en.html",cn:"cn.html",vn:"vn.html"};
+var BOOK_LINK={ko:"textbook.html",en:"textbook_en.html",cn:"textbook_cn.html",vn:"textbook_vn.html"};
+var CIRCLED=["①","②","③","④","⑤","⑥"];
+var PLAN={"문장형":7,"사진형":2,"표지판형":1};
+var TARGET_N=10;
+var KEY="diag_v1";
+
+var LANG=(function(){var p=new URLSearchParams(location.search).get("lang");return ["ko","en","cn","vn"].indexOf(p)>=0?p:"ko";})();
+var T=I18N[LANG];
+document.documentElement.lang=LANG==="cn"?"zh-CN":(LANG==="vn"?"vi":LANG);
+document.title=T.title;
+var QUESTIONS=null;
+var DATA_VER="";
+var app=document.getElementById("app");
+var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");};
+
+function loadState(){
+  try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.uid)return s;}catch(e){}
+  return null;
+}
+function saveState(s){s.updatedAt=Date.now();try{localStorage.setItem(KEY,JSON.stringify(s));}catch(e){}}
+function newId(){
+  try{return "u_"+crypto.randomUUID();}catch(e){return "u_"+Date.now().toString(36)+Math.random().toString(36).slice(2,10);}
+}
+function ansSet(a){
+  var o={};String(a==null?"":a).split(",").forEach(function(x){x=x.trim();if(x)o[x]=1;});return o;
+}
+function setEq(a,b){var ka=Object.keys(a),kb=Object.keys(b);if(ka.length!==kb.length||ka.length===0)return false;return ka.every(function(k){return b[k];});}
+
+function pick(exclude){
+  var ex={};(exclude||[]).forEach(function(n){ex[n]=1;});
+  var out=[];
+  Object.keys(PLAN).forEach(function(type){
+    var pool=QUESTIONS.filter(function(q){return q.t===type&&!ex[q.n];});
+    for(var i=pool.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=pool[i];pool[i]=pool[j];pool[j]=t;}
+    out=out.concat(pool.slice(0,Math.min(PLAN[type],pool.length)));
+  });
+  if(out.length<TARGET_N){
+    var got={};out.forEach(function(q){got[q.n]=1;});
+    var rest=QUESTIONS.filter(function(q){return !ex[q.n]&&!got[q.n]&&q.t!=="동영상형";});
+    for(var i=rest.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=rest[i];rest[i]=rest[j];rest[j]=t;}
+    out=out.concat(rest.slice(0,TARGET_N-out.length));
+  }
+  for(var i=out.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=out[i];out[i]=out[j];out[j]=t;}
+  return out.map(function(q){return q.n;});
+}
+function byN(n){for(var i=0;i<QUESTIONS.length;i++){if(QUESTIONS[i].n===n)return QUESTIONS[i];}return null;}
+
+function header(){return '<div class="hd"><h1>'+esc(T.title)+'</h1><div class="sub">'+esc(T.sub)+'</div></div>';}
+function resetLink(){return '<div class="reset"><a id="resetA">'+esc(T.reset)+'</a></div>';}
+function bindReset(){var a=document.getElementById("resetA");if(a)a.onclick=function(){if(confirm(T.resetAsk)){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};}
+
+/* ---------- form ---------- */
+function screenForm(){
+  app.onchange=null;
+  var opts='<option value="">'+esc(T.natPick)+'</option>';
+  COUNTRIES.forEach(function(c){opts+='<option value="'+c.c+'">'+esc(c[LANG])+'</option>';});
+  var ages=T.ages.map(function(a,i){return '<label><input type="radio" name="age" value="'+i+'">'+esc(a)+'</label>';}).join("");
+  app.innerHTML=header()
+    +'<div class="card"><h2>'+esc(T.formTitle)+'</h2>'
+    +'<div class="notice">'+T.notice+'</div>'
+    +'<label class="chk"><input type="checkbox" id="agree"><span>'+esc(T.agree)+'</span></label>'
+    +'<div class="fld"><span>'+esc(T.nat)+'</span><select id="nat">'+opts+'</select></div>'
+    +'<div class="fld"><span>'+esc(T.age)+'</span><div class="ages" id="ages">'+ages+'</div></div>'
+    +'<button class="btn btn-main" id="go" disabled>'+esc(T.toPre)+'</button></div>'
+    +resetLink();
+  var agree=document.getElementById("agree"),nat=document.getElementById("nat"),go=document.getElementById("go"),age=null;
+  document.getElementById("ages").addEventListener("change",function(e){
+    age=e.target.value;
+    [].forEach.call(document.querySelectorAll("#ages label"),function(l){l.classList.toggle("on",l.querySelector("input").checked);});
+    check();
+  });
+  function check(){go.disabled=!(agree.checked&&nat.value&&age!=null);}
+  agree.onchange=check;nat.onchange=check;
+  go.onclick=function(){
+    var s={v:1,uid:newId(),lang:LANG,dataVersion:DATA_VER,createdAt:Date.now(),
+      profile:{nat:nat.value,age:parseInt(age,10),consent:true},
+      stage:"registered",pre:null,post:null};
+    saveState(s);route(s);
+  };
+  bindReset();
+}
+
+/* ---------- intro ---------- */
+function screenIntro(s,phase){
+  app.onchange=null;
+  var pre=phase==="pre";
+  var h=header()
+    +'<div class="card center"><h2>'+esc(pre?T.preTitle:T.postTitle)+'</h2>'
+    +'<p class="muted">'+esc(pre?T.preBody:T.postBody)+'</p>'
+    +'<button class="btn btn-main" id="start">'+esc(T.start)+'</button>';
+  if(!pre&&s.pre&&s.pre.score!=null){
+    h+='<a class="linkbtn" id="viewPre">'+esc(T.viewPreResult)+'</a>';
+  }
+  h+='</div>'+resetLink();
+  app.innerHTML=h;
+  document.getElementById("start").onclick=function(){
+    var qids=pick(pre?[]:((s.pre&&s.pre.qids)||[]));
+    if(pre)s.pre={qids:qids,score:null,total:qids.length,at:null,answers:{}};
+    else s.post={qids:qids,score:null,total:qids.length,at:null,answers:{}};
+    s.stage=pre?"pre_in_progress":"post_in_progress";
+    saveState(s);screenTest(s,phase);
+  };
+  var vp=document.getElementById("viewPre");
+  if(vp)vp.onclick=function(){screenResult(s,"pre");};
+  bindReset();
+}
+
+/* ---------- test ---------- */
+function renderQ(q,idx,opts){
+  opts=opts||{};
+  var multi=Object.keys(ansSet(q.a)).length>1;
+  var h='<div class="q'+(opts.cls||"")+'" data-n="'+q.n+'" data-multi="'+(multi?1:0)+'">';
+  h+='<div class="q-head"><span class="q-idx">'+(idx+1)+'</span><span class="q-type">'+esc(T.T[q.t]||q.t)+'</span>';
+  if(opts.tag)h+=opts.tag;
+  h+='</div>';
+  h+='<div class="q-body">'+esc(q.b)+'</div>';
+  var altText=(T.imgAlt||"").replace("{n}",q.n);
+  (q.imgs||[]).forEach(function(im){h+='<img src="images/'+esc(im)+'" alt="'+esc(altText)+'" loading="lazy">';});
+  if(!opts.review)h+='<div class="muted" style="font-size:.78rem;margin:2px 0 4px">'+esc(multi?T.multi:T.single)+'</div>';
+  var cor=ansSet(q.a),usr=opts.userSet||{};
+  (q.c||[]).forEach(function(ch,i){
+    var val=String(i+1),cls="opt";
+    if(opts.review){
+      if(cor[val])cls+=" ok";else if(usr[val])cls+=" bad";
+      h+='<div class="'+cls+'"><span>'+(CIRCLED[i]||(i+1))+'</span><span>'+esc(ch)+'</span></div>';
+    }else{
+      var checked=usr[val]?" checked":"";
+      var selCls=usr[val]?" sel":"";
+      h+='<label class="opt'+selCls+'"><input type="'+(multi?"checkbox":"radio")+'" name="q'+q.n+'" value="'+val+'"'+checked+'><span>'+(CIRCLED[i]||(i+1))+'</span><span>'+esc(ch)+'</span></label>';
+    }
+  });
+  if(opts.review){
+    var ya=Object.keys(usr);
+    h+='<div class="expl"><b>'+esc(T.yours)+':</b> '+(ya.length?esc(ya.join(", ")):esc(T.ansNone))
+      +' &nbsp;|&nbsp; <b>'+esc(T.correct)+':</b> '+esc(Object.keys(cor).join(", "));
+    if((q.e||"").trim())h+='<br><b>'+esc(T.expl)+':</b> '+esc(q.e.trim());
+    h+='</div>';
+  }
+  return h+'</div>';
+}
+function screenTest(s,phase){
+  var cur=phase==="pre"?s.pre:s.post;
+  if(!cur.answers)cur.answers={};
+  var qs=cur.qids.map(byN).filter(Boolean);
+  var h=header()+'<div class="card"><h2>'+esc(phase==="pre"?T.preTitle:T.postTitle)+'</h2></div>';
+  qs.forEach(function(q,i){h+=renderQ(q,i,{userSet:cur.answers[q.n]||{}});});
+  h+='<button class="btn btn-main" id="submit">'+esc(T.submit)+'</button>'+resetLink();
+  app.innerHTML=h;
+  window.scrollTo(0,0);
+  app.onchange=function(e){
+    var lab=e.target.closest&&e.target.closest("label.opt");if(!lab)return;
+    var box=lab.parentNode;
+    [].forEach.call(box.querySelectorAll("label.opt"),function(l){l.classList.toggle("sel",l.querySelector("input").checked);});
+    var qcard=lab.closest(".q");if(!qcard)return;
+    var n=parseInt(qcard.getAttribute("data-n"),10);if(isNaN(n))return;
+    var picked={};
+    [].forEach.call(document.querySelectorAll('input[name="q'+n+'"]:checked'),function(inp){picked[inp.value]=1;});
+    cur.answers[n]=picked;
+    saveState(s);
+  };
+  document.getElementById("submit").onclick=function(){
+    var answers={},unanswered=0;
+    qs.forEach(function(q){
+      var picked={};
+      [].forEach.call(document.querySelectorAll('input[name="q'+q.n+'"]:checked'),function(inp){picked[inp.value]=1;});
+      answers[q.n]=picked;
+      if(Object.keys(picked).length===0)unanswered++;
+    });
+    if(unanswered>0&&!confirm(unanswered+T.unanswered))return;
+    var score=0;
+    qs.forEach(function(q){if(setEq(ansSet(q.a),answers[q.n]))score++;});
+    cur.score=score;cur.total=qs.length;cur.at=Date.now();cur.answers=answers;
+    s.stage=phase==="pre"?"pre_done":"post_done";
+    saveState(s);
+    screenResult(s,phase);
+  };
+  bindReset();
+}
+
+/* ---------- result ---------- */
+function screenResult(s,phase){
+  app.onchange=null;
+  var pre=phase==="pre",cur=pre?s.pre:s.post;
+  var pct=Math.round(cur.score/cur.total*100);
+  var h=header()+'<div class="card center"><h2>'+esc(pre?T.resultPre:T.resultPost)+'</h2>'
+    +'<div class="score-big">'+cur.score+' / '+cur.total+'</div><p class="muted">'+pct+'%</p>';
+  if(!pre&&s.pre&&s.pre.total){
+    var prePct=Math.round(s.pre.score/s.pre.total*100),g=pct-prePct;
+    h+='<p class="muted">'+T.preWas.replace("{s}",s.pre.score).replace("{p}",prePct)+'</p>';
+    if(g>0)h+='<div class="gain">'+T.gainUp.replace("{g}",g)+'</div>';
+    else if(g===0)h+='<div class="gain flat">'+esc(T.gainFlat)+'</div>';
+    else h+='<div class="gain flat">'+T.gainDown.replace("{g}",g)+'</div>';
+  }
+  h+='<p class="muted">'+esc(pre?T.afterPre:T.afterPost)+'</p>'
+    +'<a class="btn btn-main" href="'+QUIZ_LINK[LANG]+'">'+esc(T.goQuiz)+'</a>'
+    +'<a class="btn btn-sub" href="'+BOOK_LINK[LANG]+'">'+esc(T.goBook)+'</a></div>';
+  h+='<div class="card"><h2>'+esc(T.review)+'</h2></div>';
+  cur.qids.map(byN).filter(Boolean).forEach(function(q,i){
+    var usr=(cur.answers&&cur.answers[q.n])||{};
+    var ok=setEq(ansSet(q.a),usr);
+    var tag='<span class="tag '+(ok?"ok":"no")+'">'+esc(ok?T.ansCorrect:(Object.keys(usr).length?T.ansWrong:T.ansNone))+'</span>';
+    h+=renderQ(q,i,{review:true,userSet:usr,cls:ok?" correct":" wrong",tag:tag});
+  });
+  h+=resetLink();
+  app.innerHTML=h;window.scrollTo(0,0);bindReset();
+}
+
+/* ---------- done (post already finished) ---------- */
+function screenDone(s){
+  app.onchange=null;
+  app.innerHTML=header()
+    +'<div class="card center"><h2>'+esc(T.done)+'</h2><p class="muted">'+esc(T.doneBody)+'</p>'
+    +'<button class="btn btn-main" id="v">'+esc(T.viewResult)+'</button>'
+    +(s.pre&&s.pre.score!=null?'<a class="linkbtn" id="vp">'+esc(T.viewPreResult)+'</a>':'')
+    +'<a class="btn btn-sub" href="'+QUIZ_LINK[LANG]+'">'+esc(T.goQuiz)+'</a></div>'+resetLink();
+  document.getElementById("v").onclick=function(){screenResult(s,"post");};
+  var vp=document.getElementById("vp");if(vp)vp.onclick=function(){screenResult(s,"pre");};
+  bindReset();
+}
+
+/* ---------- router ---------- */
+function route(s){
+  if(!s){screenForm();return;}
+  switch(s.stage){
+    case "registered":screenIntro(s,"pre");break;
+    case "pre_in_progress":
+      if(s.pre&&s.pre.qids&&s.pre.qids.length)screenTest(s,"pre");
+      else{s.stage="registered";saveState(s);screenIntro(s,"pre");}
+      break;
+    case "pre_done":
+      if(!s.pre||s.pre.score==null){s.stage="registered";saveState(s);screenIntro(s,"pre");}
+      else screenIntro(s,"post");
+      break;
+    case "post_in_progress":
+      if(s.post&&s.post.qids&&s.post.qids.length)screenTest(s,"post");
+      else{s.stage="pre_done";saveState(s);screenIntro(s,"post");}
+      break;
+    case "post_done":screenDone(s);break;
+    default:screenForm();
+  }
+}
+
+/* ---------- init ---------- */
+app.innerHTML='<p class="center muted" style="margin-top:40px">'+esc(T.loading)+'</p>';
+fetch("quiz_data_"+LANG+".json",{cache:"no-cache"})
+  .then(function(r){if(!r.ok)throw 0;return r.json();})
+  .then(function(d){
+    QUESTIONS=(d&&d.questions)||[];
+    DATA_VER=(d&&d.version)||"";
+    if(!QUESTIONS.length)throw 0;
+    route(loadState());
+  })
+  .catch(function(){
+    app.innerHTML=header()+'<div class="card center"><p>'+esc(T.loadErr)+'</p>'
+      +'<button class="btn btn-main" onclick="location.reload()">↻</button></div>';
+  });
+</script>
+</body>
+</html>

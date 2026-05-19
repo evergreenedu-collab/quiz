@@ -9,11 +9,13 @@ OUT_DIR = os.path.join(REPO, "gpt_files")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 TARGETS = [
-    ("index.html", "quiz_bank_ko.txt"),
-    ("en.html",    "quiz_bank_en.txt"),
-    ("cn.html",    "quiz_bank_cn.txt"),
-    ("vn.html",    "quiz_bank_vn.txt"),
+    ("index.html", "quiz_bank_ko.txt", "ko"),
+    ("en.html",    "quiz_bank_en.txt", "en"),
+    ("cn.html",    "quiz_bank_cn.txt", "cn"),
+    ("vn.html",    "quiz_bank_vn.txt", "vn"),
 ]
+
+DATA_VERSION = "2026.3.9"
 
 CIRCLED = ["①", "②", "③", "④", "⑤"]
 IMG_URL_BASE = "https://raw.githubusercontent.com/evergreenedu-collab/quiz/main/images/"
@@ -77,16 +79,28 @@ def convert(html_path, out_path, ko_expl=None, ko_imgs=None):
         f.write(body)
     types = Counter(q["t"] for q in Q)
     print(f"{os.path.basename(html_path)}: {len(Q)} {dict(types)}")
+    return Q
+
+
+def write_json(Q, out_path):
+    bad_a = [q["n"] for q in Q if not (q.get("a", "") or "").strip()]
+    if bad_a:
+        raise ValueError(f"빈 정답(a) 발견 in {os.path.basename(out_path)} 문항번호: {bad_a[:20]}")
+    data = {"version": DATA_VERSION, "count": len(Q), "questions": Q}
+    with open(out_path, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+    print(f"{os.path.basename(out_path)}: {len(Q)} questions")
 
 
 def main():
     ko_Q = extract_Q(os.path.join(REPO, "index.html"))
     ko_expl = {q["n"]: (q.get("e") or "").strip() for q in ko_Q}
     ko_imgs = {q["n"]: list(q.get("imgs") or []) for q in ko_Q}
-    for html_name, txt_name in TARGETS:
+    for html_name, txt_name, lang in TARGETS:
         expl_inj = None if html_name == "index.html" else ko_expl
         imgs_inj = None if html_name == "index.html" else ko_imgs
-        convert(os.path.join(REPO, html_name), os.path.join(OUT_DIR, txt_name), expl_inj, imgs_inj)
+        Q = convert(os.path.join(REPO, html_name), os.path.join(OUT_DIR, txt_name), expl_inj, imgs_inj)
+        write_json(Q, os.path.join(REPO, f"quiz_data_{lang}.json"))
 
 
 if __name__ == "__main__":
