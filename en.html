@@ -49,6 +49,10 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 .tt{position:fixed;bottom:16px;right:16px;width:42px;height:42px;background:var(--kb);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;box-shadow:0 3px 10px rgba(0,32,77,.25);display:none;z-index:50}
 .ft{text-align:center;padding:20px 16px;font-size:10px;color:#aaa}
 @media(min-width:640px){.ls{max-width:640px;margin:0 auto}.hd{padding:12px calc(50% - 310px) 10px}.tabs{justify-content:center}.tab{flex:none;padding:10px 18px 8px;min-width:80px}.rng{justify-content:center}.ct,.ft{max-width:640px;margin-left:auto;margin-right:auto}.sp img{width:85px}}
+.nav-strip{display:flex;gap:8px;padding:8px 12px;max-width:640px;margin:0 auto;background:#fff;border-bottom:1px solid #E2E5EF}
+.nav-strip .chip{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:44px;box-sizing:border-box;padding:10px;border-radius:18px;font-size:13px;font-weight:700;text-decoration:none;font-family:inherit;line-height:1.25}
+.nav-strip .chip-sib{background:#F3F4F8;color:#4A4D63;border:1.5px solid #E2E5EF}
+.nav-strip .chip-ai{background:linear-gradient(135deg,#003FA2,#2563EB);color:#fff;box-shadow:0 2px 8px rgba(0,32,77,.22)}
 </style>
 </head>
 <body>
@@ -58,6 +62,10 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 <div class="hd-row"><h1>🚗 Driver's License Question Bank</h1><span class="badge">Effective 2026.3.9</span></div>
 <div class="sb"><input type="text" id="si" placeholder="Number or keyword search"><button onclick="go()">Search</button></div>
 </div>
+</div>
+<div class="nav-strip">
+<a class="chip chip-sib" href="textbook_en.html">📘 Study Textbook</a>
+<a class="chip chip-ai" href="https://chatgpt.com/g/g-69db8d23db70819186a5872bbc3ea890-driver-s-license-ai-tutor-for-foreigners" target="_blank" rel="noopener" aria-label="Ask the AI Tutor, opens in a new window">🤖 Ask the AI Tutor</a>
 </div>
 <div class="tabs" id="tp">
 <button class="tab on" data-f="all"><span class="ic">📚</span>All<span class="num">1000</span></button>
