@@ -424,6 +424,8 @@
 .nav-strip .chip{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:44px;box-sizing:border-box;padding:10px;border-radius:18px;font-size:13px;font-weight:700;text-decoration:none;font-family:inherit;line-height:1.25}
 .nav-strip .chip-sib{background:#F3F4F8;color:#4A4D63;border:1.5px solid #E2E5EF}
 .nav-strip .chip-ai{background:linear-gradient(135deg,#003FA2,#2563EB);color:#fff;box-shadow:0 2px 8px rgba(0,32,77,.22)}
+.diag-banner{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;max-width:640px;margin:0 auto;padding:10px 12px;background:linear-gradient(135deg,#0D7C3F,#13A05A);color:#fff;font-size:13px;font-weight:700;text-decoration:none;text-align:center;line-height:1.35}
+.diag-banner span{font-weight:500;opacity:.9;font-size:12px}
 .tt{position:fixed;bottom:18px;right:18px;width:46px;height:46px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:18px;cursor:pointer;box-shadow:0 3px 10px rgba(0,32,77,.25);display:none;z-index:100}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -441,9 +443,11 @@
 </div>
 
 <div class="nav-strip">
-<a class="chip chip-sib" href="cn.html">📝 开始做题</a>
+<a class="chip chip-sib" href="cn.html">📝 题库 1000 题</a>
 <a class="chip chip-ai" href="https://chatgpt.com/g/g-69db8d23db70819186a5872bbc3ea890-driver-s-license-ai-tutor-for-foreigners" target="_blank" rel="noopener" aria-label="向 AI 导师提问，在新窗口中打开">🤖 向 AI 导师提问</a>
 </div>
+
+<a class="diag-banner" href="diagnostic.html?lang=cn">📊 学习效果诊断 <span>学前·学后诊断对比提升程度</span></a>
 
 <!-- ===== NAV ===== -->
 <div class="nav-tabs">
@@ -3081,5 +3085,7 @@ sections.forEach(s => observer.observe(s));
 </script>
 <button class="tt" id="tt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
 <script>window.addEventListener('scroll',function(){document.getElementById('tt').style.display=window.scrollY>400?'block':'none';});</script>
+<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!window.twemoji)return;var n=document.querySelector('.lsw');if(!n)return;twemoji.parse(n,{base:'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/',folder:'svg',ext:'.svg'});var s=document.createElement('style');s.textContent='.lsw img.emoji{height:14px;width:auto;vertical-align:-2px;margin-right:2px}';document.head.appendChild(s);});</script>
 </body>
 </html>
