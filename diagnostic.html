@@ -247,6 +247,19 @@ var CIRCLED=["①","②","③","④","⑤","⑥"];
 var PLAN={"문장형":7,"사진형":2,"표지판형":1};
 var TARGET_N=10;
 var KEY="diag_v1";
+var ENDPOINT="https://script.google.com/macros/s/AKfycbzwd-6ss4d8sjwx2pMgEipKqg7vz6wwy8ofIm6ORBpIH5hed93S47EDGATlRsW7ox7yFg/exec";
+function sendToSheet(s,phase){
+  if(!s||!s.profile||!s.profile.consent)return;
+  var cur=phase==="pre"?s.pre:s.post;
+  if(!cur||cur.score==null)return;
+  try{
+    var payload={uid:s.uid,lang:s.lang,nat:s.profile.nat,age:s.profile.age,phase:phase,score:cur.score,total:cur.total,dataVersion:s.dataVersion||DATA_VER,qids:cur.qids,answers:cur.answers};
+    var body=JSON.stringify(payload);
+    var blob=new Blob([body],{type:"text/plain;charset=utf-8"});
+    if(navigator.sendBeacon&&navigator.sendBeacon(ENDPOINT,blob))return;
+    fetch(ENDPOINT,{method:"POST",body:body,headers:{"Content-Type":"text/plain;charset=utf-8"},keepalive:true}).catch(function(){});
+  }catch(e){}
+}
 
 var LANG=(function(){var p=new URLSearchParams(location.search).get("lang");return ["ko","en","cn","vn"].indexOf(p)>=0?p:"ko";})();
 var T=I18N[LANG];
@@ -429,6 +442,7 @@ function screenTest(s,phase){
     saveState(s);updPrg();
   };
   document.getElementById("submit").onclick=function(){
+    var sb=this;if(sb.disabled)return;
     var answers={},unanswered=0;
     qs.forEach(function(q){
       var picked={};
@@ -437,11 +451,13 @@ function screenTest(s,phase){
       if(Object.keys(picked).length===0)unanswered++;
     });
     if(unanswered>0&&!confirm(unanswered+T.unanswered))return;
+    sb.disabled=true;
     var score=0;
     qs.forEach(function(q){if(setEq(ansSet(q.a),answers[q.n]))score++;});
     cur.score=score;cur.total=qs.length;cur.at=Date.now();cur.answers=answers;
     s.stage=phase==="pre"?"pre_done":"post_done";
     saveState(s);
+    sendToSheet(s,phase);
     screenResult(s,phase);
   };
   bindReset();
