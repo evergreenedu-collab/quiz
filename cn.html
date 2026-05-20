@@ -102,5 +102,7 @@ document.getElementById('si').addEventListener('keydown',e=>{if(e.key==='Enter')
 function hash(){const h=location.hash.replace('#','');if(h&&!isNaN(h)){document.getElementById('si').value=h;setTimeout(go,300);}}
 batch();hash();addEventListener('hashchange',hash);
 </script>
+<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!window.twemoji)return;var n=document.querySelector('.lsw');if(!n)return;twemoji.parse(n,{base:'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/',folder:'svg',ext:'.svg'});var s=document.createElement('style');s.textContent='.lsw img.emoji{height:14px;width:auto;vertical-align:-2px;margin-right:2px}';document.head.appendChild(s);});</script>
 </body>
 </html>

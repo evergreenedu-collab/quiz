@@ -87,6 +87,9 @@ select,input[type=text]{width:100%;padding:11px 10px;border:1.5px solid var(--bd
 .opt-hint.multi{background:var(--no-bg);color:var(--no);border:1px solid var(--no-bg)}
 .totop{position:fixed;bottom:18px;right:18px;width:48px;height:48px;background:linear-gradient(135deg,var(--kb),var(--kb2));color:#fff;border:none;border-radius:50%;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,32,77,.32);display:none;z-index:200;font-family:inherit;align-items:center;justify-content:center}
 .totop.show{display:flex}
+.nav-strip{display:flex;gap:8px;padding:8px 12px;max-width:640px;margin:0 auto;background:#fff;border-bottom:1px solid var(--bdr)}
+.nav-strip .chip{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:44px;box-sizing:border-box;padding:10px;border-radius:18px;font-size:13px;font-weight:700;text-decoration:none;font-family:inherit;line-height:1.25;background:#F3F4F8;color:#4A4D63;border:1.5px solid var(--bdr)}
+.nav-strip.hidden{display:none}
 </style>
 </head>
 <body>
@@ -95,6 +98,10 @@ select,input[type=text]{width:100%;padding:11px 10px;border:1.5px solid var(--bd
 <button type="button" class="lg" data-l="en" aria-label="English">🇺🇸 English</button>
 <button type="button" class="lg" data-l="cn" aria-label="中文">🇨🇳 中文</button>
 <button type="button" class="lg" data-l="vn" aria-label="Tiếng Việt">🇻🇳 Tiếng Việt</button>
+</div>
+<div class="nav-strip hidden" id="navStrip">
+<a class="chip chip-sib" id="navQuizLink" href="index.html"></a>
+<a class="chip chip-sib" id="navBookLink" href="textbook.html"></a>
 </div>
 <div id="app"><p class="center muted" style="margin-top:40px">…</p></div>
 <button type="button" class="totop" id="totop" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
@@ -122,11 +129,11 @@ review:"문항별 확인",ansCorrect:"정답",ansWrong:"오답",ansNone:"미응�
 yours:"내 답",correct:"정답",expl:"해설",
 afterPre:"이제 학습할 차례입니다. 문제은행·교재로 공부한 뒤 다시 방문해 사후진단을 받아보세요.",
 afterPost:"수고하셨습니다! 계속 학습하려면 아래로 이동하세요.",
-goQuiz:"📝 문제은행 풀기",goBook:"📘 디지털 교재",
+goQuiz:"✏️ 학과시험 문제은행 1000문제 풀기",goBook:"📘 디지털 교재로 공부하기",
 reset:"🔄 새 사용자로 시작",resetHint:"기기를 다른 사람이 쓰나요?",resetAsk:"저장된 진단 기록을 삭제하고 처음부터 시작할까요?",
 done:"진단 완료",doneBody:"이미 사전·사후진단을 마치셨습니다. 아래에서 결과를 다시 볼 수 있습니다.",
-viewResult:"📊 학습 효과 종합 결과",viewPreResult:"📝 사전진단 결과 보기",viewPostItems:"📝 사후진단 결과 보기",
-imgAlt:"문항 {n} 참고 이미지",totop:"맨 위로",
+viewResult:"📊 학습 효과 종합 결과",viewPreResult:"📋 사전진단 결과 보기",viewPostItems:"📈 사후진단 결과 보기",
+imgAlt:"문항 {n} 참고 이미지",totop:"맨 위로",navQuiz:"📝 학과시험 문제은행 1000문제 풀기",navBook:"📘 디지털 교재로 공부하기",
 T:{"문장형":"문장형","사진형":"사진형","표지판형":"표지판형"}},
 en:{title:"Learning Effectiveness Diagnostic",sub:"Korean Driver's License Test — AI Tutor for Foreigners",tagline:"Track your learning effectiveness with pre & post diagnostics",
 loading:"Loading questions…",loadErr:"Could not load questions. Please refresh shortly.",
@@ -149,11 +156,11 @@ review:"Question review",ansCorrect:"Correct",ansWrong:"Wrong",ansNone:"No answe
 yours:"Your answer",correct:"Correct answer",expl:"Explanation",
 afterPre:"Now it's time to study. Practice with the question bank and textbook, then come back for the post-test.",
 afterPost:"Well done! Continue studying below.",
-goQuiz:"📝 Question bank",goBook:"📘 Study textbook",
+goQuiz:"✏️ Question Bank — 1000 Items",goBook:"📘 Study textbook",
 reset:"🔄 Start as new user",resetHint:"Is someone else using this device?",resetAsk:"Delete saved diagnostic records and start over?",
 done:"Diagnostic complete",doneBody:"You have finished both the pre- and post-tests. You can review your result below.",
-viewResult:"📊 Pre & post summary",viewPreResult:"📝 Pre-test result",viewPostItems:"📝 Post-test result",
-imgAlt:"Reference image for question {n}",totop:"Back to top",
+viewResult:"📊 Pre & post summary",viewPreResult:"📋 Pre-test result",viewPostItems:"📈 Post-test result",
+imgAlt:"Reference image for question {n}",totop:"Back to top",navQuiz:"📝 Question Bank — 1000 Items",navBook:"📘 Textbook",
 T:{"문장형":"Text","사진형":"Photo","표지판형":"Sign"}},
 cn:{title:"学习效果诊断评估",sub:"外国人韩国驾照笔试 AI 导师",tagline:"通过学前·学后诊断直接确认学习效果",
 loading:"正在加载题目…",loadErr:"题目加载失败，请稍后刷新。",
@@ -176,11 +183,11 @@ review:"逐题确认",ansCorrect:"正确",ansWrong:"错误",ansNone:"未作答",
 yours:"我的答案",correct:"正确答案",expl:"解析",
 afterPre:"现在开始学习。用题库和教材学习后，再次访问做学后诊断。",
 afterPost:"辛苦了！继续学习请前往下方。",
-goQuiz:"📝 做题库",goBook:"📘 数字教材",
+goQuiz:"✏️ 题库 1000 题",goBook:"📘 数字教材",
 reset:"🔄 作为新用户开始",resetHint:"其他人在使用此设备吗？",resetAsk:"删除已保存的诊断记录并从头开始吗？",
 done:"诊断完成",doneBody:"您已完成学前和学后诊断。可在下方再次查看结果。",
-viewResult:"📊 学习效果综合结果",viewPreResult:"📝 学前结果",viewPostItems:"📝 学后结果",
-imgAlt:"题目{n}参考图",totop:"返回顶部",
+viewResult:"📊 学习效果综合结果",viewPreResult:"📋 学前结果",viewPostItems:"📈 学后结果",
+imgAlt:"题目{n}参考图",totop:"返回顶部",navQuiz:"📝 题库 1000 题",navBook:"📘 教材",
 T:{"문장형":"文字","사진형":"图片","표지판형":"标志"}},
 vn:{title:"Đánh giá chẩn đoán hiệu quả học tập",sub:"Gia sư AI cho thi lý thuyết bằng lái xe Hàn Quốc",tagline:"Theo dõi hiệu quả học tập qua chẩn đoán trước & sau",
 loading:"Đang tải câu hỏi…",loadErr:"Không tải được câu hỏi. Vui lòng tải lại sau giây lát.",
@@ -203,15 +210,15 @@ review:"Xem lại từng câu",ansCorrect:"Đúng",ansWrong:"Sai",ansNone:"Chưa
 yours:"Đáp án của bạn",correct:"Đáp án đúng",expl:"Giải thích",
 afterPre:"Giờ là lúc học. Luyện tập với ngân hàng câu hỏi và giáo trình, rồi quay lại làm chẩn đoán sau.",
 afterPost:"Làm tốt lắm! Tiếp tục học ở bên dưới.",
-goQuiz:"📝 Ngân hàng câu hỏi",goBook:"📘 Giáo trình",
+goQuiz:"✏️ Ngân hàng 1000 câu hỏi",goBook:"📘 Giáo trình",
 reset:"🔄 Bắt đầu như người dùng mới",resetHint:"Người khác đang dùng thiết bị này?",resetAsk:"Xóa hồ sơ chẩn đoán đã lưu và bắt đầu lại?",
 done:"Hoàn tất chẩn đoán",doneBody:"Bạn đã hoàn thành cả chẩn đoán trước và sau. Có thể xem lại kết quả bên dưới.",
-viewResult:"📊 Tổng hợp trước & sau",viewPreResult:"📝 Kết quả trước",viewPostItems:"📝 Kết quả sau",
-imgAlt:"Hình câu {n}",totop:"Lên đầu trang",
+viewResult:"📊 Tổng hợp trước & sau",viewPreResult:"📋 Kết quả trước",viewPostItems:"📈 Kết quả sau",
+imgAlt:"Hình câu {n}",totop:"Lên đầu trang",navQuiz:"📝 Ngân hàng 1000 câu hỏi",navBook:"📘 Giáo trình",
 T:{"문장형":"Chữ","사진형":"Ảnh","표지판형":"Biển báo"}}
 };
 var COUNTRIES=[
-{c:"KR",ko:"한국",en:"South Korea",cn:"韩国",vn:"Hàn Quốc"},
+{c:"KR",ko:"대한민국",en:"South Korea",cn:"韩国",vn:"Hàn Quốc"},
 {c:"VN",ko:"베트남",en:"Vietnam",cn:"越南",vn:"Việt Nam"},
 {c:"CN",ko:"중국",en:"China",cn:"中国",vn:"Trung Quốc"},
 {c:"US",ko:"미국",en:"USA",cn:"美国",vn:"Hoa Kỳ"},
@@ -255,7 +262,10 @@ document.title=T.title;
     });
   });
   var tt=document.getElementById("totop");if(tt&&T.totop)tt.setAttribute("aria-label",T.totop);
+  var qa=document.getElementById("navQuizLink");if(qa){qa.href=QUIZ_LINK[LANG]||"index.html";qa.textContent=T.navQuiz||"";}
+  var ba=document.getElementById("navBookLink");if(ba){ba.href=BOOK_LINK[LANG]||"textbook.html";ba.textContent=T.navBook||"";}
 })();
+function setNav(visible){var s=document.getElementById("navStrip");if(s)s.classList.toggle("hidden",!visible);}
 var QUESTIONS=null;
 var DATA_VER="";
 var app=document.getElementById("app");
@@ -299,7 +309,7 @@ function bindReset(){var a=document.getElementById("resetA");if(a)a.onclick=func
 
 /* ---------- form ---------- */
 function screenForm(){
-  app.onchange=null;
+  app.onchange=null;setNav(true);
   var loc=LOCALE_MAP[LANG]||LANG;
   var sorted=COUNTRIES.filter(function(c){return c.c!=="OTHER";}).slice().sort(function(a,b){return a[LANG].localeCompare(b[LANG],loc);});
   var withOther=sorted.concat(COUNTRIES.filter(function(c){return c.c==="OTHER";}));
@@ -336,7 +346,7 @@ function screenForm(){
 
 /* ---------- intro ---------- */
 function screenIntro(s,phase){
-  app.onchange=null;
+  app.onchange=null;setNav(true);
   var pre=phase==="pre";
   var h=header()
     +'<div class="card center"><h2>'+esc(pre?T.preTitle:T.postTitle)+'</h2>'
@@ -396,6 +406,7 @@ function renderQ(q,idx,opts){
   return h+'</div>';
 }
 function screenTest(s,phase){
+  setNav(false);
   var cur=phase==="pre"?s.pre:s.post;
   if(!cur.answers)cur.answers={};
   var qs=cur.qids.map(byN).filter(Boolean);
@@ -439,7 +450,7 @@ function screenTest(s,phase){
 /* ---------- result ---------- */
 function screenResult(s,phase,opts){
   opts=opts||{};
-  app.onchange=null;
+  app.onchange=null;setNav(true);
   var pre=phase==="pre",cur=pre?s.pre:s.post;
   var pct=Math.round(cur.score/cur.total*100);
   var h=header()+'<div class="card center"><h2>'+esc(pre?T.resultPre:T.resultPost)+'</h2>'
@@ -467,7 +478,7 @@ function screenResult(s,phase,opts){
 
 /* ---------- done (post already finished) ---------- */
 function screenDone(s){
-  app.onchange=null;
+  app.onchange=null;setNav(true);
   var hasPre=s.pre&&s.pre.score!=null;
   app.innerHTML=header()
     +'<div class="card center"><h2>'+esc(T.done)+'</h2><p class="muted">'+esc(T.doneBody)+'</p>'
@@ -515,9 +526,12 @@ fetch("quiz_data_"+LANG+".json",{cache:"no-cache"})
     route(loadState());
   })
   .catch(function(){
+    setNav(true);
     app.innerHTML=header()+'<div class="card center"><p>'+esc(T.loadErr)+'</p>'
       +'<button class="btn btn-main" onclick="location.reload()">↻</button></div>';
   });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!window.twemoji)return;var n=document.querySelector('.lsw');if(!n)return;twemoji.parse(n,{base:'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/',folder:'svg',ext:'.svg'});var s=document.createElement('style');s.textContent='.lsw img.emoji{height:14px;width:auto;vertical-align:-2px;margin-right:2px}';document.head.appendChild(s);});</script>
 </body>
 </html>
