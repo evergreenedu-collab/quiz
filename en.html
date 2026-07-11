@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest_en.json">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <meta name="theme-color" content="#003FA2">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="면허시험">
-<title>🚗 Driver's License Question Bank</title>
+<meta name="apple-mobile-web-app-title" content="Driving AI Tutor">
+<title>🚗 Driver's License Written Test AI Tutor</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -76,13 +76,44 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 .a2hs-steps b{color:#003FA2}
 .a2hs-share{vertical-align:-5px;margin:0 2px}
 .a2hs-sheet-close{width:100%;min-height:46px;border:0;border-radius:12px;background:#003FA2;color:#fff;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer}
+.hd-title{min-width:0}
+.hd-en{font-size:14px;font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.hd-ko{font-size:10.5px;font-weight:600;color:rgba(255,255,255,.85);margin-top:2px}
+.splash-ov{position:fixed;inset:0;z-index:99999;background:radial-gradient(120% 60% at 50% -10%,#EAF1FB 0%,#FFF 55%),#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 26px;transition:opacity .4s ease}
+.splash-ov.hide{opacity:0;pointer-events:none}
+.splash-ov .sci{width:230px;max-width:72%;height:auto}
+.splash-ov .sen{font-size:22px;font-weight:900;color:#003FA2;margin:28px 0 8px;letter-spacing:-.01em;line-height:1.25;text-wrap:balance}
+.splash-ov .sko{font-size:14px;font-weight:700;color:#00204D;margin:0 0 16px}
+.splash-ov .ssub{font-size:12px;color:#5E6B85;line-height:1.7;letter-spacing:.01em}
+.splash-ov .sload{position:absolute;left:0;right:0;bottom:78px;display:flex;justify-content:center}
+.splash-ov .sload span{display:block;width:140px;height:5px;border-radius:99px;overflow:hidden;background:#E7ECF4;position:relative}
+.splash-ov .sload span::after{content:"";position:absolute;left:-40%;top:0;bottom:0;width:40%;border-radius:99px;background:linear-gradient(90deg,#003FA2,#00923F);animation:splashLoad 1.3s ease-in-out infinite}
+@keyframes splashLoad{0%{left:-40%}100%{left:100%}}
+.splash-ov .sfoot{position:absolute;left:0;right:0;bottom:36px;font-size:11px;color:#9AA6BC;font-weight:700}
+@media (prefers-reduced-motion:reduce){.splash-ov{transition:none}.splash-ov .sload span::after{animation:none;left:0;width:100%}}
 </style>
+<noscript><style>.splash-ov{display:none!important}</style></noscript>
 </head>
 <body>
+<div id="splash" class="splash-ov" role="status" aria-label="Driver's License Written Test AI Tutor, loading">
+<img class="sci" src="images/koroad-ci.png" alt="한국도로교통공단 KOROAD">
+<div class="sen">Driver's License Written Test<br>AI Tutor</div>
+<div class="sko">운전면허 학과시험 AI 튜터</div>
+<div class="ssub">한국어 · English · 中文 · Tiếng Việt</div>
+<div class="sload"><span></span></div>
+<div class="sfoot">한국도로교통공단 교육본부</div>
+</div>
+<script>
+(function(){var s=document.getElementById('splash');if(!s)return;
+function close(){s.classList.add('hide');setTimeout(function(){s.style.display='none';},450);}
+try{if(sessionStorage.getItem('splash_seen')){s.style.display='none';return;}sessionStorage.setItem('splash_seen','1');}catch(e){}
+s.addEventListener('click',close);setTimeout(close,1800);
+})();
+</script>
 <div class="sticky-top">
 <div class="lsw"><a href="index.html" class="lg">🇰🇷 한국어</a><a href="en.html" class="lg on">🇺🇸 English</a><a href="cn.html" class="lg">🇨🇳 中文</a><a href="vn.html" class="lg">🇻🇳 Tiếng Việt</a></div>
 <div class="hd">
-<div class="hd-row"><h1>🚗 Driver's License Question Bank</h1><span class="badge">Effective 2026.3.9</span></div>
+<div class="hd-row"><div class="hd-title"><h1 class="hd-en">🚗 Driver's License Test · AI Tutor</h1><div class="hd-ko">운전면허 학과시험 AI 튜터</div></div><span class="badge">Effective 2026.3.9</span></div>
 <div class="sb"><input type="text" id="si" placeholder="Number or keyword search"><button onclick="go()">Search</button></div>
 </div>
 </div>
