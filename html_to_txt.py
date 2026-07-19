@@ -63,11 +63,14 @@ def format_question(q):
     return "\n".join(lines)
 
 
-def convert(html_path, out_path, ko_expl=None, ko_imgs=None):
+def convert(html_path, out_path, ko_expl=None, ko_imgs=None, risky=None):
     Q = extract_Q(html_path)
     Q.sort(key=lambda x: x["n"])
+    risky = risky or set()
     if ko_expl is not None:
         for q in Q:
+            if q["n"] in risky:
+                continue  # RISKY(보기 순서 언어별 상이) → 한국어 해설 주입 금지
             if not (q.get("e") or "").strip():
                 q["e"] = ko_expl.get(q["n"], "")
     if ko_imgs is not None:
@@ -96,10 +99,15 @@ def main():
     ko_Q = extract_Q(os.path.join(REPO, "index.html"))
     ko_expl = {q["n"]: (q.get("e") or "").strip() for q in ko_Q}
     ko_imgs = {q["n"]: list(q.get("imgs") or []) for q in ko_Q}
+    risky_path = os.path.join(REPO, "translations", "risky_questions.json")
+    risky = set()
+    if os.path.exists(risky_path):
+        with open(risky_path, encoding="utf-8") as f:
+            risky = {int(k) for k in json.load(f).get("risky", [])}
     for html_name, txt_name, lang in TARGETS:
         expl_inj = None if html_name == "index.html" else ko_expl
         imgs_inj = None if html_name == "index.html" else ko_imgs
-        Q = convert(os.path.join(REPO, html_name), os.path.join(OUT_DIR, txt_name), expl_inj, imgs_inj)
+        Q = convert(os.path.join(REPO, html_name), os.path.join(OUT_DIR, txt_name), expl_inj, imgs_inj, risky)
         write_json(Q, os.path.join(REPO, f"quiz_data_{lang}.json"))
 
 
