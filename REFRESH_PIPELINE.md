@@ -19,10 +19,12 @@ en/cn/vn/index `.bak` 사본 + 백업 브랜치(CLAUDE.md 안전절차).
 ### 1. PDF 추출 + HTML 문제 교체
 ```
 py scripts/refresh_pdf.py                 # PDF→추출 + HTML과 번호 비교(리포트)
-py scripts/apply_pdf_to_html.py [--dry-run]  # 【신규·미구현】 추출본→const Q 교체(b/c/a/t), 4개 언어
+py scripts/apply_pdf_to_html.py [--dry-run]  # 추출본→const Q 갱신(실질변경만, 4개 언어)
 py scripts/match_images.py                # 이미지(imgs) 매칭
 ```
-- **⚠️ 갭**: `apply_pdf_to_html.py`(추출 JSON→HTML const Q 갱신)는 아직 미구현. refresh_pdf는 비교만 함. 신규 문항·변경 문항을 HTML에 반영하는 스크립트 필요.
+- `apply_pdf_to_html.py`(✅구현·검증): **실질 변경만 갱신**(공백·유사문장부호 정규화로 무시), **정답 100% 정확**, **추출 실패·부재 문항은 삭제 없이 원본 보존**(데이터 손실 방지), 보기 개수 변경 문항은 c 미갱신+경고, 신규 문항 자동 추가.
+  - ⚠️ 같은 회차 재적용해도 en~87·vn~55문항 본문이 미세 갱신됨(PDF 추출 특수문자차, **정답·의미 무관**). 실제 개편 문항은 내용이 완전히 달라 명확히 구분됨.
+  - ⚠️ 실행 직후 `git diff`로 실제 변경 문항을 사용자와 검토 후 진행. 자동 폐기(문항 삭제)는 하지 않음(보존 리포트만) → 진짜 폐기는 수동 확인.
 - 카운터 라인(1000/문장/사진/표지판/동영상) 재계산.
 
 ### 2. 한국어 해설 정정
@@ -71,6 +73,6 @@ py html_to_txt.py                         # 【조정 필요】 GPTs txt에 번�
 - **vn**: chuyển làn đường·vỉa hè·còi·đèn xi nhan·dây an toàn·biển báo giao thông·đi chậm·dừng lại hẳn·vượt xe·vòng xuyến·thiết bị di chuyển cá nhân·nhường đường(양보)·Thông tư(부령)·Nghị định của Tổng thống(대통령령)·hiện tượng trượt nước(수막현상). 조문 제○호=điểm/mục.
 
 ## 미구현·주의 (다음 구축)
-- **`apply_pdf_to_html.py`**(1단계): PDF 추출→HTML const Q 갱신. 최대 갭. parse_record(refresh_pdf) 재사용.
-- **`html_to_txt.py` convert() 조정**: ko 해설 무조건 주입→번역캐시 우선+RISKY 차단.
+- ✅ `apply_pdf_to_html.py`(1단계) 구현·검증 완료 — 정답 100%·데이터 손실 0·실질 변경만 감지.
+- **`html_to_txt.py` convert() 조정**(남은 갭): ko 해설 무조건 주입 → 번역 캐시(expl_*.json) 우선 + RISKY 차단.
 - 위험 문항 언어별 보기 정렬 후 SAFE 편입은 별도.
