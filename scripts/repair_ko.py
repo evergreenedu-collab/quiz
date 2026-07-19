@@ -99,11 +99,19 @@ def repair(dry_run=False):
 
     if not dry_run and fixed:
         html = (PROJ / "index.html").read_text(encoding="utf-8")
+        applied = 0
+        failed = []
         for n, e in fixed.items():
             pat = re.compile(r'("n":' + str(n) + r',(?:(?!"n":)[\s\S])*?"e":)"(?:[^"\\]|\\.)*"')
             html, c = pat.subn(lambda m: m.group(1) + json.dumps(e, ensure_ascii=False), html, count=1)
+            applied += c
+            if c != 1:
+                failed.append(n)
+        if failed:  # 치환 실패 = HTML 포맷 변화 가능성 → 쓰지 않고 중단(부분 반영 방지)
+            print(f"  ⚠️ 치환 실패 {len(failed)}개 {failed} — HTML 포맷 확인 필요, 쓰기 중단")
+            return fixed, unmatched + failed
         (PROJ / "index.html").write_text(html, encoding="utf-8")
-        print(f"index.html 반영 완료: {len(fixed)}개")
+        print(f"index.html 반영 완료: {applied}개")
     elif dry_run:
         print("(dry-run — 파일 미수정)")
     return fixed, unmatched

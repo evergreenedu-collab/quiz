@@ -4,7 +4,7 @@
 각 언어 PDF에서 추출한 문항(본문 b·보기 c·정답 a·해설 e)을 HTML의 const Q 배열에 반영한다.
 - 기존 문항: b/c/a 갱신(ko는 e도). **t·imgs는 유지**(match_images가 별도 담당).
 - 신규 문항(PDF에만 있음): 추가(t=문장형/동영상형 기본, imgs=[]).
-- 폐기 문항(HTML에만 있음): 제거.
+- HTML에만 있고 PDF에 없는 문항: **원본 보존**(추출 실패와 구분 불가 → 자동 삭제 안 함, 리포트만).
 - **보기 개수가 바뀐 문항은 경고**만 하고 b/a만 갱신(c는 수동 확인 — parse_record는 ①~④ 4선택지 기준이라 5선택지 문항 주의).
 
 사용법: py scripts/apply_pdf_to_html.py [--dry-run]
