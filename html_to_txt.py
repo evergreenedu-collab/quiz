@@ -63,11 +63,15 @@ def format_question(q):
     return "\n".join(lines)
 
 
-def convert(html_path, out_path, ko_expl=None, ko_imgs=None):
+def convert(html_path, out_path, ko_expl=None, ko_imgs=None, risky=None):
     Q = extract_Q(html_path)
     Q.sort(key=lambda x: x["n"])
+    risky = risky or set()
     if ko_expl is not None:
         for q in Q:
+            if q["n"] in risky:
+                q["e"] = ""  # RISKY(보기 순서 언어별 상이) → 해설 강제 제거(기존 잔존분 포함, 폴백)
+                continue
             if not (q.get("e") or "").strip():
                 q["e"] = ko_expl.get(q["n"], "")
     if ko_imgs is not None:
@@ -96,10 +100,19 @@ def main():
     ko_Q = extract_Q(os.path.join(REPO, "index.html"))
     ko_expl = {q["n"]: (q.get("e") or "").strip() for q in ko_Q}
     ko_imgs = {q["n"]: list(q.get("imgs") or []) for q in ko_Q}
+    risky_path = os.path.join(REPO, "translations", "risky_questions.json")
+    if not os.path.exists(risky_path):
+        raise SystemExit(f"안전 게이트: RISKY 목록({risky_path}) 없음 — RISKY 문항 오설명 방지를 위해 중단")
+    with open(risky_path, encoding="utf-8") as f:
+        risky = {int(k) for k in json.load(f).get("risky", [])}
+    if not risky:
+        raise SystemExit("안전 게이트: RISKY 목록이 비어 있음 — 중단")
+    if len(risky) != 12:
+        print(f"⚠️ RISKY {len(risky)}개(기대 12) — verify_explanations.py 재확인 권장")
     for html_name, txt_name, lang in TARGETS:
         expl_inj = None if html_name == "index.html" else ko_expl
         imgs_inj = None if html_name == "index.html" else ko_imgs
-        Q = convert(os.path.join(REPO, html_name), os.path.join(OUT_DIR, txt_name), expl_inj, imgs_inj)
+        Q = convert(os.path.join(REPO, html_name), os.path.join(OUT_DIR, txt_name), expl_inj, imgs_inj, risky)
         write_json(Q, os.path.join(REPO, f"quiz_data_{lang}.json"))
 
 
