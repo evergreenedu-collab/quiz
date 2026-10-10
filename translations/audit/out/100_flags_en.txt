@@ -1,0 +1,1936 @@
+Reading additional input from stdin...
+2026-10-10T11:59:57.183799Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125af-2569-7e31-a71f-704a36acbf6d
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/100_flags_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/100_flags_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 568ms:
+[
+ {
+  "n": 4,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀, 援먰넻?덉쟾援먯쑁 3?쒓컙",
+   "??醫??뱀닔硫댄뿀(??뺢껄?몄감), 援먰넻?덉쟾援먯쑁 2?쒓컙",
+   "??醫??뱀닔硫댄뿀(援щ궃李?, 援먰넻?덉쟾援먯쑁 2?쒓컙",
+   "??醫?蹂댄넻硫댄뿀, 援먰넻?덉쟾援먯쑁 3?쒓컙"
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for ordinary motor vehicles; 3 hours of traffic safety education",
+   "Class I driver?셲 license for special motor vehicles (large towing vehicles); 2 hours of traffic safety education",
+   "Class I driver?셲 license for special motor vehicles (recovery vehicles); 2 hours of traffic safety education",
+   "Class II driver?셲 license for ordinary motor vehicles; 3 hours of traffic safety education"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?뱀감?뺤썝 15?몄듅??湲닿툒 ?뱁빀?먮룞李⑤? 泥섏쓬 ?댁쟾?섎젮怨??????꾩슂??議곌굔?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is a prerequisite for driving an emergency passenger  vehicle with prescribed seating capacity of no more than 15 persons?"
+ },
+ {
+  "n": 4,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀, 援먰넻?덉쟾援먯쑁 3?쒓컙",
+   "??醫??뱀닔硫댄뿀(??뺢껄?몄감), 援먰넻?덉쟾援먯쑁 2?쒓컙",
+   "??醫??뱀닔硫댄뿀(援щ궃李?, 援먰넻?덉쟾援먯쑁 2?쒓컙",
+   "??醫?蹂댄넻硫댄뿀, 援먰넻?덉쟾援먯쑁 3?쒓컙"
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for ordinary motor vehicles; 3 hours of traffic safety education",
+   "Class I driver?셲 license for special motor vehicles (large towing vehicles); 2 hours of traffic safety education",
+   "Class I driver?셲 license for special motor vehicles (recovery vehicles); 2 hours of traffic safety education",
+   "Class II driver?셲 license for ordinary motor vehicles; 3 hours of traffic safety education"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?뱀감?뺤썝 15?몄듅??湲닿툒 ?뱁빀?먮룞李⑤? 泥섏쓬 ?댁쟾?섎젮怨??????꾩슂??議곌굔?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is a prerequisite for driving an emergency passenger  vehicle with prescribed seating capacity of no more than 15 persons?"
+ },
+ {
+  "n": 4,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀, 援먰넻?덉쟾援먯쑁 3?쒓컙",
+   "??醫??뱀닔硫댄뿀(??뺢껄?몄감), 援먰넻?덉쟾援먯쑁 2?쒓컙",
+   "??醫??뱀닔硫댄뿀(援щ궃李?, 援먰넻?덉쟾援먯쑁 2?쒓컙",
+   "??醫?蹂댄넻硫댄뿀, 援먰넻?덉쟾援먯쑁 3?쒓컙"
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for ordinary motor vehicles; 3 hours of traffic safety education",
+   "Class I driver?셲 license for special motor vehicles (large towing vehicles); 2 hours of traffic safety education",
+   "Class I driver?셲 license for special motor vehicles (recovery vehicles); 2 hours of traffic safety education",
+   "Class II driver?셲 license for ordinary motor vehicles; 3 hours of traffic safety education"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?뱀감?뺤썝 15?몄듅??湲닿툒 ?뱁빀?먮룞李⑤? 泥섏쓬 ?댁쟾?섎젮怨??????꾩슂??議곌굔?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is a prerequisite for driving an emergency passenger  vehicle with prescribed seating capacity of no more than 15 persons?"
+ },
+ {
+  "n": 4,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀, 援먰넻?덉쟾援먯쑁 3?쒓컙",
+   "??醫??뱀닔硫댄뿀(??뺢껄?몄감), 援먰넻?덉쟾援먯쑁 2?쒓컙",
+   "??醫??뱀닔硫댄뿀(援щ궃李?, 援먰넻?덉쟾援먯쑁 2?쒓컙",
+   "??醫?蹂댄넻硫댄뿀, 援먰넻?덉쟾援먯쑁 3?쒓컙"
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for ordinary motor vehicles; 3 hours of traffic safety education",
+   "Class I driver?셲 license for special motor vehicles (large towing vehicles); 2 hours of traffic safety education",
+   "Class I driver?셲 license for special motor vehicles (recovery vehicles); 2 hours of traffic safety education",
+   "Class II driver?셲 license for ordinary motor vehicles; 3 hours of traffic safety education"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?뱀감?뺤썝 15?몄듅??湲닿툒 ?뱁빀?먮룞李⑤? 泥섏쓬 ?댁쟾?섎젮怨??????꾩슂??議곌굔?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is a prerequisite for driving an emergency passenger  vehicle with prescribed seating capacity of no more than 15 persons?"
+ },
+ {
+  "n": 7,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀 諛??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛???醫??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛?援щ궃李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛???醫?援щ궃李⑤㈃??
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for ordinary motor vehicles and for small towing vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles and Class I driver?셲 license for small towing vehicles",
+   "Class I driver?셲 license for ordinary motor vehicles and for recovery vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles and Class I driver?셲 license for recovery vehicles"
+  ],
+  "ko_b": "?뱀감?뺤썝??11紐낆씤 ?뱁빀?먮룞李⑤줈 珥앹쨷??780?щ줈洹몃옩???쇨껄?몄옄?숈감瑜?寃ъ씤?섍퀬???쒕떎. ?댁쟾?먭? 痍⑤뱷?댁빞?섎뒗 ?댁쟾硫댄뿀?? 醫낅쪟??",
+  "tr_b": "A vehicle with total weight of 780 kg is to be towed with an 11-seater passenger vehicle. Which of the following  driver?셲 license(s) must the driver hold?"
+ },
+ {
+  "n": 7,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['1', '2']",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀 諛??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛???醫??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛?援щ궃李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛???醫?援щ궃李⑤㈃??
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for ordinary motor vehicles and for small towing vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles and Class I driver?셲 license for small towing vehicles",
+   "Class I driver?셲 license for ordinary motor vehicles and for recovery vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles and Class I driver?셲 license for recovery vehicles"
+  ],
+  "ko_b": "?뱀감?뺤썝??11紐낆씤 ?뱁빀?먮룞李⑤줈 珥앹쨷??780?щ줈洹몃옩???쇨껄?몄옄?숈감瑜?寃ъ씤?섍퀬???쒕떎. ?댁쟾?먭? 痍⑤뱷?댁빞?섎뒗 ?댁쟾硫댄뿀?? 醫낅쪟??",
+  "tr_b": "A vehicle with total weight of 780 kg is to be towed with an 11-seater passenger vehicle. Which of the following  driver?셲 license(s) must the driver hold?"
+ },
+ {
+  "n": 7,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀 諛??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛???醫??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛?援щ궃李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛???醫?援щ궃李⑤㈃??
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for ordinary motor vehicles and for small towing vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles and Class I driver?셲 license for small towing vehicles",
+   "Class I driver?셲 license for ordinary motor vehicles and for recovery vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles and Class I driver?셲 license for recovery vehicles"
+  ],
+  "ko_b": "?뱀감?뺤썝??11紐낆씤 ?뱁빀?먮룞李⑤줈 珥앹쨷??780?щ줈洹몃옩???쇨껄?몄옄?숈감瑜?寃ъ씤?섍퀬???쒕떎. ?댁쟾?먭? 痍⑤뱷?댁빞?섎뒗 ?댁쟾硫댄뿀?? 醫낅쪟??",
+  "tr_b": "A vehicle with total weight of 780 kg is to be towed with an 11-seater passenger vehicle. Which of the following  driver?셲 license(s) must the driver hold?"
+ },
+ {
+  "n": 7,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['1', '2']",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀 諛??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛???醫??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛?援щ궃李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀 諛???醫?援щ궃李⑤㈃??
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for ordinary motor vehicles and for small towing vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles and Class I driver?셲 license for small towing vehicles",
+   "Class I driver?셲 license for ordinary motor vehicles and for recovery vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles and Class I driver?셲 license for recovery vehicles"
+  ],
+  "ko_b": "?뱀감?뺤썝??11紐낆씤 ?뱁빀?먮룞李⑤줈 珥앹쨷??780?щ줈洹몃옩???쇨껄?몄옄?숈감瑜?寃ъ씤?섍퀬???쒕떎. ?댁쟾?먭? 痍⑤뱷?댁빞?섎뒗 ?댁쟾硫댄뿀?? 醫낅쪟??",
+  "tr_b": "A vehicle with total weight of 780 kg is to be towed with an 11-seater passenger vehicle. Which of the following  driver?셲 license(s) must the driver hold?"
+ },
+ {
+  "n": 8,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫???뺣㈃?덈줈 ?꾩뒪?뷀듃?댄룷湲곕? ?댁쟾?????덈떎.",
+   "??醫?蹂댄넻硫댄뿀濡??ㅽ봽?몃윮???댁쟾?????덈떎.",
+   "??醫?蹂댄넻硫댄뿀濡?250?쒖떆 ?대쪣?먮룞李⑤? ?댁쟾?????덈떎.",
+   "??醫??뚰삎硫댄뿀濡??먮룞湲곗옣移섏옄?꾧굅瑜??댁쟾?????덈떎."
+  ],
+  "tr_c": [
+   "An asphalt distributor may be driven by a driver holding a Class I driver?셲 license for large motor vehicles.",
+   "A dump truck may be driven by a driver holding a Class I driver?셲 license for ordinary motor vehicles.",
+   "A 250 cc two-wheeled vehicle may be driven by a person holding a Class II driver?셲 license for ordinary motor vehicles.",
+   "A motorcycle may be driven by a person holding a Class II driver?셲 license for small motor vehicles."
+  ],
+  "ko_b": "?댁쟾硫댄뿀 醫낅쪟蹂??댁쟾?????덈뒗 李⑥뿉 愿???ㅻ챸?쇰줈 留욌뒗 寃?2媛吏??",
+  "tr_b": "Which TWO statements are correct regarding the types of vehicles that can be driven by specific types of driver's  license?"
+ },
+ {
+  "n": 8,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫???뺣㈃?덈줈 ?꾩뒪?뷀듃?댄룷湲곕? ?댁쟾?????덈떎.",
+   "??醫?蹂댄넻硫댄뿀濡??ㅽ봽?몃윮???댁쟾?????덈떎.",
+   "??醫?蹂댄넻硫댄뿀濡?250?쒖떆 ?대쪣?먮룞李⑤? ?댁쟾?????덈떎.",
+   "??醫??뚰삎硫댄뿀濡??먮룞湲곗옣移섏옄?꾧굅瑜??댁쟾?????덈떎."
+  ],
+  "tr_c": [
+   "An asphalt distributor may be driven by a driver holding a Class I driver?셲 license for large motor vehicles.",
+   "A dump truck may be driven by a driver holding a Class I driver?셲 license for ordinary motor vehicles.",
+   "A 250 cc two-wheeled vehicle may be driven by a person holding a Class II driver?셲 license for ordinary motor vehicles.",
+   "A motorcycle may be driven by a person holding a Class II driver?셲 license for small motor vehicles."
+  ],
+  "ko_b": "?댁쟾硫댄뿀 醫낅쪟蹂??댁쟾?????덈뒗 李⑥뿉 愿???ㅻ챸?쇰줈 留욌뒗 寃?2媛吏??",
+  "tr_b": "Which TWO statements are correct regarding the types of vehicles that can be driven by specific types of driver's  license?"
+ },
+ {
+  "n": 8,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "??醫???뺣㈃?덈줈 ?꾩뒪?뷀듃?댄룷湲곕? ?댁쟾?????덈떎.",
+   "??醫?蹂댄넻硫댄뿀濡??ㅽ봽?몃윮???댁쟾?????덈떎.",
+   "??醫?蹂댄넻硫댄뿀濡?250?쒖떆 ?대쪣?먮룞李⑤? ?댁쟾?????덈떎.",
+   "??醫??뚰삎硫댄뿀濡??먮룞湲곗옣移섏옄?꾧굅瑜??댁쟾?????덈떎."
+  ],
+  "tr_c": [
+   "An asphalt distributor may be driven by a driver holding a Class I driver?셲 license for large motor vehicles.",
+   "A dump truck may be driven by a driver holding a Class I driver?셲 license for ordinary motor vehicles.",
+   "A 250 cc two-wheeled vehicle may be driven by a person holding a Class II driver?셲 license for ordinary motor vehicles.",
+   "A motorcycle may be driven by a person holding a Class II driver?셲 license for small motor vehicles."
+  ],
+  "ko_b": "?댁쟾硫댄뿀 醫낅쪟蹂??댁쟾?????덈뒗 李⑥뿉 愿???ㅻ챸?쇰줈 留욌뒗 寃?2媛吏??",
+  "tr_b": "Which TWO statements are correct regarding the types of vehicles that can be driven by specific types of driver's  license?"
+ },
+ {
+  "n": 8,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "??醫???뺣㈃?덈줈 ?꾩뒪?뷀듃?댄룷湲곕? ?댁쟾?????덈떎.",
+   "??醫?蹂댄넻硫댄뿀濡??ㅽ봽?몃윮???댁쟾?????덈떎.",
+   "??醫?蹂댄넻硫댄뿀濡?250?쒖떆 ?대쪣?먮룞李⑤? ?댁쟾?????덈떎.",
+   "??醫??뚰삎硫댄뿀濡??먮룞湲곗옣移섏옄?꾧굅瑜??댁쟾?????덈떎."
+  ],
+  "tr_c": [
+   "An asphalt distributor may be driven by a driver holding a Class I driver?셲 license for large motor vehicles.",
+   "A dump truck may be driven by a driver holding a Class I driver?셲 license for ordinary motor vehicles.",
+   "A 250 cc two-wheeled vehicle may be driven by a person holding a Class II driver?셲 license for ordinary motor vehicles.",
+   "A motorcycle may be driven by a person holding a Class II driver?셲 license for small motor vehicles."
+  ],
+  "ko_b": "?댁쟾硫댄뿀 醫낅쪟蹂??댁쟾?????덈뒗 李⑥뿉 愿???ㅻ챸?쇰줈 留욌뒗 寃?2媛吏??",
+  "tr_b": "Which TWO statements are correct regarding the types of vehicles that can be driven by specific types of driver's  license?"
+ },
+ {
+  "n": 9,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫???뺢껄?몄감硫댄뿀",
+   "??醫?援щ궃李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀",
+   "??醫?蹂댄넻硫댄뿀"
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for large towing vehicles",
+   "Class I driver?셲 license for recovery vehicles",
+   "Class I driver?셲 license for ordinary motor vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles"
+  ],
+  "ko_b": "?뱀감?뺤썝??12紐낆씤 ?뱁빀?먮룞李⑤? ?꾨줈?먯꽌 ?댁쟾?섎젮怨??쒕떎. ?댁쟾?먭? 痍⑤뱷?댁빞?섎뒗 ?댁쟾硫댄뿀??醫낅쪟??",
+  "tr_b": "One intends to drive a 12-seater passenger vehicle. Which of the following driver?셲 license types must one obtain  to do so?"
+ },
+ {
+  "n": 9,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫???뺢껄?몄감硫댄뿀",
+   "??醫?援щ궃李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀",
+   "??醫?蹂댄넻硫댄뿀"
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for large towing vehicles",
+   "Class I driver?셲 license for recovery vehicles",
+   "Class I driver?셲 license for ordinary motor vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles"
+  ],
+  "ko_b": "?뱀감?뺤썝??12紐낆씤 ?뱁빀?먮룞李⑤? ?꾨줈?먯꽌 ?댁쟾?섎젮怨??쒕떎. ?댁쟾?먭? 痍⑤뱷?댁빞?섎뒗 ?댁쟾硫댄뿀??醫낅쪟??",
+  "tr_b": "One intends to drive a 12-seater passenger vehicle. Which of the following driver?셲 license types must one obtain  to do so?"
+ },
+ {
+  "n": 9,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??醫???뺢껄?몄감硫댄뿀",
+   "??醫?援щ궃李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀",
+   "??醫?蹂댄넻硫댄뿀"
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for large towing vehicles",
+   "Class I driver?셲 license for recovery vehicles",
+   "Class I driver?셲 license for ordinary motor vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles"
+  ],
+  "ko_b": "?뱀감?뺤썝??12紐낆씤 ?뱁빀?먮룞李⑤? ?꾨줈?먯꽌 ?댁쟾?섎젮怨??쒕떎. ?댁쟾?먭? 痍⑤뱷?댁빞?섎뒗 ?댁쟾硫댄뿀??醫낅쪟??",
+  "tr_b": "One intends to drive a 12-seater passenger vehicle. Which of the following driver?셲 license types must one obtain  to do so?"
+ },
+ {
+  "n": 9,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "??醫???뺢껄?몄감硫댄뿀",
+   "??醫?援щ궃李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀",
+   "??醫?蹂댄넻硫댄뿀"
+  ],
+  "tr_c": [
+   "Class I driver?셲 license for large towing vehicles",
+   "Class I driver?셲 license for recovery vehicles",
+   "Class I driver?셲 license for ordinary motor vehicles",
+   "Class II driver?셲 license for ordinary motor vehicles"
+  ],
+  "ko_b": "?뱀감?뺤썝??12紐낆씤 ?뱁빀?먮룞李⑤? ?꾨줈?먯꽌 ?댁쟾?섎젮怨??쒕떎. ?댁쟾?먭? 痍⑤뱷?댁빞?섎뒗 ?댁쟾硫댄뿀??醫낅쪟??",
+  "tr_b": "One intends to drive a 12-seater passenger vehicle. Which of the following driver?셲 license types must one obtain  to do so?"
+ },
+ {
+  "n": 13,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "異쒓뎅 ???곸꽦寃???곌린 ?좎껌?쒕? ?쒖텧?댁빞 ?쒕떎.",
+   "異쒓뎅 ?꾩뿉???由ъ씤????좏븯???곸꽦寃???곌린 ?좎껌???????녿떎.",
+   "?곸꽦寃???곌린 ?좎껌 ?? E-?곗폆怨?媛숈? 異쒓뎅 ?ъ떎??利앸챸?????덈뒗 ?쒕쪟瑜??쒖텧?댁빞 ?쒕떎.",
+   "?곸꽦寃???곌린 ?좎껌???뱀씤??寃쎌슦, 洹援???3媛쒖썡 ?대궡???곸꽦寃?щ? 諛쏆븘???쒕떎."
+  ],
+  "tr_c": [
+   "You must submit an application to postpone the aptitude test before leaving the country.",
+   "You cannot have an agent apply for a postponement of the aptitude test on your behalf after you leave the country.",
+   "You must provide supporting documents of your departure such as an E-ticket to apply for a postponement of the  aptitude test.",
+   "If your application is approved, you must take the aptitude test within three months of your return."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쇅 異쒓뎅 ?? ?댁쟾硫댄뿀 ?곸꽦寃???곌린??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "Which of the following is an incorrect description of postponing the driver's license aptitude test under the Road  Traffic Act when traveling abroad?"
+ },
+ {
+  "n": 17,
+  "check": "negation",
+  "detail": "c[1] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?먮룞湲곕? ??李?以??쒖냽 20?щ줈誘명꽣 ?댁긽?쇰줈 ?댄뻾??寃쎌슦 ?꾨룞湲곌? ?묐룞?섏? ?꾨땲?섏뿬???쒕떎.",
+   "?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???녿뒗(PAS : Pedal Assist System) ?꾧린?먯쟾嫄곕? ?ы븿?쒕떎.",
+   "理쒓퀬 ?뺢꺽異쒕젰 11?щ줈????댄븯???먮룞湲곕? ??李⑤줈 李⑥껜 以묐웾??35?щ줈洹몃옩 誘몃쭔??寃껋쓣 留먰븳??",
+   "李⑥껜 以묐웾? 30?щ줈洹몃옩 誘몃쭔?댁뼱???쒕떎."
+  ],
+  "tr_c": [
+   "For vehicles with a motor, the motor should stop when the device reaches or exceeds a speed of 20 km/h.",
+   "It includes electric bicycles that cannot move solely by motor power (PAS: Pedal Assist System).",
+   "It is a vehicle with maximum rated output power of 11 kW or less, which weighs less than 35 kg.",
+   "The weight of the vehicle should be less than 30 kg."
+  ],
+  "ko_b": "?꾨줈援먰넻踰???媛쒖씤???대룞?μ튂??湲곗???????ㅻ챸?대떎. 諛붾Ⅴ寃??ㅻ챸??寃껋??",
+  "tr_b": "Below are explanations of the standard for personal mobility devices (PMDs) according to the Road Traffic Act.  Which one is correct?"
+ },
+ {
+  "n": 18,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "臾대㈃???댁쟾??3?뚰븳 ??,
+   "?ㅻⅨ ?щ엺???꾪븯???댁쟾硫댄뿀?쒗뿕???由??묒떆????,
+   "?⑥냽 寃쎌같愿 ??뻾?쇰줈 ?낃굔?섏뼱 痍⑥냼媛 ?섎뒗 寃쎌슦",
+   "?뚯＜?댁쟾???섎떎媛 3???댁긽 援먰넻?ш퀬瑜??쇱쑝??寃쎌슦"
+  ],
+  "tr_c": [
+   "Driving without a license three times",
+   "When taking a driver?셲 license test on behalf of another person.",
+   "When charged for assaulting a police officer during an inspection, resulting in the revocation of one?셲 license.",
+   "When causing three or more traffic accidents while driving under the influence of alcohol."
+  ],
+  "ko_b": "?ㅼ쓬 以??댁쟾硫댄뿀 痍⑤뱷 寃곌꺽湲곌컙??2?꾩뿉 ?대떦?섎뒗 ?ъ쑀 2媛吏??",
+  "tr_b": "Which TWO actions would cause someone to be barred from acquiring a driver's license for 2 years? (If given a  penalty more severe than a criminal fine)"
+ },
+ {
+  "n": 18,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "臾대㈃???댁쟾??3?뚰븳 ??,
+   "?ㅻⅨ ?щ엺???꾪븯???댁쟾硫댄뿀?쒗뿕???由??묒떆????,
+   "?⑥냽 寃쎌같愿 ??뻾?쇰줈 ?낃굔?섏뼱 痍⑥냼媛 ?섎뒗 寃쎌슦",
+   "?뚯＜?댁쟾???섎떎媛 3???댁긽 援먰넻?ш퀬瑜??쇱쑝??寃쎌슦"
+  ],
+  "tr_c": [
+   "Driving without a license three times",
+   "When taking a driver?셲 license test on behalf of another person.",
+   "When charged for assaulting a police officer during an inspection, resulting in the revocation of one?셲 license.",
+   "When causing three or more traffic accidents while driving under the influence of alcohol."
+  ],
+  "ko_b": "?ㅼ쓬 以??댁쟾硫댄뿀 痍⑤뱷 寃곌꺽湲곌컙??2?꾩뿉 ?대떦?섎뒗 ?ъ쑀 2媛吏??",
+  "tr_b": "Which TWO actions would cause someone to be barred from acquiring a driver's license for 2 years? (If given a  penalty more severe than a criminal fine)"
+ },
+ {
+  "n": 19,
+  "check": "negation",
+  "detail": "c[2] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?곷Ц?댁쟾硫댄뿀利??몄젙 援???먯꽌 ?댁쟾????蹂꾨룄??踰덉뿭怨듭쬆???놁씠 ?댁쟾??媛?ν븯??",
+   "?곷Ц?댁쟾硫댄뿀利??몄젙 援???먯꽌??泥대쪟湲곌컙???곴??놁씠 ?ъ슜?????덈떎.",
+   "?곷Ц?댁쟾硫댄뿀利?遺덉씤??援???먯꽌???쒓뎅?댁쟾硫댄뿀利? 援?젣?댁쟾硫댄뿀利? ?ш텒??吏李명빐???쒕떎.",
+   "?댁쟾硫댄뿀利??ㅼそ???곷Ц?쇰줈 ?댁쟾硫댄뿀利앹쓽 ?댁슜???쒓린??寃껋씠??"
+  ],
+  "tr_c": [
+   "When driving in a country where an English driver?셲 license is recognized, it is possible to drive without a separate  notarized translation.",
+   "The English driver's license can be used regardless of the length of stay in a country where an English driver?셲 license is  recognized.",
+   "You should bring your Korean driver's license, an international driver's license, and your passport in a country where an English driver?셲 license is not recognized.",
+   "It is a license wherein the content of the driver's license is written in English on the back of the driver's license."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곷Ц?댁쟾硫댄뿀利앹뿉 ????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??(?쒕꽕諛뷀삊???먮뒗 鍮꾩뿏?섑삊??媛?낃뎅?쇰줈 ?쒖젙)",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about an English driver?셲 license? (Limited  to countries that have ratified the Geneva Convention or the Vienna Convention)"
+ },
+ {
+  "n": 30,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['10', '2']",
+  "ko_c": [
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 2媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 4媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 8媛쒖썡 ?대궡"
+  ],
+  "tr_c": [
+   "Within two months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within four months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within six months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within eight months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?댁쟾硫댄뿀利?媛깆떊湲곌컙???щ컮瑜닿쾶 ?ㅻ챸??寃껋?? (65??誘몃쭔???댁쟾?먯뿉 ?쒗븳??",
+  "tr_b": "Which of the following correctly describes the renewal period of a driver?셲 license under the Road Traffic Act (for drivers under 65 years of age only)?"
+ },
+ {
+  "n": 30,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['10', '4']",
+  "ko_c": [
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 2媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 4媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 8媛쒖썡 ?대궡"
+  ],
+  "tr_c": [
+   "Within two months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within four months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within six months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within eight months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?댁쟾硫댄뿀利?媛깆떊湲곌컙???щ컮瑜닿쾶 ?ㅻ챸??寃껋?? (65??誘몃쭔???댁쟾?먯뿉 ?쒗븳??",
+  "tr_b": "Which of the following correctly describes the renewal period of a driver?셲 license under the Road Traffic Act (for drivers under 65 years of age only)?"
+ },
+ {
+  "n": 30,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['10', '6']",
+  "ko_c": [
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 2媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 4媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 8媛쒖썡 ?대궡"
+  ],
+  "tr_c": [
+   "Within two months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within four months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within six months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within eight months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?댁쟾硫댄뿀利?媛깆떊湲곌컙???щ컮瑜닿쾶 ?ㅻ챸??寃껋?? (65??誘몃쭔???댁쟾?먯뿉 ?쒗븳??",
+  "tr_b": "Which of the following correctly describes the renewal period of a driver?셲 license under the Road Traffic Act (for drivers under 65 years of age only)?"
+ },
+ {
+  "n": 30,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['10', '8']",
+  "ko_c": [
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 2媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 4媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡",
+   "?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 8媛쒖썡 ?대궡"
+  ],
+  "tr_c": [
+   "Within two months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within four months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within six months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test.",
+   "Within eight months before or after one's birthday in the year that marks the tenth anniversary since passing the driver?셲 license test."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?댁쟾硫댄뿀利?媛깆떊湲곌컙???щ컮瑜닿쾶 ?ㅻ챸??寃껋?? (65??誘몃쭔???댁쟾?먯뿉 ?쒗븳??",
+  "tr_b": "Which of the following correctly describes the renewal period of a driver?셲 license under the Road Traffic Act (for drivers under 65 years of age only)?"
+ },
+ {
+  "n": 37,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑???쑣룸룄寃쎌같泥?뿉 ?깅줉?섏? ?꾨땲?섍퀬 ?댁쟾??寃쎌슦?먮뒗 硫댄뿀媛 ?뺤? ?쒕떎.",
+   "?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂?섏? ?꾨땲?섍굅???ㅼ튂湲곗???遺?⑺븯吏 ?꾨땲???뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑???댁쟾       ??寃쎌슦 1媛쒖썡 ???쒖젙議곗튂 紐낅졊???쒕떎.",
+   "?뚯＜?댁쟾 諛⑹??μ튂???뺣퉬瑜??꾪빐 ?댁껜쨌議곗옉 ?먮뒗 洹?諛뽰쓽 諛⑸쾿?쇰줈 ?⑥슜???⑥뼱吏?寃껋쓣 ?뚮㈃???대떦?μ튂媛 ?ㅼ튂??      ?먮룞李⑤벑???댁쟾??寃쎌슦?먮뒗 硫댄뿀媛 ?뺤??쒕떎.",
+   "?뚯＜?댁쟾?쇰줈 ?명븳 硫댄뿀 寃곌꺽湲곌컙 ?댄썑 諛⑹??μ튂 遺李⑹감?됰쭔 ?댁쟾媛?ν븳 硫댄뿀瑜?痍⑤뱷???뚮????μ튂瑜?遺李⑺븳 李⑤웾留?      ?댄뻾?????덈떎."
+  ],
+  "tr_c": [
+   "A person who has obtained a conditional driver?셲 license upon installing an ignition interlock device and who drives without registering it with the commissioner of the city or police agency of his/her municipality will have his/her license suspended.",
+   "A person who has driven a vehicle without an ignition interlock device or with such device that fails to meet the installation standards shall be ordered to take corrective measures within one month.",
+   "A person who drives a motor vehicle with an ignition interlock device, etc. knowing that the device is less effective as it was dismantled, tampered with, or otherwise for maintenance will have his/her license suspended.",
+   "After the period of license disqualification due to drunk driving, a person may only drive a vehicle with an ignition interlock device from the time of obtaining a conditional driver?셲 license upon installing an ignition interlock device."
+  ],
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆? ?댁쟾???깆쓽 以?섏궗??뿉 ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "Which of the following is correct regarding the obligations of a driver who has obtained a conditional driver?셲  license upon installing an ignition interlock device under the Road Traffic Act?"
+ },
+ {
+  "n": 38,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['10', '5']",
+  "ko_c": [
+   "怨쇳깭猷?5留?????10留???,
+   "怨쇳깭猷?50留?????1諛깅쭔 ??,
+   "怨쇳깭猷?2諛깅쭔 ????2泥쒕쭔 ??,
+   "泥섎쾶?섏? ?딅뒗??"
+  ],
+  "tr_c": [
+   "An administrative fine between KRW 50,000 and 100,000",
+   "An administrative fine between KRW 500,000 and 1 million",
+   "An administrative fine between KRW 2 million and 20 million",
+   "No penalties"
+  ],
+  "ko_b": "?댁쟾?먭? 媛吏??앹쑀?쒗뭹?꾩쓣 ?뚮㈃??李⑤웾 ?곕즺濡??ъ슜??寃쎌슦 泥섎쾶湲곗???",
+  "tr_b": "What is the standard for penalties imposed on a driver who knowingly uses a fake petroleum product as vehicle  fuel?"
+ },
+ {
+  "n": 38,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['50']",
+  "ko_c": [
+   "怨쇳깭猷?5留?????10留???,
+   "怨쇳깭猷?50留?????1諛깅쭔 ??,
+   "怨쇳깭猷?2諛깅쭔 ????2泥쒕쭔 ??,
+   "泥섎쾶?섏? ?딅뒗??"
+  ],
+  "tr_c": [
+   "An administrative fine between KRW 50,000 and 100,000",
+   "An administrative fine between KRW 500,000 and 1 million",
+   "An administrative fine between KRW 2 million and 20 million",
+   "No penalties"
+  ],
+  "ko_b": "?댁쟾?먭? 媛吏??앹쑀?쒗뭹?꾩쓣 ?뚮㈃??李⑤웾 ?곕즺濡??ъ슜??寃쎌슦 泥섎쾶湲곗???",
+  "tr_b": "What is the standard for penalties imposed on a driver who knowingly uses a fake petroleum product as vehicle  fuel?"
+ },
+ {
+  "n": 45,
+  "check": "paren",
+  "detail": "e 愿꾪샇 吏?遺덉씪移?,
+  "ko_c": [
+   "異⑹쟾?섍린 ??李⑤웾???쒕룞???덈떎.",
+   "異⑹쟾?뚯뿉???≪뿰? 李⑤웾???⑥뼱?몄꽌 ?쒕떎.",
+   "?섏냼媛?ㅺ? ?꾩꽕???뚯뿉??異⑹쟾???덉쟾愿由ъ옄?먭쾶 ?덉쟾?먭????붿껌?쒕떎.",
+   "?섏냼李⑤웾??異⑸룎 ??援먰넻?ш퀬 ?꾩뿉??媛???덉쟾?먭???諛쏆? ???ъ슜?쒕떎."
+  ],
+  "tr_c": [
+   "Switch off the vehicle power before charging.",
+   "Smoking should be done at a distance from the vehicle.",
+   "When hydrogen gas leaks, request the safety supervisor from the charging station for a safety check.",
+   "After a traffic accident involving the collision of a hydrogen vehicle, drive the vehicle after undergoing a gas safety  inspection."
+  ],
+  "ko_b": "?섏냼李⑤웾???덉쟾?섏튃?쇰줈 ?由?寃껋??",
+  "tr_b": "Which of the following is NOT correct regarding the safety rules for hydrogen vehicles?"
+ },
+ {
+  "n": 53,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['4']",
+  "ko_c": [
+   "?꾨줈援먰넻踰뺤긽?쒖슫?꾟앹뿉???꾨줈?먯꽌 李⑤쭏瑜?洹?蹂몃옒???ъ슜諛⑸쾿???곕씪 ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섎뒗 寃껋? ?ы븿?섏? ?딅뒗??",
+   "?댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ?대??꾪솕 ?ъ슜湲덉? 洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+   "?먯쑉二쇳뻾?쒖뒪?쒖쓽 吏곸젒 ?댁쟾 ?붽뎄??吏泥댁뾾????묓븯吏 ?꾨땲???먯쑉二쇳뻾?뱀슜?먮룞李⑥쓽 ?댁쟾?먯뿉 ???踰붿튃湲덉븸? 4留??먯씠??",
+   "?쒖옄?⑥＜?됱떆?ㅽ뀥?앹씠? ?댁쟾???먮뒗 ?밴컼??議곗옉 ?놁씠 二쇰??곹솴怨??꾨줈 ?뺣낫 ?깆쓣 ?ㅼ뒪濡??몄??섍퀬 ?먮떒?섏뿬 ?먮룞李⑤? ?댄뻾 ?????덇쾶 ?섎뒗 ?먮룞???λ퉬, ?뚰봽?몄썾??諛??댁? 愿?⑦븳 紐⑤뱺 ?μ튂瑜?留먰븳??"
+  ],
+  "tr_c": [
+   "The Road Traffic Act stipulates that ?쐂riving??does not include the use of an autonomous driving system in accordance with the original use of motor vehicles and horses.",
+   "The prohibition of using a mobile phone does not apply to drivers driving a vehicle operated under an autonomous driving  system.",
+   "The traffic penalty for a driver who fails to respond promptly to the take-over request from the autonomous driving system  is a fee of KRW 40,000.",
+   "An ?쏿utonomous driving system??encompasses a variety of automated apparatus, software, and peripheral devices that allow a vehicle to move by recognizing and judging the surroundings and road information without the manipulation of the driver or a passenger."
+  ],
+  "ko_b": "?먯쑉二쇳뻾?쒖뒪?쒓낵 愿?⑤맂 踰뺣졊???댁슜?쇰줈 ?由?寃껋??",
+  "tr_b": "Which of the following is incorrect regarding provisions on autonomous driving systems?"
+ },
+ {
+  "n": 53,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?꾨줈援먰넻踰뺤긽?쒖슫?꾟앹뿉???꾨줈?먯꽌 李⑤쭏瑜?洹?蹂몃옒???ъ슜諛⑸쾿???곕씪 ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섎뒗 寃껋? ?ы븿?섏? ?딅뒗??",
+   "?댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ?대??꾪솕 ?ъ슜湲덉? 洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+   "?먯쑉二쇳뻾?쒖뒪?쒖쓽 吏곸젒 ?댁쟾 ?붽뎄??吏泥댁뾾????묓븯吏 ?꾨땲???먯쑉二쇳뻾?뱀슜?먮룞李⑥쓽 ?댁쟾?먯뿉 ???踰붿튃湲덉븸? 4留??먯씠??",
+   "?쒖옄?⑥＜?됱떆?ㅽ뀥?앹씠? ?댁쟾???먮뒗 ?밴컼??議곗옉 ?놁씠 二쇰??곹솴怨??꾨줈 ?뺣낫 ?깆쓣 ?ㅼ뒪濡??몄??섍퀬 ?먮떒?섏뿬 ?먮룞李⑤? ?댄뻾 ?????덇쾶 ?섎뒗 ?먮룞???λ퉬, ?뚰봽?몄썾??諛??댁? 愿?⑦븳 紐⑤뱺 ?μ튂瑜?留먰븳??"
+  ],
+  "tr_c": [
+   "The Road Traffic Act stipulates that ?쐂riving??does not include the use of an autonomous driving system in accordance with the original use of motor vehicles and horses.",
+   "The prohibition of using a mobile phone does not apply to drivers driving a vehicle operated under an autonomous driving  system.",
+   "The traffic penalty for a driver who fails to respond promptly to the take-over request from the autonomous driving system  is a fee of KRW 40,000.",
+   "An ?쏿utonomous driving system??encompasses a variety of automated apparatus, software, and peripheral devices that allow a vehicle to move by recognizing and judging the surroundings and road information without the manipulation of the driver or a passenger."
+  ],
+  "ko_b": "?먯쑉二쇳뻾?쒖뒪?쒓낵 愿?⑤맂 踰뺣졊???댁슜?쇰줈 ?由?寃껋??",
+  "tr_b": "Which of the following is incorrect regarding provisions on autonomous driving systems?"
+ },
+ {
+  "n": 57,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "鍮꾩궗?낆슜 ?뱀슜?먮룞李⑥쓽 ?먮룞李④????좏슚湲곌컙? 6?꾩씠??",
+   "?κ굅由??댁쟾 ?쒖뿉???ъ쟾??諛고꽣由щ? ?뺤씤?섍퀬 異⑹쟾?쒕떎.",
+   "異⑹쟾 吏곹썑?먮뒗 湲됯??? 湲됱젙吏瑜??섏? ?딅뒗 寃껋씠 醫뗫떎.",
+   "?댁꽑?쒗듃, ?댁꽑?몃뱾蹂대떎 怨듦린 ?덊꽣瑜??ъ슜?섎뒗 寃껋씠 ?⑥쑉?곸씠??"
+  ],
+  "tr_c": [
+   "The valid period for the vehicle inspection of non-commercial passenger vehicles is 6 years.",
+   "When driving long distances, check and charge the battery in advance.",
+   "Refrain from accelerating or suddenly stopping immediately after charging.",
+   "It is more efficient to use an air heater than a heated seat or a heated handle."
+  ],
+  "ko_b": "?꾧린?먮룞李?愿由щ갑踰뺤쑝濡??녹? ?딆? 2媛吏??",
+  "tr_b": "Which two statements are NOT correct regarding the management of EVs?"
+ },
+ {
+  "n": 63,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?곸옱以묐웾 16???ㅽ봽?몃윮",
+   "?쒖슱怨??섏썝???댄뻾?섎뒗 2痢?醫뚯꽍踰꾩뒪",
+   "?⑥감濡쒖씤 寃쎌슦, 李⑦룺??3.7m???뚮갑李⑤웾",
+   "10?????援щ궃李⑤웾"
+  ],
+  "tr_c": [
+   "A dump truck with loading weight of 16 tons",
+   "A double-decker bus that operates between Seoul and Suwon",
+   "A fire vehicle with vehicle width of 3.7m in case of a single lane",
+   "A large recovery vehicle weighing 10 tons"
+  ],
+  "ko_b": "?ㅼ쓬 李⑤웾 以??섏씠?⑥뒪李⑤줈 ?댁슜??遺덇??ν븳 李⑤웾??",
+  "tr_b": "Which of the following vehicles CANNOT use the Hi-pass lanes?"
+ },
+ {
+  "n": 68,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥씠誘濡??좎뿉 痍⑦븳 ?곹깭?먯꽌 ?댁쟾?대룄 ?쒕떎.",
+   "怨쇰줈???곹깭?먯꽌 ?먯쑉二쇳뻾?먮룞李⑤? ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑤씪 ?섎뜑?쇰룄 ?μ젙?좎꽦?섏빟?덉쓣 蹂듭슜?섍퀬 ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 ?댁쟾 以묒뿉 ?대????꾪솕 ?ъ슜??媛?ν븯??"
+  ],
+  "tr_c": [
+   "Since it is an autonomous vehicle, the drivers can drive even under the influence of alcohol.",
+   "The driver must not drive an autonomous vehicle in an exhausted state.",
+   "Even drivers of autonomous vehicles can take psychoactive medication and drive.",
+   "The driver may use a mobile phone while driving an autonomous vehicle."
+  ],
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??댁쟾?먯쓽 留덉쓬媛吏먯쑝濡?諛붾Ⅴ吏 ?딆? 寃껋??",
+  "tr_b": "Which of the following is NOT a desirable mindset for drivers of autonomous vehicles?"
+ },
+ {
+  "n": 72,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['300']",
+  "ko_c": [
+   "300留????댄븯??怨쇳깭猷?,
+   "500留????댄븯??怨쇳깭猷?,
+   "1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "An administrative fine of up to KRW 3 million",
+   "An administrative fine of up to KRW 5 million",
+   "Up to 1 year of imprisonment or a criminal fine of up to KRW 10 million",
+   "Up to 2 years of imprisonment or a criminalfine of up to KRW 20 million"
+  ],
+  "ko_b": "?먮룞李⑥넀?대같?곷낫?λ쾿???섎Т蹂댄뿕??媛?낇븯吏 ?딆? ?먮룞李⑤낫?좎옄??泥섎쾶 湲곗??쇰줈 留욌뒗 寃껋??(?먮룞李?誘몄슫??",
+  "tr_b": "Under the Guarantee of Compulsory Motor Vehicle Liability Security Act, what is the punishment criterion for a car owner who fails to purchase mandatory insurance? (When the car has not been operated)"
+ },
+ {
+  "n": 72,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['500']",
+  "ko_c": [
+   "300留????댄븯??怨쇳깭猷?,
+   "500留????댄븯??怨쇳깭猷?,
+   "1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "An administrative fine of up to KRW 3 million",
+   "An administrative fine of up to KRW 5 million",
+   "Up to 1 year of imprisonment or a criminal fine of up to KRW 10 million",
+   "Up to 2 years of imprisonment or a criminalfine of up to KRW 20 million"
+  ],
+  "ko_b": "?먮룞李⑥넀?대같?곷낫?λ쾿???섎Т蹂댄뿕??媛?낇븯吏 ?딆? ?먮룞李⑤낫?좎옄??泥섎쾶 湲곗??쇰줈 留욌뒗 寃껋??(?먮룞李?誘몄슫??",
+  "tr_b": "Under the Guarantee of Compulsory Motor Vehicle Liability Security Act, what is the punishment criterion for a car owner who fails to purchase mandatory insurance? (When the car has not been operated)"
+ },
+ {
+  "n": 82,
+  "check": "negation",
+  "detail": "c[2] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?곕꼸 ?덉뿉?쒕뒗 二쇨컙?먮뒗 ?욎?瑜닿린媛 媛?ν븯吏留??쇨컙?먮뒗 ?욎?瑜닿린媛 湲덉??쒕떎.",
+   "?욎?瑜닿린???뚯뿉???꾩“?깆쓣 耳쒓퀬 寃쎌쓬湲곕? ?몃━硫댁꽌 醫뚯륫?대굹 ?곗륫 愿怨꾩뾾???????덈떎.",
+   "?ㅻ━ ?꾨굹 援먯감濡쒕뒗 ?욎?瑜닿린媛 湲덉????μ냼?대?濡??욎?瑜닿린瑜??????녿떎.",
+   "寃쎌같怨듬Т?먯쓽 吏?쒖뿉 ?곕씪 ?뺤??섍굅???쒗뻾?섍퀬 李⑤? ?욎?瑜닿린 ?????덈떎."
+  ],
+  "tr_c": [
+   "Inside tunnels, overtaking is allowed during daytime but banned during nighttime.",
+   "Drivers can overtake the car ahead either on its left or on its right after turning on the headlights and honking.",
+   "Overtaking is not allowed on bridges or at intersections.",
+   "A driver may stop, proceed slowly, or overtake a vehicle as directed by a police officer."
+  ],
+  "ko_b": "?ㅼ쓬以??꾨줈援먰넻踰뺤긽 ?욎?瑜닿린??????댁슜?쇰줈 ?щ컮瑜?寃껋??",
+  "tr_b": "Which of the following statements about overtaking is correct under the Road Traffic Act?"
+ },
+ {
+  "n": 83,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "援먰넻?곹솴? 蹂寃쎈릺吏 ?딆쑝誘濡??ъ쟾?댄뻾 怨꾪쉷???몄슱 ?꾩슂???녿떎.",
+   "李⑤웾???뚰솕湲곕? 李⑤웾 ?대???鍮꾩튂?섏뿬 ?붿옱諛쒖깮???鍮꾪븳??",
+   "李⑤웾 ?대????대????쇱씠?????명솕??臾쇨굔???먯? ?딅뒗??",
+   "珥덈낫?댁쟾?먯뿉寃?諛곕젮?댁쟾???쒕떎."
+  ],
+  "tr_c": [
+   "Because the traffic situation is not changing, there is no need to make plans ahead.",
+   "Equip the vehicle with a fire extinguisher to take action immediately in case of fire.",
+   "Remove lighters and other flammable items from the vehicle.",
+   "Drive courteously, especially for novice drivers."
+  ],
+  "ko_b": "?ㅼ쓬 以??댁쟾?먯쓽 ?щ컮瑜?留덉쓬媛吏먯쑝濡?媛??諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "tr_b": "Which of the following is NOT a desirable driver attitude?"
+ },
+ {
+  "n": 87,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?숈듅?먯쓽 遺?곸젙?꾩뿉 ?곕씪 ?묎툒議곗튂?쒕떎.",
+   "鍮꾩긽?쒖떆?깆쓣 耳쒕뒗 ???꾪뻾 ?댁쟾?먯뿉寃??꾪뿕???뚮┛??",
+   "?ш퀬李⑤웾 ?꾨??먯꽌 寃쎌같怨듬Т?먯씠 ?꾩갑???뚭퉴吏 援먰넻?뺣━瑜??쒕떎.",
+   "2李⑥궗怨??덈갑???꾪빐 ?덉쟾??怨녹쑝濡??대룞?쒕떎."
+  ],
+  "tr_c": [
+   "Take first-aid measures depending on the severity of a passenger's injury.",
+   "Turn on the hazard lights to alert trailing drivers of the danger.",
+   "Control the traffic at the rear part of the vehicle until a police officer arrives.",
+   "Move to a safer place to prevent secondary accidents."
+  ],
+  "ko_b": "怨좎냽?꾨줈 ?댁쟾 以?援먰넻?ш퀬 諛쒖깮 ?꾩옣?먯꽌???댁쟾????묐갑踰뺤쑝濡?諛붾Ⅴ吏 ?딅뒗 寃껋??",
+  "tr_b": "Which of the following is NOT a correct response by a driver to a traffic accident while driving on an expressway?"
+ },
+ {
+  "n": 90,
+  "check": "negation",
+  "detail": "c[4] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?쇰줈??寃쎌슦 媛볤만???뺤감?섏뿬 ?덉젙??痍⑦븳 ??異쒕컻?쒕떎.",
+   "?됱냼 利먭꺼蹂대뒗 ?숈쁺?곸쓣 蹂대㈃???댁쟾?쒕떎.",
+   "二쇨린?곸씤 ?댁떇?대굹 ?섍린瑜??듯빐 議몄쓬?댁쟾???덈갑?쒕떎.",
+   "異쒕컻 ??肉먮쭔 ?꾨땲???댁떇 以묒뿉??紐⑹쟻吏源뚯? 寃쎈줈???꾪뿕 ?붿냼瑜??뺤씤?섎ŉ ?댁쟾?쒕떎."
+  ],
+  "tr_c": [
+   "If you are drowsy or exhausted from driving, pull the vehicle over on the shoulder to take a rest or a nap.",
+   "You can watch entertaining videos while driving.",
+   "You should take a rest and ventilate the vehicle regularly to stay awake.",
+   "You should constantly check for hazards along the route before departure and even while taking a rest."
+  ],
+  "ko_b": "?ㅼ쓬 以?怨좎냽?꾨줈?먯꽌 ?댁쟾?먯쓽 諛붾엺吏곹븳 ?댁쟾?됱쐞 2媛吏??",
+  "tr_b": "Which of the following are desirable behaviors when driving on a freeway? (Select TWO)"
+ },
+ {
+  "n": 92,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?댁쟾 以??숈듅?먯? 怨꾩냽 ?댁빞湲곕? ?섎늻??寃껋? 吏묒쨷?μ쓣 ?믪뿬 以??",
+   "?댁쟾?먯쓽 ?쒖빞瑜?媛由щ뒗 李⑤웾 遺李⑸Ъ? ?쒓굅?섎뒗 寃껋씠 醫뗫떎.",
+   "?댁쟾 以?吏묒쨷?μ? ?덉쟾?댁쟾怨쇰뒗 ?곴????녿떎.",
+   "TV/DMB???룹쥖???숈듅?먮뱾留?蹂????덈뒗 怨녹뿉 ?μ갑?섎뒗 寃껋씠 醫뗫떎."
+  ],
+  "tr_c": [
+   "Continuously chatting with a passenger while driving improves the driver's concentration.",
+   "It is better to remove stickers that can block the driver?셲 view.",
+   "Concentration while driving has nothing to do with safe driving.",
+   "TVs or DMBs should be installed where they can be seen only by passengers in the back seat."
+  ],
+  "ko_b": "?댁쟾 以?吏묒쨷?μ뿉 ????댁슜?쇰줈 媛???곹빀??2媛吏??",
+  "tr_b": "Which TWO are correct regarding concentration while driving?"
+ },
+ {
+  "n": 94,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['1', '2']",
+  "ko_c": [
+   "?댁쟾?먮뒗 諛ㅼ뿉 ?꾨줈瑜??듯뻾???뚯뿉???꾩“?깃낵 誘몃벑??耳쒖빞 ?쒕떎.",
+   "媛쒖씤???대룞?μ튂 以??꾨룞?λ낫?쒖쓽 ?뱀감?뺤썝? 1?몄씠誘濡?2?몄씠 ?묒듅?섎㈃ ?덈맂??",
+   "媛쒖씤???대룞?μ튂???꾨룞?대쪣?됲뻾李? ?꾨룞?λ낫?? ?꾧린?먯쟾嫄? ?꾨룞?? ?꾨룞?ㅼ퓼????媛쒖씤???대룞?섍린???곹빀???대룞?μ튂瑜??ы븿?섍퀬 ?덈떎.",
+   "?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄곗쓽 寃쎌슦 ?뱀감?뺤썝? 2?몄씠??"
+  ],
+  "tr_c": [
+   "The driver must turn on headlights and daytime running lights when driving at night.",
+   "Among the PMDs, not more than one person can drive an electric kick scooter.",
+   "A personal mobility device includes self-balancing scooters, electric kick scooters, electric bicycles, electric unicycles,   and mobility scooters.",
+   "An electric bicycle powered by a motor can carry two persons."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂?????洹쒖젙怨??덉쟾???댁쟾諛⑸쾿?쇰줈 ?由?寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about regulations and proper operation of   PMDs?"
+ },
+ {
+  "n": 94,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?댁쟾?먮뒗 諛ㅼ뿉 ?꾨줈瑜??듯뻾???뚯뿉???꾩“?깃낵 誘몃벑??耳쒖빞 ?쒕떎.",
+   "媛쒖씤???대룞?μ튂 以??꾨룞?λ낫?쒖쓽 ?뱀감?뺤썝? 1?몄씠誘濡?2?몄씠 ?묒듅?섎㈃ ?덈맂??",
+   "媛쒖씤???대룞?μ튂???꾨룞?대쪣?됲뻾李? ?꾨룞?λ낫?? ?꾧린?먯쟾嫄? ?꾨룞?? ?꾨룞?ㅼ퓼????媛쒖씤???대룞?섍린???곹빀???대룞?μ튂瑜??ы븿?섍퀬 ?덈떎.",
+   "?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄곗쓽 寃쎌슦 ?뱀감?뺤썝? 2?몄씠??"
+  ],
+  "tr_c": [
+   "The driver must turn on headlights and daytime running lights when driving at night.",
+   "Among the PMDs, not more than one person can drive an electric kick scooter.",
+   "A personal mobility device includes self-balancing scooters, electric kick scooters, electric bicycles, electric unicycles,   and mobility scooters.",
+   "An electric bicycle powered by a motor can carry two persons."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂?????洹쒖젙怨??덉쟾???댁쟾諛⑸쾿?쇰줈 ?由?寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about regulations and proper operation of   PMDs?"
+ },
+ {
+  "n": 95,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['10']",
+  "ko_c": [
+   "13??誘몃쭔 ?대┛?닿? 醫뚯꽍?덉쟾?좊? 誘몄갑?⑺븯??寃쎌슦 ?댁쟾?먯뿉 ???怨쇳깭猷뚮뒗 10留??먯씠??",
+   "13???댁긽???숈듅?먭? 醫뚯꽍?덉쟾?좊? 李⑹슜?섏? ?딆? 寃쎌슦 ?댁쟾?먯뿉 ???怨쇳깭猷뚮뒗 3留??먯씠??",
+   "?쇰컲?꾨줈?먯꽌???댁쟾?먯? 議곗닔???숈듅?먮쭔 醫뚯꽍?덉쟾??李⑹슜 ?섎Т媛 ?덈떎.",
+   "??醫뚯꽍?덉쟾??李⑹슜? ?섎Т?대굹 3??誘몃쭔 ?곸쑀?꾨뒗 蹂댄샇?먭? ?덇퀬 ?숈듅??媛?ν븯??"
+  ],
+  "tr_c": [
+   "If the passenger is a child under 13 years old and is not wearing a seat belt, the driver will be slapped with an  administrative fine of KRW 100,000.",
+   "If the passenger is 13 years old or above and is not wearing a seat belt, the driver will be slapped with an  administrative fine of KRW 30,000.",
+   "Only the driver and front passenger are obligated to wear seat belts when driving on general roads.",
+   "All passengers are obligated to wear seat belts, but a child under 3 years old can be placed on the lap of the guardian."
+  ],
+  "ko_b": "?ㅼ쓬 以??먮룞李??대쪣?먮룞李??쒖쇅) 醫뚯꽍?덉쟾??李⑹슜??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "Which of the following is true regarding wearing a seat belt before driving a vehicle (excluding two-wheeled       vehicles)?"
+ },
+ {
+  "n": 95,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "13??誘몃쭔 ?대┛?닿? 醫뚯꽍?덉쟾?좊? 誘몄갑?⑺븯??寃쎌슦 ?댁쟾?먯뿉 ???怨쇳깭猷뚮뒗 10留??먯씠??",
+   "13???댁긽???숈듅?먭? 醫뚯꽍?덉쟾?좊? 李⑹슜?섏? ?딆? 寃쎌슦 ?댁쟾?먯뿉 ???怨쇳깭猷뚮뒗 3留??먯씠??",
+   "?쇰컲?꾨줈?먯꽌???댁쟾?먯? 議곗닔???숈듅?먮쭔 醫뚯꽍?덉쟾??李⑹슜 ?섎Т媛 ?덈떎.",
+   "??醫뚯꽍?덉쟾??李⑹슜? ?섎Т?대굹 3??誘몃쭔 ?곸쑀?꾨뒗 蹂댄샇?먭? ?덇퀬 ?숈듅??媛?ν븯??"
+  ],
+  "tr_c": [
+   "If the passenger is a child under 13 years old and is not wearing a seat belt, the driver will be slapped with an  administrative fine of KRW 100,000.",
+   "If the passenger is 13 years old or above and is not wearing a seat belt, the driver will be slapped with an  administrative fine of KRW 30,000.",
+   "Only the driver and front passenger are obligated to wear seat belts when driving on general roads.",
+   "All passengers are obligated to wear seat belts, but a child under 3 years old can be placed on the lap of the guardian."
+  ],
+  "ko_b": "?ㅼ쓬 以??먮룞李??대쪣?먮룞李??쒖쇅) 醫뚯꽍?덉쟾??李⑹슜??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "Which of the following is true regarding wearing a seat belt before driving a vehicle (excluding two-wheeled       vehicles)?"
+ },
+ {
+  "n": 101,
+  "check": "dup_choice",
+  "detail": "c[2]? c[3] 踰덉뿭 ?숈씪 (?먮Ц? ?ㅻ쫫)",
+  "ko_c": [
+   "援먯감濡쒖쓽 ?좏샇湲곌? ?곸깋 ?깊솕???먮㈇????,
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 援먰넻??鍮덈쾲??援먯감濡쒕? ?듦낵????,
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒕? ?듦낵????,
+   "援먯감濡?遺洹쇱뿉??李⑤줈瑜?蹂寃쏀븯??寃쎌슦"
+  ],
+  "tr_c": [
+   "When the traffic signal at the intersection is flashing in red",
+   "Upon passing an intersection where traffic is not controlled and is frequent",
+   "Upon passing an intersection where traffic is not controlled and is frequent",
+   "Upon changing lanes near an intersection"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?쒗뻾?쇰줈 ?댁쟾?섏뿬???섎뒗 寃쎌슦??",
+  "tr_b": "According to the Road Traffic Act, which of the following cases requires driving at a slow speed?"
+ },
+ {
+  "n": 117,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?좏샇湲곗쓽 ?좏샇蹂대떎 寃쎌같怨듬Т?먯쓽 ?좏샇媛 ?곗꽑?꾩쓣 紐낆떖?쒕떎.",
+   "援먰넻 ?섍꼍 蹂?붿뿉 ?곕씪 媛쒖젙?섎뒗 援먰넻踰뺢퇋瑜??숈??쒕떎.",
+   "湲닿툒?먮룞李⑤? 諛쒓껄??利됱떆 ?μ냼??愿怨꾩뾾???쇱떆?뺤??섍퀬 吏꾨줈瑜??묐낫?쒕떎.",
+   "??슦???먮뒗 ?λ쭏泥??먯＜ 鍮꾧? ?대━???꾨줈?먯꽌???ы듃?(pothole)??二쇱쓽?쒕떎."
+  ],
+  "tr_c": [
+   "Keep in mind that a police officer's hand signals overrule traffic lights.",
+   "Stay updated with the ever-changing traffic laws and regulations.",
+   "Upon identifying an emergency vehicle, immediately stop the vehicle regardless of your location, and make way.",
+   "Watch out for potholes when driving on a road where heavy rainfall is common or during the rainy season."
+  ],
+  "ko_b": "?ㅼ쓬 以??댁쟾?먯쓽 ?щ컮瑜??댁쟾?쒕룄濡?媛??諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "tr_b": "Which of the following is NOT desirable driving behavior?"
+ },
+ {
+  "n": 118,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?ㅻⅨ 李④? ?덉쓣 ?뚯뿉??洹?李⑥뿉 吏꾨줈瑜??묐낫?쒕떎.",
+   "?ㅻⅨ 李④? ?덈뜑?쇰룄 吏곸쭊李④? ?곗꽑?대?濡?癒쇱? ?듦낵?쒕떎.",
+   "?ㅻⅨ 李④? ?덉쓣 ?뚯뿉??醫뚢ㅼ슦瑜??뺤씤?섍퀬 洹?李⑥? ?곴??놁씠 ?좎냽??援먯감濡쒕? ?듦낵?쒕떎.",
+   "?ㅻⅨ 李④? ?덈뜑?쇰룄 蹂몄씤??二쇳뻾李⑤줈媛 ?곷?李⑥쓽 李⑤줈蹂대떎 ???볦? 寃쎌슦 ?듯뻾 ?곗꽑沅뚯뿉 ?곕씪 洹몃?濡?吏꾩엯?쒕떎."
+  ],
+  "tr_c": [
+   "Yield to the other vehicle already in the intersection.",
+   "Straight traffic takes the right of way over turning traffic. Drive through.",
+   "Ignore the vehicle in the intersection; check both sides and quickly drive through.",
+   "If your lane is wider than that of another vehicle in the intersection, you have the right of way."
+  ],
+  "ko_b": "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲??援먯감濡쒖뿉 吏곸쭊?섍린 ?꾪븯??吏꾩엯?섎젮 ?쒕떎.  留욎? ??李⑤줈?먯꽌 醫뚰쉶?꾪븯?ㅻ뒗 李④? ?대?  援먯감濡쒖뿉 吏꾩엯??寃쎌슦 ?대븣, ?댁쟾?먯쓽 ?щ컮瑜??댁쟾諛⑸쾿??",
+  "tr_b": "You are about to enter an uncontrolled intersection to drive straight through. When a vehicle turning left from the opposite lane has already entered the intersection, what is the correct way of driving?"
+ },
+ {
+  "n": 119,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "?꾨룞?λ낫?쒖쓽 ?뱀감?뺤썝? 1?몄씠??",
+   "?꾨룞?대쪣?됲뻾李⑥쓽 ?뱀감?뺤썝? 1?몄씠??",
+   "?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄곗쓽 寃쎌슦 ?뱀감?뺤썝? 1?몄씠??",
+   "?뱀감?뺤썝???꾨컲??寃쎌슦 踰붿튃湲?4留??먯쓣 遺怨쇳븳??"
+  ],
+  "tr_c": [
+   "An electric kick scooter can carry one person.",
+   "A self-balancing scooter can carry one person.",
+   "An electric bicycle powered by a motor can carry one person.",
+   "The traffic fine for violating the passenger capacity of a personal mobility device is KRW 40,000."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂???뱀감?뺤썝??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about the passenger capacity of personal  mobility devices?"
+ },
+ {
+  "n": 119,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "?꾨룞?λ낫?쒖쓽 ?뱀감?뺤썝? 1?몄씠??",
+   "?꾨룞?대쪣?됲뻾李⑥쓽 ?뱀감?뺤썝? 1?몄씠??",
+   "?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄곗쓽 寃쎌슦 ?뱀감?뺤썝? 1?몄씠??",
+   "?뱀감?뺤썝???꾨컲??寃쎌슦 踰붿튃湲?4留??먯쓣 遺怨쇳븳??"
+  ],
+  "tr_c": [
+   "An electric kick scooter can carry one person.",
+   "A self-balancing scooter can carry one person.",
+   "An electric bicycle powered by a motor can carry one person.",
+   "The traffic fine for violating the passenger capacity of a personal mobility device is KRW 40,000."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂???뱀감?뺤썝??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about the passenger capacity of personal  mobility devices?"
+ },
+ {
+  "n": 119,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "?꾨룞?λ낫?쒖쓽 ?뱀감?뺤썝? 1?몄씠??",
+   "?꾨룞?대쪣?됲뻾李⑥쓽 ?뱀감?뺤썝? 1?몄씠??",
+   "?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄곗쓽 寃쎌슦 ?뱀감?뺤썝? 1?몄씠??",
+   "?뱀감?뺤썝???꾨컲??寃쎌슦 踰붿튃湲?4留??먯쓣 遺怨쇳븳??"
+  ],
+  "tr_c": [
+   "An electric kick scooter can carry one person.",
+   "A self-balancing scooter can carry one person.",
+   "An electric bicycle powered by a motor can carry one person.",
+   "The traffic fine for violating the passenger capacity of a personal mobility device is KRW 40,000."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂???뱀감?뺤썝??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about the passenger capacity of personal  mobility devices?"
+ },
+ {
+  "n": 119,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['4']",
+  "ko_c": [
+   "?꾨룞?λ낫?쒖쓽 ?뱀감?뺤썝? 1?몄씠??",
+   "?꾨룞?대쪣?됲뻾李⑥쓽 ?뱀감?뺤썝? 1?몄씠??",
+   "?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄곗쓽 寃쎌슦 ?뱀감?뺤썝? 1?몄씠??",
+   "?뱀감?뺤썝???꾨컲??寃쎌슦 踰붿튃湲?4留??먯쓣 遺怨쇳븳??"
+  ],
+  "tr_c": [
+   "An electric kick scooter can carry one person.",
+   "A self-balancing scooter can carry one person.",
+   "An electric bicycle powered by a motor can carry one person.",
+   "The traffic fine for violating the passenger capacity of a personal mobility device is KRW 40,000."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂???뱀감?뺤썝??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about the passenger capacity of personal  mobility devices?"
+ },
+ {
+  "n": 121,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?먮룞李⑤벑???댁쟾?섎젮??寃쎌슦 ?뚯＜?댁쟾 諛⑹??μ튂瑜??ㅼ튂?섍퀬, ?쒌냽?꾧꼍李곗껌?μ뿉寃??깅줉?섏뿬???쒕떎.",
+   "?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂?섏? ?딆? ?먮룞李⑤벑???댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?ㅼ튂湲곗????곹빀?섏? ?꾨땲???뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑? ?댁쟾??媛?ν븯??",
+   "??2???댁긽 ?뚯＜?댁쟾 諛⑹??μ튂 遺李??먮룞李⑤벑???댄뻾湲곕줉???쒌냽?꾧꼍李곗껌?μ뿉寃??쒖텧?섏뿬???쒕떎."
+  ],
+  "tr_c": [
+   "When intending to drive a vehicle, the driver must install an alcohol ignition interlock device and register it with the commissioner of the city or provincial police.",
+   "Driving a vehicle that is not equipped with an alcohol ignition interlock device is prohibited.",
+   "Driving a vehicle with an alcohol ignition interlock device that does not meet the installation standards is permitted.",
+   "The driver must submit the driving records of the vehicle with the alcohol ignition interlock device to the commissioner of the city or provincial police at least twice a year."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆? ?щ엺??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is incorrect regarding drivers who have been issued a conditional driver?셲 license requiring the installation of an alcohol ignition interlock device?"
+ },
+ {
+  "n": 122,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['10']",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "10留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "20留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "30留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??"
+  ],
+  "tr_c": [
+   "No penalty",
+   "Criminal fine of up to KRW 100,000 or detention",
+   "Criminal fine of up to KRW 200,000 or detention",
+   "Criminal fine of up to KRW 300,000 or detention"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 怨쇰줈(議몄쓬?댁쟾 ?ы븿)濡??명븯???뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?????뚯뿉 ???踰뚯튃?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following correctly describes the penalty imposed on a driver  who cannot operate a vehicle properly due to fatigue (including drowsy driving)?"
+ },
+ {
+  "n": 122,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['20']",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "10留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "20留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "30留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??"
+  ],
+  "tr_c": [
+   "No penalty",
+   "Criminal fine of up to KRW 100,000 or detention",
+   "Criminal fine of up to KRW 200,000 or detention",
+   "Criminal fine of up to KRW 300,000 or detention"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 怨쇰줈(議몄쓬?댁쟾 ?ы븿)濡??명븯???뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?????뚯뿉 ???踰뚯튃?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following correctly describes the penalty imposed on a driver  who cannot operate a vehicle properly due to fatigue (including drowsy driving)?"
+ },
+ {
+  "n": 122,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['30']",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "10留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "20留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "30留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??"
+  ],
+  "tr_c": [
+   "No penalty",
+   "Criminal fine of up to KRW 100,000 or detention",
+   "Criminal fine of up to KRW 200,000 or detention",
+   "Criminal fine of up to KRW 300,000 or detention"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 怨쇰줈(議몄쓬?댁쟾 ?ы븿)濡??명븯???뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?????뚯뿉 ???踰뚯튃?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following correctly describes the penalty imposed on a driver  who cannot operate a vehicle properly due to fatigue (including drowsy driving)?"
+ },
+ {
+  "n": 124,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽?꾧? 0.2?쇱꽱???댁긽??寃쎌슦 2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?뚯＜ 痢≪젙 嫄곕? 1???꾨컲 ??1???댁긽 5???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?덉쨷?뚯퐫?щ냽?꾧? 0.05?쇱꽱?몃줈 2???꾨컲??寃쎌슦 1???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댄븯??踰뚭툑",
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽??0.08?쇱꽱???댁긽 0.2?쇱꽱??誘몃쭔??寃쎌슦 1???댁긽 2???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 1泥?留????댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "In case of the first violation, if the blood alcohol concentration is 0.2% or more, imprisonment for 2 to 5 years or criminal fine of KRW 10 million - 20 million",
+   "Refusing a field sobriety test once may result in imprisonment with labor for 1 year or more but not more than 5 years, or criminal fine of KRW 5 million or more but not more than KRW 20 million",
+   "In case of a second violation involving a blood alcohol concentration of 0.05%, imprisonment for up to 1 year or  criminal fine of up to KRW 5 million",
+   "Upon the first violation at a blood alcohol level of at least 0.08% but less than 0.2%: imprisonment with labor for at least 1 year but not more than 2 years or criminal fine of at least KRW 5 million but not more than KRW 10 million"
+  ],
+  "ko_b": "?뱀슜?먮룞李⑤? ?뚯＜?댁쟾??寃쎌슦 泥섎쾶 湲곗???????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "Which of the following is NOT a correct explanation of the punishment criteria for drunk driving?"
+ },
+ {
+  "n": 124,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽?꾧? 0.2?쇱꽱???댁긽??寃쎌슦 2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?뚯＜ 痢≪젙 嫄곕? 1???꾨컲 ??1???댁긽 5???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?덉쨷?뚯퐫?щ냽?꾧? 0.05?쇱꽱?몃줈 2???꾨컲??寃쎌슦 1???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댄븯??踰뚭툑",
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽??0.08?쇱꽱???댁긽 0.2?쇱꽱??誘몃쭔??寃쎌슦 1???댁긽 2???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 1泥?留????댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "In case of the first violation, if the blood alcohol concentration is 0.2% or more, imprisonment for 2 to 5 years or criminal fine of KRW 10 million - 20 million",
+   "Refusing a field sobriety test once may result in imprisonment with labor for 1 year or more but not more than 5 years, or criminal fine of KRW 5 million or more but not more than KRW 20 million",
+   "In case of a second violation involving a blood alcohol concentration of 0.05%, imprisonment for up to 1 year or  criminal fine of up to KRW 5 million",
+   "Upon the first violation at a blood alcohol level of at least 0.08% but less than 0.2%: imprisonment with labor for at least 1 year but not more than 2 years or criminal fine of at least KRW 5 million but not more than KRW 10 million"
+  ],
+  "ko_b": "?뱀슜?먮룞李⑤? ?뚯＜?댁쟾??寃쎌슦 泥섎쾶 湲곗???????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "Which of the following is NOT a correct explanation of the punishment criteria for drunk driving?"
+ },
+ {
+  "n": 124,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽?꾧? 0.2?쇱꽱???댁긽??寃쎌슦 2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?뚯＜ 痢≪젙 嫄곕? 1???꾨컲 ??1???댁긽 5???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?덉쨷?뚯퐫?щ냽?꾧? 0.05?쇱꽱?몃줈 2???꾨컲??寃쎌슦 1???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댄븯??踰뚭툑",
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽??0.08?쇱꽱???댁긽 0.2?쇱꽱??誘몃쭔??寃쎌슦 1???댁긽 2???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 1泥?留????댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "In case of the first violation, if the blood alcohol concentration is 0.2% or more, imprisonment for 2 to 5 years or criminal fine of KRW 10 million - 20 million",
+   "Refusing a field sobriety test once may result in imprisonment with labor for 1 year or more but not more than 5 years, or criminal fine of KRW 5 million or more but not more than KRW 20 million",
+   "In case of a second violation involving a blood alcohol concentration of 0.05%, imprisonment for up to 1 year or  criminal fine of up to KRW 5 million",
+   "Upon the first violation at a blood alcohol level of at least 0.08% but less than 0.2%: imprisonment with labor for at least 1 year but not more than 2 years or criminal fine of at least KRW 5 million but not more than KRW 10 million"
+  ],
+  "ko_b": "?뱀슜?먮룞李⑤? ?뚯＜?댁쟾??寃쎌슦 泥섎쾶 湲곗???????ㅻ챸?쇰줈 ?由?寃껋??",
+  "tr_b": "Which of the following is NOT a correct explanation of the punishment criteria for drunk driving?"
+ },
+ {
+  "n": 128,
+  "check": "negation",
+  "detail": "c[4] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?명씉 痢≪젙???섑븳 ?뚯＜ 痢≪젙 寃곌낵??遺덈났?섎뒗 寃쎌슦 ?ㅼ떆 ?명씉 痢≪젙???????덈떎.",
+   "?꾨줈援먰넻踰뺤긽 ?뚯＜痢≪젙諛⑺빐?됱쐞瑜?泥섎쾶?섎뒗 洹쒖젙? ?녿떎.",
+   "?좎뿉 痍⑦븳 ?곹깭濡??먯쟾嫄곕? ?댁쟾?????뚯＜痢≪젙諛⑺빐?됱쐞瑜????щ엺? 泥섎쾶??媛?ν븯??",
+   "?좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙??留뚰븳 ?곷떦???댁쑀媛 ?덉쓬?먮룄 寃쎌같怨듬Т?먯쓽 ?뚯＜ 痢≪젙???묓븯吏 ?딆? ?먮룞李⑤벑?? ?댁쟾?먮뒗 ?댁쟾硫댄뿀媛 痍⑥냼?쒕떎."
+  ],
+  "tr_c": [
+   "If a person disagrees with the result of a breathalyzer test, he/she may undergo the test again.",
+   "The Road Traffic Act does not contain any provision for punishing acts that interfere with alcohol testing.",
+   "A person who interferes with an alcohol test after riding a bicycle while drunk may be subject to punishment.",
+   "A driver of a motor vehicle who refuses to comply with a police officer?셲 request to take an alcohol test, despite being reasonably suspected of being intoxicated, will have his/her driver?셲 license revoked."
+  ],
+  "ko_b": "?뚯＜?댁쟾 愿???댁슜 以?留욌뒗 2媛吏??",
+  "tr_b": "Which TWO statements are correct regarding drunk driving?"
+ },
+ {
+  "n": 134,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "?쇰줈???곹깭?먯꽌???댁쟾? 議몄쓬?댁쟾?쇰줈 ?댁뼱吏?媛?μ꽦????떎.",
+   "?쇰줈???곹깭?먯꽌???댁쟾? 二쇱쓽?? ?먮떒?λ젰, 諛섏쓳?띾룄????섎? 媛?몄삤湲??뚮Ц???꾪뿕?섎떎.",
+   "留덉빟??蹂듭슜?섍퀬 ?댁쟾???섎떎媛 援먰넻?ш퀬濡??щ엺???곹빐???대Ⅴ寃????댁쟾?먮뒗 泥섎쾶?????덈떎.",
+   "留덉빟??蹂듭슜?섍퀬 ?댁쟾???섎떎媛 援먰넻?ш퀬濡??щ엺???곹빐???대Ⅴ寃??섍퀬 ?꾩＜?섏뿬 ?댁쟾硫댄뿀媛 痍⑥냼??寃쎌슦?먮뒗 3????寃쎄낵?댁빞 ?댁쟾硫댄뿀 痍⑤뱷??媛?ν븯??"
+  ],
+  "tr_c": [
+   "Fatigued driving is not likely to lead to falling asleep at the wheel.",
+   "Fatigued driving is dangerous because it leads to poor focus, judgment, and reflexes.",
+   "Driving under the influence of drugs and causing an accident resulting in injury are subject to punishment.",
+   "If your driver's license is revoked because of a hit-and-run event while driving under the influence of drugs, it is possible to get the license back after three years."
+  ],
+  "ko_b": "?ㅼ쓬? ?쇰줈?댁쟾怨??쎈Ъ蹂듭슜 ?댁쟾??????ㅻ챸?대떎. 留욌뒗 2媛吏??",
+  "tr_b": "Which of the following are TWO correct descriptions with regard to fatigued driving and driving under the  influence of drugs?"
+ },
+ {
+  "n": 135,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "湲닿툒?쒕룞 ??鍮꾩긽?먮㈇??耳쒖＜湲?,
+   "諛섎???李⑤줈?먯꽌 李⑤웾???묎렐 ???곹뼢?꾩“???꾧린",
+   "?띾룄瑜??щ┫ ???꾩“?깆쓣 ?곹뼢?쇰줈 耳쒓린",
+   "?욎감媛 吏??異쒕컻???뚮뒗 3珥??뺣룄 諛곕젮?섍린"
+  ],
+  "tr_c": [
+   "Turn on the emergency flashers in case of emergency braking.",
+   "Turn off the head-beam headlights when a car approaches from the opposite direction.",
+   "Turn on the high-beam headlights when driving at high speed.",
+   "Wait for three seconds if the vehicle in front does not start moving right away."
+  ],
+  "ko_b": "?ㅼ쓬 以?蹂대났?댁쟾???덈갑?섎뒗 諛⑸쾿?대씪怨?蹂????녿뒗 寃껋??",
+  "tr_b": "Which of the following is NOT an appropriate method of preventing retaliatory driving?"
+ },
+ {
+  "n": 137,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['500']",
+  "ko_c": [
+   "?꾨룞?대쪣?됲뻾李? 1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?대쪣?먮룞李? 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑",
+   "?뱀닔?먮룞李? 2???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?먮룞湲곗옣移섏옄?꾧굅, 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 million",
+   "two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  million",
+   "special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million",
+   "motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 (      )???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡?以꾩? ???듯뻾?섎㈃??援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?대? ?꾨컲??寃쎌슦 (     ) ?쇰줈 泥섎쾶?????덈떎. (    )?덉뿉  媛곴컖 諛붾Ⅴ寃?吏앹??댁쭊 寃껋??",
+  "tr_b": "According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the like in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traffic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses."
+ },
+ {
+  "n": 137,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['300']",
+  "ko_c": [
+   "?꾨룞?대쪣?됲뻾李? 1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?대쪣?먮룞李? 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑",
+   "?뱀닔?먮룞李? 2???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?먮룞湲곗옣移섏옄?꾧굅, 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 million",
+   "two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  million",
+   "special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million",
+   "motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 (      )???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡?以꾩? ???듯뻾?섎㈃??援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?대? ?꾨컲??寃쎌슦 (     ) ?쇰줈 泥섎쾶?????덈떎. (    )?덉뿉  媛곴컖 諛붾Ⅴ寃?吏앹??댁쭊 寃껋??",
+  "tr_b": "According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the like in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traffic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses."
+ },
+ {
+  "n": 137,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['500']",
+  "ko_c": [
+   "?꾨룞?대쪣?됲뻾李? 1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?대쪣?먮룞李? 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑",
+   "?뱀닔?먮룞李? 2???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?먮룞湲곗옣移섏옄?꾧굅, 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 million",
+   "two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  million",
+   "special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million",
+   "motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 (      )???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡?以꾩? ???듯뻾?섎㈃??援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?대? ?꾨컲??寃쎌슦 (     ) ?쇰줈 泥섎쾶?????덈떎. (    )?덉뿉  媛곴컖 諛붾Ⅴ寃?吏앹??댁쭊 寃껋??",
+  "tr_b": "According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the like in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traffic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses."
+ },
+ {
+  "n": 137,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['300']",
+  "ko_c": [
+   "?꾨룞?대쪣?됲뻾李? 1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?대쪣?먮룞李? 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑",
+   "?뱀닔?먮룞李? 2???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?먮룞湲곗옣移섏옄?꾧굅, 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 million",
+   "two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  million",
+   "special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million",
+   "motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 (      )???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡?以꾩? ???듯뻾?섎㈃??援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?대? ?꾨컲??寃쎌슦 (     ) ?쇰줈 泥섎쾶?????덈떎. (    )?덉뿉  媛곴컖 諛붾Ⅴ寃?吏앹??댁쭊 寃껋??",
+  "tr_b": "According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the like in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traffic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses."
+ },
+ {
+  "n": 137,
+  "check": "paren",
+  "detail": "e 愿꾪샇 吏?遺덉씪移?,
+  "ko_c": [
+   "?꾨룞?대쪣?됲뻾李? 1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?대쪣?먮룞李? 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑",
+   "?뱀닔?먮룞李? 2???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?먮룞湲곗옣移섏옄?꾧굅, 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑"
+  ],
+  "tr_c": [
+   "self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 million",
+   "two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  million",
+   "special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million",
+   "motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 (      )???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡?以꾩? ???듯뻾?섎㈃??援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?대? ?꾨컲??寃쎌슦 (     ) ?쇰줈 泥섎쾶?????덈떎. (    )?덉뿉  媛곴컖 諛붾Ⅴ寃?吏앹??댁쭊 寃껋??",
+  "tr_b": "According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the like in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traffic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses."
+ },
+ {
+  "n": 138,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "7???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "10???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "1???댁긽???좉린吏뺤뿭??泥섑븳??",
+   "1??6???댁긽???좉린吏뺤뿭??泥섑븳??"
+  ],
+  "tr_c": [
+   "You will be sentenced to imprisonment for up to 7 years or criminal fine of not more than KRW 10 million.",
+   "You will be sentenced to imprisonment for up to 10 years or criminal fine of not more than KRW 20 million.",
+   "You will be sentenced to imprisonment for a limited term of more than 1 year.",
+   "You will be sentenced to imprisonment for a limited term of more than 18 months."
+  ],
+  "ko_b": "?쇳빐 李⑤웾???ㅻ뵲瑜대뜕 ?뱀슜李??댁쟾?먭? 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?섏뿬 湲됱젣?숉븯?????꾪삊 ?댁쟾????寃쎌슦?먮뒗 ?뚰삎 踰뺛띿뿉 ?곕Ⅸ 蹂대났?댁쟾?쇰줈 泥섎쾶諛쏆쓣 ???덈떎. ?댁뿉 ???泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "tr_b": "You may be subject to a penalty according to the Criminal Act if you overtake a vehicle over the centerline or perform any retaliatory driving such as sudden braking. In this case, what is the correct punishment that will be imposed on you?"
+ },
+ {
+  "n": 138,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "7???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "10???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "1???댁긽???좉린吏뺤뿭??泥섑븳??",
+   "1??6???댁긽???좉린吏뺤뿭??泥섑븳??"
+  ],
+  "tr_c": [
+   "You will be sentenced to imprisonment for up to 7 years or criminal fine of not more than KRW 10 million.",
+   "You will be sentenced to imprisonment for up to 10 years or criminal fine of not more than KRW 20 million.",
+   "You will be sentenced to imprisonment for a limited term of more than 1 year.",
+   "You will be sentenced to imprisonment for a limited term of more than 18 months."
+  ],
+  "ko_b": "?쇳빐 李⑤웾???ㅻ뵲瑜대뜕 ?뱀슜李??댁쟾?먭? 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?섏뿬 湲됱젣?숉븯?????꾪삊 ?댁쟾????寃쎌슦?먮뒗 ?뚰삎 踰뺛띿뿉 ?곕Ⅸ 蹂대났?댁쟾?쇰줈 泥섎쾶諛쏆쓣 ???덈떎. ?댁뿉 ???泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "tr_b": "You may be subject to a penalty according to the Criminal Act if you overtake a vehicle over the centerline or perform any retaliatory driving such as sudden braking. In this case, what is the correct punishment that will be imposed on you?"
+ },
+ {
+  "n": 138,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['1', '6']",
+  "ko_c": [
+   "7???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "10???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "1???댁긽???좉린吏뺤뿭??泥섑븳??",
+   "1??6???댁긽???좉린吏뺤뿭??泥섑븳??"
+  ],
+  "tr_c": [
+   "You will be sentenced to imprisonment for up to 7 years or criminal fine of not more than KRW 10 million.",
+   "You will be sentenced to imprisonment for up to 10 years or criminal fine of not more than KRW 20 million.",
+   "You will be sentenced to imprisonment for a limited term of more than 1 year.",
+   "You will be sentenced to imprisonment for a limited term of more than 18 months."
+  ],
+  "ko_b": "?쇳빐 李⑤웾???ㅻ뵲瑜대뜕 ?뱀슜李??댁쟾?먭? 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?섏뿬 湲됱젣?숉븯?????꾪삊 ?댁쟾????寃쎌슦?먮뒗 ?뚰삎 踰뺛띿뿉 ?곕Ⅸ 蹂대났?댁쟾?쇰줈 泥섎쾶諛쏆쓣 ???덈떎. ?댁뿉 ???泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "tr_b": "You may be subject to a penalty according to the Criminal Act if you overtake a vehicle over the centerline or perform any retaliatory driving such as sudden braking. In this case, what is the correct punishment that will be imposed on you?"
+ },
+ {
+  "n": 142,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['6']",
+  "ko_c": [
+   "踰붿튃湲?6留??먯쓽 ?듦퀬泥섎텇??諛쏅뒗??",
+   "怨쇳깭猷?3留??먯씠 遺怨쇰맂??",
+   "6媛쒖썡 ?댄븯??吏뺤뿭?대굹 200留????댄븯??踰뚭툑??泥섑븳??",
+   "1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑??泥섑븳??"
+  ],
+  "tr_c": [
+   "Notice for payment of traffic penalty of KRW 60,000",
+   "Administrative fine of KRW 30,000",
+   "Imprisonment for up to 6 months or criminal fine of not more than KRW 2 million",
+   "Imprisonment for up to 1 year or criminal fine of not more than KRW 5 million"
+  ],
+  "ko_b": "?뱀슜李??댁쟾?먭? ?쒗룺?댁쟾???섎뒗 寃쎌슦 ?꾨줈援먰넻踰뺤뿉 ?곕Ⅸ 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is the correct punishment for reckless driving?"
+ },
+ {
+  "n": 142,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "踰붿튃湲?6留??먯쓽 ?듦퀬泥섎텇??諛쏅뒗??",
+   "怨쇳깭猷?3留??먯씠 遺怨쇰맂??",
+   "6媛쒖썡 ?댄븯??吏뺤뿭?대굹 200留????댄븯??踰뚭툑??泥섑븳??",
+   "1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑??泥섑븳??"
+  ],
+  "tr_c": [
+   "Notice for payment of traffic penalty of KRW 60,000",
+   "Administrative fine of KRW 30,000",
+   "Imprisonment for up to 6 months or criminal fine of not more than KRW 2 million",
+   "Imprisonment for up to 1 year or criminal fine of not more than KRW 5 million"
+  ],
+  "ko_b": "?뱀슜李??댁쟾?먭? ?쒗룺?댁쟾???섎뒗 寃쎌슦 ?꾨줈援먰넻踰뺤뿉 ?곕Ⅸ 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is the correct punishment for reckless driving?"
+ },
+ {
+  "n": 142,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['200']",
+  "ko_c": [
+   "踰붿튃湲?6留??먯쓽 ?듦퀬泥섎텇??諛쏅뒗??",
+   "怨쇳깭猷?3留??먯씠 遺怨쇰맂??",
+   "6媛쒖썡 ?댄븯??吏뺤뿭?대굹 200留????댄븯??踰뚭툑??泥섑븳??",
+   "1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑??泥섑븳??"
+  ],
+  "tr_c": [
+   "Notice for payment of traffic penalty of KRW 60,000",
+   "Administrative fine of KRW 30,000",
+   "Imprisonment for up to 6 months or criminal fine of not more than KRW 2 million",
+   "Imprisonment for up to 1 year or criminal fine of not more than KRW 5 million"
+  ],
+  "ko_b": "?뱀슜李??댁쟾?먭? ?쒗룺?댁쟾???섎뒗 寃쎌슦 ?꾨줈援먰넻踰뺤뿉 ?곕Ⅸ 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is the correct punishment for reckless driving?"
+ },
+ {
+  "n": 142,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['500']",
+  "ko_c": [
+   "踰붿튃湲?6留??먯쓽 ?듦퀬泥섎텇??諛쏅뒗??",
+   "怨쇳깭猷?3留??먯씠 遺怨쇰맂??",
+   "6媛쒖썡 ?댄븯??吏뺤뿭?대굹 200留????댄븯??踰뚭툑??泥섑븳??",
+   "1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑??泥섑븳??"
+  ],
+  "tr_c": [
+   "Notice for payment of traffic penalty of KRW 60,000",
+   "Administrative fine of KRW 30,000",
+   "Imprisonment for up to 6 months or criminal fine of not more than KRW 2 million",
+   "Imprisonment for up to 1 year or criminal fine of not more than KRW 5 million"
+  ],
+  "ko_b": "?뱀슜李??댁쟾?먭? ?쒗룺?댁쟾???섎뒗 寃쎌슦 ?꾨줈援먰넻踰뺤뿉 ?곕Ⅸ 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is the correct punishment for reckless driving?"
+ },
+ {
+  "n": 144,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "?좏샇 ?꾨컲?됱쐞瑜?3??諛섎났?섏뿬 ?댁쟾?섏???",
+   "?띾룄 ?꾨컲?됱쐞? 吏???꾨컲?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???",
+   "?좏샇 ?꾨컲?됱쐞? 以묒븰??移⑤쾾?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???",
+   "?뚯＜?댁쟾 ?됱쐞? 蹂댄뻾?먮낫?몄쓽臾??꾨컲?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???"
+  ],
+  "tr_c": [
+   "The driver repeatedly ignored traffic signals three times.",
+   "The driver committed successive violations of exceeding the speed limit and disobeying instructions.",
+   "The driver committed successive violations of ignoring traffic signals and crossing the centerline.",
+   "The driver committed successive violations of crossing the centerline as well as the duty to protect pedestrians."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞湲곗옣移섏옄?꾧굅(媛쒖씤???대룞?μ튂 ?쒖쇅)???쒗룺?댁쟾 ?됱쐞濡?蹂????녿뒗 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following cannot be construed as reckless driving for a  motorcycle (excluding personal mobility devices)?"
+ },
+ {
+  "n": 155,
+  "check": "negation",
+  "detail": "c[4] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?먮룞李?二쇱쑀 以묒뿉???붿쭊?쒕룞???덈떎.",
+   "湲닿툒???곹솴???쒖쇅?섍퀬 湲됱젣?숉븯???ㅻⅨ 李④? 湲됱젣?숉븯???곹솴??留뚮뱾吏 ?딅뒗??",
+   "?꾪뿕?곹솴???덉륫?섍퀬 諛⑹뼱?댁쟾?섍린 ?꾪븯??洹쒖젙?띾룄? ?덉쟾嫄곕━瑜?紐⑤몢 以?섑븯硫??댁쟾?쒕떎.",
+   "??댁뼱怨듦린?뺤? 怨꾩젅??愿怨꾩뾾??二쇳뻾 ?덉젙?깆쓣 ?꾪븯???곸젙?됰낫??10% ?믨쾶 ?좎??쒕떎."
+  ],
+  "tr_c": [
+   "Turn off the engine while refueling.",
+   "Unless there is an urgent situation, do not apply the brake suddenly, instigating other vehicles to do the same.",
+   "To predict potential hazards and practice defensive driving, observe the speed limit and keep a safe distance.",
+   "To ensure driving stability, tire pressure should be 10% higher than the recommended standard regardless of the season."
+  ],
+  "ko_b": "?ㅼ쓬 以??댁쟾?먯쓽 ?щ컮瑜??댁쟾?듦??쇰줈 媛??諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "tr_b": "Which of the following is NOT a desirable driving habit?"
+ },
+ {
+  "n": 159,
+  "check": "negation",
+  "detail": "c[1] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?댁쟾?먭? 蹂댄뻾?먯슦?좊룄濡쒖뿉???쒗뻾쨌 ?쇱떆?뺤??섏? ?딆븘 蹂댄뻾?먰넻?됱쓣 諛⑺빐??寃쎌슦?먮뒗 踰붿튃湲덉씠 遺怨쇰맂??",
+   "?꾨줈 ?몄쓽 怨녹쓣 ?댁쟾?섎뒗 ?댁쟾?먯뿉寃뚮룄 蹂댄뻾??蹂댄샇?섎Т媛 遺?щ맂??",
+   "?댁쟾?먮뒗 蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??洹??〓떒蹂대룄 ?욎뿉???쇱떆?뺤? ?섏뿬???쒕떎.",
+   "?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ???좏샇湲곌? ?녿뒗 ?〓떒蹂대룄 ?욎뿉?쒕뒗 諛섎뱶???쒗뻾?섏뿬???쒕떎."
+  ],
+  "tr_c": [
+   "A traffic penalty  will be imposed on the driver who fails to slow down or stop on a pedestrian-first road and obstructs the  pedestrians.",
+   "The duty to protect pedestrians also applies to drivers driving on a place other than a road.",
+   "A driver who sees pedestrians crossing a crosswalk must come to a full stop before he/she reaches the crosswalk.",
+   "The driver must slow down when driving across a crosswalk in a school zone with no traffic lights."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾?먯쓽 蹂댄뻾??蹂댄샇??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "tr_b": "Which of the following is NOT true about a driver's duty to protect pedestrians?"
+ },
+ {
+  "n": 161,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['4']",
+  "ko_c": [
+   "蹂댄뻾?먯슦?좊룄濡쒖뿉??蹂댄뻾?먮뒗 ?꾨줈???곗륫 媛?μ옄由щ줈留??듯뻾?????덈떎.",
+   "?댁쟾?먯뿉寃뚮뒗 ?쒗뻾, ?쇱떆?뺤? ??媛곸쥌 蹂댄뻾??蹂댄샇 ?섎Т媛 遺?щ맂??",
+   "蹂댄뻾??蹂댄샇 ?섎Т瑜?遺덉씠?됲븯???寃쎌슦 ?뱀슜?먮룞李?湲곗? 4留뚯썝??踰붿튃湲덇낵 10?먯쓽 踰뚯젏 泥섎텇????곸씠??",
+   "寃쎌같?쒖옣? 蹂댄뻾??蹂댄샇瑜??꾪빐 ?꾩슂?섎떎怨??몄젙??寃쎌슦 李⑤웾 ?듯뻾?띾룄瑜?20km/h ?대궡濡??쒗븳?????덈떎."
+  ],
+  "tr_c": [
+   "On a pedestrian-first road, pedestrians can only walk along the right edge of the road.",
+   "Drivers are obligated to exercise various forms of pedestrian protection such as slowing down and coming to a  complete stop.",
+   "A driver who fails to fulfill his/her duty to protect pedestrians is subject to a traffic penalty of KRW 40,000 and a penalty of 10 points based on the standards for passenger vehicles.",
+   "If deemed necessary for pedestrian protection, the chief of a police station can limit the vehicle speed to 20 km/h or  less."
+  ],
+  "ko_b": "蹂댄뻾???곗꽑?꾨줈??????ㅻ챸?쇰줈 媛??諛붾Ⅴ吏 ?딆? 寃껋??",
+  "tr_b": "Which of the following is NOT true about pedestrian-first roads?"
+ },
+ {
+  "n": 163,
+  "check": "negation",
+  "detail": "c[2] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?꾨줈???ㅼ튂???덉쟾吏???蹂댄뻾?먭? ?덈뒗 寃쎌슦? 李⑤줈媛 ?ㅼ튂?섏? ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃??곗뿉???덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾 ?섍쾶 ?〓떒?????덈룄濡??섏뿬???쒕떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?녿뒗 ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐媛 ???뚯뿉???쒗뻾?섍굅???쇱떆??吏?섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?듯뻾?????덈룄濡??섏뿬???쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌??蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쒗뻾?섏뿬???쒕떎."
+  ],
+  "tr_c": [
+   "The driver must slow down while keeping a safe distance when pedestrians are passing through a safety zone set up on the road and when he/she passes by pedestrians on a narrow road with no markings.",
+   "A driver who sees a pedestrian jaywalking must stop the vehicle at a distance for the pedestrian to cross the road safely.",
+   "A driver who is driving on a road with no centerline and where the roadway and sidewalk are not distinguishable must slow down or stop for pedestrians to travel safely.",
+   "If a crosswalk in a school zone has no traffic light, the driver has to slow down in front of the crosswalk (a stop line if there is any) even if there are no pedestrians crossing."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 蹂댄샇 ?깆뿉 愿???ㅻ챸?쇰줈 留욎? ?딆? 寃껋??",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about a driver's duty to protect  pedestrians?"
+ },
+ {
+  "n": 174,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??蹂댄뻾?먯쓽 ?덉쟾???뺤씤?섍퀬 ?쒗뻾?섎ŉ ?듦낵?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉???쇱떆?뺤??섏뿬 蹂댄뻾?먯쓽 ?〓떒??蹂댄샇?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쒗뻾?섎ŉ ?듯뻾?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??쒕떎."
+  ],
+  "tr_c": [
+   "When there are pedestrians crossing, the driver must drive across the crosswalk slowly and ensure pedestrian safety.",
+   "When there are pedestrians crossing, the driver must stop the vehicle and wait until all pedestrians have crossed.",
+   "The driver must drive across the crosswalk slowly regardless of pedestrians crossing.",
+   "The driver must stop the vehicle regardless of pedestrians crossing."
+  ],
+  "ko_b": "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌 ?댁쟾?먯쓽 ?됰룞?쇰줈 留욌뒗 寃?2媛吏??",
+  "tr_b": "A vehicle is about to drive across a crosswalk in a school zone with no traffic lights. Which of the following are  the correct actions of the driver? (Select TWO)"
+ },
+ {
+  "n": 174,
+  "check": "negation",
+  "detail": "c[4] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??蹂댄뻾?먯쓽 ?덉쟾???뺤씤?섍퀬 ?쒗뻾?섎ŉ ?듦낵?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉???쇱떆?뺤??섏뿬 蹂댄뻾?먯쓽 ?〓떒??蹂댄샇?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쒗뻾?섎ŉ ?듯뻾?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??쒕떎."
+  ],
+  "tr_c": [
+   "When there are pedestrians crossing, the driver must drive across the crosswalk slowly and ensure pedestrian safety.",
+   "When there are pedestrians crossing, the driver must stop the vehicle and wait until all pedestrians have crossed.",
+   "The driver must drive across the crosswalk slowly regardless of pedestrians crossing.",
+   "The driver must stop the vehicle regardless of pedestrians crossing."
+  ],
+  "ko_b": "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌 ?댁쟾?먯쓽 ?됰룞?쇰줈 留욌뒗 寃?2媛吏??",
+  "tr_b": "A vehicle is about to drive across a crosswalk in a school zone with no traffic lights. Which of the following are  the correct actions of the driver? (Select TWO)"
+ },
+ {
+  "n": 176,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 李⑤룄瑜??듯뻾?섎뒗 寃쎌슦 ??긽 李⑤룄??醫뚯륫?쇰줈 ?듯뻾?댁빞 ?쒕떎.",
+   "蹂댄뻾?먮뒗 ?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?됱쭊 ?쒖뿉???꾨줈??以묒븰?쇰줈 ?듯뻾?????덈떎.",
+   "?꾨줈?〓떒?쒖꽕???댁슜?????녿뒗 吏泥댁옣?좎씤? ?꾨줈?〓떒?쒖꽕???댁슜?섏? ?딄퀬 ?꾨줈瑜??〓떒?????덈떎.",
+   "?꾨줈?〓떒?쒖꽕???녿뒗 寃쎌슦 蹂댄뻾?먮뒗 ?덉쟾???꾪빐 媛??湲?嫄곕━濡??꾨줈瑜??〓떒?섏뿬???쒕떎."
+  ],
+  "tr_c": [
+   "A pedestrian using a road must always walk using the left side of the road.",
+   "A pedestrian taking part in a parade for a special social event can walk in the middle of a road.",
+   "A disabled person who is unable to use road-crossing facilities can cross a road anywhere.",
+   "A pedestrian must take the longest route to cross the road if there are no road-crossing facilities."
+  ],
+  "ko_b": "蹂댄뻾?먯쓽 ?듯뻾??????ㅻ챸 以?留욌뒗 寃?2媛吏??",
+  "tr_b": "Which of the following are TWO good pedestrian behaviors?"
+ },
+ {
+  "n": 177,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "3留???,
+   "4留???,
+   "5留???,
+   "6留???
+  ],
+  "tr_c": [
+   "KRW 30,000",
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 60,000"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섎뒗 諛⑸쾿???꾨컲??寃쎌슦 踰붿튃湲덉??",
+  "tr_b": "Which of the following is the traffic penalty imposed on the driver of a passenger car for illegal driving on a  sidewalk?"
+ },
+ {
+  "n": 177,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['4']",
+  "ko_c": [
+   "3留???,
+   "4留???,
+   "5留???,
+   "6留???
+  ],
+  "tr_c": [
+   "KRW 30,000",
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 60,000"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섎뒗 諛⑸쾿???꾨컲??寃쎌슦 踰붿튃湲덉??",
+  "tr_b": "Which of the following is the traffic penalty imposed on the driver of a passenger car for illegal driving on a  sidewalk?"
+ },
+ {
+  "n": 177,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['5']",
+  "ko_c": [
+   "3留???,
+   "4留???,
+   "5留???,
+   "6留???
+  ],
+  "tr_c": [
+   "KRW 30,000",
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 60,000"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섎뒗 諛⑸쾿???꾨컲??寃쎌슦 踰붿튃湲덉??",
+  "tr_b": "Which of the following is the traffic penalty imposed on the driver of a passenger car for illegal driving on a  sidewalk?"
+ },
+ {
+  "n": 177,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['6']",
+  "ko_c": [
+   "3留???,
+   "4留???,
+   "5留???,
+   "6留???
+  ],
+  "tr_c": [
+   "KRW 30,000",
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 60,000"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섎뒗 諛⑸쾿???꾨컲??寃쎌슦 踰붿튃湲덉??",
+  "tr_b": "Which of the following is the traffic penalty imposed on the driver of a passenger car for illegal driving on a  sidewalk?"
+ },
+ {
+  "n": 182,
+  "check": "negation",
+  "detail": "c[4] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 媛??吏㏃? 嫄곕━濡??〓떒?댁빞 ?쒕떎.",
+   "蹂댄뻾?먮뒗 紐⑤뱺 李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?〓떒?섎㈃ ???쒕떎.",
+   "臾대떒?〓떒 諛⑹?瑜??꾪븳 李⑥꽑遺꾨━?媛 ?ㅼ튂??怨녹씠?쇰룄 ?섏뼱???〓떒?????덈떎.",
+   "?꾨줈怨듭궗 ?깆쑝濡?蹂대룄???듯뻾??湲덉?????李⑤룄濡??듯뻾?????덈떎."
+  ],
+  "tr_c": [
+   "Pedestrians must take the shortest route when crossing a road without a crosswalk.",
+   "Pedestrians must not cross the road around the front or rear of a vehicle.",
+   "Pedestrians can climb over a lane partition placed to prevent illegal crossing on the road.",
+   "Pedestrians can walk on the road if the sidewalk is closed for construction."
+  ],
+  "ko_b": "蹂댄뻾?먯쓽 ?꾨줈 ?〓떒諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "tr_b": "Which of the following is an INCORRECT method of crossing the road for a pedestrian?"
+ },
+ {
+  "n": 185,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['4']",
+  "ko_c": [
+   "4留???,
+   "5留???,
+   "9留???,
+   "10留???
+  ],
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 90,000",
+   "KRW 100,000"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4.5???붾Ъ?먮룞李④? ?ㅼ쟾 10?쒕???11?쒓퉴吏 ?몄씤蹂댄샇援ъ뿭?먯꽌 二쇱감?꾨컲????寃쎌슦 怨쇳깭猷뚮뒗?",
+  "tr_b": "What is the administrative fine imposed on the driver of a 4.5-ton truck parked illegally in a silver zone between  10 AM and 11 AM?"
+ },
+ {
+  "n": 185,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['5']",
+  "ko_c": [
+   "4留???,
+   "5留???,
+   "9留???,
+   "10留???
+  ],
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 90,000",
+   "KRW 100,000"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4.5???붾Ъ?먮룞李④? ?ㅼ쟾 10?쒕???11?쒓퉴吏 ?몄씤蹂댄샇援ъ뿭?먯꽌 二쇱감?꾨컲????寃쎌슦 怨쇳깭猷뚮뒗?",
+  "tr_b": "What is the administrative fine imposed on the driver of a 4.5-ton truck parked illegally in a silver zone between  10 AM and 11 AM?"
+ },
+ {
+  "n": 185,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['9']",
+  "ko_c": [
+   "4留???,
+   "5留???,
+   "9留???,
+   "10留???
+  ],
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 90,000",
+   "KRW 100,000"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4.5???붾Ъ?먮룞李④? ?ㅼ쟾 10?쒕???11?쒓퉴吏 ?몄씤蹂댄샇援ъ뿭?먯꽌 二쇱감?꾨컲????寃쎌슦 怨쇳깭猷뚮뒗?",
+  "tr_b": "What is the administrative fine imposed on the driver of a 4.5-ton truck parked illegally in a silver zone between  10 AM and 11 AM?"
+ },
+ {
+  "n": 185,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['10']",
+  "ko_c": [
+   "4留???,
+   "5留???,
+   "9留???,
+   "10留???
+  ],
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 90,000",
+   "KRW 100,000"
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4.5???붾Ъ?먮룞李④? ?ㅼ쟾 10?쒕???11?쒓퉴吏 ?몄씤蹂댄샇援ъ뿭?먯꽌 二쇱감?꾨컲????寃쎌슦 怨쇳깭猷뚮뒗?",
+  "tr_b": "What is the administrative fine imposed on the driver of a 4.5-ton truck parked illegally in a silver zone between  10 AM and 11 AM?"
+ },
+ {
+  "n": 196,
+  "check": "negation",
+  "detail": "c[1] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?쇳빐?먯쓽 泥섎쾶?섏궗??愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎.",
+   "?쇳빐?먯? ?⑹쓽?섎㈃ 泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕??媛?낅릺???덉쑝硫?泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕媛???щ?? 愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎."
+  ],
+  "tr_c": [
+   "Criminal offense charges are imposed on the driver regardless of the victim?셲 wishes to file charges.",
+   "No charges are filed if the driver comes to an agreement with the victim.",
+   "No charges are filed if the driver has a full-coverage insurance policy.",
+   "The driver is charged with a criminal offense regardless of the presence of a full-coverage insurance policy."
+  ],
+  "ko_b": "?먮룞李⑥뿉 ?ｊ퀬 媛???붾Ъ???⑥뼱??蹂댄뻾?먯뿉寃?2二?吏꾨떒???곹빐瑜??낇엺 ?댁쟾?먯뿉 ???泥섎쾶 2媛吏??",
+  "tr_b": "When a cargo falls from a vehicle and injures a pedestrian, necessitating a two-week period of hospitalization,  which two penalties among the following will be imposed on the driver?"
+ },
+ {
+  "n": 196,
+  "check": "negation",
+  "detail": "c[4] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?쇳빐?먯쓽 泥섎쾶?섏궗??愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎.",
+   "?쇳빐?먯? ?⑹쓽?섎㈃ 泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕??媛?낅릺???덉쑝硫?泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕媛???щ?? 愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎."
+  ],
+  "tr_c": [
+   "Criminal offense charges are imposed on the driver regardless of the victim?셲 wishes to file charges.",
+   "No charges are filed if the driver comes to an agreement with the victim.",
+   "No charges are filed if the driver has a full-coverage insurance policy.",
+   "The driver is charged with a criminal offense regardless of the presence of a full-coverage insurance policy."
+  ],
+  "ko_b": "?먮룞李⑥뿉 ?ｊ퀬 媛???붾Ъ???⑥뼱??蹂댄뻾?먯뿉寃?2二?吏꾨떒???곹빐瑜??낇엺 ?댁쟾?먯뿉 ???泥섎쾶 2媛吏??",
+  "tr_b": "When a cargo falls from a vehicle and injures a pedestrian, necessitating a two-week period of hospitalization,  which two penalties among the following will be imposed on the driver?"
+ },
+ {
+  "n": 220,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "媛볤만???뺤감????鍮꾩긽?먮㈇?깆쓣 耳쒓퀬 怨좎냽?꾨줈 ?쒖같????꾩????붿껌?쒕떎.",
+   "?대? 吏꾩엯?섏??쇰?濡??ㅼ쓬 異쒓뎄源뚯? 二쇳뻾????鍮좎졇?섏삩??",
+   "鍮꾩긽?먮㈇?깆쓣 耳쒓퀬 吏꾩엯?덈뜕 湲몃줈 ?쒖꽌???꾩쭊?섏뿬 鍮좎졇?섏삩??",
+   "吏꾩엯 李⑤줈媛 2媛??댁긽??寃쎌슦?먮뒗 ?좏꽩?섏뿬 ?뚯븘 ?섏삩??"
+  ],
+  "tr_c": [
+   "Pull over, turn on the emergency flashers, and call the expressway patrol for help.",
+   "Take the next exit as he/she has already entered the expressway.",
+   "Turn on the emergency flashers and slowly reverse the vehicle back to the entry point to exit the expressway.",
+   "If there are two or more lanes, make a U-turn to exit the expressway."
+  ],
+  "ko_b": "怨좎냽?꾨줈??吏꾩엯?????섎せ 吏꾩엯???ъ떎???뚯븯????媛???곸젅???됰룞??",
+  "tr_b": "Which of the following is the most appropriate action to take when a driver realizes that he/she incorrectly  entered an expressway after he/she has already entered it?"
+ },
+ {
+  "n": 224,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "李⑤줈???쒖쐞???꾨줈??以묒븰?좎そ???덈뒗 李⑤줈遺??1李⑤줈濡??쒕떎.",
+   "?먮┛ ?띾룄濡?吏꾪뻾?섏뿬 ?ㅻⅨ 李⑥쓽 ?뺤긽?곸씤 ?듯뻾??諛⑺빐???곕젮媛 ?덈뒗 ?뚯뿉??洹??듯뻾?섎뜕 李⑤줈???ㅻⅨ履?李⑤줈濡??듯뻾???ъ빞 ?쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈?먯꽌???꾨줈???ㅻⅨ履쎈???1李⑤줈濡??쒕떎.",
+   "?몃룄 2李⑤줈 怨좎냽?꾨줈?먯꽌 紐⑤뱺 ?먮룞李⑤뒗 2李⑤줈濡??듯뻾?섎뒗 寃껋씠 ?먯튃?대떎."
+  ],
+  "tr_c": [
+   "With regard to the ordering of lanes, the lane next to the median lane of a road is regarded as the first lane.",
+   "If a person drives at a slow speed, possibly impeding the normal traffic of other cars, he/she must switch to the lane right of the one he/she was originally in.",
+   "On a road with one-way traffic, the right side of the road is regarded as the first lane.",
+   "In principle, all vehicles on an expressway with two lanes in one direction must drive in the second lane."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤줈???곕Ⅸ ?듯뻾援щ텇 ?ㅻ챸?대떎. ?섎せ??寃껋??",
+  "tr_b": "Below are the classifications of traffic by type of lane according to the Road Traffic Act and its Enforcement  Decree. Which of the following is INCORRECT?"
+ },
+ {
+  "n": 224,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "李⑤줈???쒖쐞???꾨줈??以묒븰?좎そ???덈뒗 李⑤줈遺??1李⑤줈濡??쒕떎.",
+   "?먮┛ ?띾룄濡?吏꾪뻾?섏뿬 ?ㅻⅨ 李⑥쓽 ?뺤긽?곸씤 ?듯뻾??諛⑺빐???곕젮媛 ?덈뒗 ?뚯뿉??洹??듯뻾?섎뜕 李⑤줈???ㅻⅨ履?李⑤줈濡??듯뻾???ъ빞 ?쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈?먯꽌???꾨줈???ㅻⅨ履쎈???1李⑤줈濡??쒕떎.",
+   "?몃룄 2李⑤줈 怨좎냽?꾨줈?먯꽌 紐⑤뱺 ?먮룞李⑤뒗 2李⑤줈濡??듯뻾?섎뒗 寃껋씠 ?먯튃?대떎."
+  ],
+  "tr_c": [
+   "With regard to the ordering of lanes, the lane next to the median lane of a road is regarded as the first lane.",
+   "If a person drives at a slow speed, possibly impeding the normal traffic of other cars, he/she must switch to the lane right of the one he/she was originally in.",
+   "On a road with one-way traffic, the right side of the road is regarded as the first lane.",
+   "In principle, all vehicles on an expressway with two lanes in one direction must drive in the second lane."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤줈???곕Ⅸ ?듯뻾援щ텇 ?ㅻ챸?대떎. ?섎せ??寃껋??",
+  "tr_b": "Below are the classifications of traffic by type of lane according to the Road Traffic Act and its Enforcement  Decree. Which of the following is INCORRECT?"
+ },
+ {
+  "n": 224,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2', '2']",
+  "ko_c": [
+   "李⑤줈???쒖쐞???꾨줈??以묒븰?좎そ???덈뒗 李⑤줈遺??1李⑤줈濡??쒕떎.",
+   "?먮┛ ?띾룄濡?吏꾪뻾?섏뿬 ?ㅻⅨ 李⑥쓽 ?뺤긽?곸씤 ?듯뻾??諛⑺빐???곕젮媛 ?덈뒗 ?뚯뿉??洹??듯뻾?섎뜕 李⑤줈???ㅻⅨ履?李⑤줈濡??듯뻾???ъ빞 ?쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈?먯꽌???꾨줈???ㅻⅨ履쎈???1李⑤줈濡??쒕떎.",
+   "?몃룄 2李⑤줈 怨좎냽?꾨줈?먯꽌 紐⑤뱺 ?먮룞李⑤뒗 2李⑤줈濡??듯뻾?섎뒗 寃껋씠 ?먯튃?대떎."
+  ],
+  "tr_c": [
+   "With regard to the ordering of lanes, the lane next to the median lane of a road is regarded as the first lane.",
+   "If a person drives at a slow speed, possibly impeding the normal traffic of other cars, he/she must switch to the lane right of the one he/she was originally in.",
+   "On a road with one-way traffic, the right side of the road is regarded as the first lane.",
+   "In principle, all vehicles on an expressway with two lanes in one direction must drive in the second lane."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤줈???곕Ⅸ ?듯뻾援щ텇 ?ㅻ챸?대떎. ?섎せ??寃껋??",
+  "tr_b": "Below are the classifications of traffic by type of lane according to the Road Traffic Act and its Enforcement  Decree. Which of the following is INCORRECT?"
+ },
+ {
+  "n": 228,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "?뱀슜?먮룞李⑤뒗 1李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?뱀슜?먮룞李⑤뒗 2李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "??뺤듅?⑹옄?숈감??1李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "??뺤듅?⑹옄?숈감??2李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎."
+  ],
+  "tr_c": [
+   "Passenger cars must use only the first lane to turn left.",
+   "Passenger cars must use only the second lane to turn left.",
+   "Large buses must use only the first lane to turn left.",
+   "Large buses must use only the second lane to turn left."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??1??李⑤줈媛 醫뚰쉶??李⑤줈??援먯감濡쒖쓽 ?듯뻾 諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "Which of the following is the correct method of passing through an intersection with two left-turn lanes?"
+ },
+ {
+  "n": 228,
+  "check": "number",
+  "detail": "c[2] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?뱀슜?먮룞李⑤뒗 1李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?뱀슜?먮룞李⑤뒗 2李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "??뺤듅?⑹옄?숈감??1李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "??뺤듅?⑹옄?숈감??2李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎."
+  ],
+  "tr_c": [
+   "Passenger cars must use only the first lane to turn left.",
+   "Passenger cars must use only the second lane to turn left.",
+   "Large buses must use only the first lane to turn left.",
+   "Large buses must use only the second lane to turn left."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??1??李⑤줈媛 醫뚰쉶??李⑤줈??援먯감濡쒖쓽 ?듯뻾 諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "Which of the following is the correct method of passing through an intersection with two left-turn lanes?"
+ },
+ {
+  "n": 228,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "?뱀슜?먮룞李⑤뒗 1李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?뱀슜?먮룞李⑤뒗 2李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "??뺤듅?⑹옄?숈감??1李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "??뺤듅?⑹옄?숈감??2李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎."
+  ],
+  "tr_c": [
+   "Passenger cars must use only the first lane to turn left.",
+   "Passenger cars must use only the second lane to turn left.",
+   "Large buses must use only the first lane to turn left.",
+   "Large buses must use only the second lane to turn left."
+  ],
+  "ko_b": "?꾨줈援먰넻踰뺣졊??1??李⑤줈媛 醫뚰쉶??李⑤줈??援먯감濡쒖쓽 ?듯뻾 諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "Which of the following is the correct method of passing through an intersection with two left-turn lanes?"
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); $data = Get-Content -Raw -Encoding utf8 -LiteralPath '"'translations/audit/queue/100_flags_en.json' | ConvertFrom-Json; "'$data | Group-Object n | ForEach-Object { $_.Group[0] } | ConvertTo-Json -Depth 6 -Compress' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 667ms:
+[{"n":4,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["제1종 보통면허, 교통안전교육 3시간","제1종 특수면허(대형견인차), 교통안전교육 2시간","제1종 특수면허(구난차), 교통안전교육 2시간","제2종 보통면허, 교통안전교육 3시간"],"tr_c":["Class I driver’s license for ordinary motor vehicles; 3 hours of traffic safety education","Class I driver’s license for special motor vehicles (large towing vehicles); 2 hours of traffic safety education","Class I driver’s license for special motor vehicles (recovery vehicles); 2 hours of traffic safety education","Class II driver’s license for ordinary motor vehicles; 3 hours of traffic safety education"],"ko_b":"도로교통법상 승차정원 15인승의 긴급 승합자동차를 처음 운전하려고 할 때 필요한 조건으로 맞는 것은?","tr_b":"According to the Road Traffic Act, which of the following is a prerequisite for driving an emergency passenger  vehicle with prescribed seating capacity of no more than 15 persons?"},{"n":7,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["제1종 보통면허 및 소형견인차면허","제2종 보통면허 및 제1종 소형견인차면허","제1종 보통면허 및 구난차면허","제2종 보통면허 및 제1종 구난차면허"],"tr_c":["Class I driver’s license for ordinary motor vehicles and for small towing vehicles","Class II driver’s license for ordinary motor vehicles and Class I driver’s license for small towing vehicles","Class I driver’s license for ordinary motor vehicles and for recovery vehicles","Class II driver’s license for ordinary motor vehicles and Class I driver’s license for recovery vehicles"],"ko_b":"승차정원이 11명인 승합자동차로 총중량 780킬로그램의 피견인자동차를 견인하고자 한다. 운전자가 취득해야하는 운전면허의  종류는?","tr_b":"A vehicle with total weight of 780 kg is to be towed with an 11-seater passenger vehicle. Which of the following  driver’s license(s) must the driver hold?"},{"n":8,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["제1종 대형면허로 아스팔트살포기를 운전할 수 있다.","제1종 보통면허로 덤프트럭을 운전할 수 있다.","제2종 보통면허로 250시시 이륜자동차를 운전할 수 있다.","제2종 소형면허로 원동기장치자전거를 운전할 수 있다."],"tr_c":["An asphalt distributor may be driven by a driver holding a Class I driver’s license for large motor vehicles.","A dump truck may be driven by a driver holding a Class I driver’s license for ordinary motor vehicles.","A 250 cc two-wheeled vehicle may be driven by a person holding a Class II driver’s license for ordinary motor vehicles.","A motorcycle may be driven by a person holding a Class II driver’s license for small motor vehicles."],"ko_b":"운전면허 종류별 운전할 수 있는 차에 관한 설명으로 맞는 것 2가지는?","tr_b":"Which TWO statements are correct regarding the types of vehicles that can be driven by specific types of driver\u0027s  license?"},{"n":9,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["제1종 대형견인차면허","제1종 구난차면허","제1종 보통면허","제2종 보통면허"],"tr_c":["Class I driver’s license for large towing vehicles","Class I driver’s license for recovery vehicles","Class I driver’s license for ordinary motor vehicles","Class II driver’s license for ordinary motor vehicles"],"ko_b":"승차정원이 12명인 승합자동차를 도로에서 운전하려고 한다. 운전자가 취득해야하는 운전면허의 종류는?","tr_b":"One intends to drive a 12-seater passenger vehicle. Which of the following driver’s license types must one obtain  to do so?"},{"n":13,"check":"number","detail":"c[4] 번역에 누락된 숫자 [\u00273\u0027]","ko_c":["출국 전 적성검사 연기 신청서를 제출해야 한다.","출국 후에는 대리인이 대신하여 적성검사 연기 신청을 할 수 없다.","적성검사 연기 신청 시, E-티켓과 같은 출국 사실을 증명할 수 있는 서류를 제출해야 한다.","적성검사 연기 신청이 승인된 경우, 귀국 후 3개월 이내에 적성검사를 받아야 한다."],"tr_c":["You must submit an application to postpone the aptitude test before leaving the country.","You cannot have an agent apply for a postponement of the aptitude test on your behalf after you leave the country.","You must provide supporting documents of your departure such as an E-ticket to apply for a postponement of the  aptitude test.","If your application is approved, you must take the aptitude test within three months of your return."],"ko_b":"도로교통법령상 해외 출국 시, 운전면허 적성검사 연기에 대한 설명으로 틀린 것은?","tr_b":"Which of the following is an incorrect description of postponing the driver\u0027s license aptitude test under the Road  Traffic Act when traveling abroad?"},{"n":17,"check":"negation","detail":"c[1] 부정어 소실 의심","ko_c":["원동기를 단 차 중 시속 20킬로미터 이상으로 운행할 경우 전동기가 작동하지 아니하여야 한다.","전동기의 동력만으로 움직일 수 없는(PAS : Pedal Assist System) 전기자전거를 포함한다.","최고 정격출력 11킬로와트 이하의 원동기를 단 차로 차체 중량이 35킬로그램 미만인 것을 말한다.","차체 중량은 30킬로그램 미만이어야 한다."],"tr_c":["For vehicles with a motor, the motor should stop when the device reaches or exceeds a speed of 20 km/h.","It includes electric bicycles that cannot move solely by motor power (PAS: Pedal Assist System).","It is a vehicle with maximum rated output power of 11 kW or less, which weighs less than 35 kg.","The weight of the vehicle should be less than 30 kg."],"ko_b":"도로교통법 상 개인형 이동장치의 기준에 대한 설명이다. 바르게 설명된 것은?","tr_b":"Below are explanations of the standard for personal mobility devices (PMDs) according to the Road Traffic Act.  Which one is correct?"},{"n":18,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00273\u0027]","ko_c":["무면허 운전을 3회한 때","다른 사람을 위하여 운전면허시험에 대리 응시한 때","단속 경찰관 폭행으로 입건되어 취소가 되는 경우","음주운전을 하다가 3회 이상 교통사고를 일으킨 경우"],"tr_c":["Driving without a license three times","When taking a driver’s license test on behalf of another person.","When charged for assaulting a police officer during an inspection, resulting in the revocation of one’s license.","When causing three or more traffic accidents while driving under the influence of alcohol."],"ko_b":"다음 중 운전면허 취득 결격기간이 2년에 해당하는 사유 2가지는?","tr_b":"Which TWO actions would cause someone to be barred from acquiring a driver\u0027s license for 2 years? (If given a  penalty more severe than a criminal fine)"},{"n":19,"check":"negation","detail":"c[2] 부정어 소실 의심","ko_c":["영문운전면허증 인정 국가에서 운전할 때 별도의 번역공증서 없이 운전이 가능하다.","영문운전면허증 인정 국가에서는 체류기간에 상관없이 사용할 수 있다.","영문운전면허증 불인정 국가에서는 한국운전면허증, 국제운전면허증, 여권을 지참해야 한다.","운전면허증 뒤쪽에 영문으로 운전면허증의 내용을 표기한 것이다."],"tr_c":["When driving in a country where an English driver’s license is recognized, it is possible to drive without a separate  notarized translation.","The English driver\u0027s license can be used regardless of the length of stay in a country where an English driver’s license is  recognized.","You should bring your Korean driver\u0027s license, an international driver\u0027s license, and your passport in a country where an English driver’s license is not recognized.","It is a license wherein the content of the driver\u0027s license is written in English on the back of the driver\u0027s license."],"ko_b":"도로교통법령상 영문운전면허증에 대한 설명으로 옳지 않은 것은?(제네바협약 또는 비엔나협약 가입국으로 한정)","tr_b":"According to the Road Traffic Act, which of the following is NOT true about an English driver’s license? (Limited  to countries that have ratified the Geneva Convention or the Vienna Convention)"},{"n":30,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u002710\u0027, \u00272\u0027]","ko_c":["운전면허시험에 합격한 날부터 기산하여 10년이 되는 날이 속하는 해의 생일 전후 각각 2개월 이내","운전면허시험에 합격한 날부터 기산하여 10년이 되는 날이 속하는 해의 생일 전후 각각 4개월 이내","운전면허시험에 합격한 날부터 기산하여 10년이 되는 날이 속하는 해의 생일 전후 각각 6개월 이내","운전면허시험에 합격한 날부터 기산하여 10년이 되는 날이 속하는 해의 생일 전후 각각 8개월 이내"],"tr_c":["Within two months before or after one\u0027s birthday in the year that marks the tenth anniversary since passing the driver’s license test.","Within four months before or after one\u0027s birthday in the year that marks the tenth anniversary since passing the driver’s license test.","Within six months before or after one\u0027s birthday in the year that marks the tenth anniversary since passing the driver’s license test.","Within eight months before or after one\u0027s birthday in the year that marks the tenth anniversary since passing the driver’s license test."],"ko_b":"도로교통법상 운전면허증 갱신기간을 올바르게 설명한 것은? (65세 미만의 운전자에 한한다)","tr_b":"Which of the following correctly describes the renewal period of a driver’s license under the Road Traffic Act (for drivers under 65 years of age only)?"},{"n":37,"check":"number","detail":"c[2] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["음주운전 방지장치가 설치된 자동차등을 시·도경찰청에 등록하지 아니하고 운전한 경우에는 면허가 정지 된다.","음주운전 방지장치가 설치되지 아니하거나 설치기준에 부합하지 아니한 음주운전 방지장치가 설치된 자동차등을 운전       한 경우 1개월 내 시정조치 명령을 한다.","음주운전 방지장치의 정비를 위해 해체·조작 또는 그 밖의 방법으로 효용이 떨어진 것을 알면서 해당장치가 설치된       자동차등을 운전한 경우에는 면허가 정지된다.","음주운전으로 인한 면허 결격기간 이후 방지장치 부착차량만 운전가능한 면허를 취득한 때부터 장치를 부착한 차량만       운행할 수 있다."],"tr_c":["A person who has obtained a conditional driver’s license upon installing an ignition interlock device and who drives without registering it with the commissioner of the city or police agency of his/her municipality will have his/her license suspended.","A person who has driven a vehicle without an ignition interlock device or with such device that fails to meet the installation standards shall be ordered to take corrective measures within one month.","A person who drives a motor vehicle with an ignition interlock device, etc. knowing that the device is less effective as it was dismantled, tampered with, or otherwise for maintenance will have his/her license suspended.","After the period of license disqualification due to drunk driving, a person may only drive a vehicle with an ignition interlock device from the time of obtaining a conditional driver’s license upon installing an ignition interlock device."],"ko_b":"다음 중 도로교통법상 음주운전 방지장치 부착 조건부 운전면허를 받은 운전자 등의 준수사항에 대한 설명으로 맞는 것은?","tr_b":"Which of the following is correct regarding the obligations of a driver who has obtained a conditional driver’s  license upon installing an ignition interlock device under the Road Traffic Act?"},{"n":38,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u002710\u0027, \u00275\u0027]","ko_c":["과태료 5만 원 ∼ 10만 원","과태료 50만 원 ∼ 1백만 원","과태료 2백만 원 ∼ 2천만 원","처벌되지 않는다."],"tr_c":["An administrative fine between KRW 50,000 and 100,000","An administrative fine between KRW 500,000 and 1 million","An administrative fine between KRW 2 million and 20 million","No penalties"],"ko_b":"운전자가 가짜 석유제품임을 알면서 차량 연료로 사용할 경우 처벌기준은?","tr_b":"What is the standard for penalties imposed on a driver who knowingly uses a fake petroleum product as vehicle  fuel?"},{"n":45,"check":"paren","detail":"e 괄호 짝 불일치","ko_c":["충전하기 전 차량의 시동을 끈다.","충전소에서 흡연은 차량에 떨어져서 한다.","수소가스가 누설할 때에는 충전소 안전관리자에게 안전점검을 요청한다.","수소차량의 충돌 등 교통사고 후에는 가스 안전점검을 받은 후 사용한다."],"tr_c":["Switch off the vehicle power before charging.","Smoking should be done at a distance from the vehicle.","When hydrogen gas leaks, request the safety supervisor from the charging station for a safety check.","After a traffic accident involving the collision of a hydrogen vehicle, drive the vehicle after undergoing a gas safety  inspection."],"ko_b":"수소차량의 안전수칙으로 틀린 것은?","tr_b":"Which of the following is NOT correct regarding the safety rules for hydrogen vehicles?"},{"n":53,"check":"number","detail":"c[3] 번역에 누락된 숫자 [\u00274\u0027]","ko_c":["도로교통법상“운전”에는 도로에서 차마를 그 본래의 사용방법에 따라 자율주행시스템을 사용하는 것은 포함되지 않는다.","운전자가 자율주행시스템을 사용하여 운전하는 경우에는 휴대전화 사용금지 규정을 적용하지 아니한다.","자율주행시스템의 직접 운전 요구에 지체없이 대응하지 아니한 자율주행승용자동차의 운전자에 대한 범칙금액은 4만 원이다.","“자율주행시스템”이란 운전자 또는 승객의 조작 없이 주변상황과 도로 정보 등을 스스로 인지하고 판단하여 자동차를 운행 할 수 있게 하는 자동화 장비, 소프트웨어 및 이와 관련한 모든 장치를 말한다."],"tr_c":["The Road Traffic Act stipulates that “driving” does not include the use of an autonomous driving system in accordance with the original use of motor vehicles and horses.","The prohibition of using a mobile phone does not apply to drivers driving a vehicle operated under an autonomous driving  system.","The traffic penalty for a driver who fails to respond promptly to the take-over request from the autonomous driving system  is a fee of KRW 40,000.","An “autonomous driving system” encompasses a variety of automated apparatus, software, and peripheral devices that allow a vehicle to move by recognizing and judging the surroundings and road information without the manipulation of the driver or a passenger."],"ko_b":"자율주행시스템과 관련된 법령의 내용으로 틀린 것은?","tr_b":"Which of the following is incorrect regarding provisions on autonomous driving systems?"},{"n":57,"check":"negation","detail":"c[3] 부정어 소실 의심","ko_c":["비사업용 승용자동차의 자동차검사 유효기간은 6년이다.","장거리 운전 시에는 사전에 배터리를 확인하고 충전한다.","충전 직후에는 급가속, 급정지를 하지 않는 것이 좋다.","열선시트, 열선핸들보다 공기 히터를 사용하는 것이 효율적이다."],"tr_c":["The valid period for the vehicle inspection of non-commercial passenger vehicles is 6 years.","When driving long distances, check and charge the battery in advance.","Refrain from accelerating or suddenly stopping immediately after charging.","It is more efficient to use an air heater than a heated seat or a heated handle."],"ko_b":"전기자동차 관리방법으로 옳지 않은 2가지는?","tr_b":"Which two statements are NOT correct regarding the management of EVs?"},{"n":63,"check":"number","detail":"c[2] 번역에 누락된 숫자 [\u00272\u0027]","ko_c":["적재중량 16톤 덤프트럭","서울과 수원을 운행하는 2층 좌석버스","단차로인 경우, 차폭이 3.7m인 소방차량","10톤 대형 구난차량"],"tr_c":["A dump truck with loading weight of 16 tons","A double-decker bus that operates between Seoul and Suwon","A fire vehicle with vehicle width of 3.7m in case of a single lane","A large recovery vehicle weighing 10 tons"],"ko_b":"다음 차량 중 하이패스차로 이용이 불가능한 차량은?","tr_b":"Which of the following vehicles CANNOT use the Hi-pass lanes?"},{"n":68,"check":"negation","detail":"c[3] 부정어 소실 의심","ko_c":["자율주행자동차이므로 술에 취한 상태에서 운전해도 된다.","과로한 상태에서 자율주행자동차를 운전하면 아니 된다.","자율주행자동차라 하더라도 향정신성의약품을 복용하고 운전하면 아니 된다.","자율주행자동차의 운전 중에 휴대용 전화 사용이 가능하다."],"tr_c":["Since it is an autonomous vehicle, the drivers can drive even under the influence of alcohol.","The driver must not drive an autonomous vehicle in an exhausted state.","Even drivers of autonomous vehicles can take psychoactive medication and drive.","The driver may use a mobile phone while driving an autonomous vehicle."],"ko_b":"자율주행자동차 운전자의 마음가짐으로 바르지 않은 것은?","tr_b":"Which of the following is NOT a desirable mindset for drivers of autonomous vehicles?"},{"n":72,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u0027300\u0027]","ko_c":["300만 원 이하의 과태료","500만 원 이하의 과태료","1년 이하의 징역 또는 1천만 원 이하의 벌금","2년 이하의 징역 또는 2천만 원 이하의 벌금"],"tr_c":["An administrative fine of up to KRW 3 million","An administrative fine of up to KRW 5 million","Up to 1 year of imprisonment or a criminal fine of up to KRW 10 million","Up to 2 years of imprisonment or a criminalfine of up to KRW 20 million"],"ko_b":"자동차손해배상보장법상 의무보험에 가입하지 않은 자동차보유자의 처벌 기준으로 맞는 것은?(자동차 미운행)","tr_b":"Under the Guarantee of Compulsory Motor Vehicle Liability Security Act, what is the punishment criterion for a car owner who fails to purchase mandatory insurance? (When the car has not been operated)"},{"n":82,"check":"negation","detail":"c[2] 부정어 소실 의심","ko_c":["터널 안에서는 주간에는 앞지르기가 가능하지만 야간에는 앞지르기가 금지된다.","앞지르기할 때에는 전조등을 켜고 경음기를 울리면서 좌측이나 우측 관계없이 할 수 있다.","다리 위나 교차로는 앞지르기가 금지된 장소이므로 앞지르기를 할 수 없다.","경찰공무원의 지시에 따라 정지하거나 서행하고 차를 앞지르기 할 수 있다."],"tr_c":["Inside tunnels, overtaking is allowed during daytime but banned during nighttime.","Drivers can overtake the car ahead either on its left or on its right after turning on the headlights and honking.","Overtaking is not allowed on bridges or at intersections.","A driver may stop, proceed slowly, or overtake a vehicle as directed by a police officer."],"ko_b":"다음중 도로교통법상 앞지르기에 대한 내용으로 올바른 것은?","tr_b":"Which of the following statements about overtaking is correct under the Road Traffic Act?"},{"n":83,"check":"negation","detail":"c[3] 부정어 소실 의심","ko_c":["교통상황은 변경되지 않으므로 사전운행 계획을 세울 필요는 없다.","차량용 소화기를 차량 내부에 비치하여 화재발생에 대비한다.","차량 내부에 휴대용 라이터 등 인화성 물건을 두지 않는다.","초보운전자에게 배려운전을 한다."],"tr_c":["Because the traffic situation is not changing, there is no need to make plans ahead.","Equip the vehicle with a fire extinguisher to take action immediately in case of fire.","Remove lighters and other flammable items from the vehicle.","Drive courteously, especially for novice drivers."],"ko_b":"다음 중 운전자의 올바른 마음가짐으로 가장 바람직하지 않은 것은?","tr_b":"Which of the following is NOT a desirable driver attitude?"},{"n":87,"check":"number","detail":"c[4] 번역에 누락된 숫자 [\u00272\u0027]","ko_c":["동승자의 부상정도에 따라 응급조치한다.","비상표시등을 켜는 등 후행 운전자에게 위험을 알린다.","사고차량 후미에서 경찰공무원이 도착할 때까지 교통정리를 한다.","2차사고 예방을 위해 안전한 곳으로 이동한다."],"tr_c":["Take first-aid measures depending on the severity of a passenger\u0027s injury.","Turn on the hazard lights to alert trailing drivers of the danger.","Control the traffic at the rear part of the vehicle until a police officer arrives.","Move to a safer place to prevent secondary accidents."],"ko_b":"고속도로 운전 중 교통사고 발생 현장에서의 운전자 대응방법으로 바르지 않는 것은?","tr_b":"Which of the following is NOT a correct response by a driver to a traffic accident while driving on an expressway?"},{"n":90,"check":"negation","detail":"c[4] 부정어 소실 의심","ko_c":["피로한 경우 갓길에 정차하여 안정을 취한 후 출발한다.","평소 즐겨보는 동영상을 보면서 운전한다.","주기적인 휴식이나 환기를 통해 졸음운전을 예방한다.","출발 전 뿐만 아니라 휴식 중에도 목적지까지 경로의 위험 요소를 확인하며 운전한다."],"tr_c":["If you are drowsy or exhausted from driving, pull the vehicle over on the shoulder to take a rest or a nap.","You can watch entertaining videos while driving.","You should take a rest and ventilate the vehicle regularly to stay awake.","You should constantly check for hazards along the route before departure and even while taking a rest."],"ko_b":"다음 중 고속도로에서 운전자의 바람직한 운전행위 2가지는?","tr_b":"Which of the following are desirable behaviors when driving on a freeway? (Select TWO)"},{"n":92,"check":"negation","detail":"c[3] 부정어 소실 의심","ko_c":["운전 중 동승자와 계속 이야기를 나누는 것은 집중력을 높여 준다.","운전자의 시야를 가리는 차량 부착물은 제거하는 것이 좋다.","운전 중 집중력은 안전운전과는 상관이 없다.","TV/DMB는 뒷좌석 동승자들만 볼 수 있는 곳에 장착하는 것이 좋다."],"tr_c":["Continuously chatting with a passenger while driving improves the driver\u0027s concentration.","It is better to remove stickers that can block the driver’s view.","Concentration while driving has nothing to do with safe driving.","TVs or DMBs should be installed where they can be seen only by passengers in the back seat."],"ko_b":"운전 중 집중력에 대한 내용으로 가장 적합한 2가지는?","tr_b":"Which TWO are correct regarding concentration while driving?"},{"n":94,"check":"number","detail":"c[2] 번역에 누락된 숫자 [\u00271\u0027, \u00272\u0027]","ko_c":["운전자는 밤에 도로를 통행할 때에는 전조등과 미등을 켜야 한다.","개인형 이동장치 중 전동킥보드의 승차정원은 1인이므로 2인이 탑승하면 안된다.","개인형 이동장치는 전동이륜평행차, 전동킥보드, 전기자전거, 전동휠, 전동스쿠터 등 개인이 이동하기에 적합한 이동장치를 포함하고 있다.","전동기의 동력만으로 움직일 수 있는 자전거의 경우 승차정원은 2인이다."],"tr_c":["The driver must turn on headlights and daytime running lights when driving at night.","Among the PMDs, not more than one person can drive an electric kick scooter.","A personal mobility device includes self-balancing scooters, electric kick scooters, electric bicycles, electric unicycles,   and mobility scooters.","An electric bicycle powered by a motor can carry two persons."],"ko_b":"도로교통법령상 개인형 이동장치에 대한 규정과 안전한 운전방법으로 틀린 것은?","tr_b":"According to the Road Traffic Act, which of the following is NOT true about regulations and proper operation of   PMDs?"},{"n":95,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u002710\u0027]","ko_c":["13세 미만 어린이가 좌석안전띠를 미착용하는 경우 운전자에 대한 과태료는 10만 원이다.","13세 이상의 동승자가 좌석안전띠를 착용하지 않은 경우 운전자에 대한 과태료는 3만 원이다.","일반도로에서는 운전자와 조수석 동승자만 좌석안전띠 착용 의무가 있다.","전 좌석안전띠 착용은 의무이나 3세 미만 영유아는 보호자가 안고 동승이 가능하다."],"tr_c":["If the passenger is a child under 13 years old and is not wearing a seat belt, the driver will be slapped with an  administrative fine of KRW 100,000.","If the passenger is 13 years old or above and is not wearing a seat belt, the driver will be slapped with an  administrative fine of KRW 30,000.","Only the driver and front passenger are obligated to wear seat belts when driving on general roads.","All passengers are obligated to wear seat belts, but a child under 3 years old can be placed on the lap of the guardian."],"ko_b":"다음 중 자동차(이륜자동차 제외) 좌석안전띠 착용에 대한 설명으로 맞는 것은?","tr_b":"Which of the following is true regarding wearing a seat belt before driving a vehicle (excluding two-wheeled       vehicles)?"},{"n":101,"check":"dup_choice","detail":"c[2]와 c[3] 번역 동일 (원문은 다름)","ko_c":["교차로의 신호기가 적색 등화의 점멸일 때","교통정리를 하고 있지 아니하고 교통이 빈번한 교차로를 통과할 때","교통정리를 하고 있지 아니하는 교차로를 통과할 때","교차로 부근에서 차로를 변경하는 경우"],"tr_c":["When the traffic signal at the intersection is flashing in red","Upon passing an intersection where traffic is not controlled and is frequent","Upon passing an intersection where traffic is not controlled and is frequent","Upon changing lanes near an intersection"],"ko_b":"도로교통법상 서행으로 운전하여야 하는 경우는?","tr_b":"According to the Road Traffic Act, which of the following cases requires driving at a slow speed?"},{"n":117,"check":"negation","detail":"c[3] 부정어 소실 의심","ko_c":["신호기의 신호보다 경찰공무원의 신호가 우선임을 명심한다.","교통 환경 변화에 따라 개정되는 교통법규를 숙지한다.","긴급자동차를 발견한 즉시 장소에 관계없이 일시정지하고 진로를 양보한다.","폭우시 또는 장마철 자주 비가 내리는 도로에서는 포트홀(pothole)을 주의한다."],"tr_c":["Keep in mind that a police officer\u0027s hand signals overrule traffic lights.","Stay updated with the ever-changing traffic laws and regulations.","Upon identifying an emergency vehicle, immediately stop the vehicle regardless of your location, and make way.","Watch out for potholes when driving on a road where heavy rainfall is common or during the rainy season."],"ko_b":"다음 중 운전자의 올바른 운전태도로 가장 바람직하지 않은 것은?","tr_b":"Which of the following is NOT desirable driving behavior?"},{"n":118,"check":"negation","detail":"c[3] 부정어 소실 의심","ko_c":["다른 차가 있을 때에는 그 차에 진로를 양보한다.","다른 차가 있더라도 직진차가 우선이므로 먼저 통과한다.","다른 차가 있을 때에는 좌․우를 확인하고 그 차와 상관없이 신속히 교차로를 통과한다.","다른 차가 있더라도 본인의 주행차로가 상대차의 차로보다 더 넓은 경우 통행 우선권에 따라 그대로 진입한다."],"tr_c":["Yield to the other vehicle already in the intersection.","Straight traffic takes the right of way over turning traffic. Drive through.","Ignore the vehicle in the intersection; check both sides and quickly drive through.","If your lane is wider than that of another vehicle in the intersection, you have the right of way."],"ko_b":"교통정리를 하고 있지 아니한 교차로에 직진하기 위하여 진입하려 한다.  맞은 편 차로에서 좌회전하려는 차가 이미  교차로에 진입한 경우 이때, 운전자의 올바른 운전방법은?","tr_b":"You are about to enter an uncontrolled intersection to drive straight through. When a vehicle turning left from the opposite lane has already entered the intersection, what is the correct way of driving?"},{"n":119,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["전동킥보드의 승차정원은 1인이다.","전동이륜평행차의 승차정원은 1인이다.","전동기의 동력만으로 움직일 수 있는 자전거의 경우 승차정원은 1인이다.","승차정원을 위반한 경우 범칙금 4만 원을 부과한다."],"tr_c":["An electric kick scooter can carry one person.","A self-balancing scooter can carry one person.","An electric bicycle powered by a motor can carry one person.","The traffic fine for violating the passenger capacity of a personal mobility device is KRW 40,000."],"ko_b":"도로교통법령상 개인형 이동장치의 승차정원에 대한 설명으로 틀린 것은?","tr_b":"According to the Road Traffic Act, which of the following is NOT true about the passenger capacity of personal  mobility devices?"},{"n":121,"check":"number","detail":"c[4] 번역에 누락된 숫자 [\u00272\u0027]","ko_c":["자동차등을 운전하려는 경우 음주운전 방지장치를 설치하고, 시ㆍ도경찰청장에게 등록하여야 한다.","음주운전 방지장치가 설치되지 않은 자동차등을 운전하여서는 아니 된다.","설치기준에 적합하지 아니한 음주운전 방지장치가 설치된 자동차등은 운전이 가능하다.","연 2회 이상 음주운전 방지장치 부착 자동차등의 운행기록을 시ㆍ도경찰청장에게 제출하여야 한다."],"tr_c":["When intending to drive a vehicle, the driver must install an alcohol ignition interlock device and register it with the commissioner of the city or provincial police.","Driving a vehicle that is not equipped with an alcohol ignition interlock device is prohibited.","Driving a vehicle with an alcohol ignition interlock device that does not meet the installation standards is permitted.","The driver must submit the driving records of the vehicle with the alcohol ignition interlock device to the commissioner of the city or provincial police at least twice a year."],"ko_b":"도로교통법상 음주운전 방지장치 부착 조건부 운전면허를 받은 사람에 대한 설명으로 틀린 것은?","tr_b":"According to the Road Traffic Act, which of the following is incorrect regarding drivers who have been issued a conditional driver’s license requiring the installation of an alcohol ignition interlock device?"},{"n":122,"check":"number","detail":"c[2] 번역에 누락된 숫자 [\u002710\u0027]","ko_c":["처벌하지 않는다.","10만 원 이하의 벌금이나 구류에 처한다.","20만 원 이하의 벌금이나 구류에 처한다.","30만 원 이하의 벌금이나 구류에 처한다."],"tr_c":["No penalty","Criminal fine of up to KRW 100,000 or detention","Criminal fine of up to KRW 200,000 or detention","Criminal fine of up to KRW 300,000 or detention"],"ko_b":"도로교통법상 과로(졸음운전 포함)로 인하여 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차를 운전한 사 람에 대한 벌칙으로 맞는 것은?","tr_b":"According to the Road Traffic Act, which of the following correctly describes the penalty imposed on a driver  who cannot operate a vehicle properly due to fatigue (including drowsy driving)?"},{"n":124,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["최초 위반 시 혈중알코올농도가 0.2퍼센트 이상인 경우 2년 이상 5년 이하의 징역이나 1천만 원 이상 2천만 원 이하의 벌금","음주 측정 거부 1회 위반 시 1년 이상 5년 이하의 징역이나 5백만 원 이상 2천만 원 이하의 벌금","혈중알코올농도가 0.05퍼센트로 2회 위반한 경우 1년 이하의 징역이나 5백만 원 이하의 벌금","최초 위반 시 혈중알코올농도 0.08퍼센트 이상 0.2퍼센트 미만의 경우 1년 이상 2년 이하의 징역이나 5백만 원 이상 1천 만 원 이하의 벌금"],"tr_c":["In case of the first violation, if the blood alcohol concentration is 0.2% or more, imprisonment for 2 to 5 years or criminal fine of KRW 10 million - 20 million","Refusing a field sobriety test once may result in imprisonment with labor for 1 year or more but not more than 5 years, or criminal fine of KRW 5 million or more but not more than KRW 20 million","In case of a second violation involving a blood alcohol concentration of 0.05%, imprisonment for up to 1 year or  criminal fine of up to KRW 5 million","Upon the first violation at a blood alcohol level of at least 0.08% but less than 0.2%: imprisonment with labor for at least 1 year but not more than 2 years or criminal fine of at least KRW 5 million but not more than KRW 10 million"],"ko_b":"승용자동차를 음주운전한 경우 처벌 기준에 대한 설명으로 틀린 것은?","tr_b":"Which of the following is NOT a correct explanation of the punishment criteria for drunk driving?"},{"n":128,"check":"negation","detail":"c[4] 부정어 소실 의심","ko_c":["호흡 측정에 의한 음주 측정 결과에 불복하는 경우 다시 호흡 측정을 할 수 있다.","도로교통법상 음주측정방해행위를 처벌하는 규정은 없다.","술에 취한 상태로 자전거를 운전한 후 음주측정방해행위를 한 사람은 처벌이 가능하다.","술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있음에도 경찰공무원의 음주 측정에 응하지 않은 자동차등의  운전자는 운전면허가 취소된다."],"tr_c":["If a person disagrees with the result of a breathalyzer test, he/she may undergo the test again.","The Road Traffic Act does not contain any provision for punishing acts that interfere with alcohol testing.","A person who interferes with an alcohol test after riding a bicycle while drunk may be subject to punishment.","A driver of a motor vehicle who refuses to comply with a police officer’s request to take an alcohol test, despite being reasonably suspected of being intoxicated, will have his/her driver’s license revoked."],"ko_b":"음주운전 관련 내용 중 맞는 2가지는?","tr_b":"Which TWO statements are correct regarding drunk driving?"},{"n":134,"check":"number","detail":"c[4] 번역에 누락된 숫자 [\u00273\u0027]","ko_c":["피로한 상태에서의 운전은 졸음운전으로 이어질 가능성이 낮다.","피로한 상태에서의 운전은 주의력, 판단능력, 반응속도의 저하를 가져오기 때문에 위험하다.","마약을 복용하고 운전을 하다가 교통사고로 사람을 상해에 이르게 한 운전자는 처벌될 수 있다.","마약을 복용하고 운전을 하다가 교통사고로 사람을 상해에 이르게 하고 도주하여 운전면허가 취소된 경우에는 3년 이 경과해야 운전면허 취득이 가능하다."],"tr_c":["Fatigued driving is not likely to lead to falling asleep at the wheel.","Fatigued driving is dangerous because it leads to poor focus, judgment, and reflexes.","Driving under the influence of drugs and causing an accident resulting in injury are subject to punishment.","If your driver\u0027s license is revoked because of a hit-and-run event while driving under the influence of drugs, it is possible to get the license back after three years."],"ko_b":"다음은 피로운전과 약물복용 운전에 대한 설명이다. 맞는 2가지는?","tr_b":"Which of the following are TWO correct descriptions with regard to fatigued driving and driving under the  influence of drugs?"},{"n":135,"check":"number","detail":"c[4] 번역에 누락된 숫자 [\u00273\u0027]","ko_c":["긴급제동 시 비상점멸등 켜주기","반대편 차로에서 차량이 접근 시 상향전조등 끄기","속도를 올릴 때 전조등을 상향으로 켜기","앞차가 지연 출발할 때는 3초 정도 배려하기"],"tr_c":["Turn on the emergency flashers in case of emergency braking.","Turn off the head-beam headlights when a car approaches from the opposite direction.","Turn on the high-beam headlights when driving at high speed.","Wait for three seconds if the vehicle in front does not start moving right away."],"ko_b":"다음 중 보복운전을 예방하는 방법이라고 볼 수 없는 것은?","tr_b":"Which of the following is NOT an appropriate method of preventing retaliatory driving?"},{"n":137,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u0027500\u0027]","ko_c":["전동이륜평행차, 1년 이하의 징역 또는 500만 원 이하의 벌금","이륜자동차, 6개월 이하의 징역 또는 300만 원 이하의 벌금","특수자동차, 2년 이하의 징역 또는 500만 원 이하의 벌금","원동기장치자전거, 6개월 이하의 징역 또는 300만 원 이하의 벌금"],"tr_c":["self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 million","two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  million","special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million","motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"],"ko_b":"도로교통법상 (      )의 운전자는 도로에서 2명 이상이 공동으로 2대 이상의 자동차등을 정당한 사유 없이 앞뒤로 줄지 어 통행하면서 교통상의 위험을 발생하게 하여서는 아니 된다. 이를 위반한 경우 (     ) 으로 처벌될 수 있다. (    )안에  각각 바르게 짝지어진 것은?","tr_b":"According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the like in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traffic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses."},{"n":138,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["7년 이하의 징역 또는 1천만 원 이하의 벌금에 처한다.","10년 이하의 징역 또는 2천만 원 이하의 벌금에 처한다.","1년 이상의 유기징역에 처한다.","1년 6월 이상의 유기징역에 처한다."],"tr_c":["You will be sentenced to imprisonment for up to 7 years or criminal fine of not more than KRW 10 million.","You will be sentenced to imprisonment for up to 10 years or criminal fine of not more than KRW 20 million.","You will be sentenced to imprisonment for a limited term of more than 1 year.","You will be sentenced to imprisonment for a limited term of more than 18 months."],"ko_b":"피해 차량을 뒤따르던 승용차 운전자가 중앙선을 넘어 앞지르기하여 급제동하는 등 위협 운전을 한 경우에는 「형 법」에 따른 보복운전으로 처벌받을 수 있다. 이에 대한 처벌기준으로 맞는 것은?","tr_b":"You may be subject to a penalty according to the Criminal Act if you overtake a vehicle over the centerline or perform any retaliatory driving such as sudden braking. In this case, what is the correct punishment that will be imposed on you?"},{"n":142,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00276\u0027]","ko_c":["범칙금 6만 원의 통고처분을 받는다.","과태료 3만 원이 부과된다.","6개월 이하의 징역이나 200만 원 이하의 벌금에 처한다.","1년 이하의 징역 또는 500만 원 이하의 벌금에 처한다."],"tr_c":["Notice for payment of traffic penalty of KRW 60,000","Administrative fine of KRW 30,000","Imprisonment for up to 6 months or criminal fine of not more than KRW 2 million","Imprisonment for up to 1 year or criminal fine of not more than KRW 5 million"],"ko_b":"승용차 운전자가 난폭운전을 하는 경우 도로교통법에 따른 처벌기준으로 맞는 것은?","tr_b":"According to the Road Traffic Act, which of the following is the correct punishment for reckless driving?"},{"n":144,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00273\u0027]","ko_c":["신호 위반행위를 3회 반복하여 운전하였다.","속도 위반행위와 지시 위반행위를 연달아 위반하여 운전하였다.","신호 위반행위와 중앙선 침범행위를 연달아 위반하여 운전하였다.","음주운전 행위와 보행자보호의무 위반행위를 연달아 위반하여 운전하였다."],"tr_c":["The driver repeatedly ignored traffic signals three times.","The driver committed successive violations of exceeding the speed limit and disobeying instructions.","The driver committed successive violations of ignoring traffic signals and crossing the centerline.","The driver committed successive violations of crossing the centerline as well as the duty to protect pedestrians."],"ko_b":"도로교통법령상 원동기장치자전거(개인형 이동장치 제외)의 난폭운전 행위로 볼 수 없는 것은?","tr_b":"According to the Road Traffic Act, which of the following cannot be construed as reckless driving for a  motorcycle (excluding personal mobility devices)?"},{"n":155,"check":"negation","detail":"c[4] 부정어 소실 의심","ko_c":["자동차 주유 중에는 엔진시동을 끈다.","긴급한 상황을 제외하고 급제동하여 다른 차가 급제동하는 상황을 만들지 않는다.","위험상황을 예측하고 방어운전하기 위하여 규정속도와 안전거리를 모두 준수하며 운전한다.","타이어공기압은 계절에 관계없이 주행 안정성을 위하여 적정량보다 10% 높게 유지한다."],"tr_c":["Turn off the engine while refueling.","Unless there is an urgent situation, do not apply the brake suddenly, instigating other vehicles to do the same.","To predict potential hazards and practice defensive driving, observe the speed limit and keep a safe distance.","To ensure driving stability, tire pressure should be 10% higher than the recommended standard regardless of the season."],"ko_b":"다음 중 운전자의 올바른 운전습관으로 가장 바람직하지 않은 것은?","tr_b":"Which of the following is NOT a desirable driving habit?"},{"n":159,"check":"negation","detail":"c[1] 부정어 소실 의심","ko_c":["운전자가 보행자우선도로에서 서행· 일시정지하지 않아 보행자통행을 방해한 경우에는 범칙금이 부과된다.","도로 외의 곳을 운전하는 운전자에게도 보행자 보호의무가 부여된다.","운전자는 보행자가 횡단보도를 통행하려고 하는 때에는 그 횡단보도 앞에서 일시정지 하여야 한다.","운전자는 어린이 보호구역 내 신호기가 없는 횡단보도 앞에서는 반드시 서행하여야 한다."],"tr_c":["A traffic penalty  will be imposed on the driver who fails to slow down or stop on a pedestrian-first road and obstructs the  pedestrians.","The duty to protect pedestrians also applies to drivers driving on a place other than a road.","A driver who sees pedestrians crossing a crosswalk must come to a full stop before he/she reaches the crosswalk.","The driver must slow down when driving across a crosswalk in a school zone with no traffic lights."],"ko_b":"도로교통법령상 운전자의 보행자 보호에 대한 설명으로 옳지 않은 것은?","tr_b":"Which of the following is NOT true about a driver\u0027s duty to protect pedestrians?"},{"n":161,"check":"number","detail":"c[3] 번역에 누락된 숫자 [\u00274\u0027]","ko_c":["보행자우선도로에서 보행자는 도로의 우측 가장자리로만 통행할 수 있다.","운전자에게는 서행, 일시정지 등 각종 보행자 보호 의무가 부여된다.","보행자 보호 의무를 불이행하였을 경우 승용자동차 기준 4만원의 범칙금과 10점의 벌점 처분의 대상이다.","경찰서장은 보행자 보호를 위해 필요하다고 인정할 경우 차량 통행속도를 20km/h 이내로 제한할 수 있다."],"tr_c":["On a pedestrian-first road, pedestrians can only walk along the right edge of the road.","Drivers are obligated to exercise various forms of pedestrian protection such as slowing down and coming to a  complete stop.","A driver who fails to fulfill his/her duty to protect pedestrians is subject to a traffic penalty of KRW 40,000 and a penalty of 10 points based on the standards for passenger vehicles.","If deemed necessary for pedestrian protection, the chief of a police station can limit the vehicle speed to 20 km/h or  less."],"ko_b":"보행자 우선도로에 대한 설명으로 가장 바르지 않은 것은?","tr_b":"Which of the following is NOT true about pedestrian-first roads?"},{"n":163,"check":"negation","detail":"c[2] 부정어 소실 의심","ko_c":["도로에 설치된 안전지대에 보행자가 있는 경우와 차로가 설치되지 아니한 좁은 도로에서 보행자의 옆을 지나는 경 우에는 안전한 거리를 두고 서행하여야 한다.","보행자가 횡단보도가 설치되어 있지 아니한 도로를 횡단하고 있을 때에는 안전거리를 두고 일시정지하여 보행자가 안전 하게 횡단할 수 있도록 하여야 한다.","보도와 차도가 구분되지 아니한 도로 중 중앙선이 없는 도로에서 보행자의 통행에 방해가 될 때에는 서행하거나 일시정 지하여 보행자가 안전하게 통행할 수 있도록 하여야 한다.","어린이 보호구역 내에 설치된 횡단보도 중 신호기가 설치되지 아니한 횡단보도 앞(정지선이 설치된 경우에는 그 정지선 을 말한다)에서는 보행자의 횡단 여부와 관계없이 서행하여야 한다."],"tr_c":["The driver must slow down while keeping a safe distance when pedestrians are passing through a safety zone set up on the road and when he/she passes by pedestrians on a narrow road with no markings.","A driver who sees a pedestrian jaywalking must stop the vehicle at a distance for the pedestrian to cross the road safely.","A driver who is driving on a road with no centerline and where the roadway and sidewalk are not distinguishable must slow down or stop for pedestrians to travel safely.","If a crosswalk in a school zone has no traffic light, the driver has to slow down in front of the crosswalk (a stop line if there is any) even if there are no pedestrians crossing."],"ko_b":"도로교통법상 보행자의 보호 등에 관한 설명으로 맞지 않은 것은?","tr_b":"According to the Road Traffic Act, which of the following is NOT true about a driver\u0027s duty to protect  pedestrians?"},{"n":174,"check":"negation","detail":"c[3] 부정어 소실 의심","ko_c":["보행자가 횡단보도를 통행하려고 하는 때에는 보행자의 안전을 확인하고 서행하며 통과한다.","보행자가 횡단보도를 통행하려고 하는 때에는 일시정지하여 보행자의 횡단을 보호한다.","보행자의 횡단 여부와 관계없이 서행하며 통행한다.","보행자의 횡단 여부와 관계없이 일시정지한다."],"tr_c":["When there are pedestrians crossing, the driver must drive across the crosswalk slowly and ensure pedestrian safety.","When there are pedestrians crossing, the driver must stop the vehicle and wait until all pedestrians have crossed.","The driver must drive across the crosswalk slowly regardless of pedestrians crossing.","The driver must stop the vehicle regardless of pedestrians crossing."],"ko_b":"어린이 보호구역 내에 설치된 횡단보도 중 신호기가 설치되지 아니한 횡단보도 앞(정지선이 설치된 경우에는 그 정지선 을 말한다)에서 운전자의 행동으로 맞는 것 2가지는?","tr_b":"A vehicle is about to drive across a crosswalk in a school zone with no traffic lights. Which of the following are  the correct actions of the driver? (Select TWO)"},{"n":176,"check":"negation","detail":"c[3] 부정어 소실 의심","ko_c":["보행자는 차도를 통행하는 경우 항상 차도의 좌측으로 통행해야 한다.","보행자는 사회적으로 중요한 행사에 따라 행진 시에는 도로의 중앙으로 통행할 수 있다.","도로횡단시설을 이용할 수 없는 지체장애인은 도로횡단시설을 이용하지 않고 도로를 횡단할 수 있다.","도로횡단시설이 없는 경우 보행자는 안전을 위해 가장 긴 거리로 도로를 횡단하여야 한다."],"tr_c":["A pedestrian using a road must always walk using the left side of the road.","A pedestrian taking part in a parade for a special social event can walk in the middle of a road.","A disabled person who is unable to use road-crossing facilities can cross a road anywhere.","A pedestrian must take the longest route to cross the road if there are no road-crossing facilities."],"ko_b":"보행자의 통행에 대한 설명 중 맞는 것 2가지는?","tr_b":"Which of the following are TWO good pedestrian behaviors?"},{"n":177,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00273\u0027]","ko_c":["3만 원","4만 원","5만 원","6만 원"],"tr_c":["KRW 30,000","KRW 40,000","KRW 50,000","KRW 60,000"],"ko_b":"도로교통법령상 승용자동차의 운전자가 보도를 횡단하는 방법을 위반한 경우 범칙금은?","tr_b":"Which of the following is the traffic penalty imposed on the driver of a passenger car for illegal driving on a  sidewalk?"},{"n":182,"check":"negation","detail":"c[4] 부정어 소실 의심","ko_c":["보행자는 횡단보도가 없는 도로에서 가장 짧은 거리로 횡단해야 한다.","보행자는 모든 차의 바로 앞이나 뒤로 횡단하면 안 된다.","무단횡단 방지를 위한 차선분리대가 설치된 곳이라도 넘어서 횡단할 수 있다.","도로공사 등으로 보도의 통행이 금지된 때 차도로 통행할 수 있다."],"tr_c":["Pedestrians must take the shortest route when crossing a road without a crosswalk.","Pedestrians must not cross the road around the front or rear of a vehicle.","Pedestrians can climb over a lane partition placed to prevent illegal crossing on the road.","Pedestrians can walk on the road if the sidewalk is closed for construction."],"ko_b":"보행자의 도로 횡단방법에 대한 설명으로 잘못된 것은?","tr_b":"Which of the following is an INCORRECT method of crossing the road for a pedestrian?"},{"n":185,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00274\u0027]","ko_c":["4만 원","5만 원","9만 원","10만 원"],"tr_c":["KRW 40,000","KRW 50,000","KRW 90,000","KRW 100,000"],"ko_b":"도로교통법령상 4.5톤 화물자동차가 오전 10시부터 11시까지 노인보호구역에서 주차위반을 한 경우 과태료는?","tr_b":"What is the administrative fine imposed on the driver of a 4.5-ton truck parked illegally in a silver zone between  10 AM and 11 AM?"},{"n":196,"check":"negation","detail":"c[1] 부정어 소실 의심","ko_c":["피해자의 처벌의사에 관계없이 형사처벌 된다.","피해자와 합의하면 처벌되지 않는다.","손해를 전액 보상받을 수 있는 보험에 가입되어 있으면 처벌되지 않는다.","손해를 전액 보상받을 수 있는 보험가입 여부와 관계없이 형사처벌 된다."],"tr_c":["Criminal offense charges are imposed on the driver regardless of the victim’s wishes to file charges.","No charges are filed if the driver comes to an agreement with the victim.","No charges are filed if the driver has a full-coverage insurance policy.","The driver is charged with a criminal offense regardless of the presence of a full-coverage insurance policy."],"ko_b":"자동차에 싣고 가던 화물이 떨어져 보행자에게 2주 진단의 상해를 입힌 운전자에 대한 처벌 2가지는?","tr_b":"When a cargo falls from a vehicle and injures a pedestrian, necessitating a two-week period of hospitalization,  which two penalties among the following will be imposed on the driver?"},{"n":220,"check":"number","detail":"c[4] 번역에 누락된 숫자 [\u00272\u0027]","ko_c":["갓길에 정차한 후 비상점멸등을 켜고 고속도로 순찰대에 도움을 요청한다.","이미 진입하였으므로 다음 출구까지 주행한 후 빠져나온다.","비상점멸등을 켜고 진입했던 길로 서서히 후진하여 빠져나온다.","진입 차로가 2개 이상일 경우에는 유턴하여 돌아 나온다."],"tr_c":["Pull over, turn on the emergency flashers, and call the expressway patrol for help.","Take the next exit as he/she has already entered the expressway.","Turn on the emergency flashers and slowly reverse the vehicle back to the entry point to exit the expressway.","If there are two or more lanes, make a U-turn to exit the expressway."],"ko_b":"고속도로에 진입한 후 잘못 진입한 사실을 알았을 때 가장 적절한 행동은?","tr_b":"Which of the following is the most appropriate action to take when a driver realizes that he/she incorrectly  entered an expressway after he/she has already entered it?"},{"n":224,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["차로의 순위는 도로의 중앙선쪽에 있는 차로부터 1차로로 한다.","느린 속도로 진행하여 다른 차의 정상적인 통행을 방해할 우려가 있는 때에는 그 통행하던 차로의 오른쪽 차로로 통행하 여야 한다.","일방통행 도로에서는 도로의 오른쪽부터 1차로로 한다.","편도 2차로 고속도로에서 모든 자동차는 2차로로 통행하는 것이 원칙이다."],"tr_c":["With regard to the ordering of lanes, the lane next to the median lane of a road is regarded as the first lane.","If a person drives at a slow speed, possibly impeding the normal traffic of other cars, he/she must switch to the lane right of the one he/she was originally in.","On a road with one-way traffic, the right side of the road is regarded as the first lane.","In principle, all vehicles on an expressway with two lanes in one direction must drive in the second lane."],"ko_b":"도로교통법령상 차로에 따른 통행구분 설명이다. 잘못된 것은?","tr_b":"Below are the classifications of traffic by type of lane according to the Road Traffic Act and its Enforcement  Decree. Which of the following is INCORRECT?"},{"n":228,"check":"number","detail":"c[1] 번역에 누락된 숫자 [\u00271\u0027]","ko_c":["승용자동차는 1차로만을 이용하여 좌회전하여야 한다.","승용자동차는 2차로만을 이용하여 좌회전하여야 한다.","대형승합자동차는 1차로만을 이용하여 좌회전하여야 한다.","대형승합자동차는 2차로만을 이용하여 좌회전하여야 한다."],"tr_c":["Passenger cars must use only the first lane to turn left.","Passenger cars must use only the second lane to turn left.","Large buses must use only the first lane to turn left.","Large buses must use only the second lane to turn left."],"ko_b":"도로교통법령상 1ㆍ2차로가 좌회전 차로인 교차로의 통행 방법으로 맞는 것은?","tr_b":"Which of the following is the correct method of passing through an intersection with two left-turn lanes?"}]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); $d=Get-Content -Raw -Encoding utf8 '"'translations/audit/queue/100_flags_en.json'|ConvertFrom-Json; "'$d|Where-Object {$_.n -ge 80 -and $_.n -lt 135}|Group-Object n|ForEach-Object {$x=$_.Group[0]; [pscustomobject]@{n=$x.n;ko_b=$x.ko_b;tr_b=$x.tr_b;ko_c=$x.ko_c;tr_c=$x.tr_c}}|ConvertTo-Json -Depth 4 -Compress' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 686ms:
+[{"n":82,"ko_b":"다음중 도로교통법상 앞지르기에 대한 내용으로 올바른 것은?","tr_b":"Which of the following statements about overtaking is correct under the Road Traffic Act?","ko_c":["터널 안에서는 주간에는 앞지르기가 가능하지만 야간에는 앞지르기가 금지된다.","앞지르기할 때에는 전조등을 켜고 경음기를 울리면서 좌측이나 우측 관계없이 할 수 있다.","다리 위나 교차로는 앞지르기가 금지된 장소이므로 앞지르기를 할 수 없다.","경찰공무원의 지시에 따라 정지하거나 서행하고 차를 앞지르기 할 수 있다."],"tr_c":["Inside tunnels, overtaking is allowed during daytime but banned during nighttime.","Drivers can overtake the car ahead either on its left or on its right after turning on the headlights and honking.","Overtaking is not allowed on bridges or at intersections.","A driver may stop, proceed slowly, or overtake a vehicle as directed by a police officer."]},{"n":83,"ko_b":"다음 중 운전자의 올바른 마음가짐으로 가장 바람직하지 않은 것은?","tr_b":"Which of the following is NOT a desirable driver attitude?","ko_c":["교통상황은 변경되지 않으므로 사전운행 계획을 세울 필요는 없다.","차량용 소화기를 차량 내부에 비치하여 화재발생에 대비한다.","차량 내부에 휴대용 라이터 등 인화성 물건을 두지 않는다.","초보운전자에게 배려운전을 한다."],"tr_c":["Because the traffic situation is not changing, there is no need to make plans ahead.","Equip the vehicle with a fire extinguisher to take action immediately in case of fire.","Remove lighters and other flammable items from the vehicle.","Drive courteously, especially for novice drivers."]},{"n":87,"ko_b":"고속도로 운전 중 교통사고 발생 현장에서의 운전자 대응방법으로 바르지 않는 것은?","tr_b":"Which of the following is NOT a correct response by a driver to a traffic accident while driving on an expressway?","ko_c":["동승자의 부상정도에 따라 응급조치한다.","비상표시등을 켜는 등 후행 운전자에게 위험을 알린다.","사고차량 후미에서 경찰공무원이 도착할 때까지 교통정리를 한다.","2차사고 예방을 위해 안전한 곳으로 이동한다."],"tr_c":["Take first-aid measures depending on the severity of a passenger\u0027s injury.","Turn on the hazard lights to alert trailing drivers of the danger.","Control the traffic at the rear part of the vehicle until a police officer arrives.","Move to a safer place to prevent secondary accidents."]},{"n":90,"ko_b":"다음 중 고속도로에서 운전자의 바람직한 운전행위 2가지는?","tr_b":"Which of the following are desirable behaviors when driving on a freeway? (Select TWO)","ko_c":["피로한 경우 갓길에 정차하여 안정을 취한 후 출발한다.","평소 즐겨보는 동영상을 보면서 운전한다.","주기적인 휴식이나 환기를 통해 졸음운전을 예방한다.","출발 전 뿐만 아니라 휴식 중에도 목적지까지 경로의 위험 요소를 확인하며 운전한다."],"tr_c":["If you are drowsy or exhausted from driving, pull the vehicle over on the shoulder to take a rest or a nap.","You can watch entertaining videos while driving.","You should take a rest and ventilate the vehicle regularly to stay awake.","You should constantly check for hazards along the route before departure and even while taking a rest."]},{"n":92,"ko_b":"운전 중 집중력에 대한 내용으로 가장 적합한 2가지는?","tr_b":"Which TWO are correct regarding concentration while driving?","ko_c":["운전 중 동승자와 계속 이야기를 나누는 것은 집중력을 높여 준다.","운전자의 시야를 가리는 차량 부착물은 제거하는 것이 좋다.","운전 중 집중력은 안전운전과는 상관이 없다.","TV/DMB는 뒷좌석 동승자들만 볼 수 있는 곳에 장착하는 것이 좋다."],"tr_c":["Continuously chatting with a passenger while driving improves the driver\u0027s concentration.","It is better to remove stickers that can block the driver’s view.","Concentration while driving has nothing to do with safe driving.","TVs or DMBs should be installed where they can be seen only by passengers in the back seat."]},{"n":94,"ko_b":"도로교통법령상 개인형 이동장치에 대한 규정과 안전한 운전방법으로 틀린 것은?","tr_b":"According to the Road Traffic Act, which of the following is NOT true about regulations and proper operation of   PMDs?","ko_c":["운전자는 밤에 도로를 통행할 때에는 전조등과 미등을 켜야 한다.","개인형 이동장치 중 전동킥보드의 승차정원은 1인이므로 2인이 탑승하면 안된다.","개인형 이동장치는 전동이륜평행차, 전동킥보드, 전기자전거, 전동휠, 전동스쿠터 등 개인이 이동하기에 적합한 이동장치를 포함하고 있다.","전동기의 동력만으로 움직일 수 있는 자전거의 경우 승차정원은 2인이다."],"tr_c":["The driver must turn on headlights and daytime running lights when driving at night.","Among the PMDs, not more than one person can drive an electric kick scooter.","A personal mobility device includes self-balancing scooters, electric kick scooters, electric bicycles, electric unicycles,   and mobility scooters.","An electric bicycle powered by a motor can carry two persons."]},{"n":95,"ko_b":"다음 중 자동차(이륜자동차 제외) 좌석안전띠 착용에 대한 설명으로 맞는 것은?","tr_b":"Which of the following is true regarding wearing a seat belt before driving a vehicle (excluding two-wheeled       vehicles)?","ko_c":["13세 미만 어린이가 좌석안전띠를 미착용하는 경우 운전자에 대한 과태료는 10만 원이다.","13세 이상의 동승자가 좌석안전띠를 착용하지 않은 경우 운전자에 대한 과태료는 3만 원이다.","일반도로에서는 운전자와 조수석 동승자만 좌석안전띠 착용 의무가 있다.","전 좌석안전띠 착용은 의무이나 3세 미만 영유아는 보호자가 안고 동승이 가능하다."],"tr_c":["If the passenger is a child under 13 years old and is not wearing a seat belt, the driver will be slapped with an  administrative fine of KRW 100,000.","If the passenger is 13 years old or above and is not wearing a seat belt, the driver will be slapped with an  administrative fine of KRW 30,000.","Only the driver and front passenger are obligated to wear seat belts when driving on general roads.","All passengers are obligated to wear seat belts, but a child under 3 years old can be placed on the lap of the guardian."]},{"n":101,"ko_b":"도로교통법상 서행으로 운전하여야 하는 경우는?","tr_b":"According to the Road Traffic Act, which of the following cases requires driving at a slow speed?","ko_c":["교차로의 신호기가 적색 등화의 점멸일 때","교통정리를 하고 있지 아니하고 교통이 빈번한 교차로를 통과할 때","교통정리를 하고 있지 아니하는 교차로를 통과할 때","교차로 부근에서 차로를 변경하는 경우"],"tr_c":["When the traffic signal at the intersection is flashing in red","Upon passing an intersection where traffic is not controlled and is frequent","Upon passing an intersection where traffic is not controlled and is frequent","Upon changing lanes near an intersection"]},{"n":117,"ko_b":"다음 중 운전자의 올바른 운전태도로 가장 바람직하지 않은 것은?","tr_b":"Which of the following is NOT desirable driving behavior?","ko_c":["신호기의 신호보다 경찰공무원의 신호가 우선임을 명심한다.","교통 환경 변화에 따라 개정되는 교통법규를 숙지한다.","긴급자동차를 발견한 즉시 장소에 관계없이 일시정지하고 진로를 양보한다.","폭우시 또는 장마철 자주 비가 내리는 도로에서는 포트홀(pothole)을 주의한다."],"tr_c":["Keep in mind that a police officer\u0027s hand signals overrule traffic lights.","Stay updated with the ever-changing traffic laws and regulations.","Upon identifying an emergency vehicle, immediately stop the vehicle regardless of your location, and make way.","Watch out for potholes when driving on a road where heavy rainfall is common or during the rainy season."]},{"n":118,"ko_b":"교통정리를 하고 있지 아니한 교차로에 직진하기 위하여 진입하려 한다.  맞은 편 차로에서 좌회전하려는 차가 이미  교차로에 진입한 경우 이때, 운전자의 올바른 운전방법은?","tr_b":"You are about to enter an uncontrolled intersection to drive straight through. When a vehicle turning left from the opposite lane has already entered the intersection, what is the correct way of driving?","ko_c":["다른 차가 있을 때에는 그 차에 진로를 양보한다.","다른 차가 있더라도 직진차가 우선이므로 먼저 통과한다.","다른 차가 있을 때에는 좌․우를 확인하고 그 차와 상관없이 신속히 교차로를 통과한다.","다른 차가 있더라도 본인의 주행차로가 상대차의 차로보다 더 넓은 경우 통행 우선권에 따라 그대로 진입한다."],"tr_c":["Yield to the other vehicle already in the intersection.","Straight traffic takes the right of way over turning traffic. Drive through.","Ignore the vehicle in the intersection; check both sides and quickly drive through.","If your lane is wider than that of another vehicle in the intersection, you have the right of way."]},{"n":119,"ko_b":"도로교통법령상 개인형 이동장치의 승차정원에 대한 설명으로 틀린 것은?","tr_b":"According to the Road Traffic Act, which of the following is NOT true about the passenger capacity of personal  mobility devices?","ko_c":["전동킥보드의 승차정원은 1인이다.","전동이륜평행차의 승차정원은 1인이다.","전동기의 동력만으로 움직일 수 있는 자전거의 경우 승차정원은 1인이다.","승차정원을 위반한 경우 범칙금 4만 원을 부과한다."],"tr_c":["An electric kick scooter can carry one person.","A self-balancing scooter can carry one person.","An electric bicycle powered by a motor can carry one person.","The traffic fine for violating the passenger capacity of a personal mobility device is KRW 40,000."]},{"n":121,"ko_b":"도로교통법상 음주운전 방지장치 부착 조건부 운전면허를 받은 사람에 대한 설명으로 틀린 것은?","tr_b":"According to the Road Traffic Act, which of the following is incorrect regarding drivers who have been issued a conditional driver’s license requiring the installation of an alcohol ignition interlock device?","ko_c":["자동차등을 운전하려는 경우 음주운전 방지장치를 설치하고, 시ㆍ도경찰청장에게 등록하여야 한다.","음주운전 방지장치가 설치되지 않은 자동차등을 운전하여서는 아니 된다.","설치기준에 적합하지 아니한 음주운전 방지장치가 설치된 자동차등은 운전이 가능하다.","연 2회 이상 음주운전 방지장치 부착 자동차등의 운행기록을 시ㆍ도경찰청장에게 제출하여야 한다."],"tr_c":["When intending to drive a vehicle, the driver must install an alcohol ignition interlock device and register it with the commissioner of the city or provincial police.","Driving a vehicle that is not equipped with an alcohol ignition interlock device is prohibited.","Driving a vehicle with an alcohol ignition interlock device that does not meet the installation standards is permitted.","The driver must submit the driving records of the vehicle with the alcohol ignition interlock device to the commissioner of the city or provincial police at least twice a year."]},{"n":122,"ko_b":"도로교통법상 과로(졸음운전 포함)로 인하여 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차를 운전한 사 람에 대한 벌칙으로 맞는 것은?","tr_b":"According to the Road Traffic Act, which of the following correctly describes the penalty imposed on a driver  who cannot operate a vehicle properly due to fatigue (including drowsy driving)?","ko_c":["처벌하지 않는다.","10만 원 이하의 벌금이나 구류에 처한다.","20만 원 이하의 벌금이나 구류에 처한다.","30만 원 이하의 벌금이나 구류에 처한다."],"tr_c":["No penalty","Criminal fine of up to KRW 100,000 or detention","Criminal fine of up to KRW 200,000 or detention","Criminal fine of up to KRW 300,000 or detention"]},{"n":124,"ko_b":"승용자동차를 음주운전한 경우 처벌 기준에 대한 설명으로 틀린 것은?","tr_b":"Which of the following is NOT a correct explanation of the punishment criteria for drunk driving?","ko_c":["최초 위반 시 혈중알코올농도가 0.2퍼센트 이상인 경우 2년 이상 5년 이하의 징역이나 1천만 원 이상 2천만 원 이하의 벌금","음주 측정 거부 1회 위반 시 1년 이상 5년 이하의 징역이나 5백만 원 이상 2천만 원 이하의 벌금","혈중알코올농도가 0.05퍼센트로 2회 위반한 경우 1년 이하의 징역이나 5백만 원 이하의 벌금","최초 위반 시 혈중알코올농도 0.08퍼센트 이상 0.2퍼센트 미만의 경우 1년 이상 2년 이하의 징역이나 5백만 원 이상 1천 만 원 이하의 벌금"],"tr_c":["In case of the first violation, if the blood alcohol concentration is 0.2% or more, imprisonment for 2 to 5 years or criminal fine of KRW 10 million - 20 million","Refusing a field sobriety test once may result in imprisonment with labor for 1 year or more but not more than 5 years, or criminal fine of KRW 5 million or more but not more than KRW 20 million","In case of a second violation involving a blood alcohol concentration of 0.05%, imprisonment for up to 1 year or  criminal fine of up to KRW 5 million","Upon the first violation at a blood alcohol level of at least 0.08% but less than 0.2%: imprisonment with labor for at least 1 year but not more than 2 years or criminal fine of at least KRW 5 million but not more than KRW 10 million"]},{"n":128,"ko_b":"음주운전 관련 내용 중 맞는 2가지는?","tr_b":"Which TWO statements are correct regarding drunk driving?","ko_c":["호흡 측정에 의한 음주 측정 결과에 불복하는 경우 다시 호흡 측정을 할 수 있다.","도로교통법상 음주측정방해행위를 처벌하는 규정은 없다.","술에 취한 상태로 자전거를 운전한 후 음주측정방해행위를 한 사람은 처벌이 가능하다.","술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있음에도 경찰공무원의 음주 측정에 응하지 않은 자동차등의  운전자는 운전면허가 취소된다."],"tr_c":["If a person disagrees with the result of a breathalyzer test, he/she may undergo the test again.","The Road Traffic Act does not contain any provision for punishing acts that interfere with alcohol testing.","A person who interferes with an alcohol test after riding a bicycle while drunk may be subject to punishment.","A driver of a motor vehicle who refuses to comply with a police officer’s request to take an alcohol test, despite being reasonably suspected of being intoxicated, will have his/her driver’s license revoked."]},{"n":134,"ko_b":"다음은 피로운전과 약물복용 운전에 대한 설명이다. 맞는 2가지는?","tr_b":"Which of the following are TWO correct descriptions with regard to fatigued driving and driving under the  influence of drugs?","ko_c":["피로한 상태에서의 운전은 졸음운전으로 이어질 가능성이 낮다.","피로한 상태에서의 운전은 주의력, 판단능력, 반응속도의 저하를 가져오기 때문에 위험하다.","마약을 복용하고 운전을 하다가 교통사고로 사람을 상해에 이르게 한 운전자는 처벌될 수 있다.","마약을 복용하고 운전을 하다가 교통사고로 사람을 상해에 이르게 하고 도주하여 운전면허가 취소된 경우에는 3년 이 경과해야 운전면허 취득이 가능하다."],"tr_c":["Fatigued driving is not likely to lead to falling asleep at the wheel.","Fatigued driving is dangerous because it leads to poor focus, judgment, and reflexes.","Driving under the influence of drugs and causing an accident resulting in injury are subject to punishment.","If your driver\u0027s license is revoked because of a hit-and-run event while driving under the influence of drugs, it is possible to get the license back after three years."]}]
+
+codex
+[{"n":4,"field":"b","severity":"major","issue":"원문의 '승차정원 15인승'을 '15명 이하'로 확대하여 차량 조건을 다르게 번역했다.","suggestion":"According to the Road Traffic Act, which of the following is a prerequisite for driving a 15-seat emergency passenger vehicle for the first time?"},{"n":8,"field":"c[4]","severity":"major","issue":"'원동기장치자전거'를 범위가 다른 'motorcycle'로 번역하여 면허별 운전 가능 차량을 오도한다.","suggestion":"A motorized bicycle may be driven by a person holding a Class II license for small motor vehicles."},{"n":18,"field":"b","severity":"major","issue":"원문에 없는 '벌금보다 무거운 형을 받은 경우'라는 조건을 추가하여 결격기간 판단 조건을 바꿨다.","suggestion":"Which TWO of the following are grounds for a two-year disqualification period from obtaining a driver's license?"},{"n":68,"field":"c[3]","severity":"critical","issue":"'향정신성의약품을 복용하고 운전하면 안 된다'를 운전해도 된다는 의미로 반대로 번역했다.","suggestion":"Even when driving an autonomous vehicle, a driver must not drive after taking psychotropic medication."},{"n":94,"field":"c[1]","severity":"major","issue":"'미등(tail lights)'을 '주간주행등(daytime running lights)'으로 오역하여 야간 점등 의무를 다르게 설명한다.","suggestion":"The driver must turn on the headlights and tail lights when traveling on a road at night."},{"n":101,"field":"c[3]","severity":"major","issue":"원문에는 없는 '교통이 빈번한' 조건을 추가하여 c[2]와 동일한 문장이 되었고 서행 의무의 판단 조건을 바꿨다.","suggestion":"When passing through an intersection where traffic is not controlled."},{"n":144,"field":"c[4]","severity":"major","issue":"'음주운전'을 '중앙선 침범'으로 오역하여 난폭운전 해당 여부를 판단하는 행위 자체가 달라졌다.","suggestion":"The driver successively committed drunk driving and a violation of the duty to protect pedestrians."},{"n":159,"field":"c[3]","severity":"major","issue":"'보행자가 횡단하려고 하는 때'를 이미 횡단 중인 경우로 축소하여 일시정지 의무가 발생하는 시점을 잘못 전달한다.","suggestion":"A driver must stop before the crosswalk when a pedestrian is attempting to cross it."},{"n":159,"field":"c[4]","severity":"critical","issue":"어린이보호구역의 무신호 횡단보도에서 '반드시 일시정지'해야 한다는 원문을 '서행'으로 오역했다.","suggestion":"The driver must come to a complete stop before a crosswalk without traffic signals in a school zone."},{"n":163,"field":"c[4]","severity":"critical","issue":"보행자 유무와 관계없는 '일시정지' 의무를 '서행'으로 오역했다.","suggestion":"At a crosswalk without traffic signals in a school zone, the driver must come to a complete stop before the crosswalk (or the stop line, if one is provided), regardless of whether a pedestrian is crossing."},{"n":174,"field":"c[1]","severity":"major","issue":"'보행자가 횡단하려고 하는 때'를 이미 횡단 중인 경우로 번역하여 적용 상황을 축소했다.","suggestion":"When a pedestrian is attempting to cross at the crosswalk, the driver checks the pedestrian's safety and proceeds slowly."},{"n":174,"field":"c[2]","severity":"major","issue":"'보행자가 횡단하려고 하는 때'를 이미 횡단 중인 경우로 번역하여 일시정지 의무의 발생 시점을 잘못 전달한다.","suggestion":"When a pedestrian is attempting to cross at the crosswalk, the driver must stop and allow the pedestrian to cross safely."},{"n":176,"field":"c[3]","severity":"major","issue":"횡단시설을 이용할 수 없는 지체장애인이 시설을 이용하지 않고 횡단할 수 있다는 내용을 장소 제한 없이 '어디서나' 횡단할 수 있다고 과도하게 확대했다.","suggestion":"A person with a physical disability who is unable to use road-crossing facilities may cross the road without using such facilities."},{"n":196,"field":"b","severity":"major","issue":"'2주 진단의 상해'를 '2주간 입원 필요'로 오역하여 상해의 조건과 정도를 바꿨다.","suggestion":"When cargo falls from a vehicle and injures a pedestrian, resulting in an injury requiring two weeks of medical treatment, which TWO of the following statements correctly describe the driver's criminal liability?"}]
+tokens used
+44,476
+[{"n":4,"field":"b","severity":"major","issue":"원문의 '승차정원 15인승'을 '15명 이하'로 확대하여 차량 조건을 다르게 번역했다.","suggestion":"According to the Road Traffic Act, which of the following is a prerequisite for driving a 15-seat emergency passenger vehicle for the first time?"},{"n":8,"field":"c[4]","severity":"major","issue":"'원동기장치자전거'를 범위가 다른 'motorcycle'로 번역하여 면허별 운전 가능 차량을 오도한다.","suggestion":"A motorized bicycle may be driven by a person holding a Class II license for small motor vehicles."},{"n":18,"field":"b","severity":"major","issue":"원문에 없는 '벌금보다 무거운 형을 받은 경우'라는 조건을 추가하여 결격기간 판단 조건을 바꿨다.","suggestion":"Which TWO of the following are grounds for a two-year disqualification period from obtaining a driver's license?"},{"n":68,"field":"c[3]","severity":"critical","issue":"'향정신성의약품을 복용하고 운전하면 안 된다'를 운전해도 된다는 의미로 반대로 번역했다.","suggestion":"Even when driving an autonomous vehicle, a driver must not drive after taking psychotropic medication."},{"n":94,"field":"c[1]","severity":"major","issue":"'미등(tail lights)'을 '주간주행등(daytime running lights)'으로 오역하여 야간 점등 의무를 다르게 설명한다.","suggestion":"The driver must turn on the headlights and tail lights when traveling on a road at night."},{"n":101,"field":"c[3]","severity":"major","issue":"원문에는 없는 '교통이 빈번한' 조건을 추가하여 c[2]와 동일한 문장이 되었고 서행 의무의 판단 조건을 바꿨다.","suggestion":"When passing through an intersection where traffic is not controlled."},{"n":144,"field":"c[4]","severity":"major","issue":"'음주운전'을 '중앙선 침범'으로 오역하여 난폭운전 해당 여부를 판단하는 행위 자체가 달라졌다.","suggestion":"The driver successively committed drunk driving and a violation of the duty to protect pedestrians."},{"n":159,"field":"c[3]","severity":"major","issue":"'보행자가 횡단하려고 하는 때'를 이미 횡단 중인 경우로 축소하여 일시정지 의무가 발생하는 시점을 잘못 전달한다.","suggestion":"A driver must stop before the crosswalk when a pedestrian is attempting to cross it."},{"n":159,"field":"c[4]","severity":"critical","issue":"어린이보호구역의 무신호 횡단보도에서 '반드시 일시정지'해야 한다는 원문을 '서행'으로 오역했다.","suggestion":"The driver must come to a complete stop before a crosswalk without traffic signals in a school zone."},{"n":163,"field":"c[4]","severity":"critical","issue":"보행자 유무와 관계없는 '일시정지' 의무를 '서행'으로 오역했다.","suggestion":"At a crosswalk without traffic signals in a school zone, the driver must come to a complete stop before the crosswalk (or the stop line, if one is provided), regardless of whether a pedestrian is crossing."},{"n":174,"field":"c[1]","severity":"major","issue":"'보행자가 횡단하려고 하는 때'를 이미 횡단 중인 경우로 번역하여 적용 상황을 축소했다.","suggestion":"When a pedestrian is attempting to cross at the crosswalk, the driver checks the pedestrian's safety and proceeds slowly."},{"n":174,"field":"c[2]","severity":"major","issue":"'보행자가 횡단하려고 하는 때'를 이미 횡단 중인 경우로 번역하여 일시정지 의무의 발생 시점을 잘못 전달한다.","suggestion":"When a pedestrian is attempting to cross at the crosswalk, the driver must stop and allow the pedestrian to cross safely."},{"n":176,"field":"c[3]","severity":"major","issue":"횡단시설을 이용할 수 없는 지체장애인이 시설을 이용하지 않고 횡단할 수 있다는 내용을 장소 제한 없이 '어디서나' 횡단할 수 있다고 과도하게 확대했다.","suggestion":"A person with a physical disability who is unable to use road-crossing facilities may cross the road without using such facilities."},{"n":196,"field":"b","severity":"major","issue":"'2주 진단의 상해'를 '2주간 입원 필요'로 오역하여 상해의 조건과 정도를 바꿨다.","suggestion":"When cargo falls from a vehicle and injures a pedestrian, resulting in an injury requiring two weeks of medical treatment, which TWO of the following statements correctly describe the driver's criminal liability?"}]
