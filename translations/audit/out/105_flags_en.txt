@@ -1,0 +1,626 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125bc-2e3f-77a3-bbcf-9e83815bcf8a
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/105_flags_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/105_flags_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 533ms:
+[
+ {
+  "n": 853,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "??李⑤줈 ?놁뼱吏먥숉몴吏???곕씪 1李⑤줈濡?怨꾩냽 二쇳뻾?쒕떎.",
+   "怨듭궗援ъ뿭???쇳븯湲??꾪빐 湲됱젙吏?쒕떎.",
+   "?꾨갑 李⑤줈 ??씠 醫곸븘吏誘濡?誘몃━ 2李⑤줈濡?吏꾨줈瑜?蹂寃쏀븳??",
+   "怨듭궗 以묒엫???뚮━湲??꾪빐 鍮꾩긽?먮㈇?깆쓣 耳좊떎.",
+   "1李⑤줈濡?二쇳뻾?섎떎 怨듭궗援ш컙 吏곸쟾??2李⑤줈濡??쇱뼱?좊떎."
+  ],
+  "tr_c": [
+   "Continue driving in the first lane according to the ?쏬ane  2 ends??sign.",
+   "Make a sudden stop to avoid the construction area.",
+   "Switch to the second lane in advance as the road  narrows ahead.",
+   "Turn on the hazard lights to alert others to the  construction area.",
+   "Keep driving in the first lane and merge into the second  lane right before the construction zone."
+  ],
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?"
+ },
+ {
+  "n": 853,
+  "check": "negation",
+  "detail": "c[1] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "??李⑤줈 ?놁뼱吏먥숉몴吏???곕씪 1李⑤줈濡?怨꾩냽 二쇳뻾?쒕떎.",
+   "怨듭궗援ъ뿭???쇳븯湲??꾪빐 湲됱젙吏?쒕떎.",
+   "?꾨갑 李⑤줈 ??씠 醫곸븘吏誘濡?誘몃━ 2李⑤줈濡?吏꾨줈瑜?蹂寃쏀븳??",
+   "怨듭궗 以묒엫???뚮━湲??꾪빐 鍮꾩긽?먮㈇?깆쓣 耳좊떎.",
+   "1李⑤줈濡?二쇳뻾?섎떎 怨듭궗援ш컙 吏곸쟾??2李⑤줈濡??쇱뼱?좊떎."
+  ],
+  "tr_c": [
+   "Continue driving in the first lane according to the ?쏬ane  2 ends??sign.",
+   "Make a sudden stop to avoid the construction area.",
+   "Switch to the second lane in advance as the road  narrows ahead.",
+   "Turn on the hazard lights to alert others to the  construction area.",
+   "Keep driving in the first lane and merge into the second  lane right before the construction zone."
+  ],
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?"
+ },
+ {
+  "n": 853,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "??李⑤줈 ?놁뼱吏먥숉몴吏???곕씪 1李⑤줈濡?怨꾩냽 二쇳뻾?쒕떎.",
+   "怨듭궗援ъ뿭???쇳븯湲??꾪빐 湲됱젙吏?쒕떎.",
+   "?꾨갑 李⑤줈 ??씠 醫곸븘吏誘濡?誘몃━ 2李⑤줈濡?吏꾨줈瑜?蹂寃쏀븳??",
+   "怨듭궗 以묒엫???뚮━湲??꾪빐 鍮꾩긽?먮㈇?깆쓣 耳좊떎.",
+   "1李⑤줈濡?二쇳뻾?섎떎 怨듭궗援ш컙 吏곸쟾??2李⑤줈濡??쇱뼱?좊떎."
+  ],
+  "tr_c": [
+   "Continue driving in the first lane according to the ?쏬ane  2 ends??sign.",
+   "Make a sudden stop to avoid the construction area.",
+   "Switch to the second lane in advance as the road  narrows ahead.",
+   "Turn on the hazard lights to alert others to the  construction area.",
+   "Keep driving in the first lane and merge into the second  lane right before the construction zone."
+  ],
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?"
+ },
+ {
+  "n": 853,
+  "check": "number",
+  "detail": "c[5] 踰덉뿭???꾨씫???レ옄 ['1', '2']",
+  "ko_c": [
+   "??李⑤줈 ?놁뼱吏먥숉몴吏???곕씪 1李⑤줈濡?怨꾩냽 二쇳뻾?쒕떎.",
+   "怨듭궗援ъ뿭???쇳븯湲??꾪빐 湲됱젙吏?쒕떎.",
+   "?꾨갑 李⑤줈 ??씠 醫곸븘吏誘濡?誘몃━ 2李⑤줈濡?吏꾨줈瑜?蹂寃쏀븳??",
+   "怨듭궗 以묒엫???뚮━湲??꾪빐 鍮꾩긽?먮㈇?깆쓣 耳좊떎.",
+   "1李⑤줈濡?二쇳뻾?섎떎 怨듭궗援ш컙 吏곸쟾??2李⑤줈濡??쇱뼱?좊떎."
+  ],
+  "tr_c": [
+   "Continue driving in the first lane according to the ?쏬ane  2 ends??sign.",
+   "Make a sudden stop to avoid the construction area.",
+   "Switch to the second lane in advance as the road  narrows ahead.",
+   "Turn on the hazard lights to alert others to the  construction area.",
+   "Keep driving in the first lane and merge into the second  lane right before the construction zone."
+  ],
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?"
+ },
+ {
+  "n": 859,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "寃?뺤깋 李⑤웾 ?곗륫?쇰줈 ?욎?瑜닿린?쒕떎.",
+   "寃?뺤깋 李⑤웾怨?媛숈? 李⑤줈?먯꽌 ?섎???二쇳뻾?쒕떎.",
+   "怨좎뼇諛⑺뼢?쇰줈 吏꾩텧?????덈룄濡?利됱떆 3李⑤줈濡?李⑤줈蹂寃쎌쓣 ?쒕떎.",
+   "?곗깋李⑤웾??吏꾨줈蹂寃??????덉쑝誘濡?媛먯냽?섏뿬 ?덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "李⑤줈蹂寃쎌씠 媛?ν븳 諛깆깋?먯꽑 援ш컙源뚯? 二쇳뻾?섏뿬 3李⑤줈濡?吏꾩엯?쒕떎."
+  ],
+  "tr_c": [
+   "Overtake the black vehicle on the right.",
+   "Drive side by side in the same lane as the black vehicle.",
+   "Immediately switch to the third lane to allow the  motorcycle to exit toward Goyang.",
+   "Slow down and maintain a safe distance because the  white vehicle may change lanes.",
+   "Drive up to the section with the white broken line where  lane changes are allowed, and then enter the third lane."
+  ],
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?"
+ },
+ {
+  "n": 859,
+  "check": "number",
+  "detail": "c[5] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "寃?뺤깋 李⑤웾 ?곗륫?쇰줈 ?욎?瑜닿린?쒕떎.",
+   "寃?뺤깋 李⑤웾怨?媛숈? 李⑤줈?먯꽌 ?섎???二쇳뻾?쒕떎.",
+   "怨좎뼇諛⑺뼢?쇰줈 吏꾩텧?????덈룄濡?利됱떆 3李⑤줈濡?李⑤줈蹂寃쎌쓣 ?쒕떎.",
+   "?곗깋李⑤웾??吏꾨줈蹂寃??????덉쑝誘濡?媛먯냽?섏뿬 ?덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "李⑤줈蹂寃쎌씠 媛?ν븳 諛깆깋?먯꽑 援ш컙源뚯? 二쇳뻾?섏뿬 3李⑤줈濡?吏꾩엯?쒕떎."
+  ],
+  "tr_c": [
+   "Overtake the black vehicle on the right.",
+   "Drive side by side in the same lane as the black vehicle.",
+   "Immediately switch to the third lane to allow the  motorcycle to exit toward Goyang.",
+   "Slow down and maintain a safe distance because the  white vehicle may change lanes.",
+   "Drive up to the section with the white broken line where  lane changes are allowed, and then enter the third lane."
+  ],
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?"
+ },
+ {
+  "n": 861,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "?먯쟾嫄곗쓽 ?듯뻾??諛⑺빐?섏? ?딄퀬 ?곗륫 湲멸????뺤감?쒕떎.",
+   "?꾨갑???〓떒蹂대룄媛 ?덉뼱 蹂댄뻾?먮? 二쇱쓽?섎ŉ ?쒗뻾?쇰줈 二쇳뻾?쒕떎.",
+   "?욎?瑜닿린 ??怨쇱냽???덉슜?섎?濡??쒖냽 50km濡?二쇳뻾?쒕떎.",
+   "1李⑤줈濡?李⑤줈蹂寃????먯쟾嫄곗????덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "寃쎌쓬湲곕? ?ъ슜?섏뿬 ?먯쟾嫄곗쓽 湲멸??μ옄由?二쇳뻾???ъ큺?쒕떎."
+  ],
+  "tr_c": [
+   "Park on the right-hand side of the road without  obstructing bicycle traffic.",
+   "Drive slowly while watching out for pedestrians as there  is a crosswalk ahead.",
+   "Speeding is allowed when overtaking, so drive at 50  km/h.",
+   "Switch to the first lane to maintain a safe distance from  the bicycle.",
+   "Honk to urge the bicycle to ride closer to the edge of  the road."
+  ],
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?"
+ },
+ {
+  "n": 864,
+  "check": "negation",
+  "detail": "c[2] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?꾨갑 蹂댄뻾?먯쓽 湲됱옉?ㅻ윭??醫뚯륫?〓떒???덉륫?섎ŉ ?뺤?瑜?以鍮꾪븳??",
+   "吏곸쭊?섎젮??寃쎌슦 ?꾨갑 援먯감濡쒖뿉??李④? ?놁쑝誘濡??쒗뻾?쇰줈 ?듦낵?쒕떎.",
+   "援먯감濡?吏꾩엯 ???쇱떆?뺤??섏뿬 醫뚯슦痢≪뿉???묎렐?섎뒗 李⑤? ?뺤씤?댁빞 ?쒕떎.",
+   "二쇰? ?먯쟾嫄?諛?蹂댄뻾?먯뿉寃?寃쎌쓬湲곕? 諛섎났?곸쑝濡??묐룞?섏뿬 李⑥쓽 ???됱쓣 ?뚮젮以??",
+   "?꾨갑 蹂댄뻾?먮? 湲멸??μ옄由ш뎄??쑝濡??좊룄?섍린 ?꾪빐 ?곗륫?쇰줈 遺숈뼱  ?듯뻾?댁빞 ?쒕떎."
+  ],
+  "tr_c": [
+   "Prepare to stop as the pedestrian in the front may  rapidly turn left.",
+   "To go straight, slowly enter the intersection as it is  currently empty.",
+   "Prior to entering the intersection, stop to check for  vehicles coming from both sides.",
+   "Honk repeatedly to alert the bicycle riders and  pedestrians nearby.",
+   "Drive along the right side of the road to induce the  pedestrians to move to the edge of the road."
+  ],
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)"
+ },
+ {
+  "n": 876,
+  "check": "negation",
+  "detail": "c[4] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "醫뚯륫諛??듯뻾",
+   "?고빀瑜??꾨줈",
+   "?꾨줈??醫곸븘吏?,
+   "?곗륫李⑤줈 ?놁뼱吏?
+  ],
+  "tr_c": [
+   "Detour to the left side of the road.",
+   "Road merges to the right.",
+   "Road narrows.",
+   "The right lane ends."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "tr_b": "What does this safety sign indicate?"
+ },
+ {
+  "n": 878,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?몃룄 2李⑤줈???곕꼸",
+   "?곗냽 怨쇱냽諛⑹???,
+   "?몃㈃??怨좊Ⅴ吏 紐삵븿",
+   "援닿끝???덈뒗 ?좎닔援?
+  ],
+  "tr_c": [
+   "A tunnel with two lanes in one direction",
+   "A series of speed bumps",
+   "A rough road surface ahead",
+   "A submersible bridge with curves"
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "tr_b": "What does this safety sign signify?"
+ },
+ {
+  "n": 882,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?곗꽑?꾨줈?먯꽌 ?곗꽑?꾨줈媛 ?꾨땶 ?꾨줈? 援먯감?⑥쓣 ?뚮━???쒖??대떎.",
+   "?쇰갑?듯뻾 援먯감濡쒕? ?섑??대뒗 ?쒖??대떎.",
+   "?숈씪諛⑺뼢?듯뻾?꾨줈?먯꽌 ?묒륫諛⑹쑝濡??듯뻾?섏뿬????吏?먯씠 ?덉쓬???뚮━?? ?쒖??대떎.",
+   "2諛⑺뼢 ?듯뻾???ㅼ떆?⑥쓣 ?뚮━???쒖??대떎."
+  ],
+  "tr_c": [
+   "It is a sign placed at a priority lane, indicating that there  is an intersection with a road that is not a priority lane.",
+   "It is a sign indicating an intersection with one-way traffic.",
+   "It is a sign indicating that there is a point on the road  with same-direction traffic where passage in both  directions is required.",
+   "It is a sign indicating the start of two-way traffic."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?삵븯??寃껋??",
+  "tr_b": "What does this safety sign indicate?"
+ },
+ {
+  "n": 885,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "2諛⑺뼢 ?듯뻾 ?쒖??대떎.",
+   "以묒븰遺꾨━? ?앸궓 ?쒖??대떎.",
+   "?묒륫諛⑺넻???쒖??대떎.",
+   "以묒븰遺꾨━? ?쒖옉 ?쒖??대떎."
+  ],
+  "tr_c": [
+   "Two-way traffic",
+   "The end of a median strip",
+   "Pass either side",
+   "The start of a median strip"
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "What does this safety sign signify?"
+ },
+ {
+  "n": 894,
+  "check": "direction",
+  "detail": "c[4] ?쒓뎅??R 踰덉뿭=B",
+  "ko_c": [
+   "吏곸쭊?섎뒗 李⑤웾??留롮? ?꾨줈???ㅼ튂?쒕떎.",
+   "湲덉??댁빞 ??吏?먯쓽 ?꾨줈 醫뚯륫???ㅼ튂?쒕떎.",
+   "?대윴 吏?먯뿉?쒕뒗 諛섎뱶???좏꽩?섏뿬 ?섎룎?꾧????쒕떎.",
+   "醫뚳쉈?곗륫 ?꾨줈瑜??댁슜?섎뒗 ???ㅻⅨ ?꾨줈瑜??댁슜?댁빞 ?쒕떎."
+  ],
+  "tr_c": [
+   "It should be installed on a road with many cars going  straight.",
+   "It should be installed to the left of an area that should  not be entered.",
+   "Where such signs are installed, one must make a U-turn  and drive in the opposite direction.",
+   "The sign means that drivers should use other roads such  as the ones to the right or left."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 媛???녹? 寃껋??",
+  "tr_b": "Which of the following statements regarding this  safety sign is correct?"
+ },
+ {
+  "n": 913,
+  "check": "direction",
+  "detail": "c[2] ?쒓뎅??R 踰덉뿭=B",
+  "ko_c": [
+   "?묒륫諛??듯뻾?쒖?",
+   "醫뚳쉈?고쉶???쒖?",
+   "以묒븰遺꾨━? ?쒖옉?쒖?",
+   "以묒븰遺꾨━? 醫낅즺?쒖?"
+  ],
+  "tr_c": [
+   "Go either way.",
+   "Turn left or right.",
+   "Median strip starts.",
+   "Median strip ends."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???紐낆묶??",
+  "tr_b": "What does this safety sign signify?"
+ },
+ {
+  "n": 922,
+  "check": "number",
+  "detail": "c[1] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?먯쟾嫄곕룄濡쒖뿉??2? ?댁긽 ?먯쟾嫄곗쓽 ?섎????듯뻾???덉슜?쒕떎.",
+   "?먯쟾嫄곗쓽 ?〓떒?꾩엫??吏?쒗븳??",
+   "?먯쟾嫄곕쭔 ?듯뻾?섎룄濡?吏?쒗븳??",
+   "?먯쟾嫄?二쇱감?μ씠 ?덉쓬???뚮┛??"
+  ],
+  "tr_c": [
+   "Two or more bicycles can travel side by side on the  bicycle road",
+   "A crossing for bicycles",
+   "Bicycle thoroughfare only",
+   "A bicycle parking lot"
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "What does this safety sign signify?"
+ },
+ {
+  "n": 943,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['2']",
+  "ko_c": [
+   "?먯쟾嫄??꾩슜?꾨줈?꾩쓣 ?쒖떆?섎뒗 寃껋씠??",
+   "?먯쟾嫄곕벑???〓떒?꾩엫???쒖떆?섎뒗 寃껋씠??",
+   "?먯쟾嫄곗＜李⑥옣??二쇱감?섎룄濡?吏?쒗븯??寃껋씠??",
+   "?먯쟾嫄곕룄濡쒖뿉??2? ?댁긽 ?먯쟾嫄곗쓽 ?섎????듯뻾???덉슜?섎뒗 寃껋씠??"
+  ],
+  "tr_c": [
+   "A bicycle-only lane.",
+   "A crossing for bicycles.",
+   "Bicycles must be parked at a bicycle parking lot.",
+   "Two or more bicycles can travel side by side on a bicycle  track."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "tr_b": "What does this road surface marking indicate?"
+ },
+ {
+  "n": 948,
+  "check": "negation",
+  "detail": "c[1] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??⑹깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??뱀깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋 ??硫몃벑???숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?
+  ],
+  "tr_c": [
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are red.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are yellow.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are green.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the red  lights are flashing."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섎?濡?留욌뒗 寃껋??",
+  "tr_b": "What does this road surface marking indicate?"
+ },
+ {
+  "n": 948,
+  "check": "negation",
+  "detail": "c[2] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??⑹깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??뱀깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋 ??硫몃벑???숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?
+  ],
+  "tr_c": [
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are red.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are yellow.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are green.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the red  lights are flashing."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섎?濡?留욌뒗 寃껋??",
+  "tr_b": "What does this road surface marking indicate?"
+ },
+ {
+  "n": 948,
+  "check": "negation",
+  "detail": "c[3] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??⑹깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??뱀깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋 ??硫몃벑???숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?
+  ],
+  "tr_c": [
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are red.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are yellow.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are green.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the red  lights are flashing."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섎?濡?留욌뒗 寃껋??",
+  "tr_b": "What does this road surface marking indicate?"
+ },
+ {
+  "n": 948,
+  "check": "negation",
+  "detail": "c[4] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??⑹깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??뱀깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋 ??硫몃벑???숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?
+  ],
+  "tr_c": [
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are red.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are yellow.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are green.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the red  lights are flashing."
+  ],
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섎?濡?留욌뒗 寃껋??",
+  "tr_b": "What does this road surface marking indicate?"
+ },
+ {
+  "n": 966,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['1']",
+  "ko_c": [
+   "?곗륫 ?뺤감 以묒씤 ??뺤감?됱씠 異쒕컻?섎젮怨??섎뒗 ?곹솴",
+   "諛섎?諛⑺뼢 ?몃????뱀슜李④? ?좏샇?꾨컲???섎뒗 ?곹솴",
+   "?곗륫?꾨줈?먯꽌 ?고쉶?꾪븯??寃????뱀슜李④? 1李⑤줈濡?吏꾩엯?섎뒗 ?곹솴",
+   "諛섎?諛⑺뼢 ?섏????뱀슜李④? ?몃쪣李⑤? 怨좊젮?섏? ?딄퀬 ?고쉶?꾪븯???곹솴"
+  ],
+  "tr_c": [
+   "The large vehicle waiting on the right is about to move.",
+   "The yellow vehicle on the other side is attempting to commit a traffic signal violation.",
+   "The black vehicle turning right on the right is entering the first lane.",
+   "A situation wherein a white passenger car in the opposite direction turns right without considering the outer wheel  clearance."
+  ],
+  "ko_b": "?ㅼ쓬 ?곸긽??蹂닿퀬 ?뺤씤?섎뒗 媛???꾪뿕???곹솴?? (?덊럹?댁? 李몄“)",
+  "tr_b": "Which of the following describes the most dangerous situation that may arise in the video? (Refer to the  website)"
+ },
+ {
+  "n": 985,
+  "check": "negation",
+  "detail": "c[2] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "蹂댄뻾?먮낫?몄쓽臾댁쐞諛? ?좏샇 ?꾨컲, 吏?뺤감濡??꾨컲, 二쇱젙李④툑吏?꾨컲",
+   "蹂댄뻾?먮낫?몄쓽臾댁쐞諛? ?좏샇 ?꾨컲, 吏?뺤감濡??꾨컲, ?쇱뼱?ㅺ린 湲덉??꾨컲",
+   "吏꾨줈蹂寃쎄툑吏?μ냼 ?꾨컲, ?욎?瑜닿린 諛⑸쾿?꾨컲, 蹂댄뻾?먮낫?몄쓽臾댁쐞諛? ?좏샇 ?꾨컲",
+   "吏꾨줈蹂寃쎄툑吏?μ냼 ?꾨컲, 二쇱젙李④툑吏?꾨컲, 蹂댄뻾?먮낫?몄쓽臾댁쐞諛? ?좏샇 ?꾨컲"
+  ],
+  "tr_c": [
+   "Violations of the pedestrian protection duty, signal, designated lane, and no parking and stopping area",
+   "Violation of the duty to protect pedestrians, signal violation, lane designation violation, illegal merging into traffic.",
+   "Violations of the no-lane changing zone, improper method of overtaking, pedestrian protection duty, and signal",
+   "Violations of the no-lane changing zone, no parking and stopping area, pedestrian protection duty, and signal"
+  ],
+  "ko_b": "?곸긽?먯꽌 ?뺤씤?섎뒗 二쇱씤怨??댁쟾?먯쓽 ?꾨줈援먰넻踰??꾨컲?쇰줈 諛붾Ⅴ寃?吏앹??댁쭊 寃껋?? (?덊럹?댁? 李몄“)",
+  "tr_b": "Which of the following correctly matches the Road Traffic Act violations committed by the main driver shown in  the video? (Refer to the website)"
+ },
+ {
+  "n": 987,
+  "check": "number",
+  "detail": "c[3] 踰덉뿭???꾨씫???レ옄 ['3']",
+  "ko_c": [
+   "1李⑤줈濡?二쇳뻾 以묒씤 ?뱀슜李??댁쟾?먮뒗 吏곸쭊?????덈떎.",
+   "2李⑤줈濡?二쇳뻾 以묒씤 ?붾Ъ李??댁쟾?먮뒗 醫뚰쉶???????덈떎.",
+   "3李⑤줈 ?뱀슜李??댁쟾?먮뒗 ?고쉶?????쇱떆?뺤??섍퀬 ?곗륫 ?꾩궗寃쎌쓣 蹂대㈃???꾪뿕???鍮꾪븯?ъ빞 ?쒕떎.",
+   "3李⑤줈 ?뱀슜李??댁쟾?먮뒗 蹂댄뻾?먭? ?〓떒蹂대룄瑜?嫄대꼫怨??덉쓣 ?뚯뿉???고쉶???????덈떎."
+  ],
+  "tr_c": [
+   "The passenger vehicle in lane 1 can travel straight ahead.",
+   "The truck in lane 2 can turn left.",
+   "The drivers of passenger vehicles in the third lane must come to a complete stop before turning right, and they should be prepared for risks while checking the right rear-view mirror.",
+   "The passenger vehicle in lane 3 may turn right while pedestrians are still on the crosswalk."
+  ],
+  "ko_b": "?ㅼ쓬 ?곸긽?먯꽌 媛???щ컮瑜??댁쟾?됰룞?쇰줈 留욌뒗 寃껋?? (?덊럹?댁? 李몄“)",
+  "tr_b": "In the video, which of the following is the correct way to drive?"
+ },
+ {
+  "n": 991,
+  "check": "negation",
+  "detail": "c[2] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?⑥감濡??섏씠?⑥뒪?대?濡??쒖냽 30?щ줈誘명꽣 ?댄븯濡??쒗뻾?섎㈃???듦낵?섏뿬???쒕떎.",
+   "?듯뻾猷뚮? ?⑸??섏? ?꾨땲?섍퀬 ?좊즺?꾨줈瑜??듯뻾??寃쎌슦?먮뒗 ?듯뻾猷뚯쓽 5諛곗뿉 ?대떦?섎뒗 遺媛?듯뻾猷뚮? 遺怨쇳븷 ???덈떎.",
+   "?섏씠?⑥뒪移대뱶 ?붿븸??遺議깊븳 寃쎌슦?먮뒗 ?쒓뎅?꾨줈怨듭궗???덊럹?댁??먯꽌 ?⑸??????덈떎.",
+   "?섏씠?⑥뒪李⑤줈瑜??댁슜?섎뒗 援곗옉?꾩슜李⑤웾? ?듯뻾猷뚯쓽 100%瑜?媛먮㈃諛쏅뒗??"
+  ],
+  "tr_c": [
+   "This is a single hi-pass lane, and vehicles must travel at 30 km/h or below.",
+   "Drivers who fail to pay a toll may be charged 5 times the regular toll.",
+   "If you have insufficient balance in your hi-pass card, you can pay via the Korea Expressway Corporation website.",
+   "Any military vehicles traveling on a hi-pass lane are exempted from all toll fees."
+  ],
+  "ko_b": "?곸긽怨?媛숈? ?섏씠?⑥뒪李⑤줈 ?듯뻾??????ㅻ챸?대떎. ?섎せ??寃껋?? (?덊럹?댁? 李몄“)",
+  "tr_b": "Which of the following is NOT true about driving on the hi-pass lane as shown in the video? (Refer to the  website)"
+ },
+ {
+  "n": 991,
+  "check": "number",
+  "detail": "c[4] 踰덉뿭???꾨씫???レ옄 ['100']",
+  "ko_c": [
+   "?⑥감濡??섏씠?⑥뒪?대?濡??쒖냽 30?щ줈誘명꽣 ?댄븯濡??쒗뻾?섎㈃???듦낵?섏뿬???쒕떎.",
+   "?듯뻾猷뚮? ?⑸??섏? ?꾨땲?섍퀬 ?좊즺?꾨줈瑜??듯뻾??寃쎌슦?먮뒗 ?듯뻾猷뚯쓽 5諛곗뿉 ?대떦?섎뒗 遺媛?듯뻾猷뚮? 遺怨쇳븷 ???덈떎.",
+   "?섏씠?⑥뒪移대뱶 ?붿븸??遺議깊븳 寃쎌슦?먮뒗 ?쒓뎅?꾨줈怨듭궗???덊럹?댁??먯꽌 ?⑸??????덈떎.",
+   "?섏씠?⑥뒪李⑤줈瑜??댁슜?섎뒗 援곗옉?꾩슜李⑤웾? ?듯뻾猷뚯쓽 100%瑜?媛먮㈃諛쏅뒗??"
+  ],
+  "tr_c": [
+   "This is a single hi-pass lane, and vehicles must travel at 30 km/h or below.",
+   "Drivers who fail to pay a toll may be charged 5 times the regular toll.",
+   "If you have insufficient balance in your hi-pass card, you can pay via the Korea Expressway Corporation website.",
+   "Any military vehicles traveling on a hi-pass lane are exempted from all toll fees."
+  ],
+  "ko_b": "?곸긽怨?媛숈? ?섏씠?⑥뒪李⑤줈 ?듯뻾??????ㅻ챸?대떎. ?섎せ??寃껋?? (?덊럹?댁? 李몄“)",
+  "tr_b": "Which of the following is NOT true about driving on the hi-pass lane as shown in the video? (Refer to the  website)"
+ },
+ {
+  "n": 996,
+  "check": "negation",
+  "detail": "c[1] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?곕꼸 吏꾩엯 ????蹂댁씠吏 ?딅뒗 ?곹솴",
+   "?곕꼸 吏꾩텧 ????蹂댁씠吏 ?딅뒗 ?곹솴",
+   "?곕꼸 ?낆텧援??먮뒗 援먮웾???뉗? ?댁뼹???쇰챸 釉붾옓?꾩씠??",
+   "?곕꼸 ?듯뻾 ???욎?瑜닿린 ?꾨컲 李⑤뱾"
+  ],
+  "tr_c": [
+   "Poor visibility when entering the tunnel",
+   "Poor visibility when exiting the tunnel",
+   "Thin black ice at the tunnel entrance/exit or on a bridge",
+   "Vehicles violating the overtaking rules inside the tunnel"
+  ],
+  "ko_b": "?곸긽?먯꽌 ?뺤씤???꾪뿕???붿냼 諛??곹솴?쇰줈 蹂????녿뒗 寃껋?? (?덊럹?댁? 李몄“)",
+  "tr_b": "Which of the following is NOT considered a hazardous factor/situation as shown in the video? (Refer to the  website)"
+ },
+ {
+  "n": 996,
+  "check": "negation",
+  "detail": "c[2] 遺?뺤뼱 ?뚯떎 ?섏떖",
+  "ko_c": [
+   "?곕꼸 吏꾩엯 ????蹂댁씠吏 ?딅뒗 ?곹솴",
+   "?곕꼸 吏꾩텧 ????蹂댁씠吏 ?딅뒗 ?곹솴",
+   "?곕꼸 ?낆텧援??먮뒗 援먮웾???뉗? ?댁뼹???쇰챸 釉붾옓?꾩씠??",
+   "?곕꼸 ?듯뻾 ???욎?瑜닿린 ?꾨컲 李⑤뱾"
+  ],
+  "tr_c": [
+   "Poor visibility when entering the tunnel",
+   "Poor visibility when exiting the tunnel",
+   "Thin black ice at the tunnel entrance/exit or on a bridge",
+   "Vehicles violating the overtaking rules inside the tunnel"
+  ],
+  "ko_b": "?곸긽?먯꽌 ?뺤씤???꾪뿕???붿냼 諛??곹솴?쇰줈 蹂????녿뒗 寃껋?? (?덊럹?댁? 李몄“)",
+  "tr_b": "Which of the following is NOT considered a hazardous factor/situation as shown in the video? (Refer to the  website)"
+ }
+]
+
+codex
+[
+  {
+    "n": 853,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "표지 명칭이 문자 인코딩 오류로 깨져 있어 의미를 정상적으로 이해할 수 없다.",
+    "suggestion": "Continue driving in the first lane according to the “Lane 2 Ends” sign."
+  },
+  {
+    "n": 948,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "다른 교통을 방해하지 않아야 한다는 핵심 조건이 번역에서 누락되었다.",
+    "suggestion": "It indicates the area within the intersection where vehicles turning left may wait during a red light, provided they do not obstruct other traffic."
+  },
+  {
+    "n": 948,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "다른 교통을 방해하지 않아야 한다는 핵심 조건이 번역에서 누락되었다.",
+    "suggestion": "It indicates the area within the intersection where vehicles turning left may wait during a yellow light, provided they do not obstruct other traffic."
+  },
+  {
+    "n": 948,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "다른 교통을 방해하지 않아야 한다는 핵심 조건이 번역에서 누락되었다.",
+    "suggestion": "It indicates the area within the intersection where vehicles turning left may wait during a green light, provided they do not obstruct other traffic."
+  },
+  {
+    "n": 948,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "다른 교통을 방해하지 않아야 한다는 핵심 조건이 번역에서 누락되었다.",
+    "suggestion": "It indicates the area within the intersection where vehicles turning left may wait while the red light is flashing, provided they do not obstruct other traffic."
+  }
+]
+tokens used
+17,719
+[
+  {
+    "n": 853,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "표지 명칭이 문자 인코딩 오류로 깨져 있어 의미를 정상적으로 이해할 수 없다.",
+    "suggestion": "Continue driving in the first lane according to the “Lane 2 Ends” sign."
+  },
+  {
+    "n": 948,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "다른 교통을 방해하지 않아야 한다는 핵심 조건이 번역에서 누락되었다.",
+    "suggestion": "It indicates the area within the intersection where vehicles turning left may wait during a red light, provided they do not obstruct other traffic."
+  },
+  {
+    "n": 948,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "다른 교통을 방해하지 않아야 한다는 핵심 조건이 번역에서 누락되었다.",
+    "suggestion": "It indicates the area within the intersection where vehicles turning left may wait during a yellow light, provided they do not obstruct other traffic."
+  },
+  {
+    "n": 948,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "다른 교통을 방해하지 않아야 한다는 핵심 조건이 번역에서 누락되었다.",
+    "suggestion": "It indicates the area within the intersection where vehicles turning left may wait during a green light, provided they do not obstruct other traffic."
+  },
+  {
+    "n": 948,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "다른 교통을 방해하지 않아야 한다는 핵심 조건이 번역에서 누락되었다.",
+    "suggestion": "It indicates the area within the intersection where vehicles turning left may wait while the red light is flashing, provided they do not obstruct other traffic."
+  }
+]

@@ -1,0 +1,800 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125ce-fd68-7460-b084-d9bb1da8d258
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/206_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+codex
+원문과 번역을 항목별로 대조해 실질적인 오역과 자동 지적의 오탐 여부만 선별하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/206_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 572ms:
+[
+ {
+  "n": 241,
+  "ko_b": "?щ컮瑜?援먯감濡??듯뻾 諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?좏샇?깆씠 ?곸깋 ?먮㈇??寃쎌슦 ?쒗뻾?쒕떎.",
+   "?좏샇?깆씠 ?⑹깋 ?먮㈇??寃쎌슦 鍮좊Ⅴ寃??듯뻾?쒕떎.",
+   "援먯감濡쒖뿉?쒕뒗 ?욎?瑜닿린瑜??섏? ?딅뒗??",
+   "援먯감濡??묎렐 ???꾩“?깆쓣 ??긽 ?곹뼢?쇰줈 耳쒓퀬 吏꾪뻾?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "What is the correct way of passing through an intersection?",
+  "tr_c": [
+   "When the red traffic light is flashing, drive slowly.",
+   "When the yellow traffic light is flashing, drive through as quickly as you can.",
+   "Do not overtake other vehicles at an intersection.",
+   "When approaching the intersection, always use high-beam headlights."
+  ]
+ },
+ {
+  "n": 242,
+  "ko_b": "?섏씠?⑥뒪 李⑤줈 ?ㅻ챸 諛??댁슜諛⑸쾿?대떎. 媛???щ컮瑜?寃껋??",
+  "ko_c": [
+   "?섏씠?⑥뒪 李⑤줈????긽 1李⑤줈???ㅼ튂?섏뼱 ?덉쑝誘濡?誘몃━ ?쇰컲李⑤줈?먯꽌 ?섏씠?⑥뒪 李⑤줈濡?吏꾨줈瑜?蹂寃쏀븯???덉쟾?섍쾶        ?듦낵?쒕떎.",
+   "?붾Ъ李??섏씠?⑥뒪 李⑤줈 ?좊룄?좎? ?뚮??됱쑝濡??쒖떆?섏뼱 ?덇퀬 ?붾Ъ李??꾩슜李⑤줈?대?濡?二쇳뻾?섎뜕 ?띾룄 洹몃?濡??듦낵?쒕떎.",
+   "?ㅼ감濡??섏씠?⑥뒪援ш컙 ?듦낵?띾룄??留ㅼ떆 30?щ줈誘명꽣 ?대궡濡??쒗븳?섍퀬 ?덉쑝誘濡?誘몃━ 媛먯냽?섏뿬 ?쒗뻾?쒕떎.",
+   "?ㅼ감濡??섏씠?⑥뒪援ш컙? 洹쒖젙???띾룄瑜?以?섑븯怨??섏씠?⑥뒪 ?⑤쭚湲?怨좎옣 ?깆쑝濡??뺣낫瑜??몄떇?섏? 紐삵븯??寃쎌슦 ?꾩갑吏       ?붽툑?뚯뿉???뺤궛?섎㈃ ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "The following describes a Hi-pass lane. Which is correct?",
+  "tr_c": [
+   "A Hi-pass lane is always found in lane 1; drivers intending to take it must change lanes accordingly and pass through the toll road safely.",
+   "Since the Hi-pass lane for trucks is exclusive to trucks and is colored blue, there is no need to slow down to pass through the toll road.",
+   "Drivers must reduce speed in advance since the speed limit of a multi-lane Hi-pass toll road is 30 km/h.",
+   "Drivers must observe the speed limit of a multi-lane Hi-pass toll road. If the Hi-pass device malfunctions upon entry, drivers can pay the toll upon exit."
+  ]
+ },
+ {
+  "n": 243,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李⑥쟾?⑸룄濡쒖뿉???뱀슜?먮룞李⑥쓽 理쒓퀬 ?띾룄濡??щ컮瑜?寃껋??",
+  "ko_c": [
+   "理쒓퀬?띾룄 留ㅼ떆 60 ?щ줈誘명꽣濡?二쇳뻾?쒕떎.",
+   "理쒓퀬?띾룄 留ㅼ떆 70 ?щ줈誘명꽣濡?二쇳뻾?쒕떎.",
+   "理쒓퀬?띾룄 留ㅼ떆 80 ?щ줈誘명꽣濡?二쇳뻾?쒕떎.",
+   "理쒓퀬?띾룄 留ㅼ떆 90 ?щ줈誘명꽣濡?二쇳뻾?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "What is the maximum speed for a passenger car traveling on an expressway under the Road Traffic Act?",
+  "tr_c": [
+   "60 km/h",
+   "70 km/h",
+   "80 km/h",
+   "90 km/h"
+  ]
+ },
+ {
+  "n": 244,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??二쇨굅吏??룹긽?낆???諛?怨듭뾽吏??쓽 ?쇰컲?꾨줈?먯꽌 ?쒗븳?????덈뒗 ?띾룄濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?쒖냽 20?щ줈誘명꽣 ?대궡",
+   "?쒖냽 30?щ줈誘명꽣 ?대궡",
+   "?쒖냽 40?щ줈誘명꽣 ?대궡",
+   "?쒖냽 50?щ줈誘명꽣 ?대궡"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following speed limits can be placed on a general road in  residential, commercial, and industrial areas?",
+  "tr_c": [
+   "Within 20 km/h",
+   "Within 30 km/h",
+   "Within 40 km/h",
+   "Within 50 km/h"
+  ]
+ },
+ {
+  "n": 245,
+  "ko_b": "援먰넻?ш퀬 媛먯냼瑜??꾪빐 ?꾩떖遺 理쒓퀬?띾룄瑜??쒖냽 50?щ줈誘명꽣濡??쒗븳?섍퀬, 二쇨굅吏?????대㈃?꾨줈???쒖냽 30?щ줈誘명꽣 ?댄븯 濡??섑뼢 議곗젙?섎뒗 援먰넻?덉쟾 ?뺤콉?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대뵜 ?뺤콉",
+   "?덉쟾?띾룄 5030",
+   "援먰넻?ш퀬 以꾩씠湲??쒕쭏?????,
+   "吏?ν삎 援먰넻泥닿퀎(ITS)"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the policy that limits the maximum speed in the city center to 50 km/h while lowered to 30 km/h on back roads (including residential areas) in order to reduce traffic accidents?",
+  "tr_c": [
+   "New Deal Policy",
+   "Safety Speed 5030",
+   "Campaign for Unity in Order to Reduce Traffic Accidents",
+   "Intelligent Transportation System (ITS)"
+  ]
+ },
+ {
+  "n": 246,
+  "ko_b": "鍮꾨낫?몄쥖?뚯쟾 援먯감濡쒖뿉??醫뚰쉶?꾪븯怨좎옄 ?????댁쟾?먯쓽 ?됰룞?쇰줈 ?녹? 寃?2媛吏??",
+  "ko_c": [
+   "?뱀깋?깊솕?먯꽌 留덉＜ ?ㅻ뒗 李⑤웾???놁쓣 ??醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?좏샇? 愿怨꾩뾾??留덉＜?ㅻ뒗 李⑤웾??諛⑺빐媛 ?녿떎硫??몄젣?좎? 醫뚰쉶???????덈떎.",
+   "?묐갑??吏곸쭊 ?좏샇??留덉＜?ㅻ뒗 李⑤웾??吏꾪뻾??諛⑺빐?섏? ?딅뒗 踰붿쐞?먯꽌 ?덉쟾?섍쾶 醫뚰쉶???섏뿬???쒕떎.",
+   "?곸깋 ?깊솕?먯꽌 鍮꾨낫??醫뚰쉶?꾪븷 ???ш퀬媛 諛쒖깮?섎㈃ ?덉쟾?댁쟾?섎Т ?꾨컲?쇰줈 泥섎쾶 諛쏅뒗??"
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the two correct actions a driver may take when making an unprotected left turn at  an intersection?",
+  "tr_c": [
+   "Turn left when there is no oncoming traffic during a green light.",
+   "Turn left at any time if there is no obstruction from oncoming vehicles, regardless of the signals.",
+   "During a two-way green signal, turn left safely without obstructing oncoming vehicles.",
+   "Making an unprotected left turn during a red light and causing an accident are subject to punishment for violation of the Highway Code?셲 safe driving obligations."
+  ]
+ },
+ {
+  "n": 247,
+  "ko_b": "以묒븰 踰꾩뒪?꾩슜李⑤줈媛 ?댁쁺 以묒씤 ?쒕궡 ?꾨줈瑜?二쇳뻾?섍퀬 ?덈떎. 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?ㅻⅨ 李④? ?쇱뼱?ㅼ? ?딅룄濡?寃쎌쓬湲곕? 怨꾩냽 ?ъ슜?섎ŉ 二쇳뻾?쒕떎.",
+   "?곗륫??蹂댄뻾?먭? 臾대떒 ?〓떒?????덉쑝誘濡?二쇱쓽?섎ŉ 二쇳뻾?쒕떎.",
+   "醫뚯륫??踰꾩뒪?뺣쪟?μ뿉??蹂댄뻾?먭? ?섏삱 ???덉쑝誘濡??쒗뻾?쒕떎.",
+   "?곸깋?좏샇濡?蹂寃쎈맆 ???덉쑝誘濡??좎냽?섍쾶 ?듦낵?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "You are driving in a city that operates an exclusive median bus lane system. Which of the following are safe  ways of driving? (Select TWO)",
+  "tr_c": [
+   "You should continuously honk to prevent other vehicles from cutting in front of you.",
+   "You should drive with caution as pedestrians on the right may try to jaywalk.",
+   "You should slow down as pedestrians may cross the road from the bus station on the left.",
+   "You should drive and pass through a median bus lane as quickly as possible before the traffic light turns red."
+  ]
+ },
+ {
+  "n": 248,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 李⑤줈瑜?蹂寃쏀븷 ???덉쟾???댁쟾諛⑸쾿?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "李⑤줈瑜?蹂寃쏀븷 ??理쒕???鍮좊Ⅴ寃??댁빞 ?쒕떎.",
+   "諛깆깋?ㅼ꽑 援ш컙?먯꽌留??????덈떎.",
+   "吏꾪뻾?섎뒗 李⑥쓽 ?듯뻾??吏?μ쓣 二쇱? ?딆쓣 ???댁빞 ?쒕떎.",
+   "諛깆깋?먯꽑 援ш컙?먯꽌留??????덈떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "According to the Road Traffic Act, which of the following are TWO safe methods of changing lanes?",
+  "tr_c": [
+   "Change lanes as quickly as possible.",
+   "You can change lanes only in those sections marked with solid white lines.",
+   "Change lanes without obstructing traffic.",
+   "You can change lanes only on a road marked with a white broken line."
+  ]
+ },
+ {
+  "n": 249,
+  "ko_b": "援먯감濡쒖뿉???고쉶?꾪븷 ??媛???덉쟾???댁쟾 ?됰룞?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "諛⑺뼢吏?쒕벑? ?고쉶?꾪븯??吏?먯쓽 30誘명꽣 ?댁긽 ?꾨갑?먯꽌 ?묐룞?쒕떎.",
+   "諛깆깋 ?ㅼ꽑??洹몃젮???덉쑝硫?二쇱쓽?섎ŉ ?곗륫?쇰줈 吏꾨줈 蹂寃쏀븳??",
+   "吏꾪뻾 諛⑺뼢??醫뚯륫?먯꽌 吏꾪뻾???ㅻ뒗 李⑤웾??諛⑺빐媛 ?녿룄濡??고쉶?꾪븳??",
+   "?ㅻⅨ 援먰넻??二쇱쓽?섎ŉ ?좎냽?섍쾶 ?고쉶?꾪븳??"
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO correct methods of turning right safely at an intersection?",
+  "tr_c": [
+   "Use the turn indicator at least 30 m before where you want to turn right.",
+   "Move into the right-hand lane carefully if there is a solid white line on the road.",
+   "Turn right after checking your left side to make sure that there are no other vehicles headed in the same direction as  you.",
+   "Turn right quickly while paying attention to the traffic in the area."
+  ]
+ },
+ {
+  "n": 250,
+  "ko_b": "?뱀슜?먮룞李??댁쟾?먭? ?욎?瑜닿린???뚯쓽 ?댁쟾 諛⑸쾿?쇰줈 ?녹? 2媛吏??",
+  "ko_c": [
+   "?욎?瑜닿린瑜??쒖옉???뚯뿉??醫뚯륫 怨듦컙??異⑸텇???뺣낫?섏뿬???쒕떎.",
+   "二쇳뻾?섎뒗 ?꾨줈???쒗븳?띾룄 踰붿쐞 ?댁뿉???욎?瑜닿린 ?섏뿬???쒕떎.",
+   "?덉쟾???뺤씤??寃쎌슦?먮뒗 ?곗륫?쇰줈 ?욎?瑜닿린?????덈떎.",
+   "?욎감??醫뚯륫?쇰줈 ?듦낵?????꾩궗寃쎌뿉 ?곗륫 李⑤웾??蹂댁씠吏 ?딆쓣 ??鍮좊Ⅴ寃?吏꾩엯?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the TWO correct methods for a passenger car driver to overtake another vehicle?",
+  "tr_c": [
+   "Make sure that there is enough space on the left before overtaking.",
+   "Overtaking must be done within the speed limit of the road being traveled.",
+   "If it is safe to do so, overtaking another vehicle on its right hand side is acceptable.",
+   "After passing a vehicle on its left, move back into the lane when the vehicle that you just passed is no longer visible in  the rear-view mirror."
+  ]
+ },
+ {
+  "n": 251,
+  "ko_b": "?꾨줈瑜?二쇳뻾?????덉쟾?댁쟾諛⑸쾿?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "二쇱감瑜??꾪빐?쒕뒗 ?섎룄濡??덉쟾吏???二쇱감瑜??섎뒗 寃껋씠 ?덉쟾?섎떎.",
+   "?⑹깋 ?좏샇媛 耳쒖?硫??좏샇瑜?以?섑븯湲??꾪븯??援먯감濡??댁뿉 ?뺤??쒕떎.",
+   "??李⑤웾??湲됱젣?숉븷 ?뚮? ?鍮꾪븯??異붾룎???쇳븷 ???덈뒗 嫄곕━瑜??뺣낫?쒕떎.",
+   "?욎?瑜닿린??寃쎌슦 ??李⑤웾??醫뚯륫?쇰줈 ?듯뻾?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "What are TWO safe driving methods when driving on the road?",
+  "tr_c": [
+   "Park the vehicle in a safety zone if possible.",
+   "When the traffic lights turn yellow, stop inside the intersection to observe the traffic signal.",
+   "Maintain sufficient distance to prevent a collision with the vehicle ahead if it brakes suddenly.",
+   "When overtaking another vehicle, pass along its left side."
+  ]
+ },
+ {
+  "n": 252,
+  "ko_b": "?ㅼ쓬 以??뚰솕湲곕? ?섎Т?곸쑝濡??ㅼ튂?섍굅??鍮꾩튂?댁빞 ?섎뒗 ?먮룞李④? ?꾨땶 寃껋??",
+  "ko_c": [
+   "5?몄듅 ?댁긽???뱀슜?먮룞李?,
+   "?뱁빀?먮룞李?,
+   "?붾Ъ?먮룞李?,
+   "?대쪣?먮룞李?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is not a motor vehicle that is required to install or place a fire extinguisher?",
+  "tr_c": [
+   "A passenger car with 5 or more seats",
+   "A bus",
+   "A truck",
+   "A two-wheeled vehicle"
+  ]
+ },
+ {
+  "n": 253,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 湲닿툒???⑸룄濡??댄뻾 以묒씤 湲닿툒?먮룞李④? ?ㅺ??????댁쟾?먯쓽 以?섏궗??쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "援먯감濡쒖뿉 湲닿툒?먮룞李④? ?묎렐???뚯뿉??援먯감濡???醫뚯륫 媛?μ옄由ъ뿉 ?쇱떆?뺤??섏뿬???쒕떎.",
+   "援먯감濡??몄쓽 怨녹뿉?쒕뒗 湲닿툒?먮룞李④? ?곗꽑?듯뻾?????덈룄濡?吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+   "湲닿툒?먮룞李⑤낫???띾룄瑜??믪뿬 ?좎냽???듦낵?쒕떎.",
+   "洹??먮━???쇱떆?뺤??섏뿬 湲닿툒?먮룞李④? 吏?섍컝 ?뚭퉴吏 湲곕떎由곕떎."
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, which of the following measures must be taken when an emergency vehicle  driving with an emergency siren on approaches?",
+  "tr_c": [
+   "When an emergency vehicle approaches an intersection, drivers of other vehicles must stop at the left edge of the  intersection.",
+   "On the road other than the intersection, other vehicles should yield so that emergency vehicles can pass first.",
+   "Drive faster than the emergency vehicle.",
+   "Stop temporarily and wait until the emergency vehicle passes."
+  ]
+ },
+ {
+  "n": 254,
+  "ko_b": "援먯감濡쒖뿉???고쉶??以??뚮갑李④? 寃쎄킅?깆쓣 耳쒓퀬 ?ъ씠?뚯쓣 ?몃━硫??묎렐??寃쎌슦??媛???덉쟾???댁쟾諛⑸쾿??",
+  "ko_c": [
+   "援먯감濡쒕? ?쇳븯???쇱떆?뺤??섏뿬???쒕떎.",
+   "利됱떆 ???꾩튂?먯꽌 ?뺤??쒕떎.",
+   "?쒗뻾?섎㈃???고쉶?꾪븳??",
+   "援먯감濡쒕? ?좎냽?섍쾶 ?듦낵????怨꾩냽 吏꾪뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the safest measure to take when a fire truck approaches with flashing red lights and  siren while you are trying to turn right at an intersection?",
+  "tr_c": [
+   "Temporarily stop, avoiding the intersection.",
+   "Stop right where you are.",
+   "Slow down, and turn right.",
+   "Pass through the intersection quickly and continue driving."
+  ]
+ },
+ {
+  "n": 255,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 湲닿툒?먮룞李??밸? ?곸슜??곸씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?먮룞李⑤벑???띾룄 ?쒗븳",
+   "?욎?瑜닿린??湲덉?",
+   "?쇱뼱?ㅺ린??湲덉?",
+   "蹂댄뻾??蹂댄샇"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following privileges does NOT apply to emergency vehicles?",
+  "tr_c": [
+   "Speed limit of motor vehicles",
+   "Restriction of overtaking",
+   "Restriction of cutting in",
+   "Ensuring pedestrian safety"
+  ]
+ },
+ {
+  "n": 256,
+  "ko_b": "湲닿툒?먮룞李⑤뒗 湲닿툒?먮룞李⑥쓽 援ъ“瑜?媛뽰텛怨? ?ъ씠?뚯쓣 ?몃━嫄곕굹 寃쎄킅?깆쓣 耳쒖꽌 湲닿툒???⑸Т瑜??섑뻾 以묒엫???뚮젮?? ?쒕떎. ?대윭??議곗튂瑜?痍⑦븯吏 ?딆븘???섎뒗 湲닿툒?먮룞李⑤뒗?",
+  "ko_c": [
+   "遺덈쾿 二쇱감 ?⑥냽???먮룞李?,
+   "?뚮갑李?,
+   "援ш툒李?,
+   "?띾룄?꾨컲 ?⑥냽??寃쎌같 ?먮룞李?
+  ],
+  "a": "4",
+  "tr_b": "Emergency vehicles should be properly outfitted, and they should convey that they are undertaking an emergency operation by turning on their sirens or flashing lights. Which of the following vehicles is exempted from this obligation?",
+  "tr_c": [
+   "Vehicles cracking down on illegal parking",
+   "Fire trucks",
+   "Ambulances",
+   "Police cars cracking down on violations of speed limit"
+  ]
+ },
+ {
+  "n": 257,
+  "ko_b": "?뚮갑李⑥? 援ш툒李??깆씠 ?욎?瑜닿린 湲덉? 援ъ뿭?먯꽌 ?욎?瑜닿린瑜??쒕룄?섍굅???띾룄瑜?珥덇낵?섏뿬 ?댄뻾 ?섎뒗 ???밸?瑜??곸슜  諛쏆쑝?ㅻ㈃ ?대뼡 議곗튂瑜??섏뿬???섎뒗媛?",
+  "ko_c": [
+   "寃쎌쓬湲곕? ?몃━硫댁꽌 ?댄뻾?섏뿬???쒕떎.",
+   "?먮룞李④?由щ쾿???곕Ⅸ ?먮룞李⑥쓽 ?덉쟾 ?댄뻾???꾩슂??援ъ“瑜?媛뽰텛怨??ъ씠?뚯쓣 ?몃━嫄곕굹 寃쎄킅?깆쓣 耳쒖빞 ?쒕떎.",
+   "?꾩“?깆쓣 耳쒓퀬 ?댄뻾?섏뿬???쒕떎.",
+   "?밸퀎??議곗튂媛 ?녿떎 ?섎뜑?쇰룄 ?밸?瑜??곸슜 諛쏆쓣 ???덈떎."
+  ],
+  "a": "2",
+  "tr_b": "In order for fire trucks and ambulances to be granted a special privilege to overtake other vehicles or drive at a speed exceeding the limit in a no-passing zone, which of the following is the measure that the drivers of those vehicles should take?",
+  "tr_c": [
+   "Drive while honking.",
+   "Equip the cars in a manner required for safe driving according to the Motor Vehicle Management Act and turn on the  sirens or flashing lights.",
+   "Drive with the headlights on.",
+   "Those vehicles can be granted such privileges without taking additional measures."
+  ]
+ },
+ {
+  "n": 258,
+  "ko_b": "?쇰컲?먮룞李④? ?앸챸???꾨룆???섏옄瑜??댁넚 以묒씤 寃쎌슦 湲닿툒?먮룞李⑤줈 ?몄젙諛쏄린 ?꾪븳 議곗튂??",
+  "ko_c": [
+   "愿??寃쎌같?쒖옣???덇?瑜?諛쏆븘???쒕떎.",
+   "?꾩“???먮뒗 鍮꾩긽?깆쓣 耳쒓퀬 ?댄뻾?쒕떎.",
+   "?앸챸???꾨룆???섏옄瑜??댁넚 以묒씠湲??뚮Ц???밸퀎??議곗튂媛 ?꾩슂 ?녿떎.",
+   "諛섎뱶???ㅻⅨ ?먮룞李⑥쓽 ?몄넚??諛쏆쑝硫댁꽌 ?댄뻾?섏뿬???쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is necessary for a general vehicle to be recognized as an emergency vehicle when  transporting a patient in critical condition?",
+  "tr_c": [
+   "The car should be authorized by the chief of the district police station.",
+   "The driver should turn on the headlights or emergency lights.",
+   "The car does not need to get special permission because it is transporting a patient in critical condition.",
+   "The car must be escorted by another vehicle."
+  ]
+ },
+ {
+  "n": 259,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺣졊??湲닿툒?먮룞李⑤줈 蹂????덈뒗 寃?2媛吏??",
+  "ko_c": [
+   "怨좎옣 ?섎━瑜??꾪빐 ?먮룞李??뺣퉬 怨듭옣?쇰줈 媛怨??덈뒗 ?뚮갑李?,
+   "?앸챸???꾧툒???섏옄 ?먮뒗 遺?곸옄???섑삁???꾪븳 ?덉븸???댁넚 以묒씤 ?먮룞李?,
+   "?댁썝?섎뒗 ?섏옄瑜??ｊ퀬 媛??援ш툒李?,
+   "?쑣룸룄寃쎌같泥?옣?쇰줈遺??吏?뺤쓣 諛쏄퀬 湲닿툒???고렪臾쇱쓽 ?댁넚???ъ슜?섎뒗 ?먮룞李?
+  ],
+  "a": "2, 4",
+  "tr_b": "According to the Road Traffic Act, which TWO are considered emergency vehicles?",
+  "tr_c": [
+   "A fire truck going to a repair shop for repairs",
+   "A vehicle transporting patients who are injured or in a critical condition, or transporting blood for transfusion",
+   "An ambulance transporting a patient discharged from a medical institution",
+   "A vehicle authorized by the commissioner of the City/Do (Province) police agency to transport urgent postal mail, etc."
+  ]
+ },
+ {
+  "n": 260,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 湲닿툒???⑸룄濡??댄뻾?섍퀬 ?덈뒗 援ш툒李??댁쟾?먭? ?????덈뒗 2媛吏??",
+  "ko_c": [
+   "援먰넻?ш퀬瑜??쇱쑝?????ъ긽??援ы샇 議곗튂 ?놁씠 怨꾩냽 ?댄뻾?????덈떎.",
+   "?〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섎㈃??怨꾩냽 ?댄뻾?????덈떎.",
+   "?꾨줈??以묒븰?대굹 醫뚯륫?쇰줈 ?듯뻾?????덈떎.",
+   "?뺤껜???꾨줈?먯꽌 ?쇱뼱?ㅺ린瑜??????덈떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "According to the Road Traffic Act, which of the following are TWO things that an ambulance driver is allowed to  do while operating an emergency vehicle in an emergency situation?",
+  "tr_c": [
+   "Continue to operate the vehicle after a traffic accident without administering first aid to the injured.",
+   "Continue to operate the vehicle even if it obstructs pedestrians from crossing.",
+   "Drive along the center or along the left side of the road.",
+   "Cut in front of other vehicles on a congested road."
+  ]
+ },
+ {
+  "n": 261,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂몃옒???⑸룄濡??댄뻾?섍퀬 ?덈뒗 ?뚮갑李??댁쟾?먭? 湲닿툒?먮룞李⑥뿉 ????밸?瑜??곸슜諛쏆쓣 ???녿뒗 寃껋??",
+  "ko_c": [
+   "醫뚯꽍?덉쟾??誘몄갑??,
+   "?뚯＜ ?댁쟾",
+   "以묒븰??移⑤쾾",
+   "?좏샇?꾨컲"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, what is the reason a fire truck driver who is operating a vehicle for its  original purpose cannot be granted exceptions as an emergency vehicle?",
+  "tr_c": [
+   "Not wearing a seat belt",
+   "Drunk driving",
+   "Crossing of the centerline",
+   "Violation of traffic light"
+  ]
+ },
+ {
+  "n": 262,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??湲닿툒?먮룞李⑤? ?댁쟾?섎뒗 ?щ엺????곸쑝濡??ㅼ떆?섎뒗 ?뺢린 援먰넻?덉쟾援먯쑁? (  )?꾨쭏??諛쏆븘???쒕떎. (     ) ?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "1",
+   "2",
+   "3",
+   "5"
+  ],
+  "a": "3",
+  "tr_b": "The regular traffic safety education provided for drivers of emergency vehicles shall be taken every ( ) years.  Which of the following best fits in (   )?",
+  "tr_c": [
+   "1",
+   "2",
+   "3",
+   "5"
+  ]
+ },
+ {
+  "n": 263,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??湲닿툒?먮룞李⑥뿉 ????밸????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "?욎?瑜닿린 湲덉??μ냼?먯꽌 ?욎?瑜닿린?????덈떎.",
+   "?쇱뼱?ㅺ린 湲덉??μ냼?먯꽌 ?쇱뼱?ㅺ린 ?????덈떎.",
+   "?〓떒蹂대룄瑜??〓떒?섎뒗 蹂댄뻾?먭? ?덉뼱??蹂댄샇?섏? ?딄퀬 ?듯뻾?????덈떎.",
+   "?꾨줈 ?듯뻾?띾룄??理쒓퀬?띾룄蹂대떎 鍮좊Ⅴ寃??댁쟾?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT true about an exception for emergency vehicles under the Road Traffic Act?",
+  "tr_c": [
+   "They may overtake other vehicles at a location where passing is prohibited.",
+   "They may cut in front of other vehicles even where cutting is prohibited.",
+   "They may pass the crossroad even though there is a pedestrian crossing it without regard for their safety.",
+   "They may drive faster than the speed limit prescribed for the road."
+  ]
+ },
+ {
+  "n": 264,
+  "ko_b": "?꾨줈援먰넻踰????뚮갑?⑹닔?쒖꽕, 鍮꾩긽?뚰솕?μ튂, ?뚮갑?쒖꽕濡쒕???(  )誘명꽣 ?대궡??怨녹? ?뺤감 諛?二쇱감??湲덉?援ъ뿭?낅땲??  (  )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "5",
+   "6",
+   "8",
+   "10"
+  ],
+  "a": "1",
+  "tr_b": "Stopping and parking are prohibited within ( ) meters of fire-extinguishing water supply system, emergency firefighting equipment, and firefighting systems under the Road Traffic Act. Which of the following best fills the parentheses?",
+  "tr_c": [
+   "5",
+   "6",
+   "8",
+   "10"
+  ]
+ },
+ {
+  "n": 265,
+  "ko_b": "?ㅼ쓬 以??ъ슜?섎뒗 ?щ엺 ?먮뒗 湲곌??깆쓽 ?좎껌???섑븯???쑣룸룄寃쎌같泥?옣??吏?뺥븷 ???덈뒗 湲닿툒?먮룞李⑤줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뚮갑李?,
+   "媛?ㅻ늻異?蹂듦뎄瑜??꾪븳 ?묎툒?묒뾽???ъ슜?섎뒗 媛???ъ뾽???먮룞李?,
+   "援ш툒李?,
+   "?덉븸怨듦툒 李⑤웾"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following can be designated as an emergency vehicle by the commissioner of the City/Do (Province) police agency at the request of the organization or the person intending to use the vehicle?",
+  "tr_c": [
+   "A fire truck",
+   "A gasworks vehicle used for emergency gas leak repair",
+   "An ambulance",
+   "A blood bank vehicle"
+  ]
+ },
+ {
+  "n": 266,
+  "ko_b": "?ㅼ쓬 以??ъ슜?섎뒗 ?щ엺 ?먮뒗 湲곌??깆쓽 ?좎껌???섑븯???쑣룸룄寃쎌같泥?옣??吏?뺥븷 ???덈뒗 湲닿툒?먮룞李④? ?꾨땶 寃껋??",
+  "ko_c": [
+   "援먰넻?⑥냽???ъ슜?섎뒗 寃쎌같???먮룞李?,
+   "湲닿툒???고렪臾쇱쓽 ?댁넚???ъ슜?섎뒗 ?먮룞李?,
+   "?꾪솕???섎━怨듭궗 ???묎툒?묒뾽???ъ슜?섎뒗 ?먮룞李?,
+   "湲닿툒蹂듦뎄瑜??꾪븳 異쒕룞???ъ슜?섎뒗 誘쇰갑?꾩뾽臾대? ?섑뻾?섎뒗 湲곌????먮룞李?
+  ],
+  "a": "1",
+  "tr_b": "Which of the following CANNOT be designated as an emergency vehicle by the commissioner of the City/Do  police agency at the request of the organization or the person intending to use the vehicle?",
+  "tr_c": [
+   "A police car used for traffic control",
+   "A vehicle used for delivery of urgent mail",
+   "A vehicle used for emergency work such as repair of phone lines",
+   "A civil defense vehicle used for emergency restorations"
+  ]
+ },
+ {
+  "n": 267,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??湲닿툒?먮룞李④? 湲닿툒???⑸룄 ?몄뿉??寃쎄킅???깆쓣 ?ъ슜?????덈뒗 寃쎌슦媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?뚮갑李④? ?붿옱 ?덈갑 諛?援ъ“쨌援ш툒 ?쒕룞???꾪븯???쒖같???섎뒗 寃쎌슦",
+   "?뚮갑李④? ?뺣퉬瑜??꾪빐 湲닿툒???대룞?섎뒗 寃쎌슦",
+   "誘쇰갑?꾩뾽臾댁슜 ?먮룞李④? 洹?蹂몃옒??湲닿툒???⑸룄? 愿?⑤맂 ?덈젴??李몄뿬?섎뒗 寃쎌슦",
+   "寃쎌같???먮룞李④? 踰붿즲 ?덈갑 諛??⑥냽???꾪븯???쒖같???섎뒗 寃쎌슦"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT a situation wherein an emergency vehicle can  flash its warning lights for non-emergency matters?",
+  "tr_c": [
+   "When a fire truck is on patrol for fire prevention, rescue, and emergency activities",
+   "When a fire truck is being driven to the workshop for urgent repair",
+   "When a vehicle commissioned for civil defense activities participates in a drill relevant to its usual emergency  responsibilities",
+   "When a police vehicle is on patrol for crime prevention and control"
+  ]
+ },
+ {
+  "n": 268,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 湲닿툒異쒕룞 以묒씤 湲닿툒?먮룞李⑥쓽 踰뺢퇋?꾨컲?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?몃룄 2李⑤줈 ?쇰컲?꾨줈?먯꽌 留ㅼ떆 100 ?щ줈誘명꽣濡?二쇳뻾?섏???",
+   "諛깆깋 ?ㅼ꽑?쇰줈 李⑥꽑???ㅼ튂???곕꼸 ?덉뿉???욎?瑜닿린?섏???",
+   "?고쉶?꾪븯湲??꾪빐 援먯감濡쒖뿉???쇱뼱?ㅺ린瑜??섏???",
+   "?몃챸 ?쇳빐 援먰넻?ш퀬媛 諛쒖깮?섏뿬??湲닿툒異쒕룞 以묒씠誘濡??꾩슂???좉퀬??議곗튂 ?놁씠 怨꾩냽 ?댁쟾?섏???"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following actions by an emergency vehicle on an emergency  rescue mission is considered an offense?",
+  "tr_c": [
+   "Driving at 100 km/h on a general road with two lanes in one direction",
+   "Overtaking a vehicle inside a tunnel where lanes are marked with a solid white line",
+   "Cutting in front of a vehicle at an intersection to turn right",
+   "Failing to report or take the necessary actions in the event of a traffic accident resulting in personal injury because the vehicle is on an emergency rescue mission"
+  ]
+ },
+ {
+  "n": 269,
+  "ko_b": "湲닿툒?먮룞李④? 湲닿툒???⑸룄 ?몄뿉 寃쎄킅?깆쓣 ?ъ슜?????덈뒗 寃쎌슦媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?뚮갑李④? ?붿옱?덈갑???꾪븯???쒖같?섎뒗 寃쎌슦",
+   "?꾨줈愿由ъ슜 ?먮룞李④? ?꾨줈?곸쓽 ?꾪뿕??諛⑹??섍린 ?꾪븯???꾨줈 ?쒖같?섎뒗 寃쎌슦",
+   "援ш툒李④? 湲닿툒???⑸룄? 愿?⑤맂 ?덈젴??李몄뿬?섎뒗 寃쎌슦",
+   "寃쎌같???먮룞李④? 踰붿즲?덈갑???꾪븯???쒖같?섎뒗 寃쎌슦"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT an instance wherein an emergency vehicle can use a warning light for  non-emergency purposes?",
+  "tr_c": [
+   "A fire truck on a round of patrol for fire prevention",
+   "A road maintenance vehicle on a round of patrol to prevent traffic accidents",
+   "An ambulance used in emergency response training",
+   "A police car on a round of patrol for crime prevention"
+  ]
+ },
+ {
+  "n": 270,
+  "ko_b": "湲닿툒???⑸룄濡??댄뻾 以묒씤 湲닿툒?먮룞李⑥뿉寃??묐낫?섎뒗 ?댁쟾諛⑸쾿?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "紐⑤뱺 ?먮룞李⑤뒗 醫뚯륫 媛?μ옄由щ줈 ?쇳븯??寃껋씠 ?먯튃?대떎.",
+   "鍮꾪깉吏?醫곸? ?꾨줈?먯꽌 ?쒕줈 留덉＜蹂닿퀬 吏꾪뻾?섎뒗 寃쎌슦 ?щ씪媛??湲닿툒?먮룞李⑤뒗 ?꾨줈???곗륫 媛?μ옄由щ줈 ?쇳븯??李⑤줈瑜? ?묐낫?섏뿬???쒕떎.",
+   "援먯감濡?遺洹쇱뿉?쒕뒗 援먯감濡쒕? ?쇳븯???쇱떆?뺤??섏뿬???쒕떎.",
+   "援먯감濡쒕굹 洹?遺洹??몄쓽 怨녹뿉??湲닿툒?먮룞李④? ?묎렐??寃쎌슦?먮뒗 湲닿툒?먮룞李④? ?곗꽑?듯뻾?????덈룄濡?吏꾨줈瑜??묐낫?섏뿬?? ?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO correct methods of yielding to an emergency vehicle on the road?",
+  "tr_c": [
+   "All vehicles must pull over to the left side of the road.",
+   "If the emergency vehicle is climbing up a narrow slope and you are facing it, the emergency vehicle must pull over to  the right to make way for you.",
+   "Near an intersection, pull over at some distance from the intersection.",
+   "When an emergency vehicle approaches from a place other than an intersection or its vicinity, the roadway shall be yielded so that the emergency vehicle can take priority."
+  ]
+ },
+ {
+  "n": 271,
+  "ko_b": "?ㅼ쓬 以?湲닿툒?먮룞李⑥뿉 ?대떦?섎뒗 2媛吏??",
+  "ko_c": [
+   "寃쎌같??湲닿툒?먮룞李⑥뿉 ?섑븯???좊룄?섍퀬 ?덈뒗 ?먮룞李?,
+   "?섏궗湲곌????먮룞李⑥씠吏留??섏궗? 愿???녿뒗 湲곕뒫?쇰줈 ?ъ슜?섎뒗 ?먮룞李?,
+   "援щ궃?쒕룞??留덉튂怨?蹂듦??섎뒗 援щ궃李?,
+   "?앸챸???꾧툒???섏옄 ?먮뒗 遺?곸옄???섑삁???꾪븳 ?덉븸???댁넚 以묒씤 ?먮룞李?
+  ],
+  "a": "1, 4",
+  "tr_b": "Which TWO are considered emergency vehicles?",
+  "tr_c": [
+   "A vehicle being guided by a police car for emergency purposes",
+   "An investigation vehicle used for non-investigatory purposes",
+   "A tow truck returning after completing a rescue activity",
+   "A vehicle transporting patients who are injured or in critical condition, or transporting blood for transfusion"
+  ]
+ },
+ {
+  "n": 272,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭???댁쟾??諛??댁쁺?먯쓽 ?섎Т??????ㅻ챸?쇰줈 留욎? ?딆? 寃껋??",
+  "ko_c": [
+   "?대┛?댄넻?숇쾭???댁쟾?먮뒗 ?대┛?대굹 ?곸쑀?꾧? ?怨??대━??寃쎌슦?먮쭔 ?먮㈇?깆쓣 ?묐룞?섏뿬???쒕떎.",
+   "?대┛?댄넻?숇쾭???댁쟾?먮뒗 ?뱀감??紐⑤뱺 ?대┛?대굹 ?곸쑀?꾧? 醫뚯꽍?덉쟾?좊? 留ㅻ룄濡?????異쒕컻?쒕떎.",
+   "?대┛?댄넻?숇쾭???댁쁺?먮뒗 ?대┛?댄넻?숇쾭?ㅼ뿉 蹂댄샇?먮? ?④퍡 ?쒖슦怨??댄뻾?섎뒗 寃쎌슦?먮뒗 蹂댄샇???숈듅?쒖?瑜?遺李⑺븷 ???덈떎.",
+   "?대┛?댄넻?숇쾭???댁쁺?먮뒗 ?대┛?댄넻?숇쾭?ㅼ뿉 蹂댄샇?먭? ?숈듅??寃쎌슦?먮뒗 ?덉쟾?댄뻾湲곕줉???묒꽦?섏? ?딆븘???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT true about the duty of a school bus driver/operator?",
+  "tr_c": [
+   "A school bus driver must turn on the hazard lights only when children and infants are getting on or off the bus.",
+   "A school bus driver must make sure that all children and infants on board are wearing seat belts before moving the bus.",
+   "In case parents or guardians are on board together with the children, a school bus operator may post a sign indicating the accompaniment of parents/guardians.",
+   "In case parents or guardians are on board, there is no need to write safety operation records."
+  ]
+ },
+ {
+  "n": 273,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂댄뻾?먯쓽 ?듯뻾 ?щ???愿怨꾩뾾??諛섎뱶???쇱떆?뺤? ?섏뿬?????μ냼??",
+  "ko_c": [
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?녿뒗 ?꾨줈",
+   "?대┛??蹂댄샇援ъ뿭 ???좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ??,
+   "蹂댄뻾?먯슦?좊룄濡?,
+   "?꾨줈 ?몄쓽 怨?
+  ],
+  "a": "2",
+  "tr_b": "In which location should the driver come to a full stop, regardless of the existence of pedestrians?",
+  "tr_c": [
+   "A road with no centerline among the roads where the roadway and sidewalk are not distinguishable",
+   "Front of a crosswalk in a school zone with no traffic light",
+   "Pedestrian-first road",
+   "A place other than a road"
+  ]
+ },
+ {
+  "n": 274,
+  "ko_b": "?몃룄 2李⑤줈 ?꾨줈?먯꽌 1李⑤줈濡??대┛???듯븰踰꾩뒪媛 ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덉쓬???뚮━???쒖떆瑜????곹깭濡?二쇳뻾 以묒씠??  媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "2李⑤줈媛 鍮꾩뼱 ?덉뼱???욎?瑜닿린瑜??섏? ?딅뒗??",
+   "2李⑤줈濡??욎?瑜닿린?섏뿬 二쇳뻾?쒕떎.",
+   "寃쎌쓬湲곕? ?몃젮 ?꾨갑 李⑤줈瑜?鍮꾩폒 ?щ씪???쒖떆瑜??쒕떎.",
+   "諛섎? 李⑤줈???곹솴??二쇱떆????以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "A school bus for children is driving in the first lane of a road with two lanes in one direction with markings to show that it has children or infants on board. Which of the following is the safest course of action?",
+  "tr_c": [
+   "Do not overtake the bus even if the second lane is empty.",
+   "Overtake the bus using the second lane.",
+   "Honk to send a signal to make way.",
+   "Check the situation of the traffic in the opposite direction, and overtake the bus by crossing the centerline."
+  ]
+ },
+ {
+  "n": 275,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭??????ㅻ챸 以?留욌뒗 寃껋??",
+  "ko_c": [
+   "?좎튂?먯씠??以묓븰援??욎뿉 ?ㅼ튂?????덈떎.",
+   "?쒖옣 ?깆? 李⑥쓽 ?듯뻾??湲덉??????덈떎.",
+   "?대┛??蹂댄샇援ъ뿭?먯꽌???대┛?대뒗 12??誘몃쭔???먮? 留먰븳??",
+   "?먮룞李⑤벑???듯뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is correct regarding school zones?",
+  "tr_c": [
+   "Areas in front of kindergartens or middle schools are designated as school zones.",
+   "Mayors and other officials can limit or prohibit vehicles from entering a school zone.",
+   "For the purposes of a school zone, children are defined as those under 12 years old.",
+   "A school zone can limit vehicles to a speed of 30 km/h."
+  ]
+ },
+ {
+  "n": 276,
+  "ko_b": "援먰넻?ш퀬泥섎━?밸?踰뺤긽 ?대┛??蹂댄샇援ъ뿭 ?댁뿉??留ㅼ떆 40?щ줈誘명꽣濡?二쇳뻾 以??댁쟾?먯쓽 怨쇱떎濡??대┛?대? ?ㅼ튂寃???寃쎌슦??泥섎쾶濡? 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쇳빐?먭? ?뺤궗泥섎쾶???붽뎄??寃쎌슦?먮쭔 ?뺤궗 泥섎쾶?쒕떎.",
+   "?쇳빐?먯쓽 泥섎쾶 ?섏궗??愿怨꾩뾾???뺤궗 泥섎쾶?쒕떎.",
+   "醫낇빀蹂댄뿕??媛?낅릺???덈뒗 寃쎌슦?먮뒗 ?뺤궗 泥섎쾶?섏? ?딅뒗??",
+   "?쇳빐?먯? ?⑹쓽?섎㈃ ?뺤궗 泥섎쾶?섏? ?딅뒗??"
+  ],
+  "a": "2",
+  "tr_b": "Under the Act on Special Cases Concerning the Settlement of Traffic Accidents, what is the appropriate punishment for a driver?셲 negligence resulting in injury to a child while driving at 40 km/h within a school zone?",
+  "tr_c": [
+   "Only if demanded by the victim will the offender be subjected to criminal punishment.",
+   "Regardless of the victim's request, criminal punishment will be imposed.",
+   "When insured by comprehensive insurance, the driver will not face criminal punishment.",
+   "An agreement with the victim can prevent criminal punishment."
+  ]
+ },
+ {
+  "n": 277,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭?ㅻ줈 ?좉퀬?????덈뒗 ?먮룞李⑥쓽 ?뱀감?뺤썝 湲곗??쇰줈 留욌뒗 寃껋??(?대┛??1紐낆쓣 ?뱀감?뺤썝 1 紐낆쑝濡?蹂몃떎)",
+  "ko_c": [
+   "11?몄듅 ?댁긽",
+   "16?몄듅 ?댁긽",
+   "17?몄듅 ?댁긽",
+   "9?몄듅 ?댁긽"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the allowed seating capacity for a vehicle to be registered as a school bus for children?  (1 child is considered 1 passenger)",
+  "tr_c": [
+   "11-seater or larger",
+   "16-seater or larger",
+   "17-seater or larger",
+   "9-seater or larger"
+  ]
+ },
+ {
+  "n": 278,
+  "ko_b": "?뱀슜李??댁쟾?먭? 08:30寃??대┛??蹂댄샇援ъ뿭?먯꽌 理쒓퀬?쒗븳?띾룄瑜?留ㅼ떆 25?щ줈誘명꽣 珥덇낵?섏뿬 ?꾨컲??寃쎌슦 踰뚯젏?쇰줈 留???寃껋??",
+  "ko_c": [
+   "10??,
+   "15??,
+   "30??,
+   "60??
+  ],
+  "a": "3",
+  "tr_b": "What is the correct number of demerit points for the driver of a passenger car who has violated the speed limit  by exceeding the maximum speed by 25 km/h at around 08:30 am in a school zone?",
+  "tr_c": [
+   "10 points",
+   "15 points",
+   "30 points",
+   "60 points"
+  ]
+ },
+ {
+  "n": 279,
+  "ko_b": "?뱀슜李??댁쟾?먭? ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜??섍퀬 ?꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜닿린??寃???紐??먯쓽 踰뚯젏??遺怨쇰릺?붽??",
+  "ko_c": [
+   "10??,
+   "15??,
+   "30??,
+   "40??
+  ],
+  "a": "3",
+  "tr_b": "How many demerit points are imposed on the driver of a passenger car who overtakes a school bus for children  that is driving on a road with an indication that it has children or infants on board?",
+  "tr_c": [
+   "10 points",
+   "15 points",
+   "30 points",
+   "40 points"
+  ]
+ },
+ {
+  "n": 280,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛???듯븰踰꾩뒪 ?덉쟾援먯쑁 ??곸옄??援먯쑁?쒓컙 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "1?쒓컙 ?댁긽",
+   "3?쒓컙 ?댁긽",
+   "5?쒓컙 ?댁긽",
+   "6?쒓컙 ?댁긽"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, how many hours of safety education are required for persons subject to  education regarding school buses for children?",
+  "tr_c": [
+   "1 hour or more",
+   "3 hours or more",
+   "5 hours or more",
+   "6 hours or more"
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n '\"field\"\\s*:\\s*\"c\\[' translations/audit -g '*.json' | Select-Object -First 20" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:35:35.908879Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.9 seconds
+Output:
+
+ exited 1 in 856ms:
+2026-10-10T12:35:35.962364Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'rg --files translations/audit | Select-Object -First 40' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 567ms:
+translations/audit\queue\208_choices_vn.json
+translations/audit\queue\105_flags_en.json
+translations/audit\queue\208_choices_en.json
+translations/audit\queue\208_choices_cn.json
+translations/audit\queue\207_choices_vn.json
+translations/audit\queue\104_flags_en.json
+translations/audit\queue\207_choices_en.json
+translations/audit\queue\103_flags_vn.json
+translations/audit\queue\207_choices_cn.json
+translations/audit\queue\103_flags_en.json
+translations/audit\queue\206_choices_vn.json
+translations/audit\queue\103_flags_cn.json
+translations/audit\queue\206_choices_en.json
+translations/audit\queue\102_flags_vn.json
+translations/audit\queue\206_choices_cn.json
+translations/audit\queue\102_flags_en.json
+translations/audit\queue\205_choices_vn.json
+translations/audit\queue\102_flags_cn.json
+translations/audit\queue\205_choices_en.json
+translations/audit\queue\101_flags_vn.json
+translations/audit\queue\205_choices_cn.json
+translations/audit\queue\101_flags_en.json
+translations/audit\queue\204_choices_vn.json
+translations/audit\queue\101_flags_cn.json
+translations/audit\queue\204_choices_en.json
+translations/audit\queue\100_flags_vn.json
+translations/audit\queue\204_choices_cn.json
+translations/audit\queue\100_flags_en.json
+translations/audit\queue\203_choices_vn.json
+translations/audit\queue\100_flags_cn.json
+translations/audit\queue\203_choices_en.json
+translations/audit\queue\203_choices_cn.json
+translations/audit\queue\202_choices_vn.json
+translations/audit\queue\202_choices_en.json
+translations/audit\queue\202_choices_cn.json
+translations/audit\queue\201_choices_vn.json
+translations/audit\queue\201_choices_en.json
+translations/audit\queue\201_choices_cn.json
+translations/audit\queue\200_choices_vn.json
+translations/audit\queue\200_choices_en.json
+
+2026-10-10T12:35:40.660905Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+codex
+[{"n":243,"field":"b","severity":"major","issue":"‘자동차전용도로’를 ‘expressway(고속도로)’로 오역하여 최고속도 정답 판단을 바꿀 수 있다.","suggestion":"Under the Road Traffic Act, what is the maximum speed for a passenger car traveling on a motor-vehicle-only road?"},{"n":249,"field":"c[2]","severity":"major","issue":"‘진행 방향의 좌측에서 진행해 오는 차량’을 ‘나와 같은 방향으로 진행하는 차량’으로 오역했다.","suggestion":"Turn right without obstructing vehicles approaching from the left."}]
+tokens used
+24,183
+[{"n":243,"field":"b","severity":"major","issue":"‘자동차전용도로’를 ‘expressway(고속도로)’로 오역하여 최고속도 정답 판단을 바꿀 수 있다.","suggestion":"Under the Road Traffic Act, what is the maximum speed for a passenger car traveling on a motor-vehicle-only road?"},{"n":249,"field":"c[2]","severity":"major","issue":"‘진행 방향의 좌측에서 진행해 오는 차량’을 ‘나와 같은 방향으로 진행하는 차량’으로 오역했다.","suggestion":"Turn right without obstructing vehicles approaching from the left."}]

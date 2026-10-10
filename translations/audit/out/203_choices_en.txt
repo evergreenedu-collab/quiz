@@ -1,0 +1,1657 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125c6-5659-71b1-a547-daa1a9f8b64a
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/203_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/203_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 528ms:
+[
+ {
+  "n": 121,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆? ?щ엺??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?먮룞李⑤벑???댁쟾?섎젮??寃쎌슦 ?뚯＜?댁쟾 諛⑹??μ튂瑜??ㅼ튂?섍퀬, ?쒌냽?꾧꼍李곗껌?μ뿉寃??깅줉?섏뿬???쒕떎.",
+   "?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂?섏? ?딆? ?먮룞李⑤벑???댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?ㅼ튂湲곗????곹빀?섏? ?꾨땲???뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑? ?댁쟾??媛?ν븯??",
+   "??2???댁긽 ?뚯＜?댁쟾 諛⑹??μ튂 遺李??먮룞李⑤벑???댄뻾湲곕줉???쒌냽?꾧꼍李곗껌?μ뿉寃??쒖텧?섏뿬???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is incorrect regarding drivers who have been issued a conditional driver?셲 license requiring the installation of an alcohol ignition interlock device?",
+  "tr_c": [
+   "When intending to drive a vehicle, the driver must install an alcohol ignition interlock device and register it with the commissioner of the city or provincial police.",
+   "Driving a vehicle that is not equipped with an alcohol ignition interlock device is prohibited.",
+   "Driving a vehicle with an alcohol ignition interlock device that does not meet the installation standards is permitted.",
+   "The driver must submit the driving records of the vehicle with the alcohol ignition interlock device to the commissioner of the city or provincial police at least twice a year."
+  ]
+ },
+ {
+  "n": 122,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 怨쇰줈(議몄쓬?댁쟾 ?ы븿)濡??명븯???뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?????뚯뿉 ???踰뚯튃?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "10留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "20留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "30留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following correctly describes the penalty imposed on a driver  who cannot operate a vehicle properly due to fatigue (including drowsy driving)?",
+  "tr_c": [
+   "No penalty",
+   "Criminal fine of up to KRW 100,000 or detention",
+   "Criminal fine of up to KRW 200,000 or detention",
+   "Criminal fine of up to KRW 300,000 or detention"
+  ]
+ },
+ {
+  "n": 123,
+  "ko_b": "?댁쟾?먯쓽 ?쇰줈???댁쟾 ?됰룞???곹뼢??誘몄튂寃??쒕떎. ?쇰줈媛 ?댁쟾 ?됰룞??誘몄튂???곹뼢??諛붾Ⅴ寃??ㅻ챸??寃껋??",
+  "ko_c": [
+   "二쇰? ?먭레?????諛섏쓳 ?숈옉??鍮좊Ⅴ寃??섑??쒕떎.",
+   "?쒕젰???⑥뼱吏怨??쒖빞媛 ?볦뼱吏꾨떎.",
+   "吏媛?諛??댁쟾 議곗옉 ?λ젰???⑥뼱吏꾨떎.",
+   "移섎??섍퀬 怨꾪쉷?곸씤 ?댁쟾 ?됰룞???섑??쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Fatigue affects a driver's driving performance. Which of the following correctly describes the influence of  fatigue on a driver?",
+  "tr_c": [
+   "The response time of a driver to stimuli in his/her surroundings quickens.",
+   "The vision of the driver deteriorates and his/her view widens.",
+   "A driver's ability to recognize objects and drive safely deteriorates.",
+   "A driver's driving performance becomes more meticulous and planned."
+  ]
+ },
+ {
+  "n": 124,
+  "ko_b": "?뱀슜?먮룞李⑤? ?뚯＜?댁쟾??寃쎌슦 泥섎쾶 湲곗???????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽?꾧? 0.2?쇱꽱???댁긽??寃쎌슦 2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?뚯＜ 痢≪젙 嫄곕? 1???꾨컲 ??1???댁긽 5???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?덉쨷?뚯퐫?щ냽?꾧? 0.05?쇱꽱?몃줈 2???꾨컲??寃쎌슦 1???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댄븯??踰뚭툑",
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽??0.08?쇱꽱???댁긽 0.2?쇱꽱??誘몃쭔??寃쎌슦 1???댁긽 2???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 1泥?留????댄븯??踰뚭툑"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a correct explanation of the punishment criteria for drunk driving?",
+  "tr_c": [
+   "In case of the first violation, if the blood alcohol concentration is 0.2% or more, imprisonment for 2 to 5 years or criminal fine of KRW 10 million - 20 million",
+   "Refusing a field sobriety test once may result in imprisonment with labor for 1 year or more but not more than 5 years, or criminal fine of KRW 5 million or more but not more than KRW 20 million",
+   "In case of a second violation involving a blood alcohol concentration of 0.05%, imprisonment for up to 1 year or  criminal fine of up to KRW 5 million",
+   "Upon the first violation at a blood alcohol level of at least 0.08% but less than 0.2%: imprisonment with labor for at least 1 year but not more than 2 years or criminal fine of at least KRW 5 million but not more than KRW 10 million"
+  ]
+ },
+ {
+  "n": 125,
+  "ko_b": "?댁쟾?먭? ?쇰줈???곹깭?먯꽌 ?댁쟾?섍쾶 ?섎㈃ ?띾룄 ?먮떒???섎せ?섍쾶 ?쒕떎. 洹??댁슜??留욌뒗 寃껋??",
+  "ko_c": [
+   "醫곸? ?꾨줈?먯꽌???ㅼ젣 ?띾룄蹂대떎 ?먮━寃??먭뺨吏꾨떎.",
+   "二쇰??????몄씤 ?꾨줈?먯꽌???ㅼ젣蹂대떎 鍮좊Ⅴ寃??먭뺨吏꾨떎.",
+   "硫由ъ꽌 ?ㅺ??ㅻ뒗 李⑥쓽 ?띾룄瑜?怨쇱냼?됯??섎떎媛 ?ш퀬媛 諛쒖깮?????덈떎.",
+   "怨좎냽?꾨줈?먯꽌 ?꾨갑???뺤???李⑤? 二쇳뻾 以묒씤 李⑤줈 ?섎せ ?꾨뒗 寃쎌슦??諛쒖깮?섏? ?딅뒗??"
+  ],
+  "a": "3",
+  "tr_b": "If you drive when you are tired, you will not be able to sense correctly the speed at which you are driving.  Which of the following is correct?",
+  "tr_c": [
+   "On a narrow road, you will feel as if you are going slower than you actually are.",
+   "On roads with wide-open views, you will feel as if you are going faster than you actually are.",
+   "You could underestimate the speed of a car coming toward you from far away and end up in an accident.",
+   "There is no possibility of you mistaking a car stopped ahead on an expressway to be moving."
+  ]
+ },
+ {
+  "n": 126,
+  "ko_b": "?먮룞李⑤? ?댄뻾????怨듭＜嫄곕━???곹뼢??以????덈뒗 寃쎌슦濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "鍮꾧? ?ㅻ뒗 ???댁쟾?섎뒗 寃쎌슦",
+   "?좎뿉 痍⑦븳 ?곹깭濡??댁쟾?섎뒗 寃쎌슦",
+   "李⑤웾??釉뚮젅?댄겕?≪씠 遺議깊븳 ?곹깭濡??댁쟾?섎뒗 寃쎌슦",
+   "?댁쟾?먭? ?쇰줈???곹깭濡??댁쟾?섎뒗 寃쎌슦"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which TWO may affect free running distance when driving a car?",
+  "tr_c": [
+   "Driving on a rainy day",
+   "Driving under the influence of alcohol",
+   "Driving when the vehicle has insufficient brake fluid",
+   "Driving when tired"
+  ]
+ },
+ {
+  "n": 127,
+  "ko_b": "?뚯＜ ?댁쟾?먯뿉 ???泥섎쾶 湲곗??쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?덉쨷?뚯퐫?щ냽??0.08?쇱꽱???댁긽??留뚯랬 ?댁쟾?먮뒗 ?댁쟾硫댄뿀 痍⑥냼? ?뺤궗泥섎쾶??諛쏅뒗??",
+   "寃쎌같愿???뚯＜ 痢≪젙??遺덉쓳?섍굅???덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽???곹깭?먯꽌 ?몄쟻 ?쇳빐??援먰넻?ш퀬瑜??쇱쑝??寃????댁쟾硫댄뿀 痍⑥냼? ?뺤궗泥섎쾶??諛쏅뒗??",
+   "?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???⑥닚 ?뚯＜?댁쟾??寃쎌슦?먮뒗 120?쇨컙???댁쟾硫댄뿀 ?뺤?? ?뺤궗泥섎쾶??諛쏅뒗??",
+   "泥섏쓬?쇰줈 ?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???뚯＜ ?댁쟾?먭? 臾쇱쟻 ?쇳빐??援먰넻?ш퀬瑜??쇱쑝??寃쎌슦?????댁쟾硫댄뿀媛 痍⑥냼?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which TWO statements are correct regarding penalties imposed on drunk drivers?",
+  "tr_c": [
+   "Fully inebriated drivers with a blood alcohol concentration of 0.08% or higher will have their driver's license revoked and receive punishment in accordance with the law.",
+   "Those who refuse to take the alcohol breathalyzer test or who have caused fatalities or injuries while driving with a blood alcohol concentration of 0.03% or higher will have their driver's license revoked and receive punishment in accordance with the law.",
+   "Those who are caught driving with a blood alcohol concentration of at least 0.03 percent but less than 0.08 percent will have their driver's license suspended for 120 days and receive punishment in accordance with the law.",
+   "In a case wherein the driver causes an accident for the first time resulting in property damage while driving with a blood alcohol concentration of at least 0.03 percent but less than 0.08 percent, his/her driver?셲 license is revoked."
+  ]
+ },
+ {
+  "n": 128,
+  "ko_b": "?뚯＜?댁쟾 愿???댁슜 以?留욌뒗 2媛吏??",
+  "ko_c": [
+   "?명씉 痢≪젙???섑븳 ?뚯＜ 痢≪젙 寃곌낵??遺덈났?섎뒗 寃쎌슦 ?ㅼ떆 ?명씉 痢≪젙???????덈떎.",
+   "?꾨줈援먰넻踰뺤긽 ?뚯＜痢≪젙諛⑺빐?됱쐞瑜?泥섎쾶?섎뒗 洹쒖젙? ?녿떎.",
+   "?좎뿉 痍⑦븳 ?곹깭濡??먯쟾嫄곕? ?댁쟾?????뚯＜痢≪젙諛⑺빐?됱쐞瑜????щ엺? 泥섎쾶??媛?ν븯??",
+   "?좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙??留뚰븳 ?곷떦???댁쑀媛 ?덉쓬?먮룄 寃쎌같怨듬Т?먯쓽 ?뚯＜ 痢≪젙???묓븯吏 ?딆? ?먮룞李⑤벑?? ?댁쟾?먮뒗 ?댁쟾硫댄뿀媛 痍⑥냼?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which TWO statements are correct regarding drunk driving?",
+  "tr_c": [
+   "If a person disagrees with the result of a breathalyzer test, he/she may undergo the test again.",
+   "The Road Traffic Act does not contain any provision for punishing acts that interfere with alcohol testing.",
+   "A person who interferes with an alcohol test after riding a bicycle while drunk may be subject to punishment.",
+   "A driver of a motor vehicle who refuses to comply with a police officer?셲 request to take an alcohol test, despite being reasonably suspected of being intoxicated, will have his/her driver?셲 license revoked."
+  ]
+ },
+ {
+  "n": 129,
+  "ko_b": "?쇰줈 諛?怨쇰줈, 議몄쓬?댁쟾怨?愿?⑤맂 ?ㅻ챸 以?留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "?쇰줈???곹솴?먯꽌??議몄쓬?댁쟾??鍮덈쾲?섎?濡?移댄럹????랬瑜??섎━怨??⑥“濡쒖슫 ?곹솴???쇳븯湲??꾪빐 吏꾨줈蹂寃쎌쓣 ?먯＜?쒕떎.",
+   "蹂?붽? ?곴퀬 ?꾪뿕 ?ы깭??異쒗쁽???곸? ?꾨줈?먯꽌??二쇱쓽?μ씠 ?μ긽?섏뼱 議몄쓬?댁쟾 ?됰룞??以꾩뼱?좊떎.",
+   "媛먭린??蹂듭슜 ??議몄쓬???????덇린 ?뚮Ц???덉쟾???꾪빐 ?댁쟾??吏?묓빐???쒕떎.",
+   "?뚯＜?댁쟾????寃쎌슦 ??뚯쓽 湲곕뒫??鍮꾪솢?깊솕?섏뼱 議몄쓬?댁쟾??媛?μ꽦???믪븘吏꾨떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are true about drowsy and/or fatigued driving? (Select TWO)",
+  "tr_c": [
+   "If drowsy while driving, you must consume more caffeine and change lanes more often to avoid monotonous driving.",
+   "Your alertness improves on roads with fewer variations and potential hazards, thereby reducing the risk of drowsy driving.",
+   "Avoid driving if you have taken cold medicines since they may cause drowsiness.",
+   "Alcohol deactivates certain cerebral functions and increases the chance of drowsiness."
+  ]
+ },
+ {
+  "n": 130,
+  "ko_b": "吏덈퀝??怨쇰줈濡??명빐 ?뺤긽?곸씤 ?댁쟾???섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?섎떎媛 ?⑥냽??寃쎌슦 ?대뼸寃??섎뒗媛?",
+  "ko_c": [
+   "怨쇳깭猷뚭? 遺怨쇰맆 ???덈떎.",
+   "?댁쟾硫댄뿀媛 ?뺤??????덈떎.",
+   "援щ쪟 ?먮뒗 踰뚭툑??泥섑븳??",
+   "泥섎쾶 諛쏆? ?딅뒗??"
+  ],
+  "a": "3",
+  "tr_b": "What penalty is a driver subjected to if caught by the police while driving in a physical state of being unable to  drive normally (due to illness or fatigue)?",
+  "tr_c": [
+   "Administrative fine",
+   "Suspension of the driver's license",
+   "Detention or criminal fine",
+   "No penalty"
+  ]
+ },
+ {
+  "n": 131,
+  "ko_b": "留덉빟 ???쎈Ъ蹂듭슜?쇰줈 ?뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?섎떎媛 ?몃챸?쇳빐 援먰넻?ш퀬瑜???湲고븳 寃쎌슦 援먰넻?ш퀬泥섎━ ?밸?踰뺤긽 ?댁쟾?먯쓽 梨낆엫?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "梨낆엫蹂댄뿕留?媛?낅릺???덉쑝??異붽??곸쑝濡??쇳빐?먯? ?⑹쓽?섎뜑?쇰룄 ?뺤궗泥섎쾶?쒕떎.",
+   "?댁쟾?먮낫?섏뿉 媛?낅릺???덉쑝硫??뺤궗泥섎쾶??硫댁젣?쒕떎.",
+   "醫낇빀蹂댄뿕??媛?낅릺???덉쑝硫??뺤궗泥섎쾶??硫댁젣?쒕떎.",
+   "醫낇빀蹂댄뿕??媛?낅릺???덇퀬 異붽??곸쑝濡??쇳빐?먯? ?⑹쓽??寃쎌슦?먮뒗 ?뺤궗泥섎쾶??硫댁젣?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Under the Act on Special Cases Concerning the Settlement of Traffic Accidents, what is the correct legal responsibility of a driver who causes a traffic accident resulting in injury or death while driving a vehicle in a condition of impaired normal driving due to drug or other substance abuse?",
+  "tr_c": [
+   "The driver will be criminally charged despite being covered by liability car insurance and even after having settled  with  the accident victim(s).",
+   "The driver will be exempted from criminal charges if he/she is covered by car insurance.",
+   "The driver will be exempted from criminal charges if he/she is covered by comprehensive insurance.",
+   "The driver will be exempted from criminal charges if he/she is covered by comprehensive insurance and he/she has settled with the accident victim(s)."
+  ]
+ },
+ {
+  "n": 132,
+  "ko_b": "?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 ?곹깭???댁쟾??媛묒씠 ?좏샇?湲?以묒씤 ?곹솴?먯꽌 ?ㅼ감(?댁쟾????媛 異붾룎??寃쎌슦??留????ㅻ챸??",
+  "ko_c": [
+   "?뚯＜?댁쟾??以묓븳 ?꾨컲?됱쐞?닿린 ?뚮Ц??媛묒씠 ?ш퀬??媛?댁옄濡?泥섎쾶?쒕떎.",
+   "?ш퀬??媛?댁옄???꾩씠 ?섏?留? 媛묒쓽 ?뚯＜?댁쟾? 蹂꾧컻濡?泥섎쾶?쒕떎.",
+   "媛묒? ?쇳빐?먯씠誘濡??댁쟾硫댄뿀??????됱젙泥섎텇??諛쏆? ?딅뒗??",
+   "?꾩? 援먰넻?ш퀬 ?먯씤怨?寃곌낵???곕Ⅸ 踰뚯젏? ?녿떎."
+  ],
+  "a": "2",
+  "tr_b": "Driver A, with blood alcohol concentration of over 0.03%, is rear-ended by Driver B while waiting at a red light.  What happens next?",
+  "tr_c": [
+   "Since drunk driving is a serious offense, Driver A should be penalized.",
+   "Although Driver B needs to be penalized for the accident, Driver A is also penalized separately for drunk driving.",
+   "Driver A is the victim in this accident and will not be subject to administrative penalties.",
+   "Driver B receives no demerit points regardless of the cause or result of the accident."
+  ]
+ },
+ {
+  "n": 133,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?댁쟾??湲덉??섎뒗 ?좎뿉 痍⑦븳 ?곹깭??湲곗?? ?댁쟾?먯쓽 ?덉쨷?뚯퐫?щ냽?꾧? (   )濡??쒕떎. (   )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "0.01?쇱꽱???댁긽??寃쎌슦",
+   "0.02?쇱꽱???댁긽??寃쎌슦",
+   "0.03?쇱꽱???댁긽??寃쎌슦",
+   "0.08?쇱꽱???댁긽??寃쎌슦"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, a driver with blood alcohol concentration of ( ) or more is prohibited from  driving. Select one of the following to fill in the brackets:",
+  "tr_c": [
+   "0.01% or higher",
+   "0.02% or higher",
+   "0.03% or higher",
+   "0.08% or higher"
+  ]
+ },
+ {
+  "n": 134,
+  "ko_b": "?ㅼ쓬? ?쇰줈?댁쟾怨??쎈Ъ蹂듭슜 ?댁쟾??????ㅻ챸?대떎. 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?쇰줈???곹깭?먯꽌???댁쟾? 議몄쓬?댁쟾?쇰줈 ?댁뼱吏?媛?μ꽦????떎.",
+   "?쇰줈???곹깭?먯꽌???댁쟾? 二쇱쓽?? ?먮떒?λ젰, 諛섏쓳?띾룄????섎? 媛?몄삤湲??뚮Ц???꾪뿕?섎떎.",
+   "留덉빟??蹂듭슜?섍퀬 ?댁쟾???섎떎媛 援먰넻?ш퀬濡??щ엺???곹빐???대Ⅴ寃????댁쟾?먮뒗 泥섎쾶?????덈떎.",
+   "留덉빟??蹂듭슜?섍퀬 ?댁쟾???섎떎媛 援먰넻?ш퀬濡??щ엺???곹빐???대Ⅴ寃??섍퀬 ?꾩＜?섏뿬 ?댁쟾硫댄뿀媛 痍⑥냼??寃쎌슦?먮뒗 3????寃쎄낵?댁빞 ?댁쟾硫댄뿀 痍⑤뱷??媛?ν븯??"
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are TWO correct descriptions with regard to fatigued driving and driving under the  influence of drugs?",
+  "tr_c": [
+   "Fatigued driving is not likely to lead to falling asleep at the wheel.",
+   "Fatigued driving is dangerous because it leads to poor focus, judgment, and reflexes.",
+   "Driving under the influence of drugs and causing an accident resulting in injury are subject to punishment.",
+   "If your driver's license is revoked because of a hit-and-run event while driving under the influence of drugs, it is possible to get the license back after three years."
+  ]
+ },
+ {
+  "n": 135,
+  "ko_b": "?ㅼ쓬 以?蹂대났?댁쟾???덈갑?섎뒗 諛⑸쾿?대씪怨?蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "湲닿툒?쒕룞 ??鍮꾩긽?먮㈇??耳쒖＜湲?,
+   "諛섎???李⑤줈?먯꽌 李⑤웾???묎렐 ???곹뼢?꾩“???꾧린",
+   "?띾룄瑜??щ┫ ???꾩“?깆쓣 ?곹뼢?쇰줈 耳쒓린",
+   "?욎감媛 吏??異쒕컻???뚮뒗 3珥??뺣룄 諛곕젮?섍린"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT an appropriate method of preventing retaliatory driving?",
+  "tr_c": [
+   "Turn on the emergency flashers in case of emergency braking.",
+   "Turn off the head-beam headlights when a car approaches from the opposite direction.",
+   "Turn on the high-beam headlights when driving at high speed.",
+   "Wait for three seconds if the vehicle in front does not start moving right away."
+  ]
+ },
+ {
+  "n": 136,
+  "ko_b": "?ㅼ쓬 以?蹂대났?댁쟾???뱁뻽?????좉퀬?섎뒗 諛⑸쾿?쇰줈 媛???곸젅?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "120???좉퀬?쒕떎.",
+   "112???좉퀬?쒕떎.",
+   "?ㅻ쭏?명룿?섏븞?꾩떊臾멸퀬?숈뿉 ?좉퀬?쒕떎.",
+   "?ъ씠踰?寃쎌같泥?뿉 ?좉퀬?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT an appropriate way of reporting retaliatory driving?",
+  "tr_c": [
+   "Calling 120",
+   "Calling 112",
+   "Reporting to the smartphone app Safety e-Report",
+   "Reporting the incident to the Cyber Police Agency"
+  ]
+ },
+ {
+  "n": 137,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 (      )???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡?以꾩? ???듯뻾?섎㈃??援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?대? ?꾨컲??寃쎌슦 (     ) ?쇰줈 泥섎쾶?????덈떎. (    )?덉뿉  媛곴컖 諛붾Ⅴ寃?吏앹??댁쭊 寃껋??",
+  "ko_c": [
+   "?꾨룞?대쪣?됲뻾李? 1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?대쪣?먮룞李? 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑",
+   "?뱀닔?먮룞李? 2???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?먮룞湲곗옣移섏옄?꾧굅, 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the like in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traffic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses.",
+  "tr_c": [
+   "self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 million",
+   "two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  million",
+   "special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million",
+   "motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"
+  ]
+ },
+ {
+  "n": 138,
+  "ko_b": "?쇳빐 李⑤웾???ㅻ뵲瑜대뜕 ?뱀슜李??댁쟾?먭? 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?섏뿬 湲됱젣?숉븯?????꾪삊 ?댁쟾????寃쎌슦?먮뒗 ?뚰삎 踰뺛띿뿉 ?곕Ⅸ 蹂대났?댁쟾?쇰줈 泥섎쾶諛쏆쓣 ???덈떎. ?댁뿉 ???泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "7???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "10???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "1???댁긽???좉린吏뺤뿭??泥섑븳??",
+   "1??6???댁긽???좉린吏뺤뿭??泥섑븳??"
+  ],
+  "a": "1",
+  "tr_b": "You may be subject to a penalty according to the Criminal Act if you overtake a vehicle over the centerline or perform any retaliatory driving such as sudden braking. In this case, what is the correct punishment that will be imposed on you?",
+  "tr_c": [
+   "You will be sentenced to imprisonment for up to 7 years or criminal fine of not more than KRW 10 million.",
+   "You will be sentenced to imprisonment for up to 10 years or criminal fine of not more than KRW 20 million.",
+   "You will be sentenced to imprisonment for a limited term of more than 1 year.",
+   "You will be sentenced to imprisonment for a limited term of more than 18 months."
+  ]
+ },
+ {
+  "n": 139,
+  "ko_b": "?뱀슜李??댁쟾?먭? 李⑤줈 蹂寃??쒕퉬??遺꾨끂???곷?李⑤웾 ?욎뿉??湲됱젣?숉븯?? ?대? 蹂댁? 紐삵븯怨??ㅻ뵲瑜대뜕 ?붾Ъ李④? 異??뚰븯???붾Ъ李??댁쟾?먭? ?ㅼ튇 寃쎌슦?먮뒗?뚰삎踰뺛띿뿉 ?곕Ⅸ 蹂대났?댁쟾?쇰줈 泥섎쾶諛쏆쓣 ???덈떎. ?댁뿉 ???泥섎쾶湲곗??쇰줈 留욌뒗  寃껋?? (以묒긽?대뒗 ?꾨떂)",
+  "ko_c": [
+   "1???댁긽 10???댄븯??吏뺤뿭",
+   "1???댁긽 20???댄븯??吏뺤뿭",
+   "2???댁긽 10???댄븯??吏뺤뿭",
+   "2???댁긽 20???댄븯??吏뺤뿭"
+  ],
+  "a": "1",
+  "tr_b": "If a passenger vehicle driver responds to a lane-change dispute by suddenly braking in front of the pursuing vehicle, leading to a subsequent collision with an unaware cargo truck and resulting in injury to the cargo truck driver, legal repercussions may arise under the provisions of the Criminal Act for engaging in retaliatory driving. What is the appropriate punishment standard for this? (The cargo truck driver is not seriously injured)",
+  "tr_c": [
+   "You will be sentenced to imprisonment for a limited term in the range of 1 year - 10 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 1 year - 20 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 2 years - 10 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 2 years - 20 years."
+  ]
+ },
+ {
+  "n": 140,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?쒗룺?댁쟾 ?곸슜 ??곸씠 ?꾨땶 寃껋?竊?,
+  "ko_c": [
+   "理쒓퀬?띾룄???꾨컲",
+   "?〓떒?띿쑀?담냽?꾩쭊 湲덉? ?꾨컲",
+   "?쇱뼱?ㅺ린",
+   "?곗냽?곸쑝濡?寃쎌쓬湲곕? ?몃━???됱쐞"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is not subject to legal action for reckless driving under the Road Traffic Act?",
+  "tr_c": [
+   "Violating the maximum speed limit",
+   "Violating a prohibition of crossing the road, making a U-turn, or moving backward",
+   "Cutting in a lane",
+   "Honking continuously"
+  ]
+ },
+ {
+  "n": 141,
+  "ko_b": "?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???댁쟾?먭? ?ㅼ쓬???됱쐞瑜?諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??媛?섎뒗 寃쎌슦 ?쒗룺?댁쟾??濡?泥섎쾶諛쏄쾶 ?쒕떎. ?쒗룺?댁쟾??????됱쐞媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?좏샇 ?먮뒗 吏???꾨컲",
+   "?〓떒쨌?좏꽩쨌?꾩쭊 湲덉? ?꾨컲",
+   "?뺣떦???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮",
+   "怨좎냽?꾨줈?먯꽌??吏?뺤감濡??꾨컲"
+  ],
+  "a": "4",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another driver by committing the acts below in a repeated manner will be punished for reckless driving. Which of the following is NOT an example of reckless driving?",
+  "tr_c": [
+   "Violation of traffic signals or instructions",
+   "Violation of prohibitions on crossing, making a U-turn, and driving backward",
+   "Creating noise without reasonable cause",
+   "Violating a designated lane of an expressway"
+  ]
+ },
+ {
+  "n": 142,
+  "ko_b": "?뱀슜李??댁쟾?먭? ?쒗룺?댁쟾???섎뒗 寃쎌슦 ?꾨줈援먰넻踰뺤뿉 ?곕Ⅸ 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "踰붿튃湲?6留??먯쓽 ?듦퀬泥섎텇??諛쏅뒗??",
+   "怨쇳깭猷?3留??먯씠 遺怨쇰맂??",
+   "6媛쒖썡 ?댄븯??吏뺤뿭?대굹 200留????댄븯??踰뚭툑??泥섑븳??",
+   "1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑??泥섑븳??"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is the correct punishment for reckless driving?",
+  "tr_c": [
+   "Notice for payment of traffic penalty of KRW 60,000",
+   "Administrative fine of KRW 30,000",
+   "Imprisonment for up to 6 months or criminal fine of not more than KRW 2 million",
+   "Imprisonment for up to 1 year or criminal fine of not more than KRW 5 million"
+  ]
+ },
+ {
+  "n": 143,
+  "ko_b": "怨좎냽?꾨줈瑜?二쇳뻾?섎뒗 李⑤웾(蹂몄씤 李⑤웾 ?ы븿)???곸옱臾쇱씠 二쇳뻾李⑤줈???⑥뼱議뚯쓣 ???댁쟾?먯쓽 議곗튂?붾졊?쇰줈 媛??諛붾Ⅴ吏  ?딆? 寃껋??",
+  "ko_c": [
+   "?꾨갑 李⑤웾??二쇳뻾???뺤씤?섎㈃???덉쟾???μ냼???뺤감?쒕떎.",
+   "怨좎냽?꾨줈 愿由ъ껌?대굹 愿怨?湲곌????좎냽???좉퀬?쒕떎.",
+   "?덉쟾??怨녹뿉 ?뺤감 ???붾Ъ?곸옱 ?곹깭瑜??뺤씤?쒕떎.",
+   "?붾Ъ ?곸옱臾쇱쓣 ?⑥뼱?⑤┛ 李⑤웾???댁쟾?먯뿉寃?蹂대났?댁쟾???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "What is the most incorrect action by the driver when a vehicle's cargo (including the driver's vehicle) falls into  the lane while driving on an expressway?",
+  "tr_c": [
+   "Stop the vehicle in a safe place while checking for vehicles behind.",
+   "Report the case promptly to the relevant authorities such as expressway management agency.",
+   "Stop the vehicle in a safe place and check the cargo loading status.",
+   "Conduct retaliatory driving against the driver who dropped the cargo."
+  ]
+ },
+ {
+  "n": 144,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞湲곗옣移섏옄?꾧굅(媛쒖씤???대룞?μ튂 ?쒖쇅)???쒗룺?댁쟾 ?됱쐞濡?蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "?좏샇 ?꾨컲?됱쐞瑜?3??諛섎났?섏뿬 ?댁쟾?섏???",
+   "?띾룄 ?꾨컲?됱쐞? 吏???꾨컲?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???",
+   "?좏샇 ?꾨컲?됱쐞? 以묒븰??移⑤쾾?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???",
+   "?뚯＜?댁쟾 ?됱쐞? 蹂댄뻾?먮낫?몄쓽臾??꾨컲?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following cannot be construed as reckless driving for a  motorcycle (excluding personal mobility devices)?",
+  "tr_c": [
+   "The driver repeatedly ignored traffic signals three times.",
+   "The driver committed successive violations of exceeding the speed limit and disobeying instructions.",
+   "The driver committed successive violations of ignoring traffic signals and crossing the centerline.",
+   "The driver committed successive violations of crossing the centerline as well as the duty to protect pedestrians."
+  ]
+ },
+ {
+  "n": 145,
+  "ko_b": "?ㅼ쓬? ?쒗룺?댁쟾怨?蹂대났?댁쟾??????ㅻ챸?대떎. 留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅽ넗諛붿씠 ?댁쟾?먭? ?뺣떦???ъ쑀 ?놁씠 ?뚯쓬??諛섎났?섏뿬 遺덊듅???ㅼ닔?먭쾶 ?꾪삊??媛?섎뒗 寃쎌슦??蹂대났?댁쟾???대떦?쒕떎.",
+   "?뱀슜李??댁쟾?먭? 以묒븰??移⑤쾾 諛??띾룄?꾨컲???곕떖???섏뿬 遺덊듅???ㅼ닔?먭쾶 ?꾪빐瑜?媛?섎뒗 寃쎌슦???쒗룺?댁쟾???대떦?쒕떎.",
+   "????몃윮 ?댁쟾?먭? 怨좎쓽?곸쑝濡??뱀젙 李⑤웾 ?욎쑝濡??욎?瑜닿린?섏뿬 湲됱젣?숉븳 寃쎌슦???쒗룺?댁쟾???대떦?쒕떎.",
+   "踰꾩뒪 ?댁쟾?먭? 諛섎났?곸쑝濡??욎?瑜닿린 諛⑸쾿 ?꾨컲?섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ??寃쎌슦??蹂대났?댁쟾???대떦?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is correct regarding reckless driving and retaliatory driving?",
+  "tr_c": [
+   "A motorcycle driver who generates noise without just cause to threaten many unspecified drivers can be penalized for  retaliatory driving.",
+   "The driver of a passenger car who drives over the centerline and exceeds the speed limit repeatedly to threaten many unspecified drivers can be penalized for reckless driving.",
+   "The driver of a large truck who intentionally overtakes a car and brakes suddenly can be penalized for reckless driving.",
+   "A bus driver who repeatedly violates the legal way of overtaking a car, thereby increasing the risk of traffic accident, can be penalized for retaliatory driving."
+  ]
+ },
+ {
+  "n": 146,
+  "ko_b": "?먮룞李??댁쟾?먭? 以묒븰??移⑤쾾??諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪빐瑜?媛?섍굅??援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섎뒗 ?됱쐞?? ?꾨줈援먰넻踰뺤긽 (      )???대떦?쒕떎. (     )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "怨듬룞?꾪뿕?됱쐞",
+   "?쒗룺?댁쟾",
+   "??젰?댁쟾",
+   "蹂대났?댁쟾"
+  ],
+  "a": "2",
+  "tr_b": "Causing harm to the life and safety of others by repeatedly driving over the centerline or causing risk in the traffic flow are ( ) according to the Road Traffic Act. Which of the following fits in ( )?",
+  "tr_c": [
+   "joint risky behavior",
+   "reckless driving",
+   "violent driving",
+   "retaliatory driving"
+  ]
+ },
+ {
+  "n": 147,
+  "ko_b": "?쇰컲?꾨줈?먯꽌 ?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???댁쟾?먭? ?ㅼ쓬???됱쐞瑜?諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??媛?섎뒗 寃????쒗룺?댁쟾?쇰줈 泥섎쾶諛쏄쾶 ?쒕떎. ?쒗룺?댁쟾??????됱쐞媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?쇰컲?꾨줈?먯꽌 吏?뺤감濡??꾨컲",
+   "以묒븰??移⑤쾾, 湲됱젣?숆툑吏 ?꾨컲",
+   "?덉쟾嫄곕━ 誘명솗蹂? 李⑤줈蹂寃?湲덉? ?꾨컲",
+   "?쇰컲?꾨줈?먯꽌 ?욎?瑜닿린 諛⑸쾿 ?꾨컲"
+  ],
+  "a": "1",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another driver by committing the acts below in a repeated manner on a general road will be punished for reckless driving. Which of the following is NOT an example of reckless driving?",
+  "tr_c": [
+   "Violating a designated lane on a general road",
+   "Driving over the centerline and violating the prohibition on sudden braking",
+   "Not complying with the safe distance, violating lane-changing prohibitions",
+   "Improperly overtaking a car on a general road"
+  ]
+ },
+ {
+  "n": 148,
+  "ko_b": "?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???댁쟾?먭? ???댁긽???됱쐞瑜??곕떖???섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??媛?섎뒗 寃쎌슦 ?쒗룺 ?댁쟾?쇰줈 泥섎쾶諛쏄쾶 ?쒕떎. ?ㅼ쓬???쒗룺?댁쟾 ?좏삎??????ㅻ챸?쇰줈 ?곷떦?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "?댁쟾 以??곸긽 ?쒖떆 ?μ튂瑜?議곗옉?섎㈃???꾨갑二쇱떆瑜??쒕쭔?섏???",
+   "?욎감???곗륫?쇰줈 ?욎?瑜닿린?섎㈃???띾룄瑜??꾨컲?섏???",
+   "?덉쟾嫄곕━瑜??뺣낫?섏? ?딄퀬 湲됱젣?숈쓣 諛섎났?섏???",
+   "?띾룄瑜??꾨컲?섏뿬 ?욎?瑜닿린?섎젮??李⑤? 諛⑺빐?섏???"
+  ],
+  "a": "1",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another person by repeatedly committing a series of two or more of the acts below will be punished for reckless driving. Which of the following is NOT an example of reckless driving?",
+  "tr_c": [
+   "Not keeping the eyes forward; operating a video display device while driving",
+   "Exceeding the speed limit while overtaking a car on his/her right side",
+   "Not securing sufficient safe distance and repeating sudden braking",
+   "Exceeding the speed limit to obstruct a trailing car that is attempting to pass by"
+  ]
+ },
+ {
+  "n": 149,
+  "ko_b": "?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???댁쟾?먭? ?ㅼ쓬???됱쐞瑜?諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??媛?섎뒗 寃쎌슦 ?쒗룺?댁쟾??濡?泥섎쾶諛쏄쾶 ?쒕떎. ?쒗룺?댁쟾??????됱쐞濡??由?寃껋??",
+  "ko_c": [
+   "?좏샇 諛?吏???꾨컲, 以묒븰??移⑤쾾",
+   "?덉쟾嫄곕━ 誘명솗蹂? 湲됱젣??湲덉? ?꾨컲",
+   "?욎?瑜닿린 諛⑺빐 湲덉? ?꾨컲, ?욎?瑜닿린 諛⑸쾿 ?꾨컲",
+   "?듯뻾湲덉? ?꾨컲, ?댁쟾 以??대????꾪솕?ъ슜"
+  ],
+  "a": "4",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another driver by repeatedly committing the acts below will be punished for reckless driving. Which of the following is NOT an example of reckless driving?",
+  "tr_c": [
+   "Violation of traffic signals and instructions, driving over the centerline",
+   "Not securing sufficient safe distance, violating the prohibition on sudden braking",
+   "Violating the prohibition on obstructing attempts to pass, improperly overtaking a car",
+   "Violating the prohibition on passage, using a mobile phone while driving"
+  ]
+ },
+ {
+  "n": 150,
+  "ko_b": "?ㅼ쓬???됱쐞瑜?諛섎났?섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섏??????쒗룺?댁쟾?쇰줈 泥섎쾶諛쏆쓣 ???덈뒗 寃껋??",
+  "ko_c": [
+   "怨좎냽?꾨줈 媛볤만 二쇄ㅼ젙李?,
+   "?뚯＜?댁쟾",
+   "?쇰컲?꾨줈 ?꾩슜李⑤줈 ?꾨컲",
+   "以묒븰?좎묠踰?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is an act of reckless driving for which you can be penalized?",
+  "tr_c": [
+   "Stopping or parking on the roadside of an expressway",
+   "Driving while under the influence of alcohol",
+   "Driving in an exclusive lane on a general road",
+   "Driving over the centerline"
+  ]
+ },
+ {
+  "n": 151,
+  "ko_b": "?ㅼ쓬 ?됱쐞瑜?諛섎났?섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섏????? ?쒗룺?댁쟾?쇰줈 泥섎쾶?????녿뒗 寃껋??",
+  "ko_c": [
+   "?좏샇?꾨컲",
+   "?띾룄?꾨컲",
+   "?뺣퉬 遺덈웾李??댁쟾湲덉? ?꾨컲",
+   "李⑤줈蹂寃?湲덉? ?꾨컲"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT considered reckless driving for which you can be penalized?",
+  "tr_c": [
+   "Violation of a traffic signal",
+   "Violation of speed limit",
+   "Violation of prohibition on driving motor vehicles in poor condition",
+   "Violation of prohibition of changing course"
+  ]
+ },
+ {
+  "n": 152,
+  "ko_b": "?먮룞李⑤벑???댁슜?섏뿬 ?뺣쾿???뱀닔?곹빐瑜??됲븯??蹂대났?댁쟾) 援ъ냽?섏뿀?? ?댁쟾硫댄뿀 ?됱젙泥섎텇??",
+  "ko_c": [
+   "硫댄뿀 痍⑥냼",
+   "硫댄뿀 ?뺤? 100??,
+   "硫댄뿀 ?뺤? 60??,
+   "?????녿떎."
+  ],
+  "a": "1",
+  "tr_b": "A driver was arrested for causing special injury under the Criminal Act using vehicles, etc. (retaliatory driving).  What is the administrative action for this person's driver's license?",
+  "tr_c": [
+   "Cancellation of driver's license",
+   "Suspension of driver's license for 100 days",
+   "Suspension of driver's license for 60 days",
+   "No actions to be taken"
+  ]
+ },
+ {
+  "n": 153,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???뺣떦???ъ쑀 ?놁씠 ???ㅻ줈 ?먮뒗 醫뚯슦濡?以꾩????듯뻾?섎㈃???ㅻⅨ ?щ엺?먭쾶 ?꾪빐(?긷?)瑜??쇱튂嫄곕굹 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섎뒗 ?됱쐞瑜?臾댁뾿 ?대씪怨??섎뒗媛?",
+  "ko_c": [
+   "怨듬룞 ?꾪뿕?됱쐞",
+   "援먯감濡?瑗щ━ 臾쇨린 ?됱쐞",
+   "?쇱뼱?ㅺ린 ?됱쐞",
+   "吏덉꽌?꾨컲 ?됱쐞"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, what do you call the offense when the drivers of two or more cars (excluding personal mobility devices) drive side by side or in tandem on a road without valid reason, causing danger to other people?",
+  "tr_c": [
+   "Dangerous collective conduct",
+   "Intersection tailgating",
+   "Cutting in",
+   "Disorderly conduct"
+  ]
+ },
+ {
+  "n": 154,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?쒗룺?댁쟾???대떦?섏? ?딅뒗 ?댁쟾?먮뒗?",
+  "ko_c": [
+   "湲됱젣?숈쓣 諛섎났?섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섎뒗 ?댁쟾??,
+   "怨꾩냽???덉쟾嫄곕━ 誘명솗蹂대줈 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??二쇰뒗 ?댁쟾??,
+   "怨좎냽?꾨줈?먯꽌 吏?띿쟻?쇰줈 ?욎?瑜닿린 諛⑸쾿 ?꾨컲???섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섎뒗 ?댁쟾??,
+   "?ъ빞 怨좎냽?꾨줈 媛볤만??誘몃벑???꾧퀬 二쇱감?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪뿕??二쇰뒗 ?댁쟾??
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT subject to penalty for reckless driving?",
+  "tr_c": [
+   "A driver who repeatedly brakes suddenly, causing danger in traffic",
+   "A driver who continually fails to maintain a safe distance from other drivers",
+   "A driver who repeatedly overtakes other vehicles in an illegal manner on the expressway",
+   "A driver who turns off his/her headlights and parks on the shoulder of the freeway at night, posing a danger to others"
+  ]
+ },
+ {
+  "n": 155,
+  "ko_b": "?ㅼ쓬 以??댁쟾?먯쓽 ?щ컮瑜??댁쟾?듦??쇰줈 媛??諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?먮룞李?二쇱쑀 以묒뿉???붿쭊?쒕룞???덈떎.",
+   "湲닿툒???곹솴???쒖쇅?섍퀬 湲됱젣?숉븯???ㅻⅨ 李④? 湲됱젣?숉븯???곹솴??留뚮뱾吏 ?딅뒗??",
+   "?꾪뿕?곹솴???덉륫?섍퀬 諛⑹뼱?댁쟾?섍린 ?꾪븯??洹쒖젙?띾룄? ?덉쟾嫄곕━瑜?紐⑤몢 以?섑븯硫??댁쟾?쒕떎.",
+   "??댁뼱怨듦린?뺤? 怨꾩젅??愿怨꾩뾾??二쇳뻾 ?덉젙?깆쓣 ?꾪븯???곸젙?됰낫??10% ?믨쾶 ?좎??쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a desirable driving habit?",
+  "tr_c": [
+   "Turn off the engine while refueling.",
+   "Unless there is an urgent situation, do not apply the brake suddenly, instigating other vehicles to do the same.",
+   "To predict potential hazards and practice defensive driving, observe the speed limit and keep a safe distance.",
+   "To ensure driving stability, tire pressure should be 10% higher than the recommended standard regardless of the season."
+  ]
+ },
+ {
+  "n": 156,
+  "ko_b": "?먮룞李⑤벑???댁슜?섏뿬 ?뺣쾿???뱀닔??뻾???됲븯??蹂대났?댁쟾) ?낃굔?섏뿀?? ?댁쟾硫댄뿀 ?됱젙泥섎텇??",
+  "ko_c": [
+   "硫댄뿀 痍⑥냼",
+   "硫댄뿀 ?뺤? 100??,
+   "硫댄뿀 ?뺤? 60??,
+   "?됱젙泥섎텇 ?놁쓬"
+  ],
+  "a": "2",
+  "tr_b": "A driver was arrested for committing special violence under the Criminal Act using vehicles, etc. (retaliatory  driving). What is the administrative action for this person's driver's license?",
+  "tr_c": [
+   "Cancellation of driver's license",
+   "Suspension of driver's license for 100 days",
+   "Suspension of driver's license for 60 days",
+   "No administrative actions"
+  ]
+ },
+ {
+  "n": 157,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂댄뻾?먯뿉 ????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?덈퉬 1誘명꽣 ?댄븯???숇젰???녿뒗 ?먯닔?덈? ?댁슜?섏뿬 ?듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먭? ?꾨땲??",
+   "?덈퉬 1誘명꽣 ?댄븯??蹂댄뻾蹂댁“???섏옄李⑤? ?댁슜?섏뿬 ?듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먯씠??",
+   "?먯쟾嫄곕? ?怨?媛???щ엺? 蹂댄뻾?먭? ?꾨땲??",
+   "?덈퉬 1誘명꽣 ?댄븯???몄빟?먯슜 蹂댄뻾湲곕? ?댁슜?섏뿬 ?듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먯씠??"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about a pedestrian?",
+  "tr_c": [
+   "A person using a handcart (not motorized) that is 1 m or less in width is not considered a pedestrian.",
+   "A person using a rollator that is 1 m or less in width is considered a pedestrian.",
+   "A person riding a bicycle is not considered a pedestrian.",
+   "A person using a walking frame that is 1 m or less in width is considered a pedestrian."
+  ]
+ },
+ {
+  "n": 158,
+  "ko_b": "?뱀감援щℓ???쒕씪?대툕 ?ㅻ（ 留ㅼ옣)???댁슜?섎뒗 ?댁쟾?먯쓽 ?먯꽭濡?媛??諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?뱀감援щℓ?먯쓽 ?덈궡?붿썝???덉쟾 愿??吏?쒖뿉 ?곕Ⅸ??",
+   "?뱀감援щℓ?먯뿉???ㅼ튂???덈궡?쒖??먯쓽 吏?쒕? 以?섑븳??",
+   "?뱀감援щℓ???湲곗뿴???곕씪 ?〓떒蹂대룄瑜?移⑤쾾?섏뿬 ?뺤감?쒕떎.",
+   "?뱀감援щℓ??吏꾩텧?낅줈???덉쟾?쒖꽕??二쇱쓽?섏뿬 ?대룞?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a desirable attitude for a driver using a drive-thru store?",
+  "tr_c": [
+   "Follow the safety instructions of the attendant at the drive-thru store.",
+   "Follow the instructions on the signage installed at the drive-thru store.",
+   "Stop by encroaching upon a crosswalk while waiting in line for the drive-thru store.",
+   "Exercise caution while navigating the entrance and exit areas of the drive-thru store, paying attention to safety facilities."
+  ]
+ },
+ {
+  "n": 159,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾?먯쓽 蹂댄뻾??蹂댄샇??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?댁쟾?먭? 蹂댄뻾?먯슦?좊룄濡쒖뿉???쒗뻾쨌 ?쇱떆?뺤??섏? ?딆븘 蹂댄뻾?먰넻?됱쓣 諛⑺빐??寃쎌슦?먮뒗 踰붿튃湲덉씠 遺怨쇰맂??",
+   "?꾨줈 ?몄쓽 怨녹쓣 ?댁쟾?섎뒗 ?댁쟾?먯뿉寃뚮룄 蹂댄뻾??蹂댄샇?섎Т媛 遺?щ맂??",
+   "?댁쟾?먮뒗 蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??洹??〓떒蹂대룄 ?욎뿉???쇱떆?뺤? ?섏뿬???쒕떎.",
+   "?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ???좏샇湲곌? ?녿뒗 ?〓떒蹂대룄 ?욎뿉?쒕뒗 諛섎뱶???쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT true about a driver's duty to protect pedestrians?",
+  "tr_c": [
+   "A traffic penalty  will be imposed on the driver who fails to slow down or stop on a pedestrian-first road and obstructs the  pedestrians.",
+   "The duty to protect pedestrians also applies to drivers driving on a place other than a road.",
+   "A driver who sees pedestrians crossing a crosswalk must come to a full stop before he/she reaches the crosswalk.",
+   "The driver must slow down when driving across a crosswalk in a school zone with no traffic lights."
+  ]
+ },
+ {
+  "n": 160,
+  "ko_b": "?댁쟾?먯쓽 蹂댄뻾??蹂댄샇??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?댁쟾?먮뒗 蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??洹??〓떒蹂대룄 ?욎뿉???쇱떆?뺤??섏뿬???쒕떎.",
+   "?댁쟾?먮뒗 李⑤줈媛 ?ㅼ튂?섏? ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃쎌슦 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?좏샇湲곌? ?ㅼ튂?섏? ?딆? ?〓떒蹂대룄 ?욎뿉?쒕뒗 蹂댄뻾?먯쓽 ?〓떒???놁쓣 寃쎌슦 ?쇱떆?뺤??섏? ?딆븘???쒕떎.",
+   "?댁쟾?먮뒗 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒕? ?〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT true about a driver's duty to protect pedestrians?",
+  "tr_c": [
+   "A driver who sees pedestrians crossing a crosswalk must come to a full stop before he/she reaches the crosswalk.",
+   "The driver must slow down while keeping a safe distance when passing by pedestrians on a narrow road with no markings.",
+   "If a crosswalk in a school zone has no traffic lights, the driver has no duty to stop if there are no pedestrians crossing.",
+   "The driver should not obstruct pedestrians crossing an intersection with no traffic lights."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d = Get-Content -Raw -LiteralPath '"'translations/audit/queue/203_choices_en.json' | ConvertFrom-Json; "'$d | ForEach-Object { [pscustomobject]@{n=$_.n; ko_b=$_.ko_b; ko_c=($_.ko_c -join '"' || '); tr_b="'$_.tr_b; tr_c=($_.tr_c -join '"' || '); check="'$_.check; detail=$_.detail} } | Where-Object {$_.n -ge 137 -and $_.n -le 142} | ConvertTo-Json -Depth 4' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 835ms:
+ConvertFrom-Json : 잘못된 배열이 전달되었습니다. ','가 필요합니다. (13535): [
+ {
+  "n": 121,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆? ?щ엺??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?먮룞李⑤벑???댁쟾?섎젮??寃쎌슦 ?뚯＜?댁쟾 諛⑹??μ튂瑜??ㅼ튂?섍퀬, ?쒌냽?꾧꼍李곗껌?μ뿉寃??깅줉?섏뿬???쒕떎.",
+   "?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂?섏? ?딆? ?먮룞李⑤벑???댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?ㅼ튂湲곗????곹빀?섏? ?꾨땲???뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑? ?댁쟾??媛?ν븯??",
+   "??2???댁긽 ?뚯＜?댁쟾 諛⑹??μ튂 遺李??먮룞李⑤벑???댄뻾湲곕줉???쒌냽?꾧꼍李곗껌?μ뿉寃??쒖텧?섏뿬???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is incorrect regarding drivers who have been issue
+d a conditional driver?셲 license requiring the installation of an alcohol ignition interlock device?",
+  "tr_c": [
+   "When intending to drive a vehicle, the driver must install an alcohol ignition interlock device and register it wit
+h the commissioner of the city or provincial police.",
+   "Driving a vehicle that is not equipped with an alcohol ignition interlock device is prohibited.",
+   "Driving a vehicle with an alcohol ignition interlock device that does not meet the installation standards is permit
+ted.",
+   "The driver must submit the driving records of the vehicle with the alcohol ignition interlock device to the commiss
+ioner of the city or provincial police at least twice a year."
+  ]
+ },
+ {
+  "n": 122,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 怨쇰줈(議몄쓬?댁쟾 ?ы븿)濡??명븯???뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?????뚯뿉 ???踰뚯튃?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "10留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "20留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+   "30留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following correctly describes the penalty imposed on a drive
+r  who cannot operate a vehicle properly due to fatigue (including drowsy driving)?",
+  "tr_c": [
+   "No penalty",
+   "Criminal fine of up to KRW 100,000 or detention",
+   "Criminal fine of up to KRW 200,000 or detention",
+   "Criminal fine of up to KRW 300,000 or detention"
+  ]
+ },
+ {
+  "n": 123,
+  "ko_b": "?댁쟾?먯쓽 ?쇰줈???댁쟾 ?됰룞???곹뼢??誘몄튂寃??쒕떎. ?쇰줈媛 ?댁쟾 ?됰룞??誘몄튂???곹뼢??諛붾Ⅴ寃??ㅻ챸??寃껋??",
+  "ko_c": [
+   "二쇰? ?먭레?????諛섏쓳 ?숈옉??鍮좊Ⅴ寃??섑??쒕떎.",
+   "?쒕젰???⑥뼱吏怨??쒖빞媛 ?볦뼱吏꾨떎.",
+   "吏媛?諛??댁쟾 議곗옉 ?λ젰???⑥뼱吏꾨떎.",
+   "移섎??섍퀬 怨꾪쉷?곸씤 ?댁쟾 ?됰룞???섑??쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Fatigue affects a driver's driving performance. Which of the following correctly describes the influence of 
+ fatigue on a driver?",
+  "tr_c": [
+   "The response time of a driver to stimuli in his/her surroundings quickens.",
+   "The vision of the driver deteriorates and his/her view widens.",
+   "A driver's ability to recognize objects and drive safely deteriorates.",
+   "A driver's driving performance becomes more meticulous and planned."
+  ]
+ },
+ {
+  "n": 124,
+  "ko_b": "?뱀슜?먮룞李⑤? ?뚯＜?댁쟾??寃쎌슦 泥섎쾶 湲곗???????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽?꾧? 0.2?쇱꽱???댁긽??寃쎌슦 2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?뚯＜ 痢≪젙 嫄곕? 1???꾨컲 ??1???댁긽 5???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "?덉쨷?뚯퐫?щ냽?꾧? 0.05?쇱꽱?몃줈 2???꾨컲??寃쎌슦 1???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댄븯??踰뚭툑",
+   "理쒖큹 ?꾨컲 ???덉쨷?뚯퐫?щ냽??0.08?쇱꽱???댁긽 0.2?쇱꽱??誘몃쭔??寃쎌슦 1???댁긽 2???댄븯??吏뺤뿭?대굹 5諛깅쭔 ???댁긽 1泥?留????댄븯??踰뚭툑"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a correct explanation of the punishment criteria for drunk driving?",
+  "tr_c": [
+   "In case of the first violation, if the blood alcohol concentration is 0.2% or more, imprisonment for 2 to 5 years o
+r criminal fine of KRW 10 million - 20 million",
+   "Refusing a field sobriety test once may result in imprisonment with labor for 1 year or more but not more than 5 ye
+ars, or criminal fine of KRW 5 million or more but not more than KRW 20 million",
+   "In case of a second violation involving a blood alcohol concentration of 0.05%, imprisonment for up to 1 year or  c
+riminal fine of up to KRW 5 million",
+   "Upon the first violation at a blood alcohol level of at least 0.08% but less than 0.2%: imprisonment with labor for
+ at least 1 year but not more than 2 years or criminal fine of at least KRW 5 million but not more than KRW 10 million"
+  ]
+ },
+ {
+  "n": 125,
+  "ko_b": "?댁쟾?먭? ?쇰줈???곹깭?먯꽌 ?댁쟾?섍쾶 ?섎㈃ ?띾룄 ?먮떒???섎せ?섍쾶 ?쒕떎. 洹??댁슜??留욌뒗 寃껋??",
+  "ko_c": [
+   "醫곸? ?꾨줈?먯꽌???ㅼ젣 ?띾룄蹂대떎 ?먮━寃??먭뺨吏꾨떎.",
+   "二쇰??????몄씤 ?꾨줈?먯꽌???ㅼ젣蹂대떎 鍮좊Ⅴ寃??먭뺨吏꾨떎.",
+   "硫由ъ꽌 ?ㅺ??ㅻ뒗 李⑥쓽 ?띾룄瑜?怨쇱냼?됯??섎떎媛 ?ш퀬媛 諛쒖깮?????덈떎.",
+   "怨좎냽?꾨줈?먯꽌 ?꾨갑???뺤???李⑤? 二쇳뻾 以묒씤 李⑤줈 ?섎せ ?꾨뒗 寃쎌슦??諛쒖깮?섏? ?딅뒗??"
+  ],
+  "a": "3",
+  "tr_b": "If you drive when you are tired, you will not be able to sense correctly the speed at which you are driving.
+  Which of the following is correct?",
+  "tr_c": [
+   "On a narrow road, you will feel as if you are going slower than you actually are.",
+   "On roads with wide-open views, you will feel as if you are going faster than you actually are.",
+   "You could underestimate the speed of a car coming toward you from far away and end up in an accident.",
+   "There is no possibility of you mistaking a car stopped ahead on an expressway to be moving."
+  ]
+ },
+ {
+  "n": 126,
+  "ko_b": "?먮룞李⑤? ?댄뻾????怨듭＜嫄곕━???곹뼢??以????덈뒗 寃쎌슦濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "鍮꾧? ?ㅻ뒗 ???댁쟾?섎뒗 寃쎌슦",
+   "?좎뿉 痍⑦븳 ?곹깭濡??댁쟾?섎뒗 寃쎌슦",
+   "李⑤웾??釉뚮젅?댄겕?≪씠 遺議깊븳 ?곹깭濡??댁쟾?섎뒗 寃쎌슦",
+   "?댁쟾?먭? ?쇰줈???곹깭濡??댁쟾?섎뒗 寃쎌슦"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which TWO may affect free running distance when driving a car?",
+  "tr_c": [
+   "Driving on a rainy day",
+   "Driving under the influence of alcohol",
+   "Driving when the vehicle has insufficient brake fluid",
+   "Driving when tired"
+  ]
+ },
+ {
+  "n": 127,
+  "ko_b": "?뚯＜ ?댁쟾?먯뿉 ???泥섎쾶 湲곗??쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?덉쨷?뚯퐫?щ냽??0.08?쇱꽱???댁긽??留뚯랬 ?댁쟾?먮뒗 ?댁쟾硫댄뿀 痍⑥냼? ?뺤궗泥섎쾶??諛쏅뒗??",
+   "寃쎌같愿???뚯＜ 痢≪젙??遺덉쓳?섍굅???덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽???곹깭?먯꽌 ?몄쟻 ?쇳빐??援먰넻?ш퀬瑜??쇱쑝??寃????댁쟾硫댄뿀 痍⑥냼? ?뺤궗泥섎쾶??諛쏅뒗??",
+   "?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???⑥닚 ?뚯＜?댁쟾??寃쎌슦?먮뒗 120?쇨컙???댁쟾硫댄뿀 ?뺤?? ?뺤궗泥섎쾶??諛쏅뒗??",
+   "泥섏쓬?쇰줈 ?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???뚯＜ ?댁쟾?먭? 臾쇱쟻 ?쇳빐??援먰넻?ш퀬瑜??쇱쑝??寃쎌슦?????댁쟾硫댄뿀媛 痍⑥냼?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which TWO statements are correct regarding penalties imposed on drunk drivers?",
+  "tr_c": [
+   "Fully inebriated drivers with a blood alcohol concentration of 0.08% or higher will have their driver's license rev
+oked and receive punishment in accordance with the law.",
+   "Those who refuse to take the alcohol breathalyzer test or who have caused fatalities or injuries while driving with
+ a blood alcohol concentration of 0.03% or higher will have their driver's license revoked and receive punishment in ac
+cordance with the law.",
+   "Those who are caught driving with a blood alcohol concentration of at least 0.03 percent but less than 0.08 percent
+ will have their driver's license suspended for 120 days and receive punishment in accordance with the law.",
+   "In a case wherein the driver causes an accident for the first time resulting in property damage while driving with 
+a blood alcohol concentration of at least 0.03 percent but less than 0.08 percent, his/her driver?셲 license is revoked.
+"
+  ]
+ },
+ {
+  "n": 128,
+  "ko_b": "?뚯＜?댁쟾 愿???댁슜 以?留욌뒗 2媛吏??",
+  "ko_c": [
+   "?명씉 痢≪젙???섑븳 ?뚯＜ 痢≪젙 寃곌낵??遺덈났?섎뒗 寃쎌슦 ?ㅼ떆 ?명씉 痢≪젙???????덈떎.",
+   "?꾨줈援먰넻踰뺤긽 ?뚯＜痢≪젙諛⑺빐?됱쐞瑜?泥섎쾶?섎뒗 洹쒖젙? ?녿떎.",
+   "?좎뿉 痍⑦븳 ?곹깭濡??먯쟾嫄곕? ?댁쟾?????뚯＜痢≪젙諛⑺빐?됱쐞瑜????щ엺? 泥섎쾶??媛?ν븯??",
+   "?좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙??留뚰븳 ?곷떦???댁쑀媛 ?덉쓬?먮룄 寃쎌같怨듬Т?먯쓽 ?뚯＜ 痢≪젙???묓븯吏 ?딆? ?먮룞李⑤벑?? ?댁쟾?먮뒗 ?댁쟾硫댄뿀媛 痍⑥냼?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which TWO statements are correct regarding drunk driving?",
+  "tr_c": [
+   "If a person disagrees with the result of a breathalyzer test, he/she may undergo the test again.",
+   "The Road Traffic Act does not contain any provision for punishing acts that interfere with alcohol testing.",
+   "A person who interferes with an alcohol test after riding a bicycle while drunk may be subject to punishment.",
+   "A driver of a motor vehicle who refuses to comply with a police officer?셲 request to take an alcohol test, despite 
+being reasonably suspected of being intoxicated, will have his/her driver?셲 license revoked."
+  ]
+ },
+ {
+  "n": 129,
+  "ko_b": "?쇰줈 諛?怨쇰줈, 議몄쓬?댁쟾怨?愿?⑤맂 ?ㅻ챸 以?留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "?쇰줈???곹솴?먯꽌??議몄쓬?댁쟾??鍮덈쾲?섎?濡?移댄럹????랬瑜??섎━怨??⑥“濡쒖슫 ?곹솴???쇳븯湲??꾪빐 吏꾨줈蹂寃쎌쓣 ?먯＜?쒕떎.",
+   "蹂?붽? ?곴퀬 ?꾪뿕 ?ы깭??異쒗쁽???곸? ?꾨줈?먯꽌??二쇱쓽?μ씠 ?μ긽?섏뼱 議몄쓬?댁쟾 ?됰룞??以꾩뼱?좊떎.",
+   "媛먭린??蹂듭슜 ??議몄쓬???????덇린 ?뚮Ц???덉쟾???꾪빐 ?댁쟾??吏?묓빐???쒕떎.",
+   "?뚯＜?댁쟾????寃쎌슦 ??뚯쓽 湲곕뒫??鍮꾪솢?깊솕?섏뼱 議몄쓬?댁쟾??媛?μ꽦???믪븘吏꾨떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are true about drowsy and/or fatigued driving? (Select TWO)",
+  "tr_c": [
+   "If drowsy while driving, you must consume more caffeine and change lanes more often to avoid monotonous driving.",
+   "Your alertness improves on roads with fewer variations and potential hazards, thereby reducing the risk of drowsy d
+riving.",
+   "Avoid driving if you have taken cold medicines since they may cause drowsiness.",
+   "Alcohol deactivates certain cerebral functions and increases the chance of drowsiness."
+  ]
+ },
+ {
+  "n": 130,
+  "ko_b": "吏덈퀝??怨쇰줈濡??명빐 ?뺤긽?곸씤 ?댁쟾???섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?섎떎媛 ?⑥냽??寃쎌슦 ?대뼸寃??섎뒗媛?",
+  "ko_c": [
+   "怨쇳깭猷뚭? 遺怨쇰맆 ???덈떎.",
+   "?댁쟾硫댄뿀媛 ?뺤??????덈떎.",
+   "援щ쪟 ?먮뒗 踰뚭툑??泥섑븳??",
+   "泥섎쾶 諛쏆? ?딅뒗??"
+  ],
+  "a": "3",
+  "tr_b": "What penalty is a driver subjected to if caught by the police while driving in a physical state of being una
+ble to  drive normally (due to illness or fatigue)?",
+  "tr_c": [
+   "Administrative fine",
+   "Suspension of the driver's license",
+   "Detention or criminal fine",
+   "No penalty"
+  ]
+ },
+ {
+  "n": 131,
+  "ko_b": "留덉빟 ???쎈Ъ蹂듭슜?쇰줈 ?뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤? ?댁쟾?섎떎媛 ?몃챸?쇳빐 援먰넻?ш퀬瑜???湲고븳 寃쎌슦 援먰넻?ш퀬泥섎━ ?밸?踰뺤
+긽 ?댁쟾?먯쓽 梨낆엫?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "梨낆엫蹂댄뿕留?媛?낅릺???덉쑝??異붽??곸쑝濡??쇳빐?먯? ?⑹쓽?섎뜑?쇰룄 ?뺤궗泥섎쾶?쒕떎.",
+   "?댁쟾?먮낫?섏뿉 媛?낅릺???덉쑝硫??뺤궗泥섎쾶??硫댁젣?쒕떎.",
+   "醫낇빀蹂댄뿕??媛?낅릺???덉쑝硫??뺤궗泥섎쾶??硫댁젣?쒕떎.",
+   "醫낇빀蹂댄뿕??媛?낅릺???덇퀬 異붽??곸쑝濡??쇳빐?먯? ?⑹쓽??寃쎌슦?먮뒗 ?뺤궗泥섎쾶??硫댁젣?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Under the Act on Special Cases Concerning the Settlement of Traffic Accidents, what is the correct legal res
+ponsibility of a driver who causes a traffic accident resulting in injury or death while driving a vehicle in a conditi
+on of impaired normal driving due to drug or other substance abuse?",
+  "tr_c": [
+   "The driver will be criminally charged despite being covered by liability car insurance and even after having settle
+d  with  the accident victim(s).",
+   "The driver will be exempted from criminal charges if he/she is covered by car insurance.",
+   "The driver will be exempted from criminal charges if he/she is covered by comprehensive insurance.",
+   "The driver will be exempted from criminal charges if he/she is covered by comprehensive insurance and he/she has se
+ttled with the accident victim(s)."
+  ]
+ },
+ {
+  "n": 132,
+  "ko_b": "?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 ?곹깭???댁쟾??媛묒씠 ?좏샇?湲?以묒씤 ?곹솴?먯꽌 ?ㅼ감(?댁쟾????媛 異붾룎??寃쎌슦??留????ㅻ챸??",
+  "ko_c": [
+   "?뚯＜?댁쟾??以묓븳 ?꾨컲?됱쐞?닿린 ?뚮Ц??媛묒씠 ?ш퀬??媛?댁옄濡?泥섎쾶?쒕떎.",
+   "?ш퀬??媛?댁옄???꾩씠 ?섏?留? 媛묒쓽 ?뚯＜?댁쟾? 蹂꾧컻濡?泥섎쾶?쒕떎.",
+   "媛묒? ?쇳빐?먯씠誘濡??댁쟾硫댄뿀??????됱젙泥섎텇??諛쏆? ?딅뒗??",
+   "?꾩? 援먰넻?ш퀬 ?먯씤怨?寃곌낵???곕Ⅸ 踰뚯젏? ?녿떎."
+  ],
+  "a": "2",
+  "tr_b": "Driver A, with blood alcohol concentration of over 0.03%, is rear-ended by Driver B while waiting at a red l
+ight.  What happens next?",
+  "tr_c": [
+   "Since drunk driving is a serious offense, Driver A should be penalized.",
+   "Although Driver B needs to be penalized for the accident, Driver A is also penalized separately for drunk driving."
+,
+   "Driver A is the victim in this accident and will not be subject to administrative penalties.",
+   "Driver B receives no demerit points regardless of the cause or result of the accident."
+  ]
+ },
+ {
+  "n": 133,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?댁쟾??湲덉??섎뒗 ?좎뿉 痍⑦븳 ?곹깭??湲곗?? ?댁쟾?먯쓽 ?덉쨷?뚯퐫?щ냽?꾧? (   )濡??쒕떎. (   )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "0.01?쇱꽱???댁긽??寃쎌슦",
+   "0.02?쇱꽱???댁긽??寃쎌슦",
+   "0.03?쇱꽱???댁긽??寃쎌슦",
+   "0.08?쇱꽱???댁긽??寃쎌슦"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, a driver with blood alcohol concentration of ( ) or more is prohibited fr
+om  driving. Select one of the following to fill in the brackets:",
+  "tr_c": [
+   "0.01% or higher",
+   "0.02% or higher",
+   "0.03% or higher",
+   "0.08% or higher"
+  ]
+ },
+ {
+  "n": 134,
+  "ko_b": "?ㅼ쓬? ?쇰줈?댁쟾怨??쎈Ъ蹂듭슜 ?댁쟾??????ㅻ챸?대떎. 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?쇰줈???곹깭?먯꽌???댁쟾? 議몄쓬?댁쟾?쇰줈 ?댁뼱吏?媛?μ꽦????떎.",
+   "?쇰줈???곹깭?먯꽌???댁쟾? 二쇱쓽?? ?먮떒?λ젰, 諛섏쓳?띾룄????섎? 媛?몄삤湲??뚮Ц???꾪뿕?섎떎.",
+   "留덉빟??蹂듭슜?섍퀬 ?댁쟾???섎떎媛 援먰넻?ш퀬濡??щ엺???곹빐???대Ⅴ寃????댁쟾?먮뒗 泥섎쾶?????덈떎.",
+   "留덉빟??蹂듭슜?섍퀬 ?댁쟾???섎떎媛 援먰넻?ш퀬濡??щ엺???곹빐???대Ⅴ寃??섍퀬 ?꾩＜?섏뿬 ?댁쟾硫댄뿀媛 痍⑥냼??寃쎌슦?먮뒗 3????寃쎄낵?댁빞 ?댁쟾硫댄뿀 痍⑤뱷??媛?ν븯??"
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are TWO correct descriptions with regard to fatigued driving and driving under the  i
+nfluence of drugs?",
+  "tr_c": [
+   "Fatigued driving is not likely to lead to falling asleep at the wheel.",
+   "Fatigued driving is dangerous because it leads to poor focus, judgment, and reflexes.",
+   "Driving under the influence of drugs and causing an accident resulting in injury are subject to punishment.",
+   "If your driver's license is revoked because of a hit-and-run event while driving under the influence of drugs, it i
+s possible to get the license back after three years."
+  ]
+ },
+ {
+  "n": 135,
+  "ko_b": "?ㅼ쓬 以?蹂대났?댁쟾???덈갑?섎뒗 諛⑸쾿?대씪怨?蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "湲닿툒?쒕룞 ??鍮꾩긽?먮㈇??耳쒖＜湲?,
+   "諛섎???李⑤줈?먯꽌 李⑤웾???묎렐 ???곹뼢?꾩“???꾧린",
+   "?띾룄瑜??щ┫ ???꾩“?깆쓣 ?곹뼢?쇰줈 耳쒓린",
+   "?욎감媛 吏??異쒕컻???뚮뒗 3珥??뺣룄 諛곕젮?섍린"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT an appropriate method of preventing retaliatory driving?",
+  "tr_c": [
+   "Turn on the emergency flashers in case of emergency braking.",
+   "Turn off the head-beam headlights when a car approaches from the opposite direction.",
+   "Turn on the high-beam headlights when driving at high speed.",
+   "Wait for three seconds if the vehicle in front does not start moving right away."
+  ]
+ },
+ {
+  "n": 136,
+  "ko_b": "?ㅼ쓬 以?蹂대났?댁쟾???뱁뻽?????좉퀬?섎뒗 諛⑸쾿?쇰줈 媛???곸젅?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "120???좉퀬?쒕떎.",
+   "112???좉퀬?쒕떎.",
+   "?ㅻ쭏?명룿?섏븞?꾩떊臾멸퀬?숈뿉 ?좉퀬?쒕떎.",
+   "?ъ씠踰?寃쎌같泥?뿉 ?좉퀬?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT an appropriate way of reporting retaliatory driving?",
+  "tr_c": [
+   "Calling 120",
+   "Calling 112",
+   "Reporting to the smartphone app Safety e-Report",
+   "Reporting the incident to the Cyber Police Agency"
+  ]
+ },
+ {
+  "n": 137,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 (      )???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡?以꾩? ???듯뻾?섎㈃??援먰넻?곸쓽 ?꾪뿕
+??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?대? ?꾨컲??寃쎌슦 (     ) ?쇰줈 泥섎쾶?????덈떎. (    )?덉뿉  媛곴컖 諛붾Ⅴ寃?吏앹??댁쭊 寃껋??",
+  "ko_c": [
+   "?꾨룞?대쪣?됲뻾李? 1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?대쪣?먮룞李? 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑",
+   "?뱀닔?먮룞李? 2???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑",
+   "?먮룞湲곗옣移섏옄?꾧굅, 6媛쒖썡 ?댄븯??吏뺤뿭 ?먮뒗 300留????댄븯??踰뚭툑"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the l
+ike in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traff
+ic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses.",
+  "tr_c": [
+   "self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 
+million",
+   "two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  
+million",
+   "special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5
+ million",
+   "motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"
+  ]
+ },
+ {
+  "n": 138,
+  "ko_b": "?쇳빐 李⑤웾???ㅻ뵲瑜대뜕 ?뱀슜李??댁쟾?먭? 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?섏뿬 湲됱젣?숉븯?????꾪삊 ?댁쟾????寃쎌슦?먮뒗 ?뚰삎 踰뺛띿뿉 ?곕Ⅸ 蹂대났?댁쟾?쇰줈 泥섎쾶諛쏆쓣 
+???덈떎. ?댁뿉 ???泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "7???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "10???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+   "1???댁긽???좉린吏뺤뿭??泥섑븳??",
+   "1??6???댁긽???좉린吏뺤뿭??泥섑븳??"
+  ],
+  "a": "1",
+  "tr_b": "You may be subject to a penalty according to the Criminal Act if you overtake a vehicle over the centerline 
+or perform any retaliatory driving such as sudden braking. In this case, what is the correct punishment that will be im
+posed on you?",
+  "tr_c": [
+   "You will be sentenced to imprisonment for up to 7 years or criminal fine of not more than KRW 10 million.",
+   "You will be sentenced to imprisonment for up to 10 years or criminal fine of not more than KRW 20 million.",
+   "You will be sentenced to imprisonment for a limited term of more than 1 year.",
+   "You will be sentenced to imprisonment for a limited term of more than 18 months."
+  ]
+ },
+ {
+  "n": 139,
+  "ko_b": "?뱀슜李??댁쟾?먭? 李⑤줈 蹂寃??쒕퉬??遺꾨끂???곷?李⑤웾 ?욎뿉??湲됱젣?숉븯?? ?대? 蹂댁? 紐삵븯怨??ㅻ뵲瑜대뜕 ?붾Ъ李④? 異??뚰븯???붾Ъ李??댁쟾?먭? ?ㅼ튇 寃쎌슦?먮뒗?
+뚰삎踰뺛띿뿉 ?곕Ⅸ 蹂대났?댁쟾?쇰줈 泥섎쾶諛쏆쓣 ???덈떎. ?댁뿉 ???泥섎쾶湲곗??쇰줈 留욌뒗  寃껋?? (以묒긽?대뒗 ?꾨떂)",
+  "ko_c": [
+   "1???댁긽 10???댄븯??吏뺤뿭",
+   "1???댁긽 20???댄븯??吏뺤뿭",
+   "2???댁긽 10???댄븯??吏뺤뿭",
+   "2???댁긽 20???댄븯??吏뺤뿭"
+  ],
+  "a": "1",
+  "tr_b": "If a passenger vehicle driver responds to a lane-change dispute by suddenly braking in front of the pursuing
+ vehicle, leading to a subsequent collision with an unaware cargo truck and resulting in injury to the cargo truck driv
+er, legal repercussions may arise under the provisions of the Criminal Act for engaging in retaliatory driving. What is
+ the appropriate punishment standard for this? (The cargo truck driver is not seriously injured)",
+  "tr_c": [
+   "You will be sentenced to imprisonment for a limited term in the range of 1 year - 10 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 1 year - 20 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 2 years - 10 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 2 years - 20 years."
+  ]
+ },
+ {
+  "n": 140,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?쒗룺?댁쟾 ?곸슜 ??곸씠 ?꾨땶 寃껋?竊?,
+  "ko_c": [
+   "理쒓퀬?띾룄???꾨컲",
+   "?〓떒?띿쑀?담냽?꾩쭊 湲덉? ?꾨컲",
+   "?쇱뼱?ㅺ린",
+   "?곗냽?곸쑝濡?寃쎌쓬湲곕? ?몃━???됱쐞"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is not subject to legal action for reckless driving under the Road Traffic Act?",
+  "tr_c": [
+   "Violating the maximum speed limit",
+   "Violating a prohibition of crossing the road, making a U-turn, or moving backward",
+   "Cutting in a lane",
+   "Honking continuously"
+  ]
+ },
+ {
+  "n": 141,
+  "ko_b": "?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???댁쟾?먭? ?ㅼ쓬???됱쐞瑜?諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??媛?섎뒗 寃쎌슦 ?쒗룺?댁쟾??濡?泥섎쾶諛쏄쾶 ?쒕떎. ?쒗룺?댁쟾???
+???됱쐞媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?좏샇 ?먮뒗 吏???꾨컲",
+   "?〓떒쨌?좏꽩쨌?꾩쭊 湲덉? ?꾨컲",
+   "?뺣떦???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮",
+   "怨좎냽?꾨줈?먯꽌??吏?뺤감濡??꾨컲"
+  ],
+  "a": "4",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another driver by committing t
+he acts below in a repeated manner will be punished for reckless driving. Which of the following is NOT an example of r
+eckless driving?",
+  "tr_c": [
+   "Violation of traffic signals or instructions",
+   "Violation of prohibitions on crossing, making a U-turn, and driving backward",
+   "Creating noise without reasonable cause",
+   "Violating a designated lane of an expressway"
+  ]
+ },
+ {
+  "n": 142,
+  "ko_b": "?뱀슜李??댁쟾?먭? ?쒗룺?댁쟾???섎뒗 寃쎌슦 ?꾨줈援먰넻踰뺤뿉 ?곕Ⅸ 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "踰붿튃湲?6留??먯쓽 ?듦퀬泥섎텇??諛쏅뒗??",
+   "怨쇳깭猷?3留??먯씠 遺怨쇰맂??",
+   "6媛쒖썡 ?댄븯??吏뺤뿭?대굹 200留????댄븯??踰뚭툑??泥섑븳??",
+   "1???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑??泥섑븳??"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is the correct punishment for reckless driving?",
+  "tr_c": [
+   "Notice for payment of traffic penalty of KRW 60,000",
+   "Administrative fine of KRW 30,000",
+   "Imprisonment for up to 6 months or criminal fine of not more than KRW 2 million",
+   "Imprisonment for up to 1 year or criminal fine of not more than KRW 5 million"
+  ]
+ },
+ {
+  "n": 143,
+  "ko_b": "怨좎냽?꾨줈瑜?二쇳뻾?섎뒗 李⑤웾(蹂몄씤 李⑤웾 ?ы븿)???곸옱臾쇱씠 二쇳뻾李⑤줈???⑥뼱議뚯쓣 ???댁쟾?먯쓽 議곗튂?붾졊?쇰줈 媛??諛붾Ⅴ吏  ?딆? 寃껋??",
+  "ko_c": [
+   "?꾨갑 李⑤웾??二쇳뻾???뺤씤?섎㈃???덉쟾???μ냼???뺤감?쒕떎.",
+   "怨좎냽?꾨줈 愿由ъ껌?대굹 愿怨?湲곌????좎냽???좉퀬?쒕떎.",
+   "?덉쟾??怨녹뿉 ?뺤감 ???붾Ъ?곸옱 ?곹깭瑜??뺤씤?쒕떎.",
+   "?붾Ъ ?곸옱臾쇱쓣 ?⑥뼱?⑤┛ 李⑤웾???댁쟾?먯뿉寃?蹂대났?댁쟾???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "What is the most incorrect action by the driver when a vehicle's cargo (including the driver's vehicle) fall
+s into  the lane while driving on an expressway?",
+  "tr_c": [
+   "Stop the vehicle in a safe place while checking for vehicles behind.",
+   "Report the case promptly to the relevant authorities such as expressway management agency.",
+   "Stop the vehicle in a safe place and check the cargo loading status.",
+   "Conduct retaliatory driving against the driver who dropped the cargo."
+  ]
+ },
+ {
+  "n": 144,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞湲곗옣移섏옄?꾧굅(媛쒖씤???대룞?μ튂 ?쒖쇅)???쒗룺?댁쟾 ?됱쐞濡?蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "?좏샇 ?꾨컲?됱쐞瑜?3??諛섎났?섏뿬 ?댁쟾?섏???",
+   "?띾룄 ?꾨컲?됱쐞? 吏???꾨컲?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???",
+   "?좏샇 ?꾨컲?됱쐞? 以묒븰??移⑤쾾?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???",
+   "?뚯＜?댁쟾 ?됱쐞? 蹂댄뻾?먮낫?몄쓽臾??꾨컲?됱쐞瑜??곕떖???꾨컲?섏뿬 ?댁쟾?섏???"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following cannot be construed as reckless driving for a  mot
+orcycle (excluding personal mobility devices)?",
+  "tr_c": [
+   "The driver repeatedly ignored traffic signals three times.",
+   "The driver committed successive violations of exceeding the speed limit and disobeying instructions.",
+   "The driver committed successive violations of ignoring traffic signals and crossing the centerline.",
+   "The driver committed successive violations of crossing the centerline as well as the duty to protect pedestrians."
+  ]
+ },
+ {
+  "n": 145,
+  "ko_b": "?ㅼ쓬? ?쒗룺?댁쟾怨?蹂대났?댁쟾??????ㅻ챸?대떎. 留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅽ넗諛붿씠 ?댁쟾?먭? ?뺣떦???ъ쑀 ?놁씠 ?뚯쓬??諛섎났?섏뿬 遺덊듅???ㅼ닔?먭쾶 ?꾪삊??媛?섎뒗 寃쎌슦??蹂대났?댁쟾???대떦?쒕떎.",
+   "?뱀슜李??댁쟾?먭? 以묒븰??移⑤쾾 諛??띾룄?꾨컲???곕떖???섏뿬 遺덊듅???ㅼ닔?먭쾶 ?꾪빐瑜?媛?섎뒗 寃쎌슦???쒗룺?댁쟾???대떦?쒕떎.",
+   "????몃윮 ?댁쟾?먭? 怨좎쓽?곸쑝濡??뱀젙 李⑤웾 ?욎쑝濡??욎?瑜닿린?섏뿬 湲됱젣?숉븳 寃쎌슦???쒗룺?댁쟾???대떦?쒕떎.",
+   "踰꾩뒪 ?댁쟾?먭? 諛섎났?곸쑝濡??욎?瑜닿린 諛⑸쾿 ?꾨컲?섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ??寃쎌슦??蹂대났?댁쟾???대떦?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is correct regarding reckless driving and retaliatory driving?",
+  "tr_c": [
+   "A motorcycle driver who generates noise without just cause to threaten many unspecified drivers can be penalized fo
+r  retaliatory driving.",
+   "The driver of a passenger car who drives over the centerline and exceeds the speed limit repeatedly to threaten man
+y unspecified drivers can be penalized for reckless driving.",
+   "The driver of a large truck who intentionally overtakes a car and brakes suddenly can be penalized for reckless dri
+ving.",
+   "A bus driver who repeatedly violates the legal way of overtaking a car, thereby increasing the risk of traffic acci
+dent, can be penalized for retaliatory driving."
+  ]
+ },
+ {
+  "n": 146,
+  "ko_b": "?먮룞李??댁쟾?먭? 以묒븰??移⑤쾾??諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪빐瑜?媛?섍굅??援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섎뒗 ?됱쐞?? ?꾨줈援먰넻踰뺤긽 (      )???대떦?쒕떎.
+ (     )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "怨듬룞?꾪뿕?됱쐞",
+   "?쒗룺?댁쟾",
+   "??젰?댁쟾",
+   "蹂대났?댁쟾"
+  ],
+  "a": "2",
+  "tr_b": "Causing harm to the life and safety of others by repeatedly driving over the centerline or causing risk in t
+he traffic flow are ( ) according to the Road Traffic Act. Which of the following fits in ( )?",
+  "tr_c": [
+   "joint risky behavior",
+   "reckless driving",
+   "violent driving",
+   "retaliatory driving"
+  ]
+ },
+ {
+  "n": 147,
+  "ko_b": "?쇰컲?꾨줈?먯꽌 ?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???댁쟾?먭? ?ㅼ쓬???됱쐞瑜?諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??媛?섎뒗 寃????쒗룺?댁쟾?쇰줈 泥섎쾶諛쏄쾶 ?쒕떎. 
+?쒗룺?댁쟾??????됱쐞媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?쇰컲?꾨줈?먯꽌 吏?뺤감濡??꾨컲",
+   "以묒븰??移⑤쾾, 湲됱젣?숆툑吏 ?꾨컲",
+   "?덉쟾嫄곕━ 誘명솗蹂? 李⑤줈蹂寃?湲덉? ?꾨컲",
+   "?쇰컲?꾨줈?먯꽌 ?욎?瑜닿린 諛⑸쾿 ?꾨컲"
+  ],
+  "a": "1",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another driver by committing t
+he acts below in a repeated manner on a general road will be punished for reckless driving. Which of the following is N
+OT an example of reckless driving?",
+  "tr_c": [
+   "Violating a designated lane on a general road",
+   "Driving over the centerline and violating the prohibition on sudden braking",
+   "Not complying with the safe distance, violating lane-changing prohibitions",
+   "Improperly overtaking a car on a general road"
+  ]
+ },
+ {
+  "n": 148,
+  "ko_b": "?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???댁쟾?먭? ???댁긽???됱쐞瑜??곕떖???섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??媛?섎뒗 寃쎌슦 ?쒗룺 ?댁쟾?쇰줈 泥섎쾶諛쏄쾶 ?쒕떎. ?ㅼ쓬??
+?쒗룺?댁쟾 ?좏삎??????ㅻ챸?쇰줈 ?곷떦?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "?댁쟾 以??곸긽 ?쒖떆 ?μ튂瑜?議곗옉?섎㈃???꾨갑二쇱떆瑜??쒕쭔?섏???",
+   "?욎감???곗륫?쇰줈 ?욎?瑜닿린?섎㈃???띾룄瑜??꾨컲?섏???",
+   "?덉쟾嫄곕━瑜??뺣낫?섏? ?딄퀬 湲됱젣?숈쓣 諛섎났?섏???",
+   "?띾룄瑜??꾨컲?섏뿬 ?욎?瑜닿린?섎젮??李⑤? 諛⑺빐?섏???"
+  ],
+  "a": "1",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another person by repeatedly c
+ommitting a series of two or more of the acts below will be punished for reckless driving. Which of the following is NO
+T an example of reckless driving?",
+  "tr_c": [
+   "Not keeping the eyes forward; operating a video display device while driving",
+   "Exceeding the speed limit while overtaking a car on his/her right side",
+   "Not securing sufficient safe distance and repeating sudden braking",
+   "Exceeding the speed limit to obstruct a trailing car that is attempting to pass by"
+  ]
+ },
+ {
+  "n": 149,
+  "ko_b": "?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???댁쟾?먭? ?ㅼ쓬???됱쐞瑜?諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??媛?섎뒗 寃쎌슦 ?쒗룺?댁쟾??濡?泥섎쾶諛쏄쾶 ?쒕떎. ?쒗룺?댁쟾???
+???됱쐞濡??由?寃껋??",
+  "ko_c": [
+   "?좏샇 諛?吏???꾨컲, 以묒븰??移⑤쾾",
+   "?덉쟾嫄곕━ 誘명솗蹂? 湲됱젣??湲덉? ?꾨컲",
+   "?욎?瑜닿린 諛⑺빐 湲덉? ?꾨컲, ?욎?瑜닿린 諛⑸쾿 ?꾨컲",
+   "?듯뻾湲덉? ?꾨컲, ?댁쟾 以??대????꾪솕?ъ슜"
+  ],
+  "a": "4",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another driver by repeatedly c
+ommitting the acts below will be punished for reckless driving. Which of the following is NOT an example of reckless dr
+iving?",
+  "tr_c": [
+   "Violation of traffic signals and instructions, driving over the centerline",
+   "Not securing sufficient safe distance, violating the prohibition on sudden braking",
+   "Violating the prohibition on obstructing attempts to pass, improperly overtaking a car",
+   "Violating the prohibition on passage, using a mobile phone while driving"
+  ]
+ },
+ {
+  "n": 150,
+  "ko_b": "?ㅼ쓬???됱쐞瑜?諛섎났?섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섏??????쒗룺?댁쟾?쇰줈 泥섎쾶諛쏆쓣 ???덈뒗 寃껋??",
+  "ko_c": [
+   "怨좎냽?꾨줈 媛볤만 二쇄ㅼ젙李?,
+   "?뚯＜?댁쟾",
+   "?쇰컲?꾨줈 ?꾩슜李⑤줈 ?꾨컲",
+   "以묒븰?좎묠踰?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is an act of reckless driving for which you can be penalized?",
+  "tr_c": [
+   "Stopping or parking on the roadside of an expressway",
+   "Driving while under the influence of alcohol",
+   "Driving in an exclusive lane on a general road",
+   "Driving over the centerline"
+  ]
+ },
+ {
+  "n": 151,
+  "ko_b": "?ㅼ쓬 ?됱쐞瑜?諛섎났?섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섏????? ?쒗룺?댁쟾?쇰줈 泥섎쾶?????녿뒗 寃껋??",
+  "ko_c": [
+   "?좏샇?꾨컲",
+   "?띾룄?꾨컲",
+   "?뺣퉬 遺덈웾李??댁쟾湲덉? ?꾨컲",
+   "李⑤줈蹂寃?湲덉? ?꾨컲"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT considered reckless driving for which you can be penalized?",
+  "tr_c": [
+   "Violation of a traffic signal",
+   "Violation of speed limit",
+   "Violation of prohibition on driving motor vehicles in poor condition",
+   "Violation of prohibition of changing course"
+  ]
+ },
+ {
+  "n": 152,
+  "ko_b": "?먮룞李⑤벑???댁슜?섏뿬 ?뺣쾿???뱀닔?곹빐瑜??됲븯??蹂대났?댁쟾) 援ъ냽?섏뿀?? ?댁쟾硫댄뿀 ?됱젙泥섎텇??",
+  "ko_c": [
+   "硫댄뿀 痍⑥냼",
+   "硫댄뿀 ?뺤? 100??,
+   "硫댄뿀 ?뺤? 60??,
+   "?????녿떎."
+  ],
+  "a": "1",
+  "tr_b": "A driver was arrested for causing special injury under the Criminal Act using vehicles, etc. (retaliatory dr
+iving).  What is the administrative action for this person's driver's license?",
+  "tr_c": [
+   "Cancellation of driver's license",
+   "Suspension of driver's license for 100 days",
+   "Suspension of driver's license for 60 days",
+   "No actions to be taken"
+  ]
+ },
+ {
+  "n": 153,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅)???뺣떦???ъ쑀 ?놁씠 ???ㅻ줈 ?먮뒗 醫뚯슦濡?以꾩????듯뻾?섎㈃??
+?ㅻⅨ ?щ엺?먭쾶 ?꾪빐(?긷?)瑜??쇱튂嫄곕굹 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섎뒗 ?됱쐞瑜?臾댁뾿 ?대씪怨??섎뒗媛?",
+  "ko_c": [
+   "怨듬룞 ?꾪뿕?됱쐞",
+   "援먯감濡?瑗щ━ 臾쇨린 ?됱쐞",
+   "?쇱뼱?ㅺ린 ?됱쐞",
+   "吏덉꽌?꾨컲 ?됱쐞"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, what do you call the offense when the drivers of two or more cars (exclud
+ing personal mobility devices) drive side by side or in tandem on a road without valid reason, causing danger to other 
+people?",
+  "tr_c": [
+   "Dangerous collective conduct",
+   "Intersection tailgating",
+   "Cutting in",
+   "Disorderly conduct"
+  ]
+ },
+ {
+  "n": 154,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?쒗룺?댁쟾???대떦?섏? ?딅뒗 ?댁쟾?먮뒗?",
+  "ko_c": [
+   "湲됱젣?숈쓣 諛섎났?섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섎뒗 ?댁쟾??,
+   "怨꾩냽???덉쟾嫄곕━ 誘명솗蹂대줈 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊??二쇰뒗 ?댁쟾??,
+   "怨좎냽?꾨줈?먯꽌 吏?띿쟻?쇰줈 ?욎?瑜닿린 諛⑸쾿 ?꾨컲???섏뿬 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섎뒗 ?댁쟾??,
+   "?ъ빞 怨좎냽?꾨줈 媛볤만??誘몃벑???꾧퀬 二쇱감?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪뿕??二쇰뒗 ?댁쟾??
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT subject to penalty for reckless driving?",
+  "tr_c": [
+   "A driver who repeatedly brakes suddenly, causing danger in traffic",
+   "A driver who continually fails to maintain a safe distance from other drivers",
+   "A driver who repeatedly overtakes other vehicles in an illegal manner on the expressway",
+   "A driver who turns off his/her headlights and parks on the shoulder of the freeway at night, posing a danger to oth
+ers"
+  ]
+ },
+ {
+  "n": 155,
+  "ko_b": "?ㅼ쓬 以??댁쟾?먯쓽 ?щ컮瑜??댁쟾?듦??쇰줈 媛??諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?먮룞李?二쇱쑀 以묒뿉???붿쭊?쒕룞???덈떎.",
+   "湲닿툒???곹솴???쒖쇅?섍퀬 湲됱젣?숉븯???ㅻⅨ 李④? 湲됱젣?숉븯???곹솴??留뚮뱾吏 ?딅뒗??",
+   "?꾪뿕?곹솴???덉륫?섍퀬 諛⑹뼱?댁쟾?섍린 ?꾪븯??洹쒖젙?띾룄? ?덉쟾嫄곕━瑜?紐⑤몢 以?섑븯硫??댁쟾?쒕떎.",
+   "??댁뼱怨듦린?뺤? 怨꾩젅??愿怨꾩뾾??二쇳뻾 ?덉젙?깆쓣 ?꾪븯???곸젙?됰낫??10% ?믨쾶 ?좎??쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a desirable driving habit?",
+  "tr_c": [
+   "Turn off the engine while refueling.",
+   "Unless there is an urgent situation, do not apply the brake suddenly, instigating other vehicles to do the same.",
+   "To predict potential hazards and practice defensive driving, observe the speed limit and keep a safe distance.",
+   "To ensure driving stability, tire pressure should be 10% higher than the recommended standard regardless of the sea
+son."
+  ]
+ },
+ {
+  "n": 156,
+  "ko_b": "?먮룞李⑤벑???댁슜?섏뿬 ?뺣쾿???뱀닔??뻾???됲븯??蹂대났?댁쟾) ?낃굔?섏뿀?? ?댁쟾硫댄뿀 ?됱젙泥섎텇??",
+  "ko_c": [
+   "硫댄뿀 痍⑥냼",
+   "硫댄뿀 ?뺤? 100??,
+   "硫댄뿀 ?뺤? 60??,
+   "?됱젙泥섎텇 ?놁쓬"
+  ],
+  "a": "2",
+  "tr_b": "A driver was arrested for committing special violence under the Criminal Act using vehicles, etc. (retaliato
+ry  driving). What is the administrative action for this person's driver's license?",
+  "tr_c": [
+   "Cancellation of driver's license",
+   "Suspension of driver's license for 100 days",
+   "Suspension of driver's license for 60 days",
+   "No administrative actions"
+  ]
+ },
+ {
+  "n": 157,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂댄뻾?먯뿉 ????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?덈퉬 1誘명꽣 ?댄븯???숇젰???녿뒗 ?먯닔?덈? ?댁슜?섏뿬 ?듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먭? ?꾨땲??",
+   "?덈퉬 1誘명꽣 ?댄븯??蹂댄뻾蹂댁“???섏옄李⑤? ?댁슜?섏뿬 ?듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먯씠??",
+   "?먯쟾嫄곕? ?怨?媛???щ엺? 蹂댄뻾?먭? ?꾨땲??",
+   "?덈퉬 1誘명꽣 ?댄븯???몄빟?먯슜 蹂댄뻾湲곕? ?댁슜?섏뿬 ?듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먯씠??"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about a pedestrian?",
+  "tr_c": [
+   "A person using a handcart (not motorized) that is 1 m or less in width is not considered a pedestrian.",
+   "A person using a rollator that is 1 m or less in width is considered a pedestrian.",
+   "A person riding a bicycle is not considered a pedestrian.",
+   "A person using a walking frame that is 1 m or less in width is considered a pedestrian."
+  ]
+ },
+ {
+  "n": 158,
+  "ko_b": "?뱀감援щℓ???쒕씪?대툕 ?ㅻ（ 留ㅼ옣)???댁슜?섎뒗 ?댁쟾?먯쓽 ?먯꽭濡?媛??諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?뱀감援щℓ?먯쓽 ?덈궡?붿썝???덉쟾 愿??吏?쒖뿉 ?곕Ⅸ??",
+   "?뱀감援щℓ?먯뿉???ㅼ튂???덈궡?쒖??먯쓽 吏?쒕? 以?섑븳??",
+   "?뱀감援щℓ???湲곗뿴???곕씪 ?〓떒蹂대룄瑜?移⑤쾾?섏뿬 ?뺤감?쒕떎.",
+   "?뱀감援щℓ??吏꾩텧?낅줈???덉쟾?쒖꽕??二쇱쓽?섏뿬 ?대룞?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a desirable attitude for a driver using a drive-thru store?",
+  "tr_c": [
+   "Follow the safety instructions of the attendant at the drive-thru store.",
+   "Follow the instructions on the signage installed at the drive-thru store.",
+   "Stop by encroaching upon a crosswalk while waiting in line for the drive-thru store.",
+   "Exercise caution while navigating the entrance and exit areas of the drive-thru store, paying attention to safety f
+acilities."
+  ]
+ },
+ {
+  "n": 159,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾?먯쓽 蹂댄뻾??蹂댄샇??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?댁쟾?먭? 蹂댄뻾?먯슦?좊룄濡쒖뿉???쒗뻾쨌 ?쇱떆?뺤??섏? ?딆븘 蹂댄뻾?먰넻?됱쓣 諛⑺빐??寃쎌슦?먮뒗 踰붿튃湲덉씠 遺怨쇰맂??",
+   "?꾨줈 ?몄쓽 怨녹쓣 ?댁쟾?섎뒗 ?댁쟾?먯뿉寃뚮룄 蹂댄뻾??蹂댄샇?섎Т媛 遺?щ맂??",
+   "?댁쟾?먮뒗 蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??洹??〓떒蹂대룄 ?욎뿉???쇱떆?뺤? ?섏뿬???쒕떎.",
+   "?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ???좏샇湲곌? ?녿뒗 ?〓떒蹂대룄 ?욎뿉?쒕뒗 諛섎뱶???쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT true about a driver's duty to protect pedestrians?",
+  "tr_c": [
+   "A traffic penalty  will be imposed on the driver who fails to slow down or stop on a pedestrian-first road and obst
+ructs the  pedestrians.",
+   "The duty to protect pedestrians also applies to drivers driving on a place other than a road.",
+   "A driver who sees pedestrians crossing a crosswalk must come to a full stop before he/she reaches the crosswalk.",
+   "The driver must slow down when driving across a crosswalk in a school zone with no traffic lights."
+  ]
+ },
+ {
+  "n": 160,
+  "ko_b": "?댁쟾?먯쓽 蹂댄뻾??蹂댄샇??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?댁쟾?먮뒗 蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??洹??〓떒蹂대룄 ?욎뿉???쇱떆?뺤??섏뿬???쒕떎.",
+   "?댁쟾?먮뒗 李⑤줈媛 ?ㅼ튂?섏? ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃쎌슦 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?좏샇湲곌? ?ㅼ튂?섏? ?딆? ?〓떒蹂대룄 ?욎뿉?쒕뒗 蹂댄뻾?먯쓽 ?〓떒???놁쓣 寃쎌슦 ?쇱떆?뺤??섏? ?딆븘???쒕떎.",
+   "?댁쟾?먮뒗 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒕? ?〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT true about a driver's duty to protect pedestrians?",
+  "tr_c": [
+   "A driver who sees pedestrians crossing a crosswalk must come to a full stop before he/she reaches the crosswalk.",
+   "The driver must slow down while keeping a safe distance when passing by pedestrians on a narrow road with no markin
+gs.",
+   "If a crosswalk in a school zone has no traffic lights, the driver has no duty to stop if there are no pedestrians c
+rossing.",
+   "The driver should not obstruct pedestrians crossing an intersection with no traffic lights."
+  ]
+ }
+]
+위치 줄:2 문자:85
++ ... nslations/audit/queue/203_choices_en.json' | ConvertFrom-Json; $d | F ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Select-String -LiteralPath 'translations/audit/queue/203_choices_en.json' -Pattern '\"n\": 13[7-9]|\"n\": 14[0-2]' -Context 0,16 | ForEach-Object { "'$_.Context.PreContext; $_.Line; $_.Context.PostContext }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 548ms:
+  "n": 137,
+  "ko_b": "도로교통법상 (      )의 운전자는 도로에서 2명 이상이 공동으로 2대 이상의 자동차등을 정당한 사유 없이 앞뒤로 줄지 어 통행하면서 교통상의 위험을 발생하게 하여서는 아니 된다. 이를 위반한 경우 (     ) 으로 처벌될 수 있다. (    )안에  각각 바르게 짝지어진 것은?",
+  "ko_c": [
+   "전동이륜평행차, 1년 이하의 징역 또는 500만 원 이하의 벌금",
+   "이륜자동차, 6개월 이하의 징역 또는 300만 원 이하의 벌금",
+   "특수자동차, 2년 이하의 징역 또는 500만 원 이하의 벌금",
+   "원동기장치자전거, 6개월 이하의 징역 또는 300만 원 이하의 벌금"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, drivers of ( ) are prohibited from driving their motor vehicles and the like in a row or side by side without good cause and in a manner that endangers other persons and causes danger to traffic. Anyone who violates this provision will be punished by ( ). Choose the correct pair for the parentheses.",
+  "tr_c": [
+   "self-balancing scooters - imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 5 million",
+   "two-wheeled vehicles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3  million",
+   "special-purpose vehicles -imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million",
+   "motorcycles - imprisonment with labor for not more than 6 months or criminal fine of not more than KRW 3 million"
+  ]
+ },
+  "n": 138,
+  "ko_b": "피해 차량을 뒤따르던 승용차 운전자가 중앙선을 넘어 앞지르기하여 급제동하는 등 위협 운전을 한 경우에는 「형 법」에 따른 보복운전으로 처벌받을 수 있다. 이에 대한 처벌기준으로 맞는 것은?",
+  "ko_c": [
+   "7년 이하의 징역 또는 1천만 원 이하의 벌금에 처한다.",
+   "10년 이하의 징역 또는 2천만 원 이하의 벌금에 처한다.",
+   "1년 이상의 유기징역에 처한다.",
+   "1년 6월 이상의 유기징역에 처한다."
+  ],
+  "a": "1",
+  "tr_b": "You may be subject to a penalty according to the Criminal Act if you overtake a vehicle over the centerline or perform any retaliatory driving such as sudden braking. In this case, what is the correct punishment that will be imposed on you?",
+  "tr_c": [
+   "You will be sentenced to imprisonment for up to 7 years or criminal fine of not more than KRW 10 million.",
+   "You will be sentenced to imprisonment for up to 10 years or criminal fine of not more than KRW 20 million.",
+   "You will be sentenced to imprisonment for a limited term of more than 1 year.",
+   "You will be sentenced to imprisonment for a limited term of more than 18 months."
+  ]
+ },
+  "n": 139,
+  "ko_b": "승용차 운전자가 차로 변경 시비에 분노해 상대차량 앞에서 급제동하자, 이를 보지 못하고 뒤따르던 화물차가 추 돌하여 화물차 운전자가 다친 경우에는「형법」에 따른 보복운전으로 처벌받을 수 있다. 이에 대한 처벌기준으로 맞는  것은? (중상해는 아님)",
+  "ko_c": [
+   "1년 이상 10년 이하의 징역",
+   "1년 이상 20년 이하의 징역",
+   "2년 이상 10년 이하의 징역",
+   "2년 이상 20년 이하의 징역"
+  ],
+  "a": "1",
+  "tr_b": "If a passenger vehicle driver responds to a lane-change dispute by suddenly braking in front of the pursuing vehicle, leading to a subsequent collision with an unaware cargo truck and resulting in injury to the cargo truck driver, legal repercussions may arise under the provisions of the Criminal Act for engaging in retaliatory driving. What is the appropriate punishment standard for this? (The cargo truck driver is not seriously injured)",
+  "tr_c": [
+   "You will be sentenced to imprisonment for a limited term in the range of 1 year - 10 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 1 year - 20 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 2 years - 10 years.",
+   "You will be sentenced to imprisonment for a limited term in the range of 2 years - 20 years."
+  ]
+ },
+  "n": 140,
+  "ko_b": "다음 중 도로교통법상 난폭운전 적용 대상이 아닌 것은？",
+  "ko_c": [
+   "최고속도의 위반",
+   "횡단ㆍ유턴ㆍ후진 금지 위반",
+   "끼어들기",
+   "연속적으로 경음기를 울리는 행위"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is not subject to legal action for reckless driving under the Road Traffic Act?",
+  "tr_c": [
+   "Violating the maximum speed limit",
+   "Violating a prohibition of crossing the road, making a U-turn, or moving backward",
+   "Cutting in a lane",
+   "Honking continuously"
+  ]
+ },
+  "n": 141,
+  "ko_b": "자동차등(개인형 이동장치는 제외)의 운전자가 다음의 행위를 반복하여 다른 사람에게 위협을 가하는 경우 난폭운전으 로 처벌받게 된다. 난폭운전의 대상 행위가 아닌 것은?",
+  "ko_c": [
+   "신호 또는 지시 위반",
+   "횡단·유턴·후진 금지 위반",
+   "정당한 사유 없는 소음 발생",
+   "고속도로에서의 지정차로 위반"
+  ],
+  "a": "4",
+  "tr_b": "A driver of a motor vehicle (excluding personal mobility devices) threatening another driver by committing the acts below in a repeated manner will be punished for reckless driving. Which of the following is NOT an example of reckless driving?",
+  "tr_c": [
+   "Violation of traffic signals or instructions",
+   "Violation of prohibitions on crossing, making a U-turn, and driving backward",
+   "Creating noise without reasonable cause",
+   "Violating a designated lane of an expressway"
+  ]
+ },
+  "n": 142,
+  "ko_b": "승용차 운전자가 난폭운전을 하는 경우 도로교통법에 따른 처벌기준으로 맞는 것은?",
+  "ko_c": [
+   "범칙금 6만 원의 통고처분을 받는다.",
+   "과태료 3만 원이 부과된다.",
+   "6개월 이하의 징역이나 200만 원 이하의 벌금에 처한다.",
+   "1년 이하의 징역 또는 500만 원 이하의 벌금에 처한다."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is the correct punishment for reckless driving?",
+  "tr_c": [
+   "Notice for payment of traffic penalty of KRW 60,000",
+   "Administrative fine of KRW 30,000",
+   "Imprisonment for up to 6 months or criminal fine of not more than KRW 2 million",
+   "Imprisonment for up to 1 year or criminal fine of not more than KRW 5 million"
+  ]
+ },
+
+codex
+[{"n":124,"field":"c[2]","severity":"major","issue":"원문의 '음주 측정 거부'를 별개의 절차인 '현장 음주운전 테스트(field sobriety test) 거부'로 오역했다.","suggestion":"A first-time refusal to submit to an alcohol test may result in imprisonment with labor for 1 to 5 years or a criminal fine of KRW 5 million to KRW 20 million."},{"n":128,"field":"c[1]","severity":"major","issue":"원문의 '혈액 측정'을 호흡측정기 검사로 오역하여 검사 방법을 바꾸었다.","suggestion":"If a person disputes the result of a blood alcohol test, he or she may undergo another blood alcohol test."},{"n":132,"field":"b","severity":"major","issue":"'혈중알코올농도 0.03% 이상'을 'over 0.03%'로 번역하여 정확히 0.03%인 경우를 제외했다.","suggestion":"Driver A, with a blood alcohol concentration of 0.03% or higher, is rear-ended by Driver B while waiting at a red light. What happens next?"},{"n":135,"field":"c[2]","severity":"major","issue":"반대편 차량 접근 시 상향등을 끄라는 뜻을 전조등 전체를 끄라는 의미로 번역해 야간 운전자를 오도할 수 있다.","suggestion":"Switch from high beams to low beams when a vehicle approaches from the opposite direction."},{"n":137,"field":"c[4]","severity":"major","issue":"법적 차종인 '원동기장치자전거'를 범위가 다른 'motorcycles'로 번역했다.","suggestion":"motorized bicycles - imprisonment with labor for not more than 6 months or a criminal fine of not more than KRW 3 million"},{"n":138,"field":"c[3]","severity":"major","issue":"'1년 이상의 유기징역'을 'more than 1 year'로 번역하여 정확히 1년을 제외했다.","suggestion":"You will be sentenced to imprisonment for a limited term of at least 1 year."},{"n":138,"field":"c[4]","severity":"major","issue":"'1년 6월 이상의 유기징역'을 'more than 18 months'로 번역하여 정확히 18개월을 제외했다.","suggestion":"You will be sentenced to imprisonment for a limited term of at least 18 months."}]
+tokens used
+42,661
+[{"n":124,"field":"c[2]","severity":"major","issue":"원문의 '음주 측정 거부'를 별개의 절차인 '현장 음주운전 테스트(field sobriety test) 거부'로 오역했다.","suggestion":"A first-time refusal to submit to an alcohol test may result in imprisonment with labor for 1 to 5 years or a criminal fine of KRW 5 million to KRW 20 million."},{"n":128,"field":"c[1]","severity":"major","issue":"원문의 '혈액 측정'을 호흡측정기 검사로 오역하여 검사 방법을 바꾸었다.","suggestion":"If a person disputes the result of a blood alcohol test, he or she may undergo another blood alcohol test."},{"n":132,"field":"b","severity":"major","issue":"'혈중알코올농도 0.03% 이상'을 'over 0.03%'로 번역하여 정확히 0.03%인 경우를 제외했다.","suggestion":"Driver A, with a blood alcohol concentration of 0.03% or higher, is rear-ended by Driver B while waiting at a red light. What happens next?"},{"n":135,"field":"c[2]","severity":"major","issue":"반대편 차량 접근 시 상향등을 끄라는 뜻을 전조등 전체를 끄라는 의미로 번역해 야간 운전자를 오도할 수 있다.","suggestion":"Switch from high beams to low beams when a vehicle approaches from the opposite direction."},{"n":137,"field":"c[4]","severity":"major","issue":"법적 차종인 '원동기장치자전거'를 범위가 다른 'motorcycles'로 번역했다.","suggestion":"motorized bicycles - imprisonment with labor for not more than 6 months or a criminal fine of not more than KRW 3 million"},{"n":138,"field":"c[3]","severity":"major","issue":"'1년 이상의 유기징역'을 'more than 1 year'로 번역하여 정확히 1년을 제외했다.","suggestion":"You will be sentenced to imprisonment for a limited term of at least 1 year."},{"n":138,"field":"c[4]","severity":"major","issue":"'1년 6월 이상의 유기징역'을 'more than 18 months'로 번역하여 정확히 18개월을 제외했다.","suggestion":"You will be sentenced to imprisonment for a limited term of at least 18 months."}]

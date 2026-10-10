@@ -1,0 +1,2315 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125c2-7bdf-7d73-86bc-eb1181b7168d
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/201_choices_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/201_choices_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 519ms:
+[
+ {
+  "n": 41,
+  "ko_b": "?먮룞李⑥뿉 ?뱀감?섍린 ??二쇰??먭? ?ы빆?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "??댁뼱 留덈え?곹깭",
+   "?꾬쉈?꾨갑 ?μ븷臾??좊Т",
+   "?댁쟾??怨꾧린???뺤긽?묐룞 ?щ?",
+   "釉뚮젅?댄겕 ?섎떖 ?뺤긽?묐룞 ?щ?"
+  ],
+  "a": "1, 2",
+  "tr_b": "Hai 휃i沼걏 n횪o l횪 휃첬ng m횪 c梳쬷 ph梳즜 ki沼긩 tra xung quanh xe tr튼沼쌵 khi l챗n xe?",
+  "tr_c": [
+   "Tr梳죒g th찼i m챵n c沼쬪 b찼nh xe.",
+   "Ph챠a tr튼沼쌵 v횪 sau xe c처 ch튼沼썀g ng梳죍 v梳춗 g챙 kh척ng.",
+   "B梳즢g 휃i沼걏 khi沼긪 tr튼沼쌵 gh梳?l찼i c처 ho梳죜 휃沼셬g b챙nh th튼沼쓓g hay kh척ng.",
+   "B횪n 휃梳죖 phanh c처 ho梳죜 휃沼셬g b챙nh th튼沼쓓g hay kh척ng."
+  ]
+ },
+ {
+  "n": 42,
+  "ko_b": "?쇰컲?곸쑝濡?臾대낫??MF竊숸aintenance Free)諛고꽣由??섎챸???ㅽ븳 寃쎌슦, ?먭?李쎌뿉 ?섑??섎뒗 ?됯퉼??",
+  "ko_c": [
+   "?⑹깋",
+   "諛깆깋",
+   "寃???,
+   "?뱀깋"
+  ],
+  "a": "2",
+  "tr_b": "Th척ng th튼沼쓓g m횪u g챙 xu梳쩿 hi沼뇆 tr챗n c沼춁 s沼?ki沼긩 tra khi tu沼뷼 th沼?c沼쬪 b챙nh 梳칌 quy b梳즣 tr챙 mi沼꿳 ph챠 (MF: Mi沼꿳  b梳즣 d튼沼죒g) 휃찾 h梳퓍?",
+  "tr_c": [
+   "M횪u v횪ng",
+   "M횪u tr梳칗g",
+   "M횪u 휃en",
+   "M횪u xanh l찼"
+  ]
+ },
+ {
+  "n": 43,
+  "ko_b": "?ㅼ쓬 以?李⑤웾 ?곕즺濡??ъ슜??寃쎌슦, 媛吏??앹쑀?쒗뭹?쇰줈 蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "?섎컻?좎뿉 硫뷀깂?ъ씠 ?쇳빀???쒗뭹",
+   "蹂댄넻 ?섎컻?좎뿉 怨좉툒 ?섎컻?좉? ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹",
+   "寃쎌쑀???깆쑀媛 ?쇳빀???쒗뭹",
+   "寃쎌쑀??臾쇱씠 ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹"
+  ],
+  "a": "4",
+  "tr_b": "S梳즢 ph梳쯯 n횪o sau 휃창y kh척ng 휃튼沼즓 xem l횪 s梳즢 ph梳쯯 x훱ng d梳쬾 gi梳?khi 휃튼沼즓 s沼?d沼쩸g l횪m nhi챗n li沼뇎 cho xe 척 t척?",
+  "tr_c": [
+   "S梳즢 ph梳쯯 l梳쳌 metanol v횪o x훱ng",
+   "S梳즢 ph梳쯯 l梳쳌 kho梳즢g d튼沼쌻 5% x훱ng cao c梳쩺 v沼쌻 x훱ng th튼沼쓓g",
+   "S梳즢 ph梳쯯 l梳쳌 d梳쬾 diesel v沼쌻 d梳쬾 h沼뢠",
+   "S梳즢 ph梳쯯 l梳쳌 kho梳즢g d튼沼쌻 5% n튼沼쌵 trong d梳쬾 diesel"
+  ]
+ },
+ {
+  "n": 44,
+  "ko_b": "?섏냼媛???꾩텧???뺤씤?????덈뒗 諛⑸쾿???꾨땶 寃껋??",
+  "ko_c": [
+   "媛?곗꽦 媛?ㅺ?吏湲??쒖슜 痢≪젙",
+   "鍮꾨닓臾쇱쓣 ?듯븳 ?뺤씤",
+   "媛???꾩깉瑜?留≪븘 ?뺤씤",
+   "?섏냼寃吏湲곕줈 ?뺤씤"
+  ],
+  "a": "3",
+  "tr_b": "C찼ch n횪o kh척ng ph梳즜 l횪 c찼ch c처 th沼?ki沼긩 tra r챵 r沼?kh챠 Hydro?",
+  "tr_c": [
+   "S沼?d沼쩸g m찼y d챵 kh챠 d沼?ch찼y 휃沼?휃o",
+   "Ki沼긩 tra b梳켷g n튼沼쌵 x횪 ph챵ng",
+   "Ki沼긩 tra b梳켷g c찼ch ng沼춊 kh챠 gas",
+   "Ki沼긩 tra b梳켷g m찼y d챵 Hydro"
+  ]
+ },
+ {
+  "n": 45,
+  "ko_b": "?섏냼李⑤웾???덉쟾?섏튃?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "異⑹쟾?섍린 ??李⑤웾???쒕룞???덈떎.",
+   "異⑹쟾?뚯뿉???≪뿰? 李⑤웾???⑥뼱?몄꽌 ?쒕떎.",
+   "?섏냼媛?ㅺ? ?꾩꽕???뚯뿉??異⑹쟾???덉쟾愿由ъ옄?먭쾶 ?덉쟾?먭????붿껌?쒕떎.",
+   "?섏냼李⑤웾??異⑸룎 ??援먰넻?ш퀬 ?꾩뿉??媛???덉쟾?먭???諛쏆? ???ъ슜?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "휂i沼걏 n횪o kh척ng ph梳즜 l횪 quy t梳칌 an to횪n c沼쬪 xe ch梳죣 b梳켷g Hydro?",
+  "tr_c": [
+   "T梳칣 m찼y tr튼沼쌵 khi s梳죅.",
+   "Khi h첬t thu沼멵 l찼 t梳죍 휃i沼긩 n梳죖 nhi챗n li沼뇎, ph梳즜 h첬t 沼?n퉤i c찼ch xa xe.",
+   "Khi kh챠 Hydro b沼?r챵 r沼? h찾y y챗u c梳쬾 ng튼沼쓎 qu梳즢 l첵 an to횪n t梳죍 휃i沼긩 n梳죖 nhi챗n li沼뇎 ki沼긩 tra an to횪n.",
+   "Sau khi x梳즭 ra tai n梳죒 giao th척ng nh튼 va ch梳죑 v沼쌻 xe ch梳죣 b梳켷g Hydro, xe ch沼?휃튼沼즓 s沼?d沼쩸g sau khi 휃찾 ki沼긩 tra an  to횪n v沼?kh챠 gas."
+  ]
+ },
+ {
+  "n": 46,
+  "ko_b": "?ㅼ쓬 以??섏냼李⑤웾?먯꽌 ?꾩텧???뺤씤?섏? ?딆븘???섎뒗 怨녹??",
+  "ko_c": [
+   "諛몃툕? ?⑷린???묒냽遺",
+   "議곗젙湲?,
+   "媛???몄뒪? 諛곌? ?곌껐遺",
+   "?곕즺?꾩? 遺?ㅽ듃 ?몃쾭??
+  ],
+  "a": "4",
+  "tr_b": "V沼?tr챠 n횪o sau 휃창y c沼쬪 xe ch梳죣 b梳켷g Hydro kh척ng c梳쬷 ki沼긩 tra r챵 r沼?",
+  "tr_c": [
+   "B沼?ph梳춏 k梳퓍 n沼멼 gi沼칊 van v횪 b챙nh 휃沼켷g nhi챗n li沼뇎",
+   "B沼?휃i沼걏 ch沼뎝h",
+   "沼릒g d梳쳌 kh챠 v횪 휃梳쬾 n沼멼 沼몁g d梳쳌",
+   "Bi梳퓆 t梳쬷 t훱ng c튼沼쓓g pin nhi챗n li沼뇎"
+  ]
+ },
+ {
+  "n": 47,
+  "ko_b": "?꾧린李?異⑹쟾???꾪븳 ?щ컮瑜?諛⑸쾿?쇰줈 ?곸젅?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "異⑹쟾???뚮뒗 洹쒓꺽??留욌뒗 異⑹쟾湲곗? ?대뙌?곕? ?ъ슜?쒕떎.",
+   "異⑹쟾 以묒뿉??異⑹쟾 而ㅻ꽖?곕? ?꾩쓽濡?遺꾨━?섏? ?딄퀬 異⑹쟾 醫낅즺 踰꾪듉?쇰줈 醫낅즺?쒕떎.",
+   "?뽰? ?먯쑝濡?異⑹쟾湲??ъ슜???섏? ?딄퀬 異⑹쟾?μ튂??臾쇱씠 ?ㅼ뼱媛吏 ?딅룄濡?二쇱쓽?쒕떎.",
+   "?대???異⑹쟾湲곕? ?댁슜?섏뿬 異⑹쟾??寃쎌슦 媛?뺤슜 硫?고꺆?대굹 ?곗옣?좎쓣 ?ъ슜?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Ph튼퉤ng ph찼p n횪o l횪 kh척ng 휃첬ng v沼?s梳죅 xe 휃i沼뇆?",
+  "tr_c": [
+   "Khi s梳죅, ph梳즜 s沼?d沼쩸g c沼쩭 s梳죅 v횪 沼?c梳칖 휃첬ng quy c찼ch.",
+   "Trong l첬c s梳죅, kh척ng t沼?첵 r첬t 휃梳쬾 n沼멼 s梳죅 m횪 ph梳즜 d沼쳌g s梳죅 b梳켷g c찼ch nh梳쩸 n첬t d沼쳌g s梳죅.",
+   "Kh척ng s沼?d沼쩸g m찼y s梳죅 khi tay 휃ang 튼沼썇 v횪 ch첬 첵 kh척ng 휃沼?n튼沼쌵 l沼뛲 v횪o thi梳퓍 b沼?s梳죅.",
+   "Tr튼沼쓓g h沼즤 s梳죅 b梳켷g b沼?s梳죅 di 휃沼셬g, ph梳즜 s沼?d沼쩸g 沼?c梳칖 휃i沼뇆 gia d沼쩸g ho梳톍 d창y 휃i沼뇆 n沼멼 d횪i."
+  ]
+ },
+ {
+  "n": 48,
+  "ko_b": "踰뺣졊???먮룞李⑥쓽 ?깊솕 醫낅쪟? 洹??깃킅?됱쓣 ?곌껐??寃껋쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾪눜??- ?몃컯??,
+   "踰덊샇??- 泥?깋",
+   "?꾨???- 諛깆깋",
+   "?쒕룞??- ?곸깋"
+  ],
+  "a": "4",
+  "tr_b": "C창u n횪o l횪 li챗n k梳퓍 휃첬ng gi沼칊 lo梳죍 휃챔n v횪 m횪u 휃챔n c沼쬪 xe theo quy 휃沼땙h ph찼p lu梳춗?",
+  "tr_c": [
+   "휂챔n l첫i - M횪u h沼?ph찼ch.",
+   "휂챔n bi沼긪 s沼?- M횪u xanh d튼퉤ng",
+   "휂챔n sau - M횪u tr梳칗g",
+   "휂챔n phanh - M횪u 휃沼?
+  ]
+ },
+ {
+  "n": 49,
+  "ko_b": "LPG李⑤웾???곕즺?뱀꽦??????ㅻ챸?쇰줈 ?곷떦?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "?쇰컲?곸씤 湲곗껜?곹깭濡??곗냼?섏뼱 ?붿쭊??遺?쒕읇寃??묐룞?쒕떎.",
+   "李⑤웾??LPG???낇듅???꾩깉媛 ?덈떎.",
+   "?쇰컲?곸쑝濡?怨듦린蹂대떎 媛蹂띻퀬, ??컻 ?꾪뿕?깆씠 ?곷떎.",
+   "?섎컻?좊굹 寃쎌쑀??鍮꾪빐 ?먮꼫吏 諛?꾧? ??븘 ?숈씪??諛곌린?됱뿉??異쒕젰????퀬 ?곕퉬媛 ?⑥뼱吏꾨떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng ph첫 h沼즤 v沼?휃梳톍 휃i沼긩 nhi챗n li沼뇎 c沼쬪 xe LPG?",
+  "tr_c": [
+   "Ch찼y 沼?tr梳죒g th찼i kh챠 th척ng th튼沼쓓g v횪 gi첬p 휃沼셬g c퉤 v梳춏 h횪nh 챗m 찼i.",
+   "LPG d횪nh cho xe th챙 c처 m첫i 휃梳톍 bi沼뇍.",
+   "Th튼沼쓓g nh梳?h퉤n kh척ng kh챠 v횪 c처 nguy c퉤 n沼?th梳쩺.",
+   "So v沼쌻 x훱ng ho梳톍 d梳쬾 diesel, m梳춗 휃沼?n훱ng l튼沼즢g th梳쩺 h퉤n n챗n c척ng su梳쩿 th梳쩺 v횪 hi沼뇎 su梳쩿 nhi챗n li沼뇎 gi梳즡 沼?c첫ng  dung t챠ch xy-lanh."
+  ]
+ },
+ {
+  "n": 50,
+  "ko_b": "?먮룞李⑥쓽 ?쒕룞?μ쓣 ??섑븯???먯씤?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "留덉뒪???ㅻ┛??怨좎옣",
+   "???ㅻ┛??遺덈웾",
+   "由대━???ы겕 蹂??,
+   "踰좎씠??濡?諛쒖깮"
+  ],
+  "a": "3",
+  "tr_b": "N沼셢 dung n횪o kh척ng 휃첬ng v沼쌻 nguy챗n nh창n l횪m gi梳즡 l沼켧 phanh c沼쬪 xe 척 t척?",
+  "tr_c": [
+   "H沼뢮g xi lanh ch챠nh",
+   "L沼뾦 xi lanh b찼nh xe",
+   "Bi梳퓆 d梳죒g ch梳죅 nh梳?ly h沼즤",
+   "Ph찼t sinh hi沼뇆 t튼沼즢g h처a h퉤i"
+  ]
+ },
+ {
+  "n": 51,
+  "ko_b": "二쇳뻾 蹂댁“?μ튂媛 ?μ갑???먮룞李⑥쓽 ?댁쟾諛⑸쾿?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "二쇳뻾 蹂댁“?μ튂瑜??ъ슜?섎뒗 寃쎌슦 二쇳뻾 蹂댁“?μ튂 ?묐룞 ?좎? ?щ?瑜??섏떆濡??뺤씤?섎ŉ 二쇳뻾?쒕떎.",
+   "?댁쟾 媛쒖엯 寃쎄퀬 ??二쇳뻾 蹂댁“?μ튂媛 ?댁젣???뚭퉴吏 湲곕떎?몃떎媛 媛쒖엯?댁빞 ?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂???쇰? ?먮뒗 ?꾩껜瑜??댁젣?섎뒗 寃쎌슦 ?묐룞 ?щ?瑜??뺤씤?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂媛 ?묐룞?섍퀬 ?덈뜑?쇰룄 利됱떆 媛쒖엯?????덈룄濡??湲고븯硫댁꽌 ?댁쟾?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "C찼ch n횪o sau 휃창y kh척ng ph梳즜 l횪 c찼ch l찼i xe 휃첬ng c沼쬪 xe 휃튼沼즓 g梳칗 thi梳퓍 b沼?tr沼?l찼i?",
+  "tr_c": [
+   "Khi s沼?d沼쩸g thi梳퓍 b沼?tr沼?l찼i ph梳즜 th튼沼쓓g xuy챗n ki沼긩 tra xem thi梳퓍 b沼?c처 duy tr챙 ho梳죜 휃沼셬g hay kh척ng tr튼沼쌵 khi l찼i.",
+   "Khi c처 c梳즢h b찼o c梳쬷 can thi沼뇈 l찼i xe, ng튼沼쓎 l찼i ph梳즜 휃沼즜 cho 휃梳퓆 khi thi梳퓍 b沼?tr沼?l찼i t梳칣 r沼밿 m沼쌻 can thi沼뇈 l찼i xe.",
+   "Tr튼沼쓓g h沼즤 휃찾 t梳칣 m沼셳 ph梳쬷 ho梳톍 to횪n b沼?thi梳퓍 b沼?tr沼?l찼i, ph梳즜 ki沼긩 tra xem thi梳퓍 b沼?c챵n ho梳죜 휃沼셬g kh척ng.",
+   "Ngay c梳?khi thi梳퓍 b沼?tr沼?l찼i 휃ang ho梳죜 휃沼셬g, v梳쳌 ph梳즜 lu척n l찼i xe trong t튼 th梳?ch沼?s梳탇 s횪ng c처 th沼?can thi沼뇈 ngay l梳춑  t沼쯢."
+  ]
+ },
+ {
+  "n": 52,
+  "ko_b": "?먮룞李⑤? ?덉쟾?섍퀬 ?몃━?섍쾶 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "LFA(Lane Following Assist)???쒖감濡쒖쑀吏蹂댁“?앷린?μ쑝濡??먮룞李④? 李⑤줈 以묒븰???좎??섎ŉ 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫?대떎.",
+   "ASCC(Adaptive Smart Cruise Control)???쒖감媛꾧굅由?諛??띾룄?좎??앷린?μ쑝濡??댁쟾?먭? ?ㅼ젙???띾룄濡?二쇳뻾?섎㈃???욎감???嫄곕━瑜??좎??섏뿬 ?ㅼ뒪濡?媛쨌媛먯냽???댁＜??湲곕뒫?대떎.",
+   "ABSD(Active Blind Spot Detection)???쒖궗媛곸??媛먯??앷린?μ쑝濡??ш컖吏???異⑸룎 ?꾪뿕??媛먯????덉쟾??李⑤줈 蹂寃쎌쓣 ?뺣뒗 湲곕뒫?대떎.",
+   "AEB(Autonomous Emergency Braking)???쒖옄?숆릿湲됱젣?쇺앷린?μ쑝濡?釉뚮젅?댄겕 ?쒕룞????댁뼱媛 ?좉린??寃껋쓣 諛⑹??섏뿬 ?쒕룞 嫄곕━瑜?以꾩뿬二쇰뒗 湲곕뒫?대떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 kh척ng 휃첬ng v沼?t챠nh n훱ng tr沼?gi첬p 휃沼?휃i沼걏 khi沼긪 xe 척 t척 an to횪n v횪 thu梳춏 ti沼뇆?",
+  "tr_c": [
+   "LFA (Lane Following Assist) l횪 t챠nh n훱ng ?쏷r沼?gi첬p duy tr챙 휃첬ng l횪n xe?? h沼?tr沼?xe lu척n ch梳죣 沼?gi沼칊 l횪n 휃튼沼쓓g.",
+   "ASCC (Adaptive Smart Cruise Control) l횪 t챠nh n훱ng ?쏡uy tr챙 t沼멵 휃沼?v횪 kho梳즢g c찼ch gi沼칊 c찼c xe??t沼?t훱ng - gi梳즡 t沼멵 휃沼?duy tr챙 c沼?ly v沼쌻 xe ph챠a tr튼沼쌵 trong khi l찼i xe v沼쌻 t沼멵 휃沼?do ng튼沼쓎 l찼i xe c횪i 휃梳톞.",
+   "ABSD (Active Blind Spot Detection) l횪 t챠nh n훱ng ?쏯h梳춏 di沼뇆 휃i沼긩 m첫??ph찼t hi沼뇆 nguy c퉤 va ch梳죑 沼?휃i沼긩 m첫 v횪 h沼? tr沼?chuy沼긪 l횪n 휃튼沼쓓g an to횪n.",
+   "AEB (Autonomous Emergency Braking) l횪 t챠nh n훱ng ?쏷沼?휃沼셬g phanh kh梳쯰 c梳쩺??gi첬p gi梳즡 kho梳즢g c찼ch phanh b梳켷g  c찼ch ng훱n ch梳톘 b찼nh xe b沼?kh처a phanh."
+  ]
+ },
+ {
+  "n": 53,
+  "ko_b": "?먯쑉二쇳뻾?쒖뒪?쒓낵 愿?⑤맂 踰뺣졊???댁슜?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?꾨줈援먰넻踰뺤긽?쒖슫?꾟앹뿉???꾨줈?먯꽌 李⑤쭏瑜?洹?蹂몃옒???ъ슜諛⑸쾿???곕씪 ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섎뒗 寃껋? ?ы븿?섏? ?딅뒗??",
+   "?댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ?대??꾪솕 ?ъ슜湲덉? 洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+   "?먯쑉二쇳뻾?쒖뒪?쒖쓽 吏곸젒 ?댁쟾 ?붽뎄??吏泥댁뾾????묓븯吏 ?꾨땲???먯쑉二쇳뻾?뱀슜?먮룞李⑥쓽 ?댁쟾?먯뿉 ???踰붿튃湲덉븸? 4留??먯씠??",
+   "?쒖옄?⑥＜?됱떆?ㅽ뀥?앹씠? ?댁쟾???먮뒗 ?밴컼??議곗옉 ?놁씠 二쇰??곹솴怨??꾨줈 ?뺣낫 ?깆쓣 ?ㅼ뒪濡??몄??섍퀬 ?먮떒?섏뿬 ?먮룞李⑤? ?댄뻾 ?????덇쾶 ?섎뒗 ?먮룞???λ퉬, ?뚰봽?몄썾??諛??댁? 愿?⑦븳 紐⑤뱺 ?μ튂瑜?留먰븳??"
+  ],
+  "a": "1",
+  "tr_b": "N沼셢 dung n횪o l횪 sai v沼?Lu梳춗 li챗n quan 휃梳퓆 h沼?th沼몁g l찼i t沼?휃沼셬g?",
+  "tr_c": [
+   "?쏬찼i xe??theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?kh척ng bao h횪m vi沼놻 s沼?d沼쩸g h沼?th沼몁g l찼i xe t沼?휃沼셬g theo ph튼퉤ng ph찼p s沼? d沼쩸g ban 휃梳쬾 c沼쬪 xe.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe khi s沼?d沼쩸g h沼?th沼몁g l찼i xe t沼?휃沼셬g 휃沼?l찼i xe kh척ng b沼?찼p d沼쩸g quy 휃沼땙h c梳쩷 s沼?d沼쩸g 휃i沼뇆  tho梳죍 di 휃沼셬g.",
+   "Ti沼걆 ph梳죜 휃沼멼 v沼쌻 ng튼沼쓎 휃i沼걏 khi沼긪 xe 척 t척 con l찼i t沼?휃沼셬g kh척ng 휃찼p 沼쯰g ngay l梳춑 t沼쯢 y챗u c梳쬾 l찼i xe tr沼켧 ti梳퓈 c沼쬪 h沼?th沼몁g l찼i xe t沼?휃沼셬g l횪 40.000 Won.",
+   "?쏦沼?th沼몁g l찼i xe t沼?휃沼셬g??bao g沼뱈 thi梳퓍 b沼?t沼?휃沼셬g h처a, ph梳쬷 m沼걅 v횪 t梳쩿 c梳?c찼c trang thi梳퓍 b沼?c처 li챗n quan kh찼c, c처 kh梳?n훱ng t沼?nh梳춏 di沼뇆 v횪 ph찼n 휃o찼n t챙nh h챙nh xung quanh c크ng nh튼 th척ng tin tr챗n 휃튼沼쓓g 휃沼?휃i沼걏 khi沼긪 xe m횪 kh척ng c梳쬷 thao t찼c c沼쬪 ng튼沼쓎 휃i沼걏 khi沼긪 xe hay h횪nh kh찼ch."
+  ]
+ },
+ {
+  "n": 54,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李⑥쓽 二쇱슂 援ъ꽦?덉씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?곕즺?꾩?",
+   "援щ룞紐⑦꽣",
+   "?붿쭊",
+   "諛고꽣由?
+  ],
+  "a": "3",
+  "tr_b": "B沼?ph梳춏 n횪o sau 휃창y kh척ng ph梳즜 l횪 b沼?ph梳춏 c梳쪀 t梳죓 ch챠nh c沼쬪 xe Hydro?",
+  "tr_c": [
+   "Pin nhi챗n li沼뇎",
+   "M척 t퉤 xoay",
+   "휂沼셬g c퉤",
+   "Pin"
+  ]
+ },
+ {
+  "n": 55,
+  "ko_b": "?먮룞李??댁뿰湲곌????щ옲?ъ텞?먯꽌 諛쒖깮?섎뒗 ?뚯쟾???쒓컙?곸쑝濡??대뒗 ????臾댁뾿?대씪 ?섎뒗媛 ?",
+  "ko_c": [
+   "?좏겕",
+   "?곕퉬",
+   "諛곌린??,
+   "留덈젰"
+  ],
+  "a": "1",
+  "tr_b": "L沼켧 quay (l沼켧 sinh ra t沼쯢 th沼쓎) sinh ra 沼?tr沼쩭 khu沼톟 c沼쬪 휃沼셬g c퉤 휃沼몋 trong c沼쬪 척 t척 sinh ra g챙?",
+  "tr_c": [
+   "Ng梳쳕 l沼켧",
+   "Hi沼뇎 su梳쩿 nhi챗n li沼뇎",
+   "Dung t챠ch xy lanh",
+   "M찾 l沼켧"
+  ]
+ },
+ {
+  "n": 56,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??곸슜??珥됱쭊 諛?吏?먯뿉 愿??踰뺣졊???먯쑉二쇳뻾?먮룞李⑥뿉 ????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 醫낅쪟???꾩쟾?먯쑉二쇳뻾?먮룞李⑥? 遺遺꾩옄?⑥＜?됱옄?숈감濡?援щ텇?????덈떎.",
+   "?꾩쟾 ?먯쑉二쇳뻾?먮룞李⑤뒗 ?먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????덉뼱 ?댁쟾?먭? ?녾굅???댁쟾???먮뒗 ?밴컼??媛쒖엯???꾩슂?섏?       ?꾨땲???먮룞李⑤? 留먰븳??",
+   "遺遺꾩옄?⑥＜?됱옄?숈감???먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????녾굅???댁쟾?먭? 吏?띿쟻?쇰줈 二쇱떆???꾩슂媛 ?덈뒗 ???댁쟾????      ???밴컼??媛쒖엯???꾩슂???먮룞李⑤? 留먰븳??",
+   "?먯쑉二쇳뻾?먮룞李⑤뒗 ?뱀슜?먮룞李⑥뿉 ?쒖젙?섏뼱 ?곸슜?섍퀬, ?뱁빀?먮룞李⑤굹 ?붾Ъ?먮룞李⑤뒗 ??踰뺤씠 ?곸슜?섏? ?딅뒗??"
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?xe 척 t척 t沼?l찼i theo Ph찼p l沼뇆h v沼?H沼?tr沼?v횪 Th첬c 휃梳쯻 s沼?d沼쩸g xe 척 t척 t沼?l찼i?",
+  "tr_c": [
+   "Ch沼쬷g lo梳죍 xe 척 t척 t沼?l찼i c처 th沼?ph창n lo梳죍 th횪nh Xe 척 t척 t沼?l찼i ho횪n to횪n v횪 Xe 척 t척 t沼?l찼i m沼셳 ph梳쬷.",
+   "Xe 척 t척 t沼?l찼i ho횪n to횪n l횪 xe ch沼?c처 th沼?휃i沼걏 khi沼긪 b梳켷g h沼?th沼몁g l찼i t沼?휃沼셬g, kh척ng c梳쬷 ng튼沼쓎 l찼i xe ho梳톍 s沼?can thi沼뇈 c沼쬪 ng튼沼쓎 l찼i xe hay h횪nh kh찼ch tr챗n xe.",
+   "Xe 척 t척 t沼?l찼i m沼셳 ph梳쬷 l횪 xe kh척ng th沼?ch沼?휃i沼걏 khi沼긪 b梳켷g h沼?th沼몁g l찼i t沼?휃沼셬g ho梳톍 xe v梳쳌 c梳쬷 ng튼沼쓎 l찼i xe li챗n t沼쩭 theo d천i ho梳톍 c梳쬷 s沼?can thi沼뇈 c沼쬪 ng튼沼쓎 l찼i xe hay h횪nh kh찼ch tr챗n xe.",
+   "Xe 척 t척 t沼?l찼i ch沼?gi沼쌻 h梳죒 cho xe 척 t척 con, Ph찼p l沼뇆h n횪y kh척ng 찼p d沼쩸g cho xe 척 t척 kh찼ch hay xe ch沼?h횪ng."
+  ]
+ },
+ {
+  "n": 57,
+  "ko_b": "?꾧린?먮룞李?愿由щ갑踰뺤쑝濡??녹? ?딆? 2媛吏??",
+  "ko_c": [
+   "鍮꾩궗?낆슜 ?뱀슜?먮룞李⑥쓽 ?먮룞李④????좏슚湲곌컙? 6?꾩씠??",
+   "?κ굅由??댁쟾 ?쒖뿉???ъ쟾??諛고꽣由щ? ?뺤씤?섍퀬 異⑹쟾?쒕떎.",
+   "異⑹쟾 吏곹썑?먮뒗 湲됯??? 湲됱젙吏瑜??섏? ?딅뒗 寃껋씠 醫뗫떎.",
+   "?댁꽑?쒗듃, ?댁꽑?몃뱾蹂대떎 怨듦린 ?덊꽣瑜??ъ슜?섎뒗 寃껋씠 ?⑥쑉?곸씠??"
+  ],
+  "a": "1, 4",
+  "tr_b": "Hai n沼셢 dung n횪o kh척ng 휃첬ng v沼쌻 ph튼퉤ng ph찼p b梳즣 d튼沼죒g xe 척 t척 휃i沼뇆?",
+  "tr_c": [
+   "K沼?h梳죒 ki沼긩 휃沼땙h xe 척 t척 con kh척ng d첫ng cho m沼쩭 휃챠ch kinh doanh l횪 6 n훱m.",
+   "Khi l찼i xe 휃튼沼쓓g d횪i, h찾y ki沼긩 tra pin v횪 s梳죅 휃i沼뇆 휃梳쭃 휃沼?",
+   "Ngay sau khi s梳죅 휃i沼뇆, kh척ng n챗n t훱ng t沼멵 ho梳톍 d沼쳌g 휃沼셳 ng沼셳.",
+   "S沼?d沼쩸g m찼y s튼沼웙 kh척ng kh챠 s梳?hi沼뇎 qu梳?h퉤n gh梳?s튼沼웙 v횪 tay c梳쬶 c처 s튼沼웙."
+  ]
+ },
+ {
+  "n": 58,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) 李쎌쑀由?媛?쒓킅???ш낵?⑥쓽 洹쒖젣瑜?諛쏅뒗 寃껋??",
+  "ko_c": [
+   "?룹쥖???녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦 ?녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦, ?룸㈃ 李쎌쑀由?,
+   "紐⑤뱺 李쎌쑀由?
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?th챙 k챠nh c沼춁 n횪o ph梳즜 찼p d沼쩸g quy 휃沼땙h h梳죒 ch梳?t沼?l沼?찼nh s찼ng nh챙n th梳쪅  휃튼沼즓 chi梳퓎 qua (ngo梳죍 tr沼?xe bu첵t 휃튼a 휃처n h沼뛠 sinh)?",
+  "tr_c": [
+   "K챠nh c沼춁 b챗n gh梳?sau",
+   "K챠nh tr튼沼쌵 v횪 hai b챗n tr찼i ph梳즜 c沼쬪 gh梳?l찼i",
+   "K챠nh ph챠a tr튼沼쌵, hai b챗n tr찼i ph梳즜 c沼쬪 gh梳?l찼i, v횪 ph챠a sau",
+   "T梳쩿 c梳?c찼c k챠nh"
+  ]
+ },
+ {
+  "n": 59,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?뱀슜?먮룞李⑤뒗 紐????댄븯瑜??댁넚?섍린???곹빀?섍쾶 ?쒖옉???먮룞李⑥씤媛?",
+  "ko_c": [
+   "10??,
+   "12??,
+   "15??,
+   "18??
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Qu梳즢 l첵 xe 척 t척, xe 척 t척 con l횪 xe 휃튼沼즓 s梳즢 xu梳쩿 ph첫 h沼즤 휃沼?ch沼?t沼?m梳쪅 ng튼沼쓎 tr沼?xu沼몁g?",
+  "tr_c": [
+   "10 ng튼沼쓎",
+   "12 ng튼沼쓎",
+   "15 ng튼沼쓎",
+   "18 ng튼沼쓎"
+  ]
+ },
+ {
+  "n": 60,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?좉퇋 ?뱀슜?먮룞李⑥쓽 理쒖큹寃???좏슚湲곌컙??",
+  "ko_c": [
+   "1??,
+   "2??,
+   "4??,
+   "5??
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 hi沼뇎 l沼켧 cho l梳쬷 ki沼긩 휃沼땙h 휃梳쬾 ti챗n c沼쬪 xe 척 t척 con phi th튼퉤ng m梳죍  휃훱ng k첵 m沼쌻 l횪 bao l창u?",
+  "tr_c": [
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m",
+   "5 n훱m"
+  ]
+ },
+ {
+  "n": 61,
+  "ko_b": "?먮룞李④?由щ쾿???먮룞李⑥쓽 醫낅쪟濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "嫄댁꽕湲곌퀎",
+   "?붾Ъ?먮룞李?,
+   "寃쎌슫湲?,
+   "?뱀닔?먮룞李?
+  ],
+  "a": "2, 4",
+  "tr_b": "Hai lo梳죍 xe n횪o sau 휃창y thu沼셛 lo梳죍 xe 척 t척 theo Lu梳춗 Qu梳즢 l첵 xe 척 t척?",
+  "tr_c": [
+   "M찼y m처c thi梳퓍 b沼?thi c척ng",
+   "Xe t梳즜 ch沼?h횪ng h처a",
+   "Xe m찼y c횪y",
+   "Xe 척 t척 휃梳톍 ch沼쬷g"
+  ]
+ },
+ {
+  "n": 62,
+  "ko_b": "鍮꾩궗?낆슜 諛???ъ궗?낆슜 ?꾧린?먮룞李⑥? ?섏냼 ?곕즺?꾩??먮룞李??섏씠釉뚮━???먮룞李??쒖쇅) ?꾩슜踰덊샇???됱긽?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?⑹깋 諛뷀깢??寃???臾몄옄",
+   "?뚮???諛뷀깢??寃???臾몄옄",
+   "媛먯껌??諛뷀깢???곗깋 臾몄옄",
+   "蹂대옃鍮?諛뷀깢??寃???臾몄옄"
+  ],
+  "a": "2",
+  "tr_b": "M횪u n횪o 휃첬ng l횪 c沼쬪 bi沼긪 s沼?xe d횪nh ri챗ng cho xe 척 t척 휃i沼뇆 ch梳죣 b梳켷g nhi챗n li沼뇎 Hydro (ngo梳죍 tr沼?xe 척 t척  Hybrid) v횪 xe 척 t척 휃i沼뇆 kh척ng d첫ng 휃沼?kinh doanh v횪 cho thu챗?",
+  "tr_c": [
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u v횪ng",
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u xanh d튼퉤ng",
+   "Ch沼?m횪u tr梳칗g tr챗n n沼걆 m횪u xanh th梳쳋",
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u 찼nh t챠m"
+  ]
+ },
+ {
+  "n": 63,
+  "ko_b": "?ㅼ쓬 李⑤웾 以??섏씠?⑥뒪李⑤줈 ?댁슜??遺덇??ν븳 李⑤웾??",
+  "ko_c": [
+   "?곸옱以묐웾 16???ㅽ봽?몃윮",
+   "?쒖슱怨??섏썝???댄뻾?섎뒗 2痢?醫뚯꽍踰꾩뒪",
+   "?⑥감濡쒖씤 寃쎌슦, 李⑦룺??3.7m???뚮갑李⑤웾",
+   "10?????援щ궃李⑤웾"
+  ],
+  "a": "3",
+  "tr_b": "Xe n횪o sau 휃창y kh척ng th沼?s沼?d沼쩸g l횪n 휃튼沼쓓g Hi-pass?",
+  "tr_c": [
+   "Xe ben tr沼뛫g t梳즜 16 t梳쩸",
+   "Xe bu첵t 2 t梳쬷g ch梳죣 t梳죍 Seoul v횪 Suwon",
+   "Xe c沼쯷 h沼뢠 c처 chi沼걏 r沼셬g 3,7m l튼u th척ng tr챗n l횪n 휃튼沼쓓g 휃퉤n",
+   "Xe c沼쯷 h沼?c沼쯷 n梳죒 c沼?l沼썀 10 t梳쩸"
+  ]
+ },
+ {
+  "n": 64,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?뱁빀?먮룞李?2001???댄썑 ?깅줉??李⑤졊??4??珥덇낵)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "2",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h 휃沼멼 v沼쌻 xe 척 t척 ch沼?kh찼ch lo梳죍 nh沼?kh척ng  kinh doanh (휃튼沼즓 휃훱ng k첵 sau n훱m 2001 v횪 tu沼뷼 xe tr챗n 4 n훱m) l횪 bao l창u?",
+  "tr_c": [
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m"
+  ]
+ },
+ {
+  "n": 65,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?붾Ъ?먮룞李?李⑤졊??4???댄븯)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "3",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h 휃沼멼 v沼쌻 xe 척 t척 t梳즜 lo梳죍 nh沼?kh척ng kinh  doanh (tu沼뷼 xe t沼?4 n훱m tr沼?xu沼몁g) l횪 bao l창u?",
+  "tr_c": [
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m"
+  ]
+ },
+ {
+  "n": 66,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?좎감 援ъ엯 ???꾩떆?댄뻾 ?덇? ?좏슚湲곌컙??湲곗???",
+  "ko_c": [
+   "10???대궡",
+   "15???대궡",
+   "20???대궡",
+   "30???대궡"
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, ti챗u chu梳쯰 th沼쓎 h梳죒 hi沼뇎 l沼켧 c沼쬪 gi梳쪅 ph챕p l튼u th척ng t梳죑 th沼쓎 khi mua xe  척 t척 m沼쌻 l횪 bao l창u?",
+  "tr_c": [
+   "Trong v챵ng 10 ng횪y",
+   "Trong v챵ng 15 ng횪y",
+   "Trong v챵ng 20 ng횪y",
+   "Trong v챵ng 30 ng횪y"
+  ]
+ },
+ {
+  "n": 67,
+  "ko_b": "?ㅼ쓬 以??먮룞李④?由щ쾿?뱀뿉 ?곕Ⅸ ?먮룞李?蹂寃쎈벑濡??ъ쑀媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?먮룞李⑥쓽 ?ъ슜蹂멸굅吏瑜?蹂寃쏀븳 ??,
+   "?먮룞李⑥쓽 李⑤?踰덊샇瑜?蹂寃쏀븳 ??,
+   "?뚯쑀沅뚯씠 蹂?숇맂 ??,
+   "踰뺤씤??紐낆묶??蹂寃쎈맂 ??
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, n沼셢 dung n횪o d튼沼쌻 휃창y kh척ng ph梳즜 l횪 l첵 do 휃沼?휃훱ng k첵 thay 휃沼뷼 xe?",
+  "tr_c": [
+   "Khi thay 휃沼뷼 khu v沼켧 s沼?d沼쩸g xe 척 t척",
+   "Khi thay 휃沼뷼 bi沼긪 s沼?xe",
+   "Khi thay 휃沼뷼 quy沼걆 s沼?h沼칤",
+   "Khi thay 휃沼뷼 t챗n ph찼p nh창n"
+  ]
+ },
+ {
+  "n": 68,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??댁쟾?먯쓽 留덉쓬媛吏먯쑝濡?諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥씠誘濡??좎뿉 痍⑦븳 ?곹깭?먯꽌 ?댁쟾?대룄 ?쒕떎.",
+   "怨쇰줈???곹깭?먯꽌 ?먯쑉二쇳뻾?먮룞李⑤? ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑤씪 ?섎뜑?쇰룄 ?μ젙?좎꽦?섏빟?덉쓣 蹂듭슜?섍퀬 ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 ?댁쟾 以묒뿉 ?대????꾪솕 ?ъ슜??媛?ν븯??"
+  ],
+  "a": "1",
+  "tr_b": "C창u n횪o kh척ng ph梳즜 l횪 suy ngh칫 휃첬ng c沼쬪 m沼셳 ng튼沼쓎 l찼i xe 척 t척 t沼?l찼i?",
+  "tr_c": [
+   "V챙 l횪 xe 척 t척 t沼?l찼i n챗n c처 th沼?l찼i xe trong t챙nh tr梳죒g say r튼沼즩.",
+   "Kh척ng 휃튼沼즓 휃i沼걏 khi沼긪 xe 척 t척 t沼?l찼i trong t챙nh tr梳죒g l횪m vi沼놻 qu찼 s沼쯢.",
+   "D첫 l횪 xe 척 t척 t沼?l찼i th챙 c크ng kh척ng 휃튼沼즓 휃i沼걏 khi沼긪 xe trong t챙nh tr梳죒g 휃찾 s沼?d沼쩸g thu沼멵 h튼沼썀g t창m th梳쬷.",
+   "휂튼沼즓 s沼?d沼쩸g 휃i沼뇆 tho梳죍 di 휃沼셬g trong khi 휃i沼걏 khi沼긪 xe 척 t척 t沼?l찼i."
+  ]
+ },
+ {
+  "n": 69,
+  "ko_b": "?붾Ъ?먮룞李??댁닔?ъ뾽踰뺤뿉 ?곕Ⅸ ?붾Ъ?먮룞李??댁넚?ъ뾽?먮뒗 愿??踰뺣졊???곕씪 ?댄뻾湲곕줉?μ튂??湲곕줉???댄뻾湲곕줉??(    )?숈븞  蹂닿??섏뿬???쒕떎. (   ) ?덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "3媛쒖썡",
+   "6媛쒖썡",
+   "1??,
+   "2??
+  ],
+  "a": "2",
+  "tr_b": "Theo Lu梳춗 Kinh doanh v梳춏 t梳즜 b梳켷g xe t梳즜, doanh nghi沼뇈 kinh doanh v梳춏 t梳즜 h횪ng h처a b梳켷g xe t梳즜 s梳?ph梳즜 l튼u gi沼?nh沼칗g ghi ch챕p v沼?h횪nh tr챙nh trong thi梳퓍 b沼?l튼u tr沼?h횪nh tr챙nh theo Lu梳춗 ph찼p c처 li챗n quan trong kho梳즢g th沼쓎 gian ( ). Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong ( )?",
+  "tr_c": [
+   "3 th찼ng",
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m"
+  ]
+ },
+ {
+  "n": 70,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑤? ?댁쟾 ?깅줉?섍퀬???섎뒗 ?먮뒗 留ㅼ닔???좊???(  ) ?대궡???깅줉?댁빞 ?쒕떎.  (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "15??,
+   "20??,
+   "30??,
+   "40??
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, ng튼沼쓎 mu沼몁 휃훱ng k첵 chuy沼긪 nh튼沼즢g xe 척 t척 ph梳즜 휃훱ng k첵 trong v챵ng (    ) ng횪y k沼?t沼?ng횪y mua. Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong ( )?",
+  "tr_c": [
+   "15 ng횪y",
+   "20 ng횪y",
+   "30 ng횪y",
+   "40 ng횪y"
+  ]
+ },
+ {
+  "n": 71,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑥쓽 ?뺢린寃?ъ쓽 湲곌컙? 寃?ъ쑀?④린媛?留뚮즺????(  )?쇰?????(  )??源뚯??? (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "90?? 31??,
+   "80?? 41??,
+   "60?? 51??,
+   "50?? 61??
+  ],
+  "a": "1",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h xe 척 t척 l횪 t沼?( ) ng횪y tr튼沼쌵 ng횪y h梳퓍 h梳죒  hi沼뇎 l沼켧 ki沼긩 tra 휃梳퓆 ( ) ng횪y. Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong( )?",
+  "tr_c": [
+   "90 ng횪y,31 ng횪y",
+   "80 ng횪y, 41 ng횪y",
+   "60 ng횪y, 51 ng횪y",
+   "50 ng횪y, 61 ng횪y"
+  ]
+ },
+ {
+  "n": 72,
+  "ko_b": "?먮룞李⑥넀?대같?곷낫?λ쾿???섎Т蹂댄뿕??媛?낇븯吏 ?딆? ?먮룞李⑤낫?좎옄??泥섎쾶 湲곗??쇰줈 留욌뒗 寃껋??(?먮룞李?誘몄슫??",
+  "ko_c": [
+   "300留????댄븯??怨쇳깭猷?,
+   "500留????댄븯??怨쇳깭猷?,
+   "1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "Theo Lu梳춗 휂梳즡 b梳즣 b沼밿 th튼沼쓓g thi沼뇍 h梳죍 cho xe 척 t척, ti챗u chu梳쯰 n횪o 휃첬ng v沼?x沼?ph梳죜 ng튼沼쓎 s沼?h沼칤 xe 척 t척  kh척ng tham gia b梳즣 hi沼긩 b梳칣 bu沼셛? (Kh척ng s沼?d沼쩸g xe 휃沼?휃i l梳죍)",
+  "tr_c": [
+   "Ph梳죜 ti沼걆 h횪nh ch챠nh t沼멼 휃a 3 tri沼뇎 Won",
+   "Ph梳죜 ti沼걆 h횪nh ch챠nh t沼멼 휃a 5 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼멼 휃a 1 n훱m ho梳톍 ph梳죜 ti沼걆 t沼멼 휃a 10 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼멼 휃a 2 n훱m ho梳톍 ph梳죜 ti沼걆 t沼멼 휃a 20 tri沼뇎 Won"
+  ]
+ },
+ {
+  "n": 73,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀沅뚯씠 ?곸냽 ?깆쑝濡?蹂寃쎈맆 寃쎌슦???댁빞 ?섎뒗 ?깅줉??",
+  "ko_c": [
+   "?좉퇋?깅줉",
+   "?댁쟾?깅줉",
+   "蹂寃쎈벑濡?,
+   "留먯냼?깅줉"
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, tr튼沼쓓g h沼즤 thay 휃沼뷼 quy沼걆 s沼?h沼칤 xe 척 t척 nh튼 th沼첺 k梳?v.v..., ph梳즜 휃훱ng k첵  lo梳죍 h챙nh n횪o sau 휃창y?",
+  "tr_c": [
+   "휂훱ng k첵 m沼쌻",
+   "휂훱ng k첵 chuy沼긪 nh튼沼즢g",
+   "휂훱ng k첵 thay 휃沼뷼",
+   "휂훱ng k첵 h沼쭃 xe"
+  ]
+ },
+ {
+  "n": 74,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀?먭? 諛쏆븘???섎뒗 ?먮룞李?寃?ъ쓽 醫낅쪟媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?섎━寃??,
+   "?밸퀎寃??,
+   "?쒕떇寃??,
+   "?꾩떆寃??
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, Lo梳죍 h챙nh ki沼긩 tra n횪o sau 휃창y kh척ng ph梳즜 l횪 n沼셢 dung ch沼?s沼?h沼칤 xe 척 t척  ph梳즜 th沼켧 hi沼뇆 ki沼긩 tra?",
+  "tr_c": [
+   "Ki沼긩 tra s沼춁 ch沼칊",
+   "Ki沼긩 tra 휃梳톍 bi沼뇍",
+   "Ki沼긩 tra 휃i沼걏 ch沼뎝h m찼y",
+   "Ki沼긩 tra t梳죑 th沼쓎"
+  ]
+ },
+ {
+  "n": 75,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑤? 留ㅻℓ??寃쎌슦 ?댁쟾?깅줉 ?대떦湲곌???",
+  "ko_c": [
+   "?쒓뎅?꾨줈援먰넻怨듬떒",
+   "?쒙쉈援곤쉈援ъ껌",
+   "?쒓뎅援먰넻?덉쟾怨듬떒",
+   "?쑣룸룄寃쎌같泥?
+  ],
+  "a": "2",
+  "tr_b": "C퉤 quan n횪o d튼沼쌻 휃창y c처 tr찼ch nhi沼뇅 휃훱ng k첵 chuy沼긪 nh튼沼즢g tr튼沼쓓g h沼즤 mua b찼n xe?",
+  "tr_c": [
+   "C퉤 quan Giao th척ng 휃튼沼쓓g b沼?H횪n Qu沼멵",
+   "沼쫦 ban qu梳춏 - huy沼뇆 - th횪nh ph沼?,
+   "C퉤 quan An to횪n giao th척ng H횪n Qu沼멵",
+   "S沼?C梳즢h s찼t t沼뎝h - th횪nh ph沼?
+  ]
+ },
+ {
+  "n": 76,
+  "ko_b": "?먮룞李??깅줉??醫낅쪟媛 ?꾨땶 寃?2媛吏??",
+  "ko_c": [
+   "寃쎌젙?깅줉",
+   "沅뚮━?깅줉",
+   "?ㅼ젙?깅줉",
+   "留먯냼?깅줉"
+  ],
+  "a": "2, 3",
+  "tr_b": "Hai lo梳죍 n횪o d튼沼쌻 휃창y kh척ng ph梳즜 l횪 휃훱ng k첵 xe?",
+  "tr_c": [
+   "휂훱ng k첵 s沼춁 ch沼칊",
+   "휂훱ng k첵 quy沼걆 l沼즜",
+   "휂훱ng k첵 thi梳퓍 l梳춑",
+   "휂훱ng k첵 h沼쭃"
+  ]
+ },
+ {
+  "n": 77,
+  "ko_b": "?먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) ?욌㈃ 李쎌쑀由ъ쓽 媛?쒓킅???ш낵??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "40?쇱꽱??,
+   "50?쇱꽱??,
+   "60?쇱꽱??,
+   "70?쇱꽱??
+  ],
+  "a": "4",
+  "tr_b": "Ti챗u chu梳쯰 n횪o 휃첬ng v沼?t沼?l沼?cho ph챕p 찼nh s찼ng nh챙n th梳쪅 휃튼沼즓 chi梳퓎 qua c沼춁 k챠nh ph챠a tr튼沼쌵 xe 척 t척 (ngo梳죍  tr沼?xe bu첵t 휃튼a 휃처n h沼뛠 sinh)?",
+  "tr_c": [
+   "40%",
+   "50%",
+   "60%",
+   "70%"
+  ]
+ },
+ {
+  "n": 78,
+  "ko_b": "二쇳뻾 以?釉뚮젅?댄겕媛 ?묐룞?섎뒗 ?댁쟾?됰룞怨쇱젙???щ컮瑜??쒖꽌濡??곌껐??寃껋??",
+  "ko_c": [
+   "?꾪뿕?몄? ???곹솴?먮떒 ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?꾪뿕?몄? ???됰룞紐낅졊 ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞",
+   "?곹솴?먮떒 ???꾪뿕?몄? ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?됰룞紐낅졊 ???꾪뿕?몄? ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞"
+  ],
+  "a": "1",
+  "tr_b": "Th沼?t沼?n횪o l횪 휃첬ng v沼?c찼c h횪nh 휃沼셬g l찼i xe khi phanh 휃튼沼즓 k챠ch ho梳죜?",
+  "tr_c": [
+   "Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼n 휃o찼n t챙nh hu沼몁g ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??휂梳죖 phanh",
+   "Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??Ph찼n 휃o찼n t챙nh hu沼몁g ??휂梳죖 phanh",
+   "Ph찼n 휃o찼n t챙nh hu沼몁g ??Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??휂梳죖 phanh",
+   "Ph찼t l沼뇆h h횪nh 휃沼셬g ??Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼n 휃o찼n t챙nh hu沼몁g ??휂梳죖 phanh"
+  ]
+ },
+ {
+  "n": 79,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑥뿉 遺李⑸맂 ?먯뼱諛깆쓽 援щ퉬議곌굔?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?믪? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "??? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "?뚯뿴媛뺣룄瑜?吏?덇퀬 ?대쭏紐⑥꽦, ?좎뿰??,
+   "?댁쟾?먯? ?묒큺?섎뒗 異⑷꺽?먮꼫吏 洹밸???
+  ],
+  "a": "4",
+  "tr_b": "N沼셢 dung n횪o sau 휃창y kh찼c xa v沼쌻 휃i沼걏 ki沼뇆 t첬i kh챠 휃튼沼즓 l梳칛 trong xe 척 t척?",
+  "tr_c": [
+   "휂沼?b沼걆 k챕o v횪 kh梳?n훱ng ch沼땥 nhi沼뇍 沼?nhi沼뇍 휃沼?cao",
+   "휂沼?b沼걆 k챕o v횪 kh梳?n훱ng ch沼땥 nhi沼뇍 沼?nhi沼뇍 휃沼?th梳쩺",
+   "C처 휃沼?b沼걆 cao, ch沼몁g m횪i m챵n v횪 linh ho梳죜",
+   "T沼멼 휃a h처a n훱ng l튼沼즢g va 휃梳춑 khi ti梳퓈 x첬c v沼쌻 ng튼沼쓎 l찼i xe"
+  ]
+ },
+ {
+  "n": 80,
+  "ko_b": "?ㅼ쓬 以??댁쟾???깆씠 李⑤웾 ?뱁븯李???二쇱쓽?ы빆?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?怨??대┫ ?뚮뒗 ?ㅼ뿉???ㅻ뒗 李⑤웾???덈뒗吏瑜??뺤씤?쒕떎.",
+   "臾몄쓣 ???뚮뒗 ?꾩쟾???닿퀬?섏꽌 怨㏓컮濡??대┛??",
+   "?룹쥖???뱀감?먭? ?섏감?????댁쟾?먮뒗 ?꾨갑??二쇱떆?댁빞 ?쒕떎.",
+   "?댁쟾?앹쓣 ?쇱떆?곸쑝濡??좊궇 ?뚯뿉???쒕룞???꾩? ?딆븘???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Nh沼칗g 휃i沼걏 c梳쬷 l튼u 첵 n횪o l횪 휃첬ng khi ng튼沼쓎 l찼i xe v횪 ng튼沼쓎 tr챗n xe l챗n xu沼몁g xe,?",
+  "tr_c": [
+   "Khi l챗n xu沼몁g xe c梳쬷 ch첬 첵 quan s찼t xem c처 xe t沼?ph챠a sau 휃ang 휃i t沼쌻 hay kh척ng.",
+   "Khi m沼?c沼춁 th챙 ph梳즜 m沼?h梳퓍 r沼밿 xu沼몁g xe ngay.",
+   "L찼i xe c梳쬷 ch첬 첵 quan s찼t ph챠a tr튼沼쌵 khi ng튼沼쓎 ng沼밿 gh梳?sau xu沼몁g xe.",
+   "Kh척ng c梳쬷 t梳칣 휃沼셬g c퉤 n梳퓎 ch沼?t梳죑 th沼쓎 r沼쓎 gh梳?l찼i."
+  ]
+ }
+]
+
+codex
+파일의 한글·베트남어가 모지바케 상태라, 원문 바이트를 복원해 의미를 대조한 뒤 실질 오류만 추리겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+s='휃i沼걏 n횪o'
+for enc in ['cp949','euc_kr']:
+ try: print(enc, s.encode(enc).decode('utf-8'))
+ except Exception as e: print(type(e).__name__,e)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:21:19.638174Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 665ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$s='"'휃i沼걏 n횪o'; "'$e=[Text.Encoding]::GetEncoding(949); [Text.Encoding]::UTF8.GetString($e.GetBytes($s))' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 475ms:
+điều nào
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$e=[Text.Encoding]::GetEncoding(949); $u=[Text.Encoding]::UTF8; $data=Get-Content -Raw -LiteralPath '"'translations/audit/queue/201_choices_vn.json' | ConvertFrom-Json; foreach("'$x in $data){ "N=$($x.n)"; '"'B: '+"'$u.GetString($e.GetBytes($x.tr_b)); for($i=0;$i -lt $x.tr_c.Count;$i++){ "C$($i+1): "+$u.GetString($e.GetBytes($x.tr_c[$i])) }; '"'' }" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:21:31.557533Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.8 seconds
+Output:
+ConvertFrom-Json : 잘못된 배열이 전달되었습니다. ','가 필요합니다. (697): [
+ {
+  "n": 41,
+  "ko_b": "?먮룞李⑥뿉 ?뱀감?섍린 ??二쇰??먭? ?ы빆?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "??댁뼱 留덈え?곹깭",
+   "?꾬쉈?꾨갑 ?μ븷臾??좊Т",
+   "?댁쟾??怨꾧린???뺤긽?묐룞 ?щ?",
+   "釉뚮젅?댄겕 ?섎떖 ?뺤긽?묐룞 ?щ?"
+  ],
+  "a": "1, 2",
+  "tr_b": "Hai 휃i沼걏 n횪o l횪 휃첬ng m횪 c梳쬷 ph梳즜 ki沼긩 tra xung quanh xe tr튼沼쌵 khi l챗n xe?",
+  "tr_c": [
+   "Tr梳죒g th찼i m챵n c沼쬪 b찼nh xe.",
+   "Ph챠a tr튼沼쌵 v횪 sau xe c처 ch튼沼썀g ng梳죍 v梳춗 g챙 kh척ng.",
+   "B梳즢g 휃i沼걏 khi沼긪 tr튼沼쌵 gh梳?l찼i c처 ho梳죜 휃沼셬g b챙nh th튼沼쓓g hay kh척ng.",
+   "B횪n 휃梳죖 phanh c처 ho梳죜 휃沼셬g b챙nh th튼沼쓓g hay kh척ng."
+  ]
+ },
+ {
+  "n": 42,
+  "ko_b": "?쇰컲?곸쑝濡?臾대낫??MF竊숸aintenance Free)諛고꽣由??섎챸???ㅽ븳 寃쎌슦, ?먭?李쎌뿉 ?섑??섎뒗 ?됯퉼??",
+  "ko_c": [
+   "?⑹깋",
+   "諛깆깋",
+   "寃???,
+   "?뱀깋"
+  ],
+  "a": "2",
+  "tr_b": "Th척ng th튼沼쓓g m횪u g챙 xu梳쩿 hi沼뇆 tr챗n c沼춁 s沼?ki沼긩 tra khi tu沼뷼 th沼?c沼쬪 b챙nh 梳칌 quy b梳즣 tr챙 mi沼꿳 ph챠 (MF: Mi沼꿳  
+b梳즣 d튼沼죒g) 휃찾 h梳퓍?",
+  "tr_c": [
+   "M횪u v횪ng",
+   "M횪u tr梳칗g",
+   "M횪u 휃en",
+   "M횪u xanh l찼"
+  ]
+ },
+ {
+  "n": 43,
+  "ko_b": "?ㅼ쓬 以?李⑤웾 ?곕즺濡??ъ슜??寃쎌슦, 媛吏??앹쑀?쒗뭹?쇰줈 蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "?섎컻?좎뿉 硫뷀깂?ъ씠 ?쇳빀???쒗뭹",
+   "蹂댄넻 ?섎컻?좎뿉 怨좉툒 ?섎컻?좉? ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹",
+   "寃쎌쑀???깆쑀媛 ?쇳빀???쒗뭹",
+   "寃쎌쑀??臾쇱씠 ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹"
+  ],
+  "a": "4",
+  "tr_b": "S梳즢 ph梳쯯 n횪o sau 휃창y kh척ng 휃튼沼즓 xem l횪 s梳즢 ph梳쯯 x훱ng d梳쬾 gi梳?khi 휃튼沼즓 s沼?d沼쩸g l횪m nhi챗n li沼뇎 cho xe 척 t척?",
+  "tr_c": [
+   "S梳즢 ph梳쯯 l梳쳌 metanol v횪o x훱ng",
+   "S梳즢 ph梳쯯 l梳쳌 kho梳즢g d튼沼쌻 5% x훱ng cao c梳쩺 v沼쌻 x훱ng th튼沼쓓g",
+   "S梳즢 ph梳쯯 l梳쳌 d梳쬾 diesel v沼쌻 d梳쬾 h沼뢠",
+   "S梳즢 ph梳쯯 l梳쳌 kho梳즢g d튼沼쌻 5% n튼沼쌵 trong d梳쬾 diesel"
+  ]
+ },
+ {
+  "n": 44,
+  "ko_b": "?섏냼媛???꾩텧???뺤씤?????덈뒗 諛⑸쾿???꾨땶 寃껋??",
+  "ko_c": [
+   "媛?곗꽦 媛?ㅺ?吏湲??쒖슜 痢≪젙",
+   "鍮꾨닓臾쇱쓣 ?듯븳 ?뺤씤",
+   "媛???꾩깉瑜?留≪븘 ?뺤씤",
+   "?섏냼寃吏湲곕줈 ?뺤씤"
+  ],
+  "a": "3",
+  "tr_b": "C찼ch n횪o kh척ng ph梳즜 l횪 c찼ch c처 th沼?ki沼긩 tra r챵 r沼?kh챠 Hydro?",
+  "tr_c": [
+   "S沼?d沼쩸g m찼y d챵 kh챠 d沼?ch찼y 휃沼?휃o",
+   "Ki沼긩 tra b梳켷g n튼沼쌵 x횪 ph챵ng",
+   "Ki沼긩 tra b梳켷g c찼ch ng沼춊 kh챠 gas",
+   "Ki沼긩 tra b梳켷g m찼y d챵 Hydro"
+  ]
+ },
+ {
+  "n": 45,
+  "ko_b": "?섏냼李⑤웾???덉쟾?섏튃?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "異⑹쟾?섍린 ??李⑤웾???쒕룞???덈떎.",
+   "異⑹쟾?뚯뿉???≪뿰? 李⑤웾???⑥뼱?몄꽌 ?쒕떎.",
+   "?섏냼媛?ㅺ? ?꾩꽕???뚯뿉??異⑹쟾???덉쟾愿由ъ옄?먭쾶 ?덉쟾?먭????붿껌?쒕떎.",
+   "?섏냼李⑤웾??異⑸룎 ??援먰넻?ш퀬 ?꾩뿉??媛???덉쟾?먭???諛쏆? ???ъ슜?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "휂i沼걏 n횪o kh척ng ph梳즜 l횪 quy t梳칌 an to횪n c沼쬪 xe ch梳죣 b梳켷g Hydro?",
+  "tr_c": [
+   "T梳칣 m찼y tr튼沼쌵 khi s梳죅.",
+   "Khi h첬t thu沼멵 l찼 t梳죍 휃i沼긩 n梳죖 nhi챗n li沼뇎, ph梳즜 h첬t 沼?n퉤i c찼ch xa xe.",
+   "Khi kh챠 Hydro b沼?r챵 r沼? h찾y y챗u c梳쬾 ng튼沼쓎 qu梳즢 l첵 an to횪n t梳죍 휃i沼긩 n梳죖 nhi챗n li沼뇎 ki沼긩 tra an to횪n.",
+   "Sau khi x梳즭 ra tai n梳죒 giao th척ng nh튼 va ch梳죑 v沼쌻 xe ch梳죣 b梳켷g Hydro, xe ch沼?휃튼沼즓 s沼?d沼쩸g sau khi 휃찾 ki沼긩 tra an  t
+o횪n v沼?kh챠 gas."
+  ]
+ },
+ {
+  "n": 46,
+  "ko_b": "?ㅼ쓬 以??섏냼李⑤웾?먯꽌 ?꾩텧???뺤씤?섏? ?딆븘???섎뒗 怨녹??",
+  "ko_c": [
+   "諛몃툕? ?⑷린???묒냽遺",
+   "議곗젙湲?,
+   "媛???몄뒪? 諛곌? ?곌껐遺",
+   "?곕즺?꾩? 遺?ㅽ듃 ?몃쾭??
+  ],
+  "a": "4",
+  "tr_b": "V沼?tr챠 n횪o sau 휃창y c沼쬪 xe ch梳죣 b梳켷g Hydro kh척ng c梳쬷 ki沼긩 tra r챵 r沼?",
+  "tr_c": [
+   "B沼?ph梳춏 k梳퓍 n沼멼 gi沼칊 van v횪 b챙nh 휃沼켷g nhi챗n li沼뇎",
+   "B沼?휃i沼걏 ch沼뎝h",
+   "沼릒g d梳쳌 kh챠 v횪 휃梳쬾 n沼멼 沼몁g d梳쳌",
+   "Bi梳퓆 t梳쬷 t훱ng c튼沼쓓g pin nhi챗n li沼뇎"
+  ]
+ },
+ {
+  "n": 47,
+  "ko_b": "?꾧린李?異⑹쟾???꾪븳 ?щ컮瑜?諛⑸쾿?쇰줈 ?곸젅?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "異⑹쟾???뚮뒗 洹쒓꺽??留욌뒗 異⑹쟾湲곗? ?대뙌?곕? ?ъ슜?쒕떎.",
+   "異⑹쟾 以묒뿉??異⑹쟾 而ㅻ꽖?곕? ?꾩쓽濡?遺꾨━?섏? ?딄퀬 異⑹쟾 醫낅즺 踰꾪듉?쇰줈 醫낅즺?쒕떎.",
+   "?뽰? ?먯쑝濡?異⑹쟾湲??ъ슜???섏? ?딄퀬 異⑹쟾?μ튂??臾쇱씠 ?ㅼ뼱媛吏 ?딅룄濡?二쇱쓽?쒕떎.",
+   "?대???異⑹쟾湲곕? ?댁슜?섏뿬 異⑹쟾??寃쎌슦 媛?뺤슜 硫?고꺆?대굹 ?곗옣?좎쓣 ?ъ슜?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Ph튼퉤ng ph찼p n횪o l횪 kh척ng 휃첬ng v沼?s梳죅 xe 휃i沼뇆?",
+  "tr_c": [
+   "Khi s梳죅, ph梳즜 s沼?d沼쩸g c沼쩭 s梳죅 v횪 沼?c梳칖 휃첬ng quy c찼ch.",
+   "Trong l첬c s梳죅, kh척ng t沼?첵 r첬t 휃梳쬾 n沼멼 s梳죅 m횪 ph梳즜 d沼쳌g s梳죅 b梳켷g c찼ch nh梳쩸 n첬t d沼쳌g s梳죅.",
+   "Kh척ng s沼?d沼쩸g m찼y s梳죅 khi tay 휃ang 튼沼썇 v횪 ch첬 첵 kh척ng 휃沼?n튼沼쌵 l沼뛲 v횪o thi梳퓍 b沼?s梳죅.",
+   "Tr튼沼쓓g h沼즤 s梳죅 b梳켷g b沼?s梳죅 di 휃沼셬g, ph梳즜 s沼?d沼쩸g 沼?c梳칖 휃i沼뇆 gia d沼쩸g ho梳톍 d창y 휃i沼뇆 n沼멼 d횪i."
+  ]
+ },
+ {
+  "n": 48,
+  "ko_b": "踰뺣졊???먮룞李⑥쓽 ?깊솕 醫낅쪟? 洹??깃킅?됱쓣 ?곌껐??寃껋쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾪눜??- ?몃컯??,
+   "踰덊샇??- 泥?깋",
+   "?꾨???- 諛깆깋",
+   "?쒕룞??- ?곸깋"
+  ],
+  "a": "4",
+  "tr_b": "C창u n횪o l횪 li챗n k梳퓍 휃첬ng gi沼칊 lo梳죍 휃챔n v횪 m횪u 휃챔n c沼쬪 xe theo quy 휃沼땙h ph찼p lu梳춗?",
+  "tr_c": [
+   "휂챔n l첫i - M횪u h沼?ph찼ch.",
+   "휂챔n bi沼긪 s沼?- M횪u xanh d튼퉤ng",
+   "휂챔n sau - M횪u tr梳칗g",
+   "휂챔n phanh - M횪u 휃沼?
+  ]
+ },
+ {
+  "n": 49,
+  "ko_b": "LPG李⑤웾???곕즺?뱀꽦??????ㅻ챸?쇰줈 ?곷떦?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "?쇰컲?곸씤 湲곗껜?곹깭濡??곗냼?섏뼱 ?붿쭊??遺?쒕읇寃??묐룞?쒕떎.",
+   "李⑤웾??LPG???낇듅???꾩깉媛 ?덈떎.",
+   "?쇰컲?곸쑝濡?怨듦린蹂대떎 媛蹂띻퀬, ??컻 ?꾪뿕?깆씠 ?곷떎.",
+   "?섎컻?좊굹 寃쎌쑀??鍮꾪빐 ?먮꼫吏 諛?꾧? ??븘 ?숈씪??諛곌린?됱뿉??異쒕젰????퀬 ?곕퉬媛 ?⑥뼱吏꾨떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng ph첫 h沼즤 v沼?휃梳톍 휃i沼긩 nhi챗n li沼뇎 c沼쬪 xe LPG?",
+  "tr_c": [
+   "Ch찼y 沼?tr梳죒g th찼i kh챠 th척ng th튼沼쓓g v횪 gi첬p 휃沼셬g c퉤 v梳춏 h횪nh 챗m 찼i.",
+   "LPG d횪nh cho xe th챙 c처 m첫i 휃梳톍 bi沼뇍.",
+   "Th튼沼쓓g nh梳?h퉤n kh척ng kh챠 v횪 c처 nguy c퉤 n沼?th梳쩺.",
+   "So v沼쌻 x훱ng ho梳톍 d梳쬾 diesel, m梳춗 휃沼?n훱ng l튼沼즢g th梳쩺 h퉤n n챗n c척ng su梳쩿 th梳쩺 v횪 hi沼뇎 su梳쩿 nhi챗n li沼뇎 gi梳즡 沼?c첫ng  dun
+g t챠ch xy-lanh."
+  ]
+ },
+ {
+  "n": 50,
+  "ko_b": "?먮룞李⑥쓽 ?쒕룞?μ쓣 ??섑븯???먯씤?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "留덉뒪???ㅻ┛??怨좎옣",
+   "???ㅻ┛??遺덈웾",
+   "由대━???ы겕 蹂??,
+   "踰좎씠??濡?諛쒖깮"
+  ],
+  "a": "3",
+  "tr_b": "N沼셢 dung n횪o kh척ng 휃첬ng v沼쌻 nguy챗n nh창n l횪m gi梳즡 l沼켧 phanh c沼쬪 xe 척 t척?",
+  "tr_c": [
+   "H沼뢮g xi lanh ch챠nh",
+   "L沼뾦 xi lanh b찼nh xe",
+   "Bi梳퓆 d梳죒g ch梳죅 nh梳?ly h沼즤",
+   "Ph찼t sinh hi沼뇆 t튼沼즢g h처a h퉤i"
+  ]
+ },
+ {
+  "n": 51,
+  "ko_b": "二쇳뻾 蹂댁“?μ튂媛 ?μ갑???먮룞李⑥쓽 ?댁쟾諛⑸쾿?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "二쇳뻾 蹂댁“?μ튂瑜??ъ슜?섎뒗 寃쎌슦 二쇳뻾 蹂댁“?μ튂 ?묐룞 ?좎? ?щ?瑜??섏떆濡??뺤씤?섎ŉ 二쇳뻾?쒕떎.",
+   "?댁쟾 媛쒖엯 寃쎄퀬 ??二쇳뻾 蹂댁“?μ튂媛 ?댁젣???뚭퉴吏 湲곕떎?몃떎媛 媛쒖엯?댁빞 ?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂???쇰? ?먮뒗 ?꾩껜瑜??댁젣?섎뒗 寃쎌슦 ?묐룞 ?щ?瑜??뺤씤?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂媛 ?묐룞?섍퀬 ?덈뜑?쇰룄 利됱떆 媛쒖엯?????덈룄濡??湲고븯硫댁꽌 ?댁쟾?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "C찼ch n횪o sau 휃창y kh척ng ph梳즜 l횪 c찼ch l찼i xe 휃첬ng c沼쬪 xe 휃튼沼즓 g梳칗 thi梳퓍 b沼?tr沼?l찼i?",
+  "tr_c": [
+   "Khi s沼?d沼쩸g thi梳퓍 b沼?tr沼?l찼i ph梳즜 th튼沼쓓g xuy챗n ki沼긩 tra xem thi梳퓍 b沼?c처 duy tr챙 ho梳죜 휃沼셬g hay kh척ng tr튼沼쌵 khi l찼i."
+,
+   "Khi c처 c梳즢h b찼o c梳쬷 can thi沼뇈 l찼i xe, ng튼沼쓎 l찼i ph梳즜 휃沼즜 cho 휃梳퓆 khi thi梳퓍 b沼?tr沼?l찼i t梳칣 r沼밿 m沼쌻 can thi沼뇈 l찼i xe.
+",
+   "Tr튼沼쓓g h沼즤 휃찾 t梳칣 m沼셳 ph梳쬷 ho梳톍 to횪n b沼?thi梳퓍 b沼?tr沼?l찼i, ph梳즜 ki沼긩 tra xem thi梳퓍 b沼?c챵n ho梳죜 휃沼셬g kh척ng.",
+   "Ngay c梳?khi thi梳퓍 b沼?tr沼?l찼i 휃ang ho梳죜 휃沼셬g, v梳쳌 ph梳즜 lu척n l찼i xe trong t튼 th梳?ch沼?s梳탇 s횪ng c처 th沼?can thi沼뇈 ngay l
+梳춑  t沼쯢."
+  ]
+ },
+ {
+  "n": 52,
+  "ko_b": "?먮룞李⑤? ?덉쟾?섍퀬 ?몃━?섍쾶 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "LFA(Lane Following Assist)???쒖감濡쒖쑀吏蹂댁“?앷린?μ쑝濡??먮룞李④? 李⑤줈 以묒븰???좎??섎ŉ 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫?대떎.",
+   "ASCC(Adaptive Smart Cruise Control)???쒖감媛꾧굅由?諛??띾룄?좎??앷린?μ쑝濡??댁쟾?먭? ?ㅼ젙???띾룄濡?二쇳뻾?섎㈃???욎감???嫄곕━瑜??좎??섏뿬 ?ㅼ뒪濡?媛쨌媛먯
+냽???댁＜??湲곕뒫?대떎.",
+   "ABSD(Active Blind Spot Detection)???쒖궗媛곸??媛먯??앷린?μ쑝濡??ш컖吏???異⑸룎 ?꾪뿕??媛먯????덉쟾??李⑤줈 蹂寃쎌쓣 ?뺣뒗 湲곕뒫?대떎.",
+   "AEB(Autonomous Emergency Braking)???쒖옄?숆릿湲됱젣?쇺앷린?μ쑝濡?釉뚮젅?댄겕 ?쒕룞????댁뼱媛 ?좉린??寃껋쓣 諛⑹??섏뿬 ?쒕룞 嫄곕━瑜?以꾩뿬二쇰뒗 湲곕뒫?대떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 kh척ng 휃첬ng v沼?t챠nh n훱ng tr沼?gi첬p 휃沼?휃i沼걏 khi沼긪 xe 척 t척 an to횪n v횪 thu梳춏 ti沼뇆?",
+  "tr_c": [
+   "LFA (Lane Following Assist) l횪 t챠nh n훱ng ?쏷r沼?gi첬p duy tr챙 휃첬ng l횪n xe?? h沼?tr沼?xe lu척n ch梳죣 沼?gi沼칊 l횪n 휃튼沼쓓g.",
+   "ASCC (Adaptive Smart Cruise Control) l횪 t챠nh n훱ng ?쏡uy tr챙 t沼멵 휃沼?v횪 kho梳즢g c찼ch gi沼칊 c찼c xe??t沼?t훱ng - gi梳즡 t沼멵 휃沼
+?duy tr챙 c沼?ly v沼쌻 xe ph챠a tr튼沼쌵 trong khi l찼i xe v沼쌻 t沼멵 휃沼?do ng튼沼쓎 l찼i xe c횪i 휃梳톞.",
+   "ABSD (Active Blind Spot Detection) l횪 t챠nh n훱ng ?쏯h梳춏 di沼뇆 휃i沼긩 m첫??ph찼t hi沼뇆 nguy c퉤 va ch梳죑 沼?휃i沼긩 m첫 v횪 h沼? tr沼?
+chuy沼긪 l횪n 휃튼沼쓓g an to횪n.",
+   "AEB (Autonomous Emergency Braking) l횪 t챠nh n훱ng ?쏷沼?휃沼셬g phanh kh梳쯰 c梳쩺??gi첬p gi梳즡 kho梳즢g c찼ch phanh b梳켷g  c찼ch ng훱
+n ch梳톘 b찼nh xe b沼?kh처a phanh."
+  ]
+ },
+ {
+  "n": 53,
+  "ko_b": "?먯쑉二쇳뻾?쒖뒪?쒓낵 愿?⑤맂 踰뺣졊???댁슜?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?꾨줈援먰넻踰뺤긽?쒖슫?꾟앹뿉???꾨줈?먯꽌 李⑤쭏瑜?洹?蹂몃옒???ъ슜諛⑸쾿???곕씪 ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섎뒗 寃껋? ?ы븿?섏? ?딅뒗??",
+   "?댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ?대??꾪솕 ?ъ슜湲덉? 洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+   "?먯쑉二쇳뻾?쒖뒪?쒖쓽 吏곸젒 ?댁쟾 ?붽뎄??吏泥댁뾾????묓븯吏 ?꾨땲???먯쑉二쇳뻾?뱀슜?먮룞李⑥쓽 ?댁쟾?먯뿉 ???踰붿튃湲덉븸? 4留??먯씠??",
+   "?쒖옄?⑥＜?됱떆?ㅽ뀥?앹씠? ?댁쟾???먮뒗 ?밴컼??議곗옉 ?놁씠 二쇰??곹솴怨??꾨줈 ?뺣낫 ?깆쓣 ?ㅼ뒪濡??몄??섍퀬 ?먮떒?섏뿬 ?먮룞李⑤? ?댄뻾 ?????덇쾶 ?섎뒗 ?먮룞???λ퉬, ?뚰봽
+?몄썾??諛??댁? 愿?⑦븳 紐⑤뱺 ?μ튂瑜?留먰븳??"
+  ],
+  "a": "1",
+  "tr_b": "N沼셢 dung n횪o l횪 sai v沼?Lu梳춗 li챗n quan 휃梳퓆 h沼?th沼몁g l찼i t沼?휃沼셬g?",
+  "tr_c": [
+   "?쏬찼i xe??theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?kh척ng bao h횪m vi沼놻 s沼?d沼쩸g h沼?th沼몁g l찼i xe t沼?휃沼셬g theo ph튼퉤ng ph찼p s沼? d沼쩸g
+ ban 휃梳쬾 c沼쬪 xe.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe khi s沼?d沼쩸g h沼?th沼몁g l찼i xe t沼?휃沼셬g 휃沼?l찼i xe kh척ng b沼?찼p d沼쩸g quy 휃沼땙h c梳쩷 s沼?d沼쩸g 휃i沼뇆  tho梳죍
+ di 휃沼셬g.",
+   "Ti沼걆 ph梳죜 휃沼멼 v沼쌻 ng튼沼쓎 휃i沼걏 khi沼긪 xe 척 t척 con l찼i t沼?휃沼셬g kh척ng 휃찼p 沼쯰g ngay l梳춑 t沼쯢 y챗u c梳쬾 l찼i xe tr沼켧 ti梳퓈 c沼쬪 
+h沼?th沼몁g l찼i xe t沼?휃沼셬g l횪 40.000 Won.",
+   "?쏦沼?th沼몁g l찼i xe t沼?휃沼셬g??bao g沼뱈 thi梳퓍 b沼?t沼?휃沼셬g h처a, ph梳쬷 m沼걅 v횪 t梳쩿 c梳?c찼c trang thi梳퓍 b沼?c처 li챗n quan kh찼c, c처
+ kh梳?n훱ng t沼?nh梳춏 di沼뇆 v횪 ph찼n 휃o찼n t챙nh h챙nh xung quanh c크ng nh튼 th척ng tin tr챗n 휃튼沼쓓g 휃沼?휃i沼걏 khi沼긪 xe m횪 kh척ng c梳쬷 th
+ao t찼c c沼쬪 ng튼沼쓎 휃i沼걏 khi沼긪 xe hay h횪nh kh찼ch."
+  ]
+ },
+ {
+  "n": 54,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李⑥쓽 二쇱슂 援ъ꽦?덉씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?곕즺?꾩?",
+   "援щ룞紐⑦꽣",
+   "?붿쭊",
+   "諛고꽣由?
+  ],
+  "a": "3",
+  "tr_b": "B沼?ph梳춏 n횪o sau 휃창y kh척ng ph梳즜 l횪 b沼?ph梳춏 c梳쪀 t梳죓 ch챠nh c沼쬪 xe Hydro?",
+  "tr_c": [
+   "Pin nhi챗n li沼뇎",
+   "M척 t퉤 xoay",
+   "휂沼셬g c퉤",
+   "Pin"
+  ]
+ },
+ {
+  "n": 55,
+  "ko_b": "?먮룞李??댁뿰湲곌????щ옲?ъ텞?먯꽌 諛쒖깮?섎뒗 ?뚯쟾???쒓컙?곸쑝濡??대뒗 ????臾댁뾿?대씪 ?섎뒗媛 ?",
+  "ko_c": [
+   "?좏겕",
+   "?곕퉬",
+   "諛곌린??,
+   "留덈젰"
+  ],
+  "a": "1",
+  "tr_b": "L沼켧 quay (l沼켧 sinh ra t沼쯢 th沼쓎) sinh ra 沼?tr沼쩭 khu沼톟 c沼쬪 휃沼셬g c퉤 휃沼몋 trong c沼쬪 척 t척 sinh ra g챙?",
+  "tr_c": [
+   "Ng梳쳕 l沼켧",
+   "Hi沼뇎 su梳쩿 nhi챗n li沼뇎",
+   "Dung t챠ch xy lanh",
+   "M찾 l沼켧"
+  ]
+ },
+ {
+  "n": 56,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??곸슜??珥됱쭊 諛?吏?먯뿉 愿??踰뺣졊???먯쑉二쇳뻾?먮룞李⑥뿉 ????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 醫낅쪟???꾩쟾?먯쑉二쇳뻾?먮룞李⑥? 遺遺꾩옄?⑥＜?됱옄?숈감濡?援щ텇?????덈떎.",
+   "?꾩쟾 ?먯쑉二쇳뻾?먮룞李⑤뒗 ?먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????덉뼱 ?댁쟾?먭? ?녾굅???댁쟾???먮뒗 ?밴컼??媛쒖엯???꾩슂?섏?       ?꾨땲???먮룞李⑤? 留먰븳??",
+   "遺遺꾩옄?⑥＜?됱옄?숈감???먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????녾굅???댁쟾?먭? 吏?띿쟻?쇰줈 二쇱떆???꾩슂媛 ?덈뒗 ???댁쟾????      ???밴컼??媛쒖엯???꾩슂???먮룞李⑤? 留
+먰븳??",
+   "?먯쑉二쇳뻾?먮룞李⑤뒗 ?뱀슜?먮룞李⑥뿉 ?쒖젙?섏뼱 ?곸슜?섍퀬, ?뱁빀?먮룞李⑤굹 ?붾Ъ?먮룞李⑤뒗 ??踰뺤씠 ?곸슜?섏? ?딅뒗??"
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?xe 척 t척 t沼?l찼i theo Ph찼p l沼뇆h v沼?H沼?tr沼?v횪 Th첬c 휃梳쯻 s沼?d沼쩸g xe 척 t척 t沼?l찼i?",
+  "tr_c": [
+   "Ch沼쬷g lo梳죍 xe 척 t척 t沼?l찼i c처 th沼?ph창n lo梳죍 th횪nh Xe 척 t척 t沼?l찼i ho횪n to횪n v횪 Xe 척 t척 t沼?l찼i m沼셳 ph梳쬷.",
+   "Xe 척 t척 t沼?l찼i ho횪n to횪n l횪 xe ch沼?c처 th沼?휃i沼걏 khi沼긪 b梳켷g h沼?th沼몁g l찼i t沼?휃沼셬g, kh척ng c梳쬷 ng튼沼쓎 l찼i xe ho梳톍 s沼?can 
+thi沼뇈 c沼쬪 ng튼沼쓎 l찼i xe hay h횪nh kh찼ch tr챗n xe.",
+   "Xe 척 t척 t沼?l찼i m沼셳 ph梳쬷 l횪 xe kh척ng th沼?ch沼?휃i沼걏 khi沼긪 b梳켷g h沼?th沼몁g l찼i t沼?휃沼셬g ho梳톍 xe v梳쳌 c梳쬷 ng튼沼쓎 l찼i xe li챗n 
+t沼쩭 theo d천i ho梳톍 c梳쬷 s沼?can thi沼뇈 c沼쬪 ng튼沼쓎 l찼i xe hay h횪nh kh찼ch tr챗n xe.",
+   "Xe 척 t척 t沼?l찼i ch沼?gi沼쌻 h梳죒 cho xe 척 t척 con, Ph찼p l沼뇆h n횪y kh척ng 찼p d沼쩸g cho xe 척 t척 kh찼ch hay xe ch沼?h횪ng."
+  ]
+ },
+ {
+  "n": 57,
+  "ko_b": "?꾧린?먮룞李?愿由щ갑踰뺤쑝濡??녹? ?딆? 2媛吏??",
+  "ko_c": [
+   "鍮꾩궗?낆슜 ?뱀슜?먮룞李⑥쓽 ?먮룞李④????좏슚湲곌컙? 6?꾩씠??",
+   "?κ굅由??댁쟾 ?쒖뿉???ъ쟾??諛고꽣由щ? ?뺤씤?섍퀬 異⑹쟾?쒕떎.",
+   "異⑹쟾 吏곹썑?먮뒗 湲됯??? 湲됱젙吏瑜??섏? ?딅뒗 寃껋씠 醫뗫떎.",
+   "?댁꽑?쒗듃, ?댁꽑?몃뱾蹂대떎 怨듦린 ?덊꽣瑜??ъ슜?섎뒗 寃껋씠 ?⑥쑉?곸씠??"
+  ],
+  "a": "1, 4",
+  "tr_b": "Hai n沼셢 dung n횪o kh척ng 휃첬ng v沼쌻 ph튼퉤ng ph찼p b梳즣 d튼沼죒g xe 척 t척 휃i沼뇆?",
+  "tr_c": [
+   "K沼?h梳죒 ki沼긩 휃沼땙h xe 척 t척 con kh척ng d첫ng cho m沼쩭 휃챠ch kinh doanh l횪 6 n훱m.",
+   "Khi l찼i xe 휃튼沼쓓g d횪i, h찾y ki沼긩 tra pin v횪 s梳죅 휃i沼뇆 휃梳쭃 휃沼?",
+   "Ngay sau khi s梳죅 휃i沼뇆, kh척ng n챗n t훱ng t沼멵 ho梳톍 d沼쳌g 휃沼셳 ng沼셳.",
+   "S沼?d沼쩸g m찼y s튼沼웙 kh척ng kh챠 s梳?hi沼뇎 qu梳?h퉤n gh梳?s튼沼웙 v횪 tay c梳쬶 c처 s튼沼웙."
+  ]
+ },
+ {
+  "n": 58,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) 李쎌쑀由?媛?쒓킅???ш낵?⑥쓽 洹쒖젣瑜?諛쏅뒗 寃껋??",
+  "ko_c": [
+   "?룹쥖???녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦 ?녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦, ?룸㈃ 李쎌쑀由?,
+   "紐⑤뱺 李쎌쑀由?
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?th챙 k챠nh c沼춁 n횪o ph梳즜 찼p d沼쩸g quy 휃沼땙h h梳죒 ch梳?t沼?l沼?찼nh s찼ng nh챙n th梳쪅  
+휃튼沼즓 chi梳퓎 qua (ngo梳죍 tr沼?xe bu첵t 휃튼a 휃처n h沼뛠 sinh)?",
+  "tr_c": [
+   "K챠nh c沼춁 b챗n gh梳?sau",
+   "K챠nh tr튼沼쌵 v횪 hai b챗n tr찼i ph梳즜 c沼쬪 gh梳?l찼i",
+   "K챠nh ph챠a tr튼沼쌵, hai b챗n tr찼i ph梳즜 c沼쬪 gh梳?l찼i, v횪 ph챠a sau",
+   "T梳쩿 c梳?c찼c k챠nh"
+  ]
+ },
+ {
+  "n": 59,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?뱀슜?먮룞李⑤뒗 紐????댄븯瑜??댁넚?섍린???곹빀?섍쾶 ?쒖옉???먮룞李⑥씤媛?",
+  "ko_c": [
+   "10??,
+   "12??,
+   "15??,
+   "18??
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Qu梳즢 l첵 xe 척 t척, xe 척 t척 con l횪 xe 휃튼沼즓 s梳즢 xu梳쩿 ph첫 h沼즤 휃沼?ch沼?t沼?m梳쪅 ng튼沼쓎 tr沼?xu沼몁g?",
+  "tr_c": [
+   "10 ng튼沼쓎",
+   "12 ng튼沼쓎",
+   "15 ng튼沼쓎",
+   "18 ng튼沼쓎"
+  ]
+ },
+ {
+  "n": 60,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?좉퇋 ?뱀슜?먮룞李⑥쓽 理쒖큹寃???좏슚湲곌컙??",
+  "ko_c": [
+   "1??,
+   "2??,
+   "4??,
+   "5??
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 hi沼뇎 l沼켧 cho l梳쬷 ki沼긩 휃沼땙h 휃梳쬾 ti챗n c沼쬪 xe 척 t척 con phi th튼퉤ng m梳죍 
+ 휃훱ng k첵 m沼쌻 l횪 bao l창u?",
+  "tr_c": [
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m",
+   "5 n훱m"
+  ]
+ },
+ {
+  "n": 61,
+  "ko_b": "?먮룞李④?由щ쾿???먮룞李⑥쓽 醫낅쪟濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "嫄댁꽕湲곌퀎",
+   "?붾Ъ?먮룞李?,
+   "寃쎌슫湲?,
+   "?뱀닔?먮룞李?
+  ],
+  "a": "2, 4",
+  "tr_b": "Hai lo梳죍 xe n횪o sau 휃창y thu沼셛 lo梳죍 xe 척 t척 theo Lu梳춗 Qu梳즢 l첵 xe 척 t척?",
+  "tr_c": [
+   "M찼y m처c thi梳퓍 b沼?thi c척ng",
+   "Xe t梳즜 ch沼?h횪ng h처a",
+   "Xe m찼y c횪y",
+   "Xe 척 t척 휃梳톍 ch沼쬷g"
+  ]
+ },
+ {
+  "n": 62,
+  "ko_b": "鍮꾩궗?낆슜 諛???ъ궗?낆슜 ?꾧린?먮룞李⑥? ?섏냼 ?곕즺?꾩??먮룞李??섏씠釉뚮━???먮룞李??쒖쇅) ?꾩슜踰덊샇???됱긽?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?⑹깋 諛뷀깢??寃???臾몄옄",
+   "?뚮???諛뷀깢??寃???臾몄옄",
+   "媛먯껌??諛뷀깢???곗깋 臾몄옄",
+   "蹂대옃鍮?諛뷀깢??寃???臾몄옄"
+  ],
+  "a": "2",
+  "tr_b": "M횪u n횪o 휃첬ng l횪 c沼쬪 bi沼긪 s沼?xe d횪nh ri챗ng cho xe 척 t척 휃i沼뇆 ch梳죣 b梳켷g nhi챗n li沼뇎 Hydro (ngo梳죍 tr沼?xe 척 t척  Hy
+brid) v횪 xe 척 t척 휃i沼뇆 kh척ng d첫ng 휃沼?kinh doanh v횪 cho thu챗?",
+  "tr_c": [
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u v횪ng",
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u xanh d튼퉤ng",
+   "Ch沼?m횪u tr梳칗g tr챗n n沼걆 m횪u xanh th梳쳋",
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u 찼nh t챠m"
+  ]
+ },
+ {
+  "n": 63,
+  "ko_b": "?ㅼ쓬 李⑤웾 以??섏씠?⑥뒪李⑤줈 ?댁슜??遺덇??ν븳 李⑤웾??",
+  "ko_c": [
+   "?곸옱以묐웾 16???ㅽ봽?몃윮",
+   "?쒖슱怨??섏썝???댄뻾?섎뒗 2痢?醫뚯꽍踰꾩뒪",
+   "?⑥감濡쒖씤 寃쎌슦, 李⑦룺??3.7m???뚮갑李⑤웾",
+   "10?????援щ궃李⑤웾"
+  ],
+  "a": "3",
+  "tr_b": "Xe n횪o sau 휃창y kh척ng th沼?s沼?d沼쩸g l횪n 휃튼沼쓓g Hi-pass?",
+  "tr_c": [
+   "Xe ben tr沼뛫g t梳즜 16 t梳쩸",
+   "Xe bu첵t 2 t梳쬷g ch梳죣 t梳죍 Seoul v횪 Suwon",
+   "Xe c沼쯷 h沼뢠 c처 chi沼걏 r沼셬g 3,7m l튼u th척ng tr챗n l횪n 휃튼沼쓓g 휃퉤n",
+   "Xe c沼쯷 h沼?c沼쯷 n梳죒 c沼?l沼썀 10 t梳쩸"
+  ]
+ },
+ {
+  "n": 64,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?뱁빀?먮룞李?2001???댄썑 ?깅줉??李⑤졊??4??珥덇낵)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "2",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h 휃沼멼 v沼쌻 xe 척 t척 ch沼?kh찼ch lo梳죍 nh沼?kh척ng 
+ kinh doanh (휃튼沼즓 휃훱ng k첵 sau n훱m 2001 v횪 tu沼뷼 xe tr챗n 4 n훱m) l횪 bao l창u?",
+  "tr_c": [
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m"
+  ]
+ },
+ {
+  "n": 65,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?붾Ъ?먮룞李?李⑤졊??4???댄븯)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "3",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h 휃沼멼 v沼쌻 xe 척 t척 t梳즜 lo梳죍 nh沼?kh척ng kinh  
+doanh (tu沼뷼 xe t沼?4 n훱m tr沼?xu沼몁g) l횪 bao l창u?",
+  "tr_c": [
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m"
+  ]
+ },
+ {
+  "n": 66,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?좎감 援ъ엯 ???꾩떆?댄뻾 ?덇? ?좏슚湲곌컙??湲곗???",
+  "ko_c": [
+   "10???대궡",
+   "15???대궡",
+   "20???대궡",
+   "30???대궡"
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, ti챗u chu梳쯰 th沼쓎 h梳죒 hi沼뇎 l沼켧 c沼쬪 gi梳쪅 ph챕p l튼u th척ng t梳죑 th沼쓎 khi mua xe 
+ 척 t척 m沼쌻 l횪 bao l창u?",
+  "tr_c": [
+   "Trong v챵ng 10 ng횪y",
+   "Trong v챵ng 15 ng횪y",
+   "Trong v챵ng 20 ng횪y",
+   "Trong v챵ng 30 ng횪y"
+  ]
+ },
+ {
+  "n": 67,
+  "ko_b": "?ㅼ쓬 以??먮룞李④?由щ쾿?뱀뿉 ?곕Ⅸ ?먮룞李?蹂寃쎈벑濡??ъ쑀媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?먮룞李⑥쓽 ?ъ슜蹂멸굅吏瑜?蹂寃쏀븳 ??,
+   "?먮룞李⑥쓽 李⑤?踰덊샇瑜?蹂寃쏀븳 ??,
+   "?뚯쑀沅뚯씠 蹂?숇맂 ??,
+   "踰뺤씤??紐낆묶??蹂寃쎈맂 ??
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, n沼셢 dung n횪o d튼沼쌻 휃창y kh척ng ph梳즜 l횪 l첵 do 휃沼?휃훱ng k첵 thay 휃沼뷼 xe?",
+  "tr_c": [
+   "Khi thay 휃沼뷼 khu v沼켧 s沼?d沼쩸g xe 척 t척",
+   "Khi thay 휃沼뷼 bi沼긪 s沼?xe",
+   "Khi thay 휃沼뷼 quy沼걆 s沼?h沼칤",
+   "Khi thay 휃沼뷼 t챗n ph찼p nh창n"
+  ]
+ },
+ {
+  "n": 68,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??댁쟾?먯쓽 留덉쓬媛吏먯쑝濡?諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥씠誘濡??좎뿉 痍⑦븳 ?곹깭?먯꽌 ?댁쟾?대룄 ?쒕떎.",
+   "怨쇰줈???곹깭?먯꽌 ?먯쑉二쇳뻾?먮룞李⑤? ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑤씪 ?섎뜑?쇰룄 ?μ젙?좎꽦?섏빟?덉쓣 蹂듭슜?섍퀬 ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 ?댁쟾 以묒뿉 ?대????꾪솕 ?ъ슜??媛?ν븯??"
+  ],
+  "a": "1",
+  "tr_b": "C창u n횪o kh척ng ph梳즜 l횪 suy ngh칫 휃첬ng c沼쬪 m沼셳 ng튼沼쓎 l찼i xe 척 t척 t沼?l찼i?",
+  "tr_c": [
+   "V챙 l횪 xe 척 t척 t沼?l찼i n챗n c처 th沼?l찼i xe trong t챙nh tr梳죒g say r튼沼즩.",
+   "Kh척ng 휃튼沼즓 휃i沼걏 khi沼긪 xe 척 t척 t沼?l찼i trong t챙nh tr梳죒g l횪m vi沼놻 qu찼 s沼쯢.",
+   "D첫 l횪 xe 척 t척 t沼?l찼i th챙 c크ng kh척ng 휃튼沼즓 휃i沼걏 khi沼긪 xe trong t챙nh tr梳죒g 휃찾 s沼?d沼쩸g thu沼멵 h튼沼썀g t창m th梳쬷.",
+   "휂튼沼즓 s沼?d沼쩸g 휃i沼뇆 tho梳죍 di 휃沼셬g trong khi 휃i沼걏 khi沼긪 xe 척 t척 t沼?l찼i."
+  ]
+ },
+ {
+  "n": 69,
+  "ko_b": "?붾Ъ?먮룞李??댁닔?ъ뾽踰뺤뿉 ?곕Ⅸ ?붾Ъ?먮룞李??댁넚?ъ뾽?먮뒗 愿??踰뺣졊???곕씪 ?댄뻾湲곕줉?μ튂??湲곕줉???댄뻾湲곕줉??(    )?숈븞  蹂닿??섏뿬???쒕떎. (   ) ?
+덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "3媛쒖썡",
+   "6媛쒖썡",
+   "1??,
+   "2??
+  ],
+  "a": "2",
+  "tr_b": "Theo Lu梳춗 Kinh doanh v梳춏 t梳즜 b梳켷g xe t梳즜, doanh nghi沼뇈 kinh doanh v梳춏 t梳즜 h횪ng h처a b梳켷g xe t梳즜 s梳?ph梳즜 l튼u g
+i沼?nh沼칗g ghi ch챕p v沼?h횪nh tr챙nh trong thi梳퓍 b沼?l튼u tr沼?h횪nh tr챙nh theo Lu梳춗 ph찼p c처 li챗n quan trong kho梳즢g th沼쓎 gian ( 
+). Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong ( )?",
+  "tr_c": [
+   "3 th찼ng",
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m"
+  ]
+ },
+ {
+  "n": 70,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑤? ?댁쟾 ?깅줉?섍퀬???섎뒗 ?먮뒗 留ㅼ닔???좊???(  ) ?대궡???깅줉?댁빞 ?쒕떎.  (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "15??,
+   "20??,
+   "30??,
+   "40??
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, ng튼沼쓎 mu沼몁 휃훱ng k첵 chuy沼긪 nh튼沼즢g xe 척 t척 ph梳즜 휃훱ng k첵 trong v챵ng (    ) n
+g횪y k沼?t沼?ng횪y mua. Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong ( )?",
+  "tr_c": [
+   "15 ng횪y",
+   "20 ng횪y",
+   "30 ng횪y",
+   "40 ng횪y"
+  ]
+ },
+ {
+  "n": 71,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑥쓽 ?뺢린寃?ъ쓽 湲곌컙? 寃?ъ쑀?④린媛?留뚮즺????(  )?쇰?????(  )??源뚯??? (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "90?? 31??,
+   "80?? 41??,
+   "60?? 51??,
+   "50?? 61??
+  ],
+  "a": "1",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h xe 척 t척 l횪 t沼?( ) ng횪y tr튼沼쌵 ng횪y h梳퓍 h梳죒
+  hi沼뇎 l沼켧 ki沼긩 tra 휃梳퓆 ( ) ng횪y. Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong( )?",
+  "tr_c": [
+   "90 ng횪y,31 ng횪y",
+   "80 ng횪y, 41 ng횪y",
+   "60 ng횪y, 51 ng횪y",
+   "50 ng횪y, 61 ng횪y"
+  ]
+ },
+ {
+  "n": 72,
+  "ko_b": "?먮룞李⑥넀?대같?곷낫?λ쾿???섎Т蹂댄뿕??媛?낇븯吏 ?딆? ?먮룞李⑤낫?좎옄??泥섎쾶 湲곗??쇰줈 留욌뒗 寃껋??(?먮룞李?誘몄슫??",
+  "ko_c": [
+   "300留????댄븯??怨쇳깭猷?,
+   "500留????댄븯??怨쇳깭猷?,
+   "1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "Theo Lu梳춗 휂梳즡 b梳즣 b沼밿 th튼沼쓓g thi沼뇍 h梳죍 cho xe 척 t척, ti챗u chu梳쯰 n횪o 휃첬ng v沼?x沼?ph梳죜 ng튼沼쓎 s沼?h沼칤 xe 척 t척  kh척
+ng tham gia b梳즣 hi沼긩 b梳칣 bu沼셛? (Kh척ng s沼?d沼쩸g xe 휃沼?휃i l梳죍)",
+  "tr_c": [
+   "Ph梳죜 ti沼걆 h횪nh ch챠nh t沼멼 휃a 3 tri沼뇎 Won",
+   "Ph梳죜 ti沼걆 h횪nh ch챠nh t沼멼 휃a 5 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼멼 휃a 1 n훱m ho梳톍 ph梳죜 ti沼걆 t沼멼 휃a 10 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼멼 휃a 2 n훱m ho梳톍 ph梳죜 ti沼걆 t沼멼 휃a 20 tri沼뇎 Won"
+  ]
+ },
+ {
+  "n": 73,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀沅뚯씠 ?곸냽 ?깆쑝濡?蹂寃쎈맆 寃쎌슦???댁빞 ?섎뒗 ?깅줉??",
+  "ko_c": [
+   "?좉퇋?깅줉",
+   "?댁쟾?깅줉",
+   "蹂寃쎈벑濡?,
+   "留먯냼?깅줉"
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, tr튼沼쓓g h沼즤 thay 휃沼뷼 quy沼걆 s沼?h沼칤 xe 척 t척 nh튼 th沼첺 k梳?v.v..., ph梳즜 휃훱ng k첵
+  lo梳죍 h챙nh n횪o sau 휃창y?",
+  "tr_c": [
+   "휂훱ng k첵 m沼쌻",
+   "휂훱ng k첵 chuy沼긪 nh튼沼즢g",
+   "휂훱ng k첵 thay 휃沼뷼",
+   "휂훱ng k첵 h沼쭃 xe"
+  ]
+ },
+ {
+  "n": 74,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀?먭? 諛쏆븘???섎뒗 ?먮룞李?寃?ъ쓽 醫낅쪟媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?섎━寃??,
+   "?밸퀎寃??,
+   "?쒕떇寃??,
+   "?꾩떆寃??
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, Lo梳죍 h챙nh ki沼긩 tra n횪o sau 휃창y kh척ng ph梳즜 l횪 n沼셢 dung ch沼?s沼?h沼칤 xe 척 t척 
+ ph梳즜 th沼켧 hi沼뇆 ki沼긩 tra?",
+  "tr_c": [
+   "Ki沼긩 tra s沼춁 ch沼칊",
+   "Ki沼긩 tra 휃梳톍 bi沼뇍",
+   "Ki沼긩 tra 휃i沼걏 ch沼뎝h m찼y",
+   "Ki沼긩 tra t梳죑 th沼쓎"
+  ]
+ },
+ {
+  "n": 75,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑤? 留ㅻℓ??寃쎌슦 ?댁쟾?깅줉 ?대떦湲곌???",
+  "ko_c": [
+   "?쒓뎅?꾨줈援먰넻怨듬떒",
+   "?쒙쉈援곤쉈援ъ껌",
+   "?쒓뎅援먰넻?덉쟾怨듬떒",
+   "?쑣룸룄寃쎌같泥?
+  ],
+  "a": "2",
+  "tr_b": "C퉤 quan n횪o d튼沼쌻 휃창y c처 tr찼ch nhi沼뇅 휃훱ng k첵 chuy沼긪 nh튼沼즢g tr튼沼쓓g h沼즤 mua b찼n xe?",
+  "tr_c": [
+   "C퉤 quan Giao th척ng 휃튼沼쓓g b沼?H횪n Qu沼멵",
+   "沼쫦 ban qu梳춏 - huy沼뇆 - th횪nh ph沼?,
+   "C퉤 quan An to횪n giao th척ng H횪n Qu沼멵",
+   "S沼?C梳즢h s찼t t沼뎝h - th횪nh ph沼?
+  ]
+ },
+ {
+  "n": 76,
+  "ko_b": "?먮룞李??깅줉??醫낅쪟媛 ?꾨땶 寃?2媛吏??",
+  "ko_c": [
+   "寃쎌젙?깅줉",
+   "沅뚮━?깅줉",
+   "?ㅼ젙?깅줉",
+   "留먯냼?깅줉"
+  ],
+  "a": "2, 3",
+  "tr_b": "Hai lo梳죍 n횪o d튼沼쌻 휃창y kh척ng ph梳즜 l횪 휃훱ng k첵 xe?",
+  "tr_c": [
+   "휂훱ng k첵 s沼춁 ch沼칊",
+   "휂훱ng k첵 quy沼걆 l沼즜",
+   "휂훱ng k첵 thi梳퓍 l梳춑",
+   "휂훱ng k첵 h沼쭃"
+  ]
+ },
+ {
+  "n": 77,
+  "ko_b": "?먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) ?욌㈃ 李쎌쑀由ъ쓽 媛?쒓킅???ш낵??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "40?쇱꽱??,
+   "50?쇱꽱??,
+   "60?쇱꽱??,
+   "70?쇱꽱??
+  ],
+  "a": "4",
+  "tr_b": "Ti챗u chu梳쯰 n횪o 휃첬ng v沼?t沼?l沼?cho ph챕p 찼nh s찼ng nh챙n th梳쪅 휃튼沼즓 chi梳퓎 qua c沼춁 k챠nh ph챠a tr튼沼쌵 xe 척 t척 (ngo梳죍  
+tr沼?xe bu첵t 휃튼a 휃처n h沼뛠 sinh)?",
+  "tr_c": [
+   "40%",
+   "50%",
+   "60%",
+   "70%"
+  ]
+ },
+ {
+  "n": 78,
+  "ko_b": "二쇳뻾 以?釉뚮젅?댄겕媛 ?묐룞?섎뒗 ?댁쟾?됰룞怨쇱젙???щ컮瑜??쒖꽌濡??곌껐??寃껋??",
+  "ko_c": [
+   "?꾪뿕?몄? ???곹솴?먮떒 ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?꾪뿕?몄? ???됰룞紐낅졊 ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞",
+   "?곹솴?먮떒 ???꾪뿕?몄? ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?됰룞紐낅졊 ???꾪뿕?몄? ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞"
+  ],
+  "a": "1",
+  "tr_b": "Th沼?t沼?n횪o l횪 휃첬ng v沼?c찼c h횪nh 휃沼셬g l찼i xe khi phanh 휃튼沼즓 k챠ch ho梳죜?",
+  "tr_c": [
+   "Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼n 휃o찼n t챙nh hu沼몁g ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??휂梳죖 phanh",
+   "Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??Ph찼n 휃o찼n t챙nh hu沼몁g ??휂梳죖 phanh",
+   "Ph찼n 휃o찼n t챙nh hu沼몁g ??Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??휂梳죖 phanh",
+   "Ph찼t l沼뇆h h횪nh 휃沼셬g ??Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼n 휃o찼n t챙nh hu沼몁g ??휂梳죖 phanh"
+  ]
+ },
+ {
+  "n": 79,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑥뿉 遺李⑸맂 ?먯뼱諛깆쓽 援щ퉬議곌굔?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?믪? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "??? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "?뚯뿴媛뺣룄瑜?吏?덇퀬 ?대쭏紐⑥꽦, ?좎뿰??,
+   "?댁쟾?먯? ?묒큺?섎뒗 異⑷꺽?먮꼫吏 洹밸???
+  ],
+  "a": "4",
+  "tr_b": "N沼셢 dung n횪o sau 휃창y kh찼c xa v沼쌻 휃i沼걏 ki沼뇆 t첬i kh챠 휃튼沼즓 l梳칛 trong xe 척 t척?",
+  "tr_c": [
+   "휂沼?b沼걆 k챕o v횪 kh梳?n훱ng ch沼땥 nhi沼뇍 沼?nhi沼뇍 휃沼?cao",
+   "휂沼?b沼걆 k챕o v횪 kh梳?n훱ng ch沼땥 nhi沼뇍 沼?nhi沼뇍 휃沼?th梳쩺",
+   "C처 휃沼?b沼걆 cao, ch沼몁g m횪i m챵n v횪 linh ho梳죜",
+   "T沼멼 휃a h처a n훱ng l튼沼즢g va 휃梳춑 khi ti梳퓈 x첬c v沼쌻 ng튼沼쓎 l찼i xe"
+  ]
+ },
+ {
+  "n": 80,
+  "ko_b": "?ㅼ쓬 以??댁쟾???깆씠 李⑤웾 ?뱁븯李???二쇱쓽?ы빆?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?怨??대┫ ?뚮뒗 ?ㅼ뿉???ㅻ뒗 李⑤웾???덈뒗吏瑜??뺤씤?쒕떎.",
+   "臾몄쓣 ???뚮뒗 ?꾩쟾???닿퀬?섏꽌 怨㏓컮濡??대┛??",
+   "?룹쥖???뱀감?먭? ?섏감?????댁쟾?먮뒗 ?꾨갑??二쇱떆?댁빞 ?쒕떎.",
+   "?댁쟾?앹쓣 ?쇱떆?곸쑝濡??좊궇 ?뚯뿉???쒕룞???꾩? ?딆븘???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Nh沼칗g 휃i沼걏 c梳쬷 l튼u 첵 n횪o l횪 휃첬ng khi ng튼沼쓎 l찼i xe v횪 ng튼沼쓎 tr챗n xe l챗n xu沼몁g xe,?",
+  "tr_c": [
+   "Khi l챗n xu沼몁g xe c梳쬷 ch첬 첵 quan s찼t xem c처 xe t沼?ph챠a sau 휃ang 휃i t沼쌻 hay kh척ng.",
+   "Khi m沼?c沼춁 th챙 ph梳즜 m沼?h梳퓍 r沼밿 xu沼몁g xe ngay.",
+   "L찼i xe c梳쬷 ch첬 첵 quan s찼t ph챠a tr튼沼쌵 khi ng튼沼쓎 ng沼밿 gh梳?sau xu沼몁g xe.",
+   "Kh척ng c梳쬷 t梳칣 휃沼셬g c퉤 n梳퓎 ch沼?t梳죑 th沼쓎 r沼쓎 gh梳?l찼i."
+  ]
+ }
+]
+위치 줄:2 문자:150
++ ... nslations/audit/queue/201_choices_vn.json' | ConvertFrom-Json; foreac ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+ exited 1 in 761ms:
+ConvertFrom-Json : 잘못된 배열이 전달되었습니다. ','가 필요합니다. (697): [
+ {
+  "n": 41,
+  "ko_b": "?먮룞李⑥뿉 ?뱀감?섍린 ??二쇰??먭? ?ы빆?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "??댁뼱 留덈え?곹깭",
+   "?꾬쉈?꾨갑 ?μ븷臾??좊Т",
+   "?댁쟾??怨꾧린???뺤긽?묐룞 ?щ?",
+   "釉뚮젅?댄겕 ?섎떖 ?뺤긽?묐룞 ?щ?"
+  ],
+  "a": "1, 2",
+  "tr_b": "Hai 휃i沼걏 n횪o l횪 휃첬ng m횪 c梳쬷 ph梳즜 ki沼긩 tra xung quanh xe tr튼沼쌵 khi l챗n xe?",
+  "tr_c": [
+   "Tr梳죒g th찼i m챵n c沼쬪 b찼nh xe.",
+   "Ph챠a tr튼沼쌵 v횪 sau xe c처 ch튼沼썀g ng梳죍 v梳춗 g챙 kh척ng.",
+   "B梳즢g 휃i沼걏 khi沼긪 tr튼沼쌵 gh梳?l찼i c처 ho梳죜 휃沼셬g b챙nh th튼沼쓓g hay kh척ng.",
+   "B횪n 휃梳죖 phanh c처 ho梳죜 휃沼셬g b챙nh th튼沼쓓g hay kh척ng."
+  ]
+ },
+ {
+  "n": 42,
+  "ko_b": "?쇰컲?곸쑝濡?臾대낫??MF竊숸aintenance Free)諛고꽣由??섎챸???ㅽ븳 寃쎌슦, ?먭?李쎌뿉 ?섑??섎뒗 ?됯퉼??",
+  "ko_c": [
+   "?⑹깋",
+   "諛깆깋",
+   "寃???,
+   "?뱀깋"
+  ],
+  "a": "2",
+  "tr_b": "Th척ng th튼沼쓓g m횪u g챙 xu梳쩿 hi沼뇆 tr챗n c沼춁 s沼?ki沼긩 tra khi tu沼뷼 th沼?c沼쬪 b챙nh 梳칌 quy b梳즣 tr챙 mi沼꿳 ph챠 (MF: Mi沼꿳  
+b梳즣 d튼沼죒g) 휃찾 h梳퓍?",
+  "tr_c": [
+   "M횪u v횪ng",
+   "M횪u tr梳칗g",
+   "M횪u 휃en",
+   "M횪u xanh l찼"
+  ]
+ },
+ {
+  "n": 43,
+  "ko_b": "?ㅼ쓬 以?李⑤웾 ?곕즺濡??ъ슜??寃쎌슦, 媛吏??앹쑀?쒗뭹?쇰줈 蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "?섎컻?좎뿉 硫뷀깂?ъ씠 ?쇳빀???쒗뭹",
+   "蹂댄넻 ?섎컻?좎뿉 怨좉툒 ?섎컻?좉? ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹",
+   "寃쎌쑀???깆쑀媛 ?쇳빀???쒗뭹",
+   "寃쎌쑀??臾쇱씠 ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹"
+  ],
+  "a": "4",
+  "tr_b": "S梳즢 ph梳쯯 n횪o sau 휃창y kh척ng 휃튼沼즓 xem l횪 s梳즢 ph梳쯯 x훱ng d梳쬾 gi梳?khi 휃튼沼즓 s沼?d沼쩸g l횪m nhi챗n li沼뇎 cho xe 척 t척?",
+  "tr_c": [
+   "S梳즢 ph梳쯯 l梳쳌 metanol v횪o x훱ng",
+   "S梳즢 ph梳쯯 l梳쳌 kho梳즢g d튼沼쌻 5% x훱ng cao c梳쩺 v沼쌻 x훱ng th튼沼쓓g",
+   "S梳즢 ph梳쯯 l梳쳌 d梳쬾 diesel v沼쌻 d梳쬾 h沼뢠",
+   "S梳즢 ph梳쯯 l梳쳌 kho梳즢g d튼沼쌻 5% n튼沼쌵 trong d梳쬾 diesel"
+  ]
+ },
+ {
+  "n": 44,
+  "ko_b": "?섏냼媛???꾩텧???뺤씤?????덈뒗 諛⑸쾿???꾨땶 寃껋??",
+  "ko_c": [
+   "媛?곗꽦 媛?ㅺ?吏湲??쒖슜 痢≪젙",
+   "鍮꾨닓臾쇱쓣 ?듯븳 ?뺤씤",
+   "媛???꾩깉瑜?留≪븘 ?뺤씤",
+   "?섏냼寃吏湲곕줈 ?뺤씤"
+  ],
+  "a": "3",
+  "tr_b": "C찼ch n횪o kh척ng ph梳즜 l횪 c찼ch c처 th沼?ki沼긩 tra r챵 r沼?kh챠 Hydro?",
+  "tr_c": [
+   "S沼?d沼쩸g m찼y d챵 kh챠 d沼?ch찼y 휃沼?휃o",
+   "Ki沼긩 tra b梳켷g n튼沼쌵 x횪 ph챵ng",
+   "Ki沼긩 tra b梳켷g c찼ch ng沼춊 kh챠 gas",
+   "Ki沼긩 tra b梳켷g m찼y d챵 Hydro"
+  ]
+ },
+ {
+  "n": 45,
+  "ko_b": "?섏냼李⑤웾???덉쟾?섏튃?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "異⑹쟾?섍린 ??李⑤웾???쒕룞???덈떎.",
+   "異⑹쟾?뚯뿉???≪뿰? 李⑤웾???⑥뼱?몄꽌 ?쒕떎.",
+   "?섏냼媛?ㅺ? ?꾩꽕???뚯뿉??異⑹쟾???덉쟾愿由ъ옄?먭쾶 ?덉쟾?먭????붿껌?쒕떎.",
+   "?섏냼李⑤웾??異⑸룎 ??援먰넻?ш퀬 ?꾩뿉??媛???덉쟾?먭???諛쏆? ???ъ슜?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "휂i沼걏 n횪o kh척ng ph梳즜 l횪 quy t梳칌 an to횪n c沼쬪 xe ch梳죣 b梳켷g Hydro?",
+  "tr_c": [
+   "T梳칣 m찼y tr튼沼쌵 khi s梳죅.",
+   "Khi h첬t thu沼멵 l찼 t梳죍 휃i沼긩 n梳죖 nhi챗n li沼뇎, ph梳즜 h첬t 沼?n퉤i c찼ch xa xe.",
+   "Khi kh챠 Hydro b沼?r챵 r沼? h찾y y챗u c梳쬾 ng튼沼쓎 qu梳즢 l첵 an to횪n t梳죍 휃i沼긩 n梳죖 nhi챗n li沼뇎 ki沼긩 tra an to횪n.",
+   "Sau khi x梳즭 ra tai n梳죒 giao th척ng nh튼 va ch梳죑 v沼쌻 xe ch梳죣 b梳켷g Hydro, xe ch沼?휃튼沼즓 s沼?d沼쩸g sau khi 휃찾 ki沼긩 tra an  t
+o횪n v沼?kh챠 gas."
+  ]
+ },
+ {
+  "n": 46,
+  "ko_b": "?ㅼ쓬 以??섏냼李⑤웾?먯꽌 ?꾩텧???뺤씤?섏? ?딆븘???섎뒗 怨녹??",
+  "ko_c": [
+   "諛몃툕? ?⑷린???묒냽遺",
+   "議곗젙湲?,
+   "媛???몄뒪? 諛곌? ?곌껐遺",
+   "?곕즺?꾩? 遺?ㅽ듃 ?몃쾭??
+  ],
+  "a": "4",
+  "tr_b": "V沼?tr챠 n횪o sau 휃창y c沼쬪 xe ch梳죣 b梳켷g Hydro kh척ng c梳쬷 ki沼긩 tra r챵 r沼?",
+  "tr_c": [
+   "B沼?ph梳춏 k梳퓍 n沼멼 gi沼칊 van v횪 b챙nh 휃沼켷g nhi챗n li沼뇎",
+   "B沼?휃i沼걏 ch沼뎝h",
+   "沼릒g d梳쳌 kh챠 v횪 휃梳쬾 n沼멼 沼몁g d梳쳌",
+   "Bi梳퓆 t梳쬷 t훱ng c튼沼쓓g pin nhi챗n li沼뇎"
+  ]
+ },
+ {
+  "n": 47,
+  "ko_b": "?꾧린李?異⑹쟾???꾪븳 ?щ컮瑜?諛⑸쾿?쇰줈 ?곸젅?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "異⑹쟾???뚮뒗 洹쒓꺽??留욌뒗 異⑹쟾湲곗? ?대뙌?곕? ?ъ슜?쒕떎.",
+   "異⑹쟾 以묒뿉??異⑹쟾 而ㅻ꽖?곕? ?꾩쓽濡?遺꾨━?섏? ?딄퀬 異⑹쟾 醫낅즺 踰꾪듉?쇰줈 醫낅즺?쒕떎.",
+   "?뽰? ?먯쑝濡?異⑹쟾湲??ъ슜???섏? ?딄퀬 異⑹쟾?μ튂??臾쇱씠 ?ㅼ뼱媛吏 ?딅룄濡?二쇱쓽?쒕떎.",
+   "?대???異⑹쟾湲곕? ?댁슜?섏뿬 異⑹쟾??寃쎌슦 媛?뺤슜 硫?고꺆?대굹 ?곗옣?좎쓣 ?ъ슜?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Ph튼퉤ng ph찼p n횪o l횪 kh척ng 휃첬ng v沼?s梳죅 xe 휃i沼뇆?",
+  "tr_c": [
+   "Khi s梳죅, ph梳즜 s沼?d沼쩸g c沼쩭 s梳죅 v횪 沼?c梳칖 휃첬ng quy c찼ch.",
+   "Trong l첬c s梳죅, kh척ng t沼?첵 r첬t 휃梳쬾 n沼멼 s梳죅 m횪 ph梳즜 d沼쳌g s梳죅 b梳켷g c찼ch nh梳쩸 n첬t d沼쳌g s梳죅.",
+   "Kh척ng s沼?d沼쩸g m찼y s梳죅 khi tay 휃ang 튼沼썇 v횪 ch첬 첵 kh척ng 휃沼?n튼沼쌵 l沼뛲 v횪o thi梳퓍 b沼?s梳죅.",
+   "Tr튼沼쓓g h沼즤 s梳죅 b梳켷g b沼?s梳죅 di 휃沼셬g, ph梳즜 s沼?d沼쩸g 沼?c梳칖 휃i沼뇆 gia d沼쩸g ho梳톍 d창y 휃i沼뇆 n沼멼 d횪i."
+  ]
+ },
+ {
+  "n": 48,
+  "ko_b": "踰뺣졊???먮룞李⑥쓽 ?깊솕 醫낅쪟? 洹??깃킅?됱쓣 ?곌껐??寃껋쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾪눜??- ?몃컯??,
+   "踰덊샇??- 泥?깋",
+   "?꾨???- 諛깆깋",
+   "?쒕룞??- ?곸깋"
+  ],
+  "a": "4",
+  "tr_b": "C창u n횪o l횪 li챗n k梳퓍 휃첬ng gi沼칊 lo梳죍 휃챔n v횪 m횪u 휃챔n c沼쬪 xe theo quy 휃沼땙h ph찼p lu梳춗?",
+  "tr_c": [
+   "휂챔n l첫i - M횪u h沼?ph찼ch.",
+   "휂챔n bi沼긪 s沼?- M횪u xanh d튼퉤ng",
+   "휂챔n sau - M횪u tr梳칗g",
+   "휂챔n phanh - M횪u 휃沼?
+  ]
+ },
+ {
+  "n": 49,
+  "ko_b": "LPG李⑤웾???곕즺?뱀꽦??????ㅻ챸?쇰줈 ?곷떦?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "?쇰컲?곸씤 湲곗껜?곹깭濡??곗냼?섏뼱 ?붿쭊??遺?쒕읇寃??묐룞?쒕떎.",
+   "李⑤웾??LPG???낇듅???꾩깉媛 ?덈떎.",
+   "?쇰컲?곸쑝濡?怨듦린蹂대떎 媛蹂띻퀬, ??컻 ?꾪뿕?깆씠 ?곷떎.",
+   "?섎컻?좊굹 寃쎌쑀??鍮꾪빐 ?먮꼫吏 諛?꾧? ??븘 ?숈씪??諛곌린?됱뿉??異쒕젰????퀬 ?곕퉬媛 ?⑥뼱吏꾨떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng ph첫 h沼즤 v沼?휃梳톍 휃i沼긩 nhi챗n li沼뇎 c沼쬪 xe LPG?",
+  "tr_c": [
+   "Ch찼y 沼?tr梳죒g th찼i kh챠 th척ng th튼沼쓓g v횪 gi첬p 휃沼셬g c퉤 v梳춏 h횪nh 챗m 찼i.",
+   "LPG d횪nh cho xe th챙 c처 m첫i 휃梳톍 bi沼뇍.",
+   "Th튼沼쓓g nh梳?h퉤n kh척ng kh챠 v횪 c처 nguy c퉤 n沼?th梳쩺.",
+   "So v沼쌻 x훱ng ho梳톍 d梳쬾 diesel, m梳춗 휃沼?n훱ng l튼沼즢g th梳쩺 h퉤n n챗n c척ng su梳쩿 th梳쩺 v횪 hi沼뇎 su梳쩿 nhi챗n li沼뇎 gi梳즡 沼?c첫ng  dun
+g t챠ch xy-lanh."
+  ]
+ },
+ {
+  "n": 50,
+  "ko_b": "?먮룞李⑥쓽 ?쒕룞?μ쓣 ??섑븯???먯씤?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "留덉뒪???ㅻ┛??怨좎옣",
+   "???ㅻ┛??遺덈웾",
+   "由대━???ы겕 蹂??,
+   "踰좎씠??濡?諛쒖깮"
+  ],
+  "a": "3",
+  "tr_b": "N沼셢 dung n횪o kh척ng 휃첬ng v沼쌻 nguy챗n nh창n l횪m gi梳즡 l沼켧 phanh c沼쬪 xe 척 t척?",
+  "tr_c": [
+   "H沼뢮g xi lanh ch챠nh",
+   "L沼뾦 xi lanh b찼nh xe",
+   "Bi梳퓆 d梳죒g ch梳죅 nh梳?ly h沼즤",
+   "Ph찼t sinh hi沼뇆 t튼沼즢g h처a h퉤i"
+  ]
+ },
+ {
+  "n": 51,
+  "ko_b": "二쇳뻾 蹂댁“?μ튂媛 ?μ갑???먮룞李⑥쓽 ?댁쟾諛⑸쾿?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "二쇳뻾 蹂댁“?μ튂瑜??ъ슜?섎뒗 寃쎌슦 二쇳뻾 蹂댁“?μ튂 ?묐룞 ?좎? ?щ?瑜??섏떆濡??뺤씤?섎ŉ 二쇳뻾?쒕떎.",
+   "?댁쟾 媛쒖엯 寃쎄퀬 ??二쇳뻾 蹂댁“?μ튂媛 ?댁젣???뚭퉴吏 湲곕떎?몃떎媛 媛쒖엯?댁빞 ?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂???쇰? ?먮뒗 ?꾩껜瑜??댁젣?섎뒗 寃쎌슦 ?묐룞 ?щ?瑜??뺤씤?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂媛 ?묐룞?섍퀬 ?덈뜑?쇰룄 利됱떆 媛쒖엯?????덈룄濡??湲고븯硫댁꽌 ?댁쟾?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "C찼ch n횪o sau 휃창y kh척ng ph梳즜 l횪 c찼ch l찼i xe 휃첬ng c沼쬪 xe 휃튼沼즓 g梳칗 thi梳퓍 b沼?tr沼?l찼i?",
+  "tr_c": [
+   "Khi s沼?d沼쩸g thi梳퓍 b沼?tr沼?l찼i ph梳즜 th튼沼쓓g xuy챗n ki沼긩 tra xem thi梳퓍 b沼?c처 duy tr챙 ho梳죜 휃沼셬g hay kh척ng tr튼沼쌵 khi l찼i."
+,
+   "Khi c처 c梳즢h b찼o c梳쬷 can thi沼뇈 l찼i xe, ng튼沼쓎 l찼i ph梳즜 휃沼즜 cho 휃梳퓆 khi thi梳퓍 b沼?tr沼?l찼i t梳칣 r沼밿 m沼쌻 can thi沼뇈 l찼i xe.
+",
+   "Tr튼沼쓓g h沼즤 휃찾 t梳칣 m沼셳 ph梳쬷 ho梳톍 to횪n b沼?thi梳퓍 b沼?tr沼?l찼i, ph梳즜 ki沼긩 tra xem thi梳퓍 b沼?c챵n ho梳죜 휃沼셬g kh척ng.",
+   "Ngay c梳?khi thi梳퓍 b沼?tr沼?l찼i 휃ang ho梳죜 휃沼셬g, v梳쳌 ph梳즜 lu척n l찼i xe trong t튼 th梳?ch沼?s梳탇 s횪ng c처 th沼?can thi沼뇈 ngay l
+梳춑  t沼쯢."
+  ]
+ },
+ {
+  "n": 52,
+  "ko_b": "?먮룞李⑤? ?덉쟾?섍퀬 ?몃━?섍쾶 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "LFA(Lane Following Assist)???쒖감濡쒖쑀吏蹂댁“?앷린?μ쑝濡??먮룞李④? 李⑤줈 以묒븰???좎??섎ŉ 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫?대떎.",
+   "ASCC(Adaptive Smart Cruise Control)???쒖감媛꾧굅由?諛??띾룄?좎??앷린?μ쑝濡??댁쟾?먭? ?ㅼ젙???띾룄濡?二쇳뻾?섎㈃???욎감???嫄곕━瑜??좎??섏뿬 ?ㅼ뒪濡?媛쨌媛먯
+냽???댁＜??湲곕뒫?대떎.",
+   "ABSD(Active Blind Spot Detection)???쒖궗媛곸??媛먯??앷린?μ쑝濡??ш컖吏???異⑸룎 ?꾪뿕??媛먯????덉쟾??李⑤줈 蹂寃쎌쓣 ?뺣뒗 湲곕뒫?대떎.",
+   "AEB(Autonomous Emergency Braking)???쒖옄?숆릿湲됱젣?쇺앷린?μ쑝濡?釉뚮젅?댄겕 ?쒕룞????댁뼱媛 ?좉린??寃껋쓣 諛⑹??섏뿬 ?쒕룞 嫄곕━瑜?以꾩뿬二쇰뒗 湲곕뒫?대떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 kh척ng 휃첬ng v沼?t챠nh n훱ng tr沼?gi첬p 휃沼?휃i沼걏 khi沼긪 xe 척 t척 an to횪n v횪 thu梳춏 ti沼뇆?",
+  "tr_c": [
+   "LFA (Lane Following Assist) l횪 t챠nh n훱ng ?쏷r沼?gi첬p duy tr챙 휃첬ng l횪n xe?? h沼?tr沼?xe lu척n ch梳죣 沼?gi沼칊 l횪n 휃튼沼쓓g.",
+   "ASCC (Adaptive Smart Cruise Control) l횪 t챠nh n훱ng ?쏡uy tr챙 t沼멵 휃沼?v횪 kho梳즢g c찼ch gi沼칊 c찼c xe??t沼?t훱ng - gi梳즡 t沼멵 휃沼
+?duy tr챙 c沼?ly v沼쌻 xe ph챠a tr튼沼쌵 trong khi l찼i xe v沼쌻 t沼멵 휃沼?do ng튼沼쓎 l찼i xe c횪i 휃梳톞.",
+   "ABSD (Active Blind Spot Detection) l횪 t챠nh n훱ng ?쏯h梳춏 di沼뇆 휃i沼긩 m첫??ph찼t hi沼뇆 nguy c퉤 va ch梳죑 沼?휃i沼긩 m첫 v횪 h沼? tr沼?
+chuy沼긪 l횪n 휃튼沼쓓g an to횪n.",
+   "AEB (Autonomous Emergency Braking) l횪 t챠nh n훱ng ?쏷沼?휃沼셬g phanh kh梳쯰 c梳쩺??gi첬p gi梳즡 kho梳즢g c찼ch phanh b梳켷g  c찼ch ng훱
+n ch梳톘 b찼nh xe b沼?kh처a phanh."
+  ]
+ },
+ {
+  "n": 53,
+  "ko_b": "?먯쑉二쇳뻾?쒖뒪?쒓낵 愿?⑤맂 踰뺣졊???댁슜?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?꾨줈援먰넻踰뺤긽?쒖슫?꾟앹뿉???꾨줈?먯꽌 李⑤쭏瑜?洹?蹂몃옒???ъ슜諛⑸쾿???곕씪 ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섎뒗 寃껋? ?ы븿?섏? ?딅뒗??",
+   "?댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ?대??꾪솕 ?ъ슜湲덉? 洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+   "?먯쑉二쇳뻾?쒖뒪?쒖쓽 吏곸젒 ?댁쟾 ?붽뎄??吏泥댁뾾????묓븯吏 ?꾨땲???먯쑉二쇳뻾?뱀슜?먮룞李⑥쓽 ?댁쟾?먯뿉 ???踰붿튃湲덉븸? 4留??먯씠??",
+   "?쒖옄?⑥＜?됱떆?ㅽ뀥?앹씠? ?댁쟾???먮뒗 ?밴컼??議곗옉 ?놁씠 二쇰??곹솴怨??꾨줈 ?뺣낫 ?깆쓣 ?ㅼ뒪濡??몄??섍퀬 ?먮떒?섏뿬 ?먮룞李⑤? ?댄뻾 ?????덇쾶 ?섎뒗 ?먮룞???λ퉬, ?뚰봽
+?몄썾??諛??댁? 愿?⑦븳 紐⑤뱺 ?μ튂瑜?留먰븳??"
+  ],
+  "a": "1",
+  "tr_b": "N沼셢 dung n횪o l횪 sai v沼?Lu梳춗 li챗n quan 휃梳퓆 h沼?th沼몁g l찼i t沼?휃沼셬g?",
+  "tr_c": [
+   "?쏬찼i xe??theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?kh척ng bao h횪m vi沼놻 s沼?d沼쩸g h沼?th沼몁g l찼i xe t沼?휃沼셬g theo ph튼퉤ng ph찼p s沼? d沼쩸g
+ ban 휃梳쬾 c沼쬪 xe.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe khi s沼?d沼쩸g h沼?th沼몁g l찼i xe t沼?휃沼셬g 휃沼?l찼i xe kh척ng b沼?찼p d沼쩸g quy 휃沼땙h c梳쩷 s沼?d沼쩸g 휃i沼뇆  tho梳죍
+ di 휃沼셬g.",
+   "Ti沼걆 ph梳죜 휃沼멼 v沼쌻 ng튼沼쓎 휃i沼걏 khi沼긪 xe 척 t척 con l찼i t沼?휃沼셬g kh척ng 휃찼p 沼쯰g ngay l梳춑 t沼쯢 y챗u c梳쬾 l찼i xe tr沼켧 ti梳퓈 c沼쬪 
+h沼?th沼몁g l찼i xe t沼?휃沼셬g l횪 40.000 Won.",
+   "?쏦沼?th沼몁g l찼i xe t沼?휃沼셬g??bao g沼뱈 thi梳퓍 b沼?t沼?휃沼셬g h처a, ph梳쬷 m沼걅 v횪 t梳쩿 c梳?c찼c trang thi梳퓍 b沼?c처 li챗n quan kh찼c, c처
+ kh梳?n훱ng t沼?nh梳춏 di沼뇆 v횪 ph찼n 휃o찼n t챙nh h챙nh xung quanh c크ng nh튼 th척ng tin tr챗n 휃튼沼쓓g 휃沼?휃i沼걏 khi沼긪 xe m횪 kh척ng c梳쬷 th
+ao t찼c c沼쬪 ng튼沼쓎 휃i沼걏 khi沼긪 xe hay h횪nh kh찼ch."
+  ]
+ },
+ {
+  "n": 54,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李⑥쓽 二쇱슂 援ъ꽦?덉씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?곕즺?꾩?",
+   "援щ룞紐⑦꽣",
+   "?붿쭊",
+   "諛고꽣由?
+  ],
+  "a": "3",
+  "tr_b": "B沼?ph梳춏 n횪o sau 휃창y kh척ng ph梳즜 l횪 b沼?ph梳춏 c梳쪀 t梳죓 ch챠nh c沼쬪 xe Hydro?",
+  "tr_c": [
+   "Pin nhi챗n li沼뇎",
+   "M척 t퉤 xoay",
+   "휂沼셬g c퉤",
+   "Pin"
+  ]
+ },
+ {
+  "n": 55,
+  "ko_b": "?먮룞李??댁뿰湲곌????щ옲?ъ텞?먯꽌 諛쒖깮?섎뒗 ?뚯쟾???쒓컙?곸쑝濡??대뒗 ????臾댁뾿?대씪 ?섎뒗媛 ?",
+  "ko_c": [
+   "?좏겕",
+   "?곕퉬",
+   "諛곌린??,
+   "留덈젰"
+  ],
+  "a": "1",
+  "tr_b": "L沼켧 quay (l沼켧 sinh ra t沼쯢 th沼쓎) sinh ra 沼?tr沼쩭 khu沼톟 c沼쬪 휃沼셬g c퉤 휃沼몋 trong c沼쬪 척 t척 sinh ra g챙?",
+  "tr_c": [
+   "Ng梳쳕 l沼켧",
+   "Hi沼뇎 su梳쩿 nhi챗n li沼뇎",
+   "Dung t챠ch xy lanh",
+   "M찾 l沼켧"
+  ]
+ },
+ {
+  "n": 56,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??곸슜??珥됱쭊 諛?吏?먯뿉 愿??踰뺣졊???먯쑉二쇳뻾?먮룞李⑥뿉 ????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 醫낅쪟???꾩쟾?먯쑉二쇳뻾?먮룞李⑥? 遺遺꾩옄?⑥＜?됱옄?숈감濡?援щ텇?????덈떎.",
+   "?꾩쟾 ?먯쑉二쇳뻾?먮룞李⑤뒗 ?먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????덉뼱 ?댁쟾?먭? ?녾굅???댁쟾???먮뒗 ?밴컼??媛쒖엯???꾩슂?섏?       ?꾨땲???먮룞李⑤? 留먰븳??",
+   "遺遺꾩옄?⑥＜?됱옄?숈감???먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????녾굅???댁쟾?먭? 吏?띿쟻?쇰줈 二쇱떆???꾩슂媛 ?덈뒗 ???댁쟾????      ???밴컼??媛쒖엯???꾩슂???먮룞李⑤? 留
+먰븳??",
+   "?먯쑉二쇳뻾?먮룞李⑤뒗 ?뱀슜?먮룞李⑥뿉 ?쒖젙?섏뼱 ?곸슜?섍퀬, ?뱁빀?먮룞李⑤굹 ?붾Ъ?먮룞李⑤뒗 ??踰뺤씠 ?곸슜?섏? ?딅뒗??"
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?xe 척 t척 t沼?l찼i theo Ph찼p l沼뇆h v沼?H沼?tr沼?v횪 Th첬c 휃梳쯻 s沼?d沼쩸g xe 척 t척 t沼?l찼i?",
+  "tr_c": [
+   "Ch沼쬷g lo梳죍 xe 척 t척 t沼?l찼i c처 th沼?ph창n lo梳죍 th횪nh Xe 척 t척 t沼?l찼i ho횪n to횪n v횪 Xe 척 t척 t沼?l찼i m沼셳 ph梳쬷.",
+   "Xe 척 t척 t沼?l찼i ho횪n to횪n l횪 xe ch沼?c처 th沼?휃i沼걏 khi沼긪 b梳켷g h沼?th沼몁g l찼i t沼?휃沼셬g, kh척ng c梳쬷 ng튼沼쓎 l찼i xe ho梳톍 s沼?can 
+thi沼뇈 c沼쬪 ng튼沼쓎 l찼i xe hay h횪nh kh찼ch tr챗n xe.",
+   "Xe 척 t척 t沼?l찼i m沼셳 ph梳쬷 l횪 xe kh척ng th沼?ch沼?휃i沼걏 khi沼긪 b梳켷g h沼?th沼몁g l찼i t沼?휃沼셬g ho梳톍 xe v梳쳌 c梳쬷 ng튼沼쓎 l찼i xe li챗n 
+t沼쩭 theo d천i ho梳톍 c梳쬷 s沼?can thi沼뇈 c沼쬪 ng튼沼쓎 l찼i xe hay h횪nh kh찼ch tr챗n xe.",
+   "Xe 척 t척 t沼?l찼i ch沼?gi沼쌻 h梳죒 cho xe 척 t척 con, Ph찼p l沼뇆h n횪y kh척ng 찼p d沼쩸g cho xe 척 t척 kh찼ch hay xe ch沼?h횪ng."
+  ]
+ },
+ {
+  "n": 57,
+  "ko_b": "?꾧린?먮룞李?愿由щ갑踰뺤쑝濡??녹? ?딆? 2媛吏??",
+  "ko_c": [
+   "鍮꾩궗?낆슜 ?뱀슜?먮룞李⑥쓽 ?먮룞李④????좏슚湲곌컙? 6?꾩씠??",
+   "?κ굅由??댁쟾 ?쒖뿉???ъ쟾??諛고꽣由щ? ?뺤씤?섍퀬 異⑹쟾?쒕떎.",
+   "異⑹쟾 吏곹썑?먮뒗 湲됯??? 湲됱젙吏瑜??섏? ?딅뒗 寃껋씠 醫뗫떎.",
+   "?댁꽑?쒗듃, ?댁꽑?몃뱾蹂대떎 怨듦린 ?덊꽣瑜??ъ슜?섎뒗 寃껋씠 ?⑥쑉?곸씠??"
+  ],
+  "a": "1, 4",
+  "tr_b": "Hai n沼셢 dung n횪o kh척ng 휃첬ng v沼쌻 ph튼퉤ng ph찼p b梳즣 d튼沼죒g xe 척 t척 휃i沼뇆?",
+  "tr_c": [
+   "K沼?h梳죒 ki沼긩 휃沼땙h xe 척 t척 con kh척ng d첫ng cho m沼쩭 휃챠ch kinh doanh l횪 6 n훱m.",
+   "Khi l찼i xe 휃튼沼쓓g d횪i, h찾y ki沼긩 tra pin v횪 s梳죅 휃i沼뇆 휃梳쭃 휃沼?",
+   "Ngay sau khi s梳죅 휃i沼뇆, kh척ng n챗n t훱ng t沼멵 ho梳톍 d沼쳌g 휃沼셳 ng沼셳.",
+   "S沼?d沼쩸g m찼y s튼沼웙 kh척ng kh챠 s梳?hi沼뇎 qu梳?h퉤n gh梳?s튼沼웙 v횪 tay c梳쬶 c처 s튼沼웙."
+  ]
+ },
+ {
+  "n": 58,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) 李쎌쑀由?媛?쒓킅???ш낵?⑥쓽 洹쒖젣瑜?諛쏅뒗 寃껋??",
+  "ko_c": [
+   "?룹쥖???녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦 ?녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦, ?룸㈃ 李쎌쑀由?,
+   "紐⑤뱺 李쎌쑀由?
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?th챙 k챠nh c沼춁 n횪o ph梳즜 찼p d沼쩸g quy 휃沼땙h h梳죒 ch梳?t沼?l沼?찼nh s찼ng nh챙n th梳쪅  
+휃튼沼즓 chi梳퓎 qua (ngo梳죍 tr沼?xe bu첵t 휃튼a 휃처n h沼뛠 sinh)?",
+  "tr_c": [
+   "K챠nh c沼춁 b챗n gh梳?sau",
+   "K챠nh tr튼沼쌵 v횪 hai b챗n tr찼i ph梳즜 c沼쬪 gh梳?l찼i",
+   "K챠nh ph챠a tr튼沼쌵, hai b챗n tr찼i ph梳즜 c沼쬪 gh梳?l찼i, v횪 ph챠a sau",
+   "T梳쩿 c梳?c찼c k챠nh"
+  ]
+ },
+ {
+  "n": 59,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?뱀슜?먮룞李⑤뒗 紐????댄븯瑜??댁넚?섍린???곹빀?섍쾶 ?쒖옉???먮룞李⑥씤媛?",
+  "ko_c": [
+   "10??,
+   "12??,
+   "15??,
+   "18??
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Qu梳즢 l첵 xe 척 t척, xe 척 t척 con l횪 xe 휃튼沼즓 s梳즢 xu梳쩿 ph첫 h沼즤 휃沼?ch沼?t沼?m梳쪅 ng튼沼쓎 tr沼?xu沼몁g?",
+  "tr_c": [
+   "10 ng튼沼쓎",
+   "12 ng튼沼쓎",
+   "15 ng튼沼쓎",
+   "18 ng튼沼쓎"
+  ]
+ },
+ {
+  "n": 60,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?좉퇋 ?뱀슜?먮룞李⑥쓽 理쒖큹寃???좏슚湲곌컙??",
+  "ko_c": [
+   "1??,
+   "2??,
+   "4??,
+   "5??
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 hi沼뇎 l沼켧 cho l梳쬷 ki沼긩 휃沼땙h 휃梳쬾 ti챗n c沼쬪 xe 척 t척 con phi th튼퉤ng m梳죍 
+ 휃훱ng k첵 m沼쌻 l횪 bao l창u?",
+  "tr_c": [
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m",
+   "5 n훱m"
+  ]
+ },
+ {
+  "n": 61,
+  "ko_b": "?먮룞李④?由щ쾿???먮룞李⑥쓽 醫낅쪟濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "嫄댁꽕湲곌퀎",
+   "?붾Ъ?먮룞李?,
+   "寃쎌슫湲?,
+   "?뱀닔?먮룞李?
+  ],
+  "a": "2, 4",
+  "tr_b": "Hai lo梳죍 xe n횪o sau 휃창y thu沼셛 lo梳죍 xe 척 t척 theo Lu梳춗 Qu梳즢 l첵 xe 척 t척?",
+  "tr_c": [
+   "M찼y m처c thi梳퓍 b沼?thi c척ng",
+   "Xe t梳즜 ch沼?h횪ng h처a",
+   "Xe m찼y c횪y",
+   "Xe 척 t척 휃梳톍 ch沼쬷g"
+  ]
+ },
+ {
+  "n": 62,
+  "ko_b": "鍮꾩궗?낆슜 諛???ъ궗?낆슜 ?꾧린?먮룞李⑥? ?섏냼 ?곕즺?꾩??먮룞李??섏씠釉뚮━???먮룞李??쒖쇅) ?꾩슜踰덊샇???됱긽?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?⑹깋 諛뷀깢??寃???臾몄옄",
+   "?뚮???諛뷀깢??寃???臾몄옄",
+   "媛먯껌??諛뷀깢???곗깋 臾몄옄",
+   "蹂대옃鍮?諛뷀깢??寃???臾몄옄"
+  ],
+  "a": "2",
+  "tr_b": "M횪u n횪o 휃첬ng l횪 c沼쬪 bi沼긪 s沼?xe d횪nh ri챗ng cho xe 척 t척 휃i沼뇆 ch梳죣 b梳켷g nhi챗n li沼뇎 Hydro (ngo梳죍 tr沼?xe 척 t척  Hy
+brid) v횪 xe 척 t척 휃i沼뇆 kh척ng d첫ng 휃沼?kinh doanh v횪 cho thu챗?",
+  "tr_c": [
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u v횪ng",
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u xanh d튼퉤ng",
+   "Ch沼?m횪u tr梳칗g tr챗n n沼걆 m횪u xanh th梳쳋",
+   "Ch沼?m횪u 휃en tr챗n n沼걆 m횪u 찼nh t챠m"
+  ]
+ },
+ {
+  "n": 63,
+  "ko_b": "?ㅼ쓬 李⑤웾 以??섏씠?⑥뒪李⑤줈 ?댁슜??遺덇??ν븳 李⑤웾??",
+  "ko_c": [
+   "?곸옱以묐웾 16???ㅽ봽?몃윮",
+   "?쒖슱怨??섏썝???댄뻾?섎뒗 2痢?醫뚯꽍踰꾩뒪",
+   "?⑥감濡쒖씤 寃쎌슦, 李⑦룺??3.7m???뚮갑李⑤웾",
+   "10?????援щ궃李⑤웾"
+  ],
+  "a": "3",
+  "tr_b": "Xe n횪o sau 휃창y kh척ng th沼?s沼?d沼쩸g l횪n 휃튼沼쓓g Hi-pass?",
+  "tr_c": [
+   "Xe ben tr沼뛫g t梳즜 16 t梳쩸",
+   "Xe bu첵t 2 t梳쬷g ch梳죣 t梳죍 Seoul v횪 Suwon",
+   "Xe c沼쯷 h沼뢠 c처 chi沼걏 r沼셬g 3,7m l튼u th척ng tr챗n l횪n 휃튼沼쓓g 휃퉤n",
+   "Xe c沼쯷 h沼?c沼쯷 n梳죒 c沼?l沼썀 10 t梳쩸"
+  ]
+ },
+ {
+  "n": 64,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?뱁빀?먮룞李?2001???댄썑 ?깅줉??李⑤졊??4??珥덇낵)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "2",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h 휃沼멼 v沼쌻 xe 척 t척 ch沼?kh찼ch lo梳죍 nh沼?kh척ng 
+ kinh doanh (휃튼沼즓 휃훱ng k첵 sau n훱m 2001 v횪 tu沼뷼 xe tr챗n 4 n훱m) l횪 bao l창u?",
+  "tr_c": [
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m"
+  ]
+ },
+ {
+  "n": 65,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?붾Ъ?먮룞李?李⑤졊??4???댄븯)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "3",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h 휃沼멼 v沼쌻 xe 척 t척 t梳즜 lo梳죍 nh沼?kh척ng kinh  
+doanh (tu沼뷼 xe t沼?4 n훱m tr沼?xu沼몁g) l횪 bao l창u?",
+  "tr_c": [
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m",
+   "4 n훱m"
+  ]
+ },
+ {
+  "n": 66,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?좎감 援ъ엯 ???꾩떆?댄뻾 ?덇? ?좏슚湲곌컙??湲곗???",
+  "ko_c": [
+   "10???대궡",
+   "15???대궡",
+   "20???대궡",
+   "30???대궡"
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, ti챗u chu梳쯰 th沼쓎 h梳죒 hi沼뇎 l沼켧 c沼쬪 gi梳쪅 ph챕p l튼u th척ng t梳죑 th沼쓎 khi mua xe 
+ 척 t척 m沼쌻 l횪 bao l창u?",
+  "tr_c": [
+   "Trong v챵ng 10 ng횪y",
+   "Trong v챵ng 15 ng횪y",
+   "Trong v챵ng 20 ng횪y",
+   "Trong v챵ng 30 ng횪y"
+  ]
+ },
+ {
+  "n": 67,
+  "ko_b": "?ㅼ쓬 以??먮룞李④?由щ쾿?뱀뿉 ?곕Ⅸ ?먮룞李?蹂寃쎈벑濡??ъ쑀媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?먮룞李⑥쓽 ?ъ슜蹂멸굅吏瑜?蹂寃쏀븳 ??,
+   "?먮룞李⑥쓽 李⑤?踰덊샇瑜?蹂寃쏀븳 ??,
+   "?뚯쑀沅뚯씠 蹂?숇맂 ??,
+   "踰뺤씤??紐낆묶??蹂寃쎈맂 ??
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, n沼셢 dung n횪o d튼沼쌻 휃창y kh척ng ph梳즜 l횪 l첵 do 휃沼?휃훱ng k첵 thay 휃沼뷼 xe?",
+  "tr_c": [
+   "Khi thay 휃沼뷼 khu v沼켧 s沼?d沼쩸g xe 척 t척",
+   "Khi thay 휃沼뷼 bi沼긪 s沼?xe",
+   "Khi thay 휃沼뷼 quy沼걆 s沼?h沼칤",
+   "Khi thay 휃沼뷼 t챗n ph찼p nh창n"
+  ]
+ },
+ {
+  "n": 68,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??댁쟾?먯쓽 留덉쓬媛吏먯쑝濡?諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥씠誘濡??좎뿉 痍⑦븳 ?곹깭?먯꽌 ?댁쟾?대룄 ?쒕떎.",
+   "怨쇰줈???곹깭?먯꽌 ?먯쑉二쇳뻾?먮룞李⑤? ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑤씪 ?섎뜑?쇰룄 ?μ젙?좎꽦?섏빟?덉쓣 蹂듭슜?섍퀬 ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 ?댁쟾 以묒뿉 ?대????꾪솕 ?ъ슜??媛?ν븯??"
+  ],
+  "a": "1",
+  "tr_b": "C창u n횪o kh척ng ph梳즜 l횪 suy ngh칫 휃첬ng c沼쬪 m沼셳 ng튼沼쓎 l찼i xe 척 t척 t沼?l찼i?",
+  "tr_c": [
+   "V챙 l횪 xe 척 t척 t沼?l찼i n챗n c처 th沼?l찼i xe trong t챙nh tr梳죒g say r튼沼즩.",
+   "Kh척ng 휃튼沼즓 휃i沼걏 khi沼긪 xe 척 t척 t沼?l찼i trong t챙nh tr梳죒g l횪m vi沼놻 qu찼 s沼쯢.",
+   "D첫 l횪 xe 척 t척 t沼?l찼i th챙 c크ng kh척ng 휃튼沼즓 휃i沼걏 khi沼긪 xe trong t챙nh tr梳죒g 휃찾 s沼?d沼쩸g thu沼멵 h튼沼썀g t창m th梳쬷.",
+   "휂튼沼즓 s沼?d沼쩸g 휃i沼뇆 tho梳죍 di 휃沼셬g trong khi 휃i沼걏 khi沼긪 xe 척 t척 t沼?l찼i."
+  ]
+ },
+ {
+  "n": 69,
+  "ko_b": "?붾Ъ?먮룞李??댁닔?ъ뾽踰뺤뿉 ?곕Ⅸ ?붾Ъ?먮룞李??댁넚?ъ뾽?먮뒗 愿??踰뺣졊???곕씪 ?댄뻾湲곕줉?μ튂??湲곕줉???댄뻾湲곕줉??(    )?숈븞  蹂닿??섏뿬???쒕떎. (   ) ?
+덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "3媛쒖썡",
+   "6媛쒖썡",
+   "1??,
+   "2??
+  ],
+  "a": "2",
+  "tr_b": "Theo Lu梳춗 Kinh doanh v梳춏 t梳즜 b梳켷g xe t梳즜, doanh nghi沼뇈 kinh doanh v梳춏 t梳즜 h횪ng h처a b梳켷g xe t梳즜 s梳?ph梳즜 l튼u g
+i沼?nh沼칗g ghi ch챕p v沼?h횪nh tr챙nh trong thi梳퓍 b沼?l튼u tr沼?h횪nh tr챙nh theo Lu梳춗 ph찼p c처 li챗n quan trong kho梳즢g th沼쓎 gian ( 
+). Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong ( )?",
+  "tr_c": [
+   "3 th찼ng",
+   "6 th찼ng",
+   "1 n훱m",
+   "2 n훱m"
+  ]
+ },
+ {
+  "n": 70,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑤? ?댁쟾 ?깅줉?섍퀬???섎뒗 ?먮뒗 留ㅼ닔???좊???(  ) ?대궡???깅줉?댁빞 ?쒕떎.  (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "15??,
+   "20??,
+   "30??,
+   "40??
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, ng튼沼쓎 mu沼몁 휃훱ng k첵 chuy沼긪 nh튼沼즢g xe 척 t척 ph梳즜 휃훱ng k첵 trong v챵ng (    ) n
+g횪y k沼?t沼?ng횪y mua. Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong ( )?",
+  "tr_c": [
+   "15 ng횪y",
+   "20 ng횪y",
+   "30 ng횪y",
+   "40 ng횪y"
+  ]
+ },
+ {
+  "n": 71,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑥쓽 ?뺢린寃?ъ쓽 湲곌컙? 寃?ъ쑀?④린媛?留뚮즺????(  )?쇰?????(  )??源뚯??? (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "90?? 31??,
+   "80?? 41??,
+   "60?? 51??,
+   "50?? 61??
+  ],
+  "a": "1",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v沼?qu梳즢 l첵 xe 척 t척, th沼쓎 h梳죒 ki沼긩 휃沼땙h xe 척 t척 l횪 t沼?( ) ng횪y tr튼沼쌵 ng횪y h梳퓍 h梳죒
+  hi沼뇎 l沼켧 ki沼긩 tra 휃梳퓆 ( ) ng횪y. Ti챗u chu梳쯰 n횪o l횪 휃첬ng trong( )?",
+  "tr_c": [
+   "90 ng횪y,31 ng횪y",
+   "80 ng횪y, 41 ng횪y",
+   "60 ng횪y, 51 ng횪y",
+   "50 ng횪y, 61 ng횪y"
+  ]
+ },
+ {
+  "n": 72,
+  "ko_b": "?먮룞李⑥넀?대같?곷낫?λ쾿???섎Т蹂댄뿕??媛?낇븯吏 ?딆? ?먮룞李⑤낫?좎옄??泥섎쾶 湲곗??쇰줈 留욌뒗 寃껋??(?먮룞李?誘몄슫??",
+  "ko_c": [
+   "300留????댄븯??怨쇳깭猷?,
+   "500留????댄븯??怨쇳깭猷?,
+   "1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "Theo Lu梳춗 휂梳즡 b梳즣 b沼밿 th튼沼쓓g thi沼뇍 h梳죍 cho xe 척 t척, ti챗u chu梳쯰 n횪o 휃첬ng v沼?x沼?ph梳죜 ng튼沼쓎 s沼?h沼칤 xe 척 t척  kh척
+ng tham gia b梳즣 hi沼긩 b梳칣 bu沼셛? (Kh척ng s沼?d沼쩸g xe 휃沼?휃i l梳죍)",
+  "tr_c": [
+   "Ph梳죜 ti沼걆 h횪nh ch챠nh t沼멼 휃a 3 tri沼뇎 Won",
+   "Ph梳죜 ti沼걆 h횪nh ch챠nh t沼멼 휃a 5 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼멼 휃a 1 n훱m ho梳톍 ph梳죜 ti沼걆 t沼멼 휃a 10 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼멼 휃a 2 n훱m ho梳톍 ph梳죜 ti沼걆 t沼멼 휃a 20 tri沼뇎 Won"
+  ]
+ },
+ {
+  "n": 73,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀沅뚯씠 ?곸냽 ?깆쑝濡?蹂寃쎈맆 寃쎌슦???댁빞 ?섎뒗 ?깅줉??",
+  "ko_c": [
+   "?좉퇋?깅줉",
+   "?댁쟾?깅줉",
+   "蹂寃쎈벑濡?,
+   "留먯냼?깅줉"
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, tr튼沼쓓g h沼즤 thay 휃沼뷼 quy沼걆 s沼?h沼칤 xe 척 t척 nh튼 th沼첺 k梳?v.v..., ph梳즜 휃훱ng k첵
+  lo梳죍 h챙nh n횪o sau 휃창y?",
+  "tr_c": [
+   "휂훱ng k첵 m沼쌻",
+   "휂훱ng k첵 chuy沼긪 nh튼沼즢g",
+   "휂훱ng k첵 thay 휃沼뷼",
+   "휂훱ng k첵 h沼쭃 xe"
+  ]
+ },
+ {
+  "n": 74,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀?먭? 諛쏆븘???섎뒗 ?먮룞李?寃?ъ쓽 醫낅쪟媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?섎━寃??,
+   "?밸퀎寃??,
+   "?쒕떇寃??,
+   "?꾩떆寃??
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h v沼?Qu梳즢 l첵 xe 척 t척, Lo梳죍 h챙nh ki沼긩 tra n횪o sau 휃창y kh척ng ph梳즜 l횪 n沼셢 dung ch沼?s沼?h沼칤 xe 척 t척 
+ ph梳즜 th沼켧 hi沼뇆 ki沼긩 tra?",
+  "tr_c": [
+   "Ki沼긩 tra s沼춁 ch沼칊",
+   "Ki沼긩 tra 휃梳톍 bi沼뇍",
+   "Ki沼긩 tra 휃i沼걏 ch沼뎝h m찼y",
+   "Ki沼긩 tra t梳죑 th沼쓎"
+  ]
+ },
+ {
+  "n": 75,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑤? 留ㅻℓ??寃쎌슦 ?댁쟾?깅줉 ?대떦湲곌???",
+  "ko_c": [
+   "?쒓뎅?꾨줈援먰넻怨듬떒",
+   "?쒙쉈援곤쉈援ъ껌",
+   "?쒓뎅援먰넻?덉쟾怨듬떒",
+   "?쑣룸룄寃쎌같泥?
+  ],
+  "a": "2",
+  "tr_b": "C퉤 quan n횪o d튼沼쌻 휃창y c처 tr찼ch nhi沼뇅 휃훱ng k첵 chuy沼긪 nh튼沼즢g tr튼沼쓓g h沼즤 mua b찼n xe?",
+  "tr_c": [
+   "C퉤 quan Giao th척ng 휃튼沼쓓g b沼?H횪n Qu沼멵",
+   "沼쫦 ban qu梳춏 - huy沼뇆 - th횪nh ph沼?,
+   "C퉤 quan An to횪n giao th척ng H횪n Qu沼멵",
+   "S沼?C梳즢h s찼t t沼뎝h - th횪nh ph沼?
+  ]
+ },
+ {
+  "n": 76,
+  "ko_b": "?먮룞李??깅줉??醫낅쪟媛 ?꾨땶 寃?2媛吏??",
+  "ko_c": [
+   "寃쎌젙?깅줉",
+   "沅뚮━?깅줉",
+   "?ㅼ젙?깅줉",
+   "留먯냼?깅줉"
+  ],
+  "a": "2, 3",
+  "tr_b": "Hai lo梳죍 n횪o d튼沼쌻 휃창y kh척ng ph梳즜 l횪 휃훱ng k첵 xe?",
+  "tr_c": [
+   "휂훱ng k첵 s沼춁 ch沼칊",
+   "휂훱ng k첵 quy沼걆 l沼즜",
+   "휂훱ng k첵 thi梳퓍 l梳춑",
+   "휂훱ng k첵 h沼쭃"
+  ]
+ },
+ {
+  "n": 77,
+  "ko_b": "?먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) ?욌㈃ 李쎌쑀由ъ쓽 媛?쒓킅???ш낵??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "40?쇱꽱??,
+   "50?쇱꽱??,
+   "60?쇱꽱??,
+   "70?쇱꽱??
+  ],
+  "a": "4",
+  "tr_b": "Ti챗u chu梳쯰 n횪o 휃첬ng v沼?t沼?l沼?cho ph챕p 찼nh s찼ng nh챙n th梳쪅 휃튼沼즓 chi梳퓎 qua c沼춁 k챠nh ph챠a tr튼沼쌵 xe 척 t척 (ngo梳죍  
+tr沼?xe bu첵t 휃튼a 휃처n h沼뛠 sinh)?",
+  "tr_c": [
+   "40%",
+   "50%",
+   "60%",
+   "70%"
+  ]
+ },
+ {
+  "n": 78,
+  "ko_b": "二쇳뻾 以?釉뚮젅?댄겕媛 ?묐룞?섎뒗 ?댁쟾?됰룞怨쇱젙???щ컮瑜??쒖꽌濡??곌껐??寃껋??",
+  "ko_c": [
+   "?꾪뿕?몄? ???곹솴?먮떒 ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?꾪뿕?몄? ???됰룞紐낅졊 ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞",
+   "?곹솴?먮떒 ???꾪뿕?몄? ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?됰룞紐낅졊 ???꾪뿕?몄? ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞"
+  ],
+  "a": "1",
+  "tr_b": "Th沼?t沼?n횪o l횪 휃첬ng v沼?c찼c h횪nh 휃沼셬g l찼i xe khi phanh 휃튼沼즓 k챠ch ho梳죜?",
+  "tr_c": [
+   "Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼n 휃o찼n t챙nh hu沼몁g ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??휂梳죖 phanh",
+   "Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??Ph찼n 휃o찼n t챙nh hu沼몁g ??휂梳죖 phanh",
+   "Ph찼n 휃o찼n t챙nh hu沼몁g ??Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼t l沼뇆h h횪nh 휃沼셬g ??휂梳죖 phanh",
+   "Ph찼t l沼뇆h h횪nh 휃沼셬g ??Nh梳춏 th沼쯢 nguy hi沼긩 ??Ph찼n 휃o찼n t챙nh hu沼몁g ??휂梳죖 phanh"
+  ]
+ },
+ {
+  "n": 79,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑥뿉 遺李⑸맂 ?먯뼱諛깆쓽 援щ퉬議곌굔?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?믪? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "??? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "?뚯뿴媛뺣룄瑜?吏?덇퀬 ?대쭏紐⑥꽦, ?좎뿰??,
+   "?댁쟾?먯? ?묒큺?섎뒗 異⑷꺽?먮꼫吏 洹밸???
+  ],
+  "a": "4",
+  "tr_b": "N沼셢 dung n횪o sau 휃창y kh찼c xa v沼쌻 휃i沼걏 ki沼뇆 t첬i kh챠 휃튼沼즓 l梳칛 trong xe 척 t척?",
+  "tr_c": [
+   "휂沼?b沼걆 k챕o v횪 kh梳?n훱ng ch沼땥 nhi沼뇍 沼?nhi沼뇍 휃沼?cao",
+   "휂沼?b沼걆 k챕o v횪 kh梳?n훱ng ch沼땥 nhi沼뇍 沼?nhi沼뇍 휃沼?th梳쩺",
+   "C처 휃沼?b沼걆 cao, ch沼몁g m횪i m챵n v횪 linh ho梳죜",
+   "T沼멼 휃a h처a n훱ng l튼沼즢g va 휃梳춑 khi ti梳퓈 x첬c v沼쌻 ng튼沼쓎 l찼i xe"
+  ]
+ },
+ {
+  "n": 80,
+  "ko_b": "?ㅼ쓬 以??댁쟾???깆씠 李⑤웾 ?뱁븯李???二쇱쓽?ы빆?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?怨??대┫ ?뚮뒗 ?ㅼ뿉???ㅻ뒗 李⑤웾???덈뒗吏瑜??뺤씤?쒕떎.",
+   "臾몄쓣 ???뚮뒗 ?꾩쟾???닿퀬?섏꽌 怨㏓컮濡??대┛??",
+   "?룹쥖???뱀감?먭? ?섏감?????댁쟾?먮뒗 ?꾨갑??二쇱떆?댁빞 ?쒕떎.",
+   "?댁쟾?앹쓣 ?쇱떆?곸쑝濡??좊궇 ?뚯뿉???쒕룞???꾩? ?딆븘???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Nh沼칗g 휃i沼걏 c梳쬷 l튼u 첵 n횪o l횪 휃첬ng khi ng튼沼쓎 l찼i xe v횪 ng튼沼쓎 tr챗n xe l챗n xu沼몁g xe,?",
+  "tr_c": [
+   "Khi l챗n xu沼몁g xe c梳쬷 ch첬 첵 quan s찼t xem c처 xe t沼?ph챠a sau 휃ang 휃i t沼쌻 hay kh척ng.",
+   "Khi m沼?c沼춁 th챙 ph梳즜 m沼?h梳퓍 r沼밿 xu沼몁g xe ngay.",
+   "L찼i xe c梳쬷 ch첬 첵 quan s찼t ph챠a tr튼沼쌵 khi ng튼沼쓎 ng沼밿 gh梳?sau xu沼몁g xe.",
+   "Kh척ng c梳쬷 t梳칣 휃沼셬g c퉤 n梳퓎 ch沼?t梳죑 th沼쓎 r沼쓎 gh梳?l찼i."
+  ]
+ }
+]
+위치 줄:2 문자:150
++ ... nslations/audit/queue/201_choices_vn.json' | ConvertFrom-Json; foreac ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+codex
+[]
+tokens used
+50,865
+[]

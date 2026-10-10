@@ -1,0 +1,1228 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125d7-506b-74a1-ae79-1e7d0be3d156
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/209_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/209_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 559ms:
+[
+ {
+  "n": 361,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먯감濡쒖뿉??醫뚰쉶?꾩뿉 ???媛???곸젅???듯뻾 諛⑸쾿??",
+  "ko_c": [
+   "以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎㈃??援먯감濡?以묒떖 ?덉そ?쇰줈 醫뚰쉶?꾪븳??",
+   "?좏샇 援먯감濡쒖뿉??鍮꾨낫?몄쥖?뚯쟾 ?덉슜 ?덉쟾?쒖?媛 ?덈뒗 寃쎌슦 ?곸깋?깊솕?먯꽌 醫뚰쉶?꾩씠 ?덉슜?쒕떎.",
+   "?좏샇 ?녿뒗 援먯감濡쒖뿉???숈떆 吏꾩엯 ??寃쎌슦 醫뚰쉶?꾩감?됱? 吏곸쭊李⑤웾???곗꽑?쒕떎.",
+   "李⑤웾 ?듯뻾???녿뒗 ?몃룄 3李⑤줈 ?꾨줈?먯꽌???곗륫李⑤줈?먯꽌 醫뚰쉶?꾪븯??寃껊룄 ?덉슜?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "What is the most appropriate method of turning left at an intersection under the Road Traffic Act?",
+  "tr_c": [
+   "Slow down along the centerline and turn left through the inner side of the intersection?셲 center.",
+   "Left turns are allowed at a red light at a signalized intersection if there is an ?쐕nprotected left turn??sign.",
+   "At a signalized intersection, a left-turning vehicle has priority over a vehicle traveling straight ahead.",
+   "On a one-way road with three lanes, turning left from the right lane is allowed if the traffic is light."
+  ]
+ },
+ {
+  "n": 362,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?뺣━媛 ?녿뒗 援먯감濡??듯뻾諛⑸쾿?쇰줈 ?뚮쭪? 寃껋??",
+  "ko_c": [
+   "醫뚯슦瑜??뺤씤?????녿뒗 寃쎌슦?먮뒗 ?쒗뻾?섏뿬???쒕떎.",
+   "醫뚰쉶?꾪븯?ㅻ뒗 李⑤뒗 吏곸쭊李⑤웾蹂대떎 ?곗꽑 ?듯뻾?댁빞 ?쒕떎.",
+   "?고쉶?꾪븯?ㅻ뒗 李⑤뒗 吏곸쭊李⑤웾蹂대떎 ?곗꽑 ?듯뻾?댁빞 ?쒕떎.",
+   "?듯뻾?섍퀬 ?덈뒗 ?꾨줈????낫??援먯감?섎뒗 ?꾨줈????씠 ?볦? 寃쎌슦 ?쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the proper method of passing through an intersection without traffic control?",
+  "tr_c": [
+   "Drive slowly when it is impossible to check the sides.",
+   "A vehicle turning left has the right of way over a vehicle traveling straight.",
+   "A vehicle turning right has the right of way over a vehicle traveling straight.",
+   "You should drive slowly when the intersection is wider than the road you are on."
+  ]
+ },
+ {
+  "n": 363,
+  "ko_b": "?꾨줈???먰솢???뚰넻怨??덉쟾???꾪븯???뚯쟾援먯감濡쒖쓽 ?ㅼ튂媛 沅뚯옣?섎뒗 寃쎌슦??",
+  "ko_c": [
+   "援먰넻???섏????믪? ?딆쑝?? 援먯감濡?援먰넻?ш퀬媛 留롮씠 諛쒖깮?섎뒗 怨?,
+   "援먯감濡쒖뿉???섎굹 ?댁긽???묎렐濡쒓? ?몃룄 3李⑤줈 ?댁긽??怨?,
+   "?뚯쟾援먯감濡쒖쓽 援먰넻???섏???泥섎━?⑸웾??珥덇낵?섎뒗 怨?,
+   "?좏샇?곕룞???꾩슂??援ш컙 以??뚯쟾援먯감濡쒖씠硫??곕룞?④낵媛 媛먯냼?섎뒗 怨?
+  ],
+  "a": "1",
+  "tr_b": "In which of the following locations is the installation of a roundabout recommended for ensuring smooth traffic  flow and safety on the road?",
+  "tr_c": [
+   "Locations where traffic volumes are not very high, but there are many intersection accidents",
+   "Locations where there are one or more access roads at the intersection with three or more lanes in one direction",
+   "Locations where the traffic volume at the roundabout exceeds its capacity",
+   "Locations where the presence of a roundabout in a segment necessary for signal coordination would reduce the  effectiveness of coordination"
+  ]
+ },
+ {
+  "n": 364,
+  "ko_b": "?뚯쟾援먯감濡쒖뿉 ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뚯쟾援먯감濡쒕뒗 ?좏샇援먯감濡쒖뿉 鍮꾪빐 ?곸땐吏???섍? 留롫떎.",
+   "吏꾩엯 ???뚯쟾援먯감濡??댁뿉 ?ъ쑀 怨듦컙???덉쓣 ?뚭퉴吏 ?묐낫?좎뿉???湲고븯?ъ빞 ?쒕떎.",
+   "?좏샇???ㅼ튂濡?吏꾩엯李⑤웾???좊룄?섏뿬 援먯감濡??댁쓽 援먰넻?됱쓣 泥섎━?쒕떎.",
+   "?뚯쟾 以묒뿉 ?덈뒗 李⑤뒗 吏꾩엯?섎뒗 李⑤웾?먭쾶 ?묐낫?댁빞 ?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements correctly describes a roundabout?",
+  "tr_c": [
+   "Roundabouts have more conflicting points than signalized intersections.",
+   "When entering, you must wait at the yield line until there is enough space within the roundabout.",
+   "Traffic lights are installed at a roundabout to guide vehicles and facilitate traffic flow through the intersection.",
+   "A vehicle that has already entered a roundabout must yield to an entering vehicle."
+  ]
+ },
+ {
+  "n": 365,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾?먭? 醫뚰쉶?????뺥솗?섍쾶 吏꾪뻾?????덈룄濡?援먯감濡??댁뿉 諛깆깋?먯꽑?쇰줈 ???몃㈃?쒖떆??臾댁뾿?멸??",
+  "ko_c": [
+   "?좊룄??,
+   "?곗옣??,
+   "吏?쒖꽑",
+   "洹쒖젣??
+  ],
+  "a": "1",
+  "tr_b": "What is the term used to refer to the road surface markings of white broken lines designed to guide left turns  at intersections?",
+  "tr_c": [
+   "Turn guidelines",
+   "Extension lines",
+   "Instruction lines",
+   "Regulation lines"
+  ]
+ },
+ {
+  "n": 366,
+  "ko_b": "援먯감濡쒖뿉??醫뚰쉶?꾪븯??李⑤웾 ?댁쟾?먯쓽 媛???덉쟾???댁쟾 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "諛섎? 諛⑺뼢???뺤??섎뒗 李⑤웾??二쇱쓽?댁빞 ?쒕떎.",
+   "諛섎? 諛⑺뼢?먯꽌 ?고쉶?꾪븯??李⑤웾??二쇱쓽?섎㈃ ?쒕떎.",
+   "媛숈? 諛⑺뼢?먯꽌 ?고쉶?꾪븯??李⑤웾??二쇱쓽?댁빞 ?쒕떎.",
+   "?④퍡 醫뚰쉶?꾪븯??痢〓㈃ 李⑤웾??二쇱쓽?댁빞 ?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO correct methods of turning left safely at an intersection?",
+  "tr_c": [
+   "Watch out for stopping vehicles from the opposite direction.",
+   "Watch out for right-turning vehicles from the opposite direction.",
+   "Watch out for right-turning vehicles from the same direction.",
+   "Watch out for left-turning vehicles in the lane to your side."
+  ]
+ },
+ {
+  "n": 367,
+  "ko_b": "援먯감濡쒖뿉??醫뚳쉈?고쉶?꾩쓣 ????媛???덉쟾???댁쟾 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?고쉶???쒖뿉??誘몃━ ?꾨줈???곗륫 媛?μ옄由щ줈 ?쒗뻾?섎㈃???고쉶?꾪빐???쒕떎.",
+   "?쇱옟???꾨줈?먯꽌 醫뚰쉶?꾪븷 ?뚯뿉??醫뚯륫 ?좊룄?좉낵 ?곴??놁씠 ?좎냽???듦낵?댁빞 ?쒕떎.",
+   "醫뚰쉶?꾪븷 ?뚯뿉??誘몃━ ?꾨줈??以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒떖 ?덉そ???댁슜?섏뿬 醫뚰쉶?꾪빐???쒕떎.",
+   "?좊룄?좎씠 ?덈뒗 援먯감濡쒖뿉??醫뚰쉶?꾪븷 ?뚯뿉??醫뚯륫 諛뷀닿? ?좊룄???덉そ???듦낵?댁빞 ?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO safest methods of turning left/right at an intersection?",
+  "tr_c": [
+   "To turn right, take the rightmost lane of the road and slowly turn right.",
+   "To turn left on a congested road, disregard the turn guidelines on the left and drive quickly.",
+   "To turn left, drive slowly along the centerline and turn left along the inner part of the intersection.",
+   "To turn left at an intersection marked with turn guidelines, turn with the left tires passing through the inside of the turn  guidelines."
+  ]
+ },
+ {
+  "n": 368,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뚯쟾援먯감濡쒖쓽 ?듯뻾諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뚯쟾?섍퀬 ?덈뒗 李④? ?곗꽑?대떎.",
+   "吏꾩엯?섎젮??李④? ?곗꽑?대떎.",
+   "吏꾩텧??李④? ?곗꽑?대떎.",
+   "李⑤웾???곗꽑?쒖쐞???녿떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is a correct guideline with regard to passing through a roundabout?",
+  "tr_c": [
+   "A car inside the roundabout has the right of way.",
+   "A car about to enter the roundabout has the right of way.",
+   "A car exiting the roundabout has the right of way.",
+   "There are no set rules on who has the right of way."
+  ]
+ },
+ {
+  "n": 369,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뚯쟾援먯감濡쒖뿉?쒖쓽 湲덉? ?됱쐞媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?뺤감",
+   "二쇱감",
+   "?쒗뻾 諛??쇱떆?뺤?",
+   "?욎?瑜닿린"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT prohibited at a roundabout?",
+  "tr_c": [
+   "Stopping",
+   "Parking",
+   "Driving slowly and stopping temporarily",
+   "Overtaking"
+  ]
+ },
+ {
+  "n": 370,
+  "ko_b": "?ㅼ쓬 以??뚯쟾援먯감濡쒖뿉???듯뻾 ?곗꽑沅뚯씠 ?몄젙?섎뒗 李⑤웾??",
+  "ko_c": [
+   "?뚯쟾援먯감濡????뚯쟾李⑤줈?먯꽌 二쇳뻾 以묒씤 李⑤웾",
+   "?뚯쟾援먯감濡?吏꾩엯 ??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾",
+   "?뚯쟾援먯감濡?吏꾩엯 ???고쉶?꾪븯?ㅻ뒗 李⑤웾",
+   "?뚯쟾援먯감濡?吏꾩엯 ??醫뚰쉶??諛??고쉶?꾪븯?ㅻ뒗 李⑤웾"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following vehicles are granted the right of way at a roundabout?",
+  "tr_c": [
+   "Vehicles moving on the section of the road within the roundabout",
+   "Vehicles trying to turn left before entering the roundabout",
+   "Vehicles trying to turn right before entering the roundabout",
+   "Vehicles trying to turn left or right before entering the roundabout"
+  ]
+ },
+ {
+  "n": 371,
+  "ko_b": "?뚯쟾援먯감濡쒖뿉 ????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "李⑤웾???쒗뻾?쇰줈 援먯감濡쒖뿉 ?묎렐?섎룄濡??섏뼱 ?덈떎.",
+   "?뚯쟾?섍퀬 ?덈뒗 李⑤웾???곗꽑?대떎.",
+   "?좏샇媛 ?녾린 ?뚮Ц???곗냽?곸쑝濡?李⑤웾 吏꾩엯??媛?ν븯??",
+   "?뚯쟾援먯감濡쒕뒗 ?쒓퀎諛⑺뼢?쇰줈 ?뚯쟾?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is an INCORRECT guideline on how to use roundabouts?",
+  "tr_c": [
+   "Vehicles must approach the roundabout slowly.",
+   "A car inside the roundabout has the right of way.",
+   "Vehicles may continually enter the roundabout as there are no signals.",
+   "Turn clockwise in the roundabout."
+  ]
+ },
+ {
+  "n": 372,
+  "ko_b": "?뚯쟾援먯감濡??듯뻾諛⑸쾿?쇰줈 媛???뚮쭪? 2媛吏??",
+  "ko_c": [
+   "援먯감濡?吏꾩엯 ???쇱떆?뺤? ??援먯감濡????쇱そ?먯꽌 ?ㅺ??ㅻ뒗 李⑤웾???놁쑝硫?吏꾩엯?쒕떎.",
+   "?뚯쟾援먯감濡쒖뿉?쒖쓽 ?뚯쟾? ?쒓퀎諛⑺뼢?쇰줈 ?뚯쟾?댁빞 ?쒕떎.",
+   "?뚯쟾援먯감濡쒕? 吏꾟ㅼ텧?????뚯뿉??諛⑺뼢吏?쒕벑???묐룞???꾩슂媛 ?녿떎.",
+   "?뚯쟾援먯감濡??댁뿉 吏꾩엯???꾩뿉???ㅻⅨ 李⑤웾??二쇱쓽?섎㈃??吏꾪뻾?댁빞 ?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the most appropriate ways of navigating a roundabout? (Select TWO)",
+  "tr_c": [
+   "Before entering a roundabout, come to a complete stop and enter when there are no approaching vehicles from the left.",
+   "At a roundabout, the traffic circulates clockwise.",
+   "There is no need to use turn signals when entering or exiting a roundabout.",
+   "Even after entering a roundabout, you should continue to be cautious of other vehicles and proceed with care."
+  ]
+ },
+ {
+  "n": 373,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???쇱떆?뺤??섏뿬?????μ냼濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨줈??援щ??ъ쭊 遺洹?,
+   "媛?뚮Ⅸ 鍮꾪깉湲몄쓽 ?대━留?,
+   "鍮꾪깉湲몄쓽 怨좉갗留덈（ 遺洹?,
+   "援먰넻?뺣━媛 ?녿뒗 援먰넻??鍮덈쾲??援먯감濡?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is a place where you should stop temporarily while driving?",
+  "tr_c": [
+   "Near a curve on a road",
+   "Descent on a steep slope",
+   "Near the top of a slope",
+   "At an intersection with no traffic control and heavy traffic"
+  ]
+ },
+ {
+  "n": 374,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??諛섎뱶???쇱떆?뺤??섏뿬?????μ냼濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녿뒗 援먯감濡?,
+   "?뱀깋?깊솕媛 耳쒖졇 ?덈뒗 援먯감濡?,
+   "援먰넻??鍮덈쾲???ㅻ━ ???먮뒗 ?곕꼸 ??,
+   "?꾨줈??援щ??ъ쭊 遺洹??먮뒗 鍮꾪깉湲몄쓽 怨좉갗留덈（ 遺洹?
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is a place where you should stop temporarily?",
+  "tr_c": [
+   "An intersection without a traffic control officer where traffic to the left and right cannot be checked",
+   "An intersection where the lights have turned green",
+   "A busy bridge/tunnel",
+   "In the vicinity of a curve or the highest point on a slope"
+  ]
+ },
+ {
+  "n": 375,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???쇱떆?뺤?瑜??댁빞 ?섎뒗 ?μ냼??",
+  "ko_c": [
+   "?곕꼸 ??諛??ㅻ━ ??,
+   "?좏샇?깆씠 ?녿뒗 援먰넻??鍮덈쾲??援먯감濡?,
+   "媛?뚮Ⅸ 鍮꾪깉湲몄쓽 ?대━留?,
+   "?꾨줈媛 援щ??ъ쭊 遺洹?
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is a place where you should stop temporarily pursuant to the Road Traffic Act?",
+  "tr_c": [
+   "Inside a tunnel and on a bridge",
+   "At a busy intersection with no traffic lights",
+   "On a descending section of a steep hill",
+   "A curved section of a road"
+  ]
+ },
+ {
+  "n": 376,
+  "ko_b": "媛蹂???띾룄?쒗븳 援ш컙??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?곹솴???곕씪 洹쒖젙 ?띾룄瑜?蹂?붿떆?ㅻ뒗 ?λ룞?곸씤 ?쒖뒪?쒖씠??",
+   "洹쒖젙 ?띾룄 ?レ옄瑜?諛붽퓭???쒗쁽?????덈뒗 ?꾧킅?쒖??먯쓣 ?ъ슜?쒕떎.",
+   "媛蹂???띾룄?쒗븳 ?쒖?濡?理쒓퀬?띾룄瑜??뺥븳 寃쎌슦?먮뒗 ?댁뿉 ?곕씪???쒕떎.",
+   "媛蹂???띾룄?쒗븳 ?쒖?濡??뺥븳 理쒓퀬?띾룄? ?덉쟾?쒖? 理쒓퀬?띾룄媛 ?ㅻ? ?뚮뒗 ?덉쟾?쒖? 理쒓퀬?띾룄瑜??곕씪???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT correct regarding the variable speed limit section?",
+  "tr_c": [
+   "It is an active system that changes the regulated speed in accordance with the situation.",
+   "It uses an electric sign that can display different speeds by changing the numbers.",
+   "When the maximum speed is set with a variable speed limit sign, it must be followed.",
+   "When the maximum speed determined by the variable speed limit sign and the maximum speed of the safety sign show different values, the maximum speed indicated by the safety sign must be followed."
+  ]
+ },
+ {
+  "n": 377,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 (    )???댁쟾?먮뒗 泥좉만 嫄대꼸紐⑹쓣 ?듦낵?섎젮??寃쎌슦 嫄대꼸紐??욎뿉??(    )?섏뿬 ?덉쟾?쒖? ?뺤씤???꾩뿉  ?듦낵?섏뿬???쒕떎. (   )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "紐⑤뱺 李? ?쒗뻾",
+   "紐⑤뱺 ?먮룞李⑤벑 ?먮뒗 嫄댁꽕湲곌퀎, ?쒗뻾",
+   "紐⑤뱺 李??먮뒗 紐⑤뱺 ?꾩감, ?쇱떆?뺤?",
+   "紐⑤뱺 李??먮뒗 ?몃㈃ ?꾩감, ?쇱떆?뺤?"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, the driver of ( ) must ( ) in front of a railway crossing and then pass through after confirming that it is safe to cross. Which of the following best fills the parentheses?",
+  "tr_c": [
+   "any vehicle - slow down",
+   "any motor vehicle or heavy equipment - slow down",
+   "any vehicle or tank - stop",
+   "any vehicle or tram - stop"
+  ]
+ },
+ {
+  "n": 378,
+  "ko_b": "?ㅼ쓬 以?怨좎냽?꾨줈 ?섎뱾紐⑹뿉??媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "?섎뱾紐⑹뿉?쒕뒗 李⑤웾???뺤껜?섎?濡??ш퀬 ?덈갑???꾪빐???ㅼ감媛 ?묎렐?섏? 紐삵븯?꾨줉 湲됱젣?숉븳??",
+   "?섎뱾紐⑹뿉?쒕뒗 ?띾룄?????媛먭컖???뷀빐吏誘濡??쇱떆?뺤?????異쒕컻?쒕떎.",
+   "吏꾩텧?섍퀬???섎뒗 ?섎뱾紐⑹쓣 吏?섏튇 寃쎌슦 ?ㅼ쓬 ?섎뱾紐⑹쓣 ?댁슜?쒕떎.",
+   "湲됯??랁븯???섎뱾紐⑹쑝濡?吏꾩텧?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the safest method of driving at an expressway interchange?",
+  "tr_c": [
+   "As interchanges tend to be congested, apply sudden brakes to discourage vehicles behind you from following closely and prevent potential accidents accordingly.",
+   "As drivers tend to become less aware of speed at an interchange, stop momentarily before continuing.",
+   "If the desired interchange has already been passed, use the next interchange.",
+   "Accelerate quickly to enter an interchange."
+  ]
+ },
+ {
+  "n": 379,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???욎감???댁쟾?먭? ?쇳뙏???섑룊?쇰줈 ?댁꽌 李⑥껜??醫뚯륫 諛뽰쑝濡??대??덉쓣 ??痍⑦빐????議곗튂濡?媛?? ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "?욎감媛 ?고쉶?꾪븷 寃껋씠 ?덉긽?섎?濡??쒗뻾?쒕떎.",
+   "?욎감媛 ?〓떒??寃껋씠 ?덉긽?섎?濡??곸쐞 李⑤줈濡?吏꾨줈蹂寃쏀븳??",
+   "?욎감媛 ?좏꽩??寃껋씠 ?덉긽?섎?濡??욎?瑜닿린?쒕떎.",
+   "?욎감??李⑤줈 蹂寃쎌씠 ?덉긽?섎?濡??쒗뻾?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most correct action to take when the driver of the vehicle ahead stretches his/her  arm horizontally out of the left side of the vehicle?",
+  "tr_c": [
+   "Slow down as the front vehicle is expected to turn right.",
+   "Switch to an upper lane as the front vehicle is expected to cross.",
+   "Overtake the front vehicle as it is expected to make a U-turn.",
+   "Slow down as the front vehicle is expected to change lanes."
+  ]
+ },
+ {
+  "n": 380,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾?먭? ?고쉶?꾪븯怨좎옄 ?????ъ슜?섎뒗 ?섏떊?몃뒗?",
+  "ko_c": [
+   "?쇳뙏??醫뚯륫 諛뽰쑝濡??댁뼱 ?붽퓞移섎? 援쏀? ?섏쭅?쇰줈 ?щ┛??",
+   "?쇳뙏? ?섑룊?쇰줈 ?댁꽌 李⑥껜??醫뚯륫 諛뽰쑝濡??대???",
+   "?ㅻⅨ?붿쓣 李⑥껜???곗륫 諛뽰쑝濡??섑룊?쇰줈 ?댁꽌 ?먯쓣 ?욌뮘濡??붾뱺??",
+   "?쇳뙏??李⑥껜 諛뽰쑝濡??댁뼱 45째諛묒쑝濡??몃떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following hand signals is used to indicate your intent to turn right?",
+  "tr_c": [
+   "Extend your left arm out to the left and bend your forearm vertically upward.",
+   "Extend your left arm out to the left, parallel to the road.",
+   "Extend your right arm out to the right and hold it parallel to the road, and wave the extended arm forwards and  backwards.",
+   "Stick your left arm out of the vehicle and bend your forearm downward at an angle of 45째."
+  ]
+ },
+ {
+  "n": 381,
+  "ko_b": "?좏샇湲곗쓽 ?좏샇???곕씪 援먯감濡쒖뿉 吏꾩엯?섎젮?붾뜲, 寃쎌같怨듬Т?먯씠 ?뺤??섎씪???섏떊?몃? 蹂대깉?? ?ㅼ쓬 以?媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "?뺤???吏곸쟾???쇱떆?뺤??쒕떎.",
+   "湲됯컧?랁븯???쒗뻾?쒕떎.",
+   "?좏샇湲곗쓽 ?좏샇???곕씪 吏꾪뻾?쒕떎.",
+   "援먯감濡쒖뿉 ?쒖꽌??吏꾩엯?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "As a vehicle is about to enter an intersection according to the traffic signal, a police officer gives a hand signal  to stop. In this scenario, which of the following is the safest way to drive?",
+  "tr_c": [
+   "Stop just before the stop line.",
+   "Decelerate suddenly to slow down.",
+   "Proceed according to the signal from the traffic light.",
+   "Enter the intersection slowly."
+  ]
+ },
+ {
+  "n": 382,
+  "ko_b": "以묒븰?좎씠 ?⑹깋 ?먯꽑怨??⑹깋 ?ㅼ꽑?쇰줈 援ъ꽦??蹂듭꽑?쇰줈 ?ㅼ튂???뚯쓽 ?욎?瑜닿린??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?⑹깋 ?ㅼ꽑怨??⑹깋 ?먯꽑 ?대뒓 履쎌뿉?쒕룄 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?????녿떎.",
+   "?⑹깋 ?먯꽑???덈뒗 痢≪뿉?쒕뒗 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?????덈떎.",
+   "?덉쟾???뺤씤?섎㈃ ?⑹깋 ?ㅼ꽑怨??⑹깋 ?먯꽑 ?곴??놁씠 ?욎?瑜닿린?????덈떎.",
+   "?⑹깋 ?ㅼ꽑???덈뒗 痢≪뿉?쒕뒗 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is true about overtaking on a road with a combination of dotted yellow and solid yellow  centerlines?",
+  "tr_c": [
+   "Overtaking is not allowed from either the yellow broken line or the yellow solid line.",
+   "Overtaking is allowed from the side of the yellow broken line.",
+   "Overtaking is allowed from the sides of both yellow broken line and yellow solid line if it is clear that it is safe.",
+   "Overtaking is allowed from the side of the yellow solid line."
+  ]
+ },
+ {
+  "n": 383,
+  "ko_b": "?댁쟾 以?泥좉만嫄대꼸紐⑹뿉??媛??諛붾엺吏곹븳 ?듯뻾諛⑸쾿??",
+  "ko_c": [
+   "湲곗감媛 ?ㅼ? ?딆쑝硫?洹몃깷 ?듦낵?쒕떎.",
+   "?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?섍퀬 ?듦낵?쒕떎.",
+   "?쒗븳?띾룄 ?댁긽?쇰줈 ?듦낵?쒕떎.",
+   "李⑤떒湲곌? ?대젮吏?ㅺ퀬 ?섎뒗 寃쎌슦??鍮⑤━ ?듦낵?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the correct method of driving through a railway crossing?",
+  "tr_c": [
+   "Drive through if there are no trains coming.",
+   "Come to a stop, check that it is safe, and drive through.",
+   "Drive through at a speed above the speed limit.",
+   "Drive at an increased speed if the crossing gate is about to close."
+  ]
+ },
+ {
+  "n": 384,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤줈瑜??쇱そ?쇰줈 諛붽씀怨좎옄 ???뚯쓽 諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "洹??됱쐞瑜??섍퀬???섎뒗 吏?먯뿉 ?대Ⅴ湲???30誘명꽣(怨좎냽?꾨줈?먯꽌??100誘명꽣) ?댁긽??吏?먯뿉 ?대Ⅴ?????醫뚯륫 諛??μ??쒓린瑜?議곗옉?쒕떎.",
+   "洹??됱쐞瑜??섍퀬???섎뒗 吏?먯뿉 ?대Ⅴ湲???10誘명꽣(怨좎냽?꾨줈?먯꽌??100誘명꽣) ?댁긽??吏?먯뿉 ?대Ⅴ?????醫뚯륫 諛??μ??쒓린瑜?議곗옉?쒕떎.",
+   "洹??됱쐞瑜??섍퀬???섎뒗 吏?먯뿉 ?대Ⅴ湲???20誘명꽣(怨좎냽?꾨줈?먯꽌??80誘명꽣) ?댁긽??吏?먯뿉 ?대Ⅴ?????醫뚯륫 諛⑺뼢吏?쒓린 瑜?議곗옉?쒕떎.",
+   "洹??됱쐞瑜??섍퀬???섎뒗 吏?먯뿉??醫뚯륫 諛⑺뼢吏?쒓린瑜?議곗옉?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct method of turning left?",
+  "tr_c": [
+   "Turn on the left turn signal at least 30m (100m on expressways) away from where you want to turn left.",
+   "Turn on the left turn signal at least 10m (100m on expressways) away from where you want to turn left.",
+   "Turn on the left turn signal at least 20m (80m on expressways) away from where you want to turn left.",
+   "Turn on the left turn signal when you reach the location where you want to turn left."
+  ]
+ },
+ {
+  "n": 385,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李⑤벑???띾룄? 愿?⑦븯???녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?쇰컲?꾨줈, ?먮룞李⑥쟾?⑸룄濡? 怨좎냽?꾨줈? 珥?李⑤줈 ?섏뿉 ?곕씪 蹂꾨룄濡?踰뺤젙?띾룄瑜?洹쒖젙?섍퀬 ?덈떎.",
+   "?쇰컲?꾨줈?먮뒗 理쒖??띾룄 ?쒗븳???녿떎.",
+   "?댁긽湲고썑 ?쒖뿉??媛먯냽?댄뻾???섏뿬???쒕떎.",
+   "媛蹂???띾룄?쒗븳?쒖?濡??뺥븳 理쒓퀬?띾룄? 洹?諛뽰쓽 ?덉쟾?쒖?濡??뺥븳 理쒓퀬?띾룄媛 ?ㅻ? 寃쎌슦 洹?諛뽰쓽 ?덉쟾?쒖????곕씪???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT a correct statement regarding the speed of  motor vehicles, etc.?",
+  "tr_c": [
+   "Separate legal speed limits are applied to various roads depending on whether it is a general road, an automobile road, or an expressway, and on the total number of lanes.",
+   "There are no minimum speed limits on regular roads.",
+   "You must drive at a reduced speed in poor weather conditions.",
+   "If the speed limit set by the variable speed limit sign and the speed limit set by a speed limit safety sign are different, the latter must be followed."
+  ]
+ },
+ {
+  "n": 386,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李⑤벑???띾룄? 愿?⑦븯???녹? ?딆?  寃껋??",
+  "ko_c": [
+   "?먮룞李⑤벑???띾룄媛 ?믪븘吏덉닔濡?援먰넻?ш퀬???꾪뿕?깆씠 而ㅼ쭚???곕씪 李⑤웾??怨쇱냽???듭젣?섎젮??寃껋씠??",
+   "?먮룞李⑥쟾?⑸룄濡?諛?怨좎냽?꾨줈?먯꽌 ?꾨줈???⑥쑉?깆쓣 ?쒓퀬?섍린 ?꾪빐 理쒖??띾룄瑜??쒗븳?섍퀬 ?덈떎.",
+   "寃쎌같泥?옣 ?먮뒗 ?쑣룸룄寃쎌같泥?옣? 援먰넻???덉쟾怨??먰솢???뚰넻???꾪빐 蹂꾨룄濡??띾룄瑜??쒗븳?????덈떎.",
+   "怨좎냽?꾨줈???쑣룸룄寃쎌같泥?옣?? 怨좎냽?꾨줈瑜??쒖쇅???꾨줈??寃쎌같泥?옣???띾룄 洹쒖젣沅뚯옄?대떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT a correct statement regarding the speed of  motor vehicles, etc.?",
+  "tr_c": [
+   "Speed limits are set because the likelihood of traffic accidents increases at higher vehicle speeds.",
+   "Minimum speed limits are set to maintain the efficiency of automobile roads and expressways.",
+   "Provisional speed limits can be set by the commissioner general of the Korean National Police Agency, or the commissioner of the City/Do (Province) police agency for road safety and efficiency.",
+   "For the setting of speed limits on expressways, the commissioner of the City/Do (Province) police agency has jurisdiction; for all other roads, the commissioner general of the Korean National Police Agency has jurisdiction."
+  ]
+ },
+ {
+  "n": 387,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좏샇?꾨컲???섎뒗 寃쎌슦 2媛吏??",
+  "ko_c": [
+   "?곸깋?좏샇 ???뺤??좎쓣 珥덇낵?섏뿬 ?뺤?",
+   "援먯감濡??대Ⅴ湲????⑹깋?좏샇 ??援먯감濡쒖뿉 吏꾩엯",
+   "?⑹깋 ?먮㈇ ???ㅻⅨ 援먰넻 ?먮뒗 ?덉쟾?쒖????쒖떆??二쇱쓽?섎㈃??吏꾪뻾",
+   "?곸깋 ?먮㈇ ???뺤???吏곸쟾???쇱떆?뺤??????ㅻⅨ 援먰넻??二쇱쓽?섎㈃??吏꾪뻾"
+  ],
+  "a": "1, 2",
+  "tr_b": "Which TWO constitute a violation of a traffic signal?",
+  "tr_c": [
+   "Stopping over the stop line at a red light",
+   "Entering an intersection when the lights have already turned yellow",
+   "When there is a yellow flashing light, you must drive carefully while being mindful of other traffic markings or safety  signs",
+   "Stopping temporarily in front of the stop line when the lights are blinking red, before driving through carefully"
+  ]
+ },
+ {
+  "n": 388,
+  "ko_b": "?몃룄 3李⑤줈???꾨줈??援먯감濡쒖뿉???고쉶?꾪븷 ???щ컮瑜??듯뻾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?고쉶?꾪븷 ?뚯뿉??援먯감濡?吏곸쟾?먯꽌 諛⑺뼢 吏?쒕벑??耳쒖꽌 吏꾪뻾諛⑺뼢???뚮젮 二쇱뼱???쒕떎.",
+   "?곗륫 ?꾨줈???〓떒蹂대룄 蹂댄뻾 ?좏샇?깆씠 ?뱀깋?대씪??蹂댄뻾?먭? ?놁쑝硫??듦낵?????덈떎.",
+   "?고쉶???쇱깋?깆씠 ?곸깋??寃쎌슦?먮뒗 蹂댄뻾?먭? ?놁뼱???듦낵?????녿떎.",
+   "?몃룄 3李⑤줈???꾨줈?먯꽌??2李⑤줈?먯꽌 ?고쉶?꾪븯??寃껋씠 ?덉쟾?섎떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the correct methods of turning right at an intersection on a road with three lanes in  one direction? (Select TWO)",
+  "tr_c": [
+   "When turning right, you should turn on the turning signal at the intersection just before proceeding to indicate your  intended direction of travel.",
+   "Even if the cross light at the right-side crosswalk is green, you can proceed if there are no pedestrians.",
+   "If the right-turn signal is red, you cannot proceed even if there are no pedestrians.",
+   "It is safer to turn right from the second lane on a road with three lanes in one direction."
+  ]
+ },
+ {
+  "n": 389,
+  "ko_b": "?ㅼ쓬? ?먮룞李④?由щ쾿???뱁빀李⑥쓽 湲곗?怨??뱁빀李⑤? ?곕씪 醫뚰쉶?꾪븯怨좎옄 ????二쇱쓽?댁빞???댁쟾諛⑸쾿?쇰줈 ?щ컮瑜?寃?2媛吏??",
+  "ko_c": [
+   "??뺤듅?⑹감??36?몄듅 ?댁긽???섎??섎ŉ, ??뺤듅?⑹감濡??명빐 ?좏샇?깆씠 ??蹂댁씪 ???덉쑝誘濡??덉쟾嫄곕━瑜??좎??섎㈃???쒗뻾?쒕떎.",
+   "以묓삎?뱁빀李⑤뒗 16???댁긽 35?몄듅 ?댄븯瑜??섎??섎ŉ, ?뱁빀李④? 諛⑺뼢吏?쒓린瑜?耳쒕뒗 寃쎌슦 ?ㅻⅨ 李④? ?쇱뼱?????덉쑝誘濡?       李④컙嫄곕━瑜?醫곹? ?쒗뻾?쒕떎.",
+   "?뚰삎?뱁빀李⑤뒗 15?몄듅 ?댄븯瑜??섎??섎ŉ, ?뱀슜李⑥뿉 鍮꾪빐 臾닿쾶以묒떖???믪븘 ?꾨룄?????덉쑝誘濡??덉쟾嫄곕━瑜??좎??섎ŉ 吏꾪뻾?쒕떎.",
+   "寃쏀삎?뱁빀李⑤뒗 諛곌린?됱씠 1200?쒖떆 誘몃쭔???섎??섎ŉ, ?뱀슜李⑥? 臾닿쾶以묒떖???숈씪?섏?留?異⑸텇???덉쟾嫄곕━瑜??좎??섍퀬 ?ㅻ뵲瑜몃떎."
+  ],
+  "a": "1. 3",
+  "tr_b": "According to the Motor Vehicle Management Act, which of the following are true about the criteria for a bus  and the precautions when turning left behind a bus? (Select TWO)",
+  "tr_c": [
+   "A bus refers to a vehicle with seating capacity of 36 or more persons. When driving behind a bus, you must drive slowly, keeping a safe distance from the bus so that you can see the traffic lights.",
+   "A mini-bus refers to a vehicle with seating capacity of 16 ~ 35 persons. When you are driving behind a mini-bus and the mini-bus driver turns on a turn signal, slow down and catch up to the mini-bus so that other vehicles will not cut in front of you.",
+   "A van refers to a vehicle with seating capacity of 15 or fewer persons. Since vans are more prone to overturning due to their high center of gravity compared to passenger vehicles, you must keep a safe distance from them.",
+   "A light van refers to a vehicle with engine displacement below 1,200 cc. Although light vans have the same center of gravity as passenger vehicles, you must keep a safe distance from them."
+  ]
+ },
+ {
+  "n": 390,
+  "ko_b": "李⑤줈瑜?蹂寃??????덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "蹂寃쏀븯怨좎옄 ?섎뒗 李⑤줈???ㅻ뵲瑜대뒗 李⑥? 嫄곕━媛 ?덉쓣 ???띾룄瑜??좎???梨?李⑤줈瑜?蹂寃쏀븳??",
+   "蹂寃쏀븯怨좎옄 ?섎뒗 李⑤줈???ㅻ뵲瑜대뒗 李⑥? 嫄곕━媛 ?덉쓣 ??媛먯냽?섎㈃??李⑤줈瑜?蹂寃쏀븳??",
+   "蹂寃쏀븯怨좎옄 ?섎뒗 李⑤줈???ㅻ뵲瑜대뒗 李④? ?묎렐?섍퀬 ?덉쓣 ???띾룄瑜???텛???ㅼ감瑜?癒쇱? ?듦낵?쒗궓??",
+   "蹂寃쏀븯怨좎옄 ?섎뒗 李⑤줈???ㅻ뵲瑜대뒗 李④? ?묎렐?섍퀬 ?덉쓣 ??湲됲븯寃?李⑤줈瑜?蹂寃쏀븳??"
+  ],
+  "a": "1, 3",
+  "tr_b": "Which TWO correctly describe how to change lanes?",
+  "tr_c": [
+   "Change lanes while maintaining speed if the car behind you in the lane you are about to enter is far back enough.",
+   "Slow down when changing lanes if the car behind you in the lane you are about to enter is far back enough.",
+   "Let the car behind you in the lane you are about to enter pass if it is approaching.",
+   "Change lanes quickly if the car behind you in the lane you are about to enter is approaching."
+  ]
+ },
+ {
+  "n": 391,
+  "ko_b": "李⑤줈瑜?援щ텇?섎뒗 李⑥꽑??????ㅻ챸?쇰줈 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "李⑤줈媛 ?ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗 寃쎌슦 ?ㅼ꽑?먯꽌 ?먯꽑諛⑺뼢?쇰줈 李⑤줈 蹂寃쎌씠 遺덇??ν븯??",
+   "李⑤줈媛 ?ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗 寃쎌슦 ?ㅼ꽑?먯꽌 ?먯꽑諛⑺뼢?쇰줈 李⑤줈 蹂寃쎌씠 媛?ν븯??",
+   "李⑤줈媛 ?ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗 寃쎌슦 ?먯꽑?먯꽌 ?ㅼ꽑諛⑺뼢?쇰줈 李⑤줈 蹂寃쎌씠 遺덇??ν븯??",
+   "李⑤줈媛 ?ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗 寃쎌슦 ?먯꽑?먯꽌 ?ㅼ꽑諛⑺뼢?쇰줈 李⑤줈 蹂寃쎌씠 媛?ν븯??"
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are TWO correct statements about the lines that separate lanes?",
+  "tr_c": [
+   "Where a solid line and a broken line run parallel, you cannot change from the lane near the solid-line to the lane near  the broken-line.",
+   "Where a solid line and a broken line run parallel, you can change from the lane near the solid line to the lane near the  broken line.",
+   "Where a solid line and a broken line run parallel, you cannot change from the lane near the broken line to the lane  near the solid line.",
+   "Where a solid line and a broken line run parallel, you can change from the lane near the broken line to the lane near  the solid line."
+  ]
+ },
+ {
+  "n": 392,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?곸깋?깊솕 ?먮㈇?????섎???",
+  "ko_c": [
+   "李⑤쭏???ㅻⅨ 援먰넻??二쇱쓽?섎㈃???쒗뻾?섏뿬???쒕떎.",
+   "李⑤쭏???ㅻⅨ 援먰넻??二쇱쓽?섎㈃??吏꾪뻾?????덈떎.",
+   "李⑤쭏???덉쟾?쒖???二쇱쓽?섎㈃???꾩쭊?????덈떎.",
+   "李⑤쭏???뺤???吏곸쟾???쇱떆?뺤??????ㅻⅨ 援먰넻??二쇱쓽?섎㈃??吏꾪뻾?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, what does a flashing red light indicate?",
+  "tr_c": [
+   "Vehicles and horses must drive slowly while looking out for traffic.",
+   "Vehicles and horses may proceed while looking out for traffic.",
+   "Vehicles and horses may reverse while looking out for safety signs.",
+   "Vehicles and horses must temporarily stop right before the stop line and then proceed while looking out for traffic."
+  ]
+ },
+ {
+  "n": 393,
+  "ko_b": "鍮꾨낫?몄쥖?뚯쟾 ?쒖?媛 ?덈뒗 援먯감濡쒖뿉 ????ㅻ챸?대떎. 留욌뒗 寃껋??",
+  "ko_c": [
+   "?좏샇? 愿怨꾩뾾???ㅻⅨ 援먰넻??二쇱쓽?섎㈃??醫뚰쉶?꾪븷 ???덈떎.",
+   "?곸깋?좏샇???ㅻⅨ 援먰넻??二쇱쓽?섎㈃??醫뚰쉶?꾪븷 ???덈떎.",
+   "?뱀깋?좏샇???ㅻⅨ 援먰넻??二쇱쓽?섎㈃??醫뚰쉶?꾪븷 ???덈떎.",
+   "?⑹깋?좏샇???ㅻⅨ 援먰넻??二쇱쓽?섎㈃??醫뚰쉶?꾪븷 ???덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following instructions about an intersection with an unprotected left-turn sign is correct?",
+  "tr_c": [
+   "You can turn left regardless of the signal as long as you look out for traffic.",
+   "You can turn left at a red light while looking out for traffic.",
+   "You can turn left at a green light while looking out for traffic.",
+   "You can turn left at a yellow light while looking out for traffic."
+  ]
+ },
+ {
+  "n": 394,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李⑥쓽 ?띾룄? 愿?⑦븯??留욌뒗 寃껋??",
+  "ko_c": [
+   "怨좎냽?꾨줈??理쒖??띾룄??留ㅼ떆 50?щ줈誘명꽣濡?洹쒖젙?섏뼱 ?덈떎.",
+   "?먮룞李⑥쟾?⑸룄濡쒖뿉?쒕뒗 理쒓퀬?띾룄???쒗븳?섏?留?理쒖??띾룄???쒗븳?섏? ?딅뒗??",
+   "?쇰컲?꾨줈?먯꽌??理쒖??띾룄? 理쒓퀬?띾룄瑜??쒗븳?섍퀬 ?덈떎.",
+   "?몃룄 2李⑤줈 ?댁긽 怨좎냽?꾨줈??理쒓퀬?띾룄??李⑥쥌??愿怨꾩뾾???숈씪?섍쾶 洹쒖젙?섏뼱 ?덈떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is a correct statement regarding the speed of motor  vehicles?",
+  "tr_c": [
+   "The minimum speed limit on expressways is 50 km/h.",
+   "Automobile roads have a maximum speed limit, but no minimum speed limit.",
+   "There are maximum and minimum speed limits on normal roads.",
+   "The maximum speed limit on expressways with more than two lanes in one direction is the same for all types of  vehicles."
+  ]
+ },
+ {
+  "n": 395,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???욎?瑜닿린??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?욎감媛 ?ㅻⅨ 李⑤? ?욎?瑜닿퀬 ?덈뒗 寃쎌슦?먮뒗 ?욎?瑜닿린?????덈떎.",
+   "?곕꼸 ?덉뿉???욎?瑜닿퀬????寃쎌슦?먮뒗 諛섎뱶???곗륫?쇰줈 ?댁빞 ?쒕떎.",
+   "?몃룄 1李⑤줈 ?꾨줈?먯꽌 ?욎?瑜닿린???⑹깋?ㅼ꽑 援ш컙?먯꽌留?媛?ν븯??",
+   "援먯감濡??댁뿉?쒕뒗 ?욎?瑜닿린媛 湲덉??섏뼱 ?덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements regarding overtaking is correct?",
+  "tr_c": [
+   "You can overtake a vehicle that is in the process of overtaking another vehicle.",
+   "You must overtake on the right when in a tunnel.",
+   "Overtaking on a road with one lane in one direction is permitted only in an area with solid yellow lines.",
+   "Overtaking is prohibited in intersections."
+  ]
+ },
+ {
+  "n": 396,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈??以묒븰?좉낵 愿?⑤맂 ?ㅻ챸?대떎. 留욌뒗 寃껋??",
+  "ko_c": [
+   "?⑹깋?ㅼ꽑???⑥꽑??寃쎌슦???욎?瑜닿린媛 媛?ν븯??",
+   "媛蹂李⑤줈?먯꽌???좏샇湲곌? 吏?쒗븯??吏꾪뻾諛⑺뼢??媛???쇱そ???덈뒗 ?⑹깋 ?먯꽑??留먰븳??",
+   "?몃룄 1李⑤줈??吏諛⑸룄?먯꽌 踰꾩뒪媛 ?뱁븯李⑤? ?꾪빐 ?뺤감??寃쎌슦?먮뒗 ?⑹깋?ㅼ꽑??以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?????덈떎.",
+   "以묒븰?좎? ?꾨줈????씠 理쒖냼 4.75誘명꽣 ?댁긽???뚮????ㅼ튂媛 媛?ν븯??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding the centerline on a road is correct?",
+  "tr_c": [
+   "Overtaking is allowed if the center is marked with a yellow solid line.",
+   "The centerline of a reversible lane is the leftmost yellow broken line in the direction of traffic indicated by traffic signals.",
+   "A bus stopped on a provincial road with one lane in one direction can be overtaken by crossing the yellow solid  centerline.",
+   "A centerline can be installed on roads at least 4.75 m wide."
+  ]
+ },
+ {
+  "n": 397,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 2李⑤줈瑜??댁슜?섏뿬 二쇳뻾?????덈뒗 ?먮룞李⑤뒗?",
+  "ko_c": [
+   "?붾Ъ?먮룞李?,
+   "?뱀닔?먮룞李?,
+   "嫄댁꽕湲곌퀎",
+   "?뙿룹쨷?뺤듅?⑹옄?숈감"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following vehicles may drive along the second lane ofan  expressway with three lanes in one direction?",
+  "tr_c": [
+   "Trucks",
+   "Special vehicles",
+   "Vehicles fitted with construction equipment",
+   "Small and mid-sized passenger vehicles"
+  ]
+ },
+ {
+  "n": 398,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몃룄 2李⑤줈 怨좎냽?꾨줈?먯꽌 1李⑤줈媛 李⑤웾 ?듯뻾??利앷? ?깆쑝濡??명븯??遺?앹씠?섍쾶 ?쒖냽(   )?щ줈誘명꽣 誘?留뚯쑝濡??듯뻾???섎컰???녿뒗 寃쎌슦?먮뒗 ?욎?瑜닿린瑜??섎뒗 寃쎌슦媛 ?꾨땲?붾씪???듯뻾?????덈떎. (   ) ?덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "80",
+   "90",
+   "100",
+   "110"
+  ],
+  "a": "1",
+  "tr_b": "Under the Road Traffic Act, on an expressway with two lanes in one direction, if the first lane must inevitably be used with speed limit set to less than ( ) km/h due to an increase in traffic volume, vehicles are allowed to drive in the first lane even if they are not overtaking. Which of the following fills in the blank correctly?",
+  "tr_c": [
+   "80",
+   "90",
+   "100",
+   "110"
+  ]
+ },
+ {
+  "n": 399,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎냽?꾨줈 媛볤만 ?댁슜??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "議몄쓬?댁쟾 諛⑹?瑜??꾪빐 媛볤만???뺤감 ???댁떇?쒕떎.",
+   "?대룍???띻꼍 媛먯긽???꾪빐 媛볤만??二쇱감?쒕떎.",
+   "怨좎냽?꾨줈 二쇳뻾李⑤줈???뺤껜媛 ?덈뒗 ?뚯뿉??媛볤만濡??듯뻾?쒕떎.",
+   "遺?앹씠???ъ쑀?놁씠 媛볤만濡??듯뻾???뱀슜?먮룞李??댁쟾?먯쓽 踰붿튃湲덉븸? 6留??먯씠??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is true about using an expressway shoulder?",
+  "tr_c": [
+   "If drowsy while driving, you can pull over on the shoulder to take a rest.",
+   "You can park on the shoulder to appreciate a good sunrise.",
+   "You can drive on the shoulder when the freeway is congested.",
+   "The traffic penalty for driving on the shoulder without good cause is a fine of KRW 60,000."
+  ]
+ },
+ {
+  "n": 400,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몃룄 5李⑤줈 怨좎냽?꾨줈?먯꽌 李⑤줈???곕Ⅸ ?듯뻾李⑥쓽 湲곗????곕Ⅴ硫?紐?李⑤줈源뚯? ?쇱そ 李⑤줈?멸??(?? ?뚰넻?  ?먰솢?섎ŉ ?꾩슜李⑤줈? 媛?ㅺ컧??李⑤줈 ?놁쓬)",
+  "ko_c": [
+   "1~2李⑤줈",
+   "2~3李⑤줈",
+   "1~3李⑤줈",
+   "2李⑤줈 留?
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, on an expressway with five lanes in one direction, up to which lane is considered the left lane based on the standard of traffic flow in each lane? (Assuming smooth traffic flow and no designated lanes or acceleration/deceleration lanes)",
+  "tr_c": [
+   "Lanes 1 to 2",
+   "Lanes 2 to 3",
+   "Lanes 1 to 3",
+   "The second lane only"
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path('translations/audit/queue/209_choices_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+def fix(s):
+    try: return s.encode('cp949').decode('utf-8')
+    except: return s
+for x in data:
+ print('\\n',x['n'], 'A',x.get('a'))
+ print('B KO',fix(x['ko_b']))
+ print('B TR',x['tr_b'])
+ for i,(k,t) in enumerate(zip(x['ko_c'],x['tr_c']),1): print(i,fix(k),'|||',t)
+ if 'check' in x or 'detail' in x: print('AUTO',x.get('check'),x.get('detail'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:44:06.683875Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:16 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 681ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:16 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/209_choices_en.json'|ConvertFrom-Json; "'$u=[Text.Encoding]::UTF8; $k=[Text.Encoding]::GetEncoding(949); function F($s){try{$u.GetString($k.GetBytes($s))}catch{$s}}; foreach($x in $d|Where-Object {$_.n -le 382}){"`n$($x.n) A=$($x.a)`nBKO=$(F $x.ko_b)`nBTR=$($x.tr_b)"; for($i=0;$i -lt $x.ko_c.Count;$i++){"$($i+1) $(F $x.ko_c[$i]) ||| $($x.tr_c[$i])"}; if($x.check -or $x.detail){"AUTO $($x.check) $($x.detail)"}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 718ms:
+
+361 A=1
+BKO=���α�����ɻ� �����ο��� ��ȸ���� ���� ���� ������ ���� �����?
+BTR=What is the most appropriate method of turning left at an intersection under the Road Traffic Act?
+1 �߾Ӽ��� ���� �����ϸ鼭 ������ �߽� �������� ��ȸ���Ѵ�. ||| Slow down along the centerline and turn left through the inner side of the intersection’s center.
+2 ��ȣ �����ο��� ��ȣ��ȸ�� ��� ����ǥ���� �ִ� ��� ������ȭ���� ��ȸ���� ���ȴ�. ||| Left turns are allowed at a red light at a signalized intersection if there is an “unprotected left turn” sign.
+3 ��ȣ ���� �����ο��� ���� ���� �� ��� ��ȸ�������� ���������� �켱�Ѵ�. ||| At a signalized intersection, a left-turning vehicle has priority over a vehicle traveling straight ahead.
+4 ���� ������ ���� ��� 3���� ���ο����� �������ο��� ��ȸ���ϴ� �͵� ���ȴ�. ||| On a one-way road with three lanes, turning left from the right lane is allowed if the traffic is light.
+
+362 A=4
+BKO=���α�����ɻ� ���������� ���� ������ ���������� �˸��� ����?
+BTR=Which of the following is the proper method of passing through an intersection without traffic control?
+1 �¿츦 Ȯ���� �� ���� ��쿡�� �����Ͽ��� �Ѵ�. ||| Drive slowly when it is impossible to check the sides.
+2 ��ȸ���Ϸ��� ���� ������������ �켱 �����ؾ� �Ѵ�. ||| A vehicle turning left has the right of way over a vehicle traveling straight.
+3 ��ȸ���Ϸ��� ���� ������������ �켱 �����ؾ� �Ѵ�. ||| A vehicle turning right has the right of way over a vehicle traveling straight.
+4 �����ϰ� �ִ� ������ ������ �����ϴ� ������ ���� ���� ��� �����Ͽ��� �Ѵ�. ||| You should drive slowly when the intersection is wider than the road you are on.
+
+363 A=1
+BKO=������ ��Ȱ�� ����� ������ ���Ͽ� ȸ���������� ��ġ�� ����Ǵ� ����?
+BTR=In which of the following locations is the installation of a roundabout recommended for ensuring smooth traffic  flow and safety on the road?
+1 ���뷮 ������ ���� ������, ������ ������� ���� �߻��ϴ� �� ||| Locations where traffic volumes are not very high, but there are many intersection accidents
+2 �����ο��� �ϳ� �̻��� ���ٷΰ� ��� 3���� �̻��� �� ||| Locations where there are one or more access roads at the intersection with three or more lanes in one direction
+3 ȸ���������� ���뷮 ������ ó���뷮�� �ʰ��ϴ� �� ||| Locations where the traffic volume at the roundabout exceeds its capacity
+4 ��ȣ������ �ʿ��� ���� �� ȸ���������̸� ����ȿ���� ���ҵǴ� �� ||| Locations where the presence of a roundabout in a segment necessary for signal coordination would reduce the  effectiveness of coordination
+
+364 A=2
+BKO=ȸ�������ο� ���� �������� �´� ����?
+BTR=Which of the following statements correctly describes a roundabout?
+1 ȸ�������δ� ��ȣ�����ο� ���� �������� ���� ����. ||| Roundabouts have more conflicting points than signalized intersections.
+2 ���� �� ȸ�������� ���� ���� ������ ���� ������ �纸������ ����Ͽ��� �Ѵ�. ||| When entering, you must wait at the yield line until there is enough space within the roundabout.
+3 ��ȣ�� ��ġ�� ���������� �����Ͽ� ������ ���� ���뷮�� ó���Ѵ�. ||| Traffic lights are installed at a roundabout to guide vehicles and facilitate traffic flow through the intersection.
+4 ȸ�� �߿� �ִ� ���� �����ϴ� �������� �纸�ؾ� �Ѵ�. ||| A vehicle that has already entered a roundabout must yield to an entering vehicle.
+
+365 A=1
+BKO=���α�����ɻ� �����ڰ� ��ȸ�� �� ��Ȯ�ϰ� ������ �� �ֵ��� ������ ���� ����������� �� ���ǥ�ô� �����ΰ�?
+BTR=What is the term used to refer to the road surface markings of white broken lines designed to guide left turns  at intersections?
+1 ������ ||| Turn guidelines
+2 ���弱 ||| Extension lines
+3 ���ü� ||| Instruction lines
+4 ������ ||| Regulation lines
+
+366 A=2, 4
+BKO=�����ο��� ��ȸ���ϴ� ���� �������� ���� ������ ���� ��� 2������?
+BTR=Which of the following are the TWO correct methods of turning left safely at an intersection?
+1 �ݴ� ���⿡ �����ϴ� ������ �����ؾ� �Ѵ�. ||| Watch out for stopping vehicles from the opposite direction.
+2 �ݴ� ���⿡�� ��ȸ���ϴ� ������ �����ϸ� �ȴ�. ||| Watch out for right-turning vehicles from the opposite direction.
+3 ���� ���⿡�� ��ȸ���ϴ� ������ �����ؾ� �Ѵ�. ||| Watch out for right-turning vehicles from the same direction.
+4 �Բ� ��ȸ���ϴ� ���� ������ �����ؾ� �Ѵ�. ||| Watch out for left-turning vehicles in the lane to your side.
+
+367 A=1, 3
+BKO=�����ο��� ��?��ȸ���� �� �� ���� ������ ���� ��� 2������?
+BTR=Which of the following are the TWO safest methods of turning left/right at an intersection?
+1 ��ȸ�� �ÿ��� �̸� ������ ���� �����ڸ��� �����ϸ鼭 ��ȸ���ؾ� �Ѵ�. ||| To turn right, take the rightmost lane of the road and slowly turn right.
+2 ȥ���� ���ο��� ��ȸ���� ������ ���� �������� ������� �ż��� ����ؾ� �Ѵ�. ||| To turn left on a congested road, disregard the turn guidelines on the left and drive quickly.
+3 ��ȸ���� ������ �̸� ������ �߾Ӽ��� ���� �����ϸ鼭 �������� �߽� ������ �̿��Ͽ� ��ȸ���ؾ� �Ѵ�. ||| To turn left, drive slowly along the centerline and turn left along the inner part of the intersection.
+4 �������� �ִ� �����ο��� ��ȸ���� ������ ���� ������ ������ ������ ����ؾ� �Ѵ�. ||| To turn left at an intersection marked with turn guidelines, turn with the left tires passing through the inside of the turn  guidelines.
+
+368 A=1
+BKO=���α�����ɻ� ȸ���������� ���������� �´� ����?
+BTR=Which of the following is a correct guideline with regard to passing through a roundabout?
+1 ȸ���ϰ� �ִ� ���� �켱�̴�. ||| A car inside the roundabout has the right of way.
+2 �����Ϸ��� ���� �켱�̴�. ||| A car about to enter the roundabout has the right of way.
+3 ������ ���� �켱�̴�. ||| A car exiting the roundabout has the right of way.
+4 ������ �켱������ ����. ||| There are no set rules on who has the right of way.
+
+369 A=3
+BKO=���α�����ɻ� ȸ�������ο����� ���� ������ �ƴ� ����?
+BTR=Which of the following is NOT prohibited at a roundabout?
+1 ���� ||| Stopping
+2 ���� ||| Parking
+3 ���� �� �Ͻ����� ||| Driving slowly and stopping temporarily
+4 �������� ||| Overtaking
+
+370 A=1
+BKO=���� �� ȸ�������ο��� ���� �켱���� �����Ǵ� ������?
+BTR=Which of the following vehicles are granted the right of way at a roundabout?
+1 ȸ�������� �� ȸ�����ο��� ���� ���� ���� ||| Vehicles moving on the section of the road within the roundabout
+2 ȸ�������� ���� �� ��ȸ���Ϸ��� ���� ||| Vehicles trying to turn left before entering the roundabout
+3 ȸ�������� ���� �� ��ȸ���Ϸ��� ���� ||| Vehicles trying to turn right before entering the roundabout
+4 ȸ�������� ���� �� ��ȸ�� �� ��ȸ���Ϸ��� ���� ||| Vehicles trying to turn left or right before entering the roundabout
+
+371 A=4
+BKO=ȸ�������ο� ���� �������� ���� ���� ����?
+BTR=Which of the following is an INCORRECT guideline on how to use roundabouts?
+1 ������ �������� �����ο� �����ϵ��� �Ǿ� �ִ�. ||| Vehicles must approach the roundabout slowly.
+2 ȸ���ϰ� �ִ� ������ �켱�̴�. ||| A car inside the roundabout has the right of way.
+3 ��ȣ�� ���� ������ ���������� ���� ������ �����ϴ�. ||| Vehicles may continually enter the roundabout as there are no signals.
+4 ȸ�������δ� �ð�������� ȸ���Ѵ�. ||| Turn clockwise in the roundabout.
+
+372 A=1, 4
+BKO=ȸ�������� ���������� ���� �˸��� 2������?
+BTR=Which of the following are the most appropriate ways of navigating a roundabout? (Select TWO)
+1 ������ ���� �� �Ͻ����� �� ������ �� ���ʿ��� �ٰ����� ������ ������ �����Ѵ�. ||| Before entering a roundabout, come to a complete stop and enter when there are no approaching vehicles from the left.
+2 ȸ�������ο����� ȸ���� �ð�������� ȸ���ؾ� �Ѵ�. ||| At a roundabout, the traffic circulates clockwise.
+3 ȸ�������θ� ��?���� �� ������ �������õ��� �۵��� �ʿ䰡 ����. ||| There is no need to use turn signals when entering or exiting a roundabout.
+4 ȸ�������� ���� ������ �Ŀ��� �ٸ� ������ �����ϸ鼭 �����ؾ� �Ѵ�. ||| Even after entering a roundabout, you should continue to be cautious of other vehicles and proceed with care.
+
+373 A=4
+BKO=���α�����ɻ� �Ͻ������Ͽ��� �� ��ҷ� �´� ����?
+BTR=Which of the following is a place where you should stop temporarily while driving?
+1 ������ ���η��� �α� ||| Near a curve on a road
+2 ���ĸ� ��Ż���� ������ ||| Descent on a steep slope
+3 ��Ż���� ������� �α� ||| Near the top of a slope
+4 ���������� ���� ������ ����� ������ ||| At an intersection with no traffic control and heavy traffic
+
+374 A=1
+BKO=���α�����ɻ� �ݵ�� �Ͻ������Ͽ��� �� ��ҷ� �´� ����?
+BTR=According to the Road Traffic Act, which of the following is a place where you should stop temporarily?
+1 ���������� �ϰ� ���� �ƴ��ϰ� �¿츦 Ȯ���� �� ���� ������ ||| An intersection without a traffic control officer where traffic to the left and right cannot be checked
+2 �����ȭ�� ���� �ִ� ������ ||| An intersection where the lights have turned green
+3 ������ ����� �ٸ� �� �Ǵ� �ͳ� �� ||| A busy bridge/tunnel
+4 ������ ���η��� �α� �Ǵ� ��Ż���� ������� �α� ||| In the vicinity of a curve or the highest point on a slope
+
+375 A=2
+BKO=���α�����ɻ� �Ͻ������� �ؾ� �ϴ� ��Ҵ�?
+BTR=Which of the following is a place where you should stop temporarily pursuant to the Road Traffic Act?
+1 �ͳ� �� �� �ٸ� �� ||| Inside a tunnel and on a bridge
+2 ��ȣ���� ���� ������ ����� ������ ||| At a busy intersection with no traffic lights
+3 ���ĸ� ��Ż���� ������ ||| On a descending section of a steep hill
+4 ���ΰ� ���η��� �α� ||| A curved section of a road
+
+376 A=4
+BKO=������ �ӵ����� ������ ���� �������� ���� ���� ����?
+BTR=Which of the following is NOT correct regarding the variable speed limit section?
+1 ��Ȳ�� ���� ���� �ӵ��� ��ȭ��Ű�� �ɵ����� �ý����̴�. ||| It is an active system that changes the regulated speed in accordance with the situation.
+2 ���� �ӵ� ���ڸ� �ٲ㼭 ǥ���� �� �ִ� ����ǥ������ ����Ѵ�. ||| It uses an electric sign that can display different speeds by changing the numbers.
+3 ������ �ӵ����� ǥ���� �ְ�ӵ��� ���� ��쿡�� �̿� ����� �Ѵ�. ||| When the maximum speed is set with a variable speed limit sign, it must be followed.
+4 ������ �ӵ����� ǥ���� ���� �ְ�ӵ��� ����ǥ�� �ְ�ӵ��� �ٸ� ���� ����ǥ�� �ְ�ӵ��� ����� �Ѵ�. ||| When the maximum speed determined by the variable speed limit sign and the maximum speed of the safety sign show different values, the maximum speed indicated by the safety sign must be followed.
+
+377 A=4
+BKO=���α������ (    )�� �����ڴ� ö�� �ǳθ��� ����Ϸ��� ��� �ǳθ� �տ��� (    )�Ͽ� �������� Ȯ���� �Ŀ�  ����Ͽ��� �Ѵ�. (   )�ȿ� �´� ����?
+BTR=According to the Road Traffic Act, the driver of ( ) must ( ) in front of a railway crossing and then pass through after confirming that it is safe to cross. Which of the following best fills the parentheses?
+1 ��� ��, ���� ||| any vehicle - slow down
+2 ��� �ڵ����� �Ǵ� �Ǽ����, ���� ||| any motor vehicle or heavy equipment - slow down
+3 ��� �� �Ǵ� ��� ����, �Ͻ����� ||| any vehicle or tank - stop
+4 ��� �� �Ǵ� ��� ����, �Ͻ����� ||| any vehicle or tram - stop
+
+378 A=3
+BKO=���� �� ��ӵ��� ����񿡼� ���� ������ ���� �����?
+BTR=Which of the following is the safest method of driving at an expressway interchange?
+1 ����񿡼��� ������ ��ü�ǹǷ� ��� ������ ���ؼ� ������ �������� ���ϵ��� �������Ѵ�. ||| As interchanges tend to be congested, apply sudden brakes to discourage vehicles behind you from following closely and prevent potential accidents accordingly.
+2 ����񿡼��� �ӵ��� ���� ������ �������Ƿ� �Ͻ������� �� ����Ѵ�. ||| As drivers tend to become less aware of speed at an interchange, stop momentarily before continuing.
+3 �����ϰ��� �ϴ� ������� ����ģ ��� ���� ������� �̿��Ѵ�. ||| If the desired interchange has already been passed, use the next interchange.
+4 �ް����Ͽ� ��������� �����Ѵ�. ||| Accelerate quickly to enter an interchange.
+
+379 A=4
+BKO=���α�����ɻ� ������ �����ڰ� ������ �������� �켭 ��ü�� ���� ������ ���о��� �� ���ؾ� �� ��ġ�� ����  �ùٸ� ����?
+BTR=Which of the following is the most correct action to take when the driver of the vehicle ahead stretches his/her  arm horizontally out of the left side of the vehicle?
+1 ������ ��ȸ���� ���� ����ǹǷ� �����Ѵ�. ||| Slow down as the front vehicle is expected to turn right.
+2 ������ Ⱦ���� ���� ����ǹǷ� ���� ���η� ���κ����Ѵ�. ||| Switch to an upper lane as the front vehicle is expected to cross.
+3 ������ ������ ���� ����ǹǷ� ���������Ѵ�. ||| Overtake the front vehicle as it is expected to make a U-turn.
+4 ������ ���� ������ ����ǹǷ� �����Ѵ�. ||| Slow down as the front vehicle is expected to change lanes.
+
+380 A=1
+BKO=���α�����ɻ� �����ڰ� ��ȸ���ϰ��� �� �� ����ϴ� ����ȣ��?
+BTR=Which of the following hand signals is used to indicate your intent to turn right?
+1 ������ ���� ������ ���� �Ȳ�ġ�� ���� �������� �ø���. ||| Extend your left arm out to the left and bend your forearm vertically upward.
+2 ������ �������� �켭 ��ü�� ���� ������ ���δ�. ||| Extend your left arm out to the left, parallel to the road.
+3 �������� ��ü�� ���� ������ �������� �켭 ���� �յڷ� ����. ||| Extend your right arm out to the right and hold it parallel to the road, and wave the extended arm forwards and  backwards.
+4 ������ ��ü ������ ���� 45�ƹ����� ���. ||| Stick your left arm out of the vehicle and bend your forearm downward at an angle of 45°.
+
+381 A=1
+BKO=��ȣ���� ��ȣ�� ���� �����ο� �����Ϸ��µ�, ������������ �����϶�� ����ȣ�� ���´�. ���� �� ���� ������ ���� �����?
+BTR=As a vehicle is about to enter an intersection according to the traffic signal, a police officer gives a hand signal  to stop. In this scenario, which of the following is the safest way to drive?
+1 ������ ������ �Ͻ������Ѵ�. ||| Stop just before the stop line.
+2 �ް����Ͽ� �����Ѵ�. ||| Decelerate suddenly to slow down.
+3 ��ȣ���� ��ȣ�� ���� �����Ѵ�. ||| Proceed according to the signal from the traffic light.
+4 �����ο� ������ �����Ѵ�. ||| Enter the intersection slowly.
+
+382 A=2
+BKO=�߾Ӽ��� Ȳ�� ������ Ȳ�� �Ǽ����� ������ �������� ��ġ�� ���� �������⿡ ���� �������� �´� ����?
+BTR=Which of the following is true about overtaking on a road with a combination of dotted yellow and solid yellow  centerlines?
+1 Ȳ�� �Ǽ��� Ȳ�� ���� ��� �ʿ����� �߾Ӽ��� �Ѿ� ���������� �� ����. ||| Overtaking is not allowed from either the yellow broken line or the yellow solid line.
+2 Ȳ�� ������ �ִ� �������� �߾Ӽ��� �Ѿ� ���������� �� �ִ�. ||| Overtaking is allowed from the side of the yellow broken line.
+3 ������ Ȯ�εǸ� Ȳ�� �Ǽ��� Ȳ�� ���� ������� ���������� �� �ִ�. ||| Overtaking is allowed from the sides of both yellow broken line and yellow solid line if it is clear that it is safe.
+4 Ȳ�� �Ǽ��� �ִ� �������� �߾Ӽ��� �Ѿ� ���������� �� �ִ�. ||| Overtaking is allowed from the side of the yellow solid line.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/209_choices_en.json'|ConvertFrom-Json; "'$u=[Text.Encoding]::UTF8; $k=[Text.Encoding]::GetEncoding(949); function F($s){$u.GetString($k.GetBytes($s))}; foreach($x in $d|Where-Object {$_.n -ge 383}){"`n$($x.n) A=$($x.a)`nBKO=$(F $x.ko_b)`nBTR=$($x.tr_b)"; for($i=0;$i -lt $x.ko_c.Count;$i++){"$($i+1) $(F $x.ko_c[$i]) ||| $($x.tr_c[$i])"}; if($x.check -or $x.detail){"AUTO $($x.check) $($x.detail)"}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 698ms:
+
+383 A=2
+BKO=���� �� ö��ǳθ񿡼� ���� �ٶ����� ��������?
+BTR=Which of the following is the correct method of driving through a railway crossing?
+1 ������ ���� ������ �׳� ����Ѵ�. ||| Drive through if there are no trains coming.
+2 �Ͻ������Ͽ� ������ Ȯ���ϰ� ����Ѵ�. ||| Come to a stop, check that it is safe, and drive through.
+3 ���Ѽӵ� �̻����� ����Ѵ�. ||| Drive through at a speed above the speed limit.
+4 ���ܱⰡ ���������� �ϴ� ���� ���� ����Ѵ�. ||| Drive at an increased speed if the crossing gate is about to close.
+
+384 A=1
+BKO=���α�����ɻ� ���θ� �������� �ٲٰ��� �� ���� ������� �´� ����?
+BTR=Which of the following is the correct method of turning left?
+1 �� ������ �ϰ��� �ϴ� ������ �̸��� �� 30����(��ӵ��ο����� 100����) �̻��� ������ �̸����� �� ���� �� �����ñ⸦ �����Ѵ�. ||| Turn on the left turn signal at least 30m (100m on expressways) away from where you want to turn left.
+2 �� ������ �ϰ��� �ϴ� ������ �̸��� �� 10����(��ӵ��ο����� 100����) �̻��� ������ �̸����� �� ���� �� �����ñ⸦ �����Ѵ�. ||| Turn on the left turn signal at least 10m (100m on expressways) away from where you want to turn left.
+3 �� ������ �ϰ��� �ϴ� ������ �̸��� �� 20����(��ӵ��ο����� 80����) �̻��� ������ �̸����� �� ���� �������ñ� �� �����Ѵ�. ||| Turn on the left turn signal at least 20m (80m on expressways) away from where you want to turn left.
+4 �� ������ �ϰ��� �ϴ� �������� ���� �������ñ⸦ �����Ѵ�. ||| Turn on the left turn signal when you reach the location where you want to turn left.
+
+385 A=4
+BKO=���α�����ɻ� �ڵ������� �ӵ��� �����Ͽ� ���� ���� ����?
+BTR=According to the Road Traffic Act, which of the following is NOT a correct statement regarding the speed of  motor vehicles, etc.?
+1 �Ϲݵ���, �ڵ������뵵��, ��ӵ��ο� �� ���� ���� ���� ������ �����ӵ��� �����ϰ� �ִ�. ||| Separate legal speed limits are applied to various roads depending on whether it is a general road, an automobile road, or an expressway, and on the total number of lanes.
+2 �Ϲݵ��ο��� �����ӵ� ������ ����. ||| There are no minimum speed limits on regular roads.
+3 �̻���� �ÿ��� ���ӿ����� �Ͽ��� �Ѵ�. ||| You must drive at a reduced speed in poor weather conditions.
+4 ������ �ӵ�����ǥ���� ���� �ְ�ӵ��� �� ���� ����ǥ���� ���� �ְ�ӵ��� �ٸ� ��� �� ���� ����ǥ���� ����� �Ѵ�. ||| If the speed limit set by the variable speed limit sign and the speed limit set by a speed limit safety sign are different, the latter must be followed.
+
+386 A=4
+BKO=���α�����ɻ� �ڵ������� �ӵ��� �����Ͽ� ���� ����  ����?
+BTR=According to the Road Traffic Act, which of the following is NOT a correct statement regarding the speed of  motor vehicles, etc.?
+1 �ڵ������� �ӵ��� ��������� �������� ���輺�� Ŀ���� ���� ������ ������ �����Ϸ��� ���̴�. ||| Speed limits are set because the likelihood of traffic accidents increases at higher vehicle speeds.
+2 �ڵ������뵵�� �� ��ӵ��ο��� ������ ȿ������ �����ϱ� ���� �����ӵ��� �����ϰ� �ִ�. ||| Minimum speed limits are set to maintain the efficiency of automobile roads and expressways.
+3 ����û�� �Ǵ� �á�������û���� ������ ������ ��Ȱ�� ������ ���� ������ �ӵ��� ������ �� �ִ�. ||| Provisional speed limits can be set by the commissioner general of the Korean National Police Agency, or the commissioner of the City/Do (Province) police agency for road safety and efficiency.
+4 ��ӵ��δ� �á�������û����, ��ӵ��θ� ������ ���δ� ����û���� �ӵ� ���������̴�. ||| For the setting of speed limits on expressways, the commissioner of the City/Do (Province) police agency has jurisdiction; for all other roads, the commissioner general of the Korean National Police Agency has jurisdiction.
+
+387 A=1, 2
+BKO=���α�����ɻ� ��ȣ������ �Ǵ� ��� 2������?
+BTR=Which TWO constitute a violation of a traffic signal?
+1 ������ȣ �� �������� �ʰ��Ͽ� ���� ||| Stopping over the stop line at a red light
+2 ������ �̸��� �� Ȳ����ȣ �� �����ο� ���� ||| Entering an intersection when the lights have already turned yellow
+3 Ȳ�� ���� �� �ٸ� ���� �Ǵ� ����ǥ���� ǥ�ÿ� �����ϸ鼭 ���� ||| When there is a yellow flashing light, you must drive carefully while being mindful of other traffic markings or safety  signs
+4 ���� ���� �� ������ ������ �Ͻ������� �� �ٸ� ���뿡 �����ϸ鼭 ���� ||| Stopping temporarily in front of the stop line when the lights are blinking red, before driving through carefully
+
+388 A=2, 3
+BKO=��� 3������ ������ �����ο��� ��ȸ���� �� �ùٸ� ������ 2������?
+BTR=Which of the following are the correct methods of turning right at an intersection on a road with three lanes in  one direction? (Select TWO)
+1 ��ȸ���� ������ ������ �������� ���� ���õ��� �Ѽ� ��������� �˷� �־�� �Ѵ�. ||| When turning right, you should turn on the turning signal at the intersection just before proceeding to indicate your  intended direction of travel.
+2 ���� ������ Ⱦ�ܺ��� ���� ��ȣ���� ����̶� �����ڰ� ������ ����� �� �ִ�. ||| Even if the cross light at the right-side crosswalk is green, you can proceed if there are no pedestrians.
+3 ��ȸ�� ������� ������ ��쿡�� �����ڰ� ��� ����� �� ����. ||| If the right-turn signal is red, you cannot proceed even if there are no pedestrians.
+4 ��� 3������ ���ο����� 2���ο��� ��ȸ���ϴ� ���� �����ϴ�. ||| It is safer to turn right from the second lane on a road with three lanes in one direction.
+
+389 A=1. 3
+BKO=������ �ڵ����������� �������� ���ذ� �������� ���� ��ȸ���ϰ��� �� �� �����ؾ��� ����������� �ùٸ� �� 2������?
+BTR=According to the Motor Vehicle Management Act, which of the following are true about the criteria for a bus  and the precautions when turning left behind a bus? (Select TWO)
+1 ������������ 36�ν� �̻��� �ǹ��ϸ�, ������������ ���� ��ȣ���� �� ���� �� �����Ƿ� �����Ÿ��� �����ϸ鼭 �����Ѵ�. ||| A bus refers to a vehicle with seating capacity of 36 or more persons. When driving behind a bus, you must drive slowly, keeping a safe distance from the bus so that you can see the traffic lights.
+2 ������������ 16�� �̻� 35�ν� ���ϸ� �ǹ��ϸ�, �������� �������ñ⸦ �Ѵ� ��� �ٸ� ���� ����� �� �����Ƿ�        �����Ÿ��� ���� �����Ѵ�. ||| A mini-bus refers to a vehicle with seating capacity of 16 ~ 35 persons. When you are driving behind a mini-bus and the mini-bus driver turns on a turn signal, slow down and catch up to the mini-bus so that other vehicles will not cut in front of you.
+3 ������������ 15�ν� ���ϸ� �ǹ��ϸ�, �¿����� ���� �����߽��� ��� ������ �� �����Ƿ� �����Ÿ��� �����ϸ� �����Ѵ�. ||| A van refers to a vehicle with seating capacity of 15 or fewer persons. Since vans are more prone to overturning due to their high center of gravity compared to passenger vehicles, you must keep a safe distance from them.
+4 ������������ ��ⷮ�� 1200�ý� �̸��� �ǹ��ϸ�, �¿����� �����߽��� ���������� ����� �����Ÿ��� �����ϰ� �ڵ�����. ||| A light van refers to a vehicle with engine displacement below 1,200 cc. Although light vans have the same center of gravity as passenger vehicles, you must keep a safe distance from them.
+
+390 A=1, 3
+BKO=���θ� ���� �� �� ������ ������� 2������?
+BTR=Which TWO correctly describe how to change lanes?
+1 �����ϰ��� �ϴ� ������ �ڵ����� ���� �Ÿ��� ���� �� �ӵ��� ������ ä ���θ� �����Ѵ�. ||| Change lanes while maintaining speed if the car behind you in the lane you are about to enter is far back enough.
+2 �����ϰ��� �ϴ� ������ �ڵ����� ���� �Ÿ��� ���� �� �����ϸ鼭 ���θ� �����Ѵ�. ||| Slow down when changing lanes if the car behind you in the lane you are about to enter is far back enough.
+3 �����ϰ��� �ϴ� ������ �ڵ����� ���� �����ϰ� ���� �� �ӵ��� ���߾� ������ ���� �����Ų��. ||| Let the car behind you in the lane you are about to enter pass if it is approaching.
+4 �����ϰ��� �ϴ� ������ �ڵ����� ���� �����ϰ� ���� �� ���ϰ� ���θ� �����Ѵ�. ||| Change lanes quickly if the car behind you in the lane you are about to enter is approaching.
+
+391 A=1, 4
+BKO=���θ� �����ϴ� ������ ���� �������� �´� �� 2������?
+BTR=Which of the following are TWO correct statements about the lines that separate lanes?
+1 ���ΰ� �Ǽ��� ������ �����ϴ� ��� �Ǽ����� ������������ ���� ������ �Ұ����ϴ�. ||| Where a solid line and a broken line run parallel, you cannot change from the lane near the solid-line to the lane near  the broken-line.
+2 ���ΰ� �Ǽ��� ������ �����ϴ� ��� �Ǽ����� ������������ ���� ������ �����ϴ�. ||| Where a solid line and a broken line run parallel, you can change from the lane near the solid line to the lane near the  broken line.
+3 ���ΰ� �Ǽ��� ������ �����ϴ� ��� �������� �Ǽ��������� ���� ������ �Ұ����ϴ�. ||| Where a solid line and a broken line run parallel, you cannot change from the lane near the broken line to the lane  near the solid line.
+4 ���ΰ� �Ǽ��� ������ �����ϴ� ��� �������� �Ǽ��������� ���� ������ �����ϴ�. ||| Where a solid line and a broken line run parallel, you can change from the lane near the broken line to the lane near  the solid line.
+
+392 A=4
+BKO=���α������ ������ȭ ������ �� �ǹ̴�?
+BTR=According to the Road Traffic Act, what does a flashing red light indicate?
+1 ������ �ٸ� ���뿡 �����ϸ鼭 �����Ͽ��� �Ѵ�. ||| Vehicles and horses must drive slowly while looking out for traffic.
+2 ������ �ٸ� ���뿡 �����ϸ鼭 ������ �� �ִ�. ||| Vehicles and horses may proceed while looking out for traffic.
+3 ������ ����ǥ���� �����ϸ鼭 ������ �� �ִ�. ||| Vehicles and horses may reverse while looking out for safety signs.
+4 ������ ������ ������ �Ͻ������� �� �ٸ� ���뿡 �����ϸ鼭 ������ �� �ִ�. ||| Vehicles and horses must temporarily stop right before the stop line and then proceed while looking out for traffic.
+
+393 A=3
+BKO=��ȣ��ȸ�� ǥ���� �ִ� �����ο� ���� �����̴�. �´� ����?
+BTR=Which of the following instructions about an intersection with an unprotected left-turn sign is correct?
+1 ��ȣ�� ������� �ٸ� ���뿡 �����ϸ鼭 ��ȸ���� �� �ִ�. ||| You can turn left regardless of the signal as long as you look out for traffic.
+2 ������ȣ�� �ٸ� ���뿡 �����ϸ鼭 ��ȸ���� �� �ִ�. ||| You can turn left at a red light while looking out for traffic.
+3 �����ȣ�� �ٸ� ���뿡 �����ϸ鼭 ��ȸ���� �� �ִ�. ||| You can turn left at a green light while looking out for traffic.
+4 Ȳ����ȣ�� �ٸ� ���뿡 �����ϸ鼭 ��ȸ���� �� �ִ�. ||| You can turn left at a yellow light while looking out for traffic.
+
+394 A=1
+BKO=���α�����ɻ� �ڵ����� �ӵ��� �����Ͽ� �´� ����?
+BTR=According to the Road Traffic Act, which of the following is a correct statement regarding the speed of motor  vehicles?
+1 ��ӵ����� �����ӵ��� �Ž� 50ų�ι��ͷ� �����Ǿ� �ִ�. ||| The minimum speed limit on expressways is 50 km/h.
+2 �ڵ������뵵�ο����� �ְ�ӵ��� ���������� �����ӵ��� �������� �ʴ´�. ||| Automobile roads have a maximum speed limit, but no minimum speed limit.
+3 �Ϲݵ��ο����� �����ӵ��� �ְ�ӵ��� �����ϰ� �ִ�. ||| There are maximum and minimum speed limits on normal roads.
+4 ��� 2���� �̻� ��ӵ����� �ְ�ӵ��� ������ ������� �����ϰ� �����Ǿ� �ִ�. ||| The maximum speed limit on expressways with more than two lanes in one direction is the same for all types of  vehicles.
+
+395 A=4
+BKO=���α�����ɻ� �������⿡ ���� �������� �´� ����?
+BTR=Which of the following statements regarding overtaking is correct?
+1 ������ �ٸ� ���� �������� �ִ� ��쿡�� ���������� �� �ִ�. ||| You can overtake a vehicle that is in the process of overtaking another vehicle.
+2 �ͳ� �ȿ��� ���������� �� ��쿡�� �ݵ�� �������� �ؾ� �Ѵ�. ||| You must overtake on the right when in a tunnel.
+3 ��� 1���� ���ο��� ��������� Ȳ���Ǽ� ���������� �����ϴ�. ||| Overtaking on a road with one lane in one direction is permitted only in an area with solid yellow lines.
+4 ������ �������� �������Ⱑ �����Ǿ� �ִ�. ||| Overtaking is prohibited in intersections.
+
+396 A=2
+BKO=���α�����ɻ� ������ �߾Ӽ��� ���õ� �����̴�. �´� ����?
+BTR=Which of the following statements regarding the centerline on a road is correct?
+1 Ȳ���Ǽ��� �ܼ��� ���� �������Ⱑ �����ϴ�. ||| Overtaking is allowed if the center is marked with a yellow solid line.
+2 �������ο����� ��ȣ�Ⱑ �����ϴ� ��������� ���� ���ʿ� �ִ� Ȳ�� ������ ���Ѵ�. ||| The centerline of a reversible lane is the leftmost yellow broken line in the direction of traffic indicated by traffic signals.
+3 ��� 1������ ���浵���� ������ �������� ���� ������ ��쿡�� Ȳ���Ǽ��� �߾Ӽ��� �Ѿ� ���������� �� �ִ�. ||| A bus stopped on a provincial road with one lane in one direction can be overtaken by crossing the yellow solid  centerline.
+4 �߾Ӽ��� ������ ���� �ּ� 4.75���� �̻��� ������ ��ġ�� �����ϴ�. ||| A centerline can be installed on roads at least 4.75 m wide.
+
+397 A=4
+BKO=���α�����ɻ� ��� 3���� ��ӵ��ο��� 2���θ� �̿��Ͽ� ������ �� �ִ� �ڵ�����?
+BTR=According to the Road Traffic Act, which of the following vehicles may drive along the second lane ofan  expressway with three lanes in one direction?
+1 ȭ���ڵ��� ||| Trucks
+2 Ư���ڵ��� ||| Special vehicles
+3 �Ǽ���� ||| Vehicles fitted with construction equipment
+4 �ҡ����������ڵ��� ||| Small and mid-sized passenger vehicles
+
+398 A=1
+BKO=���α�����ɻ� ��� 2���� ��ӵ��ο��� 1���ΰ� ���� ���෮ ���� ������ ���Ͽ� �ε����ϰ� �ü�(   )ų�ι��� �� ������ ������ ���ۿ� ���� ��쿡�� �������⸦ �ϴ� ��찡 �ƴϴ��� ������ �� �ִ�. (   ) �ȿ� �������� �´� ����?
+BTR=Under the Road Traffic Act, on an expressway with two lanes in one direction, if the first lane must inevitably be used with speed limit set to less than ( ) km/h due to an increase in traffic volume, vehicles are allowed to drive in the first lane even if they are not overtaking. Which of the following fills in the blank correctly?
+1 80 ||| 80
+2 90 ||| 90
+3 100 ||| 100
+4 110 ||| 110
+
+399 A=4
+BKO=���α�����ɻ� ��ӵ��� ���� �̿뿡 ���� �������� �´� ����?
+BTR=Which of the following is true about using an expressway shoulder?
+1 �������� ������ ���� ���濡 ���� �� �޽��Ѵ�. ||| If drowsy while driving, you can pull over on the shoulder to take a rest.
+2 �ص��� ǳ�� ������ ���� ���濡 �����Ѵ�. ||| You can park on the shoulder to appreciate a good sunrise.
+3 ��ӵ��� �������ο� ��ü�� �ִ� ������ ����� �����Ѵ�. ||| You can drive on the shoulder when the freeway is congested.
+4 �ε����� �������� ����� ������ �¿��ڵ��� �������� ��Ģ�ݾ��� 6�� ���̴�. ||| The traffic penalty for driving on the shoulder without good cause is a fine of KRW 60,000.
+
+400 A=2
+BKO=���α�����ɻ� ��� 5���� ��ӵ��ο��� ���ο� ���� �������� ���ؿ� ������ �� ���α��� ���� �����ΰ�?(��, ������  ��Ȱ�ϸ� �������ο� ��?���� ���� ����)
+BTR=According to the Road Traffic Act, on an expressway with five lanes in one direction, up to which lane is considered the left lane based on the standard of traffic flow in each lane? (Assuming smooth traffic flow and no designated lanes or acceleration/deceleration lanes)
+1 1~2���� ||| Lanes 1 to 2
+2 2~3���� ||| Lanes 2 to 3
+3 1~3���� ||| Lanes 1 to 3
+4 2���� �� ||| The second lane only
+
+2026-10-10T12:44:19.674943Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+codex
+[
+  {
+    "n": 384,
+    "field": "b",
+    "severity": "major",
+    "issue": "원문은 좌회전이 아니라 차로를 왼쪽으로 변경하는 방법을 묻는데 좌회전으로 오역했다.",
+    "suggestion": "Which of the following is the correct method of changing lanes to the left?"
+  },
+  {
+    "n": 384,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "왼쪽으로 차로를 변경하려는 지점을 좌회전하려는 지점으로 오역했다.",
+    "suggestion": "Activate the left turn signal at least 30 m (100 m on expressways) before the point where you intend to change lanes to the left."
+  },
+  {
+    "n": 384,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "왼쪽으로 차로를 변경하려는 지점을 좌회전하려는 지점으로 오역했다.",
+    "suggestion": "Activate the left turn signal at least 10 m (100 m on expressways) before the point where you intend to change lanes to the left."
+  },
+  {
+    "n": 384,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "왼쪽으로 차로를 변경하려는 지점을 좌회전하려는 지점으로 오역했다.",
+    "suggestion": "Activate the left turn signal at least 20 m (80 m on expressways) before the point where you intend to change lanes to the left."
+  },
+  {
+    "n": 384,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "왼쪽으로 차로를 변경하려는 지점을 좌회전하려는 지점으로 오역했다.",
+    "suggestion": "Activate the left turn signal upon reaching the point where you intend to change lanes to the left."
+  },
+  {
+    "n": 394,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "원문의 '편도 2차로 이상'을 'more than two lanes'로 번역하여 2차로를 제외하는 숫자 범위 오류가 발생했다.",
+    "suggestion": "The maximum speed limit on expressways with two or more lanes in one direction is the same for all types of vehicles."
+  },
+  {
+    "n": 397,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "차종인 '건설기계'를 건설장비가 장착된 차량으로 오역하여 선택지의 차량 분류가 달라졌다.",
+    "suggestion": "Construction machinery"
+  },
+  {
+    "n": 398,
+    "field": "b",
+    "severity": "major",
+    "issue": "원문은 교통량 증가로 시속 80km 미만으로 주행할 수밖에 없는 상황인데, 번역은 제한속도가 80km/h 미만으로 설정된 상황으로 의미를 바꿨다.",
+    "suggestion": "Under the Road Traffic Act, on an expressway with two lanes in one direction, vehicles may use the first lane even when not overtaking if increased traffic volume makes it unavoidable to travel at less than ( ) km/h. Which number correctly fills the blank?"
+  }
+]
+tokens used
+37,321
+[
+  {
+    "n": 384,
+    "field": "b",
+    "severity": "major",
+    "issue": "원문은 좌회전이 아니라 차로를 왼쪽으로 변경하는 방법을 묻는데 좌회전으로 오역했다.",
+    "suggestion": "Which of the following is the correct method of changing lanes to the left?"
+  },
+  {
+    "n": 384,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "왼쪽으로 차로를 변경하려는 지점을 좌회전하려는 지점으로 오역했다.",
+    "suggestion": "Activate the left turn signal at least 30 m (100 m on expressways) before the point where you intend to change lanes to the left."
+  },
+  {
+    "n": 384,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "왼쪽으로 차로를 변경하려는 지점을 좌회전하려는 지점으로 오역했다.",
+    "suggestion": "Activate the left turn signal at least 10 m (100 m on expressways) before the point where you intend to change lanes to the left."
+  },
+  {
+    "n": 384,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "왼쪽으로 차로를 변경하려는 지점을 좌회전하려는 지점으로 오역했다.",
+    "suggestion": "Activate the left turn signal at least 20 m (80 m on expressways) before the point where you intend to change lanes to the left."
+  },
+  {
+    "n": 384,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "왼쪽으로 차로를 변경하려는 지점을 좌회전하려는 지점으로 오역했다.",
+    "suggestion": "Activate the left turn signal upon reaching the point where you intend to change lanes to the left."
+  },
+  {
+    "n": 394,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "원문의 '편도 2차로 이상'을 'more than two lanes'로 번역하여 2차로를 제외하는 숫자 범위 오류가 발생했다.",
+    "suggestion": "The maximum speed limit on expressways with two or more lanes in one direction is the same for all types of vehicles."
+  },
+  {
+    "n": 397,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "차종인 '건설기계'를 건설장비가 장착된 차량으로 오역하여 선택지의 차량 분류가 달라졌다.",
+    "suggestion": "Construction machinery"
+  },
+  {
+    "n": 398,
+    "field": "b",
+    "severity": "major",
+    "issue": "원문은 교통량 증가로 시속 80km 미만으로 주행할 수밖에 없는 상황인데, 번역은 제한속도가 80km/h 미만으로 설정된 상황으로 의미를 바꿨다.",
+    "suggestion": "Under the Road Traffic Act, on an expressway with two lanes in one direction, vehicles may use the first lane even when not overtaking if increased traffic volume makes it unavoidable to travel at less than ( ) km/h. Which number correctly fills the blank?"
+  }
+]

@@ -1,0 +1,1238 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125d2-8538-7582-bb15-ae9f89ce2607
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/207_choices_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/207_choices_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 530ms:
+[
+ {
+  "n": 281,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?대┛??諛??곸쑀???곕졊湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대┛?대뒗 13???댄븯???щ엺",
+   "?곸쑀?꾨뒗 6??誘몃쭔???щ엺",
+   "?대┛?대뒗 15??誘몃쭔???щ엺",
+   "?곸쑀?꾨뒗 7??誘몃쭔???щ엺"
+  ],
+  "a": "2",
+  "tr_b": "휂沼?tu沼뷼 휃첬ng c沼쬪 thi梳퓎 nhi v횪 tr梳?nh沼?trong Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Thi梳퓎 nhi l횪 t沼?13 tu沼뷼 tr沼?xu沼몁g",
+   "Tr梳?nh沼?l횪 d튼沼쌻 6 tu沼뷼",
+   "Thi梳퓎 nhi l횪 d튼沼쌻 15 tu沼뷼",
+   "Tr梳?nh沼?l횪 d튼沼쌻 7 tu沼뷼"
+  ]
+ },
+ {
+  "n": 282,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜李??댁쟾?먭? 13:00寃??대┛??蹂댄샇援ъ뿭?먯꽌 ?좏샇?꾨컲????寃쎌슦 踰붿튃湲덉??",
+  "ko_c": [
+   "5留???,
+   "7留???,
+   "12留???,
+   "15留???
+  ],
+  "a": "3",
+  "tr_b": "Khi ng튼沼쓎 l찼i xe 척 t척 con vi ph梳죑 t챠n hi沼뇎 giao th척ng 沼?khu v沼켧 b梳즣 v沼?tr梳?em v횪o l첬c kho梳즢g 13:00 th챙 ti沼걆  ph梳죜 s梳?l횪 bao nhi챗u?",
+  "tr_c": [
+   "50.000 Won",
+   "70.000 Won",
+   "120.000 Won",
+   "150.000 Won"
+  ]
+ },
+ {
+  "n": 283,
+  "ko_b": "?대┛?닿? 蹂댄샇???놁씠 ?꾨줈?먯꽌 ?怨??덈뒗 寃쎌슦 媛???щ컮瑜??댁쟾諛⑸쾿??",
+  "ko_c": [
+   "?대┛???섎せ?대?濡?臾댁떆?섍퀬 吏?섍컙??",
+   "寃쎌쓬湲곕? ?몃젮 寃곸쓣 二쇰ŉ 吏꾪뻾?쒕떎.",
+   "?쇱떆?뺤??섏뿬???쒕떎.",
+   "?대┛?댁뿉 議곗떖?섎ŉ 湲됲엳 吏?섍컙??"
+  ],
+  "a": "3",
+  "tr_b": "Ph튼퉤ng ph찼p l찼i xe n횪o l횪 휃첬ng nh梳쩿 trong tr튼沼쓓g h沼즤 tr梳?em 휃ang ch퉤i tr챗n 휃튼沼쓓g m횪 kh척ng c처 ng튼沼쓎  b梳즣 h沼?",
+  "tr_c": [
+   "Kh척ng quan t창m v횪 휃i qua b沼웙 휃창y l횪 l沼뾦 c沼쬪 tr梳?nh沼?",
+   "B梳쩷 c챵i 휃沼?d沼뛞 tr梳?v횪 ti梳퓈 t沼쩭 휃i.",
+   "Ph梳즜 d沼쳌g l梳죍 t梳죑 th沼쓎.",
+   "C梳쯰 th梳춏 v沼쌻 tr梳?nh沼?v횪 휃i qua th梳춗 nhanh."
+  ]
+ },
+ {
+  "n": 284,
+  "ko_b": "?대┛?닿? ?〓떒蹂대룄 ?꾨? 嫄몄뼱媛怨??덉쓣 ???꾨줈援먰넻踰뺣졊??洹쒖젙 諛??댁쟾?먯쓽 ?됰룞?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "?〓떒蹂대룄 ?욎뿉??蹂댄뻾?먭? ?〓떒?섎뒗 寃껋쓣 誘몃━ 諛쒓껄?섏??????덉쟾???뺤씤 ?? ?쒗뻾?쇰줈 ?듦낵 ?쒕떎.",
+   "?좏샇?깆씠 ?녿뒗 ?쇰컲?꾨줈???〓떒蹂대룄??寃쎌슦 ?〓떒蹂대룄 ?뺤??좎쓣 吏?섏퀜???〓떒蹂대룄 ?댁뿉留?吏꾩엯?섏? ?딆쑝硫??쒕떎.",
+   "?좏샇?깆씠 ?녿뒗 ?쇰컲?꾨줈???〓떒蹂대룄??寃쎌슦 ?좏샇?깆씠 ?놁쑝誘濡??대┛???ㅼそ?쇰줈 ?쒗뻾?섏뿬 ?듦낵?섎㈃ ?쒕떎.",
+   "?〓떒蹂대룄?쒖????〓떒蹂대룄瑜??ㅼ튂???μ냼???꾩슂??吏?먯쓽 ?꾨줈?묒륫???ㅼ튂?섎ŉ ?〓떒蹂대룄 ?욎뿉???쇱떆?뺤? ?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Khi c처 tr梳?em 휃ang 휃i tr챗n v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼? n沼셢 dung n횪o 휃첬ng v沼쌻 quy 휃沼땙h v횪 h횪nh  휃沼셬g c沼쬪 ng튼沼쓎 휃i沼걏 khi沼긪 xe theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Khi ph찼t hi沼뇆 tr튼沼쌵 ng튼沼쓎 휃i b沼?휃ang b훱ng qua 휃튼沼쓓g t梳죍 v梳죅h qua 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼? ph梳즜 ki沼긩 tra an  to횪n v횪 휃i ch梳춎 qua.",
+   "휂沼멼 v沼쌻 v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?tr챗n 휃튼沼쓓g th척ng th튼沼쓓g kh척ng c처 휃챔n giao th척ng, n梳퓎 l沼?l梳쩸 qua v梳죅h d沼쳌g th챙 ch沼?c梳쬷 kh척ng l梳쩸 qu찼 s창u v횪o v첫ng v梳죅h sang 휃튼沼쓓g l횪 휃튼沼즓.",
+   "휂沼멼 v沼쌻 v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?tr챗n 휃튼沼쓓g th척ng th튼沼쓓g kh척ng c처 휃챔n giao th척ng, v챙 kh척ng c처 휃챔n giao th척ng n챗n c梳쬷 휃i ch梳춎 qua 沼?ph챠a sau tr梳?",
+   "Bi沼긪 b찼o v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?휃튼沼즓 휃梳톞 沼?hai b챗n 휃튼沼쓓g, t梳죍 v沼?tr챠 c梳쬷 thi梳퓍 c沼쬪 n퉤i 휃찾 v梳?v梳죅h sang 휃튼沼쓓g, ng튼沼쓎 휃i沼걏 khi沼긪 xe ph梳즜 t梳죑 d沼쳌g tr튼沼쌵 v梳죅h sang 휃튼沼쓓g n횪y."
+  ]
+ },
+ {
+  "n": 285,
+  "ko_b": "?대┛???듯븰踰꾩뒪媛 ?몃룄 1李⑤줈 ?꾨줈?먯꽌 ?뺤감?섏뿬 ?곸쑀?꾧? ?怨??대━??以묒엫???쒖떆?섎뒗 ?먮㈇?깆씠 ?묐룞?섍퀬 ?덉쓣  ??諛섎? 諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먮뒗 ?대뼸寃??섏뿬???섎뒗媛?",
+  "ko_c": [
+   "?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎.",
+   "?쒗뻾?섎㈃???덉쟾 ?뺤씤?????듦낵?쒕떎.",
+   "洹몃?濡??듦낵?대룄 ?쒕떎.",
+   "寃쎌쓬湲곕? ?몃━硫댁꽌 ?듦낵?섎㈃ ?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Khi xe bu첵t 휃튼a 휃처n tr梳?em d沼쳌g l梳죍 沼?휃튼沼쓓g m沼셳 chi沼걏 c처 1 l횪n 휃튼沼쓓g v횪 b梳춗 sang 휃챔n b찼o hi沼뇎 c처 tr梳?em  휃ang l챗n xu沼몁g xe th챙 ng튼沼쓎 l찼i xe 휃ang ch梳죣 沼?h튼沼썀g ng튼沼즓 l梳죍 ph梳즜 l횪m g챙?",
+  "tr_c": [
+   "Ph梳즜 t梳죑 th沼쓎 d沼쳌g l梳죍, ki沼긩 tra an to횪n r沼밿 휃i ch梳춎 qua.",
+   "V沼첺 휃i ch梳춎 v沼첺 ki沼긩 tra an to횪n r沼밿 m沼쌻 휃i qua.",
+   "C沼?th梳?휃i qua.",
+   "B梳쩷 c챵i xe v횪 휃i qua."
+  ]
+ },
+ {
+  "n": 286,
+  "ko_b": "李⑥쓽 ?댁쟾?먭? ?댁쟾 以??섏뼱由곗씠瑜?異⑷꺽??寃쎌슦?숆????щ컮瑜??됰룞??",
+  "ko_c": [
+   "?대쪣李⑥슫?꾩옄???대┛?댁뿉寃??ㅼ낀?먭퀬 臾쇱뼱蹂댁븯?쇰굹 ?꾨Т 留먮룄 ?섏? ?딆븘 ???ㅼ튇 寃껋쑝濡??먮떒?섏뿬 怨꾩냽 二쇳뻾?섏???",
+   "?뱀슜李⑥슫?꾩옄??諛붾줈 ?뺤감?????대┛?대? ?≪븞?쇰줈 ?댄렣蹂????ㅼ튇 怨녹씠 ?녿떎怨??먮떒?섏뿬 怨꾩냽 二쇳뻾?섏???",
+   "?붾Ъ李⑥슫?꾩옄???대┛?닿? ?섏뼱議뚮떎 湲덈갑 ?쇱뼱?섎뒗 寃껋쓣 蹂??????ㅼ튇 寃껋쑝濡??먮떒?섏뿬 怨꾩냽 二쇳뻾?섏???",
+   "?먯쟾嫄곗슫?꾩옄???섏뼱吏??대┛?닿? ?щ묠由??쇱뼱???곗뼱媛??寃껋쓣 蹂???寃쎌같愿?쒖뿉 ?좉퀬?섍퀬 ?꾩옣???湲고븯???"
+  ],
+  "a": "4",
+  "tr_b": "H횪nh 휃沼셬g n횪o l횪 휃첬ng nh梳쩿 c沼쬪 ng튼沼쓎 l찼i xe \"trong tr튼沼쓓g h沼즤 va ph梳즜 tr梳?em\" khi 휃ang l찼i xe?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe m찼y hai b찼nh h沼뢩 tr梳?em c처 b沼?th튼퉤ng kh척ng, n梳퓎 tr梳?kh척ng n처i g챙 th챙 ph찼n 휃o찼n l횪 kh척ng b沼? th튼퉤ng v횪 cho xe 휃i ti梳퓈.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe 척 t척 d沼쳌g xe ngay, quan s찼t tr梳?b梳켷g m梳칣 th튼沼쓓g v횪 휃찼nh gi찼 kh척ng c처 ch沼?n횪o b沼?th튼퉤ng th챙  cho xe 휃i ti梳퓈.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe t梳즜 휃찼nh gi찼 r梳켷g tr梳?kh척ng b沼?th튼퉤ng sau khi th梳쪅 tr梳?ng찾 r沼밿 휃沼쯰g d梳춞 휃튼沼즓 lu척n v횪 cho xe 휃i  ti梳퓈.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe 휃梳죖 sau khi nh챙n th梳쪅 tr梳?b沼?ng찾 v沼쩿 휃沼쯰g d梳춞 v횪 ch梳죣 th챙 c梳쬷 b찼o cho 휃沼뱊 c梳즢h s찼t v횪 ch沼?沼?t梳죍  hi沼뇆 tr튼沼쓓g."
+  ]
+ },
+ {
+  "n": 287,
+  "ko_b": "怨⑤ぉ湲몄뿉??媛묒옄湲??곗뼱?섏삤???대┛?대? ?먮룞李④? 異⑷꺽?섏??? ?대┛?대뒗 ?멸껄???ㅼ튇 怨녹씠 ?놁뼱 蹂댁?怨? ?쒓킐李??ㅲ앷퀬 留먰븯怨??덈떎. ?대윴 寃쎌슦 ?댁쟾?먯쓽 ?됰룞?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "諛섏쓽?щ텋踰뚯즲???대떦?섎?濡??댁쟾?먮뒗 媛??湲몄쓣 媛硫??쒕떎.",
+   "?대┛?댁쓽 ?쇳빐媛 ?놁뼱 援먰넻?ш퀬媛 ?꾨땲誘濡?蹂꾨룄??議곗튂 ?놁씠 ?꾩옣??踰쀬뼱?쒕떎.",
+   "遺紐⑥뿉寃??곕씫?섎뒗 ??諛섎뱶???꾩슂??議곗튂瑜??ㅽ븳 ???꾩옣??踰쀬뼱?쒕떎.",
+   "?대┛?댁쓽 怨쇱떎?대?濡??댁쟾?먮뒗 ?대┛?댁쓽 ?곕씫泥섎쭔 ?뺤씤?섍퀬 洹媛?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Xe 척 t척 x梳즭 ra va ch梳죑 v沼쌻 tr梳?휃沼셳 ng沼셳 ch梳죣 ra t沼?휃튼沼쓓g h梳팵, nh챙n b챗n ngo횪i tr梳?kh척ng b沼?th튼퉤ng g챙 v횪 tr梳? c크ng n처i l횪 kh척ng sao. H횪nh 휃沼셬g 휃첬ng c沼쬪 ng튼沼쓎 휃i沼걏 khi沼긪 xe trong tr튼沼쓓g h沼즤 n횪y l횪?",
+  "tr_c": [
+   "휂창y l횪 ?쐔沼셢 kh척ng b沼?x沼?ph梳죜 tr찼i 첵 mu沼몁 c沼쬪 n梳죒 nh창n?? n챗n ng튼沼쓎 휃i沼걏 khi沼긪 xe c처 th沼?ti梳퓈 t沼쩭 휃i.",
+   "Tr梳?em kh척ng b沼?th튼퉤ng n챗n kh척ng ph梳즜 l횪 tai n梳죒 giao th척ng, v챙 th梳?c처 th沼?r沼쓎 kh沼뢩 hi沼뇆 tr튼沼쓓g m횪 kh척ng c梳쬷 c처  b梳쩿 k沼?x沼?l첵 n횪o.",
+   "B梳칣 bu沼셛 ph梳즜 th沼켧 hi沼뇆 c찼c x沼?l첵 c梳쬷 thi梳퓍 nh튼 li챗n l梳죅 v沼쌻 b沼?m梳?v.v... r沼밿 m沼쌻 r沼쓎 kh沼뢩 hi沼뇆 tr튼沼쓓g.",
+   "휂창y l횪 l沼뾦 c沼쬪 tr梳?n챗n ng튼沼쓎 휃i沼걏 khi沼긪 xe ch沼?c梳쬷 l梳쪅 li챗n l梳죅 c沼쬪 tr梳?r沼밿 휃i v沼?"
+  ]
+ },
+ {
+  "n": 288,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭 吏??諛?愿由?二쇱껜??",
+  "ko_c": [
+   "寃쎌같?쒖옣",
+   "?쒖옣??,
+   "?쑣룸룄寃쎌같泥?옣",
+   "援먯쑁媛?
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? ai l횪 ng튼沼쓎 c처 quy沼걆 ch沼?휃沼땙h v횪 qu梳즢 l첵 c찼c khu v沼켧 b梳즣 v沼?tr梳?em?",
+  "tr_c": [
+   "C沼쩭 tr튼沼웢g C沼쩭 C梳즢h s찼t",
+   "Th沼?tr튼沼웢g",
+   "Gi찼m 휃沼멵 S沼?C梳즢h s찼t t沼뎝h - th횪nh ph沼?,
+   "B沼?tr튼沼웢g B沼?Gi찼o d沼쩭"
+  ]
+ },
+ {
+  "n": 289,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭? 珥덈벑?숆탳 二쇱텧?낅Ц 100誘명꽣 ?대궡???꾨줈 以??쇱젙 援ш컙??留먰븳??",
+   "?대┛??蹂댄샇援ъ뿭 ?덉뿉???ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 二쇽쉈?뺤감 ?꾨컲??寃쎌슦 踰붿튃湲덉씠 媛以묐맂??",
+   "?대┛??蹂댄샇援ъ뿭 ???ㅼ튂???좏샇湲곗쓽 蹂댄뻾 ?쒓컙? ?대┛??理쒓퀬 蹂댄뻾 ?띾룄瑜?湲곗??쇰줈 ?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?덉뿉???ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 蹂댄뻾?먮낫??遺덉씠?됲븯硫?踰뚯젏??2諛곕맂??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Hai c창u gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?khu v沼켧 b梳즣 v沼?tr梳?em theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Khu v沼켧 b梳즣 v沼?tr梳?em l횪 m沼셳 khu v沼켧 nh梳쩿 휃沼땙h thu沼셛 c찼c 휃튼沼쓓g n梳켶 trong v챵ng 100m xung quanh c沼븂g ch챠nh c沼쬪  tr튼沼쓓g ti沼긳 h沼뛠.",
+   "Tr튼沼쓓g h沼즤 vi ph梳죑 d沼쳌g v횪 휃沼?xe trong khu v沼켧 b梳즣 v沼?tr梳?em t沼?8 gi沼?s찼ng cho 휃梳퓆 8 gi沼?t沼멼 th챙 s梳?b沼?t훱ng m沼쯢  ti沼걆 ph梳죜 vi ph梳죑 giao th척ng.",
+   "Th沼쓎 gian qua 휃튼沼쓓g c沼쬪 c찼c 휃챔n giao th척ng 휃튼沼즓 l梳칛 휃梳톞 trong khu v沼켧 b梳즣 v沼?tr梳?em 휃튼沼즓 c훱n c沼?v횪o t沼멵 휃沼?휃i  b沼?nhanh nh梳쩿 c沼쬪 tr梳?em.",
+   "N梳퓎 kh척ng ch梳쩺 h횪nh vi沼놻 b梳즣 v沼?ng튼沼쓎 휃i b沼?trong khu v沼켧 b梳즣 v沼?tr梳?em t沼?8 gi沼?s찼ng 휃梳퓆 8 gi沼?t沼멼 th챙 휃i沼긩 ph梳죜  s梳?t훱ng l챗n g梳쩺 2 l梳쬷."
+  ]
+ },
+ {
+  "n": 290,
+  "ko_b": "?대┛?댄넻?숇쾭?ㅼ쓽 ?밸퀎蹂댄샇??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?대┛???듯븰踰꾩뒪瑜??욎?瑜닿린?섍퀬?????뚮뒗 ?ㅻⅨ 李⑥쓽 ?욎?瑜닿린 諛⑸쾿怨?媛숇떎.",
+   "?대┛?대뱾???뱁븯李??? 以묒븰?좎씠 ?녿뒗 ?꾨줈?먯꽌??諛섎??몄뿉???ㅻ뒗 李⑤웾???덉쟾???뺤씤???? ?쒗뻾?섏뿬???쒕떎.",
+   "?대┛?대뱾???뱁븯李??? ?몃룄 1李⑤줈 ?꾨줈?먯꽌??諛섎??몄뿉???ㅻ뒗 李⑤웾???쇱떆?뺤??섏뿬 ?덉쟾???뺤씤???? ?쒗뻾?섏뿬???쒕떎.",
+   "?대┛?대뱾???뱁븯李??? ?숈씪 李⑤줈? 洹?李⑤줈??諛붾줈 ??李⑤웾? ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤???? ?쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Hai gi梳즜 th챠ch 휃첬ng v沼?vi沼놻 b梳즣 v沼?휃梳톍 bi沼뇍 xe bu첵t 휃튼a 휃처n tr梳?em 휃i h沼뛠?",
+  "tr_c": [
+   "C찼ch v튼沼즨 l챗n tr튼沼쌵 xe bu첵t 휃튼a 휃처n tr梳?em 휃i h沼뛠 c크ng gi沼몁g nh튼 c찼ch v튼沼즨 l챗n tr튼沼쌵 nh沼칗g lo梳죍 xe kh찼c.",
+   "Khi tr梳?em 휃ang l챗n xu沼몁g xe bu첵t, xe 휃ang 휃梳퓆 t沼?h튼沼썀g 휃沼멼 di沼뇆 tr챗n 휃튼沼쓓g kh척ng c처 v梳죅h ph창n c찼ch c크ng ph梳즜  ki沼긩 tra s沼?an to횪n r沼밿 휃i ch梳춎 l梳죍.",
+   "Khi tr梳?em 휃ang l챗n xu沼몁g xe bu첵t, xe 휃ang 휃梳퓆 t沼?h튼沼썀g 휃沼멼 di沼뇆 沼?휃튼沼쓓g m沼셳 chi沼걏 c처 1 l횪n 휃튼沼쓓g c크ng ph梳즜 t梳죑 d沼쳌g 휃沼?ki沼긩 tra t챠nh an to횪n, sau 휃처 휃i ch梳춎 l梳죍.",
+   "Khi tr梳?em 휃ang l챗n xu沼몁g xe bu첵t, xe 척 t척 c沼쬪 l횪n 휃튼沼쓓g 휃처 v횪 xe 척 t척 沼?l횪n 휃튼沼쓓g ngay b챗n c梳죒h l횪n 휃튼沼쓓g 휃처 ph梳즜 t梳죑 d沼쳌g 휃沼?ki沼긩 tra t챠nh an to횪n, sau 휃처 휃i ch梳춎 l梳죍."
+  ]
+ },
+ {
+  "n": 291,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?먯쟾嫄??듯뻾諛⑸쾿??????ㅻ챸?대떎. ?由?寃껋??",
+  "ko_c": [
+   "?먯쟾嫄곕룄濡쒓? ?곕줈 ?덈뒗 怨녹뿉?쒕뒗 洹??먯쟾嫄곕룄濡쒕줈 ?듯뻾?섏뿬???쒕떎.",
+   "?먯쟾嫄곕룄濡쒓? ?ㅼ튂?섏? ?꾨땲??怨녹뿉?쒕뒗 ?꾨줈 ?곗륫 媛?μ옄由ъ뿉 遺숈뼱???듯뻾?섏뿬???쒕떎.",
+   "?먯쟾嫄곗쓽 ?댁쟾?먮뒗 湲멸??μ옄由ш뎄???덉쟾?쒖?濡??먯쟾嫄??듯뻾??湲덉???援ш컙? ?쒖쇅)???듯뻾?????덈떎.",
+   "?먯쟾嫄곗쓽 ?댁쟾?먭? ?〓떒蹂대룄瑜??댁슜?섏뿬 ?꾨줈瑜??〓떒???뚯뿉???먯쟾嫄곕? ?怨??듯뻾?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "D튼沼쌻 휃창y l횪 m척 t梳?v沼?ph튼퉤ng ph찼p 휃i沼걏 khi沼긪 xe 휃梳죖 theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? C창u n횪o sai?",
+  "tr_c": [
+   "沼?n퉤i c처 휃튼沼쓓g d횪nh ri챗ng cho xe 휃梳죖 th챙 ph梳즜 휃i tr챗n 휃튼沼쓓g d횪nh ri챗ng cho xe 휃梳죖 휃처.",
+   "沼?n퉤i kh척ng c처 휃튼沼쓓g d횪nh ri챗ng cho xe 휃梳죖 th챙 ph梳즜 휃i 沼?m챕p ph梳즜 c沼쬪 휃튼沼쓓g.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe 휃梳죖 c처 th沼?휃i 沼?ph梳쬷 m챕p 휃튼沼쓓g (ngo梳죍 tr沼?khu v沼켧 c梳쩷 xe 휃梳죖 c처 bi沼긪 b찼o an to횪n).",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe 휃梳죖 c처 th沼?v沼첺 휃梳죖 xe v沼첺 b훱ng qua 휃튼沼쓓g tr챗n l沼멼 sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?"
+  ]
+ },
+ {
+  "n": 292,
+  "ko_b": "?꾨줈援먰넻踰뺤긽?섎낫?멸뎄??쓽 吏?뺤젅李?諛?湲곗??숇벑??愿?섏뿬 ?꾩슂???ы빆???뺥븯??怨듬룞遺??湲곌??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭? ?됱젙?덉쟾遺, 蹂닿굔蹂듭?遺, 援?넗援먰넻遺??怨듬룞遺?뱀쑝濡??뺥븳??",
+   "?몄씤 蹂댄샇援ъ뿭? ?됱젙?덉쟾遺, 援?넗援먰넻遺, ?섍꼍遺??怨듬룞遺?뱀쑝濡??뺥븳??",
+   "?μ븷??蹂댄샇援ъ뿭? ?됱젙?덉쟾遺, 蹂닿굔蹂듭?遺, 援?넗援먰넻遺??怨듬룞遺?뱀쑝濡??뺥븳??",
+   "援먰넻?쎌옄 蹂댄샇援ъ뿭? ?됱젙?덉쟾遺, ?섍꼍遺, 援?넗援먰넻遺??怨듬룞遺?뱀쑝濡??뺥븳??"
+  ],
+  "a": "3",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? c퉤 quan b沼?ng횪nh n횪o c첫ng 휃튼a ra c찼c quy 휃沼땙h c梳쬷 thi梳퓍 li챗n quan 휃梳퓆  ?쏷i챗u chu梳쯰 v횪 Quy tr챙nh ch沼?휃沼땙h Khu v沼켧 b梳즣 v沼뉍?",
+  "tr_c": [
+   "Khu v沼켧 b梳즣 v沼?tr梳?em 휃튼沼즓 ch沼?휃沼땙h b沼웙 quy 휃沼땙h b沼?ng횪nh chung c沼쬪 B沼?H횪nh ch챠nh & An to횪n, B沼?Ph첬c l沼즜 & Y  t梳? B沼?Giao th척ng & 휂沼땇 ch챠nh.",
+   "Khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 휃튼沼즓 ch沼?휃沼땙h b沼웙 quy 휃沼땙h b沼?ng횪nh chung c沼쬪 B沼?H횪nh ch챠nh & An to횪n, B沼?Giao  th척ng & 휂沼땇 ch챠nh, B沼?M척i tr튼沼쓓g.",
+   "Khu v沼켧 b梳즣 v沼?ng튼沼쓎 khuy梳퓍 t梳춗 휃튼沼즓 ch沼?휃沼땙h b沼웙 quy 휃沼땙h b沼?ng횪nh chung c沼쬪 B沼?H횪nh ch챠nh & An to횪n, B沼?Ph첬c  l沼즜 & Y t梳? B沼?Giao th척ng & 휂沼땇 ch챠nh.",
+   "Khu v沼켧 b梳즣 v沼?ng튼沼쓎 di chuy沼긪 kh처 kh훱n trong giao th척ng 휃튼沼즓 ch沼?휃沼땙h b沼웙 quy 휃沼땙h b沼?ng횪nh chung c沼쬪 B沼?H횪nh ch챠nh & An to횪n, B沼?M척i tr튼沼쓓g, B沼?Giao th척ng & 휂沼땇 ch챠nh."
+  ]
+ },
+ {
+  "n": 293,
+  "ko_b": "?대┛?댄넻?숇쾭???밸퀎蹂댄샇瑜??꾪븳 ?댁쟾?먯쓽 ?щ컮瑜??댄뻾諛⑸쾿??",
+  "ko_c": [
+   "?몃룄 1李⑤줈???꾨줈?먯꽌??諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먮룄 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆 ?뺤??섏뿬 ?덉쟾?? ?뺤씤?????쒗뻾?섏뿬???쒕떎.",
+   "?대┛?댄넻?숇쾭?ㅺ? ?대┛?닿? ?섏감?섍퀬???먮㈇?깆쓣 ?쒖떆???뚮뒗 ?대┛???듯븰踰꾩뒪媛 ?뺤감??李⑤줈 ?몄쓽 李⑤줈濡??좎냽???듯뻾?쒕떎.",
+   "以묒븰?좎씠 ?ㅼ튂?섏? ?꾨땲???꾨줈??寃쎌슦 諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑤뒗 湲곗〈 ?띾룄濡?吏꾪뻾?쒕떎.",
+   "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜???寃쎌슦?쇰룄 ?꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "C찼ch l튼u th척ng n횪o l횪 휃첬ng c沼쬪 ng튼沼쓎 l찼i xe 휃沼?b梳즣 v沼?휃梳톍 bi沼뇍 cho xe bu첵t 휃튼a 휃처n tr梳?em 휃i h沼뛠?",
+  "tr_c": [
+   "Tr챗n 휃튼沼쓓g m沼셳 chi沼걏 c처 1 l횪n 휃튼沼쓓g, ng튼沼쓎 l찼i xe 휃ang 휃i 沼?h튼沼썀g 휃沼멼 di沼뇆 c크ng ph梳즜 t梳죑 d沼쳌g tr튼沼쌵 khi 휃梳퓆 g梳쬷 xe bu첵t 휃튼a 휃처n tr梳?휃i h沼뛠 휃沼?ki沼긩 tra an to횪n r沼밿 l찼i xe ch梳춎 l梳죍.",
+   "N梳퓎 xe bu첵t 휃튼a 휃처n tr梳?em 휃i h沼뛠 b梳춗 휃챔n b찼o hi沼뇎 tr梳?em 휃ang l챗n xu沼몁g xe, b梳죒 ph梳즜 nhanh ch처ng 휃i qua b梳켷g l횪n 휃튼沼쓓g kh척ng ph梳즜 l횪n m횪 xe bu첵t 휃처 휃ang d沼쳌g.",
+   "N梳퓎 kh척ng c처 v梳죅h ph창n c찼ch gi沼칊 휃튼沼쓓g, xe 휃ang 휃i 沼?h튼沼썀g 휃沼멼 di沼뇆 v梳쳌 ph梳즜 ti梳퓈 t沼쩭 gi沼?nguy챗n t沼멵 휃沼?",
+   "T梳쩿 c梳?c찼c l찼i xe c沼쬪 m沼뛦 lo梳죍 xe 휃沼걏 c처 th沼?v튼沼즨 l챗n tr튼沼쌵 xe bu첵t 휃튼a 휃처n tr梳?em 휃i h沼뛠, ngay c梳?khi xe n횪y 휃ang  b찼o hi沼뇎 c처 tr梳?em 휃ang 沼?tr챗n xe."
+  ]
+ },
+ {
+  "n": 294,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭???좉퀬??愿???ㅻ챸?대떎. 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "?대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎젮硫?誘몃━ ?쒓뎅?꾨줈援먰넻怨듬떒???좉퀬?섍퀬 ?좉퀬利앸챸?쒕? 諛쒓툒諛쏆븘???쒕떎.",
+   "?대┛?댄넻?숇쾭?ㅻ뒗 ?먯튃?곸쑝濡??뱀감?뺤썝 9?몄듅(?대┛??1紐낆쓣 ?뱀감?뺤썝 1?몄쑝濡?蹂몃떎) ?댁긽???먮룞李⑤줈 ?쒕떎.",
+   "?대┛?댄넻?숇쾭???좉퀬利앸챸?쒓? ?먯뼱 紐살벐寃??섏뼱 ?ㅼ떆 ?좎껌?섎뒗 ?뚯뿉???대┛?댄넻?숇쾭???좉퀬利앸챸???ш탳遺?좎껌?쒖뿉 ??      ??紐살벐寃????좉퀬利앸챸?쒕? 泥⑤??섏뿬 ?쒖텧?섏뿬???쒕떎.",
+   "?대┛?댄넻?숇쾭???좉퀬利앸챸?쒕뒗 洹??먮룞李⑥쓽 ?욌㈃ 李쎌쑀由?醫뚯륫?곷떒??蹂닿린 ?ъ슫 怨녹뿉 遺李⑺븯?ъ빞 ?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Hai n沼셢 dung n횪o d튼沼쌻 휃창y gi梳즜 th챠ch 휃첬ng v沼?vi沼놻 휃훱ng k첵 xe bu첵t 휃튼a 휃처n h沼뛠 sinh theo Ph찼p l沼뇆h Giao  th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "N梳퓎 mu沼몁 휃i沼걏 khi沼긪 xe 휃튼a 휃처n tr梳?em, ph梳즜 khai b찼o tr튼沼쌵 l챗n C퉤 quan Giao th척ng 휃튼沼쓓g b沼?H횪n Qu沼멵 v횪 xin  c梳쩺 Gi梳쪅 ch沼쯰g nh梳춏 khai b찼o.",
+   "V沼?nguy챗n t梳칌, xe bu첵t 휃튼a 휃처n h沼뛠 sinh ph梳즜 l횪 xe 척 t척 c처 kh梳?n훱ng ch沼?t沼?9 h횪nh kh찼ch tr沼?l챗n (1 tr梳?em 휃튼沼즓 coi  l횪 1 h횪nh kh찼ch 휃i xe).",
+   "Khi 휃훱ng k첵 l梳죍 v챙 gi梳쪅 휃훱ng k첵 xe bu첵t 휃튼a 휃처n h沼뛠 sinh b沼?r찼ch kh척ng th沼?s沼?d沼쩸g 휃튼沼즓, ph梳즜 n沼셮 k챔m ch沼쯰g nh梳춏 휃훱ng k첵 휃찾 r찼ch kh척ng th沼?s沼?d沼쩸g c첫ng 휃퉤n 휃훱ng k첵 xin c梳쩺 l梳죍 gi梳쪅 휃훱ng k첵 xe bu첵t 휃튼a 휃처n h沼뛠 sinh.",
+   "Gi梳쪅 휃훱ng k첵 xe bu첵t 휃튼a 휃처n h沼뛠 sinh ph梳즜 d찼n 沼?n퉤i d沼?nh챙n, ph챠a tr챗n b챗n tr찼i c沼춁 k챠nh xe 척 t척 沼?m梳톞 tr튼沼쌵 c沼쬪  xe 척 t척 휃처."
+  ]
+ },
+ {
+  "n": 295,
+  "ko_b": "?대┛?댄넻?숇쾭???댁쟾?먭? ?곸쑀?꾨? ?뱁븯李⑦븯??諛⑸쾿?쇰줈 諛붾Ⅸ 寃껋??",
+  "ko_c": [
+   "?곸쑀?꾧? ?뱀감?섍퀬 ?덈뒗 寃쎌슦?먮뒗 ?먮㈇???μ튂瑜??묐룞?섏뿬 ?덉쟾???뺣낫?섏뿬???쒕떎.",
+   "援먰넻???쇱옟??寃쎌슦 ?먮㈇?깆쓣 ?좎떆 ?꾧퀬 ?곸쑀?꾨? ?뱀감?쒗궓??",
+   "?곸쑀?꾨? ?대┛?댄넻?숇쾭??二쇰????대젮二쇨퀬 諛붾줈 異쒕컻?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭?먯꽌??醫뚯꽍?덉쟾?좊? 留ㅼ? ?딆븘???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Ph튼퉤ng ph찼p n횪o l횪 휃첬ng m횪 ng튼沼쓎 l찼i xe bu첵t 휃튼a 휃처n h沼뛠 sinh cho tr梳?nh沼?l챗n xu沼몁g xe?",
+  "tr_c": [
+   "Tr튼沼쓓g h沼즤 tr梳?nh沼?휃ang l챗n xe ph梳즜 b梳춗 휃챔n hi沼뇎 v횪 휃梳즡 b梳즣 an to횪n.",
+   "Tr튼沼쓓g h沼즤 giao th척ng ph沼쯢 t梳죖, t梳죑 th沼쓎 t梳칣 휃챔n hi沼뇎 r沼밿 cho tr梳?l챗n xe.",
+   "Cho tr梳?em xu沼몁g quanh xe bu첵t 휃튼a 휃처n h沼뛠 sinh r沼밿 kh沼웙 h횪nh lu척n.",
+   "沼?khu v沼켧 b梳즣 v沼?tr梳?em kh척ng c梳쬷 th梳칣 d창y an to횪n 沼?gh梳?ng沼밿 c크ng 휃튼沼즓."
+  ]
+ },
+ {
+  "n": 296,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭??????ㅻ챸?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "二쇱감湲덉??꾨컲?????踰붿튃湲덉? ?몄씤蹂댄샇援ъ뿭怨?媛숇떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉???쒗뻾?쒖떆瑜??ㅼ튂?????덈떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉??二쇱젙李④? 湲덉??쒕떎.",
+   "?대┛?대? ?ㅼ튂寃???援먰넻?ш퀬媛 諛쒖깮?섎㈃ ?⑹쓽?щ?? 愿怨꾩뾾???뺤궗泥섎쾶??諛쏅뒗??"
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?khu v沼켧 b梳즣 v沼?tr梳?em theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ti沼걆 ph梳죜 휃沼멼 v沼쌻 h횪nh vi vi ph梳죑 휃沼?xe c크ng gi沼몁g v沼쌻 khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼.",
+   "Bi沼긪 b찼o \"휃i ch梳춎\" c처 th沼?휃튼沼즓 l梳칛 휃梳톞 trong khu v沼켧 b梳즣 v沼?tr梳?em.",
+   "C梳쩷 휃沼?v횪 d沼쳌g xe trong khu v沼켧 b梳즣 v沼?tr梳?em.",
+   "B梳죒 c처 th沼?b沼?x沼?ph梳죜 h챙nh s沼?n梳퓎 g창y tai n梳죒 l횪m tr梳?em b沼?th튼퉤ng, b梳쩿 k沼?m沼뛦 h챙nh th沼쯢 th沼뢠 thu梳춏."
+  ]
+ },
+ {
+  "n": 297,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭?먯꽌 ?대┛?닿? ?곸쑀?꾨? ?숇컲?섏뿬 ?④퍡 ?〓떒?섍퀬 ?덈떎. ?댁쟾?먯쓽 ?щ컮瑜?二쇳뻾諛⑸쾿??",
+  "ko_c": [
+   "?대┛?댁? ?곸쑀??蹂댄샇瑜??꾪빐 ?쇱떆?뺤??섏???",
+   "?대┛?닿? ?곸쑀??蹂댄샇?섎㈃???〓떒?섍퀬 ?덉쑝誘濡??쒗뻾?섏???",
+   "?대┛?댁? ?곸쑀?꾧? ?꾩쭅 諛섎???李⑤줈 履쎌뿉 ?덉뼱 ?좎냽??二쇳뻾?섏???",
+   "?대┛?댁? ?곸쑀?꾨뒗 嫄몄쓬???먮━誘濡??덉쟾嫄곕━瑜??먭퀬 ?놁쑝濡??쇳븯??二쇳뻾?섏???"
+  ],
+  "a": "1",
+  "tr_b": "Trong khu v沼켧 b梳즣 v沼?tr梳?em c처 thi梳퓎 nhi 휃i c첫ng v沼쌻 tr梳?nh沼?b훱ng qua 휃튼沼쓓g. C찼ch n횪o l횪 c찼ch l튼u th척ng  휃첬ng c沼쬪 ng튼沼쓎 l찼i xe?",
+  "tr_c": [
+   "T梳죑 d沼쳌g xe 휃沼?b梳즣 v沼?thi梳퓎 nhi v횪 tr梳?nh沼?",
+   "V챙 em thi梳퓎 nhi 휃ang v沼첺 b梳즣 v沼?em b챕 v沼첺 sang 휃튼沼쓓g n챗n ng튼沼쓎 l찼i xe 휃i ch梳춎 l梳죍.",
+   "V챙 thi梳퓎 nhi v횪 tr梳?nh沼?v梳쳌 휃ang 沼?ph챠a l횪n 휃튼沼쓓g 휃沼멼 di沼뇆 n챗n 휃i nhanh qua.",
+   "V챙 b튼沼쌵 ch창n c沼쬪 thi梳퓎 nhi v횪 tr梳?nh沼?ch梳춎 n챗n ph梳즜 gi沼?kho梳즢g c찼ch an to횪n v횪 tr찼nh sang b챗n c梳죒h 휃沼?l튼u th척ng."
+  ]
+ },
+ {
+  "n": 298,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?대┛??蹂댄샇援ъ뿭怨?愿?⑤맂 ?ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대┛?닿? 臾대떒?〓떒???섎떎媛 援먰넻?ш퀬媛 諛쒖깮??寃쎌슦 ?댁쟾?먯쓽 紐⑤뱺 梨낆엫? 硫댁젣?쒕떎.",
+   "?먯쟾嫄??댁쟾?먭? ?댁쟾 以??대┛?대? 異⑷꺽?섎뒗 寃쎌슦 ?먯쟾嫄곕뒗 李⑤쭏媛 ?꾨땲誘濡?誘쇱궗梨낆엫留?議댁옱?쒕떎.",
+   "李⑤룄濡?媛묒옄湲??곗뼱?쒕뒗 ?대┛?대? 蹂대㈃ ?쒗뻾?섏? 留먭퀬 ?쇱떆?뺤??쒕떎.",
+   "寃쎌같?쒖옣? ?먮룞李⑤벑???듯뻾?띾룄瑜??쒖냽 50?щ줈誘명꽣 ?대궡濡?吏?뺥븷 ???덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng li챗n quan 휃梳퓆 khu v沼켧 b梳즣 v沼?tr梳?em theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Tr튼沼쓓g h沼즤 x梳즭 ra tai n梳죒 giao th척ng do tr梳?em b훱ng qua 휃튼沼쓓g kh척ng 휃첬ng n퉤i quy 휃沼땙h th챙 l찼i xe 휃튼沼즓 mi沼꿳 to횪n  b沼?tr찼ch nhi沼뇅.",
+   "Tr튼沼쓓g h沼즤 ng튼沼쓎 휃i xe 휃梳죖 va v횪o tr梳?em khi 휃ang 휃i xe th챙 ch沼?t沼뱊 t梳죍 tr찼ch nhi沼뇅 d창n s沼?v챙 xe 휃梳죖 kh척ng ph梳즜 l횪  xe c퉤 gi沼쌻.",
+   "N梳퓎 nh챙n th梳쪅 tr梳?em b梳쩿 ng沼?ch梳죣 v횪o l횪n 휃튼沼쓓g th챙 kh척ng 휃튼沼즓 휃i ch梳춎 m횪 ph梳즜 t梳죑 d沼쳌g.",
+   "Gi찼m 휃沼멵 S沼?C梳즢h s찼t c처 th沼?ch沼?휃沼땙h t沼멵 휃沼?l튼u th척ng c沼쬪 xe 척 t척 trong ph梳죑 vi 50 km/gi沼?"
+  ]
+ },
+ {
+  "n": 299,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭??????ㅻ챸怨?二쇳뻾諛⑸쾿?대떎. 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "?대┛??蹂댄샇瑜??꾪빐 ?꾩슂??寃쎌슦 ?듯뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덇퀬 ?듯뻾???뚮뒗 ??긽 ?쒗븳?띾룄 ?대궡濡? ?쒗뻾?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭 ???띾룄?쒗븳????곸? ?먮룞李? ?먮룞湲곗옣移섏옄?꾧굅, ?몃㈃?꾩감?대ŉ ?대┛?닿? ?〓떒?섎뒗 寃쎌슦 ?쇱떆?뺤??쒕떎.",
+   "??덊븰援먮굹 ?멸뎅?명븰援먯쓽 二쇰??꾨줈???대┛??蹂댄샇援ъ뿭 吏????곸씠 ?꾨땲誘濡??〓떒蹂대룄媛 ?꾨땶 怨녹뿉???대┛?닿? ?〓떒?섎뒗  寃쎌슦 ?쒗뻾?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭???띾룄 ?쒗븳 諛??〓떒蹂대룄??愿???덉쟾?쒖?瑜??곗꽑?곸쑝濡??ㅼ튂?????덉쑝硫??대┛?닿? 以묒븰??遺洹쇱뿉 ?? ?덈뒗 寃쎌슦 ?쒗뻾?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Sau 휃창y l횪 gi梳즜 th챠ch v횪 c찼ch l튼u th척ng 沼?khu v沼켧 b梳즣 v沼?tr梳?em. Hai n沼셢 dung n횪o 휃첬ng?",
+  "tr_c": [
+   "Tr튼沼쓓g h沼즤 c梳쬷 b梳즣 v沼?tr梳?em, c처 th沼?gi沼쌻 h梳죒 t沼멵 휃沼?l튼u th척ng t沼멼 휃a l횪 30 km/gi沼?v횪 khi l튼u th척ng, lu척n ph梳즜 휃i  ch梳춎 trong t沼멵 휃沼?gi沼쌻 h梳죒.",
+   "휂沼멼 t튼沼즢g b沼?gi沼쌻 h梳죒 t沼멵 휃沼?trong khu v沼켧 b梳즣 v沼?tr梳?em bao g沼뱈 xe 척 t척, xe 휃梳죖 휃i沼뇆, xe 휃i沼뇆 m梳톞 휃梳쩿 v횪 ph梳즜 t梳죑  d沼쳌g khi c처 tr梳?em b훱ng qua 휃튼沼쓓g.",
+   "Xung quanh tr튼沼쓓g h沼뛠 휃梳톍 bi沼뇍 ho梳톍 tr튼沼쓓g d횪nh cho ng튼沼쓎 n튼沼쌵 ngo횪i kh척ng ph梳즜 l횪 휃沼멼 t튼沼즢g ch沼?휃沼땙h khu v沼켧 b梳즣 v沼?tr梳?em, n챗n n梳퓎 c처 tr梳?qua 휃튼沼쓓g 沼?n퉤i kh척ng c처 v梳죅h sang 휃튼沼쓓g th챙 ch沼?c梳쬷 휃i ch梳춎 l梳죍.",
+   "특u ti챗n gi沼쌻 h梳죒 t沼멵 휃沼?v횪 l梳칛 휃梳톞 bi沼긪 b찼o an to횪n b찼o hi沼뇎 v梳죅h sang 휃튼沼쓓g 沼?khu v沼켧 b梳즣 v沼?tr梳?em, khi c처 tr梳?휃ang 휃沼쯰g 沼?xung quanh v梳죅h ph창n c찼ch gi沼칊 휃튼沼쓓g th챙 ph梳즜 휃i ch梳춎 l梳죍."
+  ]
+ },
+ {
+  "n": 300,
+  "ko_b": "?ㅼ쓬 以??대┛?댄넻?숇쾭???밸퀎蹂댄샇?섎Т ?꾨컲???대떦?섏? ?딅뒗 寃껋?? (?몃룄 1李⑤줈 ?꾨줈 寃쎌슦)",
+  "ko_c": [
+   "?대┛?대굹 ?곸쑀?꾧? ?대━??以??쇱떆?뺤??섏? ?딄퀬 洹몃?濡??듦낵??寃쎌슦",
+   "諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먭? ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쒗뻾?섏뿬 吏꾪뻾??寃쎌슦",
+   "?댁쟾?먭? ?대┛?대굹 ?곸쑀?꾨? ?덉쟾?섍쾶 ?뱁븯李??쒗궎??以?寃쎌쓬湲곕? ?몃━怨?吏꾪뻾??寃쎌슦",
+   "?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜????곹깭濡??꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜닿린 ?섏? ?딅뒗 寃쎌슦"
+  ],
+  "a": "4",
+  "tr_b": "휂i沼걏 n횪o sau 휃창y kh척ng thu沼셛 h횪nh vi vi ph梳죑 ngh칫a v沼?b梳즣 v沼?휃梳톍 bi沼뇍 휃沼멼 v沼쌻 xe bu첵t 휃튼a 휃처n tr梳?em?  (Tr튼沼쓓g h沼즤 휃튼沼쓓g m沼셳 chi沼걏 m沼셳 l횪n)",
+  "tr_c": [
+   "V튼沼즨 kh척ng t梳죑 d沼쳌g khi tr梳?em ho梳톍 tr梳?s퉤 sinh 휃ang xu沼몁g xe.",
+   "V튼沼즨 ch梳춎 khi t횪i x梳?c沼쬪 xe 휃i t沼?h튼沼썀g ng튼沼즓 chi沼걏 휃梳퓆 ch沼?xe bu첵t 휃튼a 휃처n tr梳?em.",
+   "V沼첺 b梳쩷 c챵i v沼첺 v튼沼즨 khi tr梳?em ho梳톍 tr梳?s퉤 sinh 휃ang l챗n xu沼몁g xe an to횪n.",
+   "Kh척ng v튼沼즨 qua xe bu첵t 휃튼a 휃처n tr梳?em 휃ang l튼u th척ng tr챗n 휃튼沼쓓g trong tr梳죒g th찼i c처 bi沼긪 b찼o ch沼?tr梳?em ho梳톍  tr梳?s퉤 sinh."
+  ]
+ },
+ {
+  "n": 301,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곸쑀??諛??대┛?댁뿉 ???洹쒖젙 諛??대┛?댄넻?숇쾭???댁쟾?먯쓽 ?섎Т??????ㅻ챸?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "?대┛?대뒗 13???댄븯???щ엺???섎??섎ŉ, ?대┛?닿? ?怨??대┫ ?뚯뿉??諛섎뱶???덉쟾???뺤씤????異쒕컻?쒕떎.",
+   "異쒕컻?섍린 ???곸쑀?꾨? ?쒖쇅??紐⑤뱺 ?대┛?닿? 醫뚯꽍?덉쟾?좊? 留ㅻ룄濡?????異쒕컻?섏뿬???쒕떎.",
+   "?대┛?닿? ?대┫ ?뚯뿉???대┛?닿? ?붽뎄?섎뒗 ?μ냼???덉쟾?섍쾶 ?대젮以 ??異쒕컻?섏뿬???쒕떎.",
+   "?곸쑀?꾨뒗 6??誘몃쭔???щ엺???섎??섎ŉ, ?곸쑀?꾧? ?怨??대━??寃쎌슦?먮룄 ?먮㈇???깆쓽 ?μ튂瑜??묐룞?댁빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?quy 휃沼땙h 휃沼멼 v沼쌻 thi梳퓎 nhi & tr梳?nh沼?v횪 ngh칫a v沼?c沼쬪 ng튼沼쓎 l찼i xe bu첵t 휃튼a 휃처n tr梳? theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Thi梳퓎 nhi l횪 tr梳?t沼?13 tu沼뷼 tr沼?xu沼몁g, khi c처 thi梳퓎 nhi l챗n xu沼몁g xe, b梳칣 bu沼셛 ph梳즜 ki沼긩 tra an to횪n r沼밿 m沼쌻 xu梳쩿 ph찼t.",
+   "Tr튼沼쌵 khi xu梳쩿 ph찼t, tr沼?tr梳?nh沼?d튼沼쌻 6 tu沼뷼 th챙 t梳쩿 c梳?tr梳?em/thi梳퓎 nhi 휃沼걏 ph梳즜 th梳칣 d창y an to횪n r沼밿 m沼쌻 휃튼沼즓 xu梳쩿  ph찼t.",
+   "Khi c처 tr梳?em/thi梳퓎 nhi xu沼몁g xe, ph梳즜 cho tr梳?xu沼몁g 沼?n퉤i tr梳?y챗u c梳쬾 m沼셳 c찼ch an to횪n r沼밿 m沼쌻 xu梳쩿 ph찼t ch梳죣 ti梳퓈.",
+   "Tr梳?nh沼?l횪 tr梳?d튼沼쌻 6 tu沼뷼, khi c처 tr梳?nh沼?l챗n xu沼몁g xe ph梳즜 b梳춗 휃챔n hi沼뇎."
+  ]
+ },
+ {
+  "n": 302,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?대굹 ?곸쑀?꾧? ?怨??대━寃??섍린 ?꾪븳 ?대┛?댄넻?숇쾭?ㅼ뿉 ?μ갑???⑹깋 諛??곸깋?쒖떆?깆쓽 ?묐룞諛⑸쾿?? ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뺤감???뚮뒗 ?곸깋?쒖떆?깆쓣 ?먮㈇ ?묐룞?섏뿬???쒕떎.",
+   "?쒕룞???뚮뒗 ?곸깋?쒖떆?깆쓣 ?먮㈇ ?묐룞?섏뿬???쒕떎.",
+   "?꾨줈???뺤??섎젮???뚯뿉???⑹깋?쒖떆?깆쓣 ?먮㈇ ?묐룞?섏뿬???쒕떎.",
+   "二쇱감???뚮뒗 ?⑹깋?쒖떆?깃낵 ?곸깋?쒖떆?깆쓣 ?숈떆???먮㈇ ?묐룞?섏뿬???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?c찼ch b梳춗 휃챔n t챠n hi沼뇎 v횪ng v횪 휃沼?g梳칗 tr챗n xe  휃튼a 휃처n h沼뛠 sinh khi c처 thi梳퓎 nhi v횪 tr梳?nh沼?l챗n xu沼몁g xe?",
+  "tr_c": [
+   "Khi d沼쳌g xe, 휃챔n b찼o m횪u 휃沼?ph梳즜 nh梳쩺 nh찼y.",
+   "Khi phanh, 휃챔n b찼o m횪u 휃沼?ph梳즜 nh梳쩺 nh찼y.",
+   "Khi mu沼몁 d沼쳌g xe tr챗n 휃튼沼쓓g, 휃챔n b찼o m횪u v횪ng ph梳즜 nh梳쩺 nh찼y.",
+   "Khi 휃沼?xe, 휃챔n b찼o m횪u v횪ng v횪 휃챔n b찼o m횪u 휃沼?ph梳즜 휃沼뱊g th沼쓎 nh梳쩺 nh찼y."
+  ]
+ },
+ {
+  "n": 303,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭??吏????곸쓽 洹쇨굅媛 ?섎뒗 踰뺣쪧???꾨땶 寃껋??",
+  "ko_c": [
+   "?좎븘援먯쑁踰?,
+   "珥댿ㅼ쨷?깃탳?〓쾿",
+   "?숈썝???ㅻ┰?ㅼ슫??諛?怨쇱쇅援먯뒿??愿??踰뺣쪧",
+   "?꾨룞蹂듭?踰?
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? lu梳춗 n횪o sau 휃창y kh척ng ph梳즜 l횪 c퉤 s沼?휃沼?ch沼?휃沼땙h khu v沼켧 b梳즣 v沼?tr梳?em?",
+  "tr_c": [
+   "Lu梳춗 Gi찼o d沼쩭 tr梳?em",
+   "Lu梳춗 Gi찼o d沼쩭 ti沼긳 h沼뛠 - trung h沼뛠",
+   "Ph찼p lu梳춗 li챗n quan 휃梳퓆 th횪nh l梳춑 - v梳춏 h횪nh trung t창m d梳죣 th챗m v횪 gi梳즢g d梳죣 ngo횪i gi沼?,
+   "Lu梳춗 Ph첬c l沼즜 tr梳?em"
+  ]
+ },
+ {
+  "n": 304,
+  "ko_b": "?ㅼ쓬 以??대┛??蹂댄샇援ъ뿭??????ㅻ챸?대떎. ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?닿납?먯꽌??援먰넻?ш퀬??援먰넻?ш퀬泥섎━?밸?踰뺤긽 ?밸? ?곸슜 ?쒖쇅 ?ы빆???대떦?????덈떎.",
+   "?먮룞李⑤벑???듯뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎.",
+   "踰붿튃湲덇낵 踰뚯젏? ?쇰컲?꾨줈??3諛곗씠??",
+   "二쇈꺕?뺤감媛 湲덉??쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Sau 휃창y l횪 gi梳즜 th챠ch v沼?khu v沼켧 b梳즣 v沼?tr梳?em. C창u n횪o kh척ng 휃첬ng?",
+  "tr_c": [
+   "Tai n梳죒 giao th척ng t梳죍 khu v沼켧 n횪y c처 th沼?thu沼셛 tr튼沼쓓g h沼즤 ngo梳죍 l沼?kh척ng 찼p d沼쩸g quy 휃沼땙h 휃梳톍 bi沼뇍 theo Lu梳춗 x沼?l첵 휃梳톍 bi沼뇍 c찼c v沼?tai n梳죒 giao th척ng.",
+   "C처 th沼?gi沼쌻 h梳죒 v梳춏 t沼멵 l튼u th척ng c沼쬪 xe 척 t척, v.v l횪 t沼멼 휃a 30km/gi沼?",
+   "M沼쯢 ph梳죜 ti沼걆 vi ph梳죑 giao th척ng v횪 tr沼?휃i沼긩 cao g梳쩺 3 l梳쬷 휃튼沼쓓g th척ng th튼沼쓓g.",
+   "C梳쩷 휃沼?v횪 d沼쳌g xe."
+  ]
+ },
+ {
+  "n": 305,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???덉쟾??蹂댄뻾???섍퀬 ?덉? ?딆? ?대┛?대뒗?",
+  "ko_c": [
+   "蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌 李⑤룄 媛?μ옄由щ? 嫄몄뼱媛怨??덈뒗 ?대┛??,
+   "?쇰갑?듯뻾?꾨줈??媛?μ옄由ъ뿉??李④? ?ㅻ뒗 諛⑺뼢??諛붾씪蹂대ŉ 嫄몄뼱媛怨??덈뒗 ?대┛??,
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?딆? ?꾨줈??媛?μ옄由ш뎄??뿉??李④? ?ㅻ뒗 諛⑺뼢??留덉＜蹂닿퀬 嫄몄뼱媛???대┛??,
+   "蹂대룄 ?댁뿉???곗륫?쇰줈 嫄몄뼱媛怨??덈뒗 ?대┛??
+  ],
+  "a": "1",
+  "tr_b": "Tr梳?em n횪o sau 휃창y 휃ang 휃i b沼?kh척ng an to횪n theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Tr梳?em 휃ang 휃i b沼?tr챗n m챕p 휃튼沼쓓g c沼쬪 l챵ng 휃튼沼쓓g xe ch梳죣 tr챗n 휃o梳죒 휃튼沼쓓g c처 ph창n chia v沼뎎 h챔 v횪 l챵ng 휃튼沼쓓g.",
+   "Tr梳?em v沼첺 휃i b沼?v沼첺 nh챙n v沼?h튼沼썀g c처 xe 휃ang ch梳죣 t沼쌻 t沼?m챕p 휃튼沼쓓g c沼쬪 휃튼沼쓓g m沼셳 chi沼걏.",
+   "Tr梳?em 휃ang 휃i b沼?theo h튼沼썀g 휃沼멼 di沼뇆 v沼쌻 h튼沼썀g c沼쬪 xe 휃ang ch梳죣 t沼쌻 tr챗n l沼?휃튼沼쓓g c沼쬪 휃o梳죒 휃튼沼쓓g kh척ng ph창n  chia v沼뎎 h챔 v횪 l챵ng 휃튼沼쓓g.",
+   "Tr梳?em 휃i b沼?v沼?ph챠a b챗n ph梳즜 tr챗n v沼뎎 h챔."
+  ]
+ },
+ {
+  "n": 306,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇??????ㅻ챸?대떎. ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 ?대┛?닿? ?〓떒?섍퀬 ?덈뒗 寃쎌슦 ?쒗뻾?섏뿬???쒕떎.",
+   "?덉쟾吏????대┛?닿? ???덈뒗 寃쎌슦 ?덉쟾嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "醫곸? 怨⑤ぉ湲몄뿉???대┛?닿? 嫄몄뼱媛怨??덈뒗 寃쎌슦 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "?〓떒蹂대룄???대┛?닿? ?듯뻾?섍퀬 ?덈뒗 寃쎌슦 ?〓떒蹂대룄 ?욎뿉 ?쇱떆?뺤??섏뿬???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "D튼沼쌻 휃창y l횪 gi梳즜 th챠ch v沼?b梳즣 v沼?tr梳?em theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? C창u n횪o kh척ng 휃첬ng?",
+  "tr_c": [
+   "N梳퓎 c처 tr梳?em 휃ang b훱ng qua 휃o梳죒 휃튼沼쓓g kh척ng c처 l沼멼 sang 휃튼沼쓓g th챙 ph梳즜 ch梳죣 ch梳춎 l梳죍.",
+   "N梳퓎 c처 tr梳?em 휃ang 휃沼쯰g trong khu v沼켧 c처 v梳죅h an to횪n th챙 ph梳즜 휃i ch梳춎 l梳죍 v횪 gi沼?kho梳즢g c찼ch an to횪n.",
+   "N梳퓎 c처 tr梳?em 휃ang 휃i tr챗n con h梳팵 h梳퉝 th챙 ph梳즜 휃i ch梳춎 l梳죍 v횪 gi沼?kho梳즢g c찼ch an to횪n.",
+   "N梳퓎 c처 tr梳?em 휃ang l튼u th척ng tr챗n l沼멼 sang 휃튼沼쓓g th챙 ph梳즜 t梳죑 d沼쳌g 沼?ph챠a tr튼沼쌵 l沼멼 휃i sang 휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 307,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭???밸퀎蹂댄샇??????댁쟾???섎Т瑜?留욊쾶 ?ㅻ챸??寃껋??",
+  "ko_c": [
+   "?곸깋 ?먮㈇?μ튂瑜??묐룞 以묒씤 ?대┛?댄넻?숇쾭?ㅺ? ?뺤감??李⑤줈??諛붾줈 ??李⑤줈濡??듯뻾?섎뒗 寃쎌슦 ?쇱떆?뺤??섏뿬???쒕떎.",
+   "?꾨줈瑜??듯뻾 以묒씤 紐⑤뱺 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜닿린?????녿떎.",
+   "???섎Т瑜??꾨컲?섎㈃ ?댁쟾硫댄뿀 踰뚯젏 15?먯쓣 遺怨쇰컺?붾떎.",
+   "?몃룄 1李⑤줈???꾨줈?먯꽌 ?곸깋 ?먮㈇?μ튂瑜??묐룞 以묒씤 ?대┛?댄넻?숇쾭?ㅺ? ?뺤감??寃쎌슦?????섎Т媛 ?쒖쇅?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?ngh칫a v沼?c沼쬪 ng튼沼쓎 l찼i xe v沼?vi沼놻 b梳즣 v沼?휃梳톍 bi沼뇍 xe bu첵t 휃튼a 휃처n h沼뛠 sinh theo  Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "N梳퓎 휃ang l튼u th척ng tr챗n l횪n 휃튼沼쓓g ngay b챗n c梳죒h l횪n 휃튼沼쓓g m횪 xe bu첵t 휃튼a 휃처n h沼뛠 sinh 휃ang 휃沼?v횪 b梳춗 휃챔n 휃沼? nh梳쩺 nh찼y, th챙 ph梳즜 t梳죑 d沼쳌g l梳죍.",
+   "Kh척ng 휃튼沼즓 v튼沼즨 t梳쩿 c梳?c찼c xe bu첵t 휃튼a 휃처n tr梳?em 휃i h沼뛠 휃ang l튼u th척ng tr챗n 휃튼沼쓓g.",
+   "N梳퓎 vi ph梳죑 ngh칫a v沼?n횪y s梳?b沼?ph梳죜 15 휃i沼긩 tr沼?v횪o gi梳쪅 ph챕p l찼i xe.",
+   "Tr튼沼쓓g h沼즤 xe bu첵t 휃튼a 휃처n tr梳?em 휃i h沼뛠 휃ang d沼쳌g l梳죍 v횪 nh梳쩺 nh찼y 휃챔n 휃沼?tr챗n 휃튼沼쓓g c처 1 l횪n 휃튼沼쓓g m沼셳  chi沼걏 th챙 ngh칫a v沼?n횪y 휃튼沼즓 ngo梳죍 tr沼?"
+  ]
+ },
+ {
+  "n": 308,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댁쓽 蹂댄샇?먭? 怨쇳깭猷?遺怨쇱쿂遺꾩쓣 諛쏅뒗 寃쎌슦???대떦?섎뒗 寃껋??",
+  "ko_c": [
+   "李⑤룄?먯꽌 ?대┛?닿? ?먯쟾嫄곕? ?寃???蹂댄샇??,
+   "??댄꽣?먯꽌 ?대┛?닿? ?꾨룞?λ낫?쒕? ?寃???蹂댄샇??,
+   "李⑤룄?먯꽌 ?대┛?닿? ?꾨룞?λ낫?쒕? ?寃???蹂댄샇??,
+   "??댄꽣?먯꽌 ?대┛?닿? ?먯쟾嫄곕? ?寃???蹂댄샇??
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? tr튼沼쓓g h沼즤 n횪o m횪 ng튼沼쓎 b梳즣 h沼?tr梳?em b沼?ph梳죜 ti沼걆 h횪nh ch챠nh?",
+  "tr_c": [
+   "Ng튼沼쓎 gi찼m h沼?휃沼?tr梳?em 휃i xe 휃梳죖 tr챗n 휃튼沼쓓g c沼쬪 xe ch梳죣",
+   "Ng튼沼쓎 gi찼m h沼?휃沼?tr梳?em 휃i xe tr튼沼즨 휃i沼뇆 Kickboard trong khu vui ch퉤i",
+   "Ng튼沼쓎 gi찼m h沼?휃沼?tr梳?em 휃i xe tr튼沼즨 휃i沼뇆 Kickboard tr챗n 휃튼沼쓓g c沼쬪 xe ch梳죣",
+   "Ng튼沼쓎 gi찼m h沼?휃沼?tr梳?em 휃i xe 휃梳죖 trong khu vui ch퉤i"
+  ]
+ },
+ {
+  "n": 309,
+  "ko_b": "?댁쟾 以??대┛??蹂댄샇援ъ뿭?먯꽌 ?대┛?대? ?곹빐???대Ⅴ寃???寃쎌슦 ?뱀젙踰붿즲 媛以묒쿂踰??깆뿉 愿??踰뺣쪧???곕Ⅸ ?뺤궗泥섎쾶  湲곗???",
+  "ko_c": [
+   "1???댁긽 15???댄븯??吏뺤뿭 ?먮뒗 500留????댁긽 3泥쒕쭔 ???댄븯??踰뚭툑",
+   "臾닿린 ?먮뒗 5???댁긽??吏뺤뿭",
+   "2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "5???댄븯??吏뺤뿭?대굹 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "휂i沼걏 n횪o sau 휃창y l횪 휃첬ng v沼?ti챗u chu梳쯰 x沼?ph梳죜 h챙nh s沼?theo Lu梳춗 v沼?t훱ng n梳톘g h챙nh ph梳죜 휃沼멼 v沼쌻 m沼셳 s沼?t沼셢  ph梳죑 c沼?th沼?khi g창y th튼퉤ng t챠ch cho tr梳?em trong khu v沼켧 b梳즣 v沼?tr梳?em trong l첬c l찼i xe?",
+  "tr_c": [
+   "Ph梳죜 t첫 t沼?1 n훱m 휃梳퓆 15 n훱m ho梳톍 ph梳죜 ti沼걆 t沼?5 tri沼뇎 Won 휃梳퓆 30 tri沼뇎 Won",
+   "Ph梳죜 t첫 chung th창n ho梳톍 ph梳죜 t첫 t沼?5 n훱m tr沼?l챗n",
+   "Ph梳죜 t첫 l챗n 휃梳퓆 2 n훱m ho梳톍 ph梳죜 ti沼걆 l챗n 휃梳퓆 5 tri沼뇎 Won",
+   "Ph梳죜 t첫 l챗n 휃梳퓆 5 n훱m ho梳톍 ph梳죜 ti沼걆 l챗n 휃梳퓆 20 tri沼뇎 Won"
+  ]
+ },
+ {
+  "n": 310,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭???댁쁺?먯쓽 ?섎Т瑜??ㅻ챸??寃껋쑝濡??由?寃껋??",
+  "ko_c": [
+   "?대┛?댄넻?숇쾭?ㅼ뿉 ?대┛?대? ?쒖슱 ?뚯뿉???깅뀈???щ엺 以?蹂댄샇?먮? 吏?뺥빐???쒕떎.",
+   "?대┛?댄넻?숇쾭???댄뻾??留덉튇 ???대┛?대굹 ?곸쑀?꾧? 紐⑤몢 ?섏감?섏??붿?瑜??뺤씤?섏뿬???쒕떎.",
+   "醫뚯꽍?덉쟾??李⑹슜 諛?蹂댄샇???숈듅 ?뺤씤 湲곕줉???묒꽦?띾낫愿?댁빞 ?쒕떎.",
+   "醫뚯꽍?덉쟾??李⑹슜 諛?蹂댄샇???숈듅 ?뺤씤 湲곕줉??留?遺꾧린 ?대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎뒗 ?쒖꽕??媛먮룆 湲곌????쒖텧?댁빞 ?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?ngh칫a v沼?c沼쬪 ng튼沼쓎 휃i沼걏 khi沼긪 xe bu첵t 휃튼a 휃처n h沼뛠 sinh theo Ph찼p l沼뇆h Giao  th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Khi ch沼?tr梳?em tr챗n xe bu첵t 휃튼a 휃처n h沼뛠 sinh ph梳즜 ch沼?휃沼땙h ng튼沼쓎 gi찼m h沼?l횪 ng튼沼쓎 l沼썀.",
+   "Sau khi k梳퓍 th첬c chuy梳퓆 xe bu첵t 휃튼a 휃처n h沼뛠 sinh, ph梳즜 ki沼긩 tra 휃沼?x찼c nh梳춏 r梳켷g t梳쩿 c梳?tr梳?em 휃찾 xu沼몁g xe.",
+   "Ph梳즜 l梳춑 v횪 l튼u h沼?s퉤 ki沼긩 tra vi沼놻 th梳칣 d창y an to횪n v횪 x찼c nh梳춏 ng튼沼쓎 gi찼m h沼?휃i c첫ng.",
+   "Ph梳즜 n沼셮 h沼?s퉤 ki沼긩 tra vi沼놻 th梳칣 d창y an to횪n v횪 x찼c nh梳춏 ng튼沼쓎 gi찼m h沼?휃i c첫ng l챗n C퉤 quan Gi찼m s찼t c퉤 s沼?v梳춏  h횪nh xe bu첵t 휃튼a 휃처n tr梳?em m沼뾦 qu첵."
+  ]
+ },
+ {
+  "n": 311,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭?ㅼ뿉 ?깅뀈 蹂댄샇?먭? ?놁쓣 ?뚢섎낫?몄옄 ?숈듅?쒖??숇? 遺李⑺븳 寃쎌슦??泥섎쾶濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "20留????댄븯??踰뚭툑?대굹 援щ쪟",
+   "30留????댄븯??踰뚭툑?대굹 援щ쪟",
+   "40留????댄븯??踰뚭툑?대굹 援щ쪟",
+   "50留????댄븯??踰뚭툑?대굹 援щ쪟"
+  ],
+  "a": "2",
+  "tr_b": "H챙nh ph梳죜 n횪o sau 휃창y l횪 휃첬ng trong tr튼沼쓓g h沼즤 g梳칗 ?쏝i沼긪 b찼o c처 ng튼沼쓎 gi찼m h沼?휃i c첫ng??khi kh척ng c처  ng튼沼쓎 l沼썀 gi찼m h沼?휃i c첫ng tr챗n xe bu첵t 휃튼a 휃처n tr梳?em, theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 200.000 Won ho梳톍 t梳죑 giam",
+   "Ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 300.000 Won ho梳톍 t梳죑 giam",
+   "Ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 400.000 Won ho梳톍 t梳죑 giam",
+   "Ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 500.000 Won ho梳톍 t梳죑 giam"
+  ]
+ },
+ {
+  "n": 312,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좊졊?댁쟾???쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "怨좊졊?댁쟾???쒖?? ?댁쟾硫댄뿀瑜?諛쏆? 65???댁긽???щ엺???댁쟾?섎뒗 李⑥엫???섑??대뒗 ?쒖??대떎.",
+   "諛뷀깢? 泥?깋, 湲?⑤뒗 ?몃??됱쑝濡??쒕떎.",
+   "?욌㈃? ?덈?李⑹씠 媛?ν븯?꾨줉 怨좊Т?먯꽍?쇰줈 ?쒖옉?섍퀬, ?룸㈃? 諛섏궗吏濡??쒖옉?쒕떎.",
+   "李⑥쓽 ?욌㈃ 以??덉쟾?댁쟾??吏?μ쓣 二쇱? ?딄퀬, ?쒖씤?깆쓣 ?뺣낫?????덈뒗 ?μ냼??遺李⑺븳??"
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?k첵 hi沼뇎 ng튼沼쓎 l찼i xe cao tu沼뷼 theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "K첵 hi沼뇎 ng튼沼쓎 l찼i xe cao tu沼뷼 l횪 k첵 hi沼뇎 cho bi梳퓍 xe 휃ang 휃튼沼즓 휃i沼걏 khi沼긪 b沼웙 ng튼沼쓎 t沼?65 tu沼뷼 tr沼?l챗n v횪 c처 b梳켷g l찼i xe.",
+   "K첵 hi沼뇎 c처 n沼걆 m횪u xanh v횪 ch沼?m횪u v횪ng.",
+   "M梳톞 tr튼沼쌵 휃튼沼즓 l횪m b梳켷g nam ch창m cao su 휃沼?c처 th沼?g梳칗 v횪 th찼o r沼쓎, c챵n m梳톞 sau 휃튼沼즓 l횪m b梳켷g gi梳쪅 ph梳즢 quang.",
+   "K첵 hi沼뇎 휃튼沼즓 d찼n 沼?v沼?tr챠 ph챠a tr튼沼쌵 xe sao cho c처 th沼?휃梳즡 b梳즣 t梳쬶 nh챙n v횪 kh척ng g창y c梳즢 tr沼?vi沼놻 l찼i xe an to횪n."
+  ]
+ },
+ {
+  "n": 313,
+  "ko_b": "節?끂??蹂댄샇援ъ뿭節ｌ뿉???몄씤???꾪빐 ?쑣룸룄寃쎌같泥?옣?대굹 寃쎌같?쒖옣???????덈뒗 議곗튂媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "李⑤쭏???듯뻾??湲덉??섍굅???쒗븳?????덈떎.",
+   "?대㈃?꾨줈瑜??쇰갑?듯뻾濡쒕줈 吏?뺧쉈?댁쁺?????덈떎.",
+   "李⑤쭏???댄뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎.",
+   "二쇱텧?낅Ц ?곌껐?꾨줈???몄씤???꾪븳 ?몄긽二쇱감?μ쓣 ?ㅼ튂?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Bi沼뇆 ph찼p x沼?l첵 n횪o d튼沼쌻 휃창y m횪 Gi찼m 휃沼멵 S沼?C梳즢h s찼t hay Gi찼m 휃沼멵 S沼?C梳즢h s찼t t沼뎝h - th횪nh ph沼?kh척ng  th沼?th沼켧 hi沼뇆 v챙 ng튼沼쓎 cao tu沼뷼 沼?\"Khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼\"?",
+  "tr_c": [
+   "Gi沼쌻 h梳죒 hay c梳쩷 c찼c ph튼퉤ng ti沼뇆 giao th척ngl튼u th척ng.",
+   "Ch沼?휃沼땙h v횪 휃i沼걏 h횪nh c찼c 휃튼沼쓓g nh찼nh trong khu d창n c튼 th횪nh 휃튼沼쓓g m沼셳 chi沼걏.",
+   "Gi沼쌻 h梳죒 t沼멵 휃沼?v梳춏 h횪nh c沼쬪 c찼c ph튼퉤ng ti沼뇆 giao th척ng l횪 30 km/gi沼?",
+   "X창y d沼켷g b찾i 휃沼?xe tr챗n 휃튼沼쓓g d횪nh cho ng튼沼쓎 cao tu沼뷼 t梳죍 c찼c 휃튼沼쓓g li챗n k梳퓍 v沼쌻 c沼븂g ra v횪o ch챠nh."
+  ]
+ },
+ {
+  "n": 314,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄씤蹂댄샇援ъ뿭?먯꽌 ?듯뻾??湲덉??????덈뒗 ??곸쑝濡?諛붾Ⅸ 寃껋??",
+  "ko_c": [
+   "媛쒖씤???대룞?μ튂, ?먯쟾嫄?,
+   "?몃윮?곸옱??泥쒓났湲? ?대┛?댁슜 ?λ낫??,
+   "?먮룞湲곗옣移섏옄?꾧굅, ??1誘명꽣 ?대궡??蹂댄뻾蹂댁“???섏옄李?,
+   "?몄긽?덉젙湲? ??1誘명꽣 ?대궡???몄빟?먯슜 蹂댄뻾湲?
+  ],
+  "a": "1",
+  "tr_b": "Ph튼퉤ng ti沼뇆 n횪o l횪 c처 th沼?b沼?c梳쩷 l튼u th척ng trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 theo Ph찼p l沼뇆h Giao th척ng  휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ph튼퉤ng ti沼뇆 di chuy沼긪 c찼 nh창n, xe 휃梳죖",
+   "Xe g梳칗 m찼y khoan c沼뛠, Kickboard tr梳?em",
+   "Xe 휃梳죖 c처 g梳칗 휃沼셬g c퉤, xe d梳죒g gh梳?ng沼밿 h沼?tr沼?휃i b沼?c처 chi沼걏 r沼셬g t沼멼 휃a 1m",
+   "Xe l훱n c찼n n沼걆 휃튼沼쓓g, xe t梳춑 휃i cho ng튼沼쓎 gi횪 y梳퓎 c처 chi沼걏 r沼셬g t沼멼 휃a 1m"
+  ]
+ },
+ {
+  "n": 315,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄씤蹂댄샇援ъ뿭?먯꽌 ?ㅼ쟾 10?쒓꼍 諛쒖깮??踰뺢퇋?꾨컲??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅽ봽?몃윮 ?댁쟾?먭? ?좏샇?꾨컲???섎뒗 寃쎌슦 踰붿튃湲덉? 13留??먯씠??",
+   "?뱀슜?먮룞李??댁쟾?먭? ?몄씤蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섎㈃ 踰붿튃湲덉? 7留??먯씠??",
+   "?먯쟾嫄??댁쟾?먭? ?〓떒蹂대룄?먯꽌 ?〓떒?섎뒗 ?몄씤蹂댄뻾?먯쓽 ?〓떒??諛⑺빐?섎㈃ 踰붿튃湲덉? 5留??먯씠??",
+   "寃쎌슫湲??댁쟾?먭? 蹂댄뻾?먮낫?몃? 遺덉씠?됲븯??寃쎌슦 踰붿튃湲덉? 3留??먯씠??"
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?vi ph梳죑 lu梳춗 x梳즭 ra v횪o l첬c kho梳즢g 10 gi沼?s찼ng 沼?khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼  theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe ben vi ph梳죑 휃챔n t챠n hi沼뇎 b沼?ph梳죜 ti沼걆 vi ph梳죑 130.000 Won.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe 척 t척 con n梳퓎 g창y c梳즢 tr沼?l튼u th척ng c沼쬪 ng튼沼쓎 휃i b沼?cao tu沼뷼 b沼?ph梳죜 ti沼걆 vi ph梳죑 70.000 Won.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe 휃梳죖 n梳퓎 c梳즢 tr沼?ng튼沼쓎 휃i b沼?cao tu沼뷼 qua 휃튼沼쓓g 沼?v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?b沼? ph梳죜 ti沼걆 vi ph梳죑 50.000 Won.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe m찼y c횪y kh척ng tu창n th沼?quy 휃沼땙h b梳즣 v沼?ng튼沼쓎 휃i b沼?b沼?ph梳죜 ti沼걆 vi ph梳죑 30.000 Won."
+  ]
+ },
+ {
+  "n": 316,
+  "ko_b": "?몄씤 蹂댄샇援ъ뿭 ?먮뒗 ?μ븷??蹂댄샇援ъ뿭??吏?뺛냽?댁젣 ?덉감 諛?湲곗? ?깆뿉 愿?섏뿬 ?꾩슂???ы빆??洹쒖젙?섎뒗 遺?뱀쓽 沅뚰븳??媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "臾명솕泥댁쑁愿愿묐?",
+   "?됱젙?덉쟾遺",
+   "蹂닿굔蹂듭?遺",
+   "援?넗援먰넻遺"
+  ],
+  "a": "1",
+  "tr_b": "C퉤 quan n횪o sau 휃창y kh척ng thu沼셛 th梳쯯 quy沼걆 ban h횪nh b沼?l沼뇆h c梳쩺 b沼?quy 휃沼땙h c찼c n沼셢 dung c梳쬷 thi梳퓍 v沼? th沼?t沼쩭 v횪 ti챗u chu梳쯰 ch沼?휃沼땙h ho梳톍 h沼쭃 b沼?khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 ho梳톍 ng튼沼쓎 khuy梳퓍 t梳춗?",
+  "tr_c": [
+   "B沼?V훱n h처a, Th沼?thao v횪 Du l沼땉h",
+   "B沼?H횪nh ch챠nh v횪 An to횪n",
+   "B沼?Y t梳?v횪 Ph첬c l沼즜",
+   "B沼?휂梳쩿 휃ai, C퉤 s沼?h梳?t梳쬷g v횪 Giao th척ng v梳춏 t梳즜"
+  ]
+ },
+ {
+  "n": 317,
+  "ko_b": "?ㅼ쓬 以??몄씤蹂댄샇援ъ뿭??吏?뺥븷 ???녿뒗 ?먮뒗?",
+  "ko_c": [
+   "?밸퀎?쒖옣",
+   "愿묒뿭?쒖옣",
+   "?밸퀎?먯튂?꾩???,
+   "?쑣룸룄寃쎌같泥?옣"
+  ],
+  "a": "4",
+  "tr_b": "Ai sau 휃창y l횪 ng튼沼쓎 kh척ng th沼?ch沼?휃沼땙h khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼?",
+  "tr_c": [
+   "Th沼?tr튼沼웢g th횪nh ph沼?Seoul",
+   "Th沼?tr튼沼웢g th횪nh ph沼?tr沼켧 thu沼셛 trung 튼퉤ng",
+   "Ch沼?t沼땉h t沼뎝h 휂梳톍 khu t沼?tr沼?,
+   "Gi찼m 휃沼멵 S沼?C梳즢h s찼t t沼뎝h - th횪nh ph沼?
+  ]
+ },
+ {
+  "n": 318,
+  "ko_b": "援먰넻?쎌옄??怨좊졊?먯쓽 ?쇰컲?곸씤 ?뱀쭠??????ㅻ챸?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "諛섏궗 ?좉꼍???뷀븯吏留?寃쏀뿕???섑븳 ?좎냽???먮떒? 媛?ν븯??",
+   "?쒕젰? ?쏀솕?섏?留?泥?젰? 諛쒕떖?섏뼱 ?묒? ?뚮━?먮룄 誘쇨컧?섍쾶 諛섏쓳?쒕떎.",
+   "?뚮컻 ?ы깭????묐뒫?μ? 誘명씉?섏?留??몄??λ젰? 媛뺥솕?쒕떎.",
+   "?좎껜?곹깭媛 ?명솕?좎닔濡??됰룞???먰솢?섏? ?딅떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?휃梳톍 휃i沼긩 chung c沼쬪 ng튼沼쓎 cao tu沼뷼 y梳퓎 th梳?trong giao th척ng?",
+  "tr_c": [
+   "Th梳쬷 kinh ph梳즢 x梳?k챕m nh튼ng c처 th沼?ph찼n 휃o찼n nhanh d沼켥 tr챗n kinh nghi沼뇅.",
+   "Th沼?l沼켧 k챕m nh튼ng th챠nh gi찼c nh梳죣 n챗n s梳?c처 th沼?ph梳즢 沼쯰g nhanh nh梳죣 v沼쌻 c梳?창m thanh b챕.",
+   "Kh梳?n훱ng 沼쯰g ph처 v沼쌻 t챙nh tr梳죒g kh梳쯰 c梳쩺 y梳퓎 nh튼ng kh梳?n훱ng nh梳춏 th沼쯢 휃튼沼즓 n창ng cao.",
+   "C퉤 th沼?c횪ng gi횪 th챙 h횪nh 휃沼셬g c횪ng kh척ng linh ho梳죜."
+  ]
+ },
+ {
+  "n": 319,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???쒖옣 ?깆씠 ?몄씤蹂댄샇援ъ뿭?먯꽌 ?????덈뒗 議곗튂濡??녹? 寃껋??",
+  "ko_c": [
+   "李⑤쭏? ?몃㈃?꾩감???듯뻾???쒗븳?섍굅??湲덉??????덈떎.",
+   "??뺤듅?⑹감???듯뻾??湲덉??????덉?留??몃㈃?꾩감???쒗븳?????녿떎.",
+   "?대쪣李⑥쓽 ?듯뻾? 湲덉??????덉쑝???먯쟾嫄곕뒗 ?쒗븳?????녿떎.",
+   "嫄댁꽕湲곌퀎???듯뻾??湲덉????섎뒗 ?놁?留??쒗븳?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "Bi沼뇆 ph찼p x沼?l첵 n횪o l횪 휃첬ng c처 th沼?th沼켧 hi沼뇆 trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 nh튼 ch沼?v.v??theo Ph찼p  l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "C처 th沼?h梳죒 ch梳?ho梳톍 c梳쩷 c찼c ph튼퉤ng ti沼뇆 v횪 xe 휃i沼뇆 m梳톞 휃梳쩿.",
+   "C처 th沼?c梳쩷 xe kh찼ch c沼?l沼썀 l튼u th척ng nh튼ng kh척ng 휃튼沼즓 h梳죒 ch梳?xe 휃i沼뇆 m梳톞 휃梳쩿.",
+   "C처 th沼?c梳쩷 xe hai b찼nh l튼u th척ng nh튼ng kh척ng 휃튼沼즓 h梳죒 ch梳?xe 휃梳죖.",
+   "Kh척ng th沼?c梳쩷 c찼c ph튼퉤ng ti沼뇆 d梳죒g m찼y x창y d沼켷g l튼u th척ng nh튼ng c처 th沼?h梳죒 ch梳?"
+  ]
+ },
+ {
+  "n": 320,
+  "ko_b": "蹂댄뻾???좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄濡??〓떒?섎뒗 ?몄씤???ㅻ뒭寃?諛쒓껄???뱀슜李??댁쟾?먭? 湲됱젣?숈쓣 ?섏??쇰굹 ?몄씤??異⑷꺽(2 二?吏꾨떒)?섎뒗 援먰넻?ш퀬媛 諛쒖깮?섏??? ?щ컮瑜??ㅻ챸 2媛吏??",
+  "ko_c": [
+   "蹂댄뻾???좏샇?깆씠 ?놁쑝誘濡??먮룞李??댁쟾?먮뒗 怨쇱떎???꾪? ?녿떎.",
+   "?먮룞李??댁쟾?먯뿉寃?誘쇱궗梨낆엫???덈떎.",
+   "?〓떒???몄씤留??뺤궗泥섎쾶 ?쒕떎.",
+   "?먮룞李??댁쟾?먯뿉寃??뺤궗 梨낆엫???덈떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Ng튼沼쓎 l찼i xe 척 t척 con ph찼t hi沼뇆 ch梳춎 c처 ng튼沼쓎 cao tu沼뷼 휃ang sang 휃튼沼쓓g 沼?l沼멼 sang 휃튼沼쓓g kh척ng c처 휃챔n giao th척ng d횪nh cho ng튼沼쓎 휃i b沼?v횪 phanh g梳쩺 nh튼ng 휃찾 x梳즭 ra tai n梳죒 giao th척ng 휃창m v횪o ng튼沼쓎 cao tu沼뷼 (ch梳쯰 휃o찼n m梳쩿 2 tu梳쬷 휃i沼걏 tr沼?. Hai c창u n횪o sau 휃창y gi梳즜 th챠ch 휃첬ng?",
+  "tr_c": [
+   "Do kh척ng c처 휃챔n giao th척ng d횪nh cho ng튼沼쓎 휃i b沼?n챗n ng튼沼쓎 l찼i xe 척 t척 con ho횪n to횪n kh척ng c처 tr찼ch nhi沼뇅 g챙 c梳?",
+   "Ng튼沼쓎 l찼i xe 척 t척 con ph梳즜 ch沼땥 tr찼ch nhi沼뇅 d창n s沼?",
+   "Ch沼?ng튼沼쓎 cao tu沼뷼 qua 휃튼沼쓓g m沼쌻 b沼?x沼?ph梳죜 h챙nh s沼?",
+   "Ng튼沼쓎 l찼i xe 척 t척 con ph梳즜 ch沼땥 tr찼ch nhi沼뇅 h챙nh s沼?"
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+p='translations/audit/queue/207_choices_vn.json'
+with open(p,encoding='utf-8') as f:d=json.load(f)
+print(json.dumps(d[:20],ensure_ascii=True,indent=1))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:38:48.404826Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 653ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/207_choices_vn.json'|ConvertFrom-Json; "'$s=$d[0..19]|ConvertTo-Json -Depth 5; [regex]::Replace($s,'"'["'^'"\\x00-\\x7F]',{param("'$m) '"'\\u{0:x4}' -f [int][char]"'$m.Value})' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 675ms:
+[
+    {
+        "n":  281,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\uc0c1 \uc5b4\ub9b0\uc774 \ubc0f \uc601\uc720\uc544 \uc5f0\ub839\uae30\uc900\uc73c\ub85c \ub9de\ub294 \uac83\uc740?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774\ub294 13\uc138 \uc774\ud558\uc778 \uc0ac\ub78c",
+                     "\uc601\uc720\uc544\ub294 6\uc138 \ubbf8\ub9cc\uc778 \uc0ac\ub78c",
+                     "\uc5b4\ub9b0\uc774\ub294 15\uc138 \ubbf8\ub9cc\uc778 \uc0ac\ub78c",
+                     "\uc601\uc720\uc544\ub294 7\uc138 \ubbf8\ub9cc\uc778 \uc0ac\ub78c"
+                 ],
+        "a":  "2",
+        "tr_b":  "\u0110\u1ed9 tu\u1ed5i \u0111\u00fang c\u1ee7a thi\u1ebfu nhi v\u00e0 tr\u1ebb nh\u1ecf trong Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9?",
+        "tr_c":  [
+                     "Thi\u1ebfu nhi l\u00e0 t\u1eeb 13 tu\u1ed5i tr\u1edf xu\u1ed1ng",
+                     "Tr\u1ebb nh\u1ecf l\u00e0 d\u01b0\u1edbi 6 tu\u1ed5i",
+                     "Thi\u1ebfu nhi l\u00e0 d\u01b0\u1edbi 15 tu\u1ed5i",
+                     "Tr\u1ebb nh\u1ecf l\u00e0 d\u01b0\u1edbi 7 tu\u1ed5i"
+                 ]
+    },
+    {
+        "n":  282,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\ub839\uc0c1 \uc2b9\uc6a9\ucc28 \uc6b4\uc804\uc790\uac00 13:00\uacbd \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c \uc2e0\ud638\uc704\ubc18\uc744 \ud55c \uacbd\uc6b0 \ubc94\uce59\uae08\uc740?",
+        "ko_c":  [
+                     "5\ub9cc \uc6d0",
+                     "7\ub9cc \uc6d0",
+                     "12\ub9cc \uc6d0",
+                     "15\ub9cc \uc6d0"
+                 ],
+        "a":  "3",
+        "tr_b":  "Khi ng\u01b0\u1eddi l\u00e1i xe \u00f4 t\u00f4 con vi ph\u1ea1m t\u00edn hi\u1ec7u giao th\u00f4ng \u1edf khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em v\u00e0o l\u00fac kho\u1ea3ng 13:00 th\u00ec ti\u1ec1n  ph\u1ea1t s\u1ebd l\u00e0 bao nhi\u00eau?",
+        "tr_c":  [
+                     "50.000 Won",
+                     "70.000 Won",
+                     "120.000 Won",
+                     "150.000 Won"
+                 ]
+    },
+    {
+        "n":  283,
+        "ko_b":  "\uc5b4\ub9b0\uc774\uac00 \ubcf4\ud638\uc790 \uc5c6\uc774 \ub3c4\ub85c\uc5d0\uc11c \ub180\uace0 \uc788\ub294 \uacbd\uc6b0 \uac00\uc7a5 \uc62c\ubc14\ub978 \uc6b4\uc804\ubc29\ubc95\uc740?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774 \uc798\ubabb\uc774\ubbc0\ub85c \ubb34\uc2dc\ud558\uace0 \uc9c0\ub098\uac04\ub2e4.",
+                     "\uacbd\uc74c\uae30\ub97c \uc6b8\ub824 \uac81\uc744 \uc8fc\uba70 \uc9c4\ud589\ud55c\ub2e4.",
+                     "\uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\uc5d0 \uc870\uc2ec\ud558\uba70 \uae09\ud788 \uc9c0\ub098\uac04\ub2e4."
+                 ],
+        "a":  "3",
+        "tr_b":  "Ph\u01b0\u01a1ng ph\u00e1p l\u00e1i xe n\u00e0o l\u00e0 \u0111\u00fang nh\u1ea5t trong tr\u01b0\u1eddng h\u1ee3p tr\u1ebb em \u0111ang ch\u01a1i tr\u00ean \u0111\u01b0\u1eddng m\u00e0 kh\u00f4ng c\u00f3 ng\u01b0\u1eddi  b\u1ea3o h\u1ed9?",
+        "tr_c":  [
+                     "Kh\u00f4ng quan t\u00e2m v\u00e0 \u0111i qua b\u1edfi \u0111\u00e2y l\u00e0 l\u1ed7i c\u1ee7a tr\u1ebb nh\u1ecf.",
+                     "B\u1ea5m c\u00f2i \u0111\u1ec3 d\u1ecda tr\u1ebb v\u00e0 ti\u1ebfp t\u1ee5c \u0111i.",
+                     "Ph\u1ea3i d\u1eebng l\u1ea1i t\u1ea1m th\u1eddi.",
+                     "C\u1ea9n th\u1eadn v\u1edbi tr\u1ebb nh\u1ecf v\u00e0 \u0111i qua th\u1eadt nhanh."
+                 ]
+    },
+    {
+        "n":  284,
+        "ko_b":  "\uc5b4\ub9b0\uc774\uac00 \ud6a1\ub2e8\ubcf4\ub3c4 \uc704\ub97c \uac78\uc5b4\uac00\uace0 \uc788\uc744 \ub54c \ub3c4\ub85c\uad50\ud1b5\ubc95\ub839\uc0c1 \uaddc\uc815 \ubc0f \uc6b4\uc804\uc790\uc758 \ud589\ub3d9\uc73c\ub85c \uc62c\ubc14\ub978 \uac83\uc740?",
+        "ko_c":  [
+                     "\ud6a1\ub2e8\ubcf4\ub3c4 \uc55e\uc5d0\uc11c \ubcf4\ud589\uc790\uac00 \ud6a1\ub2e8\ud558\ub294 \uac83\uc744 \ubbf8\ub9ac \ubc1c\uacac\ud558\uc600\uc744 \ub54c \uc548\uc804\uc744 \ud655\uc778 \ud6c4, \uc11c\ud589\uc73c\ub85c \ud1b5\uacfc \ud55c\ub2e4.",
+                     "\uc2e0\ud638\ub4f1\uc774 \uc5c6\ub294 \uc77c\ubc18\ub3c4\ub85c\uc758 \ud6a1\ub2e8\ubcf4\ub3c4\uc77c \uacbd\uc6b0 \ud6a1\ub2e8\ubcf4\ub3c4 \uc815\uc9c0\uc120\uc744 \uc9c0\ub098\uccd0\ub3c4 \ud6a1\ub2e8\ubcf4\ub3c4 \ub0b4\uc5d0\ub9cc \uc9c4\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \ub41c\ub2e4.",
+                     "\uc2e0\ud638\ub4f1\uc774 \uc5c6\ub294 \uc77c\ubc18\ub3c4\ub85c\uc758 \ud6a1\ub2e8\ubcf4\ub3c4\uc77c \uacbd\uc6b0 \uc2e0\ud638\ub4f1\uc774 \uc5c6\uc73c\ubbc0\ub85c \uc5b4\ub9b0\uc774 \ub4a4\ucabd\uc73c\ub85c \uc11c\ud589\ud558\uc5ec \ud1b5\uacfc\ud558\uba74 \ub41c\ub2e4.",
+                     "\ud6a1\ub2e8\ubcf4\ub3c4\ud45c\uc9c0\ub294 \ud6a1\ub2e8\ubcf4\ub3c4\ub97c \uc124\uce58\ud55c \uc7a5\uc18c\uc758 \ud544\uc694\ud55c \uc9c0\uc810\uc758 \ub3c4\ub85c\uc591\uce21\uc5d0 \uc124\uce58\ud558\uba70 \ud6a1\ub2e8\ubcf4\ub3c4 \uc55e\uc5d0\uc11c \uc77c\uc2dc\uc815\uc9c0 \ud558\uc5ec\uc57c \ud55c\ub2e4."
+                 ],
+        "a":  "4",
+        "tr_b":  "Khi c\u00f3 tr\u1ebb em \u0111ang \u0111i tr\u00ean v\u1ea1ch sang \u0111\u01b0\u1eddng d\u00e0nh cho ng\u01b0\u1eddi \u0111i b\u1ed9, n\u1ed9i dung n\u00e0o \u0111\u00fang v\u1edbi quy \u0111\u1ecbnh v\u00e0 h\u00e0nh  \u0111\u1ed9ng c\u1ee7a ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe theo Ph\u00e1p l\u1ec7nh Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9?",
+        "tr_c":  [
+                     "Khi ph\u00e1t hi\u1ec7n tr\u01b0\u1edbc ng\u01b0\u1eddi \u0111i b\u1ed9 \u0111ang b\u0103ng qua \u0111\u01b0\u1eddng t\u1ea1i v\u1ea1ch qua \u0111\u01b0\u1eddng d\u00e0nh cho ng\u01b0\u1eddi \u0111i b\u1ed9, ph\u1ea3i ki\u1ec3m tra an  to\u00e0n v\u00e0 \u0111i ch\u1eadm qua.",
+                     "\u0110\u1ed1i v\u1edbi v\u1ea1ch sang \u0111\u01b0\u1eddng d\u00e0nh cho ng\u01b0\u1eddi \u0111i b\u1ed9 tr\u00ean \u0111\u01b0\u1eddng th\u00f4ng th\u01b0\u1eddng kh\u00f4ng c\u00f3 \u0111\u00e8n giao th\u00f4ng, n\u1ebfu l\u1ee1 l\u1ea5n qua v\u1ea1ch d\u1eebng th\u00ec ch\u1ec9 c\u1ea7n kh\u00f4ng l\u1ea5n qu\u00e1 s\u00e2u v\u00e0o v\u00f9ng v\u1ea1ch sang \u0111\u01b0\u1eddng l\u00e0 \u0111\u01b0\u1ee3c.",
+                     "\u0110\u1ed1i v\u1edbi v\u1ea1ch sang \u0111\u01b0\u1eddng d\u00e0nh cho ng\u01b0\u1eddi \u0111i b\u1ed9 tr\u00ean \u0111\u01b0\u1eddng th\u00f4ng th\u01b0\u1eddng kh\u00f4ng c\u00f3 \u0111\u00e8n giao th\u00f4ng, v\u00ec kh\u00f4ng c\u00f3 \u0111\u00e8n giao th\u00f4ng n\u00ean c\u1ea7n \u0111i ch\u1eadm qua \u1edf ph\u00eda sau tr\u1ebb.",
+                     "Bi\u1ec3n b\u00e1o v\u1ea1ch sang \u0111\u01b0\u1eddng d\u00e0nh cho ng\u01b0\u1eddi \u0111i b\u1ed9 \u0111\u01b0\u1ee3c \u0111\u1eb7t \u1edf hai b\u00ean \u0111\u01b0\u1eddng, t\u1ea1i v\u1ecb tr\u00ed c\u1ea7n thi\u1ebft c\u1ee7a n\u01a1i \u0111\u00e3 v\u1ebd v\u1ea1ch sang \u0111\u01b0\u1eddng, ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe ph\u1ea3i t\u1ea1m d\u1eebng tr\u01b0\u1edbc v\u1ea1ch sang \u0111\u01b0\u1eddng n\u00e0y."
+                 ]
+    },
+    {
+        "n":  285,
+        "ko_b":  "\uc5b4\ub9b0\uc774 \ud1b5\ud559\ubc84\uc2a4\uac00 \ud3b8\ub3c4 1\ucc28\ub85c \ub3c4\ub85c\uc5d0\uc11c \uc815\ucc28\ud558\uc5ec \uc601\uc720\uc544\uac00 \ud0c0\uace0 \ub0b4\ub9ac\ub294 \uc911\uc784\uc744 \ud45c\uc2dc\ud558\ub294 \uc810\uba78\ub4f1\uc774 \uc791\ub3d9\ud558\uace0 \uc788\uc744  \ub54c \ubc18\ub300 \ubc29\ud5a5\uc5d0\uc11c \uc9c4\ud589\ud558\ub294 \ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uc5b4\ub5bb\uac8c \ud558\uc5ec\uc57c \ud558\ub294\uac00?",
+        "ko_c":  [
+                     "\uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec \uc548\uc804\uc744 \ud655\uc778\ud55c \ud6c4 \uc11c\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uc11c\ud589\ud558\uba74\uc11c \uc548\uc804 \ud655\uc778\ud55c \ud6c4 \ud1b5\uacfc\ud55c\ub2e4.",
+                     "\uadf8\ub300\ub85c \ud1b5\uacfc\ud574\ub3c4 \ub41c\ub2e4.",
+                     "\uacbd\uc74c\uae30\ub97c \uc6b8\ub9ac\uba74\uc11c \ud1b5\uacfc\ud558\uba74 \ub41c\ub2e4."
+                 ],
+        "a":  "1",
+        "tr_b":  "Khi xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em d\u1eebng l\u1ea1i \u1edf \u0111\u01b0\u1eddng m\u1ed9t chi\u1ec1u c\u00f3 1 l\u00e0n \u0111\u01b0\u1eddng v\u00e0 b\u1eadt sang \u0111\u00e8n b\u00e1o hi\u1ec7u c\u00f3 tr\u1ebb em  \u0111ang l\u00ean xu\u1ed1ng xe th\u00ec ng\u01b0\u1eddi l\u00e1i xe \u0111ang ch\u1ea1y \u1edf h\u01b0\u1edbng ng\u01b0\u1ee3c l\u1ea1i ph\u1ea3i l\u00e0m g\u00ec?",
+        "tr_c":  [
+                     "Ph\u1ea3i t\u1ea1m th\u1eddi d\u1eebng l\u1ea1i, ki\u1ec3m tra an to\u00e0n r\u1ed3i \u0111i ch\u1eadm qua.",
+                     "V\u1eeba \u0111i ch\u1eadm v\u1eeba ki\u1ec3m tra an to\u00e0n r\u1ed3i m\u1edbi \u0111i qua.",
+                     "C\u1ee9 th\u1ebf \u0111i qua.",
+                     "B\u1ea5m c\u00f2i xe v\u00e0 \u0111i qua."
+                 ]
+    },
+    {
+        "n":  286,
+        "ko_b":  "\ucc28\uc758 \uc6b4\uc804\uc790\uac00 \uc6b4\uc804 \uc911 \u2018\uc5b4\ub9b0\uc774\ub97c \ucda9\uaca9\ud55c \uacbd\uc6b0\u2019\uac00\uc7a5 \uc62c\ubc14\ub978 \ud589\ub3d9\uc740?",
+        "ko_c":  [
+                     "\uc774\ub95c\ucc28\uc6b4\uc804\uc790\ub294 \uc5b4\ub9b0\uc774\uc5d0\uac8c \ub2e4\ucce4\ub0d0\uace0 \ubb3c\uc5b4\ubcf4\uc558\uc73c\ub098 \uc544\ubb34 \ub9d0\ub3c4 \ud558\uc9c0 \uc54a\uc544 \uc548 \ub2e4\uce5c \uac83\uc73c\ub85c \ud310\ub2e8\ud558\uc5ec \uacc4\uc18d \uc8fc\ud589\ud558\uc600\ub2e4.",
+                     "\uc2b9\uc6a9\ucc28\uc6b4\uc804\uc790\ub294 \ubc14\ub85c \uc815\ucc28\ud55c \ud6c4 \uc5b4\ub9b0\uc774\ub97c \uc721\uc548\uc73c\ub85c \uc0b4\ud3b4\ubcf8 \ud6c4 \ub2e4\uce5c \uacf3\uc774 \uc5c6\ub2e4\uace0 \ud310\ub2e8\ud558\uc5ec \uacc4\uc18d \uc8fc\ud589\ud558\uc600\ub2e4.",
+                     "\ud654\ubb3c\ucc28\uc6b4\uc804\uc790\ub294 \uc5b4\ub9b0\uc774\uac00 \ub118\uc5b4\uc84c\ub2e4 \uae08\ubc29 \uc77c\uc5b4\ub098\ub294 \uac83\uc744 \ubcf8 \ud6c4 \uc548 \ub2e4\uce5c \uac83\uc73c\ub85c \ud310\ub2e8\ud558\uc5ec \uacc4\uc18d \uc8fc\ud589\ud558\uc600\ub2e4.",
+                     "\uc790\uc804\uac70\uc6b4\uc804\uc790\ub294 \ub118\uc5b4\uc9c4 \uc5b4\ub9b0\uc774\uac00 \uc7ac\ube68\ub9ac \uc77c\uc5b4\ub098 \ub6f0\uc5b4\uac00\ub294 \uac83\uc744 \ubcf8 \ud6c4 \uacbd\ucc30\uad00\uc11c\uc5d0 \uc2e0\uace0\ud558\uace0 \ud604\uc7a5\uc5d0 \ub300\uae30\ud558\uc600\ub2e4."
+                 ],
+        "a":  "4",
+        "tr_b":  "H\u00e0nh \u0111\u1ed9ng n\u00e0o l\u00e0 \u0111\u00fang nh\u1ea5t c\u1ee7a ng\u01b0\u1eddi l\u00e1i xe \"trong tr\u01b0\u1eddng h\u1ee3p va ph\u1ea3i tr\u1ebb em\" khi \u0111ang l\u00e1i xe?",
+        "tr_c":  [
+                     "Ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe m\u00e1y hai b\u00e1nh h\u1ecfi tr\u1ebb em c\u00f3 b\u1ecb th\u01b0\u01a1ng kh\u00f4ng, n\u1ebfu tr\u1ebb kh\u00f4ng n\u00f3i g\u00ec th\u00ec ph\u00e1n \u0111o\u00e1n l\u00e0 kh\u00f4ng b\u1ecb  th\u01b0\u01a1ng v\u00e0 cho xe \u0111i ti\u1ebfp.",
+                     "Ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe \u00f4 t\u00f4 d\u1eebng xe ngay, quan s\u00e1t tr\u1ebb b\u1eb1ng m\u1eaft th\u01b0\u1eddng v\u00e0 \u0111\u00e1nh gi\u00e1 kh\u00f4ng c\u00f3 ch\u1ed7 n\u00e0o b\u1ecb th\u01b0\u01a1ng th\u00ec  cho xe \u0111i ti\u1ebfp.",
+                     "Ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe t\u1ea3i \u0111\u00e1nh gi\u00e1 r\u1eb1ng tr\u1ebb kh\u00f4ng b\u1ecb th\u01b0\u01a1ng sau khi th\u1ea5y tr\u1ebb ng\u00e3 r\u1ed3i \u0111\u1ee9ng d\u1eady \u0111\u01b0\u1ee3c lu\u00f4n v\u00e0 cho xe \u0111i  ti\u1ebfp.",
+                     "Ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe \u0111\u1ea1p sau khi nh\u00ecn th\u1ea5y tr\u1ebb b\u1ecb ng\u00e3 v\u1ee5t \u0111\u1ee9ng d\u1eady v\u00e0 ch\u1ea1y th\u00ec c\u1ea7n b\u00e1o cho \u0111\u1ed3n c\u1ea3nh s\u00e1t v\u00e0 ch\u1edd \u1edf t\u1ea1i  hi\u1ec7n tr\u01b0\u1eddng."
+                 ]
+    },
+    {
+        "n":  287,
+        "ko_b":  "\uace8\ubaa9\uae38\uc5d0\uc11c \uac11\uc790\uae30 \ub6f0\uc5b4\ub098\uc624\ub294 \uc5b4\ub9b0\uc774\ub97c \uc790\ub3d9\ucc28\uac00 \ucda9\uaca9\ud558\uc600\ub2e4. \uc5b4\ub9b0\uc774\ub294 \uc678\uacac\uc0c1 \ub2e4\uce5c \uacf3\uc774 \uc5c6\uc5b4 \ubcf4\uc600\uace0, \u201c\uad1c\ucc2e \ub2e4\u201d\uace0 \ub9d0\ud558\uace0 \uc788\ub2e4. \uc774\ub7f0 \uacbd\uc6b0 \uc6b4\uc804\uc790\uc758 \ud589\ub3d9\uc73c\ub85c \ub9de\ub294 \uac83\uc740?",
+        "ko_c":  [
+                     "\ubc18\uc758\uc0ac\ubd88\ubc8c\uc8c4\uc5d0 \ud574\ub2f9\ud558\ubbc0\ub85c \uc6b4\uc804\uc790\ub294 \uac00\ub358 \uae38\uc744 \uac00\uba74 \ub41c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\uc758 \ud53c\ud574\uac00 \uc5c6\uc5b4 \uad50\ud1b5\uc0ac\uace0\uac00 \uc544\ub2c8\ubbc0\ub85c \ubcc4\ub3c4\uc758 \uc870\uce58 \uc5c6\uc774 \ud604\uc7a5\uc744 \ubc97\uc5b4\ub09c\ub2e4.",
+                     "\ubd80\ubaa8\uc5d0\uac8c \uc5f0\ub77d\ud558\ub294 \ub4f1 \ubc18\ub4dc\uc2dc \ud544\uc694\ud55c \uc870\uce58\ub97c \ub2e4\ud55c \ud6c4 \ud604\uc7a5\uc744 \ubc97\uc5b4\ub09c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\uc758 \uacfc\uc2e4\uc774\ubbc0\ub85c \uc6b4\uc804\uc790\ub294 \uc5b4\ub9b0\uc774\uc758 \uc5f0\ub77d\ucc98\ub9cc \ud655\uc778\ud558\uace0 \uadc0\uac00\ud55c\ub2e4."
+                 ],
+        "a":  "3",
+        "tr_b":  "Xe \u00f4 t\u00f4 x\u1ea3y ra va ch\u1ea1m v\u1edbi tr\u1ebb \u0111\u1ed9t ng\u1ed9t ch\u1ea1y ra t\u1eeb \u0111\u01b0\u1eddng h\u1ebbm, nh\u00ecn b\u00ean ngo\u00e0i tr\u1ebb kh\u00f4ng b\u1ecb th\u01b0\u01a1ng g\u00ec v\u00e0 tr\u1ebb  c\u0169ng n\u00f3i l\u00e0 kh\u00f4ng sao. H\u00e0nh \u0111\u1ed9ng \u0111\u00fang c\u1ee7a ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe trong tr\u01b0\u1eddng h\u1ee3p n\u00e0y l\u00e0?",
+        "tr_c":  [
+                     "\u0110\u00e2y l\u00e0 \u201ct\u1ed9i kh\u00f4ng b\u1ecb x\u1eed ph\u1ea1t tr\u00e1i \u00fd mu\u1ed1n c\u1ee7a n\u1ea1n nh\u00e2n\u201d, n\u00ean ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe c\u00f3 th\u1ec3 ti\u1ebfp t\u1ee5c \u0111i.",
+                     "Tr\u1ebb em kh\u00f4ng b\u1ecb th\u01b0\u01a1ng n\u00ean kh\u00f4ng ph\u1ea3i l\u00e0 tai n\u1ea1n giao th\u00f4ng, v\u00ec th\u1ebf c\u00f3 th\u1ec3 r\u1eddi kh\u1ecfi hi\u1ec7n tr\u01b0\u1eddng m\u00e0 kh\u00f4ng c\u1ea7n c\u00f3  b\u1ea5t k\u1ef3 x\u1eed l\u00fd n\u00e0o.",
+                     "B\u1eaft bu\u1ed9c ph\u1ea3i th\u1ef1c hi\u1ec7n c\u00e1c x\u1eed l\u00fd c\u1ea7n thi\u1ebft nh\u01b0 li\u00ean l\u1ea1c v\u1edbi b\u1ed1 m\u1eb9 v.v... r\u1ed3i m\u1edbi r\u1eddi kh\u1ecfi hi\u1ec7n tr\u01b0\u1eddng.",
+                     "\u0110\u00e2y l\u00e0 l\u1ed7i c\u1ee7a tr\u1ebb n\u00ean ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe ch\u1ec9 c\u1ea7n l\u1ea5y li\u00ean l\u1ea1c c\u1ee7a tr\u1ebb r\u1ed3i \u0111i v\u1ec1."
+                 ]
+    },
+    {
+        "n":  288,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\ub839\uc0c1 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc9c0\uc815 \ubc0f \uad00\ub9ac \uc8fc\uccb4\ub294?",
+        "ko_c":  [
+                     "\uacbd\ucc30\uc11c\uc7a5",
+                     "\uc2dc\uc7a5\ub4f1",
+                     "\uc2dc\u00b7\ub3c4\uacbd\ucc30\uccad\uc7a5",
+                     "\uad50\uc721\uac10"
+                 ],
+        "a":  "2",
+        "tr_b":  "Theo Ph\u00e1p l\u1ec7nh Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9, ai l\u00e0 ng\u01b0\u1eddi c\u00f3 quy\u1ec1n ch\u1ec9 \u0111\u1ecbnh v\u00e0 qu\u1ea3n l\u00fd c\u00e1c khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em?",
+        "tr_c":  [
+                     "C\u1ee5c tr\u01b0\u1edfng C\u1ee5c C\u1ea3nh s\u00e1t",
+                     "Th\u1ecb tr\u01b0\u1edfng",
+                     "Gi\u00e1m \u0111\u1ed1c S\u1edf C\u1ea3nh s\u00e1t t\u1ec9nh - th\u00e0nh ph\u1ed1",
+                     "B\u1ed9 tr\u01b0\u1edfng B\u1ed9 Gi\u00e1o d\u1ee5c"
+                 ]
+    },
+    {
+        "n":  289,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\ub839\uc0c1 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0 \ub300\ud55c \uc124\uba85\uc73c\ub85c \ub9de\ub294 2\uac00\uc9c0\ub294?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc740 \ucd08\ub4f1\ud559\uad50 \uc8fc\ucd9c\uc785\ubb38 100\ubbf8\ud130 \uc774\ub0b4\uc758 \ub3c4\ub85c \uc911 \uc77c\uc815 \uad6c\uac04\uc744 \ub9d0\ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc548\uc5d0\uc11c \uc624\uc804 8\uc2dc\ubd80\ud130 \uc624\ud6c4 8\uc2dc\uae4c\uc9c0 \uc8fc\uff65\uc815\ucc28 \uc704\ubc18\ud55c \uacbd\uc6b0 \ubc94\uce59\uae08\uc774 \uac00\uc911\ub41c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \ub0b4 \uc124\uce58\ub41c \uc2e0\ud638\uae30\uc758 \ubcf4\ud589 \uc2dc\uac04\uc740 \uc5b4\ub9b0\uc774 \ucd5c\uace0 \ubcf4\ud589 \uc18d\ub3c4\ub97c \uae30\uc900\uc73c\ub85c \ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc548\uc5d0\uc11c \uc624\uc804 8\uc2dc\ubd80\ud130 \uc624\ud6c4 8\uc2dc\uae4c\uc9c0 \ubcf4\ud589\uc790\ubcf4\ud638 \ubd88\uc774\ud589\ud558\uba74 \ubc8c\uc810\uc774 2\ubc30\ub41c\ub2e4."
+                 ],
+        "a":  "2, 4",
+        "tr_b":  "Hai c\u00e2u gi\u1ea3i th\u00edch n\u00e0o l\u00e0 \u0111\u00fang v\u1ec1 khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em theo Ph\u00e1p l\u1ec7nh Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9?",
+        "tr_c":  [
+                     "Khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em l\u00e0 m\u1ed9t khu v\u1ef1c nh\u1ea5t \u0111\u1ecbnh thu\u1ed9c c\u00e1c \u0111\u01b0\u1eddng n\u1eb1m trong v\u00f2ng 100m xung quanh c\u1ed5ng ch\u00ednh c\u1ee7a  tr\u01b0\u1eddng ti\u1ec3u h\u1ecdc.",
+                     "Tr\u01b0\u1eddng h\u1ee3p vi ph\u1ea1m d\u1eebng v\u00e0 \u0111\u1ed7 xe trong khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em t\u1eeb 8 gi\u1edd s\u00e1ng cho \u0111\u1ebfn 8 gi\u1edd t\u1ed1i th\u00ec s\u1ebd b\u1ecb t\u0103ng m\u1ee9c  ti\u1ec1n ph\u1ea1t vi ph\u1ea1m giao th\u00f4ng.",
+                     "Th\u1eddi gian qua \u0111\u01b0\u1eddng c\u1ee7a c\u00e1c \u0111\u00e8n giao th\u00f4ng \u0111\u01b0\u1ee3c l\u1eafp \u0111\u1eb7t trong khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em \u0111\u01b0\u1ee3c c\u0103n c\u1ee9 v\u00e0o t\u1ed1c \u0111\u1ed9 \u0111i  b\u1ed9 nhanh nh\u1ea5t c\u1ee7a tr\u1ebb em.",
+                     "N\u1ebfu kh\u00f4ng ch\u1ea5p h\u00e0nh vi\u1ec7c b\u1ea3o v\u1ec7 ng\u01b0\u1eddi \u0111i b\u1ed9 trong khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em t\u1eeb 8 gi\u1edd s\u00e1ng \u0111\u1ebfn 8 gi\u1edd t\u1ed1i th\u00ec \u0111i\u1ec3m ph\u1ea1t  s\u1ebd t\u0103ng l\u00ean g\u1ea5p 2 l\u1ea7n."
+                 ]
+    },
+    {
+        "n":  290,
+        "ko_b":  "\uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uc758 \ud2b9\ubcc4\ubcf4\ud638\uc5d0 \ub300\ud55c \uc124\uba85\uc73c\ub85c \ub9de\ub294 2\uac00\uc9c0\ub294?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774 \ud1b5\ud559\ubc84\uc2a4\ub97c \uc55e\uc9c0\ub974\uae30\ud558\uace0\uc790 \ud560 \ub54c\ub294 \ub2e4\ub978 \ucc28\uc758 \uc55e\uc9c0\ub974\uae30 \ubc29\ubc95\uacfc \uac19\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\ub4e4\uc774 \uc2b9\ud558\ucc28 \uc2dc, \uc911\uc559\uc120\uc774 \uc5c6\ub294 \ub3c4\ub85c\uc5d0\uc11c\ub294 \ubc18\ub300\ud3b8\uc5d0\uc11c \uc624\ub294 \ucc28\ub7c9\ub3c4 \uc548\uc804\uc744 \ud655\uc778\ud55c \ud6c4, \uc11c\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\ub4e4\uc774 \uc2b9\ud558\ucc28 \uc2dc, \ud3b8\ub3c4 1\ucc28\ub85c \ub3c4\ub85c\uc5d0\uc11c\ub294 \ubc18\ub300\ud3b8\uc5d0\uc11c \uc624\ub294 \ucc28\ub7c9\ub3c4 \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec \uc548\uc804\uc744 \ud655\uc778\ud55c \ud6c4, \uc11c\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\ub4e4\uc774 \uc2b9\ud558\ucc28 \uc2dc, \ub3d9\uc77c \ucc28\ub85c\uc640 \uadf8 \ucc28\ub85c\uc758 \ubc14\ub85c \uc606 \ucc28\ub7c9\uc740 \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec \uc548\uc804\uc744 \ud655\uc778\ud55c \ud6c4, \uc11c\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4."
+                 ],
+        "a":  "3, 4",
+        "tr_b":  "Hai gi\u1ea3i th\u00edch \u0111\u00fang v\u1ec1 vi\u1ec7c b\u1ea3o v\u1ec7 \u0111\u1eb7c bi\u1ec7t xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em \u0111i h\u1ecdc?",
+        "tr_c":  [
+                     "C\u00e1ch v\u01b0\u1ee3t l\u00ean tr\u01b0\u1edbc xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em \u0111i h\u1ecdc c\u0169ng gi\u1ed1ng nh\u01b0 c\u00e1ch v\u01b0\u1ee3t l\u00ean tr\u01b0\u1edbc nh\u1eefng lo\u1ea1i xe kh\u00e1c.",
+                     "Khi tr\u1ebb em \u0111ang l\u00ean xu\u1ed1ng xe bu\u00fdt, xe \u0111ang \u0111\u1ebfn t\u1eeb h\u01b0\u1edbng \u0111\u1ed1i di\u1ec7n tr\u00ean \u0111\u01b0\u1eddng kh\u00f4ng c\u00f3 v\u1ea1ch ph\u00e2n c\u00e1ch c\u0169ng ph\u1ea3i  ki\u1ec3m tra s\u1ef1 an to\u00e0n r\u1ed3i \u0111i ch\u1eadm l\u1ea1i.",
+                     "Khi tr\u1ebb em \u0111ang l\u00ean xu\u1ed1ng xe bu\u00fdt, xe \u0111ang \u0111\u1ebfn t\u1eeb h\u01b0\u1edbng \u0111\u1ed1i di\u1ec7n \u1edf \u0111\u01b0\u1eddng m\u1ed9t chi\u1ec1u c\u00f3 1 l\u00e0n \u0111\u01b0\u1eddng c\u0169ng ph\u1ea3i t\u1ea1m d\u1eebng \u0111\u1ec3 ki\u1ec3m tra t\u00ednh an to\u00e0n, sau \u0111\u00f3 \u0111i ch\u1eadm l\u1ea1i.",
+                     "Khi tr\u1ebb em \u0111ang l\u00ean xu\u1ed1ng xe bu\u00fdt, xe \u00f4 t\u00f4 c\u1ee7a l\u00e0n \u0111\u01b0\u1eddng \u0111\u00f3 v\u00e0 xe \u00f4 t\u00f4 \u1edf l\u00e0n \u0111\u01b0\u1eddng ngay b\u00ean c\u1ea1nh l\u00e0n \u0111\u01b0\u1eddng \u0111\u00f3 ph\u1ea3i t\u1ea1m d\u1eebng \u0111\u1ec3 ki\u1ec3m tra t\u00ednh an to\u00e0n, sau \u0111\u00f3 \u0111i ch\u1eadm l\u1ea1i."
+                 ]
+    },
+    {
+        "n":  291,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\uc0c1 \uc790\uc804\uac70 \ud1b5\ud589\ubc29\ubc95\uc5d0 \ub300\ud55c \uc124\uba85\uc774\ub2e4. \ud2c0\ub9b0 \uac83\uc740?",
+        "ko_c":  [
+                     "\uc790\uc804\uac70\ub3c4\ub85c\uac00 \ub530\ub85c \uc788\ub294 \uacf3\uc5d0\uc11c\ub294 \uadf8 \uc790\uc804\uac70\ub3c4\ub85c\ub85c \ud1b5\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uc790\uc804\uac70\ub3c4\ub85c\uac00 \uc124\uce58\ub418\uc9c0 \uc544\ub2c8\ud55c \uacf3\uc5d0\uc11c\ub294 \ub3c4\ub85c \uc6b0\uce21 \uac00\uc7a5\uc790\ub9ac\uc5d0 \ubd99\uc5b4\uc11c \ud1b5\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uc790\uc804\uac70\uc758 \uc6b4\uc804\uc790\ub294 \uae38\uac00\uc7a5\uc790\ub9ac\uad6c\uc5ed(\uc548\uc804\ud45c\uc9c0\ub85c \uc790\uc804\uac70 \ud1b5\ud589\uc744 \uae08\uc9c0\ud55c \uad6c\uac04\uc740 \uc81c\uc678)\uc744 \ud1b5\ud589\ud560 \uc218 \uc788\ub2e4.",
+                     "\uc790\uc804\uac70\uc758 \uc6b4\uc804\uc790\uac00 \ud6a1\ub2e8\ubcf4\ub3c4\ub97c \uc774\uc6a9\ud558\uc5ec \ub3c4\ub85c\ub97c \ud6a1\ub2e8\ud560 \ub54c\uc5d0\ub294 \uc790\uc804\uac70\ub97c \ud0c0\uace0 \ud1b5\ud589\ud560 \uc218 \uc788\ub2e4."
+                 ],
+        "a":  "4",
+        "tr_b":  "D\u01b0\u1edbi \u0111\u00e2y l\u00e0 m\u00f4 t\u1ea3 v\u1ec1 ph\u01b0\u01a1ng ph\u00e1p \u0111i\u1ec1u khi\u1ec3n xe \u0111\u1ea1p theo Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9. C\u00e2u n\u00e0o sai?",
+        "tr_c":  [
+                     "\u1ede n\u01a1i c\u00f3 \u0111\u01b0\u1eddng d\u00e0nh ri\u00eang cho xe \u0111\u1ea1p th\u00ec ph\u1ea3i \u0111i tr\u00ean \u0111\u01b0\u1eddng d\u00e0nh ri\u00eang cho xe \u0111\u1ea1p \u0111\u00f3.",
+                     "\u1ede n\u01a1i kh\u00f4ng c\u00f3 \u0111\u01b0\u1eddng d\u00e0nh ri\u00eang cho xe \u0111\u1ea1p th\u00ec ph\u1ea3i \u0111i \u1edf m\u00e9p ph\u1ea3i c\u1ee7a \u0111\u01b0\u1eddng.",
+                     "Ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe \u0111\u1ea1p c\u00f3 th\u1ec3 \u0111i \u1edf ph\u1ea7n m\u00e9p \u0111\u01b0\u1eddng (ngo\u1ea1i tr\u1eeb khu v\u1ef1c c\u1ea5m xe \u0111\u1ea1p c\u00f3 bi\u1ec3n b\u00e1o an to\u00e0n).",
+                     "Ng\u01b0\u1eddi \u0111i\u1ec1u khi\u1ec3n xe \u0111\u1ea1p c\u00f3 th\u1ec3 v\u1eeba \u0111\u1ea1p xe v\u1eeba b\u0103ng qua \u0111\u01b0\u1eddng tr\u00ean l\u1ed1i sang \u0111\u01b0\u1eddng cho ng\u01b0\u1eddi \u0111i b\u1ed9."
+                 ]
+    },
+    {
+        "n":  292,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\uc0c1\u2018\ubcf4\ud638\uad6c\uc5ed\uc758 \uc9c0\uc815\uc808\ucc28 \ubc0f \uae30\uc900\u2019\ub4f1\uc5d0 \uad00\ud558\uc5ec \ud544\uc694\ud55c \uc0ac\ud56d\uc744 \uc815\ud558\ub294 \uacf5\ub3d9\ubd80\ub839 \uae30\uad00\uc73c\ub85c \ub9de\ub294 \uac83\uc740?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc740 \ud589\uc815\uc548\uc804\ubd80, \ubcf4\uac74\ubcf5\uc9c0\ubd80, \uad6d\ud1a0\uad50\ud1b5\ubd80\uc758 \uacf5\ub3d9\ubd80\ub839\uc73c\ub85c \uc815\ud55c\ub2e4.",
+                     "\ub178\uc778 \ubcf4\ud638\uad6c\uc5ed\uc740 \ud589\uc815\uc548\uc804\ubd80, \uad6d\ud1a0\uad50\ud1b5\ubd80, \ud658\uacbd\ubd80\uc758 \uacf5\ub3d9\ubd80\ub839\uc73c\ub85c \uc815\ud55c\ub2e4.",
+                     "\uc7a5\uc560\uc778 \ubcf4\ud638\uad6c\uc5ed\uc740 \ud589\uc815\uc548\uc804\ubd80, \ubcf4\uac74\ubcf5\uc9c0\ubd80, \uad6d\ud1a0\uad50\ud1b5\ubd80\uc758 \uacf5\ub3d9\ubd80\ub839\uc73c\ub85c \uc815\ud55c\ub2e4.",
+                     "\uad50\ud1b5\uc57d\uc790 \ubcf4\ud638\uad6c\uc5ed\uc740 \ud589\uc815\uc548\uc804\ubd80, \ud658\uacbd\ubd80, \uad6d\ud1a0\uad50\ud1b5\ubd80\uc758 \uacf5\ub3d9\ubd80\ub839\uc73c\ub85c \uc815\ud55c\ub2e4."
+                 ],
+        "a":  "3",
+        "tr_b":  "Theo Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9, c\u01a1 quan b\u1ed9 ng\u00e0nh n\u00e0o c\u00f9ng \u0111\u01b0a ra c\u00e1c quy \u0111\u1ecbnh c\u1ea7n thi\u1ebft li\u00ean quan \u0111\u1ebfn  \u201cTi\u00eau chu\u1ea9n v\u00e0 Quy tr\u00ecnh ch\u1ec9 \u0111\u1ecbnh Khu v\u1ef1c b\u1ea3o v\u1ec7\u201d?",
+        "tr_c":  [
+                     "Khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em \u0111\u01b0\u1ee3c ch\u1ec9 \u0111\u1ecbnh b\u1edfi quy \u0111\u1ecbnh b\u1ed9 ng\u00e0nh chung c\u1ee7a B\u1ed9 H\u00e0nh ch\u00ednh \u0026 An to\u00e0n, B\u1ed9 Ph\u00fac l\u1ee3i \u0026 Y  t\u1ebf, B\u1ed9 Giao th\u00f4ng \u0026 \u0110\u1ecba ch\u00ednh.",
+                     "Khu v\u1ef1c b\u1ea3o v\u1ec7 ng\u01b0\u1eddi cao tu\u1ed5i \u0111\u01b0\u1ee3c ch\u1ec9 \u0111\u1ecbnh b\u1edfi quy \u0111\u1ecbnh b\u1ed9 ng\u00e0nh chung c\u1ee7a B\u1ed9 H\u00e0nh ch\u00ednh \u0026 An to\u00e0n, B\u1ed9 Giao  th\u00f4ng \u0026 \u0110\u1ecba ch\u00ednh, B\u1ed9 M\u00f4i tr\u01b0\u1eddng.",
+                     "Khu v\u1ef1c b\u1ea3o v\u1ec7 ng\u01b0\u1eddi khuy\u1ebft t\u1eadt \u0111\u01b0\u1ee3c ch\u1ec9 \u0111\u1ecbnh b\u1edfi quy \u0111\u1ecbnh b\u1ed9 ng\u00e0nh chung c\u1ee7a B\u1ed9 H\u00e0nh ch\u00ednh \u0026 An to\u00e0n, B\u1ed9 Ph\u00fac  l\u1ee3i \u0026 Y t\u1ebf, B\u1ed9 Giao th\u00f4ng \u0026 \u0110\u1ecba ch\u00ednh.",
+                     "Khu v\u1ef1c b\u1ea3o v\u1ec7 ng\u01b0\u1eddi di chuy\u1ec3n kh\u00f3 kh\u0103n trong giao th\u00f4ng \u0111\u01b0\u1ee3c ch\u1ec9 \u0111\u1ecbnh b\u1edfi quy \u0111\u1ecbnh b\u1ed9 ng\u00e0nh chung c\u1ee7a B\u1ed9 H\u00e0nh ch\u00ednh \u0026 An to\u00e0n, B\u1ed9 M\u00f4i tr\u01b0\u1eddng, B\u1ed9 Giao th\u00f4ng \u0026 \u0110\u1ecba ch\u00ednh."
+                 ]
+    },
+    {
+        "n":  293,
+        "ko_b":  "\uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \ud2b9\ubcc4\ubcf4\ud638\ub97c \uc704\ud55c \uc6b4\uc804\uc790\uc758 \uc62c\ubc14\ub978 \uc6b4\ud589\ubc29\ubc95\uc740?",
+        "ko_c":  [
+                     "\ud3b8\ub3c4 1\ucc28\ub85c\uc778 \ub3c4\ub85c\uc5d0\uc11c\ub294 \ubc18\ub300\ubc29\ud5a5\uc5d0\uc11c \uc9c4\ud589\ud558\ub294 \ucc28\uc758 \uc6b4\uc804\uc790\ub3c4 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uc5d0 \uc774\ub974\uae30 \uc804\uc5d0 \uc77c\uc2dc \uc815\uc9c0\ud558\uc5ec \uc548\uc804\uc744  \ud655\uc778\ud55c \ud6c4 \uc11c\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uac00 \uc5b4\ub9b0\uc774\uac00 \ud558\ucc28\ud558\uace0\uc790 \uc810\uba78\ub4f1\uc744 \ud45c\uc2dc\ud560 \ub54c\ub294 \uc5b4\ub9b0\uc774 \ud1b5\ud559\ubc84\uc2a4\uac00 \uc815\ucc28\ud55c \ucc28\ub85c \uc678\uc758 \ucc28\ub85c\ub85c \uc2e0\uc18d\ud788 \ud1b5\ud589\ud55c\ub2e4.",
+                     "\uc911\uc559\uc120\uc774 \uc124\uce58\ub418\uc9c0 \uc544\ub2c8\ud55c \ub3c4\ub85c\uc778 \uacbd\uc6b0 \ubc18\ub300\ubc29\ud5a5\uc5d0\uc11c \uc9c4\ud589\ud558\ub294 \ucc28\ub294 \uae30\uc874 \uc18d\ub3c4\ub85c \uc9c4\ud589\ud55c\ub2e4.",
+                     "\ubaa8\ub4e0 \ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\ub97c \ud0dc\uc6b0\uace0 \uc788\ub2e4\ub294 \ud45c\uc2dc\ub97c \ud55c \uacbd\uc6b0\ub77c\ub3c4 \ub3c4\ub85c\ub97c \ud1b5\ud589\ud558\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc55e\uc9c0\ub97c \uc218 \uc788\ub2e4."
+                 ],
+        "a":  "1",
+        "tr_b":  "C\u00e1ch l\u01b0u th\u00f4ng n\u00e0o l\u00e0 \u0111\u00fang c\u1ee7a ng\u01b0\u1eddi l\u00e1i xe \u0111\u1ec3 b\u1ea3o v\u1ec7 \u0111\u1eb7c bi\u1ec7t cho xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em \u0111i h\u1ecdc?",
+        "tr_c":  [
+                     "Tr\u00ean \u0111\u01b0\u1eddng m\u1ed9t chi\u1ec1u c\u00f3 1 l\u00e0n \u0111\u01b0\u1eddng, ng\u01b0\u1eddi l\u00e1i xe \u0111ang \u0111i \u1edf h\u01b0\u1edbng \u0111\u1ed1i di\u1ec7n c\u0169ng ph\u1ea3i t\u1ea1m d\u1eebng tr\u01b0\u1edbc khi \u0111\u1ebfn g\u1ea7n xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb \u0111i h\u1ecdc \u0111\u1ec3 ki\u1ec3m tra an to\u00e0n r\u1ed3i l\u00e1i xe ch\u1eadm l\u1ea1i.",
+                     "N\u1ebfu xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em \u0111i h\u1ecdc b\u1eadt \u0111\u00e8n b\u00e1o hi\u1ec7u tr\u1ebb em \u0111ang l\u00ean xu\u1ed1ng xe, b\u1ea1n ph\u1ea3i nhanh ch\u00f3ng \u0111i qua b\u1eb1ng l\u00e0n \u0111\u01b0\u1eddng kh\u00f4ng ph\u1ea3i l\u00e0n m\u00e0 xe bu\u00fdt \u0111\u00f3 \u0111ang d\u1eebng.",
+                     "N\u1ebfu kh\u00f4ng c\u00f3 v\u1ea1ch ph\u00e2n c\u00e1ch gi\u1eefa \u0111\u01b0\u1eddng, xe \u0111ang \u0111i \u1edf h\u01b0\u1edbng \u0111\u1ed1i di\u1ec7n v\u1eabn ph\u1ea3i ti\u1ebfp t\u1ee5c gi\u1eef nguy\u00ean t\u1ed1c \u0111\u1ed9.",
+                     "T\u1ea5t c\u1ea3 c\u00e1c l\u00e1i xe c\u1ee7a m\u1ecdi lo\u1ea1i xe \u0111\u1ec1u c\u00f3 th\u1ec3 v\u01b0\u1ee3t l\u00ean tr\u01b0\u1edbc xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em \u0111i h\u1ecdc, ngay c\u1ea3 khi xe n\u00e0y \u0111ang  b\u00e1o hi\u1ec7u c\u00f3 tr\u1ebb em \u0111ang \u1edf tr\u00ean xe."
+                 ]
+    },
+    {
+        "n":  294,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\ub839\uc0c1 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc2e0\uace0\uc5d0 \uad00\ud55c \uc124\uba85\uc774\ub2e4. \ub9de\ub294 \uac83 2\uac00\uc9c0\ub294?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc6b4\uc601\ud558\ub824\uba74 \ubbf8\ub9ac \ud55c\uad6d\ub3c4\ub85c\uad50\ud1b5\uacf5\ub2e8\uc5d0 \uc2e0\uace0\ud558\uace0 \uc2e0\uace0\uc99d\uba85\uc11c\ub97c \ubc1c\uae09\ubc1b\uc544\uc57c \ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub294 \uc6d0\uce59\uc801\uc73c\ub85c \uc2b9\ucc28\uc815\uc6d0 9\uc778\uc2b9(\uc5b4\ub9b0\uc774 1\uba85\uc744 \uc2b9\ucc28\uc815\uc6d0 1\uc778\uc73c\ub85c \ubcf8\ub2e4) \uc774\uc0c1\uc758 \uc790\ub3d9\ucc28\ub85c \ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc2e0\uace0\uc99d\uba85\uc11c\uac00 \ud5d0\uc5b4 \ubabb\uc4f0\uac8c \ub418\uc5b4 \ub2e4\uc2dc \uc2e0\uccad\ud558\ub294 \ub54c\uc5d0\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc2e0\uace0\uc99d\uba85\uc11c \uc7ac\uad50\ubd80\uc2e0\uccad\uc11c\uc5d0 \ud5d0       \uc5b4 \ubabb\uc4f0\uac8c \ub41c \uc2e0\uace0\uc99d\uba85\uc11c\ub97c \ucca8\ubd80\ud558\uc5ec \uc81c\ucd9c\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc2e0\uace0\uc99d\uba85\uc11c\ub294 \uadf8 \uc790\ub3d9\ucc28\uc758 \uc55e\uba74 \ucc3d\uc720\ub9ac \uc88c\uce21\uc0c1\ub2e8\uc758 \ubcf4\uae30 \uc26c\uc6b4 \uacf3\uc5d0 \ubd80\ucc29\ud558\uc5ec\uc57c \ud55c\ub2e4."
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "Hai n\u1ed9i dung n\u00e0o d\u01b0\u1edbi \u0111\u00e2y gi\u1ea3i th\u00edch \u0111\u00fang v\u1ec1 vi\u1ec7c \u0111\u0103ng k\u00fd xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n h\u1ecdc sinh theo Ph\u00e1p l\u1ec7nh Giao  th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9?",
+        "tr_c":  [
+                     "N\u1ebfu mu\u1ed1n \u0111i\u1ec1u khi\u1ec3n xe \u0111\u01b0a \u0111\u00f3n tr\u1ebb em, ph\u1ea3i khai b\u00e1o tr\u01b0\u1edbc l\u00ean C\u01a1 quan Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 H\u00e0n Qu\u1ed1c v\u00e0 xin  c\u1ea5p Gi\u1ea5y ch\u1ee9ng nh\u1eadn khai b\u00e1o.",
+                     "V\u1ec1 nguy\u00ean t\u1eafc, xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n h\u1ecdc sinh ph\u1ea3i l\u00e0 xe \u00f4 t\u00f4 c\u00f3 kh\u1ea3 n\u0103ng ch\u1edf t\u1eeb 9 h\u00e0nh kh\u00e1ch tr\u1edf l\u00ean (1 tr\u1ebb em \u0111\u01b0\u1ee3c coi  l\u00e0 1 h\u00e0nh kh\u00e1ch \u0111i xe).",
+                     "Khi \u0111\u0103ng k\u00fd l\u1ea1i v\u00ec gi\u1ea5y \u0111\u0103ng k\u00fd xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n h\u1ecdc sinh b\u1ecb r\u00e1ch kh\u00f4ng th\u1ec3 s\u1eed d\u1ee5ng \u0111\u01b0\u1ee3c, ph\u1ea3i n\u1ed9p k\u00e8m ch\u1ee9ng nh\u1eadn \u0111\u0103ng k\u00fd \u0111\u00e3 r\u00e1ch kh\u00f4ng th\u1ec3 s\u1eed d\u1ee5ng c\u00f9ng \u0111\u01a1n \u0111\u0103ng k\u00fd xin c\u1ea5p l\u1ea1i gi\u1ea5y \u0111\u0103ng k\u00fd xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n h\u1ecdc sinh.",
+                     "Gi\u1ea5y \u0111\u0103ng k\u00fd xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n h\u1ecdc sinh ph\u1ea3i d\u00e1n \u1edf n\u01a1i d\u1ec5 nh\u00ecn, ph\u00eda tr\u00ean b\u00ean tr\u00e1i c\u1eeda k\u00ednh xe \u00f4 t\u00f4 \u1edf m\u1eb7t tr\u01b0\u1edbc c\u1ee7a  xe \u00f4 t\u00f4 \u0111\u00f3."
+                 ]
+    },
+    {
+        "n":  295,
+        "ko_b":  "\uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc6b4\uc804\uc790\uac00 \uc601\uc720\uc544\ub97c \uc2b9\ud558\ucc28\ud558\ub294 \ubc29\ubc95\uc73c\ub85c \ubc14\ub978 \uac83\uc740?",
+        "ko_c":  [
+                     "\uc601\uc720\uc544\uac00 \uc2b9\ucc28\ud558\uace0 \uc788\ub294 \uacbd\uc6b0\uc5d0\ub294 \uc810\uba78\ub4f1 \uc7a5\uce58\ub97c \uc791\ub3d9\ud558\uc5ec \uc548\uc804\uc744 \ud655\ubcf4\ud558\uc5ec\uc57c \ud55c\ub2e4.",
+                     "\uad50\ud1b5\uc774 \ud63c\uc7a1\ud55c \uacbd\uc6b0 \uc810\uba78\ub4f1\uc744 \uc7a0\uc2dc \ub044\uace0 \uc601\uc720\uc544\ub97c \uc2b9\ucc28\uc2dc\ud0a8\ub2e4.",
+                     "\uc601\uc720\uc544\ub97c \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc8fc\ubcc0\uc5d0 \ub0b4\ub824\uc8fc\uace0 \ubc14\ub85c \ucd9c\ubc1c\ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c\ub294 \uc88c\uc11d\uc548\uc804\ub760\ub97c \ub9e4\uc9c0 \uc54a\uc544\ub3c4 \ub41c\ub2e4."
+                 ],
+        "a":  "1",
+        "tr_b":  "Ph\u01b0\u01a1ng ph\u00e1p n\u00e0o l\u00e0 \u0111\u00fang m\u00e0 ng\u01b0\u1eddi l\u00e1i xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n h\u1ecdc sinh cho tr\u1ebb nh\u1ecf l\u00ean xu\u1ed1ng xe?",
+        "tr_c":  [
+                     "Tr\u01b0\u1eddng h\u1ee3p tr\u1ebb nh\u1ecf \u0111ang l\u00ean xe ph\u1ea3i b\u1eadt \u0111\u00e8n hi\u1ec7u v\u00e0 \u0111\u1ea3m b\u1ea3o an to\u00e0n.",
+                     "Tr\u01b0\u1eddng h\u1ee3p giao th\u00f4ng ph\u1ee9c t\u1ea1p, t\u1ea1m th\u1eddi t\u1eaft \u0111\u00e8n hi\u1ec7u r\u1ed3i cho tr\u1ebb l\u00ean xe.",
+                     "Cho tr\u1ebb em xu\u1ed1ng quanh xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n h\u1ecdc sinh r\u1ed3i kh\u1edfi h\u00e0nh lu\u00f4n.",
+                     "\u1ede khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em kh\u00f4ng c\u1ea7n th\u1eaft d\u00e2y an to\u00e0n \u1edf gh\u1ebf ng\u1ed3i c\u0169ng \u0111\u01b0\u1ee3c."
+                 ]
+    },
+    {
+        "n":  296,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\ub839\uc0c1 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0 \ub300\ud55c \uc124\uba85\uc73c\ub85c \ubc14\ub974\uc9c0 \uc54a\uc740 \uac83\uc740?",
+        "ko_c":  [
+                     "\uc8fc\ucc28\uae08\uc9c0\uc704\ubc18\uc5d0 \ub300\ud55c \ubc94\uce59\uae08\uc740 \ub178\uc778\ubcf4\ud638\uad6c\uc5ed\uacfc \uac19\ub2e4.",
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \ub0b4\uc5d0\ub294 \uc11c\ud589\ud45c\uc2dc\ub97c \uc124\uce58\ud560 \uc218 \uc788\ub2e4.",
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \ub0b4\uc5d0\ub294 \uc8fc\uc815\ucc28\uac00 \uae08\uc9c0\ub41c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\ub97c \ub2e4\uce58\uac8c \ud55c \uad50\ud1b5\uc0ac\uace0\uac00 \ubc1c\uc0dd\ud558\uba74 \ud569\uc758\uc5ec\ubd80\uc640 \uad00\uacc4\uc5c6\uc774 \ud615\uc0ac\ucc98\ubc8c\uc744 \ubc1b\ub294\ub2e4."
+                 ],
+        "a":  "1",
+        "tr_b":  "Gi\u1ea3i th\u00edch n\u00e0o kh\u00f4ng \u0111\u00fang v\u1ec1 khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em theo Ph\u00e1p l\u1ec7nh Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9?",
+        "tr_c":  [
+                     "Ti\u1ec1n ph\u1ea1t \u0111\u1ed1i v\u1edbi h\u00e0nh vi vi ph\u1ea1m \u0111\u1ed7 xe c\u0169ng gi\u1ed1ng v\u1edbi khu v\u1ef1c b\u1ea3o v\u1ec7 ng\u01b0\u1eddi cao tu\u1ed5i.",
+                     "Bi\u1ec3n b\u00e1o \"\u0111i ch\u1eadm\" c\u00f3 th\u1ec3 \u0111\u01b0\u1ee3c l\u1eafp \u0111\u1eb7t trong khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em.",
+                     "C\u1ea5m \u0111\u1ed7 v\u00e0 d\u1eebng xe trong khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em.",
+                     "B\u1ea1n c\u00f3 th\u1ec3 b\u1ecb x\u1eed ph\u1ea1t h\u00ecnh s\u1ef1 n\u1ebfu g\u00e2y tai n\u1ea1n l\u00e0m tr\u1ebb em b\u1ecb th\u01b0\u01a1ng, b\u1ea5t k\u1ec3 m\u1ecdi h\u00ecnh th\u1ee9c th\u1ecfa thu\u1eadn."
+                 ]
+    },
+    {
+        "n":  297,
+        "ko_b":  "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c \uc5b4\ub9b0\uc774\uac00 \uc601\uc720\uc544\ub97c \ub3d9\ubc18\ud558\uc5ec \ud568\uaed8 \ud6a1\ub2e8\ud558\uace0 \uc788\ub2e4. \uc6b4\uc804\uc790\uc758 \uc62c\ubc14\ub978 \uc8fc\ud589\ubc29\ubc95\uc740?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774\uc640 \uc601\uc720\uc544 \ubcf4\ud638\ub97c \uc704\ud574 \uc77c\uc2dc\uc815\uc9c0\ud558\uc600\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\uac00 \uc601\uc720\uc544 \ubcf4\ud638\ud558\uba74\uc11c \ud6a1\ub2e8\ud558\uace0 \uc788\uc73c\ubbc0\ub85c \uc11c\ud589\ud558\uc600\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\uc640 \uc601\uc720\uc544\uac00 \uc544\uc9c1 \ubc18\ub300\ud3b8 \ucc28\ub85c \ucabd\uc5d0 \uc788\uc5b4 \uc2e0\uc18d\ud788 \uc8fc\ud589\ud558\uc600\ub2e4.",
+                     "\uc5b4\ub9b0\uc774\uc640 \uc601\uc720\uc544\ub294 \uac78\uc74c\uc774 \ub290\ub9ac\ubbc0\ub85c \uc548\uc804\uac70\ub9ac\ub97c \ub450\uace0 \uc606\uc73c\ub85c \ud53c\ud558\uc5ec \uc8fc\ud589\ud558\uc600\ub2e4."
+                 ],
+        "a":  "1",
+        "tr_b":  "Trong khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em c\u00f3 thi\u1ebfu nhi \u0111i c\u00f9ng v\u1edbi tr\u1ebb nh\u1ecf b\u0103ng qua \u0111\u01b0\u1eddng. C\u00e1ch n\u00e0o l\u00e0 c\u00e1ch l\u01b0u th\u00f4ng  \u0111\u00fang c\u1ee7a ng\u01b0\u1eddi l\u00e1i xe?",
+        "tr_c":  [
+                     "T\u1ea1m d\u1eebng xe \u0111\u1ec3 b\u1ea3o v\u1ec7 thi\u1ebfu nhi v\u00e0 tr\u1ebb nh\u1ecf.",
+                     "V\u00ec em thi\u1ebfu nhi \u0111ang v\u1eeba b\u1ea3o v\u1ec7 em b\u00e9 v\u1eeba sang \u0111\u01b0\u1eddng n\u00ean ng\u01b0\u1eddi l\u00e1i xe \u0111i ch\u1eadm l\u1ea1i.",
+                     "V\u00ec thi\u1ebfu nhi v\u00e0 tr\u1ebb nh\u1ecf v\u1eabn \u0111ang \u1edf ph\u00eda l\u00e0n \u0111\u01b0\u1eddng \u0111\u1ed1i di\u1ec7n n\u00ean \u0111i nhanh qua.",
+                     "V\u00ec b\u01b0\u1edbc ch\u00e2n c\u1ee7a thi\u1ebfu nhi v\u00e0 tr\u1ebb nh\u1ecf ch\u1eadm n\u00ean ph\u1ea3i gi\u1eef kho\u1ea3ng c\u00e1ch an to\u00e0n v\u00e0 tr\u00e1nh sang b\u00ean c\u1ea1nh \u0111\u1ec3 l\u01b0u th\u00f4ng."
+                 ]
+    },
+    {
+        "n":  298,
+        "ko_b":  "\ub3c4\ub85c\uad50\ud1b5\ubc95\uc0c1 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uacfc \uad00\ub828\ub41c \uc124\uba85\uc73c\ub85c \ub9de\ub294 \uac83\uc740?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774\uac00 \ubb34\ub2e8\ud6a1\ub2e8\uc744 \ud558\ub2e4\uac00 \uad50\ud1b5\uc0ac\uace0\uac00 \ubc1c\uc0dd\ud55c \uacbd\uc6b0 \uc6b4\uc804\uc790\uc758 \ubaa8\ub4e0 \ucc45\uc784\uc740 \uba74\uc81c\ub41c\ub2e4.",
+                     "\uc790\uc804\uac70 \uc6b4\uc804\uc790\uac00 \uc6b4\uc804 \uc911 \uc5b4\ub9b0\uc774\ub97c \ucda9\uaca9\ud558\ub294 \uacbd\uc6b0 \uc790\uc804\uac70\ub294 \ucc28\ub9c8\uac00 \uc544\ub2c8\ubbc0\ub85c \ubbfc\uc0ac\ucc45\uc784\ub9cc \uc874\uc7ac\ud55c\ub2e4.",
+                     "\ucc28\ub3c4\ub85c \uac11\uc790\uae30 \ub6f0\uc5b4\ub4dc\ub294 \uc5b4\ub9b0\uc774\ub97c \ubcf4\uba74 \uc11c\ud589\ud558\uc9c0 \ub9d0\uace0 \uc77c\uc2dc\uc815\uc9c0\ud55c\ub2e4.",
+                     "\uacbd\ucc30\uc11c\uc7a5\uc740 \uc790\ub3d9\ucc28\ub4f1\uc758 \ud1b5\ud589\uc18d\ub3c4\ub97c \uc2dc\uc18d 50\ud0ac\ub85c\ubbf8\ud130 \uc774\ub0b4\ub85c \uc9c0\uc815\ud560 \uc218 \uc788\ub2e4."
+                 ],
+        "a":  "3",
+        "tr_b":  "Gi\u1ea3i th\u00edch n\u00e0o \u0111\u00fang li\u00ean quan \u0111\u1ebfn khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em theo Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9?",
+        "tr_c":  [
+                     "Tr\u01b0\u1eddng h\u1ee3p x\u1ea3y ra tai n\u1ea1n giao th\u00f4ng do tr\u1ebb em b\u0103ng qua \u0111\u01b0\u1eddng kh\u00f4ng \u0111\u00fang n\u01a1i quy \u0111\u1ecbnh th\u00ec l\u00e1i xe \u0111\u01b0\u1ee3c mi\u1ec5n to\u00e0n  b\u1ed9 tr\u00e1ch nhi\u1ec7m.",
+                     "Tr\u01b0\u1eddng h\u1ee3p ng\u01b0\u1eddi \u0111i xe \u0111\u1ea1p va v\u00e0o tr\u1ebb em khi \u0111ang \u0111i xe th\u00ec ch\u1ec9 t\u1ed3n t\u1ea1i tr\u00e1ch nhi\u1ec7m d\u00e2n s\u1ef1 v\u00ec xe \u0111\u1ea1p kh\u00f4ng ph\u1ea3i l\u00e0  xe c\u01a1 gi\u1edbi.",
+                     "N\u1ebfu nh\u00ecn th\u1ea5y tr\u1ebb em b\u1ea5t ng\u1edd ch\u1ea1y v\u00e0o l\u00e0n \u0111\u01b0\u1eddng th\u00ec kh\u00f4ng \u0111\u01b0\u1ee3c \u0111i ch\u1eadm m\u00e0 ph\u1ea3i t\u1ea1m d\u1eebng.",
+                     "Gi\u00e1m \u0111\u1ed1c S\u1edf C\u1ea3nh s\u00e1t c\u00f3 th\u1ec3 ch\u1ec9 \u0111\u1ecbnh t\u1ed1c \u0111\u1ed9 l\u01b0u th\u00f4ng c\u1ee7a xe \u00f4 t\u00f4 trong ph\u1ea1m vi 50 km/gi\u1edd."
+                 ]
+    },
+    {
+        "n":  299,
+        "ko_b":  "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0 \ub300\ud55c \uc124\uba85\uacfc \uc8fc\ud589\ubc29\ubc95\uc774\ub2e4. \ub9de\ub294 \uac83 2\uac00\uc9c0\ub294?",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\ub97c \uc704\ud574 \ud544\uc694\ud55c \uacbd\uc6b0 \ud1b5\ud589\uc18d\ub3c4\ub97c \uc2dc\uc18d 30\ud0ac\ub85c\ubbf8\ud130 \uc774\ub0b4\ub85c \uc81c\ud55c\ud560 \uc218 \uc788\uace0 \ud1b5\ud589\ud560 \ub54c\ub294 \ud56d\uc0c1 \uc81c\ud55c\uc18d\ub3c4 \uc774\ub0b4\ub85c  \uc11c\ud589\ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \ub0b4 \uc18d\ub3c4\uc81c\ud55c\uc758 \ub300\uc0c1\uc740 \uc790\ub3d9\ucc28, \uc6d0\ub3d9\uae30\uc7a5\uce58\uc790\uc804\uac70, \ub178\uba74\uc804\ucc28\uc774\uba70 \uc5b4\ub9b0\uc774\uac00 \ud6a1\ub2e8\ud558\ub294 \uacbd\uc6b0 \uc77c\uc2dc\uc815\uc9c0\ud55c\ub2e4.",
+                     "\ub300\uc548\ud559\uad50\ub098 \uc678\uad6d\uc778\ud559\uad50\uc758 \uc8fc\ubcc0\ub3c4\ub85c\ub294 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc9c0\uc815 \ub300\uc0c1\uc774 \uc544\ub2c8\ubbc0\ub85c \ud6a1\ub2e8\ubcf4\ub3c4\uac00 \uc544\ub2cc \uacf3\uc5d0\uc11c \uc5b4\ub9b0\uc774\uac00 \ud6a1\ub2e8\ud558\ub294  \uacbd\uc6b0 \uc11c\ud589\ud55c\ub2e4.",
+                     "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0 \uc18d\ub3c4 \uc81c\ud55c \ubc0f \ud6a1\ub2e8\ubcf4\ub3c4\uc5d0 \uad00\ud55c \uc548\uc804\ud45c\uc9c0\ub97c \uc6b0\uc120\uc801\uc73c\ub85c \uc124\uce58\ud560 \uc218 \uc788\uc73c\uba70 \uc5b4\ub9b0\uc774\uac00 \uc911\uc559\uc120 \ubd80\uadfc\uc5d0 \uc11c  \uc788\ub294 \uacbd\uc6b0 \uc11c\ud589\ud55c\ub2e4."
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Sau \u0111\u00e2y l\u00e0 gi\u1ea3i th\u00edch v\u00e0 c\u00e1ch l\u01b0u th\u00f4ng \u1edf khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em. Hai n\u1ed9i dung n\u00e0o \u0111\u00fang?",
+        "tr_c":  [
+                     "Tr\u01b0\u1eddng h\u1ee3p c\u1ea7n b\u1ea3o v\u1ec7 tr\u1ebb em, c\u00f3 th\u1ec3 gi\u1edbi h\u1ea1n t\u1ed1c \u0111\u1ed9 l\u01b0u th\u00f4ng t\u1ed1i \u0111a l\u00e0 30 km/gi\u1edd v\u00e0 khi l\u01b0u th\u00f4ng, lu\u00f4n ph\u1ea3i \u0111i  ch\u1eadm trong t\u1ed1c \u0111\u1ed9 gi\u1edbi h\u1ea1n.",
+                     "\u0110\u1ed1i t\u01b0\u1ee3ng b\u1ecb gi\u1edbi h\u1ea1n t\u1ed1c \u0111\u1ed9 trong khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em bao g\u1ed3m xe \u00f4 t\u00f4, xe \u0111\u1ea1p \u0111i\u1ec7n, xe \u0111i\u1ec7n m\u1eb7t \u0111\u1ea5t v\u00e0 ph\u1ea3i t\u1ea1m  d\u1eebng khi c\u00f3 tr\u1ebb em b\u0103ng qua \u0111\u01b0\u1eddng.",
+                     "Xung quanh tr\u01b0\u1eddng h\u1ecdc \u0111\u1eb7c bi\u1ec7t ho\u1eb7c tr\u01b0\u1eddng d\u00e0nh cho ng\u01b0\u1eddi n\u01b0\u1edbc ngo\u00e0i kh\u00f4ng ph\u1ea3i l\u00e0 \u0111\u1ed1i t\u01b0\u1ee3ng ch\u1ec9 \u0111\u1ecbnh khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em, n\u00ean n\u1ebfu c\u00f3 tr\u1ebb qua \u0111\u01b0\u1eddng \u1edf n\u01a1i kh\u00f4ng c\u00f3 v\u1ea1ch sang \u0111\u01b0\u1eddng th\u00ec ch\u1ec9 c\u1ea7n \u0111i ch\u1eadm l\u1ea1i.",
+                     "\u01afu ti\u00ean gi\u1edbi h\u1ea1n t\u1ed1c \u0111\u1ed9 v\u00e0 l\u1eafp \u0111\u1eb7t bi\u1ec3n b\u00e1o an to\u00e0n b\u00e1o hi\u1ec7u v\u1ea1ch sang \u0111\u01b0\u1eddng \u1edf khu v\u1ef1c b\u1ea3o v\u1ec7 tr\u1ebb em, khi c\u00f3 tr\u1ebb \u0111ang \u0111\u1ee9ng \u1edf xung quanh v\u1ea1ch ph\u00e2n c\u00e1ch gi\u1eefa \u0111\u01b0\u1eddng th\u00ec ph\u1ea3i \u0111i ch\u1eadm l\u1ea1i."
+                 ]
+    },
+    {
+        "n":  300,
+        "ko_b":  "\ub2e4\uc74c \uc911 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \ud2b9\ubcc4\ubcf4\ud638\uc758\ubb34 \uc704\ubc18\uc5d0 \ud574\ub2f9\ud558\uc9c0 \uc54a\ub294 \uac83\uc740? (\ud3b8\ub3c4 1\ucc28\ub85c \ub3c4\ub85c \uacbd\uc6b0)",
+        "ko_c":  [
+                     "\uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\uac00 \ub0b4\ub9ac\ub294 \uc911 \uc77c\uc2dc\uc815\uc9c0\ud558\uc9c0 \uc54a\uace0 \uadf8\ub300\ub85c \ud1b5\uacfc\ud55c \uacbd\uc6b0",
+                     "\ubc18\ub300\ubc29\ud5a5\uc5d0\uc11c \uc9c4\ud589\ud558\ub294 \ucc28\uc758 \uc6b4\uc804\uc790\uac00 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uc5d0 \uc774\ub974\uae30 \uc804\uc5d0 \uc11c\ud589\ud558\uc5ec \uc9c4\ud589\ud55c \uacbd\uc6b0",
+                     "\uc6b4\uc804\uc790\uac00 \uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\ub97c \uc548\uc804\ud558\uac8c \uc2b9\ud558\ucc28 \uc2dc\ud0a4\ub294 \uc911 \uacbd\uc74c\uae30\ub97c \uc6b8\ub9ac\uace0 \uc9c4\ud589\ud55c \uacbd\uc6b0",
+                     "\uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\ub97c \ud0dc\uc6b0\uace0 \uc788\ub2e4\ub294 \ud45c\uc2dc\ub97c \ud55c \uc0c1\ud0dc\ub85c \ub3c4\ub85c\ub97c \ud1b5\ud589\ud558\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc55e\uc9c0\ub974\uae30 \ud558\uc9c0 \uc54a\ub294 \uacbd\uc6b0"
+                 ],
+        "a":  "4",
+        "tr_b":  "\u0110i\u1ec1u n\u00e0o sau \u0111\u00e2y kh\u00f4ng thu\u1ed9c h\u00e0nh vi vi ph\u1ea1m ngh\u0129a v\u1ee5 b\u1ea3o v\u1ec7 \u0111\u1eb7c bi\u1ec7t \u0111\u1ed1i v\u1edbi xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em?  (Tr\u01b0\u1eddng h\u1ee3p \u0111\u01b0\u1eddng m\u1ed9t chi\u1ec1u m\u1ed9t l\u00e0n)",
+        "tr_c":  [
+                     "V\u01b0\u1ee3t kh\u00f4ng t\u1ea1m d\u1eebng khi tr\u1ebb em ho\u1eb7c tr\u1ebb s\u01a1 sinh \u0111ang xu\u1ed1ng xe.",
+                     "V\u01b0\u1ee3t ch\u1eadm khi t\u00e0i x\u1ebf c\u1ee7a xe \u0111i t\u1eeb h\u01b0\u1edbng ng\u01b0\u1ee3c chi\u1ec1u \u0111\u1ebfn ch\u1ed7 xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em.",
+                     "V\u1eeba b\u1ea5m c\u00f2i v\u1eeba v\u01b0\u1ee3t khi tr\u1ebb em ho\u1eb7c tr\u1ebb s\u01a1 sinh \u0111ang l\u00ean xu\u1ed1ng xe an to\u00e0n.",
+                     "Kh\u00f4ng v\u01b0\u1ee3t qua xe bu\u00fdt \u0111\u01b0a \u0111\u00f3n tr\u1ebb em \u0111ang l\u01b0u th\u00f4ng tr\u00ean \u0111\u01b0\u1eddng trong tr\u1ea1ng th\u00e1i c\u00f3 bi\u1ec3n b\u00e1o ch\u1edf tr\u1ebb em ho\u1eb7c  tr\u1ebb s\u01a1 sinh."
+                 ]
+    }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/207_choices_vn.json'|ConvertFrom-Json; foreach("'$x in $d|Where-Object {$_.n -ge 301 -and $_.n -le 305}){Write-Output ('"'N='+"'$x.n); Write-Output ('"'KB='+"'$x.ko_b);Write-Output ('"'TB='+"'$x.tr_b);for($i=0;$i-lt$x.ko_c.Count;$i++){Write-Output ('"'C'+("'$i+1)+'"' '+"'$x.ko_c[$i]+'"' || '+"'$x.tr_c[$i])}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 641ms:
+N=301
+KB=도로교통법령상 영유아 및 어린이에 대한 규정 및 어린이통학버스 운전자의 의무에 대한 설명으로 올바른 것은?
+TB=Giải thích nào là đúng về quy định đối với thiếu nhi & trẻ nhỏ và nghĩa vụ của người lái xe buýt đưa đón trẻ  theo Pháp lệnh Giao thông đường bộ?
+C1 어린이는 13세 이하의 사람을 의미하며, 어린이가 타고 내릴 때에는 반드시 안전을 확인한 후 출발한다. || Thiếu nhi là trẻ từ 13 tuổi trở xuống, khi có thiếu nhi lên xuống xe, bắt buộc phải kiểm tra an toàn rồi mới xuất phát.
+C2 출발하기 전 영유아를 제외한 모든 어린이가 좌석안전띠를 매도록 한 후 출발하여야 한다. || Trước khi xuất phát, trừ trẻ nhỏ dưới 6 tuổi thì tất cả trẻ em/thiếu nhi đều phải thắt dây an toàn rồi mới được xuất  phát.
+C3 어린이가 내릴 때에는 어린이가 요구하는 장소에 안전하게 내려준 후 출발하여야 한다. || Khi có trẻ em/thiếu nhi xuống xe, phải cho trẻ xuống ở nơi trẻ yêu cầu một cách an toàn rồi mới xuất phát chạy tiếp.
+C4 영유아는 6세 미만의 사람을 의미하며, 영유아가 타고 내리는 경우에도 점멸등 등의 장치를 작동해야 한다. || Trẻ nhỏ là trẻ dưới 6 tuổi, khi có trẻ nhỏ lên xuống xe phải bật đèn hiệu.
+N=302
+KB=도로교통법령상 어린이나 영유아가 타고 내리게 하기 위한 어린이통학버스에 장착된 황색 및 적색표시등의 작동방법에  대한 설명으로 맞는 것은?
+TB=Theo Pháp lệnh Giao thông đường bộ, giải thích nào là đúng về cách bật đèn tín hiệu vàng và đỏ gắn trên xe  đưa đón học sinh khi có thiếu nhi và trẻ nhỏ lên xuống xe?
+C1 정차할 때는 적색표시등을 점멸 작동하여야 한다. || Khi dừng xe, đèn báo màu đỏ phải nhấp nháy.
+C2 제동할 때는 적색표시등을 점멸 작동하여야 한다. || Khi phanh, đèn báo màu đỏ phải nhấp nháy.
+C3 도로에 정지하려는 때에는 황색표시등을 점멸 작동하여야 한다. || Khi muốn dừng xe trên đường, đèn báo màu vàng phải nhấp nháy.
+C4 주차할 때는 황색표시등과 적색표시등을 동시에 점멸 작동하여야 한다. || Khi đỗ xe, đèn báo màu vàng và đèn báo màu đỏ phải đồng thời nhấp nháy.
+N=303
+KB=도로교통법령상 어린이 보호구역의 지정 대상의 근거가 되는 법률이 아닌 것은?
+TB=Theo Pháp lệnh Giao thông đường bộ, luật nào sau đây không phải là cơ sở để chỉ định khu vực bảo vệ trẻ em?
+C1 유아교육법 || Luật Giáo dục trẻ em
+C2 초․중등교육법 || Luật Giáo dục tiểu học - trung học
+C3 학원의 설립․운영 및 과외교습에 관한 법률 || Pháp luật liên quan đến thành lập - vận hành trung tâm dạy thêm và giảng dạy ngoài giờ
+C4 아동복지법 || Luật Phúc lợi trẻ em
+N=304
+KB=다음 중 어린이 보호구역에 대한 설명이다. 옳지 않은 것은?
+TB=Sau đây là giải thích về khu vực bảo vệ trẻ em. Câu nào không đúng?
+C1 이곳에서의 교통사고는 교통사고처리특례법상 특례 적용 제외 사항에 해당될 수 있다. || Tai nạn giao thông tại khu vực này có thể thuộc trường hợp ngoại lệ không áp dụng quy định đặc biệt theo Luật xử lý đặc biệt các vụ tai nạn giao thông.
+C2 자동차등의 통행속도를 시속 30킬로미터 이내로 제한할 수 있다. || Có thể giới hạn vận tốc lưu thông của xe ô tô, v.v là tối đa 30km/giờ.
+C3 범칙금과 벌점은 일반도로의 3배이다. || Mức phạt tiền vi phạm giao thông và trừ điểm cao gấp 3 lần đường thông thường.
+C4 주・정차가 금지된다. || Cấm đỗ và dừng xe.
+N=305
+KB=도로교통법령상 안전한 보행을 하고 있지 않은 어린이는?
+TB=Trẻ em nào sau đây đang đi bộ không an toàn theo Pháp lệnh Giao thông đường bộ?
+C1 보도와 차도가 구분된 도로에서 차도 가장자리를 걸어가고 있는 어린이 || Trẻ em đang đi bộ trên mép đường của lòng đường xe chạy trên đoạn đường có phân chia vỉa hè và lòng đường.
+C2 일방통행도로의 가장자리에서 차가 오는 방향을 바라보며 걸어가고 있는 어린이 || Trẻ em vừa đi bộ vừa nhìn về hướng có xe đang chạy tới từ mép đường của đường một chiều.
+C3 보도와 차도가 구분되지 않은 도로의 가장자리구역에서 차가 오는 방향을 마주보고 걸어가는 어린이 || Trẻ em đang đi bộ theo hướng đối diện với hướng của xe đang chạy tới trên lề đường của đoạn đường không phân  chia vỉa hè và lòng đường.
+C4 보도 내에서 우측으로 걸어가고 있는 어린이 || Trẻ em đi bộ về phía bên phải trên vỉa hè.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/207_choices_vn.json'|ConvertFrom-Json; foreach("'$x in $d|Where-Object {$_.n -ge 291 -and $_.n -le 300}){Write-Output ('"'N='+"'$x.n+'"' KB='+"'$x.ko_b+'"' || TB='+"'$x.tr_b);for($i=0;$i-lt$x.ko_c.Count;$i++){Write-Output ('"'C'+("'$i+1)+'"' '+"'$x.ko_c[$i]+'"' || '+"'$x.tr_c[$i])}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 635ms:
+N=291 KB=도로교통법상 자전거 통행방법에 대한 설명이다. 틀린 것은? || TB=Dưới đây là mô tả về phương pháp điều khiển xe đạp theo Luật Giao thông đường bộ. Câu nào sai?
+C1 자전거도로가 따로 있는 곳에서는 그 자전거도로로 통행하여야 한다. || Ở nơi có đường dành riêng cho xe đạp thì phải đi trên đường dành riêng cho xe đạp đó.
+C2 자전거도로가 설치되지 아니한 곳에서는 도로 우측 가장자리에 붙어서 통행하여야 한다. || Ở nơi không có đường dành riêng cho xe đạp thì phải đi ở mép phải của đường.
+C3 자전거의 운전자는 길가장자리구역(안전표지로 자전거 통행을 금지한 구간은 제외)을 통행할 수 있다. || Người điều khiển xe đạp có thể đi ở phần mép đường (ngoại trừ khu vực cấm xe đạp có biển báo an toàn).
+C4 자전거의 운전자가 횡단보도를 이용하여 도로를 횡단할 때에는 자전거를 타고 통행할 수 있다. || Người điều khiển xe đạp có thể vừa đạp xe vừa băng qua đường trên lối sang đường cho người đi bộ.
+N=292 KB=도로교통법상‘보호구역의 지정절차 및 기준’등에 관하여 필요한 사항을 정하는 공동부령 기관으로 맞는 것은? || TB=Theo Luật Giao thông đường bộ, cơ quan bộ ngành nào cùng đưa ra các quy định cần thiết liên quan đến  “Tiêu chuẩn và Quy trình chỉ định Khu vực bảo vệ”?
+C1 어린이 보호구역은 행정안전부, 보건복지부, 국토교통부의 공동부령으로 정한다. || Khu vực bảo vệ trẻ em được chỉ định bởi quy định bộ ngành chung của Bộ Hành chính & An toàn, Bộ Phúc lợi & Y  tế, Bộ Giao thông & Địa chính.
+C2 노인 보호구역은 행정안전부, 국토교통부, 환경부의 공동부령으로 정한다. || Khu vực bảo vệ người cao tuổi được chỉ định bởi quy định bộ ngành chung của Bộ Hành chính & An toàn, Bộ Giao  thông & Địa chính, Bộ Môi trường.
+C3 장애인 보호구역은 행정안전부, 보건복지부, 국토교통부의 공동부령으로 정한다. || Khu vực bảo vệ người khuyết tật được chỉ định bởi quy định bộ ngành chung của Bộ Hành chính & An toàn, Bộ Phúc  lợi & Y tế, Bộ Giao thông & Địa chính.
+C4 교통약자 보호구역은 행정안전부, 환경부, 국토교통부의 공동부령으로 정한다. || Khu vực bảo vệ người di chuyển khó khăn trong giao thông được chỉ định bởi quy định bộ ngành chung của Bộ Hành chính & An toàn, Bộ Môi trường, Bộ Giao thông & Địa chính.
+N=293 KB=어린이통학버스 특별보호를 위한 운전자의 올바른 운행방법은? || TB=Cách lưu thông nào là đúng của người lái xe để bảo vệ đặc biệt cho xe buýt đưa đón trẻ em đi học?
+C1 편도 1차로인 도로에서는 반대방향에서 진행하는 차의 운전자도 어린이통학버스에 이르기 전에 일시 정지하여 안전을  확인한 후 서행하여야 한다. || Trên đường một chiều có 1 làn đường, người lái xe đang đi ở hướng đối diện cũng phải tạm dừng trước khi đến gần xe buýt đưa đón trẻ đi học để kiểm tra an toàn rồi lái xe chậm lại.
+C2 어린이통학버스가 어린이가 하차하고자 점멸등을 표시할 때는 어린이 통학버스가 정차한 차로 외의 차로로 신속히 통행한다. || Nếu xe buýt đưa đón trẻ em đi học bật đèn báo hiệu trẻ em đang lên xuống xe, bạn phải nhanh chóng đi qua bằng làn đường không phải làn mà xe buýt đó đang dừng.
+C3 중앙선이 설치되지 아니한 도로인 경우 반대방향에서 진행하는 차는 기존 속도로 진행한다. || Nếu không có vạch phân cách giữa đường, xe đang đi ở hướng đối diện vẫn phải tiếp tục giữ nguyên tốc độ.
+C4 모든 차의 운전자는 어린이나 영유아를 태우고 있다는 표시를 한 경우라도 도로를 통행하는 어린이통학버스를 앞지를 수 있다. || Tất cả các lái xe của mọi loại xe đều có thể vượt lên trước xe buýt đưa đón trẻ em đi học, ngay cả khi xe này đang  báo hiệu có trẻ em đang ở trên xe.
+N=294 KB=도로교통법령상 어린이통학버스 신고에 관한 설명이다. 맞는 것 2가지는? || TB=Hai nội dung nào dưới đây giải thích đúng về việc đăng ký xe buýt đưa đón học sinh theo Pháp lệnh Giao  thông đường bộ?
+C1 어린이통학버스를 운영하려면 미리 한국도로교통공단에 신고하고 신고증명서를 발급받아야 한다. || Nếu muốn điều khiển xe đưa đón trẻ em, phải khai báo trước lên Cơ quan Giao thông đường bộ Hàn Quốc và xin  cấp Giấy chứng nhận khai báo.
+C2 어린이통학버스는 원칙적으로 승차정원 9인승(어린이 1명을 승차정원 1인으로 본다) 이상의 자동차로 한다. || Về nguyên tắc, xe buýt đưa đón học sinh phải là xe ô tô có khả năng chở từ 9 hành khách trở lên (1 trẻ em được coi  là 1 hành khách đi xe).
+C3 어린이통학버스 신고증명서가 헐어 못쓰게 되어 다시 신청하는 때에는 어린이통학버스 신고증명서 재교부신청서에 헐       어 못쓰게 된 신고증명서를 첨부하여 제출하여야 한다. || Khi đăng ký lại vì giấy đăng ký xe buýt đưa đón học sinh bị rách không thể sử dụng được, phải nộp kèm chứng nhận đăng ký đã rách không thể sử dụng cùng đơn đăng ký xin cấp lại giấy đăng ký xe buýt đưa đón học sinh.
+C4 어린이통학버스 신고증명서는 그 자동차의 앞면 창유리 좌측상단의 보기 쉬운 곳에 부착하여야 한다. || Giấy đăng ký xe buýt đưa đón học sinh phải dán ở nơi dễ nhìn, phía trên bên trái cửa kính xe ô tô ở mặt trước của  xe ô tô đó.
+N=295 KB=어린이통학버스 운전자가 영유아를 승하차하는 방법으로 바른 것은? || TB=Phương pháp nào là đúng mà người lái xe buýt đưa đón học sinh cho trẻ nhỏ lên xuống xe?
+C1 영유아가 승차하고 있는 경우에는 점멸등 장치를 작동하여 안전을 확보하여야 한다. || Trường hợp trẻ nhỏ đang lên xe phải bật đèn hiệu và đảm bảo an toàn.
+C2 교통이 혼잡한 경우 점멸등을 잠시 끄고 영유아를 승차시킨다. || Trường hợp giao thông phức tạp, tạm thời tắt đèn hiệu rồi cho trẻ lên xe.
+C3 영유아를 어린이통학버스 주변에 내려주고 바로 출발한다. || Cho trẻ em xuống quanh xe buýt đưa đón học sinh rồi khởi hành luôn.
+C4 어린이 보호구역에서는 좌석안전띠를 매지 않아도 된다. || Ở khu vực bảo vệ trẻ em không cần thắt dây an toàn ở ghế ngồi cũng được.
+N=296 KB=도로교통법령상 어린이 보호구역에 대한 설명으로 바르지 않은 것은? || TB=Giải thích nào không đúng về khu vực bảo vệ trẻ em theo Pháp lệnh Giao thông đường bộ?
+C1 주차금지위반에 대한 범칙금은 노인보호구역과 같다. || Tiền phạt đối với hành vi vi phạm đỗ xe cũng giống với khu vực bảo vệ người cao tuổi.
+C2 어린이 보호구역 내에는 서행표시를 설치할 수 있다. || Biển báo "đi chậm" có thể được lắp đặt trong khu vực bảo vệ trẻ em.
+C3 어린이 보호구역 내에는 주정차가 금지된다. || Cấm đỗ và dừng xe trong khu vực bảo vệ trẻ em.
+C4 어린이를 다치게 한 교통사고가 발생하면 합의여부와 관계없이 형사처벌을 받는다. || Bạn có thể bị xử phạt hình sự nếu gây tai nạn làm trẻ em bị thương, bất kể mọi hình thức thỏa thuận.
+N=297 KB=어린이 보호구역에서 어린이가 영유아를 동반하여 함께 횡단하고 있다. 운전자의 올바른 주행방법은? || TB=Trong khu vực bảo vệ trẻ em có thiếu nhi đi cùng với trẻ nhỏ băng qua đường. Cách nào là cách lưu thông  đúng của người lái xe?
+C1 어린이와 영유아 보호를 위해 일시정지하였다. || Tạm dừng xe để bảo vệ thiếu nhi và trẻ nhỏ.
+C2 어린이가 영유아 보호하면서 횡단하고 있으므로 서행하였다. || Vì em thiếu nhi đang vừa bảo vệ em bé vừa sang đường nên người lái xe đi chậm lại.
+C3 어린이와 영유아가 아직 반대편 차로 쪽에 있어 신속히 주행하였다. || Vì thiếu nhi và trẻ nhỏ vẫn đang ở phía làn đường đối diện nên đi nhanh qua.
+C4 어린이와 영유아는 걸음이 느리므로 안전거리를 두고 옆으로 피하여 주행하였다. || Vì bước chân của thiếu nhi và trẻ nhỏ chậm nên phải giữ khoảng cách an toàn và tránh sang bên cạnh để lưu thông.
+N=298 KB=도로교통법상 어린이 보호구역과 관련된 설명으로 맞는 것은? || TB=Giải thích nào đúng liên quan đến khu vực bảo vệ trẻ em theo Luật Giao thông đường bộ?
+C1 어린이가 무단횡단을 하다가 교통사고가 발생한 경우 운전자의 모든 책임은 면제된다. || Trường hợp xảy ra tai nạn giao thông do trẻ em băng qua đường không đúng nơi quy định thì lái xe được miễn toàn  bộ trách nhiệm.
+C2 자전거 운전자가 운전 중 어린이를 충격하는 경우 자전거는 차마가 아니므로 민사책임만 존재한다. || Trường hợp người đi xe đạp va vào trẻ em khi đang đi xe thì chỉ tồn tại trách nhiệm dân sự vì xe đạp không phải là  xe cơ giới.
+C3 차도로 갑자기 뛰어드는 어린이를 보면 서행하지 말고 일시정지한다. || Nếu nhìn thấy trẻ em bất ngờ chạy vào làn đường thì không được đi chậm mà phải tạm dừng.
+C4 경찰서장은 자동차등의 통행속도를 시속 50킬로미터 이내로 지정할 수 있다. || Giám đốc Sở Cảnh sát có thể chỉ định tốc độ lưu thông của xe ô tô trong phạm vi 50 km/giờ.
+N=299 KB=어린이 보호구역에 대한 설명과 주행방법이다. 맞는 것 2가지는? || TB=Sau đây là giải thích và cách lưu thông ở khu vực bảo vệ trẻ em. Hai nội dung nào đúng?
+C1 어린이 보호를 위해 필요한 경우 통행속도를 시속 30킬로미터 이내로 제한할 수 있고 통행할 때는 항상 제한속도 이내로  서행한다. || Trường hợp cần bảo vệ trẻ em, có thể giới hạn tốc độ lưu thông tối đa là 30 km/giờ và khi lưu thông, luôn phải đi  chậm trong tốc độ giới hạn.
+C2 어린이 보호구역 내 속도제한의 대상은 자동차, 원동기장치자전거, 노면전차이며 어린이가 횡단하는 경우 일시정지한다. || Đối tượng bị giới hạn tốc độ trong khu vực bảo vệ trẻ em bao gồm xe ô tô, xe đạp điện, xe điện mặt đất và phải tạm  dừng khi có trẻ em băng qua đường.
+C3 대안학교나 외국인학교의 주변도로는 어린이 보호구역 지정 대상이 아니므로 횡단보도가 아닌 곳에서 어린이가 횡단하는  경우 서행한다. || Xung quanh trường học đặc biệt hoặc trường dành cho người nước ngoài không phải là đối tượng chỉ định khu vực bảo vệ trẻ em, nên nếu có trẻ qua đường ở nơi không có vạch sang đường thì chỉ cần đi chậm lại.
+C4 어린이 보호구역에 속도 제한 및 횡단보도에 관한 안전표지를 우선적으로 설치할 수 있으며 어린이가 중앙선 부근에 서  있는 경우 서행한다. || Ưu tiên giới hạn tốc độ và lắp đặt biển báo an toàn báo hiệu vạch sang đường ở khu vực bảo vệ trẻ em, khi có trẻ đang đứng ở xung quanh vạch phân cách giữa đường thì phải đi chậm lại.
+N=300 KB=다음 중 어린이통학버스 특별보호의무 위반에 해당하지 않는 것은? (편도 1차로 도로 경우) || TB=Điều nào sau đây không thuộc hành vi vi phạm nghĩa vụ bảo vệ đặc biệt đối với xe buýt đưa đón trẻ em?  (Trường hợp đường một chiều một làn)
+C1 어린이나 영유아가 내리는 중 일시정지하지 않고 그대로 통과한 경우 || Vượt không tạm dừng khi trẻ em hoặc trẻ sơ sinh đang xuống xe.
+C2 반대방향에서 진행하는 차의 운전자가 어린이통학버스에 이르기 전에 서행하여 진행한 경우 || Vượt chậm khi tài xế của xe đi từ hướng ngược chiều đến chỗ xe buýt đưa đón trẻ em.
+C3 운전자가 어린이나 영유아를 안전하게 승하차 시키는 중 경음기를 울리고 진행한 경우 || Vừa bấm còi vừa vượt khi trẻ em hoặc trẻ sơ sinh đang lên xuống xe an toàn.
+C4 어린이나 영유아를 태우고 있다는 표시를 한 상태로 도로를 통행하는 어린이통학버스를 앞지르기 하지 않는 경우 || Không vượt qua xe buýt đưa đón trẻ em đang lưu thông trên đường trong trạng thái có biển báo chở trẻ em hoặc  trẻ sơ sinh.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Select-String -LiteralPath 'translations/audit/queue/207_choices_vn.json' -Pattern '\"check\"|\"detail\"' -Encoding UTF8" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 527ms:
+codex
+[{"n":288,"field":"c[1]","severity":"major","issue":"‘경찰서장’을 상급 경찰기관의 장인 ‘Cục trưởng Cục Cảnh sát’으로 오역하여 권한 주체를 혼동시킨다.","suggestion":"Trưởng đồn cảnh sát"}]
+tokens used
+55,458
+[{"n":288,"field":"c[1]","severity":"major","issue":"‘경찰서장’을 상급 경찰기관의 장인 ‘Cục trưởng Cục Cảnh sát’으로 오역하여 권한 주체를 혼동시킨다.","suggestion":"Trưởng đồn cảnh sát"}]

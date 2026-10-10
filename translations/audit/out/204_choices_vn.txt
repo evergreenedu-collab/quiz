@@ -1,0 +1,1040 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125ca-3071-7432-92ab-9721125f7849
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/204_choices_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+codex
+파일의 한국어 원문과 베트남어 번역을 항목별로 대조하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/204_choices_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 535ms:
+[
+ {
+  "n": 161,
+  "ko_b": "蹂댄뻾???곗꽑?꾨줈??????ㅻ챸?쇰줈 媛??諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먯슦?좊룄濡쒖뿉??蹂댄뻾?먮뒗 ?꾨줈???곗륫 媛?μ옄由щ줈留??듯뻾?????덈떎.",
+   "?댁쟾?먯뿉寃뚮뒗 ?쒗뻾, ?쇱떆?뺤? ??媛곸쥌 蹂댄뻾??蹂댄샇 ?섎Т媛 遺?щ맂??",
+   "蹂댄뻾??蹂댄샇 ?섎Т瑜?遺덉씠?됲븯???寃쎌슦 ?뱀슜?먮룞李?湲곗? 4留뚯썝??踰붿튃湲덇낵 10?먯쓽 踰뚯젏 泥섎텇????곸씠??",
+   "寃쎌같?쒖옣? 蹂댄뻾??蹂댄샇瑜??꾪빐 ?꾩슂?섎떎怨??몄젙??寃쎌슦 李⑤웾 ?듯뻾?띾룄瑜?20km/h ?대궡濡??쒗븳?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 kh척ng 휃첬ng nh梳쩿 v沼?휃튼沼쓓g 튼u ti챗n cho ng튼沼쓎 휃i b沼?",
+  "tr_c": [
+   "Tr챗n 휃튼沼쓓g 튼u ti챗n cho ng튼沼쓎 휃i b沼? ng튼沼쓎 휃i b沼?ch沼?휃튼沼즓 휃i s찼t m챕p 휃튼沼쓓g b챗n ph梳즜.",
+   "Ng튼沼쓎 l찼i xe c처 ngh칫a v沼?ph梳즜 b梳즣 v沼?ng튼沼쓎 휃i b沼?nh튼 휃i ch梳춎, d沼쳌g t梳죑 th沼쓎, v.v.",
+   "Tr튼沼쓓g h沼즤 kh척ng ch梳쩺 h횪nh 휃첬ng ngh칫a v沼?b梳즣 v沼?ng튼沼쓎 휃i b沼?thu沼셛 휃沼멼 t튼沼즢g b沼?ph梳죜 ti沼걆 vi ph梳죑 giao th척ng 40.000 won v횪 tr沼?10 휃i沼긩 ph梳죜 휃沼멼 v沼쌻 척 t척 con.",
+   "S沼?tr튼沼웢g S沼?C梳즢h s찼t n梳퓎 x챕t th梳쪅 l횪 c梳쬷 thi梳퓍 휃沼?b梳즣 v沼?ng튼沼쓎 휃i b沼?th챙 c처 th沼?gi沼쌻 h梳죒 t沼멵 휃沼?l튼u th척ng c沼쬪 xe l횪  t沼멼 휃a 20km/gi沼?"
+  ]
+ },
+ {
+  "n": 162,
+  "ko_b": "?쒕궡 ?꾨줈瑜?留ㅼ떆 50?щ줈誘명꽣濡?二쇳뻾?섎뜕 以?臾대떒?〓떒 以묒씤 蹂댄뻾?먮? 諛쒓껄?섏??? 媛???곸젅??議곗튂??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒 以묒씠誘濡??쇰떒 湲됰툕?덉씠?щ? 諛잛븘 硫덉텣??",
+   "蹂댄뻾?먯쓽 ?吏곸엫???덉륫?섏뿬 洹??ъ씠濡?二쇳뻾?쒕떎.",
+   "?띾룄瑜?以꾩씠硫?硫덉텧 以鍮꾨? ?섍퀬 鍮꾩긽?먮㈇?깆쑝濡??ㅼ감?먮룄 ?뚮━硫댁꽌 ?덉쟾?섍쾶 ?뺤??쒕떎.",
+   "蹂댄뻾?먯뿉寃?寃쎌쓬湲곕줈 二쇱쓽瑜?二쇰ŉ ?ㅼ냼 ?띾룄瑜??믪뿬 ?듦낵?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Khi b梳죒 휃ang 휃i v沼쌻 t沼멵 휃沼?50 km/gi沼?tr챗n 휃튼沼쓓g n沼셢 th횪nh th챙 ph찼t hi沼뇆 ng튼沼쓎 휃i b沼?qua 휃튼沼쓓g tr찼i lu梳춗.  C찼ch x沼?l첵 h沼즤 l첵 nh梳쩿 l횪 g챙?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i b沼?휃ang qua 휃튼沼쓓g n챗n phanh g梳쩺 v횪 d沼쳌g l梳죍.",
+   "Ph찼n 휃o찼n di chuy沼긪 c沼쬪 ng튼沼쓎 휃i b沼?v횪 휃i chen v횪o gi沼칊.",
+   "Gi梳즡 t沼멵 v횪 chu梳쯰 b沼?d沼쳌g l梳죍, b梳춗 휃챔n nh찼y kh梳쯰 c梳쩺 휃沼?b찼o hi沼뇎 cho xe 휃梳켷g sau r沼밿 d沼쳌g xe l梳죍 m沼셳 c찼ch an to횪n.",
+   "D첫ng c챵i b찼o hi沼뇎 cho ng튼沼쓎 휃i b沼? t훱ng t沼멵 m沼셳 ch첬t r沼밿 v튼沼즨 qua."
+  ]
+ },
+ {
+  "n": 163,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 蹂댄샇 ?깆뿉 愿???ㅻ챸?쇰줈 留욎? ?딆? 寃껋??",
+  "ko_c": [
+   "?꾨줈???ㅼ튂???덉쟾吏???蹂댄뻾?먭? ?덈뒗 寃쎌슦? 李⑤줈媛 ?ㅼ튂?섏? ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃??곗뿉???덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾 ?섍쾶 ?〓떒?????덈룄濡??섏뿬???쒕떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?녿뒗 ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐媛 ???뚯뿉???쒗뻾?섍굅???쇱떆??吏?섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?듯뻾?????덈룄濡??섏뿬???쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌??蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 kh척ng 휃첬ng li챗n quan 휃梳퓆 b梳즣 v沼?ng튼沼쓎 휃i b沼?theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Trong tr튼沼쓓g h沼즤 c처 ng튼沼쓎 휃i b沼?沼?khu v沼켧 an to횪n 휃튼沼즓 b沼?tr챠 tr챗n 휃튼沼쓓g xe ch梳죣 v횪 tr튼沼쓓g h沼즤 휃i qua b챗n c梳죒h ng튼沼쓎 휃i b沼?tr챗n 휃튼沼쓓g h梳퉝 kh척ng ph창n lu沼뱊g xe ch梳죣, ph梳즜 gi沼?kho梳즢g c찼ch an to횪n v횪 휃i ch梳춎.",
+   "Khi c처 ng튼沼쓎 휃i b沼?휃ang b훱ng qua 휃튼沼쓓g kh척ng c처 v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼? ph梳즜 gi沼?kho梳즢g c찼ch, t梳죑 d沼쳌g 휃沼?ng튼沼쓎 휃i b沼?c처 th沼?qua 휃튼沼쓓g an to횪n.",
+   "N梳퓎 c梳즢 tr沼?l튼u th척ng c沼쬪 ng튼沼쓎 휃i b沼?tr챗n 휃튼沼쓓g kh척ng ph창n chia v沼뎎 h챔 v횪 l챵ng 휃튼沼쓓g tr챗n 휃튼沼쓓g kh척ng c처 v梳죅h ph창n lu沼뱊g gi沼칊, th챙 ph梳즜 휃i ch梳춎 ho梳톍 t梳죑 d沼쳌g 휃沼?ng튼沼쓎 휃i b沼?c처 th沼?l튼u th척ng m沼셳 c찼ch an to횪n.",
+   "Tr튼沼쌵 v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?kh척ng c처 휃챔n giao th척ng trong khu v沼켧 b梳즣 v沼?tr梳?em (Tr튼沼쓓g h沼즤 c처 v梳죅h d沼쳌g l횪 tr튼沼쌵 v梳죅h d沼쳌g 휃처), ph梳즜 휃i ch梳춎 b梳쩿 k沼?c처 ng튼沼쓎 휃i b沼?qua 휃튼沼쓓g hay kh척ng."
+  ]
+ },
+ {
+  "n": 164,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈?먯꽌 13??誘몃쭔???대┛?닿? (        )瑜????寃쎌슦?먮뒗 ?대┛?댁쓽 ?덉쟾???꾪빐 ?몃챸蹂댄샇 ?κ뎄瑜?      李⑹슜?섏뿬???쒕떎. (      )???대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "?λ낫??,
+   "?몃컻?먯쟾嫄?,
+   "?몃씪???ㅼ??댄듃",
+   "?ㅼ??댄듃 蹂대뱶"
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? tr튼沼쓓g h沼즤 tr梳?em d튼沼쌻 13 tu沼뷼 휃i (       ) th챙 ph梳즜 휃eo d沼쩸g c沼?b梳즣  v沼?t챠nh m梳죒g 휃沼?휃梳즡 b梳즣 an to횪n cho tr梳? N沼셢 dung n횪o kh척ng 휃첬ng v沼쌻 ph梳쬷 trong (  )?",
+  "tr_c": [
+   "Xe tr튼沼즨 휃i沼뇆 Kickboard",
+   "Xe 휃梳죖 1 b찼nh",
+   "Gi횪y tr튼沼즨 patin m沼셳 h횪ng b찼nh (Inline Skate)",
+   "V찼n tr튼沼즨 (Skate Board)"
+  ]
+ },
+ {
+  "n": 165,
+  "ko_b": "蹂댄뻾?먯쓽 蹂댄샇?섎Т??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "臾대떒 ?〓떒?섎뒗 ??痍⑦븳 蹂댄뻾?먮? 蹂댄샇???꾩슂 ?녿떎.",
+   "?좏샇?깆씠 ?덈뒗 ?꾨줈?먯꽌???〓떒 以묒씤 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬??臾대갑?섎떎.",
+   "蹂댄뻾???좏샇湲곗뿉 ?뱀깋 ?좏샇媛 ?먮㈇?섍퀬 ?덈뒗 寃쎌슦 李⑤웾??吏꾪뻾?대룄 ?쒕떎.",
+   "?좏샇?깆씠 ?덈뒗 援먯감濡쒖뿉???고쉶?꾪븷 寃쎌슦 ?좏샇???곕Ⅴ??蹂댄뻾?먮? 諛⑺빐?댁꽌???꾨땲 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch 휃첬ng v沼?ngh칫a v沼?b梳즣 v沼?ng튼沼쓎 휃i b沼?",
+  "tr_c": [
+   "Kh척ng c梳쬷 b梳즣 v沼?ng튼沼쓎 say r튼沼즩 b훱ng qua 휃튼沼쓓g tr찼i ph챕p.",
+   "T梳죍 휃o梳죒 휃튼沼쓓g c처 휃챔n t챠n hi沼뇎 giao th척ng, cho d첫 c梳즢 tr沼?vi沼놻 l튼u th척ng c沼쬪 ng튼沼쓎 휃i b沼?휃ang b훱ng qua 휃튼沼쓓g th챙  c크ng kh척ng c처 v梳쩸 휃沼?g챙.",
+   "Trong tr튼沼쓓g h沼즤 휃챔n xanh d횪nh cho ng튼沼쓎 휃i b沼?nh梳쩺 nh찼y th챙 xe c처 th沼?휃i ti梳퓈 c크ng kh척ng sao.",
+   "Tr튼沼쓓g h沼즤 mu沼몁 r梳?ph梳즜 t梳죍 휃o梳죒 휃튼沼쓓g giao nhau c처 휃챔n t챠n hi沼뇎 giao th척ng th챙 kh척ng 휃튼沼즓 c梳즢 tr沼?ng튼沼쓎 휃i b沼? 휃ang 휃i theo t챠n hi沼뇎 휃챔n giao th척ng."
+  ]
+ },
+ {
+  "n": 166,
+  "ko_b": "?꾨줈??以묒븰???듯뻾?????덈뒗 ?щ엺 ?먮뒗 ?됰젹濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?쒓??됱쭊?섎뒗 ?됰젹",
+   "留? ???깆쓽 ???숇Ъ??紐곌퀬 媛???щ엺",
+   "?꾨줈??泥?냼 ?먮뒗 蹂댁닔 ???꾨줈?먯꽌 ?묒뾽 以묒씤 ?щ엺",
+   "湲??먮뒗 ?꾩닔留??깆쓣 ?대????μ쓽 ?됰젹"
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?vi沼놻 ng튼沼쓎 ho梳톍 휃o횪n ng튼沼쓎 c처 th沼?휃i l梳죍 沼?gi沼칊 휃튼沼쓓g?",
+  "tr_c": [
+   "휂o횪n ng튼沼쓎 di沼꿼 h횪nh tr챗n 휃튼沼쓓g trong c찼c s沼?ki沼뇆 x찾 h沼셢 quan tr沼뛫g.",
+   "Ng튼沼쓎 휃ang d梳칣 휃沼셬g v梳춗 to nh튼 ng沼켥, b챵 v.v 휃i c첫ng.",
+   "Ng튼沼쓎 휃ang qu챕t d沼뛫 휃튼沼쓓g, s沼춁 ch沼칊 휃튼沼쓓g.",
+   "D챵ng ng튼沼쓎 휃튼a tang c梳쬶 c沼?ho梳톍 b훱ng r척n."
+  ]
+ },
+ {
+  "n": 167,
+  "ko_b": "?먮룞李??댁쟾?먭? ?좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄瑜??듦낵????媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "?〓떒?섎뒗 ?щ엺???녿떎 ?섎뜑?쇰룄 ?꾨갑怨?洹?二쇰??????댄뵾硫?媛먯냽?쒕떎.",
+   "?〓떒?섎뒗 ?щ엺???놁쑝誘濡?洹몃?濡?吏꾪뻾?쒕떎.",
+   "?〓떒?섎뒗 ?щ엺???놁쓣 ??鍮좊Ⅴ寃?吏?섍컙??",
+   "?〓떒?섎뒗 ?щ엺???덉쓣 ???덉쑝誘濡?寃쎌쓬湲곕? ?몃━硫?洹몃?濡?吏꾪뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "C찼ch 휃i沼걏 khi沼긪 xe n횪o c沼쬪 ng튼沼쓎 l찼i xe 척 t척 l횪 an to횪n nh梳쩿 khi 휃i qua l沼멼 sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼? kh척ng c처 휃챔n t챠n hi沼뇎 giao th척ng?",
+  "tr_c": [
+   "D첫 kh척ng c처 ng튼沼쓎 sang 휃튼沼쓓g th챙 v梳쳌 ph梳즜 quan s찼t k沼?tr찼i ph梳즜 v횪 xung quanh, 휃沼뱊g th沼쓎 gi梳즡 t沼멵 휃沼?",
+   "V챙 kh척ng c처 ng튼沼쓎 sang 휃튼沼쓓g n챗n c沼?th梳?휃i qua.",
+   "Khi kh척ng c처 ng튼沼쓎 sang 휃튼沼쓓g th챙 nhanh ch처ng 휃i qua.",
+   "V챙 c처 th沼?c처 ng튼沼쓎 sang 휃튼沼쓓g n챗n nh梳쩸 c챵i v횪 c沼?th梳?휃i qua."
+  ]
+ },
+ {
+  "n": 168,
+  "ko_b": "泥좉만嫄대꼸紐⑹쓣 ?듦낵?섎떎媛 怨좎옣?쇰줈 嫄대꼸紐??덉뿉??李⑤? ?댄뻾?????녿뒗 寃쎌슦 ?댁쟾?먯쓽 議곗튂?붾졊?쇰줈 諛붾Ⅴ吏 ?딅뒗 寃껋??",
+  "ko_c": [
+   "利됱떆 ?숈듅?먮? ??쇱떆?⑤떎.",
+   "鍮꾩긽 ?좏샇湲??깆쓣 ?ъ슜?쒕떎.",
+   "泥좊룄怨듬Т?먯뿉寃??뚮┛??",
+   "李⑤웾??怨좎옣 ?먯씤???좎냽???뺤씤?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "C찼ch x沼?l첵 kh척ng 휃첬ng c沼쬪 ng튼沼쓎 l찼i xe trong tr튼沼쓓g h沼즤 휃ang 휃i qua kh첬c giao 휃튼沼쓓g s梳칣 th챙 b沼?h沼뢮g xe  n챗n kh척ng th沼?휃i qua?",
+  "tr_c": [
+   "L梳춑 t沼쯢 s퉤 t찼n h횪nh kh찼ch 휃i c첫ng.",
+   "S沼?d沼쩸g t챠n hi沼뇎 kh梳쯰 c梳쩺.",
+   "Th척ng b찼o cho nh창n vi챗n 휃튼沼쓓g s梳칣.",
+   "Nhanh ch처ng ki沼긩 tra nguy챗n nh창n h튼 h沼뢮g c沼쬪 ph튼퉤ng ti沼뇆."
+  ]
+ },
+ {
+  "n": 169,
+  "ko_b": "李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섏뿬 嫄대Ъ ?깆뿉 吏꾩엯?섎젮怨??쒕떎. ?댁쟾?먭? ?댁빞 ???쒖꽌濡??щ컮瑜?寃껋??",
+  "ko_c": [
+   "?쒗뻾 ??諛⑺뼢吏?쒕벑 ?묐룞 ???좎냽 吏꾩엯",
+   "?쇱떆?뺤? ??寃쎌쓬湲??ъ슜 ???좎냽 吏꾩엯",
+   "?쒗뻾 ??醫뚯륫怨??곗륫遺遺??뺤씤 ???쒗뻾 吏꾩엯",
+   "?쇱떆?뺤? ??醫뚯륫怨??곗륫遺遺??뺤씤 ???쒗뻾 吏꾩엯"
+  ],
+  "a": "4",
+  "tr_b": "Ng튼沼쓎 휃i沼걏 khi沼긪 xe mu沼몁 b훱ng qua v沼뎎 h챔 휃沼?r梳?v횪o t챵a nh횪. Th沼?t沼?휃첬ng m횪 ng튼沼쓎 휃i沼걏 khi沼긪 xe ph梳즜 th沼켧  hi沼뇆 l횪?",
+  "tr_c": [
+   "휂i ch梳춎 ??B梳춗 휃챔n xi nhan b찼o r梳???Nhanh ch처ng r梳?v횪o t챵a nh횪",
+   "T梳죑 d沼쳌g ??B梳쩷 c챵i ??Nhanh ch처ng r梳?v횪o t챵a nh횪",
+   "휂i ch梳춎 ??Ki沼긩 tra tr찼i ph梳즜 ??T沼?t沼?r梳?v횪o t챵a nh횪",
+   "T梳죑 d沼쳌g ??Ki沼긩 tra tr찼i ph梳즜 ??T沼?t沼?r梳?v횪o t챵a nh횪"
+  ]
+ },
+ {
+  "n": 170,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 ?꾨줈 ?〓떒 諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "紐⑤뱺 李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?〓떒?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "吏泥댁옣?좎씤??寃쎌슦?쇰룄 諛섎뱶???꾨줈 ?〓떒 ?쒖꽕???댁슜?섏뿬 ?꾨줈瑜??〓떒?섏뿬???쒕떎.",
+   "?덉쟾?쒖? ?깆뿉 ?섑븯???〓떒??湲덉??섏뼱 ?덈뒗 ?꾨줈??遺遺꾩뿉?쒕뒗 洹??꾨줈瑜??〓떒?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈?먯꽌??媛??吏㏃? 嫄곕━濡??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o sau 휃창y l횪 kh척ng 휃첬ng v沼?c찼ch qua 휃튼沼쓓g c沼쬪 ng튼沼쓎 휃i b沼?theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Kh척ng 휃튼沼즓 sang 휃튼沼쓓g ngay s찼t ph챠a tr튼沼쌵 ho梳톍 ph챠a sau m沼뛦 lo梳죍 xe.",
+   "Ngay c梳?ng튼沼쓎 khuy梳퓍 t梳춗 c크ng b梳칣 bu沼셛 ph梳즜 s沼?d沼쩸g l沼멼 sang 휃튼沼쓓g 휃沼?qua 휃튼沼쓓g.",
+   "Kh척ng sang 휃튼沼쓓g tr챗n c찼c 휃o梳죒 휃튼沼쓓g c처 bi沼긪 b찼o c梳쩷 sang 휃튼沼쓓g.",
+   "Ph梳즜 sang 휃튼沼쓓g b梳켷g kho梳즢g c찼ch ng梳칗 nh梳쩿 tr챗n nh沼칗g 휃o梳죒 휃튼沼쓓g kh척ng c처 l沼멼 sang 휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 171,
+  "ko_b": "?쇨컙???꾨줈 ?곸쓽 蹂댄뻾?먮굹 臾쇱껜?ㅼ씠 ?쇱떆?곸쑝濡???蹂댁씠寃??섎뒗?쒖쬆諛??꾩긽?앹씠 ?쇱뼱?섍린 ?ъ슫 ?꾩튂??",
+  "ko_c": [
+   "諛섎? 李⑤줈??媛?μ옄由?,
+   "二쇳뻾 李⑤줈???곗륫 遺遺?,
+   "?꾨줈??以묒븰??遺洹?,
+   "?꾨줈 ?곗륫??媛?μ옄由?
+  ],
+  "a": "3",
+  "tr_b": "V沼?tr챠 n횪o d沼?x梳즭 ra hi沼뇆 t튼沼즢g \"hi沼뇆 t튼沼즢g l처a m梳칣\" t梳죑 th沼쓎 kh척ng nh챙n th梳쪅 ch튼沼썀g ng梳죍 v梳춗 hay ng튼沼쓎 휃i  b沼?tr챗n 휃튼沼쓓g v횪o ban 휃챗m?",
+  "tr_c": [
+   "B챗n l沼?c沼쬪 휃튼沼쓓g 휃沼멼 di沼뇆",
+   "B챗n ph梳즜 휃튼沼쓓g xe ch梳죣",
+   "Ch沼?g梳쬷 d梳즜 ph창n c찼ch gi沼칊 휃튼沼쓓g",
+   "B챗n l沼?b챗n ph梳즜 c沼쬪 휃튼沼쓓g"
+  ]
+ },
+ {
+  "n": 172,
+  "ko_b": "蹂댄뻾?먯쓽 ?듯뻾??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?꾨줈 ?〓떒 ??李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?좎냽???〓떒?섏뿬???쒕떎.",
+   "吏泥??μ븷?몄? ?꾨줈 ?〓떒?쒖꽕???덈뒗 ?꾨줈?먯꽌 諛섎뱶??洹멸납?쇰줈 ?〓떒?섏뿬???쒕떎.",
+   "蹂댄뻾?먮뒗 ?덉쟾?쒖? ?깆뿉 ?섑븯???〓떒??湲덉????꾨줈?먯꽌???좎냽?섍쾶 ?꾨줈瑜??〓떒?섏뿬???쒕떎.",
+   "蹂댄뻾?먮뒗 ?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈?먯꽌??媛??吏㏃? 嫄곕━濡??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?vi沼놻 l튼u th척ng c沼쬪 ng튼沼쓎 휃i b沼?",
+  "tr_c": [
+   "Khi qua 휃튼沼쓓g, ng튼沼쓎 휃i b沼?ph梳즜 휃i qua ngay s찼t ph챠a tr튼沼쌵 ho梳톍 ph챠a sau xe th梳춗 nhanh.",
+   "N梳퓎 tr챗n 휃튼沼쓓g c처 l沼멼 sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼? ng튼沼쓎 khuy梳퓍 t梳춗 ph梳즜 qua 휃튼沼쓓g b梳켷g l沼멼 sang 휃튼沼쓓g 휃처.",
+   "Ng튼沼쓎 휃i b沼?ph梳즜 휃i sang 휃튼沼쓓g th梳춗 nhanh 沼?nh沼칗g n퉤i c梳쩷 sang 휃튼沼쓓g theo ch沼?d梳쳌 c沼쬪 bi沼긪 b찼o an to횪n.",
+   "Ng튼沼쓎 휃i b沼?khi sang 휃튼沼쓓g 沼?n퉤i kh척ng c처 l沼멼 sang 휃튼沼쓓g th챙 ph梳즜 sang 휃튼沼쓓g 沼?ch沼?c처 kho梳즢g c찼ch ng梳칗 nh梳쩿."
+  ]
+ },
+ {
+  "n": 173,
+  "ko_b": "蹂댄뻾?먯쓽 蹂대룄?듯뻾 ?먯튃?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂대룄 ???곗륫?듯뻾",
+   "蹂대룄 ??醫뚯륫?듯뻾",
+   "蹂대룄 ??以묒븰?듯뻾",
+   "蹂대룄 ???듯뻾?먯튃? ?놁쓬"
+  ],
+  "a": "1",
+  "tr_b": "C창u n횪o gi梳즜 th챠ch 휃첬ng nguy챗n t梳칌 휃i tr챗n v沼뎎 h챔 c沼쬪 ng튼沼쓎 휃i b沼?",
+  "tr_c": [
+   "휂i ph챠a b챗n ph梳즜 c沼쬪 v沼뎎 h챔",
+   "휂i ph챠a b챗n tr찼i c沼쬪 v沼뎎 h챔",
+   "휂i ch챠nh gi沼칊 c沼쬪 v沼뎎 h챔",
+   "Kh척ng c처 quy 휃沼땙h ri챗ng v沼?c찼ch 휃i tr챗n v沼뎎 h챔"
+  ]
+ },
+ {
+  "n": 174,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌 ?댁쟾?먯쓽 ?됰룞?쇰줈 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??蹂댄뻾?먯쓽 ?덉쟾???뺤씤?섍퀬 ?쒗뻾?섎ŉ ?듦낵?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉???쇱떆?뺤??섏뿬 蹂댄뻾?먯쓽 ?〓떒??蹂댄샇?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쒗뻾?섎ŉ ?듯뻾?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Hai h횪nh 휃沼셬g 휃첬ng c沼쬪 ng튼沼쓎 휃i沼걏 khi沼긪 xe tr튼沼쌵 v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?kh척ng c처 휃챔n  giao th척ng trong khu v沼켧 b梳즣 v沼?tr梳?em (Tr튼沼쓓g h沼즤 c처 v梳죅h d沼쳌g th챙 d沼쳌g tr튼沼쌵 v梳죅h 휃처) l횪?",
+  "tr_c": [
+   "Khi ng튼沼쓎 휃i b沼?d沼?휃沼땙h b훱ng qua v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼? ph梳즜 ki沼긩 tra an to횪n c沼쬪 ng튼沼쓎 휃i b沼?r沼밿  휃i ch梳춎 qua.",
+   "Khi ng튼沼쓎 휃i b沼?d沼?휃沼땙h b훱ng qua v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼? ph梳즜 t梳죑 d沼쳌g 휃沼?b梳즣 휃梳즡 an to횪n cho  ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g.",
+   "휂i ch梳춎 qua b梳쩿 k沼?c처 ng튼沼쓎 휃i b沼?b훱ng qua 휃튼沼쓓g hay kh척ng.",
+   "T梳죑 d沼쳌g b梳쩿 k沼?c처 ng튼沼쓎 휃i b沼?b훱ng qua 휃튼沼쓓g hay kh척ng."
+  ]
+ },
+ {
+  "n": 175,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾??蹂댄샇??????ㅻ챸 以?留욌뒗 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곕? ?뚭퀬 嫄몄뼱媛???щ엺? 蹂댄뻾?먯뿉 ?대떦?섏? ?딅뒗??",
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒖뿉 癒쇱? 吏꾩엯??李⑤웾? 蹂댄뻾?먯뿉 ?곗꽑?섏뿬 ?듯뻾??沅뚰븳???덈떎.",
+   "?쑣룸룄寃쎌같泥?옣? 蹂댄뻾?먯쓽 ?듯뻾??蹂댄샇?섍린 ?꾪빐 ?꾨줈??蹂댄뻾???꾩슜 ?꾨줈瑜??ㅼ튂?????덈떎.",
+   "蹂댄뻾???꾩슜 ?꾨줈?먮뒗 ?좊え李⑤? ?뚭퀬 媛????덈떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 2 gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?vi沼놻 b梳즣 v沼?ng튼沼쓎 휃i b沼?",
+  "tr_c": [
+   "Ng튼沼쓎 휃ang d梳칣 xe 휃梳죖 휃i b沼?kh척ng 휃튼沼즓 xem l횪 ng튼沼쓎 휃i b沼?",
+   "沼?휃튼沼쓓g giao nhau kh척ng 휃튼沼즓 ph창n lu沼뱊g giao th척ng, xe 척 t척 ti梳퓆 v횪o tr튼沼쌵 c처 quy沼걆 튼u ti챗n 휃i tr튼沼쌵 so v沼쌻  ng튼沼쓎 휃i b沼?",
+   "Gi찼m 휃沼멵 S沼?C梳즢h s찼t t沼뎝h - th횪nh ph沼?c처 th沼?b沼?tr챠 휃튼沼쓓g d횪nh ri챗ng cho ng튼沼쓎 휃i b沼?tr챗n 휃튼沼쓓g 휃沼?b梳즣 휃梳즡 vi沼놻  휃i l梳죍 c沼쬪 ng튼沼쓎 휃i b沼?",
+   "C처 th沼?k챕o xe 휃梳쯻 tr梳?em tr챗n 휃튼沼쓓g d횪nh ri챗ng cho ng튼沼쓎 휃i b沼?"
+  ]
+ },
+ {
+  "n": 176,
+  "ko_b": "蹂댄뻾?먯쓽 ?듯뻾??????ㅻ챸 以?留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 李⑤룄瑜??듯뻾?섎뒗 寃쎌슦 ??긽 李⑤룄??醫뚯륫?쇰줈 ?듯뻾?댁빞 ?쒕떎.",
+   "蹂댄뻾?먮뒗 ?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?됱쭊 ?쒖뿉???꾨줈??以묒븰?쇰줈 ?듯뻾?????덈떎.",
+   "?꾨줈?〓떒?쒖꽕???댁슜?????녿뒗 吏泥댁옣?좎씤? ?꾨줈?〓떒?쒖꽕???댁슜?섏? ?딄퀬 ?꾨줈瑜??〓떒?????덈떎.",
+   "?꾨줈?〓떒?쒖꽕???녿뒗 寃쎌슦 蹂댄뻾?먮뒗 ?덉쟾???꾪빐 媛??湲?嫄곕━濡??꾨줈瑜??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Ch沼뛫 2 c창u gi梳즜 th챠ch 휃첬ng v沼?vi沼놻 l튼u th척ng c沼쬪 ng튼沼쓎 휃i b沼?",
+  "tr_c": [
+   "Tr튼沼쓓g h沼즤 ng튼沼쓎 휃i b沼?ph梳즜 휃i tr챗n 휃튼沼쓓g c沼쬪 xe 척 t척 th챙 ph梳즜 l튼u th척ng 沼?ph챠a b챗n tr찼i 휃튼沼쓓g.",
+   "Khi di沼꿼 h횪nh trong c찼c s沼?ki沼뇆 mang t챠nh x찾 h沼셢 quan tr沼뛫g, ng튼沼쓎 휃i b沼?c처 th沼?l튼u th척ng 沼?gi沼칊 휃튼沼쓓g.",
+   "Ng튼沼쓎 khuy梳퓍 t梳춗 kh척ng th沼?s沼?d沼쩸g c찼c c퉤 s沼?h梳?t梳쬷g 휃沼?sang 휃튼沼쓓g th챙 c처 th沼?휃i sang 휃튼沼쓓g m횪 kh척ng c梳쬷 s沼? d沼쩸g l沼멼 sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?",
+   "Trong tr튼沼쓓g h沼즤 kh척ng c처 c퉤 s沼?h梳?t梳쬷g 휃沼?sang 휃튼沼쓓g, ng튼沼쓎 휃i b沼?ph梳즜 sang 휃튼沼쓓g 沼?n퉤i c처 kho梳즢g c찼ch d횪i  nh梳쩿 휃沼?gi沼?an to횪n."
+  ]
+ },
+ {
+  "n": 177,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섎뒗 諛⑸쾿???꾨컲??寃쎌슦 踰붿튃湲덉??",
+  "ko_c": [
+   "3留???,
+   "4留???,
+   "5留???,
+   "6留???
+  ],
+  "a": "4",
+  "tr_b": "M沼쯢 ph梳죜 n횪o d튼沼쌻 휃창y d횪nh cho ng튼沼쓎 l찼i xe 척 t척 con vi ph梳죑 ph튼퉤ng ph찼p l찼i xe b훱ng ngang qua v沼뎎 h챔  theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "30.000 Won",
+   "40.000 Won",
+   "50.000 Won",
+   "60.000 Won"
+  ]
+ },
+ {
+  "n": 178,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂댄뻾??蹂댄샇? 愿?⑤맂 ?뱀슜?먮룞李??댁쟾?먯쓽 踰붿튃?됱쐞?????踰붿튃湲덉븸???ㅻⅨ 寃껋?? (蹂댄샇援ъ뿭? ?쒖쇅)",
+  "ko_c": [
+   "?좏샇???곕씪 ?꾨줈瑜??〓떒?섎뒗 蹂댄뻾???〓떒 諛⑺빐",
+   "蹂댄뻾???꾩슜?꾨줈 ?듯뻾?꾨컲",
+   "?꾨줈瑜??듯뻾?섍퀬 ?덈뒗 李⑥뿉??諛뽰쑝濡?臾쇨굔???섏????됱쐞",
+   "?대┛?닳ㅼ븵??蹂댁? 紐삵븯???щ엺 ?깆쓽 蹂댄샇 ?꾨컲"
+  ],
+  "a": "3",
+  "tr_b": "H횪nh vi vi ph梳죑 n횪o sau 휃창y c沼쬪 ng튼沼쓎 l찼i xe 척 t척 con li챗n quan 휃梳퓆 b梳즣 v沼?ng튼沼쓎 휃i b沼?c처 m沼쯢 ph梳죜 ti沼걆  kh찼c theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? (Ngo梳죍 tr沼?khu v沼켧 b梳즣 v沼?ri챗ng)",
+  "tr_c": [
+   "C梳즢 tr沼?ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g theo t챠n hi沼뇎 giao th척ng",
+   "Vi ph梳죑 l튼u th척ng tr챗n 휃튼沼쓓g d횪nh ri챗ng cho ng튼沼쓎 휃i b沼?,
+   "H횪nh vi n챕m 휃沼?v梳춗 ra kh沼뢩 xe 휃ang l튼u th척ng tr챗n 휃튼沼쓓g",
+   "Vi ph梳죑 nguy챗n t梳칌 b梳즣 v沼?tr梳?em, ng튼沼쓎 kh척ng th沼?nh챙n th梳쪅 ph챠a tr튼沼쌵, v.v."
+  ]
+ },
+ {
+  "n": 179,
+  "ko_b": "蹂댄뻾?먯뿉 ????댁쟾?먯쓽 諛붾엺吏곹븳 ?쒕룄??",
+  "ko_c": [
+   "?꾨줈瑜?臾대떒 ?〓떒?섎뒗 蹂댄뻾?먮뒗 蹂댄샇諛쏆쓣 ???녿떎.",
+   "?먮룞李??놁쓣 吏?섎뒗 蹂댄뻾?먯뿉寃??좉꼍 ?곗? ?딆븘???쒕떎.",
+   "蹂댄뻾?먭? ?먮룞李⑤? ?쇳빐???쒕떎.",
+   "?댁쟾?먮뒗 蹂댄뻾?먮? ?곗꽑?쇰줈 蹂댄샇?댁빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Th찼i 휃沼?휃첬ng 휃梳칗 c沼쬪 ng튼沼쓎 l찼i xe 휃沼멼 v沼쌻 ng튼沼쓎 휃i b沼?l횪 g챙?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i b沼?qua 휃튼沼쓓g tr찼i ph챕p kh척ng c梳쬷 휃튼沼즓 b梳즣 v沼?",
+   "Kh척ng c梳쬷 ph梳즜 ch첬 첵 휃梳퓆 ng튼沼쓎 휃i b沼?沼?ph챠a b챗n c梳죒h xe.",
+   "Ng튼沼쓎 휃i b沼?ph梳즜 tr찼nh xe 척 t척.",
+   "Ng튼沼쓎 l찼i xe c梳쬷 튼u ti챗n b梳즣 v沼?cho ng튼沼쓎 휃i b沼?"
+  ]
+ },
+ {
+  "n": 180,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾?먭? ?꾨줈瑜??〓떒?????덇쾶 ?덉쟾?쒖?濡??쒖떆???꾨줈??遺遺꾩쓣 臾댁뾿?대씪 ?섎뒗媛?",
+  "ko_c": [
+   "蹂대룄",
+   "湲멸??μ옄由ш뎄??,
+   "?〓떒蹂대룄",
+   "蹂댄뻾???꾩슜?꾨줈"
+  ],
+  "a": "3",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? ph梳쬷 휃튼沼쓓g c처 bi沼긪 b찼o an to횪n 휃沼?ng튼沼쓎 휃i b沼?c처 th沼?b훱ng qua 휃튼沼쓓g  휃튼沼즓 g沼뛦 l횪 g챙?",
+  "tr_c": [
+   "V沼뎎 h챔",
+   "Khu v沼켧 m챕p l沼?휃튼沼쓓g",
+   "V梳죅h 휃i b沼?sang 휃튼沼쓓g",
+   "휂튼沼쓓g d횪nh ri챗ng cho ng튼沼쓎 휃i b沼?
+  ]
+ },
+ {
+  "n": 181,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?먯뿉 ????댁쟾??議곗튂濡??섎せ??寃껋??",
+  "ko_c": [
+   "?대┛?대낫???쒖?媛 ?덈뒗 怨녹뿉?쒕뒗 ?대┛?닿? ?곗뼱 ?섏삤???쇱씠 ?덉쑝誘濡?二쇱쓽?댁빞 ?쒕떎.",
+   "蹂대룄瑜??〓떒?섍린 吏곸쟾???쒗뻾?섏뿬 蹂댄뻾?먮? 蹂댄샇?댁빞 ?쒕떎.",
+   "臾대떒 ?〓떒?섎뒗 蹂댄뻾?먮룄 ?쇰떒 蹂댄샇?댁빞 ?쒕떎.",
+   "?대┛?닿? 蹂댄샇???놁씠 ?꾨줈瑜??〓떒 以묒씪 ?뚯뿉???쇱떆 ?뺤??댁빞 ?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "C찼ch x沼?l첵 sai c沼쬪 ng튼沼쓎 l찼i xe 휃沼멼 v沼쌻 ng튼沼쓎 휃i b沼?",
+  "tr_c": [
+   "Ph梳즜 ch첬 첵 tr梳?em c처 th沼?b梳쩿 ng沼?ch梳죣 ra t梳죍 khu v沼켧 c처 bi沼긪 b찼o \"B梳즣 v沼?tr梳?em\".",
+   "Ph梳즜 b梳즣 v沼?ng튼沼쓎 휃i b沼?b梳켷g c찼ch 휃i ch梳춎 ngay tr튼沼쌵 khi l찼i xe qua v沼뎎 h챔.",
+   "Ph梳즜 b梳즣 v沼?c梳?nh沼칗g ng튼沼쓎 휃i b沼?qua 휃튼沼쓓g kh척ng 휃첬ng n퉤i quy 휃沼땙h.",
+   "Ph梳즜 t梳죑 d沼쳌g khi c처 tr梳?em qua 휃튼沼쓓g m횪 kh척ng c처 ng튼沼쓎 b梳즣 h沼?"
+  ]
+ },
+ {
+  "n": 182,
+  "ko_b": "蹂댄뻾?먯쓽 ?꾨줈 ?〓떒諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 媛??吏㏃? 嫄곕━濡??〓떒?댁빞 ?쒕떎.",
+   "蹂댄뻾?먮뒗 紐⑤뱺 李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?〓떒?섎㈃ ???쒕떎.",
+   "臾대떒?〓떒 諛⑹?瑜??꾪븳 李⑥꽑遺꾨━?媛 ?ㅼ튂??怨녹씠?쇰룄 ?섏뼱???〓떒?????덈떎.",
+   "?꾨줈怨듭궗 ?깆쑝濡?蹂대룄???듯뻾??湲덉?????李⑤룄濡??듯뻾?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 kh척ng 휃첬ng v沼?c찼ch ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i b沼?c梳쬷 ch沼뛫 휃튼沼쓓g 휃i ng梳칗 nh梳쩿 khi sang 휃튼沼쓓g 沼?n퉤i kh척ng c처 l沼멼 sang 휃튼沼쓓g.",
+   "Ng튼沼쓎 휃i b沼?kh척ng 휃튼沼즓 sang 휃튼沼쓓g 沼?ngay s찼t ph챠a tr튼沼쌵 hay ph챠a sau c沼쬪 t梳쩿 c梳?c찼c ph튼퉤ng ti沼뇆.",
+   "Ng튼沼쓎 휃i b沼?c처 th沼?qua 휃튼沼쓓g b梳켷g c찼ch tr챔o qua d梳즜 ph창n c찼ch l횪n 휃튼沼쓓g 휃튼沼즓 l梳칛 휃梳톞 nh梳켶 ng훱n ch梳톘 qua  휃튼沼쓓g tr찼i ph챕p.",
+   "Ng튼沼쓎 휃i b沼?c처 th沼?휃i d튼沼쌻 l챵ng 휃튼沼쓓g n梳퓎 v沼뎎 h챔 휃ang trong qu찼 tr챙nh x창y d沼켷g."
+  ]
+ },
+ {
+  "n": 183,
+  "ko_b": "?욎쓣 蹂댁? 紐삵븯???щ엺??以?섎뒗 踰붿쐞???대떦?섏? ?딅뒗 ?щ엺??",
+  "ko_c": [
+   "?대┛???먮뒗 ?곥냽?좎븘",
+   "?섏” ?깆쓣 ?ъ슜?섏? ?꾨땲?섍퀬??蹂댄뻾???????녿뒗 ?щ엺",
+   "?좎껜???됲삎湲곕뒫???μ븷媛 ?덈뒗 ?щ엺",
+   "?ｌ? 紐삵븯???щ엺"
+  ],
+  "a": "1",
+  "tr_b": "휂沼멼 t튼沼즢g n횪o d튼沼쌻 휃창y kh척ng 휃튼沼즓 x梳퓈 v횪o ?쐍g튼沼쓎 kh척ng nh챙n th梳쪅 ph챠a tr튼沼쌵??",
+  "tr_c": [
+   "Tr梳?s퉤 sinh v횪 tr梳?em",
+   "Ng튼沼쓎 t횪n t梳춗 ph梳즜 di chuy沼긪 b梳켷g ch창n gi梳?,
+   "Ng튼沼쓎 g梳톚 kh처 kh훱n trong vi沼놻 gi沼?th훱ng b梳켷g c퉤 th沼?,
+   "Ng튼沼쓎 휃i梳풻"
+  ]
+ },
+ {
+  "n": 184,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭 ?덉뿉??(   )~(   ) ?ъ씠???좏샇?꾨컲?????뱀슜李??댁쟾?먯뿉 ???湲곗〈??踰뚯젏??2諛곕줈  遺怨쇳븳?? (   )???쒖꽌?濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅼ쟾 6?? ?ㅽ썑 6??,
+   "?ㅼ쟾 7?? ?ㅽ썑 7??,
+   "?ㅼ쟾 8?? ?ㅽ썑 8??,
+   "?ㅼ쟾 9?? ?ㅽ썑 9??
+  ],
+  "a": "3",
+  "tr_b": "Ng튼沼쓎 l찼i xe 척 t척 con vi ph梳죑 t챠n hi沼뇎 giao th척ng v횪o kho梳즢g th沼쓎 gian t沼?( ) 휃梳퓆 ( ) trong khu v沼켧 b梳즣 v沼?tr梳?em b沼?nh梳춏 g梳쩺 휃척i m沼쯢 휃i沼긩 ph梳죜 theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? Th沼?t沼?th沼쓎 gian 휃첬ng khi 휃i沼걆 v횪o ( ) l횪?",
+  "tr_c": [
+   "6 gi沼?s찼ng, 6 gi沼?t沼멼.",
+   "7 gi沼?s찼ng, 7 gi沼?t沼멼.",
+   "8 gi沼?s찼ng, 8 gi沼?t沼멼.",
+   "9 gi沼?s찼ng, 9 gi沼?t沼멼."
+  ]
+ },
+ {
+  "n": 185,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4.5???붾Ъ?먮룞李④? ?ㅼ쟾 10?쒕???11?쒓퉴吏 ?몄씤蹂댄샇援ъ뿭?먯꽌 二쇱감?꾨컲????寃쎌슦 怨쇳깭猷뚮뒗?",
+  "ko_c": [
+   "4留???,
+   "5留???,
+   "9留???,
+   "10留???
+  ],
+  "a": "3",
+  "tr_b": "M沼쯢 ph梳죜 n횪o 휃沼멼 v沼쌻 ng튼沼쓎 l찼i xe t梳즜 4,5 t梳쩸 vi ph梳죑 휃沼?xe trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 t沼?10 gi沼? 휃梳퓆 11 gi沼?s찼ng theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "40.000 Won",
+   "50.000 Won",
+   "90.000 Won",
+   "100.000 Won"
+  ]
+ },
+ {
+  "n": 186,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?먯쓽 ?듯뻾諛⑸쾿?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂대룄?먯꽌??醫뚯륫?듯뻾???먯튃?쇰줈 ?쒕떎.",
+   "蹂댄뻾?먯슦?좊룄濡쒖뿉?쒕뒗 ?꾨줈????遺遺꾩쓣 ?듯뻾?????덈떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌???몄젣??蹂대룄濡??듯뻾?섏뿬???쒕떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?딆? ?꾨줈 以?以묒븰?좎씠 ?덈뒗 ?꾨줈?먯꽌??湲멸??μ옄由ш뎄??쑝濡??듯뻾?섏뿬???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "C찼ch n횪o d튼沼쌻 휃창y kh척ng 휃첬ng 휃沼멼 v沼쌻 ng튼沼쓎 휃i b沼?khi l튼u th척ng?",
+  "tr_c": [
+   "Nguy챗n t梳칌 휃i b沼?v沼?ph챠a b챗n tr찼i c沼쬪 v沼뎎 h챔.",
+   "Tr챗n 휃튼沼쓓g d횪nh ri챗ng cho ng튼沼쓎 휃i b沼? ng튼沼쓎 휃i b沼?c처 th沼?l튼u th척ng tr챗n to횪n b沼?con 휃튼沼쓓g.",
+   "Tr챗n c찼c con 휃튼沼쓓g m횪 v沼뎎 h챔 v횪 l횪n 휃튼沼쓓g 휃튼沼즓 ph창n c찼ch r천 r횪ng, ng튼沼쓎 휃i b沼?ph梳즜 휃i tr챗n v沼뎎 h챔.",
+   "Tr챗n c찼c con 휃튼沼쓓g c처 v梳죅h trung t창m m횪 kh척ng ph창n c찼ch r천v沼뎎 h챔 v횪 l횪n 휃튼沼쓓g, ng튼沼쓎 휃i b沼?ph梳즜 휃i s찼t m챕p  휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 187,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤룄瑜??듯뻾?????덈뒗 ?щ엺 ?먮뒗 ?됰젹???꾨땶 寃쎌슦??",
+  "ko_c": [
+   "?꾨줈?먯꽌 泥?냼??蹂댁닔 ?깆쓽 ?묒뾽???섍퀬 ?덉쓣 ??,
+   "留먃룹냼 ?깆쓽 ???숇Ъ??紐곌퀬 媛???,
+   "?좊え李⑤? ?뚭퀬 媛???щ엺",
+   "?μ쓽(?у?) ?됰젹????
+  ],
+  "a": "3",
+  "tr_b": "Tr튼沼쓓g h沼즤 n횪o kh척ng ph梳즜 l횪 tr튼沼쓓g h沼즤 m沼셳 ng튼沼쓎 hay 휃o횪n ng튼沼쓎 휃튼沼즓 cho ph챕p di chuy沼긪 d튼沼쌻 l챵ng  휃튼沼쓓g theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Khi th沼켧 hi沼뇆 c척ng vi沼놻 nh튼 d沼뛫 v沼?sinh ho梳톍 tu s沼춁 tr챗n 휃튼沼쓓g",
+   "Khi c튼沼죍 c찼c 휃沼셬g v梳춗 l沼썀 nh튼 ng沼켥, b챵 휃i tr챗n 휃튼沼쓓g",
+   "Ng튼沼쓎 k챕o xe 휃梳쯻 em b챕",
+   "Khi di沼꿼 h횪nh tang l沼?
+  ]
+ },
+ {
+  "n": 188,
+  "ko_b": "?댁쟾?먭? 吏꾪뻾諛⑺뼢 ?좏샇?깆씠 ?곸깋?????뺤??좎쓣 珥덇낵?섏뿬 ?뺤???寃쎌슦 泥섎쾶 湲곗???",
+  "ko_c": [
+   "援먯감濡??듯뻾諛⑸쾿?꾨컲",
+   "?쇱떆?뺤? ?꾨컲",
+   "?좏샇?꾨컲",
+   "?쒗뻾?꾨컲"
+  ],
+  "a": "3",
+  "tr_b": "Ng튼沼쓎 l찼i xe 휃沼?l梳쩸 v梳죅h d沼쳌g khi 휃챔n giao th척ng 휃찾 chuy沼긪 sang m횪u 휃沼?ph梳즜 휃沼멼 m梳톞 v沼쌻 h챙nh ph梳죜 vi ph梳죑  n횪o sau 휃창y?",
+  "tr_c": [
+   "Vi ph梳죑 c찼ch 휃i qua 휃튼沼쓓g giao nhau",
+   "Vi ph梳죑 quy 휃沼땙h t梳죑 d沼쳌g",
+   "Vi ph梳죑 t챠n hi沼뇎 giao th척ng",
+   "Vi ph梳죑 quy 휃沼땙h 휃i ch梳춎"
+  ]
+ },
+ {
+  "n": 189,
+  "ko_b": "?ㅼ쓬 以??욎쓣 蹂댁? 紐삵븯???щ엺???μ븷?몃낫議곌껄???숇컲?섍퀬 ?꾨줈瑜??〓떒?섎뒗 紐⑥뒿??諛쒓껄?섏????뚯쓽 ?щ컮瑜??댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "二쇄ㅼ젙李?湲덉? ?μ냼??寃쎌슦 洹몃?濡?吏꾪뻾?쒕떎.",
+   "?쇱떆 ?뺤??쒕떎.",
+   "利됱떆 ?뺤감?섏뿬 ?욎쓣 蹂댁? 紐삵븯???щ엺???섎룎?꾧??꾨줉 ?덈궡?쒕떎.",
+   "寃쎌쓬湲곕? ?몃━硫?蹂댄샇?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "C찼ch l찼i xe n횪o l횪 휃첬ng khi b梳죒 nh챙n th梳쪅 m沼셳 ng튼沼쓎 kh척ng nh챙n th梳쪅 ph챠a tr튼沼쌵 휃ang sang 휃튼沼쓓g c첫ng v沼쌻  ch처 d梳쳌 휃튼沼쓓g?",
+  "tr_c": [
+   "Ti梳퓈 t沼쩭 휃i n梳퓎 휃창y l횪 khu v沼켧 kh척ng 휃튼沼즓 d沼쳌g 휃沼?",
+   "T梳죑 d沼쳌g xe l梳죍.",
+   "D沼쳌g l梳죍 ngay v횪 gi첬p ng튼沼쓎 khi梳퓅 th沼?quay l梳죍 ch沼?ban 휃梳쬾.",
+   "B梳쩷 c챵i c梳즢h b찼o 휃沼?b梳즣 v沼?h沼?"
+  ]
+ },
+ {
+  "n": 190,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ?욎뿉 ?쒕뒗 蹂댄뻾?먯쓽 ?〓떒?щ?? 愿怨꾩뾾??(    )?섏뿬???쒕떎. (   )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쒗뻾",
+   "?쇱떆?뺤?",
+   "?쒗뻾 ?먮뒗 ?쇱떆?뺤?",
+   "媛먯냽二쇳뻾"
+  ],
+  "a": "2",
+  "tr_b": "Ng튼沼쓎 휃i沼걏 khi沼긪 t梳쩿 c梳?lo梳죍 xe trong Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? tr튼沼쌵 v梳죅h sang 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?kh척ng c처 휃챔n giao th척ng trong khu v沼켧 b梳즣 v沼?tr梳?em, ph梳즜 ( ) b梳쩿 k沼?c처 ng튼沼쓎 휃i b沼?b훱ng qua 휃튼沼쓓g hay kh척ng. N沼셢 dung 휃첬ng 휃i沼걆 v횪o ( ) l횪?",
+  "tr_c": [
+   "휂i ch梳춎",
+   "T梳죑 d沼쳌g",
+   "휂i ch梳춎 ho梳톍 t梳죑 d沼쳌g",
+   "휂i gi梳즡 t沼멵 휃沼?
+  ]
+ },
+ {
+  "n": 191,
+  "ko_b": "?꾨줈瑜??〓떒?섎뒗 蹂댄뻾??蹂댄샇??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "援먯감濡??댁쇅???꾨줈?먯꽌??蹂댄뻾??蹂댄샇 ?섎Т媛 ?녿떎.",
+   "?좏샇瑜??꾨컲?섎뒗 臾대떒?〓떒 蹂댄뻾?먮뒗 蹂댄샇???섎Т媛 ?녿떎.",
+   "臾대떒?〓떒 蹂댄뻾?먮룄 蹂댄샇?섏뿬???쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈?먯꽌??臾대떒?〓떒 蹂댄뻾?먮? 蹂댄샇???섎Т媛 ?녿떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?vi沼놻 b梳즣 v沼?ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g?",
+  "tr_c": [
+   "Kh척ng c처 ngh칫a v沼?b梳즣 v沼?ng튼沼쓎 휃i b沼?tr챗n 휃튼沼쓓g 沼?ngo횪i 휃튼沼쓓g giao nhau.",
+   "Kh척ng c처 ngh칫a v沼?b梳즣 v沼?ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g tr찼i lu梳춗, vi ph梳죑 t챠n hi沼뇎 giao th척ng.",
+   "B梳즣 v沼?ng튼沼쓎 휃i b沼? k沼?c梳?khi h沼?sang 휃튼沼쓓g tr찼i lu梳춗.",
+   "Kh척ng c처 ngh칫a v沼?b梳즣 v沼?ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g tr찼i lu梳춗 沼?휃튼沼쓓g m沼셳 chi沼걏."
+  ]
+ },
+ {
+  "n": 192,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯튃?곸쑝濡?李⑤룄???듯뻾???덉슜?섏? ?딅뒗 ?щ엺??",
+  "ko_c": [
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?怨?媛???щ엺",
+   "?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?쒓?瑜??됱쭊?섎뒗 ?щ엺",
+   "?꾨줈?먯꽌 泥?냼??蹂댁닔 ?깆쓽 ?묒뾽???섍퀬 ?덈뒗 ?щ엺",
+   "?щ떎由???蹂댄뻾?먯쓽 ?듯뻾??吏?μ쓣 以??곕젮媛 ?덈뒗 臾쇨굔???대컲 以묒씤 ?щ엺"
+  ],
+  "a": "1",
+  "tr_b": "Theo quy 휃沼땙h c沼쬪 Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? ng튼沼쓎 n횪o kh척ng 휃튼沼즓 ph챕p l튼u th척ng tr챗n 휃튼沼쓓g xe  ch梳죣?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i b梳켷g xe d梳죒g gh梳?d첫ng h沼?tr沼?휃i l梳죍",
+   "Ng튼沼쓎 휃i b沼?di沼꿼 h횪nh tr챗n 휃튼沼쓓g trong s沼?ki沼뇆 x찾 h沼셢 quan tr沼뛫g",
+   "Ng튼沼쓎 l횪m c척ng vi沼놻 v沼?sinh ho梳톍 tu s沼춁 tr챗n 휃튼沼쓓g",
+   "Ng튼沼쓎 v梳춏 chuy沼긪 휃沼?v梳춗 c처 th沼?c梳즢 tr沼?l튼u th척ng c沼쬪 ng튼沼쓎 휃i b沼?v챠 d沼?nh튼 thang"
+  ]
+ },
+ {
+  "n": 193,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?깆쓽 ?뱀깋?깊솕媛 ?먮㈇????蹂댄뻾?먯쓽 媛???щ컮瑜??듯뻾諛⑸쾿??",
+  "ko_c": [
+   "?〓떒蹂대룄??吏꾩엯?섏? ?딆? 蹂댄뻾?먮뒗 ?ㅼ쓬 ?좏샇 ?뚭퉴吏 湲곕떎?몃떎媛 蹂댄뻾?깆쓽 ?뱀깋?깊솕 ???듯뻾?섏뿬???쒕떎.",
+   "?〓떒蹂대룄 以묎컙??洹몃깷 ???덈뒗??",
+   "?ㅼ쓬 ?좏샇瑜?湲곕떎由ъ? ?딄퀬 ?〓떒蹂대룄瑜?嫄대꼳??",
+   "?곸깋?깊솕濡?諛붾뚭린 ?꾩뿉???몄젣???〓떒???쒖옉?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "C찼ch n횪o d튼沼쌻 휃창y l횪 휃첬ng nh梳쩿 휃沼?ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g khi 휃챔n xanh d횪nh cho ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g  휃ang nh梳쩺 nh찼y?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i b沼?v梳쳌 ch튼a ti梳퓆 v횪o l沼멼 sang 휃튼沼쓓g ph梳즜 ch沼?l튼沼즨 휃챔n xanh ti梳퓈 theo 휃沼?sang 휃튼沼쓓g.",
+   "휂沼쯰g y챗n 沼?gi沼칊 l沼멼 sang 휃튼沼쓓g.",
+   "Sang 휃튼沼쓓g m횪 kh척ng c梳쬷 ch沼?t챠n hi沼뇎 ti梳퓈 theo.",
+   "C처 th沼?sang 휃튼沼쓓g b梳쩿 c沼?l첬c n횪o mi沼꿳 l횪 tr튼沼쌵 khi chuy沼긪 sang 휃챔n 휃沼?"
+  ]
+ },
+ {
+  "n": 194,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂대룄瑜??듯뻾?섎뒗 蹂댄뻾?먯뿉 ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "125?쒖떆 誘몃쭔???대쪣李⑤? ?怨?蹂대룄瑜??듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "?먯쟾嫄곕? ?怨?媛???щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?댁슜?섎뒗 ?щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "49?쒖떆 ?먮룞湲곗옣移섏옄?꾧굅瑜??怨?媛???щ엺? 蹂댄뻾?먮줈 蹂????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o sau 휃창y l횪 휃첬ng v沼?ng튼沼쓎 휃i b沼?휃i tr챗n v沼뎎 h챔 theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i xe m찼y hai b찼nh d튼沼쌻 125cc tr챗n v沼뎎 h챔 c처 th沼?휃튼沼즓 coi l횪 ng튼沼쓎 휃i b沼?",
+   "Ng튼沼쓎 휃i xe 휃梳죖 c처 th沼?휃튼沼즓 coi l횪 ng튼沼쓎 휃i b沼?",
+   "Ng튼沼쓎 s沼?d沼쩸g xe y t梳?h沼?tr沼?휃i l梳죍 c처 th沼?휃튼沼즓 coi l횪 ng튼沼쓎 휃i b沼?",
+   "Ng튼沼쓎 휃i xe 휃梳죖 c처 g梳칗 휃沼셬g c퉤 49cc c처 th沼?휃튼沼즓 coi l횪 ng튼沼쓎 휃i b沼?"
+  ]
+ },
+ {
+  "n": 195,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쟾?⑸룄濡쒖뿉 ????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?듯뻾???덉슜??李⑤쭏???댁쟾?먮뒗 ?듯뻾 ?띾룄瑜?蹂댄뻾?먯쓽 嫄몄쓬 ?띾룄濡??댄뻾?섏뿬???쒕떎.",
+   "李⑤쭏???댁쟾?먮뒗 ?먯튃?곸쑝濡?蹂댄뻾?먯쟾?⑸룄濡쒕? ?듯뻾?????덈떎.",
+   "寃쎌같?쒖옣???뱁엳 ?꾩슂?섎떎怨??몄젙?섎뒗 寃쎌슦??李⑤쭏???듯뻾???덉슜?????녿떎.",
+   "?듯뻾???덉슜??李⑤쭏???댁쟾?먮뒗 蹂댄뻾?먮? ?꾪뿕?섍쾶 ???뚮뒗 ?쇱떆?뺤??섏뿬???쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 2 gi梳즜 th챠ch n횪o sau 휃창y l횪 휃첬ng v沼?휃튼沼쓓g d횪nh ri챗ng cho ng튼沼쓎 휃i b沼?",
+  "tr_c": [
+   "Ng튼沼쓎 l찼i c찼c ph튼퉤ng ti沼뇆 휃튼沼즓 ph챕p l튼u th척ng ph梳즜 l찼i xe b梳켷g v沼쌻 t沼멵 휃沼?b튼沼쌵 휃i c沼쬪 ng튼沼쓎 휃i b沼?",
+   "V沼?nguy챗n t梳칌, ng튼沼쓎 l찼i c찼c ph튼퉤ng ti沼뇆 c처 th沼?l튼u th척ng tr챗n 휃튼沼쓓g d횪nh cho ng튼沼쓎 휃i b沼?",
+   "Khi Gi찼m 휃沼멵 S沼?C梳즢h s찼t c척ng nh梳춏 l횪 tr튼沼쓓g h沼즤 휃梳톍 bi沼뇍 c梳쬷 thi梳퓍 th챙 c찼c ph튼퉤ng ti沼뇆 kh척ng 휃튼沼즓 l튼u th척ng.",
+   "Ng튼沼쓎 l찼i c찼c ph튼퉤ng ti沼뇆 휃튼沼즓 ph챕p l튼u th척ng ph梳즜 t梳죑 th沼쓎 d沼쳌g l梳죍 khi g창y nguy hi沼긩 cho ng튼沼쓎 휃i b沼?"
+  ]
+ },
+ {
+  "n": 196,
+  "ko_b": "?먮룞李⑥뿉 ?ｊ퀬 媛???붾Ъ???⑥뼱??蹂댄뻾?먯뿉寃?2二?吏꾨떒???곹빐瑜??낇엺 ?댁쟾?먯뿉 ???泥섎쾶 2媛吏??",
+  "ko_c": [
+   "?쇳빐?먯쓽 泥섎쾶?섏궗??愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎.",
+   "?쇳빐?먯? ?⑹쓽?섎㈃ 泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕??媛?낅릺???덉쑝硫?泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕媛???щ?? 愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Hai h챙nh ph梳죜 d횪nh cho ng튼沼쓎 l찼i 척 t척 g창y th튼퉤ng t챠ch cho ng튼沼쓎 휃i b沼?do h횪ng h처a r퉤i t沼?xe c沼쬪 m챙nh v횪  ph梳즜 n梳켶 vi沼뇆 2 tu梳쬷 l횪 g챙??",
+  "tr_c": [
+   "B沼?x沼?ph梳죜 h챙nh s沼?b梳쩿 k沼?ng튼沼쓎 b沼?thi沼뇍 h梳죍 c처 mong mu沼몁 x沼?ph梳죜 hay kh척ng.",
+   "Kh척ng b沼?x沼?ph梳죜 n梳퓎 tho梳?thu梳춏 휃튼沼즓 v沼쌻 ng튼沼쓎 b沼?thi沼뇍 h梳죍.",
+   "Kh척ng b沼?x沼?ph梳죜 n梳퓎 휃찾 tham gia lo梳죍 b梳즣 hi沼긩 c처 th沼?b沼밿 th튼沼쓓g to횪n b沼?thi沼뇍 h梳죍.",
+   "B沼?x沼?ph梳죜 h챙nh s沼?b梳쩿 k沼?휃찾 tham gia lo梳죍 b梳즣 hi沼긩 c처 th沼?b沼밿 th튼沼쓓g to횪n b沼?thi沼뇍 h梳죍."
+  ]
+ },
+ {
+  "n": 197,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 蹂댄뻾?먯쓽 媛???щ컮瑜??〓떒諛⑸쾿??",
+  "ko_c": [
+   "?듦낵李⑤웾 諛붾줈 ?ㅻ줈 ?〓떒?쒕떎.",
+   "李⑤웾?듯뻾???놁쓣 ??鍮좊Ⅴ寃??〓떒?쒕떎.",
+   "?〓떒蹂대룄媛 ?녿뒗 怨녹씠誘濡??꾨Т 怨녹씠???〓떒?쒕떎.",
+   "?꾨줈?먯꽌 媛??吏㏃? 嫄곕━濡??〓떒?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "C찼ch 휃i b沼?qua 휃튼沼쓓g 휃첬ng nh梳쩿 휃沼멼 v沼쌻 휃튼沼쓓g kh척ng c처 v梳죅h sang 휃튼沼쓓g theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "B훱ng qua 휃튼沼쓓g ngay ph챠a sau chi梳풻 xe v沼첺 휃i qua.",
+   "휂i qua nhanh khi kh척ng c처 xe l튼u th척ng.",
+   "V챙 l횪 n퉤i kh척ng c처 l沼멼 휃i b沼?qua 휃튼沼쓓g n챗n c처 th沼?b훱ng qua 沼?b梳쩿 k沼?v沼?tr챠 n횪o.",
+   "B훱ng qua 沼?n퉤i c처 kho梳즢g c찼ch ng梳칗 nh梳쩿 tr챗n 휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 198,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?〓떒蹂대룄瑜??〓떒?섎뒗 諛⑸쾿??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "媛쒖씤???대룞?μ튂瑜??뚭퀬 ?〓떒?????덈떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?怨??〓떒?????덈떎.",
+   "?먯쟾嫄곕? ?怨??〓떒?????덈떎.",
+   "?좊え李⑤? ?뚭퀬 ?〓떒?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? gi梳즜 th챠ch n횪o sau 휃창y l횪 kh척ng 휃첬ng v沼?c찼ch 휃i b沼?qua v梳죅h 휃i b沼?sang  휃튼沼쓓g?",
+  "tr_c": [
+   "V沼첺 d梳칣 ph튼퉤ng ti沼뇆 di chuy沼긪 c찼 nh창n v沼첺 b훱ng qua 휃튼沼쓓g.",
+   "C처 th沼?b훱ng qua 휃튼沼쓓g c첫ng v沼쌻 xe d梳죒g gh梳?d첫ng h沼?tr沼?휃i b沼?",
+   "C처 th沼?v沼첺 휃i xe 휃梳죖 v沼첺 b훱ng qua 휃튼沼쓓g.",
+   "C처 th沼?c첫ng 휃梳쯻 xe 휃梳쯻 tr梳?em khi b훱ng qua 휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 199,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 李⑤쭏???듯뻾諛⑸쾿??????ㅻ챸?대떎. ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌??李⑤룄濡??듯뻾?섏뿬???쒕떎.",
+   "蹂대룄瑜??〓떒?섍린 吏곸쟾???쒗뻾?섏뿬 醫뙿룹슦瑜??댄? ??蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏? ?딅룄濡??〓떒?섏뿬???쒕떎.",
+   "?꾨줈 以묒븰???곗륫 遺遺꾩쑝濡??듯뻾?섏뿬???쒕떎.",
+   "?꾨줈媛 ?쇰갑?듯뻾??寃쎌슦 ?꾨줈??以묒븰?대굹 醫뚯륫 遺遺꾩쓣 ?듯뻾?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "Trong c찼c gi梳즜 th챠chv沼?ph튼퉤ng ph찼p l튼u th척ng c沼쬪 c찼c ph튼퉤ng ti沼뇆 giao th척ng theo Lu梳춗 Giao th척ng 휃튼沼쓓g  b沼? C창u n횪o kh척ng 휃첬ng?",
+  "tr_c": [
+   "沼?nh沼칗g 휃o梳죒 휃튼沼쓓g ph창n chia th횪nh v沼뎎 h챔 v횪 l챵ng 휃튼沼쓓g xe ch梳죣 th챙 ph梳즜 l튼u th척ng tr챗n l챵ng 휃튼沼쓓g xe ch梳죣.",
+   "Tr튼沼쌵 khi b훱ng qua v沼뎎 h챔, ph梳즜 휃i ch梳춎 l梳죍, nh챙n k沼?b챗n tr찼i b챗n ph梳즜 r沼밿 b훱ng qua sao cho kh척ng c梳즢 tr沼?vi沼놻 l튼u  th척ng c沼쬪 ng튼沼쓎 휃i b沼?",
+   "Ph梳즜 휃i v沼?ph챠a b챗n ph梳즜 c沼쬪 t창m 휃튼沼쓓g.",
+   "N梳퓎 l횪 휃튼沼쓓g m沼셳 chi沼걏, c처 th沼?휃i gi沼칊 휃튼沼쓓g ho梳톍 ph梳쬷 ph챠a b챗n tr찼i."
+  ]
+ },
+ {
+  "n": 200,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 蹂댄샇??????ㅻ챸?대떎. ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섍퀬 ?덉쓣 ??洹?吏곸쟾???쇱떆?뺤??섏뿬???쒕떎.",
+   "寃쎌같怨듬Т?먯쓽 ?좏샇??吏?쒖뿉 ?곕씪 ?꾨줈瑜??〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "援먯감濡쒖뿉???꾨줈瑜??〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Trong c찼c gi梳즜 th챠ch v沼?b梳즣 v沼?ng튼沼쓎 휃i b沼?trong Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? C창u n횪o kh척ng 휃첬ng?",
+  "tr_c": [
+   "Khi c처 ng튼沼쓎 휃i b沼?휃ang 휃i tr챗n l沼멼 휃i b沼?qua 휃튼沼쓓g th챙 ph梳즜 t梳죑 d沼쳌g ngay tr튼沼쌵 v梳죅h 휃처.",
+   "Kh척ng 휃튼沼즓 c梳즢 tr沼?vi沼놻 l튼u th척ng c沼쬪 ng튼沼쓎 휃i b沼?휃ang b훱ng qua 휃튼沼쓓g theo t챠n hi沼뇎 ho梳톍 ch沼?th沼?c沼쬪 c梳즢h s찼t  giao th척ng.",
+   "Kh척ng 휃튼沼즓 c梳즢 tr沼?vi沼놻 l튼u th척ng c沼쬪 ng튼沼쓎 휃i b沼?휃ang b훱ng qua 휃튼沼쓓g 沼?휃o梳죒 휃튼沼쓓g giao nhau.",
+   "Khi ng튼沼쓎 휃i b沼?휃ang b훱ng qua 휃튼沼쓓g 沼?휃튼沼쓓g kh척ng c처 l沼멼 휃i b沼?qua 휃튼沼쓓g, ph梳즜 ch梳죣 ch梳춎 l梳죍 v횪 duy tr챙 kho梳즢g  c찼ch an to횪n."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json; p=r'translations/audit/queue/204_choices_vn.json'; d=json.load(open(p,encoding='utf-8')); print(json.dumps(d,ensure_ascii=True))\"" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:29:44.125341Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:2 문자:1
++ python -c "import json; p=r'translations/audit/queue/204_choices_vn.j ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+위치 줄:2 문자:1
++ python -c "import json; p=r'translations/audit/queue/204_choices_vn.j ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 680ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:2 문자:1
++ python -c "import json; p=r'translations/audit/queue/204_choices_vn.j ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+위치 줄:2 문자:1
++ python -c "import json; p=r'translations/audit/queue/204_choices_vn.j ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Command node, py, python3 -ErrorAction SilentlyContinue | Select-Object Name,Source' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 532ms:
+
+Name        Source                                                       
+----        ------                                                       
+node.exe    C:\Program Files\nodejs\node.exe                             
+py.exe      C:\Users\user\AppData\Local\Microsoft\WindowsApps\py.exe     
+python3.exe C:\Users\user\AppData\Local\Microsoft\WindowsApps\python3.exe
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "node -e \"const fs=require('fs');const d=JSON.parse(fs.readFileSync('translations/audit/queue/204_choices_vn.json','utf8')); console.log(d.map(x=>({n:x.n,keys:Object.keys(x)})))\"" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 543ms:
+[
+  { n: 161, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 162, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 163, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 164, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 165, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 166, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 167, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 168, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 169, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 170, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 171, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 172, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 173, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 174, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 175, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 176, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 177, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 178, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 179, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 180, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 181, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 182, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 183, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 184, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 185, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 186, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 187, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 188, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 189, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 190, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 191, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 192, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 193, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 194, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 195, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 196, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 197, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 198, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 199, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] },
+  { n: 200, keys: [ 'n', 'ko_b', 'ko_c', 'a', 'tr_b', 'tr_c' ] }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "node -e \"const fs=require('fs');const d=JSON.parse(fs.readFileSync('translations/audit/queue/204_choices_vn.json','utf8')).filter(x=>x.n>=161&&x.n<=175); let s=JSON.stringify(d,null,1); console.log(s.replace(/["'^'"\\\\x00-\\\\x7F]/g,c=>'\\\\\\\\u'+c.charCodeAt(0).toString(16).padStart(4,'0')))\"" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 577ms:
+[\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020161\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ubcf4\\ud589\\uc790\\u0020\\uc6b0\\uc120\\ub3c4\\ub85c\\uc5d0\\u0020\\ub300\\ud55c\\u0020\\uc124\\uba85\\uc73c\\ub85c\\u0020\\uac00\\uc7a5\\u0020\\ubc14\\ub974\\uc9c0\\u0020\\uc54a\\uc740\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uc6b0\\uc120\\ub3c4\\ub85c\\uc5d0\\uc11c\\u0020\\ubcf4\\ud589\\uc790\\ub294\\u0020\\ub3c4\\ub85c\\uc758\\u0020\\uc6b0\\uce21\\u0020\\uac00\\uc7a5\\uc790\\ub9ac\\ub85c\\ub9cc\\u0020\\ud1b5\\ud589\\ud560\\u0020\\uc218\\u0020\\uc788\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc6b4\\uc804\\uc790\\uc5d0\\uac8c\\ub294\\u0020\\uc11c\\ud589\\u002c\\u0020\\uc77c\\uc2dc\\uc815\\uc9c0\\u0020\\ub4f1\\u0020\\uac01\\uc885\\u0020\\ubcf4\\ud589\\uc790\\u0020\\ubcf4\\ud638\\u0020\\uc758\\ubb34\\uac00\\u0020\\ubd80\\uc5ec\\ub41c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\u0020\\ubcf4\\ud638\\u0020\\uc758\\ubb34\\ub97c\\u0020\\ubd88\\uc774\\ud589\\ud558\\uc600\\uc744\\u0020\\uacbd\\uc6b0\\u0020\\uc2b9\\uc6a9\\uc790\\ub3d9\\ucc28\\u0020\\uae30\\uc900\\u00204\\ub9cc\\uc6d0\\uc758\\u0020\\ubc94\\uce59\\uae08\\uacfc\\u002010\\uc810\\uc758\\u0020\\ubc8c\\uc810\\u0020\\ucc98\\ubd84\\uc758\\u0020\\ub300\\uc0c1\\uc774\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uacbd\\ucc30\\uc11c\\uc7a5\\uc740\\u0020\\ubcf4\\ud589\\uc790\\u0020\\ubcf4\\ud638\\ub97c\\u0020\\uc704\\ud574\\u0020\\ud544\\uc694\\ud558\\ub2e4\\uace0\\u0020\\uc778\\uc815\\ud560\\u0020\\uacbd\\uc6b0\\u0020\\ucc28\\ub7c9\\u0020\\ud1b5\\ud589\\uc18d\\ub3c4\\ub97c\\u002020\\u006b\\u006d\\u002f\\u0068\\u0020\\uc774\\ub0b4\\ub85c\\u0020\\uc81c\\ud55c\\ud560\\u0020\\uc218\\u0020\\uc788\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00221\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022G\\u0069\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u00ed\\u0063\\u0068\\u0020\\u006e\\u00e0\\u006f\\u0020\\u006c\\u00e0\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u006e\\u0068\\u1ea5\\u0074\\u0020\\u0076\\u1ec1\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u01b0\\u0075\\u0020\\u0074\\u0069\\u00ea\\u006e\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022T\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u01b0\\u0075\\u0020\\u0074\\u0069\\u00ea\\u006e\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002c\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0063\\u0068\\u1ec9\\u0020\\u0111\\u01b0\\u1ee3\\u0063\\u0020\\u0111\\u0069\\u0020\\u0073\\u00e1\\u0074\\u0020\\u006d\\u00e9\\u0070\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0062\\u00ea\\u006e\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u006c\\u00e1\\u0069\\u0020x\\u0065\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u0068\\u0129\\u0061\\u0020\\u0076\\u1ee5\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u006e\\u0068\\u01b0\\u0020\\u0111\\u0069\\u0020\\u0063\\u0068\\u1ead\\u006d\\u002c\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u0074\\u1ea1\\u006d\\u0020\\u0074\\u0068\\u1edd\\u0069\\u002c\\u0020\\u0076\\u002e\\u0076\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u0068\\u1ea5\\u0070\\u0020\\u0068\\u00e0\\u006e\\u0068\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u006e\\u0067\\u0068\\u0129\\u0061\\u0020\\u0076\\u1ee5\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0074\\u0068\\u0075\\u1ed9\\u0063\\u0020\\u0111\\u1ed1\\u0069\\u0020\\u0074\\u01b0\\u1ee3\\u006e\\u0067\\u0020\\u0062\\u1ecb\\u0020\\u0070\\u0068\\u1ea1\\u0074\\u0020\\u0074\\u0069\\u1ec1\\u006e\\u0020\\u0076\\u0069\\u0020\\u0070\\u0068\\u1ea1\\u006d\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u002040\\u002e000\\u0020\\u0077\\u006f\\u006e\\u0020\\u0076\\u00e0\\u0020\\u0074\\u0072\\u1eeb\\u002010\\u0020\\u0111\\u0069\\u1ec3\\u006d\\u0020\\u0070\\u0068\\u1ea1\\u0074\\u0020\\u0111\\u1ed1\\u0069\\u0020\\u0076\\u1edb\\u0069\\u0020\\u00f4\\u0020\\u0074\\u00f4\\u0020\\u0063\\u006f\\u006e\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022S\\u1edf\\u0020\\u0074\\u0072\\u01b0\\u1edf\\u006e\\u0067\\u0020S\\u1edf\\u0020C\\u1ea3\\u006e\\u0068\\u0020\\u0073\\u00e1\\u0074\\u0020\\u006e\\u1ebf\\u0075\\u0020x\\u00e9\\u0074\\u0020\\u0074\\u0068\\u1ea5\\u0079\\u0020\\u006c\\u00e0\\u0020\\u0063\\u1ea7\\u006e\\u0020\\u0074\\u0068\\u0069\\u1ebf\\u0074\\u0020\\u0111\\u1ec3\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0063\\u00f3\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u0067\\u0069\\u1edb\\u0069\\u0020\\u0068\\u1ea1\\u006e\\u0020\\u0074\\u1ed1\\u0063\\u0020\\u0111\\u1ed9\\u0020\\u006c\\u01b0\\u0075\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u1ee7\\u0061\\u0020x\\u0065\\u0020\\u006c\\u00e0\\u0020\\u0020\\u0074\\u1ed1\\u0069\\u0020\\u0111\\u0061\\u002020\\u006b\\u006d\\u002f\\u0067\\u0069\\u1edd\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020162\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\uc2dc\\ub0b4\\u0020\\ub3c4\\ub85c\\ub97c\\u0020\\ub9e4\\uc2dc\\u002050\\ud0ac\\ub85c\\ubbf8\\ud130\\ub85c\\u0020\\uc8fc\\ud589\\ud558\\ub358\\u0020\\uc911\\u0020\\ubb34\\ub2e8\\ud6a1\\ub2e8\\u0020\\uc911\\uc778\\u0020\\ubcf4\\ud589\\uc790\\ub97c\\u0020\\ubc1c\\uacac\\ud558\\uc600\\ub2e4\\u002e\\u0020\\uac00\\uc7a5\\u0020\\uc801\\uc808\\ud55c\\u0020\\uc870\\uce58\\ub294?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uac00\\u0020\\ud6a1\\ub2e8\\u0020\\uc911\\uc774\\ubbc0\\ub85c\\u0020\\uc77c\\ub2e8\\u0020\\uae09\\ube0c\\ub808\\uc774\\ud06c\\ub97c\\u0020\\ubc1f\\uc544\\u0020\\uba48\\ucd98\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uc758\\u0020\\uc6c0\\uc9c1\\uc784\\uc744\\u0020\\uc608\\uce21\\ud558\\uc5ec\\u0020\\uadf8\\u0020\\uc0ac\\uc774\\ub85c\\u0020\\uc8fc\\ud589\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc18d\\ub3c4\\ub97c\\u0020\\uc904\\uc774\\uba70\\u0020\\uba48\\ucd9c\\u0020\\uc900\\ube44\\ub97c\\u0020\\ud558\\uace0\\u0020\\ube44\\uc0c1\\uc810\\uba78\\ub4f1\\uc73c\\ub85c\\u0020\\ub4a4\\ucc28\\uc5d0\\ub3c4\\u0020\\uc54c\\ub9ac\\uba74\\uc11c\\u0020\\uc548\\uc804\\ud558\\uac8c\\u0020\\uc815\\uc9c0\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uc5d0\\uac8c\\u0020\\uacbd\\uc74c\\uae30\\ub85c\\u0020\\uc8fc\\uc758\\ub97c\\u0020\\uc8fc\\uba70\\u0020\\ub2e4\\uc18c\\u0020\\uc18d\\ub3c4\\ub97c\\u0020\\ub192\\uc5ec\\u0020\\ud1b5\\uacfc\\ud55c\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00223\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022K\\u0068\\u0069\\u0020\\u0062\\u1ea1\\u006e\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0111\\u0069\\u0020\\u0076\\u1edb\\u0069\\u0020\\u0074\\u1ed1\\u0063\\u0020\\u0111\\u1ed9\\u002050\\u0020\\u006b\\u006d\\u002f\\u0067\\u0069\\u1edd\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006e\\u1ed9\\u0069\\u0020\\u0074\\u0068\\u00e0\\u006e\\u0068\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0070\\u0068\\u00e1\\u0074\\u0020\\u0068\\u0069\\u1ec7\\u006e\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0072\\u00e1\\u0069\\u0020\\u006c\\u0075\\u1ead\\u0074\\u002e\\u0020\\u0020C\\u00e1\\u0063\\u0068\\u0020x\\u1eed\\u0020\\u006c\\u00fd\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u006c\\u00fd\\u0020\\u006e\\u0068\\u1ea5\\u0074\\u0020\\u006c\\u00e0\\u0020\\u0067\\u00ec?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006e\\u00ea\\u006e\\u0020\\u0070\\u0068\\u0061\\u006e\\u0068\\u0020\\u0067\\u1ea5\\u0070\\u0020\\u0076\\u00e0\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u006c\\u1ea1\\u0069\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022P\\u0068\\u00e1\\u006e\\u0020\\u0111\\u006f\\u00e1\\u006e\\u0020\\u0064\\u0069\\u0020\\u0063\\u0068\\u0075\\u0079\\u1ec3\\u006e\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0076\\u00e0\\u0020\\u0111\\u0069\\u0020\\u0063\\u0068\\u0065\\u006e\\u0020\\u0076\\u00e0\\u006f\\u0020\\u0067\\u0069\\u1eef\\u0061\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022G\\u0069\\u1ea3\\u006d\\u0020\\u0074\\u1ed1\\u0063\\u0020\\u0076\\u00e0\\u0020\\u0063\\u0068\\u0075\\u1ea9\\u006e\\u0020\\u0062\\u1ecb\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u006c\\u1ea1\\u0069\\u002c\\u0020\\u0062\\u1ead\\u0074\\u0020\\u0111\\u00e8\\u006e\\u0020\\u006e\\u0068\\u00e1\\u0079\\u0020\\u006b\\u0068\\u1ea9\\u006e\\u0020\\u0063\\u1ea5\\u0070\\u0020\\u0111\\u1ec3\\u0020\\u0062\\u00e1\\u006f\\u0020\\u0068\\u0069\\u1ec7\\u0075\\u0020\\u0063\\u0068\\u006f\\u0020x\\u0065\\u0020\\u0111\\u1eb1\\u006e\\u0067\\u0020\\u0073\\u0061\\u0075\\u0020\\u0072\\u1ed3\\u0069\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020x\\u0065\\u0020\\u006c\\u1ea1\\u0069\\u0020\\u006d\\u1ed9\\u0074\\u0020\\u0063\\u00e1\\u0063\\u0068\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022D\\u00f9\\u006e\\u0067\\u0020\\u0063\\u00f2\\u0069\\u0020\\u0062\\u00e1\\u006f\\u0020\\u0068\\u0069\\u1ec7\\u0075\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002c\\u0020\\u0074\\u0103\\u006e\\u0067\\u0020\\u0074\\u1ed1\\u0063\\u0020\\u006d\\u1ed9\\u0074\\u0020\\u0063\\u0068\\u00fa\\u0074\\u0020\\u0072\\u1ed3\\u0069\\u0020\\u0076\\u01b0\\u1ee3\\u0074\\u0020\\u0071\\u0075\\u0061\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020163\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ub3c4\\ub85c\\uad50\\ud1b5\\ubc95\\uc0c1\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ubcf4\\ud638\\u0020\\ub4f1\\uc5d0\\u0020\\uad00\\ud55c\\u0020\\uc124\\uba85\\uc73c\\ub85c\\u0020\\ub9de\\uc9c0\\u0020\\uc54a\\uc740\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ub3c4\\ub85c\\uc5d0\\u0020\\uc124\\uce58\\ub41c\\u0020\\uc548\\uc804\\uc9c0\\ub300\\uc5d0\\u0020\\ubcf4\\ud589\\uc790\\uac00\\u0020\\uc788\\ub294\\u0020\\uacbd\\uc6b0\\uc640\\u0020\\ucc28\\ub85c\\uac00\\u0020\\uc124\\uce58\\ub418\\uc9c0\\u0020\\uc544\\ub2c8\\ud55c\\u0020\\uc881\\uc740\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\uc606\\uc744\\u0020\\uc9c0\\ub098\\ub294\\u0020\\uacbd\\u0020\\uc6b0\\uc5d0\\ub294\\u0020\\uc548\\uc804\\ud55c\\u0020\\uac70\\ub9ac\\ub97c\\u0020\\ub450\\uace0\\u0020\\uc11c\\ud589\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uac00\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\uac00\\u0020\\uc124\\uce58\\ub418\\uc5b4\\u0020\\uc788\\uc9c0\\u0020\\uc544\\ub2c8\\ud55c\\u0020\\ub3c4\\ub85c\\ub97c\\u0020\\ud6a1\\ub2e8\\ud558\\uace0\\u0020\\uc788\\uc744\\u0020\\ub54c\\uc5d0\\ub294\\u0020\\uc548\\uc804\\uac70\\ub9ac\\ub97c\\u0020\\ub450\\uace0\\u0020\\uc77c\\uc2dc\\uc815\\uc9c0\\ud558\\uc5ec\\u0020\\ubcf4\\ud589\\uc790\\uac00\\u0020\\uc548\\uc804\\u0020\\ud558\\uac8c\\u0020\\ud6a1\\ub2e8\\ud560\\u0020\\uc218\\u0020\\uc788\\ub3c4\\ub85d\\u0020\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ub3c4\\uc640\\u0020\\ucc28\\ub3c4\\uac00\\u0020\\uad6c\\ubd84\\ub418\\uc9c0\\u0020\\uc544\\ub2c8\\ud55c\\u0020\\ub3c4\\ub85c\\u0020\\uc911\\u0020\\uc911\\uc559\\uc120\\uc774\\u0020\\uc5c6\\ub294\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ud1b5\\ud589\\uc5d0\\u0020\\ubc29\\ud574\\uac00\\u0020\\ub420\\u0020\\ub54c\\uc5d0\\ub294\\u0020\\uc11c\\ud589\\ud558\\uac70\\ub098\\u0020\\uc77c\\uc2dc\\uc815\\u0020\\uc9c0\\ud558\\uc5ec\\u0020\\ubcf4\\ud589\\uc790\\uac00\\u0020\\uc548\\uc804\\ud558\\uac8c\\u0020\\ud1b5\\ud589\\ud560\\u0020\\uc218\\u0020\\uc788\\ub3c4\\ub85d\\u0020\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc5b4\\ub9b0\\uc774\\u0020\\ubcf4\\ud638\\uad6c\\uc5ed\\u0020\\ub0b4\\uc5d0\\u0020\\uc124\\uce58\\ub41c\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\u0020\\uc911\\u0020\\uc2e0\\ud638\\uae30\\uac00\\u0020\\uc124\\uce58\\ub418\\uc9c0\\u0020\\uc544\\ub2c8\\ud55c\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\u0020\\uc55e\\u0028\\uc815\\uc9c0\\uc120\\uc774\\u0020\\uc124\\uce58\\ub41c\\u0020\\uacbd\\uc6b0\\uc5d0\\ub294\\u0020\\uadf8\\u0020\\uc815\\uc9c0\\uc120\\u0020\\uc744\\u0020\\ub9d0\\ud55c\\ub2e4\\u0029\\uc5d0\\uc11c\\ub294\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ud6a1\\ub2e8\\u0020\\uc5ec\\ubd80\\uc640\\u0020\\uad00\\uacc4\\uc5c6\\uc774\\u0020\\uc11c\\ud589\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00224\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022G\\u0069\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u00ed\\u0063\\u0068\\u0020\\u006e\\u00e0\\u006f\\u0020\\u006c\\u00e0\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u006c\\u0069\\u00ea\\u006e\\u0020\\u0071\\u0075\\u0061\\u006e\\u0020\\u0111\\u1ebf\\u006e\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0074\\u0068\\u0065\\u006f\\u0020L\\u0075\\u1ead\\u0074\\u0020G\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0062\\u1ed9?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022T\\u0072\\u006f\\u006e\\u0067\\u0020\\u0074\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u1edf\\u0020\\u006b\\u0068\\u0075\\u0020\\u0076\\u1ef1\\u0063\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u0020\\u0111\\u01b0\\u1ee3\\u0063\\u0020\\u0062\\u1ed1\\u0020\\u0074\\u0072\\u00ed\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020x\\u0065\\u0020\\u0063\\u0068\\u1ea1\\u0079\\u0020\\u0076\\u00e0\\u0020\\u0074\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u0111\\u0069\\u0020\\u0071\\u0075\\u0061\\u0020\\u0062\\u00ea\\u006e\\u0020\\u0063\\u1ea1\\u006e\\u0068\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1eb9\\u0070\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0070\\u0068\\u00e2\\u006e\\u0020\\u006c\\u0075\\u1ed3\\u006e\\u0067\\u0020x\\u0065\\u0020\\u0063\\u0068\\u1ea1\\u0079\\u002c\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0067\\u0069\\u1eef\\u0020\\u006b\\u0068\\u006f\\u1ea3\\u006e\\u0067\\u0020\\u0063\\u00e1\\u0063\\u0068\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u0020\\u0076\\u00e0\\u0020\\u0111\\u0069\\u0020\\u0063\\u0068\\u1ead\\u006d\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u0069\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002c\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0067\\u0069\\u1eef\\u0020\\u006b\\u0068\\u006f\\u1ea3\\u006e\\u0067\\u0020\\u0063\\u00e1\\u0063\\u0068\\u002c\\u0020\\u0074\\u1ea1\\u006d\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u0111\\u1ec3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0063\\u00f3\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u1ebf\\u0075\\u0020\\u0063\\u1ea3\\u006e\\u0020\\u0074\\u0072\\u1edf\\u0020\\u006c\\u01b0\\u0075\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0070\\u0068\\u00e2\\u006e\\u0020\\u0063\\u0068\\u0069\\u0061\\u0020\\u0076\\u1ec9\\u0061\\u0020\\u0068\\u00e8\\u0020\\u0076\\u00e0\\u0020\\u006c\\u00f2\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0070\\u0068\\u00e2\\u006e\\u0020\\u006c\\u0075\\u1ed3\\u006e\\u0067\\u0020\\u0067\\u0069\\u1eef\\u0061\\u002c\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0111\\u0069\\u0020\\u0063\\u0068\\u1ead\\u006d\\u0020\\u0068\\u006f\\u1eb7\\u0063\\u0020\\u0074\\u1ea1\\u006d\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u0111\\u1ec3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0063\\u00f3\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u006c\\u01b0\\u0075\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u006d\\u1ed9\\u0074\\u0020\\u0063\\u00e1\\u0063\\u0068\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u0072\\u01b0\\u1edb\\u0063\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0111\\u00e8\\u006e\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0074\\u0072\\u006f\\u006e\\u0067\\u0020\\u006b\\u0068\\u0075\\u0020\\u0076\\u1ef1\\u0063\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u0074\\u0072\\u1ebb\\u0020\\u0065\\u006d\\u0020\\u0028T\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u0063\\u00f3\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u006c\\u00e0\\u0020\\u0074\\u0072\\u01b0\\u1edb\\u0063\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u0111\\u00f3\\u0029\\u002c\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0111\\u0069\\u0020\\u0063\\u0068\\u1ead\\u006d\\u0020\\u0062\\u1ea5\\u0074\\u0020\\u006b\\u1ec3\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u0061\\u0079\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020164\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ub3c4\\ub85c\\uad50\\ud1b5\\ubc95\\ub839\\uc0c1\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\u002013\\uc138\\u0020\\ubbf8\\ub9cc\\uc758\\u0020\\uc5b4\\ub9b0\\uc774\\uac00\\u0020\\u0028\\u0020\\u0020\\u0020\\u0020\\u0020\\u0020\\u0020\\u0020\\u0029\\ub97c\\u0020\\ud0c0\\ub294\\u0020\\uacbd\\uc6b0\\uc5d0\\ub294\\u0020\\uc5b4\\ub9b0\\uc774\\uc758\\u0020\\uc548\\uc804\\uc744\\u0020\\uc704\\ud574\\u0020\\uc778\\uba85\\ubcf4\\ud638\\u0020\\uc7a5\\uad6c\\ub97c\\u0020\\u0020\\u0020\\u0020\\u0020\\u0020\\u0020\\ucc29\\uc6a9\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0020\\u0028\\u0020\\u0020\\u0020\\u0020\\u0020\\u0020\\u0029\\uc5d0\\u0020\\ud574\\ub2f9\\ub418\\uc9c0\\u0020\\uc54a\\ub294\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ud0a5\\ubcf4\\ub4dc\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc678\\ubc1c\\uc790\\uc804\\uac70\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc778\\ub77c\\uc778\\u0020\\uc2a4\\ucf00\\uc774\\ud2b8\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc2a4\\ucf00\\uc774\\ud2b8\\u0020\\ubcf4\\ub4dc\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00222\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022T\\u0068\\u0065\\u006f\\u0020P\\u0068\\u00e1\\u0070\\u0020\\u006c\\u1ec7\\u006e\\u0068\\u0020G\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0062\\u1ed9\\u002c\\u0020\\u0074\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u0074\\u0072\\u1ebb\\u0020\\u0065\\u006d\\u0020\\u0064\\u01b0\\u1edb\\u0069\\u002013\\u0020\\u0074\\u0075\\u1ed5\\u0069\\u0020\\u0111\\u0069\\u0020\\u0028\\u0020\\u0020\\u0020\\u0020\\u0020\\u0020\\u0020\\u0029\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0111\\u0065\\u006f\\u0020\\u0064\\u1ee5\\u006e\\u0067\\u0020\\u0063\\u1ee5\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0020\\u0076\\u1ec7\\u0020\\u0074\\u00ed\\u006e\\u0068\\u0020\\u006d\\u1ea1\\u006e\\u0067\\u0020\\u0111\\u1ec3\\u0020\\u0111\\u1ea3\\u006d\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u0020\\u0063\\u0068\\u006f\\u0020\\u0074\\u0072\\u1ebb\\u002e\\u0020N\\u1ed9\\u0069\\u0020\\u0064\\u0075\\u006e\\u0067\\u0020\\u006e\\u00e0\\u006f\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u0076\\u1edb\\u0069\\u0020\\u0070\\u0068\\u1ea7\\u006e\\u0020\\u0074\\u0072\\u006f\\u006e\\u0067\\u0020\\u0028\\u0020\\u0020\\u0029?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022X\\u0065\\u0020\\u0074\\u0072\\u01b0\\u1ee3\\u0074\\u0020\\u0111\\u0069\\u1ec7\\u006e\\u0020K\\u0069\\u0063\\u006b\\u0062\\u006f\\u0061\\u0072\\u0064\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022X\\u0065\\u0020\\u0111\\u1ea1\\u0070\\u00201\\u0020\\u0062\\u00e1\\u006e\\u0068\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022G\\u0069\\u00e0\\u0079\\u0020\\u0074\\u0072\\u01b0\\u1ee3\\u0074\\u0020\\u0070\\u0061\\u0074\\u0069\\u006e\\u0020\\u006d\\u1ed9\\u0074\\u0020\\u0068\\u00e0\\u006e\\u0067\\u0020\\u0062\\u00e1\\u006e\\u0068\\u0020\\u0028I\\u006e\\u006c\\u0069\\u006e\\u0065\\u0020S\\u006b\\u0061\\u0074\\u0065\\u0029\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022V\\u00e1\\u006e\\u0020\\u0074\\u0072\\u01b0\\u1ee3\\u0074\\u0020\\u0028S\\u006b\\u0061\\u0074\\u0065\\u0020B\\u006f\\u0061\\u0072\\u0064\\u0029\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020165\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ubcf4\\ud638\\uc758\\ubb34\\uc5d0\\u0020\\ub300\\ud55c\\u0020\\uc124\\uba85\\uc73c\\ub85c\\u0020\\ub9de\\ub294\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ubb34\\ub2e8\\u0020\\ud6a1\\ub2e8\\ud558\\ub294\\u0020\\uc220\\u0020\\ucde8\\ud55c\\u0020\\ubcf4\\ud589\\uc790\\ub97c\\u0020\\ubcf4\\ud638\\ud560\\u0020\\ud544\\uc694\\u0020\\uc5c6\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc2e0\\ud638\\ub4f1\\uc774\\u0020\\uc788\\ub294\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\ub294\\u0020\\ud6a1\\ub2e8\\u0020\\uc911\\uc778\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ud1b5\\ud589\\uc744\\u0020\\ubc29\\ud574\\ud558\\uc5ec\\ub3c4\\u0020\\ubb34\\ubc29\\ud558\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\u0020\\uc2e0\\ud638\\uae30\\uc5d0\\u0020\\ub179\\uc0c9\\u0020\\uc2e0\\ud638\\uac00\\u0020\\uc810\\uba78\\ud558\\uace0\\u0020\\uc788\\ub294\\u0020\\uacbd\\uc6b0\\u0020\\ucc28\\ub7c9\\uc774\\u0020\\uc9c4\\ud589\\ud574\\ub3c4\\u0020\\ub41c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc2e0\\ud638\\ub4f1\\uc774\\u0020\\uc788\\ub294\\u0020\\uad50\\ucc28\\ub85c\\uc5d0\\uc11c\\u0020\\uc6b0\\ud68c\\uc804\\ud560\\u0020\\uacbd\\uc6b0\\u0020\\uc2e0\\ud638\\uc5d0\\u0020\\ub530\\ub974\\ub294\\u0020\\ubcf4\\ud589\\uc790\\ub97c\\u0020\\ubc29\\ud574\\ud574\\uc11c\\ub294\\u0020\\uc544\\ub2c8\\u0020\\ub41c\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00224\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022G\\u0069\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u00ed\\u0063\\u0068\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u0076\\u1ec1\\u0020\\u006e\\u0067\\u0068\\u0129\\u0061\\u0020\\u0076\\u1ee5\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u1ea7\\u006e\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0073\\u0061\\u0079\\u0020\\u0072\\u01b0\\u1ee3\\u0075\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0072\\u00e1\\u0069\\u0020\\u0070\\u0068\\u00e9\\u0070\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u1ea1\\u0069\\u0020\\u0111\\u006f\\u1ea1\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0111\\u00e8\\u006e\\u0020\\u0074\\u00ed\\u006e\\u0020\\u0068\\u0069\\u1ec7\\u0075\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u002c\\u0020\\u0063\\u0068\\u006f\\u0020\\u0064\\u00f9\\u0020\\u0063\\u1ea3\\u006e\\u0020\\u0074\\u0072\\u1edf\\u0020\\u0076\\u0069\\u1ec7\\u0063\\u0020\\u006c\\u01b0\\u0075\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0020\\u0063\\u0169\\u006e\\u0067\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0076\\u1ea5\\u006e\\u0020\\u0111\\u1ec1\\u0020\\u0067\\u00ec\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u0072\\u006f\\u006e\\u0067\\u0020\\u0074\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u0111\\u00e8\\u006e\\u0020x\\u0061\\u006e\\u0068\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u006e\\u0068\\u1ea5\\u0070\\u0020\\u006e\\u0068\\u00e1\\u0079\\u0020\\u0074\\u0068\\u00ec\\u0020x\\u0065\\u0020\\u0063\\u00f3\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u0111\\u0069\\u0020\\u0074\\u0069\\u1ebf\\u0070\\u0020\\u0063\\u0169\\u006e\\u0067\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0073\\u0061\\u006f\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u006d\\u0075\\u1ed1\\u006e\\u0020\\u0072\\u1ebd\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0074\\u1ea1\\u0069\\u0020\\u0111\\u006f\\u1ea1\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u006e\\u0068\\u0061\\u0075\\u0020\\u0063\\u00f3\\u0020\\u0111\\u00e8\\u006e\\u0020\\u0074\\u00ed\\u006e\\u0020\\u0068\\u0069\\u1ec7\\u0075\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0074\\u0068\\u00ec\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1ee3\\u0063\\u0020\\u0063\\u1ea3\\u006e\\u0020\\u0074\\u0072\\u1edf\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0111\\u0069\\u0020\\u0074\\u0068\\u0065\\u006f\\u0020\\u0074\\u00ed\\u006e\\u0020\\u0068\\u0069\\u1ec7\\u0075\\u0020\\u0111\\u00e8\\u006e\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020166\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ub3c4\\ub85c\\uc758\\u0020\\uc911\\uc559\\uc744\\u0020\\ud1b5\\ud589\\ud560\\u0020\\uc218\\u0020\\uc788\\ub294\\u0020\\uc0ac\\ub78c\\u0020\\ub610\\ub294\\u0020\\ud589\\ub82c\\ub85c\\u0020\\ub9de\\ub294\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\uc0ac\\ud68c\\uc801\\uc73c\\ub85c\\u0020\\uc911\\uc694\\ud55c\\u0020\\ud589\\uc0ac\\uc5d0\\u0020\\ub530\\ub77c\\u0020\\uc2dc\\uac00\\ud589\\uc9c4\\ud558\\ub294\\u0020\\ud589\\ub82c\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ub9d0\\u002c\\u0020\\uc18c\\u0020\\ub4f1\\uc758\\u0020\\ud070\\u0020\\ub3d9\\ubb3c\\uc744\\u0020\\ubab0\\uace0\\u0020\\uac00\\ub294\\u0020\\uc0ac\\ub78c\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ub3c4\\ub85c\\uc758\\u0020\\uccad\\uc18c\\u0020\\ub610\\ub294\\u0020\\ubcf4\\uc218\\u0020\\ub4f1\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\u0020\\uc791\\uc5c5\\u0020\\uc911\\uc778\\u0020\\uc0ac\\ub78c\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uae30\\u0020\\ub610\\ub294\\u0020\\ud604\\uc218\\ub9c9\\u0020\\ub4f1\\uc744\\u0020\\ud734\\ub300\\ud55c\\u0020\\uc7a5\\uc758\\u0020\\ud589\\ub82c\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00221\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022G\\u0069\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u00ed\\u0063\\u0068\\u0020\\u006e\\u00e0\\u006f\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u0076\\u1ec1\\u0020\\u0076\\u0069\\u1ec7\\u0063\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0068\\u006f\\u1eb7\\u0063\\u0020\\u0111\\u006f\\u00e0\\u006e\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0063\\u00f3\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u0111\\u0069\\u0020\\u006c\\u1ea1\\u0069\\u0020\\u1edf\\u0020\\u0067\\u0069\\u1eef\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\u0110\\u006f\\u00e0\\u006e\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0064\\u0069\\u1ec5\\u0075\\u0020\\u0068\\u00e0\\u006e\\u0068\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0072\\u006f\\u006e\\u0067\\u0020\\u0063\\u00e1\\u0063\\u0020\\u0073\\u1ef1\\u0020\\u006b\\u0069\\u1ec7\\u006e\\u0020x\\u00e3\\u0020\\u0068\\u1ed9\\u0069\\u0020\\u0071\\u0075\\u0061\\u006e\\u0020\\u0074\\u0072\\u1ecd\\u006e\\u0067\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0064\\u1eaf\\u0074\\u0020\\u0111\\u1ed9\\u006e\\u0067\\u0020\\u0076\\u1ead\\u0074\\u0020\\u0074\\u006f\\u0020\\u006e\\u0068\\u01b0\\u0020\\u006e\\u0067\\u1ef1\\u0061\\u002c\\u0020\\u0062\\u00f2\\u0020\\u0076\\u002e\\u0076\\u0020\\u0111\\u0069\\u0020\\u0063\\u00f9\\u006e\\u0067\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0071\\u0075\\u00e9\\u0074\\u0020\\u0064\\u1ecd\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u002c\\u0020\\u0073\\u1eed\\u0061\\u0020\\u0063\\u0068\\u1eef\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022D\\u00f2\\u006e\\u0067\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u01b0\\u0061\\u0020\\u0074\\u0061\\u006e\\u0067\\u0020\\u0063\\u1ea7\\u006d\\u0020\\u0063\\u1edd\\u0020\\u0068\\u006f\\u1eb7\\u0063\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0072\\u00f4\\u006e\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020167\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\uc790\\ub3d9\\ucc28\\u0020\\uc6b4\\uc804\\uc790\\uac00\\u0020\\uc2e0\\ud638\\ub4f1\\uc774\\u0020\\uc5c6\\ub294\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\ub97c\\u0020\\ud1b5\\uacfc\\ud560\\u0020\\ub54c\\u0020\\uac00\\uc7a5\\u0020\\uc548\\uc804\\ud55c\\u0020\\uc6b4\\uc804\\u0020\\ubc29\\ubc95\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ud6a1\\ub2e8\\ud558\\ub294\\u0020\\uc0ac\\ub78c\\uc774\\u0020\\uc5c6\\ub2e4\\u0020\\ud558\\ub354\\ub77c\\ub3c4\\u0020\\uc804\\ubc29\\uacfc\\u0020\\uadf8\\u0020\\uc8fc\\ubcc0\\uc744\\u0020\\uc798\\u0020\\uc0b4\\ud53c\\uba70\\u0020\\uac10\\uc18d\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ud6a1\\ub2e8\\ud558\\ub294\\u0020\\uc0ac\\ub78c\\uc774\\u0020\\uc5c6\\uc73c\\ubbc0\\ub85c\\u0020\\uadf8\\ub300\\ub85c\\u0020\\uc9c4\\ud589\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ud6a1\\ub2e8\\ud558\\ub294\\u0020\\uc0ac\\ub78c\\uc774\\u0020\\uc5c6\\uc744\\u0020\\ub54c\\u0020\\ube60\\ub974\\uac8c\\u0020\\uc9c0\\ub098\\uac04\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ud6a1\\ub2e8\\ud558\\ub294\\u0020\\uc0ac\\ub78c\\uc774\\u0020\\uc788\\uc744\\u0020\\uc218\\u0020\\uc788\\uc73c\\ubbc0\\ub85c\\u0020\\uacbd\\uc74c\\uae30\\ub97c\\u0020\\uc6b8\\ub9ac\\uba70\\u0020\\uadf8\\ub300\\ub85c\\u0020\\uc9c4\\ud589\\ud55c\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00221\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022C\\u00e1\\u0063\\u0068\\u0020\\u0111\\u0069\\u1ec1\\u0075\\u0020\\u006b\\u0068\\u0069\\u1ec3\\u006e\\u0020x\\u0065\\u0020\\u006e\\u00e0\\u006f\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u006c\\u00e1\\u0069\\u0020x\\u0065\\u0020\\u00f4\\u0020\\u0074\\u00f4\\u0020\\u006c\\u00e0\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u0020\\u006e\\u0068\\u1ea5\\u0074\\u0020\\u006b\\u0068\\u0069\\u0020\\u0111\\u0069\\u0020\\u0071\\u0075\\u0061\\u0020\\u006c\\u1ed1\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0111\\u00e8\\u006e\\u0020\\u0074\\u00ed\\u006e\\u0020\\u0068\\u0069\\u1ec7\\u0075\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022D\\u00f9\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0076\\u1eab\\u006e\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0071\\u0075\\u0061\\u006e\\u0020\\u0073\\u00e1\\u0074\\u0020\\u006b\\u1ef9\\u0020\\u0074\\u0072\\u00e1\\u0069\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0076\\u00e0\\u0020x\\u0075\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u006e\\u0068\\u002c\\u0020\\u0111\\u1ed3\\u006e\\u0067\\u0020\\u0074\\u0068\\u1edd\\u0069\\u0020\\u0067\\u0069\\u1ea3\\u006d\\u0020\\u0074\\u1ed1\\u0063\\u0020\\u0111\\u1ed9\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022V\\u00ec\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006e\\u00ea\\u006e\\u0020\\u0063\\u1ee9\\u0020\\u0074\\u0068\\u1ebf\\u0020\\u0111\\u0069\\u0020\\u0071\\u0075\\u0061\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u0069\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0068\\u00ec\\u0020\\u006e\\u0068\\u0061\\u006e\\u0068\\u0020\\u0063\\u0068\\u00f3\\u006e\\u0067\\u0020\\u0111\\u0069\\u0020\\u0071\\u0075\\u0061\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022V\\u00ec\\u0020\\u0063\\u00f3\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006e\\u00ea\\u006e\\u0020\\u006e\\u0068\\u1ea5\\u006e\\u0020\\u0063\\u00f2\\u0069\\u0020\\u0076\\u00e0\\u0020\\u0063\\u1ee9\\u0020\\u0074\\u0068\\u1ebf\\u0020\\u0111\\u0069\\u0020\\u0071\\u0075\\u0061\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020168\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ucca0\\uae38\\uac74\\ub110\\ubaa9\\uc744\\u0020\\ud1b5\\uacfc\\ud558\\ub2e4\\uac00\\u0020\\uace0\\uc7a5\\uc73c\\ub85c\\u0020\\uac74\\ub110\\ubaa9\\u0020\\uc548\\uc5d0\\uc11c\\u0020\\ucc28\\ub97c\\u0020\\uc6b4\\ud589\\ud560\\u0020\\uc218\\u0020\\uc5c6\\ub294\\u0020\\uacbd\\uc6b0\\u0020\\uc6b4\\uc804\\uc790\\uc758\\u0020\\uc870\\uce58\\uc694\\ub839\\uc73c\\ub85c\\u0020\\ubc14\\ub974\\uc9c0\\u0020\\uc54a\\ub294\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\uc989\\uc2dc\\u0020\\ub3d9\\uc2b9\\uc790\\ub97c\\u0020\\ub300\\ud53c\\uc2dc\\ud0a8\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ube44\\uc0c1\\u0020\\uc2e0\\ud638\\uae30\\u0020\\ub4f1\\uc744\\u0020\\uc0ac\\uc6a9\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ucca0\\ub3c4\\uacf5\\ubb34\\uc6d0\\uc5d0\\uac8c\\u0020\\uc54c\\ub9b0\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ucc28\\ub7c9\\uc758\\u0020\\uace0\\uc7a5\\u0020\\uc6d0\\uc778\\uc744\\u0020\\uc2e0\\uc18d\\ud788\\u0020\\ud655\\uc778\\ud55c\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00224\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022C\\u00e1\\u0063\\u0068\\u0020x\\u1eed\\u0020\\u006c\\u00fd\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u006c\\u00e1\\u0069\\u0020x\\u0065\\u0020\\u0074\\u0072\\u006f\\u006e\\u0067\\u0020\\u0074\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0111\\u0069\\u0020\\u0071\\u0075\\u0061\\u0020\\u006b\\u0068\\u00fa\\u0063\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0073\\u1eaf\\u0074\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0062\\u1ecb\\u0020\\u0068\\u1ecf\\u006e\\u0067\\u0020x\\u0065\\u0020\\u0020\\u006e\\u00ea\\u006e\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u0111\\u0069\\u0020\\u0071\\u0075\\u0061?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022L\\u1ead\\u0070\\u0020\\u0074\\u1ee9\\u0063\\u0020\\u0073\\u01a1\\u0020\\u0074\\u00e1\\u006e\\u0020\\u0068\\u00e0\\u006e\\u0068\\u0020\\u006b\\u0068\\u00e1\\u0063\\u0068\\u0020\\u0111\\u0069\\u0020\\u0063\\u00f9\\u006e\\u0067\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022S\\u1eed\\u0020\\u0064\\u1ee5\\u006e\\u0067\\u0020\\u0074\\u00ed\\u006e\\u0020\\u0068\\u0069\\u1ec7\\u0075\\u0020\\u006b\\u0068\\u1ea9\\u006e\\u0020\\u0063\\u1ea5\\u0070\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0062\\u00e1\\u006f\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0068\\u00e2\\u006e\\u0020\\u0076\\u0069\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0073\\u1eaf\\u0074\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0068\\u0061\\u006e\\u0068\\u0020\\u0063\\u0068\\u00f3\\u006e\\u0067\\u0020\\u006b\\u0069\\u1ec3\\u006d\\u0020\\u0074\\u0072\\u0061\\u0020\\u006e\\u0067\\u0075\\u0079\\u00ea\\u006e\\u0020\\u006e\\u0068\\u00e2\\u006e\\u0020\\u0068\\u01b0\\u0020\\u0068\\u1ecf\\u006e\\u0067\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u0070\\u0068\\u01b0\\u01a1\\u006e\\u0067\\u0020\\u0074\\u0069\\u1ec7\\u006e\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020169\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ucc28\\uc758\\u0020\\uc6b4\\uc804\\uc790\\uac00\\u0020\\ubcf4\\ub3c4\\ub97c\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\u0020\\uac74\\ubb3c\\u0020\\ub4f1\\uc5d0\\u0020\\uc9c4\\uc785\\ud558\\ub824\\uace0\\u0020\\ud55c\\ub2e4\\u002e\\u0020\\uc6b4\\uc804\\uc790\\uac00\\u0020\\ud574\\uc57c\\u0020\\ud560\\u0020\\uc21c\\uc11c\\ub85c\\u0020\\uc62c\\ubc14\\ub978\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\uc11c\\ud589\\u0020\\u2192\\u0020\\ubc29\\ud5a5\\uc9c0\\uc2dc\\ub4f1\\u0020\\uc791\\ub3d9\\u0020\\u2192\\u0020\\uc2e0\\uc18d\\u0020\\uc9c4\\uc785\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc77c\\uc2dc\\uc815\\uc9c0\\u0020\\u2192\\u0020\\uacbd\\uc74c\\uae30\\u0020\\uc0ac\\uc6a9\\u0020\\u2192\\u0020\\uc2e0\\uc18d\\u0020\\uc9c4\\uc785\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc11c\\ud589\\u0020\\u2192\\u0020\\uc88c\\uce21\\uacfc\\u0020\\uc6b0\\uce21\\ubd80\\ubd84\\u0020\\ud655\\uc778\\u0020\\u2192\\u0020\\uc11c\\ud589\\u0020\\uc9c4\\uc785\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc77c\\uc2dc\\uc815\\uc9c0\\u0020\\u2192\\u0020\\uc88c\\uce21\\uacfc\\u0020\\uc6b0\\uce21\\ubd80\\ubd84\\u0020\\ud655\\uc778\\u0020\\u2192\\u0020\\uc11c\\ud589\\u0020\\uc9c4\\uc785\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00224\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022N\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u1ec1\\u0075\\u0020\\u006b\\u0068\\u0069\\u1ec3\\u006e\\u0020x\\u0065\\u0020\\u006d\\u0075\\u1ed1\\u006e\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0076\\u1ec9\\u0061\\u0020\\u0068\\u00e8\\u0020\\u0111\\u1ec3\\u0020\\u0072\\u1ebd\\u0020\\u0076\\u00e0\\u006f\\u0020\\u0074\\u00f2\\u0061\\u0020\\u006e\\u0068\\u00e0\\u002e\\u0020T\\u0068\\u1ee9\\u0020\\u0074\\u1ef1\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u006d\\u00e0\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u1ec1\\u0075\\u0020\\u006b\\u0068\\u0069\\u1ec3\\u006e\\u0020x\\u0065\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u1ef1\\u0063\\u0020\\u0020\\u0068\\u0069\\u1ec7\\u006e\\u0020\\u006c\\u00e0?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\u0110\\u0069\\u0020\\u0063\\u0068\\u1ead\\u006d\\u0020\\u2192\\u0020B\\u1ead\\u0074\\u0020\\u0111\\u00e8\\u006e\\u0020x\\u0069\\u0020\\u006e\\u0068\\u0061\\u006e\\u0020\\u0062\\u00e1\\u006f\\u0020\\u0072\\u1ebd\\u0020\\u2192\\u0020N\\u0068\\u0061\\u006e\\u0068\\u0020\\u0063\\u0068\\u00f3\\u006e\\u0067\\u0020\\u0072\\u1ebd\\u0020\\u0076\\u00e0\\u006f\\u0020\\u0074\\u00f2\\u0061\\u0020\\u006e\\u0068\\u00e0\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u1ea1\\u006d\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u2192\\u0020B\\u1ea5\\u006d\\u0020\\u0063\\u00f2\\u0069\\u0020\\u2192\\u0020N\\u0068\\u0061\\u006e\\u0068\\u0020\\u0063\\u0068\\u00f3\\u006e\\u0067\\u0020\\u0072\\u1ebd\\u0020\\u0076\\u00e0\\u006f\\u0020\\u0074\\u00f2\\u0061\\u0020\\u006e\\u0068\\u00e0\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\u0110\\u0069\\u0020\\u0063\\u0068\\u1ead\\u006d\\u0020\\u2192\\u0020K\\u0069\\u1ec3\\u006d\\u0020\\u0074\\u0072\\u0061\\u0020\\u0074\\u0072\\u00e1\\u0069\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u2192\\u0020T\\u1eeb\\u0020\\u0074\\u1eeb\\u0020\\u0072\\u1ebd\\u0020\\u0076\\u00e0\\u006f\\u0020\\u0074\\u00f2\\u0061\\u0020\\u006e\\u0068\\u00e0\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u1ea1\\u006d\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u2192\\u0020K\\u0069\\u1ec3\\u006d\\u0020\\u0074\\u0072\\u0061\\u0020\\u0074\\u0072\\u00e1\\u0069\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u2192\\u0020T\\u1eeb\\u0020\\u0074\\u1eeb\\u0020\\u0072\\u1ebd\\u0020\\u0076\\u00e0\\u006f\\u0020\\u0074\\u00f2\\u0061\\u0020\\u006e\\u0068\\u00e0\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020170\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ub2e4\\uc74c\\u0020\\uc911\\u0020\\ub3c4\\ub85c\\uad50\\ud1b5\\ubc95\\uc0c1\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ub3c4\\ub85c\\u0020\\ud6a1\\ub2e8\\u0020\\ubc29\\ubc95\\uc5d0\\u0020\\ub300\\ud55c\\u0020\\uc124\\uba85\\uc73c\\ub85c\\u0020\\uc798\\ubabb\\ub41c\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ubaa8\\ub4e0\\u0020\\ucc28\\uc758\\u0020\\ubc14\\ub85c\\u0020\\uc55e\\uc774\\ub098\\u0020\\ub4a4\\ub85c\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\uc11c\\ub294\\u0020\\uc544\\ub2c8\\u0020\\ub41c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc9c0\\uccb4\\uc7a5\\uc560\\uc778\\uc758\\u0020\\uacbd\\uc6b0\\ub77c\\ub3c4\\u0020\\ubc18\\ub4dc\\uc2dc\\u0020\\ub3c4\\ub85c\\u0020\\ud6a1\\ub2e8\\u0020\\uc2dc\\uc124\\uc744\\u0020\\uc774\\uc6a9\\ud558\\uc5ec\\u0020\\ub3c4\\ub85c\\ub97c\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc548\\uc804\\ud45c\\uc9c0\\u0020\\ub4f1\\uc5d0\\u0020\\uc758\\ud558\\uc5ec\\u0020\\ud6a1\\ub2e8\\uc774\\u0020\\uae08\\uc9c0\\ub418\\uc5b4\\u0020\\uc788\\ub294\\u0020\\ub3c4\\ub85c\\uc758\\u0020\\ubd80\\ubd84\\uc5d0\\uc11c\\ub294\\u0020\\uadf8\\u0020\\ub3c4\\ub85c\\ub97c\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\uc11c\\ub294\\u0020\\uc544\\ub2c8\\u0020\\ub41c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\uac00\\u0020\\uc124\\uce58\\ub418\\uc5b4\\u0020\\uc788\\uc9c0\\u0020\\uc544\\ub2c8\\ud55c\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\ub294\\u0020\\uac00\\uc7a5\\u0020\\uc9e7\\uc740\\u0020\\uac70\\ub9ac\\ub85c\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00222\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022G\\u0069\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u00ed\\u0063\\u0068\\u0020\\u006e\\u00e0\\u006f\\u0020\\u0073\\u0061\\u0075\\u0020\\u0111\\u00e2\\u0079\\u0020\\u006c\\u00e0\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u0076\\u1ec1\\u0020\\u0063\\u00e1\\u0063\\u0068\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0074\\u0068\\u0065\\u006f\\u0020L\\u0075\\u1ead\\u0074\\u0020G\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0062\\u1ed9?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1ee3\\u0063\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006e\\u0067\\u0061\\u0079\\u0020\\u0073\\u00e1\\u0074\\u0020\\u0070\\u0068\\u00ed\\u0061\\u0020\\u0074\\u0072\\u01b0\\u1edb\\u0063\\u0020\\u0068\\u006f\\u1eb7\\u0063\\u0020\\u0070\\u0068\\u00ed\\u0061\\u0020\\u0073\\u0061\\u0075\\u0020\\u006d\\u1ecd\\u0069\\u0020\\u006c\\u006f\\u1ea1\\u0069\\u0020x\\u0065\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0067\\u0061\\u0079\\u0020\\u0063\\u1ea3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u006b\\u0068\\u0075\\u0079\\u1ebf\\u0074\\u0020\\u0074\\u1ead\\u0074\\u0020\\u0063\\u0169\\u006e\\u0067\\u0020\\u0062\\u1eaf\\u0074\\u0020\\u0062\\u0075\\u1ed9\\u0063\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0073\\u1eed\\u0020\\u0064\\u1ee5\\u006e\\u0067\\u0020\\u006c\\u1ed1\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0111\\u1ec3\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0063\\u00e1\\u0063\\u0020\\u0111\\u006f\\u1ea1\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0062\\u0069\\u1ec3\\u006e\\u0020\\u0062\\u00e1\\u006f\\u0020\\u0063\\u1ea5\\u006d\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022P\\u0068\\u1ea3\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0062\\u1eb1\\u006e\\u0067\\u0020\\u006b\\u0068\\u006f\\u1ea3\\u006e\\u0067\\u0020\\u0063\\u00e1\\u0063\\u0068\\u0020\\u006e\\u0067\\u1eaf\\u006e\\u0020\\u006e\\u0068\\u1ea5\\u0074\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u006e\\u0068\\u1eef\\u006e\\u0067\\u0020\\u0111\\u006f\\u1ea1\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u006c\\u1ed1\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020171\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\uc57c\\uac04\\uc5d0\\u0020\\ub3c4\\ub85c\\u0020\\uc0c1\\uc758\\u0020\\ubcf4\\ud589\\uc790\\ub098\\u0020\\ubb3c\\uccb4\\ub4e4\\uc774\\u0020\\uc77c\\uc2dc\\uc801\\uc73c\\ub85c\\u0020\\uc548\\u0020\\ubcf4\\uc774\\uac8c\\u0020\\ub418\\ub294\\u201c\\uc99d\\ubc1c\\u0020\\ud604\\uc0c1\\u201d\\uc774\\u0020\\uc77c\\uc5b4\\ub098\\uae30\\u0020\\uc26c\\uc6b4\\u0020\\uc704\\uce58\\ub294?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ubc18\\ub300\\u0020\\ucc28\\ub85c\\uc758\\u0020\\uac00\\uc7a5\\uc790\\ub9ac\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc8fc\\ud589\\u0020\\ucc28\\ub85c\\uc758\\u0020\\uc6b0\\uce21\\u0020\\ubd80\\ubd84\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ub3c4\\ub85c\\uc758\\u0020\\uc911\\uc559\\uc120\\u0020\\ubd80\\uadfc\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ub3c4\\ub85c\\u0020\\uc6b0\\uce21\\uc758\\u0020\\uac00\\uc7a5\\uc790\\ub9ac\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00223\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022V\\u1ecb\\u0020\\u0074\\u0072\\u00ed\\u0020\\u006e\\u00e0\\u006f\\u0020\\u0064\\u1ec5\\u0020x\\u1ea3\\u0079\\u0020\\u0072\\u0061\\u0020\\u0068\\u0069\\u1ec7\\u006e\\u0020\\u0074\\u01b0\\u1ee3\\u006e\\u0067\\u0020\\\u0022\\u0068\\u0069\\u1ec7\\u006e\\u0020\\u0074\\u01b0\\u1ee3\\u006e\\u0067\\u0020\\u006c\\u00f3\\u0061\\u0020\\u006d\\u1eaf\\u0074\\\u0022\\u0020\\u0074\\u1ea1\\u006d\\u0020\\u0074\\u0068\\u1edd\\u0069\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u006e\\u0068\\u00ec\\u006e\\u0020\\u0074\\u0068\\u1ea5\\u0079\\u0020\\u0063\\u0068\\u01b0\\u1edb\\u006e\\u0067\\u0020\\u006e\\u0067\\u1ea1\\u0069\\u0020\\u0076\\u1ead\\u0074\\u0020\\u0068\\u0061\\u0079\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0020\\u0062\\u1ed9\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0076\\u00e0\\u006f\\u0020\\u0062\\u0061\\u006e\\u0020\\u0111\\u00ea\\u006d?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022B\\u00ea\\u006e\\u0020\\u006c\\u1ec1\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0111\\u1ed1\\u0069\\u0020\\u0064\\u0069\\u1ec7\\u006e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022B\\u00ea\\u006e\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020x\\u0065\\u0020\\u0063\\u0068\\u1ea1\\u0079\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022C\\u0068\\u1ed7\\u0020\\u0067\\u1ea7\\u006e\\u0020\\u0064\\u1ea3\\u0069\\u0020\\u0070\\u0068\\u00e2\\u006e\\u0020\\u0063\\u00e1\\u0063\\u0068\\u0020\\u0067\\u0069\\u1eef\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022B\\u00ea\\u006e\\u0020\\u006c\\u1ec1\\u0020\\u0062\\u00ea\\u006e\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020172\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ud1b5\\ud589\\uc5d0\\u0020\\ub300\\ud55c\\u0020\\uc124\\uba85\\uc73c\\ub85c\\u0020\\ub9de\\ub294\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\ub294\\u0020\\ub3c4\\ub85c\\u0020\\ud6a1\\ub2e8\\u0020\\uc2dc\\u0020\\ucc28\\uc758\\u0020\\ubc14\\ub85c\\u0020\\uc55e\\uc774\\ub098\\u0020\\ub4a4\\ub85c\\u0020\\uc2e0\\uc18d\\ud788\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc9c0\\uccb4\\u0020\\uc7a5\\uc560\\uc778\\uc740\\u0020\\ub3c4\\ub85c\\u0020\\ud6a1\\ub2e8\\uc2dc\\uc124\\uc774\\u0020\\uc788\\ub294\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\u0020\\ubc18\\ub4dc\\uc2dc\\u0020\\uadf8\\uacf3\\uc73c\\ub85c\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\ub294\\u0020\\uc548\\uc804\\ud45c\\uc9c0\\u0020\\ub4f1\\uc5d0\\u0020\\uc758\\ud558\\uc5ec\\u0020\\ud6a1\\ub2e8\\uc774\\u0020\\uae08\\uc9c0\\ub41c\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\ub294\\u0020\\uc2e0\\uc18d\\ud558\\uac8c\\u0020\\ub3c4\\ub85c\\ub97c\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\ub294\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\uac00\\u0020\\uc124\\uce58\\ub418\\uc5b4\\u0020\\uc788\\uc9c0\\u0020\\uc544\\ub2c8\\ud55c\\u0020\\ub3c4\\ub85c\\uc5d0\\uc11c\\ub294\\u0020\\uac00\\uc7a5\\u0020\\uc9e7\\uc740\\u0020\\uac70\\ub9ac\\ub85c\\u0020\\ud6a1\\ub2e8\\ud558\\uc5ec\\uc57c\\u0020\\ud55c\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00224\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022G\\u0069\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u00ed\\u0063\\u0068\\u0020\\u006e\\u00e0\\u006f\\u0020\\u006c\\u00e0\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u0076\\u1ec1\\u0020\\u0076\\u0069\\u1ec7\\u0063\\u0020\\u006c\\u01b0\\u0075\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u0069\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u002c\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0111\\u0069\\u0020\\u0071\\u0075\\u0061\\u0020\\u006e\\u0067\\u0061\\u0079\\u0020\\u0073\\u00e1\\u0074\\u0020\\u0070\\u0068\\u00ed\\u0061\\u0020\\u0074\\u0072\\u01b0\\u1edb\\u0063\\u0020\\u0068\\u006f\\u1eb7\\u0063\\u0020\\u0070\\u0068\\u00ed\\u0061\\u0020\\u0073\\u0061\\u0075\\u0020x\\u0065\\u0020\\u0074\\u0068\\u1ead\\u0074\\u0020\\u006e\\u0068\\u0061\\u006e\\u0068\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u1ebf\\u0075\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u006c\\u1ed1\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002c\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u006b\\u0068\\u0075\\u0079\\u1ebf\\u0074\\u0020\\u0074\\u1ead\\u0074\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0062\\u1eb1\\u006e\\u0067\\u0020\\u006c\\u1ed1\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0111\\u00f3\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0111\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0068\\u1ead\\u0074\\u0020\\u006e\\u0068\\u0061\\u006e\\u0068\\u0020\\u1edf\\u0020\\u006e\\u0068\\u1eef\\u006e\\u0067\\u0020\\u006e\\u01a1\\u0069\\u0020\\u0063\\u1ea5\\u006d\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0068\\u0065\\u006f\\u0020\\u0063\\u0068\\u1ec9\\u0020\\u0064\\u1eab\\u006e\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u0062\\u0069\\u1ec3\\u006e\\u0020\\u0062\\u00e1\\u006f\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u006b\\u0068\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u1edf\\u0020\\u006e\\u01a1\\u0069\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u006c\\u1ed1\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u1edf\\u0020\\u0063\\u0068\\u1ed7\\u0020\\u0063\\u00f3\\u0020\\u006b\\u0068\\u006f\\u1ea3\\u006e\\u0067\\u0020\\u0063\\u00e1\\u0063\\u0068\\u0020\\u006e\\u0067\\u1eaf\\u006e\\u0020\\u006e\\u0068\\u1ea5\\u0074\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020173\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ubcf4\\ub3c4\\ud1b5\\ud589\\u0020\\uc6d0\\uce59\\uc73c\\ub85c\\u0020\\ub9de\\ub294\\u0020\\uac83\\uc740?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ub3c4\\u0020\\ub0b4\\u0020\\uc6b0\\uce21\\ud1b5\\ud589\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ub3c4\\u0020\\ub0b4\\u0020\\uc88c\\uce21\\ud1b5\\ud589\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ub3c4\\u0020\\ub0b4\\u0020\\uc911\\uc559\\ud1b5\\ud589\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ub3c4\\u0020\\ub0b4\\u0020\\ud1b5\\ud589\\uc6d0\\uce59\\uc740\\u0020\\uc5c6\\uc74c\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00221\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022C\\u00e2\\u0075\\u0020\\u006e\\u00e0\\u006f\\u0020\\u0067\\u0069\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u00ed\\u0063\\u0068\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u006e\\u0067\\u0075\\u0079\\u00ea\\u006e\\u0020\\u0074\\u1eaf\\u0063\\u0020\\u0111\\u0069\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0076\\u1ec9\\u0061\\u0020\\u0068\\u00e8\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\u0110\\u0069\\u0020\\u0070\\u0068\\u00ed\\u0061\\u0020\\u0062\\u00ea\\u006e\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u0076\\u1ec9\\u0061\\u0020\\u0068\\u00e8\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\u0110\\u0069\\u0020\\u0070\\u0068\\u00ed\\u0061\\u0020\\u0062\\u00ea\\u006e\\u0020\\u0074\\u0072\\u00e1\\u0069\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u0076\\u1ec9\\u0061\\u0020\\u0068\\u00e8\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\u0110\\u0069\\u0020\\u0063\\u0068\\u00ed\\u006e\\u0068\\u0020\\u0067\\u0069\\u1eef\\u0061\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u0076\\u1ec9\\u0061\\u0020\\u0068\\u00e8\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0071\\u0075\\u0079\\u0020\\u0111\\u1ecb\\u006e\\u0068\\u0020\\u0072\\u0069\\u00ea\\u006e\\u0067\\u0020\\u0076\\u1ec1\\u0020\\u0063\\u00e1\\u0063\\u0068\\u0020\\u0111\\u0069\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0076\\u1ec9\\u0061\\u0020\\u0068\\u00e8\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020174\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\uc5b4\\ub9b0\\uc774\\u0020\\ubcf4\\ud638\\uad6c\\uc5ed\\u0020\\ub0b4\\uc5d0\\u0020\\uc124\\uce58\\ub41c\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\u0020\\uc911\\u0020\\uc2e0\\ud638\\uae30\\uac00\\u0020\\uc124\\uce58\\ub418\\uc9c0\\u0020\\uc544\\ub2c8\\ud55c\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\u0020\\uc55e\\u0028\\uc815\\uc9c0\\uc120\\uc774\\u0020\\uc124\\uce58\\ub41c\\u0020\\uacbd\\uc6b0\\uc5d0\\ub294\\u0020\\uadf8\\u0020\\uc815\\uc9c0\\uc120\\u0020\\uc744\\u0020\\ub9d0\\ud55c\\ub2e4\\u0029\\uc5d0\\uc11c\\u0020\\uc6b4\\uc804\\uc790\\uc758\\u0020\\ud589\\ub3d9\\uc73c\\ub85c\\u0020\\ub9de\\ub294\\u0020\\uac83\\u00202\\uac00\\uc9c0\\ub294?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uac00\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\ub97c\\u0020\\ud1b5\\ud589\\ud558\\ub824\\uace0\\u0020\\ud558\\ub294\\u0020\\ub54c\\uc5d0\\ub294\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\uc548\\uc804\\uc744\\u0020\\ud655\\uc778\\ud558\\uace0\\u0020\\uc11c\\ud589\\ud558\\uba70\\u0020\\ud1b5\\uacfc\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uac00\\u0020\\ud6a1\\ub2e8\\ubcf4\\ub3c4\\ub97c\\u0020\\ud1b5\\ud589\\ud558\\ub824\\uace0\\u0020\\ud558\\ub294\\u0020\\ub54c\\uc5d0\\ub294\\u0020\\uc77c\\uc2dc\\uc815\\uc9c0\\ud558\\uc5ec\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ud6a1\\ub2e8\\uc744\\u0020\\ubcf4\\ud638\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ud6a1\\ub2e8\\u0020\\uc5ec\\ubd80\\uc640\\u0020\\uad00\\uacc4\\uc5c6\\uc774\\u0020\\uc11c\\ud589\\ud558\\uba70\\u0020\\ud1b5\\ud589\\ud55c\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ud6a1\\ub2e8\\u0020\\uc5ec\\ubd80\\uc640\\u0020\\uad00\\uacc4\\uc5c6\\uc774\\u0020\\uc77c\\uc2dc\\uc815\\uc9c0\\ud55c\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00222\\u002c\\u00204\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022H\\u0061\\u0069\\u0020\\u0068\\u00e0\\u006e\\u0068\\u0020\\u0111\\u1ed9\\u006e\\u0067\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u1ec1\\u0075\\u0020\\u006b\\u0068\\u0069\\u1ec3\\u006e\\u0020x\\u0065\\u0020\\u0074\\u0072\\u01b0\\u1edb\\u0063\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0063\\u00f3\\u0020\\u0111\\u00e8\\u006e\\u0020\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0074\\u0072\\u006f\\u006e\\u0067\\u0020\\u006b\\u0068\\u0075\\u0020\\u0076\\u1ef1\\u0063\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u0074\\u0072\\u1ebb\\u0020\\u0065\\u006d\\u0020\\u0028T\\u0072\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u1ee3\\u0070\\u0020\\u0063\\u00f3\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u0074\\u0068\\u00ec\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u0074\\u0072\\u01b0\\u1edb\\u0063\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0111\\u00f3\\u0029\\u0020\\u006c\\u00e0?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u0069\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0064\\u1ef1\\u0020\\u0111\\u1ecb\\u006e\\u0068\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002c\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u006b\\u0069\\u1ec3\\u006d\\u0020\\u0074\\u0072\\u0061\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0072\\u1ed3\\u0069\\u0020\\u0020\\u0111\\u0069\\u0020\\u0063\\u0068\\u1ead\\u006d\\u0020\\u0071\\u0075\\u0061\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022K\\u0068\\u0069\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0064\\u1ef1\\u0020\\u0111\\u1ecb\\u006e\\u0068\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0076\\u1ea1\\u0063\\u0068\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002c\\u0020\\u0070\\u0068\\u1ea3\\u0069\\u0020\\u0074\\u1ea1\\u006d\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u0111\\u1ec3\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0111\\u1ea3\\u006d\\u0020\\u0061\\u006e\\u0020\\u0074\\u006f\\u00e0\\u006e\\u0020\\u0063\\u0068\\u006f\\u0020\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0073\\u0061\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\u0110\\u0069\\u0020\\u0063\\u0068\\u1ead\\u006d\\u0020\\u0071\\u0075\\u0061\\u0020\\u0062\\u1ea5\\u0074\\u0020\\u006b\\u1ec3\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u0061\\u0079\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022T\\u1ea1\\u006d\\u0020\\u0064\\u1eeb\\u006e\\u0067\\u0020\\u0062\\u1ea5\\u0074\\u0020\\u006b\\u1ec3\\u0020\\u0063\\u00f3\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0062\\u0103\\u006e\\u0067\\u0020\\u0071\\u0075\\u0061\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0068\\u0061\\u0079\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u002c\\u000a\\u0020\\u007b\\u000a\\u0020\\u0020\\u0022\\u006e\\u0022:\\u0020175\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0062\\u0022:\\u0020\\u0022\\ub3c4\\ub85c\\uad50\\ud1b5\\ubc95\\uc0c1\\u0020\\ubcf4\\ud589\\uc790\\u0020\\ubcf4\\ud638\\uc5d0\\u0020\\ub300\\ud55c\\u0020\\uc124\\uba85\\u0020\\uc911\\u0020\\ub9de\\ub294\\u00202\\uac00\\uc9c0\\ub294?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u006b\\u006f\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022\\uc790\\uc804\\uac70\\ub97c\\u0020\\ub04c\\uace0\\u0020\\uac78\\uc5b4\\uac00\\ub294\\u0020\\uc0ac\\ub78c\\uc740\\u0020\\ubcf4\\ud589\\uc790\\uc5d0\\u0020\\ud574\\ub2f9\\ud558\\uc9c0\\u0020\\uc54a\\ub294\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uad50\\ud1b5\\uc815\\ub9ac\\ub97c\\u0020\\ud558\\uace0\\u0020\\uc788\\uc9c0\\u0020\\uc544\\ub2c8\\ud558\\ub294\\u0020\\uad50\\ucc28\\ub85c\\uc5d0\\u0020\\uba3c\\uc800\\u0020\\uc9c4\\uc785\\ud55c\\u0020\\ucc28\\ub7c9\\uc740\\u0020\\ubcf4\\ud589\\uc790\\uc5d0\\u0020\\uc6b0\\uc120\\ud558\\uc5ec\\u0020\\ud1b5\\ud589\\ud560\\u0020\\uad8c\\ud55c\\uc774\\u0020\\uc788\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\uc2dc\\u00b7\\ub3c4\\uacbd\\ucc30\\uccad\\uc7a5\\uc740\\u0020\\ubcf4\\ud589\\uc790\\uc758\\u0020\\ud1b5\\ud589\\uc744\\u0020\\ubcf4\\ud638\\ud558\\uae30\\u0020\\uc704\\ud574\\u0020\\ub3c4\\ub85c\\uc5d0\\u0020\\ubcf4\\ud589\\uc790\\u0020\\uc804\\uc6a9\\u0020\\ub3c4\\ub85c\\ub97c\\u0020\\uc124\\uce58\\ud560\\u0020\\uc218\\u0020\\uc788\\ub2e4\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\ubcf4\\ud589\\uc790\\u0020\\uc804\\uc6a9\\u0020\\ub3c4\\ub85c\\uc5d0\\ub294\\u0020\\uc720\\ubaa8\\ucc28\\ub97c\\u0020\\ub04c\\uace0\\u0020\\uac08\\u0020\\uc218\\u0020\\uc788\\ub2e4\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u002c\\u000a\\u0020\\u0020\\u0022\\u0061\\u0022:\\u0020\\u00223\\u002c\\u00204\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0062\\u0022:\\u0020\\u0022T\\u0068\\u0065\\u006f\\u0020L\\u0075\\u1ead\\u0074\\u0020G\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0062\\u1ed9\\u002c\\u00202\\u0020\\u0067\\u0069\\u1ea3\\u0069\\u0020\\u0074\\u0068\\u00ed\\u0063\\u0068\\u0020\\u006e\\u00e0\\u006f\\u0020\\u006c\\u00e0\\u0020\\u0111\\u00fa\\u006e\\u0067\\u0020\\u0076\\u1ec1\\u0020\\u0076\\u0069\\u1ec7\\u0063\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0076\\u1ec7\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9?\\u0022\\u002c\\u000a\\u0020\\u0020\\u0022\\u0074\\u0072\\u005f\\u0063\\u0022:\\u0020[\\u000a\\u0020\\u0020\\u0020\\u0022N\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0061\\u006e\\u0067\\u0020\\u0064\\u1eaf\\u0074\\u0020x\\u0065\\u0020\\u0111\\u1ea1\\u0070\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1ee3\\u0063\\u0020x\\u0065\\u006d\\u0020\\u006c\\u00e0\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022\\u1ede\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u006e\\u0068\\u0061\\u0075\\u0020\\u006b\\u0068\\u00f4\\u006e\\u0067\\u0020\\u0111\\u01b0\\u1ee3\\u0063\\u0020\\u0070\\u0068\\u00e2\\u006e\\u0020\\u006c\\u0075\\u1ed3\\u006e\\u0067\\u0020\\u0067\\u0069\\u0061\\u006f\\u0020\\u0074\\u0068\\u00f4\\u006e\\u0067\\u002c\\u0020x\\u0065\\u0020\\u00f4\\u0020\\u0074\\u00f4\\u0020\\u0074\\u0069\\u1ebf\\u006e\\u0020\\u0076\\u00e0\\u006f\\u0020\\u0074\\u0072\\u01b0\\u1edb\\u0063\\u0020\\u0063\\u00f3\\u0020\\u0071\\u0075\\u0079\\u1ec1\\u006e\\u0020\\u01b0\\u0075\\u0020\\u0074\\u0069\\u00ea\\u006e\\u0020\\u0111\\u0069\\u0020\\u0074\\u0072\\u01b0\\u1edb\\u0063\\u0020\\u0073\\u006f\\u0020\\u0076\\u1edb\\u0069\\u0020\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022G\\u0069\\u00e1\\u006d\\u0020\\u0111\\u1ed1\\u0063\\u0020S\\u1edf\\u0020C\\u1ea3\\u006e\\u0068\\u0020\\u0073\\u00e1\\u0074\\u0020\\u0074\\u1ec9\\u006e\\u0068\\u0020\\u002d\\u0020\\u0074\\u0068\\u00e0\\u006e\\u0068\\u0020\\u0070\\u0068\\u1ed1\\u0020\\u0063\\u00f3\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u0062\\u1ed1\\u0020\\u0074\\u0072\\u00ed\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0072\\u0069\\u00ea\\u006e\\u0067\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0111\\u1ec3\\u0020\\u0062\\u1ea3\\u006f\\u0020\\u0111\\u1ea3\\u006d\\u0020\\u0076\\u0069\\u1ec7\\u0063\\u0020\\u0020\\u0111\\u0069\\u0020\\u006c\\u1ea1\\u0069\\u0020\\u0063\\u1ee7\\u0061\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002e\\u0022\\u002c\\u000a\\u0020\\u0020\\u0020\\u0022C\\u00f3\\u0020\\u0074\\u0068\\u1ec3\\u0020\\u006b\\u00e9\\u006f\\u0020x\\u0065\\u0020\\u0111\\u1ea9\\u0079\\u0020\\u0074\\u0072\\u1ebb\\u0020\\u0065\\u006d\\u0020\\u0074\\u0072\\u00ea\\u006e\\u0020\\u0111\\u01b0\\u1edd\\u006e\\u0067\\u0020\\u0064\\u00e0\\u006e\\u0068\\u0020\\u0072\\u0069\\u00ea\\u006e\\u0067\\u0020\\u0063\\u0068\\u006f\\u0020\\u006e\\u0067\\u01b0\\u1edd\\u0069\\u0020\\u0111\\u0069\\u0020\\u0062\\u1ed9\\u002e\\u0022\\u000a\\u0020\\u0020\\u005d\\u000a\\u0020\\u007d\\u000a\\u005d
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); node -e \"const fs=require('fs');const d=JSON.parse(fs.readFileSync('translations/audit/queue/204_choices_vn.json','utf8')); for(const x of d){console.log(x.n+'\\t'+x.ko_b+'\\t'+x.tr_b); x.ko_c.forEach((v,i)=>console.log('  '+(i+1)+'\\t'+v+'\\t'+x.tr_c[i]));}\"" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 604ms:
+161	보행자 우선도로에 대한 설명으로 가장 바르지 않은 것은?	Giải thích nào là không đúng nhất về đường ưu tiên cho người đi bộ?
+  1	보행자우선도로에서 보행자는 도로의 우측 가장자리로만 통행할 수 있다.	Trên đường ưu tiên cho người đi bộ, người đi bộ chỉ được đi sát mép đường bên phải.
+  2	운전자에게는 서행, 일시정지 등 각종 보행자 보호 의무가 부여된다.	Người lái xe có nghĩa vụ phải bảo vệ người đi bộ như đi chậm, dừng tạm thời, v.v.
+  3	보행자 보호 의무를 불이행하였을 경우 승용자동차 기준 4만원의 범칙금과 10점의 벌점 처분의 대상이다.	Trường hợp không chấp hành đúng nghĩa vụ bảo vệ người đi bộ thuộc đối tượng bị phạt tiền vi phạm giao thông 40.000 won và trừ 10 điểm phạt đối với ô tô con.
+  4	경찰서장은 보행자 보호를 위해 필요하다고 인정할 경우 차량 통행속도를 20km/h 이내로 제한할 수 있다.	Sở trưởng Sở Cảnh sát nếu xét thấy là cần thiết để bảo vệ người đi bộ thì có thể giới hạn tốc độ lưu thông của xe là  tối đa 20km/giờ.
+162	시내 도로를 매시 50킬로미터로 주행하던 중 무단횡단 중인 보행자를 발견하였다. 가장 적절한 조치는?	Khi bạn đang đi với tốc độ 50 km/giờ trên đường nội thành thì phát hiện người đi bộ qua đường trái luật.  Cách xử lý hợp lý nhất là gì?
+  1	보행자가 횡단 중이므로 일단 급브레이크를 밟아 멈춘다.	Người đi bộ đang qua đường nên phanh gấp và dừng lại.
+  2	보행자의 움직임을 예측하여 그 사이로 주행한다.	Phán đoán di chuyển của người đi bộ và đi chen vào giữa.
+  3	속도를 줄이며 멈출 준비를 하고 비상점멸등으로 뒤차에도 알리면서 안전하게 정지한다.	Giảm tốc và chuẩn bị dừng lại, bật đèn nháy khẩn cấp để báo hiệu cho xe đằng sau rồi dừng xe lại một cách an toàn.
+  4	보행자에게 경음기로 주의를 주며 다소 속도를 높여 통과한다.	Dùng còi báo hiệu cho người đi bộ, tăng tốc một chút rồi vượt qua.
+163	도로교통법상 보행자의 보호 등에 관한 설명으로 맞지 않은 것은?	Giải thích nào là không đúng liên quan đến bảo vệ người đi bộ theo Luật Giao thông đường bộ?
+  1	도로에 설치된 안전지대에 보행자가 있는 경우와 차로가 설치되지 아니한 좁은 도로에서 보행자의 옆을 지나는 경 우에는 안전한 거리를 두고 서행하여야 한다.	Trong trường hợp có người đi bộ ở khu vực an toàn được bố trí trên đường xe chạy và trường hợp đi qua bên cạnh người đi bộ trên đường hẹp không phân luồng xe chạy, phải giữ khoảng cách an toàn và đi chậm.
+  2	보행자가 횡단보도가 설치되어 있지 아니한 도로를 횡단하고 있을 때에는 안전거리를 두고 일시정지하여 보행자가 안전 하게 횡단할 수 있도록 하여야 한다.	Khi có người đi bộ đang băng qua đường không có vạch sang đường dành cho người đi bộ, phải giữ khoảng cách, tạm dừng để người đi bộ có thể qua đường an toàn.
+  3	보도와 차도가 구분되지 아니한 도로 중 중앙선이 없는 도로에서 보행자의 통행에 방해가 될 때에는 서행하거나 일시정 지하여 보행자가 안전하게 통행할 수 있도록 하여야 한다.	Nếu cản trở lưu thông của người đi bộ trên đường không phân chia vỉa hè và lòng đường trên đường không có vạch phân luồng giữa, thì phải đi chậm hoặc tạm dừng để người đi bộ có thể lưu thông một cách an toàn.
+  4	어린이 보호구역 내에 설치된 횡단보도 중 신호기가 설치되지 아니한 횡단보도 앞(정지선이 설치된 경우에는 그 정지선 을 말한다)에서는 보행자의 횡단 여부와 관계없이 서행하여야 한다.	Trước vạch sang đường dành cho người đi bộ không có đèn giao thông trong khu vực bảo vệ trẻ em (Trường hợp có vạch dừng là trước vạch dừng đó), phải đi chậm bất kể có người đi bộ qua đường hay không.
+164	도로교통법령상 도로에서 13세 미만의 어린이가 (        )를 타는 경우에는 어린이의 안전을 위해 인명보호 장구를       착용하여야 한다. (      )에 해당되지 않는 것은?	Theo Pháp lệnh Giao thông đường bộ, trường hợp trẻ em dưới 13 tuổi đi (       ) thì phải đeo dụng cụ bảo  vệ tính mạng để đảm bảo an toàn cho trẻ. Nội dung nào không đúng với phần trong (  )?
+  1	킥보드	Xe trượt điện Kickboard
+  2	외발자전거	Xe đạp 1 bánh
+  3	인라인 스케이트	Giày trượt patin một hàng bánh (Inline Skate)
+  4	스케이트 보드	Ván trượt (Skate Board)
+165	보행자의 보호의무에 대한 설명으로 맞는 것은?	Giải thích đúng về nghĩa vụ bảo vệ người đi bộ?
+  1	무단 횡단하는 술 취한 보행자를 보호할 필요 없다.	Không cần bảo vệ người say rượu băng qua đường trái phép.
+  2	신호등이 있는 도로에서는 횡단 중인 보행자의 통행을 방해하여도 무방하다.	Tại đoạn đường có đèn tín hiệu giao thông, cho dù cản trở việc lưu thông của người đi bộ đang băng qua đường thì  cũng không có vấn đề gì.
+  3	보행자 신호기에 녹색 신호가 점멸하고 있는 경우 차량이 진행해도 된다.	Trong trường hợp đèn xanh dành cho người đi bộ nhấp nháy thì xe có thể đi tiếp cũng không sao.
+  4	신호등이 있는 교차로에서 우회전할 경우 신호에 따르는 보행자를 방해해서는 아니 된다.	Trường hợp muốn rẽ phải tại đoạn đường giao nhau có đèn tín hiệu giao thông thì không được cản trở người đi bộ  đang đi theo tín hiệu đèn giao thông.
+166	도로의 중앙을 통행할 수 있는 사람 또는 행렬로 맞는 것은?	Giải thích nào đúng về việc người hoặc đoàn người có thể đi lại ở giữa đường?
+  1	사회적으로 중요한 행사에 따라 시가행진하는 행렬	Đoàn người diễu hành trên đường trong các sự kiện xã hội quan trọng.
+  2	말, 소 등의 큰 동물을 몰고 가는 사람	Người đang dắt động vật to như ngựa, bò v.v đi cùng.
+  3	도로의 청소 또는 보수 등 도로에서 작업 중인 사람	Người đang quét dọn đường, sửa chữa đường.
+  4	기 또는 현수막 등을 휴대한 장의 행렬	Dòng người đưa tang cầm cờ hoặc băng rôn.
+167	자동차 운전자가 신호등이 없는 횡단보도를 통과할 때 가장 안전한 운전 방법은?	Cách điều khiển xe nào của người lái xe ô tô là an toàn nhất khi đi qua lối sang đường dành cho người đi bộ  không có đèn tín hiệu giao thông?
+  1	횡단하는 사람이 없다 하더라도 전방과 그 주변을 잘 살피며 감속한다.	Dù không có người sang đường thì vẫn phải quan sát kỹ trái phải và xung quanh, đồng thời giảm tốc độ.
+  2	횡단하는 사람이 없으므로 그대로 진행한다.	Vì không có người sang đường nên cứ thế đi qua.
+  3	횡단하는 사람이 없을 때 빠르게 지나간다.	Khi không có người sang đường thì nhanh chóng đi qua.
+  4	횡단하는 사람이 있을 수 있으므로 경음기를 울리며 그대로 진행한다.	Vì có thể có người sang đường nên nhấn còi và cứ thế đi qua.
+168	철길건널목을 통과하다가 고장으로 건널목 안에서 차를 운행할 수 없는 경우 운전자의 조치요령으로 바르지 않는 것은?	Cách xử lý không đúng của người lái xe trong trường hợp đang đi qua khúc giao đường sắt thì bị hỏng xe  nên không thể đi qua?
+  1	즉시 동승자를 대피시킨다.	Lập tức sơ tán hành khách đi cùng.
+  2	비상 신호기 등을 사용한다.	Sử dụng tín hiệu khẩn cấp.
+  3	철도공무원에게 알린다.	Thông báo cho nhân viên đường sắt.
+  4	차량의 고장 원인을 신속히 확인한다.	Nhanh chóng kiểm tra nguyên nhân hư hỏng của phương tiện.
+169	차의 운전자가 보도를 횡단하여 건물 등에 진입하려고 한다. 운전자가 해야 할 순서로 올바른 것은?	Người điều khiển xe muốn băng qua vỉa hè để rẽ vào tòa nhà. Thứ tự đúng mà người điều khiển xe phải thực  hiện là?
+  1	서행 → 방향지시등 작동 → 신속 진입	Đi chậm → Bật đèn xi nhan báo rẽ → Nhanh chóng rẽ vào tòa nhà
+  2	일시정지 → 경음기 사용 → 신속 진입	Tạm dừng → Bấm còi → Nhanh chóng rẽ vào tòa nhà
+  3	서행 → 좌측과 우측부분 확인 → 서행 진입	Đi chậm → Kiểm tra trái phải → Từ từ rẽ vào tòa nhà
+  4	일시정지 → 좌측과 우측부분 확인 → 서행 진입	Tạm dừng → Kiểm tra trái phải → Từ từ rẽ vào tòa nhà
+170	다음 중 도로교통법상 보행자의 도로 횡단 방법에 대한 설명으로 잘못된 것은?	Giải thích nào sau đây là không đúng về cách qua đường của người đi bộ theo Luật Giao thông đường bộ?
+  1	모든 차의 바로 앞이나 뒤로 횡단하여서는 아니 된다.	Không được sang đường ngay sát phía trước hoặc phía sau mọi loại xe.
+  2	지체장애인의 경우라도 반드시 도로 횡단 시설을 이용하여 도로를 횡단하여야 한다.	Ngay cả người khuyết tật cũng bắt buộc phải sử dụng lối sang đường để qua đường.
+  3	안전표지 등에 의하여 횡단이 금지되어 있는 도로의 부분에서는 그 도로를 횡단하여서는 아니 된다.	Không sang đường trên các đoạn đường có biển báo cấm sang đường.
+  4	횡단보도가 설치되어 있지 아니한 도로에서는 가장 짧은 거리로 횡단하여야 한다.	Phải sang đường bằng khoảng cách ngắn nhất trên những đoạn đường không có lối sang đường.
+171	야간에 도로 상의 보행자나 물체들이 일시적으로 안 보이게 되는“증발 현상”이 일어나기 쉬운 위치는?	Vị trí nào dễ xảy ra hiện tượng "hiện tượng lóa mắt" tạm thời không nhìn thấy chướng ngại vật hay người đi  bộ trên đường vào ban đêm?
+  1	반대 차로의 가장자리	Bên lề của đường đối diện
+  2	주행 차로의 우측 부분	Bên phải đường xe chạy
+  3	도로의 중앙선 부근	Chỗ gần dải phân cách giữa đường
+  4	도로 우측의 가장자리	Bên lề bên phải của đường
+172	보행자의 통행에 대한 설명으로 맞는 것은?	Giải thích nào là đúng về việc lưu thông của người đi bộ?
+  1	보행자는 도로 횡단 시 차의 바로 앞이나 뒤로 신속히 횡단하여야 한다.	Khi qua đường, người đi bộ phải đi qua ngay sát phía trước hoặc phía sau xe thật nhanh.
+  2	지체 장애인은 도로 횡단시설이 있는 도로에서 반드시 그곳으로 횡단하여야 한다.	Nếu trên đường có lối sang đường cho người đi bộ, người khuyết tật phải qua đường bằng lối sang đường đó.
+  3	보행자는 안전표지 등에 의하여 횡단이 금지된 도로에서는 신속하게 도로를 횡단하여야 한다.	Người đi bộ phải đi sang đường thật nhanh ở những nơi cấm sang đường theo chỉ dẫn của biển báo an toàn.
+  4	보행자는 횡단보도가 설치되어 있지 아니한 도로에서는 가장 짧은 거리로 횡단하여야 한다.	Người đi bộ khi sang đường ở nơi không có lối sang đường thì phải sang đường ở chỗ có khoảng cách ngắn nhất.
+173	보행자의 보도통행 원칙으로 맞는 것은?	Câu nào giải thích đúng nguyên tắc đi trên vỉa hè của người đi bộ?
+  1	보도 내 우측통행	Đi phía bên phải của vỉa hè
+  2	보도 내 좌측통행	Đi phía bên trái của vỉa hè
+  3	보도 내 중앙통행	Đi chính giữa của vỉa hè
+  4	보도 내 통행원칙은 없음	Không có quy định riêng về cách đi trên vỉa hè
+174	어린이 보호구역 내에 설치된 횡단보도 중 신호기가 설치되지 아니한 횡단보도 앞(정지선이 설치된 경우에는 그 정지선 을 말한다)에서 운전자의 행동으로 맞는 것 2가지는?	Hai hành động đúng của người điều khiển xe trước vạch sang đường dành cho người đi bộ không có đèn  giao thông trong khu vực bảo vệ trẻ em (Trường hợp có vạch dừng thì dừng trước vạch đó) là?
+  1	보행자가 횡단보도를 통행하려고 하는 때에는 보행자의 안전을 확인하고 서행하며 통과한다.	Khi người đi bộ dự định băng qua vạch sang đường dành cho người đi bộ, phải kiểm tra an toàn của người đi bộ rồi  đi chậm qua.
+  2	보행자가 횡단보도를 통행하려고 하는 때에는 일시정지하여 보행자의 횡단을 보호한다.	Khi người đi bộ dự định băng qua vạch sang đường dành cho người đi bộ, phải tạm dừng để bảo đảm an toàn cho  người đi bộ sang đường.
+  3	보행자의 횡단 여부와 관계없이 서행하며 통행한다.	Đi chậm qua bất kể có người đi bộ băng qua đường hay không.
+  4	보행자의 횡단 여부와 관계없이 일시정지한다.	Tạm dừng bất kể có người đi bộ băng qua đường hay không.
+175	도로교통법상 보행자 보호에 대한 설명 중 맞는 2가지는?	Theo Luật Giao thông đường bộ, 2 giải thích nào là đúng về việc bảo vệ người đi bộ?
+  1	자전거를 끌고 걸어가는 사람은 보행자에 해당하지 않는다.	Người đang dắt xe đạp đi bộ không được xem là người đi bộ.
+  2	교통정리를 하고 있지 아니하는 교차로에 먼저 진입한 차량은 보행자에 우선하여 통행할 권한이 있다.	Ở đường giao nhau không được phân luồng giao thông, xe ô tô tiến vào trước có quyền ưu tiên đi trước so với  người đi bộ.
+  3	시·도경찰청장은 보행자의 통행을 보호하기 위해 도로에 보행자 전용 도로를 설치할 수 있다.	Giám đốc Sở Cảnh sát tỉnh - thành phố có thể bố trí đường dành riêng cho người đi bộ trên đường để bảo đảm việc  đi lại của người đi bộ.
+  4	보행자 전용 도로에는 유모차를 끌고 갈 수 있다.	Có thể kéo xe đẩy trẻ em trên đường dành riêng cho người đi bộ.
+176	보행자의 통행에 대한 설명 중 맞는 것 2가지는?	Chọn 2 câu giải thích đúng về việc lưu thông của người đi bộ.
+  1	보행자는 차도를 통행하는 경우 항상 차도의 좌측으로 통행해야 한다.	Trường hợp người đi bộ phải đi trên đường của xe ô tô thì phải lưu thông ở phía bên trái đường.
+  2	보행자는 사회적으로 중요한 행사에 따라 행진 시에는 도로의 중앙으로 통행할 수 있다.	Khi diễu hành trong các sự kiện mang tính xã hội quan trọng, người đi bộ có thể lưu thông ở giữa đường.
+  3	도로횡단시설을 이용할 수 없는 지체장애인은 도로횡단시설을 이용하지 않고 도로를 횡단할 수 있다.	Người khuyết tật không thể sử dụng các cơ sở hạ tầng để sang đường thì có thể đi sang đường mà không cần sử  dụng lối sang đường dành cho người đi bộ.
+  4	도로횡단시설이 없는 경우 보행자는 안전을 위해 가장 긴 거리로 도로를 횡단하여야 한다.	Trong trường hợp không có cơ sở hạ tầng để sang đường, người đi bộ phải sang đường ở nơi có khoảng cách dài  nhất để giữ an toàn.
+177	도로교통법령상 승용자동차의 운전자가 보도를 횡단하는 방법을 위반한 경우 범칙금은?	Mức phạt nào dưới đây dành cho người lái xe ô tô con vi phạm phương pháp lái xe băng ngang qua vỉa hè  theo Pháp lệnh Giao thông đường bộ?
+  1	3만 원	30.000 Won
+  2	4만 원	40.000 Won
+  3	5만 원	50.000 Won
+  4	6만 원	60.000 Won
+178	도로교통법령상 보행자 보호와 관련된 승용자동차 운전자의 범칙행위에 대한 범칙금액이 다른 것은? (보호구역은 제외)	Hành vi vi phạm nào sau đây của người lái xe ô tô con liên quan đến bảo vệ người đi bộ có mức phạt tiền  khác theo Pháp lệnh Giao thông đường bộ? (Ngoại trừ khu vực bảo vệ riêng)
+  1	신호에 따라 도로를 횡단하는 보행자 횡단 방해	Cản trở người đi bộ sang đường theo tín hiệu giao thông
+  2	보행자 전용도로 통행위반	Vi phạm lưu thông trên đường dành riêng cho người đi bộ
+  3	도로를 통행하고 있는 차에서 밖으로 물건을 던지는 행위	Hành vi ném đồ vật ra khỏi xe đang lưu thông trên đường
+  4	어린이․앞을 보지 못하는 사람 등의 보호 위반	Vi phạm nguyên tắc bảo vệ trẻ em, người không thể nhìn thấy phía trước, v.v.
+179	보행자에 대한 운전자의 바람직한 태도는?	Thái độ đúng đắn của người lái xe đối với người đi bộ là gì?
+  1	도로를 무단 횡단하는 보행자는 보호받을 수 없다.	Người đi bộ qua đường trái phép không cần được bảo vệ.
+  2	자동차 옆을 지나는 보행자에게 신경 쓰지 않아도 된다.	Không cần phải chú ý đến người đi bộ ở phía bên cạnh xe.
+  3	보행자가 자동차를 피해야 한다.	Người đi bộ phải tránh xe ô tô.
+  4	운전자는 보행자를 우선으로 보호해야 한다.	Người lái xe cần ưu tiên bảo vệ cho người đi bộ.
+180	도로교통법상 보행자가 도로를 횡단할 수 있게 안전표지로 표시한 도로의 부분을 무엇이라 하는가?	Theo Luật Giao thông đường bộ, phần đường có biển báo an toàn để người đi bộ có thể băng qua đường  được gọi là gì?
+  1	보도	Vỉa hè
+  2	길가장자리구역	Khu vực mép lề đường
+  3	횡단보도	Vạch đi bộ sang đường
+  4	보행자 전용도로	Đường dành riêng cho người đi bộ
+181	다음 중 보행자에 대한 운전자 조치로 잘못된 것은?	Cách xử lý sai của người lái xe đối với người đi bộ?
+  1	어린이보호 표지가 있는 곳에서는 어린이가 뛰어 나오는 일이 있으므로 주의해야 한다.	Phải chú ý trẻ em có thể bất ngờ chạy ra tại khu vực có biển báo "Bảo vệ trẻ em".
+  2	보도를 횡단하기 직전에 서행하여 보행자를 보호해야 한다.	Phải bảo vệ người đi bộ bằng cách đi chậm ngay trước khi lái xe qua vỉa hè.
+  3	무단 횡단하는 보행자도 일단 보호해야 한다.	Phải bảo vệ cả những người đi bộ qua đường không đúng nơi quy định.
+  4	어린이가 보호자 없이 도로를 횡단 중일 때에는 일시 정지해야 한다.	Phải tạm dừng khi có trẻ em qua đường mà không có người bảo hộ.
+182	보행자의 도로 횡단방법에 대한 설명으로 잘못된 것은?	Giải thích nào là không đúng về cách người đi bộ sang đường?
+  1	보행자는 횡단보도가 없는 도로에서 가장 짧은 거리로 횡단해야 한다.	Người đi bộ cần chọn đường đi ngắn nhất khi sang đường ở nơi không có lối sang đường.
+  2	보행자는 모든 차의 바로 앞이나 뒤로 횡단하면 안 된다.	Người đi bộ không được sang đường ở ngay sát phía trước hay phía sau của tất cả các phương tiện.
+  3	무단횡단 방지를 위한 차선분리대가 설치된 곳이라도 넘어서 횡단할 수 있다.	Người đi bộ có thể qua đường bằng cách trèo qua dải phân cách làn đường được lắp đặt nhằm ngăn chặn qua  đường trái phép.
+  4	도로공사 등으로 보도의 통행이 금지된 때 차도로 통행할 수 있다.	Người đi bộ có thể đi dưới lòng đường nếu vỉa hè đang trong quá trình xây dựng.
+183	앞을 보지 못하는 사람에 준하는 범위에 해당하지 않는 사람은?	Đối tượng nào dưới đây không được xếp vào “người không nhìn thấy phía trước”?
+  1	어린이 또는 영ㆍ유아	Trẻ sơ sinh và trẻ em
+  2	의족 등을 사용하지 아니하고는 보행을 할 수 없는 사람	Người tàn tật phải di chuyển bằng chân giả
+  3	신체의 평형기능에 장애가 있는 사람	Người gặp khó khăn trong việc giữ thăng bằng cơ thể
+  4	듣지 못하는 사람	Người điếc
+184	도로교통법령상 어린이 보호구역 안에서 (   )~(   ) 사이에 신호위반을 한 승용차 운전자에 대해 기존의 벌점을 2배로  부과한다. (   )에 순서대로 맞는 것은?	Người lái xe ô tô con vi phạm tín hiệu giao thông vào khoảng thời gian từ ( ) đến ( ) trong khu vực bảo vệ trẻ em bị nhận gấp đôi mức điểm phạt theo Pháp lệnh Giao thông đường bộ. Thứ tự thời gian đúng khi điền vào ( ) là?
+  1	오전 6시, 오후 6시	6 giờ sáng, 6 giờ tối.
+  2	오전 7시, 오후 7시	7 giờ sáng, 7 giờ tối.
+  3	오전 8시, 오후 8시	8 giờ sáng, 8 giờ tối.
+  4	오전 9시, 오후 9시	9 giờ sáng, 9 giờ tối.
+185	도로교통법령상 4.5톤 화물자동차가 오전 10시부터 11시까지 노인보호구역에서 주차위반을 한 경우 과태료는?	Mức phạt nào đối với người lái xe tải 4,5 tấn vi phạm đỗ xe trong khu vực bảo vệ người cao tuổi từ 10 giờ  đến 11 giờ sáng theo Pháp lệnh Giao thông đường bộ?
+  1	4만 원	40.000 Won
+  2	5만 원	50.000 Won
+  3	9만 원	90.000 Won
+  4	10만 원	100.000 Won
+186	다음 중 보행자의 통행방법으로 잘못된 것은?	Cách nào dưới đây không đúng đối với người đi bộ khi lưu thông?
+  1	보도에서는 좌측통행을 원칙으로 한다.	Nguyên tắc đi bộ về phía bên trái của vỉa hè.
+  2	보행자우선도로에서는 도로의 전 부분을 통행할 수 있다.	Trên đường dành riêng cho người đi bộ, người đi bộ có thể lưu thông trên toàn bộ con đường.
+  3	보도와 차도가 구분된 도로에서는 언제나 보도로 통행하여야 한다.	Trên các con đường mà vỉa hè và làn đường được phân cách rõ ràng, người đi bộ phải đi trên vỉa hè.
+  4	보도와 차도가 구분되지 않은 도로 중 중앙선이 있는 도로에서는 길가장자리구역으로 통행하여야 한다.	Trên các con đường có vạch trung tâm mà không phân cách rõvỉa hè và làn đường, người đi bộ phải đi sát mép  đường.
+187	도로교통법령상 차도를 통행할 수 있는 사람 또는 행렬이 아닌 경우는?	Trường hợp nào không phải là trường hợp một người hay đoàn người được cho phép di chuyển dưới lòng  đường theo Pháp lệnh Giao thông đường bộ?
+  1	도로에서 청소나 보수 등의 작업을 하고 있을 때	Khi thực hiện công việc như dọn vệ sinh hoặc tu sửa trên đường
+  2	말·소 등의 큰 동물을 몰고 갈 때	Khi cưỡi các động vật lớn như ngựa, bò đi trên đường
+  3	유모차를 끌고 가는 사람	Người kéo xe đẩy em bé
+  4	장의(葬儀) 행렬일 때	Khi diễu hành tang lễ
+188	운전자가 진행방향 신호등이 적색일 때 정지선을 초과하여 정지한 경우 처벌 기준은?	Người lái xe đỗ lấn vạch dừng khi đèn giao thông đã chuyển sang màu đỏ phải đối mặt với hình phạt vi phạm  nào sau đây?
+  1	교차로 통행방법위반	Vi phạm cách đi qua đường giao nhau
+  2	일시정지 위반	Vi phạm quy định tạm dừng
+  3	신호위반	Vi phạm tín hiệu giao thông
+  4	서행위반	Vi phạm quy định đi chậm
+189	다음 중 앞을 보지 못하는 사람이 장애인보조견을 동반하고 도로를 횡단하는 모습을 발견하였을 때의 올바른 운전 방법은?	Cách lái xe nào là đúng khi bạn nhìn thấy một người không nhìn thấy phía trước đang sang đường cùng với  chó dẫn đường?
+  1	주․정차 금지 장소인 경우 그대로 진행한다.	Tiếp tục đi nếu đây là khu vực không được dừng đỗ.
+  2	일시 정지한다.	Tạm dừng xe lại.
+  3	즉시 정차하여 앞을 보지 못하는 사람이 되돌아가도록 안내한다.	Dừng lại ngay và giúp người khiếm thị quay lại chỗ ban đầu.
+  4	경음기를 울리며 보호한다.	Bấm còi cảnh báo để bảo vệ họ.
+190	도로교통법상 모든 차의 운전자는 어린이 보호구역 내에 설치된 횡단보도 중 신호기가 설치되지 아니한 횡단보도 앞에 서는 보행자의 횡단여부와 관계없이 (    )하여야 한다. (   )안에 맞는 것은?	Người điều khiển tất cả loại xe trong Luật Giao thông đường bộ, trước vạch sang đường dành cho người đi bộ không có đèn giao thông trong khu vực bảo vệ trẻ em, phải ( ) bất kể có người đi bộ băng qua đường hay không. Nội dung đúng điền vào ( ) là?
+  1	서행	Đi chậm
+  2	일시정지	Tạm dừng
+  3	서행 또는 일시정지	Đi chậm hoặc tạm dừng
+  4	감속주행	Đi giảm tốc độ
+191	도로를 횡단하는 보행자 보호에 대한 설명으로 맞는 것은?	Giải thích nào là đúng về việc bảo vệ người đi bộ sang đường?
+  1	교차로 이외의 도로에서는 보행자 보호 의무가 없다.	Không có nghĩa vụ bảo vệ người đi bộ trên đường ở ngoài đường giao nhau.
+  2	신호를 위반하는 무단횡단 보행자는 보호할 의무가 없다.	Không có nghĩa vụ bảo vệ người đi bộ sang đường trái luật, vi phạm tín hiệu giao thông.
+  3	무단횡단 보행자도 보호하여야 한다.	Bảo vệ người đi bộ, kể cả khi họ sang đường trái luật.
+  4	일방통행 도로에서는 무단횡단 보행자를 보호할 의무가 없다.	Không có nghĩa vụ bảo vệ người đi bộ sang đường trái luật ở đường một chiều.
+192	도로교통법령상 원칙적으로 차도의 통행이 허용되지 않는 사람은?	Theo quy định của Pháp lệnh Giao thông đường bộ, người nào không được phép lưu thông trên đường xe  chạy?
+  1	보행보조용 의자차를 타고 가는 사람	Người đi bằng xe dạng ghế dùng hỗ trợ đi lại
+  2	사회적으로 중요한 행사에 따라 시가를 행진하는 사람	Người đi bộ diễu hành trên đường trong sự kiện xã hội quan trọng
+  3	도로에서 청소나 보수 등의 작업을 하고 있는 사람	Người làm công việc vệ sinh hoặc tu sửa trên đường
+  4	사다리 등 보행자의 통행에 지장을 줄 우려가 있는 물건을 운반 중인 사람	Người vận chuyển đồ vật có thể cản trở lưu thông của người đi bộ ví dụ như thang
+193	다음 중 보행등의 녹색등화가 점멸할 때 보행자의 가장 올바른 통행방법은?	Cách nào dưới đây là đúng nhất để người đi bộ sang đường khi đèn xanh dành cho người đi bộ sang đường  đang nhấp nháy?
+  1	횡단보도에 진입하지 않은 보행자는 다음 신호 때까지 기다렸다가 보행등의 녹색등화 때 통행하여야 한다.	Người đi bộ vẫn chưa tiến vào lối sang đường phải chờ lượt đèn xanh tiếp theo để sang đường.
+  2	횡단보도 중간에 그냥 서 있는다.	Đứng yên ở giữa lối sang đường.
+  3	다음 신호를 기다리지 않고 횡단보도를 건넌다.	Sang đường mà không cần chờ tín hiệu tiếp theo.
+  4	적색등화로 바뀌기 전에는 언제나 횡단을 시작할 수 있다.	Có thể sang đường bất cứ lúc nào miễn là trước khi chuyển sang đèn đỏ.
+194	다음 중 도로교통법상 보도를 통행하는 보행자에 대한 설명으로 맞는 것은?	Giải thích nào sau đây là đúng về người đi bộ đi trên vỉa hè theo Luật Giao thông đường bộ?
+  1	125시시 미만의 이륜차를 타고 보도를 통행하는 사람은 보행자로 볼 수 있다.	Người đi xe máy hai bánh dưới 125cc trên vỉa hè có thể được coi là người đi bộ.
+  2	자전거를 타고 가는 사람은 보행자로 볼 수 있다.	Người đi xe đạp có thể được coi là người đi bộ.
+  3	보행보조용 의자차를 이용하는 사람은 보행자로 볼 수 있다.	Người sử dụng xe y tế hỗ trợ đi lại có thể được coi là người đi bộ.
+  4	49시시 원동기장치자전거를 타고 가는 사람은 보행자로 볼 수 있다.	Người đi xe đạp có gắn động cơ 49cc có thể được coi là người đi bộ.
+195	다음 중 도로교통법상 보행자전용도로에 대한 설명으로 맞는 2가지는?	Theo Luật Giao thông đường bộ, 2 giải thích nào sau đây là đúng về đường dành riêng cho người đi bộ?
+  1	통행이 허용된 차마의 운전자는 통행 속도를 보행자의 걸음 속도로 운행하여야 한다.	Người lái các phương tiện được phép lưu thông phải lái xe bằng với tốc độ bước đi của người đi bộ.
+  2	차마의 운전자는 원칙적으로 보행자전용도로를 통행할 수 있다.	Về nguyên tắc, người lái các phương tiện có thể lưu thông trên đường dành cho người đi bộ.
+  3	경찰서장이 특히 필요하다고 인정하는 경우는 차마의 통행을 허용할 수 없다.	Khi Giám đốc Sở Cảnh sát công nhận là trường hợp đặc biệt cần thiết thì các phương tiện không được lưu thông.
+  4	통행이 허용된 차마의 운전자는 보행자를 위험하게 할 때는 일시정지하여야 한다.	Người lái các phương tiện được phép lưu thông phải tạm thời dừng lại khi gây nguy hiểm cho người đi bộ.
+196	자동차에 싣고 가던 화물이 떨어져 보행자에게 2주 진단의 상해를 입힌 운전자에 대한 처벌 2가지는?	Hai hình phạt dành cho người lái ô tô gây thương tích cho người đi bộ do hàng hóa rơi từ xe của mình và  phải nằm viện 2 tuần là gì??
+  1	피해자의 처벌의사에 관계없이 형사처벌 된다.	Bị xử phạt hình sự bất kể người bị thiệt hại có mong muốn xử phạt hay không.
+  2	피해자와 합의하면 처벌되지 않는다.	Không bị xử phạt nếu thoả thuận được với người bị thiệt hại.
+  3	손해를 전액 보상받을 수 있는 보험에 가입되어 있으면 처벌되지 않는다.	Không bị xử phạt nếu đã tham gia loại bảo hiểm có thể bồi thường toàn bộ thiệt hại.
+  4	손해를 전액 보상받을 수 있는 보험가입 여부와 관계없이 형사처벌 된다.	Bị xử phạt hình sự bất kể đã tham gia loại bảo hiểm có thể bồi thường toàn bộ thiệt hại.
+197	다음 중 도로교통법상 횡단보도가 없는 도로에서 보행자의 가장 올바른 횡단방법은?	Cách đi bộ qua đường đúng nhất đối với đường không có vạch sang đường theo Luật Giao thông đường bộ?
+  1	통과차량 바로 뒤로 횡단한다.	Băng qua đường ngay phía sau chiếc xe vừa đi qua.
+  2	차량통행이 없을 때 빠르게 횡단한다.	Đi qua nhanh khi không có xe lưu thông.
+  3	횡단보도가 없는 곳이므로 아무 곳이나 횡단한다.	Vì là nơi không có lối đi bộ qua đường nên có thể băng qua ở bất kỳ vị trí nào.
+  4	도로에서 가장 짧은 거리로 횡단한다.	Băng qua ở nơi có khoảng cách ngắn nhất trên đường.
+198	다음 중 도로교통법상 횡단보도를 횡단하는 방법에 대한 설명으로 옳지 않은 것은?	Theo Luật Giao thông đường bộ, giải thích nào sau đây là không đúng về cách đi bộ qua vạch đi bộ sang  đường?
+  1	개인형 이동장치를 끌고 횡단할 수 있다.	Vừa dắt phương tiện di chuyển cá nhân vừa băng qua đường.
+  2	보행보조용 의자차를 타고 횡단할 수 있다.	Có thể băng qua đường cùng với xe dạng ghế dùng hỗ trợ đi bộ.
+  3	자전거를 타고 횡단할 수 있다.	Có thể vừa đi xe đạp vừa băng qua đường.
+  4	유모차를 끌고 횡단할 수 있다.	Có thể cùng đẩy xe đẩy trẻ em khi băng qua đường.
+199	다음 중 도로교통법상 차마의 통행방법에 대한 설명이다. 잘못된 것은?	Trong các giải thíchvề phương pháp lưu thông của các phương tiện giao thông theo Luật Giao thông đường  bộ. Câu nào không đúng?
+  1	보도와 차도가 구분된 도로에서는 차도로 통행하여야 한다.	Ở những đoạn đường phân chia thành vỉa hè và lòng đường xe chạy thì phải lưu thông trên lòng đường xe chạy.
+  2	보도를 횡단하기 직전에 서행하여 좌·우를 살핀 후 보행자의 통행을 방해하지 않도록 횡단하여야 한다.	Trước khi băng qua vỉa hè, phải đi chậm lại, nhìn kỹ bên trái bên phải rồi băng qua sao cho không cản trở việc lưu  thông của người đi bộ.
+  3	도로 중앙의 우측 부분으로 통행하여야 한다.	Phải đi về phía bên phải của tâm đường.
+  4	도로가 일방통행인 경우 도로의 중앙이나 좌측 부분을 통행할 수 있다.	Nếu là đường một chiều, có thể đi giữa đường hoặc phần phía bên trái.
+200	다음 중 도로교통법상 보행자의 보호에 대한 설명이다. 옳지 않은 것은?	Trong các giải thích về bảo vệ người đi bộ trong Luật Giao thông đường bộ. Câu nào không đúng?
+  1	보행자가 횡단보도를 통행하고 있을 때 그 직전에 일시정지하여야 한다.	Khi có người đi bộ đang đi trên lối đi bộ qua đường thì phải tạm dừng ngay trước vạch đó.
+  2	경찰공무원의 신호나 지시에 따라 도로를 횡단하는 보행자의 통행을 방해하여서는 아니 된다.	Không được cản trở việc lưu thông của người đi bộ đang băng qua đường theo tín hiệu hoặc chỉ thị của cảnh sát  giao thông.
+  3	교차로에서 도로를 횡단하는 보행자의 통행을 방해하여서는 아니 된다.	Không được cản trở việc lưu thông của người đi bộ đang băng qua đường ở đoạn đường giao nhau.
+  4	보행자가 횡단보도가 없는 도로를 횡단하고 있을 때에는 안전거리를 두고 서행하여야 한다.	Khi người đi bộ đang băng qua đường ở đường không có lối đi bộ qua đường, phải chạy chậm lại và duy trì khoảng  cách an toàn.
+
+codex
+[{"n":161,"field":"c[4]","severity":"major","issue":"‘경찰서장’을 광역 단위의 ‘경찰청장’으로 번역하여 제한 권한의 주체가 달라졌다.","suggestion":"Trưởng đồn cảnh sát có thể giới hạn tốc độ lưu thông của xe ở mức tối đa 20 km/giờ nếu xét thấy cần thiết để bảo vệ người đi bộ."},{"n":164,"field":"c[1]","severity":"major","issue":"일반 ‘킥보드’를 ‘전동 킥보드’로 번역하여 장치의 종류와 법적 분류가 달라졌다.","suggestion":"Xe trượt kickboard"},{"n":171,"field":"b","severity":"major","issue":"‘증발 현상’을 눈부심을 뜻하는 ‘hiện tượng lóa mắt’로 번역하여 야간 교행 시 보행자가 순간적으로 사라져 보이는 현상의 개념을 잘못 전달한다.","suggestion":"Vị trí nào dễ xảy ra “hiện tượng biến mất” khiến người lái xe tạm thời không nhìn thấy người đi bộ hoặc vật thể trên đường vào ban đêm?"},{"n":171,"field":"c[3]","severity":"major","issue":"‘도로의 중앙선 부근’을 물리적 중앙분리대 부근으로 번역하여 정답 위치의 의미가 달라졌다.","suggestion":"Gần vạch tim đường"},{"n":186,"field":"c[2]","severity":"major","issue":"‘보행자우선도로’를 차량 통행이 배제되는 ‘보행자전용도로’로 번역하여 서로 다른 도로 유형을 혼동시킨다.","suggestion":"Trên đường ưu tiên cho người đi bộ, người đi bộ có thể lưu thông trên toàn bộ phần đường."},{"n":187,"field":"c[2]","severity":"major","issue":"말·소 등을 ‘몰고 가는 경우’를 해당 동물을 ‘타고 가는 경우’로 번역하여 허용 대상 행위가 달라졌다.","suggestion":"Khi dắt hoặc lùa các động vật lớn như ngựa, bò đi trên đường"},{"n":196,"field":"b","severity":"major","issue":"‘2주 진단의 상해’를 ‘2주간 입원해야 하는 상해’로 번역하여 처벌 판단에 쓰이는 상해 기준을 변경했다.","suggestion":"Hai hình phạt dành cho người lái ô tô làm hàng hóa trên xe rơi xuống, gây thương tích cho người đi bộ với chẩn đoán cần điều trị trong 2 tuần là gì?"}]
+tokens used
+66,611
+[{"n":161,"field":"c[4]","severity":"major","issue":"‘경찰서장’을 광역 단위의 ‘경찰청장’으로 번역하여 제한 권한의 주체가 달라졌다.","suggestion":"Trưởng đồn cảnh sát có thể giới hạn tốc độ lưu thông của xe ở mức tối đa 20 km/giờ nếu xét thấy cần thiết để bảo vệ người đi bộ."},{"n":164,"field":"c[1]","severity":"major","issue":"일반 ‘킥보드’를 ‘전동 킥보드’로 번역하여 장치의 종류와 법적 분류가 달라졌다.","suggestion":"Xe trượt kickboard"},{"n":171,"field":"b","severity":"major","issue":"‘증발 현상’을 눈부심을 뜻하는 ‘hiện tượng lóa mắt’로 번역하여 야간 교행 시 보행자가 순간적으로 사라져 보이는 현상의 개념을 잘못 전달한다.","suggestion":"Vị trí nào dễ xảy ra “hiện tượng biến mất” khiến người lái xe tạm thời không nhìn thấy người đi bộ hoặc vật thể trên đường vào ban đêm?"},{"n":171,"field":"c[3]","severity":"major","issue":"‘도로의 중앙선 부근’을 물리적 중앙분리대 부근으로 번역하여 정답 위치의 의미가 달라졌다.","suggestion":"Gần vạch tim đường"},{"n":186,"field":"c[2]","severity":"major","issue":"‘보행자우선도로’를 차량 통행이 배제되는 ‘보행자전용도로’로 번역하여 서로 다른 도로 유형을 혼동시킨다.","suggestion":"Trên đường ưu tiên cho người đi bộ, người đi bộ có thể lưu thông trên toàn bộ phần đường."},{"n":187,"field":"c[2]","severity":"major","issue":"말·소 등을 ‘몰고 가는 경우’를 해당 동물을 ‘타고 가는 경우’로 번역하여 허용 대상 행위가 달라졌다.","suggestion":"Khi dắt hoặc lùa các động vật lớn như ngựa, bò đi trên đường"},{"n":196,"field":"b","severity":"major","issue":"‘2주 진단의 상해’를 ‘2주간 입원해야 하는 상해’로 번역하여 처벌 판단에 쓰이는 상해 기준을 변경했다.","suggestion":"Hai hình phạt dành cho người lái ô tô làm hàng hóa trên xe rơi xuống, gây thương tích cho người đi bộ với chẩn đoán cần điều trị trong 2 tuần là gì?"}]

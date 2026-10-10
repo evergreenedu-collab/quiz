@@ -1,0 +1,1558 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125d1-c728-7621-93fe-d782d98182e9
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/207_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/207_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 612ms:
+[
+ {
+  "n": 281,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?대┛??諛??곸쑀???곕졊湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대┛?대뒗 13???댄븯???щ엺",
+   "?곸쑀?꾨뒗 6??誘몃쭔???щ엺",
+   "?대┛?대뒗 15??誘몃쭔???щ엺",
+   "?곸쑀?꾨뒗 7??誘몃쭔???щ엺"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, who are considered children and infants?",
+  "tr_c": [
+   "Those 13 years old or below are considered children.",
+   "Those who are below 6 years old are considered infants.",
+   "Those who are below 15 years old are considered children.",
+   "Those who are below 7 years old are considered infants."
+  ]
+ },
+ {
+  "n": 282,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜李??댁쟾?먭? 13:00寃??대┛??蹂댄샇援ъ뿭?먯꽌 ?좏샇?꾨컲????寃쎌슦 踰붿튃湲덉??",
+  "ko_c": [
+   "5留???,
+   "7留???,
+   "12留???,
+   "15留???
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the correct amount of traffic penalty that would be imposed on the driver of a  passenger car who commits a traffic signal violation in a school zone at around 13:00?",
+  "tr_c": [
+   "KRW 50,000",
+   "KRW 70,000",
+   "KRW 120,000",
+   "KRW 150,000"
+  ]
+ },
+ {
+  "n": 283,
+  "ko_b": "?대┛?닿? 蹂댄샇???놁씠 ?꾨줈?먯꽌 ?怨??덈뒗 寃쎌슦 媛???щ컮瑜??댁쟾諛⑸쾿??",
+  "ko_c": [
+   "?대┛???섎せ?대?濡?臾댁떆?섍퀬 吏?섍컙??",
+   "寃쎌쓬湲곕? ?몃젮 寃곸쓣 二쇰ŉ 吏꾪뻾?쒕떎.",
+   "?쇱떆?뺤??섏뿬???쒕떎.",
+   "?대┛?댁뿉 議곗떖?섎ŉ 湲됲엳 吏?섍컙??"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the safest method of driving on a road where a child is playing alone without a  guardian?",
+  "tr_c": [
+   "The child should not be there in the first place. Just drive on.",
+   "Honk to scare the child away and drive past.",
+   "Stop temporarily.",
+   "Keep an eye on the child and speed away."
+  ]
+ },
+ {
+  "n": 284,
+  "ko_b": "?대┛?닿? ?〓떒蹂대룄 ?꾨? 嫄몄뼱媛怨??덉쓣 ???꾨줈援먰넻踰뺣졊??洹쒖젙 諛??댁쟾?먯쓽 ?됰룞?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "?〓떒蹂대룄 ?욎뿉??蹂댄뻾?먭? ?〓떒?섎뒗 寃껋쓣 誘몃━ 諛쒓껄?섏??????덉쟾???뺤씤 ?? ?쒗뻾?쇰줈 ?듦낵 ?쒕떎.",
+   "?좏샇?깆씠 ?녿뒗 ?쇰컲?꾨줈???〓떒蹂대룄??寃쎌슦 ?〓떒蹂대룄 ?뺤??좎쓣 吏?섏퀜???〓떒蹂대룄 ?댁뿉留?吏꾩엯?섏? ?딆쑝硫??쒕떎.",
+   "?좏샇?깆씠 ?녿뒗 ?쇰컲?꾨줈???〓떒蹂대룄??寃쎌슦 ?좏샇?깆씠 ?놁쑝誘濡??대┛???ㅼそ?쇰줈 ?쒗뻾?섏뿬 ?듦낵?섎㈃ ?쒕떎.",
+   "?〓떒蹂대룄?쒖????〓떒蹂대룄瑜??ㅼ튂???μ냼???꾩슂??吏?먯쓽 ?꾨줈?묒륫???ㅼ튂?섎ŉ ?〓떒蹂대룄 ?욎뿉???쇱떆?뺤? ?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is a correct action taken by a driver when a child is  crossing in a crosswalk?",
+  "tr_c": [
+   "Upon noticing a pedestrian crossing the crosswalk, check for safety and pass slowly.",
+   "In the case of a crosswalk on a general road with no traffic light, the driver can pass the stop line as long as he/she does not enter the crosswalk area.",
+   "In the case of a crosswalk on a general road with no traffic light, the driver can drive slowly behind crossing children.",
+   "Pedestrian crossing signs are placed on both ends of a crosswalk, and all drivers must come to a full stop before  reaching the crosswalk."
+  ]
+ },
+ {
+  "n": 285,
+  "ko_b": "?대┛???듯븰踰꾩뒪媛 ?몃룄 1李⑤줈 ?꾨줈?먯꽌 ?뺤감?섏뿬 ?곸쑀?꾧? ?怨??대━??以묒엫???쒖떆?섎뒗 ?먮㈇?깆씠 ?묐룞?섍퀬 ?덉쓣  ??諛섎? 諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먮뒗 ?대뼸寃??섏뿬???섎뒗媛?",
+  "ko_c": [
+   "?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎.",
+   "?쒗뻾?섎㈃???덉쟾 ?뺤씤?????듦낵?쒕떎.",
+   "洹몃?濡??듦낵?대룄 ?쒕떎.",
+   "寃쎌쓬湲곕? ?몃━硫댁꽌 ?듦낵?섎㈃ ?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "If a school bus for children makes a stop at a road with one lane in one direction and switches on the flashers to indicate that infants are getting on and off the bus, which of the following is the correct behavior for a driver approaching from the opposite direction?",
+  "tr_c": [
+   "Stop temporarily, check that it is safe, and drive on slowly.",
+   "Drive past at a reduced speed to ensure safety.",
+   "Continue to drive on.",
+   "Drive on while honking."
+  ]
+ },
+ {
+  "n": 286,
+  "ko_b": "李⑥쓽 ?댁쟾?먭? ?댁쟾 以??섏뼱由곗씠瑜?異⑷꺽??寃쎌슦?숆????щ컮瑜??됰룞??",
+  "ko_c": [
+   "?대쪣李⑥슫?꾩옄???대┛?댁뿉寃??ㅼ낀?먭퀬 臾쇱뼱蹂댁븯?쇰굹 ?꾨Т 留먮룄 ?섏? ?딆븘 ???ㅼ튇 寃껋쑝濡??먮떒?섏뿬 怨꾩냽 二쇳뻾?섏???",
+   "?뱀슜李⑥슫?꾩옄??諛붾줈 ?뺤감?????대┛?대? ?≪븞?쇰줈 ?댄렣蹂????ㅼ튇 怨녹씠 ?녿떎怨??먮떒?섏뿬 怨꾩냽 二쇳뻾?섏???",
+   "?붾Ъ李⑥슫?꾩옄???대┛?닿? ?섏뼱議뚮떎 湲덈갑 ?쇱뼱?섎뒗 寃껋쓣 蹂??????ㅼ튇 寃껋쑝濡??먮떒?섏뿬 怨꾩냽 二쇳뻾?섏???",
+   "?먯쟾嫄곗슫?꾩옄???섏뼱吏??대┛?닿? ?щ묠由??쇱뼱???곗뼱媛??寃껋쓣 蹂???寃쎌같愿?쒖뿉 ?좉퀬?섍퀬 ?꾩옣???湲고븯???"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most appropriate behavior when a driver hits a child?",
+  "tr_c": [
+   "A driver of a two-wheeled vehicle asked if the child was injured or not, but the child did not say anything. So the driver decided that the child was not injured and kept driving.",
+   "The driver of a passenger car stopped the vehicle immediately, visually checked the child, and concluded that the child was not injured and so kept driving.",
+   "The driver of a truck saw the child who was knocked over but got up immediately. Upon concluding that the child was not injured, the driver kept driving.",
+   "A cyclist saw the child who was knocked over but quickly got up and ran. The cyclist reported the case to the police  station and waited at the scene."
+  ]
+ },
+ {
+  "n": 287,
+  "ko_b": "怨⑤ぉ湲몄뿉??媛묒옄湲??곗뼱?섏삤???대┛?대? ?먮룞李④? 異⑷꺽?섏??? ?대┛?대뒗 ?멸껄???ㅼ튇 怨녹씠 ?놁뼱 蹂댁?怨? ?쒓킐李??ㅲ앷퀬 留먰븯怨??덈떎. ?대윴 寃쎌슦 ?댁쟾?먯쓽 ?됰룞?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "諛섏쓽?щ텋踰뚯즲???대떦?섎?濡??댁쟾?먮뒗 媛??湲몄쓣 媛硫??쒕떎.",
+   "?대┛?댁쓽 ?쇳빐媛 ?놁뼱 援먰넻?ш퀬媛 ?꾨땲誘濡?蹂꾨룄??議곗튂 ?놁씠 ?꾩옣??踰쀬뼱?쒕떎.",
+   "遺紐⑥뿉寃??곕씫?섎뒗 ??諛섎뱶???꾩슂??議곗튂瑜??ㅽ븳 ???꾩옣??踰쀬뼱?쒕떎.",
+   "?대┛?댁쓽 怨쇱떎?대?濡??댁쟾?먮뒗 ?대┛?댁쓽 ?곕씫泥섎쭔 ?뺤씤?섍퀬 洹媛?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "A vehicle just hit a child who suddenly emerged from an alleyway. The child appeared unharmed and claimed  that he was fine. Which of the following is the correct action taken by the driver?",
+  "tr_c": [
+   "The driver can leave since this is a crime that is not prosecuted against objection.",
+   "The driver can leave since the child was not hurt, so this is not considered an accident.",
+   "The driver must call the parents of the child and take other necessary measures before leaving the scene.",
+   "Since the fault lies with the child, the driver can just take the child's contact information and leave."
+  ]
+ },
+ {
+  "n": 288,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭 吏??諛?愿由?二쇱껜??",
+  "ko_c": [
+   "寃쎌같?쒖옣",
+   "?쒖옣??,
+   "?쑣룸룄寃쎌같泥?옣",
+   "援먯쑁媛?
+  ],
+  "a": "2",
+  "tr_b": "Who is responsible for the designation and management of school zones under the Road Traffic Act?",
+  "tr_c": [
+   "Police chief",
+   "Mayor, etc.",
+   "Commissioner of the City/Do (Province) police agency",
+   "Superintendent of Education"
+  ]
+ },
+ {
+  "n": 289,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭? 珥덈벑?숆탳 二쇱텧?낅Ц 100誘명꽣 ?대궡???꾨줈 以??쇱젙 援ш컙??留먰븳??",
+   "?대┛??蹂댄샇援ъ뿭 ?덉뿉???ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 二쇽쉈?뺤감 ?꾨컲??寃쎌슦 踰붿튃湲덉씠 媛以묐맂??",
+   "?대┛??蹂댄샇援ъ뿭 ???ㅼ튂???좏샇湲곗쓽 蹂댄뻾 ?쒓컙? ?대┛??理쒓퀬 蹂댄뻾 ?띾룄瑜?湲곗??쇰줈 ?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?덉뿉???ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 蹂댄뻾?먮낫??遺덉씠?됲븯硫?踰뚯젏??2諛곕맂??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are TWO correct statements about school zones?",
+  "tr_c": [
+   "A school zone refers to a section of a road located within 100m of the main gate of an elementary school.",
+   "A traffic penalty can be imposed for cars that are stopped or parked illegally in a school zone between 8 AM and 8 PM.",
+   "The length of the green signal of traffic lights installed in a school zone is based on the fastest walking speed of an  average child.",
+   "The demerit points applied to drivers who fail to consider pedestrian safety are doubled in school zones between 8 AM  and 8 PM."
+  ]
+ },
+ {
+  "n": 290,
+  "ko_b": "?대┛?댄넻?숇쾭?ㅼ쓽 ?밸퀎蹂댄샇??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?대┛???듯븰踰꾩뒪瑜??욎?瑜닿린?섍퀬?????뚮뒗 ?ㅻⅨ 李⑥쓽 ?욎?瑜닿린 諛⑸쾿怨?媛숇떎.",
+   "?대┛?대뱾???뱁븯李??? 以묒븰?좎씠 ?녿뒗 ?꾨줈?먯꽌??諛섎??몄뿉???ㅻ뒗 李⑤웾???덉쟾???뺤씤???? ?쒗뻾?섏뿬???쒕떎.",
+   "?대┛?대뱾???뱁븯李??? ?몃룄 1李⑤줈 ?꾨줈?먯꽌??諛섎??몄뿉???ㅻ뒗 李⑤웾???쇱떆?뺤??섏뿬 ?덉쟾???뺤씤???? ?쒗뻾?섏뿬???쒕떎.",
+   "?대┛?대뱾???뱁븯李??? ?숈씪 李⑤줈? 洹?李⑤줈??諛붾줈 ??李⑤웾? ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤???? ?쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are true about the special protection for school buses? (Select TWO)",
+  "tr_c": [
+   "The method of overtaking a school bus for children is the same as the method prescribed for overtaking other kinds of  vehicles.",
+   "When children are getting on or off the bus, a car coming from the opposite direction on a road without a centerline should check that it is safe and drive slowly.",
+   "When children are getting on or off the bus, a car coming from the opposite direction on a road with one lane in one direction should stop momentarily, check that it is safe, and drive slowly.",
+   "When children are getting on or off the bus, vehicles in the same lane and adjacent lanes should stop momentarily, check that it is safe, and drive slowly."
+  ]
+ },
+ {
+  "n": 291,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?먯쟾嫄??듯뻾諛⑸쾿??????ㅻ챸?대떎. ?由?寃껋??",
+  "ko_c": [
+   "?먯쟾嫄곕룄濡쒓? ?곕줈 ?덈뒗 怨녹뿉?쒕뒗 洹??먯쟾嫄곕룄濡쒕줈 ?듯뻾?섏뿬???쒕떎.",
+   "?먯쟾嫄곕룄濡쒓? ?ㅼ튂?섏? ?꾨땲??怨녹뿉?쒕뒗 ?꾨줈 ?곗륫 媛?μ옄由ъ뿉 遺숈뼱???듯뻾?섏뿬???쒕떎.",
+   "?먯쟾嫄곗쓽 ?댁쟾?먮뒗 湲멸??μ옄由ш뎄???덉쟾?쒖?濡??먯쟾嫄??듯뻾??湲덉???援ш컙? ?쒖쇅)???듯뻾?????덈떎.",
+   "?먯쟾嫄곗쓽 ?댁쟾?먭? ?〓떒蹂대룄瑜??댁슜?섏뿬 ?꾨줈瑜??〓떒???뚯뿉???먯쟾嫄곕? ?怨??듯뻾?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Below are descriptions of a thoroughfare of bicycles. According to the Road Traffic Act, which of the following is  INCORRECT?",
+  "tr_c": [
+   "The rider of a bicycle must pass along a bicycle track at a location with a separate bicycle track.",
+   "The rider of a bicycle must pass along close to the right side of the road at a location where no bicycle track is  constructed.",
+   "The rider of a bicycle may pass along the roadside area (excluding a section where thoroughfare for bicycles is  prohibited with safety markings).",
+   "A rider of a bicycle who intends to cross the road at a crosswalk may do so while riding the bicycle."
+  ]
+ },
+ {
+  "n": 292,
+  "ko_b": "?꾨줈援먰넻踰뺤긽?섎낫?멸뎄??쓽 吏?뺤젅李?諛?湲곗??숇벑??愿?섏뿬 ?꾩슂???ы빆???뺥븯??怨듬룞遺??湲곌??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭? ?됱젙?덉쟾遺, 蹂닿굔蹂듭?遺, 援?넗援먰넻遺??怨듬룞遺?뱀쑝濡??뺥븳??",
+   "?몄씤 蹂댄샇援ъ뿭? ?됱젙?덉쟾遺, 援?넗援먰넻遺, ?섍꼍遺??怨듬룞遺?뱀쑝濡??뺥븳??",
+   "?μ븷??蹂댄샇援ъ뿭? ?됱젙?덉쟾遺, 蹂닿굔蹂듭?遺, 援?넗援먰넻遺??怨듬룞遺?뱀쑝濡??뺥븳??",
+   "援먰넻?쎌옄 蹂댄샇援ъ뿭? ?됱젙?덉쟾遺, ?섍꼍遺, 援?넗援먰넻遺??怨듬룞遺?뱀쑝濡??뺥븳??"
+  ],
+  "a": "3",
+  "tr_b": "Which ministries are responsible for jointly establishing the procedure and criteria for designating priority zones  under the Road Traffic Act?",
+  "tr_c": [
+   "A school zone is jointly designated by the Ministry of Interior and Safety, Ministry of Health and Welfare, and Ministry of Land, Infrastructure, and Transport.",
+   "A silver zone is jointly designated by the Ministry of Interior and Safety, Ministry of Land, Infrastructure, and Transport, and Ministry of Environment.",
+   "A priority zone for persons with disabilities is jointly designated by the Ministry of Interior and Safety, Ministry of Health and Welfare, and Ministry of Land, Infrastructure, and Transport.",
+   "A priority zone for people with mobility impairments is jointly designated by the Ministry of Interior and Safety, Ministry of Environment, and Ministry of Land, Infrastructure, and Transport."
+  ]
+ },
+ {
+  "n": 293,
+  "ko_b": "?대┛?댄넻?숇쾭???밸퀎蹂댄샇瑜??꾪븳 ?댁쟾?먯쓽 ?щ컮瑜??댄뻾諛⑸쾿??",
+  "ko_c": [
+   "?몃룄 1李⑤줈???꾨줈?먯꽌??諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먮룄 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆 ?뺤??섏뿬 ?덉쟾?? ?뺤씤?????쒗뻾?섏뿬???쒕떎.",
+   "?대┛?댄넻?숇쾭?ㅺ? ?대┛?닿? ?섏감?섍퀬???먮㈇?깆쓣 ?쒖떆???뚮뒗 ?대┛???듯븰踰꾩뒪媛 ?뺤감??李⑤줈 ?몄쓽 李⑤줈濡??좎냽???듯뻾?쒕떎.",
+   "以묒븰?좎씠 ?ㅼ튂?섏? ?꾨땲???꾨줈??寃쎌슦 諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑤뒗 湲곗〈 ?띾룄濡?吏꾪뻾?쒕떎.",
+   "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜???寃쎌슦?쇰룄 ?꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct method of driving considering the protection of school buses for children?",
+  "tr_c": [
+   "If you are facing and approaching a school bus for children on a road with one lane in one direction, you must stop before reaching the bus, check that it is safe, and drive on slowly.",
+   "If a school bus for children has switched on flashers indicating that children are getting off, you must take another lane and drive past the bus quickly.",
+   "If there is no centerline and you are facing and approaching a school bus for children, you must keep driving at the  same speed.",
+   "You can overtake a school bus for children, even if it has signs indicating that children are on board."
+  ]
+ },
+ {
+  "n": 294,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭???좉퀬??愿???ㅻ챸?대떎. 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "?대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎젮硫?誘몃━ ?쒓뎅?꾨줈援먰넻怨듬떒???좉퀬?섍퀬 ?좉퀬利앸챸?쒕? 諛쒓툒諛쏆븘???쒕떎.",
+   "?대┛?댄넻?숇쾭?ㅻ뒗 ?먯튃?곸쑝濡??뱀감?뺤썝 9?몄듅(?대┛??1紐낆쓣 ?뱀감?뺤썝 1?몄쑝濡?蹂몃떎) ?댁긽???먮룞李⑤줈 ?쒕떎.",
+   "?대┛?댄넻?숇쾭???좉퀬利앸챸?쒓? ?먯뼱 紐살벐寃??섏뼱 ?ㅼ떆 ?좎껌?섎뒗 ?뚯뿉???대┛?댄넻?숇쾭???좉퀬利앸챸???ш탳遺?좎껌?쒖뿉 ??      ??紐살벐寃????좉퀬利앸챸?쒕? 泥⑤??섏뿬 ?쒖텧?섏뿬???쒕떎.",
+   "?대┛?댄넻?숇쾭???좉퀬利앸챸?쒕뒗 洹??먮룞李⑥쓽 ?욌㈃ 李쎌쑀由?醫뚯륫?곷떒??蹂닿린 ?ъ슫 怨녹뿉 遺李⑺븯?ъ빞 ?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are TWO correct statements regarding the registration of school buses for children?",
+  "tr_c": [
+   "To operate a school bus, one must report to the Korea Road Traffic Authority beforehand and receive a report  certificate.",
+   "A school bus for children must be a vehicle with maximum passenger capacity of nine or more (1 child is considered 1  passenger).",
+   "If applying to renew the registration of a school bus for children because the old one needs to be replaced, one must submit the old registration together with the renewal form.",
+   "The registration certificate of a school bus for children must be attached in a place where it will be easily visible on the top left side of the windows."
+  ]
+ },
+ {
+  "n": 295,
+  "ko_b": "?대┛?댄넻?숇쾭???댁쟾?먭? ?곸쑀?꾨? ?뱁븯李⑦븯??諛⑸쾿?쇰줈 諛붾Ⅸ 寃껋??",
+  "ko_c": [
+   "?곸쑀?꾧? ?뱀감?섍퀬 ?덈뒗 寃쎌슦?먮뒗 ?먮㈇???μ튂瑜??묐룞?섏뿬 ?덉쟾???뺣낫?섏뿬???쒕떎.",
+   "援먰넻???쇱옟??寃쎌슦 ?먮㈇?깆쓣 ?좎떆 ?꾧퀬 ?곸쑀?꾨? ?뱀감?쒗궓??",
+   "?곸쑀?꾨? ?대┛?댄넻?숇쾭??二쇰????대젮二쇨퀬 諛붾줈 異쒕컻?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭?먯꽌??醫뚯꽍?덉쟾?좊? 留ㅼ? ?딆븘???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct method of facilitating the safe boarding and disembarking of a child for a  driver operating a school bus for children?",
+  "tr_c": [
+   "Flashers must be used to ensure safety while the child is boarding the vehicle.",
+   "If traffic is congested, turn off the flashers momentarily and allow the child to board.",
+   "Drop off children around the school bus and leave immediately.",
+   "Fastening a seatbelt is not required in a school zone."
+  ]
+ },
+ {
+  "n": 296,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭??????ㅻ챸?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "二쇱감湲덉??꾨컲?????踰붿튃湲덉? ?몄씤蹂댄샇援ъ뿭怨?媛숇떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉???쒗뻾?쒖떆瑜??ㅼ튂?????덈떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉??二쇱젙李④? 湲덉??쒕떎.",
+   "?대┛?대? ?ㅼ튂寃???援먰넻?ш퀬媛 諛쒖깮?섎㈃ ?⑹쓽?щ?? 愿怨꾩뾾???뺤궗泥섎쾶??諛쏅뒗??"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about school zones?",
+  "tr_c": [
+   "The traffic penalty for a parking violation is the same as that for the silver zone.",
+   "A \"slow\" sign can be installed in school zones.",
+   "Parking and stopping are prohibited within a school zone.",
+   "One will face a criminal penalty for causing an accident that leaves a child injured, regardless of any settlements."
+  ]
+ },
+ {
+  "n": 297,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭?먯꽌 ?대┛?닿? ?곸쑀?꾨? ?숇컲?섏뿬 ?④퍡 ?〓떒?섍퀬 ?덈떎. ?댁쟾?먯쓽 ?щ컮瑜?二쇳뻾諛⑸쾿??",
+  "ko_c": [
+   "?대┛?댁? ?곸쑀??蹂댄샇瑜??꾪빐 ?쇱떆?뺤??섏???",
+   "?대┛?닿? ?곸쑀??蹂댄샇?섎㈃???〓떒?섍퀬 ?덉쑝誘濡??쒗뻾?섏???",
+   "?대┛?댁? ?곸쑀?꾧? ?꾩쭅 諛섎???李⑤줈 履쎌뿉 ?덉뼱 ?좎냽??二쇳뻾?섏???",
+   "?대┛?댁? ?곸쑀?꾨뒗 嫄몄쓬???먮━誘濡??덉쟾嫄곕━瑜??먭퀬 ?놁쑝濡??쇳븯??二쇳뻾?섏???"
+  ],
+  "a": "1",
+  "tr_b": "A child crosses a street in a school zone with an infant. Which of the following is the correct driving behavior?",
+  "tr_c": [
+   "Stop temporarily to protect children and infants.",
+   "Slow down as a child crosses the street while protecting the infant.",
+   "Drive fast as the child and infant are on the opposite side of the road.",
+   "Since children and infants walk slowly, keep a safe distance and drive while avoiding them."
+  ]
+ },
+ {
+  "n": 298,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?대┛??蹂댄샇援ъ뿭怨?愿?⑤맂 ?ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대┛?닿? 臾대떒?〓떒???섎떎媛 援먰넻?ш퀬媛 諛쒖깮??寃쎌슦 ?댁쟾?먯쓽 紐⑤뱺 梨낆엫? 硫댁젣?쒕떎.",
+   "?먯쟾嫄??댁쟾?먭? ?댁쟾 以??대┛?대? 異⑷꺽?섎뒗 寃쎌슦 ?먯쟾嫄곕뒗 李⑤쭏媛 ?꾨땲誘濡?誘쇱궗梨낆엫留?議댁옱?쒕떎.",
+   "李⑤룄濡?媛묒옄湲??곗뼱?쒕뒗 ?대┛?대? 蹂대㈃ ?쒗뻾?섏? 留먭퀬 ?쇱떆?뺤??쒕떎.",
+   "寃쎌같?쒖옣? ?먮룞李⑤벑???듯뻾?띾룄瑜??쒖냽 50?щ줈誘명꽣 ?대궡濡?吏?뺥븷 ???덈떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is correct regarding school zones?",
+  "tr_c": [
+   "If a car accident occurs while a child is jaywalking, the driver is exempted from all liability.",
+   "If a cyclist hits a child while driving, only civil liability exists as a bicycle is not a vehicle.",
+   "Upon seeing a child suddenly running onto the road, stop the vehicle instead of reducing the speed.",
+   "The chief of a police station may set the speed limit of a vehicle at 50km or less per hour."
+  ]
+ },
+ {
+  "n": 299,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭??????ㅻ챸怨?二쇳뻾諛⑸쾿?대떎. 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "?대┛??蹂댄샇瑜??꾪빐 ?꾩슂??寃쎌슦 ?듯뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덇퀬 ?듯뻾???뚮뒗 ??긽 ?쒗븳?띾룄 ?대궡濡? ?쒗뻾?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭 ???띾룄?쒗븳????곸? ?먮룞李? ?먮룞湲곗옣移섏옄?꾧굅, ?몃㈃?꾩감?대ŉ ?대┛?닿? ?〓떒?섎뒗 寃쎌슦 ?쇱떆?뺤??쒕떎.",
+   "??덊븰援먮굹 ?멸뎅?명븰援먯쓽 二쇰??꾨줈???대┛??蹂댄샇援ъ뿭 吏????곸씠 ?꾨땲誘濡??〓떒蹂대룄媛 ?꾨땶 怨녹뿉???대┛?닿? ?〓떒?섎뒗  寃쎌슦 ?쒗뻾?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭???띾룄 ?쒗븳 諛??〓떒蹂대룄??愿???덉쟾?쒖?瑜??곗꽑?곸쑝濡??ㅼ튂?????덉쑝硫??대┛?닿? 以묒븰??遺洹쇱뿉 ?? ?덈뒗 寃쎌슦 ?쒗뻾?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are true about school zones and driving in these zones? (Select TWO)",
+  "tr_c": [
+   "A school zone may limit the vehicle speed to 30 km/h if necessary to ensure children's safety. Drivers must observe the speed limit when driving in a school zone.",
+   "In a school zone, drivers of motor vehicles, motorcycles, and trams must observe the speed limit and come to a full  stop when children are crossing.",
+   "Roads near alternative or international schools are not designated as school zones; therefore, drivers must slow down when driving in these areas as children may be jaywalking.",
+   "Speed limit and pedestrian crossing signs can be placed with priority in school zones. Drivers must slow down when a child is standing by the centerline."
+  ]
+ },
+ {
+  "n": 300,
+  "ko_b": "?ㅼ쓬 以??대┛?댄넻?숇쾭???밸퀎蹂댄샇?섎Т ?꾨컲???대떦?섏? ?딅뒗 寃껋?? (?몃룄 1李⑤줈 ?꾨줈 寃쎌슦)",
+  "ko_c": [
+   "?대┛?대굹 ?곸쑀?꾧? ?대━??以??쇱떆?뺤??섏? ?딄퀬 洹몃?濡??듦낵??寃쎌슦",
+   "諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먭? ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쒗뻾?섏뿬 吏꾪뻾??寃쎌슦",
+   "?댁쟾?먭? ?대┛?대굹 ?곸쑀?꾨? ?덉쟾?섍쾶 ?뱁븯李??쒗궎??以?寃쎌쓬湲곕? ?몃━怨?吏꾪뻾??寃쎌슦",
+   "?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜????곹깭濡??꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜닿린 ?섏? ?딅뒗 寃쎌슦"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a violation of the special protection duty for school buses (on a one-lane road)?",
+  "tr_c": [
+   "Passing through without stopping when children or toddlers are getting off.",
+   "Slowing down and passing through before reaching the bus, when approaching from the opposite direction.",
+   "Blowing the horn and passing through while children or toddlers are getting on or off.",
+   "Not overtaking a school bus displaying the child transport sign while driving."
+  ]
+ },
+ {
+  "n": 301,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곸쑀??諛??대┛?댁뿉 ???洹쒖젙 諛??대┛?댄넻?숇쾭???댁쟾?먯쓽 ?섎Т??????ㅻ챸?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "?대┛?대뒗 13???댄븯???щ엺???섎??섎ŉ, ?대┛?닿? ?怨??대┫ ?뚯뿉??諛섎뱶???덉쟾???뺤씤????異쒕컻?쒕떎.",
+   "異쒕컻?섍린 ???곸쑀?꾨? ?쒖쇅??紐⑤뱺 ?대┛?닿? 醫뚯꽍?덉쟾?좊? 留ㅻ룄濡?????異쒕컻?섏뿬???쒕떎.",
+   "?대┛?닿? ?대┫ ?뚯뿉???대┛?닿? ?붽뎄?섎뒗 ?μ냼???덉쟾?섍쾶 ?대젮以 ??異쒕컻?섏뿬???쒕떎.",
+   "?곸쑀?꾨뒗 6??誘몃쭔???щ엺???섎??섎ŉ, ?곸쑀?꾧? ?怨??대━??寃쎌슦?먮룄 ?먮㈇???깆쓽 ?μ튂瑜??묐룞?댁빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about a child and an infant and the  responsibilities of a school bus driver?",
+  "tr_c": [
+   "Those 13 years old or below are considered children, and a school bus driver must ensure safety when children are  getting on and off the bus.",
+   "A school bus driver must make sure that all children, except infants, have put on their seat belts prior to departure.",
+   "A school bus driver must safely drop off a child at the destination demanded by the child.",
+   "Those who are below 6 years old are considered infants, and a school bus driver must turn on the hazard lights when an infant is getting on and off the bus."
+  ]
+ },
+ {
+  "n": 302,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?대굹 ?곸쑀?꾧? ?怨??대━寃??섍린 ?꾪븳 ?대┛?댄넻?숇쾭?ㅼ뿉 ?μ갑???⑹깋 諛??곸깋?쒖떆?깆쓽 ?묐룞諛⑸쾿?? ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뺤감???뚮뒗 ?곸깋?쒖떆?깆쓣 ?먮㈇ ?묐룞?섏뿬???쒕떎.",
+   "?쒕룞???뚮뒗 ?곸깋?쒖떆?깆쓣 ?먮㈇ ?묐룞?섏뿬???쒕떎.",
+   "?꾨줈???뺤??섎젮???뚯뿉???⑹깋?쒖떆?깆쓣 ?먮㈇ ?묐룞?섏뿬???쒕떎.",
+   "二쇱감???뚮뒗 ?⑹깋?쒖떆?깃낵 ?곸깋?쒖떆?깆쓣 ?숈떆???먮㈇ ?묐룞?섏뿬???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about the operation of the yellow and red strobe lights installed on a school bus for the purpose of allowing children or infants to get on or off the bus?",
+  "tr_c": [
+   "The red indicator light(s) must be flashing when stopping the bus.",
+   "The red indicator light(s) must be flashing when braking.",
+   "The yellow indicator light(s) must be flashing when attempting to stop on the road.",
+   "Both yellow and red indicator light(s) must be flashing when parking."
+  ]
+ },
+ {
+  "n": 303,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭??吏????곸쓽 洹쇨굅媛 ?섎뒗 踰뺣쪧???꾨땶 寃껋??",
+  "ko_c": [
+   "?좎븘援먯쑁踰?,
+   "珥댿ㅼ쨷?깃탳?〓쾿",
+   "?숈썝???ㅻ┰?ㅼ슫??諛?怨쇱쇅援먯뒿??愿??踰뺣쪧",
+   "?꾨룞蹂듭?踰?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a law that is the basis for designating a school zone?",
+  "tr_c": [
+   "Early Childhood Education Act",
+   "Elementary and Secondary Education Act",
+   "Act on the Establishment and Operation of Private Teaching Institutes and Extracurricular Lessons",
+   "Child Welfare Act"
+  ]
+ },
+ {
+  "n": 304,
+  "ko_b": "?ㅼ쓬 以??대┛??蹂댄샇援ъ뿭??????ㅻ챸?대떎. ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?닿납?먯꽌??援먰넻?ш퀬??援먰넻?ш퀬泥섎━?밸?踰뺤긽 ?밸? ?곸슜 ?쒖쇅 ?ы빆???대떦?????덈떎.",
+   "?먮룞李⑤벑???듯뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎.",
+   "踰붿튃湲덇낵 踰뚯젏? ?쇰컲?꾨줈??3諛곗씠??",
+   "二쇈꺕?뺤감媛 湲덉??쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Below are descriptions related to school zones. Which of the following is NOT true?",
+  "tr_c": [
+   "Traffic accidents in these areas may be excluded from the special exemption provided under the Special Traffic Accident Act.",
+   "The speed limit for vehicles can be set at 30 km/h or less.",
+   "The traffic penalty and demerit points are three times higher than those on general roads.",
+   "Parking and stopping are prohibited."
+  ]
+ },
+ {
+  "n": 305,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???덉쟾??蹂댄뻾???섍퀬 ?덉? ?딆? ?대┛?대뒗?",
+  "ko_c": [
+   "蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌 李⑤룄 媛?μ옄由щ? 嫄몄뼱媛怨??덈뒗 ?대┛??,
+   "?쇰갑?듯뻾?꾨줈??媛?μ옄由ъ뿉??李④? ?ㅻ뒗 諛⑺뼢??諛붾씪蹂대ŉ 嫄몄뼱媛怨??덈뒗 ?대┛??,
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?딆? ?꾨줈??媛?μ옄由ш뎄??뿉??李④? ?ㅻ뒗 諛⑺뼢??留덉＜蹂닿퀬 嫄몄뼱媛???대┛??,
+   "蹂대룄 ?댁뿉???곗륫?쇰줈 嫄몄뼱媛怨??덈뒗 ?대┛??
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following children is NOT walking in a safe manner?",
+  "tr_c": [
+   "A child walking on the edge of a roadway that is clearly separated from the sidewalk",
+   "A child walking on the edge of a one-way road while facing the oncoming traffic",
+   "A child walking on the edge of a roadway that does not have a clear separation from the sidewalk while facing the  oncoming traffic",
+   "A child walking on the right-hand side of a sidewalk"
+  ]
+ },
+ {
+  "n": 306,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇??????ㅻ챸?대떎. ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 ?대┛?닿? ?〓떒?섍퀬 ?덈뒗 寃쎌슦 ?쒗뻾?섏뿬???쒕떎.",
+   "?덉쟾吏????대┛?닿? ???덈뒗 寃쎌슦 ?덉쟾嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "醫곸? 怨⑤ぉ湲몄뿉???대┛?닿? 嫄몄뼱媛怨??덈뒗 寃쎌슦 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "?〓떒蹂대룄???대┛?닿? ?듯뻾?섍퀬 ?덈뒗 寃쎌슦 ?〓떒蹂대룄 ?욎뿉 ?쇱떆?뺤??섏뿬???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT correct regarding the protection of children?",
+  "tr_c": [
+   "If a child is crossing a road without a crosswalk, drivers must drive slowly.",
+   "If a child is standing in a safety zone, drivers must drive slowly while maintaining a safe distance.",
+   "If a child is walking in a narrow alley, drivers must drive slowly while maintaining a safe distance.",
+   "If a child is crossing a crosswalk, drivers shall make a temporary stop in front of the crosswalk."
+  ]
+ },
+ {
+  "n": 307,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭???밸퀎蹂댄샇??????댁쟾???섎Т瑜?留욊쾶 ?ㅻ챸??寃껋??",
+  "ko_c": [
+   "?곸깋 ?먮㈇?μ튂瑜??묐룞 以묒씤 ?대┛?댄넻?숇쾭?ㅺ? ?뺤감??李⑤줈??諛붾줈 ??李⑤줈濡??듯뻾?섎뒗 寃쎌슦 ?쇱떆?뺤??섏뿬???쒕떎.",
+   "?꾨줈瑜??듯뻾 以묒씤 紐⑤뱺 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜닿린?????녿떎.",
+   "???섎Т瑜??꾨컲?섎㈃ ?댁쟾硫댄뿀 踰뚯젏 15?먯쓣 遺怨쇰컺?붾떎.",
+   "?몃룄 1李⑤줈???꾨줈?먯꽌 ?곸깋 ?먮㈇?μ튂瑜??묐룞 以묒씤 ?대┛?댄넻?숇쾭?ㅺ? ?뺤감??寃쎌슦?????섎Т媛 ?쒖쇅?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following correctly describes the driver's duty regarding the  special protection of school buses?",
+  "tr_c": [
+   "If a school bus for children with a red flasher being operated passes next to your lane, it is necessary to stop  temporarily.",
+   "You cannot overtake any school bus for children passing on the road.",
+   "If you violate this duty, you will incur 15 demerit points on your driver's license.",
+   "This duty does not apply when a school bus for children stops on a road with one lane in one direction with its red  flasher activited."
+  ]
+ },
+ {
+  "n": 308,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댁쓽 蹂댄샇?먭? 怨쇳깭猷?遺怨쇱쿂遺꾩쓣 諛쏅뒗 寃쎌슦???대떦?섎뒗 寃껋??",
+  "ko_c": [
+   "李⑤룄?먯꽌 ?대┛?닿? ?먯쟾嫄곕? ?寃???蹂댄샇??,
+   "??댄꽣?먯꽌 ?대┛?닿? ?꾨룞?λ낫?쒕? ?寃???蹂댄샇??,
+   "李⑤룄?먯꽌 ?대┛?닿? ?꾨룞?λ낫?쒕? ?寃???蹂댄샇??,
+   "??댄꽣?먯꽌 ?대┛?닿? ?먯쟾嫄곕? ?寃???蹂댄샇??
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following constitutes a situation wherein a child?셲 guardian is  slapped with an administrative fine?",
+  "tr_c": [
+   "A guardian who lets a child ride a bicycle on the roadway",
+   "A guardian who lets a child ride an electric scooter in a playground",
+   "A guardian who lets a child ride an electric scooter on the roadway",
+   "A guardian who lets a child ride a bicycle in a playground"
+  ]
+ },
+ {
+  "n": 309,
+  "ko_b": "?댁쟾 以??대┛??蹂댄샇援ъ뿭?먯꽌 ?대┛?대? ?곹빐???대Ⅴ寃???寃쎌슦 ?뱀젙踰붿즲 媛以묒쿂踰??깆뿉 愿??踰뺣쪧???곕Ⅸ ?뺤궗泥섎쾶  湲곗???",
+  "ko_c": [
+   "1???댁긽 15???댄븯??吏뺤뿭 ?먮뒗 500留????댁긽 3泥쒕쭔 ???댄븯??踰뚭툑",
+   "臾닿린 ?먮뒗 5???댁긽??吏뺤뿭",
+   "2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "5???댄븯??吏뺤뿭?대굹 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "What are the criminal penalties under the Act on the Aggravated Punishment, etc. of Specific Crimes for causing injury to a child in a child protection zone while driving?",
+  "tr_c": [
+   "Imprisonment with labor for at least 1 year but not more than 15 years or a criminal fine of at least KRW 5 million but not more than KRW 30 million",
+   "Imprisonment with labor (or for an indefinite term) for at least 5 years",
+   "Imprisonment with labor for not more than 2 years or a criminal fine of not more than KRW 5 million",
+   "Imprisonment with labor for not more than 5 years or a criminal fine of not more than KRW 20 million"
+  ]
+ },
+ {
+  "n": 310,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭???댁쁺?먯쓽 ?섎Т瑜??ㅻ챸??寃껋쑝濡??由?寃껋??",
+  "ko_c": [
+   "?대┛?댄넻?숇쾭?ㅼ뿉 ?대┛?대? ?쒖슱 ?뚯뿉???깅뀈???щ엺 以?蹂댄샇?먮? 吏?뺥빐???쒕떎.",
+   "?대┛?댄넻?숇쾭???댄뻾??留덉튇 ???대┛?대굹 ?곸쑀?꾧? 紐⑤몢 ?섏감?섏??붿?瑜??뺤씤?섏뿬???쒕떎.",
+   "醫뚯꽍?덉쟾??李⑹슜 諛?蹂댄샇???숈듅 ?뺤씤 湲곕줉???묒꽦?띾낫愿?댁빞 ?쒕떎.",
+   "醫뚯꽍?덉쟾??李⑹슜 諛?蹂댄샇???숈듅 ?뺤씤 湲곕줉??留?遺꾧린 ?대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎뒗 ?쒖꽕??媛먮룆 湲곌????쒖텧?댁빞 ?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT correct regarding the duty of a person who operates a school bus for children?",
+  "tr_c": [
+   "When children are getting on a school bus, an adult guardian must be designated.",
+   "After completing the trip, the operator must confirm that all children and infants have disembarked from the school bus.",
+   "It is necessary to prepare and keep a record of seat belt wearing and confirmation of the accompanying guardian.",
+   "A record of confirmation of wearing seat belts and accompanying guardians must be submitted to the supervisory authority of the facility operating the school bus every quarter."
+  ]
+ },
+ {
+  "n": 311,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?댄넻?숇쾭?ㅼ뿉 ?깅뀈 蹂댄샇?먭? ?놁쓣 ?뚢섎낫?몄옄 ?숈듅?쒖??숇? 遺李⑺븳 寃쎌슦??泥섎쾶濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "20留????댄븯??踰뚭툑?대굹 援щ쪟",
+   "30留????댄븯??踰뚭툑?대굹 援щ쪟",
+   "40留????댄븯??踰뚭툑?대굹 援щ쪟",
+   "50留????댄븯??踰뚭툑?대굹 援щ쪟"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the punishment imposed on the operator when an ?쏿ccompanying guardian sign??is  attached even though there is no adult guardian on a school bus for children?",
+  "tr_c": [
+   "A criminal fine of up to KRW 200,000 or detention",
+   "A criminal fine of up to KRW 300,000 or detention",
+   "A criminal fine of up to KRW 400,000 or detention",
+   "A criminal fine of up to KRW 500,000 or detention"
+  ]
+ },
+ {
+  "n": 312,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좊졊?댁쟾???쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "怨좊졊?댁쟾???쒖?? ?댁쟾硫댄뿀瑜?諛쏆? 65???댁긽???щ엺???댁쟾?섎뒗 李⑥엫???섑??대뒗 ?쒖??대떎.",
+   "諛뷀깢? 泥?깋, 湲?⑤뒗 ?몃??됱쑝濡??쒕떎.",
+   "?욌㈃? ?덈?李⑹씠 媛?ν븯?꾨줉 怨좊Т?먯꽍?쇰줈 ?쒖옉?섍퀬, ?룸㈃? 諛섏궗吏濡??쒖옉?쒕떎.",
+   "李⑥쓽 ?욌㈃ 以??덉쟾?댁쟾??吏?μ쓣 二쇱? ?딄퀬, ?쒖씤?깆쓣 ?뺣낫?????덈뒗 ?μ냼??遺李⑺븳??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is true about the definition of the senior driver sign under the Road Traffic Act?",
+  "tr_c": [
+   "A senior driver sign indicates that the vehicle is driven by a licensed driver aged 65 or older.",
+   "The background of the sign should be blue and the text should be yellow.",
+   "The front side should be made of rubber magnet for removal, and the back side should be made of reflective paper.",
+   "Attach it to the front of the vehicle in a visible location that does not interfere with safe driving."
+  ]
+ },
+ {
+  "n": 313,
+  "ko_b": "節?끂??蹂댄샇援ъ뿭節ｌ뿉???몄씤???꾪빐 ?쑣룸룄寃쎌같泥?옣?대굹 寃쎌같?쒖옣???????덈뒗 議곗튂媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "李⑤쭏???듯뻾??湲덉??섍굅???쒗븳?????덈떎.",
+   "?대㈃?꾨줈瑜??쇰갑?듯뻾濡쒕줈 吏?뺧쉈?댁쁺?????덈떎.",
+   "李⑤쭏???댄뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎.",
+   "二쇱텧?낅Ц ?곌껐?꾨줈???몄씤???꾪븳 ?몄긽二쇱감?μ쓣 ?ㅼ튂?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT an authority that a commissioner of the City/Do (Province) police agency or a  police chief can exercise in a silver zone?",
+  "tr_c": [
+   "Prohibiting or restricting the passage of vehicles and horses",
+   "Designating and operating a back road as a one-way street",
+   "Setting a speed limit of 30 km/h for horses and vehicles",
+   "Designating an on-road parking lot for the elderly on a road next to the gate of a house"
+  ]
+ },
+ {
+  "n": 314,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄씤蹂댄샇援ъ뿭?먯꽌 ?듯뻾??湲덉??????덈뒗 ??곸쑝濡?諛붾Ⅸ 寃껋??",
+  "ko_c": [
+   "媛쒖씤???대룞?μ튂, ?먯쟾嫄?,
+   "?몃윮?곸옱??泥쒓났湲? ?대┛?댁슜 ?λ낫??,
+   "?먮룞湲곗옣移섏옄?꾧굅, ??1誘명꽣 ?대궡??蹂댄뻾蹂댁“???섏옄李?,
+   "?몄긽?덉젙湲? ??1誘명꽣 ?대궡???몄빟?먯슜 蹂댄뻾湲?
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following may be prohibited from entering or driving in a silver  zone?",
+  "tr_c": [
+   "Personal mobility devices (PMD), bicycles",
+   "Truck-mounted drilling rigs and kick scooters for children",
+   "Motorcycles and rollators with width of 1 m or less",
+   "Road stabilizers and walking frames with width of 1 m or less"
+  ]
+ },
+ {
+  "n": 315,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄씤蹂댄샇援ъ뿭?먯꽌 ?ㅼ쟾 10?쒓꼍 諛쒖깮??踰뺢퇋?꾨컲??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅽ봽?몃윮 ?댁쟾?먭? ?좏샇?꾨컲???섎뒗 寃쎌슦 踰붿튃湲덉? 13留??먯씠??",
+   "?뱀슜?먮룞李??댁쟾?먭? ?몄씤蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섎㈃ 踰붿튃湲덉? 7留??먯씠??",
+   "?먯쟾嫄??댁쟾?먭? ?〓떒蹂대룄?먯꽌 ?〓떒?섎뒗 ?몄씤蹂댄뻾?먯쓽 ?〓떒??諛⑺빐?섎㈃ 踰붿튃湲덉? 5留??먯씠??",
+   "寃쎌슫湲??댁쟾?먭? 蹂댄뻾?먮낫?몃? 遺덉씠?됲븯??寃쎌슦 踰붿튃湲덉? 3留??먯씠??"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about a violation that took place in a silver  zone at 10 AM?",
+  "tr_c": [
+   "If the driver of a dump truck violates the traffic signal, the traffic penalty is KRW 130,000.",
+   "If the driver of a passenger vehicle obstructs a senior pedestrian, the traffic penalty is KRW 70,000.",
+   "If a bicycle rider obstructs a senior pedestrian crossing a crosswalk, the traffic penalty is KRW 50,000.",
+   "If the driver of a cultivator fails to fulfill his/her duty of guaranteeing pedestrian safety, the traffic penalty is KRW 30,000."
+  ]
+ },
+ {
+  "n": 316,
+  "ko_b": "?몄씤 蹂댄샇援ъ뿭 ?먮뒗 ?μ븷??蹂댄샇援ъ뿭??吏?뺛냽?댁젣 ?덉감 諛?湲곗? ?깆뿉 愿?섏뿬 ?꾩슂???ы빆??洹쒖젙?섎뒗 遺?뱀쓽 沅뚰븳??媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "臾명솕泥댁쑁愿愿묐?",
+   "?됱젙?덉쟾遺",
+   "蹂닿굔蹂듭?遺",
+   "援?넗援먰넻遺"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following ministries is NOT authorized to enact enforcement ordinances regarding the procedures  and criteria for the designation and abolition of senior or disabled protection zones?",
+  "tr_c": [
+   "Ministry of Culture, Sports, and Tourism",
+   "Ministry of Interior and Safety",
+   "Ministry of Health and Welfare",
+   "Ministry of Land, Infrastructure, and Transport"
+  ]
+ },
+ {
+  "n": 317,
+  "ko_b": "?ㅼ쓬 以??몄씤蹂댄샇援ъ뿭??吏?뺥븷 ???녿뒗 ?먮뒗?",
+  "ko_c": [
+   "?밸퀎?쒖옣",
+   "愿묒뿭?쒖옣",
+   "?밸퀎?먯튂?꾩???,
+   "?쑣룸룄寃쎌같泥?옣"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following officials CANNOT declare a silver zone?",
+  "tr_c": [
+   "Mayor of a special metropolitan city",
+   "Mayor of a metropolitan city",
+   "Governor of a special self-governing province",
+   "A commissioner of a city/province (-do) police agency"
+  ]
+ },
+ {
+  "n": 318,
+  "ko_b": "援먰넻?쎌옄??怨좊졊?먯쓽 ?쇰컲?곸씤 ?뱀쭠??????ㅻ챸?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "諛섏궗 ?좉꼍???뷀븯吏留?寃쏀뿕???섑븳 ?좎냽???먮떒? 媛?ν븯??",
+   "?쒕젰? ?쏀솕?섏?留?泥?젰? 諛쒕떖?섏뼱 ?묒? ?뚮━?먮룄 誘쇨컧?섍쾶 諛섏쓳?쒕떎.",
+   "?뚮컻 ?ы깭????묐뒫?μ? 誘명씉?섏?留??몄??λ젰? 媛뺥솕?쒕떎.",
+   "?좎껜?곹깭媛 ?명솕?좎닔濡??됰룞???먰솢?섏? ?딅떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is true about the general characteristics of senior citizens who are considered people  with mobility impairments?",
+  "tr_c": [
+   "Their reflexes are slow but they are quick in making decisions from experience.",
+   "They have poor eyesight but high hearing sensitivity.",
+   "They may not be quick in responding to unexpected situations, but their cognitive ability is heightened in such cases.",
+   "They lose mobility as their health conditions deteriorate."
+  ]
+ },
+ {
+  "n": 319,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???쒖옣 ?깆씠 ?몄씤蹂댄샇援ъ뿭?먯꽌 ?????덈뒗 議곗튂濡??녹? 寃껋??",
+  "ko_c": [
+   "李⑤쭏? ?몃㈃?꾩감???듯뻾???쒗븳?섍굅??湲덉??????덈떎.",
+   "??뺤듅?⑹감???듯뻾??湲덉??????덉?留??몃㈃?꾩감???쒗븳?????녿떎.",
+   "?대쪣李⑥쓽 ?듯뻾? 湲덉??????덉쑝???먯쟾嫄곕뒗 ?쒗븳?????녿떎.",
+   "嫄댁꽕湲곌퀎???듯뻾??湲덉????섎뒗 ?놁?留??쒗븳?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about the measures that a mayor can take for a  silver zone?",
+  "tr_c": [
+   "The mayor can restrict or prohibit access by motor vehicles and horses and trams.",
+   "The mayor can prohibit access by buses, but cannot restrict access by trams.",
+   "The mayor can prohibit access by two-wheeled vehicles, but cannot restrict access by bicycles.",
+   "The mayor cannot prohibit access by heavy equipment, but can restrict such access."
+  ]
+ },
+ {
+  "n": 320,
+  "ko_b": "蹂댄뻾???좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄濡??〓떒?섎뒗 ?몄씤???ㅻ뒭寃?諛쒓껄???뱀슜李??댁쟾?먭? 湲됱젣?숈쓣 ?섏??쇰굹 ?몄씤??異⑷꺽(2 二?吏꾨떒)?섎뒗 援먰넻?ш퀬媛 諛쒖깮?섏??? ?щ컮瑜??ㅻ챸 2媛吏??",
+  "ko_c": [
+   "蹂댄뻾???좏샇?깆씠 ?놁쑝誘濡??먮룞李??댁쟾?먮뒗 怨쇱떎???꾪? ?녿떎.",
+   "?먮룞李??댁쟾?먯뿉寃?誘쇱궗梨낆엫???덈떎.",
+   "?〓떒???몄씤留??뺤궗泥섎쾶 ?쒕떎.",
+   "?먮룞李??댁쟾?먯뿉寃??뺤궗 梨낆엫???덈떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "The driver of a passenger car slammed on the brakes after spotting an elderly person crossing a crosswalk without pedestrian signal lights but unfortunately hit him/her, and he/she was hospitalized for two weeks. Which TWO are correct among the following statements?",
+  "tr_c": [
+   "The driver is not responsible at all as there were no pedestrian signal lights.",
+   "The driver is subject to civil liability.",
+   "Only the elderly person is subject to criminal prosecution for crossing illegally.",
+   "The driver is subject to criminal liability."
+  ]
+ }
+]
+
+codex
+파일이 콘솔 문자 인코딩 문제로 깨져 보여, 원문과 번역을 정확히 대조할 수 있도록 UTF-8로 다시 읽겠습니다. 자동 점검 필드도 함께 확인하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/207_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 535ms:
+[
+ {
+  "n": 281,
+  "ko_b": "도로교통법상 어린이 및 영유아 연령기준으로 맞는 것은?",
+  "ko_c": [
+   "어린이는 13세 이하인 사람",
+   "영유아는 6세 미만인 사람",
+   "어린이는 15세 미만인 사람",
+   "영유아는 7세 미만인 사람"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, who are considered children and infants?",
+  "tr_c": [
+   "Those 13 years old or below are considered children.",
+   "Those who are below 6 years old are considered infants.",
+   "Those who are below 15 years old are considered children.",
+   "Those who are below 7 years old are considered infants."
+  ]
+ },
+ {
+  "n": 282,
+  "ko_b": "도로교통법령상 승용차 운전자가 13:00경 어린이 보호구역에서 신호위반을 한 경우 범칙금은?",
+  "ko_c": [
+   "5만 원",
+   "7만 원",
+   "12만 원",
+   "15만 원"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the correct amount of traffic penalty that would be imposed on the driver of a  passenger car who commits a traffic signal violation in a school zone at around 13:00?",
+  "tr_c": [
+   "KRW 50,000",
+   "KRW 70,000",
+   "KRW 120,000",
+   "KRW 150,000"
+  ]
+ },
+ {
+  "n": 283,
+  "ko_b": "어린이가 보호자 없이 도로에서 놀고 있는 경우 가장 올바른 운전방법은?",
+  "ko_c": [
+   "어린이 잘못이므로 무시하고 지나간다.",
+   "경음기를 울려 겁을 주며 진행한다.",
+   "일시정지하여야 한다.",
+   "어린이에 조심하며 급히 지나간다."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the safest method of driving on a road where a child is playing alone without a  guardian?",
+  "tr_c": [
+   "The child should not be there in the first place. Just drive on.",
+   "Honk to scare the child away and drive past.",
+   "Stop temporarily.",
+   "Keep an eye on the child and speed away."
+  ]
+ },
+ {
+  "n": 284,
+  "ko_b": "어린이가 횡단보도 위를 걸어가고 있을 때 도로교통법령상 규정 및 운전자의 행동으로 올바른 것은?",
+  "ko_c": [
+   "횡단보도 앞에서 보행자가 횡단하는 것을 미리 발견하였을 때 안전을 확인 후, 서행으로 통과 한다.",
+   "신호등이 없는 일반도로의 횡단보도일 경우 횡단보도 정지선을 지나쳐도 횡단보도 내에만 진입하지 않으면 된다.",
+   "신호등이 없는 일반도로의 횡단보도일 경우 신호등이 없으므로 어린이 뒤쪽으로 서행하여 통과하면 된다.",
+   "횡단보도표지는 횡단보도를 설치한 장소의 필요한 지점의 도로양측에 설치하며 횡단보도 앞에서 일시정지 하여야 한다."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is a correct action taken by a driver when a child is  crossing in a crosswalk?",
+  "tr_c": [
+   "Upon noticing a pedestrian crossing the crosswalk, check for safety and pass slowly.",
+   "In the case of a crosswalk on a general road with no traffic light, the driver can pass the stop line as long as he/she does not enter the crosswalk area.",
+   "In the case of a crosswalk on a general road with no traffic light, the driver can drive slowly behind crossing children.",
+   "Pedestrian crossing signs are placed on both ends of a crosswalk, and all drivers must come to a full stop before  reaching the crosswalk."
+  ]
+ },
+ {
+  "n": 285,
+  "ko_b": "어린이 통학버스가 편도 1차로 도로에서 정차하여 영유아가 타고 내리는 중임을 표시하는 점멸등이 작동하고 있을  때 반대 방향에서 진행하는 차의 운전자는 어떻게 하여야 하는가?",
+  "ko_c": [
+   "일시정지하여 안전을 확인한 후 서행하여야 한다.",
+   "서행하면서 안전 확인한 후 통과한다.",
+   "그대로 통과해도 된다.",
+   "경음기를 울리면서 통과하면 된다."
+  ],
+  "a": "1",
+  "tr_b": "If a school bus for children makes a stop at a road with one lane in one direction and switches on the flashers to indicate that infants are getting on and off the bus, which of the following is the correct behavior for a driver approaching from the opposite direction?",
+  "tr_c": [
+   "Stop temporarily, check that it is safe, and drive on slowly.",
+   "Drive past at a reduced speed to ensure safety.",
+   "Continue to drive on.",
+   "Drive on while honking."
+  ]
+ },
+ {
+  "n": 286,
+  "ko_b": "차의 운전자가 운전 중 ‘어린이를 충격한 경우’가장 올바른 행동은?",
+  "ko_c": [
+   "이륜차운전자는 어린이에게 다쳤냐고 물어보았으나 아무 말도 하지 않아 안 다친 것으로 판단하여 계속 주행하였다.",
+   "승용차운전자는 바로 정차한 후 어린이를 육안으로 살펴본 후 다친 곳이 없다고 판단하여 계속 주행하였다.",
+   "화물차운전자는 어린이가 넘어졌다 금방 일어나는 것을 본 후 안 다친 것으로 판단하여 계속 주행하였다.",
+   "자전거운전자는 넘어진 어린이가 재빨리 일어나 뛰어가는 것을 본 후 경찰관서에 신고하고 현장에 대기하였다."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most appropriate behavior when a driver hits a child?",
+  "tr_c": [
+   "A driver of a two-wheeled vehicle asked if the child was injured or not, but the child did not say anything. So the driver decided that the child was not injured and kept driving.",
+   "The driver of a passenger car stopped the vehicle immediately, visually checked the child, and concluded that the child was not injured and so kept driving.",
+   "The driver of a truck saw the child who was knocked over but got up immediately. Upon concluding that the child was not injured, the driver kept driving.",
+   "A cyclist saw the child who was knocked over but quickly got up and ran. The cyclist reported the case to the police  station and waited at the scene."
+  ]
+ },
+ {
+  "n": 287,
+  "ko_b": "골목길에서 갑자기 뛰어나오는 어린이를 자동차가 충격하였다. 어린이는 외견상 다친 곳이 없어 보였고, “괜찮 다”고 말하고 있다. 이런 경우 운전자의 행동으로 맞는 것은?",
+  "ko_c": [
+   "반의사불벌죄에 해당하므로 운전자는 가던 길을 가면 된다.",
+   "어린이의 피해가 없어 교통사고가 아니므로 별도의 조치 없이 현장을 벗어난다.",
+   "부모에게 연락하는 등 반드시 필요한 조치를 다한 후 현장을 벗어난다.",
+   "어린이의 과실이므로 운전자는 어린이의 연락처만 확인하고 귀가한다."
+  ],
+  "a": "3",
+  "tr_b": "A vehicle just hit a child who suddenly emerged from an alleyway. The child appeared unharmed and claimed  that he was fine. Which of the following is the correct action taken by the driver?",
+  "tr_c": [
+   "The driver can leave since this is a crime that is not prosecuted against objection.",
+   "The driver can leave since the child was not hurt, so this is not considered an accident.",
+   "The driver must call the parents of the child and take other necessary measures before leaving the scene.",
+   "Since the fault lies with the child, the driver can just take the child's contact information and leave."
+  ]
+ },
+ {
+  "n": 288,
+  "ko_b": "도로교통법령상 어린이 보호구역 지정 및 관리 주체는?",
+  "ko_c": [
+   "경찰서장",
+   "시장등",
+   "시·도경찰청장",
+   "교육감"
+  ],
+  "a": "2",
+  "tr_b": "Who is responsible for the designation and management of school zones under the Road Traffic Act?",
+  "tr_c": [
+   "Police chief",
+   "Mayor, etc.",
+   "Commissioner of the City/Do (Province) police agency",
+   "Superintendent of Education"
+  ]
+ },
+ {
+  "n": 289,
+  "ko_b": "도로교통법령상 어린이 보호구역에 대한 설명으로 맞는 2가지는?",
+  "ko_c": [
+   "어린이 보호구역은 초등학교 주출입문 100미터 이내의 도로 중 일정 구간을 말한다.",
+   "어린이 보호구역 안에서 오전 8시부터 오후 8시까지 주･정차 위반한 경우 범칙금이 가중된다.",
+   "어린이 보호구역 내 설치된 신호기의 보행 시간은 어린이 최고 보행 속도를 기준으로 한다.",
+   "어린이 보호구역 안에서 오전 8시부터 오후 8시까지 보행자보호 불이행하면 벌점이 2배된다."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are TWO correct statements about school zones?",
+  "tr_c": [
+   "A school zone refers to a section of a road located within 100m of the main gate of an elementary school.",
+   "A traffic penalty can be imposed for cars that are stopped or parked illegally in a school zone between 8 AM and 8 PM.",
+   "The length of the green signal of traffic lights installed in a school zone is based on the fastest walking speed of an  average child.",
+   "The demerit points applied to drivers who fail to consider pedestrian safety are doubled in school zones between 8 AM  and 8 PM."
+  ]
+ },
+ {
+  "n": 290,
+  "ko_b": "어린이통학버스의 특별보호에 대한 설명으로 맞는 2가지는?",
+  "ko_c": [
+   "어린이 통학버스를 앞지르기하고자 할 때는 다른 차의 앞지르기 방법과 같다.",
+   "어린이들이 승하차 시, 중앙선이 없는 도로에서는 반대편에서 오는 차량도 안전을 확인한 후, 서행하여야 한다.",
+   "어린이들이 승하차 시, 편도 1차로 도로에서는 반대편에서 오는 차량도 일시정지하여 안전을 확인한 후, 서행하여야 한다.",
+   "어린이들이 승하차 시, 동일 차로와 그 차로의 바로 옆 차량은 일시정지하여 안전을 확인한 후, 서행하여야 한다."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are true about the special protection for school buses? (Select TWO)",
+  "tr_c": [
+   "The method of overtaking a school bus for children is the same as the method prescribed for overtaking other kinds of  vehicles.",
+   "When children are getting on or off the bus, a car coming from the opposite direction on a road without a centerline should check that it is safe and drive slowly.",
+   "When children are getting on or off the bus, a car coming from the opposite direction on a road with one lane in one direction should stop momentarily, check that it is safe, and drive slowly.",
+   "When children are getting on or off the bus, vehicles in the same lane and adjacent lanes should stop momentarily, check that it is safe, and drive slowly."
+  ]
+ },
+ {
+  "n": 291,
+  "ko_b": "도로교통법상 자전거 통행방법에 대한 설명이다. 틀린 것은?",
+  "ko_c": [
+   "자전거도로가 따로 있는 곳에서는 그 자전거도로로 통행하여야 한다.",
+   "자전거도로가 설치되지 아니한 곳에서는 도로 우측 가장자리에 붙어서 통행하여야 한다.",
+   "자전거의 운전자는 길가장자리구역(안전표지로 자전거 통행을 금지한 구간은 제외)을 통행할 수 있다.",
+   "자전거의 운전자가 횡단보도를 이용하여 도로를 횡단할 때에는 자전거를 타고 통행할 수 있다."
+  ],
+  "a": "4",
+  "tr_b": "Below are descriptions of a thoroughfare of bicycles. According to the Road Traffic Act, which of the following is  INCORRECT?",
+  "tr_c": [
+   "The rider of a bicycle must pass along a bicycle track at a location with a separate bicycle track.",
+   "The rider of a bicycle must pass along close to the right side of the road at a location where no bicycle track is  constructed.",
+   "The rider of a bicycle may pass along the roadside area (excluding a section where thoroughfare for bicycles is  prohibited with safety markings).",
+   "A rider of a bicycle who intends to cross the road at a crosswalk may do so while riding the bicycle."
+  ]
+ },
+ {
+  "n": 292,
+  "ko_b": "도로교통법상‘보호구역의 지정절차 및 기준’등에 관하여 필요한 사항을 정하는 공동부령 기관으로 맞는 것은?",
+  "ko_c": [
+   "어린이 보호구역은 행정안전부, 보건복지부, 국토교통부의 공동부령으로 정한다.",
+   "노인 보호구역은 행정안전부, 국토교통부, 환경부의 공동부령으로 정한다.",
+   "장애인 보호구역은 행정안전부, 보건복지부, 국토교통부의 공동부령으로 정한다.",
+   "교통약자 보호구역은 행정안전부, 환경부, 국토교통부의 공동부령으로 정한다."
+  ],
+  "a": "3",
+  "tr_b": "Which ministries are responsible for jointly establishing the procedure and criteria for designating priority zones  under the Road Traffic Act?",
+  "tr_c": [
+   "A school zone is jointly designated by the Ministry of Interior and Safety, Ministry of Health and Welfare, and Ministry of Land, Infrastructure, and Transport.",
+   "A silver zone is jointly designated by the Ministry of Interior and Safety, Ministry of Land, Infrastructure, and Transport, and Ministry of Environment.",
+   "A priority zone for persons with disabilities is jointly designated by the Ministry of Interior and Safety, Ministry of Health and Welfare, and Ministry of Land, Infrastructure, and Transport.",
+   "A priority zone for people with mobility impairments is jointly designated by the Ministry of Interior and Safety, Ministry of Environment, and Ministry of Land, Infrastructure, and Transport."
+  ]
+ },
+ {
+  "n": 293,
+  "ko_b": "어린이통학버스 특별보호를 위한 운전자의 올바른 운행방법은?",
+  "ko_c": [
+   "편도 1차로인 도로에서는 반대방향에서 진행하는 차의 운전자도 어린이통학버스에 이르기 전에 일시 정지하여 안전을  확인한 후 서행하여야 한다.",
+   "어린이통학버스가 어린이가 하차하고자 점멸등을 표시할 때는 어린이 통학버스가 정차한 차로 외의 차로로 신속히 통행한다.",
+   "중앙선이 설치되지 아니한 도로인 경우 반대방향에서 진행하는 차는 기존 속도로 진행한다.",
+   "모든 차의 운전자는 어린이나 영유아를 태우고 있다는 표시를 한 경우라도 도로를 통행하는 어린이통학버스를 앞지를 수 있다."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct method of driving considering the protection of school buses for children?",
+  "tr_c": [
+   "If you are facing and approaching a school bus for children on a road with one lane in one direction, you must stop before reaching the bus, check that it is safe, and drive on slowly.",
+   "If a school bus for children has switched on flashers indicating that children are getting off, you must take another lane and drive past the bus quickly.",
+   "If there is no centerline and you are facing and approaching a school bus for children, you must keep driving at the  same speed.",
+   "You can overtake a school bus for children, even if it has signs indicating that children are on board."
+  ]
+ },
+ {
+  "n": 294,
+  "ko_b": "도로교통법령상 어린이통학버스 신고에 관한 설명이다. 맞는 것 2가지는?",
+  "ko_c": [
+   "어린이통학버스를 운영하려면 미리 한국도로교통공단에 신고하고 신고증명서를 발급받아야 한다.",
+   "어린이통학버스는 원칙적으로 승차정원 9인승(어린이 1명을 승차정원 1인으로 본다) 이상의 자동차로 한다.",
+   "어린이통학버스 신고증명서가 헐어 못쓰게 되어 다시 신청하는 때에는 어린이통학버스 신고증명서 재교부신청서에 헐       어 못쓰게 된 신고증명서를 첨부하여 제출하여야 한다.",
+   "어린이통학버스 신고증명서는 그 자동차의 앞면 창유리 좌측상단의 보기 쉬운 곳에 부착하여야 한다."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are TWO correct statements regarding the registration of school buses for children?",
+  "tr_c": [
+   "To operate a school bus, one must report to the Korea Road Traffic Authority beforehand and receive a report  certificate.",
+   "A school bus for children must be a vehicle with maximum passenger capacity of nine or more (1 child is considered 1  passenger).",
+   "If applying to renew the registration of a school bus for children because the old one needs to be replaced, one must submit the old registration together with the renewal form.",
+   "The registration certificate of a school bus for children must be attached in a place where it will be easily visible on the top left side of the windows."
+  ]
+ },
+ {
+  "n": 295,
+  "ko_b": "어린이통학버스 운전자가 영유아를 승하차하는 방법으로 바른 것은?",
+  "ko_c": [
+   "영유아가 승차하고 있는 경우에는 점멸등 장치를 작동하여 안전을 확보하여야 한다.",
+   "교통이 혼잡한 경우 점멸등을 잠시 끄고 영유아를 승차시킨다.",
+   "영유아를 어린이통학버스 주변에 내려주고 바로 출발한다.",
+   "어린이 보호구역에서는 좌석안전띠를 매지 않아도 된다."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct method of facilitating the safe boarding and disembarking of a child for a  driver operating a school bus for children?",
+  "tr_c": [
+   "Flashers must be used to ensure safety while the child is boarding the vehicle.",
+   "If traffic is congested, turn off the flashers momentarily and allow the child to board.",
+   "Drop off children around the school bus and leave immediately.",
+   "Fastening a seatbelt is not required in a school zone."
+  ]
+ },
+ {
+  "n": 296,
+  "ko_b": "도로교통법령상 어린이 보호구역에 대한 설명으로 바르지 않은 것은?",
+  "ko_c": [
+   "주차금지위반에 대한 범칙금은 노인보호구역과 같다.",
+   "어린이 보호구역 내에는 서행표시를 설치할 수 있다.",
+   "어린이 보호구역 내에는 주정차가 금지된다.",
+   "어린이를 다치게 한 교통사고가 발생하면 합의여부와 관계없이 형사처벌을 받는다."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about school zones?",
+  "tr_c": [
+   "The traffic penalty for a parking violation is the same as that for the silver zone.",
+   "A \"slow\" sign can be installed in school zones.",
+   "Parking and stopping are prohibited within a school zone.",
+   "One will face a criminal penalty for causing an accident that leaves a child injured, regardless of any settlements."
+  ]
+ },
+ {
+  "n": 297,
+  "ko_b": "어린이 보호구역에서 어린이가 영유아를 동반하여 함께 횡단하고 있다. 운전자의 올바른 주행방법은?",
+  "ko_c": [
+   "어린이와 영유아 보호를 위해 일시정지하였다.",
+   "어린이가 영유아 보호하면서 횡단하고 있으므로 서행하였다.",
+   "어린이와 영유아가 아직 반대편 차로 쪽에 있어 신속히 주행하였다.",
+   "어린이와 영유아는 걸음이 느리므로 안전거리를 두고 옆으로 피하여 주행하였다."
+  ],
+  "a": "1",
+  "tr_b": "A child crosses a street in a school zone with an infant. Which of the following is the correct driving behavior?",
+  "tr_c": [
+   "Stop temporarily to protect children and infants.",
+   "Slow down as a child crosses the street while protecting the infant.",
+   "Drive fast as the child and infant are on the opposite side of the road.",
+   "Since children and infants walk slowly, keep a safe distance and drive while avoiding them."
+  ]
+ },
+ {
+  "n": 298,
+  "ko_b": "도로교통법상 어린이 보호구역과 관련된 설명으로 맞는 것은?",
+  "ko_c": [
+   "어린이가 무단횡단을 하다가 교통사고가 발생한 경우 운전자의 모든 책임은 면제된다.",
+   "자전거 운전자가 운전 중 어린이를 충격하는 경우 자전거는 차마가 아니므로 민사책임만 존재한다.",
+   "차도로 갑자기 뛰어드는 어린이를 보면 서행하지 말고 일시정지한다.",
+   "경찰서장은 자동차등의 통행속도를 시속 50킬로미터 이내로 지정할 수 있다."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is correct regarding school zones?",
+  "tr_c": [
+   "If a car accident occurs while a child is jaywalking, the driver is exempted from all liability.",
+   "If a cyclist hits a child while driving, only civil liability exists as a bicycle is not a vehicle.",
+   "Upon seeing a child suddenly running onto the road, stop the vehicle instead of reducing the speed.",
+   "The chief of a police station may set the speed limit of a vehicle at 50km or less per hour."
+  ]
+ },
+ {
+  "n": 299,
+  "ko_b": "어린이 보호구역에 대한 설명과 주행방법이다. 맞는 것 2가지는?",
+  "ko_c": [
+   "어린이 보호를 위해 필요한 경우 통행속도를 시속 30킬로미터 이내로 제한할 수 있고 통행할 때는 항상 제한속도 이내로  서행한다.",
+   "어린이 보호구역 내 속도제한의 대상은 자동차, 원동기장치자전거, 노면전차이며 어린이가 횡단하는 경우 일시정지한다.",
+   "대안학교나 외국인학교의 주변도로는 어린이 보호구역 지정 대상이 아니므로 횡단보도가 아닌 곳에서 어린이가 횡단하는  경우 서행한다.",
+   "어린이 보호구역에 속도 제한 및 횡단보도에 관한 안전표지를 우선적으로 설치할 수 있으며 어린이가 중앙선 부근에 서  있는 경우 서행한다."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are true about school zones and driving in these zones? (Select TWO)",
+  "tr_c": [
+   "A school zone may limit the vehicle speed to 30 km/h if necessary to ensure children's safety. Drivers must observe the speed limit when driving in a school zone.",
+   "In a school zone, drivers of motor vehicles, motorcycles, and trams must observe the speed limit and come to a full  stop when children are crossing.",
+   "Roads near alternative or international schools are not designated as school zones; therefore, drivers must slow down when driving in these areas as children may be jaywalking.",
+   "Speed limit and pedestrian crossing signs can be placed with priority in school zones. Drivers must slow down when a child is standing by the centerline."
+  ]
+ },
+ {
+  "n": 300,
+  "ko_b": "다음 중 어린이통학버스 특별보호의무 위반에 해당하지 않는 것은? (편도 1차로 도로 경우)",
+  "ko_c": [
+   "어린이나 영유아가 내리는 중 일시정지하지 않고 그대로 통과한 경우",
+   "반대방향에서 진행하는 차의 운전자가 어린이통학버스에 이르기 전에 서행하여 진행한 경우",
+   "운전자가 어린이나 영유아를 안전하게 승하차 시키는 중 경음기를 울리고 진행한 경우",
+   "어린이나 영유아를 태우고 있다는 표시를 한 상태로 도로를 통행하는 어린이통학버스를 앞지르기 하지 않는 경우"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a violation of the special protection duty for school buses (on a one-lane road)?",
+  "tr_c": [
+   "Passing through without stopping when children or toddlers are getting off.",
+   "Slowing down and passing through before reaching the bus, when approaching from the opposite direction.",
+   "Blowing the horn and passing through while children or toddlers are getting on or off.",
+   "Not overtaking a school bus displaying the child transport sign while driving."
+  ]
+ },
+ {
+  "n": 301,
+  "ko_b": "도로교통법령상 영유아 및 어린이에 대한 규정 및 어린이통학버스 운전자의 의무에 대한 설명으로 올바른 것은?",
+  "ko_c": [
+   "어린이는 13세 이하의 사람을 의미하며, 어린이가 타고 내릴 때에는 반드시 안전을 확인한 후 출발한다.",
+   "출발하기 전 영유아를 제외한 모든 어린이가 좌석안전띠를 매도록 한 후 출발하여야 한다.",
+   "어린이가 내릴 때에는 어린이가 요구하는 장소에 안전하게 내려준 후 출발하여야 한다.",
+   "영유아는 6세 미만의 사람을 의미하며, 영유아가 타고 내리는 경우에도 점멸등 등의 장치를 작동해야 한다."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about a child and an infant and the  responsibilities of a school bus driver?",
+  "tr_c": [
+   "Those 13 years old or below are considered children, and a school bus driver must ensure safety when children are  getting on and off the bus.",
+   "A school bus driver must make sure that all children, except infants, have put on their seat belts prior to departure.",
+   "A school bus driver must safely drop off a child at the destination demanded by the child.",
+   "Those who are below 6 years old are considered infants, and a school bus driver must turn on the hazard lights when an infant is getting on and off the bus."
+  ]
+ },
+ {
+  "n": 302,
+  "ko_b": "도로교통법령상 어린이나 영유아가 타고 내리게 하기 위한 어린이통학버스에 장착된 황색 및 적색표시등의 작동방법에  대한 설명으로 맞는 것은?",
+  "ko_c": [
+   "정차할 때는 적색표시등을 점멸 작동하여야 한다.",
+   "제동할 때는 적색표시등을 점멸 작동하여야 한다.",
+   "도로에 정지하려는 때에는 황색표시등을 점멸 작동하여야 한다.",
+   "주차할 때는 황색표시등과 적색표시등을 동시에 점멸 작동하여야 한다."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about the operation of the yellow and red strobe lights installed on a school bus for the purpose of allowing children or infants to get on or off the bus?",
+  "tr_c": [
+   "The red indicator light(s) must be flashing when stopping the bus.",
+   "The red indicator light(s) must be flashing when braking.",
+   "The yellow indicator light(s) must be flashing when attempting to stop on the road.",
+   "Both yellow and red indicator light(s) must be flashing when parking."
+  ]
+ },
+ {
+  "n": 303,
+  "ko_b": "도로교통법령상 어린이 보호구역의 지정 대상의 근거가 되는 법률이 아닌 것은?",
+  "ko_c": [
+   "유아교육법",
+   "초․중등교육법",
+   "학원의 설립․운영 및 과외교습에 관한 법률",
+   "아동복지법"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a law that is the basis for designating a school zone?",
+  "tr_c": [
+   "Early Childhood Education Act",
+   "Elementary and Secondary Education Act",
+   "Act on the Establishment and Operation of Private Teaching Institutes and Extracurricular Lessons",
+   "Child Welfare Act"
+  ]
+ },
+ {
+  "n": 304,
+  "ko_b": "다음 중 어린이 보호구역에 대한 설명이다. 옳지 않은 것은?",
+  "ko_c": [
+   "이곳에서의 교통사고는 교통사고처리특례법상 특례 적용 제외 사항에 해당될 수 있다.",
+   "자동차등의 통행속도를 시속 30킬로미터 이내로 제한할 수 있다.",
+   "범칙금과 벌점은 일반도로의 3배이다.",
+   "주・정차가 금지된다."
+  ],
+  "a": "3",
+  "tr_b": "Below are descriptions related to school zones. Which of the following is NOT true?",
+  "tr_c": [
+   "Traffic accidents in these areas may be excluded from the special exemption provided under the Special Traffic Accident Act.",
+   "The speed limit for vehicles can be set at 30 km/h or less.",
+   "The traffic penalty and demerit points are three times higher than those on general roads.",
+   "Parking and stopping are prohibited."
+  ]
+ },
+ {
+  "n": 305,
+  "ko_b": "도로교통법령상 안전한 보행을 하고 있지 않은 어린이는?",
+  "ko_c": [
+   "보도와 차도가 구분된 도로에서 차도 가장자리를 걸어가고 있는 어린이",
+   "일방통행도로의 가장자리에서 차가 오는 방향을 바라보며 걸어가고 있는 어린이",
+   "보도와 차도가 구분되지 않은 도로의 가장자리구역에서 차가 오는 방향을 마주보고 걸어가는 어린이",
+   "보도 내에서 우측으로 걸어가고 있는 어린이"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following children is NOT walking in a safe manner?",
+  "tr_c": [
+   "A child walking on the edge of a roadway that is clearly separated from the sidewalk",
+   "A child walking on the edge of a one-way road while facing the oncoming traffic",
+   "A child walking on the edge of a roadway that does not have a clear separation from the sidewalk while facing the  oncoming traffic",
+   "A child walking on the right-hand side of a sidewalk"
+  ]
+ },
+ {
+  "n": 306,
+  "ko_b": "도로교통법령상 어린이 보호에 대한 설명이다. 옳지 않은 것은?",
+  "ko_c": [
+   "횡단보도가 없는 도로에서 어린이가 횡단하고 있는 경우 서행하여야 한다.",
+   "안전지대에 어린이가 서 있는 경우 안전거리를 두고 서행하여야 한다.",
+   "좁은 골목길에서 어린이가 걸어가고 있는 경우 안전한 거리를 두고 서행하여야 한다.",
+   "횡단보도에 어린이가 통행하고 있는 경우 횡단보도 앞에 일시정지하여야 한다."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT correct regarding the protection of children?",
+  "tr_c": [
+   "If a child is crossing a road without a crosswalk, drivers must drive slowly.",
+   "If a child is standing in a safety zone, drivers must drive slowly while maintaining a safe distance.",
+   "If a child is walking in a narrow alley, drivers must drive slowly while maintaining a safe distance.",
+   "If a child is crossing a crosswalk, drivers shall make a temporary stop in front of the crosswalk."
+  ]
+ },
+ {
+  "n": 307,
+  "ko_b": "도로교통법령상 어린이통학버스 특별보호에 대한 운전자 의무를 맞게 설명한 것은?",
+  "ko_c": [
+   "적색 점멸장치를 작동 중인 어린이통학버스가 정차한 차로의 바로 옆 차로로 통행하는 경우 일시정지하여야 한다.",
+   "도로를 통행 중인 모든 어린이통학버스를 앞지르기할 수 없다.",
+   "이 의무를 위반하면 운전면허 벌점 15점을 부과받는다.",
+   "편도 1차로의 도로에서 적색 점멸장치를 작동 중인 어린이통학버스가 정차한 경우는 이 의무가 제외된다."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following correctly describes the driver's duty regarding the  special protection of school buses?",
+  "tr_c": [
+   "If a school bus for children with a red flasher being operated passes next to your lane, it is necessary to stop  temporarily.",
+   "You cannot overtake any school bus for children passing on the road.",
+   "If you violate this duty, you will incur 15 demerit points on your driver's license.",
+   "This duty does not apply when a school bus for children stops on a road with one lane in one direction with its red  flasher activited."
+  ]
+ },
+ {
+  "n": 308,
+  "ko_b": "도로교통법령상 어린이의 보호자가 과태료 부과처분을 받는 경우에 해당하는 것은?",
+  "ko_c": [
+   "차도에서 어린이가 자전거를 타게 한 보호자",
+   "놀이터에서 어린이가 전동킥보드를 타게 한 보호자",
+   "차도에서 어린이가 전동킥보드를 타게 한 보호자",
+   "놀이터에서 어린이가 자전거를 타게 한 보호자"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following constitutes a situation wherein a child’s guardian is  slapped with an administrative fine?",
+  "tr_c": [
+   "A guardian who lets a child ride a bicycle on the roadway",
+   "A guardian who lets a child ride an electric scooter in a playground",
+   "A guardian who lets a child ride an electric scooter on the roadway",
+   "A guardian who lets a child ride a bicycle in a playground"
+  ]
+ },
+ {
+  "n": 309,
+  "ko_b": "운전 중 어린이 보호구역에서 어린이를 상해에 이르게 한 경우 특정범죄 가중처벌 등에 관한 법률에 따른 형사처벌  기준은?",
+  "ko_c": [
+   "1년 이상 15년 이하의 징역 또는 500만 원 이상 3천만 원 이하의 벌금",
+   "무기 또는 5년 이상의 징역",
+   "2년 이하의 징역이나 500만 원 이하의 벌금",
+   "5년 이하의 징역이나 2천만 원 이하의 벌금"
+  ],
+  "a": "1",
+  "tr_b": "What are the criminal penalties under the Act on the Aggravated Punishment, etc. of Specific Crimes for causing injury to a child in a child protection zone while driving?",
+  "tr_c": [
+   "Imprisonment with labor for at least 1 year but not more than 15 years or a criminal fine of at least KRW 5 million but not more than KRW 30 million",
+   "Imprisonment with labor (or for an indefinite term) for at least 5 years",
+   "Imprisonment with labor for not more than 2 years or a criminal fine of not more than KRW 5 million",
+   "Imprisonment with labor for not more than 5 years or a criminal fine of not more than KRW 20 million"
+  ]
+ },
+ {
+  "n": 310,
+  "ko_b": "도로교통법령상 어린이통학버스 운영자의 의무를 설명한 것으로 틀린 것은?",
+  "ko_c": [
+   "어린이통학버스에 어린이를 태울 때에는 성년인 사람 중 보호자를 지정해야 한다.",
+   "어린이통학버스 운행을 마친 후 어린이나 영유아가 모두 하차하였는지를 확인하여야 한다.",
+   "좌석안전띠 착용 및 보호자 동승 확인 기록을 작성ㆍ보관해야 한다.",
+   "좌석안전띠 착용 및 보호자 동승 확인 기록을 매 분기 어린이통학버스를 운영하는 시설의 감독 기관에 제출해야 한다."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT correct regarding the duty of a person who operates a school bus for children?",
+  "tr_c": [
+   "When children are getting on a school bus, an adult guardian must be designated.",
+   "After completing the trip, the operator must confirm that all children and infants have disembarked from the school bus.",
+   "It is necessary to prepare and keep a record of seat belt wearing and confirmation of the accompanying guardian.",
+   "A record of confirmation of wearing seat belts and accompanying guardians must be submitted to the supervisory authority of the facility operating the school bus every quarter."
+  ]
+ },
+ {
+  "n": 311,
+  "ko_b": "도로교통법령상 어린이통학버스에 성년 보호자가 없을 때‘보호자 동승표지’를 부착한 경우의 처벌로 맞는 것은?",
+  "ko_c": [
+   "20만 원 이하의 벌금이나 구류",
+   "30만 원 이하의 벌금이나 구류",
+   "40만 원 이하의 벌금이나 구류",
+   "50만 원 이하의 벌금이나 구류"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the punishment imposed on the operator when an “accompanying guardian sign” is  attached even though there is no adult guardian on a school bus for children?",
+  "tr_c": [
+   "A criminal fine of up to KRW 200,000 or detention",
+   "A criminal fine of up to KRW 300,000 or detention",
+   "A criminal fine of up to KRW 400,000 or detention",
+   "A criminal fine of up to KRW 500,000 or detention"
+  ]
+ },
+ {
+  "n": 312,
+  "ko_b": "도로교통법령상 고령운전자 표지에 대한 설명으로 맞는 것은?",
+  "ko_c": [
+   "고령운전자 표지란 운전면허를 받은 65세 이상인 사람이 운전하는 차임을 나타내는 표지이다.",
+   "바탕은 청색, 글씨는 노란색으로 한다.",
+   "앞면은 탈부착이 가능하도록 고무자석으로 제작하고, 뒷면은 반사지로 제작한다.",
+   "차의 앞면 중 안전운전에 지장을 주지 않고, 시인성을 확보할 수 있는 장소에 부착한다."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is true about the definition of the senior driver sign under the Road Traffic Act?",
+  "tr_c": [
+   "A senior driver sign indicates that the vehicle is driven by a licensed driver aged 65 or older.",
+   "The background of the sign should be blue and the text should be yellow.",
+   "The front side should be made of rubber magnet for removal, and the back side should be made of reflective paper.",
+   "Attach it to the front of the vehicle in a visible location that does not interfere with safe driving."
+  ]
+ },
+ {
+  "n": 313,
+  "ko_b": "｢노인 보호구역｣에서 노인을 위해 시·도경찰청장이나 경찰서장이 할 수 있는 조치가 아닌 것은?",
+  "ko_c": [
+   "차마의 통행을 금지하거나 제한할 수 있다.",
+   "이면도로를 일방통행로로 지정･운영할 수 있다.",
+   "차마의 운행속도를 시속 30킬로미터 이내로 제한할 수 있다.",
+   "주출입문 연결도로에 노인을 위한 노상주차장을 설치할 수 있다."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT an authority that a commissioner of the City/Do (Province) police agency or a  police chief can exercise in a silver zone?",
+  "tr_c": [
+   "Prohibiting or restricting the passage of vehicles and horses",
+   "Designating and operating a back road as a one-way street",
+   "Setting a speed limit of 30 km/h for horses and vehicles",
+   "Designating an on-road parking lot for the elderly on a road next to the gate of a house"
+  ]
+ },
+ {
+  "n": 314,
+  "ko_b": "도로교통법령상 노인보호구역에서 통행을 금지할 수 있는 대상으로 바른 것은?",
+  "ko_c": [
+   "개인형 이동장치, 자전거",
+   "트럭적재식 천공기, 어린이용 킥보드",
+   "원동기장치자전거, 폭 1미터 이내의 보행보조용 의자차",
+   "노상안정기, 폭 1미터 이내의 노약자용 보행기"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following may be prohibited from entering or driving in a silver  zone?",
+  "tr_c": [
+   "Personal mobility devices (PMD), bicycles",
+   "Truck-mounted drilling rigs and kick scooters for children",
+   "Motorcycles and rollators with width of 1 m or less",
+   "Road stabilizers and walking frames with width of 1 m or less"
+  ]
+ },
+ {
+  "n": 315,
+  "ko_b": "도로교통법령상 노인보호구역에서 오전 10시경 발생한 법규위반에 대한 설명으로 맞는 것은?",
+  "ko_c": [
+   "덤프트럭 운전자가 신호위반을 하는 경우 범칙금은 13만 원이다.",
+   "승용자동차 운전자가 노인보행자의 통행을 방해하면 범칙금은 7만 원이다.",
+   "자전거 운전자가 횡단보도에서 횡단하는 노인보행자의 횡단을 방해하면 범칙금은 5만 원이다.",
+   "경운기 운전자가 보행자보호를 불이행하는 경우 범칙금은 3만 원이다."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about a violation that took place in a silver  zone at 10 AM?",
+  "tr_c": [
+   "If the driver of a dump truck violates the traffic signal, the traffic penalty is KRW 130,000.",
+   "If the driver of a passenger vehicle obstructs a senior pedestrian, the traffic penalty is KRW 70,000.",
+   "If a bicycle rider obstructs a senior pedestrian crossing a crosswalk, the traffic penalty is KRW 50,000.",
+   "If the driver of a cultivator fails to fulfill his/her duty of guaranteeing pedestrian safety, the traffic penalty is KRW 30,000."
+  ]
+ },
+ {
+  "n": 316,
+  "ko_b": "노인 보호구역 또는 장애인 보호구역의 지정ㆍ해제 절차 및 기준 등에 관하여 필요한 사항을 규정하는 부령의 권한자 가 아닌 것은?",
+  "ko_c": [
+   "문화체육관광부",
+   "행정안전부",
+   "보건복지부",
+   "국토교통부"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following ministries is NOT authorized to enact enforcement ordinances regarding the procedures  and criteria for the designation and abolition of senior or disabled protection zones?",
+  "tr_c": [
+   "Ministry of Culture, Sports, and Tourism",
+   "Ministry of Interior and Safety",
+   "Ministry of Health and Welfare",
+   "Ministry of Land, Infrastructure, and Transport"
+  ]
+ },
+ {
+  "n": 317,
+  "ko_b": "다음 중 노인보호구역을 지정할 수 없는 자는?",
+  "ko_c": [
+   "특별시장",
+   "광역시장",
+   "특별자치도지사",
+   "시·도경찰청장"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following officials CANNOT declare a silver zone?",
+  "tr_c": [
+   "Mayor of a special metropolitan city",
+   "Mayor of a metropolitan city",
+   "Governor of a special self-governing province",
+   "A commissioner of a city/province (-do) police agency"
+  ]
+ },
+ {
+  "n": 318,
+  "ko_b": "교통약자인 고령자의 일반적인 특징에 대한 설명으로 올바른 것은?",
+  "ko_c": [
+   "반사 신경이 둔하지만 경험에 의한 신속한 판단은 가능하다.",
+   "시력은 약화되지만 청력은 발달되어 작은 소리에도 민감하게 반응한다.",
+   "돌발 사태에 대응능력은 미흡하지만 인지능력은 강화된다.",
+   "신체상태가 노화될수록 행동이 원활하지 않다."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is true about the general characteristics of senior citizens who are considered people  with mobility impairments?",
+  "tr_c": [
+   "Their reflexes are slow but they are quick in making decisions from experience.",
+   "They have poor eyesight but high hearing sensitivity.",
+   "They may not be quick in responding to unexpected situations, but their cognitive ability is heightened in such cases.",
+   "They lose mobility as their health conditions deteriorate."
+  ]
+ },
+ {
+  "n": 319,
+  "ko_b": "도로교통법령상 시장 등이 노인보호구역에서 할 수 있는 조치로 옳은 것은?",
+  "ko_c": [
+   "차마와 노면전차의 통행을 제한하거나 금지할 수 있다.",
+   "대형승합차의 통행을 금지할 수 있지만 노면전차는 제한할 수 없다.",
+   "이륜차의 통행은 금지할 수 있으나 자전거는 제한할 수 없다.",
+   "건설기계는 통행을 금지할 수는 없지만 제한할 수 있다."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about the measures that a mayor can take for a  silver zone?",
+  "tr_c": [
+   "The mayor can restrict or prohibit access by motor vehicles and horses and trams.",
+   "The mayor can prohibit access by buses, but cannot restrict access by trams.",
+   "The mayor can prohibit access by two-wheeled vehicles, but cannot restrict access by bicycles.",
+   "The mayor cannot prohibit access by heavy equipment, but can restrict such access."
+  ]
+ },
+ {
+  "n": 320,
+  "ko_b": "보행자 신호등이 없는 횡단보도로 횡단하는 노인을 뒤늦게 발견한 승용차 운전자가 급제동을 하였으나 노인을 충격(2 주 진단)하는 교통사고가 발생하였다. 올바른 설명 2가지는?",
+  "ko_c": [
+   "보행자 신호등이 없으므로 자동차 운전자는 과실이 전혀 없다.",
+   "자동차 운전자에게 민사책임이 있다.",
+   "횡단한 노인만 형사처벌 된다.",
+   "자동차 운전자에게 형사 책임이 있다."
+  ],
+  "a": "2, 4",
+  "tr_b": "The driver of a passenger car slammed on the brakes after spotting an elderly person crossing a crosswalk without pedestrian signal lights but unfortunately hit him/her, and he/she was hospitalized for two weeks. Which TWO are correct among the following statements?",
+  "tr_c": [
+   "The driver is not responsible at all as there were no pedestrian signal lights.",
+   "The driver is subject to civil liability.",
+   "Only the elderly person is subject to criminal prosecution for crossing illegally.",
+   "The driver is subject to criminal liability."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); $d = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/207_choices_en.json' | ConvertFrom-Json; "'$d | Where-Object { $_.n -ge 298 -and $_.n -le 301 } | ConvertTo-Json -Depth 6; '"'KEYS'; ("'$d | ForEach-Object { $_.PSObject.Properties.Name } | Sort-Object -Unique)' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 663ms:
+[
+    {
+        "n":  298,
+        "ko_b":  "도로교통법상 어린이 보호구역과 관련된 설명으로 맞는 것은?",
+        "ko_c":  [
+                     "어린이가 무단횡단을 하다가 교통사고가 발생한 경우 운전자의 모든 책임은 면제된다.",
+                     "자전거 운전자가 운전 중 어린이를 충격하는 경우 자전거는 차마가 아니므로 민사책임만 존재한다.",
+                     "차도로 갑자기 뛰어드는 어린이를 보면 서행하지 말고 일시정지한다.",
+                     "경찰서장은 자동차등의 통행속도를 시속 50킬로미터 이내로 지정할 수 있다."
+                 ],
+        "a":  "3",
+        "tr_b":  "According to the Road Traffic Act, which of the following is correct regarding school zones?",
+        "tr_c":  [
+                     "If a car accident occurs while a child is jaywalking, the driver is exempted from all liability.",
+                     "If a cyclist hits a child while driving, only civil liability exists as a bicycle is not a vehicle.",
+                     "Upon seeing a child suddenly running onto the road, stop the vehicle instead of reducing the speed.",
+                     "The chief of a police station may set the speed limit of a vehicle at 50km or less per hour."
+                 ]
+    },
+    {
+        "n":  299,
+        "ko_b":  "어린이 보호구역에 대한 설명과 주행방법이다. 맞는 것 2가지는?",
+        "ko_c":  [
+                     "어린이 보호를 위해 필요한 경우 통행속도를 시속 30킬로미터 이내로 제한할 수 있고 통행할 때는 항상 제한속도 이내로  서행한다.",
+                     "어린이 보호구역 내 속도제한의 대상은 자동차, 원동기장치자전거, 노면전차이며 어린이가 횡단하는 경우 일시정지한다.",
+                     "대안학교나 외국인학교의 주변도로는 어린이 보호구역 지정 대상이 아니므로 횡단보도가 아닌 곳에서 어린이가 횡단하는  경우 서행한다.",
+                     "어린이 보호구역에 속도 제한 및 횡단보도에 관한 안전표지를 우선적으로 설치할 수 있으며 어린이가 중앙선 부근에 서  있는 경우 서행한다."
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Which of the following are true about school zones and driving in these zones? (Select TWO)",
+        "tr_c":  [
+                     "A school zone may limit the vehicle speed to 30 km/h if necessary to ensure children\u0027s safety. Drivers must observe the speed limit when driving in a school zone.",
+                     "In a school zone, drivers of motor vehicles, motorcycles, and trams must observe the speed limit and come to a full  stop when children are crossing.",
+                     "Roads near alternative or international schools are not designated as school zones; therefore, drivers must slow down when driving in these areas as children may be jaywalking.",
+                     "Speed limit and pedestrian crossing signs can be placed with priority in school zones. Drivers must slow down when a child is standing by the centerline."
+                 ]
+    },
+    {
+        "n":  300,
+        "ko_b":  "다음 중 어린이통학버스 특별보호의무 위반에 해당하지 않는 것은? (편도 1차로 도로 경우)",
+        "ko_c":  [
+                     "어린이나 영유아가 내리는 중 일시정지하지 않고 그대로 통과한 경우",
+                     "반대방향에서 진행하는 차의 운전자가 어린이통학버스에 이르기 전에 서행하여 진행한 경우",
+                     "운전자가 어린이나 영유아를 안전하게 승하차 시키는 중 경음기를 울리고 진행한 경우",
+                     "어린이나 영유아를 태우고 있다는 표시를 한 상태로 도로를 통행하는 어린이통학버스를 앞지르기 하지 않는 경우"
+                 ],
+        "a":  "4",
+        "tr_b":  "Which of the following is NOT a violation of the special protection duty for school buses (on a one-lane road)?",
+        "tr_c":  [
+                     "Passing through without stopping when children or toddlers are getting off.",
+                     "Slowing down and passing through before reaching the bus, when approaching from the opposite direction.",
+                     "Blowing the horn and passing through while children or toddlers are getting on or off.",
+                     "Not overtaking a school bus displaying the child transport sign while driving."
+                 ]
+    },
+    {
+        "n":  301,
+        "ko_b":  "도로교통법령상 영유아 및 어린이에 대한 규정 및 어린이통학버스 운전자의 의무에 대한 설명으로 올바른 것은?",
+        "ko_c":  [
+                     "어린이는 13세 이하의 사람을 의미하며, 어린이가 타고 내릴 때에는 반드시 안전을 확인한 후 출발한다.",
+                     "출발하기 전 영유아를 제외한 모든 어린이가 좌석안전띠를 매도록 한 후 출발하여야 한다.",
+                     "어린이가 내릴 때에는 어린이가 요구하는 장소에 안전하게 내려준 후 출발하여야 한다.",
+                     "영유아는 6세 미만의 사람을 의미하며, 영유아가 타고 내리는 경우에도 점멸등 등의 장치를 작동해야 한다."
+                 ],
+        "a":  "4",
+        "tr_b":  "According to the Road Traffic Act, which of the following is true about a child and an infant and the  responsibilities of a school bus driver?",
+        "tr_c":  [
+                     "Those 13 years old or below are considered children, and a school bus driver must ensure safety when children are  getting on and off the bus.",
+                     "A school bus driver must make sure that all children, except infants, have put on their seat belts prior to departure.",
+                     "A school bus driver must safely drop off a child at the destination demanded by the child.",
+                     "Those who are below 6 years old are considered infants, and a school bus driver must turn on the hazard lights when an infant is getting on and off the bus."
+                 ]
+    }
+]
+KEYS
+a
+ko_b
+ko_c
+n
+tr_b
+tr_c
+
+codex
+[{"n":289,"field":"c[2]","severity":"major","issue":"‘범칙금이 가중된다’가 단순히 범칙금이 부과될 수 있다는 의미로 번역되어 가중 처벌이라는 핵심이 누락됨.","suggestion":"The traffic penalty is increased for stopping or parking violations committed in a school zone between 8 AM and 8 PM."},{"n":294,"field":"c[3]","severity":"major","issue":"낡아 못 쓰게 된 신고증명서의 ‘재교부’를 차량·등록의 갱신으로 잘못 번역함.","suggestion":"When applying for reissuance because a school bus report certificate has become worn out and unusable, the unusable certificate must be submitted with the application for reissuance."},{"n":294,"field":"c[4]","severity":"major","issue":"‘자동차 앞면 창유리 좌측 상단’을 단순히 여러 창문의 좌측 상단으로 번역하여 부착 위치가 달라짐.","suggestion":"The school bus report certificate must be attached in an easily visible place at the upper-left corner of the vehicle's front windshield."},{"n":299,"field":"c[1]","severity":"minor","issue":"제한속도 준수뿐 아니라 ‘항상 서행한다’는 원문의 운전방법이 번역에서 누락됨.","suggestion":"A school zone may have a speed limit of 30 km/h or less when necessary to protect children, and drivers must always proceed slowly within the speed limit."},{"n":301,"field":"c[4]","severity":"major","issue":"통학버스의 ‘점멸등 등의 장치’를 일반 비상점멸등(hazard lights)으로 오역함.","suggestion":"Those under six years of age are considered infants, and the school bus's flashing-light devices must also be operated when infants are getting on or off the bus."},{"n":307,"field":"c[1]","severity":"critical","issue":"원문은 적색 점멸등을 켜고 정차한 통학버스의 바로 옆 차로를 차량이 통행하는 상황인데, 번역은 통학버스가 운전자의 옆 차로를 지나가는 상황으로 주체와 이동 관계가 뒤바뀜.","suggestion":"If driving in the lane immediately next to the lane where a school bus is stopped with its red flashing lights operating, the driver must come to a temporary stop."},{"n":313,"field":"c[4]","severity":"major","issue":"‘주출입문 연결도로’를 근거 없이 ‘주택 대문 옆 도로’로 번역하여 장소의 의미가 달라짐.","suggestion":"Installing an on-street parking area for older persons on the road connected to the main entrance."},{"n":320,"field":"b","severity":"major","issue":"‘2주 진단’을 ‘2주간 입원’으로 번역하여 상해의 진단 기간을 입원 기간으로 바꿈.","suggestion":"A passenger-car driver belatedly noticed an elderly person crossing at a crosswalk without pedestrian signals and braked suddenly, but struck the pedestrian, resulting in an injury requiring two weeks of treatment. Which TWO statements are correct?"}]
+tokens used
+33,744
+[{"n":289,"field":"c[2]","severity":"major","issue":"‘범칙금이 가중된다’가 단순히 범칙금이 부과될 수 있다는 의미로 번역되어 가중 처벌이라는 핵심이 누락됨.","suggestion":"The traffic penalty is increased for stopping or parking violations committed in a school zone between 8 AM and 8 PM."},{"n":294,"field":"c[3]","severity":"major","issue":"낡아 못 쓰게 된 신고증명서의 ‘재교부’를 차량·등록의 갱신으로 잘못 번역함.","suggestion":"When applying for reissuance because a school bus report certificate has become worn out and unusable, the unusable certificate must be submitted with the application for reissuance."},{"n":294,"field":"c[4]","severity":"major","issue":"‘자동차 앞면 창유리 좌측 상단’을 단순히 여러 창문의 좌측 상단으로 번역하여 부착 위치가 달라짐.","suggestion":"The school bus report certificate must be attached in an easily visible place at the upper-left corner of the vehicle's front windshield."},{"n":299,"field":"c[1]","severity":"minor","issue":"제한속도 준수뿐 아니라 ‘항상 서행한다’는 원문의 운전방법이 번역에서 누락됨.","suggestion":"A school zone may have a speed limit of 30 km/h or less when necessary to protect children, and drivers must always proceed slowly within the speed limit."},{"n":301,"field":"c[4]","severity":"major","issue":"통학버스의 ‘점멸등 등의 장치’를 일반 비상점멸등(hazard lights)으로 오역함.","suggestion":"Those under six years of age are considered infants, and the school bus's flashing-light devices must also be operated when infants are getting on or off the bus."},{"n":307,"field":"c[1]","severity":"critical","issue":"원문은 적색 점멸등을 켜고 정차한 통학버스의 바로 옆 차로를 차량이 통행하는 상황인데, 번역은 통학버스가 운전자의 옆 차로를 지나가는 상황으로 주체와 이동 관계가 뒤바뀜.","suggestion":"If driving in the lane immediately next to the lane where a school bus is stopped with its red flashing lights operating, the driver must come to a temporary stop."},{"n":313,"field":"c[4]","severity":"major","issue":"‘주출입문 연결도로’를 근거 없이 ‘주택 대문 옆 도로’로 번역하여 장소의 의미가 달라짐.","suggestion":"Installing an on-street parking area for older persons on the road connected to the main entrance."},{"n":320,"field":"b","severity":"major","issue":"‘2주 진단’을 ‘2주간 입원’으로 번역하여 상해의 진단 기간을 입원 기간으로 바꿈.","suggestion":"A passenger-car driver belatedly noticed an elderly person crossing at a crosswalk without pedestrian signals and braked suddenly, but struck the pedestrian, resulting in an injury requiring two weeks of treatment. Which TWO statements are correct?"}]

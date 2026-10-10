@@ -1,0 +1,1574 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125c9-44b8-79e3-ad4d-b515285a2fff
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/204_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/204_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 566ms:
+[
+ {
+  "n": 161,
+  "ko_b": "蹂댄뻾???곗꽑?꾨줈??????ㅻ챸?쇰줈 媛??諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먯슦?좊룄濡쒖뿉??蹂댄뻾?먮뒗 ?꾨줈???곗륫 媛?μ옄由щ줈留??듯뻾?????덈떎.",
+   "?댁쟾?먯뿉寃뚮뒗 ?쒗뻾, ?쇱떆?뺤? ??媛곸쥌 蹂댄뻾??蹂댄샇 ?섎Т媛 遺?щ맂??",
+   "蹂댄뻾??蹂댄샇 ?섎Т瑜?遺덉씠?됲븯???寃쎌슦 ?뱀슜?먮룞李?湲곗? 4留뚯썝??踰붿튃湲덇낵 10?먯쓽 踰뚯젏 泥섎텇????곸씠??",
+   "寃쎌같?쒖옣? 蹂댄뻾??蹂댄샇瑜??꾪빐 ?꾩슂?섎떎怨??몄젙??寃쎌슦 李⑤웾 ?듯뻾?띾룄瑜?20km/h ?대궡濡??쒗븳?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT true about pedestrian-first roads?",
+  "tr_c": [
+   "On a pedestrian-first road, pedestrians can only walk along the right edge of the road.",
+   "Drivers are obligated to exercise various forms of pedestrian protection such as slowing down and coming to a  complete stop.",
+   "A driver who fails to fulfill his/her duty to protect pedestrians is subject to a traffic penalty of KRW 40,000 and a penalty of 10 points based on the standards for passenger vehicles.",
+   "If deemed necessary for pedestrian protection, the chief of a police station can limit the vehicle speed to 20 km/h or  less."
+  ]
+ },
+ {
+  "n": 162,
+  "ko_b": "?쒕궡 ?꾨줈瑜?留ㅼ떆 50?щ줈誘명꽣濡?二쇳뻾?섎뜕 以?臾대떒?〓떒 以묒씤 蹂댄뻾?먮? 諛쒓껄?섏??? 媛???곸젅??議곗튂??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒 以묒씠誘濡??쇰떒 湲됰툕?덉씠?щ? 諛잛븘 硫덉텣??",
+   "蹂댄뻾?먯쓽 ?吏곸엫???덉륫?섏뿬 洹??ъ씠濡?二쇳뻾?쒕떎.",
+   "?띾룄瑜?以꾩씠硫?硫덉텧 以鍮꾨? ?섍퀬 鍮꾩긽?먮㈇?깆쑝濡??ㅼ감?먮룄 ?뚮━硫댁꽌 ?덉쟾?섍쾶 ?뺤??쒕떎.",
+   "蹂댄뻾?먯뿉寃?寃쎌쓬湲곕줈 二쇱쓽瑜?二쇰ŉ ?ㅼ냼 ?띾룄瑜??믪뿬 ?듦낵?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "While driving at 50 km/h on a city road, you find a pedestrian jaywalking. Which of the following is the most  appropriate measure to take?",
+  "tr_c": [
+   "Brake suddenly because the pedestrian is crossing the road.",
+   "Go past the pedestrian by predicting his/her movement.",
+   "Slow down your car, turn on the emergency flashers to notify the car behind you, and stop safely.",
+   "Slightly increase the speed to pass while warning the pedestrian by honking."
+  ]
+ },
+ {
+  "n": 163,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 蹂댄샇 ?깆뿉 愿???ㅻ챸?쇰줈 留욎? ?딆? 寃껋??",
+  "ko_c": [
+   "?꾨줈???ㅼ튂???덉쟾吏???蹂댄뻾?먭? ?덈뒗 寃쎌슦? 李⑤줈媛 ?ㅼ튂?섏? ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃??곗뿉???덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾 ?섍쾶 ?〓떒?????덈룄濡??섏뿬???쒕떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?녿뒗 ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐媛 ???뚯뿉???쒗뻾?섍굅???쇱떆??吏?섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?듯뻾?????덈룄濡??섏뿬???쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌??蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about a driver's duty to protect  pedestrians?",
+  "tr_c": [
+   "The driver must slow down while keeping a safe distance when pedestrians are passing through a safety zone set up on the road and when he/she passes by pedestrians on a narrow road with no markings.",
+   "A driver who sees a pedestrian jaywalking must stop the vehicle at a distance for the pedestrian to cross the road safely.",
+   "A driver who is driving on a road with no centerline and where the roadway and sidewalk are not distinguishable must slow down or stop for pedestrians to travel safely.",
+   "If a crosswalk in a school zone has no traffic light, the driver has to slow down in front of the crosswalk (a stop line if there is any) even if there are no pedestrians crossing."
+  ]
+ },
+ {
+  "n": 164,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈?먯꽌 13??誘몃쭔???대┛?닿? (        )瑜????寃쎌슦?먮뒗 ?대┛?댁쓽 ?덉쟾???꾪빐 ?몃챸蹂댄샇 ?κ뎄瑜?      李⑹슜?섏뿬???쒕떎. (      )???대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "?λ낫??,
+   "?몃컻?먯쟾嫄?,
+   "?몃씪???ㅼ??댄듃",
+   "?ㅼ??댄듃 蹂대뱶"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, a child below the age of 13 should wear protective gear for safety when  riding (  ). Which of the following does NOT fit in (  )?",
+  "tr_c": [
+   "Scooter",
+   "Unicycles",
+   "In-line skates",
+   "Skateboard"
+  ]
+ },
+ {
+  "n": 165,
+  "ko_b": "蹂댄뻾?먯쓽 蹂댄샇?섎Т??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "臾대떒 ?〓떒?섎뒗 ??痍⑦븳 蹂댄뻾?먮? 蹂댄샇???꾩슂 ?녿떎.",
+   "?좏샇?깆씠 ?덈뒗 ?꾨줈?먯꽌???〓떒 以묒씤 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬??臾대갑?섎떎.",
+   "蹂댄뻾???좏샇湲곗뿉 ?뱀깋 ?좏샇媛 ?먮㈇?섍퀬 ?덈뒗 寃쎌슦 李⑤웾??吏꾪뻾?대룄 ?쒕떎.",
+   "?좏샇?깆씠 ?덈뒗 援먯감濡쒖뿉???고쉶?꾪븷 寃쎌슦 ?좏샇???곕Ⅴ??蹂댄뻾?먮? 諛⑺빐?댁꽌???꾨땲 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is correct regarding the duty to protect pedestrians?",
+  "tr_c": [
+   "There is no need to protect a drunken pedestrian who is jaywalking.",
+   "It is okay to impede the passage of a pedestrian crossing a road with traffic signals.",
+   "When the green light for pedestrians is flashing, a car can proceed.",
+   "When turning right at an intersection with traffic signals, the driver shall not impede the passage of a pedestrian who is  obeying the signal."
+  ]
+ },
+ {
+  "n": 166,
+  "ko_b": "?꾨줈??以묒븰???듯뻾?????덈뒗 ?щ엺 ?먮뒗 ?됰젹濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?쒓??됱쭊?섎뒗 ?됰젹",
+   "留? ???깆쓽 ???숇Ъ??紐곌퀬 媛???щ엺",
+   "?꾨줈??泥?냼 ?먮뒗 蹂댁닔 ???꾨줈?먯꽌 ?묒뾽 以묒씤 ?щ엺",
+   "湲??먮뒗 ?꾩닔留??깆쓣 ?대????μ쓽 ?됰젹"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following persons or processions can pass through the center of a road?",
+  "tr_c": [
+   "A parade for an important social event",
+   "A person riding a large animal such as a horse or a cow",
+   "A person cleaning or repairing the road",
+   "A funeral procession holding flags or banners"
+  ]
+ },
+ {
+  "n": 167,
+  "ko_b": "?먮룞李??댁쟾?먭? ?좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄瑜??듦낵????媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "?〓떒?섎뒗 ?щ엺???녿떎 ?섎뜑?쇰룄 ?꾨갑怨?洹?二쇰??????댄뵾硫?媛먯냽?쒕떎.",
+   "?〓떒?섎뒗 ?щ엺???놁쑝誘濡?洹몃?濡?吏꾪뻾?쒕떎.",
+   "?〓떒?섎뒗 ?щ엺???놁쓣 ??鍮좊Ⅴ寃?吏?섍컙??",
+   "?〓떒?섎뒗 ?щ엺???덉쓣 ???덉쑝誘濡?寃쎌쓬湲곕? ?몃━硫?洹몃?濡?吏꾪뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the safest way of driving a motor vehicle when passing through a crosswalk without  traffic lights?",
+  "tr_c": [
+   "Even if there are no pedestrians crossing, the driver should carefully check the front and the surroundings and reduce  speed.",
+   "Since there are no pedestrians crossing, proceed without taking any action.",
+   "When there are no pedestrians crossing, proceed quickly.",
+   "Honk while driving through to alarm the pedestrians."
+  ]
+ },
+ {
+  "n": 168,
+  "ko_b": "泥좉만嫄대꼸紐⑹쓣 ?듦낵?섎떎媛 怨좎옣?쇰줈 嫄대꼸紐??덉뿉??李⑤? ?댄뻾?????녿뒗 寃쎌슦 ?댁쟾?먯쓽 議곗튂?붾졊?쇰줈 諛붾Ⅴ吏 ?딅뒗 寃껋??",
+  "ko_c": [
+   "利됱떆 ?숈듅?먮? ??쇱떆?⑤떎.",
+   "鍮꾩긽 ?좏샇湲??깆쓣 ?ъ슜?쒕떎.",
+   "泥좊룄怨듬Т?먯뿉寃??뚮┛??",
+   "李⑤웾??怨좎옣 ?먯씤???좎냽???뺤씤?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "If a vehicle is stopped on the railroad crossing due to vehicle failure while passing through, which of the  following is NOT proper behavior by the driver?",
+  "tr_c": [
+   "Immediately evacuate all passengers.",
+   "Use emergency signal devices.",
+   "Notify a railway official.",
+   "Quickly check the cause of the vehicle?셲 failure."
+  ]
+ },
+ {
+  "n": 169,
+  "ko_b": "李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섏뿬 嫄대Ъ ?깆뿉 吏꾩엯?섎젮怨??쒕떎. ?댁쟾?먭? ?댁빞 ???쒖꽌濡??щ컮瑜?寃껋??",
+  "ko_c": [
+   "?쒗뻾 ??諛⑺뼢吏?쒕벑 ?묐룞 ???좎냽 吏꾩엯",
+   "?쇱떆?뺤? ??寃쎌쓬湲??ъ슜 ???좎냽 吏꾩엯",
+   "?쒗뻾 ??醫뚯륫怨??곗륫遺遺??뺤씤 ???쒗뻾 吏꾩엯",
+   "?쇱떆?뺤? ??醫뚯륫怨??곗륫遺遺??뺤씤 ???쒗뻾 吏꾩엯"
+  ],
+  "a": "4",
+  "tr_b": "A vehicle is about to go across a sidewalk to enter a building. Which of the following is the correct sequence?",
+  "tr_c": [
+   "Slow down ??turn on the turn signal ??enter quickly",
+   "Stop ??honk ??enter quickly",
+   "Slow down ??check both sides ??enter slowly",
+   "Stop ??check both sides ??enter slowly"
+  ]
+ },
+ {
+  "n": 170,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 ?꾨줈 ?〓떒 諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "紐⑤뱺 李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?〓떒?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "吏泥댁옣?좎씤??寃쎌슦?쇰룄 諛섎뱶???꾨줈 ?〓떒 ?쒖꽕???댁슜?섏뿬 ?꾨줈瑜??〓떒?섏뿬???쒕떎.",
+   "?덉쟾?쒖? ?깆뿉 ?섑븯???〓떒??湲덉??섏뼱 ?덈뒗 ?꾨줈??遺遺꾩뿉?쒕뒗 洹??꾨줈瑜??〓떒?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈?먯꽌??媛??吏㏃? 嫄곕━濡??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, which of the following is an INCORRECT description of safe pedestrian  crossing?",
+  "tr_c": [
+   "Do not walk right in front of or behind cars to cross the road.",
+   "You must cross the road by using a crosswalk or such facilities even if you have a disability.",
+   "Do not cross the road at a section marked with a safety sign or one that specifically instructs pedestrians not to cross.",
+   "When there is no crosswalk, cross the road at its shortest section."
+  ]
+ },
+ {
+  "n": 171,
+  "ko_b": "?쇨컙???꾨줈 ?곸쓽 蹂댄뻾?먮굹 臾쇱껜?ㅼ씠 ?쇱떆?곸쑝濡???蹂댁씠寃??섎뒗?쒖쬆諛??꾩긽?앹씠 ?쇱뼱?섍린 ?ъ슫 ?꾩튂??",
+  "ko_c": [
+   "諛섎? 李⑤줈??媛?μ옄由?,
+   "二쇳뻾 李⑤줈???곗륫 遺遺?,
+   "?꾨줈??以묒븰??遺洹?,
+   "?꾨줈 ?곗륫??媛?μ옄由?
+  ],
+  "a": "3",
+  "tr_b": "Where does \"disappearance\"?봞 phenomenon wherein pedestrians or objects on roads vanish temporarily from  the driver?셲 sight?봮ccur most frequently?",
+  "tr_c": [
+   "Edge of the opposite lane",
+   "Right side of the driver's lane",
+   "Around the centerline of the road",
+   "Right edge of the road"
+  ]
+ },
+ {
+  "n": 172,
+  "ko_b": "蹂댄뻾?먯쓽 ?듯뻾??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?꾨줈 ?〓떒 ??李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?좎냽???〓떒?섏뿬???쒕떎.",
+   "吏泥??μ븷?몄? ?꾨줈 ?〓떒?쒖꽕???덈뒗 ?꾨줈?먯꽌 諛섎뱶??洹멸납?쇰줈 ?〓떒?섏뿬???쒕떎.",
+   "蹂댄뻾?먮뒗 ?덉쟾?쒖? ?깆뿉 ?섑븯???〓떒??湲덉????꾨줈?먯꽌???좎냽?섍쾶 ?꾨줈瑜??〓떒?섏뿬???쒕떎.",
+   "蹂댄뻾?먮뒗 ?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈?먯꽌??媛??吏㏃? 嫄곕━濡??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is correct regarding safe pedestrian crossing?",
+  "tr_c": [
+   "Pedestrians must walk quickly around the front or rear of vehicles to cross the street.",
+   "Disabled pedestrians must cross the road using road-crossing facilities where such facilities are present.",
+   "Where a sign prohibiting road crossing is present, pedestrians must cross the road quickly.",
+   "On a road with no crosswalk, pedestrians must cross using the shortest line of travel possible."
+  ]
+ },
+ {
+  "n": 173,
+  "ko_b": "蹂댄뻾?먯쓽 蹂대룄?듯뻾 ?먯튃?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂대룄 ???곗륫?듯뻾",
+   "蹂대룄 ??醫뚯륫?듯뻾",
+   "蹂대룄 ??以묒븰?듯뻾",
+   "蹂대룄 ???듯뻾?먯튃? ?놁쓬"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct part of a footpath that pedestrians should walk on?",
+  "tr_c": [
+   "The right side",
+   "The left side",
+   "Along the middle",
+   "No pedestrian traffic rules on the sidewalk"
+  ]
+ },
+ {
+  "n": 174,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌 ?댁쟾?먯쓽 ?됰룞?쇰줈 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??蹂댄뻾?먯쓽 ?덉쟾???뺤씤?섍퀬 ?쒗뻾?섎ŉ ?듦낵?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉???쇱떆?뺤??섏뿬 蹂댄뻾?먯쓽 ?〓떒??蹂댄샇?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쒗뻾?섎ŉ ?듯뻾?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "A vehicle is about to drive across a crosswalk in a school zone with no traffic lights. Which of the following are  the correct actions of the driver? (Select TWO)",
+  "tr_c": [
+   "When there are pedestrians crossing, the driver must drive across the crosswalk slowly and ensure pedestrian safety.",
+   "When there are pedestrians crossing, the driver must stop the vehicle and wait until all pedestrians have crossed.",
+   "The driver must drive across the crosswalk slowly regardless of pedestrians crossing.",
+   "The driver must stop the vehicle regardless of pedestrians crossing."
+  ]
+ },
+ {
+  "n": 175,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾??蹂댄샇??????ㅻ챸 以?留욌뒗 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곕? ?뚭퀬 嫄몄뼱媛???щ엺? 蹂댄뻾?먯뿉 ?대떦?섏? ?딅뒗??",
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒖뿉 癒쇱? 吏꾩엯??李⑤웾? 蹂댄뻾?먯뿉 ?곗꽑?섏뿬 ?듯뻾??沅뚰븳???덈떎.",
+   "?쑣룸룄寃쎌같泥?옣? 蹂댄뻾?먯쓽 ?듯뻾??蹂댄샇?섍린 ?꾪빐 ?꾨줈??蹂댄뻾???꾩슜 ?꾨줈瑜??ㅼ튂?????덈떎.",
+   "蹂댄뻾???꾩슜 ?꾨줈?먮뒗 ?좊え李⑤? ?뚭퀬 媛????덈떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "According to the Road Traffic Act, which of the following are TWO correct explanations of pedestrian protection?",
+  "tr_c": [
+   "A cyclist walking his/her bicycle is not considered a pedestrian.",
+   "A vehicle that is the first to enter an intersection where there is no traffic control has the right of way over pedestrians.",
+   "The commissioner of the City/Do (Province) police agency can install a pedestrian-only road for pedestrians for their  protection.",
+   "Baby carriages are allowed on the exclusive road for pedestrians."
+  ]
+ },
+ {
+  "n": 176,
+  "ko_b": "蹂댄뻾?먯쓽 ?듯뻾??????ㅻ챸 以?留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 李⑤룄瑜??듯뻾?섎뒗 寃쎌슦 ??긽 李⑤룄??醫뚯륫?쇰줈 ?듯뻾?댁빞 ?쒕떎.",
+   "蹂댄뻾?먮뒗 ?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?됱쭊 ?쒖뿉???꾨줈??以묒븰?쇰줈 ?듯뻾?????덈떎.",
+   "?꾨줈?〓떒?쒖꽕???댁슜?????녿뒗 吏泥댁옣?좎씤? ?꾨줈?〓떒?쒖꽕???댁슜?섏? ?딄퀬 ?꾨줈瑜??〓떒?????덈떎.",
+   "?꾨줈?〓떒?쒖꽕???녿뒗 寃쎌슦 蹂댄뻾?먮뒗 ?덉쟾???꾪빐 媛??湲?嫄곕━濡??꾨줈瑜??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are TWO good pedestrian behaviors?",
+  "tr_c": [
+   "A pedestrian using a road must always walk using the left side of the road.",
+   "A pedestrian taking part in a parade for a special social event can walk in the middle of a road.",
+   "A disabled person who is unable to use road-crossing facilities can cross a road anywhere.",
+   "A pedestrian must take the longest route to cross the road if there are no road-crossing facilities."
+  ]
+ },
+ {
+  "n": 177,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섎뒗 諛⑸쾿???꾨컲??寃쎌슦 踰붿튃湲덉??",
+  "ko_c": [
+   "3留???,
+   "4留???,
+   "5留???,
+   "6留???
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the traffic penalty imposed on the driver of a passenger car for illegal driving on a  sidewalk?",
+  "tr_c": [
+   "KRW 30,000",
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 60,000"
+  ]
+ },
+ {
+  "n": 178,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂댄뻾??蹂댄샇? 愿?⑤맂 ?뱀슜?먮룞李??댁쟾?먯쓽 踰붿튃?됱쐞?????踰붿튃湲덉븸???ㅻⅨ 寃껋?? (蹂댄샇援ъ뿭? ?쒖쇅)",
+  "ko_c": [
+   "?좏샇???곕씪 ?꾨줈瑜??〓떒?섎뒗 蹂댄뻾???〓떒 諛⑺빐",
+   "蹂댄뻾???꾩슜?꾨줈 ?듯뻾?꾨컲",
+   "?꾨줈瑜??듯뻾?섍퀬 ?덈뒗 李⑥뿉??諛뽰쑝濡?臾쇨굔???섏????됱쐞",
+   "?대┛?닳ㅼ븵??蹂댁? 紐삵븯???щ엺 ?깆쓽 蹂댄샇 ?꾨컲"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which is a case of violations by passenger vehicle drivers related to pedestrian safety and which have a different traffic penalty amount compared to other cases? (Excluding specific zones, e.g., school zones)",
+  "tr_c": [
+   "Interrupting pedestrians crossing the road when the walk signal is lit",
+   "Entering a pedestrian-only road",
+   "Throwing an object onto the road from a moving vehicle",
+   "Failing to protect children, visually impaired, etc."
+  ]
+ },
+ {
+  "n": 179,
+  "ko_b": "蹂댄뻾?먯뿉 ????댁쟾?먯쓽 諛붾엺吏곹븳 ?쒕룄??",
+  "ko_c": [
+   "?꾨줈瑜?臾대떒 ?〓떒?섎뒗 蹂댄뻾?먮뒗 蹂댄샇諛쏆쓣 ???녿떎.",
+   "?먮룞李??놁쓣 吏?섎뒗 蹂댄뻾?먯뿉寃??좉꼍 ?곗? ?딆븘???쒕떎.",
+   "蹂댄뻾?먭? ?먮룞李⑤? ?쇳빐???쒕떎.",
+   "?댁쟾?먮뒗 蹂댄뻾?먮? ?곗꽑?쇰줈 蹂댄샇?댁빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the right attitude that a driver should adopt toward pedestrians?",
+  "tr_c": [
+   "Jaywalkers need not be protected.",
+   "There is no need to pay attention to pedestrians on the side of the vehicle.",
+   "It is the pedestrians' responsibility to dodge vehicles.",
+   "The driver must prioritize pedestrian safety."
+  ]
+ },
+ {
+  "n": 180,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾?먭? ?꾨줈瑜??〓떒?????덇쾶 ?덉쟾?쒖?濡??쒖떆???꾨줈??遺遺꾩쓣 臾댁뾿?대씪 ?섎뒗媛?",
+  "ko_c": [
+   "蹂대룄",
+   "湲멸??μ옄由ш뎄??,
+   "?〓떒蹂대룄",
+   "蹂댄뻾???꾩슜?꾨줈"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, the part of the road marked with road safety signs that allow pedestrians to  cross the road is called ( ).",
+  "tr_c": [
+   "Sidewalk",
+   "Roadside area",
+   "Crosswalk",
+   "Pedestrian-only road"
+  ]
+ },
+ {
+  "n": 181,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?먯뿉 ????댁쟾??議곗튂濡??섎せ??寃껋??",
+  "ko_c": [
+   "?대┛?대낫???쒖?媛 ?덈뒗 怨녹뿉?쒕뒗 ?대┛?닿? ?곗뼱 ?섏삤???쇱씠 ?덉쑝誘濡?二쇱쓽?댁빞 ?쒕떎.",
+   "蹂대룄瑜??〓떒?섍린 吏곸쟾???쒗뻾?섏뿬 蹂댄뻾?먮? 蹂댄샇?댁빞 ?쒕떎.",
+   "臾대떒 ?〓떒?섎뒗 蹂댄뻾?먮룄 ?쇰떒 蹂댄샇?댁빞 ?쒕떎.",
+   "?대┛?닿? 蹂댄샇???놁씠 ?꾨줈瑜??〓떒 以묒씪 ?뚯뿉???쇱떆 ?뺤??댁빞 ?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT appropriate behavior on the part of a driver toward pedestrians?",
+  "tr_c": [
+   "Watch out for children in areas with the \"school zone\" sign.",
+   "Drive slowly to protect pedestrians who are about to cross a crosswalk.",
+   "Pedestrians crossing the road illegally must also be protected.",
+   "Stop if there is a child crossing the road without a guardian."
+  ]
+ },
+ {
+  "n": 182,
+  "ko_b": "蹂댄뻾?먯쓽 ?꾨줈 ?〓떒諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 媛??吏㏃? 嫄곕━濡??〓떒?댁빞 ?쒕떎.",
+   "蹂댄뻾?먮뒗 紐⑤뱺 李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?〓떒?섎㈃ ???쒕떎.",
+   "臾대떒?〓떒 諛⑹?瑜??꾪븳 李⑥꽑遺꾨━?媛 ?ㅼ튂??怨녹씠?쇰룄 ?섏뼱???〓떒?????덈떎.",
+   "?꾨줈怨듭궗 ?깆쑝濡?蹂대룄???듯뻾??湲덉?????李⑤룄濡??듯뻾?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is an INCORRECT method of crossing the road for a pedestrian?",
+  "tr_c": [
+   "Pedestrians must take the shortest route when crossing a road without a crosswalk.",
+   "Pedestrians must not cross the road around the front or rear of a vehicle.",
+   "Pedestrians can climb over a lane partition placed to prevent illegal crossing on the road.",
+   "Pedestrians can walk on the road if the sidewalk is closed for construction."
+  ]
+ },
+ {
+  "n": 183,
+  "ko_b": "?욎쓣 蹂댁? 紐삵븯???щ엺??以?섎뒗 踰붿쐞???대떦?섏? ?딅뒗 ?щ엺??",
+  "ko_c": [
+   "?대┛???먮뒗 ?곥냽?좎븘",
+   "?섏” ?깆쓣 ?ъ슜?섏? ?꾨땲?섍퀬??蹂댄뻾???????녿뒗 ?щ엺",
+   "?좎껜???됲삎湲곕뒫???μ븷媛 ?덈뒗 ?щ엺",
+   "?ｌ? 紐삵븯???щ엺"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT classified as a person corresponding to one who is visually impaired?",
+  "tr_c": [
+   "Infant or child",
+   "An individual who is unable to walk without a prosthetic limb",
+   "An individual who has trouble maintaining bodily balance",
+   "A deaf person"
+  ]
+ },
+ {
+  "n": 184,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭 ?덉뿉??(   )~(   ) ?ъ씠???좏샇?꾨컲?????뱀슜李??댁쟾?먯뿉 ???湲곗〈??踰뚯젏??2諛곕줈  遺怨쇳븳?? (   )???쒖꽌?濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅼ쟾 6?? ?ㅽ썑 6??,
+   "?ㅼ쟾 7?? ?ㅽ썑 7??,
+   "?ㅼ쟾 8?? ?ㅽ썑 8??,
+   "?ㅼ쟾 9?? ?ㅽ썑 9??
+  ],
+  "a": "3",
+  "tr_b": "The driver of a passenger car who commits a violation of a traffic signal between ( ) and ( ) in a school zone receives double the demerit points. Which of the following belongs in the pair of brackets?",
+  "tr_c": [
+   "6 AM, 6 PM",
+   "7 AM, 7 PM",
+   "8 AM, 8 PM",
+   "9 AM, 9 PM"
+  ]
+ },
+ {
+  "n": 185,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4.5???붾Ъ?먮룞李④? ?ㅼ쟾 10?쒕???11?쒓퉴吏 ?몄씤蹂댄샇援ъ뿭?먯꽌 二쇱감?꾨컲????寃쎌슦 怨쇳깭猷뚮뒗?",
+  "ko_c": [
+   "4留???,
+   "5留???,
+   "9留???,
+   "10留???
+  ],
+  "a": "3",
+  "tr_b": "What is the administrative fine imposed on the driver of a 4.5-ton truck parked illegally in a silver zone between  10 AM and 11 AM?",
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 90,000",
+   "KRW 100,000"
+  ]
+ },
+ {
+  "n": 186,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?먯쓽 ?듯뻾諛⑸쾿?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂대룄?먯꽌??醫뚯륫?듯뻾???먯튃?쇰줈 ?쒕떎.",
+   "蹂댄뻾?먯슦?좊룄濡쒖뿉?쒕뒗 ?꾨줈????遺遺꾩쓣 ?듯뻾?????덈떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌???몄젣??蹂대룄濡??듯뻾?섏뿬???쒕떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?딆? ?꾨줈 以?以묒븰?좎씠 ?덈뒗 ?꾨줈?먯꽌??湲멸??μ옄由ш뎄??쑝濡??듯뻾?섏뿬???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is an INCORRECT method of traveling for a pedestrian?",
+  "tr_c": [
+   "Walk on the left side of a sidewalk.",
+   "Pedestrians are allowed to use any part of the pedestrian-first road.",
+   "Pedestrians must walk on the sidewalk on roads where the sidewalk and roadways are separated.",
+   "For roads without a clear distinction of the sidewalks but have a centerline, pedestrians must use the roadside area to  walk."
+  ]
+ },
+ {
+  "n": 187,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤룄瑜??듯뻾?????덈뒗 ?щ엺 ?먮뒗 ?됰젹???꾨땶 寃쎌슦??",
+  "ko_c": [
+   "?꾨줈?먯꽌 泥?냼??蹂댁닔 ?깆쓽 ?묒뾽???섍퀬 ?덉쓣 ??,
+   "留먃룹냼 ?깆쓽 ???숇Ъ??紐곌퀬 媛???,
+   "?좊え李⑤? ?뚭퀬 媛???щ엺",
+   "?μ쓽(?у?) ?됰젹????
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT permitted to travel on a roadway?",
+  "tr_c": [
+   "Cleaning or maintenance personnel working on roads",
+   "A person driving a large animal such as horse or cattle",
+   "A person who is pushing a stroller",
+   "A funeral procession"
+  ]
+ },
+ {
+  "n": 188,
+  "ko_b": "?댁쟾?먭? 吏꾪뻾諛⑺뼢 ?좏샇?깆씠 ?곸깋?????뺤??좎쓣 珥덇낵?섏뿬 ?뺤???寃쎌슦 泥섎쾶 湲곗???",
+  "ko_c": [
+   "援먯감濡??듯뻾諛⑸쾿?꾨컲",
+   "?쇱떆?뺤? ?꾨컲",
+   "?좏샇?꾨컲",
+   "?쒗뻾?꾨컲"
+  ],
+  "a": "3",
+  "tr_b": "What are the grounds for the penalty faced by a driver who stops over the stop line when the traffic light has  turned red?",
+  "tr_c": [
+   "Violation of intersection thoroughfare",
+   "Failure to stop",
+   "Violation of traffic signal",
+   "Violation of slow driving"
+  ]
+ },
+ {
+  "n": 189,
+  "ko_b": "?ㅼ쓬 以??욎쓣 蹂댁? 紐삵븯???щ엺???μ븷?몃낫議곌껄???숇컲?섍퀬 ?꾨줈瑜??〓떒?섎뒗 紐⑥뒿??諛쒓껄?섏????뚯쓽 ?щ컮瑜??댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "二쇄ㅼ젙李?湲덉? ?μ냼??寃쎌슦 洹몃?濡?吏꾪뻾?쒕떎.",
+   "?쇱떆 ?뺤??쒕떎.",
+   "利됱떆 ?뺤감?섏뿬 ?욎쓣 蹂댁? 紐삵븯???щ엺???섎룎?꾧??꾨줉 ?덈궡?쒕떎.",
+   "寃쎌쓬湲곕? ?몃━硫?蹂댄샇?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the right method of driving when you spot a visually impaired person crossing the  road with a guide dog?",
+  "tr_c": [
+   "Keep going if stopping or parking is not allowed in the area.",
+   "Stop momentarily.",
+   "Stop and help the person go back the way he/she came.",
+   "Protect the person by honking."
+  ]
+ },
+ {
+  "n": 190,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ?욎뿉 ?쒕뒗 蹂댄뻾?먯쓽 ?〓떒?щ?? 愿怨꾩뾾??(    )?섏뿬???쒕떎. (   )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쒗뻾",
+   "?쇱떆?뺤?",
+   "?쒗뻾 ?먮뒗 ?쇱떆?뺤?",
+   "媛먯냽二쇳뻾"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, the driver of any type of vehicle must ( ) before reaching a crosswalk in a school zone with no traffic lights, regardless of pedestrians crossing. Which of the following best fills the parentheses?",
+  "tr_c": [
+   "slow down",
+   "stop",
+   "slow down or stop",
+   "reduce speed"
+  ]
+ },
+ {
+  "n": 191,
+  "ko_b": "?꾨줈瑜??〓떒?섎뒗 蹂댄뻾??蹂댄샇??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "援먯감濡??댁쇅???꾨줈?먯꽌??蹂댄뻾??蹂댄샇 ?섎Т媛 ?녿떎.",
+   "?좏샇瑜??꾨컲?섎뒗 臾대떒?〓떒 蹂댄뻾?먮뒗 蹂댄샇???섎Т媛 ?녿떎.",
+   "臾대떒?〓떒 蹂댄뻾?먮룄 蹂댄샇?섏뿬???쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈?먯꽌??臾대떒?〓떒 蹂댄뻾?먮? 蹂댄샇???섎Т媛 ?녿떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is correct regarding the protection of pedestrians crossing roads?",
+  "tr_c": [
+   "You have no responsibility to protect pedestrians on sections of a road other than an intersection.",
+   "You have no responsibility to protect pedestrians crossing the road illegally.",
+   "You have to protect pedestrians even when they are crossing the road illegally.",
+   "You have no responsibility to protect pedestrians crossing a one-way road illegally."
+  ]
+ },
+ {
+  "n": 192,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯튃?곸쑝濡?李⑤룄???듯뻾???덉슜?섏? ?딅뒗 ?щ엺??",
+  "ko_c": [
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?怨?媛???щ엺",
+   "?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?쒓?瑜??됱쭊?섎뒗 ?щ엺",
+   "?꾨줈?먯꽌 泥?냼??蹂댁닔 ?깆쓽 ?묒뾽???섍퀬 ?덈뒗 ?щ엺",
+   "?щ떎由???蹂댄뻾?먯쓽 ?듯뻾??吏?μ쓣 以??곕젮媛 ?덈뒗 臾쇨굔???대컲 以묒씤 ?щ엺"
+  ],
+  "a": "1",
+  "tr_b": "Who is NOT allowed to drive on the road according to the Road Traffic Act?",
+  "tr_c": [
+   "A person using a wheelchair to aid his/her movement",
+   "A person marching on the streets for an important social event",
+   "A person cleaning or doing maintenance work on a road",
+   "A person carrying an object that can hinder pedestrian thoroughfare, such as a ladder"
+  ]
+ },
+ {
+  "n": 193,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?깆쓽 ?뱀깋?깊솕媛 ?먮㈇????蹂댄뻾?먯쓽 媛???щ컮瑜??듯뻾諛⑸쾿??",
+  "ko_c": [
+   "?〓떒蹂대룄??吏꾩엯?섏? ?딆? 蹂댄뻾?먮뒗 ?ㅼ쓬 ?좏샇 ?뚭퉴吏 湲곕떎?몃떎媛 蹂댄뻾?깆쓽 ?뱀깋?깊솕 ???듯뻾?섏뿬???쒕떎.",
+   "?〓떒蹂대룄 以묎컙??洹몃깷 ???덈뒗??",
+   "?ㅼ쓬 ?좏샇瑜?湲곕떎由ъ? ?딄퀬 ?〓떒蹂대룄瑜?嫄대꼳??",
+   "?곸깋?깊솕濡?諛붾뚭린 ?꾩뿉???몄젣???〓떒???쒖옉?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the best method of crossing the road for a pedestrian when the green light at the  crosswalk is flashing?",
+  "tr_c": [
+   "A pedestrian who is not yet in the crosswalk must wait for the next green light to start crossing.",
+   "Stand still in the middle of the crosswalk.",
+   "Cross the road without waiting for the next signal.",
+   "The pedestrian can start crossing the road as long as the light does not turn red."
+  ]
+ },
+ {
+  "n": 194,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂대룄瑜??듯뻾?섎뒗 蹂댄뻾?먯뿉 ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "125?쒖떆 誘몃쭔???대쪣李⑤? ?怨?蹂대룄瑜??듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "?먯쟾嫄곕? ?怨?媛???щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?댁슜?섎뒗 ?щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "49?쒖떆 ?먮룞湲곗옣移섏옄?꾧굅瑜??怨?媛???щ엺? 蹂댄뻾?먮줈 蹂????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is correct regarding pedestrians using the sidewalk?",
+  "tr_c": [
+   "A person who rides a two-wheeled vehicle up to 125cc on the sidewalk can be considered a pedestrian.",
+   "A person riding a bicycle can be considered a pedestrian.",
+   "A person who uses a wheelchair can be considered a pedestrian.",
+   "A person who rides a 49cc motorcycle can be considered a pedestrian."
+  ]
+ },
+ {
+  "n": 195,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쟾?⑸룄濡쒖뿉 ????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?듯뻾???덉슜??李⑤쭏???댁쟾?먮뒗 ?듯뻾 ?띾룄瑜?蹂댄뻾?먯쓽 嫄몄쓬 ?띾룄濡??댄뻾?섏뿬???쒕떎.",
+   "李⑤쭏???댁쟾?먮뒗 ?먯튃?곸쑝濡?蹂댄뻾?먯쟾?⑸룄濡쒕? ?듯뻾?????덈떎.",
+   "寃쎌같?쒖옣???뱁엳 ?꾩슂?섎떎怨??몄젙?섎뒗 寃쎌슦??李⑤쭏???듯뻾???덉슜?????녿떎.",
+   "?듯뻾???덉슜??李⑤쭏???댁쟾?먮뒗 蹂댄뻾?먮? ?꾪뿕?섍쾶 ???뚮뒗 ?쇱떆?뺤??섏뿬???쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "According to the Road Traffic Act, which TWO correctly describe the rules for a pedestrian-only road?",
+  "tr_c": [
+   "The driver of a motor vehicle or a horse allowed on a pedestrian-only road must travel at the same speed as the  pedestrians.",
+   "In principle, the driver of a motor vehicle or a horse may use a pedestrian-only road.",
+   "The driver of a motor vehicle or a horse may not be allowed to enter a pedestrian-only road if and when deemed  necessary by the chief of police.",
+   "If there is a possibility that pedestrians could be exposed to danger, the driver of a motor vehicle or a horse on a pedestrian-only road must stop and remain stationary."
+  ]
+ },
+ {
+  "n": 196,
+  "ko_b": "?먮룞李⑥뿉 ?ｊ퀬 媛???붾Ъ???⑥뼱??蹂댄뻾?먯뿉寃?2二?吏꾨떒???곹빐瑜??낇엺 ?댁쟾?먯뿉 ???泥섎쾶 2媛吏??",
+  "ko_c": [
+   "?쇳빐?먯쓽 泥섎쾶?섏궗??愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎.",
+   "?쇳빐?먯? ?⑹쓽?섎㈃ 泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕??媛?낅릺???덉쑝硫?泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕媛???щ?? 愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "When a cargo falls from a vehicle and injures a pedestrian, necessitating a two-week period of hospitalization,  which two penalties among the following will be imposed on the driver?",
+  "tr_c": [
+   "Criminal offense charges are imposed on the driver regardless of the victim?셲 wishes to file charges.",
+   "No charges are filed if the driver comes to an agreement with the victim.",
+   "No charges are filed if the driver has a full-coverage insurance policy.",
+   "The driver is charged with a criminal offense regardless of the presence of a full-coverage insurance policy."
+  ]
+ },
+ {
+  "n": 197,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 蹂댄뻾?먯쓽 媛???щ컮瑜??〓떒諛⑸쾿??",
+  "ko_c": [
+   "?듦낵李⑤웾 諛붾줈 ?ㅻ줈 ?〓떒?쒕떎.",
+   "李⑤웾?듯뻾???놁쓣 ??鍮좊Ⅴ寃??〓떒?쒕떎.",
+   "?〓떒蹂대룄媛 ?녿뒗 怨녹씠誘濡??꾨Т 怨녹씠???〓떒?쒕떎.",
+   "?꾨줈?먯꽌 媛??吏㏃? 嫄곕━濡??〓떒?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is the most appropriate method of crossing a road  without a crosswalk for a pedestrian?",
+  "tr_c": [
+   "Cross the road right behind a passing vehicle.",
+   "Cross the road quickly when there are no cars passing by.",
+   "Cross anywhere as there is no crosswalk.",
+   "Cross the road using the shortest distance."
+  ]
+ },
+ {
+  "n": 198,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?〓떒蹂대룄瑜??〓떒?섎뒗 諛⑸쾿??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "媛쒖씤???대룞?μ튂瑜??뚭퀬 ?〓떒?????덈떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?怨??〓떒?????덈떎.",
+   "?먯쟾嫄곕? ?怨??〓떒?????덈떎.",
+   "?좊え李⑤? ?뚭퀬 ?〓떒?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT a correct explanation of how to traverse a  crosswalk?",
+  "tr_c": [
+   "A person may cross the crosswalk while pushing a personal mobility device.",
+   "A person may cross the crosswalk while on a motorized chair.",
+   "A person may cross the crosswalk while riding a bicycle.",
+   "A person may cross the crosswalk while pushing a stroller."
+  ]
+ },
+ {
+  "n": 199,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 李⑤쭏???듯뻾諛⑸쾿??????ㅻ챸?대떎. ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌??李⑤룄濡??듯뻾?섏뿬???쒕떎.",
+   "蹂대룄瑜??〓떒?섍린 吏곸쟾???쒗뻾?섏뿬 醫뙿룹슦瑜??댄? ??蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏? ?딅룄濡??〓떒?섏뿬???쒕떎.",
+   "?꾨줈 以묒븰???곗륫 遺遺꾩쑝濡??듯뻾?섏뿬???쒕떎.",
+   "?꾨줈媛 ?쇰갑?듯뻾??寃쎌슦 ?꾨줈??以묒븰?대굹 醫뚯륫 遺遺꾩쓣 ?듯뻾?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, which of the following methods of passage used by motor vehicles or horses  is NOT correct?",
+  "tr_c": [
+   "When the roadway and sidewalk are separated, be sure to use the roadway.",
+   "Drive slowly just before crossing a crosswalk, check left and right, and cross in a manner that does not impede the  passage of pedestrians.",
+   "Be sure to use the right-side roadway.",
+   "When it is a one-way road, you can drive in the center or left portion of the road."
+  ]
+ },
+ {
+  "n": 200,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 蹂댄샇??????ㅻ챸?대떎. ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섍퀬 ?덉쓣 ??洹?吏곸쟾???쇱떆?뺤??섏뿬???쒕떎.",
+   "寃쎌같怨듬Т?먯쓽 ?좏샇??吏?쒖뿉 ?곕씪 ?꾨줈瑜??〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "援먯감濡쒖뿉???꾨줈瑜??〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following guidelines for the protection of pedestrians is NOT  correct?",
+  "tr_c": [
+   "When a pedestrian is using the crosswalk, the driver must make a temporary stop before the crosswalk.",
+   "The driver shall not impede the passage of pedestrians who are crossing the road according to the signals or directions  given by a police officer.",
+   "A driver shall not impede the passage of pedestrians who are crossing the road at an intersection.",
+   "When a pedestrian is crossing a road without a crosswalk, the driver must drive slowly while maintaining a safe distance."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/204_choices_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+def fix(s):
+    try:return s.encode('latin1').decode('utf-8')
+    except:return s
+for x in data:
+ print('\\n',x['n'],fix(x['ko_b']))
+ for i,(k,t) in enumerate(zip(x['ko_c'],x['tr_c']),1): print(i,fix(k),' || ',t)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:28:43.620042Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:13 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 681ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:13 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/204_choices_en.json' | ConvertFrom-Json
+"'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8
+foreach($x in $data){
+  Write-Output "`n$($x.n) $($utf8.GetString($cp949.GetBytes($x.ko_b)))"
+  for($i=0;$i -lt $x.ko_c.Count;$i++){ Write-Output "$($i+1) $($utf8.GetString($cp949.GetBytes($x.ko_c[$i]))) || $($x.tr_c[$i])" }
+}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 780ms:
+ConvertFrom-Json : 잘못된 배열이 전달되었습니다. ','가 필요합니다. (3563): [
+ {
+  "n": 161,
+  "ko_b": "蹂댄뻾???곗꽑?꾨줈??????ㅻ챸?쇰줈 媛??諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먯슦?좊룄濡쒖뿉??蹂댄뻾?먮뒗 ?꾨줈???곗륫 媛?μ옄由щ줈留??듯뻾?????덈떎.",
+   "?댁쟾?먯뿉寃뚮뒗 ?쒗뻾, ?쇱떆?뺤? ??媛곸쥌 蹂댄뻾??蹂댄샇 ?섎Т媛 遺?щ맂??",
+   "蹂댄뻾??蹂댄샇 ?섎Т瑜?遺덉씠?됲븯???寃쎌슦 ?뱀슜?먮룞李?湲곗? 4留뚯썝??踰붿튃湲덇낵 10?먯쓽 踰뚯젏 泥섎텇????곸씠??",
+   "寃쎌같?쒖옣? 蹂댄뻾??蹂댄샇瑜??꾪빐 ?꾩슂?섎떎怨??몄젙??寃쎌슦 李⑤웾 ?듯뻾?띾룄瑜?20km/h ?대궡濡??쒗븳?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT true about pedestrian-first roads?",
+  "tr_c": [
+   "On a pedestrian-first road, pedestrians can only walk along the right edge of the road.",
+   "Drivers are obligated to exercise various forms of pedestrian protection such as slowing down and coming to a  comp
+lete stop.",
+   "A driver who fails to fulfill his/her duty to protect pedestrians is subject to a traffic penalty of KRW 40,000 and
+ a penalty of 10 points based on the standards for passenger vehicles.",
+   "If deemed necessary for pedestrian protection, the chief of a police station can limit the vehicle speed to 20 km/h
+ or  less."
+  ]
+ },
+ {
+  "n": 162,
+  "ko_b": "?쒕궡 ?꾨줈瑜?留ㅼ떆 50?щ줈誘명꽣濡?二쇳뻾?섎뜕 以?臾대떒?〓떒 以묒씤 蹂댄뻾?먮? 諛쒓껄?섏??? 媛???곸젅??議곗튂??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒 以묒씠誘濡??쇰떒 湲됰툕?덉씠?щ? 諛잛븘 硫덉텣??",
+   "蹂댄뻾?먯쓽 ?吏곸엫???덉륫?섏뿬 洹??ъ씠濡?二쇳뻾?쒕떎.",
+   "?띾룄瑜?以꾩씠硫?硫덉텧 以鍮꾨? ?섍퀬 鍮꾩긽?먮㈇?깆쑝濡??ㅼ감?먮룄 ?뚮━硫댁꽌 ?덉쟾?섍쾶 ?뺤??쒕떎.",
+   "蹂댄뻾?먯뿉寃?寃쎌쓬湲곕줈 二쇱쓽瑜?二쇰ŉ ?ㅼ냼 ?띾룄瑜??믪뿬 ?듦낵?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "While driving at 50 km/h on a city road, you find a pedestrian jaywalking. Which of the following is the mos
+t  appropriate measure to take?",
+  "tr_c": [
+   "Brake suddenly because the pedestrian is crossing the road.",
+   "Go past the pedestrian by predicting his/her movement.",
+   "Slow down your car, turn on the emergency flashers to notify the car behind you, and stop safely.",
+   "Slightly increase the speed to pass while warning the pedestrian by honking."
+  ]
+ },
+ {
+  "n": 163,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 蹂댄샇 ?깆뿉 愿???ㅻ챸?쇰줈 留욎? ?딆? 寃껋??",
+  "ko_c": [
+   "?꾨줈???ㅼ튂???덉쟾吏???蹂댄뻾?먭? ?덈뒗 寃쎌슦? 李⑤줈媛 ?ㅼ튂?섏? ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃??곗뿉???덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.
+",
+   "蹂댄뻾?먭? ?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾 ?섍쾶 ?〓떒?????덈룄濡??섏뿬???쒕떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?녿뒗 ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐媛 ???뚯뿉???쒗뻾?섍굅???쇱떆??吏?섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?듯뻾?????덈
+룄濡??섏뿬???쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌??蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿
+怨꾩뾾???쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about a driver's duty to protect  pede
+strians?",
+  "tr_c": [
+   "The driver must slow down while keeping a safe distance when pedestrians are passing through a safety zone set up o
+n the road and when he/she passes by pedestrians on a narrow road with no markings.",
+   "A driver who sees a pedestrian jaywalking must stop the vehicle at a distance for the pedestrian to cross the road 
+safely.",
+   "A driver who is driving on a road with no centerline and where the roadway and sidewalk are not distinguishable mus
+t slow down or stop for pedestrians to travel safely.",
+   "If a crosswalk in a school zone has no traffic light, the driver has to slow down in front of the crosswalk (a stop
+ line if there is any) even if there are no pedestrians crossing."
+  ]
+ },
+ {
+  "n": 164,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈?먯꽌 13??誘몃쭔???대┛?닿? (        )瑜????寃쎌슦?먮뒗 ?대┛?댁쓽 ?덉쟾???꾪빐 ?몃챸蹂댄샇 ?κ뎄瑜?      李⑹슜?섏뿬???쒕떎. (   
+   )???대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "?λ낫??,
+   "?몃컻?먯쟾嫄?,
+   "?몃씪???ㅼ??댄듃",
+   "?ㅼ??댄듃 蹂대뱶"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, a child below the age of 13 should wear protective gear for safety when  
+riding (  ). Which of the following does NOT fit in (  )?",
+  "tr_c": [
+   "Scooter",
+   "Unicycles",
+   "In-line skates",
+   "Skateboard"
+  ]
+ },
+ {
+  "n": 165,
+  "ko_b": "蹂댄뻾?먯쓽 蹂댄샇?섎Т??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "臾대떒 ?〓떒?섎뒗 ??痍⑦븳 蹂댄뻾?먮? 蹂댄샇???꾩슂 ?녿떎.",
+   "?좏샇?깆씠 ?덈뒗 ?꾨줈?먯꽌???〓떒 以묒씤 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬??臾대갑?섎떎.",
+   "蹂댄뻾???좏샇湲곗뿉 ?뱀깋 ?좏샇媛 ?먮㈇?섍퀬 ?덈뒗 寃쎌슦 李⑤웾??吏꾪뻾?대룄 ?쒕떎.",
+   "?좏샇?깆씠 ?덈뒗 援먯감濡쒖뿉???고쉶?꾪븷 寃쎌슦 ?좏샇???곕Ⅴ??蹂댄뻾?먮? 諛⑺빐?댁꽌???꾨땲 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is correct regarding the duty to protect pedestrians?",
+  "tr_c": [
+   "There is no need to protect a drunken pedestrian who is jaywalking.",
+   "It is okay to impede the passage of a pedestrian crossing a road with traffic signals.",
+   "When the green light for pedestrians is flashing, a car can proceed.",
+   "When turning right at an intersection with traffic signals, the driver shall not impede the passage of a pedestrian
+ who is  obeying the signal."
+  ]
+ },
+ {
+  "n": 166,
+  "ko_b": "?꾨줈??以묒븰???듯뻾?????덈뒗 ?щ엺 ?먮뒗 ?됰젹濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?쒓??됱쭊?섎뒗 ?됰젹",
+   "留? ???깆쓽 ???숇Ъ??紐곌퀬 媛???щ엺",
+   "?꾨줈??泥?냼 ?먮뒗 蹂댁닔 ???꾨줈?먯꽌 ?묒뾽 以묒씤 ?щ엺",
+   "湲??먮뒗 ?꾩닔留??깆쓣 ?대????μ쓽 ?됰젹"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following persons or processions can pass through the center of a road?",
+  "tr_c": [
+   "A parade for an important social event",
+   "A person riding a large animal such as a horse or a cow",
+   "A person cleaning or repairing the road",
+   "A funeral procession holding flags or banners"
+  ]
+ },
+ {
+  "n": 167,
+  "ko_b": "?먮룞李??댁쟾?먭? ?좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄瑜??듦낵????媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "?〓떒?섎뒗 ?щ엺???녿떎 ?섎뜑?쇰룄 ?꾨갑怨?洹?二쇰??????댄뵾硫?媛먯냽?쒕떎.",
+   "?〓떒?섎뒗 ?щ엺???놁쑝誘濡?洹몃?濡?吏꾪뻾?쒕떎.",
+   "?〓떒?섎뒗 ?щ엺???놁쓣 ??鍮좊Ⅴ寃?吏?섍컙??",
+   "?〓떒?섎뒗 ?щ엺???덉쓣 ???덉쑝誘濡?寃쎌쓬湲곕? ?몃━硫?洹몃?濡?吏꾪뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the safest way of driving a motor vehicle when passing through a crosswalk without
+  traffic lights?",
+  "tr_c": [
+   "Even if there are no pedestrians crossing, the driver should carefully check the front and the surroundings and red
+uce  speed.",
+   "Since there are no pedestrians crossing, proceed without taking any action.",
+   "When there are no pedestrians crossing, proceed quickly.",
+   "Honk while driving through to alarm the pedestrians."
+  ]
+ },
+ {
+  "n": 168,
+  "ko_b": "泥좉만嫄대꼸紐⑹쓣 ?듦낵?섎떎媛 怨좎옣?쇰줈 嫄대꼸紐??덉뿉??李⑤? ?댄뻾?????녿뒗 寃쎌슦 ?댁쟾?먯쓽 議곗튂?붾졊?쇰줈 諛붾Ⅴ吏 ?딅뒗 寃껋??",
+  "ko_c": [
+   "利됱떆 ?숈듅?먮? ??쇱떆?⑤떎.",
+   "鍮꾩긽 ?좏샇湲??깆쓣 ?ъ슜?쒕떎.",
+   "泥좊룄怨듬Т?먯뿉寃??뚮┛??",
+   "李⑤웾??怨좎옣 ?먯씤???좎냽???뺤씤?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "If a vehicle is stopped on the railroad crossing due to vehicle failure while passing through, which of the 
+ following is NOT proper behavior by the driver?",
+  "tr_c": [
+   "Immediately evacuate all passengers.",
+   "Use emergency signal devices.",
+   "Notify a railway official.",
+   "Quickly check the cause of the vehicle?셲 failure."
+  ]
+ },
+ {
+  "n": 169,
+  "ko_b": "李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섏뿬 嫄대Ъ ?깆뿉 吏꾩엯?섎젮怨??쒕떎. ?댁쟾?먭? ?댁빞 ???쒖꽌濡??щ컮瑜?寃껋??",
+  "ko_c": [
+   "?쒗뻾 ??諛⑺뼢吏?쒕벑 ?묐룞 ???좎냽 吏꾩엯",
+   "?쇱떆?뺤? ??寃쎌쓬湲??ъ슜 ???좎냽 吏꾩엯",
+   "?쒗뻾 ??醫뚯륫怨??곗륫遺遺??뺤씤 ???쒗뻾 吏꾩엯",
+   "?쇱떆?뺤? ??醫뚯륫怨??곗륫遺遺??뺤씤 ???쒗뻾 吏꾩엯"
+  ],
+  "a": "4",
+  "tr_b": "A vehicle is about to go across a sidewalk to enter a building. Which of the following is the correct sequen
+ce?",
+  "tr_c": [
+   "Slow down ??turn on the turn signal ??enter quickly",
+   "Stop ??honk ??enter quickly",
+   "Slow down ??check both sides ??enter slowly",
+   "Stop ??check both sides ??enter slowly"
+  ]
+ },
+ {
+  "n": 170,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 ?꾨줈 ?〓떒 諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "紐⑤뱺 李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?〓떒?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "吏泥댁옣?좎씤??寃쎌슦?쇰룄 諛섎뱶???꾨줈 ?〓떒 ?쒖꽕???댁슜?섏뿬 ?꾨줈瑜??〓떒?섏뿬???쒕떎.",
+   "?덉쟾?쒖? ?깆뿉 ?섑븯???〓떒??湲덉??섏뼱 ?덈뒗 ?꾨줈??遺遺꾩뿉?쒕뒗 洹??꾨줈瑜??〓떒?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈?먯꽌??媛??吏㏃? 嫄곕━濡??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, which of the following is an INCORRECT description of safe pedestrian  cr
+ossing?",
+  "tr_c": [
+   "Do not walk right in front of or behind cars to cross the road.",
+   "You must cross the road by using a crosswalk or such facilities even if you have a disability.",
+   "Do not cross the road at a section marked with a safety sign or one that specifically instructs pedestrians not to 
+cross.",
+   "When there is no crosswalk, cross the road at its shortest section."
+  ]
+ },
+ {
+  "n": 171,
+  "ko_b": "?쇨컙???꾨줈 ?곸쓽 蹂댄뻾?먮굹 臾쇱껜?ㅼ씠 ?쇱떆?곸쑝濡???蹂댁씠寃??섎뒗?쒖쬆諛??꾩긽?앹씠 ?쇱뼱?섍린 ?ъ슫 ?꾩튂??",
+  "ko_c": [
+   "諛섎? 李⑤줈??媛?μ옄由?,
+   "二쇳뻾 李⑤줈???곗륫 遺遺?,
+   "?꾨줈??以묒븰??遺洹?,
+   "?꾨줈 ?곗륫??媛?μ옄由?
+  ],
+  "a": "3",
+  "tr_b": "Where does \"disappearance\"?봞 phenomenon wherein pedestrians or objects on roads vanish temporarily from  t
+he driver?셲 sight?봮ccur most frequently?",
+  "tr_c": [
+   "Edge of the opposite lane",
+   "Right side of the driver's lane",
+   "Around the centerline of the road",
+   "Right edge of the road"
+  ]
+ },
+ {
+  "n": 172,
+  "ko_b": "蹂댄뻾?먯쓽 ?듯뻾??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?꾨줈 ?〓떒 ??李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?좎냽???〓떒?섏뿬???쒕떎.",
+   "吏泥??μ븷?몄? ?꾨줈 ?〓떒?쒖꽕???덈뒗 ?꾨줈?먯꽌 諛섎뱶??洹멸납?쇰줈 ?〓떒?섏뿬???쒕떎.",
+   "蹂댄뻾?먮뒗 ?덉쟾?쒖? ?깆뿉 ?섑븯???〓떒??湲덉????꾨줈?먯꽌???좎냽?섍쾶 ?꾨줈瑜??〓떒?섏뿬???쒕떎.",
+   "蹂댄뻾?먮뒗 ?〓떒蹂대룄媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈?먯꽌??媛??吏㏃? 嫄곕━濡??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is correct regarding safe pedestrian crossing?",
+  "tr_c": [
+   "Pedestrians must walk quickly around the front or rear of vehicles to cross the street.",
+   "Disabled pedestrians must cross the road using road-crossing facilities where such facilities are present.",
+   "Where a sign prohibiting road crossing is present, pedestrians must cross the road quickly.",
+   "On a road with no crosswalk, pedestrians must cross using the shortest line of travel possible."
+  ]
+ },
+ {
+  "n": 173,
+  "ko_b": "蹂댄뻾?먯쓽 蹂대룄?듯뻾 ?먯튃?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂대룄 ???곗륫?듯뻾",
+   "蹂대룄 ??醫뚯륫?듯뻾",
+   "蹂대룄 ??以묒븰?듯뻾",
+   "蹂대룄 ???듯뻾?먯튃? ?놁쓬"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct part of a footpath that pedestrians should walk on?",
+  "tr_c": [
+   "The right side",
+   "The left side",
+   "Along the middle",
+   "No pedestrian traffic rules on the sidewalk"
+  ]
+ },
+ {
+  "n": 174,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤?????留먰븳???먯꽌 ?댁쟾?먯쓽 ?됰룞?쇰줈
+ 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉??蹂댄뻾?먯쓽 ?덉쟾???뺤씤?섍퀬 ?쒗뻾?섎ŉ ?듦낵?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섎젮怨??섎뒗 ?뚯뿉???쇱떆?뺤??섏뿬 蹂댄뻾?먯쓽 ?〓떒??蹂댄샇?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쒗뻾?섎ŉ ?듯뻾?쒕떎.",
+   "蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "A vehicle is about to drive across a crosswalk in a school zone with no traffic lights. Which of the followi
+ng are  the correct actions of the driver? (Select TWO)",
+  "tr_c": [
+   "When there are pedestrians crossing, the driver must drive across the crosswalk slowly and ensure pedestrian safety
+.",
+   "When there are pedestrians crossing, the driver must stop the vehicle and wait until all pedestrians have crossed."
+,
+   "The driver must drive across the crosswalk slowly regardless of pedestrians crossing.",
+   "The driver must stop the vehicle regardless of pedestrians crossing."
+  ]
+ },
+ {
+  "n": 175,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾??蹂댄샇??????ㅻ챸 以?留욌뒗 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곕? ?뚭퀬 嫄몄뼱媛???щ엺? 蹂댄뻾?먯뿉 ?대떦?섏? ?딅뒗??",
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒖뿉 癒쇱? 吏꾩엯??李⑤웾? 蹂댄뻾?먯뿉 ?곗꽑?섏뿬 ?듯뻾??沅뚰븳???덈떎.",
+   "?쑣룸룄寃쎌같泥?옣? 蹂댄뻾?먯쓽 ?듯뻾??蹂댄샇?섍린 ?꾪빐 ?꾨줈??蹂댄뻾???꾩슜 ?꾨줈瑜??ㅼ튂?????덈떎.",
+   "蹂댄뻾???꾩슜 ?꾨줈?먮뒗 ?좊え李⑤? ?뚭퀬 媛????덈떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "According to the Road Traffic Act, which of the following are TWO correct explanations of pedestrian protect
+ion?",
+  "tr_c": [
+   "A cyclist walking his/her bicycle is not considered a pedestrian.",
+   "A vehicle that is the first to enter an intersection where there is no traffic control has the right of way over pe
+destrians.",
+   "The commissioner of the City/Do (Province) police agency can install a pedestrian-only road for pedestrians for the
+ir  protection.",
+   "Baby carriages are allowed on the exclusive road for pedestrians."
+  ]
+ },
+ {
+  "n": 176,
+  "ko_b": "蹂댄뻾?먯쓽 ?듯뻾??????ㅻ챸 以?留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 李⑤룄瑜??듯뻾?섎뒗 寃쎌슦 ??긽 李⑤룄??醫뚯륫?쇰줈 ?듯뻾?댁빞 ?쒕떎.",
+   "蹂댄뻾?먮뒗 ?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?됱쭊 ?쒖뿉???꾨줈??以묒븰?쇰줈 ?듯뻾?????덈떎.",
+   "?꾨줈?〓떒?쒖꽕???댁슜?????녿뒗 吏泥댁옣?좎씤? ?꾨줈?〓떒?쒖꽕???댁슜?섏? ?딄퀬 ?꾨줈瑜??〓떒?????덈떎.",
+   "?꾨줈?〓떒?쒖꽕???녿뒗 寃쎌슦 蹂댄뻾?먮뒗 ?덉쟾???꾪빐 媛??湲?嫄곕━濡??꾨줈瑜??〓떒?섏뿬???쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are TWO good pedestrian behaviors?",
+  "tr_c": [
+   "A pedestrian using a road must always walk using the left side of the road.",
+   "A pedestrian taking part in a parade for a special social event can walk in the middle of a road.",
+   "A disabled person who is unable to use road-crossing facilities can cross a road anywhere.",
+   "A pedestrian must take the longest route to cross the road if there are no road-crossing facilities."
+  ]
+ },
+ {
+  "n": 177,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李⑥쓽 ?댁쟾?먭? 蹂대룄瑜??〓떒?섎뒗 諛⑸쾿???꾨컲??寃쎌슦 踰붿튃湲덉??",
+  "ko_c": [
+   "3留???,
+   "4留???,
+   "5留???,
+   "6留???
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the traffic penalty imposed on the driver of a passenger car for illegal driving o
+n a  sidewalk?",
+  "tr_c": [
+   "KRW 30,000",
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 60,000"
+  ]
+ },
+ {
+  "n": 178,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂댄뻾??蹂댄샇? 愿?⑤맂 ?뱀슜?먮룞李??댁쟾?먯쓽 踰붿튃?됱쐞?????踰붿튃湲덉븸???ㅻⅨ 寃껋?? (蹂댄샇援ъ뿭? ?쒖쇅)",
+  "ko_c": [
+   "?좏샇???곕씪 ?꾨줈瑜??〓떒?섎뒗 蹂댄뻾???〓떒 諛⑺빐",
+   "蹂댄뻾???꾩슜?꾨줈 ?듯뻾?꾨컲",
+   "?꾨줈瑜??듯뻾?섍퀬 ?덈뒗 李⑥뿉??諛뽰쑝濡?臾쇨굔???섏????됱쐞",
+   "?대┛?닳ㅼ븵??蹂댁? 紐삵븯???щ엺 ?깆쓽 蹂댄샇 ?꾨컲"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which is a case of violations by passenger vehicle drivers related to ped
+estrian safety and which have a different traffic penalty amount compared to other cases? (Excluding specific zones, e.
+g., school zones)",
+  "tr_c": [
+   "Interrupting pedestrians crossing the road when the walk signal is lit",
+   "Entering a pedestrian-only road",
+   "Throwing an object onto the road from a moving vehicle",
+   "Failing to protect children, visually impaired, etc."
+  ]
+ },
+ {
+  "n": 179,
+  "ko_b": "蹂댄뻾?먯뿉 ????댁쟾?먯쓽 諛붾엺吏곹븳 ?쒕룄??",
+  "ko_c": [
+   "?꾨줈瑜?臾대떒 ?〓떒?섎뒗 蹂댄뻾?먮뒗 蹂댄샇諛쏆쓣 ???녿떎.",
+   "?먮룞李??놁쓣 吏?섎뒗 蹂댄뻾?먯뿉寃??좉꼍 ?곗? ?딆븘???쒕떎.",
+   "蹂댄뻾?먭? ?먮룞李⑤? ?쇳빐???쒕떎.",
+   "?댁쟾?먮뒗 蹂댄뻾?먮? ?곗꽑?쇰줈 蹂댄샇?댁빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the right attitude that a driver should adopt toward pedestrians?",
+  "tr_c": [
+   "Jaywalkers need not be protected.",
+   "There is no need to pay attention to pedestrians on the side of the vehicle.",
+   "It is the pedestrians' responsibility to dodge vehicles.",
+   "The driver must prioritize pedestrian safety."
+  ]
+ },
+ {
+  "n": 180,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾?먭? ?꾨줈瑜??〓떒?????덇쾶 ?덉쟾?쒖?濡??쒖떆???꾨줈??遺遺꾩쓣 臾댁뾿?대씪 ?섎뒗媛?",
+  "ko_c": [
+   "蹂대룄",
+   "湲멸??μ옄由ш뎄??,
+   "?〓떒蹂대룄",
+   "蹂댄뻾???꾩슜?꾨줈"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, the part of the road marked with road safety signs that allow pedestrians
+ to  cross the road is called ( ).",
+  "tr_c": [
+   "Sidewalk",
+   "Roadside area",
+   "Crosswalk",
+   "Pedestrian-only road"
+  ]
+ },
+ {
+  "n": 181,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?먯뿉 ????댁쟾??議곗튂濡??섎せ??寃껋??",
+  "ko_c": [
+   "?대┛?대낫???쒖?媛 ?덈뒗 怨녹뿉?쒕뒗 ?대┛?닿? ?곗뼱 ?섏삤???쇱씠 ?덉쑝誘濡?二쇱쓽?댁빞 ?쒕떎.",
+   "蹂대룄瑜??〓떒?섍린 吏곸쟾???쒗뻾?섏뿬 蹂댄뻾?먮? 蹂댄샇?댁빞 ?쒕떎.",
+   "臾대떒 ?〓떒?섎뒗 蹂댄뻾?먮룄 ?쇰떒 蹂댄샇?댁빞 ?쒕떎.",
+   "?대┛?닿? 蹂댄샇???놁씠 ?꾨줈瑜??〓떒 以묒씪 ?뚯뿉???쇱떆 ?뺤??댁빞 ?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT appropriate behavior on the part of a driver toward pedestrians?",
+  "tr_c": [
+   "Watch out for children in areas with the \"school zone\" sign.",
+   "Drive slowly to protect pedestrians who are about to cross a crosswalk.",
+   "Pedestrians crossing the road illegally must also be protected.",
+   "Stop if there is a child crossing the road without a guardian."
+  ]
+ },
+ {
+  "n": 182,
+  "ko_b": "蹂댄뻾?먯쓽 ?꾨줈 ?〓떒諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 媛??吏㏃? 嫄곕━濡??〓떒?댁빞 ?쒕떎.",
+   "蹂댄뻾?먮뒗 紐⑤뱺 李⑥쓽 諛붾줈 ?욎씠???ㅻ줈 ?〓떒?섎㈃ ???쒕떎.",
+   "臾대떒?〓떒 諛⑹?瑜??꾪븳 李⑥꽑遺꾨━?媛 ?ㅼ튂??怨녹씠?쇰룄 ?섏뼱???〓떒?????덈떎.",
+   "?꾨줈怨듭궗 ?깆쑝濡?蹂대룄???듯뻾??湲덉?????李⑤룄濡??듯뻾?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is an INCORRECT method of crossing the road for a pedestrian?",
+  "tr_c": [
+   "Pedestrians must take the shortest route when crossing a road without a crosswalk.",
+   "Pedestrians must not cross the road around the front or rear of a vehicle.",
+   "Pedestrians can climb over a lane partition placed to prevent illegal crossing on the road.",
+   "Pedestrians can walk on the road if the sidewalk is closed for construction."
+  ]
+ },
+ {
+  "n": 183,
+  "ko_b": "?욎쓣 蹂댁? 紐삵븯???щ엺??以?섎뒗 踰붿쐞???대떦?섏? ?딅뒗 ?щ엺??",
+  "ko_c": [
+   "?대┛???먮뒗 ?곥냽?좎븘",
+   "?섏” ?깆쓣 ?ъ슜?섏? ?꾨땲?섍퀬??蹂댄뻾???????녿뒗 ?щ엺",
+   "?좎껜???됲삎湲곕뒫???μ븷媛 ?덈뒗 ?щ엺",
+   "?ｌ? 紐삵븯???щ엺"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT classified as a person corresponding to one who is visually impaired?",
+  "tr_c": [
+   "Infant or child",
+   "An individual who is unable to walk without a prosthetic limb",
+   "An individual who has trouble maintaining bodily balance",
+   "A deaf person"
+  ]
+ },
+ {
+  "n": 184,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭 ?덉뿉??(   )~(   ) ?ъ씠???좏샇?꾨컲?????뱀슜李??댁쟾?먯뿉 ???湲곗〈??踰뚯젏??2諛곕줈  遺怨쇳븳?? (   )???쒖꽌?濡
+?留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅼ쟾 6?? ?ㅽ썑 6??,
+   "?ㅼ쟾 7?? ?ㅽ썑 7??,
+   "?ㅼ쟾 8?? ?ㅽ썑 8??,
+   "?ㅼ쟾 9?? ?ㅽ썑 9??
+  ],
+  "a": "3",
+  "tr_b": "The driver of a passenger car who commits a violation of a traffic signal between ( ) and ( ) in a school zo
+ne receives double the demerit points. Which of the following belongs in the pair of brackets?",
+  "tr_c": [
+   "6 AM, 6 PM",
+   "7 AM, 7 PM",
+   "8 AM, 8 PM",
+   "9 AM, 9 PM"
+  ]
+ },
+ {
+  "n": 185,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4.5???붾Ъ?먮룞李④? ?ㅼ쟾 10?쒕???11?쒓퉴吏 ?몄씤蹂댄샇援ъ뿭?먯꽌 二쇱감?꾨컲????寃쎌슦 怨쇳깭猷뚮뒗?",
+  "ko_c": [
+   "4留???,
+   "5留???,
+   "9留???,
+   "10留???
+  ],
+  "a": "3",
+  "tr_b": "What is the administrative fine imposed on the driver of a 4.5-ton truck parked illegally in a silver zone b
+etween  10 AM and 11 AM?",
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 90,000",
+   "KRW 100,000"
+  ]
+ },
+ {
+  "n": 186,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?먯쓽 ?듯뻾諛⑸쾿?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂대룄?먯꽌??醫뚯륫?듯뻾???먯튃?쇰줈 ?쒕떎.",
+   "蹂댄뻾?먯슦?좊룄濡쒖뿉?쒕뒗 ?꾨줈????遺遺꾩쓣 ?듯뻾?????덈떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌???몄젣??蹂대룄濡??듯뻾?섏뿬???쒕떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?딆? ?꾨줈 以?以묒븰?좎씠 ?덈뒗 ?꾨줈?먯꽌??湲멸??μ옄由ш뎄??쑝濡??듯뻾?섏뿬???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is an INCORRECT method of traveling for a pedestrian?",
+  "tr_c": [
+   "Walk on the left side of a sidewalk.",
+   "Pedestrians are allowed to use any part of the pedestrian-first road.",
+   "Pedestrians must walk on the sidewalk on roads where the sidewalk and roadways are separated.",
+   "For roads without a clear distinction of the sidewalks but have a centerline, pedestrians must use the roadside are
+a to  walk."
+  ]
+ },
+ {
+  "n": 187,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤룄瑜??듯뻾?????덈뒗 ?щ엺 ?먮뒗 ?됰젹???꾨땶 寃쎌슦??",
+  "ko_c": [
+   "?꾨줈?먯꽌 泥?냼??蹂댁닔 ?깆쓽 ?묒뾽???섍퀬 ?덉쓣 ??,
+   "留먃룹냼 ?깆쓽 ???숇Ъ??紐곌퀬 媛???,
+   "?좊え李⑤? ?뚭퀬 媛???щ엺",
+   "?μ쓽(?у?) ?됰젹????
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT permitted to travel on a roadway?",
+  "tr_c": [
+   "Cleaning or maintenance personnel working on roads",
+   "A person driving a large animal such as horse or cattle",
+   "A person who is pushing a stroller",
+   "A funeral procession"
+  ]
+ },
+ {
+  "n": 188,
+  "ko_b": "?댁쟾?먭? 吏꾪뻾諛⑺뼢 ?좏샇?깆씠 ?곸깋?????뺤??좎쓣 珥덇낵?섏뿬 ?뺤???寃쎌슦 泥섎쾶 湲곗???",
+  "ko_c": [
+   "援먯감濡??듯뻾諛⑸쾿?꾨컲",
+   "?쇱떆?뺤? ?꾨컲",
+   "?좏샇?꾨컲",
+   "?쒗뻾?꾨컲"
+  ],
+  "a": "3",
+  "tr_b": "What are the grounds for the penalty faced by a driver who stops over the stop line when the traffic light h
+as  turned red?",
+  "tr_c": [
+   "Violation of intersection thoroughfare",
+   "Failure to stop",
+   "Violation of traffic signal",
+   "Violation of slow driving"
+  ]
+ },
+ {
+  "n": 189,
+  "ko_b": "?ㅼ쓬 以??욎쓣 蹂댁? 紐삵븯???щ엺???μ븷?몃낫議곌껄???숇컲?섍퀬 ?꾨줈瑜??〓떒?섎뒗 紐⑥뒿??諛쒓껄?섏????뚯쓽 ?щ컮瑜??댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "二쇄ㅼ젙李?湲덉? ?μ냼??寃쎌슦 洹몃?濡?吏꾪뻾?쒕떎.",
+   "?쇱떆 ?뺤??쒕떎.",
+   "利됱떆 ?뺤감?섏뿬 ?욎쓣 蹂댁? 紐삵븯???щ엺???섎룎?꾧??꾨줉 ?덈궡?쒕떎.",
+   "寃쎌쓬湲곕? ?몃━硫?蹂댄샇?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the right method of driving when you spot a visually impaired person crossing the 
+ road with a guide dog?",
+  "tr_c": [
+   "Keep going if stopping or parking is not allowed in the area.",
+   "Stop momentarily.",
+   "Stop and help the person go back the way he/she came.",
+   "Protect the person by honking."
+  ]
+ },
+ {
+  "n": 190,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ?욎뿉 ?쒕뒗 蹂댄뻾?먯쓽 ?〓떒?щ?? 愿怨
+꾩뾾??(    )?섏뿬???쒕떎. (   )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쒗뻾",
+   "?쇱떆?뺤?",
+   "?쒗뻾 ?먮뒗 ?쇱떆?뺤?",
+   "媛먯냽二쇳뻾"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, the driver of any type of vehicle must ( ) before reaching a crosswalk in
+ a school zone with no traffic lights, regardless of pedestrians crossing. Which of the following best fills the parent
+heses?",
+  "tr_c": [
+   "slow down",
+   "stop",
+   "slow down or stop",
+   "reduce speed"
+  ]
+ },
+ {
+  "n": 191,
+  "ko_b": "?꾨줈瑜??〓떒?섎뒗 蹂댄뻾??蹂댄샇??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "援먯감濡??댁쇅???꾨줈?먯꽌??蹂댄뻾??蹂댄샇 ?섎Т媛 ?녿떎.",
+   "?좏샇瑜??꾨컲?섎뒗 臾대떒?〓떒 蹂댄뻾?먮뒗 蹂댄샇???섎Т媛 ?녿떎.",
+   "臾대떒?〓떒 蹂댄뻾?먮룄 蹂댄샇?섏뿬???쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈?먯꽌??臾대떒?〓떒 蹂댄뻾?먮? 蹂댄샇???섎Т媛 ?녿떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is correct regarding the protection of pedestrians crossing roads?",
+  "tr_c": [
+   "You have no responsibility to protect pedestrians on sections of a road other than an intersection.",
+   "You have no responsibility to protect pedestrians crossing the road illegally.",
+   "You have to protect pedestrians even when they are crossing the road illegally.",
+   "You have no responsibility to protect pedestrians crossing a one-way road illegally."
+  ]
+ },
+ {
+  "n": 192,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯튃?곸쑝濡?李⑤룄???듯뻾???덉슜?섏? ?딅뒗 ?щ엺??",
+  "ko_c": [
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?怨?媛???щ엺",
+   "?ы쉶?곸쑝濡?以묒슂???됱궗???곕씪 ?쒓?瑜??됱쭊?섎뒗 ?щ엺",
+   "?꾨줈?먯꽌 泥?냼??蹂댁닔 ?깆쓽 ?묒뾽???섍퀬 ?덈뒗 ?щ엺",
+   "?щ떎由???蹂댄뻾?먯쓽 ?듯뻾??吏?μ쓣 以??곕젮媛 ?덈뒗 臾쇨굔???대컲 以묒씤 ?щ엺"
+  ],
+  "a": "1",
+  "tr_b": "Who is NOT allowed to drive on the road according to the Road Traffic Act?",
+  "tr_c": [
+   "A person using a wheelchair to aid his/her movement",
+   "A person marching on the streets for an important social event",
+   "A person cleaning or doing maintenance work on a road",
+   "A person carrying an object that can hinder pedestrian thoroughfare, such as a ladder"
+  ]
+ },
+ {
+  "n": 193,
+  "ko_b": "?ㅼ쓬 以?蹂댄뻾?깆쓽 ?뱀깋?깊솕媛 ?먮㈇????蹂댄뻾?먯쓽 媛???щ컮瑜??듯뻾諛⑸쾿??",
+  "ko_c": [
+   "?〓떒蹂대룄??吏꾩엯?섏? ?딆? 蹂댄뻾?먮뒗 ?ㅼ쓬 ?좏샇 ?뚭퉴吏 湲곕떎?몃떎媛 蹂댄뻾?깆쓽 ?뱀깋?깊솕 ???듯뻾?섏뿬???쒕떎.",
+   "?〓떒蹂대룄 以묎컙??洹몃깷 ???덈뒗??",
+   "?ㅼ쓬 ?좏샇瑜?湲곕떎由ъ? ?딄퀬 ?〓떒蹂대룄瑜?嫄대꼳??",
+   "?곸깋?깊솕濡?諛붾뚭린 ?꾩뿉???몄젣???〓떒???쒖옉?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the best method of crossing the road for a pedestrian when the green light at the 
+ crosswalk is flashing?",
+  "tr_c": [
+   "A pedestrian who is not yet in the crosswalk must wait for the next green light to start crossing.",
+   "Stand still in the middle of the crosswalk.",
+   "Cross the road without waiting for the next signal.",
+   "The pedestrian can start crossing the road as long as the light does not turn red."
+  ]
+ },
+ {
+  "n": 194,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂대룄瑜??듯뻾?섎뒗 蹂댄뻾?먯뿉 ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "125?쒖떆 誘몃쭔???대쪣李⑤? ?怨?蹂대룄瑜??듯뻾?섎뒗 ?щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "?먯쟾嫄곕? ?怨?媛???щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?댁슜?섎뒗 ?щ엺? 蹂댄뻾?먮줈 蹂????덈떎.",
+   "49?쒖떆 ?먮룞湲곗옣移섏옄?꾧굅瑜??怨?媛???щ엺? 蹂댄뻾?먮줈 蹂????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is correct regarding pedestrians using the sidewal
+k?",
+  "tr_c": [
+   "A person who rides a two-wheeled vehicle up to 125cc on the sidewalk can be considered a pedestrian.",
+   "A person riding a bicycle can be considered a pedestrian.",
+   "A person who uses a wheelchair can be considered a pedestrian.",
+   "A person who rides a 49cc motorcycle can be considered a pedestrian."
+  ]
+ },
+ {
+  "n": 195,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쟾?⑸룄濡쒖뿉 ????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?듯뻾???덉슜??李⑤쭏???댁쟾?먮뒗 ?듯뻾 ?띾룄瑜?蹂댄뻾?먯쓽 嫄몄쓬 ?띾룄濡??댄뻾?섏뿬???쒕떎.",
+   "李⑤쭏???댁쟾?먮뒗 ?먯튃?곸쑝濡?蹂댄뻾?먯쟾?⑸룄濡쒕? ?듯뻾?????덈떎.",
+   "寃쎌같?쒖옣???뱁엳 ?꾩슂?섎떎怨??몄젙?섎뒗 寃쎌슦??李⑤쭏???듯뻾???덉슜?????녿떎.",
+   "?듯뻾???덉슜??李⑤쭏???댁쟾?먮뒗 蹂댄뻾?먮? ?꾪뿕?섍쾶 ???뚮뒗 ?쇱떆?뺤??섏뿬???쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "According to the Road Traffic Act, which TWO correctly describe the rules for a pedestrian-only road?",
+  "tr_c": [
+   "The driver of a motor vehicle or a horse allowed on a pedestrian-only road must travel at the same speed as the  pe
+destrians.",
+   "In principle, the driver of a motor vehicle or a horse may use a pedestrian-only road.",
+   "The driver of a motor vehicle or a horse may not be allowed to enter a pedestrian-only road if and when deemed  nec
+essary by the chief of police.",
+   "If there is a possibility that pedestrians could be exposed to danger, the driver of a motor vehicle or a horse on 
+a pedestrian-only road must stop and remain stationary."
+  ]
+ },
+ {
+  "n": 196,
+  "ko_b": "?먮룞李⑥뿉 ?ｊ퀬 媛???붾Ъ???⑥뼱??蹂댄뻾?먯뿉寃?2二?吏꾨떒???곹빐瑜??낇엺 ?댁쟾?먯뿉 ???泥섎쾶 2媛吏??",
+  "ko_c": [
+   "?쇳빐?먯쓽 泥섎쾶?섏궗??愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎.",
+   "?쇳빐?먯? ?⑹쓽?섎㈃ 泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕??媛?낅릺???덉쑝硫?泥섎쾶?섏? ?딅뒗??",
+   "?먰빐瑜??꾩븸 蹂댁긽諛쏆쓣 ???덈뒗 蹂댄뿕媛???щ?? 愿怨꾩뾾???뺤궗泥섎쾶 ?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "When a cargo falls from a vehicle and injures a pedestrian, necessitating a two-week period of hospitalizati
+on,  which two penalties among the following will be imposed on the driver?",
+  "tr_c": [
+   "Criminal offense charges are imposed on the driver regardless of the victim?셲 wishes to file charges.",
+   "No charges are filed if the driver comes to an agreement with the victim.",
+   "No charges are filed if the driver has a full-coverage insurance policy.",
+   "The driver is charged with a criminal offense regardless of the presence of a full-coverage insurance policy."
+  ]
+ },
+ {
+  "n": 197,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈?먯꽌 蹂댄뻾?먯쓽 媛???щ컮瑜??〓떒諛⑸쾿??",
+  "ko_c": [
+   "?듦낵李⑤웾 諛붾줈 ?ㅻ줈 ?〓떒?쒕떎.",
+   "李⑤웾?듯뻾???놁쓣 ??鍮좊Ⅴ寃??〓떒?쒕떎.",
+   "?〓떒蹂대룄媛 ?녿뒗 怨녹씠誘濡??꾨Т 怨녹씠???〓떒?쒕떎.",
+   "?꾨줈?먯꽌 媛??吏㏃? 嫄곕━濡??〓떒?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following is the most appropriate method of crossing a road 
+ without a crosswalk for a pedestrian?",
+  "tr_c": [
+   "Cross the road right behind a passing vehicle.",
+   "Cross the road quickly when there are no cars passing by.",
+   "Cross anywhere as there is no crosswalk.",
+   "Cross the road using the shortest distance."
+  ]
+ },
+ {
+  "n": 198,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?〓떒蹂대룄瑜??〓떒?섎뒗 諛⑸쾿??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "媛쒖씤???대룞?μ튂瑜??뚭퀬 ?〓떒?????덈떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑤? ?怨??〓떒?????덈떎.",
+   "?먯쟾嫄곕? ?怨??〓떒?????덈떎.",
+   "?좊え李⑤? ?뚭퀬 ?〓떒?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT a correct explanation of how to traverse a 
+ crosswalk?",
+  "tr_c": [
+   "A person may cross the crosswalk while pushing a personal mobility device.",
+   "A person may cross the crosswalk while on a motorized chair.",
+   "A person may cross the crosswalk while riding a bicycle.",
+   "A person may cross the crosswalk while pushing a stroller."
+  ]
+ },
+ {
+  "n": 199,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 李⑤쭏???듯뻾諛⑸쾿??????ㅻ챸?대떎. ?섎せ??寃껋??",
+  "ko_c": [
+   "蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌??李⑤룄濡??듯뻾?섏뿬???쒕떎.",
+   "蹂대룄瑜??〓떒?섍린 吏곸쟾???쒗뻾?섏뿬 醫뙿룹슦瑜??댄? ??蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏? ?딅룄濡??〓떒?섏뿬???쒕떎.",
+   "?꾨줈 以묒븰???곗륫 遺遺꾩쑝濡??듯뻾?섏뿬???쒕떎.",
+   "?꾨줈媛 ?쇰갑?듯뻾??寃쎌슦 ?꾨줈??以묒븰?대굹 醫뚯륫 遺遺꾩쓣 ?듯뻾?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, which of the following methods of passage used by motor vehicles or horse
+s  is NOT correct?",
+  "tr_c": [
+   "When the roadway and sidewalk are separated, be sure to use the roadway.",
+   "Drive slowly just before crossing a crosswalk, check left and right, and cross in a manner that does not impede the
+  passage of pedestrians.",
+   "Be sure to use the right-side roadway.",
+   "When it is a one-way road, you can drive in the center or left portion of the road."
+  ]
+ },
+ {
+  "n": 200,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쓽 蹂댄샇??????ㅻ챸?대떎. ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섍퀬 ?덉쓣 ??洹?吏곸쟾???쇱떆?뺤??섏뿬???쒕떎.",
+   "寃쎌같怨듬Т?먯쓽 ?좏샇??吏?쒖뿉 ?곕씪 ?꾨줈瑜??〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "援먯감濡쒖뿉???꾨줈瑜??〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following guidelines for the protection of pedestrians is NO
+T  correct?",
+  "tr_c": [
+   "When a pedestrian is using the crosswalk, the driver must make a temporary stop before the crosswalk.",
+   "The driver shall not impede the passage of pedestrians who are crossing the road according to the signals or direct
+ions  given by a police officer.",
+   "A driver shall not impede the passage of pedestrians who are crossing the road at an intersection.",
+   "When a pedestrian is crossing a road without a crosswalk, the driver must drive slowly while maintaining a safe dis
+tance."
+  ]
+ }
+]
+위치 줄:2 문자:88
++ ... ath 'translations/audit/queue/204_choices_en.json' | ConvertFrom-Json
++                                                          ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+codex
+[{"n":171,"field":"b","severity":"major","issue":"문장이 문자 깨짐으로 심각하게 훼손되었고, 원문의 핵심 조건인 ‘야간’도 누락되었다.","suggestion":"At night, where is the “visual disappearance” phenomenon—in which pedestrians or objects on the road temporarily disappear from a driver's view—most likely to occur?"},{"n":192,"field":"b","severity":"major","issue":"사람의 차도 ‘통행’을 차량 ‘운전(drive)’으로 오역하여 질문의 의미가 달라졌다.","suggestion":"According to the Road Traffic Act, who is generally NOT permitted to travel on the roadway?"},{"n":194,"field":"c[1]","severity":"minor","issue":"‘125cc 미만’을 상한을 포함하는 ‘up to 125cc’로 번역해 수치 경계가 달라졌다.","suggestion":"A person riding a two-wheeled vehicle with an engine displacement of less than 125cc on the sidewalk can be considered a pedestrian."},{"n":196,"field":"b","severity":"major","issue":"‘2주 진단의 상해’를 ‘2주간 입원이 필요한 상해’로 오역하여 처벌 판단의 의학적 조건이 달라졌다.","suggestion":"When cargo falls from a vehicle and injures a pedestrian, resulting in an injury diagnosed as requiring two weeks of treatment, which TWO of the following apply to the driver?"}]
+tokens used
+43,286
+[{"n":171,"field":"b","severity":"major","issue":"문장이 문자 깨짐으로 심각하게 훼손되었고, 원문의 핵심 조건인 ‘야간’도 누락되었다.","suggestion":"At night, where is the “visual disappearance” phenomenon—in which pedestrians or objects on the road temporarily disappear from a driver's view—most likely to occur?"},{"n":192,"field":"b","severity":"major","issue":"사람의 차도 ‘통행’을 차량 ‘운전(drive)’으로 오역하여 질문의 의미가 달라졌다.","suggestion":"According to the Road Traffic Act, who is generally NOT permitted to travel on the roadway?"},{"n":194,"field":"c[1]","severity":"minor","issue":"‘125cc 미만’을 상한을 포함하는 ‘up to 125cc’로 번역해 수치 경계가 달라졌다.","suggestion":"A person riding a two-wheeled vehicle with an engine displacement of less than 125cc on the sidewalk can be considered a pedestrian."},{"n":196,"field":"b","severity":"major","issue":"‘2주 진단의 상해’를 ‘2주간 입원이 필요한 상해’로 오역하여 처벌 판단의 의학적 조건이 달라졌다.","suggestion":"When cargo falls from a vehicle and injures a pedestrian, resulting in an injury diagnosed as requiring two weeks of treatment, which TWO of the following apply to the driver?"}]
