@@ -1,0 +1,231 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12620-caef-7941-a047-0cfa47be6847
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/300_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/300_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 544ms:
+[
+ {
+  "n": 1,
+  "ko_e": "?꾨줈援먰넻踰???5議곗쓽2(紐⑤컮?쇱슫?꾨㈃?덉쬆 諛쒓툒 諛??댁쟾硫댄뿀利앹쓽 ?뺤씤 ??,           ?꾨줈援먰넻踰뺤떆?됯퇋移숈젣78議곗쓽2(紐⑤컮?쇱슫?꾨㈃?덉쬆???좎껌 ??",
+  "tr_e": "Article 85-2 of the Road Traffic Act (Issuance of the Mobile Driver's License and Verification of the Driver's License, etc.), Article 78-2 of the Enforcement Rule of the Road Traffic Act (Application for the Mobile Driver's License, etc.)."
+ },
+ {
+  "n": 2,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???7議겸댘??1議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議??댁쟾硫댄뿀利앹쓣 ?껋뼱踰꾨졇嫄곕굹 ?먯뼱 紐??곌쾶 ?섏뿀?????먮뒗 ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?쒌냽?꾧꼍李곗껌?μ뿉寃??좎껌?섏뿬 ?ㅼ떆 諛쒓툒諛쏆쓣 ???덈떎.",
+  "tr_e": "Articles 77 to 81 of the Enforcement Rule of the Road Traffic Act; Article 80 of the Enforcement Rule of the Road Traffic Act. When a driver's license is lost or is so damaged that it can no longer be used, a person may apply to the Commissioner of the City/Provincial Police Agency, as prescribed by Ordinance of the Ministry of the Interior and Safety, to be reissued a license."
+ },
+ {
+  "n": 3,
+  "ko_e": "?꾨줈援먰넻踰???0議곗뿉 ?곕씪 ?댁쟾硫댄뿀瑜?諛쒓툒諛쏆? ?щ엺??援?쇅?먯꽌 ?댁쟾?섍린 ?꾪븯????6議????????몄쓽 ?뚮룄濡쒓탳????愿???묒빟?띿뿉 ?곕Ⅸ 援?젣?댁쟾硫댄뿀利앹쓣 諛쒓툒 諛쏆쑝?ㅻ㈃ ?? ??寃쎌같泥?옣???좎껌?섏뿬???섍퀬,  ?좏슚湲곌컙? 諛쒓툒諛?? ?좊???1?꾩씠??",
+  "tr_e": "Under Article 80 of the Road Traffic Act, a person who has obtained a driver's license and wishes to drive abroad must apply to the Commissioner of the City/Provincial Police Agency to be issued an international driving permit under the 'Convention on Road Traffic' referred to in Article 96(1)1; its period of validity is one year from the date of issuance."
+ },
+ {
+  "n": 4,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18 ?뱀감?뺤썝 15?몄듅???뱁빀?먮룞李⑤뒗 1醫???뺣㈃???먮뒗 1醫?蹂댄넻硫댄뿀媛 ?꾩슂?섍퀬 湲닿툒???숈감 ?낅Т??醫낆궗?섎뒗 ?щ엺? ?꾨줈援먰넻踰??쒗뻾????8議곗쓽2 ????뿉 ?곕Ⅸ ?좉퇋(3?쒓컙) 諛??뺢린援먰넻?덉쟾援먯쑁(2?쒓컙)??諛쏆븘?? ?쒕떎.",
+  "tr_e": "Under Table 18 of the Enforcement Rule of the Road Traffic Act, a bus (van) with a seating capacity of 15 requires a Class 1 Large license or a Class 1 Ordinary license, and a person engaged in emergency-vehicle duties must receive new (3 hours) and regular (2 hours) traffic safety education under Article 38-2(2) of the Enforcement Decree of the Road Traffic Act."
+ },
+ {
+  "n": 5,
+  "ko_e": "?꾨줈援먰넻踰???1議??곗뒿?댁쟾硫댄뿀???⑤젰) ?곗뒿?댁쟾硫댄뿀??洹?硫댄뿀瑜?諛쏆? ?좊???1???숈븞 ?⑤젰??媛吏꾨떎.          ?ㅻ쭔, ?곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?좊???1???댁쟾?대씪???곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?щ엺????醫?蹂댄넻硫댄뿀 ?먮뒗 ??醫?蹂댄넻 硫댄뿀瑜?諛쏆? 寃쎌슦 ?곗뒿?댁쟾硫댄뿀??洹??⑤젰???껊뒗??",
+  "tr_e": "Article 81 of the Road Traffic Act (Effect of a Provisional Driver's License): A provisional driver's license is valid for one year from the date it is issued. However, even before one year has passed since the provisional license was issued, if the person who received the provisional license obtains a Class 1 Ordinary license or a Class 2 Ordinary license, the provisional license loses its effect."
+ },
+ {
+  "n": 6,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??4議??댁쟾硫댄뿀??議곌굔 ?? ????뿉 ?섍굅, ?댁쟾硫댄뿀 議곌굔??遺怨쇨린以? 蹂꾪몴20 A???먮룞蹂?띻린, B???섏닔, C???섏”, D??蹂댁껌湲? E??泥?컖?μ븷???쒖? 諛?蹂쇰줉嫄곗슱, F???섎룞?쒕룞湲겸ㅺ??띻린, G???뱀닔?쒖옉  諛??뱀씤李? H???곗륫 諛⑺뼢吏?쒓린, I???쇱そ ?묒??덉씠?곗씠硫? ?좎껜?μ븷?몄씠 ?댁쟾硫댄뿀?쒗뿕???묒떆????議곌굔??留욌뒗 李⑤웾?쇰줈  ?쒗뿕???묒떆 諛??⑷꺽?댁빞 ?섎ŉ, ?⑷꺽 ???대떦 議곌굔??留욌뒗 硫댄뿀利?諛쒓툒",
+  "tr_e": "Under Article 54(3) of the Enforcement Rule of the Road Traffic Act (Conditions of a Driver's License, etc.), the criteria for imposing license conditions are set out in Table 20: A is automatic transmission, B is a prosthetic arm, C is a prosthetic leg, D is a hearing aid, E is a hearing-impaired sign and convex mirror, F is a hand-operated brake/accelerator, G is a specially manufactured and approved vehicle, H is a right-side turn signal, and I is a left-side accelerator. When a physically disabled person takes the driving test, the person must take and pass the test in a vehicle meeting the applicable conditions, and after passing, a license conforming to those conditions is issued."
+ },
+ {
+  "n": 7,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18 鍮꾧퀬3, 珥앹쨷??750?щ줈洹몃옩??珥덇낵?섎뒗 3?ㅼ씠?섏쓽 ?쇨껄?몄옄?숈감瑜?寃ъ씤?섍린 ?꾪빐????寃ъ씤?섎뒗 ?먮룞李⑤? ?댁쟾?????덈뒗 硫댄뿀? ??醫??뚰삎寃ъ씤李⑤㈃???먮뒗 ??뺢껄?몄감硫댄뿀瑜?媛吏怨??덉뼱???쒕떎.",
+  "tr_e": "Under Note 3 of Table 18 of the Enforcement Rule of the Road Traffic Act, to tow a trailer of 3 tons or less whose gross weight exceeds 750 kilograms, a person must hold a license permitting operation of the towing vehicle together with a Class 1 Small Trailer license or a Large Trailer license."
+ },
+ {
+  "n": 8,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18(?댁쟾?????덈뒗 李⑥쓽 醫낅쪟)???곕씪 ?ㅽ봽?몃윮? ??醫???뺣㈃?? 諛곌린??125?쒖떆 珥덇낵  ?대쪣?먮룞李⑤뒗 2醫??뚰삎硫댄뿀媛 ?꾩슂?섎떎.",
+  "tr_e": "Under Table 18 of the Enforcement Rule of the Road Traffic Act (Types of Vehicles That May Be Driven), a dump truck requires a Class 1 Large license, and a motorcycle with an engine displacement exceeding 125 cc requires a Class 2 Small license."
+ },
+ {
+  "n": 9,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18, ??醫?蹂댄넻硫댄뿀濡??뱀감?뺤썝 15紐??댄븯???뱁빀?먮룞李??댁쟾媛?? ?? ?? ?ｋ뒗 ?뱀감?뺤썝  10紐??댄븯???뱁빀?먮룞李??댁쟾媛??,
+  "tr_e": "Under Table 18 of the Enforcement Rule of the Road Traffic Act, a Class 1 Ordinary license allows driving of a bus (van) with a seating capacity of 15 or fewer; (1), (2), and (4) allow driving of a bus (van) with a seating capacity of 10 or fewer."
+ },
+ {
+  "n": 10,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????5議??????????섎ぉ???곕씪 ??醫??댁쟾硫댄뿀??18???댁긽?쇰줈, ???덉쓣 ?숈떆???④퀬 ?? ?쒕젰??0.5 ?댁긽(?ㅻ쭔, ?쒖そ ?덉쓣 蹂댁? 紐삵븯???щ엺? ?ㅻⅨ 履??덉쓽 ?쒕젰??0.6 ?댁긽?댁뼱???쒕떎.)???쒕젰???덉뼱???쒕떎. ?먰븳  遺됱??? ?뱀깋 諛??몃??됱쓽 ?됱콈 ?앸퀎??媛?ν빐???섎굹 ?ｌ? 紐삵빐??痍⑤뱷??媛?ν븯??",
+  "tr_e": "Under Article 45(1)1(b) of the Enforcement Decree of the Road Traffic Act, a Class 2 driver's license requires the person to be at least 18 years old and to have a visual acuity, measured with both eyes open at the same time, of 0.5 or higher (however, a person who cannot see with one eye must have a visual acuity of 0.6 or higher in the other eye). The person must also be able to distinguish the colors red, green, and yellow, but may obtain the license even if unable to hear."
+ },
+ {
+  "n": 11,
+  "ko_e": "?꾨줈援먰넻踰???議???9???섎ぉ ?뺤쓽 李몄“ ?쒖썝?숆린?μ튂?먯쟾嫄겸앸? ?ㅼ쓬 媛?紐⑹쓽 ?대뒓 ?섎굹???대떦?섎뒗 李⑤? 留먰븳?? 媛. ?뚯옄?숈감愿由щ쾿????議곗뿉 ?곕Ⅸ ?대쪣?먮룞李?媛?대뜲 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰?쇰줈 ?섎뒗 寃쎌슦?먮뒗 理쒓퀬?뺢꺽異쒕젰  11?щ줈????댄븯)???대쪣?먮룞李??? 洹?諛뽰뿉 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰?쇰줈 ?섎뒗 寃쎌슦?먮뒗 理쒓퀬?뺢꺽異쒕젰 11?щ줈????댄븯)???먮룞湲곕? ??李??뚯옄?꾧굅  ?댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧????議곗젣1?몄쓽2???곕Ⅸ ?꾧린?먯쟾嫄?諛???1?몄쓽3???곕Ⅸ ?ㅼ쇅?대룞濡쒕큸? ?쒖쇅?쒕떎)",
+  "tr_e": "See the definition in Article 2, subparagraph 19(b) of the Road Traffic Act. A 'motorized bicycle' means a vehicle falling under any of the following: (a) among motorcycles under Article 3 of the 'Motor Vehicle Management Act', a motorcycle with an engine displacement of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less); (b) any other vehicle equipped with an engine of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less) (excluding electric bicycles under Article 2, subparagraph 1-2 of the 'Act on the Promotion of Bicycle Use' and outdoor mobile robots under subparagraph 21-3)."
+ },
+ {
+  "n": 12,
+  "ko_e": "?꾨줈援먰넻踰???2議????????몄뿉 ?곕씪 ??醫???뺣㈃?덈뒗 19??誘몃쭔?닿굅???먮룞李??대쪣?먮룞李⑤뒗 ?쒖쇅?쒕떎)???댁쟾 寃쎈젰??1??誘몃쭔???щ엺? 諛쏆쓣 ???녿떎.",
+  "tr_e": "Under Article 82(1)6 of the Road Traffic Act, a Class 1 Large license may not be issued to a person under 19 years of age or to a person with less than one year of experience driving a motor vehicle (excluding motorcycles)."
+ },
+ {
+  "n": 13,
+  "ko_e": "?? ???꾨줈援먰넻踰뺤떆?됰졊 ??5議??댁쟾硫댄뿀利?媛깆떊諛쒓툒 諛??뺢린 ?곸꽦寃?ъ쓽 ?곌린 ?? ????         ???꾨줈援먰넻踰뺤떆?됰졊 ??5議??댁쟾硫댄뿀利?媛깆떊諛쒓툒 諛??뺢린 ?곸꽦寃?ъ쓽 ?곌린 ?? ????          ???꾨줈援먰넻踰뺤떆?됯퇋移???3議??댁쟾硫댄뿀利?媛깆떊諛쒓툒 諛??뺢린?곸꽦寃?ъ쓽 ?곌린) ???? 蹂꾩? ??9???쒖떇",
+  "tr_e": "(1), (3): Article 55(1) of the Enforcement Decree of the Road Traffic Act (Postponement of Renewal Issuance of Driver's Licenses and Regular Aptitude Tests, etc.). (4): Article 55(3) of the Enforcement Decree of the Road Traffic Act. (2): Article 83(3) of the Enforcement Rule of the Road Traffic Act (Postponement of Renewal Issuance of Driver's Licenses and Regular Aptitude Tests) and Form 59."
+ },
+ {
+  "n": 14,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????9議?????뿉 ?곕씪 ?꾨줈二쇳뻾?쒗뿕??遺덊빀寃⑺븳 ?щ엺? 遺덊빀寃⑺븳 ?좊???3?쇱씠 吏???꾩뿉 ?ㅼ떆 ?꾨줈二쇳뻾?쒗뿕???묒떆?????덈떎. 15.?섏갑?쒖슫??留덉씪由ъ?' ?쒕룄??????ㅻ챸?쇰줈 ?곸젅移??딆? 2媛吏?? ??援먰넻踰뺢퇋瑜???吏?ㅺ퀬 ?대? ?ㅼ쿇???댁쟾?먯뿉寃??ㅼ쭏?곸씤 ?몄꽱?곕툕瑜?遺?ы븯???쒕룄?대떎. ???댁쟾?먭? ?뺤?泥섎텇??諛쏄쾶 ??寃쎌슦 ?꾩궛?먯닔?먯꽌 怨듭젣?????덈떎. ??踰붿튃湲덉씠??怨쇳깭猷?誘몃궔?먮룄 留덉씪由ъ? ?쒕룄??臾댁쐞諛섃ㅻТ?ш퀬 ?쒖빟??李몄뿬?????덈떎. ???쒖빟 ?ㅼ쿇湲곌컙 以묒뿉 援먰넻?ш퀬瑜??좊컻?섍굅??援먰넻踰뺢퇋瑜??꾨컲?섎㈃ ?ㅼ떆 ?쒖빟?????녿떎.",
+  "tr_e": "Under Article 49(4) of the Enforcement Decree of the Road Traffic Act, a person who fails the road driving test may retake it after 3 days have passed from the date of failure. 15. Which two of the following are NOT appropriate descriptions of the 'Good Driver Mileage' system? (1) It is a system that grants substantial incentives to drivers who observe and practice traffic laws well. (2) If a driver becomes subject to a suspension disposition, the mileage may be deducted from the accumulated points. (3) A person who has not paid a fine or an administrative penalty may still participate in the mileage system's pledge of no-violation and no-accident. (4) If a person causes a traffic accident or violates traffic laws during the pledge-performance period, the person may not make the pledge again."
+ },
+ {
+  "n": 15,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃?붾퀎??28?뺤슫?꾩옄媛 ?뺤?泥섎텇??諛쏄쾶 ??寃쎌슦 ?꾩궛?먯닔?먯꽌 ?대? 怨듭젣?????덈떎. ?댁쟾硫댄뿀瑜??뚯????꾧뎄??留덉씪由ъ? ?쒕룄??李몄뿬?????덉?留? 踰붿튃湲덉씠??怨쇳깭猷?誘몃궔?먮뒗 ?쒖빟?????녾퀬, ?쒖빟 ?ㅼ쿇湲곌컙 以묒뿉 援먰넻?ш퀬 媛 諛쒖깮?섍굅??援먰넻踰뺢퇋瑜??꾨컲?대룄 ?ㅼ떆 ?쒖빟?????덈떎(?댁쟾硫댄뿀 ?뱁삙?먯닔 遺?ъ뿉 愿??湲곗? 怨좎떆).",
+  "tr_e": "Under Table 28 of the Enforcement Rule of the Road Traffic Act, if a driver becomes subject to a suspension disposition, this may be deducted from the accumulated points. Anyone holding a driver's license may participate in the mileage system, but a person who has not paid a fine or an administrative penalty may not make the pledge, and even if a traffic accident occurs or a traffic law is violated during the pledge-performance period, the person may make the pledge again (per the public notice on standards for granting driver's-license preferential points)."
+ },
+ {
+  "n": 16,
+  "ko_e": "?꾨줈援먰넻踰???議???9??, ?먯쟾嫄??댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧 ??議?????\"媛쒖씤???대룞?μ튂\"? ??9???섎ぉ???먮룞 湲곗옣移섏옄?꾧굅 以??쒖냽 25?щ줈誘명꽣 ?댁긽?쇰줈 ?댄뻾??寃쎌슦 ?꾨룞湲곌? ?묐룞?섏? ?꾨땲?섍퀬 李⑥껜 以묐웾??30?щ줈洹몃옩 誘몃쭔??寃껋쑝 濡쒖꽌 ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??寃껋쓣 留먰븯硫? ?깊뙋媛곷룄??洹쒖젙?섏뼱 ?덉? ?딅떎.",
+  "tr_e": "Article 2, subparagraph 19-2 of the Road Traffic Act; Article 3, subparagraph 1 of the Act on the Promotion of Bicycle Use. A 'personal mobility device' means, among the motorized bicycles under subparagraph 19(b), one that does not have its motor operate when running at 25 km/h or faster and whose vehicle body weighs less than 30 kilograms, as prescribed by Ordinance of the Ministry of the Interior and Safety; a gradient (climbing) angle is not specified."
+ },
+ {
+  "n": 17,
+  "ko_e": "?꾨줈援먰넻踰???議???9???섎ぉ 洹?諛뽰뿉 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰?쇰줈 ?섎뒗 寃쎌슦?먮뒗 理쒓퀬 ?뺢꺽異쒕젰 11?щ줈 ????댄븯)???먮룞湲곕? ??李??먯쟾嫄??댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧 ??議????몄쓽 2???곕Ⅸ ?꾧린?먯쟾嫄?諛???1?몄쓽3???곕Ⅸ ?ㅼ쇅?대룞濡쒕큸? ?쒖쇅?쒕떎) 19??2???쒓컻?명삎 ?대룞?μ튂?앸? ??9???섎ぉ???먮룞湲곗옣移섏옄?꾧굅 以??쒖냽 25?щ줈誘명꽣 ?댁긽?쇰줈 ?댄뻾??寃쎌슦 ?꾨룞湲곌? ?묐룞 ?섏? ?꾨땲?섍퀬 李⑥껜 以묐웾??30?щ줈洹몃옩 誘몃쭔??寃껋쑝濡쒖꽌 ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??寃껋쓣 留먰븳?? * PAS (Pedal Assist System)???꾧린?먯쟾嫄?: ?섎떖怨??꾨룞湲곗쓽 ?숈떆?숇젰?쇰줈 ?吏곸씠硫??꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???녿뒗 ?먯쟾嫄?* Throttle???꾧린?먯쟾嫄?: ?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄곕줈??踰뺣졊 ???섍컻?명삎?대룞?μ튂?숇줈 遺꾨쪟?쒕떎",
+  "tr_e": "Article 2, subparagraph 19(b) of the Road Traffic Act: any other vehicle equipped with an engine of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less) (excluding electric bicycles under Article 2, subparagraph 1-2 of the Act on the Promotion of Bicycle Use and outdoor mobile robots under subparagraph 21-3). Subparagraph 19-2: a 'personal mobility device' means, among the motorized bicycles under subparagraph 19(b), one that does not have its motor operate when running at 25 km/h or faster and whose vehicle body weighs less than 30 kilograms, as prescribed by Ordinance of the Ministry of the Interior and Safety. * PAS (Pedal Assist System) electric bicycle: moves by the combined power of the pedals and the motor and cannot move by motor power alone. * Throttle-type electric bicycle: a bicycle that can move by motor power alone and is classified by law as a 'personal mobility device'."
+ },
+ {
+  "n": 18,
+  "ko_e": "?꾨줈援먰넻踰???82議??댁쟾硫댄뿀寃곌꺽?ъ쑀)??洹쒖젙???섑븯硫??⑥냽 寃쎌같愿 ??뻾?쇰줈 ?낃굔?섏뼱 痍⑥냼?섎뒗 寃쎌슦 痍⑤뱷 寃곌꺽 湲곌컙 1?? ?뚯＜?댁쟾???섎떎媛 3???댁긽 援먰넻?ш퀬瑜??쇱쑝??寃쎌슦 ?댁쟾硫댄뿀媛 痍⑥냼???좊줈遺??3??,
+  "tr_e": "Under the provisions of Article 82 of the Road Traffic Act (Grounds for Disqualification from a Driver's License), if a license is revoked after the person is booked for assaulting a police officer conducting enforcement, the disqualification period for obtaining a license is 1 year; if a person causes three or more traffic accidents while driving under the influence, the disqualification period is 3 years from the date the license is revoked."
+ },
+ {
+  "n": 19,
+  "ko_e": "?곷Ц?댁쟾硫댄뿀利??덈궡(?쒓뎅?꾨줈援먰넻怨듬떒) ?댁쟾?????덈뒗 湲곌컙??援??留덈떎 ?곸씠?섎ŉ, ?遺遺?3媛쒖썡 ?뺣룄???④린媛꾨쭔 ?덉슜 ?섍퀬 ?덉쑝誘濡??κ린泥대쪟瑜??섎뒗 寃쎌슦 ?대떦援??댁쟾硫댄뿀瑜?痍⑤뱷?댁빞 ?쒕떎.",
+  "tr_e": "English Driver's License Guide (Korea Road Traffic Authority). The period during which one may drive differs by country, and most countries allow only a short period of about 3 months, so a person staying long-term must obtain a driver's license of the country concerned."
+ },
+ {
+  "n": 20,
+  "ko_e": "?꾨줈援먰넻踰???議??⑹뼱) ?먮룞湲곗옣移섏옄?꾧굅? ?먮룞李④?由щ쾿???대쪣?먮룞李?媛?대뜲 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰 ?쇰줈 ?섎뒗 寃쎌슦?먮뒗 理쒓퀬?뺢꺽異쒕젰 11?щ줈????댄븯)???대쪣?먮룞李⑥? 洹?諛뽰뿉 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰?쇰줈 ?섎뒗  寃쎌슦?먮뒗 理쒓퀬?뺢꺽異쒕젰 11?щ줈????댄븯)???먮룞湲곕? ??李?,
+  "tr_e": "Article 2 (Definitions) of the Road Traffic Act. A motorized bicycle means, among motorcycles under the Motor Vehicle Management Act, a motorcycle with an engine displacement of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less), and any other vehicle equipped with an engine of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less)."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/300_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 517ms:
+[
+ {
+  "n": 1,
+  "ko_e": "도로교통법 제85조의2(모바일운전면허증 발급 및 운전면허증의 확인 등),           도로교통법시행규칙제78조의2(모바일운전면허증의 신청 등)",
+  "tr_e": "Article 85-2 of the Road Traffic Act (Issuance of the Mobile Driver's License and Verification of the Driver's License, etc.), Article 78-2 of the Enforcement Rule of the Road Traffic Act (Application for the Mobile Driver's License, etc.)."
+ },
+ {
+  "n": 2,
+  "ko_e": "도로교통법시행규칙 제77조∼제81조, 도로교통법 시행규칙 제80조 운전면허증을 잃어버렸거나 헐어 못 쓰게 되었을 때 에는 행정안전부령으로 정하는 바에 따라 시ㆍ도경찰청장에게 신청하여 다시 발급받을 수 있다.",
+  "tr_e": "Articles 77 to 81 of the Enforcement Rule of the Road Traffic Act; Article 80 of the Enforcement Rule of the Road Traffic Act. When a driver's license is lost or is so damaged that it can no longer be used, a person may apply to the Commissioner of the City/Provincial Police Agency, as prescribed by Ordinance of the Ministry of the Interior and Safety, to be reissued a license."
+ },
+ {
+  "n": 3,
+  "ko_e": "도로교통법 제80조에 따라 운전면허를 발급받은 사람이 국외에서 운전하기 위하여 제96조 제1항 제1호의 「도로교통 에 관한 협약」에 따른 국제운전면허증을 발급 받으려면 시, 도 경찰청장에 신청하여야 하고,  유효기간은 발급받 은 날부터 1년이다.",
+  "tr_e": "Under Article 80 of the Road Traffic Act, a person who has obtained a driver's license and wishes to drive abroad must apply to the Commissioner of the City/Provincial Police Agency to be issued an international driving permit under the 'Convention on Road Traffic' referred to in Article 96(1)1; its period of validity is one year from the date of issuance."
+ },
+ {
+  "n": 4,
+  "ko_e": "도로교통법 시행규칙 별표18 승차정원 15인승의 승합자동차는 1종 대형면허 또는 1종 보통면허가 필요하고 긴급자 동차 업무에 종사하는 사람은 도로교통법 시행령 제38조의2 제2항에 따른 신규(3시간) 및 정기교통안전교육(2시간)을 받아야  한다.",
+  "tr_e": "Under Table 18 of the Enforcement Rule of the Road Traffic Act, a bus (van) with a seating capacity of 15 requires a Class 1 Large license or a Class 1 Ordinary license, and a person engaged in emergency-vehicle duties must receive new (3 hours) and regular (2 hours) traffic safety education under Article 38-2(2) of the Enforcement Decree of the Road Traffic Act."
+ },
+ {
+  "n": 5,
+  "ko_e": "도로교통법 제81조(연습운전면허의 효력) 연습운전면허는 그 면허를 받은 날부터 1년 동안 효력을 가진다.          다만, 연습운전면허를 받은 날부터 1년 이전이라도 연습운전면허를 받은 사람이 제1종 보통면허 또는 제2종 보통 면허를 받은 경우 연습운전면허는 그 효력을 잃는다.",
+  "tr_e": "Article 81 of the Road Traffic Act (Effect of a Provisional Driver's License): A provisional driver's license is valid for one year from the date it is issued. However, even before one year has passed since the provisional license was issued, if the person who received the provisional license obtains a Class 1 Ordinary license or a Class 2 Ordinary license, the provisional license loses its effect."
+ },
+ {
+  "n": 6,
+  "ko_e": "도로교통법 시행규칙 제54조(운전면허의 조건 등) 제3항에 의거, 운전면허 조건의 부과기준은 별표20 A는 자동변속기, B는 의수, C는 의족, D는 보청기, E는 청각장애인 표지 및 볼록거울, F는 수동제동기․가속기, G는 특수제작  및 승인차, H는 우측 방향지시기, I는 왼쪽 엑셀레이터이며, 신체장애인이 운전면허시험에 응시할 때 조건에 맞는 차량으로  시험에 응시 및 합격해야 하며, 합격 후 해당 조건에 맞는 면허증 발급",
+  "tr_e": "Under Article 54(3) of the Enforcement Rule of the Road Traffic Act (Conditions of a Driver's License, etc.), the criteria for imposing license conditions are set out in Table 20: A is automatic transmission, B is a prosthetic arm, C is a prosthetic leg, D is a hearing aid, E is a hearing-impaired sign and convex mirror, F is a hand-operated brake/accelerator, G is a specially manufactured and approved vehicle, H is a right-side turn signal, and I is a left-side accelerator. When a physically disabled person takes the driving test, the person must take and pass the test in a vehicle meeting the applicable conditions, and after passing, a license conforming to those conditions is issued."
+ },
+ {
+  "n": 7,
+  "ko_e": "도로교통법 시행규칙 별표18 비고3, 총중량 750킬로그램을 초과하는 3톤이하의 피견인자동차를 견인하기 위해서 는 견인하는 자동차를 운전할 수 있는 면허와 제1종 소형견인차면허 또는 대형견인차면허를 가지고 있어야 한다.",
+  "tr_e": "Under Note 3 of Table 18 of the Enforcement Rule of the Road Traffic Act, to tow a trailer of 3 tons or less whose gross weight exceeds 750 kilograms, a person must hold a license permitting operation of the towing vehicle together with a Class 1 Small Trailer license or a Large Trailer license."
+ },
+ {
+  "n": 8,
+  "ko_e": "도로교통법 시행규칙 별표18(운전할 수 있는 차의 종류)에 따라 덤프트럭은 제1종 대형면허, 배기량 125시시 초과  이륜자동차는 2종 소형면허가 필요하다.",
+  "tr_e": "Under Table 18 of the Enforcement Rule of the Road Traffic Act (Types of Vehicles That May Be Driven), a dump truck requires a Class 1 Large license, and a motorcycle with an engine displacement exceeding 125 cc requires a Class 2 Small license."
+ },
+ {
+  "n": 9,
+  "ko_e": "도로교통법 시행규칙 별표18, 제1종 보통면허로 승차정원 15명 이하의 승합자동차 운전가능, ①, ②, ④는 승차정원  10명 이하의 승합자동차 운전가능",
+  "tr_e": "Under Table 18 of the Enforcement Rule of the Road Traffic Act, a Class 1 Ordinary license allows driving of a bus (van) with a seating capacity of 15 or fewer; (1), (2), and (4) allow driving of a bus (van) with a seating capacity of 10 or fewer."
+ },
+ {
+  "n": 10,
+  "ko_e": "도로교통법 시행령 제45조 제1항 제1호 나목에 따라 제2종 운전면허는 18세 이상으로, 두 눈을 동시에 뜨고 잰  시력이 0.5 이상(다만, 한쪽 눈을 보지 못하는 사람은 다른 쪽 눈의 시력이 0.6 이상이어야 한다.)의 시력이 있어야 한다. 또한  붉은색, 녹색 및 노란색의 색채 식별이 가능해야 하나 듣지 못해도 취득이 가능하다.",
+  "tr_e": "Under Article 45(1)1(b) of the Enforcement Decree of the Road Traffic Act, a Class 2 driver's license requires the person to be at least 18 years old and to have a visual acuity, measured with both eyes open at the same time, of 0.5 or higher (however, a person who cannot see with one eye must have a visual acuity of 0.6 or higher in the other eye). The person must also be able to distinguish the colors red, green, and yellow, but may obtain the license even if unable to hear."
+ },
+ {
+  "n": 11,
+  "ko_e": "도로교통법 제2조 제19호 나목 정의 참조 “원동기장치자전거”란 다음 각 목의 어느 하나에 해당하는 차를 말한다. 가. 「자동차관리법」 제3조에 따른 이륜자동차 가운데 배기량 125시시 이하(전기를 동력으로 하는 경우에는 최고정격출력  11킬로와트 이하)의 이륜자동차 나. 그 밖에 배기량 125시시 이하(전기를 동력으로 하는 경우에는 최고정격출력 11킬로와트 이하)의 원동기를 단 차(「자전거  이용 활성화에 관한 법률」 제2조제1호의2에 따른 전기자전거 및 제21호의3에 따른 실외이동로봇은 제외한다)",
+  "tr_e": "See the definition in Article 2, subparagraph 19(b) of the Road Traffic Act. A 'motorized bicycle' means a vehicle falling under any of the following: (a) among motorcycles under Article 3 of the 'Motor Vehicle Management Act', a motorcycle with an engine displacement of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less); (b) any other vehicle equipped with an engine of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less) (excluding electric bicycles under Article 2, subparagraph 1-2 of the 'Act on the Promotion of Bicycle Use' and outdoor mobile robots under subparagraph 21-3)."
+ },
+ {
+  "n": 12,
+  "ko_e": "도로교통법 제82조 제1항 제6호에 따라 제1종 대형면허는 19세 미만이거나 자동차(이륜자동차는 제외한다)의 운전 경력이 1년 미만인 사람은 받을 수 없다.",
+  "tr_e": "Under Article 82(1)6 of the Road Traffic Act, a Class 1 Large license may not be issued to a person under 19 years of age or to a person with less than one year of experience driving a motor vehicle (excluding motorcycles)."
+ },
+ {
+  "n": 13,
+  "ko_e": "①, ③ 도로교통법시행령 제55조(운전면허증 갱신발급 및 정기 적성검사의 연기 등) 제1항          ④ 도로교통법시행령 제55조(운전면허증 갱신발급 및 정기 적성검사의 연기 등) 제3항           ② 도로교통법시행규칙 제83조(운전면허증 갱신발급 및 정기적성검사의 연기) 제3항, 별지 제59호 서식",
+  "tr_e": "(1), (3): Article 55(1) of the Enforcement Decree of the Road Traffic Act (Postponement of Renewal Issuance of Driver's Licenses and Regular Aptitude Tests, etc.). (4): Article 55(3) of the Enforcement Decree of the Road Traffic Act. (2): Article 83(3) of the Enforcement Rule of the Road Traffic Act (Postponement of Renewal Issuance of Driver's Licenses and Regular Aptitude Tests) and Form 59."
+ },
+ {
+  "n": 14,
+  "ko_e": "도로교통법 시행령 제49조 제4항에 따라 도로주행시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 도로주행시험에 응시할 수 있다. 15.‘착한운전 마일리지' 제도에 대한 설명으로 적절치 않은 2가지는? ① 교통법규를 잘 지키고 이를 실천한 운전자에게 실질적인 인센티브를 부여하는 제도이다. ② 운전자가 정지처분을 받게 될 경우 누산점수에서 공제할 수 있다. ③ 범칙금이나 과태료 미납자도 마일리지 제도의 무위반․무사고 서약에 참여할 수 있다. ④ 서약 실천기간 중에 교통사고를 유발하거나 교통법규를 위반하면 다시 서약할 수 없다.",
+  "tr_e": "Under Article 49(4) of the Enforcement Decree of the Road Traffic Act, a person who fails the road driving test may retake it after 3 days have passed from the date of failure. 15. Which two of the following are NOT appropriate descriptions of the 'Good Driver Mileage' system? (1) It is a system that grants substantial incentives to drivers who observe and practice traffic laws well. (2) If a driver becomes subject to a suspension disposition, the mileage may be deducted from the accumulated points. (3) A person who has not paid a fine or an administrative penalty may still participate in the mileage system's pledge of no-violation and no-accident. (4) If a person causes a traffic accident or violates traffic laws during the pledge-performance period, the person may not make the pledge again."
+ },
+ {
+  "n": 15,
+  "ko_e": "도로교통법 시행규칙〔별표 28〕운전자가 정지처분을 받게 될 경우 누산점수에서 이를 공제할 수 있다. 운전면허를 소지한 누구나 마일리지 제도에 참여할 수 있지만, 범칙금이나 과태료 미납자는 서약할 수 없고, 서약 실천기간 중에 교통사고 가 발생하거나 교통법규를 위반해도 다시 서약할 수 있다(운전면허 특혜점수 부여에 관한 기준 고시).",
+  "tr_e": "Under Table 28 of the Enforcement Rule of the Road Traffic Act, if a driver becomes subject to a suspension disposition, this may be deducted from the accumulated points. Anyone holding a driver's license may participate in the mileage system, but a person who has not paid a fine or an administrative penalty may not make the pledge, and even if a traffic accident occurs or a traffic law is violated during the pledge-performance period, the person may make the pledge again (per the public notice on standards for granting driver's-license preferential points)."
+ },
+ {
+  "n": 16,
+  "ko_e": "도로교통법 제2조 제19호2, 자전거 이용 활성화에 관한 법률 제3조 제1호 \"개인형 이동장치\"란 제19호 나목의 원동 기장치자전거 중 시속 25킬로미터 이상으로 운행할 경우 전동기가 작동하지 아니하고 차체 중량이 30킬로그램 미만인 것으 로서 행정안전부령으로 정하는 것을 말하며, 등판각도는 규정되어 있지 않다.",
+  "tr_e": "Article 2, subparagraph 19-2 of the Road Traffic Act; Article 3, subparagraph 1 of the Act on the Promotion of Bicycle Use. A 'personal mobility device' means, among the motorized bicycles under subparagraph 19(b), one that does not have its motor operate when running at 25 km/h or faster and whose vehicle body weighs less than 30 kilograms, as prescribed by Ordinance of the Ministry of the Interior and Safety; a gradient (climbing) angle is not specified."
+ },
+ {
+  "n": 17,
+  "ko_e": "도로교통법 제2조 제19호 나목 그 밖에 배기량 125시시 이하(전기를 동력으로 하는 경우에는 최고 정격출력 11킬로 와트 이하)의 원동기를 단 차(자전거 이용 활성화에 관한 법률 제2조 제1호의 2에 따른 전기자전거 및 제21호의3에 따른 실외이동로봇은 제외한다) 19의 2호 “개인형 이동장치”란 제19호 나목의 원동기장치자전거 중 시속 25킬로미터 이상으로 운행할 경우 전동기가 작동 하지 아니하고 차체 중량이 30킬로그램 미만인 것으로서 행정안전부령으로 정하는 것을 말한다. * PAS (Pedal Assist System)형 전기자전거 : 페달과 전동기의 동시동력으로 움직이며 전동기의 동력만으로 움직일 수 없는 자전거 * Throttle형 전기자전거 : 전동기의 동력만으로 움직일 수 있는 자전거로서 법령 상 ‘개인형이동장치’로 분류한다",
+  "tr_e": "Article 2, subparagraph 19(b) of the Road Traffic Act: any other vehicle equipped with an engine of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less) (excluding electric bicycles under Article 2, subparagraph 1-2 of the Act on the Promotion of Bicycle Use and outdoor mobile robots under subparagraph 21-3). Subparagraph 19-2: a 'personal mobility device' means, among the motorized bicycles under subparagraph 19(b), one that does not have its motor operate when running at 25 km/h or faster and whose vehicle body weighs less than 30 kilograms, as prescribed by Ordinance of the Ministry of the Interior and Safety. * PAS (Pedal Assist System) electric bicycle: moves by the combined power of the pedals and the motor and cannot move by motor power alone. * Throttle-type electric bicycle: a bicycle that can move by motor power alone and is classified by law as a 'personal mobility device'."
+ },
+ {
+  "n": 18,
+  "ko_e": "도로교통법 제 82조(운전면허결격사유)의 규정에 의하면 단속 경찰관 폭행으로 입건되어 취소되는 경우 취득 결격 기간 1년, 음주운전을 하다가 3회 이상 교통사고를 일으킨 경우 운전면허가 취소된 날로부터 3년",
+  "tr_e": "Under the provisions of Article 82 of the Road Traffic Act (Grounds for Disqualification from a Driver's License), if a license is revoked after the person is booked for assaulting a police officer conducting enforcement, the disqualification period for obtaining a license is 1 year; if a person causes three or more traffic accidents while driving under the influence, the disqualification period is 3 years from the date the license is revoked."
+ },
+ {
+  "n": 19,
+  "ko_e": "영문운전면허증 안내(한국도로교통공단) 운전할 수 있는 기간이 국가마다 상이하며, 대부분 3개월 정도의 단기간만 허용 하고 있으므로 장기체류를 하는 경우 해당국 운전면허를 취득해야 한다.",
+  "tr_e": "English Driver's License Guide (Korea Road Traffic Authority). The period during which one may drive differs by country, and most countries allow only a short period of about 3 months, so a person staying long-term must obtain a driver's license of the country concerned."
+ },
+ {
+  "n": 20,
+  "ko_e": "도로교통법 제2조(용어) 원동기장치자전거란 자동차관리법상 이륜자동차 가운데 배기량 125시시 이하(전기를 동력 으로 하는 경우에는 최고정격출력 11킬로와트 이하)의 이륜자동차와 그 밖에 배기량 125시시 이하(전기를 동력으로 하는  경우에는 최고정격출력 11킬로와트 이하)의 원동기를 단 차",
+  "tr_e": "Article 2 (Definitions) of the Road Traffic Act. A motorized bicycle means, among motorcycles under the Motor Vehicle Management Act, a motorcycle with an engine displacement of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less), and any other vehicle equipped with an engine of 125 cc or less (or, if powered by electricity, a maximum rated output of 11 kilowatts or less)."
+ }
+]
+
+codex
+[]
+tokens used
+15,979
+[]

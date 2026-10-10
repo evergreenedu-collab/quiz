@@ -1,0 +1,1050 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125c0-c021-70e3-b7af-554c04a40fed
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/201_choices_cn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/201_choices_cn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 551ms:
+[
+ {
+  "n": 41,
+  "ko_b": "?먮룞李⑥뿉 ?뱀감?섍린 ??二쇰??먭? ?ы빆?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "??댁뼱 留덈え?곹깭",
+   "?꾬쉈?꾨갑 ?μ븷臾??좊Т",
+   "?댁쟾??怨꾧린???뺤긽?묐룞 ?щ?",
+   "釉뚮젅?댄겕 ?섎떖 ?뺤긽?묐룞 ?щ?"
+  ],
+  "a": "1, 2",
+  "tr_b": "訝뗥닓?념틢訝딂쉐?띷쑛?②쉐汝?δ틟窈밥릎閭ｇ‘?꾡륵窈방삸竊?,
+  "tr_c": [
+   "饔?깕髥ⓩ뜜?뜻?,
+   "?뷴뒯饔?뎺?롦뼶?됪뿞?쒐쥗??,
+   "要얗㈅躍?빽烏①썥??맔閭ｅ만??뒯",
+   "?뜹뒯甕뤸씮??맔閭ｅ만"
+  ]
+ },
+ {
+  "n": 42,
+  "ko_b": "?쇰컲?곸쑝濡?臾대낫??MF竊숸aintenance Free)諛고꽣由??섎챸???ㅽ븳 寃쎌슦, ?먭?李쎌뿉 ?섑??섎뒗 ?됯퉼??",
+  "ko_c": [
+   "?⑹깋",
+   "諛깆깋",
+   "寃???,
+   "?뱀깋"
+  ],
+  "a": "2",
+  "tr_b": "?싧만?θ?竊뚦뀓瀯닸뒪竊뉾F: Maintenance Free竊됭뱞?득콬野욕뫝?경쐿?? 汝鰲녺첊?양ㅊ餓阿덆쥪??",
+  "tr_c": [
+   "容꾥돯",
+   "?썼돯",
+   "容묋돯",
+   "瀯욤돯"
+  ]
+ },
+ {
+  "n": 43,
+  "ko_b": "?ㅼ쓬 以?李⑤웾 ?곕즺濡??ъ슜??寃쎌슦, 媛吏??앹쑀?쒗뭹?쇰줈 蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "?섎컻?좎뿉 硫뷀깂?ъ씠 ?쇳빀???쒗뭹",
+   "蹂댄넻 ?섎컻?좎뿉 怨좉툒 ?섎컻?좉? ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹",
+   "寃쎌쑀???깆쑀媛 ?쇳빀???쒗뭹",
+   "寃쎌쑀??臾쇱씠 ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹"
+  ],
+  "a": "4",
+  "tr_b": "訝뗥닓?됮」訝?펽?ⓧ퐳黎썼쉐?껅뼑?띰펽?졿퀡鰲녵맏?뉒윹亦밧댍?곭쉪??폕",
+  "tr_c": [
+   "?ⓩ굵亦밥릎?졾뀯?꿴냷?꾡벨??,
+   "?ⓧ??ф굵亦밥릎?졾뀯訝띶댆5%?꾦쳵瀛㎪굵亦밭쉪雅㎩뱚",
+   "?ⓩ윺亦밥릎?졾뀯?ㅶ껸?꾡벨??,
+   "?ⓩ윺亦밥릎?졾뀯訝띶댆5%?꾣객?꾡벨??
+  ]
+ },
+ {
+  "n": 44,
+  "ko_b": "?섏냼媛???꾩텧???뺤씤?????덈뒗 諛⑸쾿???꾨땶 寃껋??",
+  "ko_c": [
+   "媛?곗꽦 媛?ㅺ?吏湲??쒖슜 痢≪젙",
+   "鍮꾨닓臾쇱쓣 ?듯븳 ?뺤씤",
+   "媛???꾩깉瑜?留≪븘 ?뺤씤",
+   "?섏냼寃吏湲곕줈 ?뺤씤"
+  ],
+  "a": "3",
+  "tr_b": "訝뗥닓?념틢簾??麗€컮力꾣폀?꾣뼶力뺜릎?숃??꾣삸竊?,
+  "tr_c": [
+   "鵝욜뵪??뇘?㎪컮鵝볠?役뗥솳瓦쏂죱汝役?,
+   "鵝욜뵪?η쉨麗닺퓵烏뚨‘溫?,
+   "?싪퓝?낂뿻麗붷뫑瓦쏂죱簾??",
+   "鵝욜뵪麗€컮役뗩뇧餓よ퓵烏뚨‘溫?
+  ]
+ },
+ {
+  "n": 45,
+  "ko_b": "?섏냼李⑤웾???덉쟾?섏튃?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "異⑹쟾?섍린 ??李⑤웾???쒕룞???덈떎.",
+   "異⑹쟾?뚯뿉???≪뿰? 李⑤웾???⑥뼱?몄꽌 ?쒕떎.",
+   "?섏냼媛?ㅺ? ?꾩꽕???뚯뿉??異⑹쟾???덉쟾愿由ъ옄?먭쾶 ?덉쟾?먭????붿껌?쒕떎.",
+   "?섏냼李⑤웾??異⑸룎 ??援먰넻?ш퀬 ?꾩뿉??媛???덉쟾?먭???諛쏆? ???ъ슜?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "訝뗥닓?념틢麗?꺗繹먩굵饔?츎?ⓨ츍?숂쉪?뤺염訝?뵗瑥?쉪??폕",
+  "tr_c": [
+   "?끾컮?띶룕?②쉐渦녴?,
+   "?ⓨ뀉麗붺쳶?며깱?띰펽佯붻퓶獵삭쉐渦녴?,
+   "?묊뵟麗€컮力꾣폀?띰펽誤곫콆?끾컮塋쇿츎?①??녵볶?섋퓵烏뚦츎?ⓩ??γ?,
+   "麗?꺗黎썼쉐?ⓨ룕?잏ː?욅춬雅ㅹ싦틟?끻릮竊뚪?瓦쏂죱?껅컮若됧뀲汝?ε릮?띴슴?ⓦ?
+  ]
+ },
+ {
+  "n": 46,
+  "ko_b": "?ㅼ쓬 以??섏냼李⑤웾?먯꽌 ?꾩텧???뺤씤?섏? ?딆븘???섎뒗 怨녹??",
+  "ko_c": [
+   "諛몃툕? ?⑷린???묒냽遺",
+   "議곗젙湲?,
+   "媛???몄뒪? 諛곌? ?곌껐遺",
+   "?곕즺?꾩? 遺?ㅽ듃 ?몃쾭??
+  ],
+  "a": "4",
+  "tr_b": "訝뗥닓?됮」訝?펽?ⓩ각?썸틦黎썼쉐訝딀뿞?簾??力꾣폀?끻넻?꾢쑑?방삸竊?,
+  "tr_c": [
+   "??ⓧ툗若밧솳?꾣렏?ｉ깿鵝?,
+   "瘟껇뒄??,
+   "麗€컮嶸↓걪?뚪뀓嶸↑퓹?ε쨪",
+   "?껅뼑?득콬?뉐럨?녶룜??
+  ]
+ },
+ {
+  "n": 47,
+  "ko_b": "?꾧린李?異⑹쟾???꾪븳 ?щ컮瑜?諛⑸쾿?쇰줈 ?곸젅?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "異⑹쟾???뚮뒗 洹쒓꺽??留욌뒗 異⑹쟾湲곗? ?대뙌?곕? ?ъ슜?쒕떎.",
+   "異⑹쟾 以묒뿉??異⑹쟾 而ㅻ꽖?곕? ?꾩쓽濡?遺꾨━?섏? ?딄퀬 異⑹쟾 醫낅즺 踰꾪듉?쇰줈 醫낅즺?쒕떎.",
+   "?뽰? ?먯쑝濡?異⑹쟾湲??ъ슜???섏? ?딄퀬 異⑹쟾?μ튂??臾쇱씠 ?ㅼ뼱媛吏 ?딅룄濡?二쇱쓽?쒕떎.",
+   "?대???異⑹쟾湲곕? ?댁슜?섏뿬 異⑹쟾??寃쎌슦 媛?뺤슜 硫?고꺆?대굹 ?곗옣?좎쓣 ?ъ슜?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "訝뗥닓?념틢?드뒯黎썼쉐?끿뵷?방퀡?꾣룒瓦겻릎?숃??꾣삸竊?,
+  "tr_c": [
+   "?끿뵷?뜸슴?①Е?덅쭊?쇘쉪?끿뵷?ⓨ뭽?귡뀓?ⓦ?,
+   "?끿뵷瓦뉒쮮訝?툖?뤶씩?붹럦瓦욄렏?⑨펽瀯볠씇?띄궧?사퍜?잌뀉?득뙃???,
+   "訝띸뵪躍?객歷띸쉪?뗨㏄?멨뀉?드솳竊뚦뭉力ⓩ꼷訝띹쫨溫⒵객瓦쎾뀯?끿뵷溫얍쨭??,
+   "鵝욜뵪堊욘맳凉뤷뀉?드솳?끿뵷?띰펽鵝욜뵪若띄뵪鸚싨룖耶붹룖佯㎪닑兩띌빣瀛욍?
+  ]
+ },
+ {
+  "n": 48,
+  "ko_b": "踰뺣졊???먮룞李⑥쓽 ?깊솕 醫낅쪟? 洹??깃킅?됱쓣 ?곌껐??寃껋쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾪눜??- ?몃컯??,
+   "踰덊샇??- 泥?깋",
+   "?꾨???- 諛깆깋",
+   "?쒕룞??- ?곸깋"
+  ],
+  "a": "4",
+  "tr_b": "力뺝풃鰲꾢츣饔?겘燁띸굳訝롥끀窯쒑돯?백뀓閭ｇ‘?꾣삸竊?,
+  "tr_c": [
+   "?롩??- ?η???,
+   "?루쟻??- ?앲돯",
+   "弱양겘 - ?썼돯",
+   "?뜹뒯??- 瀛?돯"
+  ]
+ },
+ {
+  "n": 49,
+  "ko_b": "LPG李⑤웾???곕즺?뱀꽦??????ㅻ챸?쇰줈 ?곷떦?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "?쇰컲?곸씤 湲곗껜?곹깭濡??곗냼?섏뼱 ?붿쭊??遺?쒕읇寃??묐룞?쒕떎.",
+   "李⑤웾??LPG???낇듅???꾩깉媛 ?덈떎.",
+   "?쇰컲?곸쑝濡?怨듦린蹂대떎 媛蹂띻퀬, ??컻 ?꾪뿕?깆씠 ?곷떎.",
+   "?섎컻?좊굹 寃쎌쑀??鍮꾪빐 ?먮꼫吏 諛?꾧? ??븘 ?숈씪??諛곌린?됱뿉??異쒕젰????퀬 ?곕퉬媛 ?⑥뼱吏꾨떎."
+  ],
+  "a": "3",
+  "tr_b": "訝뗥닓?념틢LPG饔?푺?껅뼑?방㎫쉪瑥닸삇訝?툖?겼퐪?꾣삸?",
+  "tr_c": [
+   "餓δ??ф컮?곭뇘?㏆펽?묈뒯?븃퓧饔у뭄葉녈?,
+   "饔?푺?쭺PG?됬돶餘딁쉪麗붷뫑??,
+   "訝?ф캈令뷸컮饔삼펽?녺궦?깁솴?㎬푵弱뤵?,
+   "訝롦굵亦방닑?닸껸?멩캈?썽뇧野녶벧鵝롳펽?졿??①쎑?뚧럲?뤶툔渦볟눣?잏럤渦껂퐥竊뚨뇘亦방븞?뉓푵藥??
+  ]
+ },
+ {
+  "n": 50,
+  "ko_b": "?먮룞李⑥쓽 ?쒕룞?μ쓣 ??섑븯???먯씤?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "留덉뒪???ㅻ┛??怨좎옣",
+   "???ㅻ┛??遺덈웾",
+   "由대━???ы겕 蹂??,
+   "踰좎씠??濡?諛쒖깮"
+  ],
+  "a": "3",
+  "tr_b": "訝뗥닓?됮」訝?펽?亦→쐣??꺗野쇠눜?뷴뒯饔?댍?ⓨ뒟訝뗩솉?꾣삸竊?,
+  "tr_c": [
+   "訝사섯?낂슌",
+   "饔?섯訝띶릦??,
+   "?녺┿?됧룜壤?,
+   "?뜹뒯麗붼샍"
+  ]
+ },
+ {
+  "n": 51,
+  "ko_b": "二쇳뻾 蹂댁“?μ튂媛 ?μ갑???먮룞李⑥쓽 ?댁쟾諛⑸쾿?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "二쇳뻾 蹂댁“?μ튂瑜??ъ슜?섎뒗 寃쎌슦 二쇳뻾 蹂댁“?μ튂 ?묐룞 ?좎? ?щ?瑜??섏떆濡??뺤씤?섎ŉ 二쇳뻾?쒕떎.",
+   "?댁쟾 媛쒖엯 寃쎄퀬 ??二쇳뻾 蹂댁“?μ튂媛 ?댁젣???뚭퉴吏 湲곕떎?몃떎媛 媛쒖엯?댁빞 ?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂???쇰? ?먮뒗 ?꾩껜瑜??댁젣?섎뒗 寃쎌슦 ?묐룞 ?щ?瑜??뺤씤?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂媛 ?묐룞?섍퀬 ?덈뜑?쇰룄 利됱떆 媛쒖엯?????덈룄濡??湲고븯硫댁꽌 ?댁쟾?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "?념틢?띶쨭要얗㈅渦끻뒰獒끿쉰?꾣굵饔?펽訝뗥닓野백㈍要뜻뼶力뺟쉪?뤺염訝?뵗瑥?쉪??폕",
+  "tr_c": [
+   "鵝욜뵪要얗㈅渦끻뒰獒끿쉰?띰펽要얗㈅瓦뉒쮮訝???뤸뿶?η쐦要얗㈅渦끻뒰獒끿쉰??맔閭ｅ만瓦먫죱??,
+   "?ⓨ룕?븅㈍要뜻렏嶸↑??딀뿶竊뚦틪嶺됧푷楹사퍨若뚦뀲鰲ｉ솮?롥냽瓦쏂죱?η???,
+   "要얗㈅渦끻뒰獒끿쉰?븀렟?ⓨ늽?뽩뀲?②㎗?ㅷ쉪?끻넻?띰펽佯붺‘溫ㅵ끀??맔閭ｅ만瓦먫죱??,
+   "?념씩??뒯要얗㈅渦끻뒰獒끿쉰竊뚩쉐渦녻죱要띈퓝葉뗤릎竊뚪㈍要뜸볶餓띶틪?녶쨭?뤸뿶餓뗥뀯要얗㈅??
+  ]
+ },
+ {
+  "n": 52,
+  "ko_b": "?먮룞李⑤? ?덉쟾?섍퀬 ?몃━?섍쾶 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "LFA(Lane Following Assist)???쒖감濡쒖쑀吏蹂댁“?앷린?μ쑝濡??먮룞李④? 李⑤줈 以묒븰???좎??섎ŉ 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫?대떎.",
+   "ASCC(Adaptive Smart Cruise Control)???쒖감媛꾧굅由?諛??띾룄?좎??앷린?μ쑝濡??댁쟾?먭? ?ㅼ젙???띾룄濡?二쇳뻾?섎㈃???욎감???嫄곕━瑜??좎??섏뿬 ?ㅼ뒪濡?媛쨌媛먯냽???댁＜??湲곕뒫?대떎.",
+   "ABSD(Active Blind Spot Detection)???쒖궗媛곸??媛먯??앷린?μ쑝濡??ш컖吏???異⑸룎 ?꾪뿕??媛먯????덉쟾??李⑤줈 蹂寃쎌쓣 ?뺣뒗 湲곕뒫?대떎.",
+   "AEB(Autonomous Emergency Braking)???쒖옄?숆릿湲됱젣?쇺앷린?μ쑝濡?釉뚮젅?댄겕 ?쒕룞????댁뼱媛 ?좉린??寃껋쓣 諛⑹??섏뿬 ?쒕룞 嫄곕━瑜?以꾩뿬二쇰뒗 湲곕뒫?대떎."
+  ],
+  "a": "4",
+  "tr_b": "訝뗥닓?념틢餓δ퓷瑥곫쑛?②쉐要얗㈅若됧뀲?뚥씩?⒳맏??쉪?꾥푷?⒴뒣?썹쉪瑥닸퀡訝?펽?숃??꾣삸竊?,
+  "tr_c": [
+   "LFA竊뉽ane Following Assist竊됪삸?쒑쉐?볞퓷?곮푷?⒱앭뒣?쏙펽?룡쐣渦끻뒰?뷴뒯饔╊퓷?곮죱要뜹쑉饔?걪訝?ㄾ?꾢뒣?썬?,
+   "ASCC竊뉯daptive Smart Crusise Control竊됪삸?쒑쉐瓮앭뭽饔?잏뺨?곣앭뒣?쏙펽?썼눎?ⓨ뒥?잍닑?뤻잞펽鵝욘쑛?②쉐?②죱要뜻뿶瀯닸똻要얗㈅雅븃?若??꾦잌벧竊뚥퓷?곦툗?띹쉐阿뗩뿴?꾥쉐瓮앫?,
+   "ABSD竊뉯ctive Blind Spot Detection竊됪삸?싪퓝?잏윥鰲녻쭑?꿨뙷?꾤ː?욃뜳?⑼펽渦끻뒰?뷴뒯饔?츑?먨츎?ⓨ룜?볡쉪?잒꺗??,
+   "AEB竊뉯utonomous Emergency Braking竊됪삸訝븅삻閭℡댍?②퓝葉뗤릎饔?쉰?길?亮띄섄??댍?②퇌獵사쉪?잒꺗??
+  ]
+ },
+ {
+  "n": 53,
+  "ko_b": "?먯쑉二쇳뻾?쒖뒪?쒓낵 愿?⑤맂 踰뺣졊???댁슜?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?꾨줈援먰넻踰뺤긽?쒖슫?꾟앹뿉???꾨줈?먯꽌 李⑤쭏瑜?洹?蹂몃옒???ъ슜諛⑸쾿???곕씪 ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섎뒗 寃껋? ?ы븿?섏? ?딅뒗??",
+   "?댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ?대??꾪솕 ?ъ슜湲덉? 洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+   "?먯쑉二쇳뻾?쒖뒪?쒖쓽 吏곸젒 ?댁쟾 ?붽뎄??吏泥댁뾾????묓븯吏 ?꾨땲???먯쑉二쇳뻾?뱀슜?먮룞李⑥쓽 ?댁쟾?먯뿉 ???踰붿튃湲덉븸? 4留??먯씠??",
+   "?쒖옄?⑥＜?됱떆?ㅽ뀥?앹씠? ?댁쟾???먮뒗 ?밴컼??議곗옉 ?놁씠 二쇰??곹솴怨??꾨줈 ?뺣낫 ?깆쓣 ?ㅼ뒪濡??몄??섍퀬 ?먮떒?섏뿬 ?먮룞李⑤? ?댄뻾 ?????덇쾶 ?섎뒗 ?먮룞???λ퉬, ?뚰봽?몄썾??諛??댁? 愿?⑦븳 紐⑤뱺 ?μ튂瑜?留먰븳??"
+  ],
+  "a": "1",
+  "tr_b": "?념틢訝롨눎?③㈍要띄내瀯잏쎑?녕쉪力뺠쭊?끻?竊뚥툔?쀩됮」訝?뵗瑥?쉪??폕",
+  "tr_c": [
+   "?딃걪瓮?벡?싨퀡?뗤릎?먨댆?꾟쒒㈍要띈죱訝뷜앾펽訝띶똿?у쑉?볢러訝딀뙃饔?푺?잍쑍?ⓩ퀡鵝욜뵪?꾥눎?③㈍要띄내瀯잆?,
+   "要얗㈅雅뷰슴?②눎?③㈍要띄내瀯잓㈍要뜻뿶竊뚥툖?귞뵪獵곫?鵝욜뵪?뗦똻?듣캕?꾥쭊若싥?,
+   "野밥틢訝띸쳦?녑뱧佯붻눎?③㈍要띄내瀯잍룓?븀쉪雅뷴램要얗㈅誤곫콆?꾦㈍要뜸볶竊뚦컛鸚꾡빳4訝뉔윪?껆퐱轝얇?,
+   "?쒑눎?③㈍要띄내瀯잂앮삸??빳?좈?要얗㈅雅뷸닑?끺튂若€뱧鵝쒙펽?싪퓝?や말溫ㅷ윥竊뚦닩??뫅渦방깄?드뭽瓮?씊岳→겘嶺됵펽餓ζ?若욅렟要얗㈅?뷴뒯饔?쉪?ゅ뒯 ?뽫내瀯잆곮쉴餓뜹룋?뜻??됬쎑?녕쉪獒끿쉰??
+  ]
+ },
+ {
+  "n": 54,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李⑥쓽 二쇱슂 援ъ꽦?덉씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?곕즺?꾩?",
+   "援щ룞紐⑦꽣",
+   "?붿쭊",
+   "諛고꽣由?
+  ],
+  "a": "3",
+  "tr_b": "訝뗥닓?됮」訝?툖??각?썸쑛?②쉐訝삭쫨瀯꾣닇?ⓧ뻑?꾣삸竊?,
+  "tr_c": [
+   "?껅뼑?득콬",
+   "要긷뒯?득쑛",
+   "?묈뒯??,
+   "?득콬"
+  ]
+ },
+ {
+  "n": 55,
+  "ko_b": "?먮룞李??댁뿰湲곌????щ옲?ъ텞?먯꽌 諛쒖깮?섎뒗 ?뚯쟾???쒓컙?곸쑝濡??대뒗 ????臾댁뾿?대씪 ?섎뒗媛 ?",
+  "ko_c": [
+   "?좏겕",
+   "?곕퉬",
+   "諛곌린??,
+   "留덈젰"
+  ],
+  "a": "1",
+  "tr_b": "?뷴뒯饔?냵?껅쑛?꾣쎊饔답벨?잏쉪?뗨쉬?쏉펷?ч뿴雅㎫뵟?꾢뒟竊됧룶餓阿?",
+  "tr_c": [
+   "??윪",
+   "?껅뼑易덅쀧럤",
+   "?믤컮??,
+   "要у뒟"
+  ]
+ },
+ {
+  "n": 56,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??곸슜??珥됱쭊 諛?吏?먯뿉 愿??踰뺣졊???먯쑉二쇳뻾?먮룞李⑥뿉 ????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 醫낅쪟???꾩쟾?먯쑉二쇳뻾?먮룞李⑥? 遺遺꾩옄?⑥＜?됱옄?숈감濡?援щ텇?????덈떎.",
+   "?꾩쟾 ?먯쑉二쇳뻾?먮룞李⑤뒗 ?먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????덉뼱 ?댁쟾?먭? ?녾굅???댁쟾???먮뒗 ?밴컼??媛쒖엯???꾩슂?섏?       ?꾨땲???먮룞李⑤? 留먰븳??",
+   "遺遺꾩옄?⑥＜?됱옄?숈감???먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????녾굅???댁쟾?먭? 吏?띿쟻?쇰줈 二쇱떆???꾩슂媛 ?덈뒗 ???댁쟾????      ???밴컼??媛쒖엯???꾩슂???먮룞李⑤? 留먰븳??",
+   "?먯쑉二쇳뻾?먮룞李⑤뒗 ?뱀슜?먮룞李⑥뿉 ?쒖젙?섏뼱 ?곸슜?섍퀬, ?뱁빀?먮룞李⑤굹 ?붾Ъ?먮룞李⑤뒗 ??踰뺤씠 ?곸슜?섏? ?딅뒗??"
+  ],
+  "a": "4",
+  "tr_b": "?방뜮?듾퓘瓦쎾뭉??뤃?ゅ뒯要얗㈅黎썼쉐?녺뵪?뽫쎑?녔퀡孃뗣뗰펽訝뗥닓?념틢?ゅ뒯要얗㈅黎썼쉐?꾥?力뺜릎?숃??꾣삸竊?,
+  "tr_c": [
+   "?ゅ뒯要얗㈅黎썼쉐?꾤쭕映삣룾餓ε늽訝뷴뀲?ゅ뒯要얗㈅黎썼쉐?뚦뜇?ゅ뒯要얗㈅黎썼쉐??,
+   "?②눎?③㈍要뜻굵饔?삸?뉐룾餓ε츑?ⓧ풚?좄눎?③㈍要띄내瀯잓㈍要띰펽?좈?要얗㈅雅뷸닑阿섇?亮꿴쥋?꾣굵饔╉?,
+   "?딂눎?③㈍要뜻굵饔?삸?뉑뿞力뺝츑?ⓧ풚?좄눎?③㈍要띄내瀯잓㈍要띰펽?誤곲㈍要뜸볶?곭뺌力ⓩ꼷竊뚧닑?낂?誤곲㈍要뜸볶?뽨튂若℡묾窯꾤쉪黎썼쉐??,
+   "?ゅ뒯要얗㈅黎썼쉐?꾤쭕映삡퍎?먫슴饔?펽若?쉐?뽬뇻饔╊툖?귞뵪瑥ζ퀡孃뗣?
+  ]
+ },
+ {
+  "n": 57,
+  "ko_b": "?꾧린?먮룞李?愿由щ갑踰뺤쑝濡??녹? ?딆? 2媛吏??",
+  "ko_c": [
+   "鍮꾩궗?낆슜 ?뱀슜?먮룞李⑥쓽 ?먮룞李④????좏슚湲곌컙? 6?꾩씠??",
+   "?κ굅由??댁쟾 ?쒖뿉???ъ쟾??諛고꽣由щ? ?뺤씤?섍퀬 異⑹쟾?쒕떎.",
+   "異⑹쟾 吏곹썑?먮뒗 湲됯??? 湲됱젙吏瑜??섏? ?딅뒗 寃껋씠 醫뗫떎.",
+   "?댁꽑?쒗듃, ?댁꽑?몃뱾蹂대떎 怨듦린 ?덊꽣瑜??ъ슜?섎뒗 寃껋씠 ?⑥쑉?곸씠??"
+  ],
+  "a": "1, 4",
+  "tr_b": "訝뗥닓?념틢?드뒯黎썼쉐嶸←릤?방퀡?꾥??롳펽?숃??꾡륵訝ら됮」??폕",
+  "tr_c": [
+   "?욃븚?②슴饔?쉪汝?ζ쐣?덃쐿??亮담?,
+   "?②퓵烏뚪빣?붼㈍要뜻뿶竊뚦틪雅뗥뀍簾???득콬?들뇧亮뜹뀉?듐?,
+   "?싧뀉若뚨뵷竊뚦갹?뤶툖誤곭뇻?ε뒥?잍닑?ε댒饔╉?,
+   "?뚦뒥??쓲?ユ닑?좂꺆?밧릲?섊쎑驪뷂펽凉??㈉瘟껃댍??쎍遙섉븞??
+  ]
+ },
+ {
+  "n": 58,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) 李쎌쑀由?媛?쒓킅???ш낵?⑥쓽 洹쒖젣瑜?諛쏅뒗 寃껋??",
+  "ko_c": [
+   "?룹쥖???녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦 ?녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦, ?룸㈃ 李쎌쑀由?,
+   "紐⑤뱺 李쎌쑀由?
+  ],
+  "a": "2",
+  "tr_b": "?방뜮?딃걪瓮?벡?싨퀡?뗨쭊若싷펽野배쉐囹쀧렮?껓펷鵝녶꽴塋ζ젩饔?솮鸚뽳펹??쭅?됮뤺퓝?뉑쐣?먨댍?꾣삸竊?,
+  "tr_c": [
+   "?롥벨?곮씁?꾥쉐囹쀧렮??,
+   "?띷뼶?곲㈍要뜹릎藥?뤂訝ㅴ쑨?꾥쉐囹쀧렮??,
+   "?띷뼶?곲㈍要뜹릎藥?뤂訝ㅴ쑨?곩릮?밭쉪饔?첊?사뭴",
+   "??됭쉐囹쀧렮??
+  ]
+ },
+ {
+  "n": 59,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?뱀슜?먮룞李⑤뒗 紐????댄븯瑜??댁넚?섍린???곹빀?섍쾶 ?쒖옉???먮룞李⑥씤媛?",
+  "ko_c": [
+   "10??,
+   "12??,
+   "15??,
+   "18??
+  ],
+  "a": "1",
+  "tr_b": "?방뜮?딀쑛?②쉐嶸←릤力뺛뗨쭊若싷펽饔욤쉐??귛릦瓦먫풏?졽볶餓δ툔?꾥쉐渦놅폕",
+  "tr_c": [
+   "10雅?,
+   "12雅?,
+   "15雅?,
+   "18雅?
+  ]
+ },
+ {
+  "n": 60,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?좉퇋 ?뱀슜?먮룞李⑥쓽 理쒖큹寃???좏슚湲곌컙??",
+  "ko_c": [
+   "1??,
+   "2??,
+   "4??,
+   "5??
+  ],
+  "a": "4",
+  "tr_b": "堊앯뀱?딀쑛?②쉐嶸←릤力뺛뗨쭊若싷펽?욃븚?ⓩ뼭饔욤쉐?꾢닜轝→?謠뚧쐣?덃쐿訝븝폕",
+  "tr_c": [
+   "1亮?,
+   "2亮?,
+   "4亮?,
+   "5亮?
+  ]
+ },
+ {
+  "n": 61,
+  "ko_b": "?먮룞李④?由щ쾿???먮룞李⑥쓽 醫낅쪟濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "嫄댁꽕湲곌퀎",
+   "?붾Ъ?먮룞李?,
+   "寃쎌슫湲?,
+   "?뱀닔?먮룞李?
+  ],
+  "a": "2, 4",
+  "tr_b": "?방뜮?딀쑛?②쉐嶸←릤力뺛뗨쭊若싷펽訝뗥닓掠욂틢?뷴뒯饔?쭕映사쉪訝ㅹ」??폕",
+  "tr_c": [
+   "兩븀춵?뷸ː",
+   "兀㎬쉐",
+   "?뺠섉쑛",
+   "?방츏?뷴뒯饔?
+  ]
+ },
+ {
+  "n": 62,
+  "ko_b": "鍮꾩궗?낆슜 諛???ъ궗?낆슜 ?꾧린?먮룞李⑥? ?섏냼 ?곕즺?꾩??먮룞李??섏씠釉뚮━???먮룞李??쒖쇅) ?꾩슜踰덊샇???됱긽?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?⑹깋 諛뷀깢??寃???臾몄옄",
+   "?뚮???諛뷀깢??寃???臾몄옄",
+   "媛먯껌??諛뷀깢???곗깋 臾몄옄",
+   "蹂대옃鍮?諛뷀깢??寃???臾몄옄"
+  ],
+  "a": "2",
+  "tr_b": "訝뗥닓?념틢?욃븚?ⓨ룋燁잒탛?녺뵪?드뒯黎썼쉐?뚧각?껅뼑?득콬黎썼쉐竊덃렁?덂뒯?쎿굵饔?솮鸚뽳펹?꾡툜?②쉐?뚪쥪?꿰쉪?뤺염訝?펽閭ｇ‘?꾣삸竊?,
+  "tr_c": [
+   "容꾢틫容묈춻",
+   "?앭틫容묈춻",
+   "曆김뱷佯뺟쇋耶?,
+   "榮ュ틫容묈춻"
+  ]
+ },
+ {
+  "n": 63,
+  "ko_b": "?ㅼ쓬 李⑤웾 以??섏씠?⑥뒪李⑤줈 ?댁슜??遺덇??ν븳 李⑤웾??",
+  "ko_c": [
+   "?곸옱以묐웾 16???ㅽ봽?몃윮",
+   "?쒖슱怨??섏썝???댄뻾?섎뒗 2痢?醫뚯꽍踰꾩뒪",
+   "?⑥감濡쒖씤 寃쎌슦, 李⑦룺??3.7m???뚮갑李⑤웾",
+   "10?????援щ궃李⑤웾"
+  ],
+  "a": "3",
+  "tr_b": "訝뗥닓饔?푺訝?툖孃쀤슴?쭴i-Pass饔?걪?꾣삸竊?,
+  "tr_c": [
+   "獒낁슬?띺뇧訝?6?①쉪?ゅ뜽饔?,
+   "孃瓦붶틢腰뽩컮?뚧객?잏쉪?뚦콆?т벡饔?,
+   "烏뚪㈅?ⓨ뜒饔?걪訝딁쉪饔??訝?.7映녕쉪易덆삻饔?,
+   "10?①쉪鸚㎩엹?묌솴饔?
+  ]
+ },
+ {
+  "n": 64,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?뱁빀?먮룞李?2001???댄썑 ?깅줉??李⑤졊??4??珥덇낵)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "2",
+  "tr_b": "?방뜮?딀쑛?②쉐嶸←릤?멨뀽力뺜빱?뗰펽野밥틢?욆맓訝싩뵪?붺쉪弱뤷엹若?쉐竊?001亮답퉳?롧쇉溫겻툝饔?푶擁낁퓝4亮댐펹竊뚦끀汝?ζ쐣?덃쐿野밧틪???됮」??폕",
+  "tr_c": [
+   "6訝ゆ쐢",
+   "1亮?,
+   "2亮?,
+   "4亮?
+  ]
+ },
+ {
+  "n": 65,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?붾Ъ?먮룞李?李⑤졊??4???댄븯)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "3",
+  "tr_b": "?방뜮?딀쑛?②쉐嶸←릤?멨뀽力뺜빱?뗰펽野밥틢?욆맓訝싩뵪?붺쉪弱뤷엹饔썼뇻?뷴뒯饔?펷饔?푶??亮닷룋餓δ툔竊됵펽?뜻??ζ쐣?덃쐿野밧틪?꾦됮」??폕",
+  "tr_c": [
+   "6訝ゆ쐢",
+   "1亮?,
+   "2亮?,
+   "4亮?
+  ]
+ },
+ {
+  "n": 66,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?좎감 援ъ엯 ???꾩떆?댄뻾 ?덇? ?좏슚湲곌컙??湲곗???",
+  "ko_c": [
+   "10???대궡",
+   "15???대궡",
+   "20???대궡",
+   "30???대궡"
+  ],
+  "a": "1",
+  "tr_b": "堊앯뀱?딀쑛?②쉐嶸←릤力뺛뗰펽訝뗥닓?념틢兀?물?계쉐?띄쉪訝닸뿶?뚨뀱?됪븞?잏쉪?뉐뇛訝??簾?쉪??폕",
+  "tr_c": [
+   "10鸚⒳빳??,
+   "15鸚⒳빳??,
+   "20鸚⒳빳??,
+   "30鸚⒳빳??
+  ]
+ },
+ {
+  "n": 67,
+  "ko_b": "?ㅼ쓬 以??먮룞李④?由щ쾿?뱀뿉 ?곕Ⅸ ?먮룞李?蹂寃쎈벑濡??ъ쑀媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?먮룞李⑥쓽 ?ъ슜蹂멸굅吏瑜?蹂寃쏀븳 ??,
+   "?먮룞李⑥쓽 李⑤?踰덊샇瑜?蹂寃쏀븳 ??,
+   "?뚯쑀沅뚯씠 蹂?숇맂 ??,
+   "踰뺤씤??紐낆묶??蹂寃쎈맂 ??
+  ],
+  "a": "3",
+  "tr_b": "訝뗥닓?됮」訝?펽訝띶콪雅롢딀쑛?②쉐嶸←릤力뺛뗨쭊若싩쉪?뷴뒯饔?룜?당쇉溫겻틟?긺쉪??폕",
+  "tr_c": [
+   "?섉쎍?뷴뒯饔?쉪鵝욜뵪?겼뙷??,
+   "?섉쎍?뷴뒯饔?틫?섇뤇??,
+   "?섉쎍??됪쓢??,
+   "?섉쎍力뺜볶?띸㎞??
+  ]
+ },
+ {
+  "n": 68,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??댁쟾?먯쓽 留덉쓬媛吏먯쑝濡?諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥씠誘濡??좎뿉 痍⑦븳 ?곹깭?먯꽌 ?댁쟾?대룄 ?쒕떎.",
+   "怨쇰줈???곹깭?먯꽌 ?먯쑉二쇳뻾?먮룞李⑤? ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑤씪 ?섎뜑?쇰룄 ?μ젙?좎꽦?섏빟?덉쓣 蹂듭슜?섍퀬 ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 ?댁쟾 以묒뿉 ?대????꾪솕 ?ъ슜??媛?ν븯??"
+  ],
+  "a": "1",
+  "tr_b": "?ゅ뒯要얗㈅黎썼쉐要얗㈅雅븀쉪恙껅곦툖??룚?꾣삸竊?,
+  "tr_c": [
+   "?졽맏??눎?③㈍要뜻굵饔?펽?졿???빳?됮뀙要얕쉐??,
+   "訝띶풓?②퓝佯?뼯?녕쉪?뜻곦툔要얗㈅?ゅ뒯要얗㈅黎썼쉐??,
+   "?념씩??눎?③㈍要뜻굵饔?펽阿잋툖孃쀥쑉?띸뵪?쀧꼐曄욄㎬뜱?⒴릮要얗㈅??,
+   "?③㈍要띈눎?③㈍要뜻굵饔?쉪?붶릎??빳鵝욜뵪?뗦쑛??
+  ]
+ },
+ {
+  "n": 69,
+  "ko_b": "?붾Ъ?먮룞李??댁닔?ъ뾽踰뺤뿉 ?곕Ⅸ ?붾Ъ?먮룞李??댁넚?ъ뾽?먮뒗 愿??踰뺣졊???곕씪 ?댄뻾湲곕줉?μ튂??湲곕줉???댄뻾湲곕줉??(    )?숈븞  蹂닿??섏뿬???쒕떎. (   ) ?덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "3媛쒖썡",
+   "6媛쒖썡",
+   "1??,
+   "2??
+  ],
+  "a": "2",
+  "tr_b": "?방뜮?딂뇻饔?퓧渦볞틟訝싨퀡?뗨쭊若싷펽兀㎬쉐瓦먫풏餓롣툣雅뷴몮佯붹뙃?㎫쎑?녔퀡餓ㅸ쭊若싷펽?⑨펷 竊됪뿶?닷냵倻ε뻹岳앯?烏뚩쉐溫겼퐬獒끿쉰訝?퓷耶섊쉪要얗㈅ 溫겼퐬?귛∥?ζ떖?룝릎??겼퐪?꾦됮」??폕",
+  "tr_c": [
+   "3訝ゆ쐢",
+   "6訝ゆ쐢",
+   "1亮?,
+   "2亮?
+  ]
+ },
+ {
+  "n": 70,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑤? ?댁쟾 ?깅줉?섍퀬???섎뒗 ?먮뒗 留ㅼ닔???좊???(  ) ?대궡???깅줉?댁빞 ?쒕떎.  (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "15??,
+   "20??,
+   "30??,
+   "40??
+  ],
+  "a": "1",
+  "tr_b": "?방뜮?딀쑛?②쉐嶸←릤力뺛뗨쭊若싷펽?됪꼷?욤퓵烏뚧쑛?②쉐饔ц??삭??낉펽佯붻눎兀?물阿뗦뿥壅뤄펷 竊됦퉳?낁퓵烏뚨쇉溫겹귛∥?ζ떖?룝릎??겼퐪?꾦됮」 ??폕",
+  "tr_c": [
+   "15鸚?,
+   "20鸚?,
+   "30鸚?,
+   "40鸚?
+  ]
+ },
+ {
+  "n": 71,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑥쓽 ?뺢린寃?ъ쓽 湲곌컙? 寃?ъ쑀?④린媛?留뚮즺????(  )?쇰?????(  )??源뚯??? (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "90?? 31??,
+   "80?? 41??,
+   "60?? 51??,
+   "50?? 61??
+  ],
+  "a": "1",
+  "tr_b": "?방뜮?딀쑛?②쉐嶸←릤?멨뀽力뺜빱?뗰펽?뷴뒯饔?쉪若싨쐿汝?ζ쐿?먩삸汝?ζ쐣?덃쐿?ゆ??δ퉳?랃펷 竊됧ㄹ壅룩눛阿뗥릮竊?竊됧ㄹ訝뷸???竊?竊됦릎野밧틪?꾣?簾?됮」??폕",
+  "tr_c": [
+   "90鸚⑼펽31鸚?,
+   "80鸚⑼펽41鸚?,
+   "60鸚⑼펽51鸚?,
+   "50鸚⑼펽61鸚?
+  ]
+ },
+ {
+  "n": 72,
+  "ko_b": "?먮룞李⑥넀?대같?곷낫?λ쾿???섎Т蹂댄뿕??媛?낇븯吏 ?딆? ?먮룞李⑤낫?좎옄??泥섎쾶 湲곗??쇰줈 留욌뒗 寃껋??(?먮룞李?誘몄슫??",
+  "ko_c": [
+   "300留????댄븯??怨쇳깭猷?,
+   "500留????댄븯??怨쇳깭猷?,
+   "1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "?방뜮?딀쑛?②쉐?잌ㅁ壅붷겳岳앶슌力뺛뗨쭊若싷펽訝뗥닓?념틢?ゅ뒥?δ퉱?▽퓷?⑴쉪?뷴뒯饔???됦볶?꾢쨪營싨젃?녵릎閭ｇ‘?꾣삸竊잞펷?ら㈍要뜻쑛?②쉐竊?,
+  "tr_c": [
+   "300訝뉔윪?껂빳訝뗧퐱??,
+   "500訝뉔윪?껂빳訝뗧퐱??,
+   "1亮답빳訝뗦쐣?잌풎?묉닑1?껂툏?⒴뀇餓δ툔營싨Ь",
+   "2亮답빳訝뗦쐣?잌풎?묉닑2?껂툏?⒴뀇餓δ툔營싨Ь"
+  ]
+ },
+ {
+  "n": 73,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀沅뚯씠 ?곸냽 ?깆쑝濡?蹂寃쎈맆 寃쎌슦???댁빞 ?섎뒗 ?깅줉??",
+  "ko_c": [
+   "?좉퇋?깅줉",
+   "?댁쟾?깅줉",
+   "蹂寃쎈벑濡?,
+   "留먯냼?깅줉"
+  ],
+  "a": "2",
+  "tr_b": "?방뜮?딀쑛?②쉐嶸←릤力뺛뗰펽?뷴뒯饔???됪쓢?좂빵?욜춬?뚦룜?닸뿶竊뚪?誤곮퓵烏뚨쉪?삭???폕",
+  "tr_c": [
+   "?계쉐?삭?",
+   "饔ц??삭?",
+   "?섉쎍?삭?",
+   "力③??삭?"
+  ]
+ },
+ {
+  "n": 74,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀?먭? 諛쏆븘???섎뒗 ?먮룞李?寃?ъ쓽 醫낅쪟媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?섎━寃??,
+   "?밸퀎寃??,
+   "?쒕떇寃??,
+   "?꾩떆寃??
+  ],
+  "a": "2",
+  "tr_b": "訝뗥닓?됮」訝?펽訝띶콪雅롢딀쑛?②쉐嶸←릤力뺛뗨쭊若싩쉪饔╊말佯붻??ε룛?꾣쑛?②쉐汝?η쭕映삥삸竊?,
+  "tr_c": [
+   "岳?릤汝??,
+   "?방츏汝??,
+   "瘟껅빐汝??,
+   "訝닸뿶汝??
+  ]
+ },
+ {
+  "n": 75,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑤? 留ㅻℓ??寃쎌슦 ?댁쟾?깅줉 ?대떦湲곌???",
+  "ko_c": [
+   "?쒓뎅?꾨줈援먰넻怨듬떒",
+   "?쒙쉈援곤쉈援ъ껌",
+   "?쒓뎅援먰넻?덉쟾怨듬떒",
+   "?쑣룸룄寃쎌같泥?
+  ],
+  "a": "2",
+  "tr_b": "訝뗥닓?됮」訝?펽兀잒뇩?뷴뒯饔╊물?뽬쉬燁사쇉溫곁쉪?뷴뀽??폕",
+  "tr_c": [
+   "?⒴쎖?볢러雅ㅹ싧뀶??,
+   "躍귙곲깳?곩뙷??,
+   "?⒴쎖雅ㅹ싧츎?ⓨ뀶??,
+   "躍귙곲걪鈺?캗??
+  ]
+ },
+ {
+  "n": 76,
+  "ko_b": "?먮룞李??깅줉??醫낅쪟媛 ?꾨땶 寃?2媛吏??",
+  "ko_c": [
+   "寃쎌젙?깅줉",
+   "沅뚮━?깅줉",
+   "?ㅼ젙?깅줉",
+   "留먯냼?깅줉"
+  ],
+  "a": "2, 3",
+  "tr_b": "訝뗥닓?됮」訝?툖掠욂틢?뷴뒯饔?쇉溫곁쭕映사쉪訝ㅹ」??폕",
+  "tr_c": [
+   "?닸??삭?",
+   "?껃닶?삭?",
+   "溫얍츣?삭?",
+   "力③??삭?"
+  ]
+ },
+ {
+  "n": 77,
+  "ko_b": "?먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) ?욌㈃ 李쎌쑀由ъ쓽 媛?쒓킅???ш낵??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "40?쇱꽱??,
+   "50?쇱꽱??,
+   "60?쇱꽱??,
+   "70?쇱꽱??
+  ],
+  "a": "4",
+  "tr_b": "訝뗥닓?념틢?뷴뒯饔?뎺饔?첊?사뭴竊덁퐜?욜ゥ?↑쉐?ㅵ쨼竊됬쉪??쭅?됮뤺퓝?뉑젃?녵릎竊뚧?簾?쉪??",
+  "tr_c": [
+   "40%",
+   "50%",
+   "60%",
+   "70%"
+  ]
+ },
+ {
+  "n": 78,
+  "ko_b": "二쇳뻾 以?釉뚮젅?댄겕媛 ?묐룞?섎뒗 ?댁쟾?됰룞怨쇱젙???щ컮瑜??쒖꽌濡??곌껐??寃껋??",
+  "ko_c": [
+   "?꾪뿕?몄? ???곹솴?먮떒 ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?꾪뿕?몄? ???됰룞紐낅졊 ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞",
+   "?곹솴?먮떒 ???꾪뿕?몄? ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?됰룞紐낅졊 ???꾪뿕?몄? ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞"
+  ],
+  "a": "1",
+  "tr_b": "訝뗥닓?됮」訝?벆窈방삸若뚧닇?배쉐?띄쉪閭ｇ‘烏뚦뒯窈뷴틣竊?,
+  "tr_c": [
+   "?묊렟?깁솴 ???ㅶ뼪?끻넻 ??烏뚦뒯?썰빱 ???배쉐",
+   "?묊렟?깁솴 ??烏뚦뒯?썰빱 ???ㅶ뼪?끻넻 ???배쉐",
+   "?ㅶ뼪?끻넻 ???묊렟?깁솴 ??烏뚦뒯?썰빱 ???배쉐",
+   "烏뚦뒯?썰빱 ???묊렟?깁솴 ???ㅶ뼪?끻넻 ???배쉐"
+  ]
+ },
+ {
+  "n": 79,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑥뿉 遺李⑸맂 ?먯뼱諛깆쓽 援щ퉬議곌굔?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?믪? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "??? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "?뚯뿴媛뺣룄瑜?吏?덇퀬 ?대쭏紐⑥꽦, ?좎뿰??,
+   "?댁쟾?먯? ?묒큺?섎뒗 異⑷꺽?먮꼫吏 洹밸???
+  ],
+  "a": "4",
+  "tr_b": "訝뗥닓?념틢?뷴뒯饔╊툓若됭즳若됧뀲麗붷썗?뜹틪?룟쨭?꾣씉餓띄쉪瑥닸퀡訝?펽?訝띹눼?뉒쉪??폕",
+  "tr_c": [
+   "遙섉릇訝뗧쉪?쀦땳凉뷴벧訝롨먪꺆凉뷴벧",
+   "鵝롦릇訝뗧쉪?쀦땳凉뷴벧訝롨먪꺆凉뷴벧",
+   "?룟쨭?닺즰凉뷴벧?곮먪（?㎯곫윍?㎪?,
+   "訝롩㈍要뜸볶?θ㏄?꾢넳?삭꺗?뤸?鸚㎩뙑"
+  ]
+ },
+ {
+  "n": 80,
+  "ko_b": "?ㅼ쓬 以??댁쟾???깆씠 李⑤웾 ?뱁븯李???二쇱쓽?ы빆?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?怨??대┫ ?뚮뒗 ?ㅼ뿉???ㅻ뒗 李⑤웾???덈뒗吏瑜??뺤씤?쒕떎.",
+   "臾몄쓣 ???뚮뒗 ?꾩쟾???닿퀬?섏꽌 怨㏓컮濡??대┛??",
+   "?룹쥖???뱀감?먭? ?섏감?????댁쟾?먮뒗 ?꾨갑??二쇱떆?댁빞 ?쒕떎.",
+   "?댁쟾?앹쓣 ?쇱떆?곸쑝濡??좊궇 ?뚯뿉???쒕룞???꾩? ?딆븘???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "訝뗥닓?념틢要얗㈅雅븀춬訝듾툔饔?낏?뤶틟窈밭쉪?뤺염訝??簾?쉪??폕",
+  "tr_c": [
+   "訝듾툔饔?뿶誤곭‘溫ㅵ릮?방삸??쐣饔?푺要뜻씎??,
+   "凉饔?뿨?뜸빳?鸚㎩퉭佯?돀凉?롧쳦?념툔饔╉?,
+   "?롥벨阿섋쉐?끺툔饔?뿶竊뚪㈍要뜸볶誤곫낏?뤷뎺?밤?,
+   "訝닸뿶獵삣?要얗㈅躍?뿶?좈??녜뿭?묈뒯?뷩?
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/201_choices_cn.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+print(json.dumps(data, ensure_ascii=True, indent=2))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:19:26.384961Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 693ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$json = [System.IO.File]::ReadAllText((Resolve-Path '"'translations/audit/queue/201_choices_cn.json'), [System.Text.Encoding]::UTF8); "'$bytes = [System.Text.Encoding]::UTF8.GetBytes($json); [Convert]::ToBase64String($bytes)' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 511ms:
+Ww0KIHsNCiAgIm4iOiA0MSwNCiAgImtvX2IiOiAi7J6Q64+Z7LCo7JeQIOyKueywqO2VmOq4sCDsoIQg7KO867OA7KCQ6rKAIOyCrO2VreycvOuhnCDrp57ripQgMuqwgOyngOuKlD8iLA0KICAia29fYyI6IFsNCiAgICLtg4DsnbTslrQg66eI66qo7IOB7YOcIiwNCiAgICLsoITvvaXtm4TrsKkg7J6l7JWg66y8IOycoOustCIsDQogICAi7Jq07KCE7ISdIOqzhOq4sO2MkCDsoJXsg4HsnpHrj5kg7Jes67aAIiwNCiAgICLruIzroIjsnbTtgawg7Y6Y64usIOygleyDgeyekeuPmSDsl6zrtoAiDQogIF0sDQogICJhIjogIjEsIDIiLA0KICAidHJfYiI6ICLkuIvliJflhbPkuo7kuIrovabliY3mnLrliqjovabmo4Dmn6XkuovpobnkuK3mraPnoa7nmoTkuKTpobnmmK/vvJ8iLA0KICAidHJfYyI6IFsNCiAgICLova7og47no6jmjZ/nirbmgIEiLA0KICAgIuacuuWKqOi9puWJjeWQjuaWueacieaXoOmanOeijeeJqSIsDQogICAi6am+6am25bit5Luq6KGo55uY5piv5ZCm5q2j5bi45ZCv5YqoIiwNCiAgICLliLbliqjouI/mnb/mmK/lkKbmraPluLgiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA0MiwNCiAgImtvX2IiOiAi7J2867CY7KCB7Jy866GcIOustOuztOyImChNRu+8mk1haW50ZW5hbmNlIEZyZWUp67Cw7YSw66asIOyImOuqheydtCDri6TtlZwg6rK97JqwLCDsoJDqsoDssL3sl5Ag64KY7YOA64KY64qUIOyDieq5lOydgD8iLA0KICAia29fYyI6IFsNCiAgICLtmansg4kiLA0KICAgIuuwseyDiSIsDQogICAi6rKA7J2A7IOJIiwNCiAgICLrhbnsg4kiDQogIF0sDQogICJhIjogIjIiLA0KICAidHJfYiI6ICLpgJrluLjmnaXor7TvvIzlhY3nu7TmiqTvvIhNRjogTWFpbnRlbmFuY2UgRnJlZe+8ieiThOeUteaxoOWvv+WRveWIsOacn+aXtiwg5qOA6KeG56qX5pi+56S65LuA5LmI6aKc6ImyPyIsDQogICJ0cl9jIjogWw0KICAgIum7hOiJsiIsDQogICAi55m96ImyIiwNCiAgICLpu5HoibIiLA0KICAgIue7v+iJsiINCiAgXQ0KIH0sDQogew0KICAibiI6IDQzLA0KICAia29fYiI6ICLri6TsnYwg7KSRIOywqOufiSDsl7Dro4zroZwg7IKs7Jqp65CgIOqyveyasCwg6rCA7KecIOyEneycoOygnO2SiOycvOuhnCDrs7wg7IiYIOyXhuuKlCDqsoPsnYA/IiwNCiAgImtvX2MiOiBbDQogICAi7ZyY67Cc7Jyg7JeQIOuplO2DhOyYrOydtCDtmLztlanrkJwg7KCc7ZKIIiwNCiAgICLrs7TthrUg7ZyY67Cc7Jyg7JeQIOqzoOq4iSDtnJjrsJzsnKDqsIAg7JW9IDUlIOuvuOunjOycvOuhnCDtmLztlanrkJwg7KCc7ZKIIiwNCiAgICLqsr3snKDsl5Ag65Ox7Jyg6rCAIO2YvO2VqeuQnCDsoJztkogiLA0KICAgIuqyveycoOyXkCDrrLzsnbQg7JW9IDUlIOuvuOunjOycvOuhnCDtmLztlanrkJwg7KCc7ZKIIg0KICBdLA0KICAiYSI6ICI0IiwNCiAgInRyX2IiOiAi5LiL5YiX6YCJ6aG55Lit77yM55So5L2c5rG96L2m54eD5paZ5pe277yM5peg5rOV6KeG5Li65YGH55+z5rK55Yi25ZOB55qE5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAi5Zyo5rG95rK55Lit5Yqg5YWl55Sy6YaH55qE5Lqn5ZOBIiwNCiAgICLlnKjkuIDoiKzmsb3msrnkuK3liqDlhaXkuI3liLA1JeeahOmrmOe6p+axveayueeahOS6p+WTgSIsDQogICAi5Zyo5p+05rK55Lit5Yqg5YWl54Wk5rK555qE5Lqn5ZOBIiwNCiAgICLlnKjmn7TmsrnkuK3liqDlhaXkuI3liLA1JeeahOawtOeahOS6p+WTgSINCiAgXQ0KIH0sDQogew0KICAibiI6IDQ0LA0KICAia29fYiI6ICLsiJjshozqsIDsiqQg64iE7Lac7J2EIO2ZleyduO2VoCDsiJgg7J6I64qUIOuwqeuyleydtCDslYTri4wg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIuqwgOyXsOyEsSDqsIDsiqTqsoDsp4DquLAg7Zmc7JqpIOy4oeyglSIsDQogICAi67mE64iX66y87J2EIO2Gte2VnCDtmZXsnbgiLA0KICAgIuqwgOyKpCDrg4Tsg4jrpbwg66eh7JWEIO2ZleyduCIsDQogICAi7IiY7IaM6rKA7KeA6riw66GcIO2ZleyduCINCiAgXSwNCiAgImEiOiAiMyIsDQogICJ0cl9iIjogIuS4i+WIl+WFs+S6juehruiupOawouawlOazhOa8j+eahOaWueazleS4remUmeivr+eahOaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIuS9v+eUqOWPr+eHg+aAp+awlOS9k+ajgOa1i+WZqOi/m+ihjOajgOa1iyIsDQogICAi5L2/55So6IKl55qC5rC06L+b6KGM56Gu6K6kIiwNCiAgICLpgJrov4fll4Xpl7vmsJTlkbPov5vooYznoa7orqQiLA0KICAgIuS9v+eUqOawouawlOa1i+mHj+S7qui/m+ihjOehruiupCINCiAgXQ0KIH0sDQogew0KICAibiI6IDQ1LA0KICAia29fYiI6ICLsiJjshozssKjrn4nsnZgg7JWI7KCE7IiY7LmZ7Jy866GcIO2LgOumsCDqsoPsnYA/IiwNCiAgImtvX2MiOiBbDQogICAi7Lap7KCE7ZWY6riwIOyghCDssKjrn4nsnZgg7Iuc64+Z7J2EIOuBiOuLpC4iLA0KICAgIuy2qeyghOyGjOyXkOyEnCDtnaHsl7DsnYAg7LCo65+J7JeQIOuWqOyWtOyguOyEnCDtlZzri6QuIiwNCiAgICLsiJjshozqsIDsiqTqsIAg64iE7ISk7ZWgIOuVjOyXkOuKlCDstqnsoITshowg7JWI7KCE6rSA66as7J6Q7JeQ6rKMIOyViOyghOygkOqygOydhCDsmpTssq3tlZzri6QuIiwNCiAgICLsiJjshozssKjrn4nsnZgg7Lap64+MIOuTsSDqtZDthrXsgqzqs6Ag7ZuE7JeQ64qUIOqwgOyKpCDslYjsoITsoJDqsoDsnYQg67Cb7J2AIO2bhCDsgqzsmqntlZzri6QuIg0KICBdLA0KICAiYSI6ICIyIiwNCiAgInRyX2IiOiAi5LiL5YiX5YWz5LqO5rCi6IO95rqQ5rG96L2m5a6J5YWo5a6I5YiZ55qE5o+P6L+w5Lit6ZSZ6K+v55qE5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAi5YWF5rCU5YmN5Y+R5Yqo6L2m6L6G44CCIiwNCiAgICLlnKjlhYXmsJTnq5nlkLjng5/ml7bvvIzlupTov5znprvovabovobjgIIiLA0KICAgIuWPkeeUn+awouawlOazhOa8j+aXtu+8jOimgeaxguWFheawlOermeWuieWFqOeuoeeQhuS6uuWRmOi/m+ihjOWuieWFqOajgOafpeOAgiIsDQogICAi5rCi6IO95rG96L2m5Zyo5Y+R55Sf56Kw5pKe562J5Lqk6YCa5LqL5pWF5ZCO77yM6ZyA6L+b6KGM54eD5rCU5a6J5YWo5qOA5p+l5ZCO5YaN5L2/55So44CCIg0KICBdDQogfSwNCiB7DQogICJuIjogNDYsDQogICJrb19iIjogIuuLpOydjCDspJEg7IiY7IaM7LCo65+J7JeQ7IScIOuIhOy2nOydhCDtmZXsnbjtlZjsp4Ag7JWK7JWE64+EIOuQmOuKlCDqs7PsnYA/IiwNCiAgImtvX2MiOiBbDQogICAi67C467iM7JmAIOyaqeq4sOydmCDsoJHsho3rtoAiLA0KICAgIuyhsOygleq4sCIsDQogICAi6rCA7IqkIO2YuOyKpOyZgCDrsLDqtIAg7Jew6rKw67aAIiwNCiAgICLsl7Dro4zsoITsp4Ag67aA7Iqk7Yq4IOyduOuyhO2EsCINCiAgXSwNCiAgImEiOiAiNCIsDQogICJ0cl9iIjogIuS4i+WIl+mAiemhueS4re+8jOWcqOawouiDvea6kOaxvei9puS4iuaXoOmcgOehruiupOazhOa8j+aDheWGteeahOWcsOaWueaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIumYgOmXqOS4juWuueWZqOeahOaOpeWPo+mDqOS9jSIsDQogICAi6LCD6IqC5ZmoIiwNCiAgICLmsKLmsJTnrqHpgZPlkozphY3nrqHov57mjqXlpIQiLA0KICAgIueHg+aWmeeUteaxoOWNh+WOi+mAhuWPmOWZqCINCiAgXQ0KIH0sDQogew0KICAibiI6IDQ3LA0KICAia29fYiI6ICLsoITquLDssKgg7Lap7KCE7J2EIOychO2VnCDsmKzrsJTrpbgg67Cp67KV7Jy866GcIOyggeygiO2VmOyngCDslYrsnYAg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIuy2qeyghO2VoCDrlYzripQg6rec6rKp7JeQIOunnuuKlCDstqnsoITquLDsmYAg7Ja064yR7YSw66W8IOyCrOyaqe2VnOuLpC4iLA0KICAgIuy2qeyghCDspJHsl5DripQg7Lap7KCEIOy7pOuEpe2EsOulvCDsnoTsnZjroZwg67aE66as7ZWY7KeAIOyViuqzoCDstqnsoIQg7KKF66OMIOuyhO2KvOycvOuhnCDsooXro4ztlZzri6QuIiwNCiAgICLsoJbsnYAg7IaQ7Jy866GcIOy2qeyghOq4sCDsgqzsmqnsnYQg7ZWY7KeAIOyViuqzoCDstqnsoITsnqXsuZjsl5Ag66y87J20IOuTpOyWtOqwgOyngCDslYrrj4TroZ0g7KO87J2Y7ZWc64ukLiIsDQogICAi7Zy064yA7JqpIOy2qeyghOq4sOulvCDsnbTsmqntlZjsl6wg7Lap7KCE7ZWgIOqyveyasCDqsIDsoJXsmqkg66mA7Yuw7YOt7J2064KYIOyXsOyepeyEoOydhCDsgqzsmqntlZzri6QuIg0KICBdLA0KICAiYSI6ICI0IiwNCiAgInRyX2IiOiAi5LiL5YiX5YWz5LqO55S15Yqo5rG96L2m5YWF55S15pa55rOV55qE5o+P6L+w5Lit6ZSZ6K+v55qE5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAi5YWF55S15pe25L2/55So56ym5ZCI6KeE5qC855qE5YWF55S15Zmo5ZKM6YCC6YWN5Zmo44CCIiwNCiAgICLlhYXnlLXov4fnqIvkuK3kuI3pmo/kvr/mi5Tmjonov57mjqXlmajvvIznu5PmnZ/ml7bngrnlh7vnu5PmnZ/lhYXnlLXmjInpkq7jgIIiLA0KICAgIuS4jeeUqOW4puawtOa4jeeahOaJi+inpuaRuOWFheeUteWZqO+8jOW5tuazqOaEj+S4jeimgeiuqeawtOi/m+WFpeWFheeUteiuvuWkh+OAgiIsDQogICAi5L2/55So5L6/5pC65byP5YWF55S15Zmo5YWF55S15pe277yM5L2/55So5a6255So5aSa5o+S5a2U5o+S5bqn5oiW5bu26ZW/57q/44CCIg0KICBdDQogfSwNCiB7DQogICJuIjogNDgsDQogICJrb19iIjogIuuyleugueyDgSDsnpDrj5nssKjsnZgg65Ox7ZmUIOyiheulmOyZgCDqt7gg65Ox6rSR7IOJ7J2EIOyXsOqysO2VnCDqsoPsnLzroZwg66ee64qUIOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICLtm4Tth7Trk7EgLSDtmLjrsJXsg4kiLA0KICAgIuuyiO2YuOuTsSAtIOyyreyDiSIsDQogICAi7ZuE66+465OxIC0g67Cx7IOJIiwNCiAgICLsoJzrj5nrk7EgLSDsoIHsg4kiDQogIF0sDQogICJhIjogIjQiLA0KICAidHJfYiI6ICLms5Xlvovop4Tlrprovabnga/np43nsbvkuI7lhbbpopzoibLljLnphY3mraPnoa7nmoTmmK/vvJ8iLA0KICAidHJfYyI6IFsNCiAgICLlkI7pgIDnga8gLSDnkKXnj4DoibIiLA0KICAgIuWPt+eggeeBryAtIOiTneiJsiIsDQogICAi5bC+54GvIC0g55m96ImyIiwNCiAgICLliLbliqjnga8gLSDnuqLoibIiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA0OSwNCiAgImtvX2IiOiAiTFBH7LCo65+J7J2YIOyXsOujjO2KueyEseyXkCDrjIDtlZwg7ISk66qF7Jy866GcIOyggeuLue2VmOyngCDslYrsnYAg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIuydvOuwmOyggeyduCDquLDssrTsg4Htg5zroZwg7Jew7IaM65CY7Ja0IOyXlOynhOydtCDrtoDrk5zrn73qsowg7J6R64+Z7ZWc64ukLiIsDQogICAi7LCo65+J7JqpIExQR+uKlCDrj4XtirntlZwg64OE7IOI6rCAIOyeiOuLpC4iLA0KICAgIuydvOuwmOyggeycvOuhnCDqs7XquLDrs7Tri6Qg6rCA67ON6rOgLCDtj63rsJwg7JyE7ZeY7ISx7J20IOyggeuLpC4iLA0KICAgIu2cmOuwnOycoOuCmCDqsr3snKDsl5Ag67mE7ZW0IOyXkOuEiOyngCDrsIDrj4TqsIAg64Ku7JWEIOuPmeydvO2VnCDrsLDquLDrn4nsl5DshJwg7Lac66Cl7J20IOuCruqzoCDsl7DruYTqsIAg65ao7Ja07KeE64ukLiINCiAgXSwNCiAgImEiOiAiMyIsDQogICJ0cl9iIjogIuS4i+WIl+WFs+S6jkxQR+i9pui+hueHg+aWmeeJueaAp+eahOivtOaYjuS4reS4jeaBsOW9k+eahOaYrz8iLA0KICAidHJfYyI6IFsNCiAgICLku6XkuIDoiKzmsJTmgIHnh4Png6fvvIzlj5HliqjmnLrov5DovazlubPnqLPjgIIiLA0KICAgIui9pui+hueUqExQR+acieeJueauiueahOawlOWRs+OAgiIsDQogICAi5LiA6Iis5q+U56m65rCU6L2777yM54iG54K45Y2x6Zmp5oCn6L6D5bCP44CCIiwNCiAgICLkuI7msb3msrnmiJbmn7Tmsrnnm7jmr5Tog73ph4/lr4bluqbkvY7vvIzlm6DmraTlnKjnm7jlkIzmjpLph4/kuIvovpPlh7rlip/njofovoPkvY7vvIznh4PmsrnmlYjnjofovoPlt67jgIIiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA1MCwNCiAgImtvX2IiOiAi7J6Q64+Z7LCo7J2YIOygnOuPmeugpeydhCDsoIDtlZjtlZjripQg7JuQ7J247Jy866GcIOqwgOyepSDqsbDrpqzqsIAg66i8IOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICLrp4jsiqTthLAg7Iuk66aw642UIOqzoOyepSIsDQogICAi7ZygIOyLpOumsOuNlCDrtojrn4kiLA0KICAgIuumtOumrOyKpCDtj6ztgawg67OA7ZiVIiwNCiAgICLrsqDsnbTtjbwg66GdIOuwnOyDnSINCiAgXSwNCiAgImEiOiAiMyIsDQogICJ0cl9iIjogIuS4i+WIl+mAiemhueS4re+8jOacgOayoeacieWPr+iDveWvvOiHtOacuuWKqOi9puWItuWKqOWKm+S4i+mZjeeahOaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIuS4u+e8uOaVhemanCIsDQogICAi6L2u57y45LiN5ZCI5qC8IiwNCiAgICLliIbnprvlj4nlj5jlvaIiLA0KICAgIuWItuWKqOawlOmYuyINCiAgXQ0KIH0sDQogew0KICAibiI6IDUxLA0KICAia29fYiI6ICLso7ztlokg67O07KGw7J6l7LmY6rCAIOyepeywqeuQnCDsnpDrj5nssKjsnZgg7Jq07KCE67Cp67KV7Jy866GcIOuwlOultOyngCDslYrsnYAg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIuyjvO2WiSDrs7TsobDsnqXsuZjrpbwg7IKs7Jqp7ZWY64qUIOqyveyasCDso7ztlokg67O07KGw7J6l7LmYIOyekeuPmSDsnKDsp4Ag7Jes67aA66W8IOyImOyLnOuhnCDtmZXsnbjtlZjrqbAg7KO87ZaJ7ZWc64ukLiIsDQogICAi7Jq07KCEIOqwnOyehSDqsr3qs6Ag7IucIOyjvO2WiSDrs7TsobDsnqXsuZjqsIAg7ZW07KCc65CgIOuVjOq5jOyngCDquLDri6TroLjri6TqsIAg6rCc7J6F7ZW07JW8IO2VnOuLpC4iLA0KICAgIuyjvO2WiSDrs7TsobDsnqXsuZjsnZgg7J2867aAIOuYkOuKlCDsoITssrTrpbwg7ZW07KCc7ZWY64qUIOqyveyasCDsnpHrj5kg7Jes67aA66W8IO2ZleyduO2VnOuLpC4iLA0KICAgIuyjvO2WiSDrs7TsobDsnqXsuZjqsIAg7J6R64+Z65CY6rOgIOyeiOuNlOudvOuPhCDsponsi5wg6rCc7J6F7ZWgIOyImCDsnojrj4TroZ0g64yA6riw7ZWY66m07IScIOyatOyghO2VnOuLpC4iDQogIF0sDQogICJhIjogIjIiLA0KICAidHJfYiI6ICLlhbPkuo7phY3lpIfpqb7pqbbovoXliqnoo4Xnva7nmoTmsb3ovabvvIzkuIvliJflr7npqb7pqbbmlrnms5XnmoTmj4/ov7DkuK3plJnor6/nmoTmmK/vvJ8iLA0KICAidHJfYyI6IFsNCiAgICLkvb/nlKjpqb7pqbbovoXliqnoo4Xnva7ml7bvvIzpqb7pqbbov4fnqIvkuK3pnIDpmo/ml7bmn6XnnIvpqb7pqbbovoXliqnoo4Xnva7mmK/lkKbmraPluLjov5DooYzjgIIiLA0KICAgIuWcqOWPkeWHuumpvumptuaOpeeuoeitpuWRiuaXtu+8jOW6lOetieW+heezu+e7n+WujOWFqOino+mZpOWQjuWGjei/m+ihjOaOpeeuoeOAgiIsDQogICAi6am+6am26L6F5Yqp6KOF572u5Ye6546w6YOo5YiG5oiW5YWo6YOo6Kej6Zmk55qE5oOF5Ya15pe277yM5bqU56Gu6K6k5YW25piv5ZCm5q2j5bi46L+Q6KGM44CCIiwNCiAgICLljbPkvr/lkK/liqjpqb7pqbbovoXliqnoo4Xnva7vvIzovabovobooYzpqbbov4fnqIvkuK3vvIzpqb7pqbbkurrku43lupTlh4blpIfpmo/ml7bku4vlhaXpqb7pqbbjgIIiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA1MiwNCiAgImtvX2IiOiAi7J6Q64+Z7LCo66W8IOyViOyghO2VmOqzoCDtjrjrpqztlZjqsowg7KO87ZaJ7ZWgIOyImCDsnojrj4TroZ0g67O07KGw7ZW0IOyjvOuKlCDquLDriqXsl5Ag64yA7ZWcIOyEpOuqheycvOuhnCDsnpjrqrvrkJwg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIkxGQShMYW5lIEZvbGxvd2luZyBBc3Npc3Qp64qUIOKAnOywqOuhnOycoOyngOuztOyhsOKAneq4sOuKpeycvOuhnCDsnpDrj5nssKjqsIAg7LCo66GcIOykkeyVmeydhCDsnKDsp4DtlZjrqbAg7KO87ZaJ7ZWgIOyImCDsnojrj4TroZ0g67O07KGw7ZW0IOyjvOuKlCDquLDriqXsnbTri6QuIiwNCiAgICJBU0NDKEFkYXB0aXZlIFNtYXJ0IENydWlzZSBDb250cm9sKeuKlCDigJzssKjqsITqsbDrpqwg67CPIOyGjeuPhOycoOyngOKAneq4sOuKpeycvOuhnCDsmrTsoITsnpDqsIAg7ISk7KCV7ZWcIOyGjeuPhOuhnCDso7ztlontlZjrqbTshJwg7JWe7LCo7JmA7J2YIOqxsOumrOulvCDsnKDsp4DtlZjsl6wg7Iqk7Iqk66GcIOqwgMK36rCQ7IaN7J2EIO2VtOyjvOuKlCDquLDriqXsnbTri6QuIiwNCiAgICJBQlNEKEFjdGl2ZSBCbGluZCBTcG90IERldGVjdGlvbinripQg4oCc7IKs6rCB7KeA64yA6rCQ7KeA4oCd6riw64ql7Jy866GcIOyCrOqwgeyngOuMgOydmCDstqnrj4wg7JyE7ZeY7J2EIOqwkOyngO2VtCDslYjsoITtlZwg7LCo66GcIOuzgOqyveydhCDrj5XripQg6riw64ql7J2064ukLiIsDQogICAiQUVCKEF1dG9ub21vdXMgRW1lcmdlbmN5IEJyYWtpbmcp64qUIOKAnOyekOuPmeq4tOq4ieygnOuPmeKAneq4sOuKpeycvOuhnCDruIzroIjsnbTtgawg7KCc64+Z7IucIO2DgOydtOyWtOqwgCDsnqDquLDripQg6rKD7J2EIOuwqeyngO2VmOyXrCDsoJzrj5kg6rGw66as66W8IOykhOyXrOyjvOuKlCDquLDriqXsnbTri6QuIg0KICBdLA0KICAiYSI6ICI0IiwNCiAgInRyX2IiOiAi5LiL5YiX5YWz5LqO5Lul5L+d6K+B5py65Yqo6L2m6am+6am25a6J5YWo5ZKM5L6/5Yip5Li655uu55qE55qE6L6F5Yqp5Yqf6IO955qE6K+05rOV5Lit77yM6ZSZ6K+v55qE5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAiTEZB77yITGFuZSBGb2xsb3dpbmcgQXNzaXN077yJ5piv4oCc6L2m6YGT5L+d5oyB6L6F5Yqp4oCd5Yqf6IO977yM5YW35pyJ6L6F5Yqp5py65Yqo6L2m5L+d5oyB6KGM6am25Zyo6L2m6YGT5Lit5aSu55qE5Yqf6IO944CCIiwNCiAgICJBU0ND77yIQWRhcHRpdmUgU21hcnQgQ3J1c2lzZSBDb250cm9s77yJ5piv4oCc6L2m6Led5ZKM6L2m6YCf57u05oyB4oCd5Yqf6IO977yM6IO96Ieq5Yqo5Yqg6YCf5oiW5YeP6YCf77yM5L2/5py65Yqo6L2m5Zyo6KGM6am25pe257u05oyB6am+6am25Lq66K6+5a6aIOeahOmAn+W6pu+8jOS/neaMgeS4juWJjei9puS5i+mXtOeahOi9pui3neOAgiIsDQogICAiQUJTRO+8iEFjdGl2ZSBCbGluZCBTcG90IERldGVjdGlvbu+8ieaYr+mAmui/h+aEn+efpeinhuinieebsuWMuueahOeisOaSnuWNsemZqe+8jOi+heWKqeacuuWKqOi9puWujOaIkOWuieWFqOWPmOmBk+eahOWKn+iDveOAgiIsDQogICAiQUVC77yIQXV0b25vbW91cyBFbWVyZ2VuY3kgQnJha2luZ++8ieaYr+S4uumYsuatouWItuWKqOi/h+eoi+S4rei9pui9ruaKseatu+W5tue8qeefreWItuWKqOi3neemu+eahOWKn+iDveOAgiINCiAgXQ0KIH0sDQogew0KICAibiI6IDUzLA0KICAia29fYiI6ICLsnpDsnKjso7ztlonsi5zsiqTthZzqs7wg6rSA66Co65CcIOuyleugueydmCDrgrTsmqnsnLzroZwg7YuA66awIOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICLrj4TroZzqtZDthrXrspXsg4HigJzsmrTsoITigJ3sl5DripQg64+E66Gc7JeQ7IScIOywqOuniOulvCDqt7gg67O4656Y7J2YIOyCrOyaqeuwqeuyleyXkCDrlLDrnbwg7J6Q7Jyo7KO87ZaJ7Iuc7Iqk7YWc7J2EIOyCrOyaqe2VmOuKlCDqsoPsnYAg7Y+s7ZWo65CY7KeAIOyViuuKlOuLpC4iLA0KICAgIuyatOyghOyekOqwgCDsnpDsnKjso7ztlonsi5zsiqTthZzsnYQg7IKs7Jqp7ZWY7JesIOyatOyghO2VmOuKlCDqsr3smrDsl5DripQg7Zy064yA7KCE7ZmUIOyCrOyaqeq4iOyngCDqt5zsoJXsnYQg7KCB7Jqp7ZWY7KeAIOyVhOuLiO2VnOuLpC4iLA0KICAgIuyekOycqOyjvO2WieyLnOyKpO2FnOydmCDsp4HsoJEg7Jq07KCEIOyalOq1rOyXkCDsp4DssrTsl4bsnbQg64yA7J2R7ZWY7KeAIOyVhOuLiO2VnCDsnpDsnKjso7ztlonsirnsmqnsnpDrj5nssKjsnZgg7Jq07KCE7J6Q7JeQIOuMgO2VnCDrspTsuZnquIjslaHsnYAgNOunjCDsm5DsnbTri6QuIiwNCiAgICLigJzsnpDsnKjso7ztlonsi5zsiqTthZzigJ3snbTrnoAg7Jq07KCE7J6QIOuYkOuKlCDsirnqsJ3snZgg7KGw7J6RIOyXhuydtCDso7zrs4Dsg4Htmanqs7wg64+E66GcIOygleuztCDrk7HsnYQg7Iqk7Iqk66GcIOyduOyngO2VmOqzoCDtjJDri6jtlZjsl6wg7J6Q64+Z7LCo66W8IOyatO2WiSDtlaAg7IiYIOyeiOqyjCDtlZjripQg7J6Q64+Z7ZmUIOyepeu5hCwg7IaM7ZSE7Yq47Juo7Ja0IOuwjyDsnbTsmYAg6rSA66Co7ZWcIOuqqOuToCDsnqXsuZjrpbwg66eQ7ZWc64ukLiINCiAgXSwNCiAgImEiOiAiMSIsDQogICJ0cl9iIjogIuWFs+S6juS4juiHquWKqOmpvumptuezu+e7n+ebuOWFs+eahOazleinhOWGheWuue+8jOS4i+WIl+mAiemhueS4remUmeivr+eahOaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIuOAiumBk+i3r+S6pOmAmuazleOAi+S4reaPkOWIsOeahOKAnOmpvumptuihjOS4uuKAne+8jOS4jeWMheaLrOWcqOmBk+i3r+S4iuaMiei9pui+huWOn+acrOeUqOazleS9v+eUqOeahOiHquWKqOmpvumptuezu+e7n+OAgiIsDQogICAi6am+6am25Lq65L2/55So6Ieq5Yqo6am+6am257O757uf6am+6am25pe277yM5LiN6YCC55So56aB5q2i5L2/55So5omL5oyB55S16K+d55qE6KeE5a6a44CCIiwNCiAgICLlr7nkuo7kuI3nq4vljbPlk43lupToh6rliqjpqb7pqbbns7vnu5/mj5Dlh7rnmoTkurrlt6Xpqb7pqbbopoHmsYLnmoTpqb7pqbbkurrvvIzlsIblpITku6U05LiH6Z+p5YWD572a5qy+44CCIiwNCiAgICLigJzoh6rliqjpqb7pqbbns7vnu5/igJ3mmK/lj6/ku6Xml6DpnIDpqb7pqbbkurrmiJbogIXkuZjlrqLmk43kvZzvvIzpgJrov4foh6rkuLvorqTnn6XvvIzliKTmlq3lkajovrnmg4XlhrXlkozot6/pnaLkv6Hmga/nrYnvvIzku6XmraTlrp7njrDpqb7pqbbmnLrliqjovabnmoToh6rliqgg5YyW57O757uf44CB6L2v5Lu25Y+K5YW25omA5pyJ55u45YWz55qE6KOF572u44CCIg0KICBdDQogfSwNCiB7DQogICJuIjogNTQsDQogICJrb19iIjogIuuLpOydjCDspJEg7IiY7IaM7J6Q64+Z7LCo7J2YIOyjvOyalCDqtazshLHtkojsnbQg7JWE64uMIOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICLsl7Dro4zsoITsp4AiLA0KICAgIuq1rOuPmeuqqO2EsCIsDQogICAi7JeU7KeEIiwNCiAgICLrsLDthLDrpqwiDQogIF0sDQogICJhIjogIjMiLA0KICAidHJfYiI6ICLkuIvliJfpgInpobnkuK3kuI3mmK/msKLog73mnLrliqjovabkuLvopoHnu4TmiJDpg6jku7bnmoTmmK/vvJ8iLA0KICAidHJfYyI6IFsNCiAgICLnh4PmlpnnlLXmsaAiLA0KICAgIumpseWKqOeUteacuiIsDQogICAi5Y+R5Yqo5py6IiwNCiAgICLnlLXmsaAiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA1NSwNCiAgImtvX2IiOiAi7J6Q64+Z7LCoIOuCtOyXsOq4sOq0gOydmCDtgazrnq3tgazstpXsl5DshJwg67Cc7IOd7ZWY64qUIO2ajOyghOugpSjsiJzqsITsoIHsnLzroZwg64K064qUIO2emCnsnYQg66y07JeH7J206528IO2VmOuKlOqwgCA/IiwNCiAgImtvX2MiOiBbDQogICAi7Yag7YGsIiwNCiAgICLsl7DruYQiLA0KICAgIuuwsOq4sOufiSIsDQogICAi66eI66ClIg0KICBdLA0KICAiYSI6ICIxIiwNCiAgInRyX2IiOiAi5py65Yqo6L2m5YaF54eD5py655qE5puy6L205Lqn55Sf55qE5peL6L2s5Yqb77yI556s6Ze05Lqn55Sf55qE5Yqb77yJ5Y+r5LuA5LmIPyIsDQogICJ0cl9jIjogWw0KICAgIuaJreefqSIsDQogICAi54eD5paZ5raI6ICX546HIiwNCiAgICLmjpLmsJTph48iLA0KICAgIumprOWKmyINCiAgXQ0KIH0sDQogew0KICAibiI6IDU2LA0KICAia29fYiI6ICLsnpDsnKjso7ztlonsnpDrj5nssKgg7IOB7Jqp7ZmUIOy0ieynhCDrsI8g7KeA7JuQ7JeQIOq0gO2VnCDrspXroLnsg4Eg7J6Q7Jyo7KO87ZaJ7J6Q64+Z7LCo7JeQIOuMgO2VnCDshKTrqoXsnLzroZwg7J6Y66q765CcIOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICLsnpDsnKjso7ztlonsnpDrj5nssKjsnZgg7KKF66WY64qUIOyZhOyghOyekOycqOyjvO2WieyekOuPmeywqOyZgCDrtoDrtoTsnpDsnKjso7ztlonsnpDrj5nssKjroZwg6rWs67aE7ZWgIOyImCDsnojri6QuIiwNCiAgICLsmYTsoIQg7J6Q7Jyo7KO87ZaJ7J6Q64+Z7LCo64qUIOyekOycqOyjvO2WieyLnOyKpO2FnOunjOycvOuhnCDsmrTtlontlaAg7IiYIOyeiOyWtCDsmrTsoITsnpDqsIAg7JeG6rGw64KYIOyatOyghOyekCDrmJDripQg7Iq56rCd7J2YIOqwnOyeheydtCDtlYTsmpTtlZjsp4AgICAgICAg7JWE64uI7ZWcIOyekOuPmeywqOulvCDrp5DtlZzri6QuIiwNCiAgICLrtoDrtoTsnpDsnKjso7ztlonsnpDrj5nssKjripQg7J6Q7Jyo7KO87ZaJ7Iuc7Iqk7YWc66eM7Jy866GcIOyatO2Wie2VoCDsiJgg7JeG6rGw64KYIOyatOyghOyekOqwgCDsp4Dsho3soIHsnLzroZwg7KO87Iuc7ZWgIO2VhOyalOqwgCDsnojripQg65OxIOyatOyghOyekCDrmJAgICAgICAg64qUIOyKueqwneydmCDqsJzsnoXsnbQg7ZWE7JqU7ZWcIOyekOuPmeywqOulvCDrp5DtlZzri6QuIiwNCiAgICLsnpDsnKjso7ztlonsnpDrj5nssKjripQg7Iq57Jqp7J6Q64+Z7LCo7JeQIO2VnOygleuQmOyWtCDsoIHsmqntlZjqs6AsIOyKue2VqeyekOuPmeywqOuCmCDtmZTrrLzsnpDrj5nssKjripQg7J20IOuyleydtCDsoIHsmqnrkJjsp4Ag7JWK64qU64ukLiINCiAgXSwNCiAgImEiOiAiNCIsDQogICJ0cl9iIjogIuagueaNruOAiuS/g+i/m+W5tuaUr+aPtOiHquWKqOmpvumptuaxvei9puWVhueUqOWMluebuOWFs+azleW+i+OAi++8jOS4i+WIl+WFs+S6juiHquWKqOmpvumptuaxvei9pueahOivtOazleS4remUmeivr+eahOaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIuiHquWKqOmpvumptuaxvei9pueahOenjeexu+WPr+S7peWIhuS4uuWFqOiHquWKqOmpvumptuaxvei9puWSjOWNiuiHquWKqOmpvumptuaxvei9puOAgiIsDQogICAi5YWo6Ieq5Yqo6am+6am25rG96L2m5piv5oyH5Y+v5Lul5a6M5YWo5L6d6Z2g6Ieq5Yqo6am+6am257O757uf6am+6am277yM5peg6ZyA6am+6am25Lq65oiW5LmY5a6i5bmy6aKE55qE5rG96L2m44CCIiwNCiAgICLljYroh6rliqjpqb7pqbbmsb3ovabmmK/mjIfml6Dms5Xlrozlhajkvp3pnaDoh6rliqjpqb7pqbbns7vnu5/pqb7pqbbvvIzpnIDopoHpqb7pqbbkurrmjIHnu63ms6jmhI/vvIzmiJbogIXpnIDopoHpqb7pqbbkurrmiJbkuZjlrqLlubLpooTnmoTmsb3ovabjgIIiLA0KICAgIuiHquWKqOmpvumptuaxvei9pueahOenjeexu+S7hemZkOi9v+i9pu+8jOWuoui9puaIlui0p+i9puS4jemAgueUqOivpeazleW+i+OAgiINCiAgXQ0KIH0sDQogew0KICAibiI6IDU3LA0KICAia29fYiI6ICLsoITquLDsnpDrj5nssKgg6rSA66as67Cp67KV7Jy866GcIOyYs+yngCDslYrsnYAgMuqwgOyngOuKlD8iLA0KICAia29fYyI6IFsNCiAgICLruYTsgqzsl4Xsmqkg7Iq57Jqp7J6Q64+Z7LCo7J2YIOyekOuPmeywqOqygOyCrCDsnKDtmqjquLDqsITsnYAgNuuFhOydtOuLpC4iLA0KICAgIuyepeqxsOumrCDsmrTsoIQg7Iuc7JeQ64qUIOyCrOyghOyXkCDrsLDthLDrpqzrpbwg7ZmV7J247ZWY6rOgIOy2qeyghO2VnOuLpC4iLA0KICAgIuy2qeyghCDsp4Htm4Tsl5DripQg6riJ6rCA7IaNLCDquInsoJXsp4Drpbwg7ZWY7KeAIOyViuuKlCDqsoPsnbQg7KKL64ukLiIsDQogICAi7Je07ISg7Iuc7Yq4LCDsl7TshKDtlbjrk6Trs7Tri6Qg6rO16riwIO2eiO2EsOulvCDsgqzsmqntlZjripQg6rKD7J20IO2aqOycqOyggeydtOuLpC4iDQogIF0sDQogICJhIjogIjEsIDQiLA0KICAidHJfYiI6ICLkuIvliJflhbPkuo7nlLXliqjmsb3ovabnrqHnkIbmlrnms5XnmoTor7TmmI7vvIzplJnor6/nmoTkuKTkuKrpgInpobnmmK/vvJ8iLA0KICAidHJfYyI6IFsNCiAgICLpnZ7llYbnlKjovb/ovabnmoTmo4Dmn6XmnInmlYjmnJ/mmK825bm044CCIiwNCiAgICLlnKjov5vooYzplb/pgJTpqb7pqbbml7bvvIzlupTkuovlhYjnoa7orqTnlLXmsaDnlLXph4/lubblhYXnlLXjgIIiLA0KICAgIuWImuWFheWujOeUte+8jOWwvemHj+S4jeimgee0p+aApeWKoOmAn+aIluaApeWIuei9puOAgiIsDQogICAi5ZKM5Yqg54Ot5Z2Q5Z6r5oiW5Yqg54Ot5pa55ZCR55uY55u45q+U77yM5byA5ZCv56m66LCD5Yi254Ot5pu06auY5pWI44CCIg0KICBdDQogfSwNCiB7DQogICJuIjogNTgsDQogICJrb19iIjogIuuPhOuhnOq1kO2GteuyleugueyDgSDsnpDrj5nssKgo64uoLCDslrTrprDsnbTthrXtlZnrsoTsiqQg7KCc7Jm4KSDssL3snKDrpqwg6rCA7Iuc6rSR7ISgIO2IrOqzvOycqOydmCDqt5zsoJzrpbwg67Cb64qUIOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICLrkrfsoozshJ0g7JiG66m0IOywveycoOumrCIsDQogICAi7JWe66m0LCDsmrTsoITshJ0g7KKM7JqwIOyYhuuptCDssL3snKDrpqwiLA0KICAgIuyVnuuptCwg7Jq07KCE7ISdIOyijOyasCwg65K366m0IOywveycoOumrCIsDQogICAi66qo65OgIOywveycoOumrCINCiAgXSwNCiAgImEiOiAiMiIsDQogICJ0cl9iIjogIuagueaNruOAiumBk+i3r+S6pOmAmuazleOAi+inhOWumu+8jOWvuei9pueql+eOu+eSg++8iOS9huWEv+erpeagoei9pumZpOWklu+8ieWPr+ingeWFiemAj+i/h+eOh+aciemZkOWItueahOaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIuWQjuW6p+aXgei+ueeahOi9pueql+eOu+eSgyIsDQogICAi5YmN5pa544CB6am+6am25bit5bem5Y+z5Lik5L6n55qE6L2m56qX546755KDIiwNCiAgICLliY3mlrnjgIHpqb7pqbbluK3lt6blj7PkuKTkvqfjgIHlkI7mlrnnmoTovabnqpfnjrvnkoMiLA0KICAgIuaJgOaciei9pueql+eOu+eSgyINCiAgXQ0KIH0sDQogew0KICAibiI6IDU5LA0KICAia29fYiI6ICLsnpDrj5nssKjqtIDrpqzrspXroLnsg4Eg7Iq57Jqp7J6Q64+Z7LCo64qUIOuqhyDsnbgg7J207ZWY66W8IOyatOyGoe2VmOq4sOyXkCDsoIHtlantlZjqsowg7KCc7J6R65CcIOyekOuPmeywqOyduOqwgD8iLA0KICAia29fYyI6IFsNCiAgICIxMOyduCIsDQogICAiMTLsnbgiLA0KICAgIjE17J24IiwNCiAgICIxOOyduCINCiAgXSwNCiAgImEiOiAiMSIsDQogICJ0cl9iIjogIuagueaNruOAiuacuuWKqOi9pueuoeeQhuazleOAi+inhOWumu+8jOi9v+i9puaYr+mAguWQiOi/kOi+k+WHoOS6uuS7peS4i+eahOi9pui+hu+8nyIsDQogICJ0cl9jIjogWw0KICAgIjEw5Lq6IiwNCiAgICIxMuS6uiIsDQogICAiMTXkuroiLA0KICAgIjE45Lq6Ig0KICBdDQogfSwNCiB7DQogICJuIjogNjAsDQogICJrb19iIjogIuyekOuPmeywqOq0gOumrOuyleugueyDgSDruYTsgqzsl4Xsmqkg7Iug6recIOyKueyaqeyekOuPmeywqOydmCDstZzstIjqsoDsgqwg7Jyg7Zqo6riw6rCE7J2APyIsDQogICJrb19jIjogWw0KICAgIjHrhYQiLA0KICAgIjLrhYQiLA0KICAgIjTrhYQiLA0KICAgIjXrhYQiDQogIF0sDQogICJhIjogIjQiLA0KICAidHJfYiI6ICLkvp3nhafjgIrmnLrliqjovabnrqHnkIbms5XjgIvop4TlrprvvIzpnZ7llYbnlKjmlrDovb/ovabnmoTliJ3mrKHmo4DpqozmnInmlYjmnJ/kuLrvvJ8iLA0KICAidHJfYyI6IFsNCiAgICIx5bm0IiwNCiAgICIy5bm0IiwNCiAgICI05bm0IiwNCiAgICI15bm0Ig0KICBdDQogfSwNCiB7DQogICJuIjogNjEsDQogICJrb19iIjogIuyekOuPmeywqOq0gOumrOuyleyDgSDsnpDrj5nssKjsnZgg7KKF66WY66GcIOunnuuKlCAy6rCA7KeA64qUPyIsDQogICJrb19jIjogWw0KICAgIuqxtOyEpOq4sOqzhCIsDQogICAi7ZmU66y87J6Q64+Z7LCoIiwNCiAgICLqsr3smrTquLAiLA0KICAgIu2KueyImOyekOuPmeywqCINCiAgXSwNCiAgImEiOiAiMiwgNCIsDQogICJ0cl9iIjogIuagueaNruOAiuacuuWKqOi9pueuoeeQhuazleOAi+inhOWumu+8jOS4i+WIl+WxnuS6juacuuWKqOi9puenjeexu+eahOS4pOmhueaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIuW7uuetkeacuuaisCIsDQogICAi6LSn6L2mIiwNCiAgICLogJXogJjmnLoiLA0KICAgIueJueauiuacuuWKqOi9piINCiAgXQ0KIH0sDQogew0KICAibiI6IDYyLA0KICAia29fYiI6ICLruYTsgqzsl4Xsmqkg67CPIOuMgOyXrOyCrOyXheyaqSDsoITquLDsnpDrj5nssKjsmYAg7IiY7IaMIOyXsOujjOyghOyngOyekOuPmeywqCjtlZjsnbTruIzrpqzrk5wg7J6Q64+Z7LCoIOygnOyZuCkg7KCE7Jqp67KI7Zi47YyQIOyDieyDgeycvOuhnCDrp57ripQg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIu2ZqeyDiSDrsJTtg5Xsl5Ag6rKA7J2A7IOJIOusuOyekCIsDQogICAi7YyM656A7IOJIOuwlO2DleyXkCDqsoDsnYDsg4kg66y47J6QIiwNCiAgICLqsJDssq3sg4kg67CU7YOV7JeQIO2dsOyDiSDrrLjsnpAiLA0KICAgIuuztOuej+u5myDrsJTtg5Xsl5Ag6rKA7J2A7IOJIOusuOyekCINCiAgXSwNCiAgImEiOiAiMiIsDQogICJ0cl9iIjogIuS4i+WIl+WFs+S6jumdnuWVhueUqOWPiuenn+i1geWVhueUqOeUteWKqOaxvei9puWSjOawoueHg+aWmeeUteaxoOaxvei9pu+8iOa3t+WQiOWKqOWKm+axvei9pumZpOWklu+8ieeahOS4k+eUqOi9pueJjOminOiJsueahOaPj+i/sOS4re+8jOato+ehrueahOaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIum7hOW6lem7keWtlyIsDQogICAi6JOd5bqV6buR5a2XIiwNCiAgICLmt7Hok53lupXnmb3lrZciLA0KICAgIue0q+W6lem7keWtlyINCiAgXQ0KIH0sDQogew0KICAibiI6IDYzLA0KICAia29fYiI6ICLri6TsnYwg7LCo65+JIOykkSDtlZjsnbTtjKjsiqTssKjroZwg7J207Jqp7J20IOu2iOqwgOuKpe2VnCDssKjrn4nsnYA/IiwNCiAgImtvX2MiOiBbDQogICAi7KCB7J6s7KSR65+JIDE27YakIOuNpO2UhO2KuOufrSIsDQogICAi7ISc7Jq46rO8IOyImOybkOydhCDsmrTtlontlZjripQgMuy4tSDsoozshJ3rsoTsiqQiLA0KICAgIuuLqOywqOuhnOyduCDqsr3smrAsIOywqO2PreydtCAzLjdt7J24IOyGjOuwqeywqOufiSIsDQogICAiMTDthqQg64yA7ZiVIOq1rOuCnOywqOufiSINCiAgXSwNCiAgImEiOiAiMyIsDQogICJ0cl9iIjogIuS4i+WIl+i9pui+huS4reS4jeW+l+S9v+eUqEhpLVBhc3PovabpgZPnmoTmmK/vvJ8iLA0KICAidHJfYyI6IFsNCiAgICLoo4Xovb3ph43ph4/kuLoxNuWQqOeahOiHquWNuOi9piIsDQogICAi5b6A6L+U5LqO6aaW5bCU5ZKM5rC05Y6f55qE5Y+M5bGC5YWs5Lqk6L2mIiwNCiAgICLooYzpqbblnKjljZXovabpgZPkuIrnmoTovablrr3kuLozLjfnsbPnmoTmtojpmLLovaYiLA0KICAgIjEw5ZCo55qE5aSn5Z6L5pWR6Zmp6L2mIg0KICBdDQogfSwNCiB7DQogICJuIjogNjQsDQogICJrb19iIjogIuyekOuPmeywqOq0gOumrOuyleugueyDgSDruYTsgqzsl4Xsmqkg7IaM7ZiVIOyKue2VqeyekOuPmeywqCgyMDAx64WEIOydtO2bhCDrk7HroZ3rkJwg7LCo66C57J20IDTrhYQg7LSI6rO8KeydmCDqsoDsgqwg7Jyg7Zqo6riw6rCE7Jy866GcIOunnuuKlCDqsoPsnYA/IiwNCiAgImtvX2MiOiBbDQogICAiNuqwnOyblCIsDQogICAiMeuFhCIsDQogICAiMuuFhCIsDQogICAiNOuFhCINCiAgXSwNCiAgImEiOiAiMiIsDQogICJ0cl9iIjogIuagueaNruOAiuacuuWKqOi9pueuoeeQhuebuOWFs+azleS7pOOAi++8jOWvueS6jumdnuiQpeS4mueUqOmAlOeahOWwj+Wei+Wuoui9pu+8iDIwMDHlubTkuYvlkI7nmbvorrDkuJTovabpvoTotoXov4c05bm077yJ77yM5YW25qOA5p+l5pyJ5pWI5pyf5a+55bqU55qEIOmAiemhueaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIjbkuKrmnIgiLA0KICAgIjHlubQiLA0KICAgIjLlubQiLA0KICAgIjTlubQiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA2NSwNCiAgImtvX2IiOiAi7J6Q64+Z7LCo6rSA66as67KV66C57IOBIOu5hOyCrOyXheyaqSDshoztmJUg7ZmU66y87J6Q64+Z7LCoKOywqOugueydtCA064WEIOydtO2VmCnsnZgg6rKA7IKsIOycoO2aqOq4sOqwhOycvOuhnCDrp57ripQg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIjbqsJzsm5QiLA0KICAgIjHrhYQiLA0KICAgIjLrhYQiLA0KICAgIjTrhYQiDQogIF0sDQogICJhIjogIjMiLA0KICAidHJfYiI6ICLmoLnmja7jgIrmnLrliqjovabnrqHnkIbnm7jlhbPms5Xku6TjgIvvvIzlr7nkuo7pnZ7okKXkuJrnlKjpgJTnmoTlsI/lnovovb3otKfmnLrliqjovabvvIjovabpvoTlnKg05bm05Y+K5Lul5LiL77yJ77yM5YW25qOA5p+l5pyJ5pWI5pyf5a+55bqU55qE6YCJ6aG55piv77yfIiwNCiAgInRyX2MiOiBbDQogICAiNuS4quaciCIsDQogICAiMeW5tCIsDQogICAiMuW5tCIsDQogICAiNOW5tCINCiAgXQ0KIH0sDQogew0KICAibiI6IDY2LA0KICAia29fYiI6ICLsnpDrj5nssKjqtIDrpqzrspXroLnsg4Eg7Iug7LCoIOq1rOyehSDsi5wg7J6E7Iuc7Jq07ZaJIO2XiOqwgCDsnKDtmqjquLDqsITsnZgg6riw7KSA7J2APyIsDQogICJrb19jIjogWw0KICAgIjEw7J28IOydtOuCtCIsDQogICAiMTXsnbwg7J2064K0IiwNCiAgICIyMOydvCDsnbTrgrQiLA0KICAgIjMw7J28IOydtOuCtCINCiAgXSwNCiAgImEiOiAiMSIsDQogICJ0cl9iIjogIuS+neeFp+OAiuacuuWKqOi9pueuoeeQhuazleOAi++8jOS4i+WIl+WFs+S6jui0reS5sOaWsOi9puaXtueahOS4tOaXtueJjOeFp+acieaViOacn+eahOagh+WHhuS4reato+ehrueahOaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIjEw5aSp5Lul5YaFIiwNCiAgICIxNeWkqeS7peWGhSIsDQogICAiMjDlpKnku6XlhoUiLA0KICAgIjMw5aSp5Lul5YaFIg0KICBdDQogfSwNCiB7DQogICJuIjogNjcsDQogICJrb19iIjogIuuLpOydjCDspJEg7J6Q64+Z7LCo6rSA66as67KV66C57JeQIOuUsOuluCDsnpDrj5nssKgg67OA6rK965Ox66GdIOyCrOycoOqwgCDslYTri4wg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIuyekOuPmeywqOydmCDsgqzsmqnrs7jqsbDsp4Drpbwg67OA6rK97ZWcIOuVjCIsDQogICAi7J6Q64+Z7LCo7J2YIOywqOuMgOuyiO2YuOulvCDrs4Dqsr3tlZwg65WMIiwNCiAgICLshozsnKDqtozsnbQg67OA64+Z65CcIOuVjCIsDQogICAi67KV7J247J2YIOuqhey5reydtCDrs4Dqsr3rkJwg65WMIg0KICBdLA0KICAiYSI6ICIzIiwNCiAgInRyX2IiOiAi5LiL5YiX6YCJ6aG55Lit77yM5LiN5bGe5LqO44CK5py65Yqo6L2m566h55CG5rOV44CL6KeE5a6a55qE5py65Yqo6L2m5Y+Y5pu055m76K6w5LqL55Sx55qE5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAi5Y+Y5pu05py65Yqo6L2m55qE5L2/55So5Zyw5Yy65pe2IiwNCiAgICLlj5jmm7TmnLrliqjovablupXnm5jlj7fml7YiLA0KICAgIuWPmOabtOaJgOacieadg+aXtiIsDQogICAi5Y+Y5pu05rOV5Lq65ZCN56ew5pe2Ig0KICBdDQogfSwNCiB7DQogICJuIjogNjgsDQogICJrb19iIjogIuyekOycqOyjvO2WieyekOuPmeywqCDsmrTsoITsnpDsnZgg66eI7J2M6rCA7KeQ7Jy866GcIOuwlOultOyngCDslYrsnYAg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIuyekOycqOyjvO2WieyekOuPmeywqOydtOuvgOuhnCDsiKDsl5Ag7Leo7ZWcIOyDge2DnOyXkOyEnCDsmrTsoITtlbTrj4Qg65Cc64ukLiIsDQogICAi6rO866Gc7ZWcIOyDge2DnOyXkOyEnCDsnpDsnKjso7ztlonsnpDrj5nssKjrpbwg7Jq07KCE7ZWY66m0IOyVhOuLiCDrkJzri6QuIiwNCiAgICLsnpDsnKjso7ztlonsnpDrj5nssKjrnbwg7ZWY642U652864+EIO2WpeygleyLoOyEseydmOyVve2SiOydhCDrs7XsmqntlZjqs6Ag7Jq07KCE7ZWY66m0IOyVhOuLiCDrkJzri6QuIiwNCiAgICLsnpDsnKjso7ztlonsnpDrj5nssKjsnZgg7Jq07KCEIOykkeyXkCDtnLTrjIDsmqkg7KCE7ZmUIOyCrOyaqeydtCDqsIDriqXtlZjri6QuIg0KICBdLA0KICAiYSI6ICIxIiwNCiAgInRyX2IiOiAi6Ieq5Yqo6am+6am25rG96L2m6am+6am25Lq655qE5b+D5oCB5LiN5Y+v5Y+W55qE5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAi5Zug5Li65piv6Ieq5Yqo6am+6am25rG96L2m77yM5Zug5q2k5Y+v5Lul6YaJ6YWS6am+6L2m44CCIiwNCiAgICLkuI3lvpflnKjov4fluqbnlrLlirPnmoTnirbmgIHkuIvpqb7pqbboh6rliqjpqb7pqbbmsb3ovabjgIIiLA0KICAgIuWNs+S+v+aYr+iHquWKqOmpvumptuaxvei9pu+8jOS5n+S4jeW+l+WcqOacjeeUqOaKl+eyvuelnuaAp+iNr+eJqeWQjumpvumptuOAgiIsDQogICAi5Zyo6am+6am26Ieq5Yqo6am+6am25rG96L2m55qE6YCU5Lit5Y+v5Lul5L2/55So5omL5py644CCIg0KICBdDQogfSwNCiB7DQogICJuIjogNjksDQogICJrb19iIjogIu2ZlOusvOyekOuPmeywqCDsmrTsiJjsgqzsl4XrspXsl5Ag65Sw66W4IO2ZlOusvOyekOuPmeywqCDsmrTshqHsgqzsl4XsnpDripQg6rSA66CoIOuyleugueyXkCDrlLDrnbwg7Jq07ZaJ6riw66Gd7J6l7LmY7JeQIOq4sOuhneuQnCDsmrTtlonquLDroZ3snYQgKCAgICAp64+Z7JWIICDrs7TqtIDtlZjsl6zslbwg7ZWc64ukLiAoICAgKSDslYjsl5Ag6riw7KSA7Jy866GcIOunnuuKlCDqsoPsnYA/IiwNCiAgImtvX2MiOiBbDQogICAiM+qwnOyblCIsDQogICAiNuqwnOyblCIsDQogICAiMeuFhCIsDQogICAiMuuFhCINCiAgXSwNCiAgImEiOiAiMiIsDQogICJ0cl9iIjogIuagueaNruOAiui0p+i9pui/kOi+k+S6i+S4muazleOAi+inhOWumu+8jOi0p+i9pui/kOi+k+S7juS4muS6uuWRmOW6lOaMieeFp+ebuOWFs+azleS7pOinhOWumu+8jOWcqO+8iCDvvInml7bpl7TlhoXlpqXlloTkv53nrqHooYzovaborrDlvZXoo4Xnva7kuK3kv53lrZjnmoTpqb7pqbYg6K6w5b2V44CC5aGr5YWl5ous5Y+35Lit5pyA5oGw5b2T55qE6YCJ6aG55piv77yfIiwNCiAgInRyX2MiOiBbDQogICAiM+S4quaciCIsDQogICAiNuS4quaciCIsDQogICAiMeW5tCIsDQogICAiMuW5tCINCiAgXQ0KIH0sDQogew0KICAibiI6IDcwLA0KICAia29fYiI6ICLsnpDrj5nssKjqtIDrpqzrspXroLnsg4Eg7J6Q64+Z7LCo66W8IOydtOyghCDrk7HroZ3tlZjqs6DsnpAg7ZWY64qUIOyekOuKlCDrp6TsiJjtlZwg64Kg67aA7YSwICggICkg7J2064K07JeQIOuTseuhne2VtOyVvCDtlZzri6QuICAoICAgKeyXkCDquLDspIDsnLzroZwg66ee64qUIOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICIxNeydvCIsDQogICAiMjDsnbwiLA0KICAgIjMw7J28IiwNCiAgICI0MOydvCINCiAgXSwNCiAgImEiOiAiMSIsDQogICJ0cl9iIjogIuagueaNruOAiuacuuWKqOi9pueuoeeQhuazleOAi+inhOWumu+8jOacieaEj+aEv+i/m+ihjOacuuWKqOi9pui9rOiuqeeZu+iusOiAhe+8jOW6lOiHqui0reS5sOS5i+aXpei1t++8iCDvvInkuYvlhoXov5vooYznmbvorrDjgILloavlhaXmi6zlj7fkuK3mnIDmgbDlvZPnmoTpgInpobkg5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAiMTXlpKkiLA0KICAgIjIw5aSpIiwNCiAgICIzMOWkqSIsDQogICAiNDDlpKkiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA3MSwNCiAgImtvX2IiOiAi7J6Q64+Z7LCo6rSA66as67KV66C57IOBIOyekOuPmeywqOydmCDsoJXquLDqsoDsgqzsnZgg6riw6rCE7J2AIOqygOyCrOycoO2aqOq4sOqwhCDrp4zro4zsnbwg7KCEICggICnsnbzrtoDthLAg7ZuEICggICnsnbwg6rmM7KeA64ukLiAoICAgKeyXkCDquLDspIDsnLzroZwg66ee64qUIOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICI5MOydvCwgMzHsnbwiLA0KICAgIjgw7J28LCA0MeydvCIsDQogICAiNjDsnbwsIDUx7J28IiwNCiAgICI1MOydvCwgNjHsnbwiDQogIF0sDQogICJhIjogIjEiLA0KICAidHJfYiI6ICLmoLnmja7jgIrmnLrliqjovabnrqHnkIbnm7jlhbPms5Xku6TjgIvvvIzmnLrliqjovabnmoTlrprmnJ/mo4Dmn6XmnJ/pmZDmmK/mo4Dmn6XmnInmlYjmnJ/miKrmraLml6XkuYvliY3vvIgg77yJ5aSp6LW36Iez5LmL5ZCO77yIIO+8ieWkqeS4uuatouOAgiDvvIgg77yJ5Lit5a+55bqU55qE5q2j56Gu6YCJ6aG55piv77yfIiwNCiAgInRyX2MiOiBbDQogICAiOTDlpKnvvIwzMeWkqSIsDQogICAiODDlpKnvvIw0MeWkqSIsDQogICAiNjDlpKnvvIw1MeWkqSIsDQogICAiNTDlpKnvvIw2MeWkqSINCiAgXQ0KIH0sDQogew0KICAibiI6IDcyLA0KICAia29fYiI6ICLsnpDrj5nssKjshpDtlbTrsLDsg4Hrs7TsnqXrspXsg4Eg7J2Y66y067O07ZeY7JeQIOqwgOyehe2VmOyngCDslYrsnYAg7J6Q64+Z7LCo67O07Jyg7J6Q7J2YIOyymOuyjCDquLDspIDsnLzroZwg66ee64qUIOqyg+ydgD8o7J6Q64+Z7LCoIOuvuOyatO2WiSkiLA0KICAia29fYyI6IFsNCiAgICIzMDDrp4wg7JuQIOydtO2VmOydmCDqs7ztg5zro4wiLA0KICAgIjUwMOunjCDsm5Ag7J207ZWY7J2YIOqzvO2DnOujjCIsDQogICAiMeuFhCDsnbTtlZjsnZgg7KeV7JetIOuYkOuKlCAx7LKc66eMIOybkCDsnbTtlZjsnZgg67KM6riIIiwNCiAgICIy64WEIOydtO2VmOydmCDsp5Xsl60g65iQ64qUIDLsspzrp4wg7JuQIOydtO2VmOydmCDrsozquIgiDQogIF0sDQogICJhIjogIjEiLA0KICAidHJfYiI6ICLmoLnmja7jgIrmnLrliqjovabmjZ/lpLHotZTlgb/kv53pmpzms5XjgIvop4TlrprvvIzkuIvliJflhbPkuo7mnKrliqDlhaXkuYnliqHkv53pmannmoTmnLrliqjovabmiYDmnInkurrnmoTlpITnvZrmoIflh4bkuK3mraPnoa7nmoTmmK/vvJ/vvIjmnKrpqb7pqbbmnLrliqjovabvvIkiLA0KICAidHJfYyI6IFsNCiAgICIzMDDkuIfpn6nlhYPku6XkuIvnvZrph5EiLA0KICAgIjUwMOS4h+mfqeWFg+S7peS4i+e9mumHkSIsDQogICAiMeW5tOS7peS4i+acieacn+W+kuWIkeaIljHljYPkuIfpn6nlhYPku6XkuIvnvZrmrL4iLA0KICAgIjLlubTku6XkuIvmnInmnJ/lvpLliJHmiJYy5Y2D5LiH6Z+p5YWD5Lul5LiL572a5qy+Ig0KICBdDQogfSwNCiB7DQogICJuIjogNzMsDQogICJrb19iIjogIuyekOuPmeywqOq0gOumrOuyleugueyDgSDsnpDrj5nssKgg7IaM7Jyg6raM7J20IOyDgeyGjSDrk7HsnLzroZwg67OA6rK965CgIOqyveyasOyXkCDtlbTslbwg7ZWY64qUIOuTseuhneydgD8iLA0KICAia29fYyI6IFsNCiAgICLsi6Dqt5zrk7HroZ0iLA0KICAgIuydtOyghOuTseuhnSIsDQogICAi67OA6rK965Ox66GdIiwNCiAgICLrp5Dshozrk7HroZ0iDQogIF0sDQogICJhIjogIjIiLA0KICAidHJfYiI6ICLmoLnmja7jgIrmnLrliqjovabnrqHnkIbms5XjgIvvvIzmnLrliqjovabmiYDmnInmnYPlm6Dnu6fmib/nrYnogIzlj5jmm7Tml7bvvIzpnIDopoHov5vooYznmoTnmbvorrDmmK/vvJ8iLA0KICAidHJfYyI6IFsNCiAgICLmlrDovabnmbvorrAiLA0KICAgIui9rOiuqeeZu+iusCIsDQogICAi5Y+Y5pu055m76K6wIiwNCiAgICLms6jplIDnmbvorrAiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA3NCwNCiAgImtvX2IiOiAi7J6Q64+Z7LCo6rSA66as67KV66C57IOBIOyekOuPmeywqCDshozsnKDsnpDqsIAg67Cb7JWE7JW8IO2VmOuKlCDsnpDrj5nssKgg6rKA7IKs7J2YIOyiheulmOqwgCDslYTri4wg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIuyImOumrOqygOyCrCIsDQogICAi7Yq567OE6rKA7IKsIiwNCiAgICLtipzri53qsoDsgqwiLA0KICAgIuyehOyLnOqygOyCrCINCiAgXSwNCiAgImEiOiAiMiIsDQogICJ0cl9iIjogIuS4i+WIl+mAiemhueS4re+8jOS4jeWxnuS6juOAiuacuuWKqOi9pueuoeeQhuazleOAi+inhOWumueahOi9puS4u+W6lOivpeaOpeWPl+eahOacuuWKqOi9puajgOafpeenjeexu+aYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIuS/rueQhuajgOafpSIsDQogICAi54m55q6K5qOA5p+lIiwNCiAgICLosIPmlbTmo4Dmn6UiLA0KICAgIuS4tOaXtuajgOafpSINCiAgXQ0KIH0sDQogew0KICAibiI6IDc1LA0KICAia29fYiI6ICLri6TsnYwg7KSRIOyekOuPmeywqOulvCDrp6Trp6TtlZwg6rK97JqwIOydtOyghOuTseuhnSDri7Tri7nquLDqtIDsnYA/IiwNCiAgImtvX2MiOiBbDQogICAi7ZWc6rWt64+E66Gc6rWQ7Ya16rO164uoIiwNCiAgICLsi5zvvaXqtbDvvaXqtazssq0iLA0KICAgIu2VnOq1req1kO2GteyViOyghOqzteuLqCIsDQogICAi7Iucwrfrj4Tqsr3ssLDssq0iDQogIF0sDQogICJhIjogIjIiLA0KICAidHJfYiI6ICLkuIvliJfpgInpobnkuK3vvIzotJ/otKPmnLrliqjovabkubDljZbovaznp7vnmbvorrDnmoTmnLrlhbPmmK/vvJ8iLA0KICAidHJfYyI6IFsNCiAgICLpn6nlm73pgZPot6/kuqTpgJrlhazlm6IiLA0KICAgIuW4guOAgemDoeOAgeWMuuWOhSIsDQogICAi6Z+p5Zu95Lqk6YCa5a6J5YWo5YWs5ZuiIiwNCiAgICLluILjgIHpgZPorablr5/ljoUiDQogIF0NCiB9LA0KIHsNCiAgIm4iOiA3NiwNCiAgImtvX2IiOiAi7J6Q64+Z7LCoIOuTseuhneydmCDsooXrpZjqsIAg7JWE64uMIOqygyAy6rCA7KeA64qUPyIsDQogICJrb19jIjogWw0KICAgIuqyveygleuTseuhnSIsDQogICAi6raM66as65Ox66GdIiwNCiAgICLshKTsoJXrk7HroZ0iLA0KICAgIuunkOyGjOuTseuhnSINCiAgXSwNCiAgImEiOiAiMiwgMyIsDQogICJ0cl9iIjogIuS4i+WIl+mAiemhueS4reS4jeWxnuS6juacuuWKqOi9pueZu+iusOenjeexu+eahOS4pOmhueaYr++8nyIsDQogICJ0cl9jIjogWw0KICAgIuabtOato+eZu+iusCIsDQogICAi5p2D5Yip55m76K6wIiwNCiAgICLorr7lrprnmbvorrAiLA0KICAgIuazqOmUgOeZu+iusCINCiAgXQ0KIH0sDQogew0KICAibiI6IDc3LA0KICAia29fYiI6ICLsnpDrj5nssKgo64uoLCDslrTrprDsnbTthrXtlZnrsoTsiqQg7KCc7Jm4KSDslZ7rqbQg7LC97Jyg66as7J2YIOqwgOyLnOq0keyEoCDtiKzqs7zsnKgg6riw7KSA7Jy866GcIOunnuuKlCDqsoPsnYA/IiwNCiAgImtvX2MiOiBbDQogICAiNDDtjbzshLztirgiLA0KICAgIjUw7Y287IS87Yq4IiwNCiAgICI2MO2NvOyEvO2KuCIsDQogICAiNzDtjbzshLztirgiDQogIF0sDQogICJhIjogIjQiLA0KICAidHJfYiI6ICLkuIvliJflhbPkuo7mnLrliqjovabliY3ovabnqpfnjrvnkoPvvIjkvYblhL/nq6XmoKHovabpmaTlpJbvvInnmoTlj6/op4HlhYnpgI/ov4fnjofmoIflh4bkuK3vvIzmraPnoa7nmoTmmK8/IiwNCiAgInRyX2MiOiBbDQogICAiNDAlIiwNCiAgICI1MCUiLA0KICAgIjYwJSIsDQogICAiNzAlIg0KICBdDQogfSwNCiB7DQogICJuIjogNzgsDQogICJrb19iIjogIuyjvO2WiSDspJEg67iM66CI7J207YGs6rCAIOyekeuPmeuQmOuKlCDsmrTsoITtlonrj5nqs7zsoJXsnYQg7Jis67CU66W4IOyInOyEnOuhnCDsl7DqsrDtlZwg6rKD7J2APyIsDQogICJrb19jIjogWw0KICAgIuychO2XmOyduOyngCDihpIg7IOB7Zmp7YyQ64uoIOKGkiDtlonrj5nrqoXroLkg4oaSIOu4jOugiOydtO2BrOyekeuPmSIsDQogICAi7JyE7ZeY7J247KeAIOKGkiDtlonrj5nrqoXroLkg4oaSIOyDge2Zqe2MkOuLqCDihpIg67iM66CI7J207YGs7J6R64+ZIiwNCiAgICLsg4HtmantjJDri6gg4oaSIOychO2XmOyduOyngCDihpIg7ZaJ64+Z66qF66C5IOKGkiDruIzroIjsnbTtgazsnpHrj5kiLA0KICAgIu2WieuPmeuqheuguSDihpIg7JyE7ZeY7J247KeAIOKGkiDsg4HtmantjJDri6gg4oaSIOu4jOugiOydtO2BrOyekeuPmSINCiAgXSwNCiAgImEiOiAiMSIsDQogICJ0cl9iIjogIuS4i+WIl+mAiemhueS4reWTqumhueaYr+WujOaIkOWIuei9puaXtueahOato+ehruihjOWKqOmhuuW6j++8nyIsDQogICJ0cl9jIjogWw0KICAgIuWPkeeOsOWNsemZqSDihpIg5Yik5pat5oOF5Ya1IOKGkiDooYzliqjlkb3ku6Qg4oaSIOWIuei9piIsDQogICAi5Y+R546w5Y2x6ZmpIOKGkiDooYzliqjlkb3ku6Qg4oaSIOWIpOaWreaDheWGtSDihpIg5Yi56L2mIiwNCiAgICLliKTmlq3mg4XlhrUg4oaSIOWPkeeOsOWNsemZqSDihpIg6KGM5Yqo5ZG95LukIOKGkiDliLnovaYiLA0KICAgIuihjOWKqOWRveS7pCDihpIg5Y+R546w5Y2x6ZmpIOKGkiDliKTmlq3mg4XlhrUg4oaSIOWIuei9piINCiAgXQ0KIH0sDQogew0KICAibiI6IDc5LA0KICAia29fYiI6ICLri6TsnYwg7KSRIOyekOuPmeywqOyXkCDrtoDssKnrkJwg7JeQ7Ja067Cx7J2YIOq1rOu5hOyhsOqxtOycvOuhnCDqsIDsnqUg6rGw66as6rCAIOuovCDqsoPsnYA/IiwNCiAgImtvX2MiOiBbDQogICAi64aS7J2AIOyYqOuPhOyXkOyEnCDsnbjsnqXqsJXrj4Qg67CPIOuCtOyXtOqwleuPhCIsDQogICAi64Ku7J2AIOyYqOuPhOyXkOyEnCDsnbjsnqXqsJXrj4Qg67CPIOuCtOyXtOqwleuPhCIsDQogICAi7YyM7Je06rCV64+E66W8IOyngOuLiOqzoCDrgrTrp4jrqqjshLEsIOycoOyXsOyEsSIsDQogICAi7Jq07KCE7J6Q7JmAIOygkey0ie2VmOuKlCDstqnqsqnsl5DrhIjsp4Ag6re564yA7ZmUIg0KICBdLA0KICAiYSI6ICI0IiwNCiAgInRyX2IiOiAi5LiL5YiX5YWz5LqO5py65Yqo6L2m5LiK5a6J6KOF5a6J5YWo5rCU5ZuK5pe25bqU5YW35aSH55qE5p2h5Lu255qE6K+05rOV5Lit77yM5pyA5LiN6LS05YiH55qE5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAi6auY5rip5LiL55qE5oqX5ouJ5by65bqm5LiO6ICQ54Ot5by65bqmIiwNCiAgICLkvY7muKnkuIvnmoTmipfmi4nlvLrluqbkuI7ogJDng63lvLrluqYiLA0KICAgIuWFt+Wkh+egtOijguW8uuW6puOAgeiAkOejqOaAp+OAgeaflOmfp+aApyIsDQogICAi5LiO6am+6am25Lq65o6l6Kem55qE5Yay5Ye76IO96YeP5pyA5aSn5YyWIg0KICBdDQogfSwNCiB7DQogICJuIjogODAsDQogICJrb19iIjogIuuLpOydjCDspJEg7Jq07KCE7J6QIOuTseydtCDssKjrn4kg7Iq57ZWY7LCoIOyLnCDso7zsnZjsgqztla3snLzroZwg66ee64qUIOqyg+ydgD8iLA0KICAia29fYyI6IFsNCiAgICLtg4Dqs6Ag64K066a0IOuVjOuKlCDrkqTsl5DshJwg7Jik64qUIOywqOufieydtCDsnojripTsp4Drpbwg7ZmV7J247ZWc64ukLiIsDQogICAi66y47J2EIOyXtCDrlYzripQg7JmE7KCE7Z6IIOyXtOqzoOuCmOyEnCDqs6frsJTroZwg64K066aw64ukLiIsDQogICAi65K37KKM7ISdIOyKueywqOyekOqwgCDtlZjssKjtlaAg65WMIOyatOyghOyekOuKlCDsoITrsKnsnYQg7KO87Iuc7ZW07JW8IO2VnOuLpC4iLA0KICAgIuyatOyghOyEneydhCDsnbzsi5zsoIHsnLzroZwg65ag64KgIOuVjOyXkOuKlCDsi5zrj5nsnYQg64GE7KeAIOyViuyVhOuPhCDrkJzri6QuIg0KICBdLA0KICAiYSI6ICIxIiwNCiAgInRyX2IiOiAi5LiL5YiX5YWz5LqO6am+6am25Lq6562J5LiK5LiL6L2m5rOo5oSP5LqL6aG555qE5o+P6L+w5Lit5q2j56Gu55qE5piv77yfIiwNCiAgInRyX2MiOiBbDQogICAi5LiK5LiL6L2m5pe26KaB56Gu6K6k5ZCO5pa55piv5ZCm5pyJ6L2m6L6G6am25p2l44CCIiwNCiAgICLlvIDovabpl6jml7bku6XmnIDlpKfluYXluqbmiZPlvIDlkI7nq4vljbPkuIvovabjgIIiLA0KICAgIuWQjuW6p+S5mOi9puiAheS4i+i9puaXtu+8jOmpvumptuS6uuimgeazqOaEj+WJjeaWueOAgiIsDQogICAi5Li05pe256a75byA6am+6am25bit5pe25peg6ZyA5YWz6Zet5Y+R5Yqo5py644CCIg0KICBdDQogfQ0KXQ==
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$text=[IO.File]::ReadAllText((Resolve-Path '"'translations/audit/queue/201_choices_cn.json'),[Text.Encoding]::UTF8); "'$node=[System.Text.Json.Nodes.JsonNode]::Parse($text); $opts=[System.Text.Json.JsonSerializerOptions]::new(); $opts.WriteIndented=$false; [System.Text.Json.JsonSerializer]::Serialize($node,$opts)' in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:19:40.637439Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+[System.Text.Json.Nodes.JsonNode] 형식을 찾을 수 없습니다.
+위치 줄:2 문자:122
++ ... ext.Encoding]::UTF8); $node=[System.Text.Json.Nodes.JsonNode]::Parse( ...
++                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Text.Json.Nodes.JsonNode:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+ 
+[System.Text.Json.JsonSerializerOptions] 형식을 찾을 수 없습니다.
+위치 줄:2 문자:177
++ ... :Parse($text); $opts=[System.Text.Json.JsonSerializerOptions]::new(); ...
++                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Text.Json.JsonSerializerOptions:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+ 
+이 개체에 'WriteIndented' 속성이 없습니다. 해당 속성이 있고 설정 가능한지 검증하십시오.
+위치 줄:2 문자:226
++ ... son.JsonSerializerOptions]::new(); $opts.WriteIndented=$false; [Syste ...
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : PropertyNotFound
+ 
+[System.Text.Json.JsonSerializer] 형식을 찾을 수 없습니다.
+위치 줄:2 문자:254
++ ... $opts.WriteIndented=$false; [System.Text.Json.JsonSerializer]::Serial ...
++                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Text.Json.JsonSerializer:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+ 
+
+ exited 1 in 586ms:
+[System.Text.Json.Nodes.JsonNode] 형식을 찾을 수 없습니다.
+위치 줄:2 문자:122
++ ... ext.Encoding]::UTF8); $node=[System.Text.Json.Nodes.JsonNode]::Parse( ...
++                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Text.Json.Nodes.JsonNode:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+ 
+[System.Text.Json.JsonSerializerOptions] 형식을 찾을 수 없습니다.
+위치 줄:2 문자:177
++ ... :Parse($text); $opts=[System.Text.Json.JsonSerializerOptions]::new(); ...
++                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Text.Json.JsonSerializerOptions:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+ 
+이 개체에 'WriteIndented' 속성이 없습니다. 해당 속성이 있고 설정 가능한지 검증하십시오.
+위치 줄:2 문자:226
++ ... son.JsonSerializerOptions]::new(); $opts.WriteIndented=$false; [Syste ...
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : PropertyNotFound
+ 
+[System.Text.Json.JsonSerializer] 형식을 찾을 수 없습니다.
+위치 줄:2 문자:254
++ ... $opts.WriteIndented=$false; [System.Text.Json.JsonSerializer]::Serial ...
++                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Text.Json.JsonSerializer:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/201_choices_cn.json' | ConvertFrom-Json; function Esc([string]"'$s){$sb=New-Object Text.StringBuilder; foreach($ch in $s.ToCharArray()){if([int]$ch -gt 127){[void]$sb.Append(('"'\\u{0:x4}' -f [int]"'$ch))}else{[void]$sb.Append($ch)}}; $sb.ToString()}; foreach($x in $data){ Write-Output ((Esc $x.n.ToString())+'"' B '+(Esc "'$x.ko_b)+'"' || '+(Esc "'$x.tr_b)); for($i=0;$i -lt $x.ko_c.Count;$i++){Write-Output ('"' C'+("'$i+1)+'"' '+(Esc "'$x.ko_c[$i])+'"' || '+(Esc "'$x.tr_c[$i]))}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 1217ms:
+41 B \uc790\ub3d9\ucc28\uc5d0 \uc2b9\ucc28\ud558\uae30 \uc804 \uc8fc\ubcc0\uc810\uac80 \uc0ac\ud56d\uc73c\ub85c \ub9de\ub294 2\uac00\uc9c0\ub294? || \u4e0b\u5217\u5173\u4e8e\u4e0a\u8f66\u524d\u673a\u52a8\u8f66\u68c0\u67e5\u4e8b\u9879\u4e2d\u6b63\u786e\u7684\u4e24\u9879\u662f\uff1f
+ C1 \ud0c0\uc774\uc5b4 \ub9c8\ubaa8\uc0c1\ud0dc || \u8f6e\u80ce\u78e8\u635f\u72b6\u6001
+ C2 \uc804\uff65\ud6c4\ubc29 \uc7a5\uc560\ubb3c \uc720\ubb34 || \u673a\u52a8\u8f66\u524d\u540e\u65b9\u6709\u65e0\u969c\u788d\u7269
+ C3 \uc6b4\uc804\uc11d \uacc4\uae30\ud310 \uc815\uc0c1\uc791\ub3d9 \uc5ec\ubd80 || \u9a7e\u9a76\u5e2d\u4eea\u8868\u76d8\u662f\u5426\u6b63\u5e38\u542f\u52a8
+ C4 \ube0c\ub808\uc774\ud06c \ud398\ub2ec \uc815\uc0c1\uc791\ub3d9 \uc5ec\ubd80 || \u5236\u52a8\u8e0f\u677f\u662f\u5426\u6b63\u5e38
+42 B \uc77c\ubc18\uc801\uc73c\ub85c \ubb34\ubcf4\uc218(MF\uff1aMaintenance Free)\ubc30\ud130\ub9ac \uc218\uba85\uc774 \ub2e4\ud55c \uacbd\uc6b0, \uc810\uac80\ucc3d\uc5d0 \ub098\ud0c0\ub098\ub294 \uc0c9\uae54\uc740? || \u901a\u5e38\u6765\u8bf4\uff0c\u514d\u7ef4\u62a4\uff08MF: Maintenance Free\uff09\u84c4\u7535\u6c60\u5bff\u547d\u5230\u671f\u65f6, \u68c0\u89c6\u7a97\u663e\u793a\u4ec0\u4e48\u989c\u8272?
+ C1 \ud669\uc0c9 || \u9ec4\u8272
+ C2 \ubc31\uc0c9 || \u767d\u8272
+ C3 \uac80\uc740\uc0c9 || \u9ed1\u8272
+ C4 \ub179\uc0c9 || \u7eff\u8272
+43 B \ub2e4\uc74c \uc911 \ucc28\ub7c9 \uc5f0\ub8cc\ub85c \uc0ac\uc6a9\ub420 \uacbd\uc6b0, \uac00\uc9dc \uc11d\uc720\uc81c\ud488\uc73c\ub85c \ubcfc \uc218 \uc5c6\ub294 \uac83\uc740? || \u4e0b\u5217\u9009\u9879\u4e2d\uff0c\u7528\u4f5c\u6c7d\u8f66\u71c3\u6599\u65f6\uff0c\u65e0\u6cd5\u89c6\u4e3a\u5047\u77f3\u6cb9\u5236\u54c1\u7684\u662f\uff1f
+ C1 \ud718\ubc1c\uc720\uc5d0 \uba54\ud0c4\uc62c\uc774 \ud63c\ud569\ub41c \uc81c\ud488 || \u5728\u6c7d\u6cb9\u4e2d\u52a0\u5165\u7532\u9187\u7684\u4ea7\u54c1
+ C2 \ubcf4\ud1b5 \ud718\ubc1c\uc720\uc5d0 \uace0\uae09 \ud718\ubc1c\uc720\uac00 \uc57d 5% \ubbf8\ub9cc\uc73c\ub85c \ud63c\ud569\ub41c \uc81c\ud488 || \u5728\u4e00\u822c\u6c7d\u6cb9\u4e2d\u52a0\u5165\u4e0d\u52305%\u7684\u9ad8\u7ea7\u6c7d\u6cb9\u7684\u4ea7\u54c1
+ C3 \uacbd\uc720\uc5d0 \ub4f1\uc720\uac00 \ud63c\ud569\ub41c \uc81c\ud488 || \u5728\u67f4\u6cb9\u4e2d\u52a0\u5165\u7164\u6cb9\u7684\u4ea7\u54c1
+ C4 \uacbd\uc720\uc5d0 \ubb3c\uc774 \uc57d 5% \ubbf8\ub9cc\uc73c\ub85c \ud63c\ud569\ub41c \uc81c\ud488 || \u5728\u67f4\u6cb9\u4e2d\u52a0\u5165\u4e0d\u52305%\u7684\u6c34\u7684\u4ea7\u54c1
+44 B \uc218\uc18c\uac00\uc2a4 \ub204\ucd9c\uc744 \ud655\uc778\ud560 \uc218 \uc788\ub294 \ubc29\ubc95\uc774 \uc544\ub2cc \uac83\uc740? || \u4e0b\u5217\u5173\u4e8e\u786e\u8ba4\u6c22\u6c14\u6cc4\u6f0f\u7684\u65b9\u6cd5\u4e2d\u9519\u8bef\u7684\u662f\uff1f
+ C1 \uac00\uc5f0\uc131 \uac00\uc2a4\uac80\uc9c0\uae30 \ud65c\uc6a9 \uce21\uc815 || \u4f7f\u7528\u53ef\u71c3\u6027\u6c14\u4f53\u68c0\u6d4b\u5668\u8fdb\u884c\u68c0\u6d4b
+ C2 \ube44\ub217\ubb3c\uc744 \ud1b5\ud55c \ud655\uc778 || \u4f7f\u7528\u80a5\u7682\u6c34\u8fdb\u884c\u786e\u8ba4
+ C3 \uac00\uc2a4 \ub0c4\uc0c8\ub97c \ub9e1\uc544 \ud655\uc778 || \u901a\u8fc7\u55c5\u95fb\u6c14\u5473\u8fdb\u884c\u786e\u8ba4
+ C4 \uc218\uc18c\uac80\uc9c0\uae30\ub85c \ud655\uc778 || \u4f7f\u7528\u6c22\u6c14\u6d4b\u91cf\u4eea\u8fdb\u884c\u786e\u8ba4
+45 B \uc218\uc18c\ucc28\ub7c9\uc758 \uc548\uc804\uc218\uce59\uc73c\ub85c \ud2c0\ub9b0 \uac83\uc740? || \u4e0b\u5217\u5173\u4e8e\u6c22\u80fd\u6e90\u6c7d\u8f66\u5b89\u5168\u5b88\u5219\u7684\u63cf\u8ff0\u4e2d\u9519\u8bef\u7684\u662f\uff1f
+ C1 \ucda9\uc804\ud558\uae30 \uc804 \ucc28\ub7c9\uc758 \uc2dc\ub3d9\uc744 \ub048\ub2e4. || \u5145\u6c14\u524d\u53d1\u52a8\u8f66\u8f86\u3002
+ C2 \ucda9\uc804\uc18c\uc5d0\uc11c \ud761\uc5f0\uc740 \ucc28\ub7c9\uc5d0 \ub5a8\uc5b4\uc838\uc11c \ud55c\ub2e4. || \u5728\u5145\u6c14\u7ad9\u5438\u70df\u65f6\uff0c\u5e94\u8fdc\u79bb\u8f66\u8f86\u3002
+ C3 \uc218\uc18c\uac00\uc2a4\uac00 \ub204\uc124\ud560 \ub54c\uc5d0\ub294 \ucda9\uc804\uc18c \uc548\uc804\uad00\ub9ac\uc790\uc5d0\uac8c \uc548\uc804\uc810\uac80\uc744 \uc694\uccad\ud55c\ub2e4. || \u53d1\u751f\u6c22\u6c14\u6cc4\u6f0f\u65f6\uff0c\u8981\u6c42\u5145\u6c14\u7ad9\u5b89\u5168\u7ba1\u7406\u4eba\u5458\u8fdb\u884c\u5b89\u5168\u68c0\u67e5\u3002
+ C4 \uc218\uc18c\ucc28\ub7c9\uc758 \ucda9\ub3cc \ub4f1 \uad50\ud1b5\uc0ac\uace0 \ud6c4\uc5d0\ub294 \uac00\uc2a4 \uc548\uc804\uc810\uac80\uc744 \ubc1b\uc740 \ud6c4 \uc0ac\uc6a9\ud55c\ub2e4. || \u6c22\u80fd\u6c7d\u8f66\u5728\u53d1\u751f\u78b0\u649e\u7b49\u4ea4\u901a\u4e8b\u6545\u540e\uff0c\u9700\u8fdb\u884c\u71c3\u6c14\u5b89\u5168\u68c0\u67e5\u540e\u518d\u4f7f\u7528\u3002
+46 B \ub2e4\uc74c \uc911 \uc218\uc18c\ucc28\ub7c9\uc5d0\uc11c \ub204\ucd9c\uc744 \ud655\uc778\ud558\uc9c0 \uc54a\uc544\ub3c4 \ub418\ub294 \uacf3\uc740? || \u4e0b\u5217\u9009\u9879\u4e2d\uff0c\u5728\u6c22\u80fd\u6e90\u6c7d\u8f66\u4e0a\u65e0\u9700\u786e\u8ba4\u6cc4\u6f0f\u60c5\u51b5\u7684\u5730\u65b9\u662f\uff1f
+ C1 \ubc38\ube0c\uc640 \uc6a9\uae30\uc758 \uc811\uc18d\ubd80 || \u9600\u95e8\u4e0e\u5bb9\u5668\u7684\u63a5\u53e3\u90e8\u4f4d
+ C2 \uc870\uc815\uae30 || \u8c03\u8282\u5668
+ C3 \uac00\uc2a4 \ud638\uc2a4\uc640 \ubc30\uad00 \uc5f0\uacb0\ubd80 || \u6c22\u6c14\u7ba1\u9053\u548c\u914d\u7ba1\u8fde\u63a5\u5904
+ C4 \uc5f0\ub8cc\uc804\uc9c0 \ubd80\uc2a4\ud2b8 \uc778\ubc84\ud130 || \u71c3\u6599\u7535\u6c60\u5347\u538b\u9006\u53d8\u5668
+47 B \uc804\uae30\ucc28 \ucda9\uc804\uc744 \uc704\ud55c \uc62c\ubc14\ub978 \ubc29\ubc95\uc73c\ub85c \uc801\uc808\ud558\uc9c0 \uc54a\uc740 \uac83\uc740? || \u4e0b\u5217\u5173\u4e8e\u7535\u52a8\u6c7d\u8f66\u5145\u7535\u65b9\u6cd5\u7684\u63cf\u8ff0\u4e2d\u9519\u8bef\u7684\u662f\uff1f
+ C1 \ucda9\uc804\ud560 \ub54c\ub294 \uaddc\uaca9\uc5d0 \ub9de\ub294 \ucda9\uc804\uae30\uc640 \uc5b4\ub311\ud130\ub97c \uc0ac\uc6a9\ud55c\ub2e4. || \u5145\u7535\u65f6\u4f7f\u7528\u7b26\u5408\u89c4\u683c\u7684\u5145\u7535\u5668\u548c\u9002\u914d\u5668\u3002
+ C2 \ucda9\uc804 \uc911\uc5d0\ub294 \ucda9\uc804 \ucee4\ub125\ud130\ub97c \uc784\uc758\ub85c \ubd84\ub9ac\ud558\uc9c0 \uc54a\uace0 \ucda9\uc804 \uc885\ub8cc \ubc84\ud2bc\uc73c\ub85c \uc885\ub8cc\ud55c\ub2e4. || \u5145\u7535\u8fc7\u7a0b\u4e2d\u4e0d\u968f\u4fbf\u62d4\u6389\u8fde\u63a5\u5668\uff0c\u7ed3\u675f\u65f6\u70b9\u51fb\u7ed3\u675f\u5145\u7535\u6309\u94ae\u3002
+ C3 \uc816\uc740 \uc190\uc73c\ub85c \ucda9\uc804\uae30 \uc0ac\uc6a9\uc744 \ud558\uc9c0 \uc54a\uace0 \ucda9\uc804\uc7a5\uce58\uc5d0 \ubb3c\uc774 \ub4e4\uc5b4\uac00\uc9c0 \uc54a\ub3c4\ub85d \uc8fc\uc758\ud55c\ub2e4. || \u4e0d\u7528\u5e26\u6c34\u6e0d\u7684\u624b\u89e6\u6478\u5145\u7535\u5668\uff0c\u5e76\u6ce8\u610f\u4e0d\u8981\u8ba9\u6c34\u8fdb\u5165\u5145\u7535\u8bbe\u5907\u3002
+ C4 \ud734\ub300\uc6a9 \ucda9\uc804\uae30\ub97c \uc774\uc6a9\ud558\uc5ec \ucda9\uc804\ud560 \uacbd\uc6b0 \uac00\uc815\uc6a9 \uba40\ud2f0\ud0ed\uc774\ub098 \uc5f0\uc7a5\uc120\uc744 \uc0ac\uc6a9\ud55c\ub2e4. || \u4f7f\u7528\u4fbf\u643a\u5f0f\u5145\u7535\u5668\u5145\u7535\u65f6\uff0c\u4f7f\u7528\u5bb6\u7528\u591a\u63d2\u5b54\u63d2\u5ea7\u6216\u5ef6\u957f\u7ebf\u3002
+48 B \ubc95\ub839\uc0c1 \uc790\ub3d9\ucc28\uc758 \ub4f1\ud654 \uc885\ub958\uc640 \uadf8 \ub4f1\uad11\uc0c9\uc744 \uc5f0\uacb0\ud55c \uac83\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u6cd5\u5f8b\u89c4\u5b9a\u8f66\u706f\u79cd\u7c7b\u4e0e\u5176\u989c\u8272\u5339\u914d\u6b63\u786e\u7684\u662f\uff1f
+ C1 \ud6c4\ud1f4\ub4f1 - \ud638\ubc15\uc0c9 || \u540e\u9000\u706f - \u7425\u73c0\u8272
+ C2 \ubc88\ud638\ub4f1 - \uccad\uc0c9 || \u53f7\u7801\u706f - \u84dd\u8272
+ C3 \ud6c4\ubbf8\ub4f1 - \ubc31\uc0c9 || \u5c3e\u706f - \u767d\u8272
+ C4 \uc81c\ub3d9\ub4f1 - \uc801\uc0c9 || \u5236\u52a8\u706f - \u7ea2\u8272
+49 B LPG\ucc28\ub7c9\uc758 \uc5f0\ub8cc\ud2b9\uc131\uc5d0 \ub300\ud55c \uc124\uba85\uc73c\ub85c \uc801\ub2f9\ud558\uc9c0 \uc54a\uc740 \uac83\uc740? || \u4e0b\u5217\u5173\u4e8eLPG\u8f66\u8f86\u71c3\u6599\u7279\u6027\u7684\u8bf4\u660e\u4e2d\u4e0d\u6070\u5f53\u7684\u662f?
+ C1 \uc77c\ubc18\uc801\uc778 \uae30\uccb4\uc0c1\ud0dc\ub85c \uc5f0\uc18c\ub418\uc5b4 \uc5d4\uc9c4\uc774 \ubd80\ub4dc\ub7fd\uac8c \uc791\ub3d9\ud55c\ub2e4. || \u4ee5\u4e00\u822c\u6c14\u6001\u71c3\u70e7\uff0c\u53d1\u52a8\u673a\u8fd0\u8f6c\u5e73\u7a33\u3002
+ C2 \ucc28\ub7c9\uc6a9 LPG\ub294 \ub3c5\ud2b9\ud55c \ub0c4\uc0c8\uac00 \uc788\ub2e4. || \u8f66\u8f86\u7528LPG\u6709\u7279\u6b8a\u7684\u6c14\u5473\u3002
+ C3 \uc77c\ubc18\uc801\uc73c\ub85c \uacf5\uae30\ubcf4\ub2e4 \uac00\ubccd\uace0, \ud3ed\ubc1c \uc704\ud5d8\uc131\uc774 \uc801\ub2e4. || \u4e00\u822c\u6bd4\u7a7a\u6c14\u8f7b\uff0c\u7206\u70b8\u5371\u9669\u6027\u8f83\u5c0f\u3002
+ C4 \ud718\ubc1c\uc720\ub098 \uacbd\uc720\uc5d0 \ube44\ud574 \uc5d0\ub108\uc9c0 \ubc00\ub3c4\uac00 \ub0ae\uc544 \ub3d9\uc77c\ud55c \ubc30\uae30\ub7c9\uc5d0\uc11c \ucd9c\ub825\uc774 \ub0ae\uace0 \uc5f0\ube44\uac00 \ub5a8\uc5b4\uc9c4\ub2e4. || \u4e0e\u6c7d\u6cb9\u6216\u67f4\u6cb9\u76f8\u6bd4\u80fd\u91cf\u5bc6\u5ea6\u4f4e\uff0c\u56e0\u6b64\u5728\u76f8\u540c\u6392\u91cf\u4e0b\u8f93\u51fa\u529f\u7387\u8f83\u4f4e\uff0c\u71c3\u6cb9\u6548\u7387\u8f83\u5dee\u3002
+50 B \uc790\ub3d9\ucc28\uc758 \uc81c\ub3d9\ub825\uc744 \uc800\ud558\ud558\ub294 \uc6d0\uc778\uc73c\ub85c \uac00\uc7a5 \uac70\ub9ac\uac00 \uba3c \uac83\uc740? || \u4e0b\u5217\u9009\u9879\u4e2d\uff0c\u6700\u6ca1\u6709\u53ef\u80fd\u5bfc\u81f4\u673a\u52a8\u8f66\u5236\u52a8\u529b\u4e0b\u964d\u7684\u662f\uff1f
+ C1 \ub9c8\uc2a4\ud130 \uc2e4\ub9b0\ub354 \uace0\uc7a5 || \u4e3b\u7f38\u6545\u969c
+ C2 \ud720 \uc2e4\ub9b0\ub354 \ubd88\ub7c9 || \u8f6e\u7f38\u4e0d\u5408\u683c
+ C3 \ub9b4\ub9ac\uc2a4 \ud3ec\ud06c \ubcc0\ud615 || \u5206\u79bb\u53c9\u53d8\u5f62
+ C4 \ubca0\uc774\ud37c \ub85d \ubc1c\uc0dd || \u5236\u52a8\u6c14\u963b
+51 B \uc8fc\ud589 \ubcf4\uc870\uc7a5\uce58\uac00 \uc7a5\ucc29\ub41c \uc790\ub3d9\ucc28\uc758 \uc6b4\uc804\ubc29\ubc95\uc73c\ub85c \ubc14\ub974\uc9c0 \uc54a\uc740 \uac83\uc740? || \u5173\u4e8e\u914d\u5907\u9a7e\u9a76\u8f85\u52a9\u88c5\u7f6e\u7684\u6c7d\u8f66\uff0c\u4e0b\u5217\u5bf9\u9a7e\u9a76\u65b9\u6cd5\u7684\u63cf\u8ff0\u4e2d\u9519\u8bef\u7684\u662f\uff1f
+ C1 \uc8fc\ud589 \ubcf4\uc870\uc7a5\uce58\ub97c \uc0ac\uc6a9\ud558\ub294 \uacbd\uc6b0 \uc8fc\ud589 \ubcf4\uc870\uc7a5\uce58 \uc791\ub3d9 \uc720\uc9c0 \uc5ec\ubd80\ub97c \uc218\uc2dc\ub85c \ud655\uc778\ud558\uba70 \uc8fc\ud589\ud55c\ub2e4. || \u4f7f\u7528\u9a7e\u9a76\u8f85\u52a9\u88c5\u7f6e\u65f6\uff0c\u9a7e\u9a76\u8fc7\u7a0b\u4e2d\u9700\u968f\u65f6\u67e5\u770b\u9a7e\u9a76\u8f85\u52a9\u88c5\u7f6e\u662f\u5426\u6b63\u5e38\u8fd0\u884c\u3002
+ C2 \uc6b4\uc804 \uac1c\uc785 \uacbd\uace0 \uc2dc \uc8fc\ud589 \ubcf4\uc870\uc7a5\uce58\uac00 \ud574\uc81c\ub420 \ub54c\uae4c\uc9c0 \uae30\ub2e4\ub838\ub2e4\uac00 \uac1c\uc785\ud574\uc57c \ud55c\ub2e4. || \u5728\u53d1\u51fa\u9a7e\u9a76\u63a5\u7ba1\u8b66\u544a\u65f6\uff0c\u5e94\u7b49\u5f85\u7cfb\u7edf\u5b8c\u5168\u89e3\u9664\u540e\u518d\u8fdb\u884c\u63a5\u7ba1\u3002
+ C3 \uc8fc\ud589 \ubcf4\uc870\uc7a5\uce58\uc758 \uc77c\ubd80 \ub610\ub294 \uc804\uccb4\ub97c \ud574\uc81c\ud558\ub294 \uacbd\uc6b0 \uc791\ub3d9 \uc5ec\ubd80\ub97c \ud655\uc778\ud55c\ub2e4. || \u9a7e\u9a76\u8f85\u52a9\u88c5\u7f6e\u51fa\u73b0\u90e8\u5206\u6216\u5168\u90e8\u89e3\u9664\u7684\u60c5\u51b5\u65f6\uff0c\u5e94\u786e\u8ba4\u5176\u662f\u5426\u6b63\u5e38\u8fd0\u884c\u3002
+ C4 \uc8fc\ud589 \ubcf4\uc870\uc7a5\uce58\uac00 \uc791\ub3d9\ub418\uace0 \uc788\ub354\ub77c\ub3c4 \uc989\uc2dc \uac1c\uc785\ud560 \uc218 \uc788\ub3c4\ub85d \ub300\uae30\ud558\uba74\uc11c \uc6b4\uc804\ud55c\ub2e4. || \u5373\u4fbf\u542f\u52a8\u9a7e\u9a76\u8f85\u52a9\u88c5\u7f6e\uff0c\u8f66\u8f86\u884c\u9a76\u8fc7\u7a0b\u4e2d\uff0c\u9a7e\u9a76\u4eba\u4ecd\u5e94\u51c6\u5907\u968f\u65f6\u4ecb\u5165\u9a7e\u9a76\u3002
+52 B \uc790\ub3d9\ucc28\ub97c \uc548\uc804\ud558\uace0 \ud3b8\ub9ac\ud558\uac8c \uc8fc\ud589\ud560 \uc218 \uc788\ub3c4\ub85d \ubcf4\uc870\ud574 \uc8fc\ub294 \uae30\ub2a5\uc5d0 \ub300\ud55c \uc124\uba85\uc73c\ub85c \uc798\ubabb\ub41c \uac83\uc740? || \u4e0b\u5217\u5173\u4e8e\u4ee5\u4fdd\u8bc1\u673a\u52a8\u8f66\u9a7e\u9a76\u5b89\u5168\u548c\u4fbf\u5229\u4e3a\u76ee\u7684\u7684\u8f85\u52a9\u529f\u80fd\u7684\u8bf4\u6cd5\u4e2d\uff0c\u9519\u8bef\u7684\u662f\uff1f
+ C1 LFA(Lane Following Assist)\ub294 \u201c\ucc28\ub85c\uc720\uc9c0\ubcf4\uc870\u201d\uae30\ub2a5\uc73c\ub85c \uc790\ub3d9\ucc28\uac00 \ucc28\ub85c \uc911\uc559\uc744 \uc720\uc9c0\ud558\uba70 \uc8fc\ud589\ud560 \uc218 \uc788\ub3c4\ub85d \ubcf4\uc870\ud574 \uc8fc\ub294 \uae30\ub2a5\uc774\ub2e4. || LFA\uff08Lane Following Assist\uff09\u662f\u201c\u8f66\u9053\u4fdd\u6301\u8f85\u52a9\u201d\u529f\u80fd\uff0c\u5177\u6709\u8f85\u52a9\u673a\u52a8\u8f66\u4fdd\u6301\u884c\u9a76\u5728\u8f66\u9053\u4e2d\u592e\u7684\u529f\u80fd\u3002
+ C2 ASCC(Adaptive Smart Cruise Control)\ub294 \u201c\ucc28\uac04\uac70\ub9ac \ubc0f \uc18d\ub3c4\uc720\uc9c0\u201d\uae30\ub2a5\uc73c\ub85c \uc6b4\uc804\uc790\uac00 \uc124\uc815\ud55c \uc18d\ub3c4\ub85c \uc8fc\ud589\ud558\uba74\uc11c \uc55e\ucc28\uc640\uc758 \uac70\ub9ac\ub97c \uc720\uc9c0\ud558\uc5ec \uc2a4\uc2a4\ub85c \uac00\u00b7\uac10\uc18d\uc744 \ud574\uc8fc\ub294 \uae30\ub2a5\uc774\ub2e4. || ASCC\uff08Adaptive Smart Crusise Control\uff09\u662f\u201c\u8f66\u8ddd\u548c\u8f66\u901f\u7ef4\u6301\u201d\u529f\u80fd\uff0c\u80fd\u81ea\u52a8\u52a0\u901f\u6216\u51cf\u901f\uff0c\u4f7f\u673a\u52a8\u8f66\u5728\u884c\u9a76\u65f6\u7ef4\u6301\u9a7e\u9a76\u4eba\u8bbe\u5b9a \u7684\u901f\u5ea6\uff0c\u4fdd\u6301\u4e0e\u524d\u8f66\u4e4b\u95f4\u7684\u8f66\u8ddd\u3002
+ C3 ABSD(Active Blind Spot Detection)\ub294 \u201c\uc0ac\uac01\uc9c0\ub300\uac10\uc9c0\u201d\uae30\ub2a5\uc73c\ub85c \uc0ac\uac01\uc9c0\ub300\uc758 \ucda9\ub3cc \uc704\ud5d8\uc744 \uac10\uc9c0\ud574 \uc548\uc804\ud55c \ucc28\ub85c \ubcc0\uacbd\uc744 \ub3d5\ub294 \uae30\ub2a5\uc774\ub2e4. || ABSD\uff08Active Blind Spot Detection\uff09\u662f\u901a\u8fc7\u611f\u77e5\u89c6\u89c9\u76f2\u533a\u7684\u78b0\u649e\u5371\u9669\uff0c\u8f85\u52a9\u673a\u52a8\u8f66\u5b8c\u6210\u5b89\u5168\u53d8\u9053\u7684\u529f\u80fd\u3002
+ C4 AEB(Autonomous Emergency Braking)\ub294 \u201c\uc790\ub3d9\uae34\uae09\uc81c\ub3d9\u201d\uae30\ub2a5\uc73c\ub85c \ube0c\ub808\uc774\ud06c \uc81c\ub3d9\uc2dc \ud0c0\uc774\uc5b4\uac00 \uc7a0\uae30\ub294 \uac83\uc744 \ubc29\uc9c0\ud558\uc5ec \uc81c\ub3d9 \uac70\ub9ac\ub97c \uc904\uc5ec\uc8fc\ub294 \uae30\ub2a5\uc774\ub2e4. || AEB\uff08Autonomous Emergency Braking\uff09\u662f\u4e3a\u9632\u6b62\u5236\u52a8\u8fc7\u7a0b\u4e2d\u8f66\u8f6e\u62b1\u6b7b\u5e76\u7f29\u77ed\u5236\u52a8\u8ddd\u79bb\u7684\u529f\u80fd\u3002
+53 B \uc790\uc728\uc8fc\ud589\uc2dc\uc2a4\ud15c\uacfc \uad00\ub828\ub41c \ubc95\ub839\uc758 \ub0b4\uc6a9\uc73c\ub85c \ud2c0\ub9b0 \uac83\uc740? || \u5173\u4e8e\u4e0e\u81ea\u52a8\u9a7e\u9a76\u7cfb\u7edf\u76f8\u5173\u7684\u6cd5\u89c4\u5185\u5bb9\uff0c\u4e0b\u5217\u9009\u9879\u4e2d\u9519\u8bef\u7684\u662f\uff1f
+ C1 \ub3c4\ub85c\uad50\ud1b5\ubc95\uc0c1\u201c\uc6b4\uc804\u201d\uc5d0\ub294 \ub3c4\ub85c\uc5d0\uc11c \ucc28\ub9c8\ub97c \uadf8 \ubcf8\ub798\uc758 \uc0ac\uc6a9\ubc29\ubc95\uc5d0 \ub530\ub77c \uc790\uc728\uc8fc\ud589\uc2dc\uc2a4\ud15c\uc744 \uc0ac\uc6a9\ud558\ub294 \uac83\uc740 \ud3ec\ud568\ub418\uc9c0 \uc54a\ub294\ub2e4. || \u300a\u9053\u8def\u4ea4\u901a\u6cd5\u300b\u4e2d\u63d0\u5230\u7684\u201c\u9a7e\u9a76\u884c\u4e3a\u201d\uff0c\u4e0d\u5305\u62ec\u5728\u9053\u8def\u4e0a\u6309\u8f66\u8f86\u539f\u672c\u7528\u6cd5\u4f7f\u7528\u7684\u81ea\u52a8\u9a7e\u9a76\u7cfb\u7edf\u3002
+ C2 \uc6b4\uc804\uc790\uac00 \uc790\uc728\uc8fc\ud589\uc2dc\uc2a4\ud15c\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc6b4\uc804\ud558\ub294 \uacbd\uc6b0\uc5d0\ub294 \ud734\ub300\uc804\ud654 \uc0ac\uc6a9\uae08\uc9c0 \uaddc\uc815\uc744 \uc801\uc6a9\ud558\uc9c0 \uc544\ub2c8\ud55c\ub2e4. || \u9a7e\u9a76\u4eba\u4f7f\u7528\u81ea\u52a8\u9a7e\u9a76\u7cfb\u7edf\u9a7e\u9a76\u65f6\uff0c\u4e0d\u9002\u7528\u7981\u6b62\u4f7f\u7528\u624b\u6301\u7535\u8bdd\u7684\u89c4\u5b9a\u3002
+ C3 \uc790\uc728\uc8fc\ud589\uc2dc\uc2a4\ud15c\uc758 \uc9c1\uc811 \uc6b4\uc804 \uc694\uad6c\uc5d0 \uc9c0\uccb4\uc5c6\uc774 \ub300\uc751\ud558\uc9c0 \uc544\ub2c8\ud55c \uc790\uc728\uc8fc\ud589\uc2b9\uc6a9\uc790\ub3d9\ucc28\uc758 \uc6b4\uc804\uc790\uc5d0 \ub300\ud55c \ubc94\uce59\uae08\uc561\uc740 4\ub9cc \uc6d0\uc774\ub2e4. || \u5bf9\u4e8e\u4e0d\u7acb\u5373\u54cd\u5e94\u81ea\u52a8\u9a7e\u9a76\u7cfb\u7edf\u63d0\u51fa\u7684\u4eba\u5de5\u9a7e\u9a76\u8981\u6c42\u7684\u9a7e\u9a76\u4eba\uff0c\u5c06\u5904\u4ee54\u4e07\u97e9\u5143\u7f5a\u6b3e\u3002
+ C4 \u201c\uc790\uc728\uc8fc\ud589\uc2dc\uc2a4\ud15c\u201d\uc774\ub780 \uc6b4\uc804\uc790 \ub610\ub294 \uc2b9\uac1d\uc758 \uc870\uc791 \uc5c6\uc774 \uc8fc\ubcc0\uc0c1\ud669\uacfc \ub3c4\ub85c \uc815\ubcf4 \ub4f1\uc744 \uc2a4\uc2a4\ub85c \uc778\uc9c0\ud558\uace0 \ud310\ub2e8\ud558\uc5ec \uc790\ub3d9\ucc28\ub97c \uc6b4\ud589 \ud560 \uc218 \uc788\uac8c \ud558\ub294 \uc790\ub3d9\ud654 \uc7a5\ube44, \uc18c\ud504\ud2b8\uc6e8\uc5b4 \ubc0f \uc774\uc640 \uad00\ub828\ud55c \ubaa8\ub4e0 \uc7a5\uce58\ub97c \ub9d0\ud55c\ub2e4. || \u201c\u81ea\u52a8\u9a7e\u9a76\u7cfb\u7edf\u201d\u662f\u53ef\u4ee5\u65e0\u9700\u9a7e\u9a76\u4eba\u6216\u8005\u4e58\u5ba2\u64cd\u4f5c\uff0c\u901a\u8fc7\u81ea\u4e3b\u8ba4\u77e5\uff0c\u5224\u65ad\u5468\u8fb9\u60c5\u51b5\u548c\u8def\u9762\u4fe1\u606f\u7b49\uff0c\u4ee5\u6b64\u5b9e\u73b0\u9a7e\u9a76\u673a\u52a8\u8f66\u7684\u81ea\u52a8 \u5316\u7cfb\u7edf\u3001\u8f6f\u4ef6\u53ca\u5176\u6240\u6709\u76f8\u5173\u7684\u88c5\u7f6e\u3002
+54 B \ub2e4\uc74c \uc911 \uc218\uc18c\uc790\ub3d9\ucc28\uc758 \uc8fc\uc694 \uad6c\uc131\ud488\uc774 \uc544\ub2cc \uac83\uc740? || \u4e0b\u5217\u9009\u9879\u4e2d\u4e0d\u662f\u6c22\u80fd\u673a\u52a8\u8f66\u4e3b\u8981\u7ec4\u6210\u90e8\u4ef6\u7684\u662f\uff1f
+ C1 \uc5f0\ub8cc\uc804\uc9c0 || \u71c3\u6599\u7535\u6c60
+ C2 \uad6c\ub3d9\ubaa8\ud130 || \u9a71\u52a8\u7535\u673a
+ C3 \uc5d4\uc9c4 || \u53d1\u52a8\u673a
+ C4 \ubc30\ud130\ub9ac || \u7535\u6c60
+55 B \uc790\ub3d9\ucc28 \ub0b4\uc5f0\uae30\uad00\uc758 \ud06c\ub7ad\ud06c\ucd95\uc5d0\uc11c \ubc1c\uc0dd\ud558\ub294 \ud68c\uc804\ub825(\uc21c\uac04\uc801\uc73c\ub85c \ub0b4\ub294 \ud798)\uc744 \ubb34\uc5c7\uc774\ub77c \ud558\ub294\uac00 ? || \u673a\u52a8\u8f66\u5185\u71c3\u673a\u7684\u66f2\u8f74\u4ea7\u751f\u7684\u65cb\u8f6c\u529b\uff08\u77ac\u95f4\u4ea7\u751f\u7684\u529b\uff09\u53eb\u4ec0\u4e48?
+ C1 \ud1a0\ud06c || \u626d\u77e9
+ C2 \uc5f0\ube44 || \u71c3\u6599\u6d88\u8017\u7387
+ C3 \ubc30\uae30\ub7c9 || \u6392\u6c14\u91cf
+ C4 \ub9c8\ub825 || \u9a6c\u529b
+56 B \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28 \uc0c1\uc6a9\ud654 \ucd09\uc9c4 \ubc0f \uc9c0\uc6d0\uc5d0 \uad00\ud55c \ubc95\ub839\uc0c1 \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\uc5d0 \ub300\ud55c \uc124\uba85\uc73c\ub85c \uc798\ubabb\ub41c \uac83\uc740? || \u6839\u636e\u300a\u4fc3\u8fdb\u5e76\u652f\u63f4\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u5546\u7528\u5316\u76f8\u5173\u6cd5\u5f8b\u300b\uff0c\u4e0b\u5217\u5173\u4e8e\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u7684\u8bf4\u6cd5\u4e2d\u9519\u8bef\u7684\u662f\uff1f
+ C1 \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\uc758 \uc885\ub958\ub294 \uc644\uc804\uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\uc640 \ubd80\ubd84\uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\ub85c \uad6c\ubd84\ud560 \uc218 \uc788\ub2e4. || \u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u7684\u79cd\u7c7b\u53ef\u4ee5\u5206\u4e3a\u5168\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u548c\u534a\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u3002
+ C2 \uc644\uc804 \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\ub294 \uc790\uc728\uc8fc\ud589\uc2dc\uc2a4\ud15c\ub9cc\uc73c\ub85c \uc6b4\ud589\ud560 \uc218 \uc788\uc5b4 \uc6b4\uc804\uc790\uac00 \uc5c6\uac70\ub098 \uc6b4\uc804\uc790 \ub610\ub294 \uc2b9\uac1d\uc758 \uac1c\uc785\uc774 \ud544\uc694\ud558\uc9c0       \uc544\ub2c8\ud55c \uc790\ub3d9\ucc28\ub97c \ub9d0\ud55c\ub2e4. || \u5168\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u662f\u6307\u53ef\u4ee5\u5b8c\u5168\u4f9d\u9760\u81ea\u52a8\u9a7e\u9a76\u7cfb\u7edf\u9a7e\u9a76\uff0c\u65e0\u9700\u9a7e\u9a76\u4eba\u6216\u4e58\u5ba2\u5e72\u9884\u7684\u6c7d\u8f66\u3002
+ C3 \ubd80\ubd84\uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\ub294 \uc790\uc728\uc8fc\ud589\uc2dc\uc2a4\ud15c\ub9cc\uc73c\ub85c \uc6b4\ud589\ud560 \uc218 \uc5c6\uac70\ub098 \uc6b4\uc804\uc790\uac00 \uc9c0\uc18d\uc801\uc73c\ub85c \uc8fc\uc2dc\ud560 \ud544\uc694\uac00 \uc788\ub294 \ub4f1 \uc6b4\uc804\uc790 \ub610       \ub294 \uc2b9\uac1d\uc758 \uac1c\uc785\uc774 \ud544\uc694\ud55c \uc790\ub3d9\ucc28\ub97c \ub9d0\ud55c\ub2e4. || \u534a\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u662f\u6307\u65e0\u6cd5\u5b8c\u5168\u4f9d\u9760\u81ea\u52a8\u9a7e\u9a76\u7cfb\u7edf\u9a7e\u9a76\uff0c\u9700\u8981\u9a7e\u9a76\u4eba\u6301\u7eed\u6ce8\u610f\uff0c\u6216\u8005\u9700\u8981\u9a7e\u9a76\u4eba\u6216\u4e58\u5ba2\u5e72\u9884\u7684\u6c7d\u8f66\u3002
+ C4 \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\ub294 \uc2b9\uc6a9\uc790\ub3d9\ucc28\uc5d0 \ud55c\uc815\ub418\uc5b4 \uc801\uc6a9\ud558\uace0, \uc2b9\ud569\uc790\ub3d9\ucc28\ub098 \ud654\ubb3c\uc790\ub3d9\ucc28\ub294 \uc774 \ubc95\uc774 \uc801\uc6a9\ub418\uc9c0 \uc54a\ub294\ub2e4. || \u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u7684\u79cd\u7c7b\u4ec5\u9650\u8f7f\u8f66\uff0c\u5ba2\u8f66\u6216\u8d27\u8f66\u4e0d\u9002\u7528\u8be5\u6cd5\u5f8b\u3002
+57 B \uc804\uae30\uc790\ub3d9\ucc28 \uad00\ub9ac\ubc29\ubc95\uc73c\ub85c \uc633\uc9c0 \uc54a\uc740 2\uac00\uc9c0\ub294? || \u4e0b\u5217\u5173\u4e8e\u7535\u52a8\u6c7d\u8f66\u7ba1\u7406\u65b9\u6cd5\u7684\u8bf4\u660e\uff0c\u9519\u8bef\u7684\u4e24\u4e2a\u9009\u9879\u662f\uff1f
+ C1 \ube44\uc0ac\uc5c5\uc6a9 \uc2b9\uc6a9\uc790\ub3d9\ucc28\uc758 \uc790\ub3d9\ucc28\uac80\uc0ac \uc720\ud6a8\uae30\uac04\uc740 6\ub144\uc774\ub2e4. || \u975e\u5546\u7528\u8f7f\u8f66\u7684\u68c0\u67e5\u6709\u6548\u671f\u662f6\u5e74\u3002
+ C2 \uc7a5\uac70\ub9ac \uc6b4\uc804 \uc2dc\uc5d0\ub294 \uc0ac\uc804\uc5d0 \ubc30\ud130\ub9ac\ub97c \ud655\uc778\ud558\uace0 \ucda9\uc804\ud55c\ub2e4. || \u5728\u8fdb\u884c\u957f\u9014\u9a7e\u9a76\u65f6\uff0c\u5e94\u4e8b\u5148\u786e\u8ba4\u7535\u6c60\u7535\u91cf\u5e76\u5145\u7535\u3002
+ C3 \ucda9\uc804 \uc9c1\ud6c4\uc5d0\ub294 \uae09\uac00\uc18d, \uae09\uc815\uc9c0\ub97c \ud558\uc9c0 \uc54a\ub294 \uac83\uc774 \uc88b\ub2e4. || \u521a\u5145\u5b8c\u7535\uff0c\u5c3d\u91cf\u4e0d\u8981\u7d27\u6025\u52a0\u901f\u6216\u6025\u5239\u8f66\u3002
+ C4 \uc5f4\uc120\uc2dc\ud2b8, \uc5f4\uc120\ud578\ub4e4\ubcf4\ub2e4 \uacf5\uae30 \ud788\ud130\ub97c \uc0ac\uc6a9\ud558\ub294 \uac83\uc774 \ud6a8\uc728\uc801\uc774\ub2e4. || \u548c\u52a0\u70ed\u5750\u57ab\u6216\u52a0\u70ed\u65b9\u5411\u76d8\u76f8\u6bd4\uff0c\u5f00\u542f\u7a7a\u8c03\u5236\u70ed\u66f4\u9ad8\u6548\u3002
+58 B \ub3c4\ub85c\uad50\ud1b5\ubc95\ub839\uc0c1 \uc790\ub3d9\ucc28(\ub2e8, \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc81c\uc678) \ucc3d\uc720\ub9ac \uac00\uc2dc\uad11\uc120 \ud22c\uacfc\uc728\uc758 \uaddc\uc81c\ub97c \ubc1b\ub294 \uac83\uc740? || \u6839\u636e\u300a\u9053\u8def\u4ea4\u901a\u6cd5\u300b\u89c4\u5b9a\uff0c\u5bf9\u8f66\u7a97\u73bb\u7483\uff08\u4f46\u513f\u7ae5\u6821\u8f66\u9664\u5916\uff09\u53ef\u89c1\u5149\u900f\u8fc7\u7387\u6709\u9650\u5236\u7684\u662f\uff1f
+ C1 \ub4b7\uc88c\uc11d \uc606\uba74 \ucc3d\uc720\ub9ac || \u540e\u5ea7\u65c1\u8fb9\u7684\u8f66\u7a97\u73bb\u7483
+ C2 \uc55e\uba74, \uc6b4\uc804\uc11d \uc88c\uc6b0 \uc606\uba74 \ucc3d\uc720\ub9ac || \u524d\u65b9\u3001\u9a7e\u9a76\u5e2d\u5de6\u53f3\u4e24\u4fa7\u7684\u8f66\u7a97\u73bb\u7483
+ C3 \uc55e\uba74, \uc6b4\uc804\uc11d \uc88c\uc6b0, \ub4b7\uba74 \ucc3d\uc720\ub9ac || \u524d\u65b9\u3001\u9a7e\u9a76\u5e2d\u5de6\u53f3\u4e24\u4fa7\u3001\u540e\u65b9\u7684\u8f66\u7a97\u73bb\u7483
+ C4 \ubaa8\ub4e0 \ucc3d\uc720\ub9ac || \u6240\u6709\u8f66\u7a97\u73bb\u7483
+59 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \uc2b9\uc6a9\uc790\ub3d9\ucc28\ub294 \uba87 \uc778 \uc774\ud558\ub97c \uc6b4\uc1a1\ud558\uae30\uc5d0 \uc801\ud569\ud558\uac8c \uc81c\uc791\ub41c \uc790\ub3d9\ucc28\uc778\uac00? || \u6839\u636e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u6cd5\u300b\u89c4\u5b9a\uff0c\u8f7f\u8f66\u662f\u9002\u5408\u8fd0\u8f93\u51e0\u4eba\u4ee5\u4e0b\u7684\u8f66\u8f86\uff1f
+ C1 10\uc778 || 10\u4eba
+ C2 12\uc778 || 12\u4eba
+ C3 15\uc778 || 15\u4eba
+ C4 18\uc778 || 18\u4eba
+60 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \ube44\uc0ac\uc5c5\uc6a9 \uc2e0\uaddc \uc2b9\uc6a9\uc790\ub3d9\ucc28\uc758 \ucd5c\ucd08\uac80\uc0ac \uc720\ud6a8\uae30\uac04\uc740? || \u4f9d\u7167\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u6cd5\u300b\u89c4\u5b9a\uff0c\u975e\u5546\u7528\u65b0\u8f7f\u8f66\u7684\u521d\u6b21\u68c0\u9a8c\u6709\u6548\u671f\u4e3a\uff1f
+ C1 1\ub144 || 1\u5e74
+ C2 2\ub144 || 2\u5e74
+ C3 4\ub144 || 4\u5e74
+ C4 5\ub144 || 5\u5e74
+61 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\uc0c1 \uc790\ub3d9\ucc28\uc758 \uc885\ub958\ub85c \ub9de\ub294 2\uac00\uc9c0\ub294? || \u6839\u636e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u6cd5\u300b\u89c4\u5b9a\uff0c\u4e0b\u5217\u5c5e\u4e8e\u673a\u52a8\u8f66\u79cd\u7c7b\u7684\u4e24\u9879\u662f\uff1f
+ C1 \uac74\uc124\uae30\uacc4 || \u5efa\u7b51\u673a\u68b0
+ C2 \ud654\ubb3c\uc790\ub3d9\ucc28 || \u8d27\u8f66
+ C3 \uacbd\uc6b4\uae30 || \u8015\u8018\u673a
+ C4 \ud2b9\uc218\uc790\ub3d9\ucc28 || \u7279\u6b8a\u673a\u52a8\u8f66
+62 B \ube44\uc0ac\uc5c5\uc6a9 \ubc0f \ub300\uc5ec\uc0ac\uc5c5\uc6a9 \uc804\uae30\uc790\ub3d9\ucc28\uc640 \uc218\uc18c \uc5f0\ub8cc\uc804\uc9c0\uc790\ub3d9\ucc28(\ud558\uc774\ube0c\ub9ac\ub4dc \uc790\ub3d9\ucc28 \uc81c\uc678) \uc804\uc6a9\ubc88\ud638\ud310 \uc0c9\uc0c1\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u4e0b\u5217\u5173\u4e8e\u975e\u5546\u7528\u53ca\u79df\u8d41\u5546\u7528\u7535\u52a8\u6c7d\u8f66\u548c\u6c22\u71c3\u6599\u7535\u6c60\u6c7d\u8f66\uff08\u6df7\u5408\u52a8\u529b\u6c7d\u8f66\u9664\u5916\uff09\u7684\u4e13\u7528\u8f66\u724c\u989c\u8272\u7684\u63cf\u8ff0\u4e2d\uff0c\u6b63\u786e\u7684\u662f\uff1f
+ C1 \ud669\uc0c9 \ubc14\ud0d5\uc5d0 \uac80\uc740\uc0c9 \ubb38\uc790 || \u9ec4\u5e95\u9ed1\u5b57
+ C2 \ud30c\ub780\uc0c9 \ubc14\ud0d5\uc5d0 \uac80\uc740\uc0c9 \ubb38\uc790 || \u84dd\u5e95\u9ed1\u5b57
+ C3 \uac10\uccad\uc0c9 \ubc14\ud0d5\uc5d0 \ud770\uc0c9 \ubb38\uc790 || \u6df1\u84dd\u5e95\u767d\u5b57
+ C4 \ubcf4\ub78f\ube5b \ubc14\ud0d5\uc5d0 \uac80\uc740\uc0c9 \ubb38\uc790 || \u7d2b\u5e95\u9ed1\u5b57
+63 B \ub2e4\uc74c \ucc28\ub7c9 \uc911 \ud558\uc774\ud328\uc2a4\ucc28\ub85c \uc774\uc6a9\uc774 \ubd88\uac00\ub2a5\ud55c \ucc28\ub7c9\uc740? || \u4e0b\u5217\u8f66\u8f86\u4e2d\u4e0d\u5f97\u4f7f\u7528Hi-Pass\u8f66\u9053\u7684\u662f\uff1f
+ C1 \uc801\uc7ac\uc911\ub7c9 16\ud1a4 \ub364\ud504\ud2b8\ub7ed || \u88c5\u8f7d\u91cd\u91cf\u4e3a16\u5428\u7684\u81ea\u5378\u8f66
+ C2 \uc11c\uc6b8\uacfc \uc218\uc6d0\uc744 \uc6b4\ud589\ud558\ub294 2\uce35 \uc88c\uc11d\ubc84\uc2a4 || \u5f80\u8fd4\u4e8e\u9996\u5c14\u548c\u6c34\u539f\u7684\u53cc\u5c42\u516c\u4ea4\u8f66
+ C3 \ub2e8\ucc28\ub85c\uc778 \uacbd\uc6b0, \ucc28\ud3ed\uc774 3.7m\uc778 \uc18c\ubc29\ucc28\ub7c9 || \u884c\u9a76\u5728\u5355\u8f66\u9053\u4e0a\u7684\u8f66\u5bbd\u4e3a3.7\u7c73\u7684\u6d88\u9632\u8f66
+ C4 10\ud1a4 \ub300\ud615 \uad6c\ub09c\ucc28\ub7c9 || 10\u5428\u7684\u5927\u578b\u6551\u9669\u8f66
+64 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \ube44\uc0ac\uc5c5\uc6a9 \uc18c\ud615 \uc2b9\ud569\uc790\ub3d9\ucc28(2001\ub144 \uc774\ud6c4 \ub4f1\ub85d\ub41c \ucc28\ub839\uc774 4\ub144 \ucd08\uacfc)\uc758 \uac80\uc0ac \uc720\ud6a8\uae30\uac04\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u6839\u636e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u76f8\u5173\u6cd5\u4ee4\u300b\uff0c\u5bf9\u4e8e\u975e\u8425\u4e1a\u7528\u9014\u7684\u5c0f\u578b\u5ba2\u8f66\uff082001\u5e74\u4e4b\u540e\u767b\u8bb0\u4e14\u8f66\u9f84\u8d85\u8fc74\u5e74\uff09\uff0c\u5176\u68c0\u67e5\u6709\u6548\u671f\u5bf9\u5e94\u7684 \u9009\u9879\u662f\uff1f
+ C1 6\uac1c\uc6d4 || 6\u4e2a\u6708
+ C2 1\ub144 || 1\u5e74
+ C3 2\ub144 || 2\u5e74
+ C4 4\ub144 || 4\u5e74
+65 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \ube44\uc0ac\uc5c5\uc6a9 \uc18c\ud615 \ud654\ubb3c\uc790\ub3d9\ucc28(\ucc28\ub839\uc774 4\ub144 \uc774\ud558)\uc758 \uac80\uc0ac \uc720\ud6a8\uae30\uac04\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u6839\u636e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u76f8\u5173\u6cd5\u4ee4\u300b\uff0c\u5bf9\u4e8e\u975e\u8425\u4e1a\u7528\u9014\u7684\u5c0f\u578b\u8f7d\u8d27\u673a\u52a8\u8f66\uff08\u8f66\u9f84\u57284\u5e74\u53ca\u4ee5\u4e0b\uff09\uff0c\u5176\u68c0\u67e5\u6709\u6548\u671f\u5bf9\u5e94\u7684\u9009\u9879\u662f\uff1f
+ C1 6\uac1c\uc6d4 || 6\u4e2a\u6708
+ C2 1\ub144 || 1\u5e74
+ C3 2\ub144 || 2\u5e74
+ C4 4\ub144 || 4\u5e74
+66 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \uc2e0\ucc28 \uad6c\uc785 \uc2dc \uc784\uc2dc\uc6b4\ud589 \ud5c8\uac00 \uc720\ud6a8\uae30\uac04\uc758 \uae30\uc900\uc740? || \u4f9d\u7167\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u6cd5\u300b\uff0c\u4e0b\u5217\u5173\u4e8e\u8d2d\u4e70\u65b0\u8f66\u65f6\u7684\u4e34\u65f6\u724c\u7167\u6709\u6548\u671f\u7684\u6807\u51c6\u4e2d\u6b63\u786e\u7684\u662f\uff1f
+ C1 10\uc77c \uc774\ub0b4 || 10\u5929\u4ee5\u5185
+ C2 15\uc77c \uc774\ub0b4 || 15\u5929\u4ee5\u5185
+ C3 20\uc77c \uc774\ub0b4 || 20\u5929\u4ee5\u5185
+ C4 30\uc77c \uc774\ub0b4 || 30\u5929\u4ee5\u5185
+67 B \ub2e4\uc74c \uc911 \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc5d0 \ub530\ub978 \uc790\ub3d9\ucc28 \ubcc0\uacbd\ub4f1\ub85d \uc0ac\uc720\uac00 \uc544\ub2cc \uac83\uc740? || \u4e0b\u5217\u9009\u9879\u4e2d\uff0c\u4e0d\u5c5e\u4e8e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u6cd5\u300b\u89c4\u5b9a\u7684\u673a\u52a8\u8f66\u53d8\u66f4\u767b\u8bb0\u4e8b\u7531\u7684\u662f\uff1f
+ C1 \uc790\ub3d9\ucc28\uc758 \uc0ac\uc6a9\ubcf8\uac70\uc9c0\ub97c \ubcc0\uacbd\ud55c \ub54c || \u53d8\u66f4\u673a\u52a8\u8f66\u7684\u4f7f\u7528\u5730\u533a\u65f6
+ C2 \uc790\ub3d9\ucc28\uc758 \ucc28\ub300\ubc88\ud638\ub97c \ubcc0\uacbd\ud55c \ub54c || \u53d8\u66f4\u673a\u52a8\u8f66\u5e95\u76d8\u53f7\u65f6
+ C3 \uc18c\uc720\uad8c\uc774 \ubcc0\ub3d9\ub41c \ub54c || \u53d8\u66f4\u6240\u6709\u6743\u65f6
+ C4 \ubc95\uc778\uc758 \uba85\uce6d\uc774 \ubcc0\uacbd\ub41c \ub54c || \u53d8\u66f4\u6cd5\u4eba\u540d\u79f0\u65f6
+68 B \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28 \uc6b4\uc804\uc790\uc758 \ub9c8\uc74c\uac00\uc9d0\uc73c\ub85c \ubc14\ub974\uc9c0 \uc54a\uc740 \uac83\uc740? || \u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u9a7e\u9a76\u4eba\u7684\u5fc3\u6001\u4e0d\u53ef\u53d6\u7684\u662f\uff1f
+ C1 \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\uc774\ubbc0\ub85c \uc220\uc5d0 \ucde8\ud55c \uc0c1\ud0dc\uc5d0\uc11c \uc6b4\uc804\ud574\ub3c4 \ub41c\ub2e4. || \u56e0\u4e3a\u662f\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\uff0c\u56e0\u6b64\u53ef\u4ee5\u9189\u9152\u9a7e\u8f66\u3002
+ C2 \uacfc\ub85c\ud55c \uc0c1\ud0dc\uc5d0\uc11c \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\ub97c \uc6b4\uc804\ud558\uba74 \uc544\ub2c8 \ub41c\ub2e4. || \u4e0d\u5f97\u5728\u8fc7\u5ea6\u75b2\u52b3\u7684\u72b6\u6001\u4e0b\u9a7e\u9a76\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u3002
+ C3 \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\ub77c \ud558\ub354\ub77c\ub3c4 \ud5a5\uc815\uc2e0\uc131\uc758\uc57d\ud488\uc744 \ubcf5\uc6a9\ud558\uace0 \uc6b4\uc804\ud558\uba74 \uc544\ub2c8 \ub41c\ub2e4. || \u5373\u4fbf\u662f\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\uff0c\u4e5f\u4e0d\u5f97\u5728\u670d\u7528\u6297\u7cbe\u795e\u6027\u836f\u7269\u540e\u9a7e\u9a76\u3002
+ C4 \uc790\uc728\uc8fc\ud589\uc790\ub3d9\ucc28\uc758 \uc6b4\uc804 \uc911\uc5d0 \ud734\ub300\uc6a9 \uc804\ud654 \uc0ac\uc6a9\uc774 \uac00\ub2a5\ud558\ub2e4. || \u5728\u9a7e\u9a76\u81ea\u52a8\u9a7e\u9a76\u6c7d\u8f66\u7684\u9014\u4e2d\u53ef\u4ee5\u4f7f\u7528\u624b\u673a\u3002
+69 B \ud654\ubb3c\uc790\ub3d9\ucc28 \uc6b4\uc218\uc0ac\uc5c5\ubc95\uc5d0 \ub530\ub978 \ud654\ubb3c\uc790\ub3d9\ucc28 \uc6b4\uc1a1\uc0ac\uc5c5\uc790\ub294 \uad00\ub828 \ubc95\ub839\uc5d0 \ub530\ub77c \uc6b4\ud589\uae30\ub85d\uc7a5\uce58\uc5d0 \uae30\ub85d\ub41c \uc6b4\ud589\uae30\ub85d\uc744 (    )\ub3d9\uc548  \ubcf4\uad00\ud558\uc5ec\uc57c \ud55c\ub2e4. (   ) \uc548\uc5d0 \uae30\uc900\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u6839\u636e\u300a\u8d27\u8f66\u8fd0\u8f93\u4e8b\u4e1a\u6cd5\u300b\u89c4\u5b9a\uff0c\u8d27\u8f66\u8fd0\u8f93\u4ece\u4e1a\u4eba\u5458\u5e94\u6309\u7167\u76f8\u5173\u6cd5\u4ee4\u89c4\u5b9a\uff0c\u5728\uff08 \uff09\u65f6\u95f4\u5185\u59a5\u5584\u4fdd\u7ba1\u884c\u8f66\u8bb0\u5f55\u88c5\u7f6e\u4e2d\u4fdd\u5b58\u7684\u9a7e\u9a76 \u8bb0\u5f55\u3002\u586b\u5165\u62ec\u53f7\u4e2d\u6700\u6070\u5f53\u7684\u9009\u9879\u662f\uff1f
+ C1 3\uac1c\uc6d4 || 3\u4e2a\u6708
+ C2 6\uac1c\uc6d4 || 6\u4e2a\u6708
+ C3 1\ub144 || 1\u5e74
+ C4 2\ub144 || 2\u5e74
+70 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \uc790\ub3d9\ucc28\ub97c \uc774\uc804 \ub4f1\ub85d\ud558\uace0\uc790 \ud558\ub294 \uc790\ub294 \ub9e4\uc218\ud55c \ub0a0\ubd80\ud130 (  ) \uc774\ub0b4\uc5d0 \ub4f1\ub85d\ud574\uc57c \ud55c\ub2e4.  (   )\uc5d0 \uae30\uc900\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u6839\u636e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u6cd5\u300b\u89c4\u5b9a\uff0c\u6709\u610f\u613f\u8fdb\u884c\u673a\u52a8\u8f66\u8f6c\u8ba9\u767b\u8bb0\u8005\uff0c\u5e94\u81ea\u8d2d\u4e70\u4e4b\u65e5\u8d77\uff08 \uff09\u4e4b\u5185\u8fdb\u884c\u767b\u8bb0\u3002\u586b\u5165\u62ec\u53f7\u4e2d\u6700\u6070\u5f53\u7684\u9009\u9879 \u662f\uff1f
+ C1 15\uc77c || 15\u5929
+ C2 20\uc77c || 20\u5929
+ C3 30\uc77c || 30\u5929
+ C4 40\uc77c || 40\u5929
+71 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \uc790\ub3d9\ucc28\uc758 \uc815\uae30\uac80\uc0ac\uc758 \uae30\uac04\uc740 \uac80\uc0ac\uc720\ud6a8\uae30\uac04 \ub9cc\ub8cc\uc77c \uc804 (  )\uc77c\ubd80\ud130 \ud6c4 (  )\uc77c \uae4c\uc9c0\ub2e4. (   )\uc5d0 \uae30\uc900\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u6839\u636e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u76f8\u5173\u6cd5\u4ee4\u300b\uff0c\u673a\u52a8\u8f66\u7684\u5b9a\u671f\u68c0\u67e5\u671f\u9650\u662f\u68c0\u67e5\u6709\u6548\u671f\u622a\u6b62\u65e5\u4e4b\u524d\uff08 \uff09\u5929\u8d77\u81f3\u4e4b\u540e\uff08 \uff09\u5929\u4e3a\u6b62\u3002 \uff08 \uff09\u4e2d\u5bf9\u5e94\u7684\u6b63\u786e\u9009\u9879\u662f\uff1f
+ C1 90\uc77c, 31\uc77c || 90\u5929\uff0c31\u5929
+ C2 80\uc77c, 41\uc77c || 80\u5929\uff0c41\u5929
+ C3 60\uc77c, 51\uc77c || 60\u5929\uff0c51\u5929
+ C4 50\uc77c, 61\uc77c || 50\u5929\uff0c61\u5929
+72 B \uc790\ub3d9\ucc28\uc190\ud574\ubc30\uc0c1\ubcf4\uc7a5\ubc95\uc0c1 \uc758\ubb34\ubcf4\ud5d8\uc5d0 \uac00\uc785\ud558\uc9c0 \uc54a\uc740 \uc790\ub3d9\ucc28\ubcf4\uc720\uc790\uc758 \ucc98\ubc8c \uae30\uc900\uc73c\ub85c \ub9de\ub294 \uac83\uc740?(\uc790\ub3d9\ucc28 \ubbf8\uc6b4\ud589) || \u6839\u636e\u300a\u673a\u52a8\u8f66\u635f\u5931\u8d54\u507f\u4fdd\u969c\u6cd5\u300b\u89c4\u5b9a\uff0c\u4e0b\u5217\u5173\u4e8e\u672a\u52a0\u5165\u4e49\u52a1\u4fdd\u9669\u7684\u673a\u52a8\u8f66\u6240\u6709\u4eba\u7684\u5904\u7f5a\u6807\u51c6\u4e2d\u6b63\u786e\u7684\u662f\uff1f\uff08\u672a\u9a7e\u9a76\u673a\u52a8\u8f66\uff09
+ C1 300\ub9cc \uc6d0 \uc774\ud558\uc758 \uacfc\ud0dc\ub8cc || 300\u4e07\u97e9\u5143\u4ee5\u4e0b\u7f5a\u91d1
+ C2 500\ub9cc \uc6d0 \uc774\ud558\uc758 \uacfc\ud0dc\ub8cc || 500\u4e07\u97e9\u5143\u4ee5\u4e0b\u7f5a\u91d1
+ C3 1\ub144 \uc774\ud558\uc758 \uc9d5\uc5ed \ub610\ub294 1\ucc9c\ub9cc \uc6d0 \uc774\ud558\uc758 \ubc8c\uae08 || 1\u5e74\u4ee5\u4e0b\u6709\u671f\u5f92\u5211\u62161\u5343\u4e07\u97e9\u5143\u4ee5\u4e0b\u7f5a\u6b3e
+ C4 2\ub144 \uc774\ud558\uc758 \uc9d5\uc5ed \ub610\ub294 2\ucc9c\ub9cc \uc6d0 \uc774\ud558\uc758 \ubc8c\uae08 || 2\u5e74\u4ee5\u4e0b\u6709\u671f\u5f92\u5211\u62162\u5343\u4e07\u97e9\u5143\u4ee5\u4e0b\u7f5a\u6b3e
+73 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \uc790\ub3d9\ucc28 \uc18c\uc720\uad8c\uc774 \uc0c1\uc18d \ub4f1\uc73c\ub85c \ubcc0\uacbd\ub420 \uacbd\uc6b0\uc5d0 \ud574\uc57c \ud558\ub294 \ub4f1\ub85d\uc740? || \u6839\u636e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u6cd5\u300b\uff0c\u673a\u52a8\u8f66\u6240\u6709\u6743\u56e0\u7ee7\u627f\u7b49\u800c\u53d8\u66f4\u65f6\uff0c\u9700\u8981\u8fdb\u884c\u7684\u767b\u8bb0\u662f\uff1f
+ C1 \uc2e0\uaddc\ub4f1\ub85d || \u65b0\u8f66\u767b\u8bb0
+ C2 \uc774\uc804\ub4f1\ub85d || \u8f6c\u8ba9\u767b\u8bb0
+ C3 \ubcc0\uacbd\ub4f1\ub85d || \u53d8\u66f4\u767b\u8bb0
+ C4 \ub9d0\uc18c\ub4f1\ub85d || \u6ce8\u9500\u767b\u8bb0
+74 B \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\ub839\uc0c1 \uc790\ub3d9\ucc28 \uc18c\uc720\uc790\uac00 \ubc1b\uc544\uc57c \ud558\ub294 \uc790\ub3d9\ucc28 \uac80\uc0ac\uc758 \uc885\ub958\uac00 \uc544\ub2cc \uac83\uc740? || \u4e0b\u5217\u9009\u9879\u4e2d\uff0c\u4e0d\u5c5e\u4e8e\u300a\u673a\u52a8\u8f66\u7ba1\u7406\u6cd5\u300b\u89c4\u5b9a\u7684\u8f66\u4e3b\u5e94\u8be5\u63a5\u53d7\u7684\u673a\u52a8\u8f66\u68c0\u67e5\u79cd\u7c7b\u662f\uff1f
+ C1 \uc218\ub9ac\uac80\uc0ac || \u4fee\u7406\u68c0\u67e5
+ C2 \ud2b9\ubcc4\uac80\uc0ac || \u7279\u6b8a\u68c0\u67e5
+ C3 \ud29c\ub2dd\uac80\uc0ac || \u8c03\u6574\u68c0\u67e5
+ C4 \uc784\uc2dc\uac80\uc0ac || \u4e34\u65f6\u68c0\u67e5
+75 B \ub2e4\uc74c \uc911 \uc790\ub3d9\ucc28\ub97c \ub9e4\ub9e4\ud55c \uacbd\uc6b0 \uc774\uc804\ub4f1\ub85d \ub2f4\ub2f9\uae30\uad00\uc740? || \u4e0b\u5217\u9009\u9879\u4e2d\uff0c\u8d1f\u8d23\u673a\u52a8\u8f66\u4e70\u5356\u8f6c\u79fb\u767b\u8bb0\u7684\u673a\u5173\u662f\uff1f
+ C1 \ud55c\uad6d\ub3c4\ub85c\uad50\ud1b5\uacf5\ub2e8 || \u97e9\u56fd\u9053\u8def\u4ea4\u901a\u516c\u56e2
+ C2 \uc2dc\uff65\uad70\uff65\uad6c\uccad || \u5e02\u3001\u90e1\u3001\u533a\u5385
+ C3 \ud55c\uad6d\uad50\ud1b5\uc548\uc804\uacf5\ub2e8 || \u97e9\u56fd\u4ea4\u901a\u5b89\u5168\u516c\u56e2
+ C4 \uc2dc\u00b7\ub3c4\uacbd\ucc30\uccad || \u5e02\u3001\u9053\u8b66\u5bdf\u5385
+76 B \uc790\ub3d9\ucc28 \ub4f1\ub85d\uc758 \uc885\ub958\uac00 \uc544\ub2cc \uac83 2\uac00\uc9c0\ub294? || \u4e0b\u5217\u9009\u9879\u4e2d\u4e0d\u5c5e\u4e8e\u673a\u52a8\u8f66\u767b\u8bb0\u79cd\u7c7b\u7684\u4e24\u9879\u662f\uff1f
+ C1 \uacbd\uc815\ub4f1\ub85d || \u66f4\u6b63\u767b\u8bb0
+ C2 \uad8c\ub9ac\ub4f1\ub85d || \u6743\u5229\u767b\u8bb0
+ C3 \uc124\uc815\ub4f1\ub85d || \u8bbe\u5b9a\u767b\u8bb0
+ C4 \ub9d0\uc18c\ub4f1\ub85d || \u6ce8\u9500\u767b\u8bb0
+77 B \uc790\ub3d9\ucc28(\ub2e8, \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc81c\uc678) \uc55e\uba74 \ucc3d\uc720\ub9ac\uc758 \uac00\uc2dc\uad11\uc120 \ud22c\uacfc\uc728 \uae30\uc900\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u4e0b\u5217\u5173\u4e8e\u673a\u52a8\u8f66\u524d\u8f66\u7a97\u73bb\u7483\uff08\u4f46\u513f\u7ae5\u6821\u8f66\u9664\u5916\uff09\u7684\u53ef\u89c1\u5149\u900f\u8fc7\u7387\u6807\u51c6\u4e2d\uff0c\u6b63\u786e\u7684\u662f?
+ C1 40\ud37c\uc13c\ud2b8 || 40%
+ C2 50\ud37c\uc13c\ud2b8 || 50%
+ C3 60\ud37c\uc13c\ud2b8 || 60%
+ C4 70\ud37c\uc13c\ud2b8 || 70%
+78 B \uc8fc\ud589 \uc911 \ube0c\ub808\uc774\ud06c\uac00 \uc791\ub3d9\ub418\ub294 \uc6b4\uc804\ud589\ub3d9\uacfc\uc815\uc744 \uc62c\ubc14\ub978 \uc21c\uc11c\ub85c \uc5f0\uacb0\ud55c \uac83\uc740? || \u4e0b\u5217\u9009\u9879\u4e2d\u54ea\u9879\u662f\u5b8c\u6210\u5239\u8f66\u65f6\u7684\u6b63\u786e\u884c\u52a8\u987a\u5e8f\uff1f
+ C1 \uc704\ud5d8\uc778\uc9c0 \u2192 \uc0c1\ud669\ud310\ub2e8 \u2192 \ud589\ub3d9\uba85\ub839 \u2192 \ube0c\ub808\uc774\ud06c\uc791\ub3d9 || \u53d1\u73b0\u5371\u9669 \u2192 \u5224\u65ad\u60c5\u51b5 \u2192 \u884c\u52a8\u547d\u4ee4 \u2192 \u5239\u8f66
+ C2 \uc704\ud5d8\uc778\uc9c0 \u2192 \ud589\ub3d9\uba85\ub839 \u2192 \uc0c1\ud669\ud310\ub2e8 \u2192 \ube0c\ub808\uc774\ud06c\uc791\ub3d9 || \u53d1\u73b0\u5371\u9669 \u2192 \u884c\u52a8\u547d\u4ee4 \u2192 \u5224\u65ad\u60c5\u51b5 \u2192 \u5239\u8f66
+ C3 \uc0c1\ud669\ud310\ub2e8 \u2192 \uc704\ud5d8\uc778\uc9c0 \u2192 \ud589\ub3d9\uba85\ub839 \u2192 \ube0c\ub808\uc774\ud06c\uc791\ub3d9 || \u5224\u65ad\u60c5\u51b5 \u2192 \u53d1\u73b0\u5371\u9669 \u2192 \u884c\u52a8\u547d\u4ee4 \u2192 \u5239\u8f66
+ C4 \ud589\ub3d9\uba85\ub839 \u2192 \uc704\ud5d8\uc778\uc9c0 \u2192 \uc0c1\ud669\ud310\ub2e8 \u2192 \ube0c\ub808\uc774\ud06c\uc791\ub3d9 || \u884c\u52a8\u547d\u4ee4 \u2192 \u53d1\u73b0\u5371\u9669 \u2192 \u5224\u65ad\u60c5\u51b5 \u2192 \u5239\u8f66
+79 B \ub2e4\uc74c \uc911 \uc790\ub3d9\ucc28\uc5d0 \ubd80\ucc29\ub41c \uc5d0\uc5b4\ubc31\uc758 \uad6c\ube44\uc870\uac74\uc73c\ub85c \uac00\uc7a5 \uac70\ub9ac\uac00 \uba3c \uac83\uc740? || \u4e0b\u5217\u5173\u4e8e\u673a\u52a8\u8f66\u4e0a\u5b89\u88c5\u5b89\u5168\u6c14\u56ca\u65f6\u5e94\u5177\u5907\u7684\u6761\u4ef6\u7684\u8bf4\u6cd5\u4e2d\uff0c\u6700\u4e0d\u8d34\u5207\u7684\u662f\uff1f
+ C1 \ub192\uc740 \uc628\ub3c4\uc5d0\uc11c \uc778\uc7a5\uac15\ub3c4 \ubc0f \ub0b4\uc5f4\uac15\ub3c4 || \u9ad8\u6e29\u4e0b\u7684\u6297\u62c9\u5f3a\u5ea6\u4e0e\u8010\u70ed\u5f3a\u5ea6
+ C2 \ub0ae\uc740 \uc628\ub3c4\uc5d0\uc11c \uc778\uc7a5\uac15\ub3c4 \ubc0f \ub0b4\uc5f4\uac15\ub3c4 || \u4f4e\u6e29\u4e0b\u7684\u6297\u62c9\u5f3a\u5ea6\u4e0e\u8010\u70ed\u5f3a\u5ea6
+ C3 \ud30c\uc5f4\uac15\ub3c4\ub97c \uc9c0\ub2c8\uace0 \ub0b4\ub9c8\ubaa8\uc131, \uc720\uc5f0\uc131 || \u5177\u5907\u7834\u88c2\u5f3a\u5ea6\u3001\u8010\u78e8\u6027\u3001\u67d4\u97e7\u6027
+ C4 \uc6b4\uc804\uc790\uc640 \uc811\ucd09\ud558\ub294 \ucda9\uaca9\uc5d0\ub108\uc9c0 \uadf9\ub300\ud654 || \u4e0e\u9a7e\u9a76\u4eba\u63a5\u89e6\u7684\u51b2\u51fb\u80fd\u91cf\u6700\u5927\u5316
+80 B \ub2e4\uc74c \uc911 \uc6b4\uc804\uc790 \ub4f1\uc774 \ucc28\ub7c9 \uc2b9\ud558\ucc28 \uc2dc \uc8fc\uc758\uc0ac\ud56d\uc73c\ub85c \ub9de\ub294 \uac83\uc740? || \u4e0b\u5217\u5173\u4e8e\u9a7e\u9a76\u4eba\u7b49\u4e0a\u4e0b\u8f66\u6ce8\u610f\u4e8b\u9879\u7684\u63cf\u8ff0\u4e2d\u6b63\u786e\u7684\u662f\uff1f
+ C1 \ud0c0\uace0 \ub0b4\ub9b4 \ub54c\ub294 \ub4a4\uc5d0\uc11c \uc624\ub294 \ucc28\ub7c9\uc774 \uc788\ub294\uc9c0\ub97c \ud655\uc778\ud55c\ub2e4. || \u4e0a\u4e0b\u8f66\u65f6\u8981\u786e\u8ba4\u540e\u65b9\u662f\u5426\u6709\u8f66\u8f86\u9a76\u6765\u3002
+ C2 \ubb38\uc744 \uc5f4 \ub54c\ub294 \uc644\uc804\ud788 \uc5f4\uace0\ub098\uc11c \uace7\ubc14\ub85c \ub0b4\ub9b0\ub2e4. || \u5f00\u8f66\u95e8\u65f6\u4ee5\u6700\u5927\u5e45\u5ea6\u6253\u5f00\u540e\u7acb\u5373\u4e0b\u8f66\u3002
+ C3 \ub4b7\uc88c\uc11d \uc2b9\ucc28\uc790\uac00 \ud558\ucc28\ud560 \ub54c \uc6b4\uc804\uc790\ub294 \uc804\ubc29\uc744 \uc8fc\uc2dc\ud574\uc57c \ud55c\ub2e4. || \u540e\u5ea7\u4e58\u8f66\u8005\u4e0b\u8f66\u65f6\uff0c\u9a7e\u9a76\u4eba\u8981\u6ce8\u610f\u524d\u65b9\u3002
+ C4 \uc6b4\uc804\uc11d\uc744 \uc77c\uc2dc\uc801\uc73c\ub85c \ub5a0\ub0a0 \ub54c\uc5d0\ub294 \uc2dc\ub3d9\uc744 \ub044\uc9c0 \uc54a\uc544\ub3c4 \ub41c\ub2e4. || \u4e34\u65f6\u79bb\u5f00\u9a7e\u9a76\u5e2d\u65f6\u65e0\u9700\u5173\u95ed\u53d1\u52a8\u673a\u3002
+
+codex
+[{"n":45,"field":"c[1]","severity":"critical","issue":"원문의 '충전 전에 차량의 시동을 끈다'가 '충전 전에 차량을 시동한다'로 반대로 번역되어 정답 판단을 방해한다.","suggestion":"充气前关闭车辆发动机。"}]
+tokens used
+73,779
+[{"n":45,"field":"c[1]","severity":"critical","issue":"원문의 '충전 전에 차량의 시동을 끈다'가 '충전 전에 차량을 시동한다'로 반대로 번역되어 정답 판단을 방해한다.","suggestion":"充气前关闭车辆发动机。"}]

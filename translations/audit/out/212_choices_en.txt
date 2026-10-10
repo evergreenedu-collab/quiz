@@ -1,0 +1,1144 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125ff-d17d-7c90-a973-3929a598391d
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/212_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/212_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 521ms:
+[
+ {
+  "n": 481,
+  "ko_b": "醫뚯꽍 ?덉쟾??李⑹슜??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "媛源뚯슫 嫄곕━瑜??댄뻾??寃쎌슦?먮뒗 ???④낵媛 ?놁쑝誘濡?李⑹슜?섏? ?딆븘???쒕떎.",
+   "?먮룞李⑥쓽 ?뱀감?먮뒗 ?덉쟾???꾪븯??醫뚯꽍 ?덉쟾?좊? 李⑹슜?섏뿬???쒕떎.",
+   "?대┛?대뒗 遺紐⑥쓽 ?꾩???諛쏆쓣 ???덈뒗 ?댁쟾????醫뚯꽍???쒖슦怨? 醫뚯꽍 ?덉쟾?좊? 李⑹슜?쒗궎??寃껋씠 ?덉쟾?섎떎.",
+   "湲닿툒???⑸Т濡?異쒕룞?섎뒗 寃쎌슦 ?댁쇅?먮뒗 湲닿툒?먮룞李⑥쓽 ?댁쟾?먮룄 醫뚯꽍 ?덉쟾?좊? 諛섎뱶??李⑹슜?섏뿬???쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO correct statements regarding wearing a seat belt?",
+  "tr_c": [
+   "You need not wear a seat belt when driving to a place close by.",
+   "Passengers in a car should wear a seat belt for safety.",
+   "It is safe to make a child sit in the passenger seat so that the parents can help the child wear a seat belt.",
+   "Except when there is an emergency, the driver of an emergency vehicle should also wear a seat belt."
+  ]
+ },
+ {
+  "n": 482,
+  "ko_b": "援먰넻?ш퀬濡??ш컖??泥숈텛 怨⑥젅 遺?곸씠 ?덉긽?섎뒗 寃쎌슦??媛???곸젅??議곗튂諛⑸쾿??",
+  "ko_c": [
+   "?섏떇???덈뒗吏 ?뺤씤?섍퀬 利됱떆 ?ы룓?뚯깮?좎쓣 ?ㅼ떆?쒕떎.",
+   "遺?곸옄瑜?遺異뺥븯???덉쟾??怨녹쑝濡??대룞?섍퀬 119???좉퀬?쒕떎.",
+   "?곴린???먯깋??諛쒖깮?????덉쑝誘濡??섏엫由ы엳踰뺤쓣 ?쒗뻾?쒕떎.",
+   "湲닿툒??寃쎌슦媛 ?꾨땲硫??댁넚???댁꽌?????섎ŉ, 遺?앹씠??寃쎌슦?먮뒗 ?댁넚?댁빞 ?쒕떎硫?遺紐⑹쓣 ?댁슜?댁꽌 泥숈텛遺遺꾩쓣 怨좎젙?? ???덉쟾??怨녹쑝濡??곗꽑 ??쇳빐???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "A person seems to be suffering from a fractured spine after an accident. Which of the following is the most  appropriate measure you can take?",
+  "tr_c": [
+   "Check if the person is conscious and perform cardiopulmonary resuscitation immediately.",
+   "Move the person to a safe place and call 119.",
+   "Apply the Heimlich maneuver to prevent upper airway obstruction.",
+   "Unless urgent, do not move the person. If moving is inevitable, use a spine splint and assist the person in moving to a safe  place."
+  ]
+ },
+ {
+  "n": 483,
+  "ko_b": "援먰넻?ш퀬 諛쒖깮 ??遺?곸옄???섏떇 ?곹깭瑜??뺤씤?섎뒗 諛⑸쾿?쇰줈 媛??癒쇱? ?댁빞 ??寃껋??",
+  "ko_c": [
+   "遺?곸옄??留λ컯 ?좊Т瑜??뺤씤?쒕떎.",
+   "留먯쓣 嫄몄뼱蹂닿굅???닿묠瑜?媛蹂띻쾶 ?먮뱶??蹂몃떎.",
+   "?대뒓 遺?꾩뿉 異쒗삁???ы븳吏 ?댄렣蹂몃떎.",
+   "?낆븞???댄렣??湲곕룄???대Ъ吏덉씠 ?덈뒗吏 ?뺤씤?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "When you are involved in a traffic accident, what should you do first to check if an injured person is conscious?",
+  "tr_c": [
+   "Check his/her pulse.",
+   "Try to start a conversation or gently pat his/her shoulders.",
+   "Find the location of any wound that is bleeding heavily.",
+   "Look into the mouth to check if anything is blocking the airway."
+  ]
+ },
+ {
+  "n": 484,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?ш퀬 諛쒖깮 ??湲닿툒???뷀븯??寃쎌슦 ?숈듅?먯뿉寃?議곗튂瑜??섎룄濡??섍퀬 ?댁쟾??怨꾩냽?????덈뒗 李???2媛吏??",
+  "ko_c": [
+   "蹂묒썝?쇰줈 遺?곸옄瑜??대컲 以묒씤 ?뱀슜?먮룞李?,
+   "?붿옱吏꾩븬 ???뚮갑?쒕줈 ?뚯븘?ㅻ뒗 ?뚮갑?먮룞李?,
+   "援먰넻?ш퀬 ?꾩옣?쇰줈 異쒕룞?섎뒗 寃ъ씤?먮룞李?,
+   "?고렪?붾Ъ???ｊ퀬 媛??以묒씤 ?고렪臾쇱옄?숈감"
+  ],
+  "a": "1, 4",
+  "tr_b": "Which TWO vehicles are allowed to continue driving while asking a passenger to take actions during a traffic  accident?",
+  "tr_c": [
+   "A passenger car that is carrying an injured person to a hospital",
+   "A fire truck returning to the fire station after extinguishing a fire",
+   "A tow vehicle going to the scene of a traffic accident",
+   "A postal vehicle transporting mail."
+  ]
+ },
+ {
+  "n": 485,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?ш퀬 諛쒖깮 ??怨꾩냽 ?댁쟾?????덈뒗 寃쎌슦濡??녹? 2媛吏??",
+  "ko_c": [
+   "湲닿툒???섏옄瑜??섏넚 以묒씤 援ш툒李??댁쟾?먮뒗 ?숈듅?먮줈 ?섏뿬湲??꾩슂??議곗튂 ?깆쓣 ?섍쾶?섍퀬 怨꾩냽 ?댁쟾?섏???",
+   "湲닿툒???뚯쓽??李몄꽍?섍린 ?꾪빐 ?대룞 以묒씤 ?댁쟾?먮뒗 ?숈듅?먮줈 ?섏뿬湲??꾩슂??議곗튂 ?깆쓣 ?섍쾶?섍퀬 怨꾩냽 ?댁쟾?섏???",
+   "湲닿툒???고렪臾쇱쓣 ?섏넚?섎뒗 李⑤웾 ?댁쟾?먮뒗 ?숈듅?먮줈 ?섏뿬湲??꾩슂??議곗튂 ?깆쓣 ?섍쾶?섍퀬 怨꾩냽 ?댁쟾?섏???",
+   "湲닿툒???쏀뭹???섏넚 以묒씤 援ш툒李??댁쟾?먮뒗 ?숈듅?먮줈 ?섏뿬湲??꾩슂??議곗튂 ?깆쓣 ?섍쾶?섍퀬 怨꾩냽 ?댁쟾?섏???"
+  ],
+  "a": "1, 3",
+  "tr_b": "According to the Road Traffic Act, which of the following are the TWO correct statements regarding a vehicle  that is allowed to continue driving despite a traffic accident?",
+  "tr_c": [
+   "The ambulance driver who was transporting an urgent patient had the passenger take the necessary measures and kept  driving.",
+   "The driver who was traveling to attend an urgent meeting had the passenger take the necessary actions and kept  driving.",
+   "The driver of the vehicle transporting urgent mail made the passenger take the necessary measures and kept driving.",
+   "The ambulance driver who was transporting urgent medicines had the passengers take the necessary actions and kept  driving."
+  ]
+ },
+ {
+  "n": 486,
+  "ko_b": "?쇨컙???꾨줈?먯꽌 濡쒕뱶??road kill)???덈갑?섍린 ?꾪븳 ?댁쟾諛⑸쾿?쇰줈 諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?щ엺?대굹 李⑤웾???뺣옒媛 ?곸? 援?룄???곌만??二쇳뻾???뚮뒗 媛먯냽?댄뻾???댁빞 ?쒕떎.",
+   "?쇱깮?숇Ъ 諛쒓껄 ?쒖뿉???쒗뻾?쇰줈 ?묎렐?섍퀬 ?쒖쟻??媛볤만???몄썙 ?숇Ъ怨쇱쓽 異⑸룎??諛⑹??쒕떎.",
+   "?쇱깮?숇Ъ 諛쒓껄 ?쒖뿉???꾩“?깆쓣 ??梨?寃쎌쓬湲곕? 媛蹂띻쾶 ?몃젮 ?꾨쭩媛?꾨줉 ?좊룄?쒕떎.",
+   "異쒗쁽?섎뒗 ?숇Ъ??諛쒓껄???⑹씠?섍쾶 ?섍린 ?꾪빐 媛湲됱쟻 媛볤만??媛源뚯슫 ?꾨줈瑜?二쇳뻾?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT appropriate for preventing road kill at night?",
+  "tr_c": [
+   "Reduce speed when traveling on national or mountain roads with fewer vehicles or people.",
+   "If you spot an animal on the road, slow down or stop on the shoulder to avoid a collision.",
+   "If you spot an animal on the road, turn off the headlights and honk lightly to scare it away.",
+   "To spot animals on the road more easily, drive closer along the shoulder."
+  ]
+ },
+ {
+  "n": 487,
+  "ko_b": "怨좎냽?꾨줈?먯꽌 怨좎옣 ?깆쑝濡?湲닿툒 ?곹솴 諛쒖깮 ???쇱젙 嫄곕━瑜?臾대즺濡?寃ъ씤?쒕퉬?ㅻ? ?쒓났??二쇰뒗 湲곌???",
+  "ko_c": [
+   "?쒓뎅?꾨줈援먰넻怨듬떒",
+   "?쒓뎅?꾨줈怨듭궗",
+   "寃쎌같泥?,
+   "?쒓뎅援먰넻?덉쟾怨듬떒"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following organizations provides free towing service over a set distance in the event of an  emergency?",
+  "tr_c": [
+   "Korea Road Traffic Authority",
+   "Korea Expressway Corporation",
+   "Police agency",
+   "Korea Transportation Safety Authority"
+  ]
+ },
+ {
+  "n": 488,
+  "ko_b": "?꾨줈?먯꽌 濡쒕뱶??road kill)??諛쒖깮?섏?????議곗튂?붾졊?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "媛먯뿼蹂??꾪뿕???덉쓣 ???덉쑝誘濡??숇Ъ?ъ껜 ?깆쓣 ?⑤?濡?留뚯?吏 ?딅뒗??",
+   "濡쒕뱶???ш퀬媛 諛쒖깮?섎㈃ ?쇱깮?숇Ъ援ъ“?쇳꽣??吏?먯껜 肄쒖꽱?겸섏???쾲??+ 120踰댿숇벑???좉퀬?쒕떎.",
+   "2李⑥궗怨?諛⑹?瑜??꾪빐 ?ш퀬 ?뱁븳 ?숇Ъ???먭린 李⑥뿉 ?ｊ퀬 二쇳뻾?쒕떎.",
+   "2李⑥궗怨?諛⑹?? ?먰솢???뚰넻???꾪븳 議곗튂瑜???寃쎌슦?먮뒗 ?좉퀬?섏? ?딆븘???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a proper way to respond after a road kill?",
+  "tr_c": [
+   "Do not touch the animal carcass to prevent exposure to potential diseases.",
+   "Call any wildlife rescue center or a local government call center (area code + 120).",
+   "Load the animal carcass on your vehicle to prevent a secondary accident.",
+   "There is no need to file a report if necessary measures have been taken to prevent a secondary accident and facilitate   traffic flow."
+  ]
+ },
+ {
+  "n": 489,
+  "ko_b": "蹂대났?댁쟾 ?먮뒗 援먰넻?ш퀬 諛쒖깮??諛⑹??섍린 ?꾪븳 遺꾨끂議곗젅湲곕쾿??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "媛먯젙???볦뼱?ㅻⅤ???곹솴?먯꽌 ?좎떆 鍮좎졇?섏? ?쒓컙???ъ쑀瑜?媛뽮퀬 留덉쓬???덉젙??李얜뒗 遺꾨끂議곗젅諛⑸쾿???ㅽ넲踰꾪듉湲곕쾿?대씪 ?쒕떎.",
+   "遺꾨끂瑜??좊컻?섎뒗 遺?뺤쟻???ш퀬瑜?以묒??섍퀬 ?됱냼 ?앷컖?????됰났???λ㈃??1-2遺꾧컙 ?좎삱??吏묒쨷?섎뒗 遺꾨끂議곗젅諛⑸쾿?? ??꾩븘?껉린踰뺤씠???쒕떎.",
+   "遺꾨끂瑜??좊컻?섎뒗 醫낇빀???좊뀗泥닿퀎? 怨쇨굅???쒓끝???ш퀬??????섎룞???몄떇寃쏀뿕???먯떊?먭쾶 吏덈Ц?섎뒗 諛⑸쾿??寃쏀뿕?뚯긽 吏덈Ц湲곕쾿?대씪 ?쒕떎.",
+   "?묓뙏, ?ㅻ━, ?꾨옯諛? 媛?? ?닿묠 ??紐몄쓽 媛?遺遺꾩쓣 理쒕???湲댁옣?쒖섟?ㅺ? ?댁셿?쒖폒 ?몄븞???곹깭瑜?諛섎났?섎뒗 諛⑸쾿??湲댁옣???꾪썕?④린踰뺤씠???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is true about anger control techniques for preventing road rage and car crashes?",
+  "tr_c": [
+   "An anger control technique that is a mindfulness-based practice designed to help you defuse stress is called the STOP  technique.",
+   "An anger control technique during which you try to push out the negative thoughts and focus on happy thoughts for 1?? minutes is called the time-out technique.",
+   "An anger control technique during which you question your passive recognition of the belief system and distorted thoughts that trigger anger is called the reminiscence technique.",
+   "An anger control technique during which you repeatedly contract and relax your arms, legs, abdomen, chest, shoulders, and other body parts is called the contract-relax stretching technique."
+  ]
+ },
+ {
+  "n": 490,
+  "ko_b": "??슦濡??명븯??吏?섏감?꾧? 臾쇱뿉 ?좉꺼 ?덈뒗 ?곹솴?대떎. ?ㅼ쓬 以?媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "臾쇱뿉 諛뷀닿? ???좉만 ?뚭퉴吏??臾댁궗???듦낵?????덉쑝???쒗뻾?쇰줈 吏?섍컙??",
+   "理쒕???鍮좊Ⅸ ?띾룄濡?鍮좎졇 ?섍컙??",
+   "?고쉶?꾨줈瑜??뺤씤???꾩뿉 ?뚯븘媛꾨떎.",
+   "?듦낵?섎떎媛 ?쒕룞??爰쇱?硫?諛붾줈 ?ㅼ떆 ?쒕룞??嫄멸퀬 鍮좎졇 ?섏삩??"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the safest method of driving when the underground road ahead is submerged in  water due to heavy rainfall?",
+  "tr_c": [
+   "Drive through slowly. You can make it as long as the wheels are not completely submerged in water.",
+   "Get through the water as fast as you can.",
+   "Take another road to bypass the water.",
+   "Drive through. If the engine stops, start it back immediately and drive through."
+  ]
+ },
+ {
+  "n": 491,
+  "ko_b": "援먰넻?ш퀬 ???묎툒?곹솴 諛쒖깮 ??議곗튂?붾졊怨?嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?꾪뿕?щ? ?뺤씤",
+   "?섏옄??諛섏쓳 ?뺤씤",
+   "湲곕룄 ?뺣낫 諛??명씉 ?뺤씤",
+   "?섏옄??紐⑹쟻吏? ?좎긽 ?뺤씤"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a correct description of the actions to take when responding to an emergency  situation such as a traffic accident?",
+  "tr_c": [
+   "Check the risk.",
+   "Check the response of a patient.",
+   "Secure the airway and check the breathing.",
+   "Check the destination and identification of a patient."
+  ]
+ },
+ {
+  "n": 492,
+  "ko_b": "二쇳뻾 以??먮룞李??뚮컻 ?곹솴??????щ컮瑜??泥?諛⑸쾿怨?嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "二쇳뻾 以??몃뱾???ы븯寃??⑤━硫??몃뱾??苑??↔퀬 怨꾩냽 二쇳뻾?쒕떎.",
+   "?먮룞李⑥뿉???곌린媛 ?섎㈃ 利됱떆 ?덉쟾??怨녹쑝濡??대룞 ???쒕룞???덈떎.",
+   "??댁뼱 ?묓겕媛 ?섎㈃ ?몃뱾??苑??↔퀬 媛먯냽?섎ŉ ?덉쟾??怨녹뿉 ?뺤감?쒕떎.",
+   "泥좉만嫄대꼸紐??듦낵 以??쒕룞??爰쇱졇???ㅼ떆 嫄몃━吏 ?딅뒗?ㅻ㈃ ?좎냽????????좉퀬?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT a correct method of handling a dangerous situation while driving?",
+  "tr_c": [
+   "Firmly grasp the steering wheel if it vibrates hard and keep driving.",
+   "If smoke comes out of the vehicle, pull over where it is safe and turn off the engine.",
+   "If a tire explodes, hold the steering wheel firmly and pull over to a safe location.",
+   "If the engine stops while crossing a railroad, evacuate the vehicle immediately and contact the authorities."
+  ]
+ },
+ {
+  "n": 493,
+  "ko_b": "援먰넻?ш퀬 ?꾩옣?먯꽌 利앷굅?뺣낫瑜??꾪븳 ?ъ쭊 珥ъ쁺 諛⑸쾿?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "釉붾옓諛뺤뒪 ?곸긽??珥ъ쁺?섎뒗 寃쎌슦 異붽??섏뿬 ?ъ쭊 珥ъ쁺???꾩슂媛 ?녿떎.",
+   "?꾨줈???붿쭊?ㅼ씪, ?됯컖???깆쓽 ?붿쟻? ?ㅻ옯?숈븞 吏?띾릺誘濡?珥ъ쁺?섏? ?딆븘???쒕떎.",
+   "?뚰렪臾? ?먮룞李⑥? ?꾨줈???뚯넀遺?????숈씪????곸뿉 ???洹쇱젒珥ъ쁺怨??먭굅由?珥ъ쁺??媛숈씠 ?쒕떎.",
+   "李⑤웾 諛뷀댁쓽 吏꾪뻾諛⑺뼢???ㅽ봽?덉씠 ?깆쑝濡??쒖떆?섍굅??珥ъ쁺?????붾떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are proper ways to take photographs at the scene of an accident? (Select TWO)",
+  "tr_c": [
+   "If there is a black box that successfully captured the accident, there is no need to take any photos.",
+   "Photos of spilled engine oil and coolant are not needed as their stains will last a long time on the road.",
+   "Take photos of the overall accident scene from a distance and work your way toward the point of collision, taking  photos along the way.",
+   "Mark the scene by spray painting or taking photos of the direction of the tires."
+  ]
+ },
+ {
+  "n": 494,
+  "ko_b": "?ㅼ쓬 以??κ굅由??댄뻾 ?꾩뿉 諛섎뱶???먭??댁빞 ???곗꽑?쒖쐞 2媛吏??",
+  "ko_c": [
+   "李⑤웾 泥?껐 ?곹깭 ?먭?",
+   "DMB(?곸긽?쒖떆?μ튂) ?묐룞?щ? ?먭?",
+   "媛곸쥌 ?ㅼ씪瑜??먭?",
+   "??댁뼱 ?곹깭 ?먭?"
+  ],
+  "a": "3, 4",
+  "tr_b": "Which TWO things must be inspected before starting a long-distance drive?",
+  "tr_c": [
+   "Cleanliness of the vehicle",
+   "DMB operation status",
+   "Oils and fluids",
+   "Tires"
+  ]
+ },
+ {
+  "n": 495,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾硫댄뿀 痍⑥냼 ?ъ쑀???대떦?섎뒗 寃껋??",
+  "ko_c": [
+   "?뺢린 ?곸꽦寃??湲곌컙 留뚮즺 ?ㅼ쓬 ?좊????곸꽦寃?щ? 諛쏆? ?꾨땲?섍퀬 6媛쒖썡??珥덇낵??寃쎌슦",
+   "?댁쟾?먭? ?⑥냽 怨듬Т??寃쎌같怨듬Т?? ?쒙쉈援곤쉈援?怨듬Т??????뻾?섏뿬 遺덇뎄???뺤궗 ?낃굔??寃쎌슦",
+   "?먮룞李??깅줉 ???먮룞李??깅줉踰덊샇?먯쓣 遺李⑺븯吏 ?딄퀬 ?댁쟾??寃쎌슦",
+   "??醫?蹂댄넻硫댄뿀瑜?媛깆떊?섏? ?딄퀬 2?꾩쓣 珥덇낵??寃쎌슦"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following constitutes grounds for revocation of a driver's license?",
+  "tr_c": [
+   "When 6 months have lapsed after the expiration date of the regular aptitude test",
+   "When a motorist is booked without detention for assaulting a law enforcement officer (policeman or local government  official)",
+   "When a motorist drives his/her car without affixing a license plate after registration",
+   "When 2 years have lapsed without renewal of a Class II driver?셲 license for an ordinary motor vehicle"
+  ]
+ },
+ {
+  "n": 496,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??踰붿튃湲??⑸? ?듦퀬?쒕? 諛쏆? ?щ엺??1李??⑸? 湲곌컙 寃쎄낵 ??20???대궡 ?⑸??댁빞 ??湲덉븸?쇰줈 留욌뒗  寃껋??",
+  "ko_c": [
+   "?듦퀬 諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 10???뷀븳 湲덉븸",
+   "?듦퀬 諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 20???뷀븳 湲덉븸",
+   "?듦퀬 諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 30???뷀븳 湲덉븸",
+   "?듦퀬 諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 40???뷀븳 湲덉븸"
+  ],
+  "a": "2",
+  "tr_b": "If a person notified to pay a traffic penalty fails to make the payment during the first designated period, which  of the following is the correct amount that he/she has to pay within 20 days?",
+  "tr_c": [
+   "Original traffic penalty + 10% late penalty",
+   "Original traffic penalty + 20% late penalty",
+   "Original traffic penalty + 30% late penalty",
+   "Original traffic penalty + 40% late penalty"
+  ]
+ },
+ {
+  "n": 497,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾩궛 ?먯닔 珥덇낵濡??명븳 ?댁쟾硫댄뿀 痍⑥냼 湲곗??쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "1?꾧컙 100???댁긽",
+   "2?꾧컙 191???댁긽",
+   "3?꾧컙 271???댁긽",
+   "5?꾧컙 301???댁긽"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the correct standard for the revocation of a driver's license based on cumulative  demerit points?",
+  "tr_c": [
+   "100+ points within 1 year",
+   "191+ points within 2 years",
+   "271+ points within 3 years",
+   "301+ points within 5 years"
+  ]
+ },
+ {
+  "n": 498,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?ш퀬 寃곌낵???곕Ⅸ 踰뚯젏 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?됱젙 泥섎텇??諛쏆쓣 ?댁쟾??蹂몄씤???몄쟻 ?쇳빐????댁꽌???몄쟻 ?쇳빐 援먰넻?ш퀬 援щ텇???곕씪 踰뚯젏??遺怨쇳븳??",
+   "?먮룞李???? ?щ엺 援먰넻?ш퀬??寃쎌슦 ?띾갑 怨쇱떎???뚯뿉??踰뚯젏??遺怨쇳븯吏 ?딅뒗??",
+   "援먰넻?ш퀬 諛쒖깮 ?먯씤??遺덇???젰?닿굅???쇳빐?먯쓽 紐낅갚??怨쇱떎???뚯뿉??踰뚯젏??2遺꾩쓽 1濡?媛먭꼍?쒕떎.",
+   "?먮룞李???? ?먮룞李???援먰넻?ш퀬??寃쎌슦?먮뒗 洹??ш퀬 ?먯씤 以?以묓븳 ?꾨컲 ?됱쐞瑜????댁쟾?먯뿉寃뚮쭔 踰뚯젏??遺怨쇳븳??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements regarding the standards for demerit points based on the effects of a traffic  accident is correct?",
+  "tr_c": [
+   "As for the personal injury of the driver who will receive an administrative punishment, demerit points will be imposed based on the rules regarding traffic accidents involving personal injury.",
+   "In an accident between a car and a pedestrian, demerit points will not be imposed if the accident occurred due to  mistakes committed by both parties.",
+   "If the accident was unavoidable or had been caused clearly by a mistake of the injured, demerit points will be halved.",
+   "In an accident between cars, demerit points are imposed only on the driver who committed a serious violation that  caused the accident."
+  ]
+ },
+ {
+  "n": 499,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곸긽湲곕줉留ㅼ껜???섑빐 ?낆쬆?섎뒗 二쇱감?꾨컲?????怨쇳깭猷뚯쓽 ?ㅻ챸?쇰줈 ?뚮쭪? 寃껋??",
+  "ko_c": [
+   "?뱀슜李⑥쓽 ?뚯쑀?먮뒗 3留??먯쓽 怨쇳깭猷뚮? ?댁빞 ?쒕떎.",
+   "?뱁빀李⑥쓽 ?뚯쑀?먮뒗 7留??먯쓽 怨쇳깭猷뚮? ?댁빞 ?쒕떎.",
+   "湲곌컙 ?댁뿉 怨쇳깭猷뚮? ?댁? ?딆븘??遺덉씠?듭? ?녿떎.",
+   "媛숈? ?μ냼?먯꽌 2?쒓컙 ?댁긽 二쇱감 ?꾨컲???섎뒗 寃쎌슦 怨쇳깭猷뚭? 媛以묐맂??"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following statements regarding the administrative fine for  parking violations is correct?",
+  "tr_c": [
+   "The owner of a passenger car involved in a parking violation should pay an administrative fine of KRW 30,000.",
+   "The owner of a van involved in a parking violation should pay an administrative fine of KRW 70,000.",
+   "No administrative fine is imposed even if you do not pay the fine within the designated period.",
+   "For parking violations that continue for more than two hours at the same location, additional administrative fines are  imposed."
+  ]
+ },
+ {
+  "n": 500,
+  "ko_b": "?ㅼ쓬 以?援먰넻?ш퀬瑜??쇱쑝???댁쟾?먭? 醫낇빀蹂댄뿕?대굹 怨듭젣議고빀??媛?낅릺???덉뼱 援먰넻?ш퀬泥섎━?밸?踰뺤쓽 ?밸?媛 ?곸슜?섎뒗  寃쎌슦濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?덉쟾?댁쟾 ?섎Т?꾨컲?쇰줈 ?먮룞李⑤? ?먭눼?섍퀬 寃쎌긽??援먰넻?ш퀬瑜???寃쎌슦",
+   "援먰넻?ш퀬濡??щ엺???щ쭩???대Ⅴ寃???寃쎌슦",
+   "援먰넻?ш퀬瑜??쇨린????遺?곸옄 援ы샇瑜??섏? ?딆? 梨??꾩＜??寃쎌슦",
+   "?좏샇 ?꾨컲?쇰줈 寃쎌긽??援먰넻?ш퀬瑜??쇱쑝??寃쎌슦"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is a scenario where the exemption according to the Act on Special Cases Concerning the Settlement of Traffic Accidents is applied because the driver who caused the accident has comprehensive insurance or he/she is insured through a mutual aid association?",
+  "tr_c": [
+   "When the driver has violated his/her duty to drive safely, resulting in car damage or minor accident",
+   "When the driver has caused an accident that resulted in loss of human life",
+   "When the driver has fled the scene after causing an accident without attending to the injured",
+   "When the driver has violated traffic signals, causing an accident involving minor injuries"
+  ]
+ },
+ {
+  "n": 501,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈?먯꽌 ?숉샇??7紐낆씠 4???李⑤웾???섎늻???怨?怨듬룞?쇰줈 ?ㅻⅨ ?щ엺?먭쾶 ?꾪빐瑜??쇱퀜 ?뺤궗?낃굔 ???덈떎. 泥섎쾶湲곗??쇰줈 ?由?寃껋?? (媛쒖씤???대룞?μ튂???쒖쇅)",
+  "ko_c": [
+   "2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "?곷컻 利됱떆 硫댄뿀?뺤?",
+   "援ъ냽??寃쎌슦 硫댄뿀痍⑥냼",
+   "?뺤궗?낃굔??寃쎌슦 踰뚯젏 40??
+  ],
+  "a": "2",
+  "tr_b": "Seven people riding together in four vehicles on the road and causing harm to others were criminally charged according to the Road Traffic Act. Which of the following is NOT true about their punishment? (Excluding personal mobility devices)",
+  "tr_c": [
+   "Imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million",
+   "Immediate license suspension upon apprehension",
+   "License revocation if detained",
+   "A penalty of 40 points if prosecuted"
+  ]
+ },
+ {
+  "n": 502,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??댁쟾?먭? ?쒗룺?댁쟾?쇰줈 ?뺤궗?낃굔?섏뿀?? ?댁쟾硫댄뿀 ?됱젙泥섎텇??",
+  "ko_c": [
+   "硫댄뿀 痍⑥냼",
+   "硫댄뿀 ?뺤? 100??,
+   "硫댄뿀 ?뺤? 60??,
+   "硫댄뿀 ?뺤? 40??
+  ],
+  "a": "4",
+  "tr_b": "The driver of an automobile is arrested for reckless driving. Which of the following is the correct administrative  disposition on the driver?셲 license?",
+  "tr_c": [
+   "Revocation of the driver?셲 license",
+   "100-day suspension of the driver?셲 license",
+   "60-day suspension of the driver?셲 license",
+   "40-day suspension of the driver?셲 license"
+  ]
+ },
+ {
+  "n": 503,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먯쟾嫄곕? ?댁쟾??寃쎌슦 ?대뼸寃??섎뒗媛?",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "踰붿튃湲?3留??먯쓽 ?듦퀬泥섎텇?쒕떎.",
+   "怨쇳깭猷?4留??먯쓣 遺怨쇳븳??",
+   "10留????댄븯??踰뚭툑 ?먮뒗 援щ쪟??泥섑븳??"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, what is the punishment for riding a bicycle while  intoxicated?",
+  "tr_c": [
+   "No punishment",
+   "Notification of a traffic penalty of KRW 30,000",
+   "Punished through an administrative fine of KRW 40,000",
+   "Punished through a criminal fine of not more than KRW 100,000 or by detention"
+  ]
+ },
+ {
+  "n": 504,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙?좊쭔???곷떦???댁쑀媛 ?덈뒗 ?먯쟾嫄??댁쟾?먭? 寃쎌같怨듬Т?먯쓽 ?뺣떦???뚯＜ 痢≪젙 ?붽뎄??遺덉쓳??寃쎌슦 泥섎쾶??",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "怨쇳깭猷?7留??먯쓣 遺怨쇳븳??",
+   "踰붿튃湲?10留??먯쓽 ?듦퀬泥섎텇?쒕떎.",
+   "10留????댄븯??踰뚭툑 ?먮뒗 援щ쪟??泥섑븳??"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, what is the punishment for a bicycle rider who is deemed to be intoxicated  and who refuses a police officer's lawful request for a field sobriety test?",
+  "tr_c": [
+   "No punishment",
+   "Punished through an administrative fine of KRW 70,000",
+   "Notification of a traffic penalty of KRW 100,000",
+   "Punished through a criminal fine of not more than KRW 100,000 or by detention"
+  ]
+ },
+ {
+  "n": 505,
+  "ko_b": "援먰넻?ш퀬泥섎━?밸?踰뺤긽 ?뺤궗 泥섎쾶?섎뒗 寃쎌슦濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "醫낇빀蹂댄뿕??媛?낇븯吏 ?딆? 李④? 臾쇱쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝?ㅺ퀬 ?쇳빐?먯? ?⑹쓽????,
+   "?앹떆怨듭젣議고빀??媛?낇븳 ?앹떆媛 以묒븰?좎쓣 移⑤쾾?섏뿬 ?몄쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝????,
+   "醫낇빀蹂댄뿕??媛?낇븳 李④? ?좏샇瑜??꾨컲?섏뿬 ?몄쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝????,
+   "?붾Ъ怨듭젣議고빀??媛?낇븳 ?붾Ъ李④? ?덉쟾?댁쟾 遺덉씠?됱쑝濡??몄쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝????
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO situations subject to criminal prosecution in accordance with the Act on  Special Cases Concerning the Settlement of Traffic Accidents?",
+  "tr_c": [
+   "A driver without comprehensive insurance reaches a settlement with the victim after causing an accident resulting in  property damage.",
+   "A taxi driver who is a member of the Taxi Mutual Aid Association causes a traffic accident resulting in injury or death after driving over the centerline.",
+   "A driver with comprehensive insurance causes a traffic accident resulting in injury or death after committing a violation  of a traffic signal.",
+   "A truck covered by cooperative insurance causes injury due to careless driving."
+  ]
+ },
+ {
+  "n": 506,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??踰붿튃湲??⑸? ?듦퀬?쒕? 諛쏆? ?щ엺??2李??⑸?湲곌컙??寃쎄낵??寃쎌슦??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "吏泥??놁씠 利됯껐?ы뙋??泥?뎄?섏뿬???쒕떎.",
+   "利됯껐?ы뙋??諛쏆? ?꾨땲?????댁쟾硫댄뿀瑜?40???뺤??쒕떎.",
+   "怨쇳깭猷?遺怨쇳븳??",
+   "踰붿튃湲덉븸??100遺꾩쓽 30???뷀븳 湲덉븸???⑸??섎㈃ 利됯껐?ы뙋??泥?뎄?섏? ?딅뒗??"
+  ],
+  "a": "1, 2",
+  "tr_b": "You fail to pay a traffic penalty for which you have been notified in writing even by its second deadline. Which  TWO are applicable?",
+  "tr_c": [
+   "You must request a summary judgment immediately.",
+   "Your license will be suspended for 40 days if no summary judgment is reached.",
+   "An administrative fine will be charged.",
+   "No summary judgment needs to be requested if you pay the traffic penalty along with an additional 30% as delay  penalty."
+  ]
+ },
+ {
+  "n": 507,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李??댁쟾?먭? 二셋룹젙李⑤맂 李⑤쭔 ?먭눼?섎뒗 援먰넻?ш퀬瑜??쇱쑝?ㅺ퀬 ?대? ?몄??섍퀬?쒕룄 ?쇳빐?먯뿉寃? ?몄쟻?ы빆???쒓났?섏? ?꾨땲??寃쎌슦 ?대뼸寃??섎뒗媛?",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "怨쇳깭猷?10留??먯쓣 遺怨쇳븳??",
+   "踰붿튃湲?12留??먯쓽 ?듦퀬泥섎텇?쒕떎.",
+   "30留????댄븯??踰뚭툑 ?먮뒗 援щ쪟??泥섑븳??"
+  ],
+  "a": "3",
+  "tr_b": "What will happen if the driver of a passenger car causes a traffic accident that damages only parked or stopped vehicles and, even upon becoming aware of the situation, fails to provide personal information to the victims?",
+  "tr_c": [
+   "No punishment",
+   "An administrative fine of KRW 100,000 is imposed.",
+   "A traffic penalty of KRW 120,000 is notified.",
+   "A criminal fine of up to KRW 300,000 or detention is imposed."
+  ]
+ },
+ {
+  "n": 508,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???좎뿉 痍⑦븳 ?곹깭濡??뱀슜李⑤? ?댁쟾???щ엺????? 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋?? (10????1???꾨컲??寃쎌슦)",
+  "ko_c": [
+   "1???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "3???댄븯??吏뺤뿭?대굹 1泥?00留????댄븯??踰뚭툑",
+   "2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, what is the correct penalty for a person who drives a passenger car with a blood alcohol concentration (BAC) of 0.03 percent or higher but less than 0.08 percent (for a first offense within 10 years)?",
+  "tr_c": [
+   "Imprisonment for up to 1 year or criminal fine of up to KRW 5 million",
+   "Imprisonment for up to 2 years or criminal fine of up to KRW 10 million",
+   "Imprisonment for up to 3 years or criminal fine of up to KRW 15 million",
+   "Imprisonment in the range of 2 years - 5 years or criminal fine of KRW 10 million or more (up to KRW 20 million)"
+  ]
+ },
+ {
+  "n": 509,
+  "ko_b": "?꾨줈援먰넻踰???吏꾨줈?묐낫 諛??묐낫?댁쟾??愿???ㅻ챸?대떎. ????븞???ㅼ뼱媛?留먮줈 ?щ컮瑜닿쾶 吏앹??댁쭊 寃껋?? - 鍮꾪깉湲?醫곸? ?꾨줈?먯꽌 湲닿툒?먮룞李??몄쓽 ?먮룞李④? ?쒕줈 留덉＜ 蹂닿퀬 吏꾪뻾?섎뒗 寃쎌슦?먮뒗 (?? ?먮룞李④? ?꾨줈???곗륫 媛?μ옄由щ줈 ?쇳븯??吏꾨줈瑜??묐낫?섏뿬???쒕떎. - 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒖뿉??(???섎젮怨??섎뒗 李⑥쓽 ?댁쟾?먮뒗 洹?援먯감濡쒖뿉??吏곸쭊?섍굅??(???섎젮???ㅻⅨ 李④? ?덉쓣 ?뚯뿉??洹?李⑥뿉 吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+  "ko_c": [
+   "?좎삱?쇨????≪슦?뚯쟾 ??쥖?뚯쟾",
+   "?좎삱?쇨????≪쥖?뚯쟾 ??슦?뚯쟾",
+   "?좊궡?ㅺ????≪쥖?뚯쟾 ??슦?뚯쟾",
+   "?좊궡?ㅺ????≪슦?뚯쟾 ??쥖?뚯쟾"
+  ],
+  "a": "2",
+  "tr_b": "Under the Road Traffic Act, which set of words correctly completes ?졻볝돚?- On a steep narrow road, when two non-emergency vehicles come face to face with each other, the (?? vehicle must yield by moving to the right side.- At an unsignalized intersection, a driver turning (?? must yield to vehicles traveling straight ahead or turning (??.",
+  "tr_c": [
+   "??uphill?껁돘 left?껁돚 right",
+   "??downhill?껁돘 left?껁돚 right",
+   "??downhill?껁돘 right?껁돚 left"
+  ]
+ },
+ {
+  "n": 510,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곗뒿?댁쟾硫댄뿀 ?뚯??먭? ?덉쨷?뚯퐫?щ냽??(   )?쇱꽱???댁긽???섏뼱???댁쟾?????곗뒿?댁쟾硫댄뿀瑜?痍⑥냼???? (   )?덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "0.03",
+   "0.05",
+   "0.08",
+   "0.10"
+  ],
+  "a": "1",
+  "tr_b": "If a driver with a student license drives in inebriated state with blood alcohol content of at least ( ) percent,  his/her student license shall be revoked. Which answer fits in ( )?",
+  "tr_c": [
+   "0.03",
+   "0.05",
+   "0.08",
+   "0.10"
+  ]
+ },
+ {
+  "n": 511,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾?먭? ?⑥냽 寃쎌같怨듬Т???깆뿉 ?????뻾???섏뿬 ?뺤궗 ?낃굔????泥섎텇?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "踰뚯젏 40?먯쓣 遺怨쇳븳??",
+   "踰뚯젏 100?먯쓣 遺怨쇳븳??",
+   "?댁쟾硫댄뿀瑜?痍⑥냼 泥섎텇?쒕떎.",
+   "利됯껐?ы뙋??泥?뎄?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the punishment imposed on a driver who has been criminally charged for assaulting a  traffic police officer?",
+  "tr_c": [
+   "40 demerit points",
+   "100 demerit points",
+   "Revocation of the driver?셲 license",
+   "Request for a summary trial"
+  ]
+ },
+ {
+  "n": 512,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄쟻 ?쇳빐 ?덈뒗 援먰넻?ш퀬瑜??쇨린?섍퀬 ?꾩＜??李⑤웾???댁쟾?먮? 寃嫄고븯嫄곕굹 ?좉퀬?섏뿬 寃嫄고븯寃??????꾩옄(援먰넻?ш퀬???쇳빐?먭? ?꾨땶 寃쎌슦)?먭쾶 寃嫄??먮뒗 ?좉퀬????留덈떎 (    )???뱁삙?먯닔瑜?遺?ы븳?? (    )??留욌뒗 寃껋??",
+  "ko_c": [
+   "10??,
+   "20??,
+   "30??,
+   "40??
+  ],
+  "a": "4",
+  "tr_b": "Each time a driver (if not a victim of a traffic accident) arrests or reports to arrest a driver of a vehicle that has caused a traffic accident involving personal injury and fled, a benefit of ( ) shall be given. Which of the following correctly fills in ( )?",
+  "tr_c": [
+   "10 points",
+   "20 points",
+   "30 points",
+   "40 points"
+  ]
+ },
+ {
+  "n": 513,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李??댁쟾?먯뿉 ????꾨컲?됱쐞蹂?踰붿튃湲덉씠 ?由?寃껋??",
+  "ko_c": [
+   "?띾룄 ?꾨컲(留ㅼ떆 60?щ줈誘명꽣 珥덇낵)??寃쎌슦 12留???,
+   "?좏샇 ?꾨컲??寃쎌슦 6留???,
+   "以묒븰?좎묠踰붿쓽 寃쎌슦 6留???,
+   "?욎?瑜닿린 湲덉? ?쒓린쨌?μ냼 ?꾨컲??寃쎌슦 5留???
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is an incorrect pairing of traffic penalties and violations by the driver of an automobile?",
+  "tr_c": [
+   "KRW 120,000 for a speed violation (exceeding 60 km/h)",
+   "KRW 60,000 for a signal violation",
+   "KRW 60,000 for driving over the centerline",
+   "KRW 50,000 for a violation of the period or place when/where overtaking is prohibited"
+  ]
+ },
+ {
+  "n": 514,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???붿옱吏꾩븬???곌껐?≪닔愿 ?ㅻ퉬???≪닔援щ줈遺??5誘명꽣 ?대궡 ?뱀슜?먮룞李⑤? ?뺤감??寃쎌슦 踰붿튃湲덉??(?덉쟾??吏 誘몄꽕移?",
+  "ko_c": [
+   "4留???,
+   "3留???,
+   "2留???,
+   "泥섎쾶?섏? ?딅뒗??"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, what is the traffic penalty imposed on the driver of an automobile parked within 5 m of the transmission valve of a fire department standpipe used for fire-extinguishing purposes?",
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 30,000",
+   "KRW 20,000",
+   "No penalty is imposed."
+  ]
+ },
+ {
+  "n": 515,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 踰뚯젏 遺怨쇨린以???ㅻⅨ ?꾨컲?됱쐞 ?섎굹??",
+  "ko_c": [
+   "?밴컼??李⑤궡 ?뚮??됱쐞 諛⑹튂?댁쟾",
+   "泥좉만嫄대꼸紐??듦낵諛⑸쾿 ?꾨컲",
+   "怨좎냽?꾨줈 媛볤만 ?듯뻾 ?꾨컲",
+   "?댁쟾硫댄뿀利??깆쓽 ?쒖떆?섎Т?꾨컲"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following violations involves a different criterion for demerit  points?",
+  "tr_c": [
+   "Driving while neglecting disorderly conduct by a passenger inside the vehicle",
+   "Violating the method of passing a railroad crossing",
+   "Violation of passage on a shoulder in an expressway",
+   "Violation of the obligation to present a driver's license, etc."
+  ]
+ },
+ {
+  "n": 516,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??利됯껐?ы뙋??泥?뎄???댁쟾?먭? 利됯껐?ы뙋???좉퀬 ?꾧퉴吏 ?듦퀬諛쏆? 踰붿튃湲덉븸??(    )???뷀븳 湲덉븸?? ?닿퀬 ?⑸?瑜?利앸챸?섎뒗 ?쒕쪟瑜??쒖텧?섎㈃ 寃쎌같?쒖옣? ?댁쟾?먯뿉 ???利됯껐?ы뙋 泥?뎄瑜?痍⑥냼?섏뿬???쒕떎. (   )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "100遺꾩쓽 20",
+   "100遺꾩쓽 30",
+   "100遺꾩쓽 50",
+   "100遺꾩쓽 70"
+  ],
+  "a": "3",
+  "tr_b": "When a driver subject to summary judgment pays the total sum of the due penalty in addition to ( ) of the traffic penalty and submits a document confirming the payment before the announcement of the summary judgment, the police chief is required to cancel the summary judgment on the driver. Select one that fills in ( ) correctly.",
+  "tr_c": [
+   "20/100",
+   "30/100",
+   "50/100",
+   "70/100"
+  ]
+ },
+ {
+  "n": 517,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙?좊쭔???곷떦???댁쑀媛 ?덈뒗 ?먮룞李??댁쟾?먭? 寃쎌같怨듬Т?먯쓽 ?뺣떦???뚯＜ 痢≪젙 ?붽뎄??遺덉쓳??寃쎌슦 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋?? (10???대궡 1???꾨컲??寃쎌슦)",
+  "ko_c": [
+   "1???댁긽 2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "1???댁긽 3???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "1???댁긽 4???댄븯??吏뺤뿭?대굹 500留????댁긽 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "1???댁긽 5???댄븯??吏뺤뿭?대굹 500留????댁긽 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, what is the correct penalty for a driver who, despite having reasonable grounds to be considered under the influence of alcohol, refuses to comply with a breath alcohol test legitimately requested by a police officer (for a first offense within ten years)?",
+  "tr_c": [
+   "Imprisonment for at least one year but no more than two years, or criminal fine of up to KRW 5 million",
+   "Imprisonment for at least one year but no more than three years, or criminal fine of up to KRW 10 million",
+   "Imprisonment for at least one year but no more than four years, or criminal fine in the range of KRW 5 million - KRW  10 million",
+   "Imprisonment for at least one year but no more than five years, or criminal fine in the range of KRW 5 million - KRW  20 million"
+  ]
+ },
+ {
+  "n": 518,
+  "ko_b": "?먮룞李?踰덊샇?먯쓣 媛由ш퀬 ?먮룞李⑤? ?댄뻾??寃쎌슦??踰뚯튃?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "1???댄븯??吏뺤뿭 ?먮뒗 1,000留뚯썝 ?댄븯??踰뚭툑",
+   "1???댄븯??吏뺤뿭 ?먮뒗 2,000留뚯썝 ?댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 1,000留뚯썝 ?댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2,000留뚯썝 ?댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the appropriate penalty for driving a vehicle while covering the license plate?",
+  "tr_c": [
+   "Imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 10 million",
+   "Imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 20 million",
+   "Imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 10 million",
+   "Imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 20 million"
+  ]
+ },
+ {
+  "n": 519,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??댁쟾?먭? 怨좎냽?꾨줈?먯꽌 ?먮룞李??댁뿉 怨좎옣?먮룞李⑥쓽 ?쒖?瑜?鍮꾩튂?섏? ?딄퀬 ?댄뻾?섏??? ?대뼸寃? ?섎뒗媛?",
+  "ko_c": [
+   "2留??먯쓽 怨쇳깭猷뚭? 遺怨쇰맂??",
+   "3留??먯쓽 踰붿튃湲덉쑝濡??듦퀬 泥섎텇?쒕떎.",
+   "30留????댄븯??踰뚭툑?쇰줈 泥섎쾶?쒕떎.",
+   "?꾨Т??泥섎쾶?대굹 泥섎텇?섏? ?딅뒗??"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, the driver of a vehicle is traveling on an expressway without carrying a vehicle breakdown sign (safety tripod sign) inside the vehicle. What will happen?",
+  "tr_c": [
+   "An administrative fine of KRW 20,000 will be charged.",
+   "A traffic penalty of KRW 30,000 will be imposed.",
+   "A criminal fine of up to KRW 300,000 will be charged.",
+   "No fine or penalty will be imposed."
+  ]
+ },
+ {
+  "n": 520,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎냽?꾨줈?먯꽌 ?뱀슜?먮룞李??댁쟾?먯쓽 怨쇱냽?됱쐞?????踰붿튃湲?湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쒗븳?띾룄湲곗? ?쒖냽 60?щ줈誘명꽣 珥덇낵 80?щ줈誘명꽣 ?댄븯 ??踰붿튃湲?12留???,
+   "?쒗븳?띾룄湲곗? ?쒖냽 40?щ줈誘명꽣 珥덇낵 60?щ줈誘명꽣 ?댄븯 ??踰붿튃湲?8留???,
+   "?쒗븳?띾룄湲곗? ?쒖냽 20?щ줈誘명꽣 珥덇낵 40?щ줈誘명꽣 ?댄븯 ??踰붿튃湲?5留???,
+   "?쒗븳?띾룄湲곗? ?쒖냽 20?щ줈誘명꽣 ?댄븯 ??踰붿튃湲?2留???
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct pairing of traffic penalty and speed range imposed on the driver of an  automobile caught speeding on an expressway?",
+  "tr_c": [
+   "For exceeding the speed limit by over 60 km/h to 80 km/h: traffic penalty of KRW 120,000",
+   "For exceeding the speed limit by over 40 to 60 km/h: traffic penalty of KRW 80,000",
+   "For exceeding the speed limit by over 20 to 40 km/h: traffic penalty of KRW 50,000",
+   "For exceeding the speed limit by less than 20 km/h: traffic penalty of KRW 20,000"
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+p='translations/audit/queue/212_choices_en.json'
+data=json.load(open(p,encoding='utf-8'))
+def fix(s):
+    if not isinstance(s,str): return s
+    try: return s.encode('cp949').decode('utf-8')
+    except: return s
+for x in data:
+    print('\\n###',x['n'],'a=',x.get('a'))
+    print('B',fix(x['ko_b']))
+    print('TB',x['tr_b'])
+    for i,(k,t) in enumerate(zip(x['ko_c'],x['tr_c']),1): print(i,fix(k),'||',t)
+    if 'check' in x or 'detail' in x: print('AUTO',x.get('check'),x.get('detail'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:28:20.116351Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:16 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 689ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:16 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/212_choices_en.json'|ConvertFrom-Json; function F([string]"'$s){try{[Text.Encoding]::UTF8.GetString([Text.Encoding]::GetEncoding(949).GetBytes($s))}catch{$s}}; foreach($x in $d[0..19]){"### $($x.n) a=$($x.a)"; "B $(F $x.ko_b)"; "TB $($x.tr_b)"; for($i=0;$i-lt$x.ko_c.Count;$i++){"$($i+1) $(F $x.ko_c[$i]) || $($x.tr_c[$i])"}; if($x.check -or $x.detail){"AUTO $($x.check) $($x.detail)"}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 645ms:
+### 481 a=2, 4
+B �¼� ������ ���뿡 ���� �������� �´� 2������?
+TB Which of the following are the TWO correct statements regarding wearing a seat belt?
+1 ����� �Ÿ��� ������ ��쿡�� ū ȿ���� �����Ƿ� �������� �ʾƵ� �ȴ�. || You need not wear a seat belt when driving to a place close by.
+2 �ڵ����� �����ڴ� ������ ���Ͽ� �¼� �����츦 �����Ͽ��� �Ѵ�. || Passengers in a car should wear a seat belt for safety.
+3 ��̴� �θ��� ������ ���� �� �ִ� ������ �� �¼��� �¿��, �¼� �����츦 �����Ű�� ���� �����ϴ�. || It is safe to make a child sit in the passenger seat so that the parents can help the child wear a seat belt.
+4 ����� �빫�� �⵿�ϴ� ��� �̿ܿ��� ����ڵ����� �����ڵ� �¼� �����츦 �ݵ�� �����Ͽ��� �Ѵ�. || Except when there is an emergency, the driver of an emergency vehicle should also wear a seat belt.
+### 482 a=4
+B ������� �ɰ��� ô�� ���� �λ��� ����Ǵ� ��쿡 ���� ������ ��ġ�����?
+TB A person seems to be suffering from a fractured spine after an accident. Which of the following is the most  appropriate measure you can take?
+1 �ǽ��� �ִ��� Ȯ���ϰ� ��� ����һ����� �ǽ��Ѵ�. || Check if the person is conscious and perform cardiopulmonary resuscitation immediately.
+2 �λ��ڸ� �����Ͽ� ������ ������ �̵��ϰ� 119�� �Ű��Ѵ�. || Move the person to a safe place and call 119.
+3 ��⵵ ����� �߻��� �� �����Ƿ� ���Ӹ������� �����Ѵ�. || Apply the Heimlich maneuver to prevent upper airway obstruction.
+4 ����� ��찡 �ƴϸ� �̼��� �ؼ��� �� �Ǹ�, �ε����� ��쿡�� �̼��ؾ� �Ѵٸ� �θ��� �̿��ؼ� ô�ߺκ��� ������  �� ������ ������ �켱 �����ؾ� �Ѵ�. || Unless urgent, do not move the person. If moving is inevitable, use a spine splint and assist the person in moving to a safe  place.
+### 483 a=2
+B ������ �߻� �� �λ����� �ǽ� ���¸� Ȯ���ϴ� ������� ���� ���� �ؾ� �� ����?
+TB When you are involved in a traffic accident, what should you do first to check if an injured person is conscious?
+1 �λ����� �ƹ� ������ Ȯ���Ѵ�. || Check his/her pulse.
+2 ���� �ɾ�ų� ����� ������ �ε�� ����. || Try to start a conversation or gently pat his/her shoulders.
+3 ��� ������ ������ ������ ���캻��. || Find the location of any wound that is bleeding heavily.
+4 �Ծ��� ���켭 �⵵�� �̹����� �ִ��� Ȯ���Ѵ�. || Look into the mouth to check if anything is blocking the airway.
+### 484 a=1, 4
+B ���α�����ɻ� ������ �߻� �� ����� ���ϴ� ��� �����ڿ��� ��ġ�� �ϵ��� �ϰ� ������ ����� �� �ִ� �� �� 2������?
+TB Which TWO vehicles are allowed to continue driving while asking a passenger to take actions during a traffic  accident?
+1 �������� �λ��ڸ� ��� ���� �¿��ڵ��� || A passenger car that is carrying an injured person to a hospital
+2 ȭ������ �� �ҹ漭�� ���ƿ��� �ҹ��ڵ��� || A fire truck returning to the fire station after extinguishing a fire
+3 ������ �������� �⵿�ϴ� �����ڵ��� || A tow vehicle going to the scene of a traffic accident
+4 ����ȭ���� �ư� ���� ���� ������ڵ��� || A postal vehicle transporting mail.
+### 485 a=1, 3
+B ���α�����ɻ� ������ �߻� �� ��� ������ �� �ִ� ���� ���� 2������?
+TB According to the Road Traffic Act, which of the following are the TWO correct statements regarding a vehicle  that is allowed to continue driving despite a traffic accident?
+1 ����� ȯ�ڸ� ���� ���� ������ �����ڴ� �����ڷ� �Ͽ��� �ʿ��� ��ġ ���� �ϰ��ϰ� ��� �����Ͽ���. || The ambulance driver who was transporting an urgent patient had the passenger take the necessary measures and kept  driving.
+2 ����� ȸ�ǿ� �����ϱ� ���� �̵� ���� �����ڴ� �����ڷ� �Ͽ��� �ʿ��� ��ġ ���� �ϰ��ϰ� ��� �����Ͽ���. || The driver who was traveling to attend an urgent meeting had the passenger take the necessary actions and kept  driving.
+3 ����� ������� �����ϴ� ���� �����ڴ� �����ڷ� �Ͽ��� �ʿ��� ��ġ ���� �ϰ��ϰ� ��� �����Ͽ���. || The driver of the vehicle transporting urgent mail made the passenger take the necessary measures and kept driving.
+4 ����� ��ǰ�� ���� ���� ������ �����ڴ� �����ڷ� �Ͽ��� �ʿ��� ��ġ ���� �ϰ��ϰ� ��� �����Ͽ���. || The ambulance driver who was transporting urgent medicines had the passengers take the necessary actions and kept  driving.
+### 486 a=4
+B �߰��� ���ο��� �ε�ų(road kill)�� �����ϱ� ���� ����������� �ٶ������� ���� ����?
+TB Which of the following is NOT appropriate for preventing road kill at night?
+1 ����̳� ������ �շ��� ���� ������ ����� ������ ���� ���ӿ����� �ؾ� �Ѵ�. || Reduce speed when traveling on national or mountain roads with fewer vehicles or people.
+2 �߻����� �߰� �ÿ��� �������� �����ϰ� ������ ���濡 ���� �������� �浹�� �����Ѵ�. || If you spot an animal on the road, slow down or stop on the shoulder to avoid a collision.
+3 �߻����� �߰� �ÿ��� �������� �� ä �����⸦ ������ ��� ���������� �����Ѵ�. || If you spot an animal on the road, turn off the headlights and honk lightly to scare it away.
+4 �����ϴ� ������ �߰��� �����ϰ� �ϱ� ���� ������ ���濡 ����� ���θ� �����Ѵ�. || To spot animals on the road more easily, drive closer along the shoulder.
+### 487 a=2
+B ��ӵ��ο��� ���� ������ ��� ��Ȳ �߻� �� ���� �Ÿ��� ����� ���μ��񽺸� ������ �ִ� �����?
+TB Which of the following organizations provides free towing service over a set distance in the event of an  emergency?
+1 �ѱ����α������ || Korea Road Traffic Authority
+2 �ѱ����ΰ��� || Korea Expressway Corporation
+3 ����û || Police agency
+4 �ѱ������������ || Korea Transportation Safety Authority
+### 488 a=3
+B ���ο��� �ε�ų(road kill)�� �߻��Ͽ��� �� ��ġ������� �ٸ��� ���� ����?
+TB Which of the following is NOT a proper way to respond after a road kill?
+1 ������ ������ ���� �� �����Ƿ� ������ü ���� �Ժη� ������ �ʴ´�. || Do not touch the animal carcass to prevent exposure to potential diseases.
+2 �ε�ų ���� �߻��ϸ� �߻������������ͳ� ����ü �ݼ��͡�������ȣ + 120����� �Ű��Ѵ�. || Call any wildlife rescue center or a local government call center (area code + 120).
+3 2����� ������ ���� ��� ���� ������ �ڱ� ���� �ư� �����Ѵ�. || Load the animal carcass on your vehicle to prevent a secondary accident.
+4 2����� ������ ��Ȱ�� ������ ���� ��ġ�� �� ��쿡�� �Ű����� �ʾƵ� �ȴ�. || There is no need to file a report if necessary measures have been taken to prevent a secondary accident and facilitate   traffic flow.
+### 489 a=4
+B �������� �Ǵ� ������ �߻��� �����ϱ� ���� �г���������� ���� �������� �´� ����?
+TB Which of the following is true about anger control techniques for preventing road rage and car crashes?
+1 ������ ��������� ��Ȳ���� ��� �������� �ð��� ������ ���� ������ ������ ã�� �г���������� �����ư����̶� �Ѵ�. || An anger control technique that is a mindfulness-based practice designed to help you defuse stress is called the STOP  technique.
+2 �г븦 �����ϴ� �������� ���� �����ϰ� ��� ������ �� �ູ�� ����� 1-2�а� ���÷� �����ϴ� �г����������  Ÿ�Ӿƿ����̶� �Ѵ�. || An anger control technique during which you try to push out the negative thoughts and focus on happy thoughts for 1–2 minutes is called the time-out technique.
+3 �г븦 �����ϴ� ������ �ų�ü��� ������ �ְ�� ���� ���� ������ �νİ����� �ڽſ��� �����ϴ� ����� ����ȸ�� ��������̶� �Ѵ�. || An anger control technique during which you question your passive recognition of the belief system and distorted thoughts that trigger anger is called the reminiscence technique.
+4 ����, �ٸ�, �Ʒ���, ����, ��� �� ���� �� �κ��� �ִ��� ������״ٰ� �̿Ͻ��� ����� ���¸� �ݺ��ϴ� ����� ������ ���Ʒñ���̶� �Ѵ�. || An anger control technique during which you repeatedly contract and relax your arms, legs, abdomen, chest, shoulders, and other body parts is called the contract-relax stretching technique.
+### 490 a=3
+B ����� ���Ͽ� ���������� ���� ��� �ִ� ��Ȳ�̴�. ���� �� ���� ������ ���� �����?
+TB Which of the following is the safest method of driving when the underground road ahead is submerged in  water due to heavy rainfall?
+1 ���� ������ �� ��� �������� ������ ����� �� ������ �������� ��������. || Drive through slowly. You can make it as long as the wheels are not completely submerged in water.
+2 �ִ��� ���� �ӵ��� ���� ������. || Get through the water as fast as you can.
+3 ��ȸ���θ� Ȯ���� �Ŀ� ���ư���. || Take another road to bypass the water.
+4 ����ϴٰ� �õ��� ������ �ٷ� �ٽ� �õ��� �ɰ� ���� ���´�. || Drive through. If the engine stops, start it back immediately and drive through.
+### 491 a=4
+B ������ �� ���޻�Ȳ �߻� �� ��ġ��ɰ� �Ÿ��� �� ����?
+TB Which of the following is NOT a correct description of the actions to take when responding to an emergency  situation such as a traffic accident?
+1 ���迩�� Ȯ�� || Check the risk.
+2 ȯ���� ���� Ȯ�� || Check the response of a patient.
+3 �⵵ Ȯ�� �� ȣ�� Ȯ�� || Secure the airway and check the breathing.
+4 ȯ���� �������� �Ż� Ȯ�� || Check the destination and identification of a patient.
+### 492 a=1
+B ���� �� �ڵ��� ���� ��Ȳ�� ���� �ùٸ� ��ó ����� �Ÿ��� �� ����?
+TB Which of the following is NOT a correct method of handling a dangerous situation while driving?
+1 ���� �� �ڵ��� ���ϰ� ������ �ڵ��� �� ��� ��� �����Ѵ�. || Firmly grasp the steering wheel if it vibrates hard and keep driving.
+2 �ڵ������� ���Ⱑ ���� ��� ������ ������ �̵� �� �õ��� ����. || If smoke comes out of the vehicle, pull over where it is safe and turn off the engine.
+3 Ÿ�̾� ��ũ�� ���� �ڵ��� �� ��� �����ϸ� ������ ���� �����Ѵ�. || If a tire explodes, hold the steering wheel firmly and pull over to a safe location.
+4 ö��ǳθ� ��� �� �õ��� ������ �ٽ� �ɸ��� �ʴ´ٸ� �ż��� ���� �� �Ű��Ѵ�. || If the engine stops while crossing a railroad, evacuate the vehicle immediately and contact the authorities.
+### 493 a=3, 4
+B ������ ���忡�� ����Ȯ���� ���� ���� �Կ� ������� �´� 2������?
+TB Which of the following are proper ways to take photographs at the scene of an accident? (Select TWO)
+1 ����ڽ� ������ �Կ��Ǵ� ��� �߰��Ͽ� ���� �Կ��� �ʿ䰡 ����. || If there is a black box that successfully captured the accident, there is no need to take any photos.
+2 ���ο� ��������, �ð��� ���� ������ �������� ���ӵǹǷ� �Կ����� �ʾƵ� �ȴ�. || Photos of spilled engine oil and coolant are not needed as their stains will last a long time on the road.
+3 �����, �ڵ����� ������ �ļպ��� �� ������ ��� ���� �����Կ��� ���Ÿ� �Կ��� ���� �Ѵ�. || Take photos of the overall accident scene from a distance and work your way toward the point of collision, taking  photos along the way.
+4 ���� ������ ��������� �������� ������ ǥ���ϰų� �Կ��� �� �д�. || Mark the scene by spray painting or taking photos of the direction of the tires.
+### 494 a=3, 4
+B ���� �� ��Ÿ� ���� ���� �ݵ�� �����ؾ� �� �켱���� 2������?
+TB Which TWO things must be inspected before starting a long-distance drive?
+1 ���� û�� ���� ���� || Cleanliness of the vehicle
+2 DMB(����ǥ����ġ) �۵����� ���� || DMB operation status
+3 ���� ���Ϸ� ���� || Oils and fluids
+4 Ÿ�̾� ���� ���� || Tires
+### 495 a=2
+B ���α�����ɻ� �������� ��� ������ �ش��ϴ� ����?
+TB Which of the following constitutes grounds for revocation of a driver's license?
+1 ���� �����˻� �Ⱓ ���� ���� ������ �����˻縦 ���� �ƴ��ϰ� 6������ �ʰ��� ��� || When 6 months have lapsed after the expiration date of the regular aptitude test
+2 �����ڰ� �ܼ� ������(����������, ��?��?�� ������)�� �����Ͽ� �ұ��� ���� �԰ǵ� ��� || When a motorist is booked without detention for assaulting a law enforcement officer (policeman or local government  official)
+3 �ڵ��� ��� �� �ڵ��� ��Ϲ�ȣ���� �������� �ʰ� ������ ��� || When a motorist drives his/her car without affixing a license plate after registration
+4 ��2�� ������㸦 �������� �ʰ� 2���� �ʰ��� ��� || When 2 years have lapsed without renewal of a Class II driver’s license for an ordinary motor vehicle
+### 496 a=2
+B ���α�����ɻ� ��Ģ�� ���� ������ ���� ����� 1�� ���� �Ⱓ ��� �� 20�� �̳� �����ؾ� �� �ݾ����� �´�  ����?
+TB If a person notified to pay a traffic penalty fails to make the payment during the first designated period, which  of the following is the correct amount that he/she has to pay within 20 days?
+1 ��� ���� ��Ģ�ݿ� 100���� 10�� ���� �ݾ� || Original traffic penalty + 10% late penalty
+2 ��� ���� ��Ģ�ݿ� 100���� 20�� ���� �ݾ� || Original traffic penalty + 20% late penalty
+3 ��� ���� ��Ģ�ݿ� 100���� 30�� ���� �ݾ� || Original traffic penalty + 30% late penalty
+4 ��� ���� ��Ģ�ݿ� 100���� 40�� ���� �ݾ� || Original traffic penalty + 40% late penalty
+### 497 a=3
+B ���α�����ɻ� ���� ���� �ʰ��� ���� �������� ��� �������� ���� ����?
+TB Which of the following is the correct standard for the revocation of a driver's license based on cumulative  demerit points?
+1 1�Ⱓ 100�� �̻� || 100+ points within 1 year
+2 2�Ⱓ 191�� �̻� || 191+ points within 2 years
+3 3�Ⱓ 271�� �̻� || 271+ points within 3 years
+4 5�Ⱓ 301�� �̻� || 301+ points within 5 years
+### 498 a=4
+B ���α�����ɻ� ������ ����� ���� ���� �������� �´� ����?
+TB Which of the following statements regarding the standards for demerit points based on the effects of a traffic  accident is correct?
+1 ���� ó���� ���� ������ ������ ���� ���ؿ� ���ؼ��� ���� ���� ������ ���п� ���� ������ �ΰ��Ѵ�. || As for the personal injury of the driver who will receive an administrative punishment, demerit points will be imposed based on the rules regarding traffic accidents involving personal injury.
+2 �ڵ��� �� �� ��� �������� ��� �ֹ� ������ ������ ������ �ΰ����� �ʴ´�. || In an accident between a car and a pedestrian, demerit points will not be imposed if the accident occurred due to  mistakes committed by both parties.
+3 ������ �߻� ������ �Ұ��׷��̰ų� �������� ����� ������ ������ ������ 2���� 1�� �����Ѵ�. || If the accident was unavoidable or had been caused clearly by a mistake of the injured, demerit points will be halved.
+4 �ڵ��� �� �� �ڵ��� �� �������� ��쿡�� �� ��� ���� �� ���� ���� ������ �� �����ڿ��Ը� ������ �ΰ��Ѵ�. || In an accident between cars, demerit points are imposed only on the driver who committed a serious violation that  caused the accident.
+### 499 a=4
+B ���α�����ɻ� �����ϸ�ü�� ���� �����Ǵ� �������ݿ� ���� ���·��� �������� �˸��� ����?
+TB According to the Road Traffic Act, which of the following statements regarding the administrative fine for  parking violations is correct?
+1 �¿����� �����ڴ� 3�� ���� ���·Ḧ ���� �Ѵ�. || The owner of a passenger car involved in a parking violation should pay an administrative fine of KRW 30,000.
+2 �������� �����ڴ� 7�� ���� ���·Ḧ ���� �Ѵ�. || The owner of a van involved in a parking violation should pay an administrative fine of KRW 70,000.
+3 �Ⱓ ���� ���·Ḧ ���� �ʾƵ� �������� ����. || No administrative fine is imposed even if you do not pay the fine within the designated period.
+4 ���� ��ҿ��� 2�ð� �̻� ���� ������ �ϴ� ��� ���·ᰡ ���ߵȴ�. || For parking violations that continue for more than two hours at the same location, additional administrative fines are  imposed.
+### 500 a=1
+B ���� �� ������� ����Ų �����ڰ� ���պ����̳� �������տ� ���ԵǾ� �־� ������ó��Ư�ʹ��� Ư�ʰ� ����Ǵ�  ���� �´� ����?
+TB Which of the following is a scenario where the exemption according to the Act on Special Cases Concerning the Settlement of Traffic Accidents is applied because the driver who caused the accident has comprehensive insurance or he/she is insured through a mutual aid association?
+1 �������� �ǹ��������� �ڵ����� �ձ��ϰ� ����� ������� �� ��� || When the driver has violated his/her duty to drive safely, resulting in car damage or minor accident
+2 ������� ����� ����� �̸��� �� ��� || When the driver has caused an accident that resulted in loss of human life
+3 ������� �߱��� �� �λ��� ��ȣ�� ���� ���� ä ������ ��� || When the driver has fled the scene after causing an accident without attending to the injured
+4 ��ȣ �������� ����� ������� ����Ų ��� || When the driver has violated traffic signals, causing an accident involving minor injuries
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/212_choices_en.json'|ConvertFrom-Json; function F([string]"'$s){[Text.Encoding]::UTF8.GetString([Text.Encoding]::GetEncoding(949).GetBytes($s))}; foreach($x in $d[20..39]){"### $($x.n) a=$($x.a)"; "B $(F $x.ko_b)"; "TB $($x.tr_b)"; for($i=0;$i-lt$x.ko_c.Count;$i++){"$($i+1) $(F $x.ko_c[$i]) || $($x.tr_c[$i])"}; if($x.check -or $x.detail){"AUTO $($x.check) $($x.detail)"}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 639ms:
+### 501 a=2
+B ���α�����ɻ� ���ο��� ��ȣ�� 7���� 4���� ������ ������ Ÿ�� �������� �ٸ� ������� ���ظ� ���� �����԰� �� ����. ó���������� Ʋ�� ����? (������ �̵���ġ�� ����)
+TB Seven people riding together in four vehicles on the road and causing harm to others were criminally charged according to the Road Traffic Act. Which of the following is NOT true about their punishment? (Excluding personal mobility devices)
+1 2�� ������ ¡���̳� 500�� �� ������ ���� || Imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 5 million
+2 ���� ��� �������� || Immediate license suspension upon apprehension
+3 ���ӵ� ��� ������� || License revocation if detained
+4 �����԰ǵ� ��� ���� 40�� || A penalty of 40 points if prosecuted
+### 502 a=4
+B ���α�����ɻ� �ڵ��� �����ڰ� ������������ �����԰ǵǾ���. �������� ����ó����?
+TB The driver of an automobile is arrested for reckless driving. Which of the following is the correct administrative  disposition on the driver’s license?
+1 ���� ��� || Revocation of the driver’s license
+2 ���� ���� 100�� || 100-day suspension of the driver’s license
+3 ���� ���� 60�� || 60-day suspension of the driver’s license
+4 ���� ���� 40�� || 40-day suspension of the driver’s license
+### 503 a=2
+B ���α�����ɻ� ���� ���� ���¿��� �����Ÿ� ������ ��� ��� �Ǵ°�?
+TB According to the Road Traffic Act and its Enforcement Decree, what is the punishment for riding a bicycle while  intoxicated?
+1 ó������ �ʴ´�. || No punishment
+2 ��Ģ�� 3�� ���� ���ó���Ѵ�. || Notification of a traffic penalty of KRW 30,000
+3 ���·� 4�� ���� �ΰ��Ѵ�. || Punished through an administrative fine of KRW 40,000
+4 10�� �� ������ ���� �Ǵ� ������ ó�Ѵ�. || Punished through a criminal fine of not more than KRW 100,000 or by detention
+### 504 a=3
+B ���α�����ɻ� ���� ���� ���¿� �ִٰ� �����Ҹ��� ����� ������ �ִ� ������ �����ڰ� ������������ ������ ���� ���� �䱸�� ������ ��� ó����?
+TB According to the Road Traffic Act, what is the punishment for a bicycle rider who is deemed to be intoxicated  and who refuses a police officer's lawful request for a field sobriety test?
+1 ó������ �ʴ´�. || No punishment
+2 ���·� 7�� ���� �ΰ��Ѵ�. || Punished through an administrative fine of KRW 70,000
+3 ��Ģ�� 10�� ���� ���ó���Ѵ�. || Notification of a traffic penalty of KRW 100,000
+4 10�� �� ������ ���� �Ǵ� ������ ó�Ѵ�. || Punished through a criminal fine of not more than KRW 100,000 or by detention
+### 505 a=2, 3
+B ������ó��Ư�ʹ��� ���� ó���Ǵ� ���� �´� 2������?
+TB Which of the following are the TWO situations subject to criminal prosecution in accordance with the Act on  Special Cases Concerning the Settlement of Traffic Accidents?
+1 ���պ��迡 �������� ���� ���� ���� ���ذ� �ִ� ������� ����Ű�� �����ڿ� ������ �� || A driver without comprehensive insurance reaches a settlement with the victim after causing an accident resulting in  property damage.
+2 �ýð������տ� ������ �ýð� �߾Ӽ��� ħ���Ͽ� ���� ���ذ� �ִ� ������� ����Ų �� || A taxi driver who is a member of the Taxi Mutual Aid Association causes a traffic accident resulting in injury or death after driving over the centerline.
+3 ���պ��迡 ������ ���� ��ȣ�� �����Ͽ� ���� ���ذ� �ִ� ������� ����Ų �� || A driver with comprehensive insurance causes a traffic accident resulting in injury or death after committing a violation  of a traffic signal.
+4 ȭ���������տ� ������ ȭ������ �������� ���������� ���� ���ذ� �ִ� ������� ����Ų �� || A truck covered by cooperative insurance causes injury due to careless driving.
+### 506 a=1, 2
+B ���α�����ɻ� ��Ģ�� ���� ������ ���� ����� 2�� ���αⰣ�� ����� ��쿡 ���� �������� �´� 2������?
+TB You fail to pay a traffic penalty for which you have been notified in writing even by its second deadline. Which  TWO are applicable?
+1 ��ü ���� �������� û���Ͽ��� �Ѵ�. || You must request a summary judgment immediately.
+2 �������� ���� �ƴ��� �� �������㸦 40�� �����Ѵ�. || Your license will be suspended for 40 days if no summary judgment is reached.
+3 ���·� �ΰ��Ѵ�. || An administrative fine will be charged.
+4 ��Ģ�ݾ׿� 100���� 30�� ���� �ݾ��� �����ϸ� �������� û������ �ʴ´�. || No summary judgment needs to be requested if you pay the traffic penalty along with an additional 30% as delay  penalty.
+### 507 a=3
+B ���α�����ɻ� �¿��ڵ��� �����ڰ� �֡������� ���� �ձ��ϴ� ������� ����Ű�� �̸� �����ϰ���� �����ڿ���  ���������� �������� �ƴ��� ��� ��� �Ǵ°�?
+TB What will happen if the driver of a passenger car causes a traffic accident that damages only parked or stopped vehicles and, even upon becoming aware of the situation, fails to provide personal information to the victims?
+1 ó������ �ʴ´�. || No punishment
+2 ���·� 10�� ���� �ΰ��Ѵ�. || An administrative fine of KRW 100,000 is imposed.
+3 ��Ģ�� 12�� ���� ���ó���Ѵ�. || A traffic penalty of KRW 120,000 is notified.
+4 30�� �� ������ ���� �Ǵ� ������ ó�Ѵ�. || A criminal fine of up to KRW 300,000 or detention is imposed.
+### 508 a=1
+B ���α�����ɻ� ���߾��ڿó� 0.03�ۼ�Ʈ �̻� 0.08�ۼ�Ʈ �̸��� ���� ���� ���·� �¿����� ������ ����� ����  ó���������� �´� ����? (10�� �� 1ȸ ������ ���)
+TB According to the Road Traffic Act, what is the correct penalty for a person who drives a passenger car with a blood alcohol concentration (BAC) of 0.03 percent or higher but less than 0.08 percent (for a first offense within 10 years)?
+1 1�� ������ ¡���̳� 500�� �� ������ ���� || Imprisonment for up to 1 year or criminal fine of up to KRW 5 million
+2 2�� ������ ¡���̳� 1õ�� �� ������ ���� || Imprisonment for up to 2 years or criminal fine of up to KRW 10 million
+3 3�� ������ ¡���̳� 1õ500�� �� ������ ���� || Imprisonment for up to 3 years or criminal fine of up to KRW 15 million
+4 2�� �̻� 5�� ������ ¡���̳� 1õ�� �� �̻� 2õ�� �� ������ ���� || Imprisonment in the range of 2 years - 5 years or criminal fine of KRW 10 million or more (up to KRW 20 million)
+### 509 a=2
+B ���α���� �� ���ξ纸 �� �纸������ ���� �����̴�. ��~���ȿ� �� ���� �ùٸ��� ¦������ ����? - ��Ż�� ���� ���ο��� ����ڵ��� ���� �ڵ����� ���� ���� ���� �����ϴ� ��쿡�� (��) �ڵ����� ������ ���� �����ڸ��� ���Ͽ� ���θ� �纸�Ͽ��� �Ѵ�. - ���������� �ϰ� ���� �ƴ��ϴ� �����ο��� (��)�Ϸ��� �ϴ� ���� �����ڴ� �� �����ο��� �����ϰų� (��)�Ϸ��� �ٸ� ���� ���� ������ �� ���� ���θ� �纸�Ͽ��� �Ѵ�.
+TB Under the Road Traffic Act, which set of words correctly completes ㉠–㉢?- On a steep narrow road, when two non-emergency vehicles come face to face with each other, the (㉠) vehicle must yield by moving to the right side.- At an unsignalized intersection, a driver turning (㉡) must yield to vehicles traveling straight ahead or turning (㉢).
+1 ���ö󰡴� ����ȸ�� ����ȸ�� || ㉠ uphill ㉡ left ㉢ right
+2 ���ö󰡴� ����ȸ�� ����ȸ�� || ㉠ downhill ㉡ left ㉢ right
+3 ���������� ����ȸ�� ����ȸ�� || ㉠ downhill ㉡ right ㉢ left
+4 ���������� ����ȸ�� ����ȸ�� || 
+### 510 a=1
+B ���α�����ɻ� ������������ �����ڰ� ���߾��ڿó� (   )�ۼ�Ʈ �̻��� �Ѿ ������ �� �����������㸦 ����� ��. (   )�ȿ� �������� �´� ����?
+TB If a driver with a student license drives in inebriated state with blood alcohol content of at least ( ) percent,  his/her student license shall be revoked. Which answer fits in ( )?
+1 0.03 || 0.03
+2 0.05 || 0.05
+3 0.08 || 0.08
+4 0.10 || 0.10
+### 511 a=3
+B ���α�����ɻ� �����ڰ� �ܼ� ���������� � ���� ������ �Ͽ� ���� �԰ǵ� �� ó������ �´� ����?
+TB Which of the following is the punishment imposed on a driver who has been criminally charged for assaulting a  traffic police officer?
+1 ���� 40���� �ΰ��Ѵ�. || 40 demerit points
+2 ���� 100���� �ΰ��Ѵ�. || 100 demerit points
+3 �������㸦 ��� ó���Ѵ�. || Revocation of the driver’s license
+4 �������� û���Ѵ�. || Request for a summary trial
+### 512 a=4
+B ���α�����ɻ� ���� ���� �ִ� ������� �߱��ϰ� ������ ������ �����ڸ� �˰��ϰų� �Ű��Ͽ� �˰��ϰ� �� �� ����(�������� �����ڰ� �ƴ� ���)���� �˰� �Ǵ� �Ű��� �� ���� (    )�� Ư�������� �ο��Ѵ�. (    )�� �´� ����?
+TB Each time a driver (if not a victim of a traffic accident) arrests or reports to arrest a driver of a vehicle that has caused a traffic accident involving personal injury and fled, a benefit of ( ) shall be given. Which of the following correctly fills in ( )?
+1 10�� || 10 points
+2 20�� || 20 points
+3 30�� || 30 points
+4 40�� || 40 points
+### 513 a=4
+B ���α�����ɻ� �¿��ڵ��� �����ڿ� ���� ���������� ��Ģ���� Ʋ�� ����?
+TB Which of the following is an incorrect pairing of traffic penalties and violations by the driver of an automobile?
+1 �ӵ� ����(�Ž� 60ų�ι��� �ʰ�)�� ��� 12�� �� || KRW 120,000 for a speed violation (exceeding 60 km/h)
+2 ��ȣ ������ ��� 6�� �� || KRW 60,000 for a signal violation
+3 �߾Ӽ�ħ���� ��� 6�� �� || KRW 60,000 for driving over the centerline
+4 �������� ���� �ñ⡤��� ������ ��� 5�� �� || KRW 50,000 for a violation of the period or place when/where overtaking is prohibited
+### 514 a=1
+B ���α�����ɻ� ȭ�����п� ����ۼ��� ������ �ۼ����κ��� 5���� �̳� �¿��ڵ����� ������ ��� ��Ģ����?(����ǥ �� �̼�ġ)
+TB According to the Road Traffic Act and its Enforcement Decree, what is the traffic penalty imposed on the driver of an automobile parked within 5 m of the transmission valve of a fire department standpipe used for fire-extinguishing purposes?
+1 4�� �� || KRW 40,000
+2 3�� �� || KRW 30,000
+3 2�� �� || KRW 20,000
+4 ó������ �ʴ´�. || No penalty is imposed.
+### 515 a=1
+B ���α������ ���� �ΰ������� �ٸ� �������� �ϳ���?
+TB According to the Road Traffic Act, which of the following violations involves a different criterion for demerit  points?
+1 �°��� ���� �Ҷ����� ��ġ���� || Driving while neglecting disorderly conduct by a passenger inside the vehicle
+2 ö��ǳθ� ������ ���� || Violating the method of passing a railroad crossing
+3 ��ӵ��� ���� ���� ���� || Violation of passage on a shoulder in an expressway
+4 ���������� ���� �����ǹ����� || Violation of the obligation to present a driver's license, etc.
+### 516 a=3
+B ���α�����ɻ� �������� û���� �����ڰ� �������� ���� ������ ������ ��Ģ�ݾ׿� (    )�� ���� �ݾ���  ���� ���θ� �����ϴ� ������ �����ϸ� ���������� �����ڿ� ���� ������ û���� ����Ͽ��� �Ѵ�. (   )�ȿ� �´� ����?
+TB When a driver subject to summary judgment pays the total sum of the due penalty in addition to ( ) of the traffic penalty and submits a document confirming the payment before the announcement of the summary judgment, the police chief is required to cancel the summary judgment on the driver. Select one that fills in ( ) correctly.
+1 100���� 20 || 20/100
+2 100���� 30 || 30/100
+3 100���� 50 || 50/100
+4 100���� 70 || 70/100
+### 517 a=4
+B ���α�����ɻ� ���� ���� ���¿� �ִٰ� �����Ҹ��� ����� ������ �ִ� �ڵ��� �����ڰ� ������������ ������ ���� ���� �䱸�� ������ ��� ó���������� �´� ����? (10�� �̳� 1ȸ ������ ���)
+TB According to the Road Traffic Act, what is the correct penalty for a driver who, despite having reasonable grounds to be considered under the influence of alcohol, refuses to comply with a breath alcohol test legitimately requested by a police officer (for a first offense within ten years)?
+1 1�� �̻� 2�� ������ ¡���̳� 500�� �� ������ ���� || Imprisonment for at least one year but no more than two years, or criminal fine of up to KRW 5 million
+2 1�� �̻� 3�� ������ ¡���̳� 1õ�� �� ������ ���� || Imprisonment for at least one year but no more than three years, or criminal fine of up to KRW 10 million
+3 1�� �̻� 4�� ������ ¡���̳� 500�� �� �̻� 1õ�� �� ������ ���� || Imprisonment for at least one year but no more than four years, or criminal fine in the range of KRW 5 million - KRW  10 million
+4 1�� �̻� 5�� ������ ¡���̳� 500�� �� �̻� 2õ�� �� ������ ���� || Imprisonment for at least one year but no more than five years, or criminal fine in the range of KRW 5 million - KRW  20 million
+### 518 a=1
+B �ڵ��� ��ȣ���� ������ �ڵ����� ������ ����� ��Ģ���� �´� ����?
+TB Which of the following is the appropriate penalty for driving a vehicle while covering the license plate?
+1 1�� ������ ¡�� �Ǵ� 1,000���� ������ ���� || Imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 10 million
+2 1�� ������ ¡�� �Ǵ� 2,000���� ������ ���� || Imprisonment with labor for not more than 1 year or criminal fine of not more than KRW 20 million
+3 2�� ������ ¡�� �Ǵ� 1,000���� ������ ���� || Imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 10 million
+4 2�� ������ ¡�� �Ǵ� 2,000���� ������ ���� || Imprisonment with labor for not more than 2 years or criminal fine of not more than KRW 20 million
+### 519 a=1
+B ���α�����ɻ� �ڵ��� �����ڰ� ��ӵ��ο��� �ڵ��� ���� �����ڵ����� ǥ���� ��ġ���� �ʰ� �����Ͽ���. ���  �Ǵ°�?
+TB According to the Road Traffic Act and its Enforcement Decree, the driver of a vehicle is traveling on an expressway without carrying a vehicle breakdown sign (safety tripod sign) inside the vehicle. What will happen?
+1 2�� ���� ���·ᰡ �ΰ��ȴ�. || An administrative fine of KRW 20,000 will be charged.
+2 3�� ���� ��Ģ������ ��� ó�еȴ�. || A traffic penalty of KRW 30,000 will be imposed.
+3 30�� �� ������ �������� ó���ȴ�. || A criminal fine of up to KRW 300,000 will be charged.
+4 �ƹ��� ó���̳� ó�е��� �ʴ´�. || No fine or penalty will be imposed.
+### 520 a=1
+B ���α�����ɻ� ��ӵ��ο��� �¿��ڵ��� �������� ���������� ���� ��Ģ�� �������� �´� ����?
+TB Which of the following is the correct pairing of traffic penalty and speed range imposed on the driver of an  automobile caught speeding on an expressway?
+1 ���Ѽӵ����� �ü� 60ų�ι��� �ʰ� 80ų�ι��� ���� ? ��Ģ�� 12�� �� || For exceeding the speed limit by over 60 km/h to 80 km/h: traffic penalty of KRW 120,000
+2 ���Ѽӵ����� �ü� 40ų�ι��� �ʰ� 60ų�ι��� ���� ? ��Ģ�� 8�� �� || For exceeding the speed limit by over 40 to 60 km/h: traffic penalty of KRW 80,000
+3 ���Ѽӵ����� �ü� 20ų�ι��� �ʰ� 40ų�ι��� ���� ? ��Ģ�� 5�� �� || For exceeding the speed limit by over 20 to 40 km/h: traffic penalty of KRW 50,000
+4 ���Ѽӵ����� �ü� 20ų�ι��� ���� ? ��Ģ�� 2�� �� || For exceeding the speed limit by less than 20 km/h: traffic penalty of KRW 20,000
+
+codex
+[
+  {
+    "n": 486,
+    "field": "c[3]",
+    "severity": "critical",
+    "issue": "원문은 전조등을 켠 채 경음기를 가볍게 울리라는 뜻인데, 번역은 전조등을 끄라고 의미를 반대로 옮겨 복수 정답처럼 보이게 한다.",
+    "suggestion": "If you spot an animal on the road, keep the headlights on and honk lightly to encourage it to move away."
+  },
+  {
+    "n": 493,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "원문의 핵심인 파편물·파손 부위 등 동일한 대상을 근거리와 원거리에서 모두 촬영하라는 내용을 다른 촬영 순서로 바꾸었다.",
+    "suggestion": "Take both close-up and long-distance photographs of the same subjects, such as debris and damaged parts of the vehicles and road."
+  },
+  {
+    "n": 500,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "원문에 있는 '피해자와 합의한 경우'가 번역에서 누락되어 면책 요건을 잘못 판단하게 할 수 있다.",
+    "suggestion": "When the driver violates the duty to drive safely, causes a traffic accident involving property damage, and reaches a settlement with the victim."
+  },
+  {
+    "n": 506,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "번역은 범칙금 미납자가 직접 즉결심판을 청구해야 한다고 오해하게 하지만, 원문은 즉결심판 청구 절차가 지체 없이 이루어져야 한다는 뜻이다.",
+    "suggestion": "A summary judgment must be requested without delay."
+  },
+  {
+    "n": 509,
+    "field": "c[4]",
+    "severity": "critical",
+    "issue": "네 번째 선택지의 번역이 완전히 누락되어 선택지 비교와 정답 판단이 불가능하다.",
+    "suggestion": "㉠ uphill ㉡ right ㉢ left"
+  }
+]
+tokens used
+34,164
+[
+  {
+    "n": 486,
+    "field": "c[3]",
+    "severity": "critical",
+    "issue": "원문은 전조등을 켠 채 경음기를 가볍게 울리라는 뜻인데, 번역은 전조등을 끄라고 의미를 반대로 옮겨 복수 정답처럼 보이게 한다.",
+    "suggestion": "If you spot an animal on the road, keep the headlights on and honk lightly to encourage it to move away."
+  },
+  {
+    "n": 493,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "원문의 핵심인 파편물·파손 부위 등 동일한 대상을 근거리와 원거리에서 모두 촬영하라는 내용을 다른 촬영 순서로 바꾸었다.",
+    "suggestion": "Take both close-up and long-distance photographs of the same subjects, such as debris and damaged parts of the vehicles and road."
+  },
+  {
+    "n": 500,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "원문에 있는 '피해자와 합의한 경우'가 번역에서 누락되어 면책 요건을 잘못 판단하게 할 수 있다.",
+    "suggestion": "When the driver violates the duty to drive safely, causes a traffic accident involving property damage, and reaches a settlement with the victim."
+  },
+  {
+    "n": 506,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "번역은 범칙금 미납자가 직접 즉결심판을 청구해야 한다고 오해하게 하지만, 원문은 즉결심판 청구 절차가 지체 없이 이루어져야 한다는 뜻이다.",
+    "suggestion": "A summary judgment must be requested without delay."
+  },
+  {
+    "n": 509,
+    "field": "c[4]",
+    "severity": "critical",
+    "issue": "네 번째 선택지의 번역이 완전히 누락되어 선택지 비교와 정답 판단이 불가능하다.",
+    "suggestion": "㉠ uphill ㉡ right ㉢ left"
+  }
+]

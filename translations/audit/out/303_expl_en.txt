@@ -1,0 +1,233 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12624-c4d3-72c2-869e-b7a8d56a2754
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/303_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+codex
+파일의 원문·번역과 자동 지적을 대조해 실질 오류만 선별하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/303_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 541ms:
+[
+ {
+  "n": 62,
+  "ko_e": "?먮룞李??깅줉踰덊샇???깆쓽 湲곗???愿??怨좎떆(援?넗援먰넻遺 怨좎떆 ??017-245??2017.4.18. ?쇰?媛쒖젙)",
+  "tr_e": "Public Notice on Standards for Motor Vehicle Registration Plates, etc. (Ministry of Land, Infrastructure and Transport Public Notice No. 2017-245, partially amended Apr. 18, 2017)."
+ },
+ {
+  "n": 63,
+  "ko_e": "?섏씠?⑥뒪李⑤줈???⑥감濡?李⑦룺 3.0m, ?ㅼ감濡?李⑦룺 3.6m?대떎.",
+  "tr_e": "For Hi-pass lanes, a single lane has a width of 3.0 m, and a multi-lane has a width of 3.6 m."
+ },
+ {
+  "n": 64,
+  "ko_e": "?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 蹂꾪몴15?? 鍮꾩궗?낆슜 寃쏀삎쨌?뚰삎 ?뱁빀?먮룞李⑥쓽 寃???좏슚湲곌컙(李⑤졊 4??珥덇낵)? 1?꾩씠??",
+  "tr_e": "Table 15-2 of the Enforcement Rule of the Motor Vehicle Management Act: the inspection validity period for a non-commercial light or small bus (van) (vehicle age exceeding 4 years) is 1 year."
+ },
+ {
+  "n": 65,
+  "ko_e": "?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 蹂꾪몴15?? 鍮꾩궗?낆슜 寃쏀삎쨌?뚰삎 ?붾Ъ?먮룞李⑥쓽 寃???좏슚湲곌컙(李⑤졊 4???댄븯)? 2?꾩씠??",
+  "tr_e": "Table 15-2 of the Enforcement Rule of the Motor Vehicle Management Act: the inspection validity period for a non-commercial light or small truck (vehicle age of 4 years or less) is 2 years."
+ },
+ {
+  "n": 66,
+  "ko_e": "?먮룞李④?由щ쾿 ?쒗뻾????議곗젣2??젣1???꾩떆?댄뻾 ?덇? ?좏슚湲곌컙? 10???대궡?대떎.",
+  "tr_e": "Article 7(2)1 of the Enforcement Decree of the Motor Vehicle Management Act: the validity period of a temporary operation permit is within 10 days."
+ },
+ {
+  "n": 67,
+  "ko_e": "?먮룞李⑤벑濡앸졊 ??2議? ??6議??먮룞李??뚯쑀沅뚯쓽 蹂?숈씠 ???뚯뿉???댁쟾?깅줉???섏뿬???쒕떎.",
+  "tr_e": "Articles 22 and 26 of the Motor Vehicle Registration Decree: when ownership of a motor vehicle changes, a transfer registration must be made."
+ },
+ {
+  "n": 68,
+  "ko_e": "?꾨줈援먰넻踰???4議곗젣1???좎뿉 痍⑦븳 ?곹깭?먯꽌???댁쟾 湲덉?) ?꾧뎄?좎? ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먮룞李⑤벑, ?몃㈃?꾩감 ?먮뒗 ?먯쟾嫄곕? ?댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ??5議?怨쇰줈?????깆쓽 ?댁쟾 湲덉?) ?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ?좎뿉 痍⑦븳 ?곹깭 ?몄뿉 怨쇰줈, 吏덈퀝, ?먮뒗 ?쎈Ъ (留덉빟, ?留? ?μ젙?좎꽦?섏빟???????곹뼢怨?洹?諛뽰쓽 ?ъ쑀濡??뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李????먮뒗 ?몃㈃?꾩감瑜??댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ??6議곗쓽2(?먯쑉二쇳뻾?먮룞李??댁쟾?먯쓽 以?섏궗???? ?????댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ??9議?紐⑤뱺 ?댁쟾?먯쓽 以?섏궗???? ????젣10???대????꾪솕 ?ъ슜 湲덉?), ??1???곸긽?쒖떆?μ튂 ?쒖껌 湲덉?) 諛???1 ?몄쓽2(?곸긽?쒖떆?μ튂 議곗옉 湲덉?)??洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+  "tr_e": "Article 44(1) of the Road Traffic Act (Prohibition of Driving While Intoxicated): no one may drive a motor vehicle, etc., a tram, or a bicycle while intoxicated. Article 45 (Prohibition of Driving While Fatigued, etc.): the driver of a motor vehicle, etc. or a tram must not drive a motor vehicle, etc. or a tram in a state in which normal driving may not be possible, other than while intoxicated, due to fatigue, illness, the effects of drugs (narcotics, cannabis, psychotropic substances, etc.), or other causes. Article 56-2(2) (Matters to Be Observed by Drivers of Autonomous Vehicles, etc.): where a driver drives using an autonomous driving system, the provisions of Article 49(1)10 (prohibition of using a handheld phone), subparagraph 11 (prohibition of watching a video display device), and subparagraph 11-2 (prohibition of operating a video display device) do not apply."
+ },
+ {
+  "n": 69,
+  "ko_e": "援먰넻?덉쟾踰??쒗뻾????5議????? 援먰넻?덉쟾踰뺤긽 6媛쒖썡 ?숈븞 蹂닿??섏뿬???쒕떎.",
+  "tr_e": "Article 45(2) of the Enforcement Decree of the Traffic Safety Act: under the Traffic Safety Act, it must be kept for 6 months."
+ },
+ {
+  "n": 70,
+  "ko_e": "?먮룞李⑤벑濡앸졊 ??6議??댁쟾?깅줉?좎껌) ?먮룞李⑤? 留ㅼ닔???좊???15???대궡 ?댁쟾 ?깅줉?댁빞 ?쒕떎.",
+  "tr_e": "Article 26 of the Motor Vehicle Registration Decree (Application for Transfer Registration): a transfer registration must be made within 15 days from the date the motor vehicle is purchased."
+ },
+ {
+  "n": 71,
+  "ko_e": "?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 ??7議??????뺢린寃?ъ쓽 湲곌컙? 寃?ъ쑀?④린媛꾨쭔猷뚯씪(??5議곗쓽 洹쒖젙???섑븯??寃?ъ쑀?④린 媛꾩쓣 ?곗옣 ?먮뒗 ?좎삁??寃쎌슦?먮뒗 洹?留뚮즺?쇱쓣 留먰븳?? ??90?쇰?????31?쇨퉴吏濡??섎ŉ, ??湲곌컙?댁뿉 ?뺢린寃?ъ뿉?? ?곹빀?먯젙??諛쏆? 寃쎌슦?먮뒗 寃?ъ쑀?④린媛꾨쭔猷뚯씪???뺢린寃?щ? 諛쏆? 寃껋쑝濡?蹂몃떎.",
+  "tr_e": "Article 77(2) of the Enforcement Rule of the Motor Vehicle Management Act: the period for a regular inspection is from 90 days before to 31 days after the expiration date of the inspection validity period (or, where the validity period has been extended or deferred under Article 75, the expiration date thereof); if a conforming determination is obtained in the regular inspection within this period, the regular inspection is deemed to have been conducted on the expiration date of the inspection validity period."
+ },
+ {
+  "n": 72,
+  "ko_e": "?먮룞李⑥넀?대같?곷낫?λ쾿 ??8議?怨쇳깭猷? ??떎??媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?먯뿉寃뚮뒗 300留????댄븯??怨쇳깭猷뚮?  遺怨쇳븳?? 1. ??議곗젣1?????????퉴吏??洹쒖젙???곕Ⅸ ?섎Т蹂댄뿕??媛?낇븯吏 ?꾨땲??????6議?踰뚯튃) ?〓떎??媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?먮뒗 1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+  "tr_e": "Article 48 of the Guarantee of Automobile Accident Compensation Act (Administrative Fines): (3) an administrative fine not exceeding 3 million won is imposed on any of the following persons: 1. a person who has not subscribed to mandatory insurance under Article 5(1) to (3). Article 46 (Penalty Provisions): (2) any of the following persons is punished by imprisonment for not more than 1 year or a fine not exceeding 10 million won."
+ },
+ {
+  "n": 73,
+  "ko_e": "?먮룞李④?由щ쾿 ??2議??먮룞李??뚯쑀沅뚯씠 留ㅻℓ, ?곸냽, 怨듬ℓ, 寃쎈ℓ ?깆쑝濡?蹂寃쎈맆 寃쎌슦 ?묒닔?몄씠 踰뺤젙湲고븳 ???뚯쑀沅뚯쓽  ?댁쟾?깅줉???댁빞 ?쒕떎.",
+  "tr_e": "Article 12 of the Motor Vehicle Management Act: where ownership of a motor vehicle changes through sale, inheritance, public auction, court auction, etc., the transferee must complete the transfer registration of ownership within the statutory period."
+ },
+ {
+  "n": 74,
+  "ko_e": "?먮룞李④?由щ쾿 ??3議??먮룞李?寃?? ?먮룞李??뚯쑀?먮뒗 援?넗援먰넻遺?κ????ㅼ떆?섎뒗 ?좉퇋寃?? ?뺢린寃?? ?쒕떇寃?? ???쒓??? ?섎━寃?щ? 諛쏆븘???쒕떎.",
+  "tr_e": "Article 43 of the Motor Vehicle Management Act (Motor Vehicle Inspection): the owner of a motor vehicle must undergo the new registration inspection, regular inspection, tuning inspection, temporary inspection, and repair inspection conducted by the Minister of Land, Infrastructure and Transport."
+ },
+ {
+  "n": 75,
+  "ko_e": "?먮룞李④?由щ쾿 ??議??????먮룞李??깅줉??愿???щТ???쒙쉈援곤쉈援ъ껌???대떦?쒕떎.",
+  "tr_e": "Article 8(1) of the Motor Vehicle Management Act: affairs concerning motor vehicle registration are handled by the Si/Gun/Gu (city/county/district) office."
+ },
+ {
+  "n": 76,
+  "ko_e": "?먮룞李⑤벑濡앸졊 ??議??먮룞李⑤벑濡앹? ?좉퇋, 蹂寃? ?댁쟾, 留먯냼, ?뺣쪟, ??밴텒, 寃쎌젙, ?덇퀬?깅줉???덇퀬, ?뱁뿀?깅줉? 沅뚮━??濡? ?ㅼ젙?깅줉 ?깆씠 ?덈떎. (?먮룞李⑤벑濡앸졊)",
+  "tr_e": "Article 3 of the Motor Vehicle Registration Decree: motor vehicle registrations include new, alteration, transfer, cancellation, seizure, mortgage, correction, and provisional registration, and patent-type registrations include rights registration, establishment registration, etc. (Motor Vehicle Registration Decree)."
+ },
+ {
+  "n": 77,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????8議곗뿉 ?곕씪 ?먮룞李?李쎌쑀由?媛?쒓킅???ш낵?⑥쓽 湲곗?? ?욌㈃ 李쎌쑀由ъ쓽 寃쎌슦 70?쇱꽱?? ?댁쟾?? 醫뚯슦 ?녿㈃ 李쎌쑀由ъ쓽 寃쎌슦 40?쇱꽱???댁뼱???쒕떎.",
+  "tr_e": "Under Article 28 of the Enforcement Decree of the Road Traffic Act, the standard for the visible-light transmittance of vehicle windows is 70 percent for the front windshield and 40 percent for the left and right side windows next to the driver's seat."
+ },
+ {
+  "n": 78,
+  "ko_e": "?댁쟾 以??꾪뿕?곹솴???몄??섍퀬 ?먮떒?섎ŉ ?됰룞紐낅졊 ??釉뚮젅?댄겕媛 ?묐룞?쒕떎.",
+  "tr_e": "While driving, a hazard is recognized and judged, and after the action command, the brakes are applied."
+ },
+ {
+  "n": 79,
+  "ko_e": "?먮룞李④? 異⑸룎?????댁쟾?먯? 吏곸젒 ?묒큺?섏뿬 異⑷꺽 ?먮꼫吏瑜??≪닔?댁＜?댁빞 ?쒕떎.",
+  "tr_e": "When a motor vehicle collides, it should directly contact the driver and absorb the impact energy."
+ },
+ {
+  "n": 80,
+  "ko_e": "?댁쟾???깆씠 ?怨??대┫ ?뚮뒗 ?ㅼ뿉???ㅻ뒗 李⑤웾???덈뒗吏瑜??뺤씤?쒕떎.",
+  "tr_e": "When the driver, etc. get in or out, check whether there are vehicles coming from behind."
+ },
+ {
+  "n": 81,
+  "ko_e": "?숆탳 ??蹂댄뻾濡쒖뿉???대┛?닿? 吏?섍컝 寃쎌슦 ?쇱떆?뺤??댁빞 ?섎ŉ, 泥좉만 嫄대꼸紐⑹뿉??李⑤떒湲곌? ?대젮媛?ㅻ뒗 寃쎌슦 吏꾩엯??硫????쒕떎. ?먰븳 ?쇨컙 ?댁쟾 ?쒖뿉??諛섎???李⑤웾??二쇳뻾??諛⑺빐媛 ?섏? ?딅룄濡??꾩“?깆쓣 ?섑뼢?쇰줈 議곗젙?댁빞 ?쒕떎.",
+  "tr_e": "When a child is passing on a pedestrian path in front of a school, one must come to a complete stop; when a barrier is about to lower at a railroad crossing, one must not enter. Also, when driving at night, one must adjust the headlights to low beam so as not to interfere with oncoming vehicles' travel."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -Encoding UTF8 -LiteralPath 'translations/audit/queue/303_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 505ms:
+[
+ {
+  "n": 62,
+  "ko_e": "자동차 등록번호판 등의 기준에 관한 고시(국토교통부 고시 제2017-245호 2017.4.18. 일부개정)",
+  "tr_e": "Public Notice on Standards for Motor Vehicle Registration Plates, etc. (Ministry of Land, Infrastructure and Transport Public Notice No. 2017-245, partially amended Apr. 18, 2017)."
+ },
+ {
+  "n": 63,
+  "ko_e": "하이패스차로는 단차로 차폭 3.0m, 다차로 차폭 3.6m이다.",
+  "tr_e": "For Hi-pass lanes, a single lane has a width of 3.0 m, and a multi-lane has a width of 3.6 m."
+ },
+ {
+  "n": 64,
+  "ko_e": "자동차관리법 시행규칙 별표15의2 비사업용 경형·소형 승합자동차의 검사 유효기간(차령 4년 초과)은 1년이다.",
+  "tr_e": "Table 15-2 of the Enforcement Rule of the Motor Vehicle Management Act: the inspection validity period for a non-commercial light or small bus (van) (vehicle age exceeding 4 years) is 1 year."
+ },
+ {
+  "n": 65,
+  "ko_e": "자동차관리법 시행규칙 별표15의2 비사업용 경형·소형 화물자동차의 검사 유효기간(차령 4년 이하)은 2년이다.",
+  "tr_e": "Table 15-2 of the Enforcement Rule of the Motor Vehicle Management Act: the inspection validity period for a non-commercial light or small truck (vehicle age of 4 years or less) is 2 years."
+ },
+ {
+  "n": 66,
+  "ko_e": "자동차관리법 시행령 제7조제2항제1호 임시운행 허가 유효기간은 10일 이내이다.",
+  "tr_e": "Article 7(2)1 of the Enforcement Decree of the Motor Vehicle Management Act: the validity period of a temporary operation permit is within 10 days."
+ },
+ {
+  "n": 67,
+  "ko_e": "자동차등록령 제22조, 제26조 자동차 소유권의 변동이 된 때에는 이전등록을 하여야 한다.",
+  "tr_e": "Articles 22 and 26 of the Motor Vehicle Registration Decree: when ownership of a motor vehicle changes, a transfer registration must be made."
+ },
+ {
+  "n": 68,
+  "ko_e": "도로교통법 제44조제1항(술에 취한 상태에서의 운전 금지) 누구든지 술에 취한 상태에서 자동차등, 노면전차 또는 자전거를 운전하여서는 아니 된다. 제45조(과로한 때 등의 운전 금지) 자동차등 또는 노면전차의 운전자는 술에 취한 상태 외에 과로, 질병, 또는 약물 (마약, 대마, 향정신성의약품 등)의 영향과 그 밖의 사유로 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차 등 또는 노면전차를 운전하여서는 아니 된다. 제56조의2(자율주행자동차 운전자의 준수사항 등) 제2항 운전자가 자율주행시스템을 사용하여 운전하는 경우에는 제49조(모든 운전자의 준수사항 등) 제1항제10호(휴대용 전화 사용 금지), 제11호(영상표시장치 시청 금지) 및 제11 호의2(영상표시장치 조작 금지)의 규정을 적용하지 아니한다.",
+  "tr_e": "Article 44(1) of the Road Traffic Act (Prohibition of Driving While Intoxicated): no one may drive a motor vehicle, etc., a tram, or a bicycle while intoxicated. Article 45 (Prohibition of Driving While Fatigued, etc.): the driver of a motor vehicle, etc. or a tram must not drive a motor vehicle, etc. or a tram in a state in which normal driving may not be possible, other than while intoxicated, due to fatigue, illness, the effects of drugs (narcotics, cannabis, psychotropic substances, etc.), or other causes. Article 56-2(2) (Matters to Be Observed by Drivers of Autonomous Vehicles, etc.): where a driver drives using an autonomous driving system, the provisions of Article 49(1)10 (prohibition of using a handheld phone), subparagraph 11 (prohibition of watching a video display device), and subparagraph 11-2 (prohibition of operating a video display device) do not apply."
+ },
+ {
+  "n": 69,
+  "ko_e": "교통안전법 시행령 제45조 제2항, 교통안전법상 6개월 동안 보관하여야 한다.",
+  "tr_e": "Article 45(2) of the Enforcement Decree of the Traffic Safety Act: under the Traffic Safety Act, it must be kept for 6 months."
+ },
+ {
+  "n": 70,
+  "ko_e": "자동차등록령 제26조(이전등록신청) 자동차를 매수한 날부터 15일 이내 이전 등록해야 한다.",
+  "tr_e": "Article 26 of the Motor Vehicle Registration Decree (Application for Transfer Registration): a transfer registration must be made within 15 days from the date the motor vehicle is purchased."
+ },
+ {
+  "n": 71,
+  "ko_e": "자동차관리법 시행규칙 제77조 제2항 정기검사의 기간은 검사유효기간만료일(제75조의 규정에 의하여 검사유효기 간을 연장 또는 유예한 경우에는 그 만료일을 말한다) 전 90일부터 후 31일까지로 하며, 이 기간내에 정기검사에서  적합판정을 받은 경우에는 검사유효기간만료일에 정기검사를 받은 것으로 본다.",
+  "tr_e": "Article 77(2) of the Enforcement Rule of the Motor Vehicle Management Act: the period for a regular inspection is from 90 days before to 31 days after the expiration date of the inspection validity period (or, where the validity period has been extended or deferred under Article 75, the expiration date thereof); if a conforming determination is obtained in the regular inspection within this period, the regular inspection is deemed to have been conducted on the expiration date of the inspection validity period."
+ },
+ {
+  "n": 72,
+  "ko_e": "자동차손해배상보장법 제48조(과태료) ③다음 각 호의 어느 하나에 해당하는 자에게는 300만 원 이하의 과태료를  부과한다. 1. 제5조제1항부터 제3항까지의 규정에 따른 의무보험에 가입하지 아니한 자 제46조(벌칙) ②다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만 원 이하의 벌금에 처한다.",
+  "tr_e": "Article 48 of the Guarantee of Automobile Accident Compensation Act (Administrative Fines): (3) an administrative fine not exceeding 3 million won is imposed on any of the following persons: 1. a person who has not subscribed to mandatory insurance under Article 5(1) to (3). Article 46 (Penalty Provisions): (2) any of the following persons is punished by imprisonment for not more than 1 year or a fine not exceeding 10 million won."
+ },
+ {
+  "n": 73,
+  "ko_e": "자동차관리법 제12조 자동차 소유권이 매매, 상속, 공매, 경매 등으로 변경될 경우 양수인이 법정기한 내 소유권의  이전등록을 해야 한다.",
+  "tr_e": "Article 12 of the Motor Vehicle Management Act: where ownership of a motor vehicle changes through sale, inheritance, public auction, court auction, etc., the transferee must complete the transfer registration of ownership within the statutory period."
+ },
+ {
+  "n": 74,
+  "ko_e": "자동차관리법 제43조(자동차 검사) 자동차 소유자는 국토교통부장관이 실시하는 신규검사, 정기검사, 튜닝검사, 임 시검사, 수리검사를 받아야 한다.",
+  "tr_e": "Article 43 of the Motor Vehicle Management Act (Motor Vehicle Inspection): the owner of a motor vehicle must undergo the new registration inspection, regular inspection, tuning inspection, temporary inspection, and repair inspection conducted by the Minister of Land, Infrastructure and Transport."
+ },
+ {
+  "n": 75,
+  "ko_e": "자동차관리법 제8조 제1항 자동차 등록에 관한 사무는 시･군･구청이 담당한다.",
+  "tr_e": "Article 8(1) of the Motor Vehicle Management Act: affairs concerning motor vehicle registration are handled by the Si/Gun/Gu (city/county/district) office."
+ },
+ {
+  "n": 76,
+  "ko_e": "자동차등록령 제3조 자동차등록은 신규, 변경, 이전, 말소, 압류, 저당권, 경정, 예고등록이 있고, 특허등록은 권리등 록, 설정등록 등이 있다. (자동차등록령)",
+  "tr_e": "Article 3 of the Motor Vehicle Registration Decree: motor vehicle registrations include new, alteration, transfer, cancellation, seizure, mortgage, correction, and provisional registration, and patent-type registrations include rights registration, establishment registration, etc. (Motor Vehicle Registration Decree)."
+ },
+ {
+  "n": 77,
+  "ko_e": "도로교통법 시행령 제28조에 따라 자동차 창유리 가시광선 투과율의 기준은 앞면 창유리의 경우 70퍼센트, 운전석  좌우 옆면 창유리의 경우 40퍼센트 이어야 한다.",
+  "tr_e": "Under Article 28 of the Enforcement Decree of the Road Traffic Act, the standard for the visible-light transmittance of vehicle windows is 70 percent for the front windshield and 40 percent for the left and right side windows next to the driver's seat."
+ },
+ {
+  "n": 78,
+  "ko_e": "운전 중 위험상황을 인지하고 판단하며 행동명령 후 브레이크가 작동된다.",
+  "tr_e": "While driving, a hazard is recognized and judged, and after the action command, the brakes are applied."
+ },
+ {
+  "n": 79,
+  "ko_e": "자동차가 충돌할 때 운전자와 직접 접촉하여 충격 에너지를 흡수해주어야 한다.",
+  "tr_e": "When a motor vehicle collides, it should directly contact the driver and absorb the impact energy."
+ },
+ {
+  "n": 80,
+  "ko_e": "운전자 등이 타고 내릴 때는 뒤에서 오는 차량이 있는지를 확인한다.",
+  "tr_e": "When the driver, etc. get in or out, check whether there are vehicles coming from behind."
+ },
+ {
+  "n": 81,
+  "ko_e": "학교 앞 보행로에서 어린이가 지나갈 경우 일시정지해야 하며, 철길 건널목에서 차단기가 내려가려는 경우 진입하 면 안 된다. 또한 야간 운전 시에는 반대편 차량의 주행에 방해가 되지 않도록 전조등을 하향으로 조정해야 한다.",
+  "tr_e": "When a child is passing on a pedestrian path in front of a school, one must come to a complete stop; when a barrier is about to lower at a railroad crossing, one must not enter. Also, when driving at night, one must adjust the headlights to low beam so as not to interfere with oncoming vehicles' travel."
+ }
+]
+
+codex
+[{"n":76,"field":"e","severity":"major","issue":"‘특허등록’을 ‘patent-type registrations’로 번역해 자동차등록의 한 유형처럼 오해하게 하며, ‘예고등록’도 ‘provisional registration’으로 잘못 옮겼다.","suggestion":"Article 3 of the Motor Vehicle Registration Decree: motor vehicle registrations include new registration, change registration, transfer registration, cancellation registration, seizure registration, mortgage registration, correction registration, and notice registration; patent registrations include registration of rights and registration of establishment. (Motor Vehicle Registration Decree)."},{"n":79,"field":"e","severity":"major","issue":"‘it’의 선행사가 자동차로 읽혀 자동차가 운전자와 직접 접촉해 충격을 흡수해야 한다는 잘못된 의미가 된다.","suggestion":"In a motor vehicle collision, the relevant safety device should come into direct contact with the driver and absorb the impact energy."}]
+tokens used
+11,052
+[{"n":76,"field":"e","severity":"major","issue":"‘특허등록’을 ‘patent-type registrations’로 번역해 자동차등록의 한 유형처럼 오해하게 하며, ‘예고등록’도 ‘provisional registration’으로 잘못 옮겼다.","suggestion":"Article 3 of the Motor Vehicle Registration Decree: motor vehicle registrations include new registration, change registration, transfer registration, cancellation registration, seizure registration, mortgage registration, correction registration, and notice registration; patent registrations include registration of rights and registration of establishment. (Motor Vehicle Registration Decree)."},{"n":79,"field":"e","severity":"major","issue":"‘it’의 선행사가 자동차로 읽혀 자동차가 운전자와 직접 접촉해 충격을 흡수해야 한다는 잘못된 의미가 된다.","suggestion":"In a motor vehicle collision, the relevant safety device should come into direct contact with the driver and absorb the impact energy."}]

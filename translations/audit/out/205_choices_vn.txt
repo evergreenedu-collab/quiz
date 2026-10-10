@@ -1,0 +1,1249 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125cd-2d0c-79b0-a164-7380e3921e35
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/205_choices_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/205_choices_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 630ms:
+[
+ {
+  "n": 201,
+  "ko_b": "李⑤웾 ?댁쟾 以?李⑤웾 ?좏샇?깃낵 ?〓떒蹂대룄 蹂댄뻾???좏샇?깆씠 紐⑤몢 怨좎옣 ??寃쎌슦 ?〓떒蹂대룄 ?듦낵 諛⑸쾿?쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "?〓떒?섎뒗 ?щ엺???덈뒗 寃쎌슦 ?쒗뻾?쇰줈 ?듦낵?쒕떎.",
+   "?〓떒蹂대룄???щ엺???놁쑝硫??쒗뻾?섏? ?딄퀬 鍮좊Ⅴ寃??듦낵?쒕떎.",
+   "?좏샇??怨좎옣?쇰줈 ?〓떒蹂대룄 湲곕뒫???곸떎?섏뿀?쇰?濡??쒗뻾???꾩슂媛 ?녿떎.",
+   "?〓떒?섎뒗 ?щ엺???덈뒗 寃쎌슦 ?〓떒蹂대룄 吏곸쟾???쇱떆?뺤??쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "C찼ch 휃i qua v梳죅h sang 휃튼沼쓓g 휃첬ngkhi 휃ang l찼i xe m횪 t梳쩿 c梳?c찼c 휃챔n t챠n hi沼뇎 c沼쬪 xe v횪 휃챔n t챠n hi沼뇎 giao  th척ng d횪nh cho ng튼沼쓎 휃i b沼?沼?l沼멼 sang 휃튼沼쓓gb沼?",
+  "tr_c": [
+   "N梳퓎 c처 ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g th챙 ph梳즜 ch梳죣 qua th梳춗 ch梳춎.",
+   "N梳퓎 kh척ng c처 ng튼沼쓎 휃ang 휃i b沼?tr챗n l沼멼 sang 휃튼沼쓓g th챙 kh척ng c梳쬷 휃i ch梳춎 l梳죍 m횪 b훱ng qua nhanh ch처ng.",
+   "N梳퓎 ch沼쯢 n훱ng c沼쬪 l沼멼 sang 휃튼沼쓓g b沼?m梳쩿 do h沼뢮g 휃챔n giao th척ng th챙 kh척ng c梳쬷 휃i ch梳춎 l梳죍.",
+   "N梳퓎 c처 ng튼沼쓎 휃i b沼?qua 휃튼沼쓓g th챙 ph梳즜 t梳죑 d沼쳌g ngay tr튼沼쌵 l沼멼 sang 휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 202,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂대룄? 李⑤룄媛 援щ텇???섏? ?딅뒗 ?꾨줈 以?以묒븰?좎씠 ?덈뒗 ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?듯뻾諛⑸쾿?쇰줈 媛???곸젅??寃껋??",
+  "ko_c": [
+   "李⑤룄 以묒븰?쇰줈 蹂댄뻾?쒕떎.",
+   "李⑤룄 ?곗륫?쇰줈 蹂댄뻾?쒕떎.",
+   "湲멸??μ옄由ш뎄??쑝濡?蹂댄뻾?쒕떎.",
+   "?꾨줈????遺遺꾩쑝濡?蹂댄뻾?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Ph튼퉤ng ph찼p n횪o l횪 ph첫 h沼즤 nh梳쩿 휃沼?ng튼沼쓎 휃i b沼?l튼u th척ng tr챗n 휃o梳죒 휃튼沼쓓g kh척ng ph창n chia v沼뎎 h챔 v횪  l챵ng 휃튼沼쓓g nh튼ng c처 v梳죅h trung t창m 沼?gi沼칊 theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?,
+  "tr_c": [
+   "휂i b沼?沼?gi沼칊 l챵ng 휃튼沼쓓g.",
+   "휂i b沼?b챗n ph梳즜 l챵ng 휃튼沼쓓g.",
+   "휂i b沼?沼?s찼t m챕p 휃튼沼쓓g.",
+   "휂i b沼?tho梳즜 m찼i tr챗n to횪n b沼?휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 203,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂댄뻾?먯쟾?⑸룄濡??듯뻾???덉슜??李⑤쭏???댁쟾?먭? ?듯뻾?섎뒗 諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?덈뒗 寃쎌슦 ?쒗뻾?쇰줈 吏꾪뻾?쒕떎.",
+   "寃쎌쓬湲곕? ?몃━硫댁꽌 吏꾪뻾?쒕떎.",
+   "蹂댄뻾?먯쓽 嫄몄쓬 ?띾룄濡??댄뻾?섍굅???쇱떆?뺤??섏뿬???쒕떎.",
+   "蹂댄뻾?먭? ?녿뒗 寃쎌슦 ?좎냽??吏꾪뻾?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Ph튼퉤ng ph찼p l튼u th척ng n횪o l횪 휃첬ng c沼쬪 ng튼沼쓎 l찼i c찼c ph튼퉤ng ti沼뇆 휃튼沼즓 ph챕p l튼u th척ng tr챗n 휃튼沼쓓g d횪nh  ri챗ng cho ng튼沼쓎 휃i b沼?theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "N梳퓎 c처 ng튼沼쓎 휃i b沼?th챙 휃i ch梳춎 l梳죍.",
+   "V沼첺 b梳쩷 c챵i xe v沼첺 휃i.",
+   "Ch梳죣 v沼쌻 t沼멵 휃沼?b梳켷g t沼멵 휃沼?b튼沼쌵 ch창n c沼쬪 ng튼沼쓎 휃i b沼?ho梳톍 t梳죑 d沼쳌g xe.",
+   "N梳퓎 kh척ng c처 ng튼沼쓎 휃i b沼?th챙 휃i nhanh qua."
+  ]
+ },
+ {
+  "n": 204,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?곗꽍?? ?덉쟾?쒖???洹몄? 鍮꾩듂???멸났援ъ“臾쇰줈 寃쎄퀎瑜??쒖떆?섏뿬 蹂댄뻾?먭? ?듯뻾?????덈룄濡????꾨줈??遺遺꾩??",
+  "ko_c": [
+   "蹂대룄",
+   "湲멸??μ옄由ш뎄??,
+   "?〓떒蹂대룄",
+   "?먯쟾嫄고슒?⑤룄"
+  ],
+  "a": "1",
+  "tr_b": "Theo lu梳춗 Giao th척ng 휃튼沼쓓g b沼? ph梳쬷 휃튼沼쓓g n횪o cho ph챕p ng튼沼쓎 휃i b沼?휃i qua b梳켷g c찼ch 휃찼nh d梳쪀 ranh gi沼쌻  b梳켷g v梳죅h k梳?휃튼沼쓓g, bi沼긪 b찼o an to횪n ho梳톍 c척ng tr챙nh nh창n t梳죓 theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "V沼뎎 h챔",
+   "Khu v沼켧 m챕p 휃튼沼쓓g",
+   "L沼멼 휃i b沼?qua 휃튼沼쓓g",
+   "L沼멼 xe 휃梳죖 qua 휃튼沼쓓g"
+  ]
+ },
+ {
+  "n": 205,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂댄뻾?좏샇?깆씠 ?먮㈇?????щ컮瑜??〓떒諛⑸쾿???꾨땶 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?〓떒???쒖옉?섏뿬?쒕뒗 ???쒕떎.",
+   "?〓떒?섍퀬 ?덈뒗 蹂댄뻾?먮뒗 ?좎냽?섍쾶 ?〓떒???꾨즺?섏뿬???쒕떎.",
+   "?〓떒??以묒??섍퀬 蹂대룄濡??섎룎?꾩????쒕떎.",
+   "?〓떒??以묒??섍퀬 洹??먮━?먯꽌 ?ㅼ쓬 ?좏샇瑜?湲곕떎由곕떎."
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? C찼ch  휃i qua 휃튼沼쓓g kh척ng 휃첬ng khi 휃챔n t챠n hi沼뇎 cho ng튼沼쓎 휃i b沼? 휃ang nh梳쩺 nh찼y?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i b沼?kh척ng 휃튼沼즓 b梳칣 휃梳쬾 b훱ng qua 휃튼沼쓓g.",
+   "Ng튼沼쓎 휃ang 휃i b沼?qua 휃튼沼쓓g ph梳즜 nhanh ch처ng qua 휃튼沼쓓g.",
+   "D沼쳌g qua 휃튼沼쓓g v횪 quay tr沼?l梳죍 v沼뎎 h챔.",
+   "D沼쳌g qua 휃튼沼쓓g v횪 휃沼즜 t챠n hi沼뇎 ti梳퓈 theo ngay t梳죍 ch沼?"
+  ]
+ },
+ {
+  "n": 206,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 李⑥쓽 ?댁쟾?먭? ?ㅼ쓬怨?媛숈? ?곹솴?먯꽌 ?쒗뻾?섏뿬????寃쎌슦??",
+  "ko_c": [
+   "?먯쟾嫄곕? ?뚭퀬 ?〓떒蹂대룄瑜??〓떒?섎뒗 ?щ엺??諛쒓껄?섏?????,
+   "?대㈃?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섍컝 ??,
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??〓떒?섎뒗 寃껋쓣 遊ㅼ쓣 ??,
+   "蹂댄뻾?먭? ?〓떒蹂대룄媛 ?녿뒗 ?꾨줈瑜??〓떒?섎뒗 寃껋쓣 遊ㅼ쓣 ??
+  ],
+  "a": "2",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? tr튼沼쓓g h沼즤 n횪o sau 휃창y ng튼沼쓎 l찼i xe 척 t척 ph梳즜 휃i ch梳춎 l梳죍?",
+  "tr_c": [
+   "Khi ph찼t hi沼뇆 th梳쪅 m沼셳 ng튼沼쓎 d梳칣 xe 휃梳죖 v횪 b훱ng qua l沼멼 휃i b沼?qua 휃튼沼쓓g",
+   "Khi 휃i qua b챗n c梳죒h m沼셳 ng튼沼쓎 휃ang 휃i b沼?tr챗n 휃o梳죒 휃튼沼쓓g h梳퉝 kh척ng chia l횪n",
+   "Khi th梳쪅 ng튼沼쓎 휃i b沼?휃ang b훱ng qua l沼멼 sang 휃튼沼쓓g",
+   "Khi nh챙n th梳쪅 ng튼沼쓎 휃i b沼?휃ang 휃i sang 휃튼沼쓓g tr챗n 휃o梳죒 휃튼沼쓓g kh척ng c처 l沼멼 sang 휃튼沼쓓g"
+  ]
+ },
+ {
+  "n": 207,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎썝???〓떒蹂대룄???쒗븳?띾룄瑜?留ㅼ떆 (   )?щ줈誘명꽣 ?댄븯濡??쒗븳???꾩슂媛 ?덈뒗 ?꾨줈???ㅼ튂?쒕떎. (    )?덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "10",
+   "20",
+   "30",
+   "50"
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? l沼멼 휃i b沼?sang 휃튼沼쓓g c처 chi沼걏 cao b梳켷g v沼뎎 h챔 휃튼沼즓 l梳칛 휃梳톞 沼?nh沼칗g  휃o梳죒 휃튼沼쓓g c梳쬷 h梳죒 ch梳?t沼멵 휃沼?t沼?( ) km/gi沼?tr沼?xu沼몁g. 휂찼p 찼n n횪o 휃첬ng v沼쌻 (     )?",
+  "tr_c": [
+   "10",
+   "20",
+   "30",
+   "50"
+  ]
+ },
+ {
+  "n": 208,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤웾 ?댁쟾 以??쇱떆?뺤??댁빞 ???곹솴???꾨땶 寃껋??",
+  "ko_c": [
+   "?대┛?닿? 蹂댄샇???놁씠 ?꾨줈瑜??〓떒????,
+   "李⑤웾 ?좏샇?깆씠 ?곸깋?깊솕???먮㈇ ?좏샇????,
+   "?대┛?닿? ?꾨줈?먯꽌 ?됱븘 ?덇굅?????덉쓣 ??,
+   "李⑤웾 ?좏샇?깆씠 ?⑹깋?깊솕???먮㈇ ?좏샇????
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? 휃찼p 찼n n횪o kh척ng ph梳즜 l횪 t챙nh hu沼몁g ph梳즜 t梳죑 d沼쳌g khi 휃ang l찼i xe?",
+  "tr_c": [
+   "Khi tr梳?em b훱ng qua 휃튼沼쓓g kh척ng c처 ng튼沼쓎 gi찼m h沼?,
+   "Khi 휃챔n t챠n hi沼뇎 l횪 휃챔n 휃沼?휃ang nh梳쩺 nh찼y",
+   "Khi c처 tr梳?em 휃ang ng沼밿 ho梳톍 휃沼쯰g tr챗n 휃튼沼쓓g",
+   "Khi 휃챔n t챠n hi沼뇎 l횪 휃챔n v횪ng 휃ang nh梳쩺 nh찼y"
+  ]
+ },
+ {
+  "n": 209,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺣졊???媛곸꽑 ?〓떒蹂대룄??蹂댄뻾 ?좏샇媛 ?뱀깋?깊솕????李⑤쭏???듯뻾諛⑸쾿?쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "吏곸쭊?섎젮???뚯뿉???뺤??좎쓽 吏곸쟾???뺤??섏뿬???쒕떎.",
+   "蹂댄뻾?먭? ?녿떎硫??띾룄瑜??믪뿬 ?고쉶?꾪븷 ???덈떎.",
+   "蹂댄뻾?먭? ?녿떎硫??띾룄瑜??믪뿬 醫뚰쉶?꾪븷 ???덈떎.",
+   "蹂댄뻾?먭? ?〓떒?섏? ?딅뒗 諛⑺뼢?쇰줈??吏꾪뻾?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "C찼ch l튼u th척ng n횪o l횪 휃첬ng c沼쬪 c찼c ph튼퉤ng ti沼뇆 giao th척ng 휃i qua khi 휃챔n t챠n hi沼뇎 휃i b沼?沼?v梳죅h qua 휃튼沼쓓g  ch챕o chuy沼긪 m횪u xanh, theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "N梳퓎 mu沼몁 휃i th梳쿻g th챙 ph梳즜 d沼쳌g l梳죍 ngay tr튼沼쌵 v梳죅h d沼쳌g.",
+   "N梳퓎 kh척ng c처 ng튼沼쓎 휃i b沼?th챙 c처 th沼?t훱ng t沼멵 v횪 r梳?ph梳즜.",
+   "N梳퓎 kh척ng c처 ng튼沼쓎 휃i b沼?th챙 c처 th沼?t훱ng t沼멵 v횪 r梳?tr찼i.",
+   "C처 th沼?휃i v沼?h튼沼썀g kh척ng c처 ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 210,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 李⑥쓽 ?댁쟾?먭? 洹?李⑥쓽 諛뷀대? ?쇱떆?곸쑝濡??꾩쟾???뺤??쒗궎??寃껋??",
+  "ko_c": [
+   "?쒗뻾",
+   "?뺤감",
+   "二쇱감",
+   "?쇱떆?뺤?"
+  ],
+  "a": "4",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? vi沼놻 ng튼沼쓎 l찼i xe t梳죑 th沼쓎 l횪m cho b찼nh xe d沼쳌g h梳쿻 c처 ngh칫a l횪 g챙?",
+  "tr_c": [
+   "휂i ch梳춎 l梳죍",
+   "D沼쳌g xe",
+   "휂沼?xe",
+   "T梳죑 d沼쳌g"
+  ]
+ },
+ {
+  "n": 211,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?섎즺???꾨룞?좎껜?닿? ?듯뻾?????녿뒗 怨녹??",
+  "ko_c": [
+   "?먯쟾嫄곗쟾?⑸룄濡?,
+   "湲멸??μ옄由ш뎄??,
+   "蹂대룄",
+   "?꾨줈??媛?μ옄由?
+  ],
+  "a": "1",
+  "tr_b": "Khu v沼켧 n횪o sau 휃창y l횪 n퉤i m횪 xe l훱n 휃i沼뇆 y t梳?kh척ng 휃튼沼즓 ph챕p l튼u th척ng theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "휂튼沼쓓g d횪nh ri챗ng cho xe 휃梳죖",
+   "Khu v沼켧 l沼?휃튼沼쓓g",
+   "V沼뎎 h챔",
+   "M챕p 휃튼沼쓓g"
+  ]
+ },
+ {
+  "n": 212,
+  "ko_b": "援먰넻?뺣━媛 ?녿뒗 援먯감濡쒖뿉??醫뚰쉶?꾪븯??諛⑸쾿 以?媛???녹? 寃껋??",
+  "ko_c": [
+   "?쇰컲?꾨줈?먯꽌??醫뚰쉶?꾪븯?ㅻ뒗 援먯감濡?吏곸쟾?먯꽌 諛⑺뼢吏?쒕벑??耳쒓퀬 醫뚰쉶?꾪븳??",
+   "誘몃━ ?꾨줈??以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒떖 諛붽묑履쎌쑝濡?醫뚰쉶?꾪븳??",
+   "?쑣룸룄寃쎌같泥?옣??吏?뺥븯?붾씪??援먯감濡쒖쓽 以묒떖 諛붽묑履쎌쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븷 ???녿떎.",
+   "諛섎뱶???쒗뻾?섏뿬???섍퀬, ?쇱떆?뺤????곹솴???곕씪 ?댁쟾?먭? ?먮떒?섏뿬 ?ㅼ떆?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "C찼ch n횪o l횪 ch챠nh x찼c nh梳쩿 휃沼?r梳?tr찼i t梳죍 휃튼沼쓓g giao nhau kh척ng c처 휃i沼걏 khi沼긪 giao th척ng?",
+  "tr_c": [
+   "Tr챗n 휃튼沼쓓g th척ng th튼沼쓓g, b梳춗 휃챔n xi nhan ngay tr튼沼쌵 휃o梳죒 휃튼沼쓓g giao nhau 휃沼땙h r梳?tr찼i r沼밿 sau 휃처 r梳?tr찼i.",
+   "휂i t沼?t沼?theo v梳죅h ph창n c찼ch gi沼칊 휃튼沼쓓g tr튼沼쌵 r沼밿 r梳?tr찼i sang ph챠a ngo횪i c沼쬪 khu v沼켧 ch챠nh gi沼칊 휃튼沼쓓g giao nhau.",
+   "Kh척ng th沼?s沼?d沼쩸g ph챠a ngo횪i c沼쬪 khu v沼켧 ch챠nh gi沼칊 휃튼沼쓓g giao nhau 휃沼?r梳?tr찼i ngay c梳?khi Gi찼m 휃沼멵 S沼?C梳즢h s찼t  t沼뎝h - th횪nh ph沼?ch沼?휃沼땙h.",
+   "B梳칣 bu沼셛 ph梳즜 휃i t沼?t沼? c챵n vi沼놻 c처 d沼쳌g t梳죑 th沼쓎 hay kh척ng th챙 ng튼沼쓎 l찼i xe s梳?ph찼n 휃o찼n v횪 th沼켧 hi沼뇆 tu沼?theo  t沼쳌g t챙nh hu沼몁g."
+  ]
+ },
+ {
+  "n": 213,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ튂?섎뒗 李⑤줈???덈퉬??(  )誘명꽣 ?댁긽?쇰줈 ?섏뿬???쒕떎. ??寃쎌슦 醫뚰쉶?꾩쟾??李⑤줈???ㅼ튂 ??遺?앹씠?섎떎 怨??몄젙?섎뒗 ?뚯뿉??(   )?쇳떚誘명꽣 ?댁긽?쇰줈 ?????덈떎. (   )?덉뿉 湲곗??쇰줈 媛곴컖 留욌뒗 寃껋??",
+  "ko_c": [
+   "5, 300",
+   "4, 285",
+   "3, 275",
+   "2, 265"
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? c찼c l횪n 휃튼沼쓓g 휃튼沼즓 b沼?tr챠 ph梳즜 r沼셬g tr챗n ( ) m챕t. Trong tr튼沼쓓g h沼즤 n횪y, khi 휃튼沼즓 coi l횪 tr튼沼쓓g h沼즤 b梳쩿 휃梳칌 d칫, ch梳쿻g h梳죒 nh튼 vi沼놻 b沼?tr챠 l횪n 휃튼沼쓓g ch沼?r梳?tr찼i, th챙 c처 th沼?b沼?tr챠 t沼?( ) cm tr沼?l챗n. N沼셢 dung n횪o d튼沼쌻 휃창y l횪 ti챗u chu梳쯰 휃첬ng trong ( )?",
+  "tr_c": [
+   "5, 300",
+   "4, 285",
+   "3, 275",
+   "2, 265"
+  ]
+ },
+ {
+  "n": 214,
+  "ko_b": "?꾨줈 ?곗륫 遺遺꾩쓽 ??씠 6誘명꽣媛 ?섏? ?꾨땲?섎뒗 ?꾨줈?먯꽌 ?ㅻⅨ 李⑤? ?욎?瑜닿린?????덈뒗 寃쎌슦濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨줈??醫뚯륫 遺遺꾩쓣 ?뺤씤?????녿뒗 寃쎌슦",
+   "諛섎? 諛⑺뼢??援먰넻??諛⑺빐???곕젮媛 ?덈뒗 寃쎌슦",
+   "?욎감媛 ??띿쑝濡?吏꾪뻾?섍퀬, ?ㅻⅨ 李⑥? ?덉쟾嫄곕━媛 ?뺣낫??寃쎌슦",
+   "?덉쟾?쒖? ?깆쑝濡??욎?瑜닿린瑜?湲덉??섍굅???쒗븳?섍퀬 ?덈뒗 寃쎌슦"
+  ],
+  "a": "3",
+  "tr_b": "Tr튼沼쓓g h沼즤 n횪o l횪 휃첬ng 휃沼?c처 th沼?v튼沼즨 xe kh찼c khi chi沼걏 r沼셬g c沼쬪 ph梳쬷 휃튼沼쓓g b챗n ph梳즜 kh척ng 휃沼?6m?",
+  "tr_c": [
+   "Tr튼沼쓓g h沼즤 kh척ng th沼?ki沼긩 tra ph梳쬷 휃튼沼쓓g b챗n tr찼i",
+   "Tr튼沼쓓g h沼즤 c처 th沼?g창y c梳즢 tr沼?giao th척ng cho h튼沼썀g ng튼沼즓 l梳죍",
+   "Tr튼沼쓓g h沼즤 xe ph챠a tr튼沼쌵 ch梳죣 v沼쌻 t沼멵 휃沼?th梳쩺 v횪 휃梳즡 b梳즣 휃튼沼즓 kho梳즢g c찼ch an to횪n v沼쌻 ca?c ph튼퉤ng ti沼뇆 kh찼c",
+   "Tr튼沼쓓g h沼즤 c처 bi沼긪 b찼o an to횪n h梳죒 ch梳?ho梳톍 c梳쩷 v튼沼즨"
+  ]
+ },
+ {
+  "n": 215,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?쒓컙????곕씪 ?묐갑?μ쓽 ?듯뻾?됱씠 ?쒕졆?섍쾶 ?ㅻⅨ ?꾨줈?먮뒗 援먰넻?됱씠 留롮? 履쎌쑝濡?李⑤줈???섍? ?뺣??? ???덈룄濡??좏샇湲곗뿉 ?섑븯??李⑤줈??吏꾪뻾諛⑺뼢??吏?쒗븯??李⑤줈??",
+  "ko_c": [
+   "媛蹂李⑤줈",
+   "踰꾩뒪?꾩슜李⑤줈",
+   "媛?띿감濡?,
+   "?욎?瑜닿린 李⑤줈"
+  ],
+  "a": "1",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? v沼쌻 휃튼沼쓓g c처 l튼沼즢g xe l튼u th척ng 沼?hai h튼沼썀g kh찼c bi沼뇍 r천 r沼뇍 theo khung th沼쓎 gian, th챙 l횪n 휃튼沼쓓g 휃튼沼즓 ch沼?d梳쳌 h튼沼썀g 휃i b梳켷g 휃챔n t챠n hi沼뇎 휃沼?c처 th沼?t훱ng s沼?l튼沼즢g l횪n xe cho h튼沼썀g c처 nhi沼걏 ph튼퉤ng ti沼뇆 tham gia giao th척ng?",
+  "tr_c": [
+   "L횪n 휃튼沼쓓g c처 th沼?thay 휃沼뷼",
+   "L횪n 휃튼沼쓓g d횪nh ri챗ng cho xe bu첵t",
+   "L횪n 휃튼沼쓓g t훱ng t沼멵",
+   "L횪n xe v튼沼즨"
+  ]
+ },
+ {
+  "n": 216,
+  "ko_b": "?꾨줈援먰넻踰뺣졊?곣섎え??李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉??(      )???섎젮??寃쎌슦?먮뒗 誘몃━ ?꾨줈???곗륫 媛?μ옄由щ? ?쒗뻾?섎㈃ ??(     )?섏뿬???쒕떎. ??寃쎌슦 (     )?섎뒗 李⑤룄???댁쟾?먮뒗 ?좏샇???곕씪 ?뺤??섍굅??吏꾪뻾?섎뒗 蹂댄뻾???먮뒗 ?먯쟾嫄??깆뿉  二쇱쓽?섏뿬???쒕떎.??    )?덉뿉 留욌뒗 寃껋쑝濡?吏앹??댁쭊 寃껋??",
+  "ko_c": [
+   "?고쉶?????고쉶?????고쉶??,
+   "醫뚰쉶????醫뚰쉶????醫뚰쉶??,
+   "?고쉶????醫뚰쉶?????고쉶??,
+   "醫뚰쉶?????고쉶????醫뚰쉶??
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?ng튼沼쓎 휃i沼걏 khi沼긪 t梳쩿 c梳?lo梳죍 xe khi mu沼몁 ( ) tr챗n 휃튼沼쓓g giao nhau, ph梳즜 휃i ch梳춎 沼?m챕p ph梳즜 c沼쬪 휃튼沼쓓g tr튼沼쌵 r沼밿 ( ). Trong tr튼沼쓓g h沼즤 n횪y, ng튼沼쓎 휃i沼걏 khi沼긪 xe tr챗n l횪n 휃튼沼쓓g ( ), ph梳즜 d沼쳌g l梳죍 theo t챠n hi沼뇎 휃챔n ho梳톍 ch첬 첵 ng튼沼쓎 휃i b沼?hay xe 휃梳죖 휃ang l튼u th척ng. Th沼?t沼?n沼셢 dung 휃첬ng 휃沼?휃i沼걆 v횪o ( ) l횪?",
+  "tr_c": [
+   "R梳?ph梳즜 - R梳?ph梳즜 - R梳?ph梳즜",
+   "R梳?tr찼i - R梳?tr찼i - R梳?tr찼i",
+   "R梳?ph梳즜 - R梳?tr찼i - R梳?ph梳즜",
+   "R梳?tr찼i - R梳?ph梳즜 - R梳?tr찼i"
+  ]
+ },
+ {
+  "n": 217,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 李⑤줈蹂寃쎌뿉 ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅻ━ ?꾨뒗 ?꾪뿕???μ냼?닿린 ?뚮Ц??諛깆깋?ㅼ꽑?쇰줈 李⑤줈蹂寃쎌쓣 ?쒗븳?섎뒗 寃쎌슦媛 留롫떎.",
+   "李⑤줈蹂寃쎌쓣 ?쒗븳?섍퀬???섎뒗 ?μ냼??諛깆깋?먯꽑??李⑥꽑?쇰줈 ?쒖떆?섏뼱 ?덈떎.",
+   "李⑤줈蹂寃?湲덉??μ냼?먯꽌???꾨줈怨듭궗 ?깆쑝濡??μ븷臾쇱씠 ?덉뼱 ?듯뻾??遺덇??ν븳 寃쎌슦?쇰룄 李⑤줈蹂寃쎌쓣 ?댁꽌?????쒕떎.",
+   "李⑤줈蹂寃?湲덉??μ냼?댁?留??덉쟾?섍쾶 李⑤줈瑜?蹂寃쏀븯硫?踰뺢퇋?꾨컲???꾨땲??"
+  ],
+  "a": "1",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?vi沼놻 휃沼뷼 l횪n 휃튼沼쓓g?",
+  "tr_c": [
+   "Do tr챗n c梳쬾 l횪 n퉤i nguy hi沼긩 n챗n c처 nhi沼걏 tr튼沼쓓g h沼즤 h梳죒 ch梳?휃沼뷼 l횪n 휃튼沼쓓g b梳켷g v梳죅h li沼걆 m횪u tr梳칗g.",
+   "Khu v沼켧 h梳죒 ch梳?휃沼뷼 l횪n 휃튼沼쓓g 휃튼沼즓 bi沼긳 th沼?b梳켷g v梳죅h 휃沼쯶 m횪u tr梳칗g.",
+   "T梳죍 khu v沼켧 c梳쩷 휃沼뷼 l횪n 휃튼沼쓓g, kh척ng 휃튼沼즓 휃沼뷼 l횪n 휃튼沼쓓g cho d첫 kh척ng th沼?l튼u th척ng do c처 ch튼沼썀g ng梳죍 v梳춗  ch梳쿻g h梳죒 nh튼 c척ng tr튼沼쓓g 휃ang x창y d沼켷g.",
+   "M梳톍 d첫 l횪 khu v沼켧 c梳쩷 휃沼뷼 l횪n 휃튼沼쓓g nh튼ng n梳퓎 휃沼뷼 l횪n 휃튼沼쓓g m沼셳 c찼ch an to횪n th챙 kh척ng b沼?coi l횪 vi ph梳죑 quy  휃沼땙h."
+  ]
+ },
+ {
+  "n": 218,
+  "ko_b": "?ㅼ쓬 以??뱀깋?깊솕 援먯감濡쒖뿉 吏꾩엯?섏뿬 ?좏샇媛 諛붾??꾩뿉??吏?섍?吏 紐삵빐 ?ㅻⅨ 李⑤웾 ?듯뻾??諛⑺빐?섎뒗 ?됱쐞???쒓섕 由?臾쇨린?앸? ?섏????뚯쓽 ?꾨컲 ?됱쐞濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "援먯감濡??듯뻾諛⑸쾿 ?꾨컲",
+   "?쇱떆?뺤? ?꾨컲",
+   "吏꾨줈 蹂寃?諛⑸쾿 ?꾨컲",
+   "?쇱옟 ?꾪솕 議곗튂 ?꾨컲"
+  ],
+  "a": "1",
+  "tr_b": "Trong c찼c c창u sau, h횪nh vi vi ph梳죑 n횪o l횪 휃첬ng v沼??쑧몍沼뷼 theo xe ph챠a tr튼沼쌵?? t沼쯢 h횪nh vi ti梳퓆 v횪o 휃튼沼쓓g giao nhau khi 휃챔n xanh v횪 kh척ng th沼?휃i qua khi t챠n hi沼뇎 휃챔n chuy沼긪 m횪u l횪m c梳즢 tr沼?l튼u th척ng c沼쬪 xe kh찼c?",
+  "tr_c": [
+   "Vi ph梳죑 c찼ch l튼u th척ng tr챗n 휃튼沼쓓g giao nhau",
+   "Vi ph梳죑 quy 휃沼땙h t梳죑 d沼쳌g",
+   "Vi ph梳죑 c찼ch 휃沼뷼 l횪n 휃튼沼쓓g 휃i th梳쿻g",
+   "Vi ph梳죑 bi沼뇆 ph찼p gi梳즡 thi沼긳 t梳칌 ngh梳퐊"
+  ]
+ },
+ {
+  "n": 219,
+  "ko_b": "怨좎냽?꾨줈??媛?띿감濡쒖뿉 ????ㅻ챸?쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "怨좎냽?꾨줈 二쇳뻾 李⑤웾??吏꾩텧濡쒕줈 吏꾩텧?섍린 ?꾪빐 李⑤줈 蹂寃쏀븷 ???덈룄濡??좊룄?섎뒗 李⑤줈",
+   "怨좎냽?꾨줈濡?吏꾩엯?섎뒗 李⑤웾??異⑸텇???띾룄瑜??????덈룄濡??좊룄?섎뒗 李⑤줈",
+   "怨좎냽?꾨줈?먯꽌 ?욎?瑜닿린?섍퀬???섎뒗 李⑤웾???띾룄瑜??????덈룄濡??좊룄?섎뒗 李⑤줈",
+   "?ㅻⅤ留됱뿉?????李⑤웾?ㅼ쓽 ?띾룄 媛먯냼濡??명븳 ?곹뼢??以꾩씠湲??꾪빐 ?ㅼ튂??李⑤줈"
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?l횪n 휃튼沼쓓g t훱ng t沼멵 tr챗n 휃튼沼쓓g cao t沼멵?",
+  "tr_c": [
+   "L횪 l횪n 휃튼沼쓓g d횪nh cho nh沼칗g xe 휃ang 휃i tr챗n 휃튼沼쓓g cao t沼멵 휃沼?chuy沼긪 l횪n 휃沼?ra kh沼뢩 cao t沼멵",
+   "L횪 l횪n 휃튼沼쓓g gi첬p cho c찼c xe ti梳퓆 v횪o 휃튼沼쓓g cao t沼멵 c처 th沼?l梳쪅 l梳죍 t沼멵 휃沼?c梳쬷 thi梳퓍.",
+   "L횪 l횪n 휃튼沼쓓g d횪nh cho xe t훱ng t沼멵 khi mu沼몁 v튼沼즨 xe kh찼c tr챗n 휃튼沼쓓g cao t沼멵.",
+   "L횪 l횪n 휃튼沼쓓g d첫ng 휃沼?l횪m gi梳즡 梳즢h h튼沼웢g c沼쬪 vi沼놻 c찼c xe to gi梳즡 t沼멵 khi l챗n d沼멵."
+  ]
+ },
+ {
+  "n": 220,
+  "ko_b": "怨좎냽?꾨줈??吏꾩엯?????섎せ 吏꾩엯???ъ떎???뚯븯????媛???곸젅???됰룞??",
+  "ko_c": [
+   "媛볤만???뺤감????鍮꾩긽?먮㈇?깆쓣 耳쒓퀬 怨좎냽?꾨줈 ?쒖같????꾩????붿껌?쒕떎.",
+   "?대? 吏꾩엯?섏??쇰?濡??ㅼ쓬 異쒓뎄源뚯? 二쇳뻾????鍮좎졇?섏삩??",
+   "鍮꾩긽?먮㈇?깆쓣 耳쒓퀬 吏꾩엯?덈뜕 湲몃줈 ?쒖꽌???꾩쭊?섏뿬 鍮좎졇?섏삩??",
+   "吏꾩엯 李⑤줈媛 2媛??댁긽??寃쎌슦?먮뒗 ?좏꽩?섏뿬 ?뚯븘 ?섏삩??"
+  ],
+  "a": "2",
+  "tr_b": "H횪nh 휃沼셬g ph첫 h沼즤 nh梳쩿 khi bi梳퓍 m챙nh 휃찾 v횪o nh梳쬶 휃튼沼쓓g cao t沼멵?",
+  "tr_c": [
+   "D沼쳌g 沼?l沼?휃튼沼쓓g, b梳춗 휃챔n b찼o kh梳쯰 c梳쩺 휃沼?nh沼?s沼?gi첬p 휃沼?c沼쬪 c梳즢h s찼t tu梳쬷 tra.",
+   "V챙 휃찾 휃i v횪o r沼밿 n챗n c沼?휃i cho 휃梳퓆 l沼멼 ra ti梳퓈 theo.",
+   "B梳춗 휃챔n b찼o kh梳쯰 c梳쩺 v횪 l첫i t沼?t沼?tr챗n 휃튼沼쓓g m챙nh 휃찾 휃i v횪o.",
+   "N梳퓎 l횪n xe l첬c ti梳퓆 v횪o l횪 t沼?l횪n s沼?2 tr沼?l챗n th챙 quay 휃梳쬾 xe l梳죍 휃沼?휃i ra."
+  ]
+ },
+ {
+  "n": 221,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈???ㅼ튂?섎뒗 ?몃㈃?쒖떆???됱씠 ?섎せ ?곌껐??寃껋??",
+  "ko_c": [
+   "?덉쟾吏? 以??묐갑??援먰넻??遺꾨━?섎뒗 ?쒖떆???몃???,
+   "踰꾩뒪?꾩슜李⑤줈?쒖떆???뚮???,
+   "?몃㈃?됯퉼?좊룄?좏몴?쒕뒗 遺꾪솉?? ?고븳?뱀깋 ?먮뒗 ?뱀깋",
+   "?대┛??蹂댄샇援ъ뿭 ?덉뿉 ?ㅼ튂?섎뒗 ?띾룄?쒗븳?쒖떆???뚮몢由ъ꽑? ?곗깋"
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? k梳퓍 n沼멼 n횪o l횪 kh척ng 휃첬ng v沼?m횪u s梳칌 v梳죅h k梳?휃튼沼쓓g 휃찾 l梳칛 휃梳톞?",
+  "tr_c": [
+   "M횪u v횪ng bi沼긳 th沼?vi沼놻 ph창n lu沼뱊g giao th척ng hai chi沼걏 trong khu v沼켧 an to횪n",
+   "M횪u xanh bi沼긳 th沼?l횪n 휃튼沼쓓g d횪nh ri챗ng cho xe bu첵t",
+   "M횪u h沼뱊g, m횪u xanh l찼 c창y nh梳죜 ho梳톍 m횪u xanh l찼 c창y bi沼긳 th沼?h튼沼썀g 휃i theo m횪u s梳칌 tr챗n m梳톞 휃튼沼쓓g",
+   "휂튼沼쓓g vi沼걆 m횪u tr梳칗g bi沼긳 th沼?h梳죒 ch梳?t沼멵 휃沼?휃튼沼즓 v梳?trong khu v沼켧 b梳즣 v沼?tr梳?em"
+  ]
+ },
+ {
+  "n": 222,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎냽?꾨줈 ?몄쓽 ?꾨줈?먯꽌 ?쇱そ 李⑤줈瑜??듯뻾?????덈뒗 李⑥쥌?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뱀슜?먮룞李?諛?寃쏀삎?ㅼ냼?뺚ㅼ쨷???뱁빀?먮룞李?,
+   "????뱁빀?먮룞李?,
+   "?붾Ъ?먮룞李?,
+   "?뱀닔?먮룞李?諛??대쪣?먮룞李?
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? lo梳죍 xe n횪o l횪 휃첬ng 휃沼?c처 th沼?휃i 沼?l횪n 휃튼沼쓓g b챗n tr찼i tr챗n c찼c tuy梳퓆  휃튼沼쓓g ngo횪i 휃튼沼쓓g cao t沼멵?",
+  "tr_c": [
+   "Xe 척 t척 con v횪 xe 척 t척 bu첵t ch沼?ng튼沼쓎 d梳죒g v沼첺 v횪 nh沼? nh沼?g沼뛫",
+   "Xe kh찼ch c沼?l沼썀",
+   "Xe t梳즜 ch沼?h횪ng",
+   "Xe 척 t척 chuy챗n d沼쩸g v횪 xe m찼y 2 b찼nh"
+  ]
+ },
+ {
+  "n": 223,
+  "ko_b": "?먮룞李??댁쟾 ???좏꽩???덉슜?섎뒗 ?몃㈃?쒖떆 ?뺤떇??(?좏꽩?쒖?媛 ?덈뒗 怨?",
+  "ko_c": [
+   "?꾨줈??以묒븰???⑹깋 ?ㅼ꽑 ?뺤떇?쇰줈 ?ㅼ튂???몃㈃?쒖떆",
+   "?꾨줈??以묒븰??諛깆깋 ?ㅼ꽑 ?뺤떇?쇰줈 ?ㅼ튂???몃㈃?쒖떆",
+   "?꾨줈??以묒븰??諛깆깋 ?먯꽑 ?뺤떇?쇰줈 ?ㅼ튂???몃㈃?쒖떆",
+   "?꾨줈??以묒븰??泥?깋 ?ㅼ꽑 ?뺤떇?쇰줈 ?ㅼ튂???몃㈃?쒖떆"
+  ],
+  "a": "3",
+  "tr_b": "K첵 hi沼뇎 n횪o tr챗n m梳톞 휃튼沼쓓g cho ph챕p quay 휃梳쬾 xe khi 휃i沼걏 khi沼긪 xe 척 t척? (N퉤i c처 k첵 hi沼뇎 quay 휃梳쬾 xe)",
+  "tr_c": [
+   "K첵 hi沼뇎 tr챗n m梳톞 휃튼沼쓓g 휃튼沼즓 l梳칛 휃梳톞 d튼沼쌻 d梳죒g v梳죅h k梳?li沼걆 m횪u v횪ng 沼?gi沼칊 휃튼沼쓓g",
+   "K첵 hi沼뇎 tr챗n m梳톞 휃튼沼쓓g 휃튼沼즓 l梳칛 휃梳톞 d튼沼쌻 d梳죒g v梳죅h k梳?li沼걆 m횪u tr梳칗g 沼?gi沼칊 휃튼沼쓓g",
+   "K첵 hi沼뇎 tr챗n m梳톞 휃튼沼쓓g 휃튼沼즓 l梳칛 휃梳톞 d튼沼쌻 d梳죒g v梳죅h k梳?ch梳쩷 m횪u tr梳칗g 沼?gi沼칊 휃튼沼쓓g",
+   "K첵 hi沼뇎 tr챗n m梳톞 휃튼沼쓓g 휃튼沼즓 l梳칛 휃梳톞 d튼沼쌻 d梳죒g v梳죅h k梳?li沼걆 m횪u xanh d튼퉤ng 沼?gi沼칊 휃튼沼쓓g"
+  ]
+ },
+ {
+  "n": 224,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤줈???곕Ⅸ ?듯뻾援щ텇 ?ㅻ챸?대떎. ?섎せ??寃껋??",
+  "ko_c": [
+   "李⑤줈???쒖쐞???꾨줈??以묒븰?좎そ???덈뒗 李⑤줈遺??1李⑤줈濡??쒕떎.",
+   "?먮┛ ?띾룄濡?吏꾪뻾?섏뿬 ?ㅻⅨ 李⑥쓽 ?뺤긽?곸씤 ?듯뻾??諛⑺빐???곕젮媛 ?덈뒗 ?뚯뿉??洹??듯뻾?섎뜕 李⑤줈???ㅻⅨ履?李⑤줈濡??듯뻾???ъ빞 ?쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈?먯꽌???꾨줈???ㅻⅨ履쎈???1李⑤줈濡??쒕떎.",
+   "?몃룄 2李⑤줈 怨좎냽?꾨줈?먯꽌 紐⑤뱺 ?먮룞李⑤뒗 2李⑤줈濡??듯뻾?섎뒗 寃껋씠 ?먯튃?대떎."
+  ],
+  "a": "3",
+  "tr_b": "N沼셢 dung gi梳즜 th챠ch v沼?ph창n lo梳죍 giao th척ng theo l횪n 휃튼沼쓓g theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? N沼셢 dung  n횪o l횪 sai?",
+  "tr_c": [
+   "Khi 휃梳퓅 th沼?t沼?l횪n 휃튼沼쓓g th챙 t챠nh t沼?l횪n 휃튼沼쓓g 沼?trung t창m l횪 l횪n 휃튼沼쓓g s沼?1.",
+   "Tr튼沼쓓g h沼즤 휃ang 휃i v沼쌻 t沼멵 휃沼?ch梳춎 v횪 c처 nguy c퉤 c梳즢 tr沼?vi沼놻 l튼u th척ng b챙nh th튼沼쓓g c沼쬪 m沼셳 ph튼퉤ng ti沼뇆 kh찼c th챙 ph梳즜 l찼i xe sang l횪n 휃튼沼쓓g b챗n ph梳즜 c沼쬪 l횪n 휃튼沼쓓g 휃ang 휃i.",
+   "Tr챗n 휃튼沼쓓g m沼셳 chi沼걏, l횪n 휃튼沼쓓g s沼?1 휃튼沼즓 t챠nh t沼?ph챠a b챗n ph梳즜 c沼쬪 con 휃튼沼쓓g.",
+   "V沼?nguy챗n t梳칌, t梳쩿 c梳?c찼c xe 척 t척 ph梳즜 휃i tr챗n l횪n 휃튼沼쓓g s沼?2 沼?tr챗n 휃튼沼쓓g cao t沼멵 c처 2 l횪n 휃튼沼쓓g m沼셳 chi沼걏."
+  ]
+ },
+ {
+  "n": 225,
+  "ko_b": "?먮룞李??댁쟾?먮뒗 ??슦濡?媛?쒓굅由ш? 50誘명꽣 ?대궡??寃쎌슦 ?꾨줈援먰넻踰뺣졊??理쒓퀬?띾룄??(  )??以꾩씤 ?띾룄濡??댄뻾?섏뿬?? ?쒕떎. (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "100遺꾩쓽 50",
+   "100遺꾩쓽 40",
+   "100遺꾩쓽 30",
+   "100遺꾩쓽 20"
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? tr튼沼쓓g h沼즤 t梳쬶 nh챙n xa c沼쬪 ng튼沼쓎 l찼i xe 척 t척 d튼沼쌻 50m do m튼a to th챙 ph梳즜 l튼u th척ng v沼쌻 t沼멵 휃沼?gi梳즡 ( ) th梳쩺 h퉤n t沼멵 휃沼?t沼멼 휃a. N沼셢 dung n횪o l횪 휃첬ng trong ( )?",
+  "tr_c": [
+   "50%",
+   "40%",
+   "30%",
+   "20%"
+  ]
+ },
+ {
+  "n": 226,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ씤???꾩슜李⑤줈瑜??듯뻾?????덈뒗 李⑥쓽 湲곗??쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "3紐??댁긽 ?뱀감???뱀슜?먮룞李?,
+   "3紐??댁긽 ?뱀감???붾Ъ?먮룞李?,
+   "3紐??댁긽 ?뱀감???뱁빀?먮룞李?,
+   "2紐??댁긽 ?뱀감???대쪣?먮룞李?
+  ],
+  "a": "1,3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? hai ti챗u chu梳쯰 n횪o l횪 휃첬ng 휃沼?xe 척 t척 c처 th沼?휃i tr챗n l횪n 휃튼沼쓓g d횪nh  ri챗ng cho xe kh찼ch?",
+  "tr_c": [
+   "Xe 척 t척 ch沼?3 ng튼沼쓎 tr沼?l챗n",
+   "Xe t梳즜 ch沼?3 ng튼沼쓎 tr沼?l챗n",
+   "Xe kh찼ch ch沼?3 ng튼沼쓎 tr沼?l챗n",
+   "Xe m찼y ch沼?2 ng튼沼쓎 tr沼?l챗n"
+  ]
+ },
+ {
+  "n": 227,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 蹂대룄? 李⑤룄??援щ텇???녿뒗 ?꾨줈??李⑤줈瑜??ㅼ튂?섎뒗 ??蹂댄뻾?먭? ?덉쟾?섍쾶 ?듯뻾?????덈룄濡?洹??꾨줈?? ?묒そ???ㅼ튂?섎뒗 寃껋??",
+  "ko_c": [
+   "?덉쟾吏?",
+   "吏꾨줈蹂寃쎌젣?쒖꽑 ?쒖떆",
+   "媛볤만",
+   "湲멸??μ옄由ш뎄??
+  ],
+  "a": "4",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? khi b沼?tr챠 l횪n 휃튼沼쓓g tr챗n 휃o梳죒 휃튼沼쓓g kh척ng c처 ph창n chia v沼뎎 h챔 v횪 l챵ng  휃튼沼쓓g th챙 c梳쬷 ph梳즜 l梳칛 휃梳톞 g챙 沼?hai b챗n 휃튼沼쓓g 휃沼?ng튼沼쓎 휃i b沼?c처 th沼?휃i qua m沼셳 c찼ch an to횪n?",
+  "tr_c": [
+   "Khu v沼켧 an toa?n",
+   "Bi沼긳 th沼?v梳죅h h梳죒 ch梳?thay 휃沼뷼 l횪n 휃튼沼쓓g",
+   "L沼?휃튼沼쓓g",
+   "Khu v沼켧 m챕p 휃튼沼쓓g"
+  ]
+ },
+ {
+  "n": 228,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??1??李⑤줈媛 醫뚰쉶??李⑤줈??援먯감濡쒖쓽 ?듯뻾 諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뱀슜?먮룞李⑤뒗 1李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?뱀슜?먮룞李⑤뒗 2李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "??뺤듅?⑹옄?숈감??1李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "??뺤듅?⑹옄?숈감??2李⑤줈留뚯쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? c찼ch l튼u th척ng n횪o l횪 휃첬ng tr챗n 휃튼沼쓓g giao nhau c처 l횪n xe 1 - l횪n  xe 2 l횪 l횪n r梳?tr찼i?",
+  "tr_c": [
+   "Xe 척 t척 con ch沼?휃튼沼즓 s沼?d沼쩸g l횪n xe th沼?nh梳쩿 휃沼?r梳?tr찼i.",
+   "Xe 척 t척 con ch沼?휃튼沼즓 s沼?d沼쩸g l횪n xe th沼?hai 휃沼?r梳?tr찼i.",
+   "Xe 척 t척 ch沼?kh찼ch c沼?l沼썀 ch沼?휃튼沼즓 s沼?d沼쩸g l횪n xe th沼?nh梳쩿 휃沼?r梳?tr찼i.",
+   "Xe 척 t척 ch沼?kh찼ch c沼?l沼썀 ch沼?휃튼沼즓 s沼?d沼쩸g l횪n xe th沼?hai 휃沼?r梳?tr찼i."
+  ]
+ },
+ {
+  "n": 229,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤쭏???듯뻾諛⑸쾿 諛??띾룄??????ㅻ챸?쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?좏샇?깆씠 ?녿뒗 援먯감濡쒖뿉??醫뚰쉶?꾪븷 ??吏곸쭊?섎젮???ㅻⅨ 李④? ?덈뒗 寃쎌슦 吏곸쭊 李⑥뿉寃?李⑤줈瑜??묐낫?섏뿬???쒕떎.",
+   "李⑤룄? 蹂대룄??援щ퀎???녿뒗 ?꾨줈?먯꽌 李⑤웾???뺤감?????꾨줈???ㅻⅨ履?媛?μ옄由щ줈遺??以묒븰?쇰줈 50?쇳떚誘명꽣 ?댁긽?? 嫄곕━瑜??먯뼱???쒕떎.",
+   "援먯감濡쒖뿉???욎감媛 ?고쉶?꾩쓣 ?섎젮怨??좏샇瑜??섎뒗 寃쎌슦 ?ㅻ뵲瑜대뒗 李⑤뒗 ?욎감??吏꾪뻾??諛⑺빐?댁꽌?????쒕떎.",
+   "?먮룞李⑥쟾?⑸룄濡쒖뿉?쒖쓽 理쒖??띾룄??留ㅼ떆 40?щ줈誘명꽣?대떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?c찼ch th沼쯢 v횪 t沼멵 휃沼?di chuy沼긪 c沼쬪 c찼c ph튼퉤ng ti沼뇆 giao th척ng theo Ph찼p l沼뇆h  Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Khi mu沼몁 r梳?tr찼i 沼?휃o梳죒 휃튼沼쓓g giao nhau kh척ng c처 휃챔n t챠n hi沼뇎 m횪 c처 xe kh찼c 휃ang 휃i th梳쿻g th챙 ph梳즜 nh튼沼쓓g  휃튼沼쓓g cho xe 휃ang 휃i th梳쿻g.",
+   "Khi d沼쳌g xe 척 t척 t梳죍 휃o梳죒 휃튼沼쓓g kh척ng ph창n bi沼뇍 l챵ng 휃튼沼쓓g v횪 v沼뎎 h챔 th챙 ph梳즜 duy tr챙 kho梳즢g c찼ch t沼멼 thi沼긳 50cm t챠nh t沼?l沼?휃튼沼쓓g b챗n ph梳즜 휃梳퓆 t창m 휃튼沼쓓g.",
+   "Tr튼沼쓓g h沼즤 xe ph챠a tr튼沼쌵 mu沼몁 r梳?ph梳즜 沼?휃o梳죒 휃튼沼쓓g giao nhau v횪 b梳춗 휃챔n t챠n hi沼뇎 th챙 xe ph챠a sau kh척ng 휃튼沼즓 c梳즢  tr沼?xe ph챠a tr튼沼쌵.",
+   "T沼멵 휃沼?t沼멼 thi沼긳 tr챗n 휃튼沼쓓g d횪nh ri챗ng cho xe 척 t척 l횪 40 km/gi沼?"
+  ]
+ },
+ {
+  "n": 230,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??理쒓퀬?띾룄 留ㅼ떆 100?щ줈誘명꽣???몃룄 4李⑤줈 怨좎냽?꾨줈瑜?二쇳뻾?섎뒗 ?곸옱以묐웾 3?ㅼ쓽 ?붾Ъ?먮룞李⑥쓽 理쒓퀬?띾룄??",
+  "ko_c": [
+   "留ㅼ떆 60?щ줈誘명꽣",
+   "留ㅼ떆 70?щ줈誘명꽣",
+   "留ㅼ떆 80?щ줈誘명꽣",
+   "留ㅼ떆 90?щ줈誘명꽣"
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? t沼멵 휃沼?t沼멼 휃a c沼쬪 m沼셳 chi梳풻 xe t梳즜 v沼쌻 t梳즜 tr沼뛫g 3 t梳쩸 l횪 bao nhi챗u khi 휃i  tr챗n 휃튼沼쓓g cao t沼멵 b沼몁 l횪n xe c처 t沼멵 휃沼?t沼멼 휃a 100 km/gi沼?",
+  "tr_c": [
+   "60 km/gi沼?,
+   "70 km/gi沼?,
+   "80 km/gi沼?,
+   "90 km/gi沼?
+  ]
+ },
+ {
+  "n": 231,
+  "ko_b": "李⑤쭏???댁쟾?먭? ?꾨줈??醫뚯륫?쇰줈 ?듯뻾?????녿뒗 寃쎌슦濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?덉쟾?쒖? ?깆쑝濡??욎?瑜닿린瑜??쒗븳?섍퀬 ?덈뒗 寃쎌슦",
+   "?꾨줈媛 ?쇰갑?듯뻾??寃쎌슦",
+   "?꾨줈 怨듭궗 ?깆쑝濡??꾨줈???곗륫 遺遺꾩쓣 ?듯뻾?????녿뒗 寃쎌슦",
+   "?꾨줈???곗륫 遺遺꾩쓽 ??씠 李⑤쭏???듯뻾??異⑸텇?섏? ?꾨땲??寃쎌슦"
+  ],
+  "a": "1",
+  "tr_b": "Tr튼퉤ng h沼즤 n횪o l횪 휃첬ng khi ng튼沼쓎 l찼i xe kh척ng 휃튼沼즓 휃i v沼?b챗n tr찼i 휃튼沼쓓g?",
+  "tr_c": [
+   "Tr튼沼쓓g h沼즤 h梳죒 ch梳?v튼沼즨 b梳켷g bi沼긪 b찼o an to횪n",
+   "Tr튼沼쓓g h沼즤 휃튼沼쓓g m沼셳 chi沼걏",
+   "Tr튼沼쓓g h沼즤 kh척ng th沼?휃i 沼?ph챠a b챗n ph梳즜 휃튼沼쓓g do 휃튼沼쓓g 휃ang thi c척ng",
+   "Tr튼沼쓓g h沼즤 chi沼걏 r沼셬g c沼쬪 ph梳쬷 휃튼沼쓓g b챗n ph梳즜 kh척ng 휃沼?휃沼?xe l튼u th척ng"
+  ]
+ },
+ {
+  "n": 232,
+  "ko_b": "援먯감濡쒖? ?쒕젅留?議?Dilemma Zone)?듦낵 諛⑸쾿 以?媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "援먯감濡?吏꾩엯 ??援먰넻 ?곹솴??誘몃━ ?뺤씤?섍퀬 ?덉쟾嫄곕━ ?좎?? 媛먯냽?댁쟾?쇰줈 紐⑤뱺 ?곹솴???덉륫?섎ŉ 諛⑹뼱?댁쟾???쒕떎.",
+   "?곸깋?좏샇?먯꽌 援먯감濡쒖뿉 吏꾩엯?섎㈃ ?좏샇?꾨컲???대떦?쒕떎.",
+   "?좏샇?깆씠 ?뱀깋?먯꽌 ?⑹깋?쇰줈 諛붾????욌컮?닿? ?뺤??좎쓣 吏꾩엯?덈떎硫?援먯감濡?援먰넻?곹솴??二쇱떆?섎ŉ ?좎냽?섍쾶 援먯감濡? 諛뽰쑝濡?吏꾪뻾?쒕떎.",
+   "?꾨줈援먰넻踰뺣졊???쒕젅留?議?Dilemma Zone)???몄젙?섏뿬 李⑤웾??援먯감濡쒖뿉 吏꾩엯?섍린 ?꾩뿉 ?⑹깋???깊솕濡?諛붾?寃쎌슦 援먯감 濡?吏곸쟾???뺤????꾩슂媛 ?녿떎."
+  ],
+  "a": "4",
+  "tr_b": "N沼셢 dung n횪o kh찼c xa nh梳쩿 v沼쌻 c찼c quy t梳칌 휃i qua giao l沼?v횪 khu v沼켧 ti梳퓆 tho찼i l튼沼죒g nan (Dilemma Zone)?",
+  "tr_c": [
+   "Ki沼긩 tra t챙nh h챙nh giao th척ng tr튼沼쌵 khi 휃i v횪o giao l沼?v횪 d沼?휃o찼n m沼뛦 t챙nh hu沼몁g b梳켷g c찼ch duy tr챙 kho梳즢g c찼ch an to횪n, gi梳즡 t沼멵 휃沼?v횪 l찼i xe c梳쯰 tr沼뛫g.",
+   "휂i v횪o giao l沼?khi t챠n hi沼뇎 휃챔n 휃沼?l횪 vi ph梳죑 휃챔n t챠n hi沼뇎.",
+   "Khi 휃챔n t챠n hi沼뇎 chuy沼긪 t沼?m횪u xanh sang m횪u v횪ng, n梳퓎 b찼nh tr튼沼쌵 휃찾 l梳쩸 v횪o v梳죅h d沼쳌g th챙 quan s찼t t챙nh h챙nh giao th척ng t梳죍 giao l沼?v횪 nhanh ch처ng 휃i ra kh沼뢩 kh첬c giao.",
+   "Theo quy 휃沼땙h c沼쬪 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? b梳켷g c찼ch c척ng nh梳춏 \"v첫ng l튼沼죒g nan\" (Dilemma Zone), n梳퓎 휃챔n t챠n hi沼뇎 giao th척ng chuy沼긪 sang m횪u v횪ng tr튼沼쌵 khi xe 휃i v횪o giao l沼?th챙 kh척ng c梳쬷 ph梳즜 d沼쳌g l梳죍 ngay tr튼沼쌵 giao l沼?
+  ]
+ },
+ {
+  "n": 233,
+  "ko_b": "?ㅼ쓬? 李④컙嫄곕━??????ㅻ챸?대떎. ?щ컮瑜닿쾶 ?쒗쁽??寃껋??",
+  "ko_c": [
+   "怨듭＜嫄곕━???꾪뿕??諛쒓껄?섍퀬 釉뚮젅?댄겕 ?섎떖??諛잛븘 釉뚮젅?댄겕媛 ?ｊ린 ?쒖옉???뚭퉴吏??嫄곕━瑜?留먰븳??",
+   "?뺤?嫄곕━???욎감媛 湲됱젙吏????異붾룎?섏? ?딆쓣 ?뺣룄??嫄곕━瑜?留먰븳??",
+   "?덉쟾嫄곕━??釉뚮젅?댄겕瑜??묐룞?쒖폒 ?꾩쟾???뺤????뚭퉴吏??嫄곕━瑜?留먰븳??",
+   "?쒕룞嫄곕━???꾪뿕??諛쒓껄????李⑤웾???꾩쟾???뺤????뚭퉴吏??嫄곕━瑜?留먰븳??"
+  ],
+  "a": "1",
+  "tr_b": "Sau 휃창y l횪 c찼c gi梳즜 th챠ch v沼?kho梳즢g c찼ch gi沼칊 c찼c xe. M척 t梳?n횪o 휃첬ng?",
+  "tr_c": [
+   "Kho梳즢g c찼ch ph梳즢 x梳?nhanh l횪 kho梳즢g c찼ch t沼?l첬c ph찼t hi沼뇆 nguy hi沼긩, gi梳쳋 b횪n 휃梳죖 phanh cho 휃梳퓆 khi phanh b梳칣  휃梳쬾 ho梳죜 휃沼셬g.",
+   "Kho梳즢g c찼ch phanh l횪 kho梳즢g c찼ch kh척ng b沼?휃창m v횪o xe tr튼沼쌵 khi xe tr튼沼쌵 d沼쳌g 휃沼셳 ng沼셳.",
+   "Kho梳즢g c찼ch an to횪n l횪 kho梳즢g c찼ch t沼?khi kh沼웙 휃沼셬g phanh cho 휃梳퓆 khi xe d沼쳌g ho횪n to횪n.",
+   "Kho梳즢g c찼ch 휃梳죖 phanh l횪 kho梳즢g c찼ch t沼?khi nh梳춏 th梳쪅 nguy hi沼긩 휃梳퓆 khi xe d沼쳌g l梳죍 h梳쿻."
+  ]
+ },
+ {
+  "n": 234,
+  "ko_b": "?ㅼ쓬 以??욎?瑜닿린媛 媛?ν븳 ?μ냼??",
+  "ko_c": [
+   "援먯감濡?,
+   "以묒븰???⑹깋 ?먯꽑)",
+   "?곕꼸 ???곗깋 ?ㅼ꽑 李⑤줈)",
+   "?ㅻ━ ???곗깋 ?ㅼ꽑 李⑤줈)"
+  ],
+  "a": "2",
+  "tr_b": "Khu v沼켧 n횪o sau 휃창y c처 th沼?v튼沼즨?",
+  "tr_c": [
+   "Giao l沼?,
+   "V梳죅h ph창n c찼ch (v梳죅h ch梳쩷 m횪u v횪ng)",
+   "Trong 휃튼沼쓓g h梳쬶 (l횪n 휃튼沼쓓g c처 v梳죅h k梳?li沼걆 m횪u tr梳칗g)",
+   "Tr챗n c梳쬾 (l횪n 휃튼沼쓓g c처 v梳죅h k梳?li沼걆 m횪u tr梳칗g)"
+  ]
+ },
+ {
+  "n": 235,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 援먯감濡쒖뿉?쒖쓽 ?쒗뻾??????ㅻ챸?쇰줈 媛???곸젅??寃껋??",
+  "ko_c": [
+   "李④? 利됱떆 ?뺤??쒗궗 ???덈뒗 ?뺣룄???먮┛ ?띾룄濡?吏꾪뻾?섎뒗 寃?,
+   "留ㅼ떆 30?щ줈誘명꽣???띾룄瑜??좎??섏뿬 吏꾪뻾?섎뒗 寃?,
+   "?ш퀬瑜??좊컻?섏? ?딆쓣 留뚰겮???띾룄濡??먮━寃?吏꾪뻾?섎뒗 寃?,
+   "?욎감??湲됱젙吏瑜??쇳븷 留뚰겮???띾룄濡?吏꾪뻾?섎뒗 寃?
+  ],
+  "a": "1",
+  "tr_b": "Theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? gi梳즜 th챠ch n횪o sau 휃창y l횪 h沼즤 l첵 nh梳쩿 v沼?vi沼놻 ch梳죣 xe ch梳춎 tr챗n 휃튼沼쓓g giao  nhau?",
+  "tr_c": [
+   "Ch梳죣 v沼쌻 t沼멵 휃沼?ch梳춎 c처 th沼?d沼쳌g xe ngay l梳춑 t沼쯢.",
+   "Ch梳죣 v횪 duy tr챙 t沼멵 휃沼?30 km/gi沼?",
+   "Ch梳죣 v沼쌻 t沼멵 휃沼?ch梳춎 kh척ng th沼?g창y ra tai n梳죒.",
+   "Ch梳죣 v沼쌻 t沼멵 휃沼?휃沼?휃沼?tr찼nh khi xe ph챠a tr튼沼쌵 d沼쳌g 휃沼셳 ng沼셳."
+  ]
+ },
+ {
+  "n": 236,
+  "ko_b": "?ㅼ쓬? ?꾨줈?먯꽌 理쒓퀬?띾룄瑜??꾨컲?섏뿬 ?먮룞李⑤벑(媛쒖씤???대룞?μ튂 ?쒖쇅)???댁쟾??寃쎌슦 泥섎쾶湲곗???",
+  "ko_c": [
+   "?쒖냽 100?щ줈誘명꽣瑜?珥덇낵???띾룄濡?3???댁긽 ?댁쟾???щ엺? 500留????댄븯??踰뚭툑 ?먮뒗 援щ쪟",
+   "?쒖냽 100?щ줈誘명꽣瑜?珥덇낵???띾룄濡?3???댁긽 ?댁쟾???щ엺? 1???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "?쒖냽 100?щ줈誘명꽣瑜?珥덇낵???띾룄濡?2???댁쟾???щ엺? 300留????댄븯??踰뚭툑",
+   "?쒖냽 80?щ줈誘명꽣瑜?珥덇낵???띾룄濡??댁쟾???щ엺? 50留????댄븯??踰뚭툑 ?먮뒗 援щ쪟"
+  ],
+  "a": "2",
+  "tr_b": "Ti챗u chu梳쯰 x沼?ph梳죜 n횪o l횪 휃첬ng khi 휃i沼걏 khi沼긪 xe 척 t척 (ngo梳죍 tr沼?ph튼퉤ng ti沼뇆 di chuy沼긪 c찼 nh창n) vi ph梳죑 t沼멵  휃沼?t沼멼 휃a tr챗n 휃튼沼쓓g?",
+  "tr_c": [
+   "Ng튼沼쓎 l찼i xe v沼쌻 t沼멵 휃沼?qu찼 100 km/gi沼?3 l梳쬷 tr沼?l챗n s梳?b沼?ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 5 tri沼뇎 Won ho梳톍 b沼?t梳죑 giam.",
+   "Ng튼沼쓎 l찼i xe v沼쌻 t沼멵 휃沼?qu찼 100 km/gi沼?3 l梳쬷 tr沼?l챗n s梳?b沼?ph梳죜 t첫 t沼멼 휃a 1 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 5 tri沼뇎  Won.",
+   "Ng튼沼쓎 l찼i xe v沼쌻 t沼멵 휃沼?qu찼 100 km/gi沼?2 l梳쬷 s梳?b沼?ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 3 tri沼뇎 Won.",
+   "Ng튼沼쓎 l찼i xe v沼쌻 t沼멵 휃沼?qu찼 80 km/gi沼?s梳?b沼?ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 500.000 Won ho梳톍 b沼?t梳죑 giam."
+  ]
+ },
+ {
+  "n": 237,
+  "ko_b": "?좏샇?깆씠 ?녿뒗 援먯감濡쒖뿉???고쉶?꾪븯???????녹? 寃껋??",
+  "ko_c": [
+   "媛湲됱쟻 鍮좊Ⅸ ?띾룄濡??좎냽?섍쾶 ?고쉶?꾪븳??",
+   "援먯감濡쒖뿉 ?좎쭊?낇븳 李⑤웾???듦낵?????고쉶?꾪븳??",
+   "諛섎??몄뿉???욎꽌 醫뚰쉶?꾪븯怨??덈뒗 李⑤웾???덉쑝硫??덉쟾???좎쓽?섎ŉ ?④퍡 ?고쉶?꾪븳??",
+   "??씠 ?볦? ?꾨줈?먯꽌 醫곸? ?꾨줈濡??고쉶?꾪븷 ?뚮뒗 ?ㅻⅨ 李⑤웾??二쇱쓽???꾩슂媛 ?녿떎."
+  ],
+  "a": "2",
+  "tr_b": "C찼ch x沼?l첵 휃첬ng khi 휃沼땙h r梳?ph梳즜 沼?휃튼沼쓓g giao nhau kh척ng c처 휃챔n giao th척ng?",
+  "tr_c": [
+   "Nhanh ch처ng r梳?ph梳즜 v沼쌻 t沼멵 휃沼?cao n梳퓎 c처 th沼?",
+   "R梳?ph梳즜 sau khi chi梳풻 xe 휃ang 휃i v횪o 휃튼沼쓓g giao nhau 沼?ph챠a tr튼沼쌵 휃찾 휃i qua.",
+   "N梳퓎 c처 xe 沼?ph챠a 휃沼멼 di沼뇆 휃ang r梳?tr찼i th챙 ch첬 첵 an to횪n r沼밿 r梳?ph梳즜.",
+   "Khi r梳?ph梳즜 t沼?휃튼沼쓓g r沼셬g sang 휃튼沼쓓g h梳퉝 th챙 kh척ng c梳쬷 ch첬 첵 휃梳퓆 xe kh찼c."
+  ]
+ },
+ {
+  "n": 238,
+  "ko_b": "?좏샇湲곗쓽 ?좏샇媛 ?덇퀬 李⑤웾蹂댁“?좏샇媛 ?녿뒗 援먯감濡쒖뿉???고쉶?꾪븯?ㅺ퀬 ?쒕떎. ?꾨줈援먰넻踰뺣졊???섎せ??寃껋??",
+  "ko_c": [
+   "李⑤웾?좏샇媛 ?곸깋?깊솕??寃쎌슦, ?〓떒蹂대룄?먯꽌 蹂댄뻾?먯떊?몄? 愿怨꾩뾾???뺤???吏곸쟾???쇱떆?뺤? ?쒕떎.",
+   "李⑤웾?좏샇媛 ?뱀깋?깊솕??寃쎌슦, ?뺤???吏곸쟾???쇱떆?뺤??섏? ?딄퀬 ?고쉶?꾪븳??",
+   "李⑤웾?좏샇媛 醫뚰쉶???좏샇??寃쎌슦, ?〓떒蹂대룄?먯꽌 蹂댄뻾?먯떊?몄? 愿怨꾩뾾???뺤???吏곸쟾???쇱떆?뺤? ?쒕떎.",
+   "李⑤웾?좏샇??愿怨꾩뾾???ㅻⅨ 李⑤웾??援먰넻??諛⑺빐?섏? ?딆? ???쇱떆?뺤??섏? ?딄퀬 ?고쉶?꾪븳??"
+  ],
+  "a": "4",
+  "tr_b": "Khi mu沼몁 r梳?ph梳즜 t梳죍 휃o梳죒 휃튼沼쓓g giao nhau c처 t챠n hi沼뇎 휃챔n giao th척ng v횪 kh척ng c처 t챠n hi沼뇎 ph沼?tr沼?ri챗ng  cho xe. Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?, h횪nh vi n횪o sau 휃창y l횪 kh척ng 휃첬ng ?",
+  "tr_c": [
+   "N梳퓎 t챠n hi沼뇎 c沼쬪 xe b梳춗 s찼ng m횪u 휃沼?th챙 t梳죑 d沼쳌g ngay tr튼沼쌵 v梳죅h d沼쳌g, b梳쩿 k沼?t챠n hi沼뇎 d횪nh cho ng튼沼쓎 휃i b沼?t梳죍 l沼멼  qua 휃튼沼쓓g l횪 g챙.",
+   "N梳퓎 t챠n hi沼뇎 c沼쬪 xe b梳춗 s찼ng m횪u xanh l찼 c창y th챙 kh척ng t梳죑 d沼쳌g 沼?ngay tr튼沼쌵 v梳죅h d沼쳌g m횪 r梳?ph梳즜 lu척n.",
+   "N梳퓎 휃챔n t챠n hi沼뇎 cho xe l횪 t챠n hi沼뇎 r梳?tr찼i, th챙 ph梳즜 d沼쳌g t梳죑 th沼쓎 沼?tr튼沼쌵 v梳죅h d沼쳌g b梳쩿 k沼?t챠n hi沼뇎 휃챔n d횪nh cho  ng튼沼쓎 휃i b沼?沼?v梳죅h sang 휃튼沼쓓g.",
+   "Kh척ng t梳죑 d沼쳌g 沼?ngay tr튼沼쌵 v梳죅h d沼쳌g m횪 r梳?ph梳즜 lu척n, mi沼꿳 l횪 kh척ng c梳즢 tr沼?s沼?l튼u th척ng c沼쬪 xe kh찼c v횪 b梳쩿 k沼? t챠n hi沼뇎 c沼쬪 xe."
+  ]
+ },
+ {
+  "n": 239,
+  "ko_b": "援먯감濡쒖뿉??醫뚳쉈?고쉶?꾪븯??諛⑸쾿??媛??諛붾Ⅴ寃??ㅻ챸??寃껋??",
+  "ko_c": [
+   "?고쉶?꾩쓣 ?섍퀬???섎뒗 ?뚯뿉???좏샇???곕씪 ?뺤? ?먮뒗 吏꾪뻾?섎뒗 蹂댄뻾?먯? ?먯쟾嫄곗뿉 二쇱쓽?섎㈃???좎냽???듦낵?쒕떎.",
+   "醫뚰쉶?꾩쓣 ?섍퀬???섎뒗 ?뚯뿉????긽 援먯감濡?以묒떖 諛붽묑履쎌쑝濡??듦낵?댁빞 ?쒕떎.",
+   "?고쉶?꾩쓣 ?섍퀬???섎뒗 ?뚯뿉??誘몃━ ?곗륫 媛?μ옄由щ? ?곕씪 ?쒗뻾?섏뿬???쒕떎.",
+   "?좏샇湲??녿뒗 援먯감濡쒖뿉??醫뚰쉶?꾩쓣 ?섍퀬????寃쎌슦 蹂댄뻾?먭? ?〓떒 以묒씠硫?洹??욎쓣 ?좎냽???듦낵?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch 휃첬ng nh梳쩿 v沼?c찼ch r梳?tr찼i v횪 r梳?ph梳즜 沼?휃튼沼쓓g giao nhau?",
+  "tr_c": [
+   "Khi 휃沼땙h r梳?ph梳즜 th챙 ph梳즜 ch첬 첵 휃梳퓆 xe 휃梳죖 v횪 ng튼沼쓎 휃i b沼?휃ang 휃i ho梳톍 휃ang d沼쳌g theo t챠n hi沼뇎 giao th척ng v횪 휃i  qua m沼셳 c찼ch nhanh ch처ng.",
+   "Khi 휃沼땙h r梳?tr찼i, lu척n lu척n ph梳즜 휃i qua ph챠a ngo횪i c沼쬪 ph梳쬷 trung t창m gi沼칊 휃튼沼쓓g giao nhau.",
+   "Khi 휃沼땙h r梳?ph梳즜, ph梳즜 휃i ch梳춎 l梳죍 d沼뛠 theo m챕p 휃튼沼쓓g b챗n ph梳즜 tr튼沼쌵.",
+   "Trong tr튼沼쓓g h沼즤 휃沼땙h r梳?tr찼i 沼?휃튼沼쓓g giao nhau kh척ng c처 휃챔n t챠n hi沼뇎, n梳퓎 c처 ng튼沼쓎 휃i b沼?휃ang 휃i qua th챙 nhanh  ch처ng 휃i qua ph챠a tr튼沼쌵 ng튼沼쓎 휃처."
+  ]
+ },
+ {
+  "n": 240,
+  "ko_b": "?뺤?嫄곕━??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?댁쟾?먭? 釉뚮젅?댄겕 ?섎떖??諛잛? ??理쒖쥌?곸쑝濡??뺤???嫄곕━",
+   "?욎감媛 湲됱젙吏 ???욎감???異붾룎???쇳븷 ???덈뒗 嫄곕━",
+   "?댁쟾?먭? ?꾪뿕??諛쒓껄?섍퀬 釉뚮젅?댄겕 ?섎떖??諛잛븘 ?ㅼ젣濡?李⑤웾???뺤??섍린源뚯? 吏꾪뻾??嫄곕━",
+   "?댁쟾?먭? ?꾪뿕??媛먯??섍퀬 釉뚮젅?댄겕 ?섎떖??諛잛븘 釉뚮젅?댄겕媛 ?ㅼ젣濡??묐룞?섍린 ?꾧퉴吏??嫄곕━"
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?kho梳즢g c찼ch phanh?",
+  "tr_c": [
+   "L횪 kho梳즢g c찼ch d沼쳌g h梳쿻 sau khi ng튼沼쓎 l찼i xe 휃梳죖 phanh.",
+   "L횪 kho梳즢g c찼ch 휃沼?tr찼nh tai n梳죒 khi xe tr튼沼쌵 d沼쳌g 휃沼셳 ng沼셳.",
+   "L횪 kho梳즢g c찼ch t沼?khi l찼i xe ph찼t hi沼뇆 nguy hi沼긩 v횪 휃梳죖 phanh cho 휃梳퓆 khi xe d沼쳌g l梳죍 tr챗n th沼켧 t梳?",
+   "L횪 kho梳즢g c찼ch t沼?l첬c ng튼沼쓎 l찼i xe nh梳춏 th沼쯢 ra s沼?nguy hi沼긩 v횪 ph梳즢 x梳?휃梳죖 phanh cho 휃梳퓆 tr튼沼쌵 khi phanh th沼켧  s沼?ho梳죜 휃沼셬g."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path('translations/audit/queue/205_choices_vn.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+print(len(data), data[0].keys())
+print(repr(data[0]['ko_b']))
+print(repr(data[0]['tr_b']))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:32:59.192790Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:10 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 703ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:10 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); $d = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/205_choices_vn.json' | ConvertFrom-Json; "'$d[0] | ConvertTo-Json -Depth 5' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 625ms:
+{
+    "n":  201,
+    "ko_b":  "차량 운전 중 차량 신호등과 횡단보도 보행자 신호등이 모두 고장 난 경우 횡단보도 통과 방법으로 옳은 것은?",
+    "ko_c":  [
+                 "횡단하는 사람이 있는 경우 서행으로 통과한다.",
+                 "횡단보도에 사람이 없으면 서행하지 않고 빠르게 통과한다.",
+                 "신호등 고장으로 횡단보도 기능이 상실되었으므로 서행할 필요가 없다.",
+                 "횡단하는 사람이 있는 경우 횡단보도 직전에 일시정지한다."
+             ],
+    "a":  "4",
+    "tr_b":  "Cách đi qua vạch sang đường đúngkhi đang lái xe mà tất cả các đèn tín hiệu của xe và đèn tín hiệu giao  thông dành cho người đi bộ ở lối sang đườngbị?",
+    "tr_c":  [
+                 "Nếu có người đi bộ sang đường thì phải chạy qua thật chậm.",
+                 "Nếu không có người đang đi bộ trên lối sang đường thì không cần đi chậm lại mà băng qua nhanh chóng.",
+                 "Nếu chức năng của lối sang đường bị mất do hỏng đèn giao thông thì không cần đi chậm lại.",
+                 "Nếu có người đi bộ qua đường thì phải tạm dừng ngay trước lối sang đường."
+             ]
+}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new(); $d=Get-Content -Raw -Encoding UTF8 '"'translations/audit/queue/205_choices_vn.json'|ConvertFrom-Json; foreach("'$x in $d){ if($x.n -le 220){ Write-Output ('"'N='+"'$x.n); Write-Output ('"'B '+"'$x.ko_b); Write-Output ('"'T '+"'$x.tr_b); for($i=0;$i -lt $x.ko_c.Count;$i++){Write-Output ('"'C'+("'$i+1)+'"' '+"'$x.ko_c[$i]);Write-Output ('"'V'+("'$i+1)+'"' '+"'$x.tr_c[$i])}; if($x.check){Write-Output ('"'CHECK '+"'$x.check+'"' '+"'$x.detail)}}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 678ms:
+N=201
+B 차량 운전 중 차량 신호등과 횡단보도 보행자 신호등이 모두 고장 난 경우 횡단보도 통과 방법으로 옳은 것은?
+T Cách đi qua vạch sang đường đúngkhi đang lái xe mà tất cả các đèn tín hiệu của xe và đèn tín hiệu giao  thông dành cho người đi bộ ở lối sang đườngbị?
+C1 횡단하는 사람이 있는 경우 서행으로 통과한다.
+V1 Nếu có người đi bộ sang đường thì phải chạy qua thật chậm.
+C2 횡단보도에 사람이 없으면 서행하지 않고 빠르게 통과한다.
+V2 Nếu không có người đang đi bộ trên lối sang đường thì không cần đi chậm lại mà băng qua nhanh chóng.
+C3 신호등 고장으로 횡단보도 기능이 상실되었으므로 서행할 필요가 없다.
+V3 Nếu chức năng của lối sang đường bị mất do hỏng đèn giao thông thì không cần đi chậm lại.
+C4 횡단하는 사람이 있는 경우 횡단보도 직전에 일시정지한다.
+V4 Nếu có người đi bộ qua đường thì phải tạm dừng ngay trước lối sang đường.
+N=202
+B 도로교통법상 보도와 차도가 구분이 되지 않는 도로 중 중앙선이 있는 도로에서 보행자의 통행방법으로 가장 적절한 것은?
+T Phương pháp nào là phù hợp nhất để người đi bộ lưu thông trên đoạn đường không phân chia vỉa hè và  lòng đường nhưng có vạch trung tâm ở giữa theo Luật Giao thông đường bộ
+C1 차도 중앙으로 보행한다.
+V1 Đi bộ ở giữa lòng đường.
+C2 차도 우측으로 보행한다.
+V2 Đi bộ bên phải lòng đường.
+C3 길가장자리구역으로 보행한다.
+V3 Đi bộ ở sát mép đường.
+C4 도로의 전 부분으로 보행한다.
+V4 Đi bộ thoải mái trên toàn bộ đường.
+N=203
+B 도로교통법상 보행자전용도로 통행이 허용된 차마의 운전자가 통행하는 방법으로 맞는 것은?
+T Phương pháp lưu thông nào là đúng của người lái các phương tiện được phép lưu thông trên đường dành  riêng cho người đi bộ theo Luật Giao thông đường bộ?
+C1 보행자가 있는 경우 서행으로 진행한다.
+V1 Nếu có người đi bộ thì đi chậm lại.
+C2 경음기를 울리면서 진행한다.
+V2 Vừa bấm còi xe vừa đi.
+C3 보행자의 걸음 속도로 운행하거나 일시정지하여야 한다.
+V3 Chạy với tốc độ bằng tốc độ bước chân của người đi bộ hoặc tạm dừng xe.
+C4 보행자가 없는 경우 신속히 진행한다.
+V4 Nếu không có người đi bộ thì đi nhanh qua.
+N=204
+B 도로교통법상 연석선, 안전표지나 그와 비슷한 인공구조물로 경계를 표시하여 보행자가 통행할 수 있도록 한 도로의 부분은?
+T Theo luật Giao thông đường bộ, phần đường nào cho phép người đi bộ đi qua bằng cách đánh dấu ranh giới  bằng vạch kẻ đường, biển báo an toàn hoặc công trình nhân tạo theo Luật Giao thông đường bộ?
+C1 보도
+V1 Vỉa hè
+C2 길가장자리구역
+V2 Khu vực mép đường
+C3 횡단보도
+V3 Lối đi bộ qua đường
+C4 자전거횡단도
+V4 Lối xe đạp qua đường
+N=205
+B 도로교통법령상 보행신호등이 점멸할 때 올바른 횡단방법이 아닌 것은?
+T Theo Pháp lệnh Giao thông đường bộ, Cách  đi qua đường không đúng khi đèn tín hiệu cho người đi bộ  đang nhấp nháy?
+C1 보행자는 횡단을 시작하여서는 안 된다.
+V1 Người đi bộ không được bắt đầu băng qua đường.
+C2 횡단하고 있는 보행자는 신속하게 횡단을 완료하여야 한다.
+V2 Người đang đi bộ qua đường phải nhanh chóng qua đường.
+C3 횡단을 중지하고 보도로 되돌아와야 한다.
+V3 Dừng qua đường và quay trở lại vỉa hè.
+C4 횡단을 중지하고 그 자리에서 다음 신호를 기다린다.
+V4 Dừng qua đường và đợi tín hiệu tiếp theo ngay tại chỗ.
+N=206
+B 도로교통법상 차의 운전자가 다음과 같은 상황에서 서행하여야 할 경우는?
+T Theo Luật Giao thông đường bộ, trường hợp nào sau đây người lái xe ô tô phải đi chậm lại?
+C1 자전거를 끌고 횡단보도를 횡단하는 사람을 발견하였을 때
+V1 Khi phát hiện thấy một người dắt xe đạp và băng qua lối đi bộ qua đường
+C2 이면도로에서 보행자의 옆을 지나갈 때
+V2 Khi đi qua bên cạnh một người đang đi bộ trên đoạn đường hẹp không chia làn
+C3 보행자가 횡단보도를 횡단하는 것을 봤을 때
+V3 Khi thấy người đi bộ đang băng qua lối sang đường
+C4 보행자가 횡단보도가 없는 도로를 횡단하는 것을 봤을 때
+V4 Khi nhìn thấy người đi bộ đang đi sang đường trên đoạn đường không có lối sang đường
+N=207
+B 도로교통법령상 고원식 횡단보도는 제한속도를 매시 (   )킬로미터 이하로 제한할 필요가 있는 도로에 설치한다. (    )안에 기준으로 맞는 것은?
+T Theo Pháp lệnh Giao thông đường bộ, lối đi bộ sang đường có chiều cao bằng vỉa hè được lắp đặt ở những  đoạn đường cần hạn chế tốc độ từ ( ) km/giờ trở xuống. Đáp án nào đúng với (     )?
+C1 10
+V1 10
+C2 20
+V2 20
+C3 30
+V3 30
+C4 50
+V4 50
+N=208
+B 도로교통법령상 차량 운전 중 일시정지해야 할 상황이 아닌 것은?
+T Theo Pháp lệnh Giao thông đường bộ, đáp án nào không phải là tình huống phải tạm dừng khi đang lái xe?
+C1 어린이가 보호자 없이 도로를 횡단할 때
+V1 Khi trẻ em băng qua đường không có người giám hộ
+C2 차량 신호등이 적색등화의 점멸 신호일 때
+V2 Khi đèn tín hiệu là đèn đỏ đang nhấp nháy
+C3 어린이가 도로에서 앉아 있거나 서 있을 때
+V3 Khi có trẻ em đang ngồi hoặc đứng trên đường
+C4 차량 신호등이 황색등화의 점멸 신호일 때
+V4 Khi đèn tín hiệu là đèn vàng đang nhấp nháy
+N=209
+B 다음 중 도로교통법령상 대각선 횡단보도의 보행 신호가 녹색등화일 때 차마의 통행방법으로 옳은 것은?
+T Cách lưu thông nào là đúng của các phương tiện giao thông đi qua khi đèn tín hiệu đi bộ ở vạch qua đường  chéo chuyển màu xanh, theo Pháp lệnh Giao thông đường bộ?
+C1 직진하려는 때에는 정지선의 직전에 정지하여야 한다.
+V1 Nếu muốn đi thẳng thì phải dừng lại ngay trước vạch dừng.
+C2 보행자가 없다면 속도를 높여 우회전할 수 있다.
+V2 Nếu không có người đi bộ thì có thể tăng tốc và rẽ phải.
+C3 보행자가 없다면 속도를 높여 좌회전할 수 있다.
+V3 Nếu không có người đi bộ thì có thể tăng tốc và rẽ trái.
+C4 보행자가 횡단하지 않는 방향으로는 진행할 수 있다.
+V4 Có thể đi về hướng không có người đi bộ sang đường.
+N=210
+B 도로교통법상 차의 운전자가 그 차의 바퀴를 일시적으로 완전히 정지시키는 것은?
+T Theo Luật Giao thông đường bộ, việc người lái xe tạm thời làm cho bánh xe dừng hẳn có nghĩa là gì?
+C1 서행
+V1 Đi chậm lại
+C2 정차
+V2 Dừng xe
+C3 주차
+V3 Đỗ xe
+C4 일시정지
+V4 Tạm dừng
+N=211
+B 다음 중 도로교통법상 의료용 전동휠체어가 통행할 수 없는 곳은?
+T Khu vực nào sau đây là nơi mà xe lăn điện y tế không được phép lưu thông theo Luật Giao thông đường bộ?
+C1 자전거전용도로
+V1 Đường dành riêng cho xe đạp
+C2 길가장자리구역
+V2 Khu vực lề đường
+C3 보도
+V3 Vỉa hè
+C4 도로의 가장자리
+V4 Mép đường
+N=212
+B 교통정리가 없는 교차로에서 좌회전하는 방법 중 가장 옳은 것은?
+T Cách nào là chính xác nhất để rẽ trái tại đường giao nhau không có điều khiển giao thông?
+C1 일반도로에서는 좌회전하려는 교차로 직전에서 방향지시등을 켜고 좌회전한다.
+V1 Trên đường thông thường, bật đèn xi nhan ngay trước đoạn đường giao nhau định rẽ trái rồi sau đó rẽ trái.
+C2 미리 도로의 중앙선을 따라 서행하면서 교차로의 중심 바깥쪽으로 좌회전한다.
+V2 Đi từ từ theo vạch phân cách giữa đường trước rồi rẽ trái sang phía ngoài của khu vực chính giữa đường giao nhau.
+C3 시·도경찰청장이 지정하더라도 교차로의 중심 바깥쪽을 이용하여 좌회전할 수 없다.
+V3 Không thể sử dụng phía ngoài của khu vực chính giữa đường giao nhau để rẽ trái ngay cả khi Giám đốc Sở Cảnh sát  tỉnh - thành phố chỉ định.
+C4 반드시 서행하여야 하고, 일시정지는 상황에 따라 운전자가 판단하여 실시한다.
+V4 Bắt buộc phải đi từ từ, còn việc có dừng tạm thời hay không thì người lái xe sẽ phán đoán và thực hiện tuỳ theo  từng tình huống.
+N=213
+B 도로교통법령상 설치되는 차로의 너비는 (  )미터 이상으로 하여야 한다. 이 경우 좌회전전용 차로의 설치 등 부득이하다 고 인정되는 때에는 (   )센티미터 이상으로 할 수 있다. (   )안에 기준으로 각각 맞는 것은?
+T Theo Pháp lệnh Giao thông đường bộ, các làn đường được bố trí phải rộng trên ( ) mét. Trong trường hợp này, khi được coi là trường hợp bất đắc dĩ, chẳng hạn như việc bố trí làn đường chỉ rẽ trái, thì có thể bố trí từ ( ) cm trở lên. Nội dung nào dưới đây là tiêu chuẩn đúng trong ( )?
+C1 5, 300
+V1 5, 300
+C2 4, 285
+V2 4, 285
+C3 3, 275
+V3 3, 275
+C4 2, 265
+V4 2, 265
+N=214
+B 도로 우측 부분의 폭이 6미터가 되지 아니하는 도로에서 다른 차를 앞지르기할 수 있는 경우로 맞는 것은?
+T Trường hợp nào là đúng để có thể vượt xe khác khi chiều rộng của phần đường bên phải không đủ 6m?
+C1 도로의 좌측 부분을 확인할 수 없는 경우
+V1 Trường hợp không thể kiểm tra phần đường bên trái
+C2 반대 방향의 교통을 방해할 우려가 있는 경우
+V2 Trường hợp có thể gây cản trở giao thông cho hướng ngược lại
+C3 앞차가 저속으로 진행하고, 다른 차와 안전거리가 확보된 경우
+V3 Trường hợp xe phía trước chạy với tốc độ thấp và đảm bảo được khoảng cách an toàn với các phương tiện khác
+C4 안전표지 등으로 앞지르기를 금지하거나 제한하고 있는 경우
+V4 Trường hợp có biển báo an toàn hạn chế hoặc cấm vượt
+N=215
+B 도로교통법상 시간대에 따라 양방향의 통행량이 뚜렷하게 다른 도로에는 교통량이 많은 쪽으로 차로의 수가 확대될  수 있도록 신호기에 의하여 차로의 진행방향을 지시하는 차로는?
+T Theo Luật Giao thông đường bộ, với đường có lượng xe lưu thông ở hai hướng khác biệt rõ rệt theo khung thời gian, thì làn đường được chỉ dẫn hướng đi bằng đèn tín hiệu để có thể tăng số lượng làn xe cho hướng có nhiều phương tiện tham gia giao thông?
+C1 가변차로
+V1 Làn đường có thể thay đổi
+C2 버스전용차로
+V2 Làn đường dành riêng cho xe buýt
+C3 가속차로
+V3 Làn đường tăng tốc
+C4 앞지르기 차로
+V4 Làn xe vượt
+N=216
+B 도로교통법령상‘모든 차의 운전자는 교차로에서 (      )을 하려는 경우에는 미리 도로의 우측 가장자리를 서행하면 서 (     )하여야 한다. 이 경우 (     )하는 차도의 운전자는 신호에 따라 정지하거나 진행하는 보행자 또는 자전거 등에  주의하여야 한다.’(    )안에 맞는 것으로 짝지어진 것은?
+T Theo Pháp lệnh Giao thông đường bộ người điều khiển tất cả loại xe khi muốn ( ) trên đường giao nhau, phải đi chậm ở mép phải của đường trước rồi ( ). Trong trường hợp này, người điều khiển xe trên làn đường ( ), phải dừng lại theo tín hiệu đèn hoặc chú ý người đi bộ hay xe đạp đang lưu thông. Thứ tự nội dung đúng để điền vào ( ) là?
+C1 우회전 – 우회전 – 우회전
+V1 Rẽ phải - Rẽ phải - Rẽ phải
+C2 좌회전 – 좌회전 – 좌회전
+V2 Rẽ trái - Rẽ trái - Rẽ trái
+C3 우회전 – 좌회전 – 우회전
+V3 Rẽ phải - Rẽ trái - Rẽ phải
+C4 좌회전 – 우회전 – 좌회전
+V4 Rẽ trái - Rẽ phải - Rẽ trái
+N=217
+B 다음 중 도로교통법상 차로변경에 대한 설명으로 맞는 것은?
+T Theo Luật Giao thông đường bộ, giải thích nào là đúng về việc đổi làn đường?
+C1 다리 위는 위험한 장소이기 때문에 백색실선으로 차로변경을 제한하는 경우가 많다.
+V1 Do trên cầu là nơi nguy hiểm nên có nhiều trường hợp hạn chế đổi làn đường bằng vạch liền màu trắng.
+C2 차로변경을 제한하고자 하는 장소는 백색점선의 차선으로 표시되어 있다.
+V2 Khu vực hạn chế đổi làn đường được biểu thị bằng vạch đứt màu trắng.
+C3 차로변경 금지장소에서는 도로공사 등으로 장애물이 있어 통행이 불가능한 경우라도 차로변경을 해서는 안 된다.
+V3 Tại khu vực cấm đổi làn đường, không được đổi làn đường cho dù không thể lưu thông do có chướng ngại vật  chẳng hạn như công trường đang xây dựng.
+C4 차로변경 금지장소이지만 안전하게 차로를 변경하면 법규위반이 아니다.
+V4 Mặc dù là khu vực cấm đổi làn đường nhưng nếu đổi làn đường một cách an toàn thì không bị coi là vi phạm quy  định.
+N=218
+B 다음 중 녹색등화 교차로에 진입하여 신호가 바뀐 후에도 지나가지 못해 다른 차량 통행을 방해하는 행위인 “꼬 리 물기”를 하였을 때의 위반 행위로 맞는 것은?
+T Trong các câu sau, hành vi vi phạm nào là đúng về “đuổi theo xe phía trước”, tức hành vi tiến vào đường giao nhau khi đèn xanh và không thể đi qua khi tín hiệu đèn chuyển màu làm cản trở lưu thông của xe khác?
+C1 교차로 통행방법 위반
+V1 Vi phạm cách lưu thông trên đường giao nhau
+C2 일시정지 위반
+V2 Vi phạm quy định tạm dừng
+C3 진로 변경 방법 위반
+V3 Vi phạm cách đổi làn đường đi thẳng
+C4 혼잡 완화 조치 위반
+V4 Vi phạm biện pháp giảm thiểu tắc nghẽn
+N=219
+B 고속도로의 가속차로에 대한 설명으로 옳은 것은?
+T Giải thích nào là đúng về làn đường tăng tốc trên đường cao tốc?
+C1 고속도로 주행 차량이 진출로로 진출하기 위해 차로 변경할 수 있도록 유도하는 차로
+V1 Là làn đường dành cho những xe đang đi trên đường cao tốc để chuyển làn để ra khỏi cao tốc
+C2 고속도로로 진입하는 차량이 충분한 속도를 낼 수 있도록 유도하는 차로
+V2 Là làn đường giúp cho các xe tiến vào đường cao tốc có thể lấy lại tốc độ cần thiết.
+C3 고속도로에서 앞지르기하고자 하는 차량이 속도를 낼 수 있도록 유도하는 차로
+V3 Là làn đường dành cho xe tăng tốc khi muốn vượt xe khác trên đường cao tốc.
+C4 오르막에서 대형 차량들의 속도 감소로 인한 영향을 줄이기 위해 설치한 차로
+V4 Là làn đường dùng để làm giảm ảnh hưởng của việc các xe to giảm tốc khi lên dốc.
+N=220
+B 고속도로에 진입한 후 잘못 진입한 사실을 알았을 때 가장 적절한 행동은?
+T Hành động phù hợp nhất khi biết mình đã vào nhầm đường cao tốc?
+C1 갓길에 정차한 후 비상점멸등을 켜고 고속도로 순찰대에 도움을 요청한다.
+V1 Dừng ở lề đường, bật đèn báo khẩn cấp để nhờ sự giúp đỡ của cảnh sát tuần tra.
+C2 이미 진입하였으므로 다음 출구까지 주행한 후 빠져나온다.
+V2 Vì đã đi vào rồi nên cứ đi cho đến lối ra tiếp theo.
+C3 비상점멸등을 켜고 진입했던 길로 서서히 후진하여 빠져나온다.
+V3 Bật đèn báo khẩn cấp và lùi từ từ trên đường mình đã đi vào.
+C4 진입 차로가 2개 이상일 경우에는 유턴하여 돌아 나온다.
+V4 Nếu làn xe lúc tiến vào là từ làn số 2 trở lên thì quay đầu xe lại để đi ra.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new(); $d=Get-Content -Raw -Encoding UTF8 '"'translations/audit/queue/205_choices_vn.json'|ConvertFrom-Json; foreach("'$x in $d){ if($x.n -ge 221){ Write-Output ('"'N='+"'$x.n); Write-Output ('"'B '+"'$x.ko_b); Write-Output ('"'T '+"'$x.tr_b); for($i=0;$i -lt $x.ko_c.Count;$i++){Write-Output ('"'C'+("'$i+1)+'"' '+"'$x.ko_c[$i]);Write-Output ('"'V'+("'$i+1)+'"' '+"'$x.tr_c[$i])}; if($x.check){Write-Output ('"'CHECK '+"'$x.check+'"' '+"'$x.detail)}}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 670ms:
+N=221
+B 도로교통법령상 도로에 설치하는 노면표시의 색이 잘못 연결된 것은?
+T Theo Pháp lệnh Giao thông đường bộ, kết nối nào là không đúng về màu sắc vạch kẻ đường đã lắp đặt?
+C1 안전지대 중 양방향 교통을 분리하는 표시는 노란색
+V1 Màu vàng biểu thị việc phân luồng giao thông hai chiều trong khu vực an toàn
+C2 버스전용차로표시는 파란색
+V2 Màu xanh biểu thị làn đường dành riêng cho xe buýt
+C3 노면색깔유도선표시는 분홍색, 연한녹색 또는 녹색
+V3 Màu hồng, màu xanh lá cây nhạt hoặc màu xanh lá cây biểu thị hướng đi theo màu sắc trên mặt đường
+C4 어린이 보호구역 안에 설치하는 속도제한표시의 테두리선은 흰색
+V4 Đường viền màu trắng biểu thị hạn chế tốc độ được vẽ trong khu vực bảo vệ trẻ em
+N=222
+B 도로교통법령상 고속도로 외의 도로에서 왼쪽 차로를 통행할 수 있는 차종으로 맞는 것은?
+T Theo Pháp lệnh Giao thông đường bộ, loại xe nào là đúng để có thể đi ở làn đường bên trái trên các tuyến  đường ngoài đường cao tốc?
+C1 승용자동차 및 경형․소형․중형 승합자동차
+V1 Xe ô tô con và xe ô tô buýt chở người dạng vừa và nhỏ, nhỏ gọn
+C2 대형 승합자동차
+V2 Xe khách cỡ lớn
+C3 화물자동차
+V3 Xe tải chở hàng
+C4 특수자동차 및 이륜자동차
+V4 Xe ô tô chuyên dụng và xe máy 2 bánh
+N=223
+B 자동차 운전 시 유턴이 허용되는 노면표시 형식은?(유턴표지가 있는 곳)
+T Ký hiệu nào trên mặt đường cho phép quay đầu xe khi điều khiển xe ô tô? (Nơi có ký hiệu quay đầu xe)
+C1 도로의 중앙에 황색 실선 형식으로 설치된 노면표시
+V1 Ký hiệu trên mặt đường được lắp đặt dưới dạng vạch kẻ liền màu vàng ở giữa đường
+C2 도로의 중앙에 백색 실선 형식으로 설치된 노면표시
+V2 Ký hiệu trên mặt đường được lắp đặt dưới dạng vạch kẻ liền màu trắng ở giữa đường
+C3 도로의 중앙에 백색 점선 형식으로 설치된 노면표시
+V3 Ký hiệu trên mặt đường được lắp đặt dưới dạng vạch kẻ chấm màu trắng ở giữa đường
+C4 도로의 중앙에 청색 실선 형식으로 설치된 노면표시
+V4 Ký hiệu trên mặt đường được lắp đặt dưới dạng vạch kẻ liền màu xanh dương ở giữa đường
+N=224
+B 도로교통법령상 차로에 따른 통행구분 설명이다. 잘못된 것은?
+T Nội dung giải thích về phân loại giao thông theo làn đường theo Pháp lệnh Giao thông đường bộ. Nội dung  nào là sai?
+C1 차로의 순위는 도로의 중앙선쪽에 있는 차로부터 1차로로 한다.
+V1 Khi đếm thứ tự làn đường thì tính từ làn đường ở trung tâm là làn đường số 1.
+C2 느린 속도로 진행하여 다른 차의 정상적인 통행을 방해할 우려가 있는 때에는 그 통행하던 차로의 오른쪽 차로로 통행하 여야 한다.
+V2 Trường hợp đang đi với tốc độ chậm và có nguy cơ cản trở việc lưu thông bình thường của một phương tiện khác thì phải lái xe sang làn đường bên phải của làn đường đang đi.
+C3 일방통행 도로에서는 도로의 오른쪽부터 1차로로 한다.
+V3 Trên đường một chiều, làn đường số 1 được tính từ phía bên phải của con đường.
+C4 편도 2차로 고속도로에서 모든 자동차는 2차로로 통행하는 것이 원칙이다.
+V4 Về nguyên tắc, tất cả các xe ô tô phải đi trên làn đường số 2 ở trên đường cao tốc có 2 làn đường một chiều.
+N=225
+B 자동차 운전자는 폭우로 가시거리가 50미터 이내인 경우 도로교통법령상 최고속도의 (  )을 줄인 속도로 운행하여야  한다. (   )에 기준으로 맞는 것은?
+T Theo Pháp lệnh Giao thông đường bộ, trường hợp tầm nhìn xa của người lái xe ô tô dưới 50m do mưa to thì phải lưu thông với tốc độ giảm ( ) thấp hơn tốc độ tối đa. Nội dung nào là đúng trong ( )?
+C1 100분의 50
+V1 50%
+C2 100분의 40
+V2 40%
+C3 100분의 30
+V3 30%
+C4 100분의 20
+V4 20%
+N=226
+B 도로교통법령상 다인승 전용차로를 통행할 수 있는 차의 기준으로 맞는 2가지는?
+T Theo Pháp lệnh Giao thông đường bộ, hai tiêu chuẩn nào là đúng để xe ô tô có thể đi trên làn đường dành  riêng cho xe khách?
+C1 3명 이상 승차한 승용자동차
+V1 Xe ô tô chở 3 người trở lên
+C2 3명 이상 승차한 화물자동차
+V2 Xe tải chở 3 người trở lên
+C3 3명 이상 승차한 승합자동차
+V3 Xe khách chở 3 người trở lên
+C4 2명 이상 승차한 이륜자동차
+V4 Xe máy chở 2 người trở lên
+N=227
+B 도로교통법상 보도와 차도의 구분이 없는 도로에 차로를 설치하는 때 보행자가 안전하게 통행할 수 있도록 그 도로의  양쪽에 설치하는 것은?
+T Theo Luật Giao thông đường bộ, khi bố trí làn đường trên đoạn đường không có phân chia vỉa hè và lòng  đường thì cần phải lắp đặt gì ở hai bên đường để người đi bộ có thể đi qua một cách an toàn?
+C1 안전지대
+V1 Khu vực an toàn
+C2 진로변경제한선 표시
+V2 Biểu thị vạch hạn chế thay đổi làn đường
+C3 갓길
+V3 Lề đường
+C4 길가장자리구역
+V4 Khu vực mép đường
+N=228
+B 도로교통법령상 1ㆍ2차로가 좌회전 차로인 교차로의 통행 방법으로 맞는 것은?
+T Theo Pháp lệnh Giao thông đường bộ, cách lưu thông nào là đúng trên đường giao nhau có làn xe 1 - làn  xe 2 là làn rẽ trái?
+C1 승용자동차는 1차로만을 이용하여 좌회전하여야 한다.
+V1 Xe ô tô con chỉ được sử dụng làn xe thứ nhất để rẽ trái.
+C2 승용자동차는 2차로만을 이용하여 좌회전하여야 한다.
+V2 Xe ô tô con chỉ được sử dụng làn xe thứ hai để rẽ trái.
+C3 대형승합자동차는 1차로만을 이용하여 좌회전하여야 한다.
+V3 Xe ô tô chở khách cỡ lớn chỉ được sử dụng làn xe thứ nhất để rẽ trái.
+C4 대형승합자동차는 2차로만을 이용하여 좌회전하여야 한다.
+V4 Xe ô tô chở khách cỡ lớn chỉ được sử dụng làn xe thứ hai để rẽ trái.
+N=229
+B 도로교통법령상 차마의 통행방법 및 속도에 대한 설명으로 옳지 않은 것은?
+T Giải thích nào không đúng về cách thức và tốc độ di chuyển của các phương tiện giao thông theo Pháp lệnh  Giao thông đường bộ?
+C1 신호등이 없는 교차로에서 좌회전할 때 직진하려는 다른 차가 있는 경우 직진 차에게 차로를 양보하여야 한다.
+V1 Khi muốn rẽ trái ở đoạn đường giao nhau không có đèn tín hiệu mà có xe khác đang đi thẳng thì phải nhường  đường cho xe đang đi thẳng.
+C2 차도와 보도의 구별이 없는 도로에서 차량을 정차할 때 도로의 오른쪽 가장자리로부터 중앙으로 50센티미터 이상의  거리를 두어야 한다.
+V2 Khi dừng xe ô tô tại đoạn đường không phân biệt lòng đường và vỉa hè thì phải duy trì khoảng cách tối thiểu 50cm tính từ lề đường bên phải đến tâm đường.
+C3 교차로에서 앞차가 우회전을 하려고 신호를 하는 경우 뒤따르는 차는 앞차의 진행을 방해해서는 안 된다.
+V3 Trường hợp xe phía trước muốn rẽ phải ở đoạn đường giao nhau và bật đèn tín hiệu thì xe phía sau không được cản  trở xe phía trước.
+C4 자동차전용도로에서의 최저속도는 매시 40킬로미터이다.
+V4 Tốc độ tối thiểu trên đường dành riêng cho xe ô tô là 40 km/giờ.
+N=230
+B 도로교통법령상 최고속도 매시 100킬로미터인 편도 4차로 고속도로를 주행하는 적재중량 3톤의 화물자동차의 최고속도는?
+T Theo Pháp lệnh Giao thông đường bộ, tốc độ tối đa của một chiếc xe tải với tải trọng 3 tấn là bao nhiêu khi đi  trên đường cao tốc bốn làn xe có tốc độ tối đa 100 km/giờ?
+C1 매시 60킬로미터
+V1 60 km/giờ
+C2 매시 70킬로미터
+V2 70 km/giờ
+C3 매시 80킬로미터
+V3 80 km/giờ
+C4 매시 90킬로미터
+V4 90 km/giờ
+N=231
+B 차마의 운전자가 도로의 좌측으로 통행할 수 없는 경우로 맞는 것은?
+T Trương hợp nào là đúng khi người lái xe không được đi về bên trái đường?
+C1 안전표지 등으로 앞지르기를 제한하고 있는 경우
+V1 Trường hợp hạn chế vượt bằng biển báo an toàn
+C2 도로가 일방통행인 경우
+V2 Trường hợp đường một chiều
+C3 도로 공사 등으로 도로의 우측 부분을 통행할 수 없는 경우
+V3 Trường hợp không thể đi ở phía bên phải đường do đường đang thi công
+C4 도로의 우측 부분의 폭이 차마의 통행에 충분하지 아니한 경우
+V4 Trường hợp chiều rộng của phần đường bên phải không đủ để xe lưu thông
+N=232
+B 교차로와 딜레마 존(Dilemma Zone)통과 방법 중 가장 거리가 먼 것은?
+T Nội dung nào khác xa nhất với các quy tắc đi qua giao lộ và khu vực tiến thoái lưỡng nan (Dilemma Zone)?
+C1 교차로 진입 전 교통 상황을 미리 확인하고 안전거리 유지와 감속운전으로 모든 상황을 예측하며 방어운전을 한다.
+V1 Kiểm tra tình hình giao thông trước khi đi vào giao lộ và dự đoán mọi tình huống bằng cách duy trì khoảng cách an toàn, giảm tốc độ và lái xe cẩn trọng.
+C2 적색신호에서 교차로에 진입하면 신호위반에 해당된다.
+V2 Đi vào giao lộ khi tín hiệu đèn đỏ là vi phạm đèn tín hiệu.
+C3 신호등이 녹색에서 황색으로 바뀔 때 앞바퀴가 정지선을 진입했다면 교차로 교통상황을 주시하며 신속하게 교차로  밖으로 진행한다.
+V3 Khi đèn tín hiệu chuyển từ màu xanh sang màu vàng, nếu bánh trước đã lấn vào vạch dừng thì quan sát tình hình giao thông tại giao lộ và nhanh chóng đi ra khỏi khúc giao.
+C4 도로교통법령상 딜레마 존(Dilemma Zone)을 인정하여 차량이 교차로에 진입하기 전에 황색의 등화로 바뀐 경우 교차 로 직전에 정지할 필요가 없다.
+V4 Theo quy định của Luật Giao thông đường bộ, bằng cách công nhận "vùng lưỡng nan" (Dilemma Zone), nếu đèn tín hiệu giao thông chuyển sang màu vàng trước khi xe đi vào giao lộ thì không cần phải dừng lại ngay trước giao lộ
+N=233
+B 다음은 차간거리에 대한 설명이다. 올바르게 표현된 것은?
+T Sau đây là các giải thích về khoảng cách giữa các xe. Mô tả nào đúng?
+C1 공주거리는 위험을 발견하고 브레이크 페달을 밟아 브레이크가 듣기 시작할 때까지의 거리를 말한다.
+V1 Khoảng cách phản xạ nhanh là khoảng cách từ lúc phát hiện nguy hiểm, giẫm bàn đạp phanh cho đến khi phanh bắt  đầu hoạt động.
+C2 정지거리는 앞차가 급정지할 때 추돌하지 않을 정도의 거리를 말한다.
+V2 Khoảng cách phanh là khoảng cách không bị đâm vào xe trước khi xe trước dừng đột ngột.
+C3 안전거리는 브레이크를 작동시켜 완전히 정지할 때까지의 거리를 말한다.
+V3 Khoảng cách an toàn là khoảng cách từ khi khởi động phanh cho đến khi xe dừng hoàn toàn.
+C4 제동거리는 위험을 발견한 후 차량이 완전히 정지할 때까지의 거리를 말한다.
+V4 Khoảng cách đạp phanh là khoảng cách từ khi nhận thấy nguy hiểm đến khi xe dừng lại hẳn.
+N=234
+B 다음 중 앞지르기가 가능한 장소는?
+T Khu vực nào sau đây có thể vượt?
+C1 교차로
+V1 Giao lộ
+C2 중앙선(황색 점선)
+V2 Vạch phân cách (vạch chấm màu vàng)
+C3 터널 안(흰색 실선 차로)
+V3 Trong đường hầm (làn đường có vạch kẻ liền màu trắng)
+C4 다리 위(흰색 실선 차로)
+V4 Trên cầu (làn đường có vạch kẻ liền màu trắng)
+N=235
+B 다음 중 도로교통법상 교차로에서의 서행에 대한 설명으로 가장 적절한 것은?
+T Theo Luật Giao thông đường bộ, giải thích nào sau đây là hợp lý nhất về việc chạy xe chậm trên đường giao  nhau?
+C1 차가 즉시 정지시킬 수 있는 정도의 느린 속도로 진행하는 것
+V1 Chạy với tốc độ chậm có thể dừng xe ngay lập tức.
+C2 매시 30킬로미터의 속도를 유지하여 진행하는 것
+V2 Chạy và duy trì tốc độ 30 km/giờ.
+C3 사고를 유발하지 않을 만큼의 속도로 느리게 진행하는 것
+V3 Chạy với tốc độ chậm không thể gây ra tai nạn.
+C4 앞차의 급정지를 피할 만큼의 속도로 진행하는 것
+V4 Chạy với tốc độ đủ để tránh khi xe phía trước dừng đột ngột.
+N=236
+B 다음은 도로에서 최고속도를 위반하여 자동차등(개인형 이동장치 제외)을 운전한 경우 처벌기준은?
+T Tiêu chuẩn xử phạt nào là đúng khi điều khiển xe ô tô (ngoại trừ phương tiện di chuyển cá nhân) vi phạm tốc  độ tối đa trên đường?
+C1 시속 100킬로미터를 초과한 속도로 3회 이상 운전한 사람은 500만 원 이하의 벌금 또는 구류
+V1 Người lái xe với tốc độ quá 100 km/giờ 3 lần trở lên sẽ bị phạt tiền hình sự tối đa 5 triệu Won hoặc bị tạm giam.
+C2 시속 100킬로미터를 초과한 속도로 3회 이상 운전한 사람은 1년 이하의 징역이나 500만 원 이하의 벌금
+V2 Người lái xe với tốc độ quá 100 km/giờ 3 lần trở lên sẽ bị phạt tù tối đa 1 năm hoặc phạt tiền hình sự tối đa 5 triệu  Won.
+C3 시속 100킬로미터를 초과한 속도로 2회 운전한 사람은 300만 원 이하의 벌금
+V3 Người lái xe với tốc độ quá 100 km/giờ 2 lần sẽ bị phạt tiền hình sự tối đa 3 triệu Won.
+C4 시속 80킬로미터를 초과한 속도로 운전한 사람은 50만 원 이하의 벌금 또는 구류
+V4 Người lái xe với tốc độ quá 80 km/giờ sẽ bị phạt tiền hình sự tối đa 500.000 Won hoặc bị tạm giam.
+N=237
+B 신호등이 없는 교차로에서 우회전하려 할 때 옳은 것은?
+T Cách xử lý đúng khi định rẽ phải ở đường giao nhau không có đèn giao thông?
+C1 가급적 빠른 속도로 신속하게 우회전한다.
+V1 Nhanh chóng rẽ phải với tốc độ cao nếu có thể.
+C2 교차로에 선진입한 차량이 통과한 뒤 우회전한다.
+V2 Rẽ phải sau khi chiếc xe đang đi vào đường giao nhau ở phía trước đã đi qua.
+C3 반대편에서 앞서 좌회전하고 있는 차량이 있으면 안전에 유의하며 함께 우회전한다.
+V3 Nếu có xe ở phía đối diện đang rẽ trái thì chú ý an toàn rồi rẽ phải.
+C4 폭이 넓은 도로에서 좁은 도로로 우회전할 때는 다른 차량에 주의할 필요가 없다.
+V4 Khi rẽ phải từ đường rộng sang đường hẹp thì không cần chú ý đến xe khác.
+N=238
+B 신호기의 신호가 있고 차량보조신호가 없는 교차로에서 우회전하려고 한다. 도로교통법령상 잘못된 것은?
+T Khi muốn rẽ phải tại đoạn đường giao nhau có tín hiệu đèn giao thông và không có tín hiệu phụ trợ riêng  cho xe. Theo Pháp lệnh Giao thông đường bộ , hành vi nào sau đây là không đúng ?
+C1 차량신호가 적색등화인 경우, 횡단보도에서 보행자신호와 관계없이 정지선 직전에 일시정지 한다.
+V1 Nếu tín hiệu của xe bật sáng màu đỏ thì tạm dừng ngay trước vạch dừng, bất kể tín hiệu dành cho người đi bộ tại lối  qua đường là gì.
+C2 차량신호가 녹색등화인 경우, 정지선 직전에 일시정지하지 않고 우회전한다.
+V2 Nếu tín hiệu của xe bật sáng màu xanh lá cây thì không tạm dừng ở ngay trước vạch dừng mà rẽ phải luôn.
+C3 차량신호가 좌회전 신호인 경우, 횡단보도에서 보행자신호와 관계없이 정지선 직전에 일시정지 한다.
+V3 Nếu đèn tín hiệu cho xe là tín hiệu rẽ trái, thì phải dừng tạm thời ở trước vạch dừng bất kể tín hiệu đèn dành cho  người đi bộ ở vạch sang đường.
+C4 차량신호에 관계없이 다른 차량의 교통을 방해하지 않은 때 일시정지하지 않고 우회전한다.
+V4 Không tạm dừng ở ngay trước vạch dừng mà rẽ phải luôn, miễn là không cản trở sự lưu thông của xe khác và bất kể  tín hiệu của xe.
+N=239
+B 교차로에서 좌･우회전하는 방법을 가장 바르게 설명한 것은?
+T Giải thích đúng nhất về cách rẽ trái và rẽ phải ở đường giao nhau?
+C1 우회전을 하고자 하는 때에는 신호에 따라 정지 또는 진행하는 보행자와 자전거에 주의하면서 신속히 통과한다.
+V1 Khi định rẽ phải thì phải chú ý đến xe đạp và người đi bộ đang đi hoặc đang dừng theo tín hiệu giao thông và đi  qua một cách nhanh chóng.
+C2 좌회전을 하고자 하는 때에는 항상 교차로 중심 바깥쪽으로 통과해야 한다.
+V2 Khi định rẽ trái, luôn luôn phải đi qua phía ngoài của phần trung tâm giữa đường giao nhau.
+C3 우회전을 하고자 하는 때에는 미리 우측 가장자리를 따라 서행하여야 한다.
+V3 Khi định rẽ phải, phải đi chậm lại dọc theo mép đường bên phải trước.
+C4 신호기 없는 교차로에서 좌회전을 하고자 할 경우 보행자가 횡단 중이면 그 앞을 신속히 통과한다.
+V4 Trong trường hợp định rẽ trái ở đường giao nhau không có đèn tín hiệu, nếu có người đi bộ đang đi qua thì nhanh  chóng đi qua phía trước người đó.
+N=240
+B 정지거리에 대한 설명으로 맞는 것은?
+T Giải thích nào đúng về khoảng cách phanh?
+C1 운전자가 브레이크 페달을 밟은 후 최종적으로 정지한 거리
+V1 Là khoảng cách dừng hẳn sau khi người lái xe đạp phanh.
+C2 앞차가 급정지 시 앞차와의 추돌을 피할 수 있는 거리
+V2 Là khoảng cách để tránh tai nạn khi xe trước dừng đột ngột.
+C3 운전자가 위험을 발견하고 브레이크 페달을 밟아 실제로 차량이 정지하기까지 진행한 거리
+V3 Là khoảng cách từ khi lái xe phát hiện nguy hiểm và đạp phanh cho đến khi xe dừng lại trên thực tế.
+C4 운전자가 위험을 감지하고 브레이크 페달을 밟아 브레이크가 실제로 작동하기 전까지의 거리
+V4 Là khoảng cách từ lúc người lái xe nhận thức ra sự nguy hiểm và phản xạ đạp phanh cho đến trước khi phanh thực  sự hoạt động.
+
+codex
+[{"n":201,"field":"b","severity":"major","issue":"고장났다는 핵심 서술어가 누락되어 질문이 불완전한 비문이 되었다.","suggestion":"Cách đi qua lối sang đường nào là đúng khi đang lái xe mà cả đèn tín hiệu dành cho xe và đèn tín hiệu dành cho người đi bộ đều bị hỏng?"},{"n":216,"field":"b","severity":"major","issue":"보행자·자전거가 신호에 따라 정지하거나 진행한다는 문장을 운전자가 신호에 따라 정지해야 한다는 의미로 잘못 연결했다.","suggestion":"Theo Pháp lệnh Giao thông đường bộ, người điều khiển mọi loại xe khi muốn ( ) tại giao lộ phải đi chậm sát mép phải của đường từ trước rồi ( ). Trong trường hợp này, người điều khiển xe đang ( ) phải chú ý đến người đi bộ hoặc xe đạp đang dừng hay di chuyển theo tín hiệu. Thứ tự nội dung đúng để điền vào các chỗ trống là gì?"},{"n":226,"field":"b","severity":"major","issue":"‘다인승 전용차로’를 버스·승합차 전용차로라는 뜻의 ‘làn đường dành riêng cho xe khách’로 오역했다.","suggestion":"Theo Pháp lệnh Giao thông đường bộ, hai tiêu chuẩn nào sau đây là đúng đối với xe được phép lưu thông trên làn đường dành riêng cho xe chở nhiều người?"},{"n":237,"field":"c[2]","severity":"major","issue":"‘교차로에 먼저 진입한 차량’을 단순히 앞쪽에서 교차로에 진입 중인 차량으로 번역해 우선순위 판단을 흐린다.","suggestion":"Rẽ phải sau khi chiếc xe đã đi vào giao lộ trước đi qua."},{"n":240,"field":"b","severity":"major","issue":"‘정지거리’를 ‘제동거리’에 해당하는 ‘khoảng cách phanh’으로 오역하여 정답 판단에 영향을 준다.","suggestion":"Giải thích nào sau đây là đúng về khoảng cách dừng xe?"}]
+tokens used
+40,580
+[{"n":201,"field":"b","severity":"major","issue":"고장났다는 핵심 서술어가 누락되어 질문이 불완전한 비문이 되었다.","suggestion":"Cách đi qua lối sang đường nào là đúng khi đang lái xe mà cả đèn tín hiệu dành cho xe và đèn tín hiệu dành cho người đi bộ đều bị hỏng?"},{"n":216,"field":"b","severity":"major","issue":"보행자·자전거가 신호에 따라 정지하거나 진행한다는 문장을 운전자가 신호에 따라 정지해야 한다는 의미로 잘못 연결했다.","suggestion":"Theo Pháp lệnh Giao thông đường bộ, người điều khiển mọi loại xe khi muốn ( ) tại giao lộ phải đi chậm sát mép phải của đường từ trước rồi ( ). Trong trường hợp này, người điều khiển xe đang ( ) phải chú ý đến người đi bộ hoặc xe đạp đang dừng hay di chuyển theo tín hiệu. Thứ tự nội dung đúng để điền vào các chỗ trống là gì?"},{"n":226,"field":"b","severity":"major","issue":"‘다인승 전용차로’를 버스·승합차 전용차로라는 뜻의 ‘làn đường dành riêng cho xe khách’로 오역했다.","suggestion":"Theo Pháp lệnh Giao thông đường bộ, hai tiêu chuẩn nào sau đây là đúng đối với xe được phép lưu thông trên làn đường dành riêng cho xe chở nhiều người?"},{"n":237,"field":"c[2]","severity":"major","issue":"‘교차로에 먼저 진입한 차량’을 단순히 앞쪽에서 교차로에 진입 중인 차량으로 번역해 우선순위 판단을 흐린다.","suggestion":"Rẽ phải sau khi chiếc xe đã đi vào giao lộ trước đi qua."},{"n":240,"field":"b","severity":"major","issue":"‘정지거리’를 ‘제동거리’에 해당하는 ‘khoảng cách phanh’으로 오역하여 정답 판단에 영향을 준다.","suggestion":"Giải thích nào sau đây là đúng về khoảng cách dừng xe?"}]

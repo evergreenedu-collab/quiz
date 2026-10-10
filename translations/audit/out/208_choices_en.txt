@@ -1,0 +1,851 @@
+Reading additional input from stdin...
+2026-10-10T12:40:42.587452Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125d4-76eb-7eb3-ba02-99e163006da7
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/208_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+codex
+요청하신 파일의 원문과 번역을 항목별로 대조해 실질 오류와 자동 지적의 오탐 여부만 판정하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/208_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 737ms:
+[
+ {
+  "n": 321,
+  "ko_b": "愿??寃쎌같?쒖옣???몄씤 蹂댄샇援ъ뿭 ?덉뿉???????덈뒗 議곗튂濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "?먮룞李⑥쓽 ?듯뻾??湲덉??섍굅???쒗븳?섎뒗 寃?,
+   "?먮룞李⑥쓽 ?뺤감??二쇱감瑜?湲덉??섎뒗 寃?,
+   "?몄긽二쇱감?μ쓣 ?ㅼ튂?섎뒗 寃?,
+   "蹂댄뻾?먯쓽 ?듯뻾??湲덉??섍굅???쒗븳?섎뒗 寃?
+  ],
+  "a": "1, 2",
+  "tr_b": "Which TWO are applicable to the control that a police chief has over a silver zone?",
+  "tr_c": [
+   "Prohibition or restriction of vehicle passage",
+   "Prohibition of stopping/parking",
+   "Installation of a road parking lot",
+   "Prohibition or restriction of pedestrian passage"
+  ]
+ },
+ {
+  "n": 322,
+  "ko_b": "?몄씤蹂댄샇援ъ뿭?먯꽌 ?몄씤???놁쓣 吏?섍컝 ???댁쟾?먯쓽 ?댁쟾諛⑸쾿 以?留욌뒗 寃껋??",
+  "ko_c": [
+   "二쇳뻾 ?띾룄瑜??좎??섏뿬 ?좎냽???듦낵?쒕떎.",
+   "?몄씤怨쇱쓽 媛꾧꺽??異⑸텇???뺣낫?섎ŉ ?쒗뻾?쇰줈 ?듦낵?쒕떎.",
+   "寃쎌쓬湲곕? ?몃━硫??좎냽???듦낵?쒕떎.",
+   "?꾩“?깆쓣 ?먮㈇?섎ŉ ?듦낵?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the correct method of driving when passing by an elderly person in a silver zone?",
+  "tr_c": [
+   "Maintain a constant speed and drive by.",
+   "Maintain a safe distance and drive by slowly.",
+   "Honk and drive by quickly.",
+   "Flash the headlights and drive by."
+  ]
+ },
+ {
+  "n": 323,
+  "ko_b": "?몄씤蹂댄샇援ъ뿭?먯꽌 ?몄씤???덉쟾???꾪븯???ㅼ튂?????덈뒗 ?꾨줈 ?쒖꽕臾쇨낵 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "誘몃걚?쇰갑吏?쒖꽕, 諛⑺샇?명?由?,
+   "怨쇱냽諛⑹??쒖꽕, 誘몃걚?쇰갑吏?쒖꽕",
+   "媛?띿감濡? 蹂댄샇援ъ뿭 ?꾨줈?쒖?",
+   "諛⑺샇?명?由? ?꾨줈諛섏궗寃?
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a road facility that can be installed for the safety of the aged in a silver zone?",
+  "tr_c": [
+   "Non-slip facilities, crash barriers",
+   "Speed bumps, non-slip facilities",
+   "Acceleration lane, silver zone sign",
+   "Crash barriers, road reflector system"
+  ]
+ },
+ {
+  "n": 324,
+  "ko_b": "?쇨컙???몄씤蹂댄샇援ъ뿭???듦낵?????댁쟾?먭? 二쇱쓽?댁빞???ы빆?쇰줈 ?꾨땶 寃껋??",
+  "ko_c": [
+   "利앸컻?꾩긽??諛쒖깮?????덉쑝誘濡?二쇱쓽?쒕떎.",
+   "?쇨컙?먮뒗 ?몄씤???놁쑝誘濡??띾룄瑜??믪뿬 ?듦낵?쒕떎.",
+   "臾대떒 ?〓떒?섎뒗 ?몄씤??二쇱쓽?섎ŉ ?듦낵?쒕떎.",
+   "寃????룹쓣 ?낆? ?몄씤? ??蹂댁씠吏 ?딆쑝誘濡??좎쓽?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT a safety precaution to be taken by a driver driving through a silver zone at night?",
+  "tr_c": [
+   "Watch out for glare from another car?셲 headlights as you may not be able to see the pedestrians.",
+   "Drive at high speed because there are no elderly people around at night.",
+   "Drive through while looking out for any elderly crossing the road illegally.",
+   "Drive carefully because elderly people wearing black can be hard to spot."
+  ]
+ },
+ {
+  "n": 325,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄씤蹂댄샇援ъ뿭 ???좏샇???덈뒗 ?〓떒蹂대룄 ?듯뻾諛⑸쾿 諛?踰뺢퇋?꾨컲??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?먮룞李??댁쟾?먮뒗 ?좏샇媛 諛붾뚮㈃ 利됱떆 異쒕컻?섏? 留먭퀬 二쇰????댄뵾怨?泥쒖쿇??異쒕컻?쒕떎.",
+   "?뱀슜李??댁쟾?먭? ?ㅼ쟾 8?쒕????ㅽ썑 8???ъ씠???좏샇瑜??꾨컲?섍퀬 ?듦낵?섎뒗 寃쎌슦 踰붿튃湲덉? 12留??먯씠 遺怨쇰맂??",
+   "?먯쟾嫄??댁쟾?먮룄 ?꾩쭅 ?〓떒?섏? 紐삵븳 ?몄씤???덈뒗 寃쎌슦 ?몄씤???덉쟾?섍쾶 嫄대꼸 ???덈룄濡?湲곕떎由곕떎.",
+   "?대쪣李??댁쟾?먭? ?ㅼ쟾 8?쒕????ㅽ썑 8???ъ씠???〓떒蹂대룄 蹂댄뻾???〓떒??諛⑺빐?섎㈃ 踰붿튃湲?9留??먯씠 遺怨쇰맂??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT true about driving across a crosswalk with a traffic light in a silver zone and  penalty for violation?",
+  "tr_c": [
+   "When the traffic light turns green, the driver of a motor vehicle must look around first and speed up slowly.",
+   "If the driver of a passenger vehicle violates the traffic signal between 8 AM and 8 PM, the traffic penalty is KRW  120,000.",
+   "A bicycle rider must also wait for all senior pedestrians to finish crossing the street.",
+   "If a motorcycle rider obstructs pedestrians who are crossing at a crosswalk between 8 a.m. and 8 p.m., a traffic penalty of KRW 90,000 will be imposed."
+  ]
+ },
+ {
+  "n": 326,
+  "ko_b": "?몄씤蹂댄샇援ъ뿭??????ㅻ챸?대떎. ?由?寃껋??",
+  "ko_c": [
+   "?ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 ?쒗븳?띾룄瑜??꾨컲??寃쎌슦 踰붿튃湲덉븸??媛以??쒕떎.",
+   "蹂댄뻾?좏샇???쒓컙???쇰컲?꾨줈??蹂댄뻾?좏샇蹂대떎 ??湲몃떎.",
+   "?몄긽二쇱감???ㅼ튂瑜??????녿떎.",
+   "?몄씤?ㅼ씠 ??蹂댁씪 ???덈룄濡?洹쒖젙蹂대떎 ?좏샇?깆쓣 ?ш쾶 ?ㅼ튂?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements is INCORRECT regarding a silver zone?",
+  "tr_c": [
+   "A traffic penalty is imposed for speeding between 8 AM and 8 PM.",
+   "Green traffic lights for pedestrians are longer that those on general roadways.",
+   "No road parking lots can be installed.",
+   "Larger traffic lights are installed so that they can be seen more easily by the elderly."
+  ]
+ },
+ {
+  "n": 327,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜李??댁쟾?먭? ?ㅼ쟾 11?쒓꼍 ?몄씤蹂댄샇援ъ뿭?먯꽌 ?쒗븳?띾룄瑜?25km/h 珥덇낵??寃쎌슦 踰뚯젏??",
+  "ko_c": [
+   "60??,
+   "40??,
+   "30??,
+   "15??
+  ],
+  "a": "3",
+  "tr_b": "How many demerit points does the driver of a passenger car incur if caught driving at a speed that is 25 km/h  faster than the limit in a silver zone at around 11 AM?",
+  "tr_c": [
+   "60 points",
+   "40 points",
+   "30 points",
+   "15 points"
+  ]
+ },
+ {
+  "n": 328,
+  "ko_b": "?몄씤蹂댄샇援ъ뿭 ?댁쓽 ?좏샇?깆씠 ?덈뒗 ?〓떒蹂대룄???묎렐?섍퀬 ?덉쓣 ???댁쟾諛⑸쾿?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?좏샇媛 ?곸깋?쇰줈 諛붾??꾩뿉???몄씤??蹂댄뻾?섎뒗 寃쎌슦 ?湲고븯怨??덈떎媛 ?〓떒??留덉튇 ??二쇳뻾?쒕떎.",
+   "?좏샇??蹂寃쎌쓣 ?덉긽?섏뿬 ?덉륫 異쒕컻?????덈룄濡??쒕떎.",
+   "?덉쟾?섍쾶 ?뺤????띾룄濡??쒗뻾?섍퀬 ?뺤??좏샇??留욎떠 ?뺤??섏뿬???쒕떎.",
+   "?몄씤??寃쎌슦 蹂댄뻾?띾룄媛 ?먮━?ㅻ뒗 寃껋쓣 媛먯븞?섏뿬 二쇱쓽?섏뿬???쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is an INCORRECT method of driving when approaching a crosswalk with traffic lights in  a silver zone?",
+  "tr_c": [
+   "If an elderly person crosses the road after the signals change, wait for the person to finish crossing before taking off.",
+   "Drivers must anticipate signal changes and drive accordingly to ensure safe driving.",
+   "Drive slowly to come to a safe stop when the signals change.",
+   "Take extra precautions as the elderly walk at a slower pace."
+  ]
+ },
+ {
+  "n": 329,
+  "ko_b": "?몄씤蹂댄샇援ъ뿭?쇰줈 吏?뺣맂 寃쎌슦 ?????덈뒗 議곗튂?ы빆?대떎. 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?몄씤蹂댄샇援ъ뿭??寃쎌슦 ?쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎.",
+   "蹂댄뻾?좏샇???좏샇?쒓컙???쇰컲 蹂댄뻾?좏샇湲곗? 媛숆린 ?뚮Ц??二쇱쓽?쒖?瑜??ㅼ튂?????덈떎.",
+   "怨쇱냽諛⑹?????援먰넻?덉쟾?쒖꽕??蹂닿컯?섏뿬 ?ㅼ튂?????덈떎.",
+   "蹂댄샇援ъ뿭?쇰줈 吏?뺥븳 ?쒖꽕??二쇱텧?낅Ц怨?媛??媛源뚯슫 嫄곕━???꾩튂??媛꾩꽑?꾨줈???〓떒蹂대룄?먮뒗 ?좏샇湲곕? ?곗꽑?곸쑝濡? ?ㅼ튂쨌 愿由ы빐???쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is INCORRECT regarding the measures applicable to a silver zone?",
+  "tr_c": [
+   "The speed limit can be set to 30 km/h.",
+   "A \"caution\" sign can be installed as the duration of the pedestrian signal is the same as that of the normal pedestrian  signal.",
+   "Extra traffic safety installations, e.g., speed bumps, can be added.",
+   "Signal devices must be prioritized for installation and maintenance at crosswalks on arterial roads located closest to the main entrance of the designated facility within the specific zone (e.g., school zone)."
+  ]
+ },
+ {
+  "n": 330,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 ?ъ씠???몄씤蹂댄샇援ъ뿭?먯꽌 援먰넻踰뺢퇋 ?꾨컲 ??踰붿튃湲덉씠 媛以묐릺???됱쐞媛 ????寃껋??",
+  "ko_c": [
+   "?좏샇?꾨컲",
+   "二쇱감湲덉? ?꾨컲",
+   "?〓떒蹂대룄 蹂댄뻾???〓떒 諛⑺빐",
+   "以묒븰?좎묠踰?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a behavior for which a traffic penalty is imposed when it occurs in a silver zone  between 8 AM and 8 PM?",
+  "tr_c": [
+   "Violation of traffic signal",
+   "Violation of parking rules",
+   "Obstruction of pedestrians in a crosswalk",
+   "Invasion of the centerline"
+  ]
+ },
+ {
+  "n": 331,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄씤蹂댄샇援ъ뿭??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "?몄씤蹂댄샇援ъ뿭???듦낵???뚮뒗 ?꾪뿕?곹솴 諛쒖깮???鍮꾪빐 二쇱쓽?섎㈃??二쇳뻾?댁빞 ?쒕떎.",
+   "?몄씤蹂댄샇?쒖?? ?몄씤蹂댄샇援ъ뿭 ?덉뿉???몄씤??蹂댄샇瑜?吏?쒗븯??寃껋쓣 留먰븳??",
+   "?몄씤蹂댄샇?쒖????몄씤蹂댄샇援ъ뿭???꾨줈 以묒븰???ㅼ튂?쒕떎.",
+   "?뱀슜李??댁쟾?먭? ?몄씤蹂댄샇援ъ뿭?먯꽌 ?ㅼ쟾 10?쒖뿉 ?〓떒蹂대룄 蹂댄뻾?먯쓽 ?〓떒??諛⑺빐?섎㈃ 踰붿튃湲?12留??먯씠 遺怨쇰맂??"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT true about a silver zone?",
+  "tr_c": [
+   "When driving in a silver zone, look around with caution for any potential hazards.",
+   "A silver zone sign is a road sign that informs drivers of their duty to protect the seniors within the designated zone.",
+   "A silver zone sign is installed in the center of the road within said zone.",
+   "If the driver of a passenger vehicle obstructs a pedestrian crossing a crosswalk in a silver zone at 10 AM, the traffic  penalty is KRW 120,000."
+  ]
+ },
+ {
+  "n": 332,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄씤蹂댄샇援ъ뿭??????ㅻ챸?대떎. ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?몄씤蹂댄샇援ъ뿭??吏?빧룻빐??諛?愿由ш텒? ?쒖옣?깆뿉寃??덈떎.",
+   "寃쎌같?쒖옣? ?대㈃?꾨줈瑜??쇰갑?듯뻾濡쒕줈 吏?뺛냽?댁쁺?????덈떎.",
+   "寃쎌같?쒖옣? ?몄씤蹂댄샇援ъ뿭 ?댁뿉??李⑤쭏???듯뻾???쒗븳?????덈떎.",
+   "?쒖옣?깆? ?댄뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements about senior protection zones under the Road Traffic Act is incorrect?",
+  "tr_c": [
+   "The authority to designate, cancel, and manage such zones lies with the mayor, governor, or local administrator.",
+   "The local police chief may designate and operate side streets as one-way roads.",
+   "The local police chief may restrict traffic within senior protection zones.",
+   "The mayor or governor may limit the driving speed to 30 km/h or less."
+  ]
+ },
+ {
+  "n": 333,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤쓣 媛????以?섑븯怨??덈뒗 蹂댄뻾?먮뒗?",
+  "ko_c": [
+   "?〓떒蹂대룄媛 ?녿뒗 ?꾨줈瑜?媛??吏㏃? 嫄곕━濡??〓떒?섏???",
+   "?듯뻾李⑤웾???놁뼱 ?〓떒蹂대룄濡??듯뻾?섏? ?딄퀬 ?꾨줈瑜?媛濡쒖쭏???〓떒?섏???",
+   "?뺤감?섍퀬 ?덈뒗 ?붾Ъ?먮룞李?諛붾줈 ?ㅼそ?쇰줈 ?꾨줈瑜??〓떒?섏???",
+   "蹂대룄?먯꽌 醫뚯륫?쇰줈 ?듯뻾?섏???"
+  ],
+  "a": "1",
+  "tr_b": "Who among the following pedestrians is most likely to comply with the Road Traffic Act?",
+  "tr_c": [
+   "A pedestrian who crosses a road without a crosswalk using the shortest possible distance.",
+   "A pedestrian who crosses a road without using a crosswalk, as there are no cars passing by.",
+   "A pedestrian who crosses a road behind a stopped truck.",
+   "A pedestrian who walks on the left side of a sidewalk."
+  ]
+ },
+ {
+  "n": 334,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄씤?댁쟾?먭? ?ㅼ쓬怨?媛숈? ?댁쟾?됱쐞瑜??섎뒗 寃쎌슦 踰뚯젏湲곗???媛???믪? ?꾨컲?됱쐞??",
+  "ko_c": [
+   "?〓떒蹂대룄 ?댁뿉 ?뺤감?섏뿬 蹂댄뻾???듯뻾??諛⑺빐?섏???",
+   "蹂댄뻾?먮? ?ㅻ뒭寃?諛쒓껄 湲됱젣?숉븯??蹂댄뻾?먭? ?섏뼱吏?六뷀븯???",
+   "臾대떒 ?〓떒?섎뒗 蹂댄뻾?먮? 諛쒓껄?섍퀬 寃쎌쓬湲곕? ?몃━硫?蹂댄뻾???욎쑝濡??щ묠由??듦낵?섏???",
+   "?⑹깋?ㅼ꽑??以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?섏???"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following driving behaviors by an elderly driver is subject to the  highest demerit points?",
+  "tr_c": [
+   "Stop the car at the crosswalk and obstruct the passage of pedestrians.",
+   "Notice a pedestrian late and apply the brake so suddenly that the pedestrian almost fell over.",
+   "Upon spotting a pedestrian who is jaywalking, honk and pass quickly in front of the pedestrian.",
+   "Overtake the pedestrian by crossing the solid yellow centerline."
+  ]
+ },
+ {
+  "n": 335,
+  "ko_b": "?ㅼ쓬 以?援먰넻?쎌옄???대룞?몄쓽 利앹쭊踰뺤긽 援먰넻?쎌옄???대떦?섏? ?딆? ?щ엺??",
+  "ko_c": [
+   "?대┛??,
+   "怨좊졊??,
+   "泥?냼??,
+   "?꾩궛遺"
+  ],
+  "a": "3",
+  "tr_b": "According to the Act on the Promotion of the Transportation Convenience of Mobility Disadvantaged Persons,  which of the following persons is not regarded as a \"mobility disadvantaged person\"?",
+  "tr_c": [
+   "A child",
+   "An elderly person",
+   "A teenager",
+   "A pregnant woman"
+  ]
+ },
+ {
+  "n": 336,
+  "ko_b": "?몄씤???쇰컲?곸씤 ?좎껜???뱀꽦??????ㅻ챸?쇰줈 ?곷떦?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "?됰룞???먮젮吏꾨떎.",
+   "?쒕젰? ??섎릺??泥?젰? ?μ긽?쒕떎.",
+   "諛섏궗 ?좉꼍???뷀솕?쒕떎.",
+   "洹쇰젰???쏀솕?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT correct regarding the general physical characteristics of a senior citizen?",
+  "tr_c": [
+   "Slow movement",
+   "Vision deteriorates, but hearing improves",
+   "Slow reflexes",
+   "Physical strength is weakened"
+  ]
+ },
+ {
+  "n": 337,
+  "ko_b": "?ㅼ쓬 以?媛??諛붾엺吏곹븳 ?댁쟾???섍퀬 ?덈뒗 ?몄씤?댁쟾?먮뒗?",
+  "ko_c": [
+   "?꾨줈??愿怨꾩뾾???κ굅由щ? ?대룞???뚮뒗 ?덉쟾???꾪븯???쒗뻾 ?댁쟾?쒕떎.",
+   "?쒓컙 ?덉빟???꾪빐 紐⑹쟻吏源뚯? ?ъ? ?딄퀬 ?댄뻾?쒕떎.",
+   "?꾨줈 ?곹솴??二쇱떆?섎㈃??洹쒖젙 ?띾룄瑜?以?섑븯怨??댄뻾?쒕떎.",
+   "?듯뻾 李⑤웾???곸? ?쇨컙??二쇰줈 ?댁쟾???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the most desirable driving behavior of an elderly driver?",
+  "tr_c": [
+   "Always drive slowly for safety reasons when traveling long distances, regardless of the type of road.",
+   "Drive a vehicle without taking a rest until you reach your destination to save time.",
+   "Keep an eye on the road situation and drive by complying with the speed limit.",
+   "Drive mainly at night when there is less traffic."
+  ]
+ },
+ {
+  "n": 338,
+  "ko_b": "?몄씤?댁쟾?먯쓽 ?덉쟾?댁쟾怨?媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?댁쟾?섍린 ??異⑸텇???댁떇",
+   "二쇨린?곸씤 嫄닿컯?곹깭 ?뺤씤",
+   "?댁쟾?섍린 ?꾩뿉 紐⑹쟻吏 寃쎈줈?뺤씤",
+   "二쇨컙蹂대떎 ?ъ빞?댁쟾 沅뚯옣"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the least related to safe driving by a senior citizen?",
+  "tr_c": [
+   "Taking sufficient rest prior to driving",
+   "Periodic checks of health condition",
+   "Verification of the route to the destination prior to driving",
+   "Encouraging nighttime driving rather than daytime driving."
+  ]
+ },
+ {
+  "n": 339,
+  "ko_b": "?뱀슜?먮룞李??댁쟾?먭? ?몄씤蹂댄샇援ъ뿭?먯꽌 ?꾨갑二쇱떆?쒕쭔?쇰줈 ?몄씤?먭쾶 3二쇨컙???곹빐瑜??낇엺 寃쎌슦 ?뺤궗泥섎쾶??????ㅻ챸??濡??由?寃껋??",
+  "ko_c": [
+   "醫낇빀蹂댄뿕??媛?낅릺???덉쑝硫??뺤궗泥섎쾶?섏? ?딅뒗??",
+   "?몄씤蹂댄샇援ъ뿭???뚮━???덉쟾?쒖?媛 ?덈뒗 寃쎌슦 ?뺤궗泥섎쾶?쒕떎.",
+   "?쇳빐?먭? 泥섎쾶???먰븯吏 ?딆쑝硫??뺤궗泥섎쾶?섏? ?딅뒗??",
+   "?⑹쓽?섎㈃ ?뺤궗泥섎쾶?섏? ?딅뒗??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT the correct explanation regarding criminal punishment if a driver of a passenger car causes an injury that will take 3 weeks to heal to an elderly person in the silver zone for failing to look ahead while driving?",
+  "tr_c": [
+   "If a driver has comprehensive insurance, he/she is not subject to criminal punishment.",
+   "Criminal punishment is applied when there is a road sign indicating a silver zone.",
+   "If a victim does not want punishment, a driver is not subject to criminal punishment.",
+   "If both parties reach an agreement, criminal punishment is not imposed."
+  ]
+ },
+ {
+  "n": 340,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李??댁쟾?먭? ?몄씤蹂댄샇援ъ뿭?먯꽌 15:00寃?洹쒖젙?띾룄 蹂대떎 ?쒖냽 60?щ줈誘명꽣瑜?珥덇낵?섏뿬 ?댁쟾?? 寃쎌슦 踰붿튃湲덇낵 踰뚯젏?(媛?곌툑? ?쒖쇅)?",
+  "ko_c": [
+   "6留??? 60??,
+   "9留??? 60??,
+   "12留??? 120??,
+   "15留??? 120??
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is in the correct range of traffic penalties and demerit points (excluding surcharges)  imposed on a car driver who drives above 60 km/h at around 15:00 in a silver zone?",
+  "tr_c": [
+   "KRW 60,000, 60 points",
+   "KRW 90,000, 60 points",
+   "KRW 120,000, 120 points",
+   "KRW 150,000, 120 points"
+  ]
+ },
+ {
+  "n": 341,
+  "ko_b": "?μ븷?몄쟾?⑹＜李④뎄??뿉 ????ㅻ챸?대떎. ?섎せ??寃껋??",
+  "ko_c": [
+   "?μ븷?몄쟾?⑹＜李④뎄??二쇱감?쒖?媛 遺숈뼱 ?덈뒗 ?먮룞李⑥뿉 ?μ븷媛 ?덈뒗 ?щ엺???묒듅?섏? ?딆븘??二쇱감媛 媛?ν븯??",
+   "?μ븷?몄쟾?⑹＜李④뎄??二쇱감?쒖?瑜?諛쒓툒諛쏆? ?먭? 洹??쒖?瑜??묐룄쨌 ??ы븯????遺?뱁븳 紐⑹쟻?쇰줈 ?ъ슜??寃쎌슦 ?쒖?瑜? ?뚯닔?섍굅???щ컻湲됱쓣 ?쒗븳?????덈떎.",
+   "?μ븷?몄쟾?⑹＜李④뎄??뿉 臾쇨굔???볤굅???듯뻾濡쒕? 留됰뒗 ??二쇱감瑜?諛⑺빐?섎뒗 ?됱쐞瑜??섏뿬?쒕뒗 ???쒕떎.",
+   "?μ븷?몄쟾?⑹＜李④뎄??二쇱감?쒖?瑜?遺숈씠吏 ?딆? ?먮룞李⑤? ?μ븷?몄쟾?⑹＜李④뎄??뿉 二쇱감??寃쎌슦 10留??먯쓽 怨쇳깭猷뚭? 遺怨쇰맂??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is incorrect regarding parking spaces designated for persons with disabilities?",
+  "tr_c": [
+   "A vehicle with a tag permitting parking in parking spaces reserved for persons with disabilities may park there even if a disabled person is not riding in the vehicle.",
+   "If a person issued with a tag permitting parking in parking spaces reserved for persons with disabilities uses it in an unlawful manner such as transfer or lending, the tag may be confiscated or reissuance may be restricted.",
+   "Any act impeding parking in parking spaces reserved for persons with disabilities, such as piling up items or blocking passage, is strictly prohibited.",
+   "When a vehicle without a parking tag is parked in a parking space reserved for persons with disabilities, an administrative fine of KRW 100,000 is imposed."
+  ]
+ },
+ {
+  "n": 342,
+  "ko_b": "?μ븷???꾩슜 二쇱감援ъ뿭 二쇱감?쒖? 諛쒓툒 湲곌????꾨땶 寃껋??",
+  "ko_c": [
+   "援??蹂댄썕遺?κ?",
+   "?밸퀎?먯튂?쒖옣쨌?밸퀎?먯튂?꾩???,
+   "?쒖옣쨌援곗닔쨌援ъ껌??,
+   "蹂닿굔蹂듭?遺?κ?"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is not an agency that issues a parking tag for parking spaces reserved for persons with  disabilities?",
+  "tr_c": [
+   "Ministry of Patriots and Veterans Affairs",
+   "Special Self-Governing City Mayor, Special Self-Governing Province Governor",
+   "Head of Si/Gun/Gu",
+   "Minister of Health and Welfare"
+  ]
+ },
+ {
+  "n": 343,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??諛ㅼ뿉 ?먮룞李??대쪣?먮룞李??쒖쇅)???댁쟾?먭? 怨좎옣 洹?諛뽰쓽 遺?앹씠???ъ쑀濡??꾨줈???뺤감??寃쎌슦 耳쒖빞 ?????깊솕濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾩“??諛?誘몃벑",
+   "?ㅻ궡 議곕챸??諛?李⑦룺??,
+   "踰덊샇??諛??꾩“??,
+   "誘몃벑 諛?李⑦룺??
+  ],
+  "a": "4",
+  "tr_b": "Which of the following lights must be turned on when stopping on a road at night (except for two-wheeled  vehicles)?",
+  "tr_c": [
+   "Headlights and taillights",
+   "Indoor lights and sidelights",
+   "License plate lights and headlights",
+   "Taillights and sidelights"
+  ]
+ },
+ {
+  "n": 344,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈??媛?μ옄由ъ뿉 ?ㅼ튂???⑹깋 ?먯꽑??????ㅻ챸?대떎. 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "二쇱감? ?뺤감瑜??숈떆???????덈떎.",
+   "二쇱감??湲덉??섍퀬 ?뺤감???????덈떎.",
+   "二쇱감???????덉쑝???뺤감???????녿떎.",
+   "二쇱감? ?뺤감瑜??숈떆??湲덉??쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following descriptions is most correct regarding the yellow broken line on the edge of a road?",
+  "tr_c": [
+   "Both parking and stopping are allowed on the edge of a road marked with yellow broken lines.",
+   "Parking is prohibited, but stopping is allowed on the edge of a road marked with yellow broken lines.",
+   "Parking is allowed, but stopping is prohibited on the edge of a road marked with yellow broken lines.",
+   "Both parking and stopping are prohibited on the edge of a road marked with yellow broken lines."
+  ]
+ },
+ {
+  "n": 345,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂???뺤감 諛?二쇱감媛 湲덉??섎뒗 湲곗??쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "援먯감濡쒖쓽 媛?μ옄由щ줈遺??10誘명꽣 ?대궡??怨? ?꾨줈??紐⑦뎮?대줈遺??5誘명꽣 ?대궡??怨?,
+   "?〓떒蹂대룄濡쒕???10誘명꽣 ?대궡??怨? 嫄대꼸紐⑹쓽 媛?μ옄由щ줈遺??10誘명꽣 ?대궡??怨?,
+   "?덉쟾吏????щ갑?쇰줈遺??媛곴컖 10誘명꽣 ?대궡??怨? 踰꾩뒪?뺣쪟??湲곕뫁?쇰줈遺??10誘명꽣 ?대궡??怨?,
+   "鍮꾩긽?뚰솕?μ튂媛 ?ㅼ튂??怨녹쑝濡쒕???5誘명꽣 ?대궡??怨? ?뚮갑?⑹닔?쒖꽕???ㅼ튂??怨녹쑝濡쒕???5誘명꽣 ?대궡??怨?
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about idling and parking restrictions for a  personal mobility device?",
+  "tr_c": [
+   "An area located within 10 m from the edge of an intersection or an area located within 5 m from the corner of a road",
+   "An area located within 10 m from a crosswalk or an area located within 10 m from the edge of a railway crossing",
+   "An area located within 10 m from any side of a safety zone or an area located within 10 m from bus stop columns",
+   "An area located within 5 m from a place where emergency firefighting equipment is installed or an area located within 5 m from a fire-extinguishing water supply system"
+  ]
+ },
+ {
+  "n": 346,
+  "ko_b": "?꾧린?먮룞李④? ?꾨땶 ?먮룞李⑤? ?섍꼍移쒗솕???먮룞李?異⑹쟾?쒖꽕??異⑹쟾援ъ뿭??二쇱감?덉쓣 ??怨쇳깭猷뚮뒗 ?쇰쭏?멸??",
+  "ko_c": [
+   "3留???,
+   "5留???,
+   "7留???,
+   "10留???
+  ],
+  "a": "4",
+  "tr_b": "What is the administrative fine for parking a non-EV in the charging area of an eco-friendly vehicle?",
+  "tr_c": [
+   "KRW 30,000",
+   "KRW 50,000",
+   "KRW 70,000",
+   "KRW 100,000"
+  ]
+ },
+ {
+  "n": 347,
+  "ko_b": "?먮룞李⑥뿉???섏감????臾몄쓣 ?щ뒗 諛⑸쾿?멤섎뜑移?由ъ튂(Dutch Reach)?숈뿉 ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?먮룞李??섏감 ??李쎈Ц?먯꽌 癒?履??먯쑝濡??먯옟?대? ?≪븘 ?ㅻ? ?뺤씤????臾몄쓣 ?곕떎.",
+   "?먮룞李??섏감 ??李쎈Ц?먯꽌 媛源뚯슫 履??먯쑝濡??먯옟?대? ?≪븘 ?욎쓣 ?뺤씤????臾몄쓣 ?곕떎.",
+   "媛쒕Ц諛쒖감?ш퀬瑜??덈갑?쒕떎.",
+   "?곴뎅?먯꽌 泥섏쓬 ?쒖옉??援먰넻?덉쟾 罹좏럹?몄씠??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following correctly describes a Dutch Reach (method of opening the door) when exiting a  vehicle?",
+  "tr_c": [
+   "When exiting the vehicle, grab the handle with the hand farthest from the window, check if there is oncoming traffic from the rear, and open the door.",
+   "When exiting the vehicle, grab the handle with the hand closest to the window, check if there is oncoming traffic from  the front, and open the door.",
+   "The Dutch Reach prevents the driver from moving the vehicle with a door open.",
+   "The Dutch Reach is a traffic safety campaign started in the UK."
+  ]
+ },
+ {
+  "n": 348,
+  "ko_b": "?꾧린?먮룞李??먮뒗 ?몃?異⑹쟾?앺븯?대툕由щ뱶?먮룞李⑤뒗 湲됱냽異⑹쟾?쒖꽕??異⑹쟾?쒖옉 ?댄썑 異⑹쟾援ъ뿭?먯꽌 ?쇰쭏??二쇱감?????덈뒗媛?",
+  "ko_c": [
+   "1?쒓컙",
+   "2?쒓컙",
+   "3?쒓컙",
+   "4?쒓컙"
+  ],
+  "a": "1",
+  "tr_b": "How long can an EV or a plug-in hybrid vehicle park at a charging station after commencing charging?",
+  "tr_c": [
+   "1 hour",
+   "2 hours",
+   "3 hours",
+   "4 hours"
+  ]
+ },
+ {
+  "n": 349,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??寃쎌궗吏?怨녹뿉?쒖쓽 ?뺤감 諛?二쇱감 諛⑸쾿??????ㅻ챸?쇰줈 ?щ컮瑜댁? ?딆? 寃껋??",
+  "ko_c": [
+   "二쇱감?섎뒗 寃쎌슦 二쇱감 ?쒕룞?μ튂瑜??묐룞????怨좎엫紐? 怨좎엫???깆쑝濡?誘몃걚?쇰갑吏 議곗튂瑜??쒕떎.",
+   "?뺤감?섎뒗 寃쎌슦 ?댁쟾??李⑹꽍?섏뿬 吏곸젒 ?쒕룞?μ튂瑜??묐룞?섎뒗 寃쎌슦 異붽??곸씤 誘몃걚?쇰갑吏 議곗튂?섎Т???녿떎.",
+   "二쇱감?섎뒗 寃쎌슦 二쇱감 ?쒕룞?μ튂瑜??묐룞????議고뼢?μ튂瑜??꾨줈 履쎌쑝濡??뚮젮?볦븘???쒕떎.",
+   "?뺤감?섍퀬 ?좎떆 ?댁쟾?앹쓣 ?좊굹??寃쎌슦 二쇱감 ?쒕룞?μ튂 ?묐룞留뚯쑝濡?遺議깊븯怨?怨좊Т, ?뚮씪?ㅽ떛 ?깆쑝濡?誘몃걚?쇰갑吏 議곗튂瑜??댁빞 ?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following statements about parking and stopping on a slope under the Road Traffic Act is incorrect?",
+  "tr_c": [
+   "When parking, operate the parking brake and use wheel chocks or blocks to prevent the vehicle from slipping.",
+   "When stopping, if the driver remains seated and directly operates the brake, no additional anti-slip measures are required.",
+   "When parking, operate the parking brake and turn the steering wheel toward the road.",
+   "The parking brake alone is insufficient when stopping and leaving the driver?셲 seat temporarily; rubber or plastic must be used to prevent the vehicle from slipping."
+  ]
+ },
+ {
+  "n": 350,
+  "ko_b": "?μ븷?몄쟾?⑹＜李④뎄??뿉 臾쇨굔 ?깆쓣 ?볤굅??洹??듯뻾濡쒕? 媛濡쒕쭑????二쇱감瑜?諛⑺빐?섎뒗 ?됱쐞瑜???寃쎌슦 怨쇳깭猷?遺怨?湲덉븸??濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "4留???,
+   "20留???,
+   "50留???,
+   "100留???
+  ],
+  "a": "3",
+  "tr_b": "Which one of the following is the correct amount of administrative fine imposed on those who stack objects on  or obstruct the entry to parking spaces reserved for persons with disabilities?",
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 200,000",
+   "KRW 500,000",
+   "KRW 1,000,000"
+  ]
+ },
+ {
+  "n": 351,
+  "ko_b": "?댁쟾?먯쓽 以???ы빆??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?밴컼??臾몄쓣 ?닿퀬 ?대┫ ?뚯뿉???밴컼?먭쾶 ?덉쟾 梨낆엫???덈떎.",
+   "臾쇨굔 ?깆쓣 ?ш린 ?꾪빐 ?쇱떆 二쇱감?섎뒗 寃쎌슦?먮룄 ?쒕룞???덈떎.",
+   "?댁쟾?먮뒗 李⑥쓽 ?쒕룞???꾧퀬 ?덉쟾???뺤씤????李⑥쓽 臾몄쓣 ?닿퀬 ?대젮???쒕떎.",
+   "二쇱감 援ъ뿭???꾨땶 寃쎌슦?먮뒗 ?꾧뎄?쇰룄 利됱떆 ?대룞??媛?ν븯?꾨줉 議곗튂???붾떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are TWO statements correctly describe how a driver should behave?",
+  "tr_c": [
+   "The passenger is responsible for his/her safety when exiting the vehicle.",
+   "Even when parking temporarily to buy something, the driver must turn off the engine.",
+   "Before exiting a vehicle, the driver must turn off the engine and check that it is safe.",
+   "When parking in an area other than a parking lot, the parking brake must be left released so that the vehicle can be  moved if necessary."
+  ]
+ },
+ {
+  "n": 352,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??湲됯꼍?щ줈??二쇱감??寃쎌슦 媛???덉쟾??諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "寃쎌궗??諛⑺뼢怨?愿怨꾩뾾??二쇱감 ?쒕룞?μ튂瑜??묐룞?????꾩쭊 湲곗뼱瑜??ｌ뼱 ?붾떎.",
+   "二쇱감 ?쒕룞?μ튂瑜??묐룞????議고뼢?μ튂瑜??꾨줈??媛?μ옄由??먮룞李⑥뿉??媛源뚯슫 履쎌쓣 留먰븳?? 諛⑺뼢?쇰줈 ?뚮젮?볥뒗??",
+   "二쇱감 ?쒕룞?μ튂瑜??묐룞????寃쎌궗???대━留?諛⑺뼢?쇰줈 諛뷀댁뿉 怨좎엫紐????먮룞李⑥쓽 誘몃걚???ш퀬瑜?諛⑹??????덈뒗 寃????ㅼ튂?쒕떎.",
+   "?섎룞蹂?띻린 ?먮룞李⑤뒗 二쇱감 ?쒕룞?μ튂瑜??묐룞????湲곗뼱瑜?以묐┰???붾떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO safest methods of parking on a steeply sloped road?",
+  "tr_c": [
+   "Engage the parking brake and put the vehicle into reverse gear, regardless of the direction of the slope.",
+   "Engage the parking brake and turn the steering wheel toward the roadside (meaning toward the side closest to the vehicle).",
+   "Engage the parking brake and place a wheel stopper or other device that can prevent the vehicle from slipping in the  downhill direction.",
+   "For manual transmission vehicles, engage the parking brake and leave the gear in neutral."
+  ]
+ },
+ {
+  "n": 353,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??二쇽쉈?뺤감 諛⑸쾿??????ㅻ챸?대떎. 留욌뒗 2媛吏??",
+  "ko_c": [
+   "李⑤룄? 蹂대룄 援щ텇???덈뒗 ?꾨줈?먯꽌 ?뺤감瑜??섍퀬???섎뒗 ?뚯뿉??李⑤룄???곗륫 媛?μ옄由ъ뿉 ?몄썙???쒕떎.",
+   "?덉쟾?쒖?濡?二쇽쉈?뺤감 諛⑸쾿??吏?뺣릺???덈뒗 怨녹뿉?쒕뒗 洹?諛⑸쾿???곕? ?꾩슂???녿떎.",
+   "?됱??먯꽌??二쇱감 ?쒕룞?μ튂 ?묐룞?놁씠 ?섎룞蹂?띻린 李⑤웾??寃쎌슦 湲곗뼱瑜?1???먮뒗 ?꾩쭊???ｌ뼱?먭린留??섎㈃ ?쒕떎.",
+   "寃쎌궗吏??꾨줈?먯꽌??二쇱감 ?쒕룞?μ튂 ?묐룞 ??怨좎엫紐⑹쓣 諛쏆퀜?먯뼱???쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are TWO correct statements about stopping/parking?",
+  "tr_c": [
+   "When stopping on a road with a separate sidewalk, park at the far right edge of the roadway.",
+   "There is no need to follow the stopping/parking instructions shown on safety signs.",
+   "In the case of manual vehicles, you may leave the vehicle in 1st or reverse gear without using the parking brake when  parking on level ground.",
+   "On sloped roads, engage the parking brake and place a wheel stopper."
+  ]
+ },
+ {
+  "n": 354,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??二쇱감???대떦?섎뒗 2媛吏??",
+  "ko_c": [
+   "李⑤웾??怨좎옣 ?섏꽌 怨꾩냽 ?뺤??섍퀬 ?덈뒗 寃쎌슦",
+   "?꾪뿕 諛⑹?瑜??꾪븳 ?쇱떆?뺤?",
+   "5遺꾩쓣 珥덇낵?섏? ?딆븯吏留??댁쟾?먭? 李⑤? ?좊굹 利됱떆 ?댁쟾?????녿뒗 ?곹깭",
+   "吏?섏쿋??뿉 移쒓뎄瑜??대젮 二쇨린 ?꾪빐 ?쇱떆?뺤?"
+  ],
+  "a": "1, 3",
+  "tr_b": "Which TWO constitute parking?",
+  "tr_c": [
+   "A vehicle remaining stationary after breaking down",
+   "A temporary stop after recognizing a safety hazard",
+   "A stopped vehicle that is left unattended by the driver so that it cannot be driven immediately, even if it is for less than  five minutes",
+   "Stopping briefly near a subway station to drop off a friend"
+  ]
+ },
+ {
+  "n": 355,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뺤감???대떦?섎뒗 2媛吏??",
+  "ko_c": [
+   "?앹떆 ?뺣쪟?μ뿉???湲?以??댁쟾?먭? ?붿옣?ㅼ쓣 媛?寃쎌슦",
+   "?붾Ъ???ｊ린 ?꾪빐 ?댁쟾?먭? 李⑤? ?좊굹 利됱떆 ?댁쟾?????녿뒗 寃쎌슦",
+   "?댄뻾 以??좏샇 ?湲곕? ?꾪빐 ?뺤???寃쎌슦",
+   "李⑤? ?뺤??섍퀬 ?댁쟾?앹뿉??吏?섍????됱씤?먭쾶 湲몄쓣 臾삳뒗 寃쎌슦"
+  ],
+  "a": "3, 4",
+  "tr_b": "Which TWO constitute stopping?",
+  "tr_c": [
+   "A taxi stopping at a taxi stand for the driver to go to the restroom",
+   "A vehicle that is left unattended by its driver who is away to pick up a load to transport",
+   "The vehicle stops while waiting for a traffic signal.",
+   "The driver stops the car to ask a passerby for directions."
+  ]
+ },
+ {
+  "n": 356,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뺤감 ?먮뒗 二쇱감瑜?湲덉??섎뒗 ?μ냼???밸?瑜??곸슜?섏? ?딅뒗 2媛吏??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭 ??二쇱텧?낅Ц?쇰줈遺??50誘명꽣 ?대궡",
+   "?〓떒蹂대룄濡쒕???10誘명꽣 ?대궡",
+   "鍮꾩긽?뚰솕?μ튂媛 ?ㅼ튂??怨녹쑝濡쒕???5誘명꽣 ?대궡",
+   "?덉쟾吏????щ갑?쇰줈遺??媛곴컖 10誘명꽣 ?대궡"
+  ],
+  "a": "3, 4",
+  "tr_b": "According to the Road Traffic Act, which of the following are TWO locations that allow a motor vehicle to make  a stop or park?",
+  "tr_c": [
+   "Within 50 m from the main entrance in a school zone",
+   "Within 10 m from a crosswalk",
+   "Within a distance of 5 m from where emergency fire-extinguishing equipment is installed",
+   "Within 10 m from a safety zone in all four directions"
+  ]
+ },
+ {
+  "n": 357,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??二쇱감媛 媛?ν븳 ?μ냼濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "?꾨줈??紐⑦뎮?대줈遺??5誘명꽣 吏??,
+   "?뚮갑?⑹닔?쒖꽕???ㅼ튂??怨녹쑝濡쒕???7誘명꽣 吏??,
+   "鍮꾩긽?뚰솕?μ튂媛 ?ㅼ튂??怨녹쑝濡쒕???7誘명꽣 吏??,
+   "?덉쟾吏?濡쒕???5誘명꽣 吏??
+  ],
+  "a": "2, 3",
+  "tr_b": "According to the Road Traffic Act, which of the following are TWO locations that allow a motor vehicle to park?",
+  "tr_c": [
+   "5 m from the corner of a road",
+   "At a distance of 7 m or more from where a fire-extinguishing water facility is installed",
+   "At a distance of 7 m or more from where emergency fire-extinguishing equipment is installed",
+   "5 m from a safety zone"
+  ]
+ },
+ {
+  "n": 358,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒕? 醫뚰쉶?꾪븯?ㅺ퀬 ????媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "癒쇱? 吏꾩엯???ㅻⅨ 李⑤웾???덉뼱???쒗뻾?섎ŉ 議곗떖?ㅻ읇寃?醫뚰쉶?꾪븳??",
+   "??씠 ?볦? ?꾨줈??李⑥뿉 吏꾨줈瑜??묐낫?쒕떎.",
+   "吏곸쭊 李⑥뿉??李⑤줈瑜??묐낫?섎굹 ?고쉶??李⑤낫?ㅻ뒗 ?곗꽑沅뚯씠 ?덈떎.",
+   "誘몃━ ?꾨줈??以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎떎 援먯감濡?以묒떖 諛붽묑履쎌쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븳??"
+  ],
+  "a": "2",
+  "tr_b": "At an intersection with no traffic control, what is the safest method of turning left?",
+  "tr_c": [
+   "Drive slowly and turn left with care even if there are other vehicles that have entered the intersection ahead of you.",
+   "Yield to cars entering from wider roads.",
+   "Yield to cars passing through straight across, but take the right of way over cars trying to turn right.",
+   "Go slowly along the centerline of the road beforehand and turn left using the outside center of the intersection."
+  ]
+ },
+ {
+  "n": 359,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뚯쟾援먯감濡??듯뻾諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "吏꾩엯???뚮뒗 ?띾룄瑜?以꾩뿬 ?쒗뻾?쒕떎.",
+   "?묐낫?좎뿉 ?湲고븯???쇱떆?뺤??????쒗뻾?쇰줈 吏꾩엯?쒕떎.",
+   "吏꾩엯李⑤웾???곗꽑沅뚯씠 ?덉뼱 ?뚯쟾 以묒씤 李⑤웾???묐낫?쒕떎.",
+   "諛섏떆怨꾨갑?μ쑝濡??뚯쟾?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following INCORRECTLY describes a safe method of using a roundabout?",
+  "tr_c": [
+   "Slow down before entering a roundabout.",
+   "Stop temporarily at the yield line and enter slowly.",
+   "A vehicle entering the roundabout has the right of way, so the vehicle making a turn in the roundabout must yield.",
+   "Turn counterclockwise."
+  ]
+ },
+ {
+  "n": 360,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좏샇?깆씠 ?녿뒗 援먯감濡쒖뿉 ?좎쭊?낇븯??醫뚰쉶?꾪븯??李⑤웾???덈뒗 寃쎌슦???녹? 寃껋??",
+  "ko_c": [
+   "吏곸쭊 李⑤웾? 二쇱쓽?섎ŉ 吏꾪뻾?쒕떎.",
+   "?고쉶??李⑤웾? ?쒗뻾?쇰줈 ?고쉶?꾪븳??",
+   "吏곸쭊 李⑤웾怨??고쉶??李⑤웾 紐⑤몢 醫뚰쉶??李⑤웾??李⑤줈瑜??묐낫?쒕떎.",
+   "??씠 醫곸? ?꾨줈?먯꽌 吏꾪뻾?섎뒗 李⑤웾? ?쒗뻾?섎ŉ ?듦낵?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "A vehicle that has entered an intersection without traffic lights ahead of you is turning left. What should you do?",
+  "tr_c": [
+   "Proceed with caution if you are going to pass straight through.",
+   "If you are going to turn right, do so at low speed.",
+   "If you are going to go straight through or turn right, yield to vehicles turning left.",
+   "If you are driving on a narrow road, pass through the intersection at low speed."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+s='??씠 醫곸? ?꾨줈?먯꽌 吏꾪뻾?섎뒗 李⑤웾? ?쒗뻾?섎ŉ ?듦낵?쒕떎.'
+for enc in ['cp949','euc_kr']:
+ try: print(enc, s.encode(enc).decode('utf-8'))
+ except Exception as e: print(e)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:41:15.249907Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 645ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+codex
+[
+  {
+    "n": 334,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "원문은 황색 실선 중앙선을 넘어 앞지르는 행위인데, 번역은 보행자를 추월하는 상황으로 대상을 임의로 추가했다.",
+    "suggestion": "Overtaking another vehicle by crossing the solid yellow centerline."
+  },
+  {
+    "n": 340,
+    "field": "b",
+    "severity": "critical",
+    "issue": "‘제한속도보다 시속 60km를 초과’가 ‘시속 60km를 초과하여 운전’으로 번역되어 초과속도의 기준이 달라졌다.",
+    "suggestion": "What are the traffic penalty and demerit points (excluding additional penalties) imposed on a passenger-car driver who exceeds the speed limit by more than 60 km/h in a silver zone at around 3:00 PM?"
+  },
+  {
+    "n": 345,
+    "field": "b",
+    "severity": "major",
+    "issue": "법률상 ‘정차’를 엔진 공회전을 뜻하는 ‘idling’으로 오역했다.",
+    "suggestion": "According to the Road Traffic Act, which of the following is NOT a correct criterion for places where stopping and parking of a personal mobility device are prohibited?"
+  },
+  {
+    "n": 353,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "원문의 ‘정차’를 ‘park’로 번역해 정차와 주차라는 서로 다른 법률 개념을 혼동시킨다.",
+    "suggestion": "When stopping on a road with a separate sidewalk, stop at the far right edge of the roadway."
+  },
+  {
+    "n": 356,
+    "field": "b",
+    "severity": "critical",
+    "issue": "원문은 정차·주차 금지 장소 중 예외가 적용되지 않는 곳을 묻는데, 번역은 정차·주차가 허용되는 곳을 묻는 것으로 의미를 반전했다.",
+    "suggestion": "According to the Road Traffic Act, which TWO locations are subject to the prohibition on stopping or parking without exception?"
+  }
+]
+tokens used
+25,786
+[
+  {
+    "n": 334,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "원문은 황색 실선 중앙선을 넘어 앞지르는 행위인데, 번역은 보행자를 추월하는 상황으로 대상을 임의로 추가했다.",
+    "suggestion": "Overtaking another vehicle by crossing the solid yellow centerline."
+  },
+  {
+    "n": 340,
+    "field": "b",
+    "severity": "critical",
+    "issue": "‘제한속도보다 시속 60km를 초과’가 ‘시속 60km를 초과하여 운전’으로 번역되어 초과속도의 기준이 달라졌다.",
+    "suggestion": "What are the traffic penalty and demerit points (excluding additional penalties) imposed on a passenger-car driver who exceeds the speed limit by more than 60 km/h in a silver zone at around 3:00 PM?"
+  },
+  {
+    "n": 345,
+    "field": "b",
+    "severity": "major",
+    "issue": "법률상 ‘정차’를 엔진 공회전을 뜻하는 ‘idling’으로 오역했다.",
+    "suggestion": "According to the Road Traffic Act, which of the following is NOT a correct criterion for places where stopping and parking of a personal mobility device are prohibited?"
+  },
+  {
+    "n": 353,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "원문의 ‘정차’를 ‘park’로 번역해 정차와 주차라는 서로 다른 법률 개념을 혼동시킨다.",
+    "suggestion": "When stopping on a road with a separate sidewalk, stop at the far right edge of the roadway."
+  },
+  {
+    "n": 356,
+    "field": "b",
+    "severity": "critical",
+    "issue": "원문은 정차·주차 금지 장소 중 예외가 적용되지 않는 곳을 묻는데, 번역은 정차·주차가 허용되는 곳을 묻는 것으로 의미를 반전했다.",
+    "suggestion": "According to the Road Traffic Act, which TWO locations are subject to the prohibition on stopping or parking without exception?"
+  }
+]

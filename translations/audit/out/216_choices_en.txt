@@ -1,0 +1,745 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1260a-9de3-7bc0-bbbd-f99649a3513f
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/216_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/216_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 543ms:
+[
+ {
+  "n": 641,
+  "ko_b": "?ㅼ쓬 以??몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 寃ъ씤李⑥쓽 二쇳뻾 李⑤줈??(踰꾩뒪?꾩슜李⑤줈 ?놁쓬)",
+  "ko_c": [
+   "1李⑤줈",
+   "2李⑤줈",
+   "3李⑤줈",
+   "紐⑤몢媛??
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the lane to be used by a towing vehicle on an expressway with three lanes in one  direction? (There is no bus-only lane)",
+  "tr_c": [
+   "The first lane",
+   "The second lane",
+   "The third lane",
+   "Any of the above"
+  ]
+ },
+ {
+  "n": 642,
+  "ko_b": "湲됯컧?띯ㅺ툒?쒕룞 ???쇨껄?몄감媛 ?욎そ 寃ъ씤李⑤? 吏곸꽑 ?대룞?쇰줈 諛怨??섏븘媛硫댁꽌 ?곌껐 遺?꾧? ?섅꽦?숈옄泥섎읆 ?묓엳???꾩긽?? 留먰븯???⑹뼱??",
+  "ko_c": [
+   "?ㅼ쐷-?꾩썐(swing-out)",
+   "???섏씠??jack knife)",
+   "?섏씠?쒕줈?뚮옒??hydroplaning)",
+   "踰좎씠??濡?vapor lock)"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following terms refers to the phenomenon wherein a towed vehicle pushes the tow truck that is in front in a linear motion during rapid deceleration or sudden braking, and the joints are folded as in an ?쏬??shape?",
+  "tr_c": [
+   "Swing-out",
+   "Jack knife",
+   "Hydroplaning",
+   "Vapor lock"
+  ]
+ },
+ {
+  "n": 643,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?먮룞李⑤? 寃ъ씤?섎뒗 寃쎌슦??????ㅻ챸?쇰줈 諛붾Ⅴ吏 紐삵븳 寃껋??",
+  "ko_c": [
+   "??醫???뺣㈃?덈줈 ??뺢껄?몄감瑜??댁쟾?섏뿬 ?대쪣?먮룞李⑤? 寃ъ씤?섏???",
+   "?뚰삎寃ъ씤李?硫댄뿀濡?珥앹쨷??3.5???댄븯??寃ъ씤???뱀닔?먮룞李⑤? ?댁쟾?섏???",
+   "??醫?蹂댄넻硫댄뿀濡?10?ㅼ쓽 ?붾Ъ?먮룞李⑤? ?댁쟾?섏뿬 怨좎옣???뱀슜?먮룞李⑤? 寃ъ씤?섏???",
+   "珥앹쨷??1泥?諛깊궗濡쒓렇???먮룞李⑤? 珥앹쨷?됱씠 5泥쒗궗濡쒓렇?⑥씤 ?먮룞李⑤줈 寃ъ씤?섏뿬 留ㅼ떆 30?щ줈誘명꽣濡?二쇳뻾?섏???"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT a correct description of towing a vehicle according to the Road Traffic Act?",
+  "tr_c": [
+   "A driver may tow a two-wheeled vehicle using a large towing vehicle with a Class 1 driver?셲 license for large motor  vehicles.",
+   "A driver may drive a special vehicle for towing that weighs 3.5 tons or less with a small tow truck license.",
+   "A driver may tow a broken down passenger car using a 10-ton truck with a Class 1 driver?셲 license for ordinary motor  vehicles.",
+   "A driver may tow a 1,500 kg vehicle using a 5,000 kg vehicle driving at 30 km/h."
+  ]
+ },
+ {
+  "n": 644,
+  "ko_b": "?ㅼ쓬 以??몃젅?쇰윭 李⑤웾???뱀꽦??????ㅻ챸?쇰줈 媛???곸젙??寃껋??",
+  "ko_c": [
+   "醫뚰쉶?????뱀슜李⑥? 鍮꾩듂???뚯쟾媛곸쓣 ?좎??쒕떎.",
+   "?대━留됯만?먯꽌??誘몃걚??諛⑹?瑜??꾪빐 湲곗뼱瑜?以묐┰???붾떎.",
+   "?뱀슜李⑥뿉 鍮꾪빐 ?대쪣李??㎬섈藥?媛 ?щ떎.",
+   "?뱀슜李⑥뿉 鍮꾪빐 異뺢컙 嫄곕━媛 吏㏓떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following statements regarding a trailer is correct?",
+  "tr_c": [
+   "When turning left, a trailer must maintain a turning angle similar to the one used for passenger cars.",
+   "Shift to neutral when driving downhill to prevent sliding.",
+   "The difference of radius between the inner wheels of a trailer is larger than that of a passenger car.",
+   "The wheelbase of a trailer is shorter than that of a passenger car."
+  ]
+ },
+ {
+  "n": 645,
+  "ko_b": "?붾Ъ???곸옱???몃젅?쇰윭 ?먮룞李④? ?쒖냽 50?щ줈誘명꽣濡??몃룄 1李⑤줈 ?꾨줈???곕줈 援쎌? ?꾨줈瑜?吏꾪뻾????媛???덉쟾?? ?댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "二쇳뻾?섎뜕 ?띾룄瑜?以꾩씠硫??꾨났???꾪뿕???덉뼱 ?띾룄瑜??믪뿬 吏꾩엯?쒕떎.",
+   "?뚯쟾諛섍꼍??以꾩씠湲??꾪빐 諛섎?李⑤줈瑜??댁슜?섏뿬 吏꾩엯?쒕떎.",
+   "?먰솢??援먰넻?먮쫫???꾪빐 ?꾩옱 ?띾룄瑜??좎??섎㈃???좎냽?섍쾶 吏꾩엯?쒕떎.",
+   "?먯떖?μ뿉 ?섑빐 ?꾨났???꾪뿕?깆씠 ?덉뼱 ?띾룄瑜?以꾩씠硫댁꽌 吏꾩엯?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the safest way to drive a trailer truck loaded with cargo, traveling at a speed of 50  km/h on a road with one lane in one direction that curves to the right?",
+  "tr_c": [
+   "Slowing down can cause the vehicle to overturn. It is safer to drive at an increased speed into the curve.",
+   "Drive into the other lane to reduce the turning radius.",
+   "Drive into the curve at the current speed so as not to hold up the traffic behind.",
+   "Slow down and safely enter the curve to prevent the vehicle from rolling over due to centrifugal force."
+  ]
+ },
+ {
+  "n": 646,
+  "ko_b": "?먮룞李④?由щ쾿???좏삎蹂꾨줈 援щ텇???뱀닔?먮룞李⑥뿉 ?대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "寃ъ씤??,
+   "援щ궃??,
+   "?쇰컲??,
+   "?뱀닔?⑸룄??
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a type of special vehicle defined by the Motor Vehicle Management Act?",
+  "tr_c": [
+   "The towing type",
+   "The rescue type",
+   "The general type",
+   "The special-purpose type"
+  ]
+ },
+ {
+  "n": 647,
+  "ko_b": "?ㅼ쓬 以??몃젅?쇰윭??醫낅쪟???대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "??몃젅?쇰윭",
+   "??곹듃?덉씪??,
+   "?몃??몃젅?쇰윭",
+   "怨좉??몃젅?쇰윭"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following types is NOT classified as a trailer?",
+  "tr_c": [
+   "A pull trailer",
+   "A low-bed trailer",
+   "A semi-trailer",
+   "A tractor-trailer"
+  ]
+ },
+ {
+  "n": 648,
+  "ko_b": "?먮룞李?諛??먮룞李⑤??덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃???몃젅?쇰윭??李⑤웾以묐웾?대??",
+  "ko_c": [
+   "怨듭감?곹깭???먮룞李⑥쓽 以묐웾??留먰븳??",
+   "?곸감?곹깭???먮룞李⑥쓽 以묐웾??留먰븳??",
+   "怨듭감?곹깭???먮룞李⑥쓽 異뺤쨷??留먰븳??",
+   "?곸감?곹깭???먮룞李⑥쓽 異뺤쨷??留먰븳??"
+  ],
+  "a": "1",
+  "tr_b": "What is the definition of vehicle weight according to the Regulations on the Performance and Standards of  Vehicles and Automotive Parts?",
+  "tr_c": [
+   "The weight of an empty vehicle",
+   "The weight of a loaded vehicle",
+   "The axle weight of an empty vehicle",
+   "The axle weight of a loaded vehicle"
+  ]
+ },
+ {
+  "n": 649,
+  "ko_b": "?꾨줈?먯꽌 罹좏븨?몃젅?쇰윭 ?쇨껄??李⑤웾 ?댄뻾 ???≫뭾 ??臾쇰━???붿씤???섑빐 ?쇨껄??李⑤웾??臾쇨퀬湲?瑗щ━泥섎읆 ?붾뱾由щ뒗 ?꾩긽? ?",
+  "ko_c": [
+   "???섏씠??jack knife) ?꾩긽",
+   "?ㅼ썾??Sway) ?꾩긽",
+   "?섎쭑(Hydroplaning) ?꾩긽",
+   "???쇰씪?대㉫??wheel alignment) ?꾩긽"
+  ],
+  "a": "2",
+  "tr_b": "When driving a vehicle towed using a camping trailer on the road, which of the following is the phenomenon wherein the towed vehicle shakes like a fish tail due to physical factors such as cross-wind?",
+  "tr_c": [
+   "Jack knife phenomenon",
+   "Swaying",
+   "Hydroplaning",
+   "Wheel alignment"
+  ]
+ },
+ {
+  "n": 650,
+  "ko_b": "?먮룞李?諛??먮룞李⑤??덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃??寃ъ씤???뱀닔?먮룞李⑥쓽 ?룸㈃ ?먮뒗 ?곗륫硫댁뿉 ?쒖떆?섏뿬???섎뒗 寃껋??",
+  "ko_c": [
+   "李⑤웾珥앹쨷?됵쉈理쒕??곸옱??,
+   "李⑤웾以묐웾???뱀감?뺤썝??以묐웾???⑺븳 以묐웾",
+   "李⑤웾珥앹쨷?됱뿉 ?뱀감?뺤썝??以묐웾???⑺븳 以묐웾",
+   "李⑤웾珥앹쨷?됵쉈理쒕??곸옱?됵쉈理쒕??곸옱?⑹쟻節μ쟻?щЪ?덈챸"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following must be displayed on the back or right side of a special vehicle for towing?",
+  "tr_c": [
+   "Total vehicle weight and maximum permitted cargo weight",
+   "Weight calculated by adding the vehicle's weight and maximum seating capacity",
+   "Weight calculated by adding the total vehicle weight and maximum seating capacity",
+   "Total vehicle weight, maximum permitted cargo weight, maximum permitted cargo volume, and cargo manifest"
+  ]
+ },
+ {
+  "n": 651,
+  "ko_b": "?ㅼ쓬 以?寃ъ씤李⑥쓽 ?몃옓?곗? ?몃젅?쇰윭瑜??곌껐?섎뒗 ?μ튂濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "而ㅽ뵆??,
+   "?뱁?",
+   "?꾩슦?몃━嫄?,
+   "遺?
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the part that connects the tractor and the trailer of a tow truck?",
+  "tr_c": [
+   "A coupler",
+   "A kingpin",
+   "An outrigger",
+   "A boom"
+  ]
+ },
+ {
+  "n": 652,
+  "ko_b": "?먮룞李?諛??먮룞李⑤??덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃???곌껐?먮룞李④? 珥덇낵?댁꽌?????섎뒗 ?먮룞李?湲몄씠??湲곗???",
+  "ko_c": [
+   "13.5誘명꽣",
+   "16.7誘명꽣",
+   "18.9誘명꽣",
+   "19.3誘명꽣"
+  ],
+  "a": "2",
+  "tr_b": "What is the length limit prescribed for connected vehicles according to the Regulations on the Performance and  Standards of Vehicles and Automotive Parts?",
+  "tr_c": [
+   "13.5 m",
+   "16.7 m",
+   "18.9 m",
+   "19.3 m"
+  ]
+ },
+ {
+  "n": 653,
+  "ko_b": "珥덈???以묐웾臾쇱쓽 ?댁넚???꾪븯???⑤룆?쇰줈 ?먮뒗 2? ?댁긽??議고빀?섏뿬 ?댄뻾?????덈룄濡??섏뼱 ?덈뒗 援ъ“濡쒖꽌 ?섏쨷?? 怨④퀬猷?遺꾩궛?섍린 ?꾪븳 ?μ튂瑜?媛뽰텣 ?쇨껄?몄옄?숈감??",
+  "ko_c": [
+   "?몃??몃젅?쇰윭",
+   "??곹듃?덉씪??,
+   "紐⑤뱢?몃젅?쇰윭",
+   "?쇳꽣李⑥텞?몃젅?쇰윭"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is a towed motor vehicle designed for the transport of extremely large cargo as a single  or a combined double unit, and equipped with a device for weight balancing?",
+  "tr_c": [
+   "A semi-trailer",
+   "A low-bed trailer",
+   "A module trailer",
+   "A center-axle trailer"
+  ]
+ },
+ {
+  "n": 654,
+  "ko_b": "李⑥껜 ?쇰?媛 寃ъ씤?먮룞李⑥쓽 ?곷????ㅻ━怨? ?대떦 ?먮룞李?諛??곸옱臾?以묐웾???곷떦 遺遺꾩쓣 寃ъ씤?먮룞李⑥뿉 遺꾨떞?쒗궎??援?議곗쓽 ?쇨껄?몄옄?숈감??",
+  "ko_c": [
+   "??몃젅?쇰윭",
+   "?몃??몃젅?쇰윭",
+   "??곹듃?덉씪??,
+   "?쇳꽣李⑥텞?몃젅?쇰윭"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is a towing vehicle designed in such a way that a towed vehicle is partially loaded so  that most of the vehicle weight and its cargo weight are shifted to the towing vehicle?",
+  "tr_c": [
+   "A pull trailer",
+   "A semi-trailer",
+   "A low-bed trailer",
+   "A center-axle trailer"
+  ]
+ },
+ {
+  "n": 655,
+  "ko_b": "?몃젅?쇰윭???뱀꽦??????ㅻ챸?대떎. 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "李⑥껜媛 臾닿굅?뚯꽌 ?쒕룞嫄곕━媛 ?쇰컲?뱀슜李⑤낫??吏㏓떎.",
+   "湲?李⑤줈蹂寃쎌쓣 ?????꾨룄???꾨났???꾪뿕?깆씠 ?믩떎.",
+   "?댁쟾?앹씠 ?믪븘????李⑤웾???ㅼ젣蹂대떎 媛源뚯썙 蹂댁씤??",
+   "李⑥껜媛 ?ш린 ?뚮Ц???대쪣李??㎬섈藥????ш쾶 愿怨꾧? ?녿떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding the characteristics of a trailer is correct?",
+  "tr_c": [
+   "The heavy weight of a trailer makes its braking distance shorter than that of passenger cars.",
+   "A trailer has a high risk of rolling over during sudden lane changes.",
+   "The high seating position of a trailer makes vehicles ahead appear to be closer than they actually are.",
+   "The large size of a trailer has no impact on the difference of radius between the inner wheels."
+  ]
+ },
+ {
+  "n": 656,
+  "ko_b": "?ㅼ쓬 以???뺥솕臾쇱옄?숈감???좏쉶?뱀꽦怨?吏꾨룞?뱀꽦??????ㅻ챸?쇰줈 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "吏꾨룞媛곸? 李⑥쓽 ?먯떖?μ뿉 ?ш쾶 ?곹뼢??誘몄튂吏 ?딅뒗??",
+   "吏꾨룞媛곸? 李⑥쓽 以묒떖?믪씠???ш쾶 ?곹뼢??諛쏆? ?딅뒗??",
+   "?붾Ъ??醫낅쪟? ?곸옱?꾩튂???곕씪 ?좏쉶 諛섍꼍怨??덉젙?깆씠 ?ш쾶 蹂?????덈떎.",
+   "吏꾨룞媛곷룄媛 ?뱀슜李⑤낫???묒븘 異붾룎?ш퀬瑜??좊컻?섍린 ?쎈떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following statements regarding the turning and vibration characteristics of a large truck is correct?",
+  "tr_c": [
+   "Centrifugal force does not have much influence on the vibration level.",
+   "A vehicle's height of gravitational center does not have much influence on the vibration level.",
+   "The turning radius and stability of a large truck can change dramatically depending on the cargo type and position.",
+   "Accidents involving collisions are more likely due to the vibration level of a large truck being lower than that of  passenger cars."
+  ]
+ },
+ {
+  "n": 657,
+  "ko_b": "?몃젅?쇰윭 ?댁쟾?먯쓽 以?섏궗??뿉 ????ㅻ챸?쇰줈 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "?댄뻾??留덉튇 ?꾩뿉留?李⑤웾 ?쇱긽?먭? 諛??뺤씤???댁빞 ?쒕떎.",
+   "?뺣떦???댁쑀 ?놁씠 ?붾Ъ???댁넚??嫄곕??댁꽌???꾨땲 ?쒕떎.",
+   "李⑤웾??泥?껐?곹깭???댁엫?붽툑??怨좉????뚮쭔 ?묓샇?섍쾶 ?좎??쒕떎.",
+   "?곸옱?붾Ъ???댄깉諛⑹?瑜??꾪븳 ??컻節ν룷???깆? 紐⑹쟻吏???꾩갑?댁꽌 ?뺤씤?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following correctly describes a rule that should be followed by the driver of a trailer?",
+  "tr_c": [
+   "Routine inspection of the vehicle must take place only at the end of a shift.",
+   "Transport of cargo must not be refused unless there is a valid reason.",
+   "The vehicle should be kept clean only when carrying high-priced cargo.",
+   "Be sure to check the placement of covers and packaging used to hold cargo in place when the destination is reached."
+  ]
+ },
+ {
+  "n": 658,
+  "ko_b": "?ㅼ쓬 以??몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 援щ궃李⑥쓽 二쇳뻾 李⑤줈?? (踰꾩뒪?꾩슜李⑤줈 ?놁쓬)",
+  "ko_c": [
+   "1李⑤줈",
+   "?쇱そ李⑤줈",
+   "?ㅻⅨ履쎌감濡?,
+   "紐⑤뱺 李⑤줈"
+  ],
+  "a": "3",
+  "tr_b": "Which lane is to be used by a recovery vehicle on an expressway with three lanes in one direction?",
+  "tr_c": [
+   "The first lane",
+   "The left lane",
+   "The right lane",
+   "Any lane"
+  ]
+ },
+ {
+  "n": 659,
+  "ko_b": "?ㅼ쓬 以?援щ궃李⑤줈 ?곸떆 4瑜쒓뎄???먮룞李⑤? 寃ъ씤?섎뒗 寃쎌슦 媛???곸젅??諛⑸쾿??",
+  "ko_c": [
+   "?먮룞李⑥쓽 ?ㅻ? ?ㅼ뼱??寃ъ씤?쒕떎.",
+   "?곸떆 4瑜쒓뎄???먮룞李⑤뒗 ?꾩껜瑜??ㅼ뼱??寃ъ씤?쒕떎.",
+   "援щ룞 諛⑹떇怨?寃ъ씤?섎뒗 諛⑸쾿? 臾닿??섎떎.",
+   "寃ъ씤?섎뒗 紐⑤뱺 ?먮룞李⑥쓽 二쇱감釉뚮젅?댄겕??諛섎뱶???쒕룞 ?곹깭濡??쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the most appropriate method for a recovery vehicle to tow an all-wheel drive vehicle?",
+  "tr_c": [
+   "Tow the vehicle from behind using another vehicle.",
+   "Tow by lifting the all-wheel drive vehicle entirely off the ground.",
+   "The drive system and the towing method are unrelated.",
+   "The parking brakes of all vehicles being towed must be in braking state."
+  ]
+ },
+ {
+  "n": 660,
+  "ko_b": "?먮룞李④?由щ쾿??援щ궃???뱀닔?먮룞李⑥쓽 ?몃?湲곗???",
+  "ko_c": [
+   "?쇨껄?몄감??寃ъ씤???꾩슜?쇰줈 ?섎뒗 援ъ“??寃?,
+   "寃ъ씤節κ뎄?쒗븷 ???덈뒗 援ъ“??寃?,
+   "怨좎옣節μ궗怨??깆쑝濡??댄뻾??怨ㅻ????먮룞李⑤? 援щ궃節κ껄?명븷 ???덈뒗 援ъ“??寃?,
+   "???대뒓 ?뺤뿉???랁븯吏 ?꾨땲?섎뒗 ?뱀닔?묒뾽?⑹씤 寃?
+  ],
+  "a": "3",
+  "tr_b": "Which of the following describes a special recovery vehicle as defined by the Motor Vehicle Management Act?",
+  "tr_c": [
+   "A vehicle that is structurally designed to tow other vehicles",
+   "A vehicle that is structurally designed to tow and salvage other vehicles",
+   "A vehicle that is structurally designed to salvage and tow a vehicle rendered immobile by a malfunction or an accident",
+   "A vehicle that is designed to perform special tasks other than the three above"
+  ]
+ },
+ {
+  "n": 661,
+  "ko_b": "?먮룞李?諛??먮룞李⑤??덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃???곕Ⅸ ?먮룞李⑥쓽 湲몄씠 湲곗??? (?곌껐?먮룞李??꾨떂)",
+  "ko_c": [
+   "13誘명꽣",
+   "14誘명꽣",
+   "15誘명꽣",
+   "16誘명꽣"
+  ],
+  "a": "1",
+  "tr_b": "According to the Regulations on the Performance and Standards of Vehicles and Automotive Parts, what is the  maximum length of a motor vehicle? (Not referring to connected cars)",
+  "tr_c": [
+   "13 m",
+   "14 m",
+   "15 m",
+   "16 m"
+  ]
+ },
+ {
+  "n": 662,
+  "ko_b": "援먰넻?ш퀬 諛쒖깮 ?꾩옣???꾩갑??援щ궃李??댁쟾?먯쓽 媛??諛붾엺吏곹븳 ?됰룞??",
+  "ko_c": [
+   "?ш퀬李⑤웾 ?댁쟾?먯쓽 ?댁쟾硫댄뿀利앹쓣 ?뚯닔?쒕떎.",
+   "?꾩갑 利됱떆 ?ш퀬李⑤웾??寃ъ씤?섏뿬 ?뺣퉬?뚮줈 ?대룞?쒗궓??",
+   "?댁쟾?먯? ?ш퀬李⑤웾???섎━鍮꾩슜???μ젙?쒕떎.",
+   "?댁쟾?먯쓽 遺???뺣룄瑜??뺤씤?섍퀬 2李??ш퀬???鍮??덉쟾議곗튂瑜??쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most appropriate action for the driver of a recovery vehicle upon arrival at the  scene of an accident?",
+  "tr_c": [
+   "Collect the driver's license belonging to the driver of the vehicle that was involved in the accident.",
+   "Immediately upon arrival, tow the vehicle involved in the accident to a maintenance shop.",
+   "Negotiate the cost of repairs with the driver of the vehicle that was involved in the accident.",
+   "Check the driver of the vehicle involved in the accident for any injuries, and take safety measures to prevent further  accidents."
+  ]
+ },
+ {
+  "n": 663,
+  "ko_b": "援щ궃李??댁쟾?먯쓽 ?됰룞?쇰줈 媛??諛붾엺吏곹븳 寃껋??",
+  "ko_c": [
+   "怨좎옣李⑤웾 諛쒖깮 ???좎냽?섍쾶 異쒕룞?섏뿬 臾댁“嫄?寃ъ씤?쒕떎.",
+   "?쇨껄?몄감?됱쓣 寃ъ씤 ??踰뺢퇋瑜?以?섑븯怨??덉쟾?섍쾶 寃ъ씤?쒕떎.",
+   "寃ъ씤李⑥쓽 ?대룞嫄곕━蹂??붽툑??怨좉????뚮쭔 ?덉쟾?섍쾶 ?댄뻾?쒕떎.",
+   "?ш퀬李⑤웾 諛쒖깮 ???ш퀬?꾩옣源뚯? ?좏샇??臾댁떆?섍퀬 媛???쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the most desirable action for a recovery vehicle driver?",
+  "tr_c": [
+   "Reach the location of a vehicle breakdown as soon as possible and tow the vehicle immediately.",
+   "When towing a vehicle, obey the laws and safely proceed with towing.",
+   "Drive safely only when the towing cost by distance is expensive.",
+   "Ignore signals while on the way to the location of a breakdown."
+  ]
+ },
+ {
+  "n": 664,
+  "ko_b": "援щ궃李④? 媛볤만?먯꽌 怨좎옣李⑤웾??寃ъ씤?섏뿬 二쇳뻾李⑤줈濡?吏꾩엯????媛??二쇱쓽?댁빞 ???ы빆?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "怨좎냽?꾨줈 ?꾨갑?먯꽌 ?뺤냽 二쇳뻾?섎뒗 李⑤웾??二쇱쓽",
+   "?쇨껄?몄옄?숈감???묒듅???몄썝??????덉쟾",
+   "蹂몄꽑 二쇳뻾李⑤줈?먯꽌 鍮좊Ⅴ寃?吏꾪뻾?섎뒗 李⑤웾??二쇱쓽",
+   "寃ъ씤?먮룞李⑤뒗 ?덉뿉 ???꾨?濡??ш쾶 ?좉꼍 ???꾩슂媛 ?녿떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the most important consideration when a recovery vehicle is towing a broken-down  vehicle from the shoulder to the travel lane?",
+  "tr_c": [
+   "On an expressway, pay attention to vehicles maintaining constant speed ahead.",
+   "Ensure the safety of people in the towed vehicle.",
+   "Watch out for fast-moving vehicles in the main lane.",
+   "There is no need to pay much attention to tow trucks as they are highly visible."
+  ]
+ },
+ {
+  "n": 665,
+  "ko_b": "遺?곸옄媛 諛쒖깮???ш퀬?꾩옣?먯꽌 援щ궃李??댁쟾?먭? 痍⑦븳 ?됰룞?쇰줈 媛???곸젅?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "遺?곸옄???섏떇 ?곹깭瑜??뺤씤?섏???",
+   "遺?곸옄???명씉 ?곹깭瑜??뺤씤?섏???",
+   "遺?곸옄??異쒗삁?곹깭瑜??뺤씤?섏???",
+   "諛붾줈 寃ъ씤以鍮꾨? ?섎ŉ ?⑹쓽瑜?醫낆슜?섏???"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is an inappropriate measure on the part of the driver of a recovery vehicle at the scene  of an accident with injured persons?",
+  "tr_c": [
+   "Check the injured for consciousness.",
+   "Check the injured for breathing.",
+   "Check the injured for bleeding.",
+   "Load the crashed vehicle onto the towing vehicle and negotiate the towing cost."
+  ]
+ },
+ {
+  "n": 666,
+  "ko_b": "?ㅼ쓬 以?援щ궃李⑥쓽 媛곸쥌 ?μ튂??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?щ젅??蹂몄껜???щ젮 ?덈뒗 ?щ젅?몄쓽 ??遺遺꾩쓣 ?꾪겕(hook)???쒕떎.",
+   "援ъ“臾쇱쓣 寃ъ씤????援щ궃李⑥? ?곌껐?섎뒗 ?μ튂瑜?PTO?ㅼ쐞移섎씪怨??쒕떎.",
+   "?묒뾽 ???덉젙?깆쓣 ?뺣낫?섍린 ?꾪븯???꾨갑怨??꾨갑 痢〓㈃??遺李⑸맂 援ъ“臾쇱쓣 ?꾩슦?몃━嫄곕씪怨??쒕떎.",
+   "?щ젅?몄뿉 ?μ갑?섏뼱 ?덉쑝硫?媛덇퀬由?紐⑥뼇?쇰줈 ??댁뼱 濡쒗봽???щ젮??以묐웾臾쇱쓣 嫄곕뒗 ?μ튂瑜?遺?boom)?대씪 ?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is a correct description of equipment attached to a recovery vehicle?",
+  "tr_c": [
+   "The arm structure hung from the main body of the crane is called a hook.",
+   "The device used to connect the recovery vehicle to a structure when towing is called the PTO switch.",
+   "The structure attached to the front and rear sides in order to secure stability during tasks is called an outrigger.",
+   "The device installed on the crane and on which a weighted item is hooked with a wire rope is called a boom."
+  ]
+ },
+ {
+  "n": 667,
+  "ko_b": "援щ궃李??댁쟾?먭? FF諛⑹떇(Front engine Front wheel drive)??怨좎옣李⑤? 援щ궃?섎뒗 諛⑸쾿?쇰줈 媛???곸젅??寃껋??",
+  "ko_c": [
+   "李⑥껜???욌?遺꾩쓣 ?ㅼ뼱 ?щ젮 寃ъ씤?쒕떎.",
+   "李⑥껜???룸?遺꾩쓣 ?ㅼ뼱 ?щ젮 寃ъ씤?쒕떎.",
+   "?욊낵 ?룸?遺??대뒓 履쎌씠??愿怨꾩뾾??",
+   "諛섎뱶??李⑥껜 ?꾩껜瑜??ㅼ뼱 ?щ젮 寃ъ씤?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the most appropriate method for the driver of a recovery vehicle to tow a broken  down vehicle with an FF layout (Front engine Front wheel drive)?",
+  "tr_c": [
+   "Tow by lifting the front part of the vehicle.",
+   "Tow by lifting the rear part of the vehicle.",
+   "It does not matter which part is lifted.",
+   "Tow by lifting the entire vehicle."
+  ]
+ },
+ {
+  "n": 668,
+  "ko_b": "援щ궃李??댁쟾?먭? 援먰넻?ш퀬?꾩옣?먯꽌 ??議곗튂?대떎. 媛??諛붾엺吏곹븳 寃껋??",
+  "ko_c": [
+   "援먰넻?ш퀬 ?뱀궗?먯뿉寃?誘쇱궗?⑹쓽瑜?醫낆슜?덈떎.",
+   "援먰넻?ш퀬 ?뱀궗???섏궗? 愿怨꾩뾾??諛붾줈 寃ъ씤 議곗튂?덈떎.",
+   "二쇨컙?먮뒗 ??蹂댁씠誘濡?蹂꾨떎瑜??덉쟾議곗튂 ?놁씠 寃ъ씤以鍮꾨? ?덈떎.",
+   "?ш퀬?뱀궗?먯뿉寃??쇰떒 ?щ━???덉젙??痍⑦븷 ???덈룄濡??꾩?以щ떎."
+  ],
+  "a": "4",
+  "tr_b": "The following are measures that the driver of a recovery vehicle may take at the scene of an accident. Which  one is the most advisable?",
+  "tr_c": [
+   "Advise the parties involved in the accident to pursue a civil settlement.",
+   "Immediately tow the crashed vehicle without consulting the parties involved in the accident.",
+   "Just prepare for towing without taking any safety measures, as visibility is good in daytime.",
+   "Help the driver of the vehicle that crashed to calm down."
+  ]
+ },
+ {
+  "n": 669,
+  "ko_b": "援щ궃李??댁쟾?먭? 援먰넻?ш퀬 ?꾩옣?먯꽌 遺?곸옄瑜?諛쒓껄?섏??????泥섎갑踰뺤쑝濡?媛??諛붾엺吏곹븳 寃껋??",
+  "ko_c": [
+   "留먯쓣 嫄몄뼱蹂닿굅???닿묠瑜??먮뱶??遺?곸옄???섏떇 ?곹깭瑜??뺤씤?쒕떎.",
+   "遺?곸옄媛 ?섏떇???놁쑝硫??멸났?명씉???ㅼ떆?쒕떎.",
+   "怨⑥젅 遺?곸옄??利됱떆 遺紐⑹쓣 ?怨?援ш툒李④? ???뚭퉴吏 湲곕떎由곕떎.",
+   "?ы븳 異쒗삁??寃쎌슦 異쒗삁 遺?꾨? ?ъ옣 ?꾨옒履쎌쑝濡??붾떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the most appropriate measure for the driver of a recovery vehicle to take if he/she  finds an injured person at the scene of an accident?",
+  "tr_c": [
+   "Try to start a conversation or gently tap the injured person?셲 shoulders to check the state of consciousness.",
+   "If the injured person is not conscious, attempt CPR.",
+   "For a person with a fracture, immediately support the fractured area with a splint and wait until an ambulance arrives.",
+   "For severe bleeding, position the bleeding area below the heart."
+  ]
+ },
+ {
+  "n": 670,
+  "ko_b": "援먰넻?ш퀬 諛쒖깮 ?꾩옣???꾩갑??援щ궃李??댁쟾?먭? 遺?곸옄?먭쾶 ?묎툒議곗튂瑜??댁빞 ?섎뒗 ?댁쑀濡?媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "遺?곸옄??鍮좊Ⅸ ?몄넚???꾪븯??,
+   "遺?곸옄???앸챸??蹂댄샇?섍린 ?꾪븯??,
+   "遺?곸옄???ъ궛??蹂댄샇?섍린 ?꾪븯??,
+   "遺?곸옄??援щ챸瑜좎쓣 ?믪씠湲??꾪븯??
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is not a reason why the driver of a recovery vehicle arriving at the scene of an accident  should perform emergency first-aid measures on an injured person(s)?",
+  "tr_c": [
+   "To facilitate the speedy transport of the victim",
+   "To protect the life of the injured.",
+   "To protect the victim's assets",
+   "To increase the chances of the victim's survival"
+  ]
+ },
+ {
+  "n": 671,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑥쓽 二쇳뻾 ?먮뒗 湲됱젣?????먮룞李⑥쓽 ?ㅼそ 李⑥껜媛 醫뚯슦濡??⑤━???꾩긽???삵븯???⑹뼱??",
+  "ko_c": [
+   "?쇱돩?뚯씪留?fishtailing)",
+   "?섏씠?쒕줈?뚮옒??hydroplaning)",
+   "?ㅽ깲???⑥씠釉?standing wave)",
+   "踰좎씠?쇰씫(vapor lock)"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following terms refers to the phenomenon wherein the rear of a vehicle shakes from side to side  during driving or sudden braking?",
+  "tr_c": [
+   "Fishtailing",
+   "Hydroplaning",
+   "Standing wave",
+   "Vapor lock"
+  ]
+ },
+ {
+  "n": 672,
+  "ko_b": "?ㅼ쓬 以?援щ궃李??댁쟾?먯쓽 媛??諛붾엺吏곹븳 ?됰룞??",
+  "ko_c": [
+   "?붿옱諛쒖깮 ??珥덇린吏꾪솕瑜??꾪빐 ?뚰솕 ?λ퉬瑜?李⑤웾??鍮꾩튂?쒕떎.",
+   "?ш퀬?꾩옣???좎냽???꾩갑???꾪빐 以묒븰?좎쓣 ?섏뼱 二쇳뻾?쒕떎.",
+   "寃쎈????ш퀬???댁쟾?먭컙???⑹쓽瑜?醫낆슜?쒕떎.",
+   "援먰넻?ш퀬 ?댁쟾?먯? ?숈듅?먮? ?ш퀬李⑤웾???뱀감?쒗궓 ??寃ъ씤?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following actions is appropriate for the driver of a recovery vehicle?",
+  "tr_c": [
+   "Carry a fire extinguisher within the vehicle for early suppression of fire.",
+   "Drive past the centerline to rush to the scene of an accident.",
+   "In a minor accident, persuade the drivers to settle the issue.",
+   "Take both the driver and the passenger, and then tow the vehicle involved in the accident."
+  ]
+ },
+ {
+  "n": 673,
+  "ko_b": "?쒗븳?띾룄 留ㅼ떆 100?щ줈誘명꽣 怨좎냽?꾨줈?먯꽌 援щ궃李⑤웾??留ㅼ떆 145?щ줈誘명꽣濡?二쇳뻾?섎떎 怨쇱냽?쇰줈 ?곷컻?섏뿀?? 踰뚯젏怨? 踰붿튃湲덉븸??",
+  "ko_c": [
+   "踰뚯젏 70?? 踰붿튃湲?14留???,
+   "踰뚯젏 60?? 踰붿튃湲?13留???,
+   "踰뚯젏 30?? 踰붿튃湲?10留???,
+   "踰뚯젏 15?? 踰붿튃湲?7留???
+  ],
+  "a": "2",
+  "tr_b": "A recovery vehicle was caught driving at 145 km/h on an expressway with a 100 km/h speed limit. Which of the  following corresponds to the correct demerit points and traffic penalty?",
+  "tr_c": [
+   "70 demerit points and traffic penalty of KRW 140,000",
+   "60 demerit points and traffic penalty of KRW 130,000",
+   "30 demerit points and traffic penalty of KRW 100,000",
+   "15 demerit points and traffic penalty of KRW 70,000"
+  ]
+ },
+ {
+  "n": 674,
+  "ko_b": "?ㅼ쓬 以?援щ궃李??댁쟾?먭? ?먮룞李⑥뿉 ?꾩깋(櫻쀨돯)?대굹 ?쒖?瑜??????덈뒗 寃껋??",
+  "ko_c": [
+   "援먰넻?⑥냽?⑹옄?숈감? ?좎궗???꾩깋 諛??쒖?",
+   "踰붿즲?섏궗?⑹옄?숈감? ?좎궗???꾩깋 諛??쒖?",
+   "湲닿툒?먮룞李⑥? ?좎궗???꾩깋 諛??쒖?",
+   "?묎툒?곹솴 諛쒖깮 ???곕씫?????덈뒗 ?댁쟾???꾪솕踰덊샇"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following may be painted or marked on a recovery vehicle?",
+  "tr_c": [
+   "Vehicle painting and signs similar to those used on a traffic control vehicle",
+   "Vehicle painting and signs similar to those used on a crime investigation vehicle",
+   "Vehicle painting and signs similar to those used on an emergency vehicle",
+   "Indication of the driver's phone number to be called in case of an emergency"
+  ]
+ },
+ {
+  "n": 675,
+  "ko_b": "援щ궃李??댁쟾?먭? RR諛⑹떇(Rear engine Rear wheel drive)??怨좎옣李⑤? 援щ궃?섎뒗 諛⑸쾿?쇰줈 媛???곸젅??寃껋??",
+  "ko_c": [
+   "李⑥껜???욌?遺꾩쓣 ?ㅼ뼱 ?щ젮 寃ъ씤?쒕떎.",
+   "李⑥껜???룸?遺꾩쓣 ?ㅼ뼱 ?щ젮 寃ъ씤?쒕떎.",
+   "?욊낵 ?룸?遺??대뒓 履쎌씠??愿怨꾩뾾??",
+   "諛섎뱶??李⑥껜 ?꾩껜瑜??ㅼ뼱 ?щ젮 寃ъ씤?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the most appropriate method for the driver of a recovery vehicle to tow a broken  down vehicle with an RR layout (Rear engine Rear wheel drive)?",
+  "tr_c": [
+   "Tow by lifting the front part of the vehicle.",
+   "Tow by lifting the rear part of the vehicle.",
+   "It does not matter which part is lifted.",
+   "Tow by lifting the entire vehicle."
+  ]
+ },
+ {
+  "n": 676,
+  "ko_b": "援먰넻?ш퀬 ?꾩옣??異쒕룞?섎뒗 援щ궃李??댁쟾?먯쓽 ?댁쟾諛⑸쾿?쇰줈 媛??諛붾엺吏곹븳 寃껋??",
+  "ko_c": [
+   "?좎냽???꾩갑??理쒖슦?좎씠誘濡?諛섎?李⑤줈濡?二쇳뻾?쒕떎.",
+   "湲닿툒?먮룞李⑥뿉 ?대떦?⑥쑝濡?理쒓퀬 ?띾룄瑜?珥덇낵?섏뿬 二쇳뻾?쒕떎.",
+   "怨좎냽?꾨줈?먯꽌 李⑤웾 ?뺤껜 ??寃쎌쓬湲곕? ?몃━硫댁꽌 媛볤만濡?二쇳뻾?쒕떎.",
+   "?좎냽???꾩갑??以묒슂?섏?留?援먰넻?ш퀬 諛⑹?瑜??꾪빐 ?덉쟾?댁쟾 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most desirable way to drive a recovery vehicle when responding to an accident  scene?",
+  "tr_c": [
+   "Speedy arrival is the foremost priority, so it is acceptable to drive on the opposite side.",
+   "It is acceptable to drive over the speed limit because a recovery vehicle is classified as an emergency vehicle.",
+   "On a congested expressway, drive along the roadside while honking loudly.",
+   "Drive safely to prevent more accidents, while striving to get to the scene of the accident as quickly as possible."
+  ]
+ },
+ {
+  "n": 677,
+  "ko_b": "?ㅼ쓬 以??먮룞李④?由щ쾿?뱀긽 ?뱀닔?먮룞李⑥쓽 ?좏삎蹂?援щ텇???대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "寃ъ씤???뱀닔?먮룞李?,
+   "?뱀닔?⑸룄???뱀닔?먮룞李?,
+   "援щ궃???뱀닔?먮룞李?,
+   "?꾩떆媛???묎툒蹂듦뎄???뱀닔?먮룞李?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following does NOT correspond to the classification of special motor vehicle types under the  Motor Vehicle Management Act?",
+  "tr_c": [
+   "Vehicle used for towing",
+   "Vehicle used for special operation",
+   "Vehicle used for recovery",
+   "Vehicle used for emergency gas recovery"
+  ]
+ },
+ {
+  "n": 678,
+  "ko_b": "??醫??뱀닔硫댄뿀 以??뚰삎寃ъ씤李⑤㈃?덉쓽 湲곕뒫?쒗뿕??????댁슜?대떎. 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뚰삎寃ъ씤李?硫댄뿀 ?⑷꺽湲곗?? 100??留뚯젏??90???댁긽?대떎.",
+   "?뚰삎寃ъ씤李??쒗뿕? 援댁젅, 怨≪꽑, 諛⑺뼢?꾪솚, 二쇳뻾肄붿뒪瑜??듦낵?섏뿬???쒕떎.",
+   "?뚰삎寃ъ씤李??쒗뿕 肄붿뒪?듦낵 湲곗?? 媛?肄붿뒪留덈떎 5遺??대궡?대떎.",
+   "?뚰삎寃ъ씤李??쒗뿕 媛?肄붿뒪???뺤씤??誘몄젒珥???媛?5?먯뵫 媛먯젏?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following statements regarding the driving skills test for a Class I driver?셲 license for small towing  vehicles is correct?",
+  "tr_c": [
+   "The participant is required to score at least 90 out of 100 to pass.",
+   "The participant is required to pass the bent course, curved course, change of direction, and driving tests.",
+   "The pass criteria for the small towing vehicle test course is within 5 minutes for each course.",
+   "The participant will lose 5 points every time he or she fails to touch the confirmation line on each test course."
+  ]
+ },
+ {
+  "n": 679,
+  "ko_b": "援щ궃李⑤줈 怨좎옣李⑤웾??寃ъ씤????寃ъ씤?섎뒗 李④? 耳쒖빞 ?섎뒗 ?깊솕??",
+  "ko_c": [
+   "?꾩“?? 鍮꾩긽?먮㈇??,
+   "?꾩“?? 誘몃벑",
+   "誘몃벑, 李⑦룺?? 踰덊샇??,
+   "醫뚯륫諛⑺뼢吏?쒕벑"
+  ],
+  "a": "3",
+  "tr_b": "When a recovery vehicle is towing a vehicle that has broken down, which of the following lights should the  vehicle being towed turn on?",
+  "tr_c": [
+   "Headlights and emergency flashers",
+   "Headlights and taillights",
+   "Taillights, sidelights, and license plate lights",
+   "Left turn indicator"
+  ]
+ },
+ {
+  "n": 680,
+  "ko_b": "援щ궃李??댁쟾?먭? 吏耳쒖빞 ???ы빆?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "援щ궃李??댁쟾?먯쓽 寃쎌같臾댁꽑 ?꾩껌? ?쇰? ?덉슜?쒕떎.",
+   "援щ궃李??댁쟾?먮뒗 ?꾨줈援먰넻踰뺤쓣 諛섎뱶??以?섑빐???쒕떎.",
+   "援먰넻?ш퀬 諛쒖깮 ??異쒕룞?섎뒗 援щ궃李⑥쓽 怨쇱냽? 臾대갑?섎떎.",
+   "援щ궃李⑤뒗 援먰넻?ш퀬 諛쒖깮 ???좏샇瑜?臾댁떆?섍퀬 吏꾪뻾?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is an appropriate action for the driver of a recovery vehicle?",
+  "tr_c": [
+   "In some instances, it is permissible for the driver of a recovery vehicle to use a police radio scanner.",
+   "The driver of a recovery vehicle must obey the Road Traffic Act.",
+   "A recovery vehicle may violate the speed limit when it is on the way to the scene of an accident.",
+   "In the event of an accident, a recovery vehicle may proceed without regard for traffic signals."
+  ]
+ }
+]
+
+codex
+[{"n":642,"field":"b","severity":"major","issue":"문장 끝의 도형 표현이 깨져 있어 연결부가 꺾이는 현상을 제대로 이해하기 어렵다.","suggestion":"Which term describes the phenomenon in which, during rapid deceleration or sudden braking, a towed vehicle pushes the towing vehicle forward and the connected vehicles fold at the coupling like a jackknife?"},{"n":654,"field":"b","severity":"major","issue":"피견인자동차를 towing vehicle로 번역하여 견인하는 차량과 견인되는 차량의 역할을 뒤바꿨다.","suggestion":"Which of the following is a towed motor vehicle designed so that part of its body rests on the towing vehicle, with a substantial portion of its own weight and cargo weight borne by the towing vehicle?"},{"n":656,"field":"b","severity":"major","issue":"원문의 전도 특성을 vibration characteristics로 오역하여 대형 화물차의 전복·전도에 관한 문제를 진동 문제로 바꿨다.","suggestion":"Which of the following statements regarding the turning and rollover characteristics of a large truck is correct?"},{"n":656,"field":"c[1]","severity":"major","issue":"전도각을 vibration level로 오역했다.","suggestion":"The rollover angle is not greatly affected by the vehicle's centrifugal force."},{"n":656,"field":"c[2]","severity":"major","issue":"전도각을 vibration level로 오역했다.","suggestion":"The rollover angle is not greatly affected by the height of the vehicle's center of gravity."},{"n":656,"field":"c[4]","severity":"major","issue":"전도각과 전도사고를 각각 vibration level과 collision accidents로 오역하여 사고 유형을 바꿨다.","suggestion":"A large truck has a smaller rollover angle than a passenger car and is therefore more prone to rollover accidents."}]
+tokens used
+19,113
+[{"n":642,"field":"b","severity":"major","issue":"문장 끝의 도형 표현이 깨져 있어 연결부가 꺾이는 현상을 제대로 이해하기 어렵다.","suggestion":"Which term describes the phenomenon in which, during rapid deceleration or sudden braking, a towed vehicle pushes the towing vehicle forward and the connected vehicles fold at the coupling like a jackknife?"},{"n":654,"field":"b","severity":"major","issue":"피견인자동차를 towing vehicle로 번역하여 견인하는 차량과 견인되는 차량의 역할을 뒤바꿨다.","suggestion":"Which of the following is a towed motor vehicle designed so that part of its body rests on the towing vehicle, with a substantial portion of its own weight and cargo weight borne by the towing vehicle?"},{"n":656,"field":"b","severity":"major","issue":"원문의 전도 특성을 vibration characteristics로 오역하여 대형 화물차의 전복·전도에 관한 문제를 진동 문제로 바꿨다.","suggestion":"Which of the following statements regarding the turning and rollover characteristics of a large truck is correct?"},{"n":656,"field":"c[1]","severity":"major","issue":"전도각을 vibration level로 오역했다.","suggestion":"The rollover angle is not greatly affected by the vehicle's centrifugal force."},{"n":656,"field":"c[2]","severity":"major","issue":"전도각을 vibration level로 오역했다.","suggestion":"The rollover angle is not greatly affected by the height of the vehicle's center of gravity."},{"n":656,"field":"c[4]","severity":"major","issue":"전도각과 전도사고를 각각 vibration level과 collision accidents로 오역하여 사고 유형을 바꿨다.","suggestion":"A large truck has a smaller rollover angle than a passenger car and is therefore more prone to rollover accidents."}]

@@ -1,0 +1,1723 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12615-5649-7eb2-9f5f-0609d52c1334
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/220_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/220_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 528ms:
+[
+ {
+  "n": 801,
+  "ko_b": "吏곸쭊?쇰줈 ?듯뻾?섎뒗 以묒씠?? ?덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?곗깋 ?먮룞李④? 吏꾩엯?섏? 紐삵븯?꾨줉 媛?랁븯???듯뻾?쒕떎.",
+   "?곗깋 ?먮룞李④? 吏곸쭊?????덉쑝誘濡??쒗뻾?섎ŉ 二쇱쓽瑜??댄???",
+   "?꾨줈?좎? 蹂댁닔 以묒뿉 醫뚯륫???듯뻾?????덉쑝誘濡?洹몃?濡??듯뻾?쒕떎.",
+   "?곗깋 ?뱀슜李④? 硫덉텧 寃껋씠???덉륫?섍퀬 諛섎?諛⑺뼢 李⑥뿉 二쇱쓽?섎ŉ  ?듯뻾?쒕떎.",
+   "諛섎?諛⑺뼢 鍮④컯???뱀슜李④? 醫뚰쉶?꾩감濡쒕줈 吏꾩엯?????덉쑝誘濡? ?꾩슂??寃쎌슦 ?뺤감?섏뿬 ?곹솴???댄???"
+  ],
+  "a": "2, 5",
+  "tr_b": "The driver is driving straight ahead. Which of the  following are the TWO safest ways to drive?",
+  "tr_c": [
+   "Accelerate to prevent the white vehicle from entering.",
+   "Drive slowly and pay attention as the white car may be  driving straight ahead.",
+   "Traffic is allowed to pass on the left side during road  maintenance, so stay on the left.",
+   "Anticipate that the white car will stop and proceed while  paying attention to the vehicles in the opposite direction.",
+   "The red car in the opposite direction may enter the  left-turn lane, so stop and observe the situation if  necessary."
+  ]
+ },
+ {
+  "n": 802,
+  "ko_b": "?꾩떖吏 ?대㈃?꾨줈瑜?二쇳뻾?섎뒗 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗? ?곗콉?섎뒗 諛섎젮寃ъ씠 媛묒옄湲??꾨줈 以묒븰?쇰줈 ?섏삱 ?? ?덉쑝誘濡?二쇱쓽?쒕떎.",
+   "寃쎌쓬湲곕? ?ъ슜?댁꽌 ??李⑥쓽 吏꾪뻾???뚮━怨?洹몃?濡?吏꾪뻾?쒕떎.",
+   "?대┛?닿? 媛묒옄湲??꾨줈 以묒븰?쇰줈 ?섏삱 ???덉쑝誘濡??띾룄瑜?以꾩씤??",
+   "?띾룄瑜??믪뿬 ?먯쟾嫄곕? ?쇳빐 ?좎냽???듦낵?쒕떎.",
+   "?꾩“??遺덈튆??踰덉찉?대㈃??留덉＜ ?ㅻ뒗 李⑥뿉 二쇱쓽瑜?以??"
+  ],
+  "a": "1, 3",
+  "tr_b": "When driving on an urban side street, which of the  following are the two safest ways of driving?",
+  "tr_c": [
+   "Watch out for bicycles and dogs being walked, as they  may suddenly enter the roadway.",
+   "Honk to let the cyclist know that you want to pass.",
+   "Children may suddenly come into the center of the road,  so slow down.",
+   "Increase speed to avoid the bicycle and pass by quickly.",
+   "Flash your headlights as a warning signal to the car  coming from the opposite direction."
+  ]
+ },
+ {
+  "n": 803,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "二쇱감??李⑤웾?ъ씠?먯꽌 蹂댄뻾?먭? ?섑??????덇린 ?뚮Ц???쒗뻾?쇰줈    ?댁쟾?쒕떎.",
+   "二쇱감以묒씤 李⑤웾??媛묒옄湲?異쒕컻?????덉쑝誘濡?二쇱쓽?섎ŉ ?댁쟾?쒕떎.",
+   "吏?섏＜李⑥옣 ?몃㈃?쒖떆??諛섎뱶??吏?ㅻŉ ?댁쟾???꾩슂媛 ?녿떎.",
+   "??李⑤웾??二쇱감?????덈뒗 二쇱감援ъ뿭留??댄렣蹂대ŉ ?댁쟾?쒕떎.",
+   "吏?섏＜李⑥옣 湲곕뫁? ?댁쟾?쒖빞瑜?諛⑺빐?섎뒗 ?쒖꽕臾쇱씠誘濡?寃쎌쓬湲곕?     怨꾩냽 ?몃━硫댁꽌 ?댁쟾?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Slow down as a pedestrian may suddenly appear from  between the parked vehicles.",
+   "Drive with caution as a parked vehicle may suddenly  move.",
+   "You can ignore the marking lines in an underground  parking lot.",
+   "Drive while paying attention only to the parking space  you want.",
+   "The pillars in an underground parking lot obstruct  visibility, so continue honking while driving."
+  ]
+ },
+ {
+  "n": 804,
+  "ko_b": "?쒖냽 30?щ줈誘명꽣濡?吏곸쭊?섎뒗 ?곹솴?대떎. ?덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "二쇱감??李⑤뱾怨?異⑸룎?섏? ?딅룄濡??쒖냽 30?щ줈誘명꽣 ?댄븯濡??〓떒 蹂대룄瑜??듦낵?쒕떎.",
+   "媛먯냽?섎ŉ ?묎렐?섍퀬 ?〓떒蹂대룄 吏곸쟾 ?뺤??좎뿉 ?뺤??쒕떎.",
+   "?〓떒蹂대룄???щ엺???놁쑝誘濡??쒖냽 30?щ줈誘명꽣濡??쒗뻾?쒕떎.",
+   "?〓떒蹂대룄???щ엺???놁쑝誘濡?洹몃?濡??듦낵?쒕떎.",
+   "?ㅻⅨ履쎌뿉???꾨줈??吏꾩엯?섎젮??李⑤? 二쇱쓽?섎ŉ ?쒗뻾?쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "You are driving straight at 30 km/h. Which of the  following are the TWO safest ways to drive?",
+  "tr_c": [
+   "Drive through the crosswalk at no more than 30 km/h  to avoid collision with the parked cars.",
+   "Slow down as you approach and stop at the stop line  just before the crosswalk.",
+   "There are no pedestrians on the crosswalk, so proceed  at 30 km/h.",
+   "Keep driving as there are no pedestrians on the  crosswalk.",
+   "Drive slowly while paying attention to vehicles entering  the road from the right."
+  ]
+ },
+ {
+  "n": 805,
+  "ko_b": "怨듬룞二쇳깮 二쇱감?μ뿉??醫뚰쉶???섎젮??以묒씠?? ?鍮꾪빐???????섏슂?뚯? 嫄곕━媛 癒?2媛吏??",
+  "ko_c": [
+   "怨듭옉臾쇱뿉 媛?ㅼ졇 ?뺤씤?섏? ?딅뒗 A 吏??,
+   "?꾩쭊?섎젮???곗깋 ?먮룞李?,
+   "?ы솢?⑹닔嫄곗슜 留덈?? 異⑸룎??媛?μ꽦",
+   "??댄븯怨??덈뒗 ?대┛?댁쓽 李⑤룄 吏꾩엯",
+   "?ㅼそ ?먮룞李⑥???異⑸룎 媛?μ꽦"
+  ],
+  "a": "3, 5",
+  "tr_b": "You are about to turn left from an apartment  parking lot. Which of the following risks are NOT  what you need to prepare for? (Select TWO)",
+  "tr_c": [
+   "Area A, which is obscured by an object and cannot be  seen",
+   "A white vehicle, which is trying to reverse",
+   "Possible collision with a recycling bag",
+   "Playing children who may possibly enter the driveway",
+   "Possible collision with a vehicle behind"
+  ]
+ },
+ {
+  "n": 806,
+  "ko_b": "援먯감濡??묎렐?섍퀬 ?덉쑝硫??고쉶?꾪븯?ㅻ뒗 ?곹솴?대떎. 媛???덉쟾?? ?듯뻾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?대┛?닿? ?쇱そ?쇰줈 ?〓떒?섍퀬 ?덉쑝誘濡??곗륫怨듦컙???댁슜?섏뿬  洹몃?濡?吏꾩엯?섏뿬 ?고쉶?꾪븳??",
+   "諛섎?諛⑸㈃?먯꽌 吏꾩엯???ㅻ뒗 ?먮룞李④? 醫뚰쉶?꾪븯?ㅻ뒗 吏瑜??댄???",
+   "?〓떒蹂대룄 吏곸쟾 ?뺤??좎뿉???뺤??섏뿬 ?대┛?닿? ?〓떒???꾨즺?? ?뚭퉴吏 ?湲고븳??",
+   "諛섎?諛⑸㈃ ?뱀슜李⑤낫??援먯감濡쒖뿉 ?좎쭊?낇븯湲??꾪빐 媛?랁븯????吏?좎쓣 ?듦낵?쒕떎.",
+   "?좏샇???곕씪 二쇱쓽?섏뿬 ?쒗뻾?쇰줈 吏꾩엯?섍퀬 ?고쉶?꾪븳??"
+  ],
+  "a": "2, 3",
+  "tr_b": "You are about to turn right while approaching an  intersection. Which of the following are the safest  ways to drive? (Select TWO)",
+  "tr_c": [
+   "The child is crossing to the left, so you use the space on  the right to enter and turn right.",
+   "Watch out for vehicles entering from the opposite  direction to see if they are turning left.",
+   "Stop at the stop line just before the crosswalk and wait  for the child to complete crossing.",
+   "Accelerate through the stop line to enter the  intersection ahead of oncoming traffic.",
+   "Enter slowly and turn right at the signal with caution."
+  ]
+ },
+ {
+  "n": 807,
+  "ko_b": "T?먰삎 援먯감濡쒖뿉??醫뚰쉶?꾩쓣 ?섎젮???곹솴?대떎. 媛???덉쟾?? ?댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "醫뚰쉶???좏샇???곕씪 ?좎냽?섍쾶 醫뚰쉶?꾪븳??",
+   "?〓떒蹂대룄 ?뺤????꾩뿉???뺤??쒕떎.",
+   "?쒗뻾?쇰줈 ?〓떒蹂대룄??吏꾩엯?????쇱そ 李⑥뿉 二쇱쓽?섎ŉ 醫뚰쉶?꾪븳??",
+   "?ㅻⅨ履??щ엺怨??놁쑝濡??덉쟾??嫄곕━瑜??먭퀬 醫뚰쉶?꾪븳??",
+   "?〓떒蹂대룄瑜??댁슜?섎뒗 蹂댄뻾?먯? ?먯쟾嫄곌? ?〓떒???꾨즺???뚭퉴 吏 湲곕떎由곕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "You are about to turn left at a T-intersection. Which  of the following are the safest ways to drive? (Select  TWO)",
+  "tr_c": [
+   "Quickly turn left at the left-turn signal.",
+   "Stop before the crosswalk stop line.",
+   "Enter the crosswalk slowly and turn left while paying  attention to the vehicle on the left.",
+   "Turn left with a safe distance to the side of the person  on the right.",
+   "Wait for pedestrians and bicycle riders using the  crosswalk to complete crossing."
+  ]
+ },
+ {
+  "n": 808,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛??二쇱쓽?댁빞 ???꾪뿕?곹솴 2媛吏??",
+  "ko_c": [
+   "?꾨룞?λ낫???댁쟾?먮뒗 ?욎そ 蹂댄뻾?먮? ?쇳빐??媛묒옄湲??쇱そ?쇰줈  ?대룞?????덈떎.",
+   "?ㅻⅨ履?蹂댄뻾?먮뱾???쇱そ?쇰줈 ?〓떒?????덈떎.",
+   "?쒗뻾?쇰줈 ?듯뻾?섏뿬 ?ㅼ감?ㅺ낵 異⑸룎?????덈떎.",
+   "諛섎?諛⑸㈃ ?곗깋 ?먮룞李⑥? 異⑸룎?????덈떎.",
+   "?꾨룞?λ낫?쒓? 踰꾩뒪?밴컯?μ뿉 ?덈뒗 蹂댄뻾?먮? 異⑸룎?????덈떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the risks you must pay  attention to in the given situation? (Select TWO)",
+  "tr_c": [
+   "An electric kick scooter rider may suddenly move to the  left to avoid pedestrians ahead of him/her.",
+   "Pedestrians on the right may cross to the left.",
+   "Driving slowly may cause collision with trailing cars.",
+   "You may collide with a white car coming from the  opposite direction.",
+   "An electric scooter may collide with a pedestrian at a  bus stop."
+  ]
+ },
+ {
+  "n": 809,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?쇱そ 諛⑺뼢吏?쒓린? ?꾩“?깆쓣 ?묐룞?섎ŉ ?덉쟾?섍쾶 異붿썡?쒕떎.",
+   "寃쎌슫湲??댁쟾?먯쓽 ?섏떊?몄뿉 ?곕씪 二쇱쓽?섎ŉ ?덉쟾?섍쾶 異붿썡?쒕떎.",
+   "寃쎌슫湲??댁쟾?먯쓽 ?섏떊?멸? ?앸굹硫??욎?瑜몃떎.",
+   "寃쎌슫湲??댁쟾?먯쓽 ?먯쭞??臾댁떆?섍퀬 洹??ㅻ? ?곕Ⅸ??",
+   "寃쎌슫湲곗? 異⑸텇???덉쟾嫄곕━瑜??좎??쒕떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Turn on the left-turn signal and headlights, and then  pass safely.",
+   "Pay attention to the signals from the cultivator operator  and pass safely.",
+   "Proceed ahead once the signals from the cultivator  operator have ended.",
+   "Ignore the hand signals of the cultivator operator and  follow behind.",
+   "Maintain sufficient safe distance from the cultivator."
+  ]
+ },
+ {
+  "n": 810,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "吏꾩엯?섎젮??李⑤웾? 吏꾪뻾?섍퀬 ?덈뒗 ?뚯쟾李⑤웾??吏꾨줈瑜??묐낫?섏뿬?? ?쒕떎.",
+   "?뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮??寃쎌슦?먮뒗 ?쒗뻾?섍굅???쇱떆?뺤? ?섏뿬???쒕떎.",
+   "吏꾩엯李⑤웾???곗꽑?대?濡??좎냽??吏꾩엯?섏뿬 媛怨좎옄 ?섎뒗 紐⑹쟻吏濡?    吏꾪뻾?쒕떎.",
+   "?뚯쟾援먯감濡쒖뿉 吏꾩엯???뚮뒗 ?뚯쟾李⑤웾蹂대떎 癒쇱? 吏꾩엯?쒕떎.",
+   "二쇰? 李⑤웾???吏곸엫??二쇱쓽???꾩슂媛 ?녿떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "The entering vehicle must yield to the vehicles already  in the roundabout.",
+   "Slow down or stop the vehicle before entering the  roundabout.",
+   "Since the entering vehicle has the right of way, enter  quickly and proceed to your intended destination.",
+   "Enter the roundabout in front of vehicles already inside.",
+   "You can ignore the vehicles around you."
+  ]
+ },
+ {
+  "n": 811,
+  "ko_b": "援먯감濡쒖뿉 吏꾩엯?섏뿬 吏곸쭊?섎젮???곹솴?대떎. 媛???덉쟾???댁쟾諛⑸쾿  2媛吏??",
+  "ko_c": [
+   "寃????먮룞李④? ?꾩쭊?????덉쑝誘濡?媛먯냽?섎ŉ ?鍮꾪븳??",
+   "?대쪣李④? 寃????뱀슜李⑥쓽 ?쇱そ?쇰줈 吏꾨줈蹂寃쏀븷 ???덉쑝誘濡?二쇱쓽?쒕떎.",
+   "諛섎?諛⑺뼢??鍮꾩뼱?덈뒗 吏곸쭊李⑤줈瑜??댁슜?섏뿬 吏곸쭊?섎떎媛 ?먮옒 李⑤줈 濡??섎룎?꾩삩??",
+   "?뺤감??寃????먮룞李⑥쓽 ?놁쑝濡?媛?랁븯硫?吏곸쭊?쇰줈 ?듦낵?쒕떎.",
+   "?대쪣李④? ?섏쓽 ?욎쑝濡?吏꾨줈蹂寃쏀븷 ???녿룄濡?媛?랁븯硫??듦낵?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "You are entering an intersection and trying to go  straight. Which of the following are the safest ways to  drive? (Select TWO)",
+  "tr_c": [
+   "The black car may reverse, so slow down, and be  prepared.",
+   "Be careful as the two-wheeled vehicle may change lanes  on the left of the black car.",
+   "Use the empty straight lane in the opposite direction to  go straight, and then return to your original lane.",
+   "Accelerate and pass the stopped black car in a straight  line.",
+   "Accelerate and pass the two-wheeled vehicle so that it  cannot change lanes in front of you."
+  ]
+ },
+ {
+  "n": 812,
+  "ko_b": "?ㅼ쓬怨?媛숈? ?곹솴?먯꽌 ?덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "寃????먮룞李??댁쟾?먮뒗 P怨듦컙???댁슜?섏뿬 ?좎냽?섍쾶 ?듯뻾?쒕떎.",
+   "寃????먮룞李??댁쟾?먮뒗 ?대┛?댄넻?숇쾭???ㅼ뿉???뺤??쒕떎.",
+   "?곗깋 ?먮룞李??댁쟾?먮뒗 ?대┛?댄넻?숇쾭?ㅼ뿉 二쇱쓽?섎ŉ ?쒗뻾?쇰줈 吏곸쭊?쒕떎.",
+   "?곗깋 ?먮룞李??댁쟾?먮뒗 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?뺤????? ?쒗뻾?쒕떎.",
+   "?곗깋 ?먮룞李??댁쟾?먮뒗 吏?띿쟻?쇰줈 寃쎌쓬湲곕? ?묐룞?섏뿬 蹂몄씤??吏곸쭊 ??寃껋쓣 ?뚮┛??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "The black car driver uses the P space to pass quickly.",
+   "The black car driver stops behind the school bus.",
+   "The white car driver proceeds slowly while paying  attention to the school bus.",
+   "The white car driver stops before reaching the school  bus, and then proceeds slowly.",
+   "The white car driver honks continuously to indicate that  he/she is going straight."
+  ]
+ },
+ {
+  "n": 813,
+  "ko_b": "?ㅼ쓬怨?媛숈? 援먯감濡쒖뿉??媛???덉쟾???듯뻾諛⑸쾿 2媛吏瑜??ㅻ챸??寃껋??",
+  "ko_c": [
+   "A李⑤줈?먯꽌 吏꾩엯?섎젮???뚯뿉 ?쇱そ 諛⑺뼢吏?쒓린瑜??묐룞?섏???",
+   "A李⑤줈?먯꽌 吏꾩엯???댁쟾?먭? 利됱떆 a李⑤줈??吏꾩엯?섏뿬 ?뚯쟾?섎떎媛  遺곸そ?쇰줈 吏꾩텧?섏???",
+   "B李⑤줈?먯꽌 吏꾩엯?섎젮???뚯뿉 ?ㅻⅨ履?諛⑺뼢吏?쒓린瑜??묐룞?섏???",
+   "B李⑤줈?먯꽌 吏꾩엯???댁쟾?먭? 利됱떆 b李⑤줈濡?吏꾩엯?섏뿬 ?뚯쟾?섎떎媛  a李⑤줈濡?吏꾨줈蹂寃쏀븯??遺곸そ諛⑺뼢?쇰줈 吏꾩텧?섏???",
+   "?덉そ?먯꽌 ?뚯쟾?섎떎媛 吏꾩텧?섎젮???뚯뿉 ?쇱そ 諛⑺뼢吏?쒓린瑜??묐룞?섏???"
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed at the intersection in the given picture?",
+  "tr_c": [
+   "The driver activated the left-turn signal when he/she was  about to enter from lane A.",
+   "The driver entering from lane A immediately entered  lane a, made a turn, and proceeded north.",
+   "The driver activated the right-turn signal when he/she  was about to enter from lane B.",
+   "The driver entering from lane B immediately entered  lane b, made a turn, and then switched to lane B and  headed north.",
+   "The driver activated the left-turn signal while trying to  exit after making a turn inside."
+  ]
+ },
+ {
+  "n": 814,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 ?고쉶?꾪븯怨좎옄 ????媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?꾨갑 ?뱀깋 吏꾪뻾?좏샇???곕씪 ?좎냽???고쉶?꾪븳??",
+   "?곗륫 蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾 ?????덉쑝誘濡??쇱떆?뺤? ?? ?덉쟾???뺤씤?섎ŉ ?고쉶?꾪븳??",
+   "?고쉶?꾩쟾?⑹떊?멸? ?곸깋?대?濡??뺤??쒕떎.",
+   "?고쉶?꾩쟾?⑹떊?멸? ?곸깋?댁뼱??蹂댄뻾???듯뻾??諛⑺빐瑜?二쇱? ????寃쎌슦 ?고쉶??媛?ν븯??",
+   "?뺤??좎뿉 ?뺤??섏뿬 ?고쉶???붿궡?쒕벑?붾줈 諛붾??뚭퉴吏 湲곕떎由곕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "In the given situation, which of the following are  the TWO safest ways to turn right?",
+  "tr_c": [
+   "Turn right quickly when the forward-facing green light is  on.",
+   "Come to a complete stop and check for safety before  turning right, as pedestrians may be crossing on the  right.",
+   "Stop because the dedicated right-turn signal is red.",
+   "Even if the dedicated right-turn signal is red, you may  turn right if it does not interfere with any pedestrians.",
+   "Stop at the stop line and wait until the right-turn arrow  signal turns green."
+  ]
+ },
+ {
+  "n": 815,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 醫뚰쉶?꾪븯?ㅻ뒗 寃쎌슦 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?뱀깋 吏꾪뻾?좏샇???곕씪 援먯감濡쒖뿉 洹몃?濡?鍮좊Ⅴ寃?吏꾩엯?쒕떎.",
+   "?욎감??諛붿쭩 遺숈뼱 ?곕씪媛꾨떎.",
+   "醫뚰쉶??李⑤줈媛 ?뺤껜?곹솴?닿린 ?뚮Ц??3李⑤줈瑜??댁슜??醫뚰쉶?꾪븳??",
+   "瑗щ━臾쇨린濡??ㅻⅨ 李⑥쓽 ?듯뻾??諛⑺빐瑜?以????덉쑝誘濡?吏꾩엯??吏 ?딅뒗??",
+   "援먯감濡쒖뿉 吏꾩엯?섎젮???꾪뻾李⑤웾???덉쓣 ???덉쑝誘濡?誘몃━ ?띾룄 瑜?以꾩뿬 異붾룎?ш퀬瑜??덈갑?쒕떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  turn left in the given situation?",
+  "tr_c": [
+   "Enter the intersection quickly according to the green  signal.",
+   "Follow the vehicle in front closely.",
+   "Since the left-turn lane is congested, use the third lane  to turn left.",
+   "Do not enter the intersection, as you may obstruct  traffic by tailgating.",
+   "Slow down in advance to prevent a rear-end collision, as  there may be vehicles approaching from behind and  trying to enter the intersection."
+  ]
+ },
+ {
+  "n": 816,
+  "ko_b": "?ш퀬諛쒖깮 媛?μ꽦??媛???믪? ?붿씤 2媛吏??",
+  "ko_c": [
+   "?꾩쭊?섎젮??A?붾Ъ李?,
+   "?붾Ъ李??ㅼ뿉???〓떒?섎뒗 B蹂댄뻾??,
+   "?꾨갑?먯꽌 吏꾪뻾以묒씤 C李⑤웾",
+   "蹂대룄 ?듯뻾以묒씤 D蹂댄뻾??,
+   "醫뚯륫?먯꽌 ?고쉶?꾪븯?ㅻ뒗 E李⑤웾"
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the TWO most likely risk  factors for a traffic accident in the given situation?",
+  "tr_c": [
+   "Truck A attempting to back up",
+   "Pedestrian B crossing behind the truck",
+   "Vehicle C approaching from the rear",
+   "Pedestrian D walking on the sidewalk",
+   "Vehicle E attempting to turn right from the left-hand  side"
+  ]
+ },
+ {
+  "n": 817,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "援먯감濡쒖뿉 癒쇱? 吏꾩엯?섎뒗 寃껋씠 以묒슂?섎떎.",
+   "?꾨갑留?二쇱떆?섎ŉ ?댁쟾?댁빞 ?쒕떎.",
+   "1李⑤줈 ?붾Ъ李④? 援먯감濡?吏꾩엯?섎뜕 以?2李⑤줈 履쎌쑝濡?李⑤줈蹂寃???    ???덉쑝誘濡??鍮꾪빐???쒕떎.",
+   "醫뚯륫???뚯쟾李⑤웾怨??곗륫?꾨줈?먯꽌 吏꾩엯?섎뒗 李⑤웾??二쇱쓽?섎ŉ ?댁쟾 ?댁빞 ?쒕떎.",
+   "吏꾩엯李⑤웾???뚯쟾李⑤웾蹂대떎 ?곗꽑?대씪???앷컖?쇰줈 ?댁쟾?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "It is important to enter the intersection first.",
+   "You must drive while focusing only on what is in front of  you.",
+   "You must drive with caution as the truck in lane 1 may  switch to lane 2 while entering the intersection.",
+   "Drive while paying attention to turning vehicles from the  left and vehicles entering from the right lane.",
+   "You must keep in mind that entering vehicles have the  right of way over the vehicles already in the roundabout."
+  ]
+ },
+ {
+  "n": 818,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "吏곸쭊 ?좏샇 ?湲곗감???ъ씠?먯꽌 媛묒옄湲??〓떒?섎젮??蹂댄뻾?먮? 二??섑븳??",
+   "?꾨갑 醫뚰쉶?꾩떊?멸? 諛붾뚭린 ???듦낵?섍린 ?꾪빐 鍮좊Ⅴ寃?吏꾩엯?쒕떎.",
+   "臾대떒?〓떒 蹂댄뻾?먮? ?꾪삊?섍린 ?꾪빐 ?ㅽ엳???띾룄瑜??믪씤??",
+   "?〓떒?섎젮??蹂댄뻾?먮? 蹂댄샇?섍린 ?꾪빐 鍮꾩긽?깆쓣 耳쒓퀬 媛먯냽?쒕떎.",
+   "蹂댄뻾?먯???異⑸룎???쇳븯湲??꾪빐 1李⑤줈濡?湲?吏꾨줈 蹂寃쏀븳??"
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Keep a lookout for a pedestrian suddenly crossing  between the vehicles waiting for the green light.",
+   "Enter the intersection quickly before the left-turn signal  changes.",
+   "Speed up to intimidate the jaywalking pedestrian.",
+   "Turn on the hazard lights and slow down to protect the  pedestrian.",
+   "Change to lane 1 suddenly to avoid a collision with the  pedestrian."
+  ]
+ },
+ {
+  "n": 819,
+  "ko_b": "?ㅻⅨ履쎌쑝濡?媛붿뼱???섎뒗??湲몄쓣 ?섎せ ?ㅼ뿀?? ????媛?????꾪븳 ?댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?덉쟾吏?濡?吏꾩엯?섏뿬 鍮꾩긽?먮㈇?깆쓣 ?묐룞?????ㅻⅨ履쎌쑝濡?吏??낇븳??",
+   "?ㅻⅨ履?諛⑺뼢吏?쒓린瑜??묐룞?섎ŉ ?덉쟾吏?濡?吏꾩엯?섏뿬 ?ㅻⅨ履쎌쑝 濡?吏꾩엯?쒕떎.",
+   "?좎냽?섍쾶 媛?랁븯???ㅻⅨ履쎌쑝濡?吏꾩엯?쒕떎.",
+   "?援щ갑?μ쑝濡?洹몃?濡?吏꾪뻾?쒕떎.",
+   "?ㅼ쓬?먯꽌 留뚮굹???섎뱾紐??먮뒗 媛덈┝紐⑹쓣 ?댁슜?쒕떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "You should have gone to the right, but took the wrong lane.  Which of the following are the safe ways to drive in the given  situation? (Select TWO)",
+  "tr_c": [
+   "Enter the safety zone, turn on the hazard lights, and  then turn right.",
+   "Turn on the right-turn signal, enter the safety zone, and  then turn right.",
+   "Accelerate quickly and turn right.",
+   "Continue straight in the direction of Daegu.",
+   "Use the next interchange or junction that you see."
+  ]
+ },
+ {
+  "n": 820,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "李④컙 嫄곕━瑜??됱냼蹂대떎 異⑸텇???뺣낫?쒕떎.",
+   "?곕꼸 吏꾩엯 ??釉뚮젅?댄겕瑜??꾩＜ 媛뺥븯寃?諛잛븘 ?띾룄瑜?誘몃━ 以꾩씤??",
+   "?곕꼸 ?덉? ?덉씠 ?볦씠吏 ?딆븯湲??뚮Ц??媛???댄뻾?쒕떎.",
+   "?덇만? 留ㅼ슦 誘몃걚?쎄린 ?뚮Ц???욎감??諛뷀댁옄援?쓣 ?곕씪 二쇳뻾?쒕떎.",
+   "誘몃걚??諛⑹?瑜??꾪빐 湲곗뼱瑜?以묐┰?쇰줈 蹂寃쏀븯??吏꾪뻾?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Maintain a greater following distance than usual.",
+   "Apply the brakes very hard before entering the tunnel  to slow down in advance.",
+   "Since there is no snow inside the tunnel, accelerate  while driving through it.",
+   "Drive along the tire tracks of the vehicle in front, as  snowy roads are very slippery.",
+   "Shift to neutral to prevent skidding."
+  ]
+ },
+ {
+  "n": 821,
+  "ko_b": "湲곗뾽?꾩떆, ?곕???諛⑺뼢?쇰줈 醫뚰쉶???섎젮怨??쒕떎. 媛???덉쟾?? ?댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?ㅻ퉬寃뚯씠???덈궡???곕씪 ?꾨갑?먯꽌 醫뚰쉶?꾪빐???섎?濡?1李⑤줈濡?誘?由?吏꾨줈瑜?蹂寃쏀븳??",
+   "1,2李⑤줈??吏?섏감?꾨줈 吏꾩엯?섎?濡?3李⑤줈 ?꾪뻾 李⑤웾??癒쇱? 蹂대궡怨?  ?덉쟾???뺣낫????3李⑤줈濡?李⑤줈瑜?蹂寃쏀븳??",
+   "?뺥솗??湲몄븞?대? ?꾪빐 ?ㅻ퉬寃뚯씠?섏쓣 諛섎났?곸쑝濡?議곗옉?쒕떎.",
+   "3李⑤줈???꾪뻾 李⑤웾???덇퀬, ??李⑤웾???욎꽌 ?덉쑝誘濡?諛⑺뼢吏?쒕벑?? 耳쒖? ?딄퀬, 洹??욎쑝濡?鍮좊Ⅴ寃?吏꾨줈瑜?蹂寃쏀븳??",
+   "?좏뻾李⑥쓽 湲됱젣?숈뿉 ?鍮꾪빐 ?덉쟾嫄곕━瑜??뺣낫?섎ŉ 二쇳뻾?쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "You plan to make a left turn toward the Business  City and Terminal. What are the two safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Switch to the first lane in advance to prepare for the  upcoming left turn as instructed by the navigation.",
+   "As lanes 1 and 2 go into an underpass, let the vehicle to  your rear pass, and then safely change to lane 3.",
+   "Use the SATNAV repeatedly to confirm the route.",
+   "Quickly change lanes without signaling since your  vehicle is ahead of the vehicle to your rear.",
+   "Maintain a safe distance in case the vehicle ahead of  you brakes suddenly."
+  ]
+ },
+ {
+  "n": 822,
+  "ko_b": "?ㅼ쓬?먯꽌 ?ш퀬諛쒖깮 媛?μ꽦??媛???믪? ?곹솴 2媛吏??",
+  "ko_c": [
+   "?꾨갑 二쇳뻾以묒씤 ?먮룞李?,
+   "醫뚯륫?쇰줈 吏꾩엯?섍린 ?꾪빐 媛묒옄湲??뚯쟾?섎뒗 ?꾨룞?ㅼ퓼??,
+   "?곗륫?먯꽌 異쒕컻?섎젮???붾Ъ李?,
+   "?곗륫?먯꽌 ?묒뾽以묒씤 ?щ엺",
+   "?꾨갑 醫뚯륫 ?대쪣李?
+  ],
+  "a": "2, 3",
+  "tr_b": "Which TWO are most likely to lead to an accident in  the given situation?",
+  "tr_c": [
+   "A car driving ahead",
+   "An electric scooter suddenly turning left to enter the  road",
+   "A truck preparing to move from the right-hand side",
+   "A person working on the right-hand side of the road",
+   "A motorcycle ahead on the left-hand side"
+  ]
+ },
+ {
+  "n": 823,
+  "ko_b": "?ㅼ쓬 ?꾨줈?먯꽌 媛???덉쟾???듯뻾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "蹂댄뻾?먯슦?좊룄濡쒕뒗 ?대┛?댁뿉寃뚮쭔 ?곸슜?섎?濡??깆씤 蹂댄뻾??履쎌쑝 濡?遺숈뼱 二쇳뻾?쒕떎.",
+   "蹂댄뻾?먯? ?덉쟾??嫄곕━瑜??먭퀬 吏꾪뻾?쒕떎.",
+   "?섎????듯뻾以묒씤 蹂댄뻾???쇳뻾???쇰젹濡??듯뻾?섎룄濡?寃쎌쓬湲곕?  ?몃┛??",
+   "蹂댄뻾???듯뻾??諛⑺빐瑜?二쇱? ?딅룄濡??쒗뻾 ?먮뒗 ?쇱떆?뺤??쒕떎.",
+   "蹂댄뻾???듯뻾??諛⑺빐瑜?二쇱? ?딆쑝硫??쒖냽 20km ?댁긽 二쇳뻾?? ???덈떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Drive close to adult pedestrians because  pedestrians-first roads apply only to children.",
+   "Maintain a safe distance from pedestrians while driving.",
+   "Honk to urge a group of pedestrians walking side by  side to walk in a single file.",
+   "Slow down or stop as needed to avoid interfering with  pedestrian traffic.",
+   "You may drive at 20 km/h or faster as long as you do  not interfere with pedestrian traffic."
+  ]
+ },
+ {
+  "n": 824,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "吏꾨줈蹂寃?李⑤웾???쇳븯湲??꾪빐 3李⑤줈濡?湲됲엳 吏꾨줈瑜?蹂寃쏀븳??",
+   "1李⑤줈 李⑤웾??吏꾩엯?섏? 紐삵븯?꾨줉 ?띾룄瑜??믪뿬 ?댁쟾?쒕떎.",
+   "寃쎌쓬湲곗? ?곹뼢?깆쓣 ?ъ슜??吏꾨줈蹂寃쎌쓣 諛⑺빐?쒕떎.",
+   "媛먯냽???듯빐 吏꾨줈蹂寃쎌감?됱뿉寃??묐낫?쒕떎.",
+   "鍮쀪만?먯꽌???됱냼蹂대떎 ?쒕룞嫄곕━媛 湲몄뼱吏誘濡?誘몃━ 媛먯냽?쒕떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Quickly switch to the third lane to avoid vehicles that  are changing lanes.",
+   "Speed up to prevent vehicles in the first lane from  merging.",
+   "Use the horn and high-beam headlights to prevent  vehicles from changing lanes.",
+   "Yield to merging vehicles by slowing down.",
+   "Slow down in advance as the braking distances are  longer on wet roads."
+  ]
+ },
+ {
+  "n": 825,
+  "ko_b": "?ш퀬諛쒖깮 媛?μ꽦??媛???믪? ?곹솴 2媛吏??",
+  "ko_c": [
+   "蹂대룄 ?곗륫?먯꽌 吏꾪뻾 以묒씤 ?먯쟾嫄?,
+   "嫄대Ъ濡?吏꾩엯?섍린 ?꾪빐 醫뚰쉶???湲?以묒씤 ?먮룞李?,
+   "?꾨줈 醫뚯륫?먯꽌 ?곗륫?쇰줈 二쇳뻾 以묒씤 ?먮룞李?,
+   "諛섎???怨듯꽣??二쇱감???먮룞李?,
+   "諛섏궗寃쎌뿉 鍮꾩튇 ?먮룞李?
+  ],
+  "a": "1, 2",
+  "tr_b": "Which TWO carry the highest risk of causing an  accident?",
+  "tr_c": [
+   "A bicycle traveling on the right-hand side of the  sidewalk",
+   "A car waiting to turn left to enter the building",
+   "A car driving from the left-hand side of the road toward  the right",
+   "A car parked in an empty lot on the opposite side",
+   "A car reflected on a convex mirror"
+  ]
+ },
+ {
+  "n": 826,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "留덉＜ ?ㅻ뒗 ?앸같李⑤웾?먭쾶 吏꾨줈瑜??묐낫?쒕떎.",
+   "?뱀슜李??댁쟾?먯뿉寃??곗꽑沅뚯씠 ?덉쑝誘濡?洹몃?濡?吏꾪뻾?쒕떎.",
+   "?곹뼢?깆쓣 諛섎났 議곗옉?섏뿬 ?곷??댁쟾?먭? 吏꾪뻾?섏? 紐삵븯?꾨줉 ?쒕떎.",
+   "二쇱젙李???李⑤웾?먯꽌 ?대━?ㅻ뒗 ?щ엺??二쇱쓽?쒕떎.",
+   "?뺤??섏뿬 ?곷??댁쟾?먭? 吏꾨줈瑜??묐낫 ?뚭퉴吏 湲곕떎由곕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+  "tr_c": [
+   "Yield the right of way to the oncoming delivery vehicle.",
+   "Proceed as the passenger car driver has the priority.",
+   "Flash the high-beam headlights repeatedly to prevent  the other driver from proceeding.",
+   "Watch out for people getting out of parked vehicles.",
+   "Stop and wait until the oncoming driver gives way."
+  ]
+ },
+ {
+  "n": 827,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?곗깋李??욎뿉??釉뚮젅?댄겕瑜?諛잛븘 湲됱쭊濡쒕?寃쎌뿉 ??쓽?쒕떎.",
+   "媛먯냽?쇰줈 ?곗깋李⑤웾??吏꾨줈蹂寃??????덈룄濡??덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "異붾룎?ш퀬瑜??쇳븯湲??꾪빐 4李⑤줈濡?吏꾨줈蹂寃쏀븳??",
+   "湲됯??띿쓣 ?듯빐 ?곗깋李⑥???異붾룎???쇳븳??",
+   "?쇱そ?쇰줈 ?몃뱾???뚮━硫?湲됱젣?숉븳??"
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Step on the brakes to express objection to the sudden  change of lane of the white car in front of you.",
+   "Slow down and maintain a safe distance to allow the  white car to change lanes safely.",
+   "Switch to the 4th lane to avoid a rear-end collision.",
+   "Avoid a collision with the white car by rapidly  accelerating.",
+   "Make a sudden stop while turning the steering wheel to  the left."
+  ]
+ },
+ {
+  "n": 828,
+  "ko_b": "怨좎냽?꾨줈 ?닿쾶?뚯뿉???댁떇??痍⑦븯怨?怨좎냽?꾨줈濡??⑸쪟?섎젮怨? ?쒕떎. 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?쇱떆?뺤? ??二쇳뻾 以묒씤 李⑤웾???놁쓣 ???꾨줈濡??⑸쪟?쒕떎.",
+   "媛?띿쓣 ?듯빐 ?쒕쾲??1李⑤줈源뚯? 媛濡?吏瑜몃떎.",
+   "異⑸텇??媛?띿쓣 ?듯빐 醫뚯륫???뺤씤?????⑸쪟?쒕떎.",
+   "媛볤만濡?怨꾩냽 二쇳뻾?쒕떎.",
+   "?ㅻⅨ 李⑤웾???듯뻾??諛⑺빐?섏? ?딅룄濡??쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "You are about to reenter the expressway after  taking a break at a rest area. Which of the following  are the TWO safest ways to proceed in the given  situation?",
+  "tr_c": [
+   "Stop briefly and merge into the highway only when  there are no approaching vehicles.",
+   "Accelerate quickly and cut across directly into the first  lane.",
+   "Check your left and merge after gaining sufficient speed.",
+   "Continue driving on the shoulder.",
+   "Do not interfere with the flow of other vehicles."
+  ]
+ },
+ {
+  "n": 829,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛??諛붾엺吏곹븳 ?댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "1李⑤줈濡?吏꾨줈蹂寃쏀븯??鍮좊Ⅴ寃??듯뻾?쒕떎.",
+   "?깊솕?μ튂瑜??묐룞?섏뿬 ??李⑥쓽 議댁옱瑜??ㅻⅨ ?댁쟾?먯뿉寃??뚮┛??",
+   "?몃㈃???듯븳 ?곹깭?대?濡??띾룄瑜?以꾩씠怨??쒗뻾?쒕떎.",
+   "?욎감媛 ?듯뻾?섍퀬 ?덈뒗 ?띾룄??留욎텛???욎감瑜?蹂대ŉ ?듯뻾?쒕떎.",
+   "媛볤만濡?吏꾨줈蹂寃쏀븯???욎そ 李⑤뱾蹂대떎 ?욎꽌媛꾨떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the desirable ways to  drive in the given situation? (Select TWO)",
+  "tr_c": [
+   "Switch to the first lane and proceed quickly.",
+   "Turn on the hazard lights to alert other drivers to the  presence of your vehicle.",
+   "Since the road is wet, reduce your speed and drive  slowly.",
+   "Match your speed to the speed of the vehicle in front of  you and drive while keeping an eye on it.",
+   "Switch to the road shoulder and pass the vehicles in  front."
+  ]
+ },
+ {
+  "n": 830,
+  "ko_b": "?ㅼ쓬怨??곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?덉씠 留롮씠 ?볦씠吏 ?딆븯?쇰?濡??됱냼?濡??댁쟾?쒕떎.",
+   "?붾Ъ李④? ?덇만??誘몃걚?ъ졇 ?뚯쟾?????덉쑝誘濡??댁뿉 ?鍮꾪븳??",
+   "理쒓퀬 ?띾룄??100遺꾩쓽 10??以꾩씤 ?띾룄濡??댄뻾?쒕떎.",
+   "鍮꾩긽?먮㈇?깆쓣 ?묐룞?쒗궎硫??쒗뻾?쒕떎.",
+   "吏洹몄옱洹??댁쟾?쇰줈 ?띾룄瑜?以꾩씤??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+  "tr_c": [
+   "Drive as usual since there is not much snow.",
+   "Be prepared in case a truck skids and spins on the  snowy road.",
+   "Drive 10% slower than the maximum speed limit.",
+   "Turn on the hazard lights and drive slowly.",
+   "Slow down by driving in a zigzag pattern."
+  ]
+ },
+ {
+  "n": 831,
+  "ko_b": "?ㅼ쓬 ?곹솴怨?媛숈씠 ?붿옱 諛쒖깮援ш컙???듦낵 ??寃쎌슦 ?щ컮瑜????꾨갑踰?2媛吏??",
+  "ko_c": [
+   "?꾨줈??媛뉙옄 ???덉쑝誘濡?怨쇱냽???댁꽌?쇰룄 鍮좎졇?섍컙??",
+   "?꾨갑 ?쒖빞 ?뺣낫媛 ?대젮?곕?濡?鍮꾩긽?깆쓣 耳쒓퀬 ?댁쟾?쒕떎.",
+   "?쇰뵒???깆쓣 ?듯빐 ?고쉶?꾨줈??????뺣낫瑜??뚯븙?쒕떎.",
+   "?좎꽑??怨듦린?쒗솚???꾪빐 怨듭“湲곕? ?몃??쒗솚 紐⑤뱶濡??붾떎.",
+   "媛볤만??二쇱감?????곗륫 媛?쒕젅?쇱쓣 ?섏뼱 ?꾨줈瑜?踰쀬뼱?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "When passing through an area affected by a fire as  in the given situation, which of the following are the  TWO proper ways to proceed?",
+  "tr_c": [
+   "Speed up and drive away quickly even if it means  exceeding the speed limit, to avoid being trapped.",
+   "Turn on the hazard lights and drive carefully due to  poor visibility ahead.",
+   "Use the radio or other sources to obtain information  about detour routes.",
+   "Set the vehicle?셲 air system to external circulation to get  fresh air.",
+   "Park on the shoulder and leave the road by climbing  over the right-side guardrail."
+  ]
+ },
+ {
+  "n": 832,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "??띿＜??以묒씤 ?몃젅?쇰윭瑜??ν빐 寃쎌쓬湲??뚮윭 媛?띿쓣 ?ъ큺?쒕떎.",
+   "1李⑤줈瑜??댁슜?섏뿬 ?꾨갑 ?몃젅?쇰윭瑜??덉쟾?섍쾶 ?욎?瑜닿린 ?쒕떎.",
+   "吏꾨줈瑜?蹂寃쏀븷 ?뚮뒗 誘몃━ 諛⑺뼢吏?쒕벑???묐룞?쒕떎.",
+   "二쇳뻾李⑤줈??1李⑤줈濡?吏꾩엯?섏뿬 ?뺤냽二쇳뻾?쒕떎.",
+   "1李⑤줈??理쒓퀬?띾룄 ?쒗븳???녾린 ?뚮Ц???띾룄瑜??믪뿬 二쇳뻾?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Honk at the slow-moving trailer to urge it to speed up.",
+   "Switch to the first lane to overtake the trailer ahead  safely.",
+   "Turn on the turn signal in advance when changing lanes.",
+   "Enter the first lane, which is the driving lane, and  maintain a steady speed.",
+   "Increase your speed in the first lane since there is no  speed limit."
+  ]
+ },
+ {
+  "n": 833,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 諛쒖깮 媛?ν븳 ?꾪뿕 2媛吏??",
+  "ko_c": [
+   "?꾨갑??怨듭궗 以묒엫???뚮━???붾Ъ李④? ?뺤감 以묒씪 ???덈떎.",
+   "2李⑤줈??踰꾩뒪媛 ?덉쟾?댁쟾???꾪빐 ?띾룄瑜???텧 ???덈떎.",
+   "4李⑤줈濡?吏꾨줈 蹂寃쏀븳 踰꾩뒪媛 怨꾩냽 吏꾪뻾?????덈떎.",
+   "1李⑤줈 李⑤웾???띾룄瑜??믪뿬 二쇳뻾?????덈떎.",
+   "?ㅻⅨ 李⑤웾?????욎쑝濡??욎?瑜닿린瑜??????덈떎."
+  ],
+  "a": "1, 5",
+  "tr_b": "Which of the following are potential hazards in the  given situation? (Select TWO)",
+  "tr_c": [
+   "There could be trucks parked ahead, indicating that  there is construction.",
+   "The bus in lane 2 may slow down for safety.",
+   "The bus that just switched to lane 4 may keep going.",
+   "The vehicle in lane 1 may increase speed.",
+   "A vehicle may cut in front of you."
+  ]
+ },
+ {
+  "n": 834,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "吏꾨줈蹂寃쎌젣?쒖꽑 ?쒖떆? ?곴??놁씠 ?곗륫李⑤줈濡?吏꾨줈蹂寃??쒕떎.",
+   "?곗륫 諛⑺뼢吏?쒓린瑜?耳쒖꽌 二쇰? ?댁쟾?먯뿉寃??뚮┛??",
+   "湲됯??랁븯硫??곗륫?쇰줈 吏꾨줈蹂寃??쒕떎.",
+   "吏꾨줈蹂寃쎌? 吏꾩텧濡?諛붾줈 吏곸쟾?먯꽌 ?띾룄瑜???떠 ?쒕룄?쒕떎.",
+   "?ㅻⅨ 李⑤웾 ?듯뻾???μ븷瑜?以??곕젮媛 ?덉쓣 ?뚯뿉??吏꾨줈蹂寃쎌쓣     ?댁꽌?????쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Switch to the right lane, ignoring the combination of  broken and solid white lines.",
+   "Turn on the right-turn signal to let other drivers know.",
+   "Accelerate rapidly when changing lanes to the right.",
+   "Change lanes right before the exit while slowing down.",
+   "Changing lanes is not allowed if doing so may obstruct  other vehicles."
+  ]
+ },
+ {
+  "n": 835,
+  "ko_b": "怨좎냽?꾨줈瑜??댄뻾以묒씤 李⑤웾 以?吏?뺤감濡쒕? ?꾨컲??李⑤웾 2???",
+  "ko_c": [
+   "A (?욎?瑜닿린 以묒씤 ?뱀슜李?",
+   "B (36?몄듅 ??뺤듅?⑹감)",
+   "C (1???붾Ъ李?",
+   "D (26?몄듅 ??뺤듅?⑹감)",
+   "E (二쇳뻾以묒씤 ?뱀슜李?"
+  ],
+  "a": "2, 3",
+  "tr_b": "Among the vehicles driving on the expressway,  which TWO are violating the designated lane rules?",
+  "tr_c": [
+   "A (a passenger car overtaking another vehicle)",
+   "B (a large 36-seater bus)",
+   "C (a 1-ton cargo truck)",
+   "D (a large 26-seater bus)",
+   "E (a passenger car driving normally)"
+  ]
+ },
+ {
+  "n": 836,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "鍮꾨줈 ?명빐 ?몃㈃???뽰뼱 ?덉뼱 80km/h ?댄븯濡?二쇳뻾?쒕떎.",
+   "?곗륫 ??뺣쾭?ㅺ? 臾쇱썒?⑹씠瑜?吏?섍컝 ??臾쇱씠 ?硫댁꽌 ?쒖빞瑜? 媛由????덉쓬??二쇱쓽?섎ŉ ?댁쟾?쒕떎.",
+   "??李⑤웾 ?댁쟾?먯뿉寃??섏쓽 ?꾩튂瑜??뚮젮二쇨린 ?꾪빐 鍮꾩긽?깆쓣 ???깊븯怨?二쇳뻾?쒕떎.",
+   "?곗륫 ?꾨갑 李⑤웾??吏꾨줈蹂寃???媛?μ꽦???덇린??1李⑤줈濡?吏꾨줈 蹂寃???吏?랁븯??二쇳뻾?쒕떎.",
+   "臾쇱썒?⑹씠媛 媛묒옄湲?????쒖빞?뺣낫媛 ?대젮??寃쎌슦 ?덉쟾?뺣낫瑜? ?꾪빐 湲됱젙吏瑜??쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Drive at a speed below 80 km/h because the road  surface is wet due to rain.",
+   "Drive carefully and remain aware that your vision may  be blocked by water splashing from a large bus on the  right when it passes through a puddle.",
+   "Turn on the hazard lights to inform the driver behind  you of your position while driving.",
+   "Switch to the first lane and continue driving, anticipating  that the vehicle ahead on the right may change lanes.",
+   "Make an emergency stop to secure safety if visibility is  suddenly blocked by splashing water from puddles."
+  ]
+ },
+ {
+  "n": 837,
+  "ko_b": "?ㅼ쓬 ?덇만 援먰넻?곹솴?먯꽌 ?덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "??꽕濡??명빐 李⑥꽑??蹂댁씠吏 ?딆쓣 寃쎌슦 ??李⑥쓽 諛뷀댁옄援?쓣 ???쇱꽌 二쇳뻾?쒕떎.",
+   "?덇만?대굹 鍮숉뙋湲몄뿉?쒕뒗 ?쒕룞嫄곕━媛 吏㏃븘吏誘濡??됱냼蹂대떎 ?덉쟾 嫄곕━瑜????좎??쒕떎.",
+   "??꽕 ???곕꼸 吏꽷룹텧?낃뎄???곸뒿寃곕튃援ш컙?쇰줈 誘몃걚?ъ쭚 ?ш퀬 濡??명븳 ?곗뇙異붾룎?ш퀬瑜??鍮꾪븳??",
+   "?몃㈃???쇱뼱遺숈? ?꾨줈?먯꽌??理쒓퀬?띾룄??100遺꾩쓽 20??以꾩뿬???쒕떎.",
+   "?곕꼸???듦낵 ???붿닚?묒쑝濡??명빐 ?쇱떆???쒕젰?곸떎??寃れ쓣 ?? ?덉뼱 二쇱쓽?댁빞 ?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the snowy road conditions?",
+  "tr_c": [
+   "Follow the tire tracks of the vehicle ahead when the lane  markings are not visible due to heavy snow.",
+   "Maintain a greater safe distance than usual because  braking distances shorten on snowy or icy roads.",
+   "Be prepared for chain collisions caused by slippage accidents in tunnel entrances and exits, which are frequent freezing zones during heavy snowfall.",
+   "Reduce your speed by 20% of the speed limit on icy  roads.",
+   "Beware of a temporary loss of vision due to adaptation  to the dark after passing through the tunnel."
+  ]
+ },
+ {
+  "n": 838,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?곕꼸 ?대????덉씠 ?볦뿬?덉? ?딆쑝誘濡?理쒓퀬?띾룄瑜???떠??二쇳뻾 ???꾩슂媛 ?녿떎.",
+   "?곕꼸 諛뽰뿉 ?뚮컻?곹솴??諛쒖깮?섏??뚯쓣 ?????덉뼱, ?댁뿉 ?鍮꾪빐 ???쒕떎.",
+   "?꾨갑 李⑤웾怨쇱쓽 異붾룎?ш퀬瑜?留됯린 ?꾪빐 3李⑤줈濡?湲됱감濡쒕?寃쎌쓣  ?ㅼ떆?쒕떎.",
+   "?곕꼸???듦낵??寃쎌슦, 紐낆닚?묒쑝濡??명빐 ?쇱떆???쒕젰?곸떎??寃??????덉뼱 二쇱쓽?댁빞 ?쒕떎.",
+   "?곕꼸?대?? ?곕꼸?몃???媛묒옉?ㅻ윴 ?꾨줈?섍꼍 蹂?붿뿉 誘몃━ ?鍮??섏뿬???쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Since there is no snow inside the tunnel, there is no  need to slow down.",
+   "The lights on the truck ahead indicate a possible  emergency outside the tunnel, so you should be  prepared.",
+   "To avoid a collision with the vehicle ahead, quickly  switch to the third lane.",
+   "Beware of a temporary loss of vision due to light  adaption when exiting the tunnel.",
+   "Be prepared in advance for sudden changes in the road  conditions between the inside and outside of the tunnel."
+  ]
+ },
+ {
+  "n": 839,
+  "ko_b": "?ㅼ쓬???꾨줈瑜??듯뻾?섎젮??寃쎌슦 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗뿉 ?대Ⅴ湲????쇱떆?뺤??쒕떎.",
+   "?〓떒蹂대룄瑜??듯뻾???뚮뒗 ?뺤??좎뿉 ?쇱떆?뺤??쒕떎.",
+   "?ㅼ감???嫄곕━媛 媛源뚯슦誘濡?媛?랁븯??嫄곕━瑜?踰뚮┛??",
+   "?〓떒蹂대룄 ?꾩뿉 ?щ엺???놁쑝誘濡?洹몃?濡??듦낵?쒕떎.",
+   "寃쎌쓬湲곕? 諛섎났?섏뿬 ?묐룞?섎ŉ ?쒗뻾?쇰줈 ?듯뻾?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the desirable ways to  drive in the given situation? (Select TWO)",
+  "tr_c": [
+   "Come to a complete stop before reaching the bicycle.",
+   "Come to a complete stop at the stop line before  reaching the crosswalk.",
+   "Since the distance to the vehicle behind is short,  accelerate to increase the distance.",
+   "Since there are no people on the crosswalk, proceed  through it as is.",
+   "Honk continuously and proceed at a low speed."
+  ]
+ },
+ {
+  "n": 840,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?ㅼ쓬 援먰넻?덉쟾?쒖꽕??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?쒗븳?띾룄??留ㅼ떆 50?щ줈誘명꽣?대ŉ ?띾룄 珥덇낵 ???⑥냽?????덈떎.",
+   "?꾨갑???좏샇媛 ?뱀깋?붿궡?쒖씪 寃쎌슦?먮쭔 醫뚰쉶???????덈떎.",
+   "紐⑤뱺 ?대┛??蹂댄샇援ъ뿭???쒗븳?띾룄??留ㅼ떆 50?щ줈誘명꽣?대떎.",
+   "?좏샇?쒖꽌???곸깋-?⑹깋-?뱀깋-?뱀깋?붿궡?쒖씠??",
+   "?꾨갑???좏샇媛 ?뱀깋??寃쎌슦 諛섎???李⑤줈?먯꽌 李④? ?ㅼ? ?딆쓣 ??   醫뚰쉶?꾪븷 ???덈떎."
+  ],
+  "a": "1, 5",
+  "tr_b": "According to the Road Traffic Act, which of the  following best describe the road safety facility in the  given situation? (Select TWO)",
+  "tr_c": [
+   "The speed limit is 50 km/h and it is currently enforced.",
+   "Left turn is only allowed when there is a green arrow.",
+   "The speed limit in all school zones is 50 km/h.",
+   "The sequence of a traffic signal is red, yellow, green, and  green arrow.",
+   "When the traffic light is green, you can turn left only if  there is no vehicle coming from the opposite side of the  road."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+p='translations/audit/queue/220_choices_en.json'
+with open(p,encoding='utf-8') as f: d=json.load(f)
+for x in d:
+ print(x['n'], sorted(x.keys()))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:51:49.527853Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 656ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/220_choices_en.json' | ConvertFrom-Json; "'$d.Count; $d | ForEach-Object { "$($_.n): $((($_.PSObject.Properties.Name) -join '"','))\" }" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 626ms:
+40
+801: n,ko_b,ko_c,a,tr_b,tr_c
+802: n,ko_b,ko_c,a,tr_b,tr_c
+803: n,ko_b,ko_c,a,tr_b,tr_c
+804: n,ko_b,ko_c,a,tr_b,tr_c
+805: n,ko_b,ko_c,a,tr_b,tr_c
+806: n,ko_b,ko_c,a,tr_b,tr_c
+807: n,ko_b,ko_c,a,tr_b,tr_c
+808: n,ko_b,ko_c,a,tr_b,tr_c
+809: n,ko_b,ko_c,a,tr_b,tr_c
+810: n,ko_b,ko_c,a,tr_b,tr_c
+811: n,ko_b,ko_c,a,tr_b,tr_c
+812: n,ko_b,ko_c,a,tr_b,tr_c
+813: n,ko_b,ko_c,a,tr_b,tr_c
+814: n,ko_b,ko_c,a,tr_b,tr_c
+815: n,ko_b,ko_c,a,tr_b,tr_c
+816: n,ko_b,ko_c,a,tr_b,tr_c
+817: n,ko_b,ko_c,a,tr_b,tr_c
+818: n,ko_b,ko_c,a,tr_b,tr_c
+819: n,ko_b,ko_c,a,tr_b,tr_c
+820: n,ko_b,ko_c,a,tr_b,tr_c
+821: n,ko_b,ko_c,a,tr_b,tr_c
+822: n,ko_b,ko_c,a,tr_b,tr_c
+823: n,ko_b,ko_c,a,tr_b,tr_c
+824: n,ko_b,ko_c,a,tr_b,tr_c
+825: n,ko_b,ko_c,a,tr_b,tr_c
+826: n,ko_b,ko_c,a,tr_b,tr_c
+827: n,ko_b,ko_c,a,tr_b,tr_c
+828: n,ko_b,ko_c,a,tr_b,tr_c
+829: n,ko_b,ko_c,a,tr_b,tr_c
+830: n,ko_b,ko_c,a,tr_b,tr_c
+831: n,ko_b,ko_c,a,tr_b,tr_c
+832: n,ko_b,ko_c,a,tr_b,tr_c
+833: n,ko_b,ko_c,a,tr_b,tr_c
+834: n,ko_b,ko_c,a,tr_b,tr_c
+835: n,ko_b,ko_c,a,tr_b,tr_c
+836: n,ko_b,ko_c,a,tr_b,tr_c
+837: n,ko_b,ko_c,a,tr_b,tr_c
+838: n,ko_b,ko_c,a,tr_b,tr_c
+839: n,ko_b,ko_c,a,tr_b,tr_c
+840: n,ko_b,ko_c,a,tr_b,tr_c
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/220_choices_en.json' | ConvertFrom-Json; "'$d | Where-Object {$_.n -ge 817 -and $_.n -le 823} | ConvertTo-Json -Depth 5' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 645ms:
+[
+    {
+        "n":  817,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "교차로에 먼저 진입하는 것이 중요하다.",
+                     "전방만 주시하며 운전해야 한다.",
+                     "1차로 화물차가 교차로 진입하던 중 2차로 쪽으로 차로변경 할     수 있으므로 대비해야 한다.",
+                     "좌측의 회전차량과 우측도로에서 진입하는 차량에 주의하며 운전 해야 한다.",
+                     "진입차량이 회전차량보다 우선이라는 생각으로 운전한다."
+                 ],
+        "a":  "3, 4",
+        "tr_b":  "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+        "tr_c":  [
+                     "It is important to enter the intersection first.",
+                     "You must drive while focusing only on what is in front of  you.",
+                     "You must drive with caution as the truck in lane 1 may  switch to lane 2 while entering the intersection.",
+                     "Drive while paying attention to turning vehicles from the  left and vehicles entering from the right lane.",
+                     "You must keep in mind that entering vehicles have the  right of way over the vehicles already in the roundabout."
+                 ]
+    },
+    {
+        "n":  818,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "직진 신호 대기차량 사이에서 갑자기 횡단하려는 보행자를 주 의한다.",
+                     "전방 좌회전신호가 바뀌기 전 통과하기 위해 빠르게 진입한다.",
+                     "무단횡단 보행자를 위협하기 위해 오히려 속도를 높인다.",
+                     "횡단하려는 보행자를 보호하기 위해 비상등을 켜고 감속한다.",
+                     "보행자와의 충돌을 피하기 위해 1차로로 급 진로 변경한다."
+                 ],
+        "a":  "1, 4",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Keep a lookout for a pedestrian suddenly crossing  between the vehicles waiting for the green light.",
+                     "Enter the intersection quickly before the left-turn signal  changes.",
+                     "Speed up to intimidate the jaywalking pedestrian.",
+                     "Turn on the hazard lights and slow down to protect the  pedestrian.",
+                     "Change to lane 1 suddenly to avoid a collision with the  pedestrian."
+                 ]
+    },
+    {
+        "n":  819,
+        "ko_b":  "오른쪽으로 갔어야 하는데 길을 잘못 들었다. 이 때 가장 안 전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "안전지대로 진입하여 비상점멸등을 작동한 후 오른쪽으로 진 입한다.",
+                     "오른쪽 방향지시기를 작동하며 안전지대로 진입하여 오른쪽으 로 진입한다.",
+                     "신속하게 가속하여 오른쪽으로 진입한다.",
+                     "대구방향으로 그대로 진행한다.",
+                     "다음에서 만나는 나들목 또는 갈림목을 이용한다."
+                 ],
+        "a":  "4, 5",
+        "tr_b":  "You should have gone to the right, but took the wrong lane.  Which of the following are the safe ways to drive in the given  situation? (Select TWO)",
+        "tr_c":  [
+                     "Enter the safety zone, turn on the hazard lights, and  then turn right.",
+                     "Turn on the right-turn signal, enter the safety zone, and  then turn right.",
+                     "Accelerate quickly and turn right.",
+                     "Continue straight in the direction of Daegu.",
+                     "Use the next interchange or junction that you see."
+                 ]
+    },
+    {
+        "n":  820,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "차간 거리를 평소보다 충분히 확보한다.",
+                     "터널 진입 전 브레이크를 아주 강하게 밟아 속도를 미리 줄인다.",
+                     "터널 안은 눈이 쌓이지 않았기 때문에 가속 운행한다.",
+                     "눈길은 매우 미끄럽기 때문에 앞차의 바퀴자국을 따라 주행한다.",
+                     "미끄럼 방지를 위해 기어를 중립으로 변경하여 진행한다."
+                 ],
+        "a":  "1, 4",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Maintain a greater following distance than usual.",
+                     "Apply the brakes very hard before entering the tunnel  to slow down in advance.",
+                     "Since there is no snow inside the tunnel, accelerate  while driving through it.",
+                     "Drive along the tire tracks of the vehicle in front, as  snowy roads are very slippery.",
+                     "Shift to neutral to prevent skidding."
+                 ]
+    },
+    {
+        "n":  821,
+        "ko_b":  "기업도시, 터미널 방향으로 좌회전 하려고 한다. 가장 안전한  운전방법 2가지는?",
+        "ko_c":  [
+                     "네비게이션 안내에 따라 전방에서 좌회전해야 하므로 1차로로 미 리 진로를 변경한다.",
+                     "1,2차로는 지하차도로 진입하므로 3차로 후행 차량을 먼저 보내고   안전을 확보한 후 3차로로 차로를 변경한다.",
+                     "정확한 길안내를 위해 네비게이션을 반복적으로 조작한다.",
+                     "3차로에 후행 차량이 있고, 내 차량이 앞서 있으므로 방향지시등을  켜지 않고, 그 앞으로 빠르게 진로를 변경한다.",
+                     "선행차의 급제동에 대비해 안전거리를 확보하며 주행한다."
+                 ],
+        "a":  "2, 5",
+        "tr_b":  "You plan to make a left turn toward the Business  City and Terminal. What are the two safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Switch to the first lane in advance to prepare for the  upcoming left turn as instructed by the navigation.",
+                     "As lanes 1 and 2 go into an underpass, let the vehicle to  your rear pass, and then safely change to lane 3.",
+                     "Use the SATNAV repeatedly to confirm the route.",
+                     "Quickly change lanes without signaling since your  vehicle is ahead of the vehicle to your rear.",
+                     "Maintain a safe distance in case the vehicle ahead of  you brakes suddenly."
+                 ]
+    },
+    {
+        "n":  822,
+        "ko_b":  "다음에서 사고발생 가능성이 가장 높은 상황 2가지는?",
+        "ko_c":  [
+                     "전방 주행중인 자동차",
+                     "좌측으로 진입하기 위해 갑자기 회전하는 전동스쿠터",
+                     "우측에서 출발하려는 화물차",
+                     "우측에서 작업중인 사람",
+                     "전방 좌측 이륜차"
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "Which TWO are most likely to lead to an accident in  the given situation?",
+        "tr_c":  [
+                     "A car driving ahead",
+                     "An electric scooter suddenly turning left to enter the  road",
+                     "A truck preparing to move from the right-hand side",
+                     "A person working on the right-hand side of the road",
+                     "A motorcycle ahead on the left-hand side"
+                 ]
+    },
+    {
+        "n":  823,
+        "ko_b":  "다음 도로에서 가장 안전한 통행방법 2가지는?",
+        "ko_c":  [
+                     "보행자우선도로는 어린이에게만 적용되므로 성인 보행자 쪽으 로 붙어 주행한다.",
+                     "보행자와 안전한 거리를 두고 진행한다.",
+                     "나란히 통행중인 보행자 일행이 일렬로 통행하도록 경음기를  울린다.",
+                     "보행자 통행에 방해를 주지 않도록 서행 또는 일시정지한다.",
+                     "보행자 통행에 방해를 주지 않으면 시속 20km 이상 주행할  수 있다."
+                 ],
+        "a":  "2, 4",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Drive close to adult pedestrians because  pedestrians-first roads apply only to children.",
+                     "Maintain a safe distance from pedestrians while driving.",
+                     "Honk to urge a group of pedestrians walking side by  side to walk in a single file.",
+                     "Slow down or stop as needed to avoid interfering with  pedestrian traffic.",
+                     "You may drive at 20 km/h or faster as long as you do  not interfere with pedestrian traffic."
+                 ]
+    }
+]
+
+2026-10-10T13:51:57.350807Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/220_choices_en.json' | ConvertFrom-Json; "'$d | Where-Object {$_.n -ge 801 -and $_.n -le 816} | ConvertTo-Json -Depth 5' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 613ms:
+[
+    {
+        "n":  801,
+        "ko_b":  "직진으로 통행하는 중이다. 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "흰색 자동차가 진입하지 못하도록 가속하여 통행한다.",
+                     "흰색 자동차가 직진할 수 있으므로 서행하며 주의를 살핀다.",
+                     "도로유지 보수 중에 좌측을 통행할 수 있으므로 그대로 통행한다.",
+                     "흰색 승용차가 멈출 것이라 예측하고 반대방향 차에 주의하며  통행한다.",
+                     "반대방향 빨강색 승용차가 좌회전차로로 진입할 수 있으므로  필요한 경우 정차하여 상황을 살핀다."
+                 ],
+        "a":  "2, 5",
+        "tr_b":  "The driver is driving straight ahead. Which of the  following are the TWO safest ways to drive?",
+        "tr_c":  [
+                     "Accelerate to prevent the white vehicle from entering.",
+                     "Drive slowly and pay attention as the white car may be  driving straight ahead.",
+                     "Traffic is allowed to pass on the left side during road  maintenance, so stay on the left.",
+                     "Anticipate that the white car will stop and proceed while  paying attention to the vehicles in the opposite direction.",
+                     "The red car in the opposite direction may enter the  left-turn lane, so stop and observe the situation if  necessary."
+                 ]
+    },
+    {
+        "n":  802,
+        "ko_b":  "도심지 이면도로를 주행하는 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "자전거와 산책하는 반려견이 갑자기 도로 중앙으로 나올 수  있으므로 주의한다.",
+                     "경음기를 사용해서 내 차의 진행을 알리고 그대로 진행한다.",
+                     "어린이가 갑자기 도로 중앙으로 나올 수 있으므로 속도를 줄인다.",
+                     "속도를 높여 자전거를 피해 신속히 통과한다.",
+                     "전조등 불빛을 번쩍이면서 마주 오는 차에 주의를 준다."
+                 ],
+        "a":  "1, 3",
+        "tr_b":  "When driving on an urban side street, which of the  following are the two safest ways of driving?",
+        "tr_c":  [
+                     "Watch out for bicycles and dogs being walked, as they  may suddenly enter the roadway.",
+                     "Honk to let the cyclist know that you want to pass.",
+                     "Children may suddenly come into the center of the road,  so slow down.",
+                     "Increase speed to avoid the bicycle and pass by quickly.",
+                     "Flash your headlights as a warning signal to the car  coming from the opposite direction."
+                 ]
+    },
+    {
+        "n":  803,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "주차된 차량사이에서 보행자가 나타날 수 있기 때문에 서행으로    운전한다.",
+                     "주차중인 차량이 갑자기 출발할 수 있으므로 주의하며 운전한다.",
+                     "지하주차장 노면표시는 반드시 지키며 운전할 필요가 없다.",
+                     "내 차량을 주차할 수 있는 주차구역만 살펴보며 운전한다.",
+                     "지하주차장 기둥은 운전시야를 방해하는 시설물이므로 경음기를     계속 울리면서 운전한다."
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+        "tr_c":  [
+                     "Slow down as a pedestrian may suddenly appear from  between the parked vehicles.",
+                     "Drive with caution as a parked vehicle may suddenly  move.",
+                     "You can ignore the marking lines in an underground  parking lot.",
+                     "Drive while paying attention only to the parking space  you want.",
+                     "The pillars in an underground parking lot obstruct  visibility, so continue honking while driving."
+                 ]
+    },
+    {
+        "n":  804,
+        "ko_b":  "시속 30킬로미터로 직진하는 상황이다. 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "주차된 차들과 충돌하지 않도록 시속 30킬로미터 이하로 횡단 보도를 통과한다.",
+                     "감속하며 접근하고 횡단보도 직전 정지선에 정지한다.",
+                     "횡단보도에 사람이 없으므로 시속 30킬로미터로 서행한다.",
+                     "횡단보도에 사람이 없으므로 그대로 통과한다.",
+                     "오른쪽에서 도로에 진입하려는 차를 주의하며 서행한다."
+                 ],
+        "a":  "2, 5",
+        "tr_b":  "You are driving straight at 30 km/h. Which of the  following are the TWO safest ways to drive?",
+        "tr_c":  [
+                     "Drive through the crosswalk at no more than 30 km/h  to avoid collision with the parked cars.",
+                     "Slow down as you approach and stop at the stop line  just before the crosswalk.",
+                     "There are no pedestrians on the crosswalk, so proceed  at 30 km/h.",
+                     "Keep driving as there are no pedestrians on the  crosswalk.",
+                     "Drive slowly while paying attention to vehicles entering  the road from the right."
+                 ]
+    },
+    {
+        "n":  805,
+        "ko_b":  "공동주택 주차장에서 좌회전 하려는 중이다. 대비해야 할 위 험요소와 거리가 먼 2가지는?",
+        "ko_c":  [
+                     "공작물에 가려져 확인되지 않는 A 지역",
+                     "후진하려는 흰색 자동차",
+                     "재활용수거용 마대와 충돌할 가능성",
+                     "놀이하고 있는 어린이의 차도 진입",
+                     "뒤쪽 자동차와의 충돌 가능성"
+                 ],
+        "a":  "3, 5",
+        "tr_b":  "You are about to turn left from an apartment  parking lot. Which of the following risks are NOT  what you need to prepare for? (Select TWO)",
+        "tr_c":  [
+                     "Area A, which is obscured by an object and cannot be  seen",
+                     "A white vehicle, which is trying to reverse",
+                     "Possible collision with a recycling bag",
+                     "Playing children who may possibly enter the driveway",
+                     "Possible collision with a vehicle behind"
+                 ]
+    },
+    {
+        "n":  806,
+        "ko_b":  "교차로 접근하고 있으며 우회전하려는 상황이다. 가장 안전한  통행방법 2가지는?",
+        "ko_c":  [
+                     "어린이가 왼쪽으로 횡단하고 있으므로 우측공간을 이용하여  그대로 진입하여 우회전한다.",
+                     "반대방면에서 진입해 오는 자동차가 좌회전하려는 지를 살핀다.",
+                     "횡단보도 직전 정지선에서 정지하여 어린이가 횡단을 완료할  때까지 대기한다.",
+                     "반대방면 승용차보다 교차로에 선진입하기 위해 가속하여 정 지선을 통과한다.",
+                     "신호에 따라 주의하여 서행으로 진입하고 우회전한다."
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "You are about to turn right while approaching an  intersection. Which of the following are the safest  ways to drive? (Select TWO)",
+        "tr_c":  [
+                     "The child is crossing to the left, so you use the space on  the right to enter and turn right.",
+                     "Watch out for vehicles entering from the opposite  direction to see if they are turning left.",
+                     "Stop at the stop line just before the crosswalk and wait  for the child to complete crossing.",
+                     "Accelerate through the stop line to enter the  intersection ahead of oncoming traffic.",
+                     "Enter slowly and turn right at the signal with caution."
+                 ]
+    },
+    {
+        "n":  807,
+        "ko_b":  "T자형 교차로에서 좌회전을 하려는 상황이다. 가장 안전한  운전방법 2가지는?",
+        "ko_c":  [
+                     "좌회전 신호에 따라 신속하게 좌회전한다.",
+                     "횡단보도 정지선 전에서 정지한다.",
+                     "서행으로 횡단보도에 진입한 후 왼쪽 차에 주의하며 좌회전한다.",
+                     "오른쪽 사람과 옆으로 안전한 거리를 두고 좌회전한다.",
+                     "횡단보도를 이용하는 보행자와 자전거가 횡단을 완료할 때까 지 기다린다."
+                 ],
+        "a":  "2, 5",
+        "tr_b":  "You are about to turn left at a T-intersection. Which  of the following are the safest ways to drive? (Select  TWO)",
+        "tr_c":  [
+                     "Quickly turn left at the left-turn signal.",
+                     "Stop before the crosswalk stop line.",
+                     "Enter the crosswalk slowly and turn left while paying  attention to the vehicle on the left.",
+                     "Turn left with a safe distance to the side of the person  on the right.",
+                     "Wait for pedestrians and bicycle riders using the  crosswalk to complete crossing."
+                 ]
+    },
+    {
+        "n":  808,
+        "ko_b":  "다음 도로상황에서 가장 주의해야 할 위험상황 2가지는?",
+        "ko_c":  [
+                     "전동킥보드 운전자는 앞쪽 보행자를 피해서 갑자기 왼쪽으로  이동할 수 있다.",
+                     "오른쪽 보행자들이 왼쪽으로 횡단할 수 있다.",
+                     "서행으로 통행하여 뒤차들과 충돌할 수 있다.",
+                     "반대방면 흰색 자동차와 충돌할 수 있다.",
+                     "전동킥보드가 버스승강장에 있는 보행자를 충돌할 수 있다."
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Which of the following are the risks you must pay  attention to in the given situation? (Select TWO)",
+        "tr_c":  [
+                     "An electric kick scooter rider may suddenly move to the  left to avoid pedestrians ahead of him/her.",
+                     "Pedestrians on the right may cross to the left.",
+                     "Driving slowly may cause collision with trailing cars.",
+                     "You may collide with a white car coming from the  opposite direction.",
+                     "An electric scooter may collide with a pedestrian at a  bus stop."
+                 ]
+    },
+    {
+        "n":  809,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "왼쪽 방향지시기와 전조등을 작동하며 안전하게 추월한다.",
+                     "경운기 운전자의 수신호에 따라 주의하며 안전하게 추월한다.",
+                     "경운기 운전자의 수신호가 끝나면 앞지른다.",
+                     "경운기 운전자의 손짓을 무시하고 그 뒤를 따른다.",
+                     "경운기와 충분한 안전거리를 유지한다."
+                 ],
+        "a":  "4, 5",
+        "tr_b":  "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+        "tr_c":  [
+                     "Turn on the left-turn signal and headlights, and then  pass safely.",
+                     "Pay attention to the signals from the cultivator operator  and pass safely.",
+                     "Proceed ahead once the signals from the cultivator  operator have ended.",
+                     "Ignore the hand signals of the cultivator operator and  follow behind.",
+                     "Maintain sufficient safe distance from the cultivator."
+                 ]
+    },
+    {
+        "n":  810,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "진입하려는 차량은 진행하고 있는 회전차량에 진로를 양보하여야  한다.",
+                     "회전교차로에 진입하려는 경우에는 서행하거나 일시정지 하여야 한다.",
+                     "진입차량이 우선이므로 신속히 진입하여 가고자 하는 목적지로     진행한다.",
+                     "회전교차로에 진입할 때는 회전차량보다 먼저 진입한다.",
+                     "주변 차량의 움직임에 주의할 필요가 없다."
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+        "tr_c":  [
+                     "The entering vehicle must yield to the vehicles already  in the roundabout.",
+                     "Slow down or stop the vehicle before entering the  roundabout.",
+                     "Since the entering vehicle has the right of way, enter  quickly and proceed to your intended destination.",
+                     "Enter the roundabout in front of vehicles already inside.",
+                     "You can ignore the vehicles around you."
+                 ]
+    },
+    {
+        "n":  811,
+        "ko_b":  "교차로에 진입하여 직진하려는 상황이다. 가장 안전한 운전방법  2가지는?",
+        "ko_c":  [
+                     "검은색 자동차가 후진할 수 있으므로 감속하며 대비한다.",
+                     "이륜차가 검은색 승용차의 왼쪽으로 진로변경할 수 있으므로 주의한다.",
+                     "반대방향에 비어있는 직진차로를 이용하여 직진하다가 원래 차로 로 되돌아온다.",
+                     "정차한 검은색 자동차의 옆으로 가속하며 직진으로 통과한다.",
+                     "이륜차가 나의 앞으로 진로변경할 수 없도록 가속하며 통과한다."
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "You are entering an intersection and trying to go  straight. Which of the following are the safest ways to  drive? (Select TWO)",
+        "tr_c":  [
+                     "The black car may reverse, so slow down, and be  prepared.",
+                     "Be careful as the two-wheeled vehicle may change lanes  on the left of the black car.",
+                     "Use the empty straight lane in the opposite direction to  go straight, and then return to your original lane.",
+                     "Accelerate and pass the stopped black car in a straight  line.",
+                     "Accelerate and pass the two-wheeled vehicle so that it  cannot change lanes in front of you."
+                 ]
+    },
+    {
+        "n":  812,
+        "ko_b":  "다음과 같은 상황에서 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "검은색 자동차 운전자는 P공간을 이용하여 신속하게 통행한다.",
+                     "검은색 자동차 운전자는 어린이통학버스 뒤에서 정지한다.",
+                     "흰색 자동차 운전자는 어린이통학버스에 주의하며 서행으로 직진한다.",
+                     "흰색 자동차 운전자는 어린이통학버스에 이르기 전에 정지한 후  서행한다.",
+                     "흰색 자동차 운전자는 지속적으로 경음기를 작동하여 본인이 직진 할 것을 알린다."
+                 ],
+        "a":  "2, 4",
+        "tr_b":  "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+        "tr_c":  [
+                     "The black car driver uses the P space to pass quickly.",
+                     "The black car driver stops behind the school bus.",
+                     "The white car driver proceeds slowly while paying  attention to the school bus.",
+                     "The white car driver stops before reaching the school  bus, and then proceeds slowly.",
+                     "The white car driver honks continuously to indicate that  he/she is going straight."
+                 ]
+    },
+    {
+        "n":  813,
+        "ko_b":  "다음과 같은 교차로에서 가장 안전한 통행방법 2가지를 설명한 것은?",
+        "ko_c":  [
+                     "A차로에서 진입하려는 때에 왼쪽 방향지시기를 작동하였다.",
+                     "A차로에서 진입한 운전자가 즉시 a차로에 진입하여 회전하다가  북쪽으로 진출하였다.",
+                     "B차로에서 진입하려는 때에 오른쪽 방향지시기를 작동하였다.",
+                     "B차로에서 진입한 운전자가 즉시 b차로로 진입하여 회전하다가  a차로로 진로변경하여 북쪽방향으로 진출하였다.",
+                     "안쪽에서 회전하다가 진출하려는 때에 왼쪽 방향지시기를 작동하였다."
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed at the intersection in the given picture?",
+        "tr_c":  [
+                     "The driver activated the left-turn signal when he/she was  about to enter from lane A.",
+                     "The driver entering from lane A immediately entered  lane a, made a turn, and proceeded north.",
+                     "The driver activated the right-turn signal when he/she  was about to enter from lane B.",
+                     "The driver entering from lane B immediately entered  lane b, made a turn, and then switched to lane B and  headed north.",
+                     "The driver activated the left-turn signal while trying to  exit after making a turn inside."
+                 ]
+    },
+    {
+        "n":  814,
+        "ko_b":  "다음 상황에서 우회전하고자 할 때 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "전방 녹색 진행신호에 따라 신속히 우회전한다.",
+                     "우측 보행자가 횡단보도를 통행 할 수 있으므로 일시정지 후  안전을 확인하며 우회전한다.",
+                     "우회전전용신호가 적색이므로 정지한다.",
+                     "우회전전용신호가 적색이어도 보행자 통행에 방해를 주지 않 는 경우 우회전 가능하다.",
+                     "정지선에 정지하여 우회전 화살표등화로 바뀔 때까지 기다린다."
+                 ],
+        "a":  "3, 5",
+        "tr_b":  "In the given situation, which of the following are  the TWO safest ways to turn right?",
+        "tr_c":  [
+                     "Turn right quickly when the forward-facing green light is  on.",
+                     "Come to a complete stop and check for safety before  turning right, as pedestrians may be crossing on the  right.",
+                     "Stop because the dedicated right-turn signal is red.",
+                     "Even if the dedicated right-turn signal is red, you may  turn right if it does not interfere with any pedestrians.",
+                     "Stop at the stop line and wait until the right-turn arrow  signal turns green."
+                 ]
+    },
+    {
+        "n":  815,
+        "ko_b":  "다음 상황에서 좌회전하려는 경우 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "녹색 진행신호에 따라 교차로에 그대로 빠르게 진입한다.",
+                     "앞차에 바짝 붙어 따라간다.",
+                     "좌회전 차로가 정체상황이기 때문에 3차로를 이용해 좌회전한다.",
+                     "꼬리물기로 다른 차의 통행에 방해를 줄 수 있으므로 진입하 지 않는다.",
+                     "교차로에 진입하려는 후행차량이 있을 수 있으므로 미리 속도 를 줄여 추돌사고를 예방한다."
+                 ],
+        "a":  "4, 5",
+        "tr_b":  "Which of the following are the TWO safest ways to  turn left in the given situation?",
+        "tr_c":  [
+                     "Enter the intersection quickly according to the green  signal.",
+                     "Follow the vehicle in front closely.",
+                     "Since the left-turn lane is congested, use the third lane  to turn left.",
+                     "Do not enter the intersection, as you may obstruct  traffic by tailgating.",
+                     "Slow down in advance to prevent a rear-end collision, as  there may be vehicles approaching from behind and  trying to enter the intersection."
+                 ]
+    },
+    {
+        "n":  816,
+        "ko_b":  "사고발생 가능성이 가장 높은 요인 2가지는?",
+        "ko_c":  [
+                     "후진하려는 A화물차",
+                     "화물차 뒤에서 횡단하는 B보행자",
+                     "후방에서 진행중인 C차량",
+                     "보도 통행중인 D보행자",
+                     "좌측에서 우회전하려는 E차량"
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Which of the following are the TWO most likely risk  factors for a traffic accident in the given situation?",
+        "tr_c":  [
+                     "Truck A attempting to back up",
+                     "Pedestrian B crossing behind the truck",
+                     "Vehicle C approaching from the rear",
+                     "Pedestrian D walking on the sidewalk",
+                     "Vehicle E attempting to turn right from the left-hand  side"
+                 ]
+    }
+]
+
+2026-10-10T13:52:02.759598Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/220_choices_en.json' | ConvertFrom-Json; "'$d | Where-Object {$_.n -ge 824 -and $_.n -le 840} | ConvertTo-Json -Depth 5' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 631ms:
+[
+    {
+        "n":  824,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "진로변경 차량을 피하기 위해 3차로로 급히 진로를 변경한다.",
+                     "1차로 차량이 진입하지 못하도록 속도를 높여 운전한다.",
+                     "경음기와 상향등을 사용해 진로변경을 방해한다.",
+                     "감속을 통해 진로변경차량에게 양보한다.",
+                     "빗길에서는 평소보다 제동거리가 길어지므로 미리 감속한다."
+                 ],
+        "a":  "4, 5",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Quickly switch to the third lane to avoid vehicles that  are changing lanes.",
+                     "Speed up to prevent vehicles in the first lane from  merging.",
+                     "Use the horn and high-beam headlights to prevent  vehicles from changing lanes.",
+                     "Yield to merging vehicles by slowing down.",
+                     "Slow down in advance as the braking distances are  longer on wet roads."
+                 ]
+    },
+    {
+        "n":  825,
+        "ko_b":  "사고발생 가능성이 가장 높은 상황 2가지는?",
+        "ko_c":  [
+                     "보도 우측에서 진행 중인 자전거",
+                     "건물로 진입하기 위해 좌회전 대기 중인 자동차",
+                     "도로 좌측에서 우측으로 주행 중인 자동차",
+                     "반대편 공터에 주차된 자동차",
+                     "반사경에 비친 자동차"
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Which TWO carry the highest risk of causing an  accident?",
+        "tr_c":  [
+                     "A bicycle traveling on the right-hand side of the  sidewalk",
+                     "A car waiting to turn left to enter the building",
+                     "A car driving from the left-hand side of the road toward  the right",
+                     "A car parked in an empty lot on the opposite side",
+                     "A car reflected on a convex mirror"
+                 ]
+    },
+    {
+        "n":  826,
+        "ko_b":  "다음 상황에서 가장 올바른 운전방법 2가지는?",
+        "ko_c":  [
+                     "마주 오는 택배차량에게 진로를 양보한다.",
+                     "승용차 운전자에게 우선권이 있으므로 그대로 진행한다.",
+                     "상향등을 반복 조작하여 상대운전자가 진행하지 못하도록 한다.",
+                     "주정차 된 차량에서 내리려는 사람을 주의한다.",
+                     "정지하여 상대운전자가 진로를 양보 때까지 기다린다."
+                 ],
+        "a":  "1, 4",
+        "tr_b":  "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+        "tr_c":  [
+                     "Yield the right of way to the oncoming delivery vehicle.",
+                     "Proceed as the passenger car driver has the priority.",
+                     "Flash the high-beam headlights repeatedly to prevent  the other driver from proceeding.",
+                     "Watch out for people getting out of parked vehicles.",
+                     "Stop and wait until the oncoming driver gives way."
+                 ]
+    },
+    {
+        "n":  827,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "흰색차 앞에서 브레이크를 밟아 급진로변경에 항의한다.",
+                     "감속으로 흰색차량이 진로변경 할 수 있도록 안전거리를 확보한다.",
+                     "추돌사고를 피하기 위해 4차로로 진로변경한다.",
+                     "급가속을 통해 흰색차와의 추돌을 피한다.",
+                     "왼쪽으로 핸들을 돌리며 급제동한다."
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Step on the brakes to express objection to the sudden  change of lane of the white car in front of you.",
+                     "Slow down and maintain a safe distance to allow the  white car to change lanes safely.",
+                     "Switch to the 4th lane to avoid a rear-end collision.",
+                     "Avoid a collision with the white car by rapidly  accelerating.",
+                     "Make a sudden stop while turning the steering wheel to  the left."
+                 ]
+    },
+    {
+        "n":  828,
+        "ko_b":  "고속도로 휴게소에서 휴식을 취하고 고속도로로 합류하려고  한다. 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "일시정지 후 주행 중인 차량이 없을 때 도로로 합류한다.",
+                     "가속을 통해 한번에 1차로까지 가로 지른다.",
+                     "충분한 가속을 통해 좌측을 확인한 후 합류한다.",
+                     "갓길로 계속 주행한다.",
+                     "다른 차량의 통행을 방해하지 않도록 한다."
+                 ],
+        "a":  "3, 5",
+        "tr_b":  "You are about to reenter the expressway after  taking a break at a rest area. Which of the following  are the TWO safest ways to proceed in the given  situation?",
+        "tr_c":  [
+                     "Stop briefly and merge into the highway only when  there are no approaching vehicles.",
+                     "Accelerate quickly and cut across directly into the first  lane.",
+                     "Check your left and merge after gaining sufficient speed.",
+                     "Continue driving on the shoulder.",
+                     "Do not interfere with the flow of other vehicles."
+                 ]
+    },
+    {
+        "n":  829,
+        "ko_b":  "다음 상황에서 가장 바람직한 운전방법 2가지는?",
+        "ko_c":  [
+                     "1차로로 진로변경하여 빠르게 통행한다.",
+                     "등화장치를 작동하여 내 차의 존재를 다른 운전자에게 알린다.",
+                     "노면이 습한 상태이므로 속도를 줄이고 서행한다.",
+                     "앞차가 통행하고 있는 속도에 맞추어 앞차를 보며 통행한다.",
+                     "갓길로 진로변경하여 앞쪽 차들보다 앞서간다."
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "Which of the following are the desirable ways to  drive in the given situation? (Select TWO)",
+        "tr_c":  [
+                     "Switch to the first lane and proceed quickly.",
+                     "Turn on the hazard lights to alert other drivers to the  presence of your vehicle.",
+                     "Since the road is wet, reduce your speed and drive  slowly.",
+                     "Match your speed to the speed of the vehicle in front of  you and drive while keeping an eye on it.",
+                     "Switch to the road shoulder and pass the vehicles in  front."
+                 ]
+    },
+    {
+        "n":  830,
+        "ko_b":  "다음과 상황에서 가장 올바른 운전방법 2가지는?",
+        "ko_c":  [
+                     "눈이 많이 쌓이지 않았으므로 평소대로 운전한다.",
+                     "화물차가 눈길에 미끄러져 회전할 수 있으므로 이에 대비한다.",
+                     "최고 속도의 100분의 10을 줄인 속도로 운행한다.",
+                     "비상점멸등을 작동시키며 서행한다.",
+                     "지그재그 운전으로 속도를 줄인다."
+                 ],
+        "a":  "2, 4",
+        "tr_b":  "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+        "tr_c":  [
+                     "Drive as usual since there is not much snow.",
+                     "Be prepared in case a truck skids and spins on the  snowy road.",
+                     "Drive 10% slower than the maximum speed limit.",
+                     "Turn on the hazard lights and drive slowly.",
+                     "Slow down by driving in a zigzag pattern."
+                 ]
+    },
+    {
+        "n":  831,
+        "ko_b":  "다음 상황과 같이 화재 발생구간을 통과 할 경우 올바른 운 전방법 2가지는?",
+        "ko_c":  [
+                     "도로에 갇힐 수 있으므로 과속을 해서라도 빠져나간다.",
+                     "전방 시야 확보가 어려우므로 비상등을 켜고 운전한다.",
+                     "라디오 등을 통해 우회도로에 대한 정보를 파악한다.",
+                     "신선한 공기순환을 위해 공조기를 외부순환 모드로 둔다.",
+                     "갓길에 주차한 후 우측 가드레일을 넘어 도로를 벗어난다."
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "When passing through an area affected by a fire as  in the given situation, which of the following are the  TWO proper ways to proceed?",
+        "tr_c":  [
+                     "Speed up and drive away quickly even if it means  exceeding the speed limit, to avoid being trapped.",
+                     "Turn on the hazard lights and drive carefully due to  poor visibility ahead.",
+                     "Use the radio or other sources to obtain information  about detour routes.",
+                     "Set the vehicle’s air system to external circulation to get  fresh air.",
+                     "Park on the shoulder and leave the road by climbing  over the right-side guardrail."
+                 ]
+    },
+    {
+        "n":  832,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "저속주행 중인 트레일러를 향해 경음기 눌러 가속을 재촉한다.",
+                     "1차로를 이용하여 전방 트레일러를 안전하게 앞지르기 한다.",
+                     "진로를 변경할 때는 미리 방향지시등을 작동한다.",
+                     "주행차로인 1차로로 진입하여 정속주행한다.",
+                     "1차로는 최고속도 제한이 없기 때문에 속도를 높여 주행한다."
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Honk at the slow-moving trailer to urge it to speed up.",
+                     "Switch to the first lane to overtake the trailer ahead  safely.",
+                     "Turn on the turn signal in advance when changing lanes.",
+                     "Enter the first lane, which is the driving lane, and  maintain a steady speed.",
+                     "Increase your speed in the first lane since there is no  speed limit."
+                 ]
+    },
+    {
+        "n":  833,
+        "ko_b":  "다음 상황에서 발생 가능한 위험 2가지는?",
+        "ko_c":  [
+                     "전방에 공사 중임을 알리는 화물차가 정차 중일 수 있다.",
+                     "2차로의 버스가 안전운전을 위해 속도를 낮출 수 있다.",
+                     "4차로로 진로 변경한 버스가 계속 진행할 수 있다.",
+                     "1차로 차량이 속도를 높여 주행할 수 있다.",
+                     "다른 차량이 내 앞으로 앞지르기를 할 수 있다."
+                 ],
+        "a":  "1, 5",
+        "tr_b":  "Which of the following are potential hazards in the  given situation? (Select TWO)",
+        "tr_c":  [
+                     "There could be trucks parked ahead, indicating that  there is construction.",
+                     "The bus in lane 2 may slow down for safety.",
+                     "The bus that just switched to lane 4 may keep going.",
+                     "The vehicle in lane 1 may increase speed.",
+                     "A vehicle may cut in front of you."
+                 ]
+    },
+    {
+        "n":  834,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "진로변경제한선 표시와 상관없이 우측차로로 진로변경 한다.",
+                     "우측 방향지시기를 켜서 주변 운전자에게 알린다.",
+                     "급가속하며 우측으로 진로변경 한다.",
+                     "진로변경은 진출로 바로 직전에서 속도를 낮춰 시도한다.",
+                     "다른 차량 통행에 장애를 줄 우려가 있을 때에는 진로변경을     해서는 안 된다."
+                 ],
+        "a":  "2, 5",
+        "tr_b":  "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+        "tr_c":  [
+                     "Switch to the right lane, ignoring the combination of  broken and solid white lines.",
+                     "Turn on the right-turn signal to let other drivers know.",
+                     "Accelerate rapidly when changing lanes to the right.",
+                     "Change lanes right before the exit while slowing down.",
+                     "Changing lanes is not allowed if doing so may obstruct  other vehicles."
+                 ]
+    },
+    {
+        "n":  835,
+        "ko_b":  "고속도로를 운행중인 차량 중 지정차로를 위반한 차량 2대는?",
+        "ko_c":  [
+                     "A (앞지르기 중인 승용차)",
+                     "B (36인승 대형승합차)",
+                     "C (1톤 화물차)",
+                     "D (26인승 대형승합차)",
+                     "E (주행중인 승용차)"
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "Among the vehicles driving on the expressway,  which TWO are violating the designated lane rules?",
+        "tr_c":  [
+                     "A (a passenger car overtaking another vehicle)",
+                     "B (a large 36-seater bus)",
+                     "C (a 1-ton cargo truck)",
+                     "D (a large 26-seater bus)",
+                     "E (a passenger car driving normally)"
+                 ]
+    },
+    {
+        "n":  836,
+        "ko_b":  "다음 상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "비로 인해 노면이 젖어 있어 80km/h 이하로 주행한다.",
+                     "우측 대형버스가 물웅덩이를 지나갈 때 물이 튀면서 시야를  가릴 수 있음을 주의하며 운전한다.",
+                     "뒷 차량 운전자에게 나의 위치를 알려주기 위해 비상등을 점 등하고 주행한다.",
+                     "우측 전방 차량이 진로변경 할 가능성이 있기에 1차로로 진로 변경 후 지속하여 주행한다.",
+                     "물웅덩이가 갑자기 튀어 시야확보가 어려울 경우 안전확보를  위해 급정지를 한다."
+                 ],
+        "a":  "2, 3",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Drive at a speed below 80 km/h because the road  surface is wet due to rain.",
+                     "Drive carefully and remain aware that your vision may  be blocked by water splashing from a large bus on the  right when it passes through a puddle.",
+                     "Turn on the hazard lights to inform the driver behind  you of your position while driving.",
+                     "Switch to the first lane and continue driving, anticipating  that the vehicle ahead on the right may change lanes.",
+                     "Make an emergency stop to secure safety if visibility is  suddenly blocked by splashing water from puddles."
+                 ]
+    },
+    {
+        "n":  837,
+        "ko_b":  "다음 눈길 교통상황에서 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "폭설로 인해 차선이 보이지 않을 경우 앞 차의 바퀴자국을 따 라서 주행한다.",
+                     "눈길이나 빙판길에서는 제동거리가 짧아지므로 평소보다 안전 거리를 더 유지한다.",
+                     "폭설 시 터널 진·출입구는 상습결빙구간으로 미끄러짐 사고 로 인한 연쇄추돌사고를 대비한다.",
+                     "노면이 얼어붙은 도로에서는 최고속도의 100분의 20을 줄여야 한다.",
+                     "터널을 통과 후 암순응으로 인해 일시적 시력상실을 겪을 수  있어 주의해야 한다."
+                 ],
+        "a":  "1, 3",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the snowy road conditions?",
+        "tr_c":  [
+                     "Follow the tire tracks of the vehicle ahead when the lane  markings are not visible due to heavy snow.",
+                     "Maintain a greater safe distance than usual because  braking distances shorten on snowy or icy roads.",
+                     "Be prepared for chain collisions caused by slippage accidents in tunnel entrances and exits, which are frequent freezing zones during heavy snowfall.",
+                     "Reduce your speed by 20% of the speed limit on icy  roads.",
+                     "Beware of a temporary loss of vision due to adaptation  to the dark after passing through the tunnel."
+                 ]
+    },
+    {
+        "n":  838,
+        "ko_b":  "다음 도로상황에서 가장 안전한 운전방법 2가지는?",
+        "ko_c":  [
+                     "터널 내부는 눈이 쌓여있지 않으므로 최고속도를 낮춰서 주행 할 필요가 없다.",
+                     "터널 밖에 돌발상황이 발생하였음을 알 수 있어, 이에 대비해 야 한다.",
+                     "전방 차량과의 추돌사고를 막기 위해 3차로로 급차로변경을  실시한다.",
+                     "터널을 통과할 경우, 명순응으로 인해 일시적 시력상실을 겪 을 수 있어 주의해야 한다.",
+                     "터널내부와 터널외부의 갑작스런 도로환경 변화에 미리 대비 하여야 한다."
+                 ],
+        "a":  "2, 5",
+        "tr_b":  "Which of the following are the TWO safest ways to  proceed in the given situation?",
+        "tr_c":  [
+                     "Since there is no snow inside the tunnel, there is no  need to slow down.",
+                     "The lights on the truck ahead indicate a possible  emergency outside the tunnel, so you should be  prepared.",
+                     "To avoid a collision with the vehicle ahead, quickly  switch to the third lane.",
+                     "Beware of a temporary loss of vision due to light  adaption when exiting the tunnel.",
+                     "Be prepared in advance for sudden changes in the road  conditions between the inside and outside of the tunnel."
+                 ]
+    },
+    {
+        "n":  839,
+        "ko_b":  "다음의 도로를 통행하려는 경우 가장 올바른 운전방법 2가지는?",
+        "ko_c":  [
+                     "자전거에 이르기 전 일시정지한다.",
+                     "횡단보도를 통행할 때는 정지선에 일시정지한다.",
+                     "뒤차와의 거리가 가까우므로 가속하여 거리를 벌린다.",
+                     "횡단보도 위에 사람이 없으므로 그대로 통과한다.",
+                     "경음기를 반복하여 작동하며 서행으로 통행한다."
+                 ],
+        "a":  "1, 2",
+        "tr_b":  "Which of the following are the desirable ways to  drive in the given situation? (Select TWO)",
+        "tr_c":  [
+                     "Come to a complete stop before reaching the bicycle.",
+                     "Come to a complete stop at the stop line before  reaching the crosswalk.",
+                     "Since the distance to the vehicle behind is short,  accelerate to increase the distance.",
+                     "Since there are no people on the crosswalk, proceed  through it as is.",
+                     "Honk continuously and proceed at a low speed."
+                 ]
+    },
+    {
+        "n":  840,
+        "ko_b":  "도로교통법상 다음 교통안전시설에 대한 설명으로 맞는 2가지는?",
+        "ko_c":  [
+                     "제한속도는 매시 50킬로미터이며 속도 초과 시 단속될 수 있다.",
+                     "전방의 신호가 녹색화살표일 경우에만 좌회전 할 수 있다.",
+                     "모든 어린이 보호구역의 제한속도는 매시 50킬로미터이다.",
+                     "신호순서는 적색-황색-녹색-녹색화살표이다.",
+                     "전방의 신호가 녹색일 경우 반대편 차로에서 차가 오지 않을 때    좌회전할 수 있다."
+                 ],
+        "a":  "1, 5",
+        "tr_b":  "According to the Road Traffic Act, which of the  following best describe the road safety facility in the  given situation? (Select TWO)",
+        "tr_c":  [
+                     "The speed limit is 50 km/h and it is currently enforced.",
+                     "Left turn is only allowed when there is a green arrow.",
+                     "The speed limit in all school zones is 50 km/h.",
+                     "The sequence of a traffic signal is red, yellow, green, and  green arrow.",
+                     "When the traffic light is green, you can turn left only if  there is no vehicle coming from the opposite side of the  road."
+                 ]
+    }
+]
+
+2026-10-10T13:52:10.097708Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+codex
+[{"n":813,"field":"c[4]","severity":"major","issue":"원문은 회전 후 ‘a차로’로 진로 변경한다고 했으나 번역은 ‘lane B’로 잘못 표기했다.","suggestion":"The driver entering from lane B immediately entered lane b, made a turn, then changed to lane a and proceeded north."},{"n":829,"field":"c[2]","severity":"major","issue":"원문의 일반적인 ‘등화장치’를 ‘비상점멸등’으로 한정하여 올바른 조명 사용을 위험등 사용으로 오도한다.","suggestion":"Turn on the vehicle lights to alert other drivers to the presence of your vehicle."},{"n":840,"field":"c[1]","severity":"major","issue":"원문은 제한속도 초과 시 단속될 수 있다는 조건부 설명인데, 번역은 현재 단속 중이라는 의미로 바뀌었다.","suggestion":"The speed limit is 50 km/h, and exceeding it may result in enforcement action."}]
+tokens used
+36,956
+[{"n":813,"field":"c[4]","severity":"major","issue":"원문은 회전 후 ‘a차로’로 진로 변경한다고 했으나 번역은 ‘lane B’로 잘못 표기했다.","suggestion":"The driver entering from lane B immediately entered lane b, made a turn, then changed to lane a and proceeded north."},{"n":829,"field":"c[2]","severity":"major","issue":"원문의 일반적인 ‘등화장치’를 ‘비상점멸등’으로 한정하여 올바른 조명 사용을 위험등 사용으로 오도한다.","suggestion":"Turn on the vehicle lights to alert other drivers to the presence of your vehicle."},{"n":840,"field":"c[1]","severity":"major","issue":"원문은 제한속도 초과 시 단속될 수 있다는 조건부 설명인데, 번역은 현재 단속 중이라는 의미로 바뀌었다.","suggestion":"The speed limit is 50 km/h, and exceeding it may result in enforcement action."}]

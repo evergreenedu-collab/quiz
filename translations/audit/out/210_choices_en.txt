@@ -1,0 +1,910 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125d9-f8a1-7890-97cc-13909792c442
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/210_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/210_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 529ms:
+[
+ {
+  "n": 401,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎냽?꾨줈 吏?뺤감濡쒖뿉 ????ㅻ챸?쇰줈 ?섎せ??寃껋?? (?뚰넻???먰솢?섎ŉ, 踰꾩뒪?꾩슜李⑤줈 ?놁쓬)",
+  "ko_c": [
+   "?몃룄 3李⑤줈?먯꽌 1李⑤줈???욎?瑜닿린 ?섎젮???뱀슜?먮룞李? 寃쏀삎節μ냼?뺧쉈以묓삎 ?뱁빀?먮룞李④? ?듯뻾?????덈떎.",
+   "?욎?瑜닿린瑜????뚯뿉??吏?뺣맂 李⑤줈???쇱そ 諛붾줈 ??李⑤줈濡??듯뻾?????덈떎.",
+   "紐⑤뱺 李⑤뒗 吏?뺣맂 李⑤줈蹂대떎 ?쇱そ???덈뒗 李⑤줈濡??듯뻾?????덈떎.",
+   "怨좎냽?꾨줈 吏?뺤감濡??듯뻾?꾨컲 ?뱀슜?먮룞李??댁쟾?먯쓽 踰뚯젏? 10?먯씠??"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following is NOT true about a designated lane on an expressway?  (Assuming smooth traffic flow and no exclusive bus lanes)",
+  "tr_c": [
+   "Lane 1 of an expressway with three lanes in one direction can be used by passenger vehicles, light vans, vans, mini-buses, and buses to overtake other vehicles.",
+   "You can use the lane on the left of the designated lane to overtake another vehicle.",
+   "All vehicles can use the lane on the left of their respective designated lanes.",
+   "The penalty for not using the designated lane for drivers of passenger vehicles is 10 points."
+  ]
+ },
+ {
+  "n": 402,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뚰넻???먰솢???몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 ?욎?瑜닿린 諛⑸쾿??????ㅻ챸?쇰줈 ?섎せ??寃껋??(踰꾩뒪?꾩슜李?濡??놁쓬)",
+  "ko_c": [
+   "?뱀슜?먮룞李④? ?욎?瑜닿린?섎젮怨?1李⑤줈濡?李⑤줈瑜?蹂寃쏀븳 ??怨꾩냽?댁꽌 1李⑤줈濡?二쇳뻾?쒕떎.",
+   "3李⑤줈濡?二쇳뻾 以묒씤 ??뺤듅?⑹옄?숈감媛 2李⑤줈濡??욎?瑜닿린?쒕떎.",
+   "2李⑤줈濡?二쇳뻾 以묒씤 ?뚰삎?뱁빀?먮룞李⑤뒗 1李⑤줈瑜??댁슜?섏뿬 ?욎?瑜닿린?쒕떎.",
+   "5???붾Ъ李⑤뒗 2李⑤줈瑜??댁슜?섏뿬 ?욎?瑜닿린?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Under the Road Traffic Act, which of the following statements regarding the method of overtaking by passenger cars on a smoothly flowing three-lane one-way highway is INCORRECT? (No exclusive bus lanes)",
+  "tr_c": [
+   "To overtake, a passenger car switches to Lane 1 and continues in Lane 1.",
+   "A large passenger vehicle in Lane 3 switches to Lane 2 in order to overtake.",
+   "A small van driving in the second lane should move into Lane 1 in order to overtake.",
+   "A 5-ton truck uses Lane 2 to overtake."
+  ]
+ },
+ {
+  "n": 403,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤줈???곕Ⅸ ?듯뻾李⑥쓽 湲곗???????ㅻ챸?대떎. ?섎せ??寃껋??",
+  "ko_c": [
+   "紐⑤뱺 李⑤뒗 吏?뺣맂 李⑤줈???ㅻⅨ履?李⑤줈濡??듯뻾?????덈떎.",
+   "?뱀슜?먮룞李④? ?욎?瑜닿린瑜????뚯뿉???듯뻾 湲곗???吏?뺣맂 李⑤줈??諛붾줈 ???ㅻⅨ履?李⑤줈濡??듯뻾?댁빞?쒕떎.",
+   "?몃룄 4李⑤줈 ?쇰컲?꾨줈?먯꽌 ?뱀슜?먮룞李⑥쓽 二쇳뻾李⑤줈??紐⑤뱺 李⑤줈?대떎.",
+   "?몃룄 4李⑤줈 怨좎냽?꾨줈?먯꽌 ??뺥솕臾쇱옄?숈감??二쇳뻾李⑤줈???ㅻⅨ履쎌감濡쒖씠??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is an INCORRECT guideline for the use of the right traffic lanes on roadways?",
+  "tr_c": [
+   "All vehicles may use the right lane of the designated lane.",
+   "A passenger car overtaking another vehicle shall use the lane to the immediate right of the lane designated by traffic  standards.",
+   "On a general road with four lanes in one direction, a passenger car may drive in any of the lanes.",
+   "On an expressway with four lanes in one direction, a large truck is to use the lane on the right."
+  ]
+ },
+ {
+  "n": 404,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???쇰컲?꾨줈??踰꾩뒪?꾩슜李⑤줈濡??듯뻾?????덈뒗 寃쎌슦濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "12?몄듅 ?뱁빀?먮룞李④? 6?몄쓽 ?숈듅?먮? ?ｊ퀬 媛??寃쎌슦",
+   "?닿뎅??愿愿묎컼 ?섏넚???뱁빀?먮룞李④? 25紐낆쓽 愿愿묎컼???ｊ퀬 媛??寃쎌슦",
+   "?몄꽑???댄뻾?섎뒗 12?몄듅 ?듦렐???뱁빀?먮룞李④? 吏곸썝?ㅼ쓣 ?ｊ퀬 媛??寃쎌슦",
+   "?앹떆媛 ?밴컼???쒖슦嫄곕굹 ?대젮二쇨린 ?꾪븯???쇱떆 ?듯뻾?섎뒗 寃쎌슦"
+  ],
+  "a": "4",
+  "tr_b": "Which among the following is permitted to use the exclusive bus lane on a general roadway?",
+  "tr_c": [
+   "A 12-seater passenger vehicle carrying 6 passengers",
+   "A passenger vehicle for domestic tourists that is transporting 25 tourists",
+   "A 12-seater commuter passenger vehicle carrying employees on designated routes",
+   "A taxi temporarily using the lane so that passengers can board/leave the taxi"
+  ]
+ },
+ {
+  "n": 405,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎냽?꾨줈 踰꾩뒪?꾩슜李⑤줈瑜??듯뻾?????덈뒗 9?몄듅 ?뱀슜?먮룞李⑤뒗 (  )紐??댁긽 ?뱀감??寃쎌슦濡??쒖젙?쒕떎. (  ) ?덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, a passenger car with 9 seats can take the exclusive bus lane on the  expressway if (    ) or more people are on the vehicle. Which of the following is correct?",
+  "tr_c": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ]
+ },
+ {
+  "n": 406,
+  "ko_b": "?몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 ?듯뻾李⑥쓽 湲곗??쇰줈 留욌뒗 寃껋??(?뚰넻???먰솢?섎ŉ, 踰꾩뒪?꾩슜李⑤줈 ?놁쓬)",
+  "ko_c": [
+   "?뱀슜?먮룞李⑥쓽 二쇳뻾李⑤줈??1李⑤줈?대?濡?1李⑤줈濡?二쇳뻾?섏뿬???쒕떎.",
+   "二쇳뻾李⑤줈媛 2李⑤줈???뚰삎?뱁빀?먮룞李④? ?욎?瑜닿린???뚯뿉??1李⑤줈瑜??댁슜?섏뿬???쒕떎.",
+   "??뺤듅?⑹옄?숈감??1李⑤줈濡?二쇳뻾?섏뿬???쒕떎.",
+   "?곸옱以묐웾 1.5???댄븯???붾Ъ?먮룞李⑤뒗 1李⑤줈濡?二쇳뻾?섏뿬???쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "What is the standard for driving on an expressway with three lanes in one direction? (Assuming smooth traffic  flow and no exclusive bus lanes)",
+  "tr_c": [
+   "Passenger cars are to use Lane 1 so they must use only Lane 1.",
+   "A small passenger vehicle whose designated lane is Lane 2 should use Lane 1 when overtaking.",
+   "Large vans must use the first lane.",
+   "A truck with maximum load weight of 1.5 tons or less must drive in Lane 1."
+  ]
+ },
+ {
+  "n": 407,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 ?뱀슜?먮룞李④? 2李⑤줈濡?二쇳뻾 以묒씠?? ?욎?瑜닿린?????덈뒗 李⑤줈濡?留욌뒗 寃???(?뚰넻???먰솢?섎ŉ, 踰꾩뒪?꾩슜李⑤줈 ?놁쓬)",
+  "ko_c": [
+   "1李⑤줈",
+   "2李⑤줈",
+   "3李⑤줈",
+   "1, 2, 3李⑤줈 紐⑤몢"
+  ],
+  "a": "1",
+  "tr_b": "A passenger vehicle is driving in Lane 2 on an expressway with three lanes in one direction according to the Road Traffic Act. What is the correct lane for overtaking? (Assuming smooth traffic flow and no exclusive bus lanes)",
+  "tr_c": [
+   "The first lane",
+   "The second lane",
+   "The third lane",
+   "Any of the above"
+  ]
+ },
+ {
+  "n": 408,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???욎?瑜닿린?섎뒗 諛⑸쾿??????ㅻ챸?쇰줈 媛???섎せ??寃껋??",
+  "ko_c": [
+   "?ㅻⅨ 李⑤? ?욎?瑜대젮硫??욎감???쇱そ 李⑤줈瑜??듯뻾?댁빞 ?쒕떎.",
+   "以묒븰?좎씠 ?⑹깋 ?먯꽑??寃쎌슦 諛섎?諛⑺뼢??李⑤웾???놁쓣 ?뚮뒗 ?욎?瑜닿린媛 媛?ν븯??",
+   "媛蹂李⑤줈??寃쎌슦 ?좏샇湲곌? 吏?쒗븯??吏꾪뻾諛⑺뼢??媛???쇱そ ?⑹깋 ?먯꽑?먯꽌???욎?瑜닿린瑜??????녿떎.",
+   "?몃룄 4李⑤줈 怨좎냽?꾨줈?먯꽌 ?ㅻⅨ履?李⑤줈濡?二쇳뻾?섎뒗 李⑤뒗 1李⑤줈源뚯? 吏꾩엯??媛?ν븯??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT correct regarding overtaking according to the Road Traffic Act?",
+  "tr_c": [
+   "To overtake another vehicle, you must pass on the left lane of the vehicle in front.",
+   "If the centerline is a yellow broken line, it is possible to overtake when there is no vehicle in the opposite direction.",
+   "In case of a reversible lane, overtaking is not allowed on the leftmost yellow broken line in the direction indicated by a  traffic light.",
+   "On an expressway with four lanes in one direction, vehicles driving on the right lane can move up to the first lane."
+  ]
+ },
+ {
+  "n": 409,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??李⑤줈???곕Ⅸ ?듯뻾李⑥쓽 湲곗???????ㅻ챸?대떎. ?섎せ??寃껋??(怨좎냽?꾨줈??寃쎌슦 ?뚰넻???먰솢?섎ŉ, 踰꾩뒪 ?꾩슜李⑤줈 ?놁쓬)",
+  "ko_c": [
+   "?먮┛ ?띾룄濡?吏꾪뻾???뚯뿉??洹??듯뻾?섎뜕 李⑤줈???ㅻⅨ履?李⑤줈濡??듯뻾?????덈떎.",
+   "?몃룄 2李⑤줈 怨좎냽?꾨줈??1李⑤줈???욎?瑜닿린瑜??섎젮??紐⑤뱺 ?먮룞李④? ?듯뻾?????덈떎.",
+   "?쇰갑?듯뻾?꾨줈?먯꽌???꾨줈???ㅻⅨ履쎈???1李⑤줈濡??쒕떎.",
+   "?몃룄 3李⑤줈 怨좎냽?꾨줈???ㅻⅨ履?李⑤줈???붾Ъ?먮룞李④? ?듯뻾?????덈뒗 李⑤줈?대떎."
+  ],
+  "a": "3",
+  "tr_b": "Below are explanations of the standard for driving according to the lane under the Road Traffic Act. Which of the following is NOT true? (Expressways with smooth traffic flow and no exclusive bus lanes)",
+  "tr_c": [
+   "When proceeding at a low speed, the driver may use the lane to the right of the current lane in which he/she has been  driving.",
+   "The first lane of an expressway with two lanes in one direction may be used by all motor vehicles to overtake.",
+   "On a one-way traffic road, the rightmost lane is considered the first lane.",
+   "The right lane of an expressway with three lanes in one direction is to be used by a truck to drive."
+  ]
+ },
+ {
+  "n": 410,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 ?듯뻾李⑥쓽 湲곗???????ㅻ챸?쇰줈 留욌뒗 寃껋??(?뚰넻???먰솢?섎ŉ, 踰꾩뒪?꾩슜李⑤줈 ?놁쓬)",
+  "ko_c": [
+   "1李⑤줈??2李⑤줈媛 二쇳뻾李⑤줈???뱀슜?먮룞李⑥쓽 ?욎?瑜닿린 李⑤줈?대떎.",
+   "1李⑤줈???뱁빀?먮룞李⑥쓽 二쇳뻾李⑤줈?대떎.",
+   "媛볤만? 湲닿툒?먮룞李?諛?寃ъ씤?먮룞李⑥쓽 二쇳뻾李⑤줈?대떎.",
+   "踰꾩뒪?꾩슜李⑤줈媛 ?댁슜?섍퀬 ?덈뒗 寃쎌슦, 1李⑤줈媛 ?붾Ъ?먮룞李⑥쓽 二쇳뻾李⑤줈?대떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act, which of the following is true about the standard for driving on an expressway with three lanes in one direction? (Assuming smooth traffic flow and no exclusive bus lanes)",
+  "tr_c": [
+   "The first lane is the lane for overtaking a passenger car driving on the second lane.",
+   "The first lane is the driving lane for a van.",
+   "The roadside is the driving lane for emergency vehicles and tow vehicles.",
+   "When operating an exclusive bus lane, the first lane is the driving lane for trucks."
+  ]
+ },
+ {
+  "n": 411,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾩슜李⑤줈??醫낅쪟媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "踰꾩뒪 ?꾩슜李⑤줈",
+   "?ㅼ씤???꾩슜李⑤줈",
+   "?먮룞李??꾩슜李⑤줈",
+   "?먯쟾嫄??꾩슜李⑤줈"
+  ],
+  "a": "3",
+  "tr_b": "According to the definition provided by the Road Traffic Act and its Enforcement Decree, which of the following  is NOT a type of exclusive lane?",
+  "tr_c": [
+   "An exclusive lane for buses",
+   "An exclusive lane for high-occupancy vehicles",
+   "An exclusive lane for motor vehicles",
+   "An exclusive lane for bicycles"
+  ]
+ },
+ {
+  "n": 412,
+  "ko_b": "?섎쭑?꾩긽??????ㅻ챸?쇰줈 媛???곸젅??寃껋??",
+  "ko_c": [
+   "?섎쭑?꾩긽??以꾩씠湲??꾪빐 湲곕낯 ??댁뼱蹂대떎 ??씠 ?볦? ??댁뼱濡?援먰솚?쒕떎.",
+   "鍮쀪만蹂대떎 ?덇만?먯꽌 ?섎쭑?꾩긽????諛쒖깮?섎?濡?媛먯냽?댄뻾???댁빞 ?쒕떎.",
+   "?몃젅?쒓? 留덈え?섎㈃ ?묒??μ씠 ?믪븘???섎쭑?꾩긽??媛?μ꽦??以꾩뼱?좊떎.",
+   "??댁뼱??怨듦린?뺤씠 ??븘吏덉닔濡?怨좎냽二쇳뻾 ???섎쭑?꾩긽??利앷??쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following describes aquaplaning most appropriately?",
+  "tr_c": [
+   "You must change tires with wider widths to reduce the risks associated with aquaplaning.",
+   "Aquaplaning is more common in snow than rain. You must reduce speed.",
+   "Tires with worn-down treads will experience less aquaplaning due to reduced traction.",
+   "Underinflation can cause the tires to aquaplane more, especially at higher speeds."
+  ]
+ },
+ {
+  "n": 413,
+  "ko_b": "鍮숉뙋湲몄뿉??李④? 誘몃걚?ъ쭏 ???덉쟾 ?댁쟾諛⑸쾿 以??녹? 寃껋??",
+  "ko_c": [
+   "?몃뱾??誘몃걚?ъ???諛⑺뼢?쇰줈 議곗옉?쒕떎.",
+   "?섎룞 蹂?띻린 李⑤웾??寃쎌슦 湲곗뼱瑜?怨좊떒?쇰줈 蹂?랁븳??",
+   "?몃뱾??誘몃걚?ъ???諛섎? 諛⑺뼢?쇰줈 議곗옉?쒕떎.",
+   "二쇱감 釉뚮젅?댄겕瑜??댁슜?섏뿬 ?뺤감?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the safe method of driving when a vehicle loses control on a frozen road?",
+  "tr_c": [
+   "Steer into the skid.",
+   "In the case of a car with manual transmission, shift to high gear.",
+   "Operate the steering wheel in the opposite direction of the skid.",
+   "Stop the car using the parking brake."
+  ]
+ },
+ {
+  "n": 414,
+  "ko_b": "?덇컻 ? ?꾨줈?먯꽌 ?먮룞李⑤? ?댄뻾????媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "而ㅻ툕 湲몄씠??援먯감濡??깆뿉?쒕뒗 寃쎌쓬湲곕? ?몃젮???ㅻⅨ 李⑤? 鍮꾪궎?꾨줉 ?섍퀬 鍮⑤━ ?댄뻾?쒕떎.",
+   "?덇컻媛 ?ы븳 寃쎌슦?먮뒗 ?쒖빞 ?뺣낫瑜??꾪빐 ?꾩“?깆쓣 ?곹뼢?쇰줈 ?쒕떎.",
+   "?덇컻媛 ? ?꾨줈?먯꽌???덇컻?깅쭔 耳쒕뒗 寃껋씠 ?덉쟾 ?댁쟾???꾩????쒕떎.",
+   "?대뒓 ?뺣룄 ?쒖빞媛 ?뺣낫?섎뒗 寃쎌슦?먮뒗 媛?쒕젅?? 以묒븰?? 李⑥꽑 ???먮룞李⑥쓽 ?꾩튂瑜??뚯븙?????덈뒗 吏?뺤?臾쇱쓣 ?댁슜?섏뿬 ?쒗뻾?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the safest method of driving a vehicle on a foggy road?",
+  "tr_c": [
+   "On a curved road or at an intersection, honk to warn other vehicles to make way and proceed quickly.",
+   "In dense fog, keep the high-beam headlights on to secure visibility.",
+   "On a foggy road, switch on the fog light only.",
+   "When visibility is secured to some extent, drive slowly while monitoring the guard rail, centerline, and traffic lane to stay aware of the vehicle's position."
+  ]
+ },
+ {
+  "n": 415,
+  "ko_b": "?덇만?대굹 鍮숉뙋湲?二쇳뻾 以묒뿉 ?뺤??섎젮怨?????媛???덉쟾???쒕룞 諛⑸쾿??",
+  "ko_c": [
+   "釉뚮젅?댄겕 ?섎떖???섍퍘 諛잙뒗??",
+   "??釉뚮젅?댄겕? 二쇱감釉뚮젅?댄겕瑜??숈떆???묐룞?섏뿬 ?좎냽?섍쾶 李⑤웾???뺤??쒗궓??",
+   "李④? ?꾩쟾???뺤????뚭퉴吏 ?붿쭊釉뚮젅?댄겕濡쒕쭔 媛먯냽?쒕떎.",
+   "?붿쭊釉뚮젅?댄겕濡?媛먯냽????釉뚮젅?댄겕 ?섎떖??媛蹂띻쾶 ?щ윭 踰??섎늻??諛잙뒗??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the safest method of stopping on a snowy/icy road?",
+  "tr_c": [
+   "Apply the brake hard.",
+   "Stop quickly using the foot brake and the parking brake at the same time.",
+   "Use the engine brake only to slow down until the car comes to a complete stop.",
+   "After slowing down with the engine brake, step lightly on the brake pedal several times."
+  ]
+ },
+ {
+  "n": 416,
+  "ko_b": "??슦媛 ?대━???꾨줈??吏?섏감?꾨? 二쇳뻾?섎뒗 ?댁쟾?먯쓽 留덉쓬媛吏먯쑝濡?媛??諛붾엺吏곹븳 寃껋??",
+  "ko_c": [
+   "紐⑤뱺 ?꾨줈??吏?섏감?꾨뒗 諛곗닔?쒖꽕?????섏뼱 ?덉뼱 ?꾪뿕?붿냼??諛쒖깮?섏? ?딅뒗??",
+   "?щ궃諛⑹넚, ?덈궡?????щ궃 ?뺣낫瑜?泥?랬?섎㈃???꾪뿕?붿냼????묓븳??",
+   "??슦媛 洹몄튌 ?뚭퉴吏 吏?섏감??媛볤만???뺤감?섏뿬 ?댁떇??痍⑦븳??",
+   "?좎냽??吏?섍??쇳븯湲??뚮Ц??吏?뺤냽?꾨낫??鍮좊Ⅴ寃?二쇳뻾?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the most desirable attitude for a driver who drives through an underpass on a road in  heavy rain?",
+  "tr_c": [
+   "All roads are well-drained, so there are no hazards.",
+   "Respond to hazards while listening to disaster information such as disaster broadcasts and checking information boards.",
+   "Take a rest by stopping at the roadside of the underpass until the heavy rain sides.",
+   "Drive faster than the designated speed because high speed is required at that moment."
+  ]
+ },
+ {
+  "n": 417,
+  "ko_b": "寃⑥슱泥?鍮숉뙋湲몄뿉 ????ㅻ챸?대떎. 媛??諛붾Ⅴ寃??ㅻ챸??寃껋? ?",
+  "ko_c": [
+   "?곕꼸 ?덉뿉??二쇰줈 諛쒖깮?섎ŉ, ?덇컻?낆옄媛 ?쇰㈃???몃㈃??鍮숉뙋湲몄씠 ?쒕떎.",
+   "?ㅻ━ ?? ?곕꼸 異쒖엯援? 洹몃뒛吏??꾨줈?먯꽌??釉붾옓?꾩씠???꾩긽???먯＜ ?섑??쒕떎.",
+   "釉붾옓?꾩씠???꾩긽? 李⑤웾??留ㅼ뿰?쇰줈 ?ㅼ뿼???덉씠 ?몃㈃???볦씠硫댁꽌 諛쒖깮?쒕떎.",
+   "鍮숉뙋湲몄쓣 ?듦낵??寃쎌슦?먮뒗 ?몃뱾??怨좎젙?섍퀬 湲됱젣?숉븯??理쒕????띾룄瑜?以꾩씤??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the most correct explanation of a frozen/icy road in winter?",
+  "tr_c": [
+   "It occurs mainly in tunnels, and the road surface becomes an icy road as the fog particles freeze.",
+   "Black ice often occurs on bridges, at tunnel entrances, and on shady roads.",
+   "Black ice occurs when snow contaminated with vehicle fumes accumulates on the road surface.",
+   "When passing through an icy road, reduce speed as much as possible by not operating the steering wheel and braking  suddenly."
+  ]
+ },
+ {
+  "n": 418,
+  "ko_b": "吏묒쨷?몄슦濡?李⑤웾 移⑥닔 ???泥?諛⑸쾿?쇰줈 媛???щ컮瑜댁? ?딆? 寃껋??",
+  "ko_c": [
+   "湲됰쪟媛 諛?ㅼ삤??諛섎?履?臾몄쓣 ?닿퀬 ?덉텧???쒕룄?쒕떎.",
+   "李⑤웾 臾몄씠 ?대━吏 ?딅뒗?ㅻ㈃ 毓곗”??臾쇱껜 (紐⑸컺移⑤?, ?덉쟾諛명듃 ?좉툑?μ튂 ??濡?李쎈Ц ?좊━??媛?μ옄由щ? 媛뺥븯寃??대━爾?      李쎈Ц??源④퀬 ?덉텧???쒕룄?쒕떎.",
+   "李⑤웾 李쎈Ц??源????녿떎硫??뱁솴?섏? 留먭퀬, 119?좉퀬 ??李⑤웾 ?는룹쇅遺 ?섏쐞媛 鍮꾩듂?댁????쒖젏??30cm?댄븯) ?좎냽?섍쾶       臾몄쓣 ?댁뼱 ?덉텧?쒕떎",
+   "?덉텧?섏??ㅻ㈃ 理쒕????吏? ?뱀? 李⑤웾???꾨옒濡???쇳븯?꾨줉 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most inappropriate way to respond when your car has been flooded during  localized heavy rainfall?",
+  "tr_c": [
+   "Try to escape by opening the door on the opposite side of the rushing currents.",
+   "If the car door won't open, use a sharp object (such as headrest, seatbelt lock, etc.) to strike the edge of the window to break it and attempt to escape.",
+   "If you cannot break the window, do not panic; call 911 and quickly open the door to escape when the water levels inside and outside of the vehicle become the same (less than 30cm).",
+   "Once you have escaped, take shelter in the lowest ground or hide under the vehicle."
+  ]
+ },
+ {
+  "n": 419,
+  "ko_b": "?대━留됯만 二쇳뻾 以?釉뚮젅?댄겕媛 ?쒕룞?섏? ?딆쓣 ??媛???곸젅??議곗튂 諛⑸쾿??",
+  "ko_c": [
+   "利됱떆 ?쒕룞???덈떎.",
+   "???湲곗뼱濡?蹂?랁븳 ??李⑥뿉???곗뼱?대┛??",
+   "?몃뱾??吏洹몄옱洹몃줈 議곗옉?섎ŉ ?띾룄瑜?以꾩씤??",
+   "???湲곗뼱濡?蹂?랁븯??媛먯냽????李⑥껜瑜?媛?쒕젅?쇱씠??踰쎌뿉 遺?れ튇??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most appropriate action to take when the brakes are not working on a downhill  road?",
+  "tr_c": [
+   "Turn the ignition off at once.",
+   "Jump out of the car after shifting to low gear.",
+   "Reduce speed by zigzagging.",
+   "Run the car into a guard rail or a wall after reducing speed by shifting to low gear."
+  ]
+ },
+ {
+  "n": 420,
+  "ko_b": "?곕꼸 ??二쇳뻾 以??먮룞李??ш퀬濡??명븳 ?붿옱 紐⑷꺽 ??媛??諛붾엺吏곹븳 ???諛⑸쾿??",
+  "ko_c": [
+   "李⑤웾 ?듯뻾??媛?ν븯?붾씪??李⑤? ?몄슦??寃껋씠 ?덉쟾?섎떎.",
+   "李⑤웾 ?듯뻾??遺덇??ν븷 寃쎌슦 李⑤? ?몄슫 ???먮룞李??덉뿉???붿옱 吏꾩븬??湲곕떎由곕떎.",
+   "李⑤웾 ?듯뻾??遺덇??ν븷 寃쎌슦 李⑤? ?몄슫 ???먮룞李??댁뇿瑜?梨숆꺼 ??쇳븳??",
+   "?섏감 ???곌린媛 留롮씠 ?섎㈃ 理쒕???紐몄쓣 ??떠 ?곌린媛 ?섎뒗 諛섎? 諛⑺뼢?쇰줈 ?좊룄 ?쒖떆?깆쓣 ?곕씪 ?대룞?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "If you witness a fire caused by a traffic accident while driving inside a tunnel, which of the following is the most  appropriate method of responding?",
+  "tr_c": [
+   "It is safe to stop your vehicle even if traffic is still flowing.",
+   "If traffic is at a standstill, stop the vehicle and wait inside until the fire is extinguished.",
+   "If traffic is at a standstill, stop the vehicle and leave the scene with your car keys.",
+   "If there is a lot of smoke after disembarking, lower your body as much as possible and move in the opposite direction of the smoke following the emergency lighting."
+  ]
+ },
+ {
+  "n": 421,
+  "ko_b": "而ㅻ툕湲몄쓣 二쇳뻾 以묒씪 ?뚯쓽 ?ㅻ챸?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "而ㅻ툕湲?吏꾩엯 ?댁쟾???띾룄 洹몃?濡??뺤냽二쇳뻾?섏뿬 ?듦낵?쒕떎.",
+   "而ㅻ툕湲?吏꾩엯 ?꾩뿉??蹂??湲곗뼱鍮꾨? ?믫????먯떖?μ쓣 以꾩씠??寃껋씠 醫뗫떎.",
+   "而ㅻ툕湲몄뿉???꾨쪣援щ룞 李⑤웾? ?몃뜑?ㅽ떚??understeer) ?꾩긽??諛쒖깮?????덈떎.",
+   "而ㅻ툕湲몄뿉???ㅻ쾭?ㅽ떚??oversteer)?꾩긽??以꾩씠湲??꾪빐 議고뼢諛⑺뼢??諛섎?濡??몃뱾??議곌툑???뚮젮???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the correct explanation when driving on a sharp curve?",
+  "tr_c": [
+   "Drive through the curve at the same speed as that before entering the curve.",
+   "After entering a curve, it is better to increase the change gear ratio to reduce the centrifugal force.",
+   "A rear-wheel drive vehicle may experience understeer on a curved road.",
+   "In order to reduce oversteer on a curved road, the steering wheel should be turned slightly in the opposite direction of  the steering direction."
+  ]
+ },
+ {
+  "n": 422,
+  "ko_b": "??釉뚮젅?댄겕 怨쇰떎 ?ъ슜?쇰줈 ?명븳 留덉같???뚮Ц??釉뚮젅?댄겕?≪뿉 湲고룷媛 ?앷꺼 ?쒕룞???섏? ?딅뒗 ?꾩긽??臾댁뾿?대씪 ?섎뒗媛?",
+  "ko_c": [
+   "?ㅽ깲?⑹썾?대툕(Standing wave)",
+   "踰좎씠?쇰줉(Vapor lock)",
+   "濡쒕뱶???Road holding)",
+   "?몃뜑?ㅽ떚?대쭅(Under steering)"
+  ],
+  "a": "2",
+  "tr_b": "What do you call a problem that occurs when the brakes do not work due to bubbles that form in the brake  fluid overheated by excessive braking?",
+  "tr_c": [
+   "A standing wave",
+   "A vapor lock",
+   "A road holding",
+   "An understeering"
+  ]
+ },
+ {
+  "n": 423,
+  "ko_b": "?덇컻 ? ?꾨줈瑜?二쇳뻾?????덉쟾???댁쟾 諛⑸쾿?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "而ㅻ툕湲몄씠???몃뜒湲??깆뿉?쒕뒗 寃쎌쓬湲곕? ?ъ슜?쒕떎.",
+   "?꾨갑 ?쒖빞?뺣낫媛 70誘명꽣 ?댁쇅??寃쎌슦 洹쒖젙?띾룄???덈컲 ?댄븯濡?以꾩씤??",
+   "?됱냼蹂대떎 ?꾨갑?쒖빞?뺣낫媛 ?대젮?곕?濡??덇컻?깃낵 ?곹뼢?깆쓣 ?④퍡 耳쒖꽌 異⑸텇???쒖빞瑜??뺣낫?쒕떎.",
+   "李⑥쓽 怨좎옣?대굹 媛踰쇱슫 ?묒큺?ш퀬?쇱??쇰룄 ?꾨줈??媛?μ옄由щ줈 ?좎냽????쇳븳??"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a proper way of driving in fog?",
+  "tr_c": [
+   "Honk when driving around a curve or on a hill.",
+   "If the visibility in fog is less than 70 m, reduce speed to less than half of the speed limit.",
+   "Try to maximize visibility by turning on fog lamps and high-beam headlights.",
+   "Even in case of vehicle failure or minor accident, move the vehicle to the side of the road."
+  ]
+ },
+ {
+  "n": 424,
+  "ko_b": "寃⑥슱泥?釉붾옓 ?꾩씠??black ice)?????諛붾Ⅴ寃??ㅻ챸?섏? 紐삵븳 寃껋? ?",
+  "ko_c": [
+   "?꾨줈 ?쒕㈃??肄뷀똿??寃껋쿂???뉗? ?쇱쓬留됱씠 ?앷린???꾩긽?대떎.",
+   "?꾩뒪?뷀듃 ?쒕㈃???덇낵 ?듦린媛 怨듦린 以묒쓽 ?ㅼ뿼臾쇱쭏怨??ㅼ꽎???ㅻŉ????寃寃??쇱뼱遺숈? ?꾩긽?대떎.",
+   "異붿슫 寃⑥슱???ㅻ━ ?? ?곕꼸 異쒖엯援? 洹몃뒛吏??꾨줈, ?곕え?곸씠 ?뚯? ???⑤룄媛 ??? 怨녹뿉??二쇰줈 諛쒖깮?쒕떎.",
+   "?뉖퀡?????쒕뒗 ?꾨줈???덉씠 ?뱀븘 ?ㅻŉ?ㅼ뼱 ?꾨줈??寃? ?됱씠 ?뉖튆??諛섏궗?섏뼱 諛섏쭩?대뒗 ?꾩긽??留먰븳??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is not a correct explanation of black ice in winter?",
+  "tr_c": [
+   "It is a phenomenon wherein a thin ice film forms like a coating on the road surface.",
+   "It is a phenomenon wherein pollutants in the air are mixed with snow and moisture on the asphalt surface, absorbed,  and then frozen into black ice.",
+   "It occurs mainly in places with low temperatures during the winter season, such as on bridges, tunnel entrances, shady roads, and in the shade of mountain corners.",
+   "It refers to the phenomenon wherein the snow melts and seeps into the sunny road, and the black color of the road is reflected by sunlight and sparkles."
+  ]
+ },
+ {
+  "n": 425,
+  "ko_b": "?ㅼ쓬 以?寃⑥슱泥??꾨줈 寃곕튃 ?곹솴怨?愿?⑦븳 ?ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "?꾩뒪?뷀듃蹂대떎 肄섑겕由ы듃濡??ъ옣???꾨줈媛 寃곕튃????留롮씠 諛쒖깮?쒕떎.",
+   "肄섑겕由ы듃蹂대떎 ?꾩뒪?뷀듃 ?ъ옣???꾨줈媛 寃곕튃??????쾶 ?밸뒗??",
+   "?꾩뒪?뷀듃 ?ъ옣?꾨줈??留덉같怨꾩닔??嫄댁“???몃㈃????1.6?쇰줈 而ㅼ쭊??",
+   "?숈씪??議곌굔??寃곕튃?곹깭?먯꽌 肄섑겕由ы듃? ?꾩뒪?뷀듃 ?ъ옣???꾨줈???몃㈃留덉같怨꾩닔??媛숇떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT true about icy roads during winter months?",
+  "tr_c": [
+   "Icy roads are more common on concrete roads than on asphalt.",
+   "Ice melts slower on asphalt roads than on concrete.",
+   "The friction coefficient of an asphalt surface increases to 1.6 when dry.",
+   "Under the same conditions, the road friction coefficients of frozen concrete and asphalt surfaces are equal."
+  ]
+ },
+ {
+  "n": 426,
+  "ko_b": "?ㅼ쓬 以?吏吏꾨컻?????댁쟾?먯쓽 議곗튂濡?媛??諛붾엺吏곹븯吏 紐삵븳 寃껋??",
+  "ko_c": [
+   "?댁쟾 以묒씠??李⑥쓽 ?띾룄瑜??믪뿬 ?좎냽??洹?吏??쓣 ?듦낵?쒕떎.",
+   "李⑤? ?댁슜???대룞??遺덇??ν븷 寃쎌슦 李⑤뒗 媛?μ옄由ъ뿉 二쇱감??????쇳븳??",
+   "二쇱감??李⑤뒗 ?대룞 ??寃쎌슦瑜??鍮꾪븯???먮룞李??댁뇿??苑귥븘??梨???쇳븳??",
+   "?쇰뵒?ㅻ? 耳쒖꽌 ?щ궃諛⑹넚??吏묒쨷?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the least appropriate measure for a driver to take when an earthquake occurs?",
+  "tr_c": [
+   "Increase your vehicle's speed and quickly pass through the area.",
+   "If it is impossible to move using a vehicle, park the vehicle to the side and take shelter.",
+   "Be prepared to move the parked vehicle later by keeping the key in the ignition, and take shelter.",
+   "Turn on the radio to listen to the disaster broadcast."
+  ]
+ },
+ {
+  "n": 427,
+  "ko_b": "?ㅼ쓬 以?媛뺥뭾?대굹 ?뚰뭾 ?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?몃뱾???묒넀?쇰줈 苑??↔퀬 李⑤줈瑜??좎??쒕떎.",
+   "諛붾엺??愿怨꾩뾾???띾룄瑜??믪씤??",
+   "?쒖??먯씠???좏샇?? 媛濡쒖닔 遺洹쇱뿉 二쇱감?쒕떎.",
+   "?곗븙 吏????ㅻ━ ?? ?곕꼸 異쒖엯援ъ뿉?쒕뒗 媛뺥뭾???꾪뿕??留롮쑝誘濡?二쇱쓽?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are TWO descriptions of the correct method of driving in strong winds or storms?",
+  "tr_c": [
+   "Firmly hold the steering wheel with both hands and stay in your current lane.",
+   "Ignore the gusting winds and speed up.",
+   "Park near a sign, the traffic lights, or a roadside tree.",
+   "Be particularly careful in areas vulnerable to strong winds, such as mountainous areas, bridges, and tunnel exits."
+  ]
+ },
+ {
+  "n": 428,
+  "ko_b": "?먭컝湲??댁쟾??????ㅻ챸?대떎. 媛???곸젅??2媛吏??",
+  "ko_c": [
+   "?댁쟾???理쒕????먯뒯?섍쾶 ?≪븘 ?붿뿉 ?꾨떖?섎뒗 異⑷꺽??理쒖냼?뷀븳??",
+   "諛뷀닿? 理쒕????몃㈃???묒큺?섎룄濡??띾룄瑜??믪뿬???댁쟾?쒕떎.",
+   "蹂댄뻾???먮뒗 ?ㅻⅨ 李⑤쭏?먭쾶 ?먭컝???吏 ?딅룄濡??쒗뻾?쒕떎.",
+   "??댁뼱???곸젙怨듦린??蹂대떎 ?쎄컙 ??? 寃껋씠 ?믪? 寃껊낫???댁쟾???좊━?섎떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO most appropriate explanations regarding driving on a gravel road?",
+  "tr_c": [
+   "Hold the steering wheel as loosely as possible to minimize impact on the arm.",
+   "Increase speed while driving to ensure that the wheels are in contact with the road surface as much as possible.",
+   "Slow down to ensure that gravel is not projected onto pedestrians or other vehicles or horses.",
+   "Slightly lower tire pressure is better for driving than the appropriate level of air pressure."
+  ]
+ },
+ {
+  "n": 429,
+  "ko_b": "鍮쀪만 二쇳뻾 以??욎감媛 ?뺤??섎뒗 寃껋쓣 蹂닿퀬 ?쒕룞?덉쓣 ??諛쒖깮?섎뒗 ?꾩긽?쇰줈 諛붾Ⅴ吏 ?딆? 2媛吏??",
+  "ko_c": [
+   "湲됱젣???쒖뿉????댁뼱? ?몃㈃??留덉같濡?李⑤웾???욎닕???꾩긽??諛쒖깮?쒕떎.",
+   "?몃㈃??留덉같?μ씠 ?묒븘吏湲??뚮Ц??鍮쀪만?먯꽌??怨듭＜嫄곕━媛 湲몄뼱吏꾨떎.",
+   "?섎쭑?꾩긽怨??????쒕룞 ?꾩긽??諛쒖깮?섏뿬 李⑤줈瑜??댄깉?????덈떎.",
+   "?먮룞李⑦??댁뼱??留덈え?⑥씠 而ㅼ쭏?섎줉 ?쒕룞嫄곕━媛 吏㏃븘吏꾨떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Two vehicles are driving in the rain, and the rear vehicle sees the front vehicle stopping and applies the brakes.  Which of the following are NOT correct? (Select TWO)",
+  "tr_c": [
+   "Hard braking can cause the vehicle to nose dive due to increased friction between the road surface and tires.",
+   "Free running distance is increased due to reduced friction of the road surface.",
+   "Aquaplaning and partial braking may occur simultaneously, causing the vehicle to slide out of the lane.",
+   "The higher the tire wear rate, the shorter the braking distance."
+  ]
+ },
+ {
+  "n": 430,
+  "ko_b": "?몃뜒湲몄쓽 ?ㅻⅤ留??뺤긽 遺洹쇱쑝濡??묎렐 以묒씠?? ?덉쟾???댁쟾?됰룞 2媛吏??",
+  "ko_c": [
+   "?곕즺 ?뚮え瑜?以꾩씠湲??꾪빐???붿쭊??RPM(遺꾨떦 ?뚯쟾?????믪씤??",
+   "?ㅻⅤ留됱쓽 ?뺤긽?먯꽌??諛섎뱶???쇱떆?뺤?????異쒕컻?쒕떎.",
+   "??李⑤웾怨쇱쓽 ?덉쟾嫄곕━瑜??좎??섎ŉ ?댄뻾?쒕떎.",
+   "怨좊떒湲곗뼱蹂대떎 ??④린?대줈 二쇳뻾?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "A vehicle is approaching near the top of an uphill. Which of the following are TWO are safe ways of driving?",
+  "tr_c": [
+   "Increase engine RPM (revolutions per minute) to reduce fuel consumption.",
+   "At the top of the uphill, be sure to stop temporarily before starting.",
+   "Maintain a safe distance from the front vehicle.",
+   "Drive in a lower gear than a higher gear."
+  ]
+ },
+ {
+  "n": 431,
+  "ko_b": "?대━留됯만 二쇳뻾 ??媛???덉쟾???댁쟾 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "湲곗뼱 蹂?띻낵???꾨Т??愿怨꾧? ?놁쑝誘濡???釉뚮젅?댄겕留뚯쓣 ?ъ슜?섏뿬 ?대젮媛꾨떎.",
+   "?꾧툒???곹솴??諛쒖깮?섎㈃ 諛붾줈 二쇱감 釉뚮젅?댄겕瑜??ъ슜?쒕떎.",
+   "?щ씪媛??뚯? ?숈씪??蹂?띻린?대? ?ъ슜?섏뿬 ?대젮媛??寃껋씠 醫뗫떎.",
+   "??釉뚮젅?댄겕? ?붿쭊 釉뚮젅?댄겕瑜??곸젅???④퍡 ?ъ슜?섎㈃???대젮媛꾨떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "When you drive downhill, which of the following are the TWO safest methods to drive?",
+  "tr_c": [
+   "Only use the foot brake because shifting gears is not necessary.",
+   "If an emergency situation occurs, use the parking brake immediately.",
+   "Use the same gear you used when driving up the slope.",
+   "Use both the foot brake and engine brake properly."
+  ]
+ },
+ {
+  "n": 432,
+  "ko_b": "寃⑥슱泥??꾨줈 寃곕튃 ???덉쟾??李⑤웾?댄뻾??????ㅻ챸?쇰줈 媛???곸젅?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "寃⑥슱泥??꾨줈 二쇳뻾 ???ъ쟾??湲곗긽?뺣낫, 援먰넻?곹솴???뺤씤?????댄뻾?섏뿬???쒕떎.",
+   "寃곕튃??痍⑥빟???곕꼸, 援먮웾 援ш컙? ?붿슧 二쇱쓽?섏뿬 二쇳뻾?섏뿬???쒕떎.",
+   "?곕꼸, 援먮웾 遺洹쇱쓽 媛뺤꽕 ?꾠냽?꾨줈 ?쒖꽕?쒓? ?댄룷?섏뿀?ㅻ㈃ ?됱긽???쒗븳?띾룄濡??뺤긽?댄뻾??媛?ν븯??",
+   "?쇰? ?쑣룸룄寃쎌같泥?? 怨좎떆???섑빐 ?덇만, 鍮숉뙋湲??댄뻾 ???붾룞?κ뎄瑜??ъ슜 ?댄뻾?섎룄濡?紐낅Ц?뷀븯怨??덈떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following statements is the least appropriate regarding safe driving under icy road conditions in  winter?",
+  "tr_c": [
+   "When driving on roads in winter, you should check the weather information and traffic conditions in advance before  driving.",
+   "Extra caution should be exercised when driving through tunnels and bridge sections that are vulnerable to icing.",
+   "If de-icing agents have been applied before and after snowfall near tunnels and bridges, it is possible to drive at the  usual speed limit safely.",
+   "Some city or provincial police agencies have regulations requiring the use of winter equipment when driving on snowy  or icy roads."
+  ]
+ },
+ {
+  "n": 433,
+  "ko_b": "?ы듃?(?꾨줈??????⑥씤 怨???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?ы듃?? ?щ쫫泥?吏묒쨷 ?몄슦 ?깆쑝濡??명빐 留뚮뱾?댁?湲??쎈떎.",
+   "?ы듃?濡??명븳 ?쇳빐瑜??덈갑?섍린 ?꾪빐 二쇳뻾 ?띾룄瑜??믪씤??",
+   "?꾨줈 ?쒕㈃ ?⑤룄媛 ?곸듅???곹깭?먯꽌 ?〓떒蹂대룄 遺洹쇱뿉 ????몃윮 ?깆씠 湲됱젣?숉븯??諛쒖깮?쒕떎.",
+   "?꾨줈媛 留덈Ⅸ ?곹깭?먯꽌???ы듃? ?뺤씤???ъ슦誘濡?洹??꾨? 洹몃깷 ?듦낵?대룄 臾대갑?섎떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following statements about potholes is correct?",
+  "tr_c": [
+   "Potholes generally form during torrential rain.",
+   "Driving faster will prevent tire damage from potholes.",
+   "Sudden braking by larger vehicles is likely to occur near crosswalks when the temperature of the road surface increases.",
+   "Potholes are readily visible when the road is dry and you can just drive over them."
+  ]
+ },
+ {
+  "n": 434,
+  "ko_b": "吏묒쨷 ?몄슦 ???덉쟾???댁쟾 諛⑸쾿怨?媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "李⑤웾???꾩“?깃낵 誘몃벑??耳쒓퀬 ?댁쟾?쒕떎.",
+   "?덊꽣瑜??대?怨듦린 ?쒗솚 紐⑤뱶 ?곹깭濡??묐룞?쒕떎.",
+   "?섎쭑?꾩긽???덈갑?섍린 ?꾪빐 ??댁뼱??留덈え ?뺣룄瑜??뺤씤?쒕떎.",
+   "鍮쀪만?먯꽌???덉쟾嫄곕━瑜?2諛??댁긽 湲멸쾶 ?뺣낫?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following approaches to driving in heavy rainfall is the least safe?",
+  "tr_c": [
+   "Drive with the headlights and taillights on.",
+   "Turn on the heater in internal air circulation mode.",
+   "Check the tires for wear to prevent aquaplaning.",
+   "Maintain double the usual safe distance on wet roads."
+  ]
+ },
+ {
+  "n": 435,
+  "ko_b": "媛뺥뭾 諛???슦瑜??숇컲???쒗뭾??諛쒖깮???꾨줈瑜?二쇳뻾 以묒씪 ???댁쟾?먯쓽 議곗튂諛⑸쾿?쇰줈 ?곸젅?섏? 紐삵븳 寃껋??",
+  "ko_c": [
+   "?쒕룞嫄곕━媛 ?됱냼蹂대떎 湲몄뼱吏誘濡??욎감???嫄곕━瑜??됱냼蹂대떎 2諛??댁긽 ?붾떎.",
+   "移⑥닔吏??쓣 吏?섍컝 ?뚮뒗 以묎컙??硫덉텛吏 留먭퀬 洹몃?濡??듦낵?섎뒗 寃껋씠 醫뗫떎.",
+   "二쇱감???뚮뒗 移⑥닔 ?꾪뿕???믪? 媛뺣??대굹 ?섏쿇 ?깆쓽 ?μ냼瑜??쇳븳??",
+   "?대꼈???놁씠?????媛꾪뙋 ?꾨옒 二쇱감?섎뒗 寃껋씠 ?덉쟾?섎떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT an appropriate action by a driver while driving on a road during a typhoon  accompanied by strong winds and heavy rain?",
+  "tr_c": [
+   "Maintain at least double the normal distance from the car in front, as the braking distance is longer.",
+   "Upon passing the flooded area, it is better to pass without stopping.",
+   "Avoid areas with a high risk of flooding such as riversides and streams when parking.",
+   "It is safe to park a vehicle by a wall or under a large sign."
+  ]
+ },
+ {
+  "n": 436,
+  "ko_b": "?덇만 ?댁쟾??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?댁쟾?먯쓽 ?쒖빞 ?뺣낫瑜??꾪빐 ???좊━李쎌뿉 ?덈뒗 ?덈쭔 移섏슦怨?二쇳뻾?섎㈃ ?덉쟾?섎떎.",
+   "??釉뚮젅?댄겕? ?붿쭊釉뚮젅?댄겕瑜?媛숈씠 ?ъ슜?섏뿬???쒕떎.",
+   "?ㅻ끂泥댁씤?????곹깭?쇰㈃ 留ㅼ떆 30?щ줈誘명꽣 ?댄븯濡?二쇳뻾?섎뒗 寃껋씠 ?덉쟾?섎떎.",
+   "?됱긽?쒕낫???덉쟾嫄곕━瑜?異⑸텇???뺣낫?섍퀬 二쇳뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is an INCORRECT method of driving on snowy roads?",
+  "tr_c": [
+   "Just clearing the windshield of piled up snow is enough for safe driving.",
+   "The foot brake and engine brake must be used together.",
+   "For safety, drive at 30km/h or below with snow chains on.",
+   "Maintain a longer safe distance than usual."
+  ]
+ },
+ {
+  "n": 437,
+  "ko_b": "?ㅼ쓬 以??곗쿇 ?쒖뿉 ?덉쟾???댁쟾諛⑸쾿???꾨땶 寃껋??",
+  "ko_c": [
+   "?곹솴???곕씪 ?쒗븳 ?띾룄?먯꽌 50?쇱꽱???뺣룄 媛먯냽 ?댁쟾?쒕떎.",
+   "湲?媛???됱씤?먭쾶 臾쇱쓣 ?吏 ?딅룄濡??곸젅??媛꾧꺽???먭퀬 二쇳뻾?쒕떎.",
+   "鍮꾧? ?대━??珥덇린??媛?랁럹?ш낵 釉뚮젅?댄겕 ?섎떖??諛잛? ?딅뒗 ?곹깭?먯꽌 諛뷀닿? 援대윭媛???щ━??Creep) ?곹깭濡??댁쟾 ?섎뒗 寃껋? 醫뗭? ?딅떎.",
+   "??뿉 ?댁쟾?섎뒗 寃쎌슦?먮룄 誘몃벑怨??꾩“?깆쓣 耳쒓퀬 ?댁쟾?섎뒗 寃껋씠 醫뗫떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT safe driving in rain?",
+  "tr_c": [
+   "You must reduce speed to less than half of the speed limit depending on the driving condition.",
+   "You must drive with reasonable consideration so as not to splash water on pedestrians.",
+   "It is not good to drive in idle creep (a state where the tires move either forward or in reverse even when the accelerator and brake pedals are not applied) when it starts to rain.",
+   "It is safer to drive with the headlights and taillights on even during the day."
+  ]
+ },
+ {
+  "n": 438,
+  "ko_b": "?ㅼ쓬 以??덇컻 ? ?꾨줈瑜?二쇳뻾????諛붾엺吏곹븳 ?댁쟾諛⑸쾿怨?嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?ㅼ감?먭쾶 ?섏쓽 ?꾩튂瑜??뚮젮二쇨린 ?꾪빐 李⑦룺?? 誘몃벑, ?꾩“?깆쓣 耳좊떎.",
+   "??李⑥뿉寃??섏쓽 ?꾩튂瑜??뚮젮二쇨린 ?꾪빐 諛섎뱶???곹뼢?깆쓣 耳좊떎.",
+   "?덉쟾嫄곕━瑜??뺣낫?섍퀬 ?띾룄瑜?以꾩씤??",
+   "?듦린媛 留블? ?덉쓣 寃쎌슦 ??댄띁瑜??묐룞???쒖빞瑜??뺣낫?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT a safe method of driving on a foggy road?",
+  "tr_c": [
+   "Turn on the sidelights, taillights, and headlights to indicate your position to other drivers.",
+   "Turn the high-beam headlights on to indicate your position to oncoming traffic.",
+   "Maintain a safe distance and reduce speed.",
+   "If moisture is formed on the windshield, use the wipers to secure visibility."
+  ]
+ },
+ {
+  "n": 439,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몃룄 2李⑤줈 ?먮룞李⑥쟾?⑸룄濡쒖뿉 鍮꾧? ?대젮 ?몃㈃???뽰뼱?덈뒗 寃쎌슦 媛먯냽?댄뻾 ?띾룄濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "留ㅼ떆 80?щ줈誘명꽣",
+   "留ㅼ떆 90?щ줈誘명꽣",
+   "留ㅼ떆 72?щ줈誘명꽣",
+   "留ㅼ떆 100?щ줈誘명꽣"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, at which reduced speed should a vehicle drive on an automobile road with  two lanes in one direction when it is wet due to rain?",
+  "tr_c": [
+   "80 km/h",
+   "90 km/h",
+   "72 km/h",
+   "100 km/h"
+  ]
+ },
+ {
+  "n": 440,
+  "ko_b": "二쇳뻾 以?踰쇰씫??移????덉쟾???댁쟾 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먮룞李⑤뒗 ???섎Т ?꾨옒???좎떆 ?몄슫??",
+   "李⑥쓽 李쎈Ц???リ퀬 ?먮룞李??덉뿉 洹몃?濡??덈뒗??",
+   "嫄대Ъ ?놁? ?뽰? 踰쎈㈃???怨??꾧린媛 ?섎윭?ㅺ린 ?뚮Ц???쇳빐???쒕떎.",
+   "踰쇰씫???먮룞李⑥뿉 移쒕떎硫?留ㅼ슦 ?꾪뿕???곹솴?대땲 李?諛뽰쑝濡??쇱떊?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are TWO are safe methods to drive when lightning strikes?",
+  "tr_c": [
+   "Park your vehicle under a large tree.",
+   "Keep windows closed and stay in the car.",
+   "Keep away from the outer walls of buildings as electricity may conduct down the wet surface.",
+   "Evacuate the vehicle to avoid being in it if it gets hit by lightning."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); $data = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/210_choices_en.json' | ConvertFrom-Json; "'$data | ForEach-Object { $_ | ConvertTo-Json -Depth 6 -Compress }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 641ms:
+{"n":401,"ko_b":"도로교통법령상 고속도로 지정차로에 대한 설명으로 잘못된 것은? (소통이 원활하며, 버스전용차로 없음)","ko_c":["편도 3차로에서 1차로는 앞지르기 하려는 승용자동차, 경형･소형･중형 승합자동차가 통행할 수 있다.","앞지르기를 할 때에는 지정된 차로의 왼쪽 바로 옆 차로로 통행할 수 있다.","모든 차는 지정된 차로보다 왼쪽에 있는 차로로 통행할 수 있다.","고속도로 지정차로 통행위반 승용자동차 운전자의 벌점은 10점이다."],"a":"3","tr_b":"According to the Road Traffic Act, which of the following is NOT true about a designated lane on an expressway?  (Assuming smooth traffic flow and no exclusive bus lanes)","tr_c":["Lane 1 of an expressway with three lanes in one direction can be used by passenger vehicles, light vans, vans, mini-buses, and buses to overtake other vehicles.","You can use the lane on the left of the designated lane to overtake another vehicle.","All vehicles can use the lane on the left of their respective designated lanes.","The penalty for not using the designated lane for drivers of passenger vehicles is 10 points."]}
+{"n":402,"ko_b":"도로교통법령상 소통이 원활한 편도 3차로 고속도로에서 앞지르기 방법에 대한 설명으로 잘못된 것은?(버스전용차 로 없음)","ko_c":["승용자동차가 앞지르기하려고 1차로로 차로를 변경한 후 계속해서 1차로로 주행한다.","3차로로 주행 중인 대형승합자동차가 2차로로 앞지르기한다.","2차로로 주행 중인 소형승합자동차는 1차로를 이용하여 앞지르기한다.","5톤 화물차는 2차로를 이용하여 앞지르기한다."],"a":"1","tr_b":"Under the Road Traffic Act, which of the following statements regarding the method of overtaking by passenger cars on a smoothly flowing three-lane one-way highway is INCORRECT? (No exclusive bus lanes)","tr_c":["To overtake, a passenger car switches to Lane 1 and continues in Lane 1.","A large passenger vehicle in Lane 3 switches to Lane 2 in order to overtake.","A small van driving in the second lane should move into Lane 1 in order to overtake.","A 5-ton truck uses Lane 2 to overtake."]}
+{"n":403,"ko_b":"도로교통법령상 차로에 따른 통행차의 기준에 대한 설명이다. 잘못된 것은?","ko_c":["모든 차는 지정된 차로의 오른쪽 차로로 통행할 수 있다.","승용자동차가 앞지르기를 할 때에는 통행 기준에 지정된 차로의 바로 옆 오른쪽 차로로 통행해야한다.","편도 4차로 일반도로에서 승용자동차의 주행차로는 모든 차로이다.","편도 4차로 고속도로에서 대형화물자동차의 주행차로는 오른쪽차로이다."],"a":"2","tr_b":"Which of the following is an INCORRECT guideline for the use of the right traffic lanes on roadways?","tr_c":["All vehicles may use the right lane of the designated lane.","A passenger car overtaking another vehicle shall use the lane to the immediate right of the lane designated by traffic  standards.","On a general road with four lanes in one direction, a passenger car may drive in any of the lanes.","On an expressway with four lanes in one direction, a large truck is to use the lane on the right."]}
+{"n":404,"ko_b":"도로교통법령상 일반도로의 버스전용차로로 통행할 수 있는 경우로 맞는 것은?","ko_c":["12인승 승합자동차가 6인의 동승자를 싣고 가는 경우","내국인 관광객 수송용 승합자동차가 25명의 관광객을 싣고 가는 경우","노선을 운행하는 12인승 통근용 승합자동차가 직원들을 싣고 가는 경우","택시가 승객을 태우거나 내려주기 위하여 일시 통행하는 경우"],"a":"4","tr_b":"Which among the following is permitted to use the exclusive bus lane on a general roadway?","tr_c":["A 12-seater passenger vehicle carrying 6 passengers","A passenger vehicle for domestic tourists that is transporting 25 tourists","A 12-seater commuter passenger vehicle carrying employees on designated routes","A taxi temporarily using the lane so that passengers can board/leave the taxi"]}
+{"n":405,"ko_b":"도로교통법령상 고속도로 버스전용차로를 통행할 수 있는 9인승 승용자동차는 (  )명 이상 승차한 경우로 한정한다. (  ) 안에 기준으로 맞는 것은?","ko_c":["3","4","5","6"],"a":"4","tr_b":"According to the Road Traffic Act, a passenger car with 9 seats can take the exclusive bus lane on the  expressway if (    ) or more people are on the vehicle. Which of the following is correct?","tr_c":["3","4","5","6"]}
+{"n":406,"ko_b":"편도 3차로 고속도로에서 통행차의 기준으로 맞는 것은?(소통이 원활하며, 버스전용차로 없음)","ko_c":["승용자동차의 주행차로는 1차로이므로 1차로로 주행하여야 한다.","주행차로가 2차로인 소형승합자동차가 앞지르기할 때에는 1차로를 이용하여야 한다.","대형승합자동차는 1차로로 주행하여야 한다.","적재중량 1.5톤 이하인 화물자동차는 1차로로 주행하여야 한다."],"a":"2","tr_b":"What is the standard for driving on an expressway with three lanes in one direction? (Assuming smooth traffic  flow and no exclusive bus lanes)","tr_c":["Passenger cars are to use Lane 1 so they must use only Lane 1.","A small passenger vehicle whose designated lane is Lane 2 should use Lane 1 when overtaking.","Large vans must use the first lane.","A truck with maximum load weight of 1.5 tons or less must drive in Lane 1."]}
+{"n":407,"ko_b":"도로교통법령상 편도 3차로 고속도로에서 승용자동차가 2차로로 주행 중이다. 앞지르기할 수 있는 차로로 맞는 것 은?(소통이 원활하며, 버스전용차로 없음)","ko_c":["1차로","2차로","3차로","1, 2, 3차로 모두"],"a":"1","tr_b":"A passenger vehicle is driving in Lane 2 on an expressway with three lanes in one direction according to the Road Traffic Act. What is the correct lane for overtaking? (Assuming smooth traffic flow and no exclusive bus lanes)","tr_c":["The first lane","The second lane","The third lane","Any of the above"]}
+{"n":408,"ko_b":"도로교통법령상 앞지르기하는 방법에 대한 설명으로 가장 잘못된 것은?","ko_c":["다른 차를 앞지르려면 앞차의 왼쪽 차로를 통행해야 한다.","중앙선이 황색 점선인 경우 반대방향에 차량이 없을 때는 앞지르기가 가능하다.","가변차로의 경우 신호기가 지시하는 진행방향의 가장 왼쪽 황색 점선에서는 앞지르기를 할 수 없다.","편도 4차로 고속도로에서 오른쪽 차로로 주행하는 차는 1차로까지 진입이 가능하다."],"a":"4","tr_b":"Which of the following is NOT correct regarding overtaking according to the Road Traffic Act?","tr_c":["To overtake another vehicle, you must pass on the left lane of the vehicle in front.","If the centerline is a yellow broken line, it is possible to overtake when there is no vehicle in the opposite direction.","In case of a reversible lane, overtaking is not allowed on the leftmost yellow broken line in the direction indicated by a  traffic light.","On an expressway with four lanes in one direction, vehicles driving on the right lane can move up to the first lane."]}
+{"n":409,"ko_b":"도로교통법령상 차로에 따른 통행차의 기준에 대한 설명이다. 잘못된 것은?(고속도로의 경우 소통이 원활하며, 버스 전용차로 없음)","ko_c":["느린 속도로 진행할 때에는 그 통행하던 차로의 오른쪽 차로로 통행할 수 있다.","편도 2차로 고속도로의 1차로는 앞지르기를 하려는 모든 자동차가 통행할 수 있다.","일방통행도로에서는 도로의 오른쪽부터 1차로로 한다.","편도 3차로 고속도로의 오른쪽 차로는 화물자동차가 통행할 수 있는 차로이다."],"a":"3","tr_b":"Below are explanations of the standard for driving according to the lane under the Road Traffic Act. Which of the following is NOT true? (Expressways with smooth traffic flow and no exclusive bus lanes)","tr_c":["When proceeding at a low speed, the driver may use the lane to the right of the current lane in which he/she has been  driving.","The first lane of an expressway with two lanes in one direction may be used by all motor vehicles to overtake.","On a one-way traffic road, the rightmost lane is considered the first lane.","The right lane of an expressway with three lanes in one direction is to be used by a truck to drive."]}
+{"n":410,"ko_b":"도로교통법령상 편도 3차로 고속도로에서 통행차의 기준에 대한 설명으로 맞는 것은?(소통이 원활하며, 버스전용차로 없음)","ko_c":["1차로는 2차로가 주행차로인 승용자동차의 앞지르기 차로이다.","1차로는 승합자동차의 주행차로이다.","갓길은 긴급자동차 및 견인자동차의 주행차로이다.","버스전용차로가 운용되고 있는 경우, 1차로가 화물자동차의 주행차로이다."],"a":"1","tr_b":"According to the Road Traffic Act, which of the following is true about the standard for driving on an expressway with three lanes in one direction? (Assuming smooth traffic flow and no exclusive bus lanes)","tr_c":["The first lane is the lane for overtaking a passenger car driving on the second lane.","The first lane is the driving lane for a van.","The roadside is the driving lane for emergency vehicles and tow vehicles.","When operating an exclusive bus lane, the first lane is the driving lane for trucks."]}
+{"n":411,"ko_b":"도로교통법령상 전용차로의 종류가 아닌 것은?","ko_c":["버스 전용차로","다인승 전용차로","자동차 전용차로","자전거 전용차로"],"a":"3","tr_b":"According to the definition provided by the Road Traffic Act and its Enforcement Decree, which of the following  is NOT a type of exclusive lane?","tr_c":["An exclusive lane for buses","An exclusive lane for high-occupancy vehicles","An exclusive lane for motor vehicles","An exclusive lane for bicycles"]}
+{"n":412,"ko_b":"수막현상에 대한 설명으로 가장 적절한 것은?","ko_c":["수막현상을 줄이기 위해 기본 타이어보다 폭이 넓은 타이어로 교환한다.","빗길보다 눈길에서 수막현상이 더 발생하므로 감속운행을 해야 한다.","트레드가 마모되면 접지력이 높아져 수막현상의 가능성이 줄어든다.","타이어의 공기압이 낮아질수록 고속주행 시 수막현상이 증가된다."],"a":"4","tr_b":"Which of the following describes aquaplaning most appropriately?","tr_c":["You must change tires with wider widths to reduce the risks associated with aquaplaning.","Aquaplaning is more common in snow than rain. You must reduce speed.","Tires with worn-down treads will experience less aquaplaning due to reduced traction.","Underinflation can cause the tires to aquaplane more, especially at higher speeds."]}
+{"n":413,"ko_b":"빙판길에서 차가 미끄러질 때 안전 운전방법 중 옳은 것은?","ko_c":["핸들을 미끄러지는 방향으로 조작한다.","수동 변속기 차량의 경우 기어를 고단으로 변속한다.","핸들을 미끄러지는 반대 방향으로 조작한다.","주차 브레이크를 이용하여 정차한다."],"a":"1","tr_b":"Which of the following is the safe method of driving when a vehicle loses control on a frozen road?","tr_c":["Steer into the skid.","In the case of a car with manual transmission, shift to high gear.","Operate the steering wheel in the opposite direction of the skid.","Stop the car using the parking brake."]}
+{"n":414,"ko_b":"안개 낀 도로에서 자동차를 운행할 때 가장 안전한 운전 방법은?","ko_c":["커브 길이나 교차로 등에서는 경음기를 울려서 다른 차를 비키도록 하고 빨리 운행한다.","안개가 심한 경우에는 시야 확보를 위해 전조등을 상향으로 한다.","안개가 낀 도로에서는 안개등만 켜는 것이 안전 운전에 도움이 된다.","어느 정도 시야가 확보되는 경우에는 가드레일, 중앙선, 차선 등 자동차의 위치를 파악할 수 있는 지형지물을 이용하여 서행한다."],"a":"4","tr_b":"Which of the following is the safest method of driving a vehicle on a foggy road?","tr_c":["On a curved road or at an intersection, honk to warn other vehicles to make way and proceed quickly.","In dense fog, keep the high-beam headlights on to secure visibility.","On a foggy road, switch on the fog light only.","When visibility is secured to some extent, drive slowly while monitoring the guard rail, centerline, and traffic lane to stay aware of the vehicle\u0027s position."]}
+{"n":415,"ko_b":"눈길이나 빙판길 주행 중에 정지하려고 할 때 가장 안전한 제동 방법은?","ko_c":["브레이크 페달을 힘껏 밟는다.","풋 브레이크와 주차브레이크를 동시에 작동하여 신속하게 차량을 정지시킨다.","차가 완전히 정지할 때까지 엔진브레이크로만 감속한다.","엔진브레이크로 감속한 후 브레이크 페달을 가볍게 여러 번 나누어 밟는다."],"a":"4","tr_b":"Which of the following is the safest method of stopping on a snowy/icy road?","tr_c":["Apply the brake hard.","Stop quickly using the foot brake and the parking brake at the same time.","Use the engine brake only to slow down until the car comes to a complete stop.","After slowing down with the engine brake, step lightly on the brake pedal several times."]}
+{"n":416,"ko_b":"폭우가 내리는 도로의 지하차도를 주행하는 운전자의 마음가짐으로 가장 바람직한 것은?","ko_c":["모든 도로의 지하차도는 배수시설이 잘 되어 있어 위험요소는 발생하지 않는다.","재난방송, 안내판 등 재난 정보를 청취하면서 위험요소에 대응한다.","폭우가 그칠 때까지 지하차도 갓길에 정차하여 휴식을 취한다.","신속히 지나가야하기 때문에 지정속도보다 빠르게 주행한다."],"a":"2","tr_b":"Which of the following is the most desirable attitude for a driver who drives through an underpass on a road in  heavy rain?","tr_c":["All roads are well-drained, so there are no hazards.","Respond to hazards while listening to disaster information such as disaster broadcasts and checking information boards.","Take a rest by stopping at the roadside of the underpass until the heavy rain sides.","Drive faster than the designated speed because high speed is required at that moment."]}
+{"n":417,"ko_b":"겨울철 빙판길에 대한 설명이다. 가장 바르게 설명한 것은 ?","ko_c":["터널 안에서 주로 발생하며, 안개입자가 얼면서 노면이 빙판길이 된다.","다리 위, 터널 출입구, 그늘진 도로에서는 블랙아이스 현상이 자주 나타난다.","블랙아이스 현상은 차량의 매연으로 오염된 눈이 노면에 쌓이면서 발생한다.","빙판길을 통과할 경우에는 핸들을 고정하고 급제동하여 최대한 속도를 줄인다."],"a":"2","tr_b":"Which of the following is the most correct explanation of a frozen/icy road in winter?","tr_c":["It occurs mainly in tunnels, and the road surface becomes an icy road as the fog particles freeze.","Black ice often occurs on bridges, at tunnel entrances, and on shady roads.","Black ice occurs when snow contaminated with vehicle fumes accumulates on the road surface.","When passing through an icy road, reduce speed as much as possible by not operating the steering wheel and braking  suddenly."]}
+{"n":418,"ko_b":"집중호우로 차량 침수 시 대처 방법으로 가장 올바르지 않은 것은?","ko_c":["급류가 밀려오는 반대쪽 문을 열고 탈출을 시도한다.","차량 문이 열리지 않는다면 뾰족한 물체 (목받침대, 안전밸트 잠금장치 등)로 창문 유리의 가장자리를 강하게 내리쳐       창문을 깨고 탈출을 시도한다.","차량 창문을 깰 수 없다면 당황하지 말고, 119신고 후 차량 내·외부 수위가 비슷해지는 시점에(30cm이하) 신속하게       문을 열어 탈출한다","탈출하였다면 최대한 저지대 혹은 차량의 아래로 대피하도록 한다."],"a":"4","tr_b":"Which of the following is the most inappropriate way to respond when your car has been flooded during  localized heavy rainfall?","tr_c":["Try to escape by opening the door on the opposite side of the rushing currents.","If the car door won\u0027t open, use a sharp object (such as headrest, seatbelt lock, etc.) to strike the edge of the window to break it and attempt to escape.","If you cannot break the window, do not panic; call 911 and quickly open the door to escape when the water levels inside and outside of the vehicle become the same (less than 30cm).","Once you have escaped, take shelter in the lowest ground or hide under the vehicle."]}
+{"n":419,"ko_b":"내리막길 주행 중 브레이크가 제동되지 않을 때 가장 적절한 조치 방법은?","ko_c":["즉시 시동을 끈다.","저단 기어로 변속한 후 차에서 뛰어내린다.","핸들을 지그재그로 조작하며 속도를 줄인다.","저단 기어로 변속하여 감속한 후 차체를 가드레일이나 벽에 부딪친다."],"a":"4","tr_b":"Which of the following is the most appropriate action to take when the brakes are not working on a downhill  road?","tr_c":["Turn the ignition off at once.","Jump out of the car after shifting to low gear.","Reduce speed by zigzagging.","Run the car into a guard rail or a wall after reducing speed by shifting to low gear."]}
+{"n":420,"ko_b":"터널 안 주행 중 자동차 사고로 인한 화재 목격 시 가장 바람직한 대응 방법은?","ko_c":["차량 통행이 가능하더라도 차를 세우는 것이 안전하다.","차량 통행이 불가능할 경우 차를 세운 후 자동차 안에서 화재 진압을 기다린다.","차량 통행이 불가능할 경우 차를 세운 후 자동차 열쇠를 챙겨 대피한다.","하차 후 연기가 많이 나면 최대한 몸을 낮춰 연기가 나는 반대 방향으로 유도 표시등을 따라 이동한다."],"a":"4","tr_b":"If you witness a fire caused by a traffic accident while driving inside a tunnel, which of the following is the most  appropriate method of responding?","tr_c":["It is safe to stop your vehicle even if traffic is still flowing.","If traffic is at a standstill, stop the vehicle and wait inside until the fire is extinguished.","If traffic is at a standstill, stop the vehicle and leave the scene with your car keys.","If there is a lot of smoke after disembarking, lower your body as much as possible and move in the opposite direction of the smoke following the emergency lighting."]}
+{"n":421,"ko_b":"커브길을 주행 중일 때의 설명으로 올바른 것은?","ko_c":["커브길 진입 이전의 속도 그대로 정속주행하여 통과한다.","커브길 진입 후에는 변속 기어비를 높혀서 원심력을 줄이는 것이 좋다.","커브길에서 후륜구동 차량은 언더스티어(understeer) 현상이 발생할 수 있다.","커브길에서 오버스티어(oversteer)현상을 줄이기 위해 조향방향의 반대로 핸들을 조금씩 돌려야 한다."],"a":"4","tr_b":"Which of the following is the correct explanation when driving on a sharp curve?","tr_c":["Drive through the curve at the same speed as that before entering the curve.","After entering a curve, it is better to increase the change gear ratio to reduce the centrifugal force.","A rear-wheel drive vehicle may experience understeer on a curved road.","In order to reduce oversteer on a curved road, the steering wheel should be turned slightly in the opposite direction of  the steering direction."]}
+{"n":422,"ko_b":"풋 브레이크 과다 사용으로 인한 마찰열 때문에 브레이크액에 기포가 생겨 제동이 되지 않는 현상을 무엇이라 하는가?","ko_c":["스탠딩웨이브(Standing wave)","베이퍼록(Vapor lock)","로드홀딩(Road holding)","언더스티어링(Under steering)"],"a":"2","tr_b":"What do you call a problem that occurs when the brakes do not work due to bubbles that form in the brake  fluid overheated by excessive braking?","tr_c":["A standing wave","A vapor lock","A road holding","An understeering"]}
+{"n":423,"ko_b":"안개 낀 도로를 주행할 때 안전한 운전 방법으로 바르지 않은 것은?","ko_c":["커브길이나 언덕길 등에서는 경음기를 사용한다.","전방 시야확보가 70미터 내외인 경우 규정속도의 절반 이하로 줄인다.","평소보다 전방시야확보가 어려우므로 안개등과 상향등을 함께 켜서 충분한 시야를 확보한다.","차의 고장이나 가벼운 접촉사고일지라도 도로의 가장자리로 신속히 대피한다."],"a":"3","tr_b":"Which of the following is NOT a proper way of driving in fog?","tr_c":["Honk when driving around a curve or on a hill.","If the visibility in fog is less than 70 m, reduce speed to less than half of the speed limit.","Try to maximize visibility by turning on fog lamps and high-beam headlights.","Even in case of vehicle failure or minor accident, move the vehicle to the side of the road."]}
+{"n":424,"ko_b":"겨울철 블랙 아이스(black ice)에 대해 바르게 설명하지 못한 것은 ?","ko_c":["도로 표면에 코팅한 것처럼 얇은 얼음막이 생기는 현상이다.","아스팔트 표면의 눈과 습기가 공기 중의 오염물질과 뒤섞여 스며든 뒤 검게 얼어붙은 현상이다.","추운 겨울에 다리 위, 터널 출입구, 그늘진 도로, 산모퉁이 음지 등 온도가 낮은 곳에서 주로 발생한다.","햇볕이 잘 드는 도로에 눈이 녹아 스며들어 도로의 검은 색이 햇빛에 반사되어 반짝이는 현상을 말한다."],"a":"4","tr_b":"Which of the following is not a correct explanation of black ice in winter?","tr_c":["It is a phenomenon wherein a thin ice film forms like a coating on the road surface.","It is a phenomenon wherein pollutants in the air are mixed with snow and moisture on the asphalt surface, absorbed,  and then frozen into black ice.","It occurs mainly in places with low temperatures during the winter season, such as on bridges, tunnel entrances, shady roads, and in the shade of mountain corners.","It refers to the phenomenon wherein the snow melts and seeps into the sunny road, and the black color of the road is reflected by sunlight and sparkles."]}
+{"n":425,"ko_b":"다음 중 겨울철 도로 결빙 상황과 관련한 설명으로 잘못된 것은?","ko_c":["아스팔트보다 콘크리트로 포장된 도로가 결빙이 더 많이 발생한다.","콘크리트보다 아스팔트 포장된 도로가 결빙이 더 늦게 녹는다.","아스팔트 포장도로의 마찰계수는 건조한 노면일 때 1.6으로 커진다.","동일한 조건의 결빙상태에서 콘크리트와 아스팔트 포장된 도로의 노면마찰계수는 같다."],"a":"3","tr_b":"Which of the following is NOT true about icy roads during winter months?","tr_c":["Icy roads are more common on concrete roads than on asphalt.","Ice melts slower on asphalt roads than on concrete.","The friction coefficient of an asphalt surface increases to 1.6 when dry.","Under the same conditions, the road friction coefficients of frozen concrete and asphalt surfaces are equal."]}
+{"n":426,"ko_b":"다음 중 지진발생 시 운전자의 조치로 가장 바람직하지 못한 것은?","ko_c":["운전 중이던 차의 속도를 높여 신속히 그 지역을 통과한다.","차를 이용해 이동이 불가능할 경우 차는 가장자리에 주차한 후 대피한다.","주차된 차는 이동 될 경우를 대비하여 자동차 열쇠는 꽂아둔 채 대피한다.","라디오를 켜서 재난방송에 집중한다."],"a":"1","tr_b":"Which of the following is the least appropriate measure for a driver to take when an earthquake occurs?","tr_c":["Increase your vehicle\u0027s speed and quickly pass through the area.","If it is impossible to move using a vehicle, park the vehicle to the side and take shelter.","Be prepared to move the parked vehicle later by keeping the key in the ignition, and take shelter.","Turn on the radio to listen to the disaster broadcast."]}
+{"n":427,"ko_b":"다음 중 강풍이나 돌풍 상황에서 가장 올바른 운전방법 2가지는?","ko_c":["핸들을 양손으로 꽉 잡고 차로를 유지한다.","바람에 관계없이 속도를 높인다.","표지판이나 신호등, 가로수 부근에 주차한다.","산악 지대나 다리 위, 터널 출입구에서는 강풍의 위험이 많으므로 주의한다."],"a":"1, 4","tr_b":"Which of the following are TWO descriptions of the correct method of driving in strong winds or storms?","tr_c":["Firmly hold the steering wheel with both hands and stay in your current lane.","Ignore the gusting winds and speed up.","Park near a sign, the traffic lights, or a roadside tree.","Be particularly careful in areas vulnerable to strong winds, such as mountainous areas, bridges, and tunnel exits."]}
+{"n":428,"ko_b":"자갈길 운전에 대한 설명이다. 가장 적절한 2가지는?","ko_c":["운전대는 최대한 느슨하게 잡아 팔에 전달되는 충격을 최소화한다.","바퀴가 최대한 노면에 접촉되도록 속도를 높여서 운전한다.","보행자 또는 다른 차마에게 자갈이 튀지 않도록 서행한다.","타이어의 적정공기압 보다 약간 낮은 것이 높은 것보다 운전에 유리하다."],"a":"3, 4","tr_b":"Which of the following are the TWO most appropriate explanations regarding driving on a gravel road?","tr_c":["Hold the steering wheel as loosely as possible to minimize impact on the arm.","Increase speed while driving to ensure that the wheels are in contact with the road surface as much as possible.","Slow down to ensure that gravel is not projected onto pedestrians or other vehicles or horses.","Slightly lower tire pressure is better for driving than the appropriate level of air pressure."]}
+{"n":429,"ko_b":"빗길 주행 중 앞차가 정지하는 것을 보고 제동했을 때 발생하는 현상으로 바르지 않은 2가지는?","ko_c":["급제동 시에는 타이어와 노면의 마찰로 차량의 앞숙임 현상이 발생한다.","노면의 마찰력이 작아지기 때문에 빗길에서는 공주거리가 길어진다.","수막현상과 편(偏)제동 현상이 발생하여 차로를 이탈할 수 있다.","자동차타이어의 마모율이 커질수록 제동거리가 짧아진다."],"a":"2, 4","tr_b":"Two vehicles are driving in the rain, and the rear vehicle sees the front vehicle stopping and applies the brakes.  Which of the following are NOT correct? (Select TWO)","tr_c":["Hard braking can cause the vehicle to nose dive due to increased friction between the road surface and tires.","Free running distance is increased due to reduced friction of the road surface.","Aquaplaning and partial braking may occur simultaneously, causing the vehicle to slide out of the lane.","The higher the tire wear rate, the shorter the braking distance."]}
+{"n":430,"ko_b":"언덕길의 오르막 정상 부근으로 접근 중이다. 안전한 운전행동 2가지는?","ko_c":["연료 소모를 줄이기 위해서 엔진의 RPM(분당 회전수)을 높인다.","오르막의 정상에서는 반드시 일시정지한 후 출발한다.","앞 차량과의 안전거리를 유지하며 운행한다.","고단기어보다 저단기어로 주행한다."],"a":"3, 4","tr_b":"A vehicle is approaching near the top of an uphill. Which of the following are TWO are safe ways of driving?","tr_c":["Increase engine RPM (revolutions per minute) to reduce fuel consumption.","At the top of the uphill, be sure to stop temporarily before starting.","Maintain a safe distance from the front vehicle.","Drive in a lower gear than a higher gear."]}
+{"n":431,"ko_b":"내리막길 주행 시 가장 안전한 운전 방법 2가지는?","ko_c":["기어 변속과는 아무런 관계가 없으므로 풋 브레이크만을 사용하여 내려간다.","위급한 상황이 발생하면 바로 주차 브레이크를 사용한다.","올라갈 때와 동일한 변속기어를 사용하여 내려가는 것이 좋다.","풋 브레이크와 엔진 브레이크를 적절히 함께 사용하면서 내려간다."],"a":"3, 4","tr_b":"When you drive downhill, which of the following are the TWO safest methods to drive?","tr_c":["Only use the foot brake because shifting gears is not necessary.","If an emergency situation occurs, use the parking brake immediately.","Use the same gear you used when driving up the slope.","Use both the foot brake and engine brake properly."]}
+{"n":432,"ko_b":"겨울철 도로 결빙 시 안전한 차량운행에 대한 설명으로 가장 적절하지 않은 것은?","ko_c":["겨울철 도로 주행 시 사전에 기상정보, 교통상황을 확인한 후 운행하여야 한다.","결빙에 취약한 터널, 교량 구간은 더욱 주의하여 주행하여야 한다.","터널, 교량 부근의 강설 전ㆍ후로 제설제가 살포되었다면 평상시 제한속도로 정상운행이 가능하다.","일부 시·도경찰청은 고시에 의해 눈길, 빙판길 운행 시 월동장구를 사용 운행하도록 명문화하고 있다."],"a":"3","tr_b":"Which of the following statements is the least appropriate regarding safe driving under icy road conditions in  winter?","tr_c":["When driving on roads in winter, you should check the weather information and traffic conditions in advance before  driving.","Extra caution should be exercised when driving through tunnels and bridge sections that are vulnerable to icing.","If de-icing agents have been applied before and after snowfall near tunnels and bridges, it is possible to drive at the  usual speed limit safely.","Some city or provincial police agencies have regulations requiring the use of winter equipment when driving on snowy  or icy roads."]}
+{"n":433,"ko_b":"포트홀(도로의 움푹 패인 곳)에 대한 설명으로 맞는 것은?","ko_c":["포트홀은 여름철 집중 호우 등으로 인해 만들어지기 쉽다.","포트홀로 인한 피해를 예방하기 위해 주행 속도를 높인다.","도로 표면 온도가 상승한 상태에서 횡단보도 부근에 대형 트럭 등이 급제동하여 발생한다.","도로가 마른 상태에서는 포트홀 확인이 쉬우므로 그 위를 그냥 통과해도 무방하다."],"a":"1","tr_b":"Which of the following statements about potholes is correct?","tr_c":["Potholes generally form during torrential rain.","Driving faster will prevent tire damage from potholes.","Sudden braking by larger vehicles is likely to occur near crosswalks when the temperature of the road surface increases.","Potholes are readily visible when the road is dry and you can just drive over them."]}
+{"n":434,"ko_b":"집중 호우 시 안전한 운전 방법과 가장 거리가 먼 것은?","ko_c":["차량의 전조등과 미등을 켜고 운전한다.","히터를 내부공기 순환 모드 상태로 작동한다.","수막현상을 예방하기 위해 타이어의 마모 정도를 확인한다.","빗길에서는 안전거리를 2배 이상 길게 확보한다."],"a":"2","tr_b":"Which of the following approaches to driving in heavy rainfall is the least safe?","tr_c":["Drive with the headlights and taillights on.","Turn on the heater in internal air circulation mode.","Check the tires for wear to prevent aquaplaning.","Maintain double the usual safe distance on wet roads."]}
+{"n":435,"ko_b":"강풍 및 폭우를 동반한 태풍이 발생한 도로를 주행 중일 때 운전자의 조치방법으로 적절하지 못한 것은?","ko_c":["제동거리가 평소보다 길어지므로 앞차와의 거리를 평소보다 2배 이상 둔다.","침수지역을 지나갈 때는 중간에 멈추지 말고 그대로 통과하는 것이 좋다.","주차할 때는 침수 위험이 높은 강변이나 하천 등의 장소를 피한다.","담벼락 옆이나 대형 간판 아래 주차하는 것이 안전하다."],"a":"4","tr_b":"Which of the following is NOT an appropriate action by a driver while driving on a road during a typhoon  accompanied by strong winds and heavy rain?","tr_c":["Maintain at least double the normal distance from the car in front, as the braking distance is longer.","Upon passing the flooded area, it is better to pass without stopping.","Avoid areas with a high risk of flooding such as riversides and streams when parking.","It is safe to park a vehicle by a wall or under a large sign."]}
+{"n":436,"ko_b":"눈길 운전에 대한 설명으로 틀린 것은?","ko_c":["운전자의 시야 확보를 위해 앞 유리창에 있는 눈만 치우고 주행하면 안전하다.","풋 브레이크와 엔진브레이크를 같이 사용하여야 한다.","스노체인을 한 상태라면 매시 30킬로미터 이하로 주행하는 것이 안전하다.","평상시보다 안전거리를 충분히 확보하고 주행한다."],"a":"1","tr_b":"Which of the following is an INCORRECT method of driving on snowy roads?","tr_c":["Just clearing the windshield of piled up snow is enough for safe driving.","The foot brake and engine brake must be used together.","For safety, drive at 30km/h or below with snow chains on.","Maintain a longer safe distance than usual."]}
+{"n":437,"ko_b":"다음 중 우천 시에 안전한 운전방법이 아닌 것은?","ko_c":["상황에 따라 제한 속도에서 50퍼센트 정도 감속 운전한다.","길 가는 행인에게 물을 튀지 않도록 적절한 간격을 두고 주행한다.","비가 내리는 초기에 가속페달과 브레이크 페달을 밟지 않는 상태에서 바퀴가 굴러가는 크리프(Creep) 상태로 운전 하는 것은 좋지 않다.","낮에 운전하는 경우에도 미등과 전조등을 켜고 운전하는 것이 좋다."],"a":"3","tr_b":"Which of the following is NOT safe driving in rain?","tr_c":["You must reduce speed to less than half of the speed limit depending on the driving condition.","You must drive with reasonable consideration so as not to splash water on pedestrians.","It is not good to drive in idle creep (a state where the tires move either forward or in reverse even when the accelerator and brake pedals are not applied) when it starts to rain.","It is safer to drive with the headlights and taillights on even during the day."]}
+{"n":438,"ko_b":"다음 중 안개 낀 도로를 주행할 때 바람직한 운전방법과 거리가 먼 것은?","ko_c":["뒤차에게 나의 위치를 알려주기 위해 차폭등, 미등, 전조등을 켠다.","앞 차에게 나의 위치를 알려주기 위해 반드시 상향등을 켠다.","안전거리를 확보하고 속도를 줄인다.","습기가 맺혀 있을 경우 와이퍼를 작동해 시야를 확보한다."],"a":"2","tr_b":"Which of the following is NOT a safe method of driving on a foggy road?","tr_c":["Turn on the sidelights, taillights, and headlights to indicate your position to other drivers.","Turn the high-beam headlights on to indicate your position to oncoming traffic.","Maintain a safe distance and reduce speed.","If moisture is formed on the windshield, use the wipers to secure visibility."]}
+{"n":439,"ko_b":"도로교통법령상 편도 2차로 자동차전용도로에 비가 내려 노면이 젖어있는 경우 감속운행 속도로 맞는 것은?","ko_c":["매시 80킬로미터","매시 90킬로미터","매시 72킬로미터","매시 100킬로미터"],"a":"3","tr_b":"According to the Road Traffic Act, at which reduced speed should a vehicle drive on an automobile road with  two lanes in one direction when it is wet due to rain?","tr_c":["80 km/h","90 km/h","72 km/h","100 km/h"]}
+{"n":440,"ko_b":"주행 중 벼락이 칠 때 안전한 운전 방법 2가지는?","ko_c":["자동차는 큰 나무 아래에 잠시 세운다.","차의 창문을 닫고 자동차 안에 그대로 있는다.","건물 옆은 젖은 벽면을 타고 전기가 흘러오기 때문에 피해야 한다.","벼락이 자동차에 친다면 매우 위험한 상황이니 차 밖으로 피신한다."],"a":"2, 3","tr_b":"Which of the following are TWO are safe methods to drive when lightning strikes?","tr_c":["Park your vehicle under a large tree.","Keep windows closed and stay in the car.","Keep away from the outer walls of buildings as electricity may conduct down the wet surface.","Evacuate the vehicle to avoid being in it if it gets hit by lightning."]}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding=[Console]::OutputEncoding=[Text.UTF8Encoding]::new(); rg -n '"'false_positive|\"field\"\\s*:\\s*\"c\\[' translations/audit -g '*.json' | Select-Object -First 30" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T12:47:25.760772Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+
+ exited 1 in 553ms:
+codex
+[
+  {
+    "n": 401,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "경형·소형·중형 승합자동차를 부정확하게 세분하고 대형 버스까지 포함되는 듯한 표현을 추가했다.",
+    "suggestion": "Lane 1 of a three-lane expressway may be used for overtaking by passenger cars and light, small, and medium-sized passenger vans."
+  },
+  {
+    "n": 402,
+    "field": "b",
+    "severity": "major",
+    "issue": "원문은 여러 차종의 앞지르기 방법을 묻지만 번역은 승용차의 앞지르기로 범위를 잘못 한정했다.",
+    "suggestion": "Under the Road Traffic Act, which of the following statements about overtaking on a smoothly flowing three-lane expressway in one direction is incorrect? (No exclusive bus lane)"
+  },
+  {
+    "n": 406,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "소형승합자동차를 소형 승용차로 번역하여 차종을 변경했다.",
+    "suggestion": "A small passenger van whose designated driving lane is Lane 2 should use Lane 1 when overtaking."
+  },
+  {
+    "n": 412,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "원문의 '접지력이 높아져'를 '접지력이 감소하여'로 반대로 번역했다.",
+    "suggestion": "When the tire tread is worn down, traction increases, reducing the likelihood of aquaplaning."
+  },
+  {
+    "n": 418,
+    "field": "c[3]",
+    "severity": "critical",
+    "issue": "한국의 긴급신고 번호 119를 미국 번호인 911로 잘못 번역했다.",
+    "suggestion": "If you cannot break the window, do not panic; call 119 and quickly open the door to escape when the water levels inside and outside the vehicle become similar, with a difference of 30 cm or less."
+  },
+  {
+    "n": 429,
+    "field": "c[1]",
+    "severity": "critical",
+    "issue": "원문에는 단순히 타이어와 노면의 마찰 때문이라고 되어 있으나 번역은 마찰력이 증가한다고 추가하여 빗길 상황에서 선택지의 정오 판단을 바꿀 수 있다.",
+    "suggestion": "Hard braking can cause the vehicle to nose-dive due to friction between the tires and the road surface."
+  },
+  {
+    "n": 433,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "대형 트럭의 급제동이 포트홀을 발생시킨다는 원문의 인과관계를 급제동 자체가 발생하기 쉽다는 의미로 바꿨다.",
+    "suggestion": "Potholes form when large trucks and other vehicles brake suddenly near crosswalks while the road surface temperature is high."
+  },
+  {
+    "n": 438,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "원문의 '앞차'를 반대편에서 오는 차량으로 번역하여 대상 차량의 방향을 바꿨다.",
+    "suggestion": "Always turn on the high-beam headlights to indicate your position to the vehicle ahead."
+  }
+]
+tokens used
+36,656
+[
+  {
+    "n": 401,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "경형·소형·중형 승합자동차를 부정확하게 세분하고 대형 버스까지 포함되는 듯한 표현을 추가했다.",
+    "suggestion": "Lane 1 of a three-lane expressway may be used for overtaking by passenger cars and light, small, and medium-sized passenger vans."
+  },
+  {
+    "n": 402,
+    "field": "b",
+    "severity": "major",
+    "issue": "원문은 여러 차종의 앞지르기 방법을 묻지만 번역은 승용차의 앞지르기로 범위를 잘못 한정했다.",
+    "suggestion": "Under the Road Traffic Act, which of the following statements about overtaking on a smoothly flowing three-lane expressway in one direction is incorrect? (No exclusive bus lane)"
+  },
+  {
+    "n": 406,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "소형승합자동차를 소형 승용차로 번역하여 차종을 변경했다.",
+    "suggestion": "A small passenger van whose designated driving lane is Lane 2 should use Lane 1 when overtaking."
+  },
+  {
+    "n": 412,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "원문의 '접지력이 높아져'를 '접지력이 감소하여'로 반대로 번역했다.",
+    "suggestion": "When the tire tread is worn down, traction increases, reducing the likelihood of aquaplaning."
+  },
+  {
+    "n": 418,
+    "field": "c[3]",
+    "severity": "critical",
+    "issue": "한국의 긴급신고 번호 119를 미국 번호인 911로 잘못 번역했다.",
+    "suggestion": "If you cannot break the window, do not panic; call 119 and quickly open the door to escape when the water levels inside and outside the vehicle become similar, with a difference of 30 cm or less."
+  },
+  {
+    "n": 429,
+    "field": "c[1]",
+    "severity": "critical",
+    "issue": "원문에는 단순히 타이어와 노면의 마찰 때문이라고 되어 있으나 번역은 마찰력이 증가한다고 추가하여 빗길 상황에서 선택지의 정오 판단을 바꿀 수 있다.",
+    "suggestion": "Hard braking can cause the vehicle to nose-dive due to friction between the tires and the road surface."
+  },
+  {
+    "n": 433,
+    "field": "c[3]",
+    "severity": "major",
+    "issue": "대형 트럭의 급제동이 포트홀을 발생시킨다는 원문의 인과관계를 급제동 자체가 발생하기 쉽다는 의미로 바꿨다.",
+    "suggestion": "Potholes form when large trucks and other vehicles brake suddenly near crosswalks while the road surface temperature is high."
+  },
+  {
+    "n": 438,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "원문의 '앞차'를 반대편에서 오는 차량으로 번역하여 대상 차량의 방향을 바꿨다.",
+    "suggestion": "Always turn on the high-beam headlights to indicate your position to the vehicle ahead."
+  }
+]

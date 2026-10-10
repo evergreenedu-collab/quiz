@@ -1,0 +1,340 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12621-bf24-7f93-a241-ce19fbf423e0
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/301_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/301_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 518ms:
+[
+ {
+  "n": 21,
+  "ko_e": "?꾨줈援먰넻踰???議??뺤쓽) 4. ?곗꽍??李⑤룄? 蹂대룄瑜?援щ텇?섎뒗 ???깆쑝濡??댁뼱吏??좎쓣 留먰븳??)",
+  "tr_e": "Article 2 (Definitions) of the Road Traffic Act, subparagraph 4: 'curb line' means a line formed by stones or the like that separates the roadway from the sidewalk."
+ },
+ {
+  "n": 22,
+  "ko_e": "?꾨줈援먰넻踰???3議곗쓽2(?먯쟾嫄곕벑???듯뻾諛⑸쾿???밸?) ?????먯쟾嫄곕벑???댁쟾?먭? ?〓떒蹂대룄瑜??댁슜?섏뿬 ?꾨줈瑜??〓떒 ???뚯뿉???먯쟾嫄곕벑?먯꽌 ?대젮???먯쟾嫄곕벑???뚭굅???ㅺ퀬 蹂댄뻾?섏뿬???쒕떎.",
+  "tr_e": "Article 13-2(6) of the Road Traffic Act (Special Provisions on Methods of Passage for Bicycles, etc.): when the driver of a bicycle, etc. crosses a road using a crosswalk, the driver must dismount and either push or carry the bicycle, etc. while walking."
+ },
+ {
+  "n": 23,
+  "ko_e": "?꾨줈援먰넻踰???7議?????,
+  "tr_e": "Article 87(1) of the Road Traffic Act."
+ },
+ {
+  "n": 24,
+  "ko_e": "?꾨줈援먰넻踰???7議곗쓽2, ?꾨줈援먰넻踰뺤떆?됯퇋移???7議??댁쟾硫댄뿀?쒗뿕?묒떆) ?좊텇利앸챸?쒕? ?쒖떆?섏? 紐삵븯???щ엺? ?좎껌 ?몄씠 ?먰븯??寃쎌슦 ?꾩옄??諛⑸쾿?쇰줈 吏臾몄젙蹂대? ?議고븯??蹂몄씤 ?뺤씤?????덈떎.",
+  "tr_e": "Article 87-2 of the Road Traffic Act; Article 57 of the Enforcement Rule of the Road Traffic Act (Taking the Driver's License Test). A person who cannot present an identification document may, if the applicant so wishes, have their identity verified by comparing fingerprint information electronically."
+ },
+ {
+  "n": 25,
+  "ko_e": "怨좎븬媛?ㅼ븞?꾧?由щ쾿 ?쒗뻾洹쒖튃 ??1議곗젣1??蹂꾪몴31",
+  "tr_e": "Article 51(1) of the Enforcement Rule of the High-Pressure Gas Safety Control Act, Table 31."
+ },
+ {
+  "n": 26,
+  "ko_e": "?꾨줈援먰넻踰???3議?援먰넻?덉쟾援먯쑁)?????ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?щ엺???쑣룸룄寃쎌같泥?옣?먭쾶 ?좎껌?섎뒗  寃쎌슦?먮뒗 ??듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?밸퀎援먰넻?덉쟾 沅뚯옣援먯쑁??諛쏆쓣 ???덈떎. ??寃쎌슦 沅뚯옣援먯쑁??諛쏄린 ??1?? ?대궡???대떦 援먯쑁??諛쏆? ?꾨땲???щ엺???쒖젙?쒕떎.",
+  "tr_e": "Article 73(3) of the Road Traffic Act (Traffic Safety Education): a person falling under any of the following who applies to the Commissioner of the City/Provincial Police Agency may receive special traffic safety recommendation education, as prescribed by Presidential Decree. In this case, this applies only to a person who has not received such education within the past year before receiving the recommendation education."
+ },
+ {
+  "n": 27,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 ??5議??먮룞李⑤벑???댁쟾???꾩슂???곸꽦??湲곗?) ?ㅻ쭔, ?쒖そ ?덉쓣 蹂댁? 紐삵븯???щ엺????醫?蹂댄넻 ?댁쟾硫댄뿀瑜?痍⑤뱷?섎젮??寃쎌슦 ?먮룞李⑤벑???댁쟾???꾩슂???곸꽦??湲곗??먯꽌 ?ㅻⅨ 履??덉쓽 ?쒕젰??0.8?댁긽?닿퀬 ?섑룊???쇨? 120???댁긽?대ŉ, ?섏쭅?쒖빞媛 20???댁긽?닿퀬, 以묒떖?쒖빞 20?????붿젏怨?諛섎㏏???놁뼱???쒕떎.",
+  "tr_e": "Article 45 of the Enforcement Decree of the Road Traffic Act (Standards of Aptitude Required for Driving Motor Vehicles, etc.): however, where a person who cannot see with one eye wishes to obtain a Class 1 Ordinary driver's license, under the standards of aptitude required for driving, the other eye must have a visual acuity of 0.8 or higher, a horizontal field of vision of 120 degrees or more, a vertical field of vision of 20 degrees or more, and no scotoma or hemianopsia within the central 20 degrees of vision."
+ },
+ {
+  "n": 28,
+  "ko_e": "?꾨줈援먰넻踰?87議???????????醫??댁쟾硫댄뿀瑜?諛쒓툒諛쏆? 65???댁긽 75??誘몃쭔???щ엺? 5?꾨쭏???뺢린?곸꽦寃?щ?  諛쏆븘???쒕떎. ?ㅻ쭔 ?쒖そ ?덈쭔 蹂댁? 紐삵븯???щ엺?쇰줈????醫?硫댄뿀 以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?꾩씠??",
+  "tr_e": "Article 87(1)1 of the Road Traffic Act: a person aged 65 or older but under 75 who has been issued a Class 1 driver's license must undergo a regular aptitude test every 5 years. However, for a person who cannot see with one eye and has obtained the Ordinary license among the Class 1 licenses, the interval is 3 years."
+ },
+ {
+  "n": 29,
+  "ko_e": "?댁쟾硫댄뿀??痍⑥냼 泥섎텇??諛쏆? ?? ?댁쟾硫댄뿀???⑤젰 ?뺤? 泥섎텇??諛쏆? ?? ?댁쟾硫댄뿀利앹쓣 ?껋뼱踰꾨━怨??ㅼ떆 援먮? 諛쏆?  ??洹??껋뼱踰꾨┛ ?댁쟾硫댄뿀利앹쓣 李얠? ?? ?곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?щ엺????醫?蹂댄넻?댁쟾硫댄뿀 ?먮뒗 ??醫?蹂댄넻?댁쟾硫댄뿀 瑜?諛쏆? ?뚯뿉??7???대궡??二쇱냼吏瑜?愿?좏븯???쑣룸룄寃쎌같泥?옣?먭쾶 ?댁쟾硫댄뿀利앹쓣 諛섎궔?섏뿬???쒕떎.",
+  "tr_e": "When a person receives a disposition revoking their driver's license, when a person receives a disposition suspending the effect of their driver's license, when a person who lost their driver's license and was reissued one then finds the lost license, or when a person who received a provisional license obtains a Class 1 Ordinary license or a Class 2 Ordinary license, the person must return the driver's license to the Commissioner of the City/Provincial Police Agency having jurisdiction over their place of residence within 7 days."
+ },
+ {
+  "n": 30,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾 2026. 1. 1.] ??7議??댁쟾硫댄뿀利앹쓽 媛깆떊怨??뺢린 ?곸꽦寃?? ???댁쟾硫댄뿀瑜?諛쏆? ?щ엺? ?ㅼ쓬 媛??몄쓽 援щ텇???곕Ⅸ 湲곌컙 ?대궡????듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?쒌냽?꾧꼍李곗껌?μ쑝濡쒕????댁쟾硫댄뿀利앹쓣 媛깆떊?섏뿬 諛쒓툒諛??꾩빞 ?쒕떎. 1. 理쒖큹???댁쟾硫댄뿀利?媛깆떊湲곌컙? ??3議곗젣1???먮뒗 ????뿉 ?곕Ⅸ ?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10??(?댁쟾硫댄뿀?쒗뿕 ?⑷꺽?쇱뿉 65???댁긽 75??誘몃쭔???щ엺? 5?? 75???댁긽???щ엺? 3?? ?쒖そ ?덈쭔 蹂댁? 紐삵븯???щ엺?쇰줈????醫??댁쟾硫댄뿀 以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?????섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡 2. ?????몄쓽 ?댁쟾硫댄뿀利?媛깆떊湲곌컙? 吏곸쟾???댁쟾硫댄뿀利?媛깆떊?쇰???湲곗궛?섏뿬 留?10??吏곸쟾???댁쟾硫댄뿀利?媛깆떊????65???댁긽 75??誘몃쭔???щ엺? 5?? 75???댁긽???щ엺? 3?? ?쒖そ ?덈쭔 蹂댁? 紐삵븯???щ엺?쇰줈????醫??댁쟾硫댄뿀 以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?????섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡",
+  "tr_e": "Road Traffic Act [enforced Jan. 1, 2026], Article 87 (Renewal of Driver's License and Regular Aptitude Test): (1) A person who has obtained a driver's license must, within the periods classified as follows, have the license renewed and reissued by the Commissioner of the City/Provincial Police Agency, as prescribed by Presidential Decree. 1. The first license renewal period is within 6 months before or after the birthday falling in the year in which 10 years have elapsed, counting from the date the driving test under Article 83(1) or (2) was passed (5 years for a person aged 65 or older but under 75 on the date of passing; 3 years for a person aged 75 or older; 3 years for a person who cannot see with one eye and has obtained the Ordinary license among the Class 1 licenses). 2. For license renewal periods other than those in subparagraph 1, within 6 months before or after the birthday falling in the year in which each 10 years have elapsed, counting from the immediately preceding license renewal date (5 years for a person aged 65 or older but under 75 on the immediately preceding renewal date; 3 years for a person aged 75 or older; 3 years for a person who cannot see with one eye and has obtained the Ordinary license among the Class 1 licenses)."
+ },
+ {
+  "n": 31,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???8議??곷Ц ?댁쟾硫댄뿀利앹쓽 ?좎껌 ?? ?곗뒿?댁쟾硫댄뿀 ?뚯??먮뒗 ?곷Ц?댁쟾硫댄뿀利?諛쒓툒 ??곸씠 ?꾨땲??",
+  "tr_e": "Article 78 of the Enforcement Rule of the Road Traffic Act (Application for an English Driver's License, etc.): a holder of a provisional driver's license is not eligible to be issued an English driver's license."
+ },
+ {
+  "n": 32,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18(?댁쟾?????덈뒗 李⑥쓽 醫낅쪟)",
+  "tr_e": "Table 18 of the Enforcement Rule of the Road Traffic Act (Types of Vehicles That May Be Driven)."
+ },
+ {
+  "n": 33,
+  "ko_e": "?꾨줈援먰넻踰뺤젣84議곗쓽2 遺?뺥뻾?꾩옄?????議곗튂, 遺?뺥뻾?꾨줈 ?쒗뿕??臾댄슚濡?泥섎━???щ엺? 洹?泥섎텇???덈뒗 ?좊??? 2?꾧컙 ?대떦?쒗뿕???묒떆?섏? 紐삵븳??",
+  "tr_e": "Article 84-2 of the Road Traffic Act (Measures Against Persons Committing Cheating): a person whose test is invalidated due to cheating may not take that test for 2 years from the date of that disposition."
+ },
+ {
+  "n": 34,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????5議?????,
+  "tr_e": "Article 55(1) of the Enforcement Decree of the Road Traffic Act."
+ },
+ {
+  "n": 35,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????5議??????댁쟾硫댄뿀利?媛깆떊湲곌컙???곌린瑜?諛쏆? ?щ엺? 洹??ъ쑀媛 ?놁뼱吏??좊???3媛쒖썡 ?대궡 ???댁쟾硫댄뿀利앹쓣 媛깆떊?섏뿬 諛쒓툒諛쏆븘???쒕떎.",
+  "tr_e": "Article 55(3) of the Enforcement Decree of the Road Traffic Act: a person granted a postponement of the license renewal period must have the license renewed and reissued within 3 months from the date the ground for postponement ceases to exist."
+ },
+ {
+  "n": 36,
+  "ko_e": "怨좎븬媛?ㅼ븞?꾧?由щ쾿 ?쒗뻾洹쒖튃 ?쒗뻾洹쒖튃 ??1議곗젣1??蹂꾪몴31",
+  "tr_e": "Article 51(1) of the Enforcement Rule of the High-Pressure Gas Safety Control Act, Table 31."
+ },
+ {
+  "n": 37,
+  "ko_e": "?꾨줈援먰넻踰???0議곗쓽3 ?뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆? ?댁쟾?먮벑??以?섏궗?? 媛숈? 踰???3議????꾨㈃?덉쓽 痍⑥냼쨌?뺤?) ????- ?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑???쑣룸룄寃쎌같泥?뿉 ?깅줉?섏? ?꾨땲?섍퀬 ?댁쟾??寃쎌슦?먮뒗 硫댄뿀媛 痍⑥냼?쒕떎.(??1?? - ?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂?섏? ?꾨땲?섍굅???ㅼ튂湲곗???遺?⑺븯吏 ?꾨땲???뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑???댁쟾??寃쎌슦 硫댄뿀瑜?痍⑥냼?쒕떎.(??2?? - ?뚯＜?댁쟾 諛⑹??μ튂???뺣퉬瑜??꾪빐 ?댁껜쨌議곗옉 ?먮뒗 洹?諛뽰쓽 諛⑸쾿?쇰줈 ?⑥슜???⑥뼱吏?寃껋쓣 ?뚮㈃???대떦?μ튂媛 ?ㅼ튂???먮룞 李⑤벑???댁쟾??寃쎌슦?먮뒗 硫댄뿀媛 痍⑥냼?쒕떎. (??3??",
+  "tr_e": "Article 50-3 of the Road Traffic Act (Matters to Be Observed by Drivers, etc. Who Have Received a Conditional Driver's License with a Drunk-Driving Prevention Device Attached) and Article 93(1) of the same Act (Revocation and Suspension of a Driver's License). - The license is revoked if a person drives a motor vehicle, etc. equipped with a drunk-driving prevention device without registering it with the City/Provincial Police Agency (subparagraph 21). - The license is revoked if a person drives a motor vehicle, etc. on which no drunk-driving prevention device is installed, or on which a drunk-driving prevention device not meeting the installation standards is installed (subparagraph 22). - The license is revoked if a person, knowing that the device's effectiveness has been reduced through dismantling, manipulation, or other means for the purpose of servicing the drunk-driving prevention device, drives the motor vehicle, etc. on which that device is installed (subparagraph 23)."
+ },
+ {
+  "n": 38,
+  "ko_e": "?앹쑀 諛??앹쑀?泥댁뿰猷??ъ뾽踰??쒗뻾??蹂꾪몴6 怨쇳깭猷??쒗뻾湲곗? 媛吏??앹쑀?쒗뭹?꾩쓣 ?뚮㈃??李⑤웾 ?곕즺濡??ъ슜??寃쎌슦  ?ъ슜?됱뿉 ?곕씪 2諛깅쭔 ?먯뿉??2泥쒕쭔 ?먭퉴吏 怨쇳깭猷뚭? 遺怨쇰맆 ???덈떎.",
+  "tr_e": "Table 6 of the Enforcement Decree of the Petroleum and Alternative Fuel Business Act (Standards for Imposing Administrative Fines): a person who uses fake petroleum products as vehicle fuel while knowing they are fake may be subject to an administrative fine ranging from 2 million won to 20 million won, depending on the amount used."
+ },
+ {
+  "n": 40,
+  "ko_e": "媛吏쒖꽍?좊? ?먮룞李??곕즺濡??ъ슜?섏???寃쎌슦, ?ㅽ솢????섎줈 ?명븳 留덉같??利앷?濡??곕즺 怨좎븬 ?뚰봽 諛??몄젥???뚯넀?? 諛쒖깮?????덈떎.",
+  "tr_e": "If fake petroleum is used as motor vehicle fuel, the decrease in lubricity increases friction, which can cause damage to the high-pressure fuel pump and the injectors."
+ },
+ {
+  "n": 41,
+  "ko_e": "?댁쟾??怨꾧린??諛?釉뚮젅?댄겕 ?섎떖 ?뺤긽?묐룞 ?щ????뱀감 ???댁쟾?앹뿉?쒖쓽 ?먭??ы빆?대떎.",
+  "tr_e": "Checking whether the driver's-seat instrument panel and the brake pedal operate normally is an inspection item performed from the driver's seat after boarding."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+import json
+p=Path('translations/audit/queue/301_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+    print('\\n',x['n'])
+    for k,v in x.items():
+        if k.startswith('ko_'):
+            try: v=v.encode('cp949').decode('utf-8')
+            except Exception as e: v=f'{v} [ERR {e}]'
+            print(k, v)
+        elif k.startswith('tr_') or k in ('check','detail'):
+            print(k,v)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T14:05:21.895362Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:16 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 729ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:16 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/301_expl_en.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; foreach($x in $data){ Write-Output "`n$($x.n)"; foreach($p in $x.PSObject.Properties){ if($p.Name -like '"'ko_*'){ try{"'$s=$utf8.GetString($cp949.GetBytes([string]$p.Value))}catch{$s=[string]$p.Value}; Write-Output "$($p.Name): $s" } elseif($p.Name -like '"'tr_*' -or "'$p.Name -in @('"'check','detail')){Write-Output \""'$($p.Name): $($p.Value)"}}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 789ms:
+ConvertFrom-Json : 잘못된 개체가 전달되었습니다. ':' 또는 '}'가 필요합니다. (768): [
+ {
+  "n": 21,
+  "ko_e": "?꾨줈援먰넻踰???議??뺤쓽) 4. ?곗꽍??李⑤룄? 蹂대룄瑜?援щ텇?섎뒗 ???깆쑝濡??댁뼱吏??좎쓣 留먰븳??)",
+  "tr_e": "Article 2 (Definitions) of the Road Traffic Act, subparagraph 4: 'curb line' means a line formed by stones o
+r the like that separates the roadway from the sidewalk."
+ },
+ {
+  "n": 22,
+  "ko_e": "?꾨줈援먰넻踰???3議곗쓽2(?먯쟾嫄곕벑???듯뻾諛⑸쾿???밸?) ?????먯쟾嫄곕벑???댁쟾?먭? ?〓떒蹂대룄瑜??댁슜?섏뿬 ?꾨줈瑜??〓떒 ???뚯뿉???먯쟾嫄곕벑?먯꽌 ?대젮???먯쟾嫄곕벑
+???뚭굅???ㅺ퀬 蹂댄뻾?섏뿬???쒕떎.",
+  "tr_e": "Article 13-2(6) of the Road Traffic Act (Special Provisions on Methods of Passage for Bicycles, etc.): when 
+the driver of a bicycle, etc. crosses a road using a crosswalk, the driver must dismount and either push or carry the b
+icycle, etc. while walking."
+ },
+ {
+  "n": 23,
+  "ko_e": "?꾨줈援먰넻踰???7議?????,
+  "tr_e": "Article 87(1) of the Road Traffic Act."
+ },
+ {
+  "n": 24,
+  "ko_e": "?꾨줈援먰넻踰???7議곗쓽2, ?꾨줈援먰넻踰뺤떆?됯퇋移???7議??댁쟾硫댄뿀?쒗뿕?묒떆) ?좊텇利앸챸?쒕? ?쒖떆?섏? 紐삵븯???щ엺? ?좎껌 ?몄씠 ?먰븯??寃쎌슦 ?꾩옄??諛⑸쾿?쇰줈 吏
+臾몄젙蹂대? ?議고븯??蹂몄씤 ?뺤씤?????덈떎.",
+  "tr_e": "Article 87-2 of the Road Traffic Act; Article 57 of the Enforcement Rule of the Road Traffic Act (Taking the
+ Driver's License Test). A person who cannot present an identification document may, if the applicant so wishes, have t
+heir identity verified by comparing fingerprint information electronically."
+ },
+ {
+  "n": 25,
+  "ko_e": "怨좎븬媛?ㅼ븞?꾧?由щ쾿 ?쒗뻾洹쒖튃 ??1議곗젣1??蹂꾪몴31",
+  "tr_e": "Article 51(1) of the Enforcement Rule of the High-Pressure Gas Safety Control Act, Table 31."
+ },
+ {
+  "n": 26,
+  "ko_e": "?꾨줈援먰넻踰???3議?援먰넻?덉쟾援먯쑁)?????ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?щ엺???쑣룸룄寃쎌같泥?옣?먭쾶 ?좎껌?섎뒗  寃쎌슦?먮뒗 ??듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕
+씪 ?밸퀎援먰넻?덉쟾 沅뚯옣援먯쑁??諛쏆쓣 ???덈떎. ??寃쎌슦 沅뚯옣援먯쑁??諛쏄린 ??1?? ?대궡???대떦 援먯쑁??諛쏆? ?꾨땲???щ엺???쒖젙?쒕떎.",
+  "tr_e": "Article 73(3) of the Road Traffic Act (Traffic Safety Education): a person falling under any of the followin
+g who applies to the Commissioner of the City/Provincial Police Agency may receive special traffic safety recommendatio
+n education, as prescribed by Presidential Decree. In this case, this applies only to a person who has not received suc
+h education within the past year before receiving the recommendation education."
+ },
+ {
+  "n": 27,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 ??5議??먮룞李⑤벑???댁쟾???꾩슂???곸꽦??湲곗?) ?ㅻ쭔, ?쒖そ ?덉쓣 蹂댁? 紐삵븯???щ엺????醫?蹂댄넻 ?댁쟾硫댄뿀瑜?痍⑤뱷?섎젮??寃쎌슦 ?먮룞李⑤벑?
+??댁쟾???꾩슂???곸꽦??湲곗??먯꽌 ?ㅻⅨ 履??덉쓽 ?쒕젰??0.8?댁긽?닿퀬 ?섑룊???쇨? 120???댁긽?대ŉ, ?섏쭅?쒖빞媛 20???댁긽?닿퀬, 以묒떖?쒖빞 20?????붿젏怨?諛섎㏏???놁뼱??
+?쒕떎.",
+  "tr_e": "Article 45 of the Enforcement Decree of the Road Traffic Act (Standards of Aptitude Required for Driving Mot
+or Vehicles, etc.): however, where a person who cannot see with one eye wishes to obtain a Class 1 Ordinary driver's li
+cense, under the standards of aptitude required for driving, the other eye must have a visual acuity of 0.8 or higher, 
+a horizontal field of vision of 120 degrees or more, a vertical field of vision of 20 degrees or more, and no scotoma o
+r hemianopsia within the central 20 degrees of vision."
+ },
+ {
+  "n": 28,
+  "ko_e": "?꾨줈援먰넻踰?87議???????????醫??댁쟾硫댄뿀瑜?諛쒓툒諛쏆? 65???댁긽 75??誘몃쭔???щ엺? 5?꾨쭏???뺢린?곸꽦寃?щ?  諛쏆븘???쒕떎. ?ㅻ쭔 ?쒖そ ?덈쭔 蹂댁? 紐
+삵븯???щ엺?쇰줈????醫?硫댄뿀 以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?꾩씠??",
+  "tr_e": "Article 87(1)1 of the Road Traffic Act: a person aged 65 or older but under 75 who has been issued a Class 1
+ driver's license must undergo a regular aptitude test every 5 years. However, for a person who cannot see with one eye
+ and has obtained the Ordinary license among the Class 1 licenses, the interval is 3 years."
+ },
+ {
+  "n": 29,
+  "ko_e": "?댁쟾硫댄뿀??痍⑥냼 泥섎텇??諛쏆? ?? ?댁쟾硫댄뿀???⑤젰 ?뺤? 泥섎텇??諛쏆? ?? ?댁쟾硫댄뿀利앹쓣 ?껋뼱踰꾨━怨??ㅼ떆 援먮? 諛쏆?  ??洹??껋뼱踰꾨┛ ?댁쟾硫댄뿀利앹쓣 李얠? 
+?? ?곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?щ엺????醫?蹂댄넻?댁쟾硫댄뿀 ?먮뒗 ??醫?蹂댄넻?댁쟾硫댄뿀 瑜?諛쏆? ?뚯뿉??7???대궡??二쇱냼吏瑜?愿?좏븯???쑣룸룄寃쎌같泥?옣?먭쾶 ?댁쟾硫댄뿀利앹쓣 諛섎궔?섏뿬?
+??쒕떎.",
+  "tr_e": "When a person receives a disposition revoking their driver's license, when a person receives a disposition s
+uspending the effect of their driver's license, when a person who lost their driver's license and was reissued one then
+ finds the lost license, or when a person who received a provisional license obtains a Class 1 Ordinary license or a Cl
+ass 2 Ordinary license, the person must return the driver's license to the Commissioner of the City/Provincial Police A
+gency having jurisdiction over their place of residence within 7 days."
+ },
+ {
+  "n": 30,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾 2026. 1. 1.] ??7議??댁쟾硫댄뿀利앹쓽 媛깆떊怨??뺢린 ?곸꽦寃?? ???댁쟾硫댄뿀瑜?諛쏆? ?щ엺? ?ㅼ쓬 媛??몄쓽 援щ텇???곕Ⅸ 湲곌컙 ?대궡????
+듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?쒌냽?꾧꼍李곗껌?μ쑝濡쒕????댁쟾硫댄뿀利앹쓣 媛깆떊?섏뿬 諛쒓툒諛??꾩빞 ?쒕떎. 1. 理쒖큹???댁쟾硫댄뿀利?媛깆떊湲곌컙? ??3議곗젣1???먮뒗 ????뿉 ?곕Ⅸ ?댁쟾
+硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10??(?댁쟾硫댄뿀?쒗뿕 ?⑷꺽?쇱뿉 65???댁긽 75??誘몃쭔???щ엺? 5?? 75???댁긽???щ엺? 3?? ?쒖そ ?덈쭔 蹂댁? 紐삵븯???щ엺?쇰줈???
+?醫??댁쟾硫댄뿀 以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?????섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡 2. ?????몄쓽 ?댁쟾硫댄뿀利?媛깆떊湲곌컙? 吏곸쟾???댁쟾硫댄뿀利?媛깆떊?
+쇰???湲곗궛?섏뿬 留?10??吏곸쟾???댁쟾硫댄뿀利?媛깆떊????65???댁긽 75??誘몃쭔???щ엺? 5?? 75???댁긽???щ엺? 3?? ?쒖そ ?덈쭔 蹂댁? 紐삵븯???щ엺?쇰줈????醫??댁쟾硫댄뿀 
+以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?????섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡",
+  "tr_e": "Road Traffic Act [enforced Jan. 1, 2026], Article 87 (Renewal of Driver's License and Regular Aptitude Test)
+: (1) A person who has obtained a driver's license must, within the periods classified as follows, have the license ren
+ewed and reissued by the Commissioner of the City/Provincial Police Agency, as prescribed by Presidential Decree. 1. Th
+e first license renewal period is within 6 months before or after the birthday falling in the year in which 10 years ha
+ve elapsed, counting from the date the driving test under Article 83(1) or (2) was passed (5 years for a person aged 65
+ or older but under 75 on the date of passing; 3 years for a person aged 75 or older; 3 years for a person who cannot s
+ee with one eye and has obtained the Ordinary license among the Class 1 licenses). 2. For license renewal periods other
+ than those in subparagraph 1, within 6 months before or after the birthday falling in the year in which each 10 years 
+have elapsed, counting from the immediately preceding license renewal date (5 years for a person aged 65 or older but u
+nder 75 on the immediately preceding renewal date; 3 years for a person aged 75 or older; 3 years for a person who cann
+ot see with one eye and has obtained the Ordinary license among the Class 1 licenses)."
+ },
+ {
+  "n": 31,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???8議??곷Ц ?댁쟾硫댄뿀利앹쓽 ?좎껌 ?? ?곗뒿?댁쟾硫댄뿀 ?뚯??먮뒗 ?곷Ц?댁쟾硫댄뿀利?諛쒓툒 ??곸씠 ?꾨땲??",
+  "tr_e": "Article 78 of the Enforcement Rule of the Road Traffic Act (Application for an English Driver's License, etc
+.): a holder of a provisional driver's license is not eligible to be issued an English driver's license."
+ },
+ {
+  "n": 32,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18(?댁쟾?????덈뒗 李⑥쓽 醫낅쪟)",
+  "tr_e": "Table 18 of the Enforcement Rule of the Road Traffic Act (Types of Vehicles That May Be Driven)."
+ },
+ {
+  "n": 33,
+  "ko_e": "?꾨줈援먰넻踰뺤젣84議곗쓽2 遺?뺥뻾?꾩옄?????議곗튂, 遺?뺥뻾?꾨줈 ?쒗뿕??臾댄슚濡?泥섎━???щ엺? 洹?泥섎텇???덈뒗 ?좊??? 2?꾧컙 ?대떦?쒗뿕???묒떆?섏? 紐삵븳??"
+,
+  "tr_e": "Article 84-2 of the Road Traffic Act (Measures Against Persons Committing Cheating): a person whose test is 
+invalidated due to cheating may not take that test for 2 years from the date of that disposition."
+ },
+ {
+  "n": 34,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????5議?????,
+  "tr_e": "Article 55(1) of the Enforcement Decree of the Road Traffic Act."
+ },
+ {
+  "n": 35,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????5議??????댁쟾硫댄뿀利?媛깆떊湲곌컙???곌린瑜?諛쏆? ?щ엺? 洹??ъ쑀媛 ?놁뼱吏??좊???3媛쒖썡 ?대궡 ???댁쟾硫댄뿀利앹쓣 媛깆떊?섏뿬 諛쒓툒諛쏆븘???
+쒕떎.",
+  "tr_e": "Article 55(3) of the Enforcement Decree of the Road Traffic Act: a person granted a postponement of the lice
+nse renewal period must have the license renewed and reissued within 3 months from the date the ground for postponement
+ ceases to exist."
+ },
+ {
+  "n": 36,
+  "ko_e": "怨좎븬媛?ㅼ븞?꾧?由щ쾿 ?쒗뻾洹쒖튃 ?쒗뻾洹쒖튃 ??1議곗젣1??蹂꾪몴31",
+  "tr_e": "Article 51(1) of the Enforcement Rule of the High-Pressure Gas Safety Control Act, Table 31."
+ },
+ {
+  "n": 37,
+  "ko_e": "?꾨줈援먰넻踰???0議곗쓽3 ?뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆? ?댁쟾?먮벑??以?섏궗?? 媛숈? 踰???3議????꾨㈃?덉쓽 痍⑥냼쨌?뺤?) ????- ?뚯＜?댁
+쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑???쑣룸룄寃쎌같泥?뿉 ?깅줉?섏? ?꾨땲?섍퀬 ?댁쟾??寃쎌슦?먮뒗 硫댄뿀媛 痍⑥냼?쒕떎.(??1?? - ?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂?섏? ?꾨땲?섍굅???ㅼ튂湲곗
+???遺?⑺븯吏 ?꾨땲???뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑???댁쟾??寃쎌슦 硫댄뿀瑜?痍⑥냼?쒕떎.(??2?? - ?뚯＜?댁쟾 諛⑹??μ튂???뺣퉬瑜??꾪빐 ?댁껜쨌議곗옉 ?먮뒗 洹?諛뽰쓽 諛⑸
+쾿?쇰줈 ?⑥슜???⑥뼱吏?寃껋쓣 ?뚮㈃???대떦?μ튂媛 ?ㅼ튂???먮룞 李⑤벑???댁쟾??寃쎌슦?먮뒗 硫댄뿀媛 痍⑥냼?쒕떎. (??3??",
+  "tr_e": "Article 50-3 of the Road Traffic Act (Matters to Be Observed by Drivers, etc. Who Have Received a Conditiona
+l Driver's License with a Drunk-Driving Prevention Device Attached) and Article 93(1) of the same Act (Revocation and S
+uspension of a Driver's License). - The license is revoked if a person drives a motor vehicle, etc. equipped with a dru
+nk-driving prevention device without registering it with the City/Provincial Police Agency (subparagraph 21). - The lic
+ense is revoked if a person drives a motor vehicle, etc. on which no drunk-driving prevention device is installed, or o
+n which a drunk-driving prevention device not meeting the installation standards is installed (subparagraph 22). - The 
+license is revoked if a person, knowing that the device's effectiveness has been reduced through dismantling, manipulat
+ion, or other means for the purpose of servicing the drunk-driving prevention device, drives the motor vehicle, etc. on
+ which that device is installed (subparagraph 23)."
+ },
+ {
+  "n": 38,
+  "ko_e": "?앹쑀 諛??앹쑀?泥댁뿰猷??ъ뾽踰??쒗뻾??蹂꾪몴6 怨쇳깭猷??쒗뻾湲곗? 媛吏??앹쑀?쒗뭹?꾩쓣 ?뚮㈃??李⑤웾 ?곕즺濡??ъ슜??寃쎌슦  ?ъ슜?됱뿉 ?곕씪 2諛깅쭔 ?먯뿉??2泥쒕쭔 ?
+먭퉴吏 怨쇳깭猷뚭? 遺怨쇰맆 ???덈떎.",
+  "tr_e": "Table 6 of the Enforcement Decree of the Petroleum and Alternative Fuel Business Act (Standards for Imposing
+ Administrative Fines): a person who uses fake petroleum products as vehicle fuel while knowing they are fake may be su
+bject to an administrative fine ranging from 2 million won to 20 million won, depending on the amount used."
+ },
+ {
+  "n": 40,
+  "ko_e": "媛吏쒖꽍?좊? ?먮룞李??곕즺濡??ъ슜?섏???寃쎌슦, ?ㅽ솢????섎줈 ?명븳 留덉같??利앷?濡??곕즺 怨좎븬 ?뚰봽 諛??몄젥???뚯넀?? 諛쒖깮?????덈떎.",
+  "tr_e": "If fake petroleum is used as motor vehicle fuel, the decrease in lubricity increases friction, which can cau
+se damage to the high-pressure fuel pump and the injectors."
+ },
+ {
+  "n": 41,
+  "ko_e": "?댁쟾??怨꾧린??諛?釉뚮젅?댄겕 ?섎떖 ?뺤긽?묐룞 ?щ????뱀감 ???댁쟾?앹뿉?쒖쓽 ?먭??ы빆?대떎.",
+  "tr_e": "Checking whether the driver's-seat instrument panel and the brake pedal operate normally is an inspection it
+em performed from the driver's seat after boarding."
+ }
+]
+위치 줄:2 문자:85
++ ... translations/audit/queue/301_expl_en.json' | ConvertFrom-Json; $cp949 ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+codex
+[]
+tokens used
+16,055
+[]

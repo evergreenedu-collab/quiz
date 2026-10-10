@@ -1,0 +1,745 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125c1-9241-7241-8f53-cf20661b19df
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/201_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/201_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 523ms:
+[
+ {
+  "n": 41,
+  "ko_b": "?먮룞李⑥뿉 ?뱀감?섍린 ??二쇰??먭? ?ы빆?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "??댁뼱 留덈え?곹깭",
+   "?꾬쉈?꾨갑 ?μ븷臾??좊Т",
+   "?댁쟾??怨꾧린???뺤긽?묐룞 ?щ?",
+   "釉뚮젅?댄겕 ?섎떖 ?뺤긽?묐룞 ?щ?"
+  ],
+  "a": "1, 2",
+  "tr_b": "Which TWO items should you check before getting in a vehicle?",
+  "tr_c": [
+   "Condition of tire wear",
+   "Whether there are obstacles in front of or behind your car",
+   "Whether the dashboard readings are working properly",
+   "Whether the brake pedal works normally"
+  ]
+ },
+ {
+  "n": 42,
+  "ko_b": "?쇰컲?곸쑝濡?臾대낫??MF竊숸aintenance Free)諛고꽣由??섎챸???ㅽ븳 寃쎌슦, ?먭?李쎌뿉 ?섑??섎뒗 ?됯퉼??",
+  "ko_c": [
+   "?⑹깋",
+   "諛깆깋",
+   "寃???,
+   "?뱀깋"
+  ],
+  "a": "2",
+  "tr_b": "What is the color generally displayed on the inspection screen when the life of a maintenance-free (MF) battery  expires?",
+  "tr_c": [
+   "Yellow",
+   "White",
+   "Black",
+   "Green"
+  ]
+ },
+ {
+  "n": 43,
+  "ko_b": "?ㅼ쓬 以?李⑤웾 ?곕즺濡??ъ슜??寃쎌슦, 媛吏??앹쑀?쒗뭹?쇰줈 蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "?섎컻?좎뿉 硫뷀깂?ъ씠 ?쇳빀???쒗뭹",
+   "蹂댄넻 ?섎컻?좎뿉 怨좉툒 ?섎컻?좉? ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹",
+   "寃쎌쑀???깆쑀媛 ?쇳빀???쒗뭹",
+   "寃쎌쑀??臾쇱씠 ??5% 誘몃쭔?쇰줈 ?쇳빀???쒗뭹"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following CANNOT be considered a fake petroleum product for use as vehicle fuel?",
+  "tr_c": [
+   "Gasoline mixed with methanol",
+   "A product that contains less than 5% high-grade gasoline mixed with normal gasoline",
+   "Diesel oil mixed with kerosene",
+   "A product with less than 5% water mixed with diesel"
+  ]
+ },
+ {
+  "n": 44,
+  "ko_b": "?섏냼媛???꾩텧???뺤씤?????덈뒗 諛⑸쾿???꾨땶 寃껋??",
+  "ko_c": [
+   "媛?곗꽦 媛?ㅺ?吏湲??쒖슜 痢≪젙",
+   "鍮꾨닓臾쇱쓣 ?듯븳 ?뺤씤",
+   "媛???꾩깉瑜?留≪븘 ?뺤씤",
+   "?섏냼寃吏湲곕줈 ?뺤씤"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is not the correct method of checking for hydrogen gas leaks?",
+  "tr_c": [
+   "Measurement using a flammable gas detector",
+   "Confirmation through soapy water",
+   "Confirmation by smelling gas",
+   "Confirmation using a hydrogen detector"
+  ]
+ },
+ {
+  "n": 45,
+  "ko_b": "?섏냼李⑤웾???덉쟾?섏튃?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "異⑹쟾?섍린 ??李⑤웾???쒕룞???덈떎.",
+   "異⑹쟾?뚯뿉???≪뿰? 李⑤웾???⑥뼱?몄꽌 ?쒕떎.",
+   "?섏냼媛?ㅺ? ?꾩꽕???뚯뿉??異⑹쟾???덉쟾愿由ъ옄?먭쾶 ?덉쟾?먭????붿껌?쒕떎.",
+   "?섏냼李⑤웾??異⑸룎 ??援먰넻?ш퀬 ?꾩뿉??媛???덉쟾?먭???諛쏆? ???ъ슜?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT correct regarding the safety rules for hydrogen vehicles?",
+  "tr_c": [
+   "Switch off the vehicle power before charging.",
+   "Smoking should be done at a distance from the vehicle.",
+   "When hydrogen gas leaks, request the safety supervisor from the charging station for a safety check.",
+   "After a traffic accident involving the collision of a hydrogen vehicle, drive the vehicle after undergoing a gas safety  inspection."
+  ]
+ },
+ {
+  "n": 46,
+  "ko_b": "?ㅼ쓬 以??섏냼李⑤웾?먯꽌 ?꾩텧???뺤씤?섏? ?딆븘???섎뒗 怨녹??",
+  "ko_c": [
+   "諛몃툕? ?⑷린???묒냽遺",
+   "議곗젙湲?,
+   "媛???몄뒪? 諛곌? ?곌껐遺",
+   "?곕즺?꾩? 遺?ㅽ듃 ?몃쾭??
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is not necessary when checking for leaks in hydrogen vehicles?",
+  "tr_c": [
+   "Connection between valve and container",
+   "Regulator",
+   "Gas hose and pipe connection",
+   "Boost inverter of fuel cell"
+  ]
+ },
+ {
+  "n": 47,
+  "ko_b": "?꾧린李?異⑹쟾???꾪븳 ?щ컮瑜?諛⑸쾿?쇰줈 ?곸젅?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "異⑹쟾???뚮뒗 洹쒓꺽??留욌뒗 異⑹쟾湲곗? ?대뙌?곕? ?ъ슜?쒕떎.",
+   "異⑹쟾 以묒뿉??異⑹쟾 而ㅻ꽖?곕? ?꾩쓽濡?遺꾨━?섏? ?딄퀬 異⑹쟾 醫낅즺 踰꾪듉?쇰줈 醫낅즺?쒕떎.",
+   "?뽰? ?먯쑝濡?異⑹쟾湲??ъ슜???섏? ?딄퀬 異⑹쟾?μ튂??臾쇱씠 ?ㅼ뼱媛吏 ?딅룄濡?二쇱쓽?쒕떎.",
+   "?대???異⑹쟾湲곕? ?댁슜?섏뿬 異⑹쟾??寃쎌슦 媛?뺤슜 硫?고꺆?대굹 ?곗옣?좎쓣 ?ъ슜?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT an appropriate method of charging an EV?",
+  "tr_c": [
+   "When charging, use a charger and an adapter that are compatible with the specifications.",
+   "During charging, do not disconnect the charging connector arbitrarily. End charging with the charging completion  button.",
+   "Be careful not to use the charger with wet hands; prevent water from entering the charging device.",
+   "When using a portable charger to charge, you can use a household power strip or an extension cord."
+  ]
+ },
+ {
+  "n": 48,
+  "ko_b": "踰뺣졊???먮룞李⑥쓽 ?깊솕 醫낅쪟? 洹??깃킅?됱쓣 ?곌껐??寃껋쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾪눜??- ?몃컯??,
+   "踰덊샇??- 泥?깋",
+   "?꾨???- 諛깆깋",
+   "?쒕룞??- ?곸깋"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the correct pairing of light and color?",
+  "tr_c": [
+   "Reverse light ??Amber",
+   "License plate light ??Blue",
+   "Taillight ??White",
+   "Brake light ??Red"
+  ]
+ },
+ {
+  "n": 49,
+  "ko_b": "LPG李⑤웾???곕즺?뱀꽦??????ㅻ챸?쇰줈 ?곷떦?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "?쇰컲?곸씤 湲곗껜?곹깭濡??곗냼?섏뼱 ?붿쭊??遺?쒕읇寃??묐룞?쒕떎.",
+   "李⑤웾??LPG???낇듅???꾩깉媛 ?덈떎.",
+   "?쇰컲?곸쑝濡?怨듦린蹂대떎 媛蹂띻퀬, ??컻 ?꾪뿕?깆씠 ?곷떎.",
+   "?섎컻?좊굹 寃쎌쑀??鍮꾪빐 ?먮꼫吏 諛?꾧? ??븘 ?숈씪??諛곌린?됱뿉??異쒕젰????퀬 ?곕퉬媛 ?⑥뼱吏꾨떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT correct regarding the characteristics of the fuel used in an LPG vehicle?",
+  "tr_c": [
+   "It burns in a gaseous state, allowing the engine to operate smoothly.",
+   "LPG for motor vehicles has a distinct odor.",
+   "It is generally lighter than air and less explosive.",
+   "It has a lower energy density compared to gasoline or diesel, resulting in lower output and lower fuel efficiency for vehicles equipped with an engine of the same capacity."
+  ]
+ },
+ {
+  "n": 50,
+  "ko_b": "?먮룞李⑥쓽 ?쒕룞?μ쓣 ??섑븯???먯씤?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "留덉뒪???ㅻ┛??怨좎옣",
+   "???ㅻ┛??遺덈웾",
+   "由대━???ы겕 蹂??,
+   "踰좎씠??濡?諛쒖깮"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a cause of reducing the braking force of a vehicle?",
+  "tr_c": [
+   "Master cylinder failure",
+   "Defective wheel cylinder",
+   "Deformation of release fork",
+   "Occurrence of vapor lock"
+  ]
+ },
+ {
+  "n": 51,
+  "ko_b": "二쇳뻾 蹂댁“?μ튂媛 ?μ갑???먮룞李⑥쓽 ?댁쟾諛⑸쾿?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "二쇳뻾 蹂댁“?μ튂瑜??ъ슜?섎뒗 寃쎌슦 二쇳뻾 蹂댁“?μ튂 ?묐룞 ?좎? ?щ?瑜??섏떆濡??뺤씤?섎ŉ 二쇳뻾?쒕떎.",
+   "?댁쟾 媛쒖엯 寃쎄퀬 ??二쇳뻾 蹂댁“?μ튂媛 ?댁젣???뚭퉴吏 湲곕떎?몃떎媛 媛쒖엯?댁빞 ?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂???쇰? ?먮뒗 ?꾩껜瑜??댁젣?섎뒗 寃쎌슦 ?묐룞 ?щ?瑜??뺤씤?쒕떎.",
+   "二쇳뻾 蹂댁“?μ튂媛 ?묐룞?섍퀬 ?덈뜑?쇰룄 利됱떆 媛쒖엯?????덈룄濡??湲고븯硫댁꽌 ?댁쟾?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT correct regarding the method of driving a vehicle equipped with a driving  assistance device?",
+  "tr_c": [
+   "When using a driving assistance device, check frequently whether the device is operating while driving.",
+   "In case of a driving intervention warning, wait until the driving assistance device is released before intervening.",
+   "When fully or partially releasing the driving assistance device, check whether it works.",
+   "Even if the driving assistance system is in operation, be ready to intervene at short notice."
+  ]
+ },
+ {
+  "n": 52,
+  "ko_b": "?먮룞李⑤? ?덉쟾?섍퀬 ?몃━?섍쾶 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "LFA(Lane Following Assist)???쒖감濡쒖쑀吏蹂댁“?앷린?μ쑝濡??먮룞李④? 李⑤줈 以묒븰???좎??섎ŉ 二쇳뻾?????덈룄濡?蹂댁“??二쇰뒗 湲곕뒫?대떎.",
+   "ASCC(Adaptive Smart Cruise Control)???쒖감媛꾧굅由?諛??띾룄?좎??앷린?μ쑝濡??댁쟾?먭? ?ㅼ젙???띾룄濡?二쇳뻾?섎㈃???욎감???嫄곕━瑜??좎??섏뿬 ?ㅼ뒪濡?媛쨌媛먯냽???댁＜??湲곕뒫?대떎.",
+   "ABSD(Active Blind Spot Detection)???쒖궗媛곸??媛먯??앷린?μ쑝濡??ш컖吏???異⑸룎 ?꾪뿕??媛먯????덉쟾??李⑤줈 蹂寃쎌쓣 ?뺣뒗 湲곕뒫?대떎.",
+   "AEB(Autonomous Emergency Braking)???쒖옄?숆릿湲됱젣?쇺앷린?μ쑝濡?釉뚮젅?댄겕 ?쒕룞????댁뼱媛 ?좉린??寃껋쓣 諛⑹??섏뿬 ?쒕룞 嫄곕━瑜?以꾩뿬二쇰뒗 湲곕뒫?대떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT true about a driver-assistance system?",
+  "tr_c": [
+   "Lane Following Assist (LFA) is a system designed to assist the driver in driving to stay within the lane on the road.",
+   "Adaptive Smart Cruise Control (ASCC) is a system that automatically adjusts the vehicle speed to maintain a safe distance  from vehicles ahead.",
+   "Active Blind Spot Detection (ABSD) is a system that assists drivers in changing lanes by warning them of vehicles in their  blind spots.",
+   "Autonomous Emergency Braking (AEB) is a system that prevents the wheels from locking up and reduces the braking  distance."
+  ]
+ },
+ {
+  "n": 53,
+  "ko_b": "?먯쑉二쇳뻾?쒖뒪?쒓낵 愿?⑤맂 踰뺣졊???댁슜?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?꾨줈援먰넻踰뺤긽?쒖슫?꾟앹뿉???꾨줈?먯꽌 李⑤쭏瑜?洹?蹂몃옒???ъ슜諛⑸쾿???곕씪 ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섎뒗 寃껋? ?ы븿?섏? ?딅뒗??",
+   "?댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ?대??꾪솕 ?ъ슜湲덉? 洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+   "?먯쑉二쇳뻾?쒖뒪?쒖쓽 吏곸젒 ?댁쟾 ?붽뎄??吏泥댁뾾????묓븯吏 ?꾨땲???먯쑉二쇳뻾?뱀슜?먮룞李⑥쓽 ?댁쟾?먯뿉 ???踰붿튃湲덉븸? 4留??먯씠??",
+   "?쒖옄?⑥＜?됱떆?ㅽ뀥?앹씠? ?댁쟾???먮뒗 ?밴컼??議곗옉 ?놁씠 二쇰??곹솴怨??꾨줈 ?뺣낫 ?깆쓣 ?ㅼ뒪濡??몄??섍퀬 ?먮떒?섏뿬 ?먮룞李⑤? ?댄뻾 ?????덇쾶 ?섎뒗 ?먮룞???λ퉬, ?뚰봽?몄썾??諛??댁? 愿?⑦븳 紐⑤뱺 ?μ튂瑜?留먰븳??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is incorrect regarding provisions on autonomous driving systems?",
+  "tr_c": [
+   "The Road Traffic Act stipulates that ?쐂riving??does not include the use of an autonomous driving system in accordance with the original use of motor vehicles and horses.",
+   "The prohibition of using a mobile phone does not apply to drivers driving a vehicle operated under an autonomous driving  system.",
+   "The traffic penalty for a driver who fails to respond promptly to the take-over request from the autonomous driving system  is a fee of KRW 40,000.",
+   "An ?쏿utonomous driving system??encompasses a variety of automated apparatus, software, and peripheral devices that allow a vehicle to move by recognizing and judging the surroundings and road information without the manipulation of the driver or a passenger."
+  ]
+ },
+ {
+  "n": 54,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李⑥쓽 二쇱슂 援ъ꽦?덉씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?곕즺?꾩?",
+   "援щ룞紐⑦꽣",
+   "?붿쭊",
+   "諛고꽣由?
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a crucial component of an FCEV?",
+  "tr_c": [
+   "A fuel cell",
+   "A traction motor",
+   "An engine",
+   "A battery"
+  ]
+ },
+ {
+  "n": 55,
+  "ko_b": "?먮룞李??댁뿰湲곌????щ옲?ъ텞?먯꽌 諛쒖깮?섎뒗 ?뚯쟾???쒓컙?곸쑝濡??대뒗 ????臾댁뾿?대씪 ?섎뒗媛 ?",
+  "ko_c": [
+   "?좏겕",
+   "?곕퉬",
+   "諛곌린??,
+   "留덈젰"
+  ],
+  "a": "1",
+  "tr_b": "What is the rotational force (instantaneous force) generated from the crankshaft of an internal combustion  engine of a vehicle?",
+  "tr_c": [
+   "Torque",
+   "Fuel economy",
+   "Displacement",
+   "Horsepower"
+  ]
+ },
+ {
+  "n": 56,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??곸슜??珥됱쭊 諛?吏?먯뿉 愿??踰뺣졊???먯쑉二쇳뻾?먮룞李⑥뿉 ????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 醫낅쪟???꾩쟾?먯쑉二쇳뻾?먮룞李⑥? 遺遺꾩옄?⑥＜?됱옄?숈감濡?援щ텇?????덈떎.",
+   "?꾩쟾 ?먯쑉二쇳뻾?먮룞李⑤뒗 ?먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????덉뼱 ?댁쟾?먭? ?녾굅???댁쟾???먮뒗 ?밴컼??媛쒖엯???꾩슂?섏?       ?꾨땲???먮룞李⑤? 留먰븳??",
+   "遺遺꾩옄?⑥＜?됱옄?숈감???먯쑉二쇳뻾?쒖뒪?쒕쭔?쇰줈 ?댄뻾?????녾굅???댁쟾?먭? 吏?띿쟻?쇰줈 二쇱떆???꾩슂媛 ?덈뒗 ???댁쟾????      ???밴컼??媛쒖엯???꾩슂???먮룞李⑤? 留먰븳??",
+   "?먯쑉二쇳뻾?먮룞李⑤뒗 ?뱀슜?먮룞李⑥뿉 ?쒖젙?섏뼱 ?곸슜?섍퀬, ?뱁빀?먮룞李⑤굹 ?붾Ъ?먮룞李⑤뒗 ??踰뺤씠 ?곸슜?섏? ?딅뒗??"
+  ],
+  "a": "4",
+  "tr_b": "According to the Act on the Promotion of and Support for Commercialization of Autonomous Vehicles, which of  the following is NOT true about autonomous vehicles?",
+  "tr_c": [
+   "The types of autonomous vehicles can be divided into fully autonomous vehicles and semi-autonomous vehicles.",
+   "Fully autonomous vehicles refer to vehicles that can operate solely on autonomous driving systems without the need for a driver or any intervention from the driver or passengers.",
+   "Semi-autonomous vehicles refer to vehicles that cannot operate solely on autonomous driving systems or which require continuous attention from the driver or passengers, necessitating their intervention.",
+   "Autonomous vehicles are limited to passenger vehicles, and this law does not apply to buses or trucks."
+  ]
+ },
+ {
+  "n": 57,
+  "ko_b": "?꾧린?먮룞李?愿由щ갑踰뺤쑝濡??녹? ?딆? 2媛吏??",
+  "ko_c": [
+   "鍮꾩궗?낆슜 ?뱀슜?먮룞李⑥쓽 ?먮룞李④????좏슚湲곌컙? 6?꾩씠??",
+   "?κ굅由??댁쟾 ?쒖뿉???ъ쟾??諛고꽣由щ? ?뺤씤?섍퀬 異⑹쟾?쒕떎.",
+   "異⑹쟾 吏곹썑?먮뒗 湲됯??? 湲됱젙吏瑜??섏? ?딅뒗 寃껋씠 醫뗫떎.",
+   "?댁꽑?쒗듃, ?댁꽑?몃뱾蹂대떎 怨듦린 ?덊꽣瑜??ъ슜?섎뒗 寃껋씠 ?⑥쑉?곸씠??"
+  ],
+  "a": "1, 4",
+  "tr_b": "Which two statements are NOT correct regarding the management of EVs?",
+  "tr_c": [
+   "The valid period for the vehicle inspection of non-commercial passenger vehicles is 6 years.",
+   "When driving long distances, check and charge the battery in advance.",
+   "Refrain from accelerating or suddenly stopping immediately after charging.",
+   "It is more efficient to use an air heater than a heated seat or a heated handle."
+  ]
+ },
+ {
+  "n": 58,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) 李쎌쑀由?媛?쒓킅???ш낵?⑥쓽 洹쒖젣瑜?諛쏅뒗 寃껋??",
+  "ko_c": [
+   "?룹쥖???녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦 ?녿㈃ 李쎌쑀由?,
+   "?욌㈃, ?댁쟾??醫뚯슦, ?룸㈃ 李쎌쑀由?,
+   "紐⑤뱺 李쎌쑀由?
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is subject to regulations regarding the permeability of visible rays through the window glass of motor vehicles (except for children?셲 school buses)?",
+  "tr_c": [
+   "Window glass on the side of the back seat",
+   "Front windshield, window glass on the right and left sides of the driver's seat",
+   "Front windshield, window glass on the right and left sides of the driver's seat, and rear windshield",
+   "All windows"
+  ]
+ },
+ {
+  "n": 59,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?뱀슜?먮룞李⑤뒗 紐????댄븯瑜??댁넚?섍린???곹빀?섍쾶 ?쒖옉???먮룞李⑥씤媛?",
+  "ko_c": [
+   "10??,
+   "12??,
+   "15??,
+   "18??
+  ],
+  "a": "1",
+  "tr_b": "According to the Motor Vehicle Management Act and its Enforcement Decree, a passenger car is a motor vehicle  suitably manufactured to transport up to how many people?",
+  "tr_c": [
+   "10 people or fewer",
+   "12 people or fewer",
+   "15 people or fewer",
+   "18 people or fewer"
+  ]
+ },
+ {
+  "n": 60,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?좉퇋 ?뱀슜?먮룞李⑥쓽 理쒖큹寃???좏슚湲곌컙??",
+  "ko_c": [
+   "1??,
+   "2??,
+   "4??,
+   "5??
+  ],
+  "a": "4",
+  "tr_b": "Under the Motor Vehicle Management Act and its Enforcement Decree, what is the validity period for the initial  inspection conducted on a new non-commercial passenger car?",
+  "tr_c": [
+   "1 year",
+   "2 years",
+   "4 years",
+   "5 years"
+  ]
+ },
+ {
+  "n": 61,
+  "ko_b": "?먮룞李④?由щ쾿???먮룞李⑥쓽 醫낅쪟濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "嫄댁꽕湲곌퀎",
+   "?붾Ъ?먮룞李?,
+   "寃쎌슫湲?,
+   "?뱀닔?먮룞李?
+  ],
+  "a": "2, 4",
+  "tr_b": "Which TWO are considered types of vehicles according to the Motor Vehicle Management Act?",
+  "tr_c": [
+   "Construction machinery",
+   "Truck",
+   "Tractor",
+   "Special motor vehicle"
+  ]
+ },
+ {
+  "n": 62,
+  "ko_b": "鍮꾩궗?낆슜 諛???ъ궗?낆슜 ?꾧린?먮룞李⑥? ?섏냼 ?곕즺?꾩??먮룞李??섏씠釉뚮━???먮룞李??쒖쇅) ?꾩슜踰덊샇???됱긽?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?⑹깋 諛뷀깢??寃???臾몄옄",
+   "?뚮???諛뷀깢??寃???臾몄옄",
+   "媛먯껌??諛뷀깢???곗깋 臾몄옄",
+   "蹂대옃鍮?諛뷀깢??寃???臾몄옄"
+  ],
+  "a": "2",
+  "tr_b": "What is the color scheme of the license plates attached to EVs and hydrogen fuel cell vehicles used for  non-commercial or rental purposes (apart from hybrid vehicles)?",
+  "tr_c": [
+   "Black letters on yellow background",
+   "Black letters on blue background",
+   "White letters on royal blue background",
+   "Black letters on purple background"
+  ]
+ },
+ {
+  "n": 63,
+  "ko_b": "?ㅼ쓬 李⑤웾 以??섏씠?⑥뒪李⑤줈 ?댁슜??遺덇??ν븳 李⑤웾??",
+  "ko_c": [
+   "?곸옱以묐웾 16???ㅽ봽?몃윮",
+   "?쒖슱怨??섏썝???댄뻾?섎뒗 2痢?醫뚯꽍踰꾩뒪",
+   "?⑥감濡쒖씤 寃쎌슦, 李⑦룺??3.7m???뚮갑李⑤웾",
+   "10?????援щ궃李⑤웾"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following vehicles CANNOT use the Hi-pass lanes?",
+  "tr_c": [
+   "A dump truck with loading weight of 16 tons",
+   "A double-decker bus that operates between Seoul and Suwon",
+   "A fire vehicle with vehicle width of 3.7m in case of a single lane",
+   "A large recovery vehicle weighing 10 tons"
+  ]
+ },
+ {
+  "n": 64,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?뱁빀?먮룞李?2001???댄썑 ?깅줉??李⑤졊??4??珥덇낵)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "2",
+  "tr_b": "Under the Motor Vehicle Management Act, what is the period of validity for the inspection of a small  non-commercial van (registered in or after 2001) that is over 4 years old?",
+  "tr_c": [
+   "6 months",
+   "1 year",
+   "2 years",
+   "4 years"
+  ]
+ },
+ {
+  "n": 65,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 鍮꾩궗?낆슜 ?뚰삎 ?붾Ъ?먮룞李?李⑤졊??4???댄븯)??寃???좏슚湲곌컙?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "6媛쒖썡",
+   "1??,
+   "2??,
+   "4??
+  ],
+  "a": "3",
+  "tr_b": "Under the Motor Vehicle Management Act, what is the period of validity for the inspection of a small  non-commercial truck that is no more than 4 years old?",
+  "tr_c": [
+   "6 months",
+   "1 year",
+   "2 years",
+   "4 years"
+  ]
+ },
+ {
+  "n": 66,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?좎감 援ъ엯 ???꾩떆?댄뻾 ?덇? ?좏슚湲곌컙??湲곗???",
+  "ko_c": [
+   "10???대궡",
+   "15???대궡",
+   "20???대궡",
+   "30???대궡"
+  ],
+  "a": "1",
+  "tr_b": "Under the Motor Vehicle Management Act and its Enforcement Decree, what is the standard validity period of a  temporary driving permit issued when purchasing a new car?",
+  "tr_c": [
+   "Within 10 days",
+   "Within 15 days",
+   "Within 20 days",
+   "Within 30 days"
+  ]
+ },
+ {
+  "n": 67,
+  "ko_b": "?ㅼ쓬 以??먮룞李④?由щ쾿?뱀뿉 ?곕Ⅸ ?먮룞李?蹂寃쎈벑濡??ъ쑀媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?먮룞李⑥쓽 ?ъ슜蹂멸굅吏瑜?蹂寃쏀븳 ??,
+   "?먮룞李⑥쓽 李⑤?踰덊샇瑜?蹂寃쏀븳 ??,
+   "?뚯쑀沅뚯씠 蹂?숇맂 ??,
+   "踰뺤씤??紐낆묶??蹂寃쎈맂 ??
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT accepted as a reason for change of registration of a vehicle in accordance with the  Motor Vehicle Management Act and its Enforcement Decree?",
+  "tr_c": [
+   "The main use address of the car has been changed.",
+   "The vehicle's identification number has been changed.",
+   "Ownership has been changed.",
+   "The name of the corporation has been changed."
+  ]
+ },
+ {
+  "n": 68,
+  "ko_b": "?먯쑉二쇳뻾?먮룞李??댁쟾?먯쓽 留덉쓬媛吏먯쑝濡?諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?먯쑉二쇳뻾?먮룞李⑥씠誘濡??좎뿉 痍⑦븳 ?곹깭?먯꽌 ?댁쟾?대룄 ?쒕떎.",
+   "怨쇰줈???곹깭?먯꽌 ?먯쑉二쇳뻾?먮룞李⑤? ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑤씪 ?섎뜑?쇰룄 ?μ젙?좎꽦?섏빟?덉쓣 蹂듭슜?섍퀬 ?댁쟾?섎㈃ ?꾨땲 ?쒕떎.",
+   "?먯쑉二쇳뻾?먮룞李⑥쓽 ?댁쟾 以묒뿉 ?대????꾪솕 ?ъ슜??媛?ν븯??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT a desirable mindset for drivers of autonomous vehicles?",
+  "tr_c": [
+   "Since it is an autonomous vehicle, the drivers can drive even under the influence of alcohol.",
+   "The driver must not drive an autonomous vehicle in an exhausted state.",
+   "Even drivers of autonomous vehicles can take psychoactive medication and drive.",
+   "The driver may use a mobile phone while driving an autonomous vehicle."
+  ]
+ },
+ {
+  "n": 69,
+  "ko_b": "?붾Ъ?먮룞李??댁닔?ъ뾽踰뺤뿉 ?곕Ⅸ ?붾Ъ?먮룞李??댁넚?ъ뾽?먮뒗 愿??踰뺣졊???곕씪 ?댄뻾湲곕줉?μ튂??湲곕줉???댄뻾湲곕줉??(    )?숈븞  蹂닿??섏뿬???쒕떎. (   ) ?덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "3媛쒖썡",
+   "6媛쒖썡",
+   "1??,
+   "2??
+  ],
+  "a": "2",
+  "tr_b": "According to the Trucking Transport Business Act, the operator of a trucking transport business has to keep  operation records in the tachograph for ( ). Which answer fits in ( )?",
+  "tr_c": [
+   "3 months",
+   "6 months",
+   "1 year",
+   "2 years"
+  ]
+ },
+ {
+  "n": 70,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑤? ?댁쟾 ?깅줉?섍퀬???섎뒗 ?먮뒗 留ㅼ닔???좊???(  ) ?대궡???깅줉?댁빞 ?쒕떎.  (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "15??,
+   "20??,
+   "30??,
+   "40??
+  ],
+  "a": "1",
+  "tr_b": "Under the Motor Vehicle Management Act and its Enforcement Decree, a person who wishes to register the transfer of a vehicle must finish the registration within ( ) of the date of purchase. What belongs in ( )?",
+  "tr_c": [
+   "15 days",
+   "20 days",
+   "30 days",
+   "40 days"
+  ]
+ },
+ {
+  "n": 71,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李⑥쓽 ?뺢린寃?ъ쓽 湲곌컙? 寃?ъ쑀?④린媛?留뚮즺????(  )?쇰?????(  )??源뚯??? (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "90?? 31??,
+   "80?? 41??,
+   "60?? 51??,
+   "50?? 61??
+  ],
+  "a": "1",
+  "tr_b": "According to the Motor Vehicle Management Act, the period for regular vehicle inspection is from ( ) days before to ( ) days after the expiration date of the inspection validity. Which of the following fills in the blanks correctly?",
+  "tr_c": [
+   "90, 31",
+   "80, 41",
+   "60, 51",
+   "50, 61"
+  ]
+ },
+ {
+  "n": 72,
+  "ko_b": "?먮룞李⑥넀?대같?곷낫?λ쾿???섎Т蹂댄뿕??媛?낇븯吏 ?딆? ?먮룞李⑤낫?좎옄??泥섎쾶 湲곗??쇰줈 留욌뒗 寃껋??(?먮룞李?誘몄슫??",
+  "ko_c": [
+   "300留????댄븯??怨쇳깭猷?,
+   "500留????댄븯??怨쇳깭猷?,
+   "1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "Under the Guarantee of Compulsory Motor Vehicle Liability Security Act, what is the punishment criterion for a car owner who fails to purchase mandatory insurance? (When the car has not been operated)",
+  "tr_c": [
+   "An administrative fine of up to KRW 3 million",
+   "An administrative fine of up to KRW 5 million",
+   "Up to 1 year of imprisonment or a criminal fine of up to KRW 10 million",
+   "Up to 2 years of imprisonment or a criminalfine of up to KRW 20 million"
+  ]
+ },
+ {
+  "n": 73,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀沅뚯씠 ?곸냽 ?깆쑝濡?蹂寃쎈맆 寃쎌슦???댁빞 ?섎뒗 ?깅줉??",
+  "ko_c": [
+   "?좉퇋?깅줉",
+   "?댁쟾?깅줉",
+   "蹂寃쎈벑濡?,
+   "留먯냼?깅줉"
+  ],
+  "a": "2",
+  "tr_b": "According to the Motor Vehicle Management Act, what is the registration that needs to be done when the  ownership of a car is changed through inheritance or other means?",
+  "tr_c": [
+   "New registration",
+   "Transfer of ownership registration",
+   "Modification registration",
+   "Cancellation registration"
+  ]
+ },
+ {
+  "n": 74,
+  "ko_b": "?먮룞李④?由щ쾿?뱀긽 ?먮룞李??뚯쑀?먭? 諛쏆븘???섎뒗 ?먮룞李?寃?ъ쓽 醫낅쪟媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?섎━寃??,
+   "?밸퀎寃??,
+   "?쒕떇寃??,
+   "?꾩떆寃??
+  ],
+  "a": "2",
+  "tr_b": "According to the Motor Vehicle Management Act and its Enforcement Decree, which of the following is NOT a  type of vehicle inspection that a vehicle owner should do?",
+  "tr_c": [
+   "Repair inspection",
+   "Special inspection",
+   "Inspection of tuning",
+   "Provisional inspection"
+  ]
+ },
+ {
+  "n": 75,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑤? 留ㅻℓ??寃쎌슦 ?댁쟾?깅줉 ?대떦湲곌???",
+  "ko_c": [
+   "?쒓뎅?꾨줈援먰넻怨듬떒",
+   "?쒙쉈援곤쉈援ъ껌",
+   "?쒓뎅援먰넻?덉쟾怨듬떒",
+   "?쑣룸룄寃쎌같泥?
+  ],
+  "a": "2",
+  "tr_b": "Which of the following processes the registration of transfer for a vehicle sale?",
+  "tr_c": [
+   "Korea Road Traffic Authority",
+   "Si, Gun, or Gu district office",
+   "Korea Transportation Safety Authority",
+   "City/Do (Province) police agency"
+  ]
+ },
+ {
+  "n": 76,
+  "ko_b": "?먮룞李??깅줉??醫낅쪟媛 ?꾨땶 寃?2媛吏??",
+  "ko_c": [
+   "寃쎌젙?깅줉",
+   "沅뚮━?깅줉",
+   "?ㅼ젙?깅줉",
+   "留먯냼?깅줉"
+  ],
+  "a": "2, 3",
+  "tr_b": "Which TWO are NOT types of vehicle registration?",
+  "tr_c": [
+   "Registration of revision",
+   "Registration of rights",
+   "Registration of patent rights",
+   "Registration of cancellation"
+  ]
+ },
+ {
+  "n": 77,
+  "ko_b": "?먮룞李??? ?대┛?댄넻?숇쾭???쒖쇅) ?욌㈃ 李쎌쑀由ъ쓽 媛?쒓킅???ш낵??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "40?쇱꽱??,
+   "50?쇱꽱??,
+   "60?쇱꽱??,
+   "70?쇱꽱??
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the appropriate permeability of visible rays through the front windshield of motor  vehicles (other than children?셲 school buses)?",
+  "tr_c": [
+   "40%",
+   "50%",
+   "60%",
+   "70%"
+  ]
+ },
+ {
+  "n": 78,
+  "ko_b": "二쇳뻾 以?釉뚮젅?댄겕媛 ?묐룞?섎뒗 ?댁쟾?됰룞怨쇱젙???щ컮瑜??쒖꽌濡??곌껐??寃껋??",
+  "ko_c": [
+   "?꾪뿕?몄? ???곹솴?먮떒 ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?꾪뿕?몄? ???됰룞紐낅졊 ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞",
+   "?곹솴?먮떒 ???꾪뿕?몄? ???됰룞紐낅졊 ??釉뚮젅?댄겕?묐룞",
+   "?됰룞紐낅졊 ???꾪뿕?몄? ???곹솴?먮떒 ??釉뚮젅?댄겕?묐룞"
+  ],
+  "a": "1",
+  "tr_b": "What is the proper sequence of applying brakes while driving?",
+  "tr_c": [
+   "Identify hazard ??make judgment ??order action ??apply brakes",
+   "Identify hazard ??order action ??make judgment ??apply brakes",
+   "Make judgment ??identify hazard ??order action ??apply brakes",
+   "Order action ??identify hazard ??make judgment ??apply brakes"
+  ]
+ },
+ {
+  "n": 79,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑥뿉 遺李⑸맂 ?먯뼱諛깆쓽 援щ퉬議곌굔?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?믪? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "??? ?⑤룄?먯꽌 ?몄옣媛뺣룄 諛??댁뿴媛뺣룄",
+   "?뚯뿴媛뺣룄瑜?吏?덇퀬 ?대쭏紐⑥꽦, ?좎뿰??,
+   "?댁쟾?먯? ?묒큺?섎뒗 異⑷꺽?먮꼫吏 洹밸???
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a required condition for an airbag?",
+  "tr_c": [
+   "Tensile strength and heat resistance at a high temperature",
+   "Tensile strength and heat resistance at a low temperature",
+   "Rupture strength, wear resistance, flexibility",
+   "Maximizing the impact energy in contact with a driver"
+  ]
+ },
+ {
+  "n": 80,
+  "ko_b": "?ㅼ쓬 以??댁쟾???깆씠 李⑤웾 ?뱁븯李???二쇱쓽?ы빆?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?怨??대┫ ?뚮뒗 ?ㅼ뿉???ㅻ뒗 李⑤웾???덈뒗吏瑜??뺤씤?쒕떎.",
+   "臾몄쓣 ???뚮뒗 ?꾩쟾???닿퀬?섏꽌 怨㏓컮濡??대┛??",
+   "?룹쥖???뱀감?먭? ?섏감?????댁쟾?먮뒗 ?꾨갑??二쇱떆?댁빞 ?쒕떎.",
+   "?댁쟾?앹쓣 ?쇱떆?곸쑝濡??좊궇 ?뚯뿉???쒕룞???꾩? ?딆븘???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is correct regarding the precautions to take when getting in and out of a car?",
+  "tr_c": [
+   "When getting in or out, check if there is a car coming from behind.",
+   "Get out of the car immediately after completely opening the door.",
+   "When a person exits a vehicle from the back seat, the driver should look straight forward.",
+   "When leaving the driver's seat temporarily, you need not turn off the car's engine."
+  ]
+ }
+]
+
+codex
+[{"n":61,"field":"c[3]","severity":"major","issue":"‘경운기’를 별개의 차량인 ‘tractor’로 오역하여 자동차 종류 판단을 오도할 수 있다.","suggestion":"Power tiller"},{"n":68,"field":"c[3]","severity":"critical","issue":"‘향정신성의약품을 복용하고 운전하면 안 된다’의 부정어가 소실되어 정반대 의미가 되었고 정답 판단도 달라진다.","suggestion":"Even drivers of autonomous vehicles must not drive after taking psychoactive medication."},{"n":76,"field":"c[3]","severity":"minor","issue":"‘설정등록’을 무관한 ‘특허권 등록’으로 오역했다.","suggestion":"Establishment registration"}]
+tokens used
+20,688
+[{"n":61,"field":"c[3]","severity":"major","issue":"‘경운기’를 별개의 차량인 ‘tractor’로 오역하여 자동차 종류 판단을 오도할 수 있다.","suggestion":"Power tiller"},{"n":68,"field":"c[3]","severity":"critical","issue":"‘향정신성의약품을 복용하고 운전하면 안 된다’의 부정어가 소실되어 정반대 의미가 되었고 정답 판단도 달라진다.","suggestion":"Even drivers of autonomous vehicles must not drive after taking psychoactive medication."},{"n":76,"field":"c[3]","severity":"minor","issue":"‘설정등록’을 무관한 ‘특허권 등록’으로 오역했다.","suggestion":"Establishment registration"}]

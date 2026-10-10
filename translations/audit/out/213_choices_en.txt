@@ -1,0 +1,827 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12602-5981-7c02-b16f-4ab17992e4ae
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/213_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/213_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 524ms:
+[
+ {
+  "n": 521,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?ш퀬瑜??쇱쑝???먮룞李??댁쟾?먯뿉 ???踰뚯젏湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?좏샇?꾨컲?쇰줈 ?щ쭩(72?쒓컙 ?대궡) 1紐낆쓽 援먰넻?ш퀬媛 諛쒖깮?섎㈃ 踰뚯젏? 105?먯씠??",
+   "?쇳빐李⑤웾???묒듅?먯? 媛?댁감???댁쟾?먯쓽 ?쇳빐????댁꽌??踰뚯젏???곗젙?쒕떎.",
+   "援먰넻?ш퀬???먯씤 ?먯닔? ?몃챸?쇳빐 ?먯닔, 臾쇱쟻?쇳빐 ?먯닔瑜??⑹궛?쒕떎.",
+   "?먮룞李?? ?먮룞李?援먰넻?ш퀬??寃쎌슦 ?ш퀬?먯씤????李⑤웾???덉쑝硫?????踰뚯젏???곗젙?섏? ?딅뒗??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct statement regarding the demerit points applied to a driver who causes an  accident?",
+  "tr_c": [
+   "When a traffic accident involving one death (within 72 hours) occurs due to the violation of a signal, a penalty of 105  demerit points is incurred.",
+   "Demerit points are also applied for losses suffered by passengers of the victim's vehicle and the driver of the offending  vehicle.",
+   "Demerit points are calculated based on the cause of the accident, casualties if any, and damage to property.",
+   "If the accident involves two vehicles, no demerit points are applied if both vehicles are responsible for the accident."
+  ]
+ },
+ {
+  "n": 522,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곸꽦寃??湲곗???媛뽰텛?덈뒗吏瑜??먯젙?섎뒗 嫄닿컯寃吏?寃곌낵?듬낫?쒕뒗 ?댁쟾硫댄뿀?쒗뿕 ?좎껌?쇰???( ) ?대궡?? 諛쒓툒???쒕쪟?댁뼱???쒕떎. (  )?덉뿉 湲곗??쇰줈 留욎? 寃껋??",
+  "ko_c": [
+   "1??,
+   "2??,
+   "3??,
+   "4??
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act, the medical checkup result report that determines whether a driver is eligible for an aptitude test or not should be the document issued within ( ) of the driver's license application date. Which of the following is correct?",
+  "tr_c": [
+   "1 year",
+   "2 years",
+   "3 years",
+   "4 years"
+  ]
+ },
+ {
+  "n": 523,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾硫댄뿀 痍⑥냼泥섎텇??????댁쓽媛 ?덈뒗 寃쎌슦, ?댁쟾硫댄뿀?됱젙泥섎텇 ?댁쓽?ъ쓽?꾩썝?뚯뿉 ?좎껌?????덈뒗 湲곌컙??",
+  "ko_c": [
+   "洹?泥섎텇??諛쏆? ?좊줈遺??90???대궡",
+   "洹?泥섎텇?????좊줈遺??90???대궡",
+   "洹?泥섎텇??諛쏆? ?좊줈遺??60???대궡",
+   "洹?泥섎텇?????좊줈遺??60???대궡"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, if you object to the revocation of your driver's license, when can you submit an application to the Objections Deliberation Committee of the Metropolitan Police?",
+  "tr_c": [
+   "Within 90 days of the revocation",
+   "Within 90 days of becoming aware of the revocation",
+   "Within 60 days of the revocation",
+   "Within 60 days of becoming aware of the revocation"
+  ]
+ },
+ {
+  "n": 524,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곗뒿?댁쟾硫댄뿀 ?뚯??먭? ?꾨줈?먯꽌 二쇳뻾?곗뒿???????곗뒿?섍퀬???섎뒗 ?먮룞李⑤? ?댁쟾?????덈뒗 ?댁쟾硫댄뿀瑜? 諛쏆? ?좊???2?꾩씠 寃쎄낵???щ엺(?댁쟾硫댄뿀 ?뺤?湲곌컙 以묒씤 ?щ엺 ?쒖쇅)怨??④퍡 ?뱀감?섏? ?꾨땲?섍퀬 ?⑤룆?쇰줈 ?댄뻾??寃쎌슦 泥섎텇??",
+  "ko_c": [
+   "?듦퀬泥섎텇",
+   "怨쇳깭猷?遺怨?,
+   "?곗뒿?댁쟾硫댄뿀 ?뺤?",
+   "?곗뒿?댁쟾硫댄뿀 痍⑥냼"
+  ],
+  "a": "4",
+  "tr_b": "When a person holding a student license practices driving on a road, which of the following is the disposition given to the driver if he/she drives by him/herself without being accompanied by a person with a valid automobile driver?셲 license obtained 2 or more years ago (excluding persons whose driver?셲 licenses are currently suspended)?",
+  "tr_c": [
+   "Disposition of notification",
+   "Imposition of an administrative fine",
+   "Suspension of the student license",
+   "Revocation of the student license"
+  ]
+ },
+ {
+  "n": 525,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞湲곗옣移섏옄?꾧굅瑜??댁쟾?????덈뒗 ?댁쟾硫댄뿀瑜?諛쏆? ?꾨땲?섍퀬 媛쒖씤???대룞?μ튂瑜??댁쟾??寃쎌슦 泥섎쾶湲곗???",
+  "ko_c": [
+   "20留????댄븯 踰뚭툑?대굹 援щ쪟 ?먮뒗 怨쇰즺.",
+   "30留????댄븯 踰뚭툑?대굹 援щ쪟",
+   "50留????댄븯 踰뚭툑?대굹 援щ쪟",
+   "6媛쒖썡 ?댄븯 吏뺤뿭 ?먮뒗 200留????댄븯 踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct punishment if a driver drives a personal mobility device (PMD) without receiving a driver's license for a motorcycle?",
+  "tr_c": [
+   "A criminal fine of up to KRW 200,000 or detention, or minor criminal fine",
+   "A criminal fine of up to KRW 300,000 or detention",
+   "A criminal fine of up to KRW 500,000 or detention",
+   "Up to 6 months' imprisonment or criminal fine of up to KRW 2 million"
+  ]
+ },
+ {
+  "n": 526,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李⑥쓽 怨좎슜二쇰벑?먭쾶 遺怨쇰릺???꾨컲?됱쐞蹂?怨쇳깭猷?湲덉븸???由?寃껋??(?대┛??蹂댄샇援ъ뿭 諛????맞룹옣?좎씤蹂댄샇援ъ뿭 ?쒖쇅)",
+  "ko_c": [
+   "以묒븰??移⑤쾾??寃쎌슦, 怨쇳깭猷?9留???,
+   "?좏샇 ?꾨컲??寃쎌슦, 怨쇳깭猷?7留???,
+   "蹂대룄瑜?移⑤쾾??寃쎌슦, 怨쇳깭猷?7留???,
+   "?띾룄 ?꾨컲(留ㅼ떆 20?щ줈誘명꽣 ?댄븯)??寃쎌슦, 怨쇳깭猷?5留???
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is an incorrect pairing of violations and administrative fines imposed on the employers of drivers of automobiles? (Excluding school zones, silver zones, and priority zones for persons with disabilities)",
+  "tr_c": [
+   "Crossing the centerline: Administrative fine of KRW 90,000",
+   "Traffic signal violation: Administrative fine of KRW 70,000",
+   "Driving on a sidewalk: Administrative fine of KRW 70,000",
+   "Speeding (not more than 20 km/h): Administrative fine of KRW 50,000"
+  ]
+ },
+ {
+  "n": 527,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??踰뚯젏??遺怨쇰릺???댁쟾?먯쓽 ?됱쐞??",
+  "ko_c": [
+   "二쇳뻾 以?李?諛뽰쑝濡?臾쇨굔???섏???寃쎌슦",
+   "李⑤줈蹂寃????좏샇 遺덉씠?됲븳 寃쎌슦",
+   "遺덈쾿遺李⑹옣移?李⑤? ?댁쟾??寃쎌슦",
+   "援먯감濡??듯뻾諛⑸쾿???꾨컲??寃쎌슦"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following actions are punishable  with demerit points?",
+  "tr_c": [
+   "Throwing an object out of a moving vehicle",
+   "Not signaling before a change of lane",
+   "Driving a vehicle with illegal accessories",
+   "Violating the intersection traffic rules"
+  ]
+ },
+ {
+  "n": 528,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??臾댁궗怨졖룸Т?꾨컲 ?쒖빟???섑븳 踰뚯젏 媛먭꼍(李⑺븳?댁쟾 留덉씪由ъ??쒕룄)??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "40?먯쓽 ?뱁삙?먯닔瑜?遺?ы븳??",
+   "2?꾧컙 援먰넻?ш퀬 諛?踰뺢퇋?꾨컲???놁뼱???뱁삙?먯닔瑜?遺?ы븳??",
+   "?쇱젙 ?ъ쑀瑜??쒖쇅?섍퀬 ?뺤?泥섎텇??諛쏄쾶 ??寃쎌슦 ?꾩궛?먯닔?먯꽌 ?뱁삙?먯닔瑜?怨듭젣?쒕떎.",
+   "?댁쟾硫댄뿀?쒗뿕?μ뿉 吏곸젒 諛⑸Ц?섏뿬 ?쒖빟?쒕? ?쒖텧?댁빞留??쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following statements regarding a reduction of demerit points through an accident-free and  violation-free driving pledge (Good Driving Mileage System) is correct?",
+  "tr_c": [
+   "Special points of 40 points are issued.",
+   "Two years without any traffic accidents or violations are required to earn special points.",
+   "Except in certain cases, if a driver receives a suspension order, special benefit points are deducted from his or her  accumulated points.",
+   "A driver must visit a driver licensing office and submit a written pledge."
+  ]
+ },
+ {
+  "n": 529,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뚯＜?댁쟾 諛⑹??μ튂??????ㅻ챸?쇰줈 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "?쒖쓬二쇱슫??諛⑹??μ튂?앸? ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먮룞李⑤벑???댁쟾?섎젮??寃쎌슦 ?쒕룞??嫄몃━吏 ?꾨땲?섎룄濡??섎뒗 寃껋쑝濡쒖꽌       ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??寃껋쓣 留먰븳??",
+   "?뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆? ?щ엺???먮룞李⑤벑???댁쟾?섎젮??寃쎌슦 ?뚯＜?댁쟾 諛⑹??μ튂瑜??ㅼ튂??      怨? ?쒋㏓룄寃쎌같泥?옣?먭쾶 ?깅줉?섏뿬???쒕떎.",
+   "?뚯＜?댁쟾 諛⑹??μ튂???댁쟾硫댄뿀 寃곌꺽湲곌컙??醫낅즺???좊???遺李⑷린媛꾩쓣 ?곗젙?쒕떎.",
+   "?뚯＜????媛쒖씤???대룞?μ튂瑜??댁쟾??寃쎌슦?먮룄 5???대궡???ㅼ떆 ?뚯＜?댁쟾?쇰줈 ?댁쟾硫댄뿀 痍⑥냼 泥섎텇??諛쏆? 寃쎌슦 ??      二쇱슫??諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆븘???쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which two statements about ignition interlock devices (IIDs) are correct?",
+  "tr_c": [
+   "An ?쐇gnition interlock device??is a device that prevents a vehicle from starting if the driver is intoxicated, as prescribed by the Minister of Interior and Safety.",
+   "Drivers holding a conditional license with IID restrictions must install the device on their vehicle and register it with the provincial or municipal police agency.",
+   "The period of the device?셲 installation begins from the date on which the driver?셲 period of disqualification ends.",
+   "In cases where a person drives a personal mobility device after drinking, if he/she receives another license revocation for drunk driving within five years, he/she must obtain a conditional driving license requiring the installation of an alcohol ignition interlock device."
+  ]
+ },
+ {
+  "n": 530,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???밸퀎援먰넻?덉쟾 ?섎Т援먯쑁??諛쏆븘???섎뒗 ?щ엺??",
+  "ko_c": [
+   "泥섏쓬?쇰줈 ?댁쟾硫댄뿀瑜?諛쏆쑝?ㅻ뒗 ?щ엺",
+   "泥섎텇踰뚯젏??30?먯씤 ?щ엺",
+   "援먰넻李몄뿬援먯쑁??諛쏆? ?щ엺",
+   "?쒗룺?댁쟾?쇰줈 硫댄뿀媛 ?뺤????щ엺"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is subject to mandatory education on special traffic safety?",
+  "tr_c": [
+   "A first-time applicant seeking to obtain a driver's license",
+   "A driver with 30 demerit points",
+   "A driver who completed proactive driving training",
+   "A driver whose license is suspended for reckless driving"
+  ]
+ },
+ {
+  "n": 531,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먯감濡쑣룻슒?⑤낫?꽷룰굔?먮ぉ??2?쒓컙 ?댁긽 二쇱감???뱀슜?먮룞李⑥쓽 ?뚯쑀?먯뿉寃?遺怨쇰릺??怨쇳깭猷?湲덉븸?쇰줈  留욌뒗 寃껋??(?대┛??蹂댄샇援ъ뿭 諛??몄씤쨌?μ븷?몃낫?멸뎄???쒖쇅)",
+  "ko_c": [
+   "4留???,
+   "5留???,
+   "6留???,
+   "7留???
+  ],
+  "a": "2",
+  "tr_b": "How much is the fine for leaving a passenger car parked for 2 hours or more at an intersection, a crosswalk, or a railroad crossing (excluding child, elderly, or disabled protection zones)?",
+  "tr_c": [
+   "KRW 40,000",
+   "KRW 50,000",
+   "KRW 60,000",
+   "KRW 70,000"
+  ]
+ },
+ {
+  "n": 532,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾硫댄뿀 痍⑥냼 ?ъ쑀媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?뺢린 ?곸꽦寃??湲곌컙??1??珥덇낵??寃쎌슦",
+   "蹂대났?댁쟾?쇰줈 援ъ냽??寃쎌슦",
+   "?쒗븳?띾룄瑜??쒖냽 100?щ줈誘명꽣 珥덇낵?섏뿬 2???댁쟾??寃쎌슦",
+   "?먮룞李⑤벑???댁슜?섏뿬 ?ㅻⅨ ?щ엺???쎌랬 ?좎씤 ?먮뒗 媛먭툑??寃쎌슦"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT a valid reason for revocation of a driver's license?",
+  "tr_c": [
+   "Failing to take the regular aptitude test for one year",
+   "Being arrested for retaliatory driving",
+   "Driving twice at a speed exceeding the speed limit by 100 km/h.",
+   "Using vehicles to kidnap, induce, or detain another person"
+  ]
+ },
+ {
+  "n": 533,
+  "ko_b": "3?????뚯＜痢≪젙嫄곕?二꾨줈 踰뚭툑?뺤쓣 ?좉퀬諛쏄퀬 ?ъ감 寃쎌같怨듬Т?먯쓽 ?뺣떦???뚯＜痢≪젙 ?붽뎄瑜?嫄곕??섏뿬 ?곷컻???뱀슜李⑥슫???먯쓽 泥섎쾶 湲곗???",
+  "ko_c": [
+   "1???댁긽 6???댄븯??吏뺤뿭?대굹 500留????댁긽 3泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댁긽 6???댄븯??吏뺤뿭?대굹 500留????댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+   "3???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 3泥쒕쭔 ???댄븯??踰뚭툑",
+   "1???댁긽 5???댄븯??吏뺤뿭?대굹 500留????댁긽 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "What is the penalty for a driver who, upon being stopped for drink driving, and who is known to have refused a  breathalyzer test 3 years previously, refuses to comply once again?",
+  "tr_c": [
+   "Imprisonment with labor for at least 1 year but not more than 6 years, or criminal fine of at least KRW 5 million but not  more than KRW 30 million",
+   "Imprisonment with labor for at least 2 years but not more than 6 years, or criminal fine of at least KRW 5 million but  not more than KRW 20 million",
+   "Imprisonment with labor for at least 3 years but not more than 5 years, or criminal fine of KRW at least 10 million but  not more than KRW 30 million",
+   "Imprisonment with labor for at least 1 year but not more than 5 years, or criminal fine of at least KRW 5 million but not  more than KRW 20 million"
+  ]
+ },
+ {
+  "n": 534,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???덉쨷?뚯퐫?щ냽??0.08?쇱꽱???댁긽 0.2?쇱꽱??誘몃쭔???좎뿉 痍⑦븳 ?곹깭濡??뱀슜?먮룞李⑤? ?댁쟾???щ엺????? 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋?? (10????1???꾨컲??寃쎌슦)",
+  "ko_c": [
+   "2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "3???댄븯??吏뺤뿭?대굹 500留????댁긽 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "1???댁긽 2???댄븯??吏뺤뿭?대굹 500留????댁긽 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "3",
+  "tr_b": "What is the penalty for driving with a BAC of between 0.08% and 0.2% (for a first offense within 10 years)?",
+  "tr_c": [
+   "Imprisonment for up to 2 years or criminal fine of up to KRW 5 million",
+   "Imprisonment for up to 3 years or criminal fine between KRW 5 million and 10 million",
+   "Imprisonment for 1-2 years or criminal fine between KRW 5 million and 10 million",
+   "Imprisonment for 2-5 years or criminal fine between KRW 10 million and 20 million"
+  ]
+ },
+ {
+  "n": 535,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈?먯꽌 ?먮룞李??댁쟾?먭? 臾쇱쟻 ?쇳빐 援먰넻?ш퀬瑜??쇱쑝????議곗튂 ??遺덉씠?됱뿉 ?곕Ⅸ 踰뚯젏湲곗???",
+  "ko_c": [
+   "15??,
+   "20??,
+   "30??,
+   "40??
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are the demerit points given to an automobile driver who flees after causing a traffic accident involving property damage on a road?",
+  "tr_c": [
+   "15 points",
+   "20 points",
+   "30 points",
+   "40 points"
+  ]
+ },
+ {
+  "n": 536,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4.5???붾Ъ?먮룞李⑥쓽 ?곸옱臾?異붾씫 諛⑹? 議곗튂瑜??섏? ?딆? 寃쎌슦 踰붿튃湲덉븸??",
+  "ko_c": [
+   "5留???,
+   "4留???,
+   "3留???,
+   "2留???
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is the traffic penalty  imposed if measures are not taken to prevent freight from falling off a 4.5-ton truck?",
+  "tr_c": [
+   "KRW 50,000",
+   "KRW 40,000",
+   "KRW 30,000",
+   "KRW 20,000"
+  ]
+ },
+ {
+  "n": 537,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾩슜李⑤줈 ?듯뻾??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뱀슜李⑥뿉 2?몄씠 ?뱀감??寃쎌슦 ?ㅼ씤???꾩슜李⑤줈瑜??듯뻾?????덈떎.",
+   "?뱀감?뺤썝 9?몄듅 ?댁긽 ?뱀슜李⑤뒗 6?몄씠 ?뱀감?섎㈃ 怨좎냽?꾨줈 踰꾩뒪?꾩슜李⑤줈瑜??듯뻾?????덈떎.",
+   "?뱀감?뺤썝 12?몄듅 ?댄븯???뱁빀李⑤뒗 5?몄씠 ?뱀감?대룄 怨좎냽?꾨줈 踰꾩뒪?꾩슜李⑤줈瑜??듯뻾?????덈떎.",
+   "?뱀감?뺤썝 16?몄듅 ?먭????뱁빀李⑤뒗 怨좎냽?꾨줈 ?몄쓽 ?꾨줈???ㅼ튂??踰꾩뒪?꾩슜李⑤줈瑜??듯뻾 ?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is true about using  designated lanes?",
+  "tr_c": [
+   "A passenger vehicle carrying 2 or more persons can use the high-occupancy vehicle lane.",
+   "A 9-seater passenger vehicle carrying 6 or more persons can use the exclusive bus lane on an expressway.",
+   "A 12-seater bus carrying 5 or more persons can use the exclusive bus lane on an expressway.",
+   "A 16-seater personal vehicle can use all exclusive bus lanes found on roads other than expressways."
+  ]
+ },
+ {
+  "n": 538,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??75???댁긽???щ엺??諛쏆븘???섎뒗 援먰넻?덉쟾援먯쑁??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "75???댁긽???щ엺?????援먰넻?덉쟾援먯쑁? ?쒓뎅?꾨줈援먰넻怨듬떒?먯꽌 ?ㅼ떆?쒕떎.",
+   "?댁쟾硫댄뿀利?媛깆떊?쇱뿉 75???댁긽???щ엺? 媛깆떊湲곌컙 ?대궡??援먯쑁??諛쏆븘???쒕떎.",
+   "75???댁긽???щ엺???댁쟾硫댄뿀瑜?泥섏쓬 諛쏆쑝?ㅻ뒗 寃쎌슦 援먯쑁?쒓컙? 1?쒓컙?대떎.",
+   "援먯쑁? 媛뺤쓽?띿떆泥?컖?띿씤吏?λ젰 ?먭?吏꾨떒 ?깆쓽 諛⑸쾿?쇰줈 2?쒓컙 ?ㅼ떆?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following statements regarding the traffic safety education that a person who is 75 years of age or older must receive is INCORRECT?",
+  "tr_c": [
+   "Traffic safety education for persons who are 75 years of age or older is provided by the Korea Road Traffic Authority.",
+   "A person who is 75 years of age or older as of the renewal date of the driver?셲 license shall receive education within the  period of renewal.",
+   "If a person who is 75 years of age or older wants to obtain a driver?셲 license for the first time, the period of education  is 1 hour.",
+   "The education is conducted for 2 hours by means of lecture, audiovisual, and self-diagnosis of cognitive ability."
+  ]
+ },
+ {
+  "n": 539,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??댁쟾?먭? 以묒븰??移⑤쾾?쇰줈 ?쇳빐?먯뿉寃?以묒긽 1紐? 寃쎌긽 1紐낆쓽 援먰넻?ш퀬瑜??쇱쑝??寃쎌슦 踰뚯젏??",
+  "ko_c": [
+   "30??,
+   "40??,
+   "50??,
+   "60??
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are the demerit points given if an automobile driver driving over the centerline caused a traffic accident involving one severe injury and one slight injury?",
+  "tr_c": [
+   "30 points",
+   "40 points",
+   "50 points",
+   "60 points"
+  ]
+ },
+ {
+  "n": 540,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???쒕룄濡쒖뿉???대┛?댁뿉寃?媛쒖씤???대룞?μ튂瑜??댁쟾?섍쾶 ??蹂댄샇?먯쓽 怨쇳깭猷뚢앹? ?쒖닠??痍⑦븳 ?곹깭濡?媛쒖씤???대룞?μ튂瑜??댁쟾???щ엺??踰붿튃湲?痢≪젙嫄곕? ?쒖쇅)?앹쓣 ?⑹궛??寃껋쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "10留???,
+   "20留???,
+   "30留???,
+   "40留???
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct sum of the \"administrative fine imposed on a guardian who let a child drive a personal mobility device (PMD) on a road\" and \"traffic penalty imposed on a driver who drove a PMD under the influence (excluding refusal to take a field sobriety test)\"?",
+  "tr_c": [
+   "KRW 100,000",
+   "KRW 200,000",
+   "KRW 300,000",
+   "KRW 400,000"
+  ]
+ },
+ {
+  "n": 541,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎냽?꾨줈 踰꾩뒪?꾩슜李⑤줈瑜??댁슜?????덈뒗 ?먮룞李⑥쓽 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "11?몄듅 ?뱁빀?먮룞李⑤뒗 6???댁긽 ?뱀감??寃쎌슦 ?듯뻾??媛?ν븯??",
+   "9?몄듅 ?뱀슜?먮룞李⑤뒗 5???댁긽 ?뱀감??寃쎌슦 ?듯뻾??媛?ν븯??",
+   "7?몄듅 ?뱀슜?먮룞李⑤뒗 6???댁긽 ?뱀감??寃쎌슦 ?듯뻾??媛?ν븯??",
+   "紐⑤뱺 ?뱁빀?먮룞李⑤뒗 ?뱀감?몄썝 愿怨꾩뾾???듯뻾 ?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following statements regarding the criteria for vehicle types with access to exclusive bus lanes on  expressways is correct?",
+  "tr_c": [
+   "11-seater vans with at least 6 occupants.",
+   "9-seater cars with at least 5 occupants.",
+   "7-seater cars with at least 6 occupants.",
+   "All vans regardless of the number of passengers."
+  ]
+ },
+ {
+  "n": 542,
+  "ko_b": "?ㅼ쓬 蹂닿린?먯꽌 ?ㅻ챸?섎뒗 援먯감濡쒕? ?댄뻾?섎뒗 寃쎌슦 ?쇱떆?뺤??댁빞 ?섎뒗 怨녹씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?좏샇湲곗쓽 ?좏샇媛 ?⑹깋 ?먮㈇ 以묒씤 援먯감濡?,
+   "?좏샇湲곗쓽 ?좏샇媛 ?곸깋 ?먮㈇ 以묒씤 援먯감濡?,
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚣꺕?곕? ?뺤씤?????녿뒗 援먯감濡?,
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 援먰넻??鍮덈쾲??援먯감濡?
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT a place where you must come to a complete stop?",
+  "tr_c": [
+   "An intersection where the traffic signal light is flashing yellow",
+   "An intersection where the traffic signal light is flashing red",
+   "An intersection where traffic is not controlled and it is not possible to check the left and right",
+   "A busy intersection where traffic is not controlled"
+  ]
+ },
+ {
+  "n": 543,
+  "ko_b": "?좊즺?꾨줈踰뺣졊???듯뻾猷?誘몃궔?섍퀬 怨좎냽?꾨줈瑜??듦낵??李⑤웾?????遺媛?듯뻾猷?遺怨쇨린以?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?듯뻾猷뚯쓽 5諛곗쓽 ?대떦?섎뒗 湲덉븸??遺怨쇳븷 ???덈떎.",
+   "?듯뻾猷뚯쓽 10諛곗쓽 ?대떦?섎뒗 湲덉븸??遺怨쇳븷 ???덈떎.",
+   "?듯뻾猷뚯쓽 20諛곗쓽 ?대떦?섎뒗 湲덉븸??遺怨쇳븷 ???덈떎.",
+   "?듯뻾猷뚯쓽 30諛곗쓽 ?대떦?섎뒗 湲덉븸??遺怨쇳븷 ???덈떎."
+  ],
+  "a": "2",
+  "tr_b": "According to the Toll Road Act and its Enforcement Decree, what is the correct standard for imposing additional  tolls on vehicles that pass through tollgates without paying tolls on toll roads?",
+  "tr_c": [
+   "An amount equivalent to five times the toll fee can be imposed.",
+   "An amount equivalent to 10 times the toll fee can be imposed.",
+   "An amount equivalent to 20 times the toll fee can be imposed.",
+   "An amount equivalent to 30 times the toll fee can be imposed."
+  ]
+ },
+ {
+  "n": 544,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾩슜李⑤줈 ?듯뻾李??몄뿉 ?꾩슜李⑤줈濡??듯뻾?????덈뒗 寃쎌슦媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "湲닿툒?먮룞李④? 洹?蹂몃옒??湲닿툒???⑸룄濡??댄뻾?섍퀬 ?덈뒗 寃쎌슦",
+   "?꾨줈???뚯넀 ?깆쑝濡??꾩슜李⑤줈媛 ?꾨땲硫??듯뻾?????녿뒗 寃쎌슦",
+   "?꾩슜李⑤줈 ?듯뻾李⑥쓽 ?듯뻾???ν빐瑜?二쇱? ?꾨땲?섎뒗 踰붿쐞?먯꽌 ?앹떆媛 ?밴컼???쒖슦湲??꾪븯???쇱떆 ?듯뻾?섎뒗 寃쎌슦",
+   "?앸같李④? 臾쇨굔???대━湲??꾪빐 ?쇱떆 ?듯뻾?섎뒗 寃쎌슦"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT a case wherein a vehicle other than vehicles allowed on an exclusive-lane may pass along the exclusive lane?",
+  "tr_c": [
+   "When an emergency vehicle is being operated for the originally intended emergency purpose",
+   "When it is not possible to pass along except by using the exclusive lane due to road damage",
+   "When a taxi temporarily passes along to take a passenger onboard, provided that it does not impede the traffic of  vehicles in the exclusive lane",
+   "When a package delivery truck temporarily passes along to unload goods"
+  ]
+ },
+ {
+  "n": 545,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李⑥쟾?⑸룄濡쒖뿉???먮룞李⑥쓽 理쒓퀬 ?띾룄? 理쒖? ?띾룄???",
+  "ko_c": [
+   "留ㅼ떆 110?щ줈誘명꽣, 留ㅼ떆 50?щ줈誘명꽣",
+   "留ㅼ떆 100?щ줈誘명꽣, 留ㅼ떆 40?щ줈誘명꽣",
+   "留ㅼ떆 90?щ줈誘명꽣, 留ㅼ떆 30?щ줈誘명꽣",
+   "留ㅼ떆 80?щ줈誘명꽣, 留ㅼ떆 20?щ줈誘명꽣"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are the maximum and  minimum speed limits, respectively, to be observed in an automobile road?",
+  "tr_c": [
+   "110 km/h, 50 km/h",
+   "100 km/h, 40 km/h",
+   "90 km/h, 30 km/h",
+   "80 km/h, 20 km/h"
+  ]
+ },
+ {
+  "n": 546,
+  "ko_b": "怨좎냽?꾨줈 ?듯뻾猷?誘몃궔 ??媛뺤젣吏뺤닔??諛⑸쾿?쇰줈 留욎? ?딅뒗 寃껋? ?",
+  "ko_c": [
+   "?덇툑?뺣쪟",
+   "媛?곸옄?곗븬瑜?,
+   "怨듬ℓ",
+   "踰덊샇?먯쁺移?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT true about the enforced collection of tolls on expressways for unpaid tolls?",
+  "tr_c": [
+   "Seizure of deposits",
+   "Seizure of virtual assets",
+   "Public auction",
+   "Confiscation of license plates"
+  ]
+ },
+ {
+  "n": 547,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂 ?댁쟾??13???댁긽)??踰뺢퇋?꾨컲?????踰붿튃湲덉븸???ㅻⅨ 寃껋??",
+  "ko_c": [
+   "?댁쟾硫댄뿀瑜?諛쏆? ?꾨땲?섍퀬 ?댁쟾",
+   "寃쎌같怨듬Т?먯쓽 ?명씉議곗궗 痢≪젙??遺덉쓳??寃쎌슦",
+   "?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?댁쟾",
+   "?쎈Ъ???곹뼢?쇰줈 ?뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?댁쟾"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following has a different traffic penalty regarding the violation of laws by a driver (over the age of  13) of a personal mobility device?",
+  "tr_c": [
+   "Driving without a driver's license",
+   "Refusing to take a breath test as required by a police officer",
+   "Driving under the influence of alcohol",
+   "Driving in a state wherein there is risk of being unable to drive normally due to the influence of drugs"
+  ]
+ },
+ {
+  "n": 548,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀 痍⑤뱷??곸뿉 ?대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "?뚯＜?댁쟾 ?꾨컲???щ엺??5???대궡 ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먮룞湲곗옣移섏옄?꾧굅瑜??댁쟾?섏뿬 硫댄뿀痍⑥냼 泥섎텇??諛쏆? 寃쎌슦",
+   "?뚯＜?댁쟾 ?꾨컲???щ엺??3???대궡 ?좎뿉 痍⑦븳 ?곹깭?먯꽌 媛쒖씤???대룞?μ튂瑜??댁쟾?섏뿬 硫댄뿀痍⑥냼 泥섎텇??諛쏆? 寃쎌슦",
+   "?뚯＜?댁쟾 ?꾨컲???щ엺??5???대궡 ?좎뿉 痍⑦븳 ?곹깭?먯꽌 寃쎌같怨듬Т?먯쓽 ?뚯＜痢≪젙???묓븯吏 ?꾨땲?섏뿬 硫댄뿀痍⑥냼 泥섎텇??諛쏆? 寃쎌슦",
+   "?뚯＜?댁쟾 ?꾨컲???щ엺??3???대궡 ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?뚯＜痢≪젙諛⑺빐?됱쐞濡?硫댄뿀痍⑥냼 泥섎텇??諛쏆? 寃쎌슦"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, who among the following does NOT qualify for a conditional driver?셲 license requiring the installation of an alcohol ignition interlock device?",
+  "tr_c": [
+   "A person who has violated the drunk driving laws and not more than 5 years have passed since he has had his/her license revoked for driving a motorized bicycle while intoxicated.",
+   "A person who has violated the drunk driving laws and not more than 3 years have passed since he has had his/her license revoked for driving a personal mobility device while intoxicated.",
+   "A person who has violated the drunk driving laws and not more than 5 years have passed since he has had his/her license revoked for refusing to comply with a police officer?셲 request to submit to an alcohol test while intoxicated.",
+   "A person who has violated the drunk driving laws and not more than 3 years have passed since he has had his/her license revoked for interfering with an alcohol test while intoxicated."
+  ]
+ },
+ {
+  "n": 549,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뺣퉬遺덈웾李⑤웾 諛쒓껄 ??(  )?쇱쓽 踰붿쐞 ?댁뿉??洹??ъ슜???뺤??쒗궗 ???덈떎. (    ) ?덉뿉 湲곗??쇰줈 留???寃껋??",
+  "ko_c": [
+   "5",
+   "7",
+   "10",
+   "14"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, the use of a motor vehicle found to be in poor maintenance condition may be suspended within ( ) days of the initial discovery. Which of the following best fits in the ( )?",
+  "tr_c": [
+   "5",
+   "7",
+   "10",
+   "14"
+  ]
+ },
+ {
+  "n": 550,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좏샇???살뿉 ????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?⑹깋 ?깊솕???먮㈇ - 李⑤쭏???ㅻⅨ 援먰넻 ?먮뒗 ?덉쟾?쒖???二쇱쓽?섎㈃??吏꾪뻾?????덈떎.",
+   "?곸깋???깊솕 - 蹂댄뻾?먮뒗 ?〓떒蹂대룄瑜?二쇱쓽?섎㈃???〓떒?????덈떎.",
+   "?뱀깋 ?붿궡 ?쒖떆???깊솕 - 李⑤쭏???붿궡??諛⑺뼢?쇰줈 吏꾪뻾?????덈떎.",
+   "?⑹깋???깊솕 - 李⑤쭏媛 ?대? 援먯감濡쒖뿉 吏꾩엯?섍퀬 ?덈뒗 寃쎌슦?먮뒗 援먯감濡??댁뿉 ?뺤??댁빞 ?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are the TWO correct  statements regarding the meaning of traffic signals?",
+  "tr_c": [
+   "Flashing yellow light: Vehicles and horses can proceed while being careful of other forms of traffic and safety signs.",
+   "Red light: Pedestrians can cross at the crosswalk with caution.",
+   "Green arrow-shaped light: Vehicles and horses can proceed in the direction that the arrow points.",
+   "Yellow light: If vehicles and horses have already entered an intersection, they should stop within the intersection."
+  ]
+ },
+ {
+  "n": 551,
+  "ko_b": "?꾨줈援먰넻踰뺣졊?곣섏옄?숈감?숈뿉 ?대떦?섎뒗 2媛吏??",
+  "ko_c": [
+   "泥쒓났湲??몃윮?곸옱??",
+   "?몄긽?덉젙湲?,
+   "?먯쟾嫄?,
+   "?좊え李???1誘명꽣 ?대궡)"
+  ],
+  "a": "1, 2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which TWO belong to the category of ?쐖ehicles??",
+  "tr_c": [
+   "Drilling equipment (truck-mounted)",
+   "A road stabilizer",
+   "A bicycle",
+   "A stroller"
+  ]
+ },
+ {
+  "n": 552,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 ?먮룞李⑤벑(媛쒖씤???대룞?μ튂 ?쒖쇅)???댁쟾???щ엺?????泥섎쾶湲곗???????댁슜?대떎. ?섎せ ?곌껐??2媛吏??",
+  "ko_c": [
+   "?덉쨷?뚯퐳?띾룄 0.2% ?댁긽?쇰줈 ?뚯＜?댁쟾???щ엺 ??1???댁긽 2???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "怨듬룞?꾪뿕?됱쐞瑜????щ엺 ??2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "?쒗룺?댁쟾???щ엺 ??1???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "?먮룞湲곗옣移섏옄?꾧굅 臾대㈃?덉슫????50留????댄븯??踰뚭툑?대굹 援щ쪟"
+  ],
+  "a": "1, 4",
+  "tr_b": "According to the Road Traffic Act, which of the following are TWO INCORRECT statements regarding the  punishment of a driver (excluding personal mobility device)?",
+  "tr_c": [
+   "A person who drives under the influence of alcohol and whose blood alcohol concentration is 0.2% or more ??At least 1 year to 2 years of imprisonment or criminal fine of up to KRW 10 million",
+   "A person who committed risky behavior jointly - Up to 2 years of imprisonment or criminal fine of up to KRW 5 million",
+   "A person who engaged in reckless driving - Up to 1 year of imprisonment or criminal fine of up to KRW 5 million",
+   "Driving a motorcycle without a license ??A criminal fine of up to KRW 500,000 or detention"
+  ]
+ },
+ {
+  "n": 553,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뚯＜痢≪젙諛⑺빐?됱쐞???대떦?섎뒗 ?ㅻ챸?쇰줈 媛???곸젅?섏? ?딆? 2媛吏??",
+  "ko_c": [
+   "?좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙??留뚰븳 ?곷떦???댁쑀媛 ?덈뒗 ?щ엺??寃쎌같怨듬Т?먯쓽 痢≪젙??怨ㅻ??섍쾶 ??紐⑹쟻?쇰줈 異붽?濡? ?좎쓣 留덉떆??寃쎌슦媛 ?댁뿉 ?대떦?쒕떎.",
+   "?먮룞李⑤벑???댁쟾?????뚯＜痢≪젙諛⑺빐?됱쐞瑜??꾨컲??寃쎌슦 1???댄븯??吏뺤뿭?대굹 500留뚯썝 ?댄븯??踰뚭툑??泥섑븳??",
+   "?좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙??留뚰븳 ?곷떦???댁쑀媛 ?덈뒗 ?щ엺???덉쨷?뚯퐫?щ냽?꾩뿉 ?곹뼢??以????덈뒗 ?섏빟?????됱젙 ?덉쟾遺?뱀쑝濡??뺥븯??臾쇳뭹???ъ슜?섎뒗 ?됱쐞媛 ?댁뿉 ?대떦?쒕떎.",
+   "?좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙??留뚰븳 ?곷떦???댁쑀媛 ?덈뒗 ?щ엺???먯쟾嫄곕? ?댁쟾?????뚯＜痢≪젙諛⑺빐?됱쐞瑜??섎뒗 寃쎌슦?? ?댁뿉 ?대떦?섏? ?딅뒗??"
+  ],
+  "a": "2, 4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are the TWO least  appropriate statements regarding acts intended to obstruct alcohol testing?",
+  "tr_c": [
+   "A person who is reasonably suspected of being under the influence and who intentionally drinks more alcohol in order to interfere with the police officer's testing is considered to be obstructing the alcohol test.",
+   "A person who has driven a motor vehicle and who commits an act of obstructing the alcohol test may be punished by imprisonment for up to 1 year or criminal fine of up to KRW 5 million.",
+   "A person who is reasonably suspected of being under the influence and who uses substances such as medicine that may affect the blood alcohol concentration (as prescribed by the Ordinance of the Ministry of Interior and Safety) is considered to be obstructing the alcohol test.",
+   "A person who is reasonably suspected of being under the influence and who commits an act of obstructing the alcohol test after riding a bicycle is not considered to be obstructing the alcohol test."
+  ]
+ },
+ {
+  "n": 554,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜李④? ?대떦 ?꾨줈?먯꽌 踰뺤젙 ?띾룄瑜??꾨컲?섏뿬 ?댁쟾?섍퀬 ?덈뒗 寃쎌슦 2媛吏??",
+  "ko_c": [
+   "?몃룄 2李⑤줈???쇰컲?꾨줈瑜?留ㅼ떆 85?щ줈誘명꽣濡?二쇳뻾 以묒씠??",
+   "?쒗빐??怨좎냽?꾨줈瑜?留ㅼ떆 90?щ줈誘명꽣濡?二쇳뻾 以묒씠??",
+   "?먮룞李⑥쟾?⑸룄濡쒕? 留ㅼ떆 95?щ줈誘명꽣濡?二쇳뻾 以묒씠??",
+   "?몃룄 1李⑤줈??怨좎냽?꾨줈瑜?留ㅼ떆 75?щ줈誘명꽣濡?二쇳뻾 以묒씠??"
+  ],
+  "a": "1, 3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are considered TWO  violations of the legal speed limit by passenger cars?",
+  "tr_c": [
+   "Driving at a speed of 85 km/h on a general road with two lanes in one direction.",
+   "Driving at a speed of 90 km/h on Seohaean Expressway.",
+   "Driving at a speed of 95 km/h on an automobile road.",
+   "Driving at a speed of 75 km/h on an expressway with one lane in one direction."
+  ]
+ },
+ {
+  "n": 555,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??湲멸??μ옄由?援ъ뿭??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "寃쎄퀎 ?쒖떆???섏? ?딅뒗??",
+   "蹂댄뻾?먯쓽 ?덉쟾 ?뺣낫瑜??꾪븯???ㅼ튂?쒕떎.",
+   "蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈???ㅼ튂?쒕떎.",
+   "?꾨줈媛 ?꾨땲??"
+  ],
+  "a": "2, 3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are the TWO correct  statements regarding roadside area?",
+  "tr_c": [
+   "Borders need not be marked.",
+   "It is installed in order to secure the safety of pedestrians.",
+   "It is installed on roads without separate sidewalks.",
+   "It is not a road."
+  ]
+ },
+ {
+  "n": 556,
+  "ko_b": "援먰넻?ш퀬泥섎━ ?밸?踰뺤긽 泥섎쾶???밸???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "李⑥쓽 援먰넻?쇰줈 以묎낵?ㅼ튂?곸즲瑜?踰뷀븳 ?댁쟾?먯뿉 ????먮룞李?醫낇빀蹂댄뿕??媛?낅릺???덈뒗 寃쎌슦 臾댁“嫄?怨듭냼瑜??쒓린?????녿떎.",
+   "李⑥쓽 援먰넻?쇰줈 ?낅Т?곴낵?ㅼ튂?곸즲瑜?踰뷀븳 ?댁쟾?먯뿉 ????쇳빐?먯쓽 紐낆떆?곸씤 ?섏궗??諛섑븯????긽 怨듭냼瑜??쒓린?????덈떎.",
+   "李⑥쓽 ?댁쟾?먭? 援먰넻?ш퀬濡??명븯???뺤궗泥섎쾶??諛쏄쾶 ?섎뒗 寃쎌슦 5???댄븯??湲덇퀬 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑?뺤쓣 諛쏅뒗??",
+   "洹쒖젙 ?띾룄蹂대떎 留ㅼ떆 20?щ줈誘명꽣瑜?珥덇낵???댄뻾?쇰줈 ?몃챸?쇳빐 ?ш퀬 諛쒖깮??醫낇빀蹂댄뿕??媛?낅릺???덉쑝硫?怨듭냼瑜??쒓린?????녿떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the correct explanation on the Act on Special Cases Concerning the Settlement of  Traffic Accidents?",
+  "tr_c": [
+   "If a driver who commits a crime of gross negligence while driving a vehicle has comprehensive automobile insurance, a case cannot be filed unconditionally.",
+   "It is possible to institute public action against a driver responsible for occupational negligence even against the will of  the victim.",
+   "If the driver of a car is subject to criminal punishment, he/she is subject to imprisonment without prison labor for not more than five years or criminal fine of not more than KRW 20 million.",
+   "If personal injury is sustained due to driving at a speed of 20km per hour above the speed limit, but the driver has comprehensive insurance, a case cannot be filed."
+  ]
+ },
+ {
+  "n": 557,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??蹂댄뻾蹂댁“???섏옄李??덈퉬 1誘명꽣 ?대궡)濡?蹂????녿뒗 寃껋??",
+  "ko_c": [
+   "?섎룞?좎껜??,
+   "?꾨룞?좎껜??,
+   "?섎즺???ㅼ퓼??,
+   "?꾧린?먯쟾嫄?
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following cannot be regarded as a mobility aid chair vehicle (i.e.  a vehicle with a width of no more than 1 meter)?",
+  "tr_c": [
+   "A manual wheelchair",
+   "An electric wheelchair",
+   "A mobility scooter",
+   "An electric bicycle"
+  ]
+ },
+ {
+  "n": 558,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??珥덈낫?댁쟾?먯뿉 ????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀留뚯쓣 ??곸쑝濡?珥덈낫?댁쟾?먮? ?뺤쓽?섍퀬 ?덈떎.",
+   "?먮룞湲곗옣移섏옄?꾧굅 硫댄뿀留뚯쓣 諛쏆? ?좊줈遺??2?꾩씠 吏?섏? ?딆? 寃쎌슦瑜?留먰븳??",
+   "泥섏쓬 ?댁쟾硫댄뿀瑜?諛쏆? ?좊줈遺??2?꾩씠 吏?섍린 ?꾩뿉 痍⑥냼?섏뿀?ㅺ? ?ㅼ떆 硫댄뿀瑜?諛쏅뒗 寃쎌슦 痍⑥냼?섍린 ?꾩쓽 湲곌컙??珥덈낫???꾩옄 寃쎈젰???ы븿?쒕떎.",
+   "泥섏쓬 ?댁쟾硫댄뿀瑜?諛쏆? ?좊???2?꾩씠 吏?섏? ?딆? ?щ엺? 珥덈낫?댁쟾?먯뿉 ?대떦?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following statements regarding  novice drivers is correct?",
+  "tr_c": [
+   "Novice drivers are defined only for Class 1 regular licenses.",
+   "Refers to someone who has received only a motorized bicycle license for which less than 2 years have passed since the  date of issuance.",
+   "If a driver's license is revoked before 2 years have passed after the date of issuing the first driver's license and then reissued, the record of driving before the revocation is added to the driver's driving history.",
+   "A person with a driver?셲 license issued no more than two years previosuly is considered a novice driver."
+  ]
+ },
+ {
+  "n": 559,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞湲곗옣移섏옄?꾧굅??湲곗??쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "紐⑤뱺 ?대쪣?먮룞李⑤? 留먰븳??",
+   "?먮룞李④?由щ쾿???섑븳 250?쒖떆 ?댄븯???대쪣?먮룞李⑤? 留먰븳??",
+   "諛곌린??150?쒖떆 ?댁긽???먮룞湲곕? ??李⑤? 留먰븳??",
+   "?꾧린瑜??숇젰?쇰줈 ?ъ슜?섎뒗 寃쎌슦??理쒓퀬?뺢꺽異쒕젰 11?щ줈????댄븯???먮룞湲곕? ??李??꾧린?먯쟾嫄??쒖쇅)瑜?留먰븳??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is correct regarding a motorized bicycle under the Road Traffic Act?",
+  "tr_c": [
+   "The term \"motorcycle\" refers to all two-wheeled vehicles.",
+   "Under the Automobile Management Act, a motorcycle is defined as a two-wheeled vehicle with displacement of up to  250 cc.",
+   "A car embedding a motor with displacement of 150 cc or more is considered to be a motorcycle.",
+   "In the case of electricity-powered vehicles, a vehicle using a motor with maximum rated output of 11 kW or less (excluding electric bicycles) is considered to be a motorcycle."
+  ]
+ },
+ {
+  "n": 560,
+  "ko_b": "援먰넻?ш퀬泥섎━ ?밸?踰뺤긽 援먰넻?ш퀬???대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "4.5???붾Ъ李⑥? ?뱀슜?먮룞李④? 異⑸룎?섏뿬 ?뱀슜?먮룞李??댁쟾?먭? ?ㅼ튇 寃쎌슦",
+   "泥좉만嫄대꼸紐⑹뿉??蹂댄뻾?먭? 湲곗감??遺?ろ? ?ㅼ튇 寃쎌슦",
+   "蹂댄뻾?먭? ?〓떒蹂대룄瑜??〓떒?섎떎媛 ?좏샇?꾨컲 ???먮룞李⑥? 遺?ろ? 蹂댄뻾?먭? ?ㅼ튇 寃쎌슦",
+   "蹂대룄?먯꽌 ?먯쟾嫄곕? ?怨?媛?ㅺ? 蹂댄뻾?먮? 異⑷꺽?섏뿬 蹂댄뻾?먭? ?ㅼ튇 寃쎌슦"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT considered a traffic accident as defined in the Act on Special Cases Concerning  the Settlement of Traffic Accidents?",
+  "tr_c": [
+   "A 4.5-ton truck collides with a car and injures its driver.",
+   "Injury of a pedestrian hit by a train on a railroad crossing",
+   "If a pedestrian crossing a crosswalk is hit by a car that violated the signal",
+   "Collision of a bicycle with a pedestrian on a sidewalk, resulting in injury to the pedestrian"
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Format-Hex -LiteralPath 'translations/audit/queue/213_choices_en.json' -Count 160" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:31:02.288736Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+Format-Hex : 매개 변수 이름 'Count'과(와) 일치하는 매개 변수를 찾을 수 없습니다.
+위치 줄:2 문자:72
++ ... LiteralPath 'translations/audit/queue/213_choices_en.json' -Count 160
++                                                                ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Hex], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Format-Hex
+ 
+
+ exited 1 in 592ms:
+Format-Hex : 매개 변수 이름 'Count'과(와) 일치하는 매개 변수를 찾을 수 없습니다.
+위치 줄:2 문자:72
++ ... LiteralPath 'translations/audit/queue/213_choices_en.json' -Count 160
++                                                                ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Hex], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Format-Hex
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+p=Path(r'translations/audit/queue/213_choices_en.json')
+b=p.read_bytes()
+print(b[:300].hex())
+print(b[:300].decode('utf-8'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:31:05.725702Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 676ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$b=[System.IO.File]::ReadAllBytes((Resolve-Path -LiteralPath '"'translations/audit/queue/213_choices_en.json')); [Convert]::ToHexString("'$b[0..299]); [Text.Encoding]::UTF8.GetString($b[0..299])' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 581ms:
+[
+ {
+  "n": 521,
+  "ko_b": "도로교통법령상 교통사고를 일으킨 자동차 운전자에 대한 벌점기준으로 맞는 것은?",
+  "ko_c": [
+   "신호위반으로 사망(72시간 이내) 1명의 교통사고가 발생하면 벌점은 105점이다.",
+   "피해차량의 탑승자�
+[System.Convert]에 이름이 'ToHexString'인 메서드가 없으므로 메서드를 호출하지 못했습니다.
+위치 줄:2 문자:112
++ ... ue/213_choices_en.json')); [Convert]::ToHexString($b[0..299]); [Text. ...
++                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$t=[Text.Encoding]::UTF8.GetString([IO.File]::ReadAllBytes((Resolve-Path '"'translations/audit/queue/213_choices_en.json'))); "'$d=$t|ConvertFrom-Json; $d | Where-Object {$_.n -ge 521 -and $_.n -le 540} | ConvertTo-Json -Depth 6 -Compress' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 628ms:
+[{"n":521,"ko_b":"도로교통법령상 교통사고를 일으킨 자동차 운전자에 대한 벌점기준으로 맞는 것은?","ko_c":["신호위반으로 사망(72시간 이내) 1명의 교통사고가 발생하면 벌점은 105점이다.","피해차량의 탑승자와 가해차량 운전자의 피해에 대해서도 벌점을 산정한다.","교통사고의 원인 점수와 인명피해 점수, 물적피해 점수를 합산한다.","자동차 대 자동차 교통사고의 경우 사고원인이 두 차량에 있으면 둘 다 벌점을 산정하지 않는다."],"a":"1","tr_b":"Which of the following is the correct statement regarding the demerit points applied to a driver who causes an  accident?","tr_c":["When a traffic accident involving one death (within 72 hours) occurs due to the violation of a signal, a penalty of 105  demerit points is incurred.","Demerit points are also applied for losses suffered by passengers of the victim\u0027s vehicle and the driver of the offending  vehicle.","Demerit points are calculated based on the cause of the accident, casualties if any, and damage to property.","If the accident involves two vehicles, no demerit points are applied if both vehicles are responsible for the accident."]},{"n":522,"ko_b":"도로교통법령상 적성검사 기준을 갖추었는지를 판정하는 건강검진 결과통보서는 운전면허시험 신청일부터 ( ) 이내에  발급된 서류이어야 한다. (  )안에 기준으로 맞은 것은?","ko_c":["1년","2년","3년","4년"],"a":"2","tr_b":"According to the Road Traffic Act, the medical checkup result report that determines whether a driver is eligible for an aptitude test or not should be the document issued within ( ) of the driver\u0027s license application date. Which of the following is correct?","tr_c":["1 year","2 years","3 years","4 years"]},{"n":523,"ko_b":"도로교통법령상 운전면허 취소처분에 대한 이의가 있는 경우, 운전면허행정처분 이의심의위원회에 신청할 수 있는 기간은?","ko_c":["그 처분을 받은 날로부터 90일 이내","그 처분을 안 날로부터 90일 이내","그 처분을 받은 날로부터 60일 이내","그 처분을 안 날로부터 60일 이내"],"a":"3","tr_b":"According to the Road Traffic Act and its Enforcement Decree, if you object to the revocation of your driver\u0027s license, when can you submit an application to the Objections Deliberation Committee of the Metropolitan Police?","tr_c":["Within 90 days of the revocation","Within 90 days of becoming aware of the revocation","Within 60 days of the revocation","Within 60 days of becoming aware of the revocation"]},{"n":524,"ko_b":"도로교통법령상 연습운전면허 소지자가 도로에서 주행연습을 할 때 연습하고자 하는 자동차를 운전할 수 있는 운전면허를  받은 날부터 2년이 경과된 사람(운전면허 정지기간 중인 사람 제외)과 함께 승차하지 아니하고 단독으로 운행한 경우 처분은?","ko_c":["통고처분","과태료 부과","연습운전면허 정지","연습운전면허 취소"],"a":"4","tr_b":"When a person holding a student license practices driving on a road, which of the following is the disposition given to the driver if he/she drives by him/herself without being accompanied by a person with a valid automobile driver’s license obtained 2 or more years ago (excluding persons whose driver’s licenses are currently suspended)?","tr_c":["Disposition of notification","Imposition of an administrative fine","Suspension of the student license","Revocation of the student license"]},{"n":525,"ko_b":"도로교통법령상 원동기장치자전거를 운전할 수 있는 운전면허를 받지 아니하고 개인형 이동장치를 운전한 경우 처벌기준은?","ko_c":["20만 원 이하 벌금이나 구류 또는 과료.","30만 원 이하 벌금이나 구류","50만 원 이하 벌금이나 구류","6개월 이하 징역 또는 200만 원 이하 벌금"],"a":"1","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct punishment if a driver drives a personal mobility device (PMD) without receiving a driver\u0027s license for a motorcycle?","tr_c":["A criminal fine of up to KRW 200,000 or detention, or minor criminal fine","A criminal fine of up to KRW 300,000 or detention","A criminal fine of up to KRW 500,000 or detention","Up to 6 months\u0027 imprisonment or criminal fine of up to KRW 2 million"]},{"n":526,"ko_b":"도로교통법령상 승용자동차의 고용주등에게 부과되는 위반행위별 과태료 금액이 틀린 것은?(어린이 보호구역 및 노 인·장애인보호구역 제외)","ko_c":["중앙선 침범의 경우, 과태료 9만 원","신호 위반의 경우, 과태료 7만 원","보도를 침범한 경우, 과태료 7만 원","속도 위반(매시 20킬로미터 이하)의 경우, 과태료 5만 원"],"a":"4","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following is an incorrect pairing of violations and administrative fines imposed on the employers of drivers of automobiles? (Excluding school zones, silver zones, and priority zones for persons with disabilities)","tr_c":["Crossing the centerline: Administrative fine of KRW 90,000","Traffic signal violation: Administrative fine of KRW 70,000","Driving on a sidewalk: Administrative fine of KRW 70,000","Speeding (not more than 20 km/h): Administrative fine of KRW 50,000"]},{"n":527,"ko_b":"도로교통법령상 벌점이 부과되는 운전자의 행위는?","ko_c":["주행 중 차 밖으로 물건을 던지는 경우","차로변경 시 신호 불이행한 경우","불법부착장치 차를 운전한 경우","교차로 통행방법을 위반한 경우"],"a":"1","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following actions are punishable  with demerit points?","tr_c":["Throwing an object out of a moving vehicle","Not signaling before a change of lane","Driving a vehicle with illegal accessories","Violating the intersection traffic rules"]},{"n":528,"ko_b":"도로교통법령상 무사고·무위반 서약에 의한 벌점 감경(착한운전 마일리지제도)에 대한 설명으로 맞는 것은?","ko_c":["40점의 특혜점수를 부여한다.","2년간 교통사고 및 법규위반이 없어야 특혜점수를 부여한다.","일정 사유를 제외하고 정지처분을 받게 될 경우 누산점수에서 특혜점수를 공제한다.","운전면허시험장에 직접 방문하여 서약서를 제출해야만 한다."],"a":"3","tr_b":"Which of the following statements regarding a reduction of demerit points through an accident-free and  violation-free driving pledge (Good Driving Mileage System) is correct?","tr_c":["Special points of 40 points are issued.","Two years without any traffic accidents or violations are required to earn special points.","Except in certain cases, if a driver receives a suspension order, special benefit points are deducted from his or her  accumulated points.","A driver must visit a driver licensing office and submit a written pledge."]},{"n":529,"ko_b":"도로교통법령상 음주운전 방지장치에 대한 설명으로 맞는 것 2가지는?","ko_c":["“음주운전 방지장치”란 술에 취한 상태에서 자동차등을 운전하려는 경우 시동이 걸리지 아니하도록 하는 것으로서       행정안전부령으로 정하는 것을 말한다.","음주운전 방지장치 부착 조건부 운전면허를 받은 사람이 자동차등을 운전하려는 경우 음주운전 방지장치를 설치하       고, 시‧도경찰청장에게 등록하여야 한다.","음주운전 방지장치는 운전면허 결격기간이 종료된 날부터 부착기간을 산정한다.","음주한 후 개인형 이동장치를 운전한 경우에도 5년 이내에 다시 음주운전으로 운전면허 취소 처분을 받은 경우 음       주운전 방지장치 부착 조건부 운전면허를 받아야 한다."],"a":"1, 2","tr_b":"Which two statements about ignition interlock devices (IIDs) are correct?","tr_c":["An “ignition interlock device” is a device that prevents a vehicle from starting if the driver is intoxicated, as prescribed by the Minister of Interior and Safety.","Drivers holding a conditional license with IID restrictions must install the device on their vehicle and register it with the provincial or municipal police agency.","The period of the device’s installation begins from the date on which the driver’s period of disqualification ends.","In cases where a person drives a personal mobility device after drinking, if he/she receives another license revocation for drunk driving within five years, he/she must obtain a conditional driving license requiring the installation of an alcohol ignition interlock device."]},{"n":530,"ko_b":"도로교통법령상 특별교통안전 의무교육을 받아야 하는 사람은?","ko_c":["처음으로 운전면허를 받으려는 사람","처분벌점이 30점인 사람","교통참여교육을 받은 사람","난폭운전으로 면허가 정지된 사람"],"a":"4","tr_b":"Which of the following is subject to mandatory education on special traffic safety?","tr_c":["A first-time applicant seeking to obtain a driver\u0027s license","A driver with 30 demerit points","A driver who completed proactive driving training","A driver whose license is suspended for reckless driving"]},{"n":531,"ko_b":"도로교통법령상 교차로·횡단보도·건널목에 2시간 이상 주차한 승용자동차의 소유자에게 부과되는 과태료 금액으로  맞는 것은?(어린이 보호구역 및 노인·장애인보호구역 제외)","ko_c":["4만 원","5만 원","6만 원","7만 원"],"a":"2","tr_b":"How much is the fine for leaving a passenger car parked for 2 hours or more at an intersection, a crosswalk, or a railroad crossing (excluding child, elderly, or disabled protection zones)?","tr_c":["KRW 40,000","KRW 50,000","KRW 60,000","KRW 70,000"]},{"n":532,"ko_b":"도로교통법령상 운전면허 취소 사유가 아닌 것은?","ko_c":["정기 적성검사 기간을 1년 초과한 경우","보복운전으로 구속된 경우","제한속도를 시속 100킬로미터 초과하여 2회 운전한 경우","자동차등을 이용하여 다른 사람을 약취 유인 또는 감금한 경우"],"a":"3","tr_b":"Which of the following is NOT a valid reason for revocation of a driver\u0027s license?","tr_c":["Failing to take the regular aptitude test for one year","Being arrested for retaliatory driving","Driving twice at a speed exceeding the speed limit by 100 km/h.","Using vehicles to kidnap, induce, or detain another person"]},{"n":533,"ko_b":"3년 전 음주측정거부죄로 벌금형을 선고받고 재차 경찰공무원의 정당한 음주측정 요구를 거부하여 적발된 승용차운전 자의 처벌 기준은?","ko_c":["1년 이상 6년 이하의 징역이나 500만 원 이상 3천만 원 이하의 벌금","2년 이상 6년 이하의 징역이나 500만 원 이상 2천만 원 이하의 벌금","3년 이상 5년 이하의 징역이나 1천만 원 이상 3천만 원 이하의 벌금","1년 이상 5년 이하의 징역이나 500만 원 이상 2천만 원 이하의 벌금"],"a":"1","tr_b":"What is the penalty for a driver who, upon being stopped for drink driving, and who is known to have refused a  breathalyzer test 3 years previously, refuses to comply once again?","tr_c":["Imprisonment with labor for at least 1 year but not more than 6 years, or criminal fine of at least KRW 5 million but not  more than KRW 30 million","Imprisonment with labor for at least 2 years but not more than 6 years, or criminal fine of at least KRW 5 million but  not more than KRW 20 million","Imprisonment with labor for at least 3 years but not more than 5 years, or criminal fine of KRW at least 10 million but  not more than KRW 30 million","Imprisonment with labor for at least 1 year but not more than 5 years, or criminal fine of at least KRW 5 million but not  more than KRW 20 million"]},{"n":534,"ko_b":"도로교통법령상 혈중알코올농도 0.08퍼센트 이상 0.2퍼센트 미만의 술에 취한 상태로 승용자동차를 운전한 사람에 대한  처벌기준으로 맞는 것은? (10년 내 1회 위반한 경우)","ko_c":["2년 이하의 징역이나 500만 원 이하의 벌금","3년 이하의 징역이나 500만 원 이상 1천만 원 이하의 벌금","1년 이상 2년 이하의 징역이나 500만 원 이상 1천만 원 이하의 벌금","2년 이상 5년 이하의 징역이나 1천만 원 이상 2천만 원 이하의 벌금"],"a":"3","tr_b":"What is the penalty for driving with a BAC of between 0.08% and 0.2% (for a first offense within 10 years)?","tr_c":["Imprisonment for up to 2 years or criminal fine of up to KRW 5 million","Imprisonment for up to 3 years or criminal fine between KRW 5 million and 10 million","Imprisonment for 1-2 years or criminal fine between KRW 5 million and 10 million","Imprisonment for 2-5 years or criminal fine between KRW 10 million and 20 million"]},{"n":535,"ko_b":"도로교통법령상 도로에서 자동차 운전자가 물적 피해 교통사고를 일으킨 후 조치 등 불이행에 따른 벌점기준은?","ko_c":["15점","20점","30점","40점"],"a":"1","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following are the demerit points given to an automobile driver who flees after causing a traffic accident involving property damage on a road?","tr_c":["15 points","20 points","30 points","40 points"]},{"n":536,"ko_b":"도로교통법령상 4.5톤 화물자동차의 적재물 추락 방지 조치를 하지 않은 경우 범칙금액은?","ko_c":["5만 원","4만 원","3만 원","2만 원"],"a":"1","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following is the traffic penalty  imposed if measures are not taken to prevent freight from falling off a 4.5-ton truck?","tr_c":["KRW 50,000","KRW 40,000","KRW 30,000","KRW 20,000"]},{"n":537,"ko_b":"도로교통법령상 전용차로 통행에 대한 설명으로 맞는 것은?","ko_c":["승용차에 2인이 승차한 경우 다인승 전용차로를 통행할 수 있다.","승차정원 9인승 이상 승용차는 6인이 승차하면 고속도로 버스전용차로를 통행할 수 있다.","승차정원 12인승 이하인 승합차는 5인이 승차해도 고속도로 버스전용차로를 통행할 수 있다.","승차정원 16인승 자가용 승합차는 고속도로 외의 도로에 설치된 버스전용차로를 통행 할 수 있다."],"a":"2","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following is true about using  designated lanes?","tr_c":["A passenger vehicle carrying 2 or more persons can use the high-occupancy vehicle lane.","A 9-seater passenger vehicle carrying 6 or more persons can use the exclusive bus lane on an expressway.","A 12-seater bus carrying 5 or more persons can use the exclusive bus lane on an expressway.","A 16-seater personal vehicle can use all exclusive bus lanes found on roads other than expressways."]},{"n":538,"ko_b":"도로교통법령상 75세 이상인 사람이 받아야 하는 교통안전교육에 대한 설명으로 틀린 것은?","ko_c":["75세 이상인 사람에 대한 교통안전교육은 한국도로교통공단에서 실시한다.","운전면허증 갱신일에 75세 이상인 사람은 갱신기간 이내에 교육을 받아야 한다.","75세 이상인 사람이 운전면허를 처음 받으려는 경우 교육시간은 1시간이다.","교육은 강의ㆍ시청각ㆍ인지능력 자가진단 등의 방법으로 2시간 실시한다."],"a":"3","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following statements regarding the traffic safety education that a person who is 75 years of age or older must receive is INCORRECT?","tr_c":["Traffic safety education for persons who are 75 years of age or older is provided by the Korea Road Traffic Authority.","A person who is 75 years of age or older as of the renewal date of the driver’s license shall receive education within the  period of renewal.","If a person who is 75 years of age or older wants to obtain a driver’s license for the first time, the period of education  is 1 hour.","The education is conducted for 2 hours by means of lecture, audiovisual, and self-diagnosis of cognitive ability."]},{"n":539,"ko_b":"도로교통법령상 자동차 운전자가 중앙선 침범으로 피해자에게 중상 1명, 경상 1명의 교통사고를 일으킨 경우 벌점은?","ko_c":["30점","40점","50점","60점"],"a":"3","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following are the demerit points given if an automobile driver driving over the centerline caused a traffic accident involving one severe injury and one slight injury?","tr_c":["30 points","40 points","50 points","60 points"]},{"n":540,"ko_b":"도로교통법령상 “도로에서 어린이에게 개인형 이동장치를 운전하게 한 보호자의 과태료”와 “술에 취한 상태로 개인형 이동장치를 운전한 사람의 범칙금(측정거부 제외)”을 합산한 것으로 맞는 것은?","ko_c":["10만 원","20만 원","30만 원","40만 원"],"a":"2","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct sum of the \"administrative fine imposed on a guardian who let a child drive a personal mobility device (PMD) on a road\" and \"traffic penalty imposed on a driver who drove a PMD under the influence (excluding refusal to take a field sobriety test)\"?","tr_c":["KRW 100,000","KRW 200,000","KRW 300,000","KRW 400,000"]}]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$t=[Text.Encoding]::UTF8.GetString([IO.File]::ReadAllBytes((Resolve-Path '"'translations/audit/queue/213_choices_en.json'))); "'$d=$t|ConvertFrom-Json; $d | Where-Object {$_.n -ge 541 -and $_.n -le 560} | ConvertTo-Json -Depth 6 -Compress' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 616ms:
+[{"n":541,"ko_b":"도로교통법령상 고속도로 버스전용차로를 이용할 수 있는 자동차의 기준으로 맞는 것은?","ko_c":["11인승 승합자동차는 6인 이상 승차한 경우 통행이 가능하다.","9인승 승용자동차는 5인 이상 승차한 경우 통행이 가능하다.","7인승 승용자동차는 6인 이상 승차한 경우 통행이 가능하다.","모든 승합자동차는 승차인원 관계없이 통행 할 수 있다."],"a":"1","tr_b":"Which of the following statements regarding the criteria for vehicle types with access to exclusive bus lanes on  expressways is correct?","tr_c":["11-seater vans with at least 6 occupants.","9-seater cars with at least 5 occupants.","7-seater cars with at least 6 occupants.","All vans regardless of the number of passengers."]},{"n":542,"ko_b":"다음 보기에서 설명하는 교차로를 운행하는 경우 일시정지해야 하는 곳이 아닌 것은?","ko_c":["신호기의 신호가 황색 점멸 중인 교차로","신호기의 신호가 적색 점멸 중인 교차로","교통정리를 하고 있지 아니하고 좌・우를 확인할 수 없는 교차로","교통정리를 하고 있지 아니하고 교통이 빈번한 교차로"],"a":"1","tr_b":"Which of the following is NOT a place where you must come to a complete stop?","tr_c":["An intersection where the traffic signal light is flashing yellow","An intersection where the traffic signal light is flashing red","An intersection where traffic is not controlled and it is not possible to check the left and right","A busy intersection where traffic is not controlled"]},{"n":543,"ko_b":"유료도로법령상 통행료 미납하고 고속도로를 통과한 차량에 대한 부가통행료 부과기준으로 맞는 것은?","ko_c":["통행료의 5배의 해당하는 금액을 부과할 수 있다.","통행료의 10배의 해당하는 금액을 부과할 수 있다.","통행료의 20배의 해당하는 금액을 부과할 수 있다.","통행료의 30배의 해당하는 금액을 부과할 수 있다."],"a":"2","tr_b":"According to the Toll Road Act and its Enforcement Decree, what is the correct standard for imposing additional  tolls on vehicles that pass through tollgates without paying tolls on toll roads?","tr_c":["An amount equivalent to five times the toll fee can be imposed.","An amount equivalent to 10 times the toll fee can be imposed.","An amount equivalent to 20 times the toll fee can be imposed.","An amount equivalent to 30 times the toll fee can be imposed."]},{"n":544,"ko_b":"도로교통법령상 전용차로 통행차 외에 전용차로로 통행할 수 있는 경우가 아닌 것은?","ko_c":["긴급자동차가 그 본래의 긴급한 용도로 운행되고 있는 경우","도로의 파손 등으로 전용차로가 아니면 통행할 수 없는 경우","전용차로 통행차의 통행에 장해를 주지 아니하는 범위에서 택시가 승객을 태우기 위하여 일시 통행하는 경우","택배차가 물건을 내리기 위해 일시 통행하는 경우"],"a":"4","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT a case wherein a vehicle other than vehicles allowed on an exclusive-lane may pass along the exclusive lane?","tr_c":["When an emergency vehicle is being operated for the originally intended emergency purpose","When it is not possible to pass along except by using the exclusive lane due to road damage","When a taxi temporarily passes along to take a passenger onboard, provided that it does not impede the traffic of  vehicles in the exclusive lane","When a package delivery truck temporarily passes along to unload goods"]},{"n":545,"ko_b":"도로교통법령상 자동차전용도로에서 자동차의 최고 속도와 최저 속도는 ?","ko_c":["매시 110킬로미터, 매시 50킬로미터","매시 100킬로미터, 매시 40킬로미터","매시 90킬로미터, 매시 30킬로미터","매시 80킬로미터, 매시 20킬로미터"],"a":"3","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following are the maximum and  minimum speed limits, respectively, to be observed in an automobile road?","tr_c":["110 km/h, 50 km/h","100 km/h, 40 km/h","90 km/h, 30 km/h","80 km/h, 20 km/h"]},{"n":546,"ko_b":"고속도로 통행료 미납 시 강제징수의 방법으로 맞지 않는 것은 ?","ko_c":["예금압류","가상자산압류","공매","번호판영치"],"a":"4","tr_b":"Which of the following is NOT true about the enforced collection of tolls on expressways for unpaid tolls?","tr_c":["Seizure of deposits","Seizure of virtual assets","Public auction","Confiscation of license plates"]},{"n":547,"ko_b":"도로교통법령상 개인형 이동장치 운전자(13세 이상)의 법규위반에 대한 범칙금액이 다른 것은?","ko_c":["운전면허를 받지 아니하고 운전","경찰공무원의 호흡조사 측정에 불응한 경우","술에 취한 상태에서 운전","약물의 영향으로 정상적으로 운전하지 못할 우려가 있는 상태에서 운전"],"a":"2","tr_b":"Which of the following has a different traffic penalty regarding the violation of laws by a driver (over the age of  13) of a personal mobility device?","tr_c":["Driving without a driver\u0027s license","Refusing to take a breath test as required by a police officer","Driving under the influence of alcohol","Driving in a state wherein there is risk of being unable to drive normally due to the influence of drugs"]},{"n":548,"ko_b":"도로교통법령상 음주운전 방지장치 부착 조건부 운전면허 취득대상에 해당하지 않는 것은?","ko_c":["음주운전 위반한 사람이 5년 이내 술에 취한 상태에서 원동기장치자전거를 운전하여 면허취소 처분을 받은 경우","음주운전 위반한 사람이 3년 이내 술에 취한 상태에서 개인형 이동장치를 운전하여 면허취소 처분을 받은 경우","음주운전 위반한 사람이 5년 이내 술에 취한 상태에서 경찰공무원의 음주측정에 응하지 아니하여 면허취소 처분을 받은 경우","음주운전 위반한 사람이 3년 이내 술에 취한 상태에서 음주측정방해행위로 면허취소 처분을 받은 경우"],"a":"2","tr_b":"According to the Road Traffic Act and its Enforcement Decree, who among the following does NOT qualify for a conditional driver’s license requiring the installation of an alcohol ignition interlock device?","tr_c":["A person who has violated the drunk driving laws and not more than 5 years have passed since he has had his/her license revoked for driving a motorized bicycle while intoxicated.","A person who has violated the drunk driving laws and not more than 3 years have passed since he has had his/her license revoked for driving a personal mobility device while intoxicated.","A person who has violated the drunk driving laws and not more than 5 years have passed since he has had his/her license revoked for refusing to comply with a police officer’s request to submit to an alcohol test while intoxicated.","A person who has violated the drunk driving laws and not more than 3 years have passed since he has had his/her license revoked for interfering with an alcohol test while intoxicated."]},{"n":549,"ko_b":"도로교통법령상 정비불량차량 발견 시 (  )일의 범위 내에서 그 사용을 정지시킬 수 있다. (    ) 안에 기준으로 맞 는 것은?","ko_c":["5","7","10","14"],"a":"3","tr_b":"According to the Road Traffic Act and its Enforcement Decree, the use of a motor vehicle found to be in poor maintenance condition may be suspended within ( ) days of the initial discovery. Which of the following best fits in the ( )?","tr_c":["5","7","10","14"]},{"n":550,"ko_b":"도로교통법령상 신호의 뜻에 대한 설명으로 맞는 2가지는?","ko_c":["황색 등화의 점멸 - 차마는 다른 교통 또는 안전표지에 주의하면서 진행할 수 있다.","적색의 등화 - 보행자는 횡단보도를 주의하면서 횡단할 수 있다.","녹색 화살 표시의 등화 - 차마는 화살표 방향으로 진행할 수 있다.","황색의 등화 - 차마가 이미 교차로에 진입하고 있는 경우에는 교차로 내에 정지해야 한다."],"a":"1, 3","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following are the TWO correct  statements regarding the meaning of traffic signals?","tr_c":["Flashing yellow light: Vehicles and horses can proceed while being careful of other forms of traffic and safety signs.","Red light: Pedestrians can cross at the crosswalk with caution.","Green arrow-shaped light: Vehicles and horses can proceed in the direction that the arrow points.","Yellow light: If vehicles and horses have already entered an intersection, they should stop within the intersection."]},{"n":551,"ko_b":"도로교통법령상‘자동차’에 해당하는 2가지는?","ko_c":["천공기(트럭적재식)","노상안정기","자전거","유모차(폭 1미터 이내)"],"a":"1, 2","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which TWO belong to the category of “vehicles”?","tr_c":["Drilling equipment (truck-mounted)","A road stabilizer","A bicycle","A stroller"]},{"n":552,"ko_b":"도로교통법상 자동차등(개인형 이동장치 제외)을 운전한 사람에 대한 처벌기준에 대한 내용이다. 잘못 연결된 2가지는?","ko_c":["혈중알콜농도 0.2% 이상으로 음주운전한 사람 – 1년 이상 2년 이하의 징역이나 1천만 원 이하의 벌금","공동위험행위를 한 사람 – 2년 이하의 징역이나 500만 원 이하의 벌금","난폭운전한 사람 – 1년 이하의 징역이나 500만 원 이하의 벌금","원동기장치자전거 무면허운전 – 50만 원 이하의 벌금이나 구류"],"a":"1, 4","tr_b":"According to the Road Traffic Act, which of the following are TWO INCORRECT statements regarding the  punishment of a driver (excluding personal mobility device)?","tr_c":["A person who drives under the influence of alcohol and whose blood alcohol concentration is 0.2% or more – At least 1 year to 2 years of imprisonment or criminal fine of up to KRW 10 million","A person who committed risky behavior jointly - Up to 2 years of imprisonment or criminal fine of up to KRW 5 million","A person who engaged in reckless driving - Up to 1 year of imprisonment or criminal fine of up to KRW 5 million","Driving a motorcycle without a license – A criminal fine of up to KRW 500,000 or detention"]},{"n":553,"ko_b":"도로교통법령상 음주측정방해행위에 해당하는 설명으로 가장 적절하지 않은 2가지는?","ko_c":["술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있는 사람이 경찰공무원의 측정을 곤란하게 할 목적으로 추가로  술을 마시는 경우가 이에 해당한다.","자동차등을 운전한 후 음주측정방해행위를 위반할 경우 1년 이하의 징역이나 500만원 이하의 벌금에 처한다.","술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있는 사람이 혈중알코올농도에 영향을 줄 수 있는 의약품 등 행정 안전부령으로 정하는 물품을 사용하는 행위가 이에 해당한다.","술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있는 사람이 자전거를 운전한 후 음주측정방해행위를 하는 경우는  이에 해당하지 않는다."],"a":"2, 4","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following are the TWO least  appropriate statements regarding acts intended to obstruct alcohol testing?","tr_c":["A person who is reasonably suspected of being under the influence and who intentionally drinks more alcohol in order to interfere with the police officer\u0027s testing is considered to be obstructing the alcohol test.","A person who has driven a motor vehicle and who commits an act of obstructing the alcohol test may be punished by imprisonment for up to 1 year or criminal fine of up to KRW 5 million.","A person who is reasonably suspected of being under the influence and who uses substances such as medicine that may affect the blood alcohol concentration (as prescribed by the Ordinance of the Ministry of Interior and Safety) is considered to be obstructing the alcohol test.","A person who is reasonably suspected of being under the influence and who commits an act of obstructing the alcohol test after riding a bicycle is not considered to be obstructing the alcohol test."]},{"n":554,"ko_b":"도로교통법령상 승용차가 해당 도로에서 법정 속도를 위반하여 운전하고 있는 경우 2가지는?","ko_c":["편도 2차로인 일반도로를 매시 85킬로미터로 주행 중이다.","서해안 고속도로를 매시 90킬로미터로 주행 중이다.","자동차전용도로를 매시 95킬로미터로 주행 중이다.","편도 1차로인 고속도로를 매시 75킬로미터로 주행 중이다."],"a":"1, 3","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following are considered TWO  violations of the legal speed limit by passenger cars?","tr_c":["Driving at a speed of 85 km/h on a general road with two lanes in one direction.","Driving at a speed of 90 km/h on Seohaean Expressway.","Driving at a speed of 95 km/h on an automobile road.","Driving at a speed of 75 km/h on an expressway with one lane in one direction."]},{"n":555,"ko_b":"도로교통법령상 길가장자리 구역에 대한 설명으로 맞는 2가지는?","ko_c":["경계 표시는 하지 않는다.","보행자의 안전 확보를 위하여 설치한다.","보도와 차도가 구분되지 아니한 도로에 설치한다.","도로가 아니다."],"a":"2, 3","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following are the TWO correct  statements regarding roadside area?","tr_c":["Borders need not be marked.","It is installed in order to secure the safety of pedestrians.","It is installed on roads without separate sidewalks.","It is not a road."]},{"n":556,"ko_b":"교통사고처리 특례법상 처벌의 특례에 대한 설명으로 맞는 것은?","ko_c":["차의 교통으로 중과실치상죄를 범한 운전자에 대해 자동차 종합보험에 가입되어 있는 경우 무조건 공소를 제기할 수 없다.","차의 교통으로 업무상과실치상죄를 범한 운전자에 대해 피해자의 명시적인 의사에 반하여 항상 공소를 제기할 수 있다.","차의 운전자가 교통사고로 인하여 형사처벌을 받게 되는 경우 5년 이하의 금고 또는 2천만 원 이하의 벌금형을 받는다.","규정 속도보다 매시 20킬로미터를 초과한 운행으로 인명피해 사고 발생시 종합보험에 가입되어 있으면 공소를 제기할 수 없다."],"a":"3","tr_b":"Which of the following is the correct explanation on the Act on Special Cases Concerning the Settlement of  Traffic Accidents?","tr_c":["If a driver who commits a crime of gross negligence while driving a vehicle has comprehensive automobile insurance, a case cannot be filed unconditionally.","It is possible to institute public action against a driver responsible for occupational negligence even against the will of  the victim.","If the driver of a car is subject to criminal punishment, he/she is subject to imprisonment without prison labor for not more than five years or criminal fine of not more than KRW 20 million.","If personal injury is sustained due to driving at a speed of 20km per hour above the speed limit, but the driver has comprehensive insurance, a case cannot be filed."]},{"n":557,"ko_b":"도로교통법령상 보행보조용 의자차(너비 1미터 이내)로 볼 수 없는 것은?","ko_c":["수동휠체어","전동휠체어","의료용 스쿠터","전기자전거"],"a":"4","tr_b":"According to the Road Traffic Act, which of the following cannot be regarded as a mobility aid chair vehicle (i.e.  a vehicle with a width of no more than 1 meter)?","tr_c":["A manual wheelchair","An electric wheelchair","A mobility scooter","An electric bicycle"]},{"n":558,"ko_b":"도로교통법령상 초보운전자에 대한 설명으로 맞는 것은?","ko_c":["제1종 보통면허만을 대상으로 초보운전자를 정의하고 있다.","원동기장치자전거 면허만을 받은 날로부터 2년이 지나지 않은 경우를 말한다.","처음 운전면허를 받은 날로부터 2년이 지나기 전에 취소되었다가 다시 면허를 받는 경우 취소되기 전의 기간을 초보운 전자 경력에 포함한다.","처음 운전면허를 받은 날부터 2년이 지나지 않은 사람은 초보운전자에 해당한다."],"a":"4","tr_b":"According to the Road Traffic Act and its Enforcement Decree, which of the following statements regarding  novice drivers is correct?","tr_c":["Novice drivers are defined only for Class 1 regular licenses.","Refers to someone who has received only a motorized bicycle license for which less than 2 years have passed since the  date of issuance.","If a driver\u0027s license is revoked before 2 years have passed after the date of issuing the first driver\u0027s license and then reissued, the record of driving before the revocation is added to the driver\u0027s driving history.","A person with a driver’s license issued no more than two years previosuly is considered a novice driver."]},{"n":559,"ko_b":"도로교통법령상 원동기장치자전거에 기준으로 옳은 것은?","ko_c":["모든 이륜자동차를 말한다.","자동차관리법에 의한 250시시 이하의 이륜자동차를 말한다.","배기량 150시시 이상의 원동기를 단 차를 말한다.","전기를 동력으로 사용하는 경우는 최고정격출력 11킬로와트 이하의 원동기를 단 차(전기자전거 제외)를 말한다."],"a":"4","tr_b":"Which of the following is correct regarding a motorized bicycle under the Road Traffic Act?","tr_c":["The term \"motorcycle\" refers to all two-wheeled vehicles.","Under the Automobile Management Act, a motorcycle is defined as a two-wheeled vehicle with displacement of up to  250 cc.","A car embedding a motor with displacement of 150 cc or more is considered to be a motorcycle.","In the case of electricity-powered vehicles, a vehicle using a motor with maximum rated output of 11 kW or less (excluding electric bicycles) is considered to be a motorcycle."]},{"n":560,"ko_b":"교통사고처리 특례법상 교통사고에 해당하지 않는 것은?","ko_c":["4.5톤 화물차와 승용자동차가 충돌하여 승용자동차 운전자가 다친 경우","철길건널목에서 보행자가 기차에 부딪혀 다친 경우","보행자가 횡단보도를 횡단하다가 신호위반 한 자동차와 부딪혀 보행자가 다친 경우","보도에서 자전거를 타고 가다가 보행자를 충격하여 보행자가 다친 경우"],"a":"2","tr_b":"Which of the following is NOT considered a traffic accident as defined in the Act on Special Cases Concerning  the Settlement of Traffic Accidents?","tr_c":["A 4.5-ton truck collides with a car and injures its driver.","Injury of a pedestrian hit by a train on a railroad crossing","If a pedestrian crossing a crosswalk is hit by a car that violated the signal","Collision of a bicycle with a pedestrian on a sidewalk, resulting in injury to the pedestrian"]}]
+
+codex
+[{"n":525,"field":"b","severity":"major","issue":"‘원동기장치자전거 면허’를 일반적인 오토바이 면허로 번역해 필요한 면허 종류를 오해하게 한다.","suggestion":"According to the Road Traffic Act and its Enforcement Decree, what is the penalty for operating a personal mobility device without a license permitting the operation of a motorized bicycle?"},{"n":532,"field":"c[0]","severity":"major","issue":"‘정기 적성검사 기간을 1년 초과’가 검사 자체를 1년 동안 받지 않은 것으로 번역되어 면허취소의 기준 시점이 달라졌다.","suggestion":"Allowing more than one year to elapse after the deadline for the regular aptitude test"},{"n":533,"field":"b","severity":"major","issue":"3년 전 음주측정 거부로 벌금형을 선고받았다는 재범 요건이 단순히 과거 거부 사실이 알려진 것으로 번역되었다.","suggestion":"What is the penalty for a passenger-car driver who was sentenced to a criminal fine for refusing an alcohol test three years ago and is caught refusing another lawful alcohol test requested by a police officer?"},{"n":535,"field":"b","severity":"major","issue":"사고 후 필요한 조치를 이행하지 않은 행위를 무조건 현장에서 도주한 것으로 좁혀 번역했다.","suggestion":"According to the Road Traffic Act and its Enforcement Decree, how many demerit points are imposed on a driver who fails to take the required measures after causing a property-damage traffic accident on a road?"},{"n":540,"field":"b","severity":"major","issue":"‘음주측정 거부’를 현장 음주운전 수행능력검사 거부로 번역해 서로 다른 검사 개념으로 바뀌었다.","suggestion":"According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct sum of the administrative fine imposed on a guardian who allows a child to operate a personal mobility device on a road and the traffic penalty imposed on a person who operates a personal mobility device while intoxicated, excluding refusal to submit to an alcohol test?"},{"n":551,"field":"b","severity":"major","issue":"법률상 ‘자동차’를 범위가 더 넓은 ‘vehicles’로 번역해 자전거도 정답처럼 판단될 수 있다.","suggestion":"According to the Road Traffic Act and its Enforcement Decree, which TWO are classified as motor vehicles?"},{"n":556,"field":"c[1]","severity":"major","issue":"원문의 ‘항상’이 누락되어 ‘언제나 피해자의 의사에 반해 공소를 제기할 수 있다’는 오답이 일부 경우에는 가능하다는 문장으로 바뀌었다.","suggestion":"Public prosecution may always be instituted against a driver who commits occupational negligent injury through vehicle traffic, even against the victim's explicitly stated wishes."},{"n":559,"field":"c[0]","severity":"major","issue":"보기의 정의 대상인 ‘원동기장치자전거’를 일반적인 ‘motorcycle’로 바꿔 법적 차종 분류를 오도한다.","suggestion":"The term “motorized bicycle” means all two-wheeled motor vehicles."},{"n":559,"field":"c[1]","severity":"major","issue":"‘원동기장치자전거’의 정의를 ‘motorcycle’의 정의로 번역해 서로 다른 법적 차종을 혼동한다.","suggestion":"Under the Motor Vehicle Management Act, the term “motorized bicycle” means a two-wheeled motor vehicle with an engine displacement of 250 cc or less."},{"n":559,"field":"c[2]","severity":"major","issue":"‘원동기를 단 차’를 자동차에 모터를 내장한 것으로 옮겼고 정의 대상도 motorcycle로 바꾸었다.","suggestion":"A vehicle equipped with an engine having a displacement of 150 cc or more is considered a motorized bicycle."},{"n":559,"field":"c[3]","severity":"critical","issue":"정답 보기의 ‘원동기장치자전거’를 ‘motorcycle’로 오역해 정답의 핵심 법적 분류가 달라졌다.","suggestion":"For electrically powered vehicles, a vehicle equipped with a motor having a maximum rated output of 11 kW or less, excluding electric bicycles, is considered a motorized bicycle."}]
+tokens used
+37,746
+[{"n":525,"field":"b","severity":"major","issue":"‘원동기장치자전거 면허’를 일반적인 오토바이 면허로 번역해 필요한 면허 종류를 오해하게 한다.","suggestion":"According to the Road Traffic Act and its Enforcement Decree, what is the penalty for operating a personal mobility device without a license permitting the operation of a motorized bicycle?"},{"n":532,"field":"c[0]","severity":"major","issue":"‘정기 적성검사 기간을 1년 초과’가 검사 자체를 1년 동안 받지 않은 것으로 번역되어 면허취소의 기준 시점이 달라졌다.","suggestion":"Allowing more than one year to elapse after the deadline for the regular aptitude test"},{"n":533,"field":"b","severity":"major","issue":"3년 전 음주측정 거부로 벌금형을 선고받았다는 재범 요건이 단순히 과거 거부 사실이 알려진 것으로 번역되었다.","suggestion":"What is the penalty for a passenger-car driver who was sentenced to a criminal fine for refusing an alcohol test three years ago and is caught refusing another lawful alcohol test requested by a police officer?"},{"n":535,"field":"b","severity":"major","issue":"사고 후 필요한 조치를 이행하지 않은 행위를 무조건 현장에서 도주한 것으로 좁혀 번역했다.","suggestion":"According to the Road Traffic Act and its Enforcement Decree, how many demerit points are imposed on a driver who fails to take the required measures after causing a property-damage traffic accident on a road?"},{"n":540,"field":"b","severity":"major","issue":"‘음주측정 거부’를 현장 음주운전 수행능력검사 거부로 번역해 서로 다른 검사 개념으로 바뀌었다.","suggestion":"According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct sum of the administrative fine imposed on a guardian who allows a child to operate a personal mobility device on a road and the traffic penalty imposed on a person who operates a personal mobility device while intoxicated, excluding refusal to submit to an alcohol test?"},{"n":551,"field":"b","severity":"major","issue":"법률상 ‘자동차’를 범위가 더 넓은 ‘vehicles’로 번역해 자전거도 정답처럼 판단될 수 있다.","suggestion":"According to the Road Traffic Act and its Enforcement Decree, which TWO are classified as motor vehicles?"},{"n":556,"field":"c[1]","severity":"major","issue":"원문의 ‘항상’이 누락되어 ‘언제나 피해자의 의사에 반해 공소를 제기할 수 있다’는 오답이 일부 경우에는 가능하다는 문장으로 바뀌었다.","suggestion":"Public prosecution may always be instituted against a driver who commits occupational negligent injury through vehicle traffic, even against the victim's explicitly stated wishes."},{"n":559,"field":"c[0]","severity":"major","issue":"보기의 정의 대상인 ‘원동기장치자전거’를 일반적인 ‘motorcycle’로 바꿔 법적 차종 분류를 오도한다.","suggestion":"The term “motorized bicycle” means all two-wheeled motor vehicles."},{"n":559,"field":"c[1]","severity":"major","issue":"‘원동기장치자전거’의 정의를 ‘motorcycle’의 정의로 번역해 서로 다른 법적 차종을 혼동한다.","suggestion":"Under the Motor Vehicle Management Act, the term “motorized bicycle” means a two-wheeled motor vehicle with an engine displacement of 250 cc or less."},{"n":559,"field":"c[2]","severity":"major","issue":"‘원동기를 단 차’를 자동차에 모터를 내장한 것으로 옮겼고 정의 대상도 motorcycle로 바꾸었다.","suggestion":"A vehicle equipped with an engine having a displacement of 150 cc or more is considered a motorized bicycle."},{"n":559,"field":"c[3]","severity":"critical","issue":"정답 보기의 ‘원동기장치자전거’를 ‘motorcycle’로 오역해 정답의 핵심 법적 분류가 달라졌다.","suggestion":"For electrically powered vehicles, a vehicle equipped with a motor having a maximum rated output of 11 kW or less, excluding electric bicycles, is considered a motorized bicycle."}]

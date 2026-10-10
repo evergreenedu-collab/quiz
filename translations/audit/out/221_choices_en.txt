@@ -1,0 +1,1833 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12617-8945-7e11-a775-ff16a0b9be6e
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/221_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/221_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 525ms:
+[
+ {
+  "n": 841,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭???덉쟾?섍쾶 ?듯뻾?섎뒗 ?댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?욎そ ?먮룞李⑤? ?곕씪 ?쒗뻾?쇰줈 A?〓떒蹂대룄瑜??듦낵?쒕떎.",
+   "?ㅼそ ?먮룞李⑥? 異⑸룎???쇳븯湲??꾪빐 ?띾룄瑜??좎??섍퀬 ?욎そ 李?瑜??곕씪媛꾨떎.",
+   "A?〓떒蹂대룄 ?뺤????욎뿉???쇱떆?뺤??????듯뻾?쒕떎.",
+   "B?〓떒蹂대룄??蹂댄뻾?먭? ?놁쑝誘濡??쒗뻾?섎ŉ ?듯뻾?쒕떎.",
+   "B?〓떒蹂대룄 ?욎뿉???쇱떆?뺤??????듯뻾?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are the safe ways to drive through a school zone? (Select TWO)",
+  "tr_c": [
+   "Follow the vehicle ahead and drive slowly to pass through Crosswalk A.",
+   "Follow the vehicle ahead but maintain speed to avoid a collision with the rear vehicle.",
+   "Stop at the stop line in front of Crosswalk A and then pass through.",
+   "Slow down to pass through Crosswalk B as there are no pedestrians. ??Stop in front of Crosswalk B and then pass through. ??A vehicle about to drive across an intersection in the school zone ??Crosswalks and intersection with no traffic lights ??A vehicle can be seen in the rear by the rear-view mirror"
+  ]
+ },
+ {
+  "n": 842,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "蹂댄뻾蹂댁“???섏옄李⑥? ?덉쟾??嫄곕━瑜??좎??섍린 ?꾪빐 以묒븰?좎쓣 ?섏뼱 醫뚯륫?듯뻾?쒕떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑥뿉 ?대Ⅴ湲??꾩뿉 媛먯냽?섏뿬 ?됰룞???댄???",
+   "蹂댄뻾蹂댁“???섏옄李④? 李⑤줈??吏꾩엯?섍린 ?꾩뿉 ?좎냽??媛?랁븯???듯뻾?쒕떎.",
+   "蹂댄뻾蹂댁“???섏옄李④? 李⑤줈??吏꾩엯?섏? ?딄퀬 硫덉텛?꾨줉 寃쎌쓬湲?瑜?怨꾩냽?댁꽌 ?묐룞?쒕떎. ??蹂댄뻾蹂댁“???섏옄李④? 李⑤룄??吏꾩엯?섎젮怨??섍린 ?뚮Ц???쇱떆??吏?섏뿬 ?덉쟾???뺣낫?쒕떎. ???몃룄 1李⑤줈 ??李⑤룄??吏꾩엯?섎젮??蹂댄뻾蹂댁“???섏옄李?
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are safe ways to drive in the  given situation? (Select TWO)",
+  "tr_c": [
+   "Move into the left-hand lane past the centerline to  maintain a safe distance from the mobility aid device.",
+   "Slow down and assess the situation before reaching the  electric wheelchair.",
+   "Accelerate quickly to pass the device before it enters the  lane.",
+   "Sound the horn repeatedly to incite the device to stop  and refrain from entering the road.",
+   "Stop temporarily to ensure the device?셲 safety as it is  about to enter the road."
+  ]
+ },
+ {
+  "n": 843,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?대┛???듯븰踰꾩뒪 ?ㅼ뿉??媛묒옄湲???대굹?ㅻ뒗 ?대┛?닿? ?덉쓣 ?? ?덉쑝誘濡?二쇱쓽?쒕떎.",
+   "?꾨갑 ?좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄??蹂댄뻾?먭? ?놁쑝誘濡??쒗뻾?섏뿬  ?듦낵?쒕떎.",
+   "?곗륫???곗뼱媛怨??덈뒗 ?꾩씠?ㅼ씠 媛묒옄湲??〓떒蹂대룄濡???대굹?? ???덇린???〓떒蹂대룄 ?욎뿉???쇱떆?뺤? ?섏뿬???쒕떎.",
+   "?대떦 援ъ뿭??寃쎌슦, ?대┛?댄넻?숇쾭?ㅼ뿉 ?쒗빐 二셋룹젙李⑤? ???? ?덈룄濡??덉슜??怨녹씠??",
+   "?꾨갑 ?곗륫???대┛???듯븰踰꾩뒪?먯꽌 ?꾩씠?ㅼ씠 ?뮤룻븯李⑦븯怨??덇린  ?뚮Ц???듯븰踰꾩뒪 ?놁쓣 ?듦낵 ???쇱떆?뺤? ???듦낵?섏뿬???쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Be cautious, as a child may suddenly run out from  behind the school bus.",
+   "Since there are no pedestrians at the crosswalk ahead  without a traffic light, proceed through it slowly.",
+   "Come to a complete stop before the crosswalk, as  children running on the right may suddenly dart out  onto the crosswalk.",
+   "In this zone, only school buses are allowed to park or  stop temporarily.",
+   "As children are getting on or off the school bus ahead  on the right, stop before passing and then proceed  carefully."
+  ]
+ },
+ {
+  "n": 844,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾?됰룞 2媛吏??",
+  "ko_c": [
+   "援먯감濡?吏꾩엯 ???쇱떆?뺤? ???듦낵?쒕떎.",
+   "寃쎌쓬湲곕? ?ъ슜?섎ŉ ?띾룄瑜??믪뿬 ?듦낵?쒕떎.",
+   "?꾨룞蹂댁옣援щ? ??怨좊졊蹂댄뻾?먭? 李⑤웾???듯뻾??湲곕떎由ш퀬 ?덇린?? ?좎냽??援먯감濡쒕? ?듦낵?쒕떎.",
+   "二셋룹젙李?李⑤웾 ?ъ씠???대┛??蹂댄뻾?먭? ?덉쓣 ???덉뼱 二쇱쓽?쒕떎.",
+   "吏곸쭊?섎젮??李⑤웾???곗꽑?대?濡?醫뚯륫?쇰줈 遺숈뼱 洹몃?濡??듦낵?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Come to a complete stop before entering the  intersection and then proceed.",
+   "Honk and speed up to pass through it quickly.",
+   "Since an elderly pedestrian in a mobility scooter is  waiting, pass through the intersection quickly.",
+   "Exercise caution as there may be children walking  between the parked or stopped vehicles.",
+   "Since the vehicle going straight ahead has the right of  way, keep to the left and proceed as is."
+  ]
+ },
+ {
+  "n": 845,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾?됰룞 2媛吏??",
+  "ko_c": [
+   "?꾨갑 ?대┛???듯븰踰꾩뒪媛 ?뺤??????덉뼱 ?덉쟾嫄곕━瑜??좎??쒕떎.",
+   "?띾룄瑜?以꾩씠硫??ㅼ감?먭쾶 異붾룎?ш퀬瑜??뱁븷 ???덉뼱 ?듯븰踰꾩뒪瑜? ?욎?瑜몃떎.",
+   "醫뚯륫 ?대┛?닿? ?〓떒蹂대룄濡?吏꾩엯?????덉쑝誘濡??대┛???됰룞???댄???",
+   "?꾨갑 醫뚯륫 二셋룹젙李⑤맂 ?대쪣李⑥????ш퀬瑜?二쇱쓽?섎ŉ, 泥쒖쿇?? ?대┛???듯븰踰꾩뒪瑜??욎?瑜몃떎.",
+   "?꾨갑 ?대┛???듯븰踰꾩뒪?먯꽌 ?대┛?닿? ?뮤룻븯李⑦븯怨??덉쑝誘濡? ?쒖꽌???욎쭏??二쇳뻾?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Maintain a safe distance as the school bus ahead of you  may stop.",
+   "Overtake the school bus because slowing down may  cause a rear-end collision.",
+   "Watch out for any children on the left who may enter  the crosswalk.",
+   "Carefully overtake the school bus while watching out for  accidents with the parked motorcycle on the left.",
+   "Slowly pass the school bus ahead even though children  are getting on or off it."
+  ]
+ },
+ {
+  "n": 846,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "吏?띿쟻?쇰줈 寃쎌쓬湲곕? ?ъ슜?섏뿬 ?꾪뿕???뚮━硫?吏?섍컙??",
+   "?꾩“?깆쑝濡??대┛?댄넻?숇쾭???댁쟾?먯뿉寃??꾪뿕???뚮━硫?吏?섍컙??",
+   "?곗륫 遺덈쾿 二셋룹젙李?李⑤웾 ?욎쑝濡??대┛?닿? ??대굹?????덉쓬?? 二쇱쓽?섎ŉ ?듦낵?쒕떎.",
+   "醫뚯륫 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆?뺤? ?섏??ㅺ? ?쒗뻾?쇰줈  吏?섍컙??",
+   "?곗륫 ?듯븰踰꾩뒪 李⑤웾???대┛???뮤룻븯李⑤? ?꾪빐 ?뺤감 以묒씠誘濡??좎냽 ???욎쭏??怨⑤ぉ湲몄쓣 踰쀬뼱?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Honk continuously to alert others of danger while  passing.",
+   "Use headlights to signal ?쐂anger??to the school bus  driver while passing.",
+   "Be cautious as children may suddenly run out from  between illegally parked vehicles on the right.",
+   "Come to a complete stop before reaching the school  bus on the left, and then pass by it slowly.",
+   "Quickly pass the stopped school bus that is picking up  or dropping off children on the right in order to get out  of the alley."
+  ]
+ },
+ {
+  "n": 847,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?〓떒蹂대룄???덈뒗 ?대┛?댁? 異⑸룎 媛?μ꽦???놁쑝誘濡??고쉶?꾪븳??",
+   "媛묒옉?ㅻ젅 ??대굹?????덈뒗 ?꾩씠?ㅼ쓽 ?됰룞???鍮꾪븳??",
+   "?〓떒蹂대룄 ???대┛?닿? ?〓떒???꾨즺?????고쉶?꾪븳??",
+   "?대┛?댁쓽 ?〓떒???ъ큺?섍린 ?꾪빐 寃쎌쓬湲곕? ?ъ슜?쒕떎.",
+   "?〓떒蹂대룄 ?꾩뿉 ?뺤??섏뿬 ?ㅻⅨ ?꾩씠?ㅼ쓽 吏꾩엯??留됰뒗??"
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Make a right turn since there is no risk of collision with  the children on the crosswalk.",
+   "Be prepared for children who may dart out onto the  crosswalk unexpectedly.",
+   "Turn right only after the children have finished crossing.",
+   "Honk to hurry the children crossing the street.",
+   "Stop on the crosswalk to prevent other children from  entering the crosswalk."
+  ]
+ },
+ {
+  "n": 848,
+  "ko_b": "?ㅼ쓬 ?꾨줈 ?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?쒖냽 20km ?대궡濡?二쇳뻾?쒕떎.",
+   "?〓떒蹂대룄 ?욎뿉???쒗뻾?섍퀬 洹몃?濡??듦낵?쒕떎.",
+   "?숆탳 ?뺣Ц???쇳빐 ?곗륫 湲멸????뺤감?쒕떎.",
+   "?꾩씠?ㅼ씠 ?꾨줈濡???대굹?????덉뼱 二쇱쓽?섎ŉ ?듦낵?쒕떎.",
+   "?숆탳 ?뺣Ц ??李⑤웾??二쇱감 ???먮?瑜?湲곕떎由곕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+  "tr_c": [
+   "Drive at a speed of no more than 20 km/h.",
+   "Slow down at the crosswalk and pass through it without  stopping.",
+   "Stop along the right-hand side of the road without  obstructing access to the front gate of the school.",
+   "Proceed with caution as children may suddenly run into  the road.",
+   "Park in front of the school gate and wait for your child."
+  ]
+ },
+ {
+  "n": 849,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "湲닿툒李④? ?꾨줈援먰넻踰??꾨컲???섎?濡?臾댁떆?섍퀬 ?듯뻾?쒕떎.",
+   "湲닿툒李④? ?꾨컲?됰룞???섏? 紐삵븯?꾨줉 ?곹뼢?깆쓣 ?섑쉶 ?묐룞?쒕떎.",
+   "???곕Ⅴ???댁쟾?먯뿉寃??뚮━湲??꾪빐 釉뚮젅?댄겕?섎떖???щ윭 踰?       ?섎늻??諛잙뒗??",
+   "湲닿툒李④? ??＜?됲븷 ???덈룄濡?嫄곕━瑜??먭퀬 ?뺤??쒕떎.",
+   "湲닿툒李④? 吏꾪뻾?????녿룄濡?洹??욎뿉 ?뺤감?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the correct ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Ignore the emergency vehicle violating traffic laws and  continue driving.",
+   "Use the high-beam headlights several times to prevent  the emergency vehicle from committing violations.",
+   "Apply the brakes multiple times to signal to the trailing  driver.",
+   "Stop at a distance to allow the emergency vehicle to  drive against the direction of traffic.",
+   "Stop in front of the emergency vehicle to prevent it  from proceeding."
+  ]
+ },
+ {
+  "n": 850,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "援ш툒李④? 吏?섍컝 ???덈룄濡?3李⑤줈濡??띾룄瑜??믪뿬 ?듦낵?쒕떎.",
+   "?꾨갑 李⑤웾?좏샇媛 ?뱀깋?대씪??援ш툒李⑥뿉寃??듯뻾???묐낫?쒕떎.",
+   "援ш툒李④? ?듦낵?????꾪뻾 湲닿툒?먮룞李④? ?덈뒗吏 ?뺤씤?쒕떎.",
+   "鍮④컙??李⑤웾???곕씪 媛?랁븯??二쇳뻾?쒕떎.",
+   "援ш툒李??댁쟾?먯뿉寃?寃쎌쓬湲곕? ?ъ슜?섎ŉ 洹몃?濡??듦낵?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+  "tr_c": [
+   "Speed up in the third lane to get through so that the  ambulance can pass through quickly.",
+   "Yield to the ambulance even though the traffic light is  green.",
+   "Check for any trailing emergency vehicles after the  ambulance passes.",
+   "Accelerate and follow the red car through the  intersection.",
+   "Honk at the ambulance driver and continue driving  through."
+  ]
+ },
+ {
+  "n": 851,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?붿옱?щ?? ?곴??놁씠 吏곸쭊?쒕떎.",
+   "怨듭“湲곕? ?몃??쒗솚 紐⑤뱶濡??좎냽?섍쾶 ?꾪솚?쒕떎.",
+   "二쇳뻾 以묒씤 李⑤줈??二쇱감 ??臾몄쓣 ?좉렇怨??꾨쭩媛꾨떎.",
+   "李⑤웾 李쎈Ц???リ퀬 ?좊룆媛???≪엯??李⑤떒?쒕떎.",
+   "遺덇만???ы븳 怨녹쑝濡?吏꾩엯?섏? ?딄퀬, 寃쎌같愿???섏떊?몄뿉 ?곕Ⅸ??"
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+  "tr_c": [
+   "Proceed regardless of the fire.",
+   "Quickly switch the air-conditioning system to outside air  mode.",
+   "Park in the driving lane, lock the doors, and run away.",
+   "Close the car windows to block the intrusion of toxic  gases.",
+   "Avoid entering areas with fierce flames and follow the  hand signals of the police officer."
+  ]
+ },
+ {
+  "n": 852,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛??諛붾엺吏곹븳 ?댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "李⑥쓽 ?깊솕媛 ?뱀깋?대?濡?援먯감濡쒖뿉 洹몃?濡?吏꾩엯?쒕떎.",
+   "湲닿툒李④? ?곗꽑 ?듯뻾?댁빞 ???꾩슂?깆씠 ?덉쑝誘濡?援먯감濡?吏꾩엯  ?꾩뿉 ?뺤??섏뿬???쒕떎.",
+   "2李⑤줈???덈뒗 李④? 媛묒옄湲?醫뚯륫?쇰줈 蹂寃쏀븷 ?섎룄 ?덉쑝誘濡?誘?由?異⑸텇???띾룄瑜?媛먯냽?쒕떎.",
+   "湲닿툒李⑤낫??李⑥쓽 ?좏샇媛 ?곗꽑?대?濡?洹몃?濡?吏꾩엯?쒕떎.",
+   "湲닿툒李⑤낫??癒쇱? ?듦낵?????덈룄濡?媛?랁븯硫?吏꾩엯?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are desirable ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "The traffic light is green. Enter the intersection at once.",
+   "Stop before entering the intersection to allow the  emergency vehicle to pass because it has the right of  way.",
+   "Sufficiently reduce speed to account for a sudden  change of lanes by the vehicle in lane 2.",
+   "Motor vehicles have the right of way, so just enter the  intersection.",
+   "Speed up and enter the intersection before the  emergency vehicle does."
+  ]
+ },
+ {
+  "n": 853,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "??李⑤줈 ?놁뼱吏먥숉몴吏???곕씪 1李⑤줈濡?怨꾩냽 二쇳뻾?쒕떎.",
+   "怨듭궗援ъ뿭???쇳븯湲??꾪빐 湲됱젙吏?쒕떎.",
+   "?꾨갑 李⑤줈 ??씠 醫곸븘吏誘濡?誘몃━ 2李⑤줈濡?吏꾨줈瑜?蹂寃쏀븳??",
+   "怨듭궗 以묒엫???뚮━湲??꾪빐 鍮꾩긽?먮㈇?깆쓣 耳좊떎.",
+   "1李⑤줈濡?二쇳뻾?섎떎 怨듭궗援ш컙 吏곸쟾??2李⑤줈濡??쇱뼱?좊떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Continue driving in the first lane according to the ?쏬ane  2 ends??sign.",
+   "Make a sudden stop to avoid the construction area.",
+   "Switch to the second lane in advance as the road  narrows ahead.",
+   "Turn on the hazard lights to alert others to the  construction area.",
+   "Keep driving in the first lane and merge into the second  lane right before the construction zone."
+  ]
+ },
+ {
+  "n": 854,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄곗???異⑸룎???쇳븯湲??꾪빐 醫뚯륫李⑤줈濡??듯뻾?쒕떎.",
+   "?먯쟾嫄??꾩튂???대Ⅴ湲???異⑸텇??媛먯냽?쒕떎.",
+   "???곕Ⅴ???먮룞李⑥쓽 ?뚰넻???꾪빐 媛?랁븳??",
+   "蹂댄뻾?먯쓽 李⑤룄吏꾩엯???鍮꾪븯??媛먯냽?섍퀬 蹂댄뻾?먮? ?댄???",
+   "蹂댄뻾?먮? 蹂댄샇?섍린 ?꾪빐 湲멸??μ옄由ш뎄??쓣 ?듯뻾?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Drive in the left lane to avoid a collision with the bicycle.",
+   "Slow down sufficiently before reaching the bicycle.",
+   "Accelerate to maintain communication with the trailing  vehicle.",
+   "Slow down in preparation for pedestrians entering the  roadway and watch out for pedestrians.",
+   "Drive through the edge of the road to protect  pedestrians."
+  ]
+ },
+ {
+  "n": 855,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먰솢???뚰넻???꾪빐 ?욎감瑜??곕씪 洹몃?濡??듯뻾?쒕떎.",
+   "?먯쟾嫄곗쓽 吏꾩엯?띾룄蹂대떎 ??鍮좊Ⅴ寃?媛?랁븯???듯뻾?쒕떎.",
+   "?〓떒蹂대룄 吏곸쟾 ?뺤??좎뿉???뺤??쒕떎.",
+   "蹂댄뻾?먭? ?〓떒???꾨즺?덉쑝誘濡??좎냽???듯뻾?쒕떎.",
+   "?뺤감???먮룞李⑥쓽 媛묒옉?ㅻ윭??異쒕컻???鍮꾪븯??媛먯냽?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are safe ways to drive in the  given situation? (Select TWO)",
+  "tr_c": [
+   "To facilitate smooth traffic flow, drive behind the vehicle  in front without making any changes.",
+   "Accelerate faster than the bicycle in order to pass  through.",
+   "Come to a stop at the stop line just before the  crosswalk.",
+   "Since the pedestrian has already crossed the crosswalk,  proceed quickly.",
+   "Slow down to prepare for the sudden departure of the  stopped vehicle."
+  ]
+ },
+ {
+  "n": 856,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗쓽 醫뚯륫?쇰줈 二쇳뻾?섏뿬 醫뚰쉶?꾪븯吏 紐삵븯?꾨줉 ?꾪삊?쒕떎.",
+   "以묒븰?좎쓣 ?섏뼱 ?먯쟾嫄곕? ?욎?瑜닿린?쒕떎.",
+   "?먯쟾嫄곌? ?덉쟾?섍쾶 ?꾨줈瑜?踰쀬뼱???뚭퉴吏 ?쒗뻾?섎ŉ 湲곕떎?ㅼ???",
+   "?먯쟾嫄곌? 醫뚰쉶?꾪븷 ???덇린 ?뚮Ц???덉쟾嫄곕━瑜??좎??쒕떎.",
+   "?먯쟾嫄??듯뻾???ъ큺?섍린 ?꾪빐 寃쎌쓬湲곕? ?ъ슜?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Drive close to the left-hand side of the bicycle to  intimidate and dissuade it from turning left.",
+   "Cross the centerline to overtake the bicycle.",
+   "Slow down and wait until the bicycle safely moves off  the road.",
+   "Maintain a safe distance because the bicycle may turn  left.",
+   "Honk to hurry the bicycle along."
+  ]
+ },
+ {
+  "n": 857,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "李⑤웾?좏샇媛 ?곸깋?쇰줈 諛붾뚭린 ?꾩뿉 ?좎냽???듦낵?쒕떎.",
+   "?〓떒蹂대룄 吏곸쟾 ?뺤??좎뿉 ?뺤??쒕떎.",
+   "?먯쟾嫄??〓떒??媛?ν븳 怨좎썝???〓떒蹂대룄媛 ?덉뼱 二쇱쓽?섎ŉ ?듦낵?쒕떎.",
+   "?덉쟾吏?瑜?寃쎌쑀?섏뿬 ?좎냽??吏꾪뻾?쒕떎.",
+   "?몃윮 ???대┛?닿? ?곗뼱?섏삱 ???덉쑝誘濡?二쇱쓽?쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Pass through quickly before the signal turns red.",
+   "Stop at the stop line just before the crosswalk.",
+   "Be cautious while passing, as there is a raised crosswalk  that allows bicycles to cross.",
+   "Proceed quickly by passing through the safety zone.",
+   "Be careful as children may run out from behind the  truck."
+  ]
+ },
+ {
+  "n": 858,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "二쇱감??李⑤웾??媛묒옉?ㅻ읇寃?異쒕컻?????덉뼱 寃쎌쓬湲곕? 怨꾩냽 ?몃━硫?    ?좎냽???듦낵?쒕떎.",
+   "二쇱감??李⑤웾 ?ъ씠?먯꽌 蹂댄뻾?먭? ??대굹?????덉쑝誘濡?二쇱쓽?섎ŉ    ?쒗뻾?쒕떎.",
+   "?꾨갑 ?먯쟾嫄곗쓽 ?듯뻾???ъ큺?섍린 ?꾪빐 寃쎌쓬湲곕? 怨꾩냽 ?몃┛??",
+   "?꾨갑 怨쇱냽諛⑹??깃낵 ?먯쟾嫄??댁쟾?? ?쒖빞 ?뺣낫媛 ?대젮???곹솴 ??   ??怨좊젮?섏뿬 怨꾩냽?댁꽌 二쇱쓽瑜?湲곗슱?대ŉ ?좎쨷???댁쟾?쒕떎.",
+   "?꾨갑 ?먯쟾嫄곗???嫄곕━??異⑸텇?섎?濡?媛?랁븯???좎냽???듦낵?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "In this situation, which of the following are the two  safest ways of proceeding?",
+  "tr_c": [
+   "Sound the horn continuously to pass the parked vehicles  quickly as they may start to move suddenly.",
+   "Drive slowly and carefully as pedestrians may suddenly  emerge from between the parked cars.",
+   "Sound the horn to encourage the cyclist ahead to pass  quickly.",
+   "Drive carefully and pay attention to the surroundings,  taking into account speed bumps, cyclists, and situations  with limited visibility.",
+   "Accelerate quickly as there is sufficient distance between  you and the cyclist."
+  ]
+ },
+ {
+  "n": 859,
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "寃?뺤깋 李⑤웾 ?곗륫?쇰줈 ?욎?瑜닿린?쒕떎.",
+   "寃?뺤깋 李⑤웾怨?媛숈? 李⑤줈?먯꽌 ?섎???二쇳뻾?쒕떎.",
+   "怨좎뼇諛⑺뼢?쇰줈 吏꾩텧?????덈룄濡?利됱떆 3李⑤줈濡?李⑤줈蹂寃쎌쓣 ?쒕떎.",
+   "?곗깋李⑤웾??吏꾨줈蹂寃??????덉쑝誘濡?媛먯냽?섏뿬 ?덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "李⑤줈蹂寃쎌씠 媛?ν븳 諛깆깋?먯꽑 援ш컙源뚯? 二쇳뻾?섏뿬 3李⑤줈濡?吏꾩엯?쒕떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Overtake the black vehicle on the right.",
+   "Drive side by side in the same lane as the black vehicle.",
+   "Immediately switch to the third lane to allow the  motorcycle to exit toward Goyang.",
+   "Slow down and maintain a safe distance because the  white vehicle may change lanes.",
+   "Drive up to the section with the white broken line where  lane changes are allowed, and then enter the third lane."
+  ]
+ },
+ {
+  "n": 860,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 1李⑤줈濡?吏꾨줈蹂寃??섎젮 ????媛???덉쟾???댁쟾  諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "醫뚯륫 ?꾩궗寃쎌쓣 ?듯븯??1李⑤줈??二쇳뻾 以묒씤 李⑤웾???뺤씤?쒕떎.",
+   "?꾨갑???뱀슜李④? 1李⑤줈濡?吏꾨줈蹂寃쎌쓣 紐삵븯?꾨줉 ?곹뼢?깆쓣 誘몃━     耳쒖꽌 寃쎄퀬?쒕떎.",
+   "?띻린怨꾧? ?꾨줈濡?吏꾩엯?????덉뼱 1李⑤줈濡??좎냽??李⑤줈蹂寃??쒕떎.",
+   "?ㅻⅤ留됱감濡쒖씠湲??뚮Ц???띾룄瑜??믪뿬 ?댁쟾?쒕떎.",
+   "?꾨갑???대쪣李④? 1李⑤줈濡?吏꾨줈 蹂寃쏀븷 ???덉뼱 ?덉쟾嫄곕━瑜??좎??쒕떎."
+  ],
+  "a": "1, 5",
+  "tr_b": "Which of the following are the safe ways to drive  when you are trying to switch to the first lane in the  given situation? (Select TWO)",
+  "tr_c": [
+   "Look at the left side-view mirror to check the vehicles in  lane 1.",
+   "Use high-beam headlights to warn the vehicle that you  are about to go to lane 1.",
+   "Quickly switch to lane 1 as the agricultural machine may  enter the road.",
+   "Speed up since it is uphill.",
+   "Maintain a safe distance as the two-wheeled vehicle in  front may suddenly switch to lane 1."
+  ]
+ },
+ {
+  "n": 861,
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗쓽 ?듯뻾??諛⑺빐?섏? ?딄퀬 ?곗륫 湲멸????뺤감?쒕떎.",
+   "?꾨갑???〓떒蹂대룄媛 ?덉뼱 蹂댄뻾?먮? 二쇱쓽?섎ŉ ?쒗뻾?쇰줈 二쇳뻾?쒕떎.",
+   "?욎?瑜닿린 ??怨쇱냽???덉슜?섎?濡??쒖냽 50km濡?二쇳뻾?쒕떎.",
+   "1李⑤줈濡?李⑤줈蹂寃????먯쟾嫄곗????덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "寃쎌쓬湲곕? ?ъ슜?섏뿬 ?먯쟾嫄곗쓽 湲멸??μ옄由?二쇳뻾???ъ큺?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Park on the right-hand side of the road without  obstructing bicycle traffic.",
+   "Drive slowly while watching out for pedestrians as there  is a crosswalk ahead.",
+   "Speeding is allowed when overtaking, so drive at 50  km/h.",
+   "Switch to the first lane to maintain a safe distance from  the bicycle.",
+   "Honk to urge the bicycle to ride closer to the edge of  the road."
+  ]
+ },
+ {
+  "n": 862,
+  "ko_b": "?먯쟾嫄곕? ?댁쟾 以묒씠?? 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?꾨갑 蹂댄뻾???욎뿉???뺤??쒕떎.",
+   "?먯쟾嫄곌? ?곗꽑沅뚯씠 ?덉뼱 寃쎌쟻???뚮윭 ?욎?瑜닿린 ?쒕떎.",
+   "?꾨갑 蹂댄뻾?먯? 異⑸룎 ?꾪뿕???믪븘 蹂댄뻾??援ъ뿭?쇰줈 二쇳뻾?쒕떎.",
+   "?곗륫 蹂댄뻾?먯???異⑸룎媛?μ꽦???덉뼱 ?먯쟾嫄곕? ?뚭퀬 媛꾨떎.",
+   "?먯쟾嫄곗쓽 寃쎌슦 ?띾룄?쒗븳???놁뼱 ?꾪뿕援ш컙???좎냽???듦낵?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "You are riding a bicycle. Which of the following are  the TWO safest ways to ride?",
+  "tr_c": [
+   "Stop in front of the pedestrian ahead.",
+   "Since bicycles have the right of way, honk and overtake.",
+   "There is a high risk of collision with the pedestrian  ahead, so ride in the pedestrian area.",
+   "Walk the bicycle to avoid a possible collision with the  pedestrian on the right.",
+   "Bicycles are not subject to speed limits, so pass through  the dangerous area quickly."
+  ]
+ },
+ {
+  "n": 863,
+  "ko_b": "?ㅼ쓬 ?μ냼?먯꽌 ?먯쟾嫄??댁쟾?먭? ?덉쟾?섍쾶 ?〓떒?섎뒗 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗뿉 ???곹깭濡??〓떒蹂대룄 ?뱀깋?깊솕瑜?湲곕떎由щ떎媛 ?먯쟾嫄?瑜??댁쟾?섏뿬 ?〓떒?쒕떎.",
+   "?ㅻⅨ ?먯쟾嫄??댁쟾?먭? ?〓떒?섍퀬 ?덉쑝誘濡??좎냽???〓떒?쒕떎.",
+   "?ㅻⅨ ?먯쟾嫄곗? 異⑸룎媛?μ꽦???덉쑝誘濡??먯쟾嫄곗뿉???대젮 蹂대룄 ???덉쟾???μ냼?먯꽌 湲곕떎由곕떎.",
+   "?먯쟾嫄??댁쟾?먭? ?대┛???먮뒗 ?몄씤??寃쎌슦 蹂댄뻾???좏샇?깆씠  ?뱀깋?????댁쟾?섏뿬 ?〓떒?쒕떎.",
+   "?〓떒蹂대룄 ?좏샇?깆씠 ?뱀깋?깊솕 ?????먯쟾嫄곕? ?뚭퀬 ?〓떒?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are the safe ways for the bicycle rider to cross in the given location? (Select TWO)",
+  "tr_c": [
+   "Stay on the bicycle while waiting for the crosswalk light to turn green, and cross the street while riding the bicycle.",
+   "Quickly cross the street as other bicycle riders are crossing as well.",
+   "Get off the bicycle and wait in a safe location to prevent collision with other bicycle riders.",
+   "In the case of children or senior persons riding a bicycle, they must cross the street when the crosswalk light is green. ??When the crosswalk light turns green, the bicycle rider must walk his/her bicycle to cross the street. ??A bicycle rider is waiting on the sidewalk. ??A bicycle rider is looking at the road."
+  ]
+ },
+ {
+  "n": 864,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?꾨갑 蹂댄뻾?먯쓽 湲됱옉?ㅻ윭??醫뚯륫?〓떒???덉륫?섎ŉ ?뺤?瑜?以鍮꾪븳??",
+   "吏곸쭊?섎젮??寃쎌슦 ?꾨갑 援먯감濡쒖뿉??李④? ?놁쑝誘濡??쒗뻾?쇰줈 ?듦낵?쒕떎.",
+   "援먯감濡?吏꾩엯 ???쇱떆?뺤??섏뿬 醫뚯슦痢≪뿉???묎렐?섎뒗 李⑤? ?뺤씤?댁빞 ?쒕떎.",
+   "二쇰? ?먯쟾嫄?諛?蹂댄뻾?먯뿉寃?寃쎌쓬湲곕? 諛섎났?곸쑝濡??묐룞?섏뿬 李⑥쓽 ???됱쓣 ?뚮젮以??",
+   "?꾨갑 蹂댄뻾?먮? 湲멸??μ옄由ш뎄??쑝濡??좊룄?섍린 ?꾪빐 ?곗륫?쇰줈 遺숈뼱  ?듯뻾?댁빞 ?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Prepare to stop as the pedestrian in the front may  rapidly turn left.",
+   "To go straight, slowly enter the intersection as it is  currently empty.",
+   "Prior to entering the intersection, stop to check for  vehicles coming from both sides.",
+   "Honk repeatedly to alert the bicycle riders and  pedestrians nearby.",
+   "Drive along the right side of the road to induce the  pedestrians to move to the edge of the road."
+  ]
+ },
+ {
+  "n": 865,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 ?꾨룞?λ낫???댁쟾?먭? 醫뚰쉶?꾪븯?ㅻ뒗 寃쎌슦 ?덉쟾?? 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "A?〓떒蹂대룄濡??꾨룞?λ낫?쒕? ?댁쟾?섏뿬 吏꾩엯????B吏?먯뿉??D諛??μ쓽 ?뱀깋?깊솕瑜?湲곕떎由곕떎.",
+   "A?〓떒蹂대룄濡??꾨룞?λ낫?쒕? ?뚭퀬 吏꾩엯????B吏?먯뿉??D諛⑺뼢?? ?뱀깋?깊솕瑜?湲곕떎由곕떎.",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 E諛⑺뼢?쇰줈 二쇳뻾?섍린 ?꾪빐 援먯감濡?以묒떖??履쎌쑝濡?醫뚰쉶?꾪븳??",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 B吏?먯쑝濡?吏곸쭊????D諛⑺뼢???뱀깋?깊솕 瑜?湲곕떎由곕떎.",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 C吏?먯쑝濡?吏곸쭊????利됱떆 B吏?먯뿉??D 諛⑺뼢?쇰줈 吏곸쭊?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "The driver of an electric kick scooter is trying to turn left. Which of the following are the safe ways to do so in the given situation? (Select TWO)",
+  "tr_c": [
+   "Use Crosswalk A while riding the electric kick scooter, wait at Point B for the traffic light to turn green, and go in Direction D.",
+   "Use Crosswalk A while pushing the electric kick scooter, wait at Point B for the traffic light to turn green, and go in Direction D.",
+   "Ride the electric kick scooter, turn left toward the center of the intersection, and go in Direction E.",
+   "Ride the electric kick scooter going straight to Point B, wait for the traffic light to turn green, and go in Direction D. ??Ride the electric kick scooter going straight to Point C and immediately go to Point B to go straight in Direction D. ??Traffic signal from east to west: Straight and left-turn signals ??The crosswalk light for Crosswalk A from east to west has turned green."
+  ]
+ },
+ {
+  "n": 866,
+  "ko_b": "?ㅼ쓬???〓떒蹂대룄 ?쒖?媛 ?ㅼ튂?섎뒗 ?μ냼濡?媛???뚮쭪? 怨녹??",
+  "ko_c": [
+   "?〓떒蹂대룄媛 ?덈뒗 ?꾨줈濡쒖꽌 ?ъ옣?꾨줈??援먯감濡쒖뿉 ?좏샇湲곌? ?덉쓣 ??,
+   "?〓떒蹂대룄媛 ?덈뒗 ?꾨줈濡쒖꽌 ?ъ옣?꾨줈???⑥씪濡쒖뿉 ?좏샇湲곌? ?덉쓣 ??,
+   "?〓떒蹂대룄媛 ?덈뒗 ?꾨줈濡쒖꽌 蹂댄뻾?먯쓽 ?〓떒??湲덉??섎뒗 怨?,
+   "?〓떒蹂대룄媛 ?덈뒗 ?꾨줈濡쒖꽌 ?좏샇媛 ?녿뒗 ?ъ옣?꾨줈??援먯감濡쒕굹 ?⑥씪濡?
+  ],
+  "a": "4",
+  "tr_b": "Where should this crosswalk sign be installed?",
+  "tr_c": [
+   "At an intersection with a traffic signal on a paved road  with a crosswalk",
+   "On a single paved road with a traffic signal and a  crosswalk",
+   "On a road with a crosswalk where pedestrian crossing is  prohibited",
+   "At an intersection or on a single paved road without  traffic signals but which has a crosswalk"
+  ]
+ },
+ {
+  "n": 867,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?좎튂???듭썝濡쒖씠誘濡??먮룞李④? ?듯뻾?????놁쓬???섑??몃떎.",
+   "?대┛???먮뒗 ?좎븘???듯뻾濡쒕굹 ?〓떒蹂대룄媛 ?덉쓬???뚮┛??",
+   "?숆탳??異쒖엯援щ줈遺??2?щ줈誘명꽣 ?댄썑 援ъ뿭???ㅼ튂?쒕떎.",
+   "?대┛???먮뒗 ?좎븘媛 ?꾨줈瑜??〓떒?????놁쓬???뚮┛??"
+  ],
+  "a": "2",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "The area is designated for kindergarteners, so cars are  prohibited.",
+   "There is a designated crossing area/crosswalk for  children and infants.",
+   "The sign should be installed in an area more than 2 km  away from a school entrance.",
+   "Children and infants are not allowed to cross the road."
+  ]
+ },
+ {
+  "n": 868,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?삵븯??寃껋??",
+  "ko_c": [
+   "?몃㈃??怨좊Ⅴ吏 紐삵븿???뚮━??寃?,
+   "?곕꼸???덉쓬???뚮━??寃?,
+   "怨쇱냽諛⑹??깆씠 ?덉쓬???뚮━??寃?,
+   "誘몃걚?ъ슫 ?꾨줈媛 ?덉쓬???뚮━??寃?
+  ],
+  "a": "3",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "The road surface ahead is rough.",
+   "There is a tunnel ahead.",
+   "There is a speed bump ahead.",
+   "The road ahead is slippery."
+  ]
+ },
+ {
+  "n": 869,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?덈뒗 寃쎌슦 ?덉쟾 ?댁쟾諛⑸쾿??",
+  "ko_c": [
+   "?꾨줈 以묒븰???μ븷臾쇱씠 ?덉쑝誘濡??곗륫 諛⑺뼢?쇰줈 二쇱쓽?섎㈃???듯뻾?쒕떎.",
+   "以묒븰 遺꾨━?媛 ?쒖옉?섎?濡?二쇱쓽?섎㈃???듯뻾?쒕떎.",
+   "以묒븰 遺꾨━?媛 ?앸굹??吏?먯씠誘濡?二쇱쓽?섎㈃???듯뻾?쒕떎.",
+   "?곕꼸???덉쑝誘濡??꾩“?깆쓣 耳쒓퀬 二쇱쓽?섎㈃???듯뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "What does this safety sign signify?",
+  "tr_c": [
+   "You should drive with caution and proceed on the right  side of the road because there is an obstacle in the  middle of the road.",
+   "You should drive with caution because a median strip is  about to start.",
+   "You should drive with caution because a median strip is  about to end.",
+   "You should drive with caution and headlights on  because there is a tunnel is ahead."
+  ]
+ },
+ {
+  "n": 870,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ쓬 ?덉쟾?쒖???????댁슜?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "洹쒖젣?쒖??대떎.",
+   "吏곸쭊李⑤웾 ?곗꽑?쒖??대떎.",
+   "醫뚰빀瑜??꾨줈?쒖??대떎.",
+   "醫뚰쉶??湲덉??쒖??대떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its  Enforcement Decree, which of the following correctly  describes this road safety sign?",
+  "tr_c": [
+   "Regulation sign",
+   "Priority sign for vehicles going straight",
+   "Road sign for merging with left lane",
+   "Prohibition on turning left"
+  ]
+ },
+ {
+  "n": 871,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????ㅼ튂?μ냼?????湲곗??쇰줈 諛붾Ⅴ吏 ?딅뒗 寃껋??",
+  "ko_c": [
+   "A ?쒖????≫뭾???곕젮媛 ?덈뒗 吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫       ???ㅼ튂?쒕떎.",
+   "B ?쒖????곕꼸?낃뎄 ??50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎.",
+   "C ?쒖????꾪뿕吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎.",
+   "D ?쒖???怨듭슜二쇱감??吏꾩엯 ??50誘명꽣?먯꽌 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which installation location standard for traffic signs is  incorrect?",
+  "tr_c": [
+   "Sign A shall be placed on the right-hand side of the road, 50 ??00 meters before a location prone to crosswinds.",
+   "Sign B shall be placed on the right-hand side of the road, 50 ??00 m before the entrance to a tunnel.",
+   "Sign C shall be placed on the right-hand side of the road, 50 ??00 m before a dangerous area.",
+   "Sign D shall be placed on the right-hand side of the road, 50 ??00 m before the entrance to a public parking lot. A B C D"
+  ]
+ },
+ {
+  "n": 872,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??洹몃┝???덉쟾?쒖?? 媛숈씠 二쇱쓽?쒖????대떦?섎뒗 寃껋쓣 ?섏뿴 ??寃껋??",
+  "ko_c": [
+   "?ㅻⅤ留됯꼍?ы몴吏, ?곸뒿?뺤껜援ш컙?쒖?",
+   "李⑦룺?쒗븳?쒖?, 李④컙嫄곕━?뺣낫?쒖?",
+   "?몃㈃?꾩감?꾩슜?꾨줈?쒖?, ?고쉶濡쒗몴吏",
+   "鍮꾨낫?몄쥖?뚯쟾?쒖?, 醫뚰쉶??諛??좏꽩?쒖?"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its  Enforcement Decree, which of the following is  categorized as a warning sign as in the given picture?",
+  "tr_c": [
+   "Uphill sign, usual traffic congestion area sign",
+   "Vehicle width limit sign, keep distance sign",
+   "Tram-only road sign, bypass sign",
+   "Unprotected left-turn sign, left-turn and U-turn sign"
+  ]
+ },
+ {
+  "n": 873,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????살쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨갑 100誘명꽣 ?욌?????뼚?ъ? ?꾪뿕 援ш컙?대?濡?二쇱쓽",
+   "?꾨갑 100誘명꽣 ?욌???怨듭궗 援ш컙?대?濡?二쇱쓽",
+   "?꾨갑 100誘명꽣 ?욌???媛뺣??꾨줈?대?濡?二쇱쓽",
+   "?꾨갑 100誘명꽣 ?욌????숈꽍 ?곕젮媛 ?덈뒗 ?꾨줈?대?濡?二쇱쓽"
+  ],
+  "a": "4",
+  "tr_b": "What do these safety sign and supplementary sign  jointly mean?",
+  "tr_c": [
+   "Beware of a cliff 100 m ahead.",
+   "Beware of construction work 100 m ahead.",
+   "Beware of a riverside road 100 m ahead.",
+   "Beware of falling rocks 100 m ahead."
+  ]
+ },
+ {
+  "n": 874,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????살쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "泥좉만?쒖?",
+   "援먮웾?쒖?",
+   "?믪씠?쒗븳?쒖?",
+   "臾명솕?щ낫?명몴吏"
+  ],
+  "a": "2",
+  "tr_b": "What does this safety sign signify?",
+  "tr_c": [
+   "A railway",
+   "A bridge",
+   "Vehicle height limit",
+   "A cultural asset"
+  ]
+ },
+ {
+  "n": 875,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????살쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨갑???묒륫諛??듯뻾 ?꾨줈媛 ?덉쑝誘濡?媛먯냽 ?댄뻾",
+   "?꾨갑???μ븷臾쇱씠 ?덉쑝誘濡?媛먯냽 ?댄뻾",
+   "?꾨갑??以묒븰 遺꾨━?媛 ?쒖옉?섎뒗 ?꾨줈媛 ?덉쑝誘濡?媛먯냽 ?댄뻾",
+   "?꾨갑????諛⑺뼢 ?듯뻾 ?꾨줈媛 ?덉쑝誘濡?媛먯냽 ?댄뻾"
+  ],
+  "a": "3",
+  "tr_b": "What do these safety sign and supplementary sign  mean when placed together?",
+  "tr_c": [
+   "Slow down because there is a road starting ahead where  you can pass either side.",
+   "Slow down because there is a road obstacle ahead.",
+   "Slow down because a median strip starts ahead.",
+   "Slow down because there is a two-way road ahead."
+  ]
+ },
+ {
+  "n": 876,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "醫뚯륫諛??듯뻾",
+   "?고빀瑜??꾨줈",
+   "?꾨줈??醫곸븘吏?,
+   "?곗륫李⑤줈 ?놁뼱吏?
+  ],
+  "a": "4",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "Detour to the left side of the road.",
+   "Road merges to the right.",
+   "Road narrows.",
+   "The right lane ends."
+  ]
+ },
+ {
+  "n": 877,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "以묒븰遺꾨━? ?쒖옉",
+   "?묒륫諛??듯뻾",
+   "以묒븰遺꾨━? ?앸궓",
+   "?몄긽 ?μ븷臾??덉쓬"
+  ],
+  "a": "1",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "The beginning of a median strip",
+   "Start of a road where you can pass either side",
+   "The end of a median strip",
+   "An obstacle on the road ahead"
+  ]
+ },
+ {
+  "n": 878,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "?몃룄 2李⑤줈???곕꼸",
+   "?곗냽 怨쇱냽諛⑹???,
+   "?몃㈃??怨좊Ⅴ吏 紐삵븿",
+   "援닿끝???덈뒗 ?좎닔援?
+  ],
+  "a": "3",
+  "tr_b": "What does this safety sign signify?",
+  "tr_c": [
+   "A tunnel with two lanes in one direction",
+   "A series of speed bumps",
+   "A rough road surface ahead",
+   "A submersible bridge with curves"
+  ]
+ },
+ {
+  "n": 879,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄??듯뻾??留롮? 吏??,
+   "?먯쟾嫄??〓떒??,
+   "?먯쟾嫄?二쇱감??,
+   "?먯쟾嫄??꾩슜?꾨줈"
+  ],
+  "a": "1",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "This is an area with busy bicycle traffic.",
+   "This is a bicycle crossing.",
+   "This is a bicycle parking space.",
+   "This is a bicycle-only trail."
+  ]
+ },
+ {
+  "n": 880,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?덈뒗 ?꾨줈?먯꽌 ?щ컮瑜??댁쟾諛⑸쾿??",
+  "ko_c": [
+   "?덇만??寃쎌슦 怨좊떒 蹂?띻린瑜??ъ슜?쒕떎.",
+   "?덇만??寃쎌슦 媛湲됱쟻 以묎컙???뺤??섏? ?딅뒗??",
+   "?됱??먯꽌 蹂대떎 怨좊떒 蹂?띻린瑜??ъ슜?쒕떎.",
+   "吏먯씠 留롮? 李⑤? 媛源뚯씠 ?곕씪媛꾨떎."
+  ],
+  "a": "2",
+  "tr_b": "What is the safe method of driving on a road with  this safety sign?",
+  "tr_c": [
+   "If the road is snowy, use a high gear.",
+   "If the road is snowy, try not to stop on the way up if  possible.",
+   "Use a higher gear than that on level ground.",
+   "Trail closely behind a vehicle fully loaded with cargo."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+p='translations/audit/queue/221_choices_en.json'
+with open(p,encoding='utf-8') as f:d=json.load(f)
+print('items',len(d),d[0]['n'],d[-1]['n'])
+for x in d:
+ print(x['n'], len(x.get('ko_c',[])), len(x.get('tr_c',[])), 'check=',repr(x.get('check')), 'detail=',repr(x.get('detail')))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:54:12.356078Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:9 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 641ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:9 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d = Get-Content -Raw -LiteralPath '"'translations/audit/queue/221_choices_en.json' | ConvertFrom-Json; Write-Output ('items=' + "'$d.Count); foreach ($x in $d) { Write-Output (('"'{0}: ko={1} tr={2} check={3} detail={4}' -f "'$x.n,$x.ko_c.Count,$x.tr_c.Count,$x.check,$x.detail)) }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 713ms:
+items=0
+ConvertFrom-Json : 잘못된 배열이 전달되었습니다. ','가 필요합니다. (1452): [
+ {
+  "n": 841,
+  "ko_b": "?대┛??蹂댄샇援ъ뿭???덉쟾?섍쾶 ?듯뻾?섎뒗 ?댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?욎そ ?먮룞李⑤? ?곕씪 ?쒗뻾?쇰줈 A?〓떒蹂대룄瑜??듦낵?쒕떎.",
+   "?ㅼそ ?먮룞李⑥? 異⑸룎???쇳븯湲??꾪빐 ?띾룄瑜??좎??섍퀬 ?욎そ 李?瑜??곕씪媛꾨떎.",
+   "A?〓떒蹂대룄 ?뺤????욎뿉???쇱떆?뺤??????듯뻾?쒕떎.",
+   "B?〓떒蹂대룄??蹂댄뻾?먭? ?놁쑝誘濡??쒗뻾?섎ŉ ?듯뻾?쒕떎.",
+   "B?〓떒蹂대룄 ?욎뿉???쇱떆?뺤??????듯뻾?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are the safe ways to drive through a school zone? (Select TWO)",
+  "tr_c": [
+   "Follow the vehicle ahead and drive slowly to pass through Crosswalk A.",
+   "Follow the vehicle ahead but maintain speed to avoid a collision with the rear vehicle.",
+   "Stop at the stop line in front of Crosswalk A and then pass through.",
+   "Slow down to pass through Crosswalk B as there are no pedestrians. ??Stop in front of Crosswalk B and then pass thr
+ough. ??A vehicle about to drive across an intersection in the school zone ??Crosswalks and intersection with no traffi
+c lights ??A vehicle can be seen in the rear by the rear-view mirror"
+  ]
+ },
+ {
+  "n": 842,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "蹂댄뻾蹂댁“???섏옄李⑥? ?덉쟾??嫄곕━瑜??좎??섍린 ?꾪빐 以묒븰?좎쓣 ?섏뼱 醫뚯륫?듯뻾?쒕떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑥뿉 ?대Ⅴ湲??꾩뿉 媛먯냽?섏뿬 ?됰룞???댄???",
+   "蹂댄뻾蹂댁“???섏옄李④? 李⑤줈??吏꾩엯?섍린 ?꾩뿉 ?좎냽??媛?랁븯???듯뻾?쒕떎.",
+   "蹂댄뻾蹂댁“???섏옄李④? 李⑤줈??吏꾩엯?섏? ?딄퀬 硫덉텛?꾨줉 寃쎌쓬湲?瑜?怨꾩냽?댁꽌 ?묐룞?쒕떎. ??蹂댄뻾蹂댁“???섏옄李④? 李⑤룄??吏꾩엯?섎젮怨??섍린 ?뚮Ц???쇱떆??吏?섏뿬 ?덉쟾??
+?뺣낫?쒕떎. ???몃룄 1李⑤줈 ??李⑤룄??吏꾩엯?섎젮??蹂댄뻾蹂댁“???섏옄李?
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are safe ways to drive in the  given situation? (Select TWO)",
+  "tr_c": [
+   "Move into the left-hand lane past the centerline to  maintain a safe distance from the mobility aid device.",
+   "Slow down and assess the situation before reaching the  electric wheelchair.",
+   "Accelerate quickly to pass the device before it enters the  lane.",
+   "Sound the horn repeatedly to incite the device to stop  and refrain from entering the road.",
+   "Stop temporarily to ensure the device?셲 safety as it is  about to enter the road."
+  ]
+ },
+ {
+  "n": 843,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?대┛???듯븰踰꾩뒪 ?ㅼ뿉??媛묒옄湲???대굹?ㅻ뒗 ?대┛?닿? ?덉쓣 ?? ?덉쑝誘濡?二쇱쓽?쒕떎.",
+   "?꾨갑 ?좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄??蹂댄뻾?먭? ?놁쑝誘濡??쒗뻾?섏뿬  ?듦낵?쒕떎.",
+   "?곗륫???곗뼱媛怨??덈뒗 ?꾩씠?ㅼ씠 媛묒옄湲??〓떒蹂대룄濡???대굹?? ???덇린???〓떒蹂대룄 ?욎뿉???쇱떆?뺤? ?섏뿬???쒕떎.",
+   "?대떦 援ъ뿭??寃쎌슦, ?대┛?댄넻?숇쾭?ㅼ뿉 ?쒗빐 二셋룹젙李⑤? ???? ?덈룄濡??덉슜??怨녹씠??",
+   "?꾨갑 ?곗륫???대┛???듯븰踰꾩뒪?먯꽌 ?꾩씠?ㅼ씠 ?뮤룻븯李⑦븯怨??덇린  ?뚮Ц???듯븰踰꾩뒪 ?놁쓣 ?듦낵 ???쇱떆?뺤? ???듦낵?섏뿬???쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Be cautious, as a child may suddenly run out from  behind the school bus.",
+   "Since there are no pedestrians at the crosswalk ahead  without a traffic light, proceed through it slowly.",
+   "Come to a complete stop before the crosswalk, as  children running on the right may suddenly dart out  onto the cro
+sswalk.",
+   "In this zone, only school buses are allowed to park or  stop temporarily.",
+   "As children are getting on or off the school bus ahead  on the right, stop before passing and then proceed  careful
+ly."
+  ]
+ },
+ {
+  "n": 844,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾?됰룞 2媛吏??",
+  "ko_c": [
+   "援먯감濡?吏꾩엯 ???쇱떆?뺤? ???듦낵?쒕떎.",
+   "寃쎌쓬湲곕? ?ъ슜?섎ŉ ?띾룄瑜??믪뿬 ?듦낵?쒕떎.",
+   "?꾨룞蹂댁옣援щ? ??怨좊졊蹂댄뻾?먭? 李⑤웾???듯뻾??湲곕떎由ш퀬 ?덇린?? ?좎냽??援먯감濡쒕? ?듦낵?쒕떎.",
+   "二셋룹젙李?李⑤웾 ?ъ씠???대┛??蹂댄뻾?먭? ?덉쓣 ???덉뼱 二쇱쓽?쒕떎.",
+   "吏곸쭊?섎젮??李⑤웾???곗꽑?대?濡?醫뚯륫?쇰줈 遺숈뼱 洹몃?濡??듦낵?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Come to a complete stop before entering the  intersection and then proceed.",
+   "Honk and speed up to pass through it quickly.",
+   "Since an elderly pedestrian in a mobility scooter is  waiting, pass through the intersection quickly.",
+   "Exercise caution as there may be children walking  between the parked or stopped vehicles.",
+   "Since the vehicle going straight ahead has the right of  way, keep to the left and proceed as is."
+  ]
+ },
+ {
+  "n": 845,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾?됰룞 2媛吏??",
+  "ko_c": [
+   "?꾨갑 ?대┛???듯븰踰꾩뒪媛 ?뺤??????덉뼱 ?덉쟾嫄곕━瑜??좎??쒕떎.",
+   "?띾룄瑜?以꾩씠硫??ㅼ감?먭쾶 異붾룎?ш퀬瑜??뱁븷 ???덉뼱 ?듯븰踰꾩뒪瑜? ?욎?瑜몃떎.",
+   "醫뚯륫 ?대┛?닿? ?〓떒蹂대룄濡?吏꾩엯?????덉쑝誘濡??대┛???됰룞???댄???",
+   "?꾨갑 醫뚯륫 二셋룹젙李⑤맂 ?대쪣李⑥????ш퀬瑜?二쇱쓽?섎ŉ, 泥쒖쿇?? ?대┛???듯븰踰꾩뒪瑜??욎?瑜몃떎.",
+   "?꾨갑 ?대┛???듯븰踰꾩뒪?먯꽌 ?대┛?닿? ?뮤룻븯李⑦븯怨??덉쑝誘濡? ?쒖꽌???욎쭏??二쇳뻾?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Maintain a safe distance as the school bus ahead of you  may stop.",
+   "Overtake the school bus because slowing down may  cause a rear-end collision.",
+   "Watch out for any children on the left who may enter  the crosswalk.",
+   "Carefully overtake the school bus while watching out for  accidents with the parked motorcycle on the left.",
+   "Slowly pass the school bus ahead even though children  are getting on or off it."
+  ]
+ },
+ {
+  "n": 846,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "吏?띿쟻?쇰줈 寃쎌쓬湲곕? ?ъ슜?섏뿬 ?꾪뿕???뚮━硫?吏?섍컙??",
+   "?꾩“?깆쑝濡??대┛?댄넻?숇쾭???댁쟾?먯뿉寃??꾪뿕???뚮━硫?吏?섍컙??",
+   "?곗륫 遺덈쾿 二셋룹젙李?李⑤웾 ?욎쑝濡??대┛?닿? ??대굹?????덉쓬?? 二쇱쓽?섎ŉ ?듦낵?쒕떎.",
+   "醫뚯륫 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆?뺤? ?섏??ㅺ? ?쒗뻾?쇰줈  吏?섍컙??",
+   "?곗륫 ?듯븰踰꾩뒪 李⑤웾???대┛???뮤룻븯李⑤? ?꾪빐 ?뺤감 以묒씠誘濡??좎냽 ???욎쭏??怨⑤ぉ湲몄쓣 踰쀬뼱?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Honk continuously to alert others of danger while  passing.",
+   "Use headlights to signal ?쐂anger??to the school bus  driver while passing.",
+   "Be cautious as children may suddenly run out from  between illegally parked vehicles on the right.",
+   "Come to a complete stop before reaching the school  bus on the left, and then pass by it slowly.",
+   "Quickly pass the stopped school bus that is picking up  or dropping off children on the right in order to get out  
+of the alley."
+  ]
+ },
+ {
+  "n": 847,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?〓떒蹂대룄???덈뒗 ?대┛?댁? 異⑸룎 媛?μ꽦???놁쑝誘濡??고쉶?꾪븳??",
+   "媛묒옉?ㅻ젅 ??대굹?????덈뒗 ?꾩씠?ㅼ쓽 ?됰룞???鍮꾪븳??",
+   "?〓떒蹂대룄 ???대┛?닿? ?〓떒???꾨즺?????고쉶?꾪븳??",
+   "?대┛?댁쓽 ?〓떒???ъ큺?섍린 ?꾪빐 寃쎌쓬湲곕? ?ъ슜?쒕떎.",
+   "?〓떒蹂대룄 ?꾩뿉 ?뺤??섏뿬 ?ㅻⅨ ?꾩씠?ㅼ쓽 吏꾩엯??留됰뒗??"
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Make a right turn since there is no risk of collision with  the children on the crosswalk.",
+   "Be prepared for children who may dart out onto the  crosswalk unexpectedly.",
+   "Turn right only after the children have finished crossing.",
+   "Honk to hurry the children crossing the street.",
+   "Stop on the crosswalk to prevent other children from  entering the crosswalk."
+  ]
+ },
+ {
+  "n": 848,
+  "ko_b": "?ㅼ쓬 ?꾨줈 ?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?쒖냽 20km ?대궡濡?二쇳뻾?쒕떎.",
+   "?〓떒蹂대룄 ?욎뿉???쒗뻾?섍퀬 洹몃?濡??듦낵?쒕떎.",
+   "?숆탳 ?뺣Ц???쇳빐 ?곗륫 湲멸????뺤감?쒕떎.",
+   "?꾩씠?ㅼ씠 ?꾨줈濡???대굹?????덉뼱 二쇱쓽?섎ŉ ?듦낵?쒕떎.",
+   "?숆탳 ?뺣Ц ??李⑤웾??二쇱감 ???먮?瑜?湲곕떎由곕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+  "tr_c": [
+   "Drive at a speed of no more than 20 km/h.",
+   "Slow down at the crosswalk and pass through it without  stopping.",
+   "Stop along the right-hand side of the road without  obstructing access to the front gate of the school.",
+   "Proceed with caution as children may suddenly run into  the road.",
+   "Park in front of the school gate and wait for your child."
+  ]
+ },
+ {
+  "n": 849,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "湲닿툒李④? ?꾨줈援먰넻踰??꾨컲???섎?濡?臾댁떆?섍퀬 ?듯뻾?쒕떎.",
+   "湲닿툒李④? ?꾨컲?됰룞???섏? 紐삵븯?꾨줉 ?곹뼢?깆쓣 ?섑쉶 ?묐룞?쒕떎.",
+   "???곕Ⅴ???댁쟾?먯뿉寃??뚮━湲??꾪빐 釉뚮젅?댄겕?섎떖???щ윭 踰?       ?섎늻??諛잙뒗??",
+   "湲닿툒李④? ??＜?됲븷 ???덈룄濡?嫄곕━瑜??먭퀬 ?뺤??쒕떎.",
+   "湲닿툒李④? 吏꾪뻾?????녿룄濡?洹??욎뿉 ?뺤감?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the correct ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Ignore the emergency vehicle violating traffic laws and  continue driving.",
+   "Use the high-beam headlights several times to prevent  the emergency vehicle from committing violations.",
+   "Apply the brakes multiple times to signal to the trailing  driver.",
+   "Stop at a distance to allow the emergency vehicle to  drive against the direction of traffic.",
+   "Stop in front of the emergency vehicle to prevent it  from proceeding."
+  ]
+ },
+ {
+  "n": 850,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "援ш툒李④? 吏?섍컝 ???덈룄濡?3李⑤줈濡??띾룄瑜??믪뿬 ?듦낵?쒕떎.",
+   "?꾨갑 李⑤웾?좏샇媛 ?뱀깋?대씪??援ш툒李⑥뿉寃??듯뻾???묐낫?쒕떎.",
+   "援ш툒李④? ?듦낵?????꾪뻾 湲닿툒?먮룞李④? ?덈뒗吏 ?뺤씤?쒕떎.",
+   "鍮④컙??李⑤웾???곕씪 媛?랁븯??二쇳뻾?쒕떎.",
+   "援ш툒李??댁쟾?먯뿉寃?寃쎌쓬湲곕? ?ъ슜?섎ŉ 洹몃?濡??듦낵?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+  "tr_c": [
+   "Speed up in the third lane to get through so that the  ambulance can pass through quickly.",
+   "Yield to the ambulance even though the traffic light is  green.",
+   "Check for any trailing emergency vehicles after the  ambulance passes.",
+   "Accelerate and follow the red car through the  intersection.",
+   "Honk at the ambulance driver and continue driving  through."
+  ]
+ },
+ {
+  "n": 851,
+  "ko_b": "?ㅼ쓬 ?꾨줈?곹솴?먯꽌 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?붿옱?щ?? ?곴??놁씠 吏곸쭊?쒕떎.",
+   "怨듭“湲곕? ?몃??쒗솚 紐⑤뱶濡??좎냽?섍쾶 ?꾪솚?쒕떎.",
+   "二쇳뻾 以묒씤 李⑤줈??二쇱감 ??臾몄쓣 ?좉렇怨??꾨쭩媛꾨떎.",
+   "李⑤웾 李쎈Ц???リ퀬 ?좊룆媛???≪엯??李⑤떒?쒕떎.",
+   "遺덇만???ы븳 怨녹쑝濡?吏꾩엯?섏? ?딄퀬, 寃쎌같愿???섏떊?몄뿉 ?곕Ⅸ??"
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the TWO most  appropriate ways to proceed in the given situation?",
+  "tr_c": [
+   "Proceed regardless of the fire.",
+   "Quickly switch the air-conditioning system to outside air  mode.",
+   "Park in the driving lane, lock the doors, and run away.",
+   "Close the car windows to block the intrusion of toxic  gases.",
+   "Avoid entering areas with fierce flames and follow the  hand signals of the police officer."
+  ]
+ },
+ {
+  "n": 852,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛??諛붾엺吏곹븳 ?댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "李⑥쓽 ?깊솕媛 ?뱀깋?대?濡?援먯감濡쒖뿉 洹몃?濡?吏꾩엯?쒕떎.",
+   "湲닿툒李④? ?곗꽑 ?듯뻾?댁빞 ???꾩슂?깆씠 ?덉쑝誘濡?援먯감濡?吏꾩엯  ?꾩뿉 ?뺤??섏뿬???쒕떎.",
+   "2李⑤줈???덈뒗 李④? 媛묒옄湲?醫뚯륫?쇰줈 蹂寃쏀븷 ?섎룄 ?덉쑝誘濡?誘?由?異⑸텇???띾룄瑜?媛먯냽?쒕떎.",
+   "湲닿툒李⑤낫??李⑥쓽 ?좏샇媛 ?곗꽑?대?濡?洹몃?濡?吏꾩엯?쒕떎.",
+   "湲닿툒李⑤낫??癒쇱? ?듦낵?????덈룄濡?媛?랁븯硫?吏꾩엯?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are desirable ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "The traffic light is green. Enter the intersection at once.",
+   "Stop before entering the intersection to allow the  emergency vehicle to pass because it has the right of  way.",
+   "Sufficiently reduce speed to account for a sudden  change of lanes by the vehicle in lane 2.",
+   "Motor vehicles have the right of way, so just enter the  intersection.",
+   "Speed up and enter the intersection before the  emergency vehicle does."
+  ]
+ },
+ {
+  "n": 853,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "??李⑤줈 ?놁뼱吏먥숉몴吏???곕씪 1李⑤줈濡?怨꾩냽 二쇳뻾?쒕떎.",
+   "怨듭궗援ъ뿭???쇳븯湲??꾪빐 湲됱젙吏?쒕떎.",
+   "?꾨갑 李⑤줈 ??씠 醫곸븘吏誘濡?誘몃━ 2李⑤줈濡?吏꾨줈瑜?蹂寃쏀븳??",
+   "怨듭궗 以묒엫???뚮━湲??꾪빐 鍮꾩긽?먮㈇?깆쓣 耳좊떎.",
+   "1李⑤줈濡?二쇳뻾?섎떎 怨듭궗援ш컙 吏곸쟾??2李⑤줈濡??쇱뼱?좊떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Continue driving in the first lane according to the ?쏬ane  2 ends??sign.",
+   "Make a sudden stop to avoid the construction area.",
+   "Switch to the second lane in advance as the road  narrows ahead.",
+   "Turn on the hazard lights to alert others to the  construction area.",
+   "Keep driving in the first lane and merge into the second  lane right before the construction zone."
+  ]
+ },
+ {
+  "n": 854,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄곗???異⑸룎???쇳븯湲??꾪빐 醫뚯륫李⑤줈濡??듯뻾?쒕떎.",
+   "?먯쟾嫄??꾩튂???대Ⅴ湲???異⑸텇??媛먯냽?쒕떎.",
+   "???곕Ⅴ???먮룞李⑥쓽 ?뚰넻???꾪빐 媛?랁븳??",
+   "蹂댄뻾?먯쓽 李⑤룄吏꾩엯???鍮꾪븯??媛먯냽?섍퀬 蹂댄뻾?먮? ?댄???",
+   "蹂댄뻾?먮? 蹂댄샇?섍린 ?꾪빐 湲멸??μ옄由ш뎄??쓣 ?듯뻾?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Drive in the left lane to avoid a collision with the bicycle.",
+   "Slow down sufficiently before reaching the bicycle.",
+   "Accelerate to maintain communication with the trailing  vehicle.",
+   "Slow down in preparation for pedestrians entering the  roadway and watch out for pedestrians.",
+   "Drive through the edge of the road to protect  pedestrians."
+  ]
+ },
+ {
+  "n": 855,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먰솢???뚰넻???꾪빐 ?욎감瑜??곕씪 洹몃?濡??듯뻾?쒕떎.",
+   "?먯쟾嫄곗쓽 吏꾩엯?띾룄蹂대떎 ??鍮좊Ⅴ寃?媛?랁븯???듯뻾?쒕떎.",
+   "?〓떒蹂대룄 吏곸쟾 ?뺤??좎뿉???뺤??쒕떎.",
+   "蹂댄뻾?먭? ?〓떒???꾨즺?덉쑝誘濡??좎냽???듯뻾?쒕떎.",
+   "?뺤감???먮룞李⑥쓽 媛묒옉?ㅻ윭??異쒕컻???鍮꾪븯??媛먯냽?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are safe ways to drive in the  given situation? (Select TWO)",
+  "tr_c": [
+   "To facilitate smooth traffic flow, drive behind the vehicle  in front without making any changes.",
+   "Accelerate faster than the bicycle in order to pass  through.",
+   "Come to a stop at the stop line just before the  crosswalk.",
+   "Since the pedestrian has already crossed the crosswalk,  proceed quickly.",
+   "Slow down to prepare for the sudden departure of the  stopped vehicle."
+  ]
+ },
+ {
+  "n": 856,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗쓽 醫뚯륫?쇰줈 二쇳뻾?섏뿬 醫뚰쉶?꾪븯吏 紐삵븯?꾨줉 ?꾪삊?쒕떎.",
+   "以묒븰?좎쓣 ?섏뼱 ?먯쟾嫄곕? ?욎?瑜닿린?쒕떎.",
+   "?먯쟾嫄곌? ?덉쟾?섍쾶 ?꾨줈瑜?踰쀬뼱???뚭퉴吏 ?쒗뻾?섎ŉ 湲곕떎?ㅼ???",
+   "?먯쟾嫄곌? 醫뚰쉶?꾪븷 ???덇린 ?뚮Ц???덉쟾嫄곕━瑜??좎??쒕떎.",
+   "?먯쟾嫄??듯뻾???ъ큺?섍린 ?꾪빐 寃쎌쓬湲곕? ?ъ슜?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Drive close to the left-hand side of the bicycle to  intimidate and dissuade it from turning left.",
+   "Cross the centerline to overtake the bicycle.",
+   "Slow down and wait until the bicycle safely moves off  the road.",
+   "Maintain a safe distance because the bicycle may turn  left.",
+   "Honk to hurry the bicycle along."
+  ]
+ },
+ {
+  "n": 857,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "李⑤웾?좏샇媛 ?곸깋?쇰줈 諛붾뚭린 ?꾩뿉 ?좎냽???듦낵?쒕떎.",
+   "?〓떒蹂대룄 吏곸쟾 ?뺤??좎뿉 ?뺤??쒕떎.",
+   "?먯쟾嫄??〓떒??媛?ν븳 怨좎썝???〓떒蹂대룄媛 ?덉뼱 二쇱쓽?섎ŉ ?듦낵?쒕떎.",
+   "?덉쟾吏?瑜?寃쎌쑀?섏뿬 ?좎냽??吏꾪뻾?쒕떎.",
+   "?몃윮 ???대┛?닿? ?곗뼱?섏삱 ???덉쑝誘濡?二쇱쓽?쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Pass through quickly before the signal turns red.",
+   "Stop at the stop line just before the crosswalk.",
+   "Be cautious while passing, as there is a raised crosswalk  that allows bicycles to cross.",
+   "Proceed quickly by passing through the safety zone.",
+   "Be careful as children may run out from behind the  truck."
+  ]
+ },
+ {
+  "n": 858,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "二쇱감??李⑤웾??媛묒옉?ㅻ읇寃?異쒕컻?????덉뼱 寃쎌쓬湲곕? 怨꾩냽 ?몃━硫?    ?좎냽???듦낵?쒕떎.",
+   "二쇱감??李⑤웾 ?ъ씠?먯꽌 蹂댄뻾?먭? ??대굹?????덉쑝誘濡?二쇱쓽?섎ŉ    ?쒗뻾?쒕떎.",
+   "?꾨갑 ?먯쟾嫄곗쓽 ?듯뻾???ъ큺?섍린 ?꾪빐 寃쎌쓬湲곕? 怨꾩냽 ?몃┛??",
+   "?꾨갑 怨쇱냽諛⑹??깃낵 ?먯쟾嫄??댁쟾?? ?쒖빞 ?뺣낫媛 ?대젮???곹솴 ??   ??怨좊젮?섏뿬 怨꾩냽?댁꽌 二쇱쓽瑜?湲곗슱?대ŉ ?좎쨷???댁쟾?쒕떎.",
+   "?꾨갑 ?먯쟾嫄곗???嫄곕━??異⑸텇?섎?濡?媛?랁븯???좎냽???듦낵?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "In this situation, which of the following are the two  safest ways of proceeding?",
+  "tr_c": [
+   "Sound the horn continuously to pass the parked vehicles  quickly as they may start to move suddenly.",
+   "Drive slowly and carefully as pedestrians may suddenly  emerge from between the parked cars.",
+   "Sound the horn to encourage the cyclist ahead to pass  quickly.",
+   "Drive carefully and pay attention to the surroundings,  taking into account speed bumps, cyclists, and situations  
+with limited visibility.",
+   "Accelerate quickly as there is sufficient distance between  you and the cyclist."
+  ]
+ },
+ {
+  "n": 859,
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "寃?뺤깋 李⑤웾 ?곗륫?쇰줈 ?욎?瑜닿린?쒕떎.",
+   "寃?뺤깋 李⑤웾怨?媛숈? 李⑤줈?먯꽌 ?섎???二쇳뻾?쒕떎.",
+   "怨좎뼇諛⑺뼢?쇰줈 吏꾩텧?????덈룄濡?利됱떆 3李⑤줈濡?李⑤줈蹂寃쎌쓣 ?쒕떎.",
+   "?곗깋李⑤웾??吏꾨줈蹂寃??????덉쑝誘濡?媛먯냽?섏뿬 ?덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "李⑤줈蹂寃쎌씠 媛?ν븳 諛깆깋?먯꽑 援ш컙源뚯? 二쇳뻾?섏뿬 3李⑤줈濡?吏꾩엯?쒕떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Overtake the black vehicle on the right.",
+   "Drive side by side in the same lane as the black vehicle.",
+   "Immediately switch to the third lane to allow the  motorcycle to exit toward Goyang.",
+   "Slow down and maintain a safe distance because the  white vehicle may change lanes.",
+   "Drive up to the section with the white broken line where  lane changes are allowed, and then enter the third lane."
+  ]
+ },
+ {
+  "n": 860,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 1李⑤줈濡?吏꾨줈蹂寃??섎젮 ????媛???덉쟾???댁쟾  諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "醫뚯륫 ?꾩궗寃쎌쓣 ?듯븯??1李⑤줈??二쇳뻾 以묒씤 李⑤웾???뺤씤?쒕떎.",
+   "?꾨갑???뱀슜李④? 1李⑤줈濡?吏꾨줈蹂寃쎌쓣 紐삵븯?꾨줉 ?곹뼢?깆쓣 誘몃━     耳쒖꽌 寃쎄퀬?쒕떎.",
+   "?띻린怨꾧? ?꾨줈濡?吏꾩엯?????덉뼱 1李⑤줈濡??좎냽??李⑤줈蹂寃??쒕떎.",
+   "?ㅻⅤ留됱감濡쒖씠湲??뚮Ц???띾룄瑜??믪뿬 ?댁쟾?쒕떎.",
+   "?꾨갑???대쪣李④? 1李⑤줈濡?吏꾨줈 蹂寃쏀븷 ???덉뼱 ?덉쟾嫄곕━瑜??좎??쒕떎."
+  ],
+  "a": "1, 5",
+  "tr_b": "Which of the following are the safe ways to drive  when you are trying to switch to the first lane in the  g
+iven situation? (Select TWO)",
+  "tr_c": [
+   "Look at the left side-view mirror to check the vehicles in  lane 1.",
+   "Use high-beam headlights to warn the vehicle that you  are about to go to lane 1.",
+   "Quickly switch to lane 1 as the agricultural machine may  enter the road.",
+   "Speed up since it is uphill.",
+   "Maintain a safe distance as the two-wheeled vehicle in  front may suddenly switch to lane 1."
+  ]
+ },
+ {
+  "n": 861,
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗쓽 ?듯뻾??諛⑺빐?섏? ?딄퀬 ?곗륫 湲멸????뺤감?쒕떎.",
+   "?꾨갑???〓떒蹂대룄媛 ?덉뼱 蹂댄뻾?먮? 二쇱쓽?섎ŉ ?쒗뻾?쇰줈 二쇳뻾?쒕떎.",
+   "?욎?瑜닿린 ??怨쇱냽???덉슜?섎?濡??쒖냽 50km濡?二쇳뻾?쒕떎.",
+   "1李⑤줈濡?李⑤줈蹂寃????먯쟾嫄곗????덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "寃쎌쓬湲곕? ?ъ슜?섏뿬 ?먯쟾嫄곗쓽 湲멸??μ옄由?二쇳뻾???ъ큺?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Park on the right-hand side of the road without  obstructing bicycle traffic.",
+   "Drive slowly while watching out for pedestrians as there  is a crosswalk ahead.",
+   "Speeding is allowed when overtaking, so drive at 50  km/h.",
+   "Switch to the first lane to maintain a safe distance from  the bicycle.",
+   "Honk to urge the bicycle to ride closer to the edge of  the road."
+  ]
+ },
+ {
+  "n": 862,
+  "ko_b": "?먯쟾嫄곕? ?댁쟾 以묒씠?? 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?꾨갑 蹂댄뻾???욎뿉???뺤??쒕떎.",
+   "?먯쟾嫄곌? ?곗꽑沅뚯씠 ?덉뼱 寃쎌쟻???뚮윭 ?욎?瑜닿린 ?쒕떎.",
+   "?꾨갑 蹂댄뻾?먯? 異⑸룎 ?꾪뿕???믪븘 蹂댄뻾??援ъ뿭?쇰줈 二쇳뻾?쒕떎.",
+   "?곗륫 蹂댄뻾?먯???異⑸룎媛?μ꽦???덉뼱 ?먯쟾嫄곕? ?뚭퀬 媛꾨떎.",
+   "?먯쟾嫄곗쓽 寃쎌슦 ?띾룄?쒗븳???놁뼱 ?꾪뿕援ш컙???좎냽???듦낵?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "You are riding a bicycle. Which of the following are  the TWO safest ways to ride?",
+  "tr_c": [
+   "Stop in front of the pedestrian ahead.",
+   "Since bicycles have the right of way, honk and overtake.",
+   "There is a high risk of collision with the pedestrian  ahead, so ride in the pedestrian area.",
+   "Walk the bicycle to avoid a possible collision with the  pedestrian on the right.",
+   "Bicycles are not subject to speed limits, so pass through  the dangerous area quickly."
+  ]
+ },
+ {
+  "n": 863,
+  "ko_b": "?ㅼ쓬 ?μ냼?먯꽌 ?먯쟾嫄??댁쟾?먭? ?덉쟾?섍쾶 ?〓떒?섎뒗 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗뿉 ???곹깭濡??〓떒蹂대룄 ?뱀깋?깊솕瑜?湲곕떎由щ떎媛 ?먯쟾嫄?瑜??댁쟾?섏뿬 ?〓떒?쒕떎.",
+   "?ㅻⅨ ?먯쟾嫄??댁쟾?먭? ?〓떒?섍퀬 ?덉쑝誘濡??좎냽???〓떒?쒕떎.",
+   "?ㅻⅨ ?먯쟾嫄곗? 異⑸룎媛?μ꽦???덉쑝誘濡??먯쟾嫄곗뿉???대젮 蹂대룄 ???덉쟾???μ냼?먯꽌 湲곕떎由곕떎.",
+   "?먯쟾嫄??댁쟾?먭? ?대┛???먮뒗 ?몄씤??寃쎌슦 蹂댄뻾???좏샇?깆씠  ?뱀깋?????댁쟾?섏뿬 ?〓떒?쒕떎.",
+   "?〓떒蹂대룄 ?좏샇?깆씠 ?뱀깋?깊솕 ?????먯쟾嫄곕? ?뚭퀬 ?〓떒?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are the safe ways for the bicycle rider to cross in the given location? (Select TWO)"
+,
+  "tr_c": [
+   "Stay on the bicycle while waiting for the crosswalk light to turn green, and cross the street while riding the bicy
+cle.",
+   "Quickly cross the street as other bicycle riders are crossing as well.",
+   "Get off the bicycle and wait in a safe location to prevent collision with other bicycle riders.",
+   "In the case of children or senior persons riding a bicycle, they must cross the street when the crosswalk light is 
+green. ??When the crosswalk light turns green, the bicycle rider must walk his/her bicycle to cross the street. ??A bic
+ycle rider is waiting on the sidewalk. ??A bicycle rider is looking at the road."
+  ]
+ },
+ {
+  "n": 864,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?꾨갑 蹂댄뻾?먯쓽 湲됱옉?ㅻ윭??醫뚯륫?〓떒???덉륫?섎ŉ ?뺤?瑜?以鍮꾪븳??",
+   "吏곸쭊?섎젮??寃쎌슦 ?꾨갑 援먯감濡쒖뿉??李④? ?놁쑝誘濡??쒗뻾?쇰줈 ?듦낵?쒕떎.",
+   "援먯감濡?吏꾩엯 ???쇱떆?뺤??섏뿬 醫뚯슦痢≪뿉???묎렐?섎뒗 李⑤? ?뺤씤?댁빞 ?쒕떎.",
+   "二쇰? ?먯쟾嫄?諛?蹂댄뻾?먯뿉寃?寃쎌쓬湲곕? 諛섎났?곸쑝濡??묐룞?섏뿬 李⑥쓽 ???됱쓣 ?뚮젮以??",
+   "?꾨갑 蹂댄뻾?먮? 湲멸??μ옄由ш뎄??쑝濡??좊룄?섍린 ?꾪빐 ?곗륫?쇰줈 遺숈뼱  ?듯뻾?댁빞 ?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Prepare to stop as the pedestrian in the front may  rapidly turn left.",
+   "To go straight, slowly enter the intersection as it is  currently empty.",
+   "Prior to entering the intersection, stop to check for  vehicles coming from both sides.",
+   "Honk repeatedly to alert the bicycle riders and  pedestrians nearby.",
+   "Drive along the right side of the road to induce the  pedestrians to move to the edge of the road."
+  ]
+ },
+ {
+  "n": 865,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 ?꾨룞?λ낫???댁쟾?먭? 醫뚰쉶?꾪븯?ㅻ뒗 寃쎌슦 ?덉쟾?? 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "A?〓떒蹂대룄濡??꾨룞?λ낫?쒕? ?댁쟾?섏뿬 吏꾩엯????B吏?먯뿉??D諛??μ쓽 ?뱀깋?깊솕瑜?湲곕떎由곕떎.",
+   "A?〓떒蹂대룄濡??꾨룞?λ낫?쒕? ?뚭퀬 吏꾩엯????B吏?먯뿉??D諛⑺뼢?? ?뱀깋?깊솕瑜?湲곕떎由곕떎.",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 E諛⑺뼢?쇰줈 二쇳뻾?섍린 ?꾪빐 援먯감濡?以묒떖??履쎌쑝濡?醫뚰쉶?꾪븳??",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 B吏?먯쑝濡?吏곸쭊????D諛⑺뼢???뱀깋?깊솕 瑜?湲곕떎由곕떎.",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 C吏?먯쑝濡?吏곸쭊????利됱떆 B吏?먯뿉??D 諛⑺뼢?쇰줈 吏곸쭊?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "The driver of an electric kick scooter is trying to turn left. Which of the following are the safe ways to d
+o so in the given situation? (Select TWO)",
+  "tr_c": [
+   "Use Crosswalk A while riding the electric kick scooter, wait at Point B for the traffic light to turn green, and go
+ in Direction D.",
+   "Use Crosswalk A while pushing the electric kick scooter, wait at Point B for the traffic light to turn green, and g
+o in Direction D.",
+   "Ride the electric kick scooter, turn left toward the center of the intersection, and go in Direction E.",
+   "Ride the electric kick scooter going straight to Point B, wait for the traffic light to turn green, and go in Direc
+tion D. ??Ride the electric kick scooter going straight to Point C and immediately go to Point B to go straight in Dire
+ction D. ??Traffic signal from east to west: Straight and left-turn signals ??The crosswalk light for Crosswalk A from 
+east to west has turned green."
+  ]
+ },
+ {
+  "n": 866,
+  "ko_b": "?ㅼ쓬???〓떒蹂대룄 ?쒖?媛 ?ㅼ튂?섎뒗 ?μ냼濡?媛???뚮쭪? 怨녹??",
+  "ko_c": [
+   "?〓떒蹂대룄媛 ?덈뒗 ?꾨줈濡쒖꽌 ?ъ옣?꾨줈??援먯감濡쒖뿉 ?좏샇湲곌? ?덉쓣 ??,
+   "?〓떒蹂대룄媛 ?덈뒗 ?꾨줈濡쒖꽌 ?ъ옣?꾨줈???⑥씪濡쒖뿉 ?좏샇湲곌? ?덉쓣 ??,
+   "?〓떒蹂대룄媛 ?덈뒗 ?꾨줈濡쒖꽌 蹂댄뻾?먯쓽 ?〓떒??湲덉??섎뒗 怨?,
+   "?〓떒蹂대룄媛 ?덈뒗 ?꾨줈濡쒖꽌 ?좏샇媛 ?녿뒗 ?ъ옣?꾨줈??援먯감濡쒕굹 ?⑥씪濡?
+  ],
+  "a": "4",
+  "tr_b": "Where should this crosswalk sign be installed?",
+  "tr_c": [
+   "At an intersection with a traffic signal on a paved road  with a crosswalk",
+   "On a single paved road with a traffic signal and a  crosswalk",
+   "On a road with a crosswalk where pedestrian crossing is  prohibited",
+   "At an intersection or on a single paved road without  traffic signals but which has a crosswalk"
+  ]
+ },
+ {
+  "n": 867,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?좎튂???듭썝濡쒖씠誘濡??먮룞李④? ?듯뻾?????놁쓬???섑??몃떎.",
+   "?대┛???먮뒗 ?좎븘???듯뻾濡쒕굹 ?〓떒蹂대룄媛 ?덉쓬???뚮┛??",
+   "?숆탳??異쒖엯援щ줈遺??2?щ줈誘명꽣 ?댄썑 援ъ뿭???ㅼ튂?쒕떎.",
+   "?대┛???먮뒗 ?좎븘媛 ?꾨줈瑜??〓떒?????놁쓬???뚮┛??"
+  ],
+  "a": "2",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "The area is designated for kindergarteners, so cars are  prohibited.",
+   "There is a designated crossing area/crosswalk for  children and infants.",
+   "The sign should be installed in an area more than 2 km  away from a school entrance.",
+   "Children and infants are not allowed to cross the road."
+  ]
+ },
+ {
+  "n": 868,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?삵븯??寃껋??",
+  "ko_c": [
+   "?몃㈃??怨좊Ⅴ吏 紐삵븿???뚮━??寃?,
+   "?곕꼸???덉쓬???뚮━??寃?,
+   "怨쇱냽諛⑹??깆씠 ?덉쓬???뚮━??寃?,
+   "誘몃걚?ъ슫 ?꾨줈媛 ?덉쓬???뚮━??寃?
+  ],
+  "a": "3",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "The road surface ahead is rough.",
+   "There is a tunnel ahead.",
+   "There is a speed bump ahead.",
+   "The road ahead is slippery."
+  ]
+ },
+ {
+  "n": 869,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?덈뒗 寃쎌슦 ?덉쟾 ?댁쟾諛⑸쾿??",
+  "ko_c": [
+   "?꾨줈 以묒븰???μ븷臾쇱씠 ?덉쑝誘濡??곗륫 諛⑺뼢?쇰줈 二쇱쓽?섎㈃???듯뻾?쒕떎.",
+   "以묒븰 遺꾨━?媛 ?쒖옉?섎?濡?二쇱쓽?섎㈃???듯뻾?쒕떎.",
+   "以묒븰 遺꾨━?媛 ?앸굹??吏?먯씠誘濡?二쇱쓽?섎㈃???듯뻾?쒕떎.",
+   "?곕꼸???덉쑝誘濡??꾩“?깆쓣 耳쒓퀬 二쇱쓽?섎㈃???듯뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "What does this safety sign signify?",
+  "tr_c": [
+   "You should drive with caution and proceed on the right  side of the road because there is an obstacle in the  middl
+e of the road.",
+   "You should drive with caution because a median strip is  about to start.",
+   "You should drive with caution because a median strip is  about to end.",
+   "You should drive with caution and headlights on  because there is a tunnel is ahead."
+  ]
+ },
+ {
+  "n": 870,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ쓬 ?덉쟾?쒖???????댁슜?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "洹쒖젣?쒖??대떎.",
+   "吏곸쭊李⑤웾 ?곗꽑?쒖??대떎.",
+   "醫뚰빀瑜??꾨줈?쒖??대떎.",
+   "醫뚰쉶??湲덉??쒖??대떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its  Enforcement Decree, which of the following correctly  describes t
+his road safety sign?",
+  "tr_c": [
+   "Regulation sign",
+   "Priority sign for vehicles going straight",
+   "Road sign for merging with left lane",
+   "Prohibition on turning left"
+  ]
+ },
+ {
+  "n": 871,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????ㅼ튂?μ냼?????湲곗??쇰줈 諛붾Ⅴ吏 ?딅뒗 寃껋??",
+  "ko_c": [
+   "A ?쒖????≫뭾???곕젮媛 ?덈뒗 吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫       ???ㅼ튂?쒕떎.",
+   "B ?쒖????곕꼸?낃뎄 ??50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎.",
+   "C ?쒖????꾪뿕吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎.",
+   "D ?쒖???怨듭슜二쇱감??吏꾩엯 ??50誘명꽣?먯꽌 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which installation location standard for traffic signs is  incorrect?",
+  "tr_c": [
+   "Sign A shall be placed on the right-hand side of the road, 50 ??00 meters before a location prone to crosswinds.",
+   "Sign B shall be placed on the right-hand side of the road, 50 ??00 m before the entrance to a tunnel.",
+   "Sign C shall be placed on the right-hand side of the road, 50 ??00 m before a dangerous area.",
+   "Sign D shall be placed on the right-hand side of the road, 50 ??00 m before the entrance to a public parking lot. A
+ B C D"
+  ]
+ },
+ {
+  "n": 872,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??洹몃┝???덉쟾?쒖?? 媛숈씠 二쇱쓽?쒖????대떦?섎뒗 寃껋쓣 ?섏뿴 ??寃껋??",
+  "ko_c": [
+   "?ㅻⅤ留됯꼍?ы몴吏, ?곸뒿?뺤껜援ш컙?쒖?",
+   "李⑦룺?쒗븳?쒖?, 李④컙嫄곕━?뺣낫?쒖?",
+   "?몃㈃?꾩감?꾩슜?꾨줈?쒖?, ?고쉶濡쒗몴吏",
+   "鍮꾨낫?몄쥖?뚯쟾?쒖?, 醫뚰쉶??諛??좏꽩?쒖?"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its  Enforcement Decree, which of the following is  categorized as a w
+arning sign as in the given picture?",
+  "tr_c": [
+   "Uphill sign, usual traffic congestion area sign",
+   "Vehicle width limit sign, keep distance sign",
+   "Tram-only road sign, bypass sign",
+   "Unprotected left-turn sign, left-turn and U-turn sign"
+  ]
+ },
+ {
+  "n": 873,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????살쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨갑 100誘명꽣 ?욌?????뼚?ъ? ?꾪뿕 援ш컙?대?濡?二쇱쓽",
+   "?꾨갑 100誘명꽣 ?욌???怨듭궗 援ш컙?대?濡?二쇱쓽",
+   "?꾨갑 100誘명꽣 ?욌???媛뺣??꾨줈?대?濡?二쇱쓽",
+   "?꾨갑 100誘명꽣 ?욌????숈꽍 ?곕젮媛 ?덈뒗 ?꾨줈?대?濡?二쇱쓽"
+  ],
+  "a": "4",
+  "tr_b": "What do these safety sign and supplementary sign  jointly mean?",
+  "tr_c": [
+   "Beware of a cliff 100 m ahead.",
+   "Beware of construction work 100 m ahead.",
+   "Beware of a riverside road 100 m ahead.",
+   "Beware of falling rocks 100 m ahead."
+  ]
+ },
+ {
+  "n": 874,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????살쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "泥좉만?쒖?",
+   "援먮웾?쒖?",
+   "?믪씠?쒗븳?쒖?",
+   "臾명솕?щ낫?명몴吏"
+  ],
+  "a": "2",
+  "tr_b": "What does this safety sign signify?",
+  "tr_c": [
+   "A railway",
+   "A bridge",
+   "Vehicle height limit",
+   "A cultural asset"
+  ]
+ },
+ {
+  "n": 875,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????살쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨갑???묒륫諛??듯뻾 ?꾨줈媛 ?덉쑝誘濡?媛먯냽 ?댄뻾",
+   "?꾨갑???μ븷臾쇱씠 ?덉쑝誘濡?媛먯냽 ?댄뻾",
+   "?꾨갑??以묒븰 遺꾨━?媛 ?쒖옉?섎뒗 ?꾨줈媛 ?덉쑝誘濡?媛먯냽 ?댄뻾",
+   "?꾨갑????諛⑺뼢 ?듯뻾 ?꾨줈媛 ?덉쑝誘濡?媛먯냽 ?댄뻾"
+  ],
+  "a": "3",
+  "tr_b": "What do these safety sign and supplementary sign  mean when placed together?",
+  "tr_c": [
+   "Slow down because there is a road starting ahead where  you can pass either side.",
+   "Slow down because there is a road obstacle ahead.",
+   "Slow down because a median strip starts ahead.",
+   "Slow down because there is a two-way road ahead."
+  ]
+ },
+ {
+  "n": 876,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "醫뚯륫諛??듯뻾",
+   "?고빀瑜??꾨줈",
+   "?꾨줈??醫곸븘吏?,
+   "?곗륫李⑤줈 ?놁뼱吏?
+  ],
+  "a": "4",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "Detour to the left side of the road.",
+   "Road merges to the right.",
+   "Road narrows.",
+   "The right lane ends."
+  ]
+ },
+ {
+  "n": 877,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "以묒븰遺꾨━? ?쒖옉",
+   "?묒륫諛??듯뻾",
+   "以묒븰遺꾨━? ?앸궓",
+   "?몄긽 ?μ븷臾??덉쓬"
+  ],
+  "a": "1",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "The beginning of a median strip",
+   "Start of a road where you can pass either side",
+   "The end of a median strip",
+   "An obstacle on the road ahead"
+  ]
+ },
+ {
+  "n": 878,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "?몃룄 2李⑤줈???곕꼸",
+   "?곗냽 怨쇱냽諛⑹???,
+   "?몃㈃??怨좊Ⅴ吏 紐삵븿",
+   "援닿끝???덈뒗 ?좎닔援?
+  ],
+  "a": "3",
+  "tr_b": "What does this safety sign signify?",
+  "tr_c": [
+   "A tunnel with two lanes in one direction",
+   "A series of speed bumps",
+   "A rough road surface ahead",
+   "A submersible bridge with curves"
+  ]
+ },
+ {
+  "n": 879,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄??듯뻾??留롮? 吏??,
+   "?먯쟾嫄??〓떒??,
+   "?먯쟾嫄?二쇱감??,
+   "?먯쟾嫄??꾩슜?꾨줈"
+  ],
+  "a": "1",
+  "tr_b": "What does this safety sign indicate?",
+  "tr_c": [
+   "This is an area with busy bicycle traffic.",
+   "This is a bicycle crossing.",
+   "This is a bicycle parking space.",
+   "This is a bicycle-only trail."
+  ]
+ },
+ {
+  "n": 880,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?덈뒗 ?꾨줈?먯꽌 ?щ컮瑜??댁쟾諛⑸쾿??",
+  "ko_c": [
+   "?덇만??寃쎌슦 怨좊떒 蹂?띻린瑜??ъ슜?쒕떎.",
+   "?덇만??寃쎌슦 媛湲됱쟻 以묎컙???뺤??섏? ?딅뒗??",
+   "?됱??먯꽌 蹂대떎 怨좊떒 蹂?띻린瑜??ъ슜?쒕떎.",
+   "吏먯씠 留롮? 李⑤? 媛源뚯씠 ?곕씪媛꾨떎."
+  ],
+  "a": "2",
+  "tr_b": "What is the safe method of driving on a road with  this safety sign?",
+  "tr_c": [
+   "If the road is snowy, use a high gear.",
+   "If the road is snowy, try not to stop on the way up if  possible.",
+   "Use a higher gear than that on level ground.",
+   "Trail closely behind a vehicle fully loaded with cargo."
+  ]
+ }
+]
+위치 줄:2 문자:85
++ ... nslations/audit/queue/221_choices_en.json' | ConvertFrom-Json; Write- ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Select-String -LiteralPath 'translations/audit/queue/221_choices_en.json' -Pattern '\\?\\?' | Where-Object { "'$_.Line -match '"'tr_|"'^'"\\s+\"' } | ForEach-Object { '{0}: {1}' -f "'$_.LineNumber,$_.Line.Trim() }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 556ms:
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$lines=Get-Content -LiteralPath '"'translations/audit/queue/221_choices_en.json'; "'$lines[300..500]' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 516ms:
+  "n": 856,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗쓽 醫뚯륫?쇰줈 二쇳뻾?섏뿬 醫뚰쉶?꾪븯吏 紐삵븯?꾨줉 ?꾪삊?쒕떎.",
+   "以묒븰?좎쓣 ?섏뼱 ?먯쟾嫄곕? ?욎?瑜닿린?쒕떎.",
+   "?먯쟾嫄곌? ?덉쟾?섍쾶 ?꾨줈瑜?踰쀬뼱???뚭퉴吏 ?쒗뻾?섎ŉ 湲곕떎?ㅼ???",
+   "?먯쟾嫄곌? 醫뚰쉶?꾪븷 ???덇린 ?뚮Ц???덉쟾嫄곕━瑜??좎??쒕떎.",
+   "?먯쟾嫄??듯뻾???ъ큺?섍린 ?꾪빐 寃쎌쓬湲곕? ?ъ슜?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Drive close to the left-hand side of the bicycle to  intimidate and dissuade it from turning left.",
+   "Cross the centerline to overtake the bicycle.",
+   "Slow down and wait until the bicycle safely moves off  the road.",
+   "Maintain a safe distance because the bicycle may turn  left.",
+   "Honk to hurry the bicycle along."
+  ]
+ },
+ {
+  "n": 857,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "李⑤웾?좏샇媛 ?곸깋?쇰줈 諛붾뚭린 ?꾩뿉 ?좎냽???듦낵?쒕떎.",
+   "?〓떒蹂대룄 吏곸쟾 ?뺤??좎뿉 ?뺤??쒕떎.",
+   "?먯쟾嫄??〓떒??媛?ν븳 怨좎썝???〓떒蹂대룄媛 ?덉뼱 二쇱쓽?섎ŉ ?듦낵?쒕떎.",
+   "?덉쟾吏?瑜?寃쎌쑀?섏뿬 ?좎냽??吏꾪뻾?쒕떎.",
+   "?몃윮 ???대┛?닿? ?곗뼱?섏삱 ???덉쑝誘濡?二쇱쓽?쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Pass through quickly before the signal turns red.",
+   "Stop at the stop line just before the crosswalk.",
+   "Be cautious while passing, as there is a raised crosswalk  that allows bicycles to cross.",
+   "Proceed quickly by passing through the safety zone.",
+   "Be careful as children may run out from behind the  truck."
+  ]
+ },
+ {
+  "n": 858,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "二쇱감??李⑤웾??媛묒옉?ㅻ읇寃?異쒕컻?????덉뼱 寃쎌쓬湲곕? 怨꾩냽 ?몃━硫?    ?좎냽???듦낵?쒕떎.",
+   "二쇱감??李⑤웾 ?ъ씠?먯꽌 蹂댄뻾?먭? ??대굹?????덉쑝誘濡?二쇱쓽?섎ŉ    ?쒗뻾?쒕떎.",
+   "?꾨갑 ?먯쟾嫄곗쓽 ?듯뻾???ъ큺?섍린 ?꾪빐 寃쎌쓬湲곕? 怨꾩냽 ?몃┛??",
+   "?꾨갑 怨쇱냽諛⑹??깃낵 ?먯쟾嫄??댁쟾?? ?쒖빞 ?뺣낫媛 ?대젮???곹솴 ??   ??怨좊젮?섏뿬 怨꾩냽?댁꽌 二쇱쓽瑜?湲곗슱?대ŉ ?좎쨷???댁쟾?쒕떎.",
+   "?꾨갑 ?먯쟾嫄곗???嫄곕━??異⑸텇?섎?濡?媛?랁븯???좎냽???듦낵?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "In this situation, which of the following are the two  safest ways of proceeding?",
+  "tr_c": [
+   "Sound the horn continuously to pass the parked vehicles  quickly as they may start to move suddenly.",
+   "Drive slowly and carefully as pedestrians may suddenly  emerge from between the parked cars.",
+   "Sound the horn to encourage the cyclist ahead to pass  quickly.",
+   "Drive carefully and pay attention to the surroundings,  taking into account speed bumps, cyclists, and situations  with limited visibility.",
+   "Accelerate quickly as there is sufficient distance between  you and the cyclist."
+  ]
+ },
+ {
+  "n": 859,
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "寃?뺤깋 李⑤웾 ?곗륫?쇰줈 ?욎?瑜닿린?쒕떎.",
+   "寃?뺤깋 李⑤웾怨?媛숈? 李⑤줈?먯꽌 ?섎???二쇳뻾?쒕떎.",
+   "怨좎뼇諛⑺뼢?쇰줈 吏꾩텧?????덈룄濡?利됱떆 3李⑤줈濡?李⑤줈蹂寃쎌쓣 ?쒕떎.",
+   "?곗깋李⑤웾??吏꾨줈蹂寃??????덉쑝誘濡?媛먯냽?섏뿬 ?덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "李⑤줈蹂寃쎌씠 媛?ν븳 諛깆깋?먯꽑 援ш컙源뚯? 二쇳뻾?섏뿬 3李⑤줈濡?吏꾩엯?쒕떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Overtake the black vehicle on the right.",
+   "Drive side by side in the same lane as the black vehicle.",
+   "Immediately switch to the third lane to allow the  motorcycle to exit toward Goyang.",
+   "Slow down and maintain a safe distance because the  white vehicle may change lanes.",
+   "Drive up to the section with the white broken line where  lane changes are allowed, and then enter the third lane."
+  ]
+ },
+ {
+  "n": 860,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 1李⑤줈濡?吏꾨줈蹂寃??섎젮 ????媛???덉쟾???댁쟾  諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "醫뚯륫 ?꾩궗寃쎌쓣 ?듯븯??1李⑤줈??二쇳뻾 以묒씤 李⑤웾???뺤씤?쒕떎.",
+   "?꾨갑???뱀슜李④? 1李⑤줈濡?吏꾨줈蹂寃쎌쓣 紐삵븯?꾨줉 ?곹뼢?깆쓣 誘몃━     耳쒖꽌 寃쎄퀬?쒕떎.",
+   "?띻린怨꾧? ?꾨줈濡?吏꾩엯?????덉뼱 1李⑤줈濡??좎냽??李⑤줈蹂寃??쒕떎.",
+   "?ㅻⅤ留됱감濡쒖씠湲??뚮Ц???띾룄瑜??믪뿬 ?댁쟾?쒕떎.",
+   "?꾨갑???대쪣李④? 1李⑤줈濡?吏꾨줈 蹂寃쏀븷 ???덉뼱 ?덉쟾嫄곕━瑜??좎??쒕떎."
+  ],
+  "a": "1, 5",
+  "tr_b": "Which of the following are the safe ways to drive  when you are trying to switch to the first lane in the  given situation? (Select TWO)",
+  "tr_c": [
+   "Look at the left side-view mirror to check the vehicles in  lane 1.",
+   "Use high-beam headlights to warn the vehicle that you  are about to go to lane 1.",
+   "Quickly switch to lane 1 as the agricultural machine may  enter the road.",
+   "Speed up since it is uphill.",
+   "Maintain a safe distance as the two-wheeled vehicle in  front may suddenly switch to lane 1."
+  ]
+ },
+ {
+  "n": 861,
+  "ko_b": "?ㅼ쓬 以?媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗쓽 ?듯뻾??諛⑺빐?섏? ?딄퀬 ?곗륫 湲멸????뺤감?쒕떎.",
+   "?꾨갑???〓떒蹂대룄媛 ?덉뼱 蹂댄뻾?먮? 二쇱쓽?섎ŉ ?쒗뻾?쇰줈 二쇳뻾?쒕떎.",
+   "?욎?瑜닿린 ??怨쇱냽???덉슜?섎?濡??쒖냽 50km濡?二쇳뻾?쒕떎.",
+   "1李⑤줈濡?李⑤줈蹂寃????먯쟾嫄곗????덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "寃쎌쓬湲곕? ?ъ슜?섏뿬 ?먯쟾嫄곗쓽 湲멸??μ옄由?二쇳뻾???ъ큺?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO safest ways to  proceed in the given situation?",
+  "tr_c": [
+   "Park on the right-hand side of the road without  obstructing bicycle traffic.",
+   "Drive slowly while watching out for pedestrians as there  is a crosswalk ahead.",
+   "Speeding is allowed when overtaking, so drive at 50  km/h.",
+   "Switch to the first lane to maintain a safe distance from  the bicycle.",
+   "Honk to urge the bicycle to ride closer to the edge of  the road."
+  ]
+ },
+ {
+  "n": 862,
+  "ko_b": "?먯쟾嫄곕? ?댁쟾 以묒씠?? 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?꾨갑 蹂댄뻾???욎뿉???뺤??쒕떎.",
+   "?먯쟾嫄곌? ?곗꽑沅뚯씠 ?덉뼱 寃쎌쟻???뚮윭 ?욎?瑜닿린 ?쒕떎.",
+   "?꾨갑 蹂댄뻾?먯? 異⑸룎 ?꾪뿕???믪븘 蹂댄뻾??援ъ뿭?쇰줈 二쇳뻾?쒕떎.",
+   "?곗륫 蹂댄뻾?먯???異⑸룎媛?μ꽦???덉뼱 ?먯쟾嫄곕? ?뚭퀬 媛꾨떎.",
+   "?먯쟾嫄곗쓽 寃쎌슦 ?띾룄?쒗븳???놁뼱 ?꾪뿕援ш컙???좎냽???듦낵?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "You are riding a bicycle. Which of the following are  the TWO safest ways to ride?",
+  "tr_c": [
+   "Stop in front of the pedestrian ahead.",
+   "Since bicycles have the right of way, honk and overtake.",
+   "There is a high risk of collision with the pedestrian  ahead, so ride in the pedestrian area.",
+   "Walk the bicycle to avoid a possible collision with the  pedestrian on the right.",
+   "Bicycles are not subject to speed limits, so pass through  the dangerous area quickly."
+  ]
+ },
+ {
+  "n": 863,
+  "ko_b": "?ㅼ쓬 ?μ냼?먯꽌 ?먯쟾嫄??댁쟾?먭? ?덉쟾?섍쾶 ?〓떒?섎뒗 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄곗뿉 ???곹깭濡??〓떒蹂대룄 ?뱀깋?깊솕瑜?湲곕떎由щ떎媛 ?먯쟾嫄?瑜??댁쟾?섏뿬 ?〓떒?쒕떎.",
+   "?ㅻⅨ ?먯쟾嫄??댁쟾?먭? ?〓떒?섍퀬 ?덉쑝誘濡??좎냽???〓떒?쒕떎.",
+   "?ㅻⅨ ?먯쟾嫄곗? 異⑸룎媛?μ꽦???덉쑝誘濡??먯쟾嫄곗뿉???대젮 蹂대룄 ???덉쟾???μ냼?먯꽌 湲곕떎由곕떎.",
+   "?먯쟾嫄??댁쟾?먭? ?대┛???먮뒗 ?몄씤??寃쎌슦 蹂댄뻾???좏샇?깆씠  ?뱀깋?????댁쟾?섏뿬 ?〓떒?쒕떎.",
+   "?〓떒蹂대룄 ?좏샇?깆씠 ?뱀깋?깊솕 ?????먯쟾嫄곕? ?뚭퀬 ?〓떒?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are the safe ways for the bicycle rider to cross in the given location? (Select TWO)",
+  "tr_c": [
+   "Stay on the bicycle while waiting for the crosswalk light to turn green, and cross the street while riding the bicycle.",
+   "Quickly cross the street as other bicycle riders are crossing as well.",
+   "Get off the bicycle and wait in a safe location to prevent collision with other bicycle riders.",
+   "In the case of children or senior persons riding a bicycle, they must cross the street when the crosswalk light is green. ??When the crosswalk light turns green, the bicycle rider must walk his/her bicycle to cross the street. ??A bicycle rider is waiting on the sidewalk. ??A bicycle rider is looking at the road."
+  ]
+ },
+ {
+  "n": 864,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?꾨갑 蹂댄뻾?먯쓽 湲됱옉?ㅻ윭??醫뚯륫?〓떒???덉륫?섎ŉ ?뺤?瑜?以鍮꾪븳??",
+   "吏곸쭊?섎젮??寃쎌슦 ?꾨갑 援먯감濡쒖뿉??李④? ?놁쑝誘濡??쒗뻾?쇰줈 ?듦낵?쒕떎.",
+   "援먯감濡?吏꾩엯 ???쇱떆?뺤??섏뿬 醫뚯슦痢≪뿉???묎렐?섎뒗 李⑤? ?뺤씤?댁빞 ?쒕떎.",
+   "二쇰? ?먯쟾嫄?諛?蹂댄뻾?먯뿉寃?寃쎌쓬湲곕? 諛섎났?곸쑝濡??묐룞?섏뿬 李⑥쓽 ???됱쓣 ?뚮젮以??",
+   "?꾨갑 蹂댄뻾?먮? 湲멸??μ옄由ш뎄??쑝濡??좊룄?섍린 ?꾪빐 ?곗륫?쇰줈 遺숈뼱  ?듯뻾?댁빞 ?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Prepare to stop as the pedestrian in the front may  rapidly turn left.",
+   "To go straight, slowly enter the intersection as it is  currently empty.",
+   "Prior to entering the intersection, stop to check for  vehicles coming from both sides.",
+   "Honk repeatedly to alert the bicycle riders and  pedestrians nearby.",
+   "Drive along the right side of the road to induce the  pedestrians to move to the edge of the road."
+  ]
+ },
+ {
+  "n": 865,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 ?꾨룞?λ낫???댁쟾?먭? 醫뚰쉶?꾪븯?ㅻ뒗 寃쎌슦 ?덉쟾?? 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "A?〓떒蹂대룄濡??꾨룞?λ낫?쒕? ?댁쟾?섏뿬 吏꾩엯????B吏?먯뿉??D諛??μ쓽 ?뱀깋?깊솕瑜?湲곕떎由곕떎.",
+   "A?〓떒蹂대룄濡??꾨룞?λ낫?쒕? ?뚭퀬 吏꾩엯????B吏?먯뿉??D諛⑺뼢?? ?뱀깋?깊솕瑜?湲곕떎由곕떎.",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 E諛⑺뼢?쇰줈 二쇳뻾?섍린 ?꾪빐 援먯감濡?以묒떖??履쎌쑝濡?醫뚰쉶?꾪븳??",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 B吏?먯쑝濡?吏곸쭊????D諛⑺뼢???뱀깋?깊솕 瑜?湲곕떎由곕떎.",
+   "?꾨룞?λ낫?쒕? ?댁쟾?섏뿬 C吏?먯쑝濡?吏곸쭊????利됱떆 B吏?먯뿉??D 諛⑺뼢?쇰줈 吏곸쭊?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "The driver of an electric kick scooter is trying to turn left. Which of the following are the safe ways to do so in the given situation? (Select TWO)",
+  "tr_c": [
+   "Use Crosswalk A while riding the electric kick scooter, wait at Point B for the traffic light to turn green, and go in Direction D.",
+   "Use Crosswalk A while pushing the electric kick scooter, wait at Point B for the traffic light to turn green, and go in Direction D.",
+   "Ride the electric kick scooter, turn left toward the center of the intersection, and go in Direction E.",
+   "Ride the electric kick scooter going straight to Point B, wait for the traffic light to turn green, and go in Direction D. ??Ride the electric kick scooter going straight to Point C and immediately go to Point B to go straight in Direction D. ??Traffic signal from east to west: Straight and left-turn signals ??The crosswalk light for Crosswalk A from east to west has turned green."
+  ]
+ },
+ {
+  "n": 866,
+  "ko_b": "?ㅼ쓬???〓떒蹂대룄 ?쒖?媛 ?ㅼ튂?섎뒗 ?μ냼濡?媛???뚮쭪? 怨녹??",
+  "ko_c": [
+
+codex
+[{"n":841,"field":"c[4]","severity":"critical","issue":"선택지 4·5와 이미지 설명이 한 문장에 합쳐져 선택지 5가 독립적으로 표시되지 않는다.","suggestion":"Slow down and pass through Crosswalk B because there are no pedestrians."},{"n":841,"field":"c[5]","severity":"critical","issue":"정답 선택지 5가 누락되어 정답 판단이 불가능하다.","suggestion":"Stop in front of Crosswalk B and then pass through."},{"n":863,"field":"c[4]","severity":"critical","issue":"선택지 4·5와 이미지 설명이 합쳐져 선택지 구조가 무너졌다.","suggestion":"Children and senior citizens riding bicycles may cross while riding when the pedestrian signal is green."},{"n":863,"field":"c[5]","severity":"critical","issue":"정답 선택지 5가 독립 항목으로 누락되어 정답 판단이 불가능하다.","suggestion":"When the crosswalk signal turns green, get off the bicycle and walk it across."},{"n":865,"field":"c[4]","severity":"major","issue":"선택지 4 뒤에 선택지 5와 이미지 설명이 합쳐져 선택지 구조가 훼손되었다.","suggestion":"Ride straight to Point B, wait for the signal toward Direction D to turn green, and then proceed in Direction D."},{"n":865,"field":"c[5]","severity":"major","issue":"선택지 5가 독립 항목으로 누락되었다.","suggestion":"Ride straight to Point C, then immediately proceed from Point B in Direction D."},{"n":871,"field":"c[1]","severity":"major","issue":"설치 거리 '50~200 m'가 '50 ??00 meters'로 깨져 수치 범위를 알 수 없다.","suggestion":"Sign A shall be installed on the right-hand side of the road, 50 to 200 meters before a location prone to crosswinds."},{"n":871,"field":"c[2]","severity":"major","issue":"설치 거리 '50~200 m'가 '50 ??00 m'로 깨져 수치 범위를 알 수 없다.","suggestion":"Sign B shall be installed on the right-hand side of the road, 50 to 200 meters before the entrance to a tunnel."},{"n":871,"field":"c[3]","severity":"major","issue":"설치 거리 '50~200 m'가 '50 ??00 m'로 깨져 수치 범위를 알 수 없다.","suggestion":"Sign C shall be installed on the right-hand side of the road, 50 to 200 meters before a dangerous area."},{"n":871,"field":"c[4]","severity":"major","issue":"설치 거리 '50~200 m'가 깨졌고 불필요한 도면 표기 'A B C D'가 선택지에 섞였다.","suggestion":"Sign D shall be installed on the right-hand side of the road, 50 to 200 meters before the entrance to a public parking lot."}]
+tokens used
+48,754
+[{"n":841,"field":"c[4]","severity":"critical","issue":"선택지 4·5와 이미지 설명이 한 문장에 합쳐져 선택지 5가 독립적으로 표시되지 않는다.","suggestion":"Slow down and pass through Crosswalk B because there are no pedestrians."},{"n":841,"field":"c[5]","severity":"critical","issue":"정답 선택지 5가 누락되어 정답 판단이 불가능하다.","suggestion":"Stop in front of Crosswalk B and then pass through."},{"n":863,"field":"c[4]","severity":"critical","issue":"선택지 4·5와 이미지 설명이 합쳐져 선택지 구조가 무너졌다.","suggestion":"Children and senior citizens riding bicycles may cross while riding when the pedestrian signal is green."},{"n":863,"field":"c[5]","severity":"critical","issue":"정답 선택지 5가 독립 항목으로 누락되어 정답 판단이 불가능하다.","suggestion":"When the crosswalk signal turns green, get off the bicycle and walk it across."},{"n":865,"field":"c[4]","severity":"major","issue":"선택지 4 뒤에 선택지 5와 이미지 설명이 합쳐져 선택지 구조가 훼손되었다.","suggestion":"Ride straight to Point B, wait for the signal toward Direction D to turn green, and then proceed in Direction D."},{"n":865,"field":"c[5]","severity":"major","issue":"선택지 5가 독립 항목으로 누락되었다.","suggestion":"Ride straight to Point C, then immediately proceed from Point B in Direction D."},{"n":871,"field":"c[1]","severity":"major","issue":"설치 거리 '50~200 m'가 '50 ??00 meters'로 깨져 수치 범위를 알 수 없다.","suggestion":"Sign A shall be installed on the right-hand side of the road, 50 to 200 meters before a location prone to crosswinds."},{"n":871,"field":"c[2]","severity":"major","issue":"설치 거리 '50~200 m'가 '50 ??00 m'로 깨져 수치 범위를 알 수 없다.","suggestion":"Sign B shall be installed on the right-hand side of the road, 50 to 200 meters before the entrance to a tunnel."},{"n":871,"field":"c[3]","severity":"major","issue":"설치 거리 '50~200 m'가 '50 ??00 m'로 깨져 수치 범위를 알 수 없다.","suggestion":"Sign C shall be installed on the right-hand side of the road, 50 to 200 meters before a dangerous area."},{"n":871,"field":"c[4]","severity":"major","issue":"설치 거리 '50~200 m'가 깨졌고 불필요한 도면 표기 'A B C D'가 선택지에 섞였다.","suggestion":"Sign D shall be installed on the right-hand side of the road, 50 to 200 meters before the entrance to a public parking lot."}]

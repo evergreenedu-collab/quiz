@@ -1,0 +1,2977 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125fb-f6ef-7d80-8e77-391a403e172d
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/211_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+codex
+요청한 JSON 파일의 한국어 원문과 영어 번역을 대조해 실질 오류만 선별하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/211_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 526ms:
+[
+ {
+  "n": 441,
+  "ko_b": "?ㅼ쓬 以?援먰넻?ш퀬 諛쒖깮 ??媛???곸젅???됰룞??",
+  "ko_c": [
+   "鍮꾩긽?깆쓣 耳쒓퀬 ?몃쟻?щ? ?댁뼱 鍮꾩긽?곹솴?꾩쓣 ?뚮┫ ?꾩슂???녿떎.",
+   "?ш퀬吏???꾨줈 ?댁뿉???ш퀬 ?곹솴??????ъ쭊??珥ъ쁺?섍퀬 李⑤웾 ?덉뿉 ?湲고븳??",
+   "?ш퀬吏?먯뿉??鍮좎졇?섏삱 ?꾩슂 ?놁씠 李⑤웾 ?덉뿉 ?湲고븳??",
+   "李⑤웾 諛??덉쟾???μ냼?먯꽌 二쇰? 媛濡쒕벑, 援먰넻?좏샇?깆뿉 遺李⑸맂 湲곗큹踰덊샇?먯쓣 蹂닿퀬 ?ш퀬 諛쒖깮吏??쓣 蹂대떎 援ъ껜?곸쑝濡?119,  112???좉퀬?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most appropriate course of action in the event of an accident?",
+  "tr_c": [
+   "It is not necessary to turn on the hazard lights and open the trunk to indicate an emergency situation.",
+   "Take photos of the accident scene within the road and wait inside the vehicle.",
+   "There is no need to exit the accident scene; wait inside the vehicle.",
+   "From a safe location outside the vehicle, report the accident to 119 or 112, and state the number of the streetlight or traffic signal post to give a precise location."
+  ]
+ },
+ {
+  "n": 442,
+  "ko_b": "?쇨컙??留덉＜ ?ㅻ뒗 李⑥쓽 ?꾩“??遺덈튆?쇰줈 ?명븳 ?덈??ъ쓣 ?쇳븯??諛⑸쾿?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "?꾩“??遺덈튆???뺣㈃?쇰줈 蹂댁? 留먭퀬 ?먭린 李⑤줈??諛붾줈 ?꾨옒履쎌쓣 蹂몃떎.",
+   "?꾩“??遺덈튆???뺣㈃?쇰줈 蹂댁? 留먭퀬 ?꾨줈 ?곗륫??媛?μ옄由?履쎌쓣 蹂몃떎.",
+   "?덉쓣 媛?섍쾶 ?④퀬 ?먭린 李⑤줈 諛붾줈 ?꾨옒履쎌쓣 蹂몃떎.",
+   "?덉쓣 媛?섍쾶 ?④퀬 醫뚯륫??媛?μ옄由?履쎌쓣 蹂몃떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the right method of avoiding glare caused by the headlights of an oncoming car at  night?",
+  "tr_c": [
+   "Do not look directly at the headlights but at the road directly in front of your car.",
+   "Do not look directly at the headlights but to the right edge of the road.",
+   "Squint your eyes and look at the road directly in front of your car.",
+   "Squint your eyes and look to the left edge of the road."
+  ]
+ },
+ {
+  "n": 443,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??諛ㅼ뿉 怨좎냽?꾨줈 ?깆뿉??怨좎옣?쇰줈 ?먮룞李⑤? ?댄뻾?????녿뒗 寃쎌슦, ?댁쟾?먭? 議곗튂?댁빞 ???ы빆?쇰줈 ?곸젅 移??딆? 寃껋??",
+  "ko_c": [
+   "?щ갑 500誘명꽣?먯꽌 ?앸퀎?????덈뒗 ?곸깋???ш킅?좏샇쨌?꾧린?쒕벑 ?먮뒗 遺덇퐙?좏샇瑜??ㅼ튂?댁빞 ?쒕떎.",
+   "?쒖?瑜??ㅼ튂??寃쎌슦 ?꾨갑?먯꽌 ?묎렐?섎뒗 ?먮룞李⑥쓽 ?댁쟾?먭? ?뺤씤?????덈뒗 ?꾩튂???ㅼ튂?섏뿬???쒕떎.",
+   "怨좎냽?꾨줈 ?깆씠 ?꾨땶 ?ㅻⅨ 怨녹쑝濡???꺼 ?볥뒗 ???꾩슂??議곗튂瑜??섏뿬???쒕떎.",
+   "?덉쟾?쇨컖???怨좎옣李④? ?쒖엳??吏?먯쑝濡쒕???200誘명꽣 ?꾨갑??諛섎뱶???ㅼ튂?댁빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Under the Road Traffic Act, which of the following is not an appropriate action on the part of a driver if the car  is unable to operate due to a breakdown on the expressway at night?",
+  "tr_c": [
+   "A red flashing signal, electric lantern or spark signal that can be identified from 500 m in all directions must be installed.",
+   "When installing a sign, it must be installed in a location where the driver of a vehicle approaching from the rear can see  it.",
+   "The driver must take necessary measures, such as moving the vehicle off the expressway.",
+   "The safety tripod sign must be installed 200 m from the point where the broken-down vehicle is located."
+  ]
+ },
+ {
+  "n": 444,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??鍮꾩궗?낆슜 ?뱀슜李??댁쟾?먭? ?꾩“?? 李⑦룺?? 誘몃벑, 踰덊샇?깆쓣 紐⑤몢 耳쒖빞 ?섎뒗 寃쎌슦濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "諛ㅼ뿉 ?꾨줈?먯꽌 ?뺤감?섎뒗 寃쎌슦",
+   "?덇컻媛 媛??? ?꾨줈?먯꽌 ?뺤감?섎뒗 寃쎌슦",
+   "二쇱감?꾨컲?쇰줈 寃ъ씤?섎뒗 ?먮룞李⑥쓽 寃쎌슦",
+   "?곕꼸 ???꾨줈?먯꽌 ?댄뻾?섎뒗 寃쎌슦"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following describes a situation in which a driver of a non-commercial vehicle is required to turn on the headlights, sidelights, taillights, and license plate lights at the same time?",
+  "tr_c": [
+   "When stopping on a road at nighttime",
+   "When stopping on a road with minimal visibility due to fog",
+   "When the vehicle is being towed away due to a parking violation",
+   "While driving inside a tunnel"
+  ]
+ },
+ {
+  "n": 445,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎냽?꾨줈?먯꽌 ?먮룞李?怨좎옣 ???곸젅??議곗튂?붾졊??",
+  "ko_c": [
+   "?좎냽??鍮꾩긽?먮㈇?깆쓣 ?묐룞?섍퀬 李⑤? ?꾨줈 ?꾩뿉 硫덉텣 ??蹂댄뿕?ъ뿉 ?뚮┛??",
+   "?몃쟻?щ? ?댁뼱 ?볤퀬 怨좎옣 ??怨녹쓣 ?좎냽???뺤씤????援щ궃李⑤? 遺瑜몃떎.",
+   "?대룞??遺덇??ν븳 寃쎌슦 怨좎옣李⑤웾???욎そ 500誘명꽣 吏?먯뿉 ?덉쟾?쇨컖?瑜??ㅼ튂?쒕떎.",
+   "?대룞??媛?ν븳 寃쎌슦 ?좎냽??鍮꾩긽?먮㈇?깆쓣 耳쒓퀬 媛볤만???뺤??쒗궎怨??덉쟾???μ냼濡??대룞?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the MOST appropriate action in case of vehicle failure on an expressway?",
+  "tr_c": [
+   "Turn on the emergency flashing light immediately, stop the car on the road, and notify the insurance company.",
+   "Open the trunk, check the broken part quickly, and call a rescue vehicle.",
+   "If it is not possible to move, install a safety tripod 500 m in front of the broken vehicle.",
+   "If the vehicle can move, turn on the hazard lights, pull over to the shoulder, and move to a safe area."
+  ]
+ },
+ {
+  "n": 446,
+  "ko_b": "二쇳뻾 以???댁뼱 ?묓겕 ?덈갑諛⑸쾿 諛?議곗튂?붾졊?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?꾨줈? ?묒??섎뒗 ??댁뼱??諛붾떏硫댁뿉 ?섏궗紐??깆씠 諛뺥??덈뒗吏 ?섏떆濡??먭??쒕떎.",
+   "?뺢린?곸쑝濡???댁뼱???곸젙 怨듦린?뺤쓣 ?좎??섍퀬 ?몃젅??留덈え?쒓퀎瑜??섏뼱?곕뒗吏 ?댄렣蹂몃떎.",
+   "?몃뱾???쒖そ?쇰줈 ?좊━??寃쎌슦 ????댁뼱???묓겕??媛?μ꽦???믩떎.",
+   "?몃뱾? ?뺣㈃?쇰줈 怨좎젙?쒗궓 梨?二쇳뻾?섎뒗 湲곗뼱?곹깭濡??붿쭊釉뚮젅?댄겕瑜??댁슜?섏뿬 媛먯냽???좊룄?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT true about preventing a tire puncture and measures taken while driving?",
+  "tr_c": [
+   "You must regularly check the tires for nails.",
+   "You must regularly check tire pressures and tread depths.",
+   "If the steering wheel pulls to one side, it is likely that a rear tire is punctured.",
+   "While keeping the steering wheel straight ahead and in the driving gear state, use the engine brake to induce deceleration."
+  ]
+ },
+ {
+  "n": 447,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??諛ㅼ뿉 怨좎냽?꾨줈?먯꽌 ?먮룞李?怨좎옣?쇰줈 ?댄뻾?????녾쾶 ?섏뿀?????덉쟾?쇨컖?? ?④퍡 異붽?濡?(  )?먯꽌  ?앸퀎?????덈뒗 遺덇퐙 ?좏샇 ?깆쓣 ?ㅼ튂?댁빞 ?쒕떎. (   )??留욌뒗 寃껋??",
+  "ko_c": [
+   "?щ갑 200誘명꽣 吏??,
+   "?щ갑 300誘명꽣 吏??,
+   "?щ갑 400誘명꽣 吏??,
+   "?щ갑 500誘명꽣 吏??
+  ],
+  "a": "4",
+  "tr_b": "If your vehicle breaks down on an expressway at night, in addition to a safety tripod sign, etc. you must install road flare signals to provide visibility for ( ) and alert other motorists that your car has broken down. Choose the correct one to fill in the brackets.",
+  "tr_c": [
+   "200 m in every direction.",
+   "300 m in every direction.",
+   "400 m in every direction.",
+   "500 m in every direction."
+  ]
+ },
+ {
+  "n": 448,
+  "ko_b": "?먮룞李?二쇳뻾 以???댁뼱媛 ?묓겕 ?ъ쓣 ??媛???щ컮瑜?議곗튂??",
+  "ko_c": [
+   "??履쎌쑝濡?湲됯꺽?섍쾶 ?좊━硫??ш퀬瑜??덈갑?섍린 ?꾪빐 湲됱젣?숈쓣 ?쒕떎.",
+   "?몃뱾??苑??↔퀬 吏곸쭊?섎㈃??湲됱젣?숈쓣 ?쇨?怨??붿쭊 釉뚮젅?댄겕瑜??댁슜?섏뿬 ?덉쟾??怨녹뿉 ?뺤??쒕떎.",
+   "李⑤웾???좊━??諛⑺뼢?쇰줈 ?몃뱾??爰얜뒗??",
+   "釉뚮젅?댄겕 ?섎떖???묐룞?섏? ?딄린 ?뚮Ц??二쇱감 釉뚮젅?댄겕瑜??댁슜?섏뿬 ?뺤??쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the correct method of handling a tire that explodes while driving?",
+  "tr_c": [
+   "If the vehicle is pulled to one side suddenly, press the brakes to prevent an accident.",
+   "Firmly grasp the steering wheel, drive straight, and avoid sudden braking. Use the engine brake to stop in a safe  location.",
+   "Turn the steering wheel in the direction the vehicle is pulled in.",
+   "Use the parking brake to stop the vehicle as the brake pedal won't work."
+  ]
+ },
+ {
+  "n": 449,
+  "ko_b": "怨좎냽?꾨줈?먯꽌 援먰넻?ш퀬媛 諛쒖깮??寃쎌슦, 2李??ш퀬瑜?諛⑹??섍린 ?꾪븳 議곗튂?붾졊?쇰줈 媛???щ컮瑜?寃껋??",
+  "ko_c": [
+   "蹂댄뿕泥섎━瑜??꾪빐 ?곗꽑?곸쑝濡?利앷굅 ?깆뿉 ????ъ쭊珥ъ쁺???쒕떎.",
+   "?곷??댁쟾?먯뿉寃?怨쇱떎???덉쓬??紐낇솗???섍퀬 蹂댄뿕?곸슜???붿껌?쒕떎.",
+   "?먮룞李⑤? ?꾨줈???곗륫 媛?μ옄由ъ뿉 ?뺤??쒗궎怨??됱젙?덉쟾遺?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 洹??쒖?瑜??ㅼ튂?섏뿬???쒕떎.",
+   "鍮꾩긽?먮㈇?깆쓣 ?묐룞?섍퀬 ?먮룞李??덉뿉??愿怨꾧린愿???좉퀬?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "In the event of a traffic accident on an expressway, what is the most appropriate measure for preventing  secondary accidents?",
+  "tr_c": [
+   "First and foremost take photos of the accident for insurance purposes.",
+   "Explicitly let the other driver know that he/she is at fault and claim for insurance accordingly.",
+   "The vehicle must be stopped at the rightmost edge of the road, and a warning sign must be placed in accordance with the regulations prescribed by the Ministry of the Interior and Safety.",
+   "Turn on the hazard lights and call the relevant authority inside your vehicle."
+  ]
+ },
+ {
+  "n": 450,
+  "ko_b": "?ㅼ쓬 以?怨좎냽?꾨줈 怨듭궗援ш컙??愿???ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "李⑤줈瑜?李⑤떒?섎뒗 怨듭궗??寃쎌슦 ?뺤껜媛 諛쒖깮?????덉뼱 二쇱쓽?댁빞 ?쒕떎.",
+   "?붾Ъ李⑥쓽 寃쎌슦 ?쒓컙 議몄쓬, ?꾨갑 二쇱떆?쒕쭔? ??뺤궗怨좊줈 ?댁뼱吏????덈떎.",
+   "?대룞怨듭궗, 怨좎젙怨듭궗 ???ㅼ뼇???좏삎??怨듭궗媛 吏꾪뻾?쒕떎.",
+   "?쒗븳?띾룄???쒖냽 80?щ줈誘명꽣濡쒕쭔 ?쒗븳?섏뼱 ?덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a correct statement regarding the expressway construction section?",
+  "tr_c": [
+   "In the case of construction that blocks a lane, caution is required due to expected congestion.",
+   "In the case of a truck, drowsiness and neglecting to look forward can lead to a major accident.",
+   "Various types of construction work including moving construction and stationary construction can be performed.",
+   "The speed limit is set to 80 km/h."
+  ]
+ },
+ {
+  "n": 451,
+  "ko_b": "?ㅼ쓬 以??섏씠?⑥뒪 ?⑤쭚湲?怨좎옣?쇰줈 ?섏씠?⑥뒪媛 ?몄떇?섏? ?딆? 寃쎌슦, ?щ컮瑜?議곗튂諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "鍮꾩긽?먮㈇?깆쓣 ?묐룞?섍퀬 ?쇱떆?뺤??????쇰컲李⑤줈???듯뻾沅뚯쓣 諛쒓텒?쒕떎.",
+   "紐⑹쟻吏 ?붽툑?뚯뿉???뺤궛 ?대떦?먯뿉寃?吏꾩엯???μ냼瑜??ㅻ챸?섍퀬 ?뺤궛?쒕떎.",
+   "紐⑹쟻吏 ?붽툑?뚯쓽 ?섏씠?⑥뒪 李⑤줈瑜??듦낵?섎㈃ ?먮룞 ?뺤궛?쒕떎.",
+   "紐⑹쟻吏 ?붽툑?뚯뿉???섏씠?⑥뒪 ?⑤쭚湲곗쓽 移대뱶瑜?遺꾨━?????뺤궛?대떦?먯뿉寃?洹?移대뱶濡??붽툑???뺤궛?????덈떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the most appropriate actions to take if the Hi-Pass device malfunctions and fails to  read? (Select TWO)",
+  "tr_c": [
+   "Turn on the emergency flashers, temporarily stop your vehicle, and have a toll ticket issued in a non-automated toll lane.",
+   "Upon reaching the toll gate of your destination, explain where you entered the expressway to the toll collector and pay  the toll.",
+   "Use the Hi-Pass lane and go through the toll gate of your destination, and the toll will be automatically collected.",
+   "Detach the card from your Hi-Pass device at the toll gate of your destination and hand it over to the toll collector to  pay the toll."
+  ]
+ },
+ {
+  "n": 452,
+  "ko_b": "?ㅼ쓬 以??곕꼸 ???붿옱媛 諛쒖깮?덉쓣 ???댁쟾?먯쓽 ?됰룞?쇰줈 媛???щ컮瑜?寃껋??",
+  "ko_c": [
+   "?꾨궃 諛⑹?瑜??꾪빐 ?먮룞李⑤Ц???좉렇怨??곕꼸 諛뽰쑝濡???쇳븳??",
+   "?붿옱濡??명빐 ?곕꼸 ?덉? ?곌린濡?媛?앹감湲??뚮Ц??李⑥븞???湲고븳??",
+   "李⑤웾 ?붿쭊 ?쒕룞???꾧퀬 李⑤웾 ?대룞???꾪빐 ?댁뇿??苑귥븘??梨??좎냽?섍쾶 ?대젮 ??쇳븳??",
+   "?좏꽩?댁꽌 異쒓뎄 諛섎?諛⑺뼢?쇰줈 ?섎룎?꾧컙??"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the safest action in the event of a fire in a tunnel?",
+  "tr_c": [
+   "Lock the car's doors to prevent theft and evacuate the tunnel.",
+   "Stay in the car as the tunnel will be filled with smoke from the fire.",
+   "Switch off the engine, leave the key in the ignition to allow for the car to be moved if necessary, and quickly evacuate  to safety.",
+   "Make a U-turn and drive away from the exit."
+  ]
+ },
+ {
+  "n": 453,
+  "ko_b": "?ㅼ쓬 以??곕꼸???듦낵?????댁쟾?먯쓽 ?덉쟾?댁쟾 諛⑸쾿?쇰줈 媛???섎せ ??寃껋??",
+  "ko_c": [
+   "?곕꼸 吏꾩엯 ?? 紐낆닚?묒뿉 ?鍮꾪븯???됱븞寃쎌쓣 踰쀪퀬 諛ㅼ뿉 以?섎뒗 ?깊솕瑜?耳좊떎.",
+   "?곕꼸 ??李⑥꽑??諛깆깋?ㅼ꽑??寃쎌슦, 李⑤줈瑜?蹂寃쏀븯吏 ?딄퀬 ?곕꼸???듦낵?쒕떎.",
+   "?욎감????덉쟾嫄곕━瑜??좎??섎㈃??湲됱젣?숈뿉 ?鍮꾪븳??",
+   "?곕꼸 吏꾩엯 ?? ?낃뎄???ㅼ튂???꾨줈?덈궡?뺣낫瑜??뺤씤?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "From a safety perspective, which of the following is the most inappropriate way of driving when passing  through a tunnel?",
+  "tr_c": [
+   "Before entering the tunnel, remove your sunglasses to allow your eyes to adapt to the light, and turn on your  headlights as you would at nighttime.",
+   "If the lanes inside the tunnel are marked with solid white lines, do not change lanes while in the tunnel.",
+   "Keep a safe following distance from the car ahead, and be ready for sudden stops.",
+   "Before entering the tunnel, check the road information at the entrance to the tunnel."
+  ]
+ },
+ {
+  "n": 454,
+  "ko_b": "?ㅼ쓬? ?먮룞李?二쇳뻾 以?湲닿툒 ?곹솴?먯꽌 ?쒕룞怨?愿?⑦븳 ?ㅻ챸?대떎. 留욌뒗 寃껋??",
+  "ko_c": [
+   "?섎쭑?꾩긽??諛쒖깮???뚮뒗 釉뚮젅?댄겕???쒕룞?μ씠 ?됱냼蹂대떎 ?믪븘吏꾨떎.",
+   "鍮꾩긽 ??異⑷꺽 ?≪닔 諛⑺샇踰쎌쓣 ?쒖슜?섎뒗 寃껋? ????ш퀬瑜??덈갑?섎뒗 諛⑸쾿 以??섎굹?대떎.",
+   "?몃㈃???듦린媛 ?덉쓣 ??湲됰툕?덉씠?щ? 諛잛쑝硫???긽 吏곸쭊 諛⑺뼢?쇰줈 誘몃걚?ъ쭊??",
+   "ABS瑜??μ갑??李⑤웾? ?쒕룞 嫄곕━媛 ABS 誘몄옣李?李⑤웾蹂대떎 ?섏뼱?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding braking in an emergency situation that occurs while driving is  correct?",
+  "tr_c": [
+   "If aquaplaning occurs, the braking force of the brakes gets stronger.",
+   "Utilizing an impact-absorbing barrier in an emergency situation is one way of preventing a fatal accident.",
+   "If the road surface is wet, the vehicle always slides straight forward upon pressing the brake suddenly.",
+   "ABS-equipped vehicles have longer braking distances than non-ABS vehicles."
+  ]
+ },
+ {
+  "n": 455,
+  "ko_b": "吏吏꾩씠 諛쒖깮??寃쎌슦 ?덉쟾???泥??붾졊 2媛吏??",
+  "ko_c": [
+   "吏吏꾩씠 諛쒖깮?섎㈃ ?좎냽?섍쾶 二쇳뻾?섏뿬 吏吏?吏??쓣 踰쀬뼱?쒕떎.",
+   "李④컙嫄곕━瑜?異⑸텇???뺣낫?????꾨줈???곗륫???뺤감?쒕떎.",
+   "李⑤? ?먭퀬 ??쇳븷 ?꾩슂媛 ?덉쓣 ?뚮뒗 李⑥쓽 ?쒕룞???덈떎.",
+   "吏吏?諛쒖깮怨?愿怨꾩뾾??怨꾩냽 二쇳뻾?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO correct safety measures to take during an earthquake?",
+  "tr_c": [
+   "Drive as quickly as possible out of the area affected by the earthquake.",
+   "Maintain a safe distance from other vehicles and pull over to the right-hand side of the road.",
+   "Turn off the engine if you need to get out of the car to take cover.",
+   "Ignore the earthquake and drive on."
+  ]
+ },
+ {
+  "n": 456,
+  "ko_b": "怨좎냽?꾨줈 怨듭궗援ш컙??二쇳뻾?????댁쟾?먯쓽 ?щ컮瑜??댁쟾?붾졊???꾨땶 2媛吏??",
+  "ko_c": [
+   "?꾨갑 怨듭궗 援ш컙 ?곹솴??二쇱쓽?섎ŉ ?댁쟾?쒕떎.",
+   "怨듭궗援ш컙 ?쒗븳?띾룄?쒖??먯꽌 吏?쒗븯???띾룄蹂대떎 鍮좊Ⅴ寃?二쇳뻾?쒕떎.",
+   "臾대━???쇱뼱?ㅺ린 諛??욎?瑜닿린瑜??섏? ?딅뒗??",
+   "?먰솢??援먰넻?먮쫫???꾪븯??怨듭궗援ш컙 ?묎렐 ???띾룄瑜??쇨??섍쾶 ?좎??섏뿬 二쇳뻾?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "You are driving on an expressway and there is ongoing construction ahead. Which of the following are NOT true?  (Select TWO)",
+  "tr_c": [
+   "Stay cautious when driving toward and by a construction site.",
+   "Drive faster than what is indicated on the construction speed limit sign.",
+   "Try to refrain from excessive overtaking or cutting in front of cars.",
+   "Drive at the same speed when approaching the construction site so as not to cause unnecessary traffic disruptions.",
+   "In areas where the speed limit changes, turn on the hazard lights to alert the other vehicles."
+  ]
+ },
+ {
+  "n": 457,
+  "ko_b": "?먮룞李??댁쟾 以??곕꼸 ?댁뿉???붿옱媛 ?ъ쓣 寃쎌슦 議곗튂?댁빞 ???됰룞?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "李⑥뿉???대젮 ?대룞??寃쎌슦 ?먮룞李⑥쓽 ?쒕룞???꾧퀬 ?섏감?쒕떎.",
+   "?뚰솕湲곕줈 遺덉쓣 ??寃쎌슦 諛붾엺???깆?怨??쒖빞 ?쒕떎.",
+   "?곕꼸 諛뽰쑝濡??대룞???대젮??寃쎌슦 李⑤웾? 理쒕???以묒븰??履쎌쑝濡??뺤감?쒗궓??",
+   "李⑤? ?먭퀬 ??쇳븷 寃쎌슦???먮룞李??댁뇿瑜?戮묒븘 媛吏怨??대룞?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the TWO correct measures to take when a fire starts inside a tunnel that you are  driving in?",
+  "tr_c": [
+   "Turn off the engine if you are getting out of the car to evacuate.",
+   "Stand with your back to the wind when using a fire extinguisher.",
+   "If you are unable to drive out of the tunnel, stop the car as close to the centerline as possible.",
+   "Take the key out of the ignition if you are getting out of the car to evacuate."
+  ]
+ },
+ {
+  "n": 458,
+  "ko_b": "?먮룞李④? 誘몃걚?ъ????꾩긽??愿???ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "怨좎냽 二쇳뻾 以?湲됱젣???쒖뿉 二쇰줈 諛쒖깮?섍린 ?뚮Ц??怨쇱냽??二쇰맂 ?먯씤?대떎.",
+   "鍮쀪만?먯꽌??????댄뻾 ?쒖뿉 二쇰줈 諛쒖깮?쒕떎.",
+   "誘몃걚?ъ????꾩긽???섑븳 ?몃㈃ ?붿쟻? ?ш퀬 ?먯씤 異붿젙??蹂??꾩????섏쭏 ?딅뒗??",
+   "湲됯꺽???몃뱾議고뼢??誘몃걚?ъ????먯씤???????덈떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO correct statements regarding a vehicle skid?",
+  "tr_c": [
+   "Skidding mostly occurs when the brakes are applied suddenly while driving at high speed.",
+   "Skidding mostly occurs when driving at low speed in the rain.",
+   "Skid marks left on a road surface do not provide any clues as to why an accident occurred.",
+   "Sudden steering can also cause skidding."
+  ]
+ },
+ {
+  "n": 459,
+  "ko_b": "?먮룞李④? 李⑤줈瑜??댄깉??媛?μ꽦??媛????寃쎌슦 2媛吏??",
+  "ko_c": [
+   "?ㅻⅤ留됯만?먯꽌 二쇳뻾????,
+   "而ㅻ툕 湲몄뿉??湲됲엳 ?몃뱾??議곗옉????,
+   "?대━留됯만?먯꽌 二쇳뻾????,
+   "?몃㈃??誘몃걚?ъ슱 ??
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO situations wherein a vehicle is most likely to deviate from the road?",
+  "tr_c": [
+   "When driving on an uphill road",
+   "When the driver abruptly turns the steering wheel on a curved road",
+   "When driving on a downhill road",
+   "When the road surface is slippery"
+  ]
+ },
+ {
+  "n": 460,
+  "ko_b": "怨좎냽?꾨줈 二쇳뻾 以??붿쭊 猷?蹂대떅)?먯꽌 ?곌린媛 ?섍퀬 ?붿옱媛 諛쒖깮?섏?????媛??諛붾엺吏곹븳 議곗튂 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "諛쒓껄 利됱떆 洹??먮━???뺤감?쒕떎.",
+   "媛볤만濡??대룞?????쒕룞???꾧퀬 ?щ묠由?李⑥뿉???대젮 ??쇳븳??",
+   "珥덇린 吏꾪솕媛 媛?ν븳 寃쎌슦?먮뒗 李⑤웾??鍮꾩튂???뚰솕湲곕? ?ъ슜?섏뿬 遺덉쓣 ?덈떎.",
+   "珥덇린 吏꾪솕???ㅽ뙣?덉쓣 ?뚯뿉??119 ?깆뿉 ?좉퀬????李⑤웾 諛붾줈 ?놁뿉??湲곕떎由곕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "If the hood of the car starts generating smoke and catches fire on an expressway, which of the following are the  TWO most appropriate measures to take?",
+  "tr_c": [
+   "Stop immediately when you notice that there is a problem.",
+   "Move to the roadside, turn off the engine, and evacuate the vehicle.",
+   "If it is early enough to extinguish the fire, use the fire extinguisher fitted in the vehicle.",
+   "If you fail to extinguish the fire, call 119 and wait right next to the vehicle."
+  ]
+ },
+ {
+  "n": 461,
+  "ko_b": "?꾨줈 怨듭궗?μ쓽 ?덉쟾???듯뻾???꾪빐 李⑥꽑蹂寃쎌씠 ?꾩슂??援ш컙?쇰줈 李⑤줈 媛먯냼媛 ?쒖옉?섎뒗 吏?먯??",
+  "ko_c": [
+   "二쇱쓽援ш컙 ?쒖옉??,
+   "?꾪솕援ш컙 ?쒖옉??,
+   "?묒뾽援ш컙 ?쒖옉??,
+   "醫낃껐援ш컙 ?쒖옉??
+  ],
+  "a": "2",
+  "tr_b": "At which point do lanes start decreasing in the zone requiring lane changes for safe passage due to road  construction?",
+  "tr_c": [
+   "Starting point of a warning zone",
+   "Starting point of a transition zone",
+   "Starting point of a work zone",
+   "Starting point of a termination zone"
+  ]
+ },
+ {
+  "n": 462,
+  "ko_b": "?쇨컙?댁쟾怨?愿?⑤맂 ?댁슜?쇰줈 媛???щ컮瑜?寃껋??",
+  "ko_c": [
+   "?꾨㈃?좊━???댄똿(?쇰챸 ?ы똿)???섎㈃ ?쇨컙???볦? ?쒖빞瑜??뺣낫?????덈떎.",
+   "留묒? ?좎? ?쇨컙蹂대떎 二쇨컙?댁쟾 ???쒕룞嫄곕━媛 湲몄뼱吏꾨떎.",
+   "?쇨컙?먮뒗 ?꾩“?깅낫???덇컻?깆쓣 耳쒓퀬 二쇳뻾?섎㈃ ?꾨갑???쒖빞?뺣낫???좊━?섎떎.",
+   "諛섎???李⑤웾??遺덈튆???뺣㈃?쇰줈 爾먮떎蹂대㈃ 利앸컻?꾩긽??諛쒖깮?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the MOST correct description regarding driving at night?",
+  "tr_c": [
+   "It is possible to secure a wide view at night if you have the front window tinted.",
+   "On a clear day, the braking distance is longer during daytime than at night.",
+   "It is better to secure a front view when driving at night with the fog light on rather than headlights.",
+   "If you look at the light from the opposite vehicle directly, it may be hard to secure a front view due to the glare."
+  ]
+ },
+ {
+  "n": 463,
+  "ko_b": "?쇨컙 ?댁쟾 以??섑??섎뒗 利앸컻?꾩긽??????ㅻ챸 以??녹? 寃껋??",
+  "ko_c": [
+   "利앸컻?꾩긽???섑?????利됱떆 李⑤웾???꾩“?깆쓣 ?꾨㈃ 利앸컻?꾩긽???щ씪吏꾨떎.",
+   "利앸컻?꾩긽? 留덉＜ ?ㅻ뒗 ??李⑤웾??紐⑤몢 ?곹뼢 ?꾩“?깆씪 ??諛쒖깮?섎뒗 寃쎌슦媛 留롫떎.",
+   "?쇨컙???쇱옟???쒕궡?꾨줈瑜?二쇳뻾????諛쒖깮?섎뒗 寃쎌슦媛 留롫떎.",
+   "?쇨컙???곕꼸??吏꾩엯?섍쾶 ?섎㈃ 諛앹? 遺덈튆?쇰줈 ?좎떆 ??蹂댁씠???꾩긽??留먰븳??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is a correct statement regarding the glare effect (cases wherein you are unable to see  ahead due to the glare from the vehicle?셲 headlights) during nighttime?",
+  "tr_c": [
+   "The glare effect will disappear if you turn off your headlights immediately when it occurs.",
+   "The glare effect frequently occurs when two vehicles facing each other both have their high-beam headlights on.",
+   "The glare effect tends to occur when driving through busy downtown streets at nighttime.",
+   "The glare effect refers to the condition of momentary invisibility caused by bright lights upon entering a tunnel at  nighttime."
+  ]
+ },
+ {
+  "n": 464,
+  "ko_b": "?쇨컙 ?댁쟾 ???댁쟾?먯쓽 ?섍컖?깆??섏＜?됤숈뿉 ????ㅻ챸?쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "?됱냼蹂대떎 ?몄??λ젰???μ긽?쒕떎.",
+   "?덇뎄?숈옉???곷??곸쑝濡??쒕컻?댁쭊??",
+   "?쒕궡 ?쇱옟???꾨줈瑜?二쇳뻾????諛쒖깮?섎뒗 寃쎌슦媛 留롫떎.",
+   "?⑥“濡쒖슫 ?쒓퀎???듭닕?댁졇 ?쇱쥌??媛먭컖 留덈퉬 ?곹깭??鍮좎???寃껋쓣 留먰븳??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements regarding a driver?셲 \"Hypovigilance in driving\" at nighttime is correct?",
+  "tr_c": [
+   "Cognitive ability is better than usual.",
+   "Eye movements become more active.",
+   "It often occurs when driving on congested roads in a city.",
+   "The eyes become used to a monotonous view and experience a type of sensory paralysis."
+  ]
+ },
+ {
+  "n": 465,
+  "ko_b": "?닿? 吏湲??쒖옉?섎㈃???대몢?뚯쭏 ???댁쟾?먯쓽 議곗튂濡?嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "李⑦룺?? 誘몃벑??耳좊떎.",
+   "二쇨컙 二쇳뻾?띾룄蹂대떎 媛먯냽 ?댄뻾?쒕떎.",
+   "?앹뼇??吏硫??덉씠 ?대몺???곸쓳?섎뒗 ?쒓컙??遺議깊빐 二쇱쓽?섏뿬???쒕떎.",
+   "二쇨컙蹂대떎 ?쒖빞?뺣낫媛 ?⑹씠?섏뿬 ?댁쟾?섍린 ?명븯??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a measure to be taken by a driver when the sun begins to set and it becomes  dark?",
+  "tr_c": [
+   "Turn on the sidelights and taillights.",
+   "Drive slower than you would during the day.",
+   "The eyes need some time to adjust to the darkness after the sun sets.",
+   "Driving is easier compared to daytime driving because of greater visibility."
+  ]
+ },
+ {
+  "n": 466,
+  "ko_b": "?ㅼ쓬以??꾧린?먮룞李⑥쓽 異⑹쟾 耳?대툝??而ㅽ뵆?ъ뿉 愿???ㅻ챸???섎せ??寃껋??  ???ㅻⅨ 諛곗꽑湲곌뎄? ?泥?遺덇??ν븳 援ъ“濡쒖꽌 洹뱀꽦??援щ텇?섍퀬 ?묒?洹뱀씠 ?덈뒗 寃껋씪 寃?",
+  "ko_c": [
+   "?묒?洹뱀? ?ъ엯 ???쒖씪 ?섏쨷???묒냽?섍퀬, 李⑤떒 ???쒖씪 癒쇱? 遺꾨━?섎뒗 援ъ“??寃?",
+   "?섎룄?섏? ?딆? 遺?섏쓽 李⑤떒??諛⑹??섍린 ?꾪빐 ?좉툑 ?먮뒗 ?덈?李⑹쓣 ?꾪븳 湲곌퀎???μ튂媛 ?덈뒗 寃껋씪 寃?",
+   "?꾧린?먮룞李?而ㅻ꽖?곌? ?꾧린?먮룞李??묒냽援щ줈遺??遺꾨━????異⑹쟾 耳?대툝???꾩썝怨듦툒??以묐떒?쒗궎???명꽣濡?湲곕뒫???덈뒗  寃껋씪 寃?"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding the EV charging cable coupler is INCORRECT?",
+  "tr_c": [
+   "It should have separate polarity and grounding electrode as it has a structure that cannot be replaced with other wiring  equipment.",
+   "The grounding electrode should have a structure that is connected last when starting and separated first upon shutoff.",
+   "It should have a mechanical device for locking or an attachment/detachment to prevent unintended load shedding.",
+   "It should have an interlock function that suspends the power supply of charging cable when the connector of an EV is separated from the connection port."
+  ]
+ },
+ {
+  "n": 467,
+  "ko_b": "?먮룞李??붿옱瑜??덈갑?섍린 ?꾪븳 諛⑸쾿?쇰줈 媛???щ컮瑜?寃껋??",
+  "ko_c": [
+   "李⑤웾 ?대????고봽 ?ㅼ튂瑜??꾪빐 諛곗꽑?μ튂瑜??꾩쓽濡?議곗옉?쒕떎.",
+   "寃⑥슱泥?二쇱쑀???뺤쟾湲곌? 諛쒖깮?섏? ?딅룄濡?二쇱쓽?쒕떎.",
+   "LPG李⑤웾? 鍮꾩긽?쒕? ?鍮꾪븯???쇳쉶??遺?꾧??ㅻ? 李⑤웾???ｊ퀬 ?ㅻ땶??",
+   "?쇳쉶???쇱씠?곕뒗 ?щ쫫泥?李??덉뿉 ?먯뼱??愿쒖갖??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the best method of preventing vehicle fires?",
+  "tr_c": [
+   "Alter the wiring arrangement to install an amplifier in the vehicle.",
+   "Avoid generating static electricity while filling up in wintertime.",
+   "LPG vehicles should carry a disposable butane gas tank in preparation for an emergency.",
+   "A lighter can be stored inside the vehicle in summer."
+  ]
+ },
+ {
+  "n": 468,
+  "ko_b": "??李⑤웾??湲됱젣?숈쑝濡??명빐 異붾룎???꾪뿕???덈뒗 寃쎌슦, 洹??泥?諛⑸쾿?쇰줈 媛???щ컮瑜?寃껋??",
+  "ko_c": [
+   "異⑸룎吏곸쟾源뚯? ?ш린?섏? 留먭퀬, 釉뚮젅?댄겕 ?섎떖??諛잛븘 媛먯냽?쒕떎.",
+   "??李⑥???異붾룎???쇳븯湲??꾪빐 ?몃뱾??湲됲븯寃?醫뚯륫?쇰줈 爰얠뼱 以묒븰?좎쓣 ?섏뼱媛꾨떎.",
+   "?쇳빐瑜?理쒖냼?뷀븯湲??꾪빐 ?덉쓣 媛먮뒗??",
+   "??댄띁? ?곹뼢?깆쓣 ?④퍡 議곗옉?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the best method of preventing the risk of collision caused by the sudden braking of a  vehicle ahead?",
+  "tr_c": [
+   "Step on the brake pedal to slow down.",
+   "Turn the steering wheel sharply to the left and drive over the centerline to avoid hitting the vehicle ahead.",
+   "Close your eyes to minimize the impact.",
+   "Turn on both the wipers and the high-beam headlights."
+  ]
+ },
+ {
+  "n": 469,
+  "ko_b": "?ㅼ쓬 以?怨좎냽?쇰줈 二쇳뻾?섎뒗 李⑤웾????댁뼱 ?댁긽?쇰줈 諛쒖깮?섎뒗 ?꾩긽 2媛吏??",
+  "ko_c": [
+   "踰좎씠?쇰줉 ?꾩긽",
+   "?ㅽ깲?⑹썾?대툕 ?꾩긽",
+   "?섏씠???꾩긽",
+   "?섏씠?쒕줈?뚮젅?대떇 ?꾩긽"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are TWO phenomena caused by the tires of a vehicle driving at high speed?",
+  "tr_c": [
+   "Vapor lock",
+   "Standing wave",
+   "Fading",
+   "Aquaplaning"
+  ]
+ },
+ {
+  "n": 470,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??醫뚯꽍?덉쟾??李⑹슜??????댁슜?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "醫뚯꽍?덉쟾?좊뒗 ?덈━ ?꾨줈 怨좎젙?쒖폒 援먰넻?ш퀬 異⑷꺽???鍮꾪븳??",
+   "?붿옱吏꾩븬???꾪빐 異쒕룞?섎뒗 ?뚮갑愿? 醫뚯꽍?덉쟾?좊? 李⑹슜?섏? ?딆븘???쒕떎.",
+   "?대┛?대뒗 ?욎쥖?앹뿉 ?됲? 醫뚯꽍?덉쟾?좊? 留ㅻ룄濡??섎뒗 寃껋씠 媛???덉쟾?섎떎.",
+   "13??誘몃쭔???먮??먭쾶 醫뚯꽍?덉쟾?좊? 留ㅻ룄濡??섏? ?딆쑝硫?怨쇳깭猷뚭? 3留??먯씠??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding wearing a seat belt is correct?",
+  "tr_c": [
+   "Fix the seat belt above the waist to protect against the shock from a traffic accident.",
+   "Firefighters who are dispatched to suppress fire need not wear a seat belt.",
+   "It is safest for children to take the front seat and wear a seat belt.",
+   "If a driver does not ensure that children under the age of 13 wear a seat belt, an administrative fine of KRW 30,000 is  imposed."
+  ]
+ },
+ {
+  "n": 471,
+  "ko_b": "援먰넻?ш퀬 ??癒몃━? 紐?遺?곸쓣 理쒖냼?뷀븯湲??꾪빐 異쒕컻 ?꾩뿉 議곗젅?댁빞 ?섎뒗 寃껋??",
+  "ko_c": [
+   "醫뚯꽍???꾪썑 議곗젅",
+   "?깅컺??媛곷룄 議곗젅",
+   "癒몃━諛쏆묠? ?믪씠 議곗젅",
+   "醫뚯꽍???믩궙??議곗젅"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following should you adjust before you start driving in order to minimize injuries to the head and  neck?",
+  "tr_c": [
+   "Distance of the seat from the pedals",
+   "Angle of the backrest",
+   "Height of the headrest",
+   "Seat height"
+  ]
+ },
+ {
+  "n": 472,
+  "ko_b": "?곕꼸?먯꽌 ?덉쟾?댁쟾怨?愿?⑤맂 ?댁슜?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?욎?瑜닿린???쇱そ 諛⑺뼢吏?쒕벑??耳쒓퀬 醫뚯륫?쇰줈 ?쒕떎.",
+   "?곕꼸 ?덉뿉?쒕뒗 ?욎감???嫄곕━媛먯씠 ??섎맂??",
+   "?곕꼸 吏꾩엯 ??紐낆닚???꾩긽??二쇱쓽?댁빞 ?쒕떎.",
+   "?곕꼸 異쒓뎄?먯꽌???붿닚???꾩긽??諛쒖깮?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding safe driving in a tunnel is correct?",
+  "tr_c": [
+   "Turn on the left-turn signal and use the left lane for overtaking.",
+   "The sense of distance from the front vehicle is reduced in a tunnel.",
+   "When entering the tunnel, be careful of the light adaptation.",
+   "At the exit of a tunnel, dark adaptation occurs."
+  ]
+ },
+ {
+  "n": 473,
+  "ko_b": "?ㅼ쓬? 吏꾨줈 蹂寃쏀븷 ??耳쒖빞 ?섎뒗 ?좏샇??????ㅻ챸?대떎. 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "?좏샇瑜??섏? ?딄퀬 吏꾨줈瑜?蹂寃쏀빐???ㅻⅨ 援먰넻??諛⑺빐?섏? ?딆븯?ㅻ㈃ 援먰넻 踰뺢퇋 ?꾨컲?쇰줈 蹂????녿떎.",
+   "吏꾨줈 蹂寃쎌씠 ?앸궃 ???곷떦 湲곌컙 ?좏샇瑜?怨꾩냽?섏뿬???쒕떎.",
+   "吏꾨줈 蹂寃????좏샇瑜??섏? ?딆쑝硫??뱀슜李??깃낵 ?뱁빀李??깆? 3留??먯쓽 踰붿튃湲???곸씠 ?쒕떎.",
+   "怨좎냽?꾨줈?먯꽌 吏꾨줈 蹂寃쎌쓣 ?섍퀬?????뚯뿉??30誘명꽣 吏?먮???吏꾨줈蹂寃쎌씠 ?꾨즺???뚭퉴吏 ?좏샇瑜??쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is true about using turn signals?",
+  "tr_c": [
+   "It is not a violation to change lanes without signaling if it does not obstruct the other vehicles.",
+   "You must keep the turn signal on for a while after changing lanes.",
+   "The traffic penalty for failure to signal lane change for passenger vehicles and buses is a fine of KRW 30,000.",
+   "When changing lanes on an expressway, turn on the turn signal from 30 m before and keep it on until you have completed  changing lanes."
+  ]
+ },
+ {
+  "n": 474,
+  "ko_b": "?욎?瑜닿린瑜??????덈뒗 寃쎌슦濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?욎감媛 ?ㅻⅨ 李⑤? ?욎?瑜닿퀬 ?덉쓣 寃쎌슦",
+   "?욎감媛 ?꾪뿕 諛⑹?瑜??꾪븯???뺤? ?먮뒗 ?쒗뻾?섍퀬 ?덈뒗 寃쎌슦",
+   "?욎감??醫뚯륫???ㅻⅨ 李④? ?욎감? ?섎???吏꾪뻾?섍퀬 ?덈뒗 寃쎌슦",
+   "?욎감媛 ??띿쑝濡?吏꾪뻾?섎㈃???ㅻⅨ 李⑥? ?덉쟾嫄곕━瑜??뺣낫?섍퀬 ?덉쓣 寃쎌슦"
+  ],
+  "a": "4",
+  "tr_b": "In which of the following situations is a driver allowed to overtake a vehicle?",
+  "tr_c": [
+   "When the vehicle ahead is overtaking another vehicle",
+   "When the vehicle ahead stops or it is driving slowly to prevent a dangerous situation",
+   "When the vehicle ahead is driving next to another vehicle in the left lane",
+   "When the vehicle ahead is driving slowly to secure a safe distance from another vehicle"
+  ]
+ },
+ {
+  "n": 475,
+  "ko_b": "?ㅼ쓬? ?ㅻⅨ 李⑤? ?욎?瑜닿린?섎젮???먮룞李⑥쓽 ?띾룄??????ㅻ챸?대떎. 留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅻⅨ 李⑤? ?욎?瑜닿린?섎뒗 寃쎌슦?먮뒗 ?띾룄???쒗븳???녿떎.",
+   "?대떦 ?꾨줈??踰뺤젙 理쒓퀬 ?띾룄??100遺꾩쓽 50???뷀븳 ?띾룄源뚯???媛?ν븯??",
+   "?댁쟾?먯쓽 ?댁쟾 ?λ젰???곕씪 ?쒗븳 ?놁씠 媛?ν븯??",
+   "?대떦 ?꾨줈??理쒓퀬 ?띾룄 ?대궡?먯꽌留??욎?瑜닿린媛 媛?ν븯??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements regarding the speed limit of a vehicle trying to overtake another vehicle is  correct?",
+  "tr_c": [
+   "There is no speed limit applied to a vehicle overtaking another one.",
+   "A vehicle overtaking another vehicle can exceed the legal speed limit of the road by 50%.",
+   "Vehicles are allowed to overtake other vehicles regardless of the speed limit, depending on the driver's driving skill.",
+   "Overtaking other vehicles is allowed only when performed within the speed limit of the road."
+  ]
+ },
+ {
+  "n": 476,
+  "ko_b": "怨좎냽?꾨줈?먯꽌 ?ш퀬?덈갑???꾪빐 ?뺤감 諛?二쇱감瑜?湲덉??섍퀬 ?덈떎. ?댁뿉 ????ㅻ챸?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?뚮갑李④? ?앺솢?덉쟾 ?쒕룞???섑뻾?섍린 ?꾪븯???뺤감 ?먮뒗 二쇱감?????덈떎.",
+   "寃쎌같怨듬Т?먯쓽 吏?쒖뿉 ?곕Ⅴ嫄곕굹 ?꾪뿕??諛⑹??섍린 ?꾪븯???뺤감 ?먮뒗 二쇱감?????덈떎.",
+   "?쇰컲?먮룞李④? ?듯뻾猷뚮? 吏遺덊븯湲??꾪빐 ?듯뻾猷뚮? 諛쏅뒗 ?μ냼?먯꽌 ?뺤감?????덈떎.",
+   "?곕꼸 ??鍮꾩긽二쇱감????뚮갑李⑥? 寃쎌같??湲닿툒?먮룞李⑤쭔 ?뺤감 ?먮뒗 二쇱감?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Idling or parking on an expressway is prohibited as it may cause rear-end collisions. Which of the following is  NOT true?",
+  "tr_c": [
+   "A fire truck can idle or park on an expressway to perform emergency operations.",
+   "You can temporarily idle or park at the instruction of a police officer or to prevent a hazardous situation.",
+   "Motor vehicles can idle on the toll road to pay their tolls.",
+   "Only emergency vehicles such as police cars and fire trucks can idle or park at the emergency parking area inside a tunnel."
+  ]
+ },
+ {
+  "n": 477,
+  "ko_b": "?ㅼ쓬 以??먮룞李??댁쟾?먭? ?꾪뿕???먮겮怨?釉뚮젅?댄겕 ?섎떖??諛잛븘 ?ㅼ젣濡??뺤????뚭퉴吏???섏젙吏嫄곕━?숆? 媛??湲몄뼱 吏????덈뒗 寃쎌슦 2媛吏??",
+  "ko_c": [
+   "李⑤웾??以묐웾???곷??곸쑝濡?媛踰쇱슱 ??,
+   "李⑤웾???띾룄媛 ?곷??곸쑝濡?鍮좊? ??,
+   "??댁뼱瑜??덈줈 援ъ엯?섏뿬 ?μ갑??吏곹썑",
+   "怨쇰줈 諛??뚯＜ ?댁쟾 ??
+  ],
+  "a": "2, 4",
+  "tr_b": "When you sense danger while driving and step on the brake pedal, which TWO will lead to the longest stopping distance? (i.e., the distance from the point where you press the brake pedal to the point where the vehicle actually stops)",
+  "tr_c": [
+   "Relatively light vehicle weight",
+   "Relatively higher speed",
+   "Right after installing new tires",
+   "Fatigue or drunk driving"
+  ]
+ },
+ {
+  "n": 478,
+  "ko_b": "?먮룞李??뱀감?몄썝??愿???ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "怨좎냽?꾨줈?먯꽌???먮룞李⑥쓽 ?뱀감?뺤썝???섏뼱???댄뻾?????녿떎.",
+   "?먮룞李⑤벑濡앹쬆??紐낆떆???뱀감?뺤썝? ?댁쟾?먮? ?쒖쇅???몄썝?대떎.",
+   "異쒕컻吏瑜?愿?좏븯??寃쎌같?쒖옣???덇?瑜?諛쏆? ?뚯뿉???뱀감?뺤썝??珥덇낵?섏뿬 ?댄뻾?????덈떎.",
+   "?뱀감?뺤썝 珥덇낵 ???꾩갑吏 愿??寃쎌같?쒖옣???덇?瑜?諛쏆븘???쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO correct statements regarding the number of passengers in a vehicle?",
+  "tr_c": [
+   "On expressways, it is not allowed to carry more people than the defined number of passengers for the vehicle.",
+   "The number of passengers specified on the vehicle registration certificate is the number of passengers excluding the  driver.",
+   "When permission is obtained from the head of the police station having jurisdiction over the place of departure, the vehicle may operate in excess of the designated number of passengers.",
+   "If the number of passengers is exceeded, permission must be obtained from the head of the police station having  jurisdiction over the destination."
+  ]
+ },
+ {
+  "n": 479,
+  "ko_b": "?꾨갑??援먰넻?ш퀬濡??욎감媛 湲됱젙吏?덉쓣 ??異붾룎 ?ш퀬瑜?諛⑹??섍린 ?꾪븳 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?욎감? ?뺤?嫄곕━ ?댁긽???좎??섎ŉ ?댁쟾?쒕떎.",
+   "鍮꾩긽?먮㈇?깆쓣 耳쒓퀬 湲닿툒?먮룞李⑤? ?곕씪??二쇳뻾?쒕떎.",
+   "?욎감? 異붾룎?섏? ?딆쓣 ?뺣룄濡?異⑸텇??媛먯냽?섎ŉ ?덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "?꾪뿕??諛쒓껄?섎㈃ ??釉뚮젅?댄겕? 二쇱감 釉뚮젅?댄겕瑜??숈떆???ъ슜?섏뿬 ?쒕룞嫄곕━瑜?以꾩씤??"
+  ],
+  "a": "1, 3",
+  "tr_b": "When a vehicle driving in front brakes suddenly due to a traffic accident ahead, which of the following are the  TWO safest measures to avoid colliding with the vehicle?",
+  "tr_c": [
+   "Maintain a longer distance from the vehicle ahead than the stopping distance.",
+   "Turn on the emergency flashers and follow an emergency vehicle.",
+   "Reduce speed and maintain sufficient distance from the vehicle ahead to prevent a collision.",
+   "When there is danger, use both the foot brake and parking brake to shorten the braking distance."
+  ]
+ },
+ {
+  "n": 480,
+  "ko_b": "醫뚯꽍?덉쟾?좎뿉 ????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?댁쟾?먭? ?덉쟾?좊? 李⑹슜?섏? ?딆? 寃쎌슦 怨쇳깭猷?3留??먯씠 遺怨쇰맂??",
+   "?쇰컲?곸쑝濡?寃쎈???????명??먯긽? 2?먯떇?먯꽌 ??留롮씠 諛쒖깮?쒕떎.",
+   "13??誘몃쭔???대┛?닿? ?덉쟾?좊? 李⑹슜?섏? ?딆쑝硫?踰붿튃湲?6留??먯씠 遺怨쇰맂??",
+   "?덉쟾?좊뒗 2?먯떇, 3?먯떇, 4?먯떇?쇰줈 援щ텇?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are true about wearing seat belts? (Select TWO)",
+  "tr_c": [
+   "The penalty for a driver failing to wear a seat belt is an administrative fine of KRW 30,000.",
+   "Whiplash injuries are more common with two-point seat belts.",
+   "The penalty for a child under the age of 13 not wearing a seat belt is a traffic penalty of KRW 60,000.",
+   "There are two, three, and four-point seat belts."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path('translations/audit/queue/211_choices_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+print(len(data), data[0].keys(), data[-1].keys())
+for x in data:
+ print(json.dumps(x, ensure_ascii=True))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:24:08.056262Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:10 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 647ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:10 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n '\"(check|detail|n|tr_b|tr_c|a)\"' 'translations/audit/queue/211_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 490ms:
+3:  "n": 441,
+11:  "a": "4",
+12:  "tr_b": "Which of the following is the most appropriate course of action in the event of an accident?",
+13:  "tr_c": [
+14:   "It is not necessary to turn on the hazard lights and open the trunk to indicate an emergency situation.",
+15:   "Take photos of the accident scene within the road and wait inside the vehicle.",
+16:   "There is no need to exit the accident scene; wait inside the vehicle.",
+17:   "From a safe location outside the vehicle, report the accident to 119 or 112, and state the number of the streetlight or traffic signal post to give a precise location."
+21:  "n": 442,
+29:  "a": "2",
+30:  "tr_b": "Which of the following is the right method of avoiding glare caused by the headlights of an oncoming car at  night?",
+31:  "tr_c": [
+32:   "Do not look directly at the headlights but at the road directly in front of your car.",
+33:   "Do not look directly at the headlights but to the right edge of the road.",
+34:   "Squint your eyes and look at the road directly in front of your car.",
+35:   "Squint your eyes and look to the left edge of the road."
+39:  "n": 443,
+47:  "a": "4",
+48:  "tr_b": "Under the Road Traffic Act, which of the following is not an appropriate action on the part of a driver if the car  is unable to operate due to a breakdown on the expressway at night?",
+49:  "tr_c": [
+50:   "A red flashing signal, electric lantern or spark signal that can be identified from 500 m in all directions must be installed.",
+51:   "When installing a sign, it must be installed in a location where the driver of a vehicle approaching from the rear can see  it.",
+52:   "The driver must take necessary measures, such as moving the vehicle off the expressway.",
+53:   "The safety tripod sign must be installed 200 m from the point where the broken-down vehicle is located."
+57:  "n": 444,
+65:  "a": "4",
+66:  "tr_b": "According to the Road Traffic Act, which of the following describes a situation in which a driver of a non-commercial vehicle is required to turn on the headlights, sidelights, taillights, and license plate lights at the same time?",
+67:  "tr_c": [
+68:   "When stopping on a road at nighttime",
+69:   "When stopping on a road with minimal visibility due to fog",
+70:   "When the vehicle is being towed away due to a parking violation",
+71:   "While driving inside a tunnel"
+75:  "n": 445,
+83:  "a": "4",
+84:  "tr_b": "Which of the following is the MOST appropriate action in case of vehicle failure on an expressway?",
+85:  "tr_c": [
+86:   "Turn on the emergency flashing light immediately, stop the car on the road, and notify the insurance company.",
+87:   "Open the trunk, check the broken part quickly, and call a rescue vehicle.",
+88:   "If it is not possible to move, install a safety tripod 500 m in front of the broken vehicle.",
+89:   "If the vehicle can move, turn on the hazard lights, pull over to the shoulder, and move to a safe area."
+93:  "n": 446,
+101:  "a": "3",
+102:  "tr_b": "Which of the following is NOT true about preventing a tire puncture and measures taken while driving?",
+103:  "tr_c": [
+104:   "You must regularly check the tires for nails.",
+105:   "You must regularly check tire pressures and tread depths.",
+106:   "If the steering wheel pulls to one side, it is likely that a rear tire is punctured.",
+107:   "While keeping the steering wheel straight ahead and in the driving gear state, use the engine brake to induce deceleration."
+111:  "n": 447,
+119:  "a": "4",
+120:  "tr_b": "If your vehicle breaks down on an expressway at night, in addition to a safety tripod sign, etc. you must install road flare signals to provide visibility for ( ) and alert other motorists that your car has broken down. Choose the correct one to fill in the brackets.",
+121:  "tr_c": [
+122:   "200 m in every direction.",
+123:   "300 m in every direction.",
+124:   "400 m in every direction.",
+125:   "500 m in every direction."
+129:  "n": 448,
+137:  "a": "2",
+138:  "tr_b": "Which of the following is the correct method of handling a tire that explodes while driving?",
+139:  "tr_c": [
+140:   "If the vehicle is pulled to one side suddenly, press the brakes to prevent an accident.",
+141:   "Firmly grasp the steering wheel, drive straight, and avoid sudden braking. Use the engine brake to stop in a safe  location.",
+142:   "Turn the steering wheel in the direction the vehicle is pulled in.",
+143:   "Use the parking brake to stop the vehicle as the brake pedal won't work."
+147:  "n": 449,
+155:  "a": "3",
+156:  "tr_b": "In the event of a traffic accident on an expressway, what is the most appropriate measure for preventing  secondary accidents?",
+157:  "tr_c": [
+158:   "First and foremost take photos of the accident for insurance purposes.",
+159:   "Explicitly let the other driver know that he/she is at fault and claim for insurance accordingly.",
+160:   "The vehicle must be stopped at the rightmost edge of the road, and a warning sign must be placed in accordance with the regulations prescribed by the Ministry of the Interior and Safety.",
+161:   "Turn on the hazard lights and call the relevant authority inside your vehicle."
+165:  "n": 450,
+173:  "a": "4",
+174:  "tr_b": "Which of the following is NOT a correct statement regarding the expressway construction section?",
+175:  "tr_c": [
+176:   "In the case of construction that blocks a lane, caution is required due to expected congestion.",
+177:   "In the case of a truck, drowsiness and neglecting to look forward can lead to a major accident.",
+178:   "Various types of construction work including moving construction and stationary construction can be performed.",
+183:  "n": 451,
+191:  "a": "2, 4",
+192:  "tr_b": "Which of the following are the most appropriate actions to take if the Hi-Pass device malfunctions and fails to  read? (Select TWO)",
+193:  "tr_c": [
+194:   "Turn on the emergency flashers, temporarily stop your vehicle, and have a toll ticket issued in a non-automated toll lane.",
+195:   "Upon reaching the toll gate of your destination, explain where you entered the expressway to the toll collector and pay  the toll.",
+196:   "Use the Hi-Pass lane and go through the toll gate of your destination, and the toll will be automatically collected.",
+197:   "Detach the card from your Hi-Pass device at the toll gate of your destination and hand it over to the toll collector to  pay the toll."
+201:  "n": 452,
+209:  "a": "3",
+210:  "tr_b": "Which of the following is the safest action in the event of a fire in a tunnel?",
+211:  "tr_c": [
+212:   "Lock the car's doors to prevent theft and evacuate the tunnel.",
+213:   "Stay in the car as the tunnel will be filled with smoke from the fire.",
+214:   "Switch off the engine, leave the key in the ignition to allow for the car to be moved if necessary, and quickly evacuate  to safety.",
+215:   "Make a U-turn and drive away from the exit."
+219:  "n": 453,
+227:  "a": "1",
+228:  "tr_b": "From a safety perspective, which of the following is the most inappropriate way of driving when passing  through a tunnel?",
+229:  "tr_c": [
+230:   "Before entering the tunnel, remove your sunglasses to allow your eyes to adapt to the light, and turn on your  headlights as you would at nighttime.",
+231:   "If the lanes inside the tunnel are marked with solid white lines, do not change lanes while in the tunnel.",
+232:   "Keep a safe following distance from the car ahead, and be ready for sudden stops.",
+233:   "Before entering the tunnel, check the road information at the entrance to the tunnel."
+237:  "n": 454,
+245:  "a": "2",
+246:  "tr_b": "Which of the following statements regarding braking in an emergency situation that occurs while driving is  correct?",
+247:  "tr_c": [
+248:   "If aquaplaning occurs, the braking force of the brakes gets stronger.",
+249:   "Utilizing an impact-absorbing barrier in an emergency situation is one way of preventing a fatal accident.",
+250:   "If the road surface is wet, the vehicle always slides straight forward upon pressing the brake suddenly.",
+251:   "ABS-equipped vehicles have longer braking distances than non-ABS vehicles."
+255:  "n": 455,
+263:  "a": "2, 3",
+264:  "tr_b": "Which of the following are the TWO correct safety measures to take during an earthquake?",
+265:  "tr_c": [
+266:   "Drive as quickly as possible out of the area affected by the earthquake.",
+267:   "Maintain a safe distance from other vehicles and pull over to the right-hand side of the road.",
+268:   "Turn off the engine if you need to get out of the car to take cover.",
+269:   "Ignore the earthquake and drive on."
+273:  "n": 456,
+281:  "a": "2, 4",
+282:  "tr_b": "You are driving on an expressway and there is ongoing construction ahead. Which of the following are NOT true?  (Select TWO)",
+283:  "tr_c": [
+284:   "Stay cautious when driving toward and by a construction site.",
+285:   "Drive faster than what is indicated on the construction speed limit sign.",
+286:   "Try to refrain from excessive overtaking or cutting in front of cars.",
+287:   "Drive at the same speed when approaching the construction site so as not to cause unnecessary traffic disruptions.",
+288:   "In areas where the speed limit changes, turn on the hazard lights to alert the other vehicles."
+292:  "n": 457,
+300:  "a": "1, 2",
+301:  "tr_b": "Which of the following are the TWO correct measures to take when a fire starts inside a tunnel that you are  driving in?",
+302:  "tr_c": [
+303:   "Turn off the engine if you are getting out of the car to evacuate.",
+304:   "Stand with your back to the wind when using a fire extinguisher.",
+305:   "If you are unable to drive out of the tunnel, stop the car as close to the centerline as possible.",
+306:   "Take the key out of the ignition if you are getting out of the car to evacuate."
+310:  "n": 458,
+318:  "a": "1, 4",
+319:  "tr_b": "Which of the following are the TWO correct statements regarding a vehicle skid?",
+320:  "tr_c": [
+321:   "Skidding mostly occurs when the brakes are applied suddenly while driving at high speed.",
+322:   "Skidding mostly occurs when driving at low speed in the rain.",
+323:   "Skid marks left on a road surface do not provide any clues as to why an accident occurred.",
+324:   "Sudden steering can also cause skidding."
+328:  "n": 459,
+336:  "a": "2, 4",
+337:  "tr_b": "Which of the following are the TWO situations wherein a vehicle is most likely to deviate from the road?",
+338:  "tr_c": [
+339:   "When driving on an uphill road",
+340:   "When the driver abruptly turns the steering wheel on a curved road",
+341:   "When driving on a downhill road",
+342:   "When the road surface is slippery"
+346:  "n": 460,
+354:  "a": "2, 3",
+355:  "tr_b": "If the hood of the car starts generating smoke and catches fire on an expressway, which of the following are the  TWO most appropriate measures to take?",
+356:  "tr_c": [
+357:   "Stop immediately when you notice that there is a problem.",
+358:   "Move to the roadside, turn off the engine, and evacuate the vehicle.",
+359:   "If it is early enough to extinguish the fire, use the fire extinguisher fitted in the vehicle.",
+360:   "If you fail to extinguish the fire, call 119 and wait right next to the vehicle."
+364:  "n": 461,
+372:  "a": "2",
+373:  "tr_b": "At which point do lanes start decreasing in the zone requiring lane changes for safe passage due to road  construction?",
+374:  "tr_c": [
+375:   "Starting point of a warning zone",
+376:   "Starting point of a transition zone",
+377:   "Starting point of a work zone",
+378:   "Starting point of a termination zone"
+382:  "n": 462,
+390:  "a": "4",
+391:  "tr_b": "Which of the following is the MOST correct description regarding driving at night?",
+392:  "tr_c": [
+393:   "It is possible to secure a wide view at night if you have the front window tinted.",
+394:   "On a clear day, the braking distance is longer during daytime than at night.",
+395:   "It is better to secure a front view when driving at night with the fog light on rather than headlights.",
+396:   "If you look at the light from the opposite vehicle directly, it may be hard to secure a front view due to the glare."
+400:  "n": 463,
+408:  "a": "2",
+409:  "tr_b": "Which of the following is a correct statement regarding the glare effect (cases wherein you are unable to see  ahead due to the glare from the vehicle’s headlights) during nighttime?",
+410:  "tr_c": [
+411:   "The glare effect will disappear if you turn off your headlights immediately when it occurs.",
+412:   "The glare effect frequently occurs when two vehicles facing each other both have their high-beam headlights on.",
+413:   "The glare effect tends to occur when driving through busy downtown streets at nighttime.",
+414:   "The glare effect refers to the condition of momentary invisibility caused by bright lights upon entering a tunnel at  nighttime."
+418:  "n": 464,
+426:  "a": "4",
+427:  "tr_b": "Which of the following statements regarding a driver’s \"Hypovigilance in driving\" at nighttime is correct?",
+428:  "tr_c": [
+429:   "Cognitive ability is better than usual.",
+430:   "Eye movements become more active.",
+431:   "It often occurs when driving on congested roads in a city.",
+432:   "The eyes become used to a monotonous view and experience a type of sensory paralysis."
+436:  "n": 465,
+444:  "a": "4",
+445:  "tr_b": "Which of the following is NOT a measure to be taken by a driver when the sun begins to set and it becomes  dark?",
+446:  "tr_c": [
+447:   "Turn on the sidelights and taillights.",
+448:   "Drive slower than you would during the day.",
+449:   "The eyes need some time to adjust to the darkness after the sun sets.",
+450:   "Driving is easier compared to daytime driving because of greater visibility."
+454:  "n": 466,
+461:  "a": "2",
+462:  "tr_b": "Which of the following statements regarding the EV charging cable coupler is INCORRECT?",
+463:  "tr_c": [
+464:   "It should have separate polarity and grounding electrode as it has a structure that cannot be replaced with other wiring  equipment.",
+465:   "The grounding electrode should have a structure that is connected last when starting and separated first upon shutoff.",
+466:   "It should have a mechanical device for locking or an attachment/detachment to prevent unintended load shedding.",
+467:   "It should have an interlock function that suspends the power supply of charging cable when the connector of an EV is separated from the connection port."
+471:  "n": 467,
+479:  "a": "2",
+480:  "tr_b": "Which of the following is the best method of preventing vehicle fires?",
+481:  "tr_c": [
+482:   "Alter the wiring arrangement to install an amplifier in the vehicle.",
+483:   "Avoid generating static electricity while filling up in wintertime.",
+484:   "LPG vehicles should carry a disposable butane gas tank in preparation for an emergency.",
+485:   "A lighter can be stored inside the vehicle in summer."
+489:  "n": 468,
+497:  "a": "1",
+498:  "tr_b": "Which of the following is the best method of preventing the risk of collision caused by the sudden braking of a  vehicle ahead?",
+499:  "tr_c": [
+500:   "Step on the brake pedal to slow down.",
+501:   "Turn the steering wheel sharply to the left and drive over the centerline to avoid hitting the vehicle ahead.",
+502:   "Close your eyes to minimize the impact.",
+503:   "Turn on both the wipers and the high-beam headlights."
+507:  "n": 469,
+515:  "a": "2, 4",
+516:  "tr_b": "Which of the following are TWO phenomena caused by the tires of a vehicle driving at high speed?",
+517:  "tr_c": [
+518:   "Vapor lock",
+519:   "Standing wave",
+520:   "Fading",
+521:   "Aquaplaning"
+525:  "n": 470,
+533:  "a": "2",
+534:  "tr_b": "Which of the following statements regarding wearing a seat belt is correct?",
+535:  "tr_c": [
+536:   "Fix the seat belt above the waist to protect against the shock from a traffic accident.",
+537:   "Firefighters who are dispatched to suppress fire need not wear a seat belt.",
+538:   "It is safest for children to take the front seat and wear a seat belt.",
+539:   "If a driver does not ensure that children under the age of 13 wear a seat belt, an administrative fine of KRW 30,000 is  imposed."
+543:  "n": 471,
+551:  "a": "3",
+552:  "tr_b": "Which of the following should you adjust before you start driving in order to minimize injuries to the head and  neck?",
+553:  "tr_c": [
+554:   "Distance of the seat from the pedals",
+555:   "Angle of the backrest",
+556:   "Height of the headrest",
+557:   "Seat height"
+561:  "n": 472,
+569:  "a": "2",
+570:  "tr_b": "Which of the following statements regarding safe driving in a tunnel is correct?",
+571:  "tr_c": [
+572:   "Turn on the left-turn signal and use the left lane for overtaking.",
+573:   "The sense of distance from the front vehicle is reduced in a tunnel.",
+574:   "When entering the tunnel, be careful of the light adaptation.",
+575:   "At the exit of a tunnel, dark adaptation occurs."
+579:  "n": 473,
+587:  "a": "3",
+588:  "tr_b": "Which of the following is true about using turn signals?",
+589:  "tr_c": [
+590:   "It is not a violation to change lanes without signaling if it does not obstruct the other vehicles.",
+591:   "You must keep the turn signal on for a while after changing lanes.",
+592:   "The traffic penalty for failure to signal lane change for passenger vehicles and buses is a fine of KRW 30,000.",
+593:   "When changing lanes on an expressway, turn on the turn signal from 30 m before and keep it on until you have completed  changing lanes."
+597:  "n": 474,
+605:  "a": "4",
+606:  "tr_b": "In which of the following situations is a driver allowed to overtake a vehicle?",
+607:  "tr_c": [
+608:   "When the vehicle ahead is overtaking another vehicle",
+609:   "When the vehicle ahead stops or it is driving slowly to prevent a dangerous situation",
+610:   "When the vehicle ahead is driving next to another vehicle in the left lane",
+611:   "When the vehicle ahead is driving slowly to secure a safe distance from another vehicle"
+615:  "n": 475,
+623:  "a": "4",
+624:  "tr_b": "Which of the following statements regarding the speed limit of a vehicle trying to overtake another vehicle is  correct?",
+625:  "tr_c": [
+626:   "There is no speed limit applied to a vehicle overtaking another one.",
+627:   "A vehicle overtaking another vehicle can exceed the legal speed limit of the road by 50%.",
+628:   "Vehicles are allowed to overtake other vehicles regardless of the speed limit, depending on the driver's driving skill.",
+629:   "Overtaking other vehicles is allowed only when performed within the speed limit of the road."
+633:  "n": 476,
+641:  "a": "4",
+642:  "tr_b": "Idling or parking on an expressway is prohibited as it may cause rear-end collisions. Which of the following is  NOT true?",
+643:  "tr_c": [
+644:   "A fire truck can idle or park on an expressway to perform emergency operations.",
+645:   "You can temporarily idle or park at the instruction of a police officer or to prevent a hazardous situation.",
+646:   "Motor vehicles can idle on the toll road to pay their tolls.",
+647:   "Only emergency vehicles such as police cars and fire trucks can idle or park at the emergency parking area inside a tunnel."
+651:  "n": 477,
+659:  "a": "2, 4",
+660:  "tr_b": "When you sense danger while driving and step on the brake pedal, which TWO will lead to the longest stopping distance? (i.e., the distance from the point where you press the brake pedal to the point where the vehicle actually stops)",
+661:  "tr_c": [
+662:   "Relatively light vehicle weight",
+663:   "Relatively higher speed",
+664:   "Right after installing new tires",
+665:   "Fatigue or drunk driving"
+669:  "n": 478,
+677:  "a": "1, 3",
+678:  "tr_b": "Which of the following are the TWO correct statements regarding the number of passengers in a vehicle?",
+679:  "tr_c": [
+680:   "On expressways, it is not allowed to carry more people than the defined number of passengers for the vehicle.",
+681:   "The number of passengers specified on the vehicle registration certificate is the number of passengers excluding the  driver.",
+682:   "When permission is obtained from the head of the police station having jurisdiction over the place of departure, the vehicle may operate in excess of the designated number of passengers.",
+683:   "If the number of passengers is exceeded, permission must be obtained from the head of the police station having  jurisdiction over the destination."
+687:  "n": 479,
+695:  "a": "1, 3",
+696:  "tr_b": "When a vehicle driving in front brakes suddenly due to a traffic accident ahead, which of the following are the  TWO safest measures to avoid colliding with the vehicle?",
+697:  "tr_c": [
+698:   "Maintain a longer distance from the vehicle ahead than the stopping distance.",
+699:   "Turn on the emergency flashers and follow an emergency vehicle.",
+700:   "Reduce speed and maintain sufficient distance from the vehicle ahead to prevent a collision.",
+701:   "When there is danger, use both the foot brake and parking brake to shorten the braking distance."
+705:  "n": 480,
+713:  "a": "2, 4",
+714:  "tr_b": "Which of the following are true about wearing seat belts? (Select TWO)",
+715:  "tr_c": [
+716:   "The penalty for a driver failing to wear a seat belt is an administrative fine of KRW 30,000.",
+717:   "Whiplash injuries are more common with two-point seat belts.",
+718:   "The penalty for a child under the age of 13 not wearing a seat belt is a traffic penalty of KRW 60,000.",
+719:   "There are two, three, and four-point seat belts."
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg --files | rg '("'^|['"\\\\/])(211|questions|choices|ko).*\\.(json|csv)"'$|translations'"'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 616ms:
+translations\_verify_findings.md
+translations\_build_p3c.py
+translations\_build_p3b.py
+translations\_build_p3.py
+translations\validation_report.json
+translations\risky_questions.json
+translations\manual_patches.json
+translations\expl_vn_p5.json
+translations\expl_vn_p4.json
+translations\expl_vn_p3.json
+translations\expl_vn_p2.json
+translations\expl_vn_p1.json
+translations\expl_vn.json
+translations\expl_en_test.json
+translations\expl_en_p5.json
+translations\expl_en_p4.json
+translations\expl_en_p3.json
+translations\expl_en_p2.json
+translations\expl_en_p1.json
+translations\expl_en.json
+translations\expl_cn_p5.json
+translations\expl_cn_p4.json
+translations\expl_cn_p3.json
+translations\expl_cn_p2.json
+translations\expl_cn_p1.json
+translations\expl_cn.json
+scripts\inject_translations.py
+scripts\validate_translations.py
+translations\audit\queue\204_choices_vn.json
+translations\audit\queue\204_choices_en.json
+translations\audit\queue\204_choices_cn.json
+translations\audit\queue\203_choices_vn.json
+translations\audit\queue\203_choices_en.json
+translations\audit\queue\203_choices_cn.json
+translations\audit\queue\202_choices_vn.json
+translations\audit\queue\202_choices_en.json
+translations\audit\queue\202_choices_cn.json
+translations\audit\queue\201_choices_vn.json
+translations\audit\queue\201_choices_en.json
+translations\audit\queue\201_choices_cn.json
+translations\audit\queue\200_choices_vn.json
+translations\audit\queue\200_choices_en.json
+translations\audit\queue\200_choices_cn.json
+translations\audit\queue\105_flags_en.json
+translations\audit\queue\104_flags_en.json
+translations\audit\queue\103_flags_vn.json
+translations\audit\queue\103_flags_en.json
+translations\audit\queue\103_flags_cn.json
+translations\audit\queue\102_flags_vn.json
+translations\audit\queue\102_flags_en.json
+translations\audit\queue\102_flags_cn.json
+translations\audit\queue\101_flags_vn.json
+translations\audit\queue\101_flags_en.json
+translations\audit\queue\101_flags_cn.json
+translations\audit\queue\100_flags_vn.json
+translations\audit\queue\100_flags_en.json
+translations\audit\queue\100_flags_cn.json
+translations\audit\apply_report.json
+translations\audit\findings.json
+translations\audit\queue\210_choices_vn.json
+translations\audit\queue\210_choices_en.json
+translations\audit\queue\210_choices_cn.json
+translations\audit\queue\209_choices_vn.json
+translations\audit\queue\209_choices_en.json
+translations\audit\queue\209_choices_cn.json
+translations\audit\queue\208_choices_vn.json
+translations\audit\queue\208_choices_en.json
+translations\audit\queue\208_choices_cn.json
+translations\audit\queue\207_choices_vn.json
+translations\audit\queue\207_choices_en.json
+translations\audit\queue\207_choices_cn.json
+translations\audit\queue\205_choices_vn.json
+translations\audit\queue\206_choices_vn.json
+translations\audit\queue\205_choices_en.json
+translations\audit\queue\221_choices_cn.json
+translations\audit\queue\205_choices_cn.json
+translations\audit\queue\206_choices_en.json
+translations\audit\queue\220_choices_vn.json
+translations\audit\queue\220_choices_en.json
+translations\audit\queue\206_choices_cn.json
+translations\audit\queue\211_choices_en.json
+translations\audit\queue\220_choices_cn.json
+translations\audit\queue\224_choices_en.json
+translations\audit\queue\211_choices_cn.json
+translations\audit\queue\224_choices_cn.json
+translations\audit\queue\219_choices_vn.json
+translations\audit\queue\217_choices_cn.json
+translations\audit\queue\223_choices_vn.json
+translations\audit\queue\219_choices_en.json
+translations\audit\queue\216_choices_vn.json
+translations\audit\queue\216_choices_en.json
+translations\audit\queue\222_choices_en.json
+translations\audit\queue\216_choices_cn.json
+translations\audit\queue\215_choices_en.json
+translations\audit\queue\215_choices_vn.json
+translations\audit\queue\223_choices_en.json
+translations\audit\queue\215_choices_cn.json
+translations\audit\queue\223_choices_cn.json
+translations\audit\queue\222_choices_cn.json
+translations\audit\queue\214_choices_vn.json
+translations\audit\queue\222_choices_vn.json
+translations\audit\queue\212_choices_vn.json
+translations\audit\queue\214_choices_cn.json
+translations\audit\queue\212_choices_en.json
+translations\audit\queue\214_choices_en.json
+translations\audit\queue\221_choices_vn.json
+translations\audit\queue\212_choices_cn.json
+translations\audit\queue\301_expl_vn.json
+translations\audit\queue\213_choices_vn.json
+translations\audit\queue\211_choices_vn.json
+translations\audit\queue\221_choices_en.json
+translations\audit\queue\213_choices_en.json
+translations\audit\queue\301_expl_en.json
+translations\audit\queue\213_choices_cn.json
+translations\audit\queue\301_expl_cn.json
+translations\audit\queue\300_expl_vn.json
+translations\audit\queue\302_expl_en.json
+translations\audit\queue\302_expl_vn.json
+translations\audit\queue\302_expl_cn.json
+translations\audit\queue\303_expl_cn.json
+translations\audit\queue\218_choices_en.json
+translations\audit\queue\217_choices_en.json
+translations\audit\queue\217_choices_vn.json
+translations\audit\queue\218_choices_vn.json
+translations\audit\queue\303_expl_en.json
+translations\audit\queue\224_choices_vn.json
+translations\audit\queue\300_expl_en.json
+translations\audit\queue\300_expl_cn.json
+translations\audit\queue\219_choices_cn.json
+translations\audit\queue\218_choices_cn.json
+translations\audit\queue\303_expl_vn.json
+translations\audit\queue\304_expl_cn.json
+translations\audit\queue\349_expl_vn.json
+translations\audit\queue\349_expl_en.json
+translations\audit\queue\349_expl_cn.json
+translations\audit\queue\348_expl_vn.json
+translations\audit\queue\348_expl_en.json
+translations\audit\queue\348_expl_cn.json
+translations\audit\queue\347_expl_vn.json
+translations\audit\queue\347_expl_en.json
+translations\audit\queue\347_expl_cn.json
+translations\audit\queue\346_expl_vn.json
+translations\audit\queue\346_expl_en.json
+translations\audit\queue\346_expl_cn.json
+translations\audit\queue\345_expl_vn.json
+translations\audit\queue\345_expl_en.json
+translations\audit\queue\345_expl_cn.json
+translations\audit\queue\344_expl_vn.json
+translations\audit\queue\344_expl_en.json
+translations\audit\queue\344_expl_cn.json
+translations\audit\queue\343_expl_vn.json
+translations\audit\queue\343_expl_en.json
+translations\audit\queue\343_expl_cn.json
+translations\audit\queue\342_expl_vn.json
+translations\audit\queue\342_expl_en.json
+translations\audit\queue\342_expl_cn.json
+translations\audit\queue\341_expl_vn.json
+translations\audit\queue\341_expl_en.json
+translations\audit\queue\341_expl_cn.json
+translations\audit\queue\340_expl_vn.json
+translations\audit\queue\340_expl_en.json
+translations\audit\queue\340_expl_cn.json
+translations\audit\queue\339_expl_vn.json
+translations\audit\queue\339_expl_en.json
+translations\audit\queue\339_expl_cn.json
+translations\audit\queue\338_expl_vn.json
+translations\audit\queue\338_expl_en.json
+translations\audit\queue\338_expl_cn.json
+translations\audit\queue\337_expl_vn.json
+translations\audit\queue\337_expl_en.json
+translations\audit\queue\337_expl_cn.json
+translations\audit\queue\336_expl_vn.json
+translations\audit\queue\336_expl_en.json
+translations\audit\queue\336_expl_cn.json
+translations\audit\queue\335_expl_vn.json
+translations\audit\queue\335_expl_en.json
+translations\audit\queue\335_expl_cn.json
+translations\audit\queue\334_expl_vn.json
+translations\audit\queue\334_expl_en.json
+translations\audit\queue\334_expl_cn.json
+translations\audit\queue\333_expl_vn.json
+translations\audit\queue\333_expl_en.json
+translations\audit\queue\333_expl_cn.json
+translations\audit\queue\332_expl_vn.json
+translations\audit\queue\332_expl_en.json
+translations\audit\queue\332_expl_cn.json
+translations\audit\queue\331_expl_vn.json
+translations\audit\queue\331_expl_en.json
+translations\audit\queue\331_expl_cn.json
+translations\audit\queue\330_expl_vn.json
+translations\audit\queue\330_expl_en.json
+translations\audit\queue\330_expl_cn.json
+translations\audit\queue\329_expl_vn.json
+translations\audit\queue\329_expl_en.json
+translations\audit\queue\329_expl_cn.json
+translations\audit\queue\328_expl_vn.json
+translations\audit\queue\328_expl_en.json
+translations\audit\queue\328_expl_cn.json
+translations\audit\queue\327_expl_vn.json
+translations\audit\queue\327_expl_en.json
+translations\audit\queue\327_expl_cn.json
+translations\audit\queue\326_expl_vn.json
+translations\audit\queue\326_expl_en.json
+translations\audit\queue\326_expl_cn.json
+translations\audit\queue\325_expl_vn.json
+translations\audit\out\211_choices_en.txt
+translations\audit\out\211_choices_cn.txt
+translations\audit\out\210_choices_vn.txt
+translations\audit\out\210_choices_en.txt
+translations\audit\out\210_choices_cn.txt
+translations\audit\out\209_choices_vn.txt
+translations\audit\out\209_choices_en.txt
+translations\audit\out\209_choices_cn.txt
+translations\audit\out\208_choices_vn.txt
+translations\audit\out\208_choices_en.txt
+translations\audit\out\208_choices_cn.txt
+translations\audit\out\207_choices_vn.txt
+translations\audit\out\207_choices_en.txt
+translations\audit\out\207_choices_cn.txt
+translations\audit\out\206_choices_vn.txt
+translations\audit\out\206_choices_en.txt
+translations\audit\out\206_choices_cn.txt
+translations\audit\out\205_choices_vn.txt
+translations\audit\out\205_choices_en.txt
+translations\audit\out\205_choices_cn.txt
+translations\audit\out\204_choices_vn.txt
+translations\audit\out\204_choices_en.txt
+translations\audit\out\204_choices_cn.txt
+translations\audit\out\203_choices_vn.txt
+translations\audit\out\203_choices_en.txt
+translations\audit\out\203_choices_cn.txt
+translations\audit\out\202_choices_vn.txt
+translations\audit\out\202_choices_en.txt
+translations\audit\out\202_choices_cn.txt
+translations\audit\out\201_choices_vn.txt
+translations\audit\out\201_choices_en.txt
+translations\audit\out\201_choices_cn.txt
+translations\audit\out\200_choices_vn.txt
+translations\audit\out\200_choices_en.txt
+translations\audit\out\200_choices_cn.txt
+translations\audit\out\105_flags_en.txt
+translations\audit\out\104_flags_en.txt
+translations\audit\out\103_flags_vn.txt
+translations\audit\out\103_flags_en.txt
+translations\audit\out\103_flags_cn.txt
+translations\audit\out\102_flags_vn.txt
+translations\audit\out\102_flags_en.txt
+translations\audit\out\102_flags_cn.txt
+translations\audit\out\101_flags_vn.txt
+translations\audit\out\101_flags_en.txt
+translations\audit\out\101_flags_cn.txt
+translations\audit\out\100_flags_vn.txt
+translations\audit\out\100_flags_en.txt
+translations\audit\out\100_flags_cn.txt
+translations\audit\queue\325_expl_en.json
+translations\audit\queue\325_expl_cn.json
+translations\audit\queue\324_expl_vn.json
+translations\audit\queue\324_expl_en.json
+translations\audit\queue\324_expl_cn.json
+translations\audit\queue\323_expl_vn.json
+translations\audit\queue\323_expl_en.json
+translations\audit\queue\323_expl_cn.json
+translations\audit\queue\322_expl_vn.json
+translations\audit\queue\322_expl_en.json
+translations\audit\queue\322_expl_cn.json
+translations\audit\queue\321_expl_vn.json
+translations\audit\queue\321_expl_en.json
+translations\audit\queue\321_expl_cn.json
+translations\audit\queue\320_expl_vn.json
+translations\audit\queue\320_expl_en.json
+translations\audit\queue\320_expl_cn.json
+translations\audit\queue\313_expl_cn.json
+translations\audit\queue\312_expl_vn.json
+translations\audit\queue\312_expl_en.json
+translations\audit\queue\312_expl_cn.json
+translations\audit\queue\311_expl_vn.json
+translations\audit\queue\311_expl_en.json
+translations\audit\queue\311_expl_cn.json
+translations\audit\queue\310_expl_vn.json
+translations\audit\queue\310_expl_en.json
+translations\audit\queue\310_expl_cn.json
+translations\audit\queue\309_expl_vn.json
+translations\audit\queue\309_expl_en.json
+translations\audit\queue\309_expl_cn.json
+translations\audit\queue\308_expl_vn.json
+translations\audit\queue\308_expl_en.json
+translations\audit\queue\308_expl_cn.json
+translations\audit\queue\307_expl_vn.json
+translations\audit\queue\307_expl_en.json
+translations\audit\queue\307_expl_cn.json
+translations\audit\queue\306_expl_vn.json
+translations\audit\queue\306_expl_en.json
+translations\audit\queue\306_expl_cn.json
+translations\audit\queue\305_expl_vn.json
+translations\audit\queue\305_expl_en.json
+translations\audit\queue\305_expl_cn.json
+translations\audit\queue\304_expl_vn.json
+translations\audit\queue\304_expl_en.json
+translations\audit\queue\316_expl_en.json
+translations\audit\queue\316_expl_cn.json
+translations\audit\queue\315_expl_vn.json
+translations\audit\queue\315_expl_en.json
+translations\audit\queue\315_expl_cn.json
+translations\audit\queue\314_expl_vn.json
+translations\audit\queue\314_expl_en.json
+translations\audit\queue\314_expl_cn.json
+translations\audit\queue\313_expl_vn.json
+translations\audit\queue\313_expl_en.json
+translations\audit\queue\318_expl_cn.json
+translations\audit\queue\317_expl_vn.json
+translations\audit\queue\317_expl_en.json
+translations\audit\queue\317_expl_cn.json
+translations\audit\queue\316_expl_vn.json
+translations\audit\queue\318_expl_vn.json
+translations\audit\queue\318_expl_en.json
+translations\audit\queue\319_expl_cn.json
+translations\audit\queue\319_expl_en.json
+translations\audit\queue\319_expl_vn.json
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/out/211_choices_en.txt'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 543ms:
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a125fb-f6ef-7d80-8e77-391a403e172d
+--------
+user
+?덈뒗 ?쒓뎅 ?댁쟾硫댄뿀 ?숆낵?쒗뿕??踰덉뿭 ?덉쭏 媛먯궗?먮떎. ?뚯씪 translations/audit/queue/211_choices_en.json 瑜??쎌뼱?? 媛???ぉ???쒓뎅???먮Ц(ko_*)怨?踰덉뿭(tr_*)???議고빐 **?숈뒿?먮? ?ㅻ룄?섎뒗 ?ㅼ쭏 ?ㅻ쪟留?* 蹂닿퀬?섎씪: ?섎? 諛섏쟾쨌諛⑺뼢(醫??? ?ㅻ쪟쨌?レ옄/?⑥쐞 ?ㅻ쪟쨌遺?뺤뼱 ?뚯떎쨌?뺣떟 ?먮떒??諛붽씀???ㅼ뿭쨌?ш컖??鍮꾨Ц. ?⑥닚 吏곸뿭??룹궗?뚰븳 ?댁깋?⑥? ?쒖쇅. check/detail ?꾨뱶媛 ?덉쑝硫?洹??먮룞 吏?곸씠 '?ㅼ젣 ?ㅻ쪟?몄? ?ㅽ깘?몄?'瑜??먯젙?섎씪. 異쒕젰? 諛섎뱶???쒖닔 JSON 諛곗뿴留? [{"n": 踰덊샇, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "?쒓뎅????以?, "suggestion": "?섏젙 踰덉뿭臾?(?대떦 ?몄뼱)"}] ???ㅻ쪟媛 ?놁쑝硫?[].
+codex
+?붿껌??JSON ?뚯씪???쒓뎅???먮Ц怨??곸뼱 踰덉뿭???議고빐 ?ㅼ쭏 ?ㅻ쪟留??좊퀎?섍쿋?듬땲??
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/211_choices_en.json'" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+ succeeded in 526ms:
+[
+ {
+  "n": 441,
+  "ko_b": "??쇱벉 餓??대??????獄쏆뮇源???揶쎛???怨몄쟿????곕짗???",
+  "ko_c": [
+   "??쑴湲?源놁뱽 ?녹뮄???紐껋읅??? ??곷선 ??쑴湲?怨뱀넺?袁⑹뱽 ???뵭 ?袁⑹뒄????용뼄.",
+   "???э쭪????袁⑥쨮 ??곷퓠???????怨뱀넺????????彛???Ρ딆겫??랁?筌△뫀????됰퓠 ??疫꿸퀬釉??",
+   "???э쭪??癒?퓠????쥙議??륁궞 ?袁⑹뒄 ??곸뵠 筌△뫀????됰퓠 ??疫꿸퀬釉??",
+   "筌△뫀??獄???됱읈???關??癒?퐣 雅뚯눖? 揶쎛嚥≪뮆踰? ?대???醫륁깈?源녿퓠 ?봔筌△뫖留?疫꿸퀣?배린?딆깈?癒?뱽 癰귣떯??????獄쏆뮇源?쭪?????癰귣????닌딄퍥?怨몄몵嚥?119,  112???醫됲??뺣뼄."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the most appropriate course of action in the event of an accident?",
+  "tr_c": [
+   "It is not necessary to turn on the hazard lights and open the trunk to indicate an emergency situation.",
+   "Take photos of the accident scene within the road and wait inside the vehicle.",
+   "There is no need to exit the accident scene; wait inside the vehicle.",
+   "From a safe location outside the vehicle, report the accident to 119 or 112, and state the number of the streetlight or traffic signal post to give a precise location."
+  ]
+ },
+ {
+  "n": 442,
+  "ko_b": "??⑥퍢??筌띾뜆竊???삳뮉 筌△뫁???袁⒱???븍뜄???곗쨮 ?紐낅립 ?????????노릭??獄쎻뫖苡??곗쨮 ??而?몴?野껉퍔??",
+  "ko_c": [
+   "?袁⒱???븍뜄????類ｃ늺??곗쨮 癰귣똻? 筌띾Þ???癒?┛ 筌△뫀以??獄쏅뗀以??袁⑥삋筌잛럩??癰귣챶??",
+   "?袁⒱???븍뜄????類ｃ늺??곗쨮 癰귣똻? 筌띾Þ???袁⑥쨮 ?怨쀫???揶쎛?關?꾤뵳?筌잛럩??癰귣챶??",
+   "??됱뱽 揶쎛??띿쓺 ??ｍ??癒?┛ 筌△뫀以?獄쏅뗀以??袁⑥삋筌잛럩??癰귣챶??",
+   "??됱뱽 揶쎛??띿쓺 ??ｍ??ル슣瑜??揶쎛?關?꾤뵳?筌잛럩??癰귣챶??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the right method of avoiding glare caused by the headlights of an oncoming car at  night?",
+  "tr_c": [
+   "Do not look directly at the headlights but at the road directly in front of your car.",
+   "Do not look directly at the headlights but to the right edge of the road.",
+   "Squint your eyes and look at the road directly in front of your car.",
+   "Squint your eyes and look to the left edge of the road."
+  ]
+ },
+ {
+  "n": 443,
+  "ko_b": "?袁⑥쨮?대??삭린類ｌ죯??獄쎼끉肉??⑥쥙??袁⑥쨮 ?源녿퓠???⑥쥙???곗쨮 ?癒?짗筌△뫀? ??꾨뻬??????용뮉 野껋럩?? ??곸읈?癒? 鈺곌퀣???곷튊 ????鍮??곗쨮 ?怨몄쟿 燁???? 野껉퍔??",
+  "ko_c": [
+   "??媛?500沃섎챸苑?癒?퐣 ??명??????덈뮉 ?怨멸퉳??????醫륁깈夷?袁㏓┛??뺣쾻 ?癒?뮉 ?븍뜃??醫륁깈????쇳뒄??곷튊 ??뺣뼄.",
+   "???????쇳뒄??野껋럩???袁④컩?癒?퐣 ?臾롫젏??롫뮉 ?癒?짗筌△뫁????곸읈?癒? ?類ㅼ뵥??????덈뮉 ?袁⑺뒄????쇳뒄??뤿연????뺣뼄.",
+   "?⑥쥙??袁⑥쨮 ?源놁뵠 ?袁⑤빒 ??삘뀲 ?⑤끃?앮에???爰??蹂λ뮉 ???袁⑹뒄??鈺곌퀣?귞몴???뤿연????뺣뼄.",
+   "??됱읈??⑥퍟?????⑥쥙?ｏ㎕?? ??뽰뿳??筌왖?癒?몵嚥≪뮆???200沃섎챸苑??袁④컩??獄쏆꼶諭????쇳뒄??곷튊 ??뺣뼄."
+  ],
+  "a": "4",
+  "tr_b": "Under the Road Traffic Act, which of the following is not an appropriate action on the part of a driver if the car  is unable to operate due to a breakdown on the expressway at night?",
+  "tr_c": [
+   "A red flashing signal, electric lantern or spark signal that can be identified from 500 m in all directions must be installed.",
+   "When installing a sign, it must be installed in a location where the driver of a vehicle approaching from the rear can see  it.",
+   "The driver must take necessary measures, such as moving the vehicle off the expressway.",
+   "The safety tripod sign must be installed 200 m from the point where the broken-down vehicle is located."
+  ]
+ },
+ {
+  "n": 444,
+  "ko_b": "?袁⑥쨮?대??삭린類ｌ죯????쑴沅??놁뒠 ?諭?쒙㎕???곸읈?癒? ?袁⒱?? 筌△뫂猷?? 沃섎챶踰? 甕곕뜇??源놁뱽 筌뤴뫀紐??녹뮇鍮???롫뮉 野껋럩??에?筌띿쉶??野껉퍔??",
+  "ko_c": [
+   "獄쎼끉肉??袁⑥쨮?癒?퐣 ?類ㅺ컧??롫뮉 野껋럩??,
+   "??뉗뻣揶쎛 揶쎛???? ?袁⑥쨮?癒?퐣 ?類ㅺ컧??롫뮉 野껋럩??,
+   "雅뚯눘媛?袁⑥뺘??곗쨮 野꺫딆뵥??롫뮉 ?癒?짗筌△뫁??野껋럩??,
+   "?怨뺢섯 ???袁⑥쨮?癒?퐣 ??꾨뻬??롫뮉 野껋럩??
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which of the following describes a situation in which a driver of a non-commercial vehicle is required to turn on the headlights, sidelights, taillights, and license plate lights at the same time?",
+  "tr_c": [
+   "When stopping on a road at nighttime",
+   "When stopping on a road with minimal visibility due to fog",
+   "When the vehicle is being towed away due to a parking violation",
+   "While driving inside a tunnel"
+  ]
+ },
+ {
+  "n": 445,
+  "ko_b": "?袁⑥쨮?대??삭린類ｌ죯???⑥쥙??袁⑥쨮?癒?퐣 ?癒?짗筌??⑥쥙?????怨몄쟿??鈺곌퀣??遺얠죯???",
+  "ko_c": [
+   "?醫롫꺗????쑴湲?癒?늾?源놁뱽 ?臾먮짗??랁?筌△뫀? ?袁⑥쨮 ?袁⑸퓠 筌롫뜆????癰귣똾肉??肉????뵛??",
+   "?紐껋읅??? ??곷선 ?蹂ㅽ??⑥쥙?????⑤끃???醫롫꺗???類ㅼ뵥?????닌됯텆筌△뫀? ?봔?쒕챶??",
+   "??猷???븍뜃??館釉?野껋럩???⑥쥙?ｏ㎕?ㅼ쎗????롢걹 500沃섎챸苑?筌왖?癒?퓠 ??됱읈??⑥퍟??????쇳뒄??뺣뼄.",
+   "??猷??揶쎛?館釉?野껋럩???醫롫꺗????쑴湲?癒?늾?源놁뱽 ?녹뮄??揶쏅낀留???類???쀪텕????됱읈???關?쇗에???猷??뺣뼄."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the MOST appropriate action in case of vehicle failure on an expressway?",
+  "tr_c": [
+   "Turn on the emergency flashing light immediately, stop the car on the road, and notify the insurance company.",
+   "Open the trunk, check the broken part quickly, and call a rescue vehicle.",
+   "If it is not possible to move, install a safety tripod 500 m in front of the broken vehicle.",
+   "If the vehicle can move, turn on the hazard lights, pull over to the shoulder, and move to a safe area."
+  ]
+ },
+ {
+  "n": 446,
+  "ko_b": "雅뚯눛六?餓?????곷선 ?臾볤쾿 ??덇컩獄쎻뫖苡?獄?鈺곌퀣??遺얠죯??곗쨮 獄쏅뗀?ㅿ쭪? ??? 野껉퍔??",
+  "ko_c": [
+   "?袁⑥쨮?? ?臾???롫뮉 ????곷선??獄쏅뗀?륅쭖?곷퓠 ??뤾텢筌??源놁뵠 獄쏅벤???덈뮉筌왖 ??뤿뻻嚥??癒???뺣뼄.",
+   "?類?┛?怨몄몵嚥?????곷선???怨몄젟 ?⑤벀由?類ㅼ뱽 ?醫???랁??紐껋쟿??筌띾뜄???볧롧몴???뤿선?怨뺣뮉筌왖 ??꾨젫癰귣챶??",
+   "?紐껊굶????뽧걹??곗쨮 ?醫듼봺??野껋럩????????곷선???臾볤쾿??揶쎛?關苑???誘⑸뼄.",
+   "?紐껊굶?? ?類ｃ늺??곗쨮 ?⑥쥙???쀪텚 筌?雅뚯눛六??롫뮉 疫꿸퀣堉?怨밴묶嚥??遺우춭?됰슢???꾧쾿????곸뒠??뤿연 揶쏅Ŋ????醫딅즲??뺣뼄."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT true about preventing a tire puncture and measures taken while driving?",
+  "tr_c": [
+   "You must regularly check the tires for nails.",
+   "You must regularly check tire pressures and tread depths.",
+   "If the steering wheel pulls to one side, it is likely that a rear tire is punctured.",
+   "While keeping the steering wheel straight ahead and in the driving gear state, use the engine brake to induce deceleration."
+  ]
+ },
+ {
+  "n": 447,
+  "ko_b": "?袁⑥쨮?대??삭린類ｌ죯??獄쎼끉肉??⑥쥙??袁⑥쨮?癒?퐣 ?癒?짗筌??⑥쥙???곗쨮 ??꾨뻬??????얠쓺 ??뤿???????됱읈??⑥퍟???? ??ｍ뜞 ?곕떽?嚥?(  )?癒?퐣  ??명??????덈뮉 ?븍뜃???醫륁깈 ?源놁뱽 ??쇳뒄??곷튊 ??뺣뼄. (   )??筌띿쉶??野껉퍔??",
+  "ko_c": [
+   "??媛?200沃섎챸苑?筌왖??,
+   "??媛?300沃섎챸苑?筌왖??,
+   "??媛?400沃섎챸苑?筌왖??,
+   "??媛?500沃섎챸苑?筌왖??
+  ],
+  "a": "4",
+  "tr_b": "If your vehicle breaks down on an expressway at night, in addition to a safety tripod sign, etc. you must install road flare signals to provide visibility for ( ) and alert other motorists that your car has broken down. Choose the correct one to fill in the brackets.",
+  "tr_c": [
+   "200 m in every direction.",
+   "300 m in every direction.",
+   "400 m in every direction.",
+   "500 m in every direction."
+  ]
+ },
+ {
+  "n": 448,
+  "ko_b": "?癒?짗筌?雅뚯눛六?餓?????곷선揶쎛 ?臾볤쾿 ??????揶쎛????而?몴?鈺곌퀣???",
+  "ko_c": [
+   "??筌잛럩?앮에?疫뀀맦爰??띿쓺 ?醫듼봺筌????х몴???덇컩??띾┛ ?袁る퉸 疫뀀맩???덉뱽 ??뺣뼄.",
+   "?紐껊굶??????뷀?筌욊낯彛??롢늺??疫뀀맩???덉뱽 ??????遺우춭 ?됰슢???꾧쾿????곸뒠??뤿연 ??됱읈???⑤끃肉??類???뺣뼄.",
+   "筌△뫀????醫듼봺??獄쎻뫚堉??곗쨮 ?紐껊굶???곗뼔???",
+   "?됰슢???꾧쾿 ??롫뼎???臾먮짗??? ??꾨┛ ?????雅뚯눘媛??됰슢???꾧쾿????곸뒠??뤿연 ?類???뺣뼄."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the correct method of handling a tire that explodes while driving?",
+  "tr_c": [
+   "If the vehicle is pulled to one side suddenly, press the brakes to prevent an accident.",
+   "Firmly grasp the steering wheel, drive straight, and avoid sudden braking. Use the engine brake to stop in a safe  location.",
+   "Turn the steering wheel in the direction the vehicle is pulled in.",
+   "Use the parking brake to stop the vehicle as the brake pedal won't work."
+  ]
+ },
+ {
+  "n": 449,
+  "ko_b": "?⑥쥙??袁⑥쨮?癒?퐣 ?대?????у첎? 獄쏆뮇源??野껋럩?? 2筌????х몴?獄쎻뫗???띾┛ ?袁る립 鈺곌퀣??遺얠죯??곗쨮 揶쎛????而?몴?野껉퍔??",
+  "ko_c": [
+   "癰귣똾肉뺧㎗?롡봺???袁る퉸 ?怨쀪퐨?怨몄몵嚥?筌앹빓援??源녿퓠 ??????彛딁룯??????뺣뼄.",
+   "?怨???곸읈?癒?퓠野??⑥눘?????됱벉??筌뤿굟?????랁?癰귣똾肉?怨몄뒠???遺욧퍕??뺣뼄.",
+   "?癒?짗筌△뫀? ?袁⑥쨮???怨쀫? 揶쎛?關?꾤뵳?肉??類???쀪텕????깆젟??됱읈?봔?諭?앮에??類λ릭??獄쏅뗄肉??怨뺤뵬 域????????쇳뒄??뤿연????뺣뼄.",
+   "??쑴湲?癒?늾?源놁뱽 ?臾먮짗??랁??癒?짗筌???됰퓠???온?④쑨由경꽴????醫됲??뺣뼄."
+  ],
+  "a": "3",
+  "tr_b": "In the event of a traffic accident on an expressway, what is the most appropriate measure for preventing  secondary accidents?",
+  "tr_c": [
+   "First and foremost take photos of the accident for insurance purposes.",
+   "Explicitly let the other driver know that he/she is at fault and claim for insurance accordingly.",
+   "The vehicle must be stopped at the rightmost edge of the road, and a warning sign must be placed in accordance with the regulations prescribed by the Ministry of the Interior and Safety.",
+   "Turn on the hazard lights and call the relevant authority inside your vehicle."
+  ]
+ },
+ {
+  "n": 450,
+  "ko_b": "??쇱벉 餓??⑥쥙??袁⑥쨮 ?⑤벊沅쀦뤃?而???온????살구??곗쨮 ????野껉퍔??",
+  "ko_c": [
+   "筌△뫀以덄몴?筌△뫀???롫뮉 ?⑤벊沅??野껋럩???類ㅺ퍥揶쎛 獄쏆뮇源??????됰선 雅뚯눘???곷튊 ??뺣뼄.",
+   "?遺압わ㎕?μ벥 野껋럩????볦퍢 鈺곕챷?? ?袁④컩 雅뚯눘???뺤춸?? ???類ㅺ텢?⑥쥓以???곷선筌?????덈뼄.",
+   "??猷욄⑤벊沅? ?⑥쥙?숁⑤벊沅?????쇰펶???醫륁굨???⑤벊沅쀥첎? 筌욊쑵六??뺣뼄.",
+   "??쀫립??얜즲????뽯꺗 80??以덅첋紐낃숲嚥≪뮆彛???쀫립??뤿선 ??덈뼄."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a correct statement regarding the expressway construction section?",
+  "tr_c": [
+   "In the case of construction that blocks a lane, caution is required due to expected congestion.",
+   "In the case of a truck, drowsiness and neglecting to look forward can lead to a major accident.",
+   "Various types of construction work including moving construction and stationary construction can be performed.",
+   "The speed limit is set to 80 km/h."
+  ]
+ },
+ {
+  "n": 451,
+  "ko_b": "??쇱벉 餓???륁뵠??λ뮞 ??ㅼ춾疫??⑥쥙???곗쨮 ??륁뵠??λ뮞揶쎛 ?紐꾨뻼??? ??? 野껋럩?? ??而?몴?鈺곌퀣?귟쳸?몄씩 2揶쎛筌왖??",
+  "ko_c": [
+   "??쑴湲?癒?늾?源놁뱽 ?臾먮짗??랁???깅뻻?類???????곗뺘筌△뫀以?????뻬亦낅슣??獄쏆뮄???뺣뼄.",
+   "筌뤴뫗?삼쭪? ?遺쏀닊???퓠???類ㅺ텦 ????癒?퓠野?筌욊쑴????關?쇘몴???살구??랁??類ㅺ텦??뺣뼄.",
+   "筌뤴뫗?삼쭪? ?遺쏀닊???벥 ??륁뵠??λ뮞 筌△뫀以덄몴????궢??롢늺 ?癒?짗 ?類ㅺ텦??뺣뼄.",
+   "筌뤴뫗?삼쭪? ?遺쏀닊???퓠????륁뵠??λ뮞 ??ㅼ춾疫꿸퀣??燁삳?諭띄몴??브쑬??????類ㅺ텦????癒?퓠野?域?燁삳?諭뜻에??遺쏀닊???類ㅺ텦??????덈뼄."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the most appropriate actions to take if the Hi-Pass device malfunctions and fails to  read? (Select TWO)",
+  "tr_c": [
+   "Turn on the emergency flashers, temporarily stop your vehicle, and have a toll ticket issued in a non-automated toll lane.",
+   "Upon reaching the toll gate of your destination, explain where you entered the expressway to the toll collector and pay  the toll.",
+   "Use the Hi-Pass lane and go through the toll gate of your destination, and the toll will be automatically collected.",
+   "Detach the card from your Hi-Pass device at the toll gate of your destination and hand it over to the toll collector to  pay the toll."
+  ]
+ },
+ {
+  "n": 452,
+  "ko_b": "??쇱벉 餓??怨뺢섯 ???遺우삺揶쎛 獄쏆뮇源??됱뱽 ????곸읈?癒?벥 ??곕짗??곗쨮 揶쎛????而?몴?野껉퍔??",
+  "ko_c": [
+   "?袁④텆 獄쎻뫗????袁る퉸 ?癒?짗筌△뫀揆???醫됰젃???怨뺢섯 獄쏅쉼?앮에?????노립??",
+   "?遺우삺嚥??紐낅퉸 ?怨뺢섯 ??? ?怨뚮┛嚥?揶쎛??밴컧疫??????筌△뫁釉????疫꿸퀬釉??",
+   "筌△뫀???遺우춭 ??뺣짗???袁㏉?筌△뫀????猷???袁る퉸 ??곷눨???묎램釉??筌??醫롫꺗??띿쓺 ????????노립??",
+   "?醫뤾쉘??곴퐣 ?곗뮄??獄쏆꼶?獄쎻뫚堉??곗쨮 ??롫즼?袁㏃퍢??"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the safest action in the event of a fire in a tunnel?",
+  "tr_c": [
+   "Lock the car's doors to prevent theft and evacuate the tunnel.",
+   "Stay in the car as the tunnel will be filled with smoke from the fire.",
+   "Switch off the engine, leave the key in the ignition to allow for the car to be moved if necessary, and quickly evacuate  to safety.",
+   "Make a U-turn and drive away from the exit."
+  ]
+ },
+ {
+  "n": 453,
+  "ko_b": "??쇱벉 餓??怨뺢섯?????궢??????곸읈?癒?벥 ??됱읈??곸읈 獄쎻뫖苡??곗쨮 揶쎛????롢걵 ??野껉퍔??",
+  "ko_c": [
+   "?怨뺢섯 筌욊쑴???? 筌뤿굞??臾믩퓠 ????쑵釉????깅툧野껋럩??甕곗ろ?獄쎼끉肉?餓Β??롫뮉 ?源딆넅???녹쥓??",
+   "?怨뺢섯 ??筌△뫁苑??獄쏄퉮源??쇨퐨??野껋럩?? 筌△뫀以덄몴?癰궰野껋?釉?쭪? ??꾪??怨뺢섯?????궢??뺣뼄.",
+   "??롪컧??????됱읈椰꾧퀡?곭몴??醫???롢늺??疫뀀맩???덈퓠 ????쑵釉??",
+   "?怨뺢섯 筌욊쑴???? ??껊럡????쇳뒄???袁⑥쨮??덇땀?類ｋ궖???類ㅼ뵥??뺣뼄."
+  ],
+  "a": "1",
+  "tr_b": "From a safety perspective, which of the following is the most inappropriate way of driving when passing  through a tunnel?",
+  "tr_c": [
+   "Before entering the tunnel, remove your sunglasses to allow your eyes to adapt to the light, and turn on your  headlights as you would at nighttime.",
+   "If the lanes inside the tunnel are marked with solid white lines, do not change lanes while in the tunnel.",
+   "Keep a safe following distance from the car ahead, and be ready for sudden stops.",
+   "Before entering the tunnel, check the road information at the entrance to the tunnel."
+  ]
+ },
+ {
+  "n": 454,
+  "ko_b": "??쇱벉?? ?癒?짗筌?雅뚯눛六?餓?疫뀀떯???怨뱀넺?癒?퐣 ??뺣짗???온???립 ??살구???? 筌띿쉶??野껉퍔??",
+  "ko_c": [
+   "??롮춵?袁⑷맒??獄쏆뮇源?????뮉 ?됰슢???꾧쾿????뺣짗?關????깅꺖癰귣????誘る툡筌욊쑬??",
+   "??쑴湲????겸뫕爰???る땾 獄쎻뫚?뉓린?뚯뱽 ??뽰뒠??롫뮉 野껉퍔? ???????х몴???덇컩??롫뮉 獄쎻뫖苡?餓???롪돌????",
+   "?紐껁늺?????┛揶쎛 ??됱뱽 ??疫뀀맧???됱뵠??? 獄쏆옕?앾쭖???湲?筌욊낯彛?獄쎻뫚堉??곗쨮 沃섎챶嫄??彛??",
+   "ABS???關媛??筌△뫀??? ??뺣짗 椰꾧퀡?곩첎? ABS 沃섎챷?ｏ㎕?筌△뫀?얕퉪?????뤿선??뺣뼄."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding braking in an emergency situation that occurs while driving is  correct?",
+  "tr_c": [
+   "If aquaplaning occurs, the braking force of the brakes gets stronger.",
+   "Utilizing an impact-absorbing barrier in an emergency situation is one way of preventing a fatal accident.",
+   "If the road surface is wet, the vehicle always slides straight forward upon pressing the brake suddenly.",
+   "ABS-equipped vehicles have longer braking distances than non-ABS vehicles."
+  ]
+ },
+ {
+  "n": 455,
+  "ko_b": "筌왖筌욊쑴??獄쏆뮇源??野껋럩????됱읈????筌??遺얠죯 2揶쎛筌왖??",
+  "ko_c": [
+   "筌왖筌욊쑴??獄쏆뮇源??롢늺 ?醫롫꺗??띿쓺 雅뚯눛六??뤿연 筌왖筌?筌왖????甕곗щ선??뺣뼄.",
+   "筌△몿而쇿쳞怨뺚봺???겸뫖????類ｋ궖?????袁⑥쨮???怨쀫????類ㅺ컧??뺣뼄.",
+   "筌△뫀? ?癒??????노막 ?袁⑹뒄揶쎛 ??됱뱽 ???뮉 筌△뫁????뺣짗????덈뼄.",
+   "筌왖筌?獄쏆뮇源???온?④쑴毓???④쑴??雅뚯눛六??뺣뼄."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the TWO correct safety measures to take during an earthquake?",
+  "tr_c": [
+   "Drive as quickly as possible out of the area affected by the earthquake.",
+   "Maintain a safe distance from other vehicles and pull over to the right-hand side of the road.",
+   "Turn off the engine if you need to get out of the car to take cover.",
+   "Ignore the earthquake and drive on."
+  ]
+ },
+ {
+  "n": 456,
+  "ko_b": "?⑥쥙??袁⑥쨮 ?⑤벊沅쀦뤃?而??雅뚯눛六??????곸읈?癒?벥 ??而?몴???곸읈?遺얠죯???袁⑤빒 2揶쎛筌왖??",
+  "ko_c": [
+   "?袁④컩 ?⑤벊沅??닌덉퍢 ?怨뱀넺??雅뚯눘???렽???곸읈??뺣뼄.",
+   "?⑤벊沅쀦뤃?而???쀫립??얜즲????癒?퐣 筌왖??쀫릭????얜즲癰귣?????쥓?ㅵ칰?雅뚯눛六??뺣뼄.",
+   "?얜??????깅선??븍┛ 獄?????쒕떯由곁몴???? ??낅뮉??",
+   "?癒곗넞???대???癒?カ???袁る릭???⑤벊沅쀦뤃?而??臾롫젏 ????얜즲???????띿쓺 ?醫???뤿연 雅뚯눛六??뺣뼄."
+  ],
+  "a": "2, 4",
+  "tr_b": "You are driving on an expressway and there is ongoing construction ahead. Which of the following are NOT true?  (Select TWO)",
+  "tr_c": [
+   "Stay cautious when driving toward and by a construction site.",
+   "Drive faster than what is indicated on the construction speed limit sign.",
+   "Try to refrain from excessive overtaking or cutting in front of cars.",
+   "Drive at the same speed when approaching the construction site so as not to cause unnecessary traffic disruptions.",
+   "In areas where the speed limit changes, turn on the hazard lights to alert the other vehicles."
+  ]
+ },
+ {
+  "n": 457,
+  "ko_b": "?癒?짗筌???곸읈 餓??怨뺢섯 ??곷퓠???遺우삺揶쎛 ????野껋럩??鈺곌퀣???곷튊 ????곕짗??곗쨮 筌띿쉶??2揶쎛筌왖??",
+  "ko_c": [
+   "筌△뫁肉????????猷??野껋럩???癒?짗筌△뫁????뺣짗???袁㏉???뤾컧??뺣뼄.",
+   "??곗넅疫꿸퀡以??븍뜆????野껋럩??獄쏅뗀????源?????뽯튊 ??뺣뼄.",
+   "?怨뺢섯 獄쏅쉼?앮에???猷???????野껋럩??筌△뫀??? 筌ㅼ뮆???餓λ쵐釉??筌잛럩?앮에??類ㅺ컧??쀪텚??",
+   "筌△뫀? ?癒??????노막 野껋럩????癒?짗筌???곷눨??筌믩쵐釉?揶쎛筌왖????猷??뺣뼄."
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the TWO correct measures to take when a fire starts inside a tunnel that you are  driving in?",
+  "tr_c": [
+   "Turn off the engine if you are getting out of the car to evacuate.",
+   "Stand with your back to the wind when using a fire extinguisher.",
+   "If you are unable to drive out of the tunnel, stop the car as close to the centerline as possible.",
+   "Take the key out of the ignition if you are getting out of the car to evacuate."
+  ]
+ },
+ {
+  "n": 458,
+  "ko_b": "?癒?짗筌△몿? 沃섎챶嫄??????袁⑷맒???온????살구??곗쨮 筌띿쉶??2揶쎛筌왖??",
+  "ko_c": [
+   "?⑥쥙??雅뚯눛六?餓?疫뀀맩?????뽯퓠 雅뚯눖以?獄쏆뮇源??띾┛ ??????⑥눘???雅뚯눖留??癒?뵥????",
+   "??る쭔?癒?퐣????????꾨뻬 ??뽯퓠 雅뚯눖以?獄쏆뮇源??뺣뼄.",
+   "沃섎챶嫄??????袁⑷맒????묐립 ?紐껁늺 ?遺우읅?? ?????癒?뵥 ?곕뗄???癰??袁?????륁춳 ??낅뮉??",
+   "疫뀀맦爰???紐껊굶鈺곌퀬堉??沃섎챶嫄??????癒?뵥????????덈뼄."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the TWO correct statements regarding a vehicle skid?",
+  "tr_c": [
+   "Skidding mostly occurs when the brakes are applied suddenly while driving at high speed.",
+   "Skidding mostly occurs when driving at low speed in the rain.",
+   "Skid marks left on a road surface do not provide any clues as to why an accident occurred.",
+   "Sudden steering can also cause skidding."
+  ]
+ },
+ {
+  "n": 459,
+  "ko_b": "?癒?짗筌△몿? 筌△뫀以덄몴???꾧퉱??揶쎛?關苑??揶쎛????野껋럩??2揶쎛筌왖??",
+  "ko_c": [
+   "??삘뀮筌띾맦留?癒?퐣 雅뚯눛六????,
+   "?뚣끇??疫뀀챷肉??疫뀀맪???紐껊굶??鈺곌퀣?????,
+   "???곻쭕??쭔?癒?퐣 雅뚯눛六????,
+   "?紐껁늺??沃섎챶嫄??????
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO situations wherein a vehicle is most likely to deviate from the road?",
+  "tr_c": [
+   "When driving on an uphill road",
+   "When the driver abruptly turns the steering wheel on a curved road",
+   "When driving on a downhill road",
+   "When the road surface is slippery"
+  ]
+ },
+ {
+  "n": 460,
+  "ko_b": "?⑥쥙??袁⑥쨮 雅뚯눛六?餓??遺우춭 ??癰귣????癒?퐣 ?怨뚮┛揶쎛 ??랁??遺우삺揶쎛 獄쏆뮇源???????揶쎛??獄쏅뗀?븝쭪怨밸립 鈺곌퀣??獄쎻뫖苡?2揶쎛筌왖??",
+  "ko_c": [
+   "獄쏆뮄猿?筌앸맩??域??癒?봺???類ㅺ컧??뺣뼄.",
+   "揶쏅낀留뚧에???猷??????뺣짗???袁㏉???臾좂뵳?筌△뫁肉??????????노립??",
+   "?λ뜃由?筌욊쑵?뺝첎? 揶쎛?館釉?野껋럩??癒?뮉 筌△뫀?????쑴?????곗넅疫꿸퀡? ?????뤿연 ?븍뜆????덈뼄.",
+   "?λ뜃由?筌욊쑵?????쎈솭??됱뱽 ???퓠??119 ?源녿퓠 ?醫됲????筌△뫀??獄쏅뗀以???곷퓠??疫꿸퀡?롧뵳怨뺣뼄."
+  ],
+  "a": "2, 3",
+  "tr_b": "If the hood of the car starts generating smoke and catches fire on an expressway, which of the following are the  TWO most appropriate measures to take?",
+  "tr_c": [
+   "Stop immediately when you notice that there is a problem.",
+   "Move to the roadside, turn off the engine, and evacuate the vehicle.",
+   "If it is early enough to extinguish the fire, use the fire extinguisher fitted in the vehicle.",
+   "If you fail to extinguish the fire, call 119 and wait right next to the vehicle."
+  ]
+ },
+ {
+  "n": 461,
+  "ko_b": "?袁⑥쨮 ?⑤벊沅?關????됱읈?????뻬???袁る퉸 筌△뫁苑묋퉪?野껋럩???袁⑹뒄???닌덉퍢??곗쨮 筌△뫀以?揶쏅Ŋ?쇔첎? ??뽰삂??롫뮉 筌왖?癒??",
+  "ko_c": [
+   "雅뚯눘?썸뤃?而???뽰삂??,
+   "?袁れ넅?닌덉퍢 ??뽰삂??,
+   "?臾믩씜?닌덉퍢 ??뽰삂??,
+   "?ル굛猿먩뤃?而???뽰삂??
+  ],
+  "a": "2",
+  "tr_b": "At which point do lanes start decreasing in the zone requiring lane changes for safe passage due to road  construction?",
+  "tr_c": [
+   "Starting point of a warning zone",
+   "Starting point of a transition zone",
+   "Starting point of a work zone",
+   "Starting point of a termination zone"
+  ]
+ },
+ {
+  "n": 462,
+  "ko_b": "??⑥퍢??곸읈???온??ㅻ쭆 ??곸뒠??곗쨮 揶쎛????而?몴?野껉퍔??",
+  "ko_c": [
+   "?袁ⓦ늺?醫듼봺????꾨샒(??곗구 ????????롢늺 ??⑥퍢???蹂? ??뽯튊???類ｋ궖??????덈뼄.",
+   "筌띾쵐? ?醫? ??⑥퍢癰귣???雅뚯눊而??곸읈 ????뺣짗椰꾧퀡?곩첎? 疫뀀챷堉깍쭪袁⑤뼄.",
+   "??⑥퍢?癒?뮉 ?袁⒱?源낅궖????뉗뻣?源놁뱽 ?녹뮄??雅뚯눛六??롢늺 ?袁④컩????뽯튊?類ｋ궖???醫듼봺??롫뼄.",
+   "獄쏆꼶???筌△뫀????븍뜄????類ｃ늺??곗쨮 ?얜Ŧ?롨퉪???筌앹빖而?袁⑷맒??獄쏆뮇源??뺣뼄."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the MOST correct description regarding driving at night?",
+  "tr_c": [
+   "It is possible to secure a wide view at night if you have the front window tinted.",
+   "On a clear day, the braking distance is longer during daytime than at night.",
+   "It is better to secure a front view when driving at night with the fog light on rather than headlights.",
+   "If you look at the light from the opposite vehicle directly, it may be hard to secure a front view due to the glare."
+  ]
+ },
+ {
+  "n": 463,
+  "ko_b": "??⑥퍢 ??곸읈 餓??????롫뮉 筌앹빖而?袁⑷맒????????살구 餓???? 野껉퍔??",
+  "ko_c": [
+   "筌앹빖而?袁⑷맒?????????筌앸맩??筌△뫀????袁⒱?源놁뱽 ?袁ⓦ늺 筌앹빖而?袁⑷맒?????わ쭪袁⑤뼄.",
+   "筌앹빖而?袁⑷맒?? 筌띾뜆竊???삳뮉 ??筌△뫀???筌뤴뫀紐??怨밸샨 ?袁⒱?源놁뵬 ??獄쏆뮇源??롫뮉 野껋럩??첎? 筌띾∥??",
+   "??⑥퍢????깆삜????뺢땀?袁⑥쨮??雅뚯눛六????獄쏆뮇源??롫뮉 野껋럩??첎? 筌띾∥??",
+   "??⑥퍢???怨뺢섯??筌욊쑴???띿쓺 ??롢늺 獄쏆빘? ?븍뜄???곗쨮 ?醫롫뻻 ??癰귣똻????袁⑷맒??筌띾?釉??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is a correct statement regarding the glare effect (cases wherein you are unable to see  ahead due to the glare from the vehicle???headlights) during nighttime?",
+  "tr_c": [
+   "The glare effect will disappear if you turn off your headlights immediately when it occurs.",
+   "The glare effect frequently occurs when two vehicles facing each other both have their high-beam headlights on.",
+   "The glare effect tends to occur when driving through busy downtown streets at nighttime.",
+   "The glare effect refers to the condition of momentary invisibility caused by bright lights upon entering a tunnel at  nighttime."
+  ]
+ },
+ {
+  "n": 464,
+  "ko_b": "??⑥퍢 ??곸읈 ????곸읈?癒?벥 ??띿퍟?源???륅폒??ㅒ?덈퓠 ??????살구??곗쨮 ??? 野껉퍔??",
+  "ko_c": [
+   "??깅꺖癰귣????紐??貫????關湲??뺣뼄.",
+   "??뉖럡??덉삂???怨??怨몄몵嚥???뺤뻣??곸춭??",
+   "??뺢땀 ??깆삜???袁⑥쨮??雅뚯눛六????獄쏆뮇源??롫뮉 野껋럩??첎? 筌띾∥??",
+   "??β쒏에?뽰뒲 ??볧?????땿??곸죬 ??깆쪒??揶쏅Þ而?筌띾뜄???怨밴묶????쥙???野껉퍔??筌띾?釉??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements regarding a driver???\"Hypovigilance in driving\" at nighttime is correct?",
+  "tr_c": [
+   "Cognitive ability is better than usual.",
+   "Eye movements become more active.",
+   "It often occurs when driving on congested roads in a city.",
+   "The eyes become used to a monotonous view and experience a type of sensory paralysis."
+  ]
+ },
+ {
+  "n": 465,
+  "ko_b": "??? 筌왖疫???뽰삂??롢늺????紐???춳 ????곸읈?癒?벥 鈺곌퀣?귝에?椰꾧퀡?곩첎? ??野껉퍔??",
+  "ko_c": [
+   "筌△뫂猷?? 沃섎챶踰???녹쥓??",
+   "雅뚯눊而?雅뚯눛六??얜즲癰귣???揶쏅Ŋ????꾨뻬??뺣뼄.",
+   "??밸펶??筌왖筌???됱뵠 ??紐???怨몄벓??롫뮉 ??볦퍢???봔鈺곌퉲鍮?雅뚯눘???뤿연????뺣뼄.",
+   "雅뚯눊而숃퉪?????뽯튊?類ｋ궖揶쎛 ??뱀뵠??뤿연 ??곸읈??띾┛ ?紐낅릭??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT a measure to be taken by a driver when the sun begins to set and it becomes  dark?",
+  "tr_c": [
+   "Turn on the sidelights and taillights.",
+   "Drive slower than you would during the day.",
+   "The eyes need some time to adjust to the darkness after the sun sets.",
+   "Driving is easier compared to daytime driving because of greater visibility."
+  ]
+ },
+ {
+  "n": 466,
+  "ko_b": "??쇱벉餓??袁㏓┛?癒?짗筌△뫁???겸뫗???냈??????뚣끋逾??肉??온????살구????롢걵??野껉퍔??  ????삘뀲 獄쏄퀣苑묉묾怨뚮럡?? ??筌??븍뜃??館釉??닌듼쒏에?뽮퐣 域밸?苑???닌됲뀋??랁??臾?域밸?????덈뮉 野껉퍔??野?",
+  "ko_c": [
+   "?臾?域밸?? ????????뽰뵬 ??륁㉦???臾믩꺗??랁? 筌△뫀??????뽰뵬 ?믪눘? ?브쑬???롫뮉 ?닌듼??野?",
+   "??롫즲??? ??? ?봔??륁벥 筌△뫀???獄쎻뫗???띾┛ ?袁る퉸 ?醫됲닊 ?癒?뮉 ???筌△뫗???袁る립 疫꿸퀗????關?귛첎? ??덈뮉 野껉퍔??野?",
+   "?袁㏓┛?癒?짗筌??뚣끇苑?怨? ?袁㏓┛?癒?짗筌??臾믩꺗?닌됱쨮?봔???브쑬??????겸뫗???냈??????袁⑹뜚?⑤벀???餓λ쵎???쀪텕???紐낃숲嚥?疫꿸퀡?????덈뮉  野껉퍔??野?"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding the EV charging cable coupler is INCORRECT?",
+  "tr_c": [
+   "It should have separate polarity and grounding electrode as it has a structure that cannot be replaced with other wiring  equipment.",
+   "The grounding electrode should have a structure that is connected last when starting and separated first upon shutoff.",
+   "It should have a mechanical device for locking or an attachment/detachment to prevent unintended load shedding.",
+   "It should have an interlock function that suspends the power supply of charging cable when the connector of an EV is separated from the connection port."
+  ]
+ },
+ {
+  "n": 467,
+  "ko_b": "?癒?짗筌??遺우삺????덇컩??띾┛ ?袁る립 獄쎻뫖苡??곗쨮 揶쎛????而?몴?野껉퍔??",
+  "ko_c": [
+   "筌△뫀????????怨좊늄 ??쇳뒄???袁る퉸 獄쏄퀣苑?關?귞몴??袁⑹벥嚥?鈺곌퀣???뺣뼄.",
+   "野꺿뫁?깍㎗?雅뚯눘????類ㅼ읈疫꿸퀗? 獄쏆뮇源??? ??낅즲嚥?雅뚯눘???뺣뼄.",
+   "LPG筌△뫀??? ??쑴湲??? ????쑵釉????녹돳???봔?袁???? 筌△뫀????節딇???삳빒??",
+   "??녹돳????깆뵠?怨뺣뮉 ??已ワ㎗?筌???됰퓠 ?癒?선???우뮇媛??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the best method of preventing vehicle fires?",
+  "tr_c": [
+   "Alter the wiring arrangement to install an amplifier in the vehicle.",
+   "Avoid generating static electricity while filling up in wintertime.",
+   "LPG vehicles should carry a disposable butane gas tank in preparation for an emergency.",
+   "A lighter can be stored inside the vehicle in summer."
+  ]
+ },
+ {
+  "n": 468,
+  "ko_b": "??筌△뫀???疫뀀맩???덉몵嚥??紐낅퉸 ?곕뗀猷???袁る퓮????덈뮉 野껋럩?? 域???筌?獄쎻뫖苡??곗쨮 揶쎛????而?몴?野껉퍔??",
+  "ko_c": [
+   "?겸뫖猷롳쭪怨몄읈繹먮슣? ??由??? 筌띾Þ?? ?됰슢???꾧쾿 ??롫뼎??獄쏆옕釉?揶쏅Ŋ???뺣뼄.",
+   "??筌△뫁????곕뗀猷????노릭疫??袁る퉸 ?紐껊굶??疫뀀맪釉?칰??ル슣瑜??곗쨮 ?곗뼚堉?餓λ쵐釉?醫롮뱽 ??뤿선揶쏄쑬??",
+   "??노퉸??筌ㅼ뮇??酉釉?묾??袁る퉸 ??됱뱽 揶쏅Ŧ???",
+   "????꾨쓠?? ?怨밸샨?源놁뱽 ??ｍ뜞 鈺곌퀣???뺣뼄."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the best method of preventing the risk of collision caused by the sudden braking of a  vehicle ahead?",
+  "tr_c": [
+   "Step on the brake pedal to slow down.",
+   "Turn the steering wheel sharply to the left and drive over the centerline to avoid hitting the vehicle ahead.",
+   "Close your eyes to minimize the impact.",
+   "Turn on both the wipers and the high-beam headlights."
+  ]
+ },
+ {
+  "n": 469,
+  "ko_b": "??쇱벉 餓??⑥쥙???곗쨮 雅뚯눛六??롫뮉 筌△뫀???????곷선 ??곴맒??곗쨮 獄쏆뮇源??롫뮉 ?袁⑷맒 2揶쎛筌왖??",
+  "ko_c": [
+   "甕곗쥙???곗쨯 ?袁⑷맒",
+   "??쎄묾??뱀띃?????袁⑷맒",
+   "??륁뵠???袁⑷맒",
+   "??륁뵠??뺤쨮???쟿?????袁⑷맒"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are TWO phenomena caused by the tires of a vehicle driving at high speed?",
+  "tr_c": [
+   "Vapor lock",
+   "Standing wave",
+   "Fading",
+   "Aquaplaning"
+  ]
+ },
+ {
+  "n": 470,
+  "ko_b": "?袁⑥쨮?대??삭린類ｌ죯???ル슣苑??됱읈??筌△뫗?????????곸뒠??곗쨮 ??而?몴?野껉퍔??",
+  "ko_c": [
+   "?ル슣苑??됱읈?醫딅뮉 ??댿봺 ?袁⑥쨮 ?⑥쥙???뽱룖 ?대???????겸뫕爰??????쑵釉??",
+   "?遺우삺筌욊쑴釉???袁る퉸 ?곗뮆猷??롫뮉 ???컩?온?? ?ル슣苑??됱읈?醫? 筌△뫗???? ??녿툡????뺣뼄.",
+   "?????????롮쪝??밸퓠 ??? ?ル슣苑??됱읈?醫? 筌띲끇猷꾣에???롫뮉 野껉퍔??揶쎛????됱읈??롫뼄.",
+   "13??沃섎챶彛???癒??癒?쓺 ?ル슣苑??됱읈?醫? 筌띲끇猷꾣에???? ??놁몵筌??⑥눛源?뙴?? 3筌??癒?뵠??"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding wearing a seat belt is correct?",
+  "tr_c": [
+   "Fix the seat belt above the waist to protect against the shock from a traffic accident.",
+   "Firefighters who are dispatched to suppress fire need not wear a seat belt.",
+   "It is safest for children to take the front seat and wear a seat belt.",
+   "If a driver does not ensure that children under the age of 13 wear a seat belt, an administrative fine of KRW 30,000 is  imposed."
+  ]
+ },
+ {
+  "n": 471,
+  "ko_b": "?대?????????믩챶??? 筌??봔?怨몄뱽 筌ㅼ뮇??酉釉?묾??袁る퉸 ?곗뮆而??袁⑸퓠 鈺곌퀣???곷튊 ??롫뮉 野껉퍔??",
+  "ko_c": [
+   "?ル슣苑???袁れ뜎 鈺곌퀣??,
+   "?源낆뻠??揶쏄낮猷?鈺곌퀣??,
+   "?믩챶?곮쳸?녿쵟?? ?誘れ뵠 鈺곌퀣??,
+   "?ル슣苑???誘⑷텤??鈺곌퀣??
+  ],
+  "a": "3",
+  "tr_b": "Which of the following should you adjust before you start driving in order to minimize injuries to the head and  neck?",
+  "tr_c": [
+   "Distance of the seat from the pedals",
+   "Angle of the backrest",
+   "Height of the headrest",
+   "Seat height"
+  ]
+ },
+ {
+  "n": 472,
+  "ko_b": "?怨뺢섯?癒?퐣 ??됱읈??곸읈???온??ㅻ쭆 ??곸뒠??곗쨮 筌띿쉶??野껉퍔??",
+  "ko_c": [
+   "????쒕떯由????긱걹 獄쎻뫚堉?쭪???뺣쾻???녹뮄???ル슣瑜??곗쨮 ??뺣뼄.",
+   "?怨뺢섯 ??됰퓠??뺣뮉 ??롪컧????椰꾧퀡?곩첎癒?뵠 ????롫쭆??",
+   "?怨뺢섯 筌욊쑴????筌뤿굞????袁⑷맒??雅뚯눘???곷튊 ??뺣뼄.",
+   "?怨뺢섯 ?곗뮄??癒?퐣???遺용떄???袁⑷맒??獄쏆뮇源??뺣뼄."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following statements regarding safe driving in a tunnel is correct?",
+  "tr_c": [
+   "Turn on the left-turn signal and use the left lane for overtaking.",
+   "The sense of distance from the front vehicle is reduced in a tunnel.",
+   "When entering the tunnel, be careful of the light adaptation.",
+   "At the exit of a tunnel, dark adaptation occurs."
+  ]
+ },
+ {
+  "n": 473,
+  "ko_b": "??쇱벉?? 筌욊쑬以?癰궰野껋?釉????녹뮇鍮???롫뮉 ?醫륁깈????????살구???? 揶쎛???????? 野껉퍔??",
+  "ko_c": [
+   "?醫륁깈????? ??꾪?筌욊쑬以덄몴?癰궰野껋?鍮????삘뀲 ?대????獄쎻뫚鍮??? ??녿릭??삠늺 ?대???甕곕벚???袁⑥뺘??곗쨮 癰?????용뼄.",
+   "筌욊쑬以?癰궰野껋럩????멸텆 ???怨룸뼣 疫꿸퀗而??醫륁깈???④쑴???뤿연????뺣뼄.",
+   "筌욊쑬以?癰궰野????醫륁깈????? ??놁몵筌??諭?쒙㎕??源껊궢 ?諭곷?筌??源? 3筌??癒?벥 甕곕뗄?껅묾????怨몄뵠 ??뺣뼄.",
+   "?⑥쥙??袁⑥쨮?癒?퐣 筌욊쑬以?癰궰野껋럩????랁???????퓠??30沃섎챸苑?筌왖?癒???筌욊쑬以덅퉪?野껋럩???袁⑥┷?????돱筌왖 ?醫륁깈????뺣뼄."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is true about using turn signals?",
+  "tr_c": [
+   "It is not a violation to change lanes without signaling if it does not obstruct the other vehicles.",
+   "You must keep the turn signal on for a while after changing lanes.",
+   "The traffic penalty for failure to signal lane change for passenger vehicles and buses is a fine of KRW 30,000.",
+   "When changing lanes on an expressway, turn on the turn signal from 30 m before and keep it on until you have completed  changing lanes."
+  ]
+ },
+ {
+  "n": 474,
+  "ko_b": "????쒕떯由곁몴???????덈뮉 野껋럩??에?筌띿쉶??野껉퍔??",
+  "ko_c": [
+   "??롪컧揶쎛 ??삘뀲 筌△뫀? ????쒕떯????됱뱽 野껋럩??,
+   "??롪컧揶쎛 ?袁る퓮 獄쎻뫗????袁る릭???類? ?癒?뮉 ??쀫뻬??랁???덈뮉 野껋럩??,
+   "??롪컧???ル슣瑜????삘뀲 筌△몿? ??롪컧?? ?????筌욊쑵六??랁???덈뮉 野껋럩??,
+   "??롪컧揶쎛 ????우몵嚥?筌욊쑵六??롢늺????삘뀲 筌△뫁? ??됱읈椰꾧퀡?곭몴??類ｋ궖??랁???됱뱽 野껋럩??
+  ],
+  "a": "4",
+  "tr_b": "In which of the following situations is a driver allowed to overtake a vehicle?",
+  "tr_c": [
+   "When the vehicle ahead is overtaking another vehicle",
+   "When the vehicle ahead stops or it is driving slowly to prevent a dangerous situation",
+   "When the vehicle ahead is driving next to another vehicle in the left lane",
+   "When the vehicle ahead is driving slowly to secure a safe distance from another vehicle"
+  ]
+ },
+ {
+  "n": 475,
+  "ko_b": "??쇱벉?? ??삘뀲 筌△뫀? ????쒕떯由??롮젻???癒?짗筌△뫁????얜즲????????살구???? 筌띿쉶??野껉퍔??",
+  "ko_c": [
+   "??삘뀲 筌△뫀? ????쒕떯由??롫뮉 野껋럩??癒?뮉 ??얜즲????쀫립????용뼄.",
+   "?????袁⑥쨮??甕곕벡??筌ㅼ뮄????얜즲??100?브쑴??50???酉釉???얜즲繹먮슣???揶쎛?館釉??",
+   "??곸읈?癒?벥 ??곸읈 ?貫????怨뺤뵬 ??쀫립 ??곸뵠 揶쎛?館釉??",
+   "?????袁⑥쨮??筌ㅼ뮄????얜즲 ??沅?癒?퐣筌?????쒕떯由겼첎? 揶쎛?館釉??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements regarding the speed limit of a vehicle trying to overtake another vehicle is  correct?",
+  "tr_c": [
+   "There is no speed limit applied to a vehicle overtaking another one.",
+   "A vehicle overtaking another vehicle can exceed the legal speed limit of the road by 50%.",
+   "Vehicles are allowed to overtake other vehicles regardless of the speed limit, depending on the driver's driving skill.",
+   "Overtaking other vehicles is allowed only when performed within the speed limit of the road."
+  ]
+ },
+ {
+  "n": 476,
+  "ko_b": "?⑥쥙??袁⑥쨮?癒?퐣 ?????덇컩???袁る퉸 ?類ㅺ컧 獄?雅뚯눘媛먪몴?疫뀀뜆???랁???덈뼄. ??곷퓠 ??????살구??곗쨮 獄쏅뗀?ㅿ쭪? ??? 野껉퍔??",
+  "ko_c": [
+   "???컩筌△몿? ??븐넞??됱읈 ??뺣짗????묐뻬??띾┛ ?袁る릭???類ㅺ컧 ?癒?뮉 雅뚯눘媛??????덈뼄.",
+   "野껋럩媛숁⑤벉龜?癒?벥 筌왖??뽯퓠 ?怨뺚뀮椰꾧퀡援??袁る퓮??獄쎻뫗???띾┛ ?袁る릭???類ㅺ컧 ?癒?뮉 雅뚯눘媛??????덈뼄.",
+   "??곗뺘?癒?짗筌△몿? ???뻬?룸슢? 筌왖?븍뜇釉?묾??袁る퉸 ???뻬?룸슢? 獄쏆룆???關??癒?퐣 ?類ㅺ컧??????덈뼄.",
+   "?怨뺢섯 ????쑴湲썰틠?깃컧???????컩筌△뫁? 野껋럩媛??疫뀀떯??癒?짗筌△뫀彛??類ㅺ컧 ?癒?뮉 雅뚯눘媛??????덈뼄."
+  ],
+  "a": "4",
+  "tr_b": "Idling or parking on an expressway is prohibited as it may cause rear-end collisions. Which of the following is  NOT true?",
+  "tr_c": [
+   "A fire truck can idle or park on an expressway to perform emergency operations.",
+   "You can temporarily idle or park at the instruction of a police officer or to prevent a hazardous situation.",
+   "Motor vehicles can idle on the toll road to pay their tolls.",
+   "Only emergency vehicles such as police cars and fire trucks can idle or park at the emergency parking area inside a tunnel."
+  ]
+ },
+ {
+  "n": 477,
+  "ko_b": "??쇱벉 餓??癒?짗筌???곸읈?癒? ?袁る퓮???癒?껍???됰슢???꾧쾿 ??롫뼎??獄쏆옕釉???쇱젫嚥??類??????돱筌왖????륁젟筌왖椰꾧퀡???? 揶쎛??疫뀀챷堉?筌?????덈뮉 野껋럩??2揶쎛筌왖??",
+  "ko_c": [
+   "筌△뫀???餓λ쵎????怨??怨몄몵嚥?揶쎛甕곗눘????,
+   "筌△뫀?????얜즲揶쎛 ?怨??怨몄몵嚥???쥓? ??,
+   "????곷선????덉쨮 ?닌딆뿯??뤿연 ?關媛??筌욊낱??,
+   "?⑥눖以?獄????폒 ??곸읈 ??
+  ],
+  "a": "2, 4",
+  "tr_b": "When you sense danger while driving and step on the brake pedal, which TWO will lead to the longest stopping distance? (i.e., the distance from the point where you press the brake pedal to the point where the vehicle actually stops)",
+  "tr_c": [
+   "Relatively light vehicle weight",
+   "Relatively higher speed",
+   "Right after installing new tires",
+   "Fatigue or drunk driving"
+  ]
+ },
+ {
+  "n": 478,
+  "ko_b": "?癒?짗筌??諭媛?紐꾩뜚???온????살구??곗쨮 筌띿쉶??2揶쎛筌왖??",
+  "ko_c": [
+   "?⑥쥙??袁⑥쨮?癒?퐣???癒?짗筌△뫁???諭媛?類ㅼ뜚????뤿선????꾨뻬??????용뼄.",
+   "?癒?짗筌△뫀踰묉에?뱀쵄??筌뤿굞????諭媛?類ㅼ뜚?? ??곸읈?癒? ??뽰뇚???紐꾩뜚????",
+   "?곗뮆而삼쭪????온?醫뤿릭??野껋럩媛??뽰삢???????獄쏆룇? ???퓠???諭媛?類ㅼ뜚???λ뜃???뤿연 ??꾨뻬??????덈뼄.",
+   "?諭媛?類ㅼ뜚 ?λ뜃?????袁⑷컩筌왖 ?온??野껋럩媛??뽰삢???????獄쏆룇釉????뺣뼄."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the TWO correct statements regarding the number of passengers in a vehicle?",
+  "tr_c": [
+   "On expressways, it is not allowed to carry more people than the defined number of passengers for the vehicle.",
+   "The number of passengers specified on the vehicle registration certificate is the number of passengers excluding the  driver.",
+   "When permission is obtained from the head of the police station having jurisdiction over the place of departure, the vehicle may operate in excess of the designated number of passengers.",
+   "If the number of passengers is exceeded, permission must be obtained from the head of the police station having  jurisdiction over the destination."
+  ]
+ },
+ {
+  "n": 479,
+  "ko_b": "?袁④컩???대?????ф에???롪컧揶쎛 疫뀀맩?숋쭪???됱뱽 ???곕뗀猷????х몴?獄쎻뫗???띾┛ ?袁る립 揶쎛????됱읈????곸읈獄쎻뫖苡?2揶쎛筌왖??",
+  "ko_c": [
+   "??롪컧?? ?類?椰꾧퀡????곴맒???醫???렽???곸읈??뺣뼄.",
+   "??쑴湲?癒?늾?源놁뱽 ?녹뮄??疫뀀떯??癒?짗筌△뫀? ?怨뺤뵬??雅뚯눛六??뺣뼄.",
+   "??롪컧?? ?곕뗀猷??? ??놁뱽 ?類ｋ즲嚥??겸뫖???揶쏅Ŋ???렽???됱읈椰꾧퀡?곭몴??類ｋ궖??뺣뼄.",
+   "?袁る퓮??獄쏆뮄猿??롢늺 ???됰슢???꾧쾿?? 雅뚯눘媛??됰슢???꾧쾿????덈뻻???????뤿연 ??뺣짗椰꾧퀡?곭몴?餓κ쑴???"
+  ],
+  "a": "1, 3",
+  "tr_b": "When a vehicle driving in front brakes suddenly due to a traffic accident ahead, which of the following are the  TWO safest measures to avoid colliding with the vehicle?",
+  "tr_c": [
+   "Maintain a longer distance from the vehicle ahead than the stopping distance.",
+   "Turn on the emergency flashers and follow an emergency vehicle.",
+   "Reduce speed and maintain sufficient distance from the vehicle ahead to prevent a collision.",
+   "When there is danger, use both the foot brake and parking brake to shorten the braking distance."
+  ]
+ },
+ {
+  "n": 480,
+  "ko_b": "?ル슣苑??됱읈?醫롫퓠 ??????살구??곗쨮 筌띿쉶??2揶쎛筌왖??",
+  "ko_c": [
+   "??곸읈?癒? ??됱읈?醫? 筌△뫗???? ??? 野껋럩???⑥눛源?뙴?3筌??癒?뵠 ?봔?⑥눖留??",
+   "??곗뺘?怨몄몵嚥?野껋럥????????紐??癒?맒?? 2?癒?뻼?癒?퐣 ??筌띾‘??獄쏆뮇源??뺣뼄.",
+   "13??沃섎챶彛???????? ??됱읈?醫? 筌△뫗???? ??놁몵筌?甕곕뗄?껅묾?6筌??癒?뵠 ?봔?⑥눖留??",
+   "??됱읈?醫딅뮉 2?癒?뻼, 3?癒?뻼, 4?癒?뻼??곗쨮 ?닌됲뀋??뺣뼄."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are true about wearing seat belts? (Select TWO)",
+  "tr_c": [
+   "The penalty for a driver failing to wear a seat belt is an administrative fine of KRW 30,000.",
+   "Whiplash injuries are more common with two-point seat belts.",
+   "The penalty for a child under the age of 13 not wearing a seat belt is a traffic penalty of KRW 60,000.",
+   "There are two, three, and four-point seat belts."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path('translations/audit/queue/211_choices_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+print(len(data), data[0].keys(), data[-1].keys())
+for x in data:
+ print(json.dumps(x, ensure_ascii=True))
+'@ | python -" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+2026-10-10T13:24:08.056262Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+'python.exe' ?꾨줈洹몃옩???ㅽ뻾?섏? 紐삵뻽?듬땲?? 吏?뺥븳 濡쒓렇???몄뀡???놁뒿?덈떎. ?대? 醫낅즺?섏뿀???섎룄 ?덉뒿?덈떎?꾩튂 以?10 臾몄옄:6
++ '@ | python -
++      ~~~~~~~~.
+?꾩튂 以?2 臾몄옄:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 647ms:
+'python.exe' ?꾨줈洹몃옩???ㅽ뻾?섏? 紐삵뻽?듬땲?? 吏?뺥븳 濡쒓렇???몄뀡???놁뒿?덈떎. ?대? 醫낅즺?섏뿀???섎룄 ?덉뒿?덈떎?꾩튂 以?10 臾몄옄:6
++ '@ | python -
++      ~~~~~~~~.
+?꾩튂 以?2 臾몄옄:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n '\"(check|detail|n|tr_b|tr_c|a)\"' 'translations/audit/queue/211_choices_en.json'" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+ succeeded in 490ms:
+3:  "n": 441,
+11:  "a": "4",
+12:  "tr_b": "Which of the following is the most appropriate course of action in the event of an accident?",
+13:  "tr_c": [
+14:   "It is not necessary to turn on the hazard lights and open the trunk to indicate an emergency situation.",
+15:   "Take photos of the accident scene within the road and wait inside the vehicle.",
+16:   "There is no need to exit the accident scene; wait inside the vehicle.",
+17:   "From a safe location outside the vehicle, report the accident to 119 or 112, and state the number of the streetlight or traffic signal post to give a precise location."
+21:  "n": 442,
+29:  "a": "2",
+30:  "tr_b": "Which of the following is the right method of avoiding glare caused by the headlights of an oncoming car at  night?",
+31:  "tr_c": [
+32:   "Do not look directly at the headlights but at the road directly in front of your car.",
+33:   "Do not look directly at the headlights but to the right edge of the road.",
+34:   "Squint your eyes and look at the road directly in front of your car.",
+35:   "Squint your eyes and look to the left edge of the road."
+39:  "n": 443,
+47:  "a": "4",
+48:  "tr_b": "Under the Road Traffic Act, which of the following is not an appropriate action on the part of a driver if the car  is unable to operate due to a breakdown on the expressway at night?",
+49:  "tr_c": [
+50:   "A red flashing signal, electric lantern or spark signal that can be identified from 500 m in all directions must be installed.",
+51:   "When installing a sign, it must be installed in a location where the driver of a vehicle approaching from the rear can see  it.",
+52:   "The driver must take necessary measures, such as moving the vehicle off the expressway.",
+53:   "The safety tripod sign must be installed 200 m from the point where the broken-down vehicle is located."
+57:  "n": 444,
+65:  "a": "4",
+66:  "tr_b": "According to the Road Traffic Act, which of the following describes a situation in which a driver of a non-commercial vehicle is required to turn on the headlights, sidelights, taillights, and license plate lights at the same time?",
+67:  "tr_c": [
+68:   "When stopping on a road at nighttime",
+69:   "When stopping on a road with minimal visibility due to fog",
+70:   "When the vehicle is being towed away due to a parking violation",
+71:   "While driving inside a tunnel"
+75:  "n": 445,
+83:  "a": "4",
+84:  "tr_b": "Which of the following is the MOST appropriate action in case of vehicle failure on an expressway?",
+85:  "tr_c": [
+86:   "Turn on the emergency flashing light immediately, stop the car on the road, and notify the insurance company.",
+87:   "Open the trunk, check the broken part quickly, and call a rescue vehicle.",
+88:   "If it is not possible to move, install a safety tripod 500 m in front of the broken vehicle.",
+89:   "If the vehicle can move, turn on the hazard lights, pull over to the shoulder, and move to a safe area."
+93:  "n": 446,
+101:  "a": "3",
+102:  "tr_b": "Which of the following is NOT true about preventing a tire puncture and measures taken while driving?",
+103:  "tr_c": [
+104:   "You must regularly check the tires for nails.",
+105:   "You must regularly check tire pressures and tread depths.",
+106:   "If the steering wheel pulls to one side, it is likely that a rear tire is punctured.",
+107:   "While keeping the steering wheel straight ahead and in the driving gear state, use the engine brake to induce deceleration."
+111:  "n": 447,
+119:  "a": "4",
+120:  "tr_b": "If your vehicle breaks down on an expressway at night, in addition to a safety tripod sign, etc. you must install road flare signals to provide visibility for ( ) and alert other motorists that your car has broken down. Choose the correct one to fill in the brackets.",
+121:  "tr_c": [
+122:   "200 m in every direction.",
+123:   "300 m in every direction.",
+124:   "400 m in every direction.",
+125:   "500 m in every direction."
+129:  "n": 448,
+137:  "a": "2",
+138:  "tr_b": "Which of the following is the correct method of handling a tire that explodes while driving?",
+139:  "tr_c": [
+140:   "If the vehicle is pulled to one side suddenly, press the brakes to prevent an accident.",
+141:   "Firmly grasp the steering wheel, drive straight, and avoid sudden braking. Use the engine brake to stop in a safe  location.",
+142:   "Turn the steering wheel in the direction the vehicle is pulled in.",
+143:   "Use the parking brake to stop the vehicle as the brake pedal won't work."
+147:  "n": 449,
+155:  "a": "3",
+156:  "tr_b": "In the event of a traffic accident on an expressway, what is the most appropriate measure for preventing  secondary accidents?",
+157:  "tr_c": [
+158:   "First and foremost take photos of the accident for insurance purposes.",
+159:   "Explicitly let the other driver know that he/she is at fault and claim for insurance accordingly.",
+160:   "The vehicle must be stopped at the rightmost edge of the road, and a warning sign must be placed in accordance with the regulations prescribed by the Ministry of the Interior and Safety.",
+161:   "Turn on the hazard lights and call the relevant authority inside your vehicle."
+165:  "n": 450,
+173:  "a": "4",
+174:  "tr_b": "Which of the following is NOT a correct statement regarding the expressway construction section?",
+175:  "tr_c": [
+176:   "In the case of construction that blocks a lane, caution is required due to expected congestion.",
+177:   "In the case of a truck, drowsiness and neglecting to look forward can lead to a major accident.",
+178:   "Various types of construction work including moving construction and stationary construction can be performed.",
+183:  "n": 451,
+191:  "a": "2, 4",
+192:  "tr_b": "Which of the following are the most appropriate actions to take if the Hi-Pass device malfunctions and fails to  read? (Select TWO)",
+193:  "tr_c": [
+194:   "Turn on the emergency flashers, temporarily stop your vehicle, and have a toll ticket issued in a non-automated toll lane.",
+195:   "Upon reaching the toll gate of your destination, explain where you entered the expressway to the toll collector and pay  the toll.",
+196:   "Use the Hi-Pass lane and go through the toll gate of your destination, and the toll will be automatically collected.",
+197:   "Detach the card from your Hi-Pass device at the toll gate of your destination and hand it over to the toll collector to  pay the toll."
+201:  "n": 452,
+209:  "a": "3",
+210:  "tr_b": "Which of the following is the safest action in the event of a fire in a tunnel?",
+211:  "tr_c": [
+212:   "Lock the car's doors to prevent theft and evacuate the tunnel.",
+213:   "Stay in the car as the tunnel will be filled with smoke from the fire.",
+214:   "Switch off the engine, leave the key in the ignition to allow for the car to be moved if necessary, and quickly evacuate  to safety.",
+215:   "Make a U-turn and drive away from the exit."
+219:  "n": 453,
+227:  "a": "1",
+228:  "tr_b": "From a safety perspective, which of the following is the most inappropriate way of driving when passing  through a tunnel?",
+229:  "tr_c": [
+230:   "Before entering the tunnel, remove your sunglasses to allow your eyes to adapt to the light, and turn on your  headlights as you would at nighttime.",
+231:   "If the lanes inside the tunnel are marked with solid white lines, do not change lanes while in the tunnel.",
+232:   "Keep a safe following distance from the car ahead, and be ready for sudden stops.",
+233:   "Before entering the tunnel, check the road information at the entrance to the tunnel."
+237:  "n": 454,
+245:  "a": "2",
+246:  "tr_b": "Which of the following statements regarding braking in an emergency situation that occurs while driving is  correct?",
+247:  "tr_c": [
+248:   "If aquaplaning occurs, the braking force of the brakes gets stronger.",
+249:   "Utilizing an impact-absorbing barrier in an emergency situation is one way of preventing a fatal accident.",
+250:   "If the road surface is wet, the vehicle always slides straight forward upon pressing the brake suddenly.",
+251:   "ABS-equipped vehicles have longer braking distances than non-ABS vehicles."
+255:  "n": 455,
+263:  "a": "2, 3",
+264:  "tr_b": "Which of the following are the TWO correct safety measures to take during an earthquake?",
+265:  "tr_c": [
+266:   "Drive as quickly as possible out of the area affected by the earthquake.",
+267:   "Maintain a safe distance from other vehicles and pull over to the right-hand side of the road.",
+268:   "Turn off the engine if you need to get out of the car to take cover.",
+269:   "Ignore the earthquake and drive on."
+273:  "n": 456,
+281:  "a": "2, 4",
+282:  "tr_b": "You are driving on an expressway and there is ongoing construction ahead. Which of the following are NOT true?  (Select TWO)",
+283:  "tr_c": [
+284:   "Stay cautious when driving toward and by a construction site.",
+285:   "Drive faster than what is indicated on the construction speed limit sign.",
+286:   "Try to refrain from excessive overtaking or cutting in front of cars.",
+287:   "Drive at the same speed when approaching the construction site so as not to cause unnecessary traffic disruptions.",
+288:   "In areas where the speed limit changes, turn on the hazard lights to alert the other vehicles."
+292:  "n": 457,
+300:  "a": "1, 2",
+301:  "tr_b": "Which of the following are the TWO correct measures to take when a fire starts inside a tunnel that you are  driving in?",
+302:  "tr_c": [
+303:   "Turn off the engine if you are getting out of the car to evacuate.",
+304:   "Stand with your back to the wind when using a fire extinguisher.",
+305:   "If you are unable to drive out of the tunnel, stop the car as close to the centerline as possible.",
+306:   "Take the key out of the ignition if you are getting out of the car to evacuate."
+310:  "n": 458,
+318:  "a": "1, 4",
+319:  "tr_b": "Which of the following are the TWO correct statements regarding a vehicle skid?",
+320:  "tr_c": [
+321:   "Skidding mostly occurs when the brakes are applied suddenly while driving at high speed.",
+322:   "Skidding mostly occurs when driving at low speed in the rain.",
+323:   "Skid marks left on a road surface do not provide any clues as to why an accident occurred.",
+324:   "Sudden steering can also cause skidding."
+328:  "n": 459,
+336:  "a": "2, 4",
+337:  "tr_b": "Which of the following are the TWO situations wherein a vehicle is most likely to deviate from the road?",
+338:  "tr_c": [
+339:   "When driving on an uphill road",
+340:   "When the driver abruptly turns the steering wheel on a curved road",
+341:   "When driving on a downhill road",
+342:   "When the road surface is slippery"
+346:  "n": 460,
+354:  "a": "2, 3",
+355:  "tr_b": "If the hood of the car starts generating smoke and catches fire on an expressway, which of the following are the  TWO most appropriate measures to take?",
+356:  "tr_c": [
+357:   "Stop immediately when you notice that there is a problem.",
+358:   "Move to the roadside, turn off the engine, and evacuate the vehicle.",
+359:   "If it is early enough to extinguish the fire, use the fire extinguisher fitted in the vehicle.",
+360:   "If you fail to extinguish the fire, call 119 and wait right next to the vehicle."
+364:  "n": 461,
+372:  "a": "2",
+373:  "tr_b": "At which point do lanes start decreasing in the zone requiring lane changes for safe passage due to road  construction?",
+374:  "tr_c": [
+375:   "Starting point of a warning zone",
+376:   "Starting point of a transition zone",
+377:   "Starting point of a work zone",
+378:   "Starting point of a termination zone"
+382:  "n": 462,
+390:  "a": "4",
+391:  "tr_b": "Which of the following is the MOST correct description regarding driving at night?",
+392:  "tr_c": [
+393:   "It is possible to secure a wide view at night if you have the front window tinted.",
+394:   "On a clear day, the braking distance is longer during daytime than at night.",
+395:   "It is better to secure a front view when driving at night with the fog light on rather than headlights.",
+396:   "If you look at the light from the opposite vehicle directly, it may be hard to secure a front view due to the glare."
+400:  "n": 463,
+408:  "a": "2",
+409:  "tr_b": "Which of the following is a correct statement regarding the glare effect (cases wherein you are unable to see  ahead due to the glare from the vehicle?셲 headlights) during nighttime?",
+410:  "tr_c": [
+411:   "The glare effect will disappear if you turn off your headlights immediately when it occurs.",
+412:   "The glare effect frequently occurs when two vehicles facing each other both have their high-beam headlights on.",
+413:   "The glare effect tends to occur when driving through busy downtown streets at nighttime.",
+414:   "The glare effect refers to the condition of momentary invisibility caused by bright lights upon entering a tunnel at  nighttime."
+418:  "n": 464,
+426:  "a": "4",
+427:  "tr_b": "Which of the following statements regarding a driver?셲 \"Hypovigilance in driving\" at nighttime is correct?",
+428:  "tr_c": [
+429:   "Cognitive ability is better than usual.",
+430:   "Eye movements become more active.",
+431:   "It often occurs when driving on congested roads in a city.",
+432:   "The eyes become used to a monotonous view and experience a type of sensory paralysis."
+436:  "n": 465,
+444:  "a": "4",
+445:  "tr_b": "Which of the following is NOT a measure to be taken by a driver when the sun begins to set and it becomes  dark?",
+446:  "tr_c": [
+447:   "Turn on the sidelights and taillights.",
+448:   "Drive slower than you would during the day.",
+449:   "The eyes need some time to adjust to the darkness after the sun sets.",
+450:   "Driving is easier compared to daytime driving because of greater visibility."
+454:  "n": 466,
+461:  "a": "2",
+462:  "tr_b": "Which of the following statements regarding the EV charging cable coupler is INCORRECT?",
+463:  "tr_c": [
+464:   "It should have separate polarity and grounding electrode as it has a structure that cannot be replaced with other wiring  equipment.",
+465:   "The grounding electrode should have a structure that is connected last when starting and separated first upon shutoff.",
+466:   "It should have a mechanical device for locking or an attachment/detachment to prevent unintended load shedding.",
+467:   "It should have an interlock function that suspends the power supply of charging cable when the connector of an EV is separated from the connection port."
+471:  "n": 467,
+479:  "a": "2",
+480:  "tr_b": "Which of the following is the best method of preventing vehicle fires?",
+481:  "tr_c": [
+482:   "Alter the wiring arrangement to install an amplifier in the vehicle.",
+483:   "Avoid generating static electricity while filling up in wintertime.",
+484:   "LPG vehicles should carry a disposable butane gas tank in preparation for an emergency.",
+485:   "A lighter can be stored inside the vehicle in summer."
+489:  "n": 468,
+497:  "a": "1",
+498:  "tr_b": "Which of the following is the best method of preventing the risk of collision caused by the sudden braking of a  vehicle ahead?",
+499:  "tr_c": [
+500:   "Step on the brake pedal to slow down.",
+501:   "Turn the steering wheel sharply to the left and drive over the centerline to avoid hitting the vehicle ahead.",
+502:   "Close your eyes to minimize the impact.",
+503:   "Turn on both the wipers and the high-beam headlights."
+507:  "n": 469,
+515:  "a": "2, 4",
+516:  "tr_b": "Which of the following are TWO phenomena caused by the tires of a vehicle driving at high speed?",
+517:  "tr_c": [
+518:   "Vapor lock",
+519:   "Standing wave",
+520:   "Fading",
+521:   "Aquaplaning"
+525:  "n": 470,
+533:  "a": "2",
+534:  "tr_b": "Which of the following statements regarding wearing a seat belt is correct?",
+535:  "tr_c": [
+536:   "Fix the seat belt above the waist to protect against the shock from a traffic accident.",
+537:   "Firefighters who are dispatched to suppress fire need not wear a seat belt.",
+538:   "It is safest for children to take the front seat and wear a seat belt.",
+539:   "If a driver does not ensure that children under the age of 13 wear a seat belt, an administrative fine of KRW 30,000 is  imposed."
+543:  "n": 471,
+551:  "a": "3",
+552:  "tr_b": "Which of the following should you adjust before you start driving in order to minimize injuries to the head and  neck?",
+553:  "tr_c": [
+554:   "Distance of the seat from the pedals",
+555:   "Angle of the backrest",
+556:   "Height of the headrest",
+557:   "Seat height"
+561:  "n": 472,
+569:  "a": "2",
+570:  "tr_b": "Which of the following statements regarding safe driving in a tunnel is correct?",
+571:  "tr_c": [
+572:   "Turn on the left-turn signal and use the left lane for overtaking.",
+573:   "The sense of distance from the front vehicle is reduced in a tunnel.",
+574:   "When entering the tunnel, be careful of the light adaptation.",
+575:   "At the exit of a tunnel, dark adaptation occurs."
+579:  "n": 473,
+587:  "a": "3",
+588:  "tr_b": "Which of the following is true about using turn signals?",
+589:  "tr_c": [
+590:   "It is not a violation to change lanes without signaling if it does not obstruct the other vehicles.",
+591:   "You must keep the turn signal on for a while after changing lanes.",
+592:   "The traffic penalty for failure to signal lane change for passenger vehicles and buses is a fine of KRW 30,000.",
+593:   "When changing lanes on an expressway, turn on the turn signal from 30 m before and keep it on until you have completed  changing lanes."
+597:  "n": 474,
+605:  "a": "4",
+606:  "tr_b": "In which of the following situations is a driver allowed to overtake a vehicle?",
+607:  "tr_c": [
+608:   "When the vehicle ahead is overtaking another vehicle",
+609:   "When the vehicle ahead stops or it is driving slowly to prevent a dangerous situation",
+610:   "When the vehicle ahead is driving next to another vehicle in the left lane",
+611:   "When the vehicle ahead is driving slowly to secure a safe distance from another vehicle"
+615:  "n": 475,
+623:  "a": "4",
+624:  "tr_b": "Which of the following statements regarding the speed limit of a vehicle trying to overtake another vehicle is  correct?",
+625:  "tr_c": [
+626:   "There is no speed limit applied to a vehicle overtaking another one.",
+627:   "A vehicle overtaking another vehicle can exceed the legal speed limit of the road by 50%.",
+628:   "Vehicles are allowed to overtake other vehicles regardless of the speed limit, depending on the driver's driving skill.",
+629:   "Overtaking other vehicles is allowed only when performed within the speed limit of the road."
+633:  "n": 476,
+641:  "a": "4",
+642:  "tr_b": "Idling or parking on an expressway is prohibited as it may cause rear-end collisions. Which of the following is  NOT true?",
+643:  "tr_c": [
+644:   "A fire truck can idle or park on an expressway to perform emergency operations.",
+645:   "You can temporarily idle or park at the instruction of a police officer or to prevent a hazardous situation.",
+646:   "Motor vehicles can idle on the toll road to pay their tolls.",
+647:   "Only emergency vehicles such as police cars and fire trucks can idle or park at the emergency parking area inside a tunnel."
+651:  "n": 477,
+659:  "a": "2, 4",
+660:  "tr_b": "When you sense danger while driving and step on the brake pedal, which TWO will lead to the longest stopping distance? (i.e., the distance from the point where you press the brake pedal to the point where the vehicle actually stops)",
+661:  "tr_c": [
+662:   "Relatively light vehicle weight",
+663:   "Relatively higher speed",
+664:   "Right after installing new tires",
+665:   "Fatigue or drunk driving"
+669:  "n": 478,
+677:  "a": "1, 3",
+678:  "tr_b": "Which of the following are the TWO correct statements regarding the number of passengers in a vehicle?",
+679:  "tr_c": [
+680:   "On expressways, it is not allowed to carry more people than the defined number of passengers for the vehicle.",
+681:   "The number of passengers specified on the vehicle registration certificate is the number of passengers excluding the  driver.",
+682:   "When permission is obtained from the head of the police station having jurisdiction over the place of departure, the vehicle may operate in excess of the designated number of passengers.",
+683:   "If the number of passengers is exceeded, permission must be obtained from the head of the police station having  jurisdiction over the destination."
+687:  "n": 479,
+695:  "a": "1, 3",
+696:  "tr_b": "When a vehicle driving in front brakes suddenly due to a traffic accident ahead, which of the following are the  TWO safest measures to avoid colliding with the vehicle?",
+697:  "tr_c": [
+698:   "Maintain a longer distance from the vehicle ahead than the stopping distance.",
+699:   "Turn on the emergency flashers and follow an emergency vehicle.",
+700:   "Reduce speed and maintain sufficient distance from the vehicle ahead to prevent a collision.",
+701:   "When there is danger, use both the foot brake and parking brake to shorten the braking distance."
+705:  "n": 480,
+713:  "a": "2, 4",
+714:  "tr_b": "Which of the following are true about wearing seat belts? (Select TWO)",
+715:  "tr_c": [
+716:   "The penalty for a driver failing to wear a seat belt is an administrative fine of KRW 30,000.",
+717:   "Whiplash injuries are more common with two-point seat belts.",
+718:   "The penalty for a child under the age of 13 not wearing a seat belt is a traffic penalty of KRW 60,000.",
+719:   "There are two, three, and four-point seat belts."
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg --files | rg '("'^|['"\\\\/])(211|questions|choices|ko).*\\.(json|csv)"'$|translations'"'" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+ succeeded in 616ms:
+translations\_verify_findings.md
+translations\_build_p3c.py
+translations\_build_p3b.py
+translations\_build_p3.py
+translations\validation_report.json
+translations\risky_questions.json
+translations\manual_patches.json
+translations\expl_vn_p5.json
+translations\expl_vn_p4.json
+translations\expl_vn_p3.json
+translations\expl_vn_p2.json
+translations\expl_vn_p1.json
+translations\expl_vn.json
+translations\expl_en_test.json
+translations\expl_en_p5.json
+translations\expl_en_p4.json
+translations\expl_en_p3.json
+translations\expl_en_p2.json
+translations\expl_en_p1.json
+translations\expl_en.json
+translations\expl_cn_p5.json
+translations\expl_cn_p4.json
+translations\expl_cn_p3.json
+translations\expl_cn_p2.json
+translations\expl_cn_p1.json
+translations\expl_cn.json
+scripts\inject_translations.py
+scripts\validate_translations.py
+translations\audit\queue\204_choices_vn.json
+translations\audit\queue\204_choices_en.json
+translations\audit\queue\204_choices_cn.json
+translations\audit\queue\203_choices_vn.json
+translations\audit\queue\203_choices_en.json
+translations\audit\queue\203_choices_cn.json
+translations\audit\queue\202_choices_vn.json
+translations\audit\queue\202_choices_en.json
+translations\audit\queue\202_choices_cn.json
+translations\audit\queue\201_choices_vn.json
+translations\audit\queue\201_choices_en.json
+translations\audit\queue\201_choices_cn.json
+translations\audit\queue\200_choices_vn.json
+translations\audit\queue\200_choices_en.json
+translations\audit\queue\200_choices_cn.json
+translations\audit\queue\105_flags_en.json
+translations\audit\queue\104_flags_en.json
+translations\audit\queue\103_flags_vn.json
+translations\audit\queue\103_flags_en.json
+translations\audit\queue\103_flags_cn.json
+translations\audit\queue\102_flags_vn.json
+translations\audit\queue\102_flags_en.json
+translations\audit\queue\102_flags_cn.json
+translations\audit\queue\101_flags_vn.json
+translations\audit\queue\101_flags_en.json
+translations\audit\queue\101_flags_cn.json
+translations\audit\queue\100_flags_vn.json
+translations\audit\queue\100_flags_en.json
+translations\audit\queue\100_flags_cn.json
+translations\audit\apply_report.json
+translations\audit\findings.json
+translations\audit\queue\210_choices_vn.json
+translations\audit\queue\210_choices_en.json
+translations\audit\queue\210_choices_cn.json
+translations\audit\queue\209_choices_vn.json
+translations\audit\queue\209_choices_en.json
+translations\audit\queue\209_choices_cn.json
+translations\audit\queue\208_choices_vn.json
+translations\audit\queue\208_choices_en.json
+translations\audit\queue\208_choices_cn.json
+translations\audit\queue\207_choices_vn.json
+translations\audit\queue\207_choices_en.json
+translations\audit\queue\207_choices_cn.json
+translations\audit\queue\205_choices_vn.json
+translations\audit\queue\206_choices_vn.json
+translations\audit\queue\205_choices_en.json
+translations\audit\queue\221_choices_cn.json
+translations\audit\queue\205_choices_cn.json
+translations\audit\queue\206_choices_en.json
+translations\audit\queue\220_choices_vn.json
+translations\audit\queue\220_choices_en.json
+translations\audit\queue\206_choices_cn.json
+translations\audit\queue\211_choices_en.json
+translations\audit\queue\220_choices_cn.json
+translations\audit\queue\224_choices_en.json
+translations\audit\queue\211_choices_cn.json
+translations\audit\queue\224_choices_cn.json
+translations\audit\queue\219_choices_vn.json
+translations\audit\queue\217_choices_cn.json
+translations\audit\queue\223_choices_vn.json
+translations\audit\queue\219_choices_en.json
+translations\audit\queue\216_choices_vn.json
+translations\audit\queue\216_choices_en.json
+translations\audit\queue\222_choices_en.json
+translations\audit\queue\216_choices_cn.json
+translations\audit\queue\215_choices_en.json
+translations\audit\queue\215_choices_vn.json
+translations\audit\queue\223_choices_en.json
+translations\audit\queue\215_choices_cn.json
+translations\audit\queue\223_choices_cn.json
+translations\audit\queue\222_choices_cn.json
+translations\audit\queue\214_choices_vn.json
+translations\audit\queue\222_choices_vn.json
+translations\audit\queue\212_choices_vn.json
+translations\audit\queue\214_choices_cn.json
+translations\audit\queue\212_choices_en.json
+translations\audit\queue\214_choices_en.json
+translations\audit\queue\221_choices_vn.json
+translations\audit\queue\212_choices_cn.json
+translations\audit\queue\301_expl_vn.json
+translations\audit\queue\213_choices_vn.json
+translations\audit\queue\211_choices_vn.json
+translations\audit\queue\221_choices_en.json
+translations\audit\queue\213_choices_en.json
+translations\audit\queue\301_expl_en.json
+translations\audit\queue\213_choices_cn.json
+translations\audit\queue\301_expl_cn.json
+translations\audit\queue\300_expl_vn.json
+translations\audit\queue\302_expl_en.json
+translations\audit\queue\302_expl_vn.json
+translations\audit\queue\302_expl_cn.json
+translations\audit\queue\303_expl_cn.json
+translations\audit\queue\218_choices_en.json
+translations\audit\queue\217_choices_en.json
+translations\audit\queue\217_choices_vn.json
+translations\audit\queue\218_choices_vn.json
+translations\audit\queue\303_expl_en.json
+translations\audit\queue\224_choices_vn.json
+translations\audit\queue\300_expl_en.json
+translations\audit\queue\300_expl_cn.json
+translations\audit\queue\219_choices_cn.json
+translations\audit\queue\218_choices_cn.json
+translations\audit\queue\303_expl_vn.json
+translations\audit\queue\304_expl_cn.json
+translations\audit\queue\349_expl_vn.json
+translations\audit\queue\349_expl_en.json
+translations\audit\queue\349_expl_cn.json
+translations\audit\queue\348_expl_vn.json
+translations\audit\queue\348_expl_en.json
+translations\audit\queue\348_expl_cn.json
+translations\audit\queue\347_expl_vn.json
+translations\audit\queue\347_expl_en.json
+translations\audit\queue\347_expl_cn.json
+translations\audit\queue\346_expl_vn.json
+translations\audit\queue\346_expl_en.json
+translations\audit\queue\346_expl_cn.json
+translations\audit\queue\345_expl_vn.json
+translations\audit\queue\345_expl_en.json
+translations\audit\queue\345_expl_cn.json
+translations\audit\queue\344_expl_vn.json
+translations\audit\queue\344_expl_en.json
+translations\audit\queue\344_expl_cn.json
+translations\audit\queue\343_expl_vn.json
+translations\audit\queue\343_expl_en.json
+translations\audit\queue\343_expl_cn.json
+translations\audit\queue\342_expl_vn.json
+translations\audit\queue\342_expl_en.json
+translations\audit\queue\342_expl_cn.json
+translations\audit\queue\341_expl_vn.json
+translations\audit\queue\341_expl_en.json
+translations\audit\queue\341_expl_cn.json
+translations\audit\queue\340_expl_vn.json
+translations\audit\queue\340_expl_en.json
+translations\audit\queue\340_expl_cn.json
+translations\audit\queue\339_expl_vn.json
+translations\audit\queue\339_expl_en.json
+translations\audit\queue\339_expl_cn.json
+translations\audit\queue\338_expl_vn.json
+translations\audit\queue\338_expl_en.json
+translations\audit\queue\338_expl_cn.json
+translations\audit\queue\337_expl_vn.json
+translations\audit\queue\337_expl_en.json
+translations\audit\queue\337_expl_cn.json
+translations\audit\queue\336_expl_vn.json
+translations\audit\queue\336_expl_en.json
+translations\audit\queue\336_expl_cn.json
+translations\audit\queue\335_expl_vn.json
+translations\audit\queue\335_expl_en.json
+translations\audit\queue\335_expl_cn.json
+translations\audit\queue\334_expl_vn.json
+translations\audit\queue\334_expl_en.json
+translations\audit\queue\334_expl_cn.json
+translations\audit\queue\333_expl_vn.json
+translations\audit\queue\333_expl_en.json
+translations\audit\queue\333_expl_cn.json
+translations\audit\queue\332_expl_vn.json
+translations\audit\queue\332_expl_en.json
+translations\audit\queue\332_expl_cn.json
+translations\audit\queue\331_expl_vn.json
+translations\audit\queue\331_expl_en.json
+translations\audit\queue\331_expl_cn.json
+translations\audit\queue\330_expl_vn.json
+translations\audit\queue\330_expl_en.json
+translations\audit\queue\330_expl_cn.json
+translations\audit\queue\329_expl_vn.json
+translations\audit\queue\329_expl_en.json
+translations\audit\queue\329_expl_cn.json
+translations\audit\queue\328_expl_vn.json
+translations\audit\queue\328_expl_en.json
+translations\audit\queue\328_expl_cn.json
+translations\audit\queue\327_expl_vn.json
+translations\audit\queue\327_expl_en.json
+translations\audit\queue\327_expl_cn.json
+translations\audit\queue\326_expl_vn.json
+translations\audit\queue\326_expl_en.json
+translations\audit\queue\326_expl_cn.json
+translations\audit\queue\325_expl_vn.json
+translations\audit\out\211_choices_en.txt
+translations\audit\out\211_choices_cn.txt
+translations\audit\out\210_choices_vn.txt
+translations\audit\out\210_choices_en.txt
+translations\audit\out\210_choices_cn.txt
+translations\audit\out\209_choices_vn.txt
+translations\audit\out\209_choices_en.txt
+translations\audit\out\209_choices_cn.txt
+translations\audit\out\208_choices_vn.txt
+translations\audit\out\208_choices_en.txt
+translations\audit\out\208_choices_cn.txt
+translations\audit\out\207_choices_vn.txt
+translations\audit\out\207_choices_en.txt
+translations\audit\out\207_choices_cn.txt
+translations\audit\out\206_choices_vn.txt
+translations\audit\out\206_choices_en.txt
+translations\audit\out\206_choices_cn.txt
+translations\audit\out\205_choices_vn.txt
+translations\audit\out\205_choices_en.txt
+translations\audit\out\205_choices_cn.txt
+translations\audit\out\204_choices_vn.txt
+translations\audit\out\204_choices_en.txt
+translations\audit\out\204_choices_cn.txt
+translations\audit\out\203_choices_vn.txt
+translations\audit\out\203_choices_en.txt
+translations\audit\out\203_choices_cn.txt
+translations\audit\out\202_choices_vn.txt
+translations\audit\out\202_choices_en.txt
+translations\audit\out\202_choices_cn.txt
+translations\audit\out\201_choices_vn.txt
+translations\audit\out\201_choices_en.txt
+translations\audit\out\201_choices_cn.txt
+translations\audit\out\200_choices_vn.txt
+translations\audit\out\200_choices_en.txt
+translations\audit\out\200_choices_cn.txt
+translations\audit\out\105_flags_en.txt
+translations\audit\out\104_flags_en.txt
+translations\audit\out\103_flags_vn.txt
+translations\audit\out\103_flags_en.txt
+translations\audit\out\103_flags_cn.txt
+translations\audit\out\102_flags_vn.txt
+translations\audit\out\102_flags_en.txt
+translations\audit\out\102_flags_cn.txt
+translations\audit\out\101_flags_vn.txt
+translations\audit\out\101_flags_en.txt
+translations\audit\out\101_flags_cn.txt
+translations\audit\out\100_flags_vn.txt
+translations\audit\out\100_flags_en.txt
+translations\audit\out\100_flags_cn.txt
+translations\audit\queue\325_expl_en.json
+translations\audit\queue\325_expl_cn.json
+translations\audit\queue\324_expl_vn.json
+translations\audit\queue\324_expl_en.json
+translations\audit\queue\324_expl_cn.json
+translations\audit\queue\323_expl_vn.json
+translations\audit\queue\323_expl_en.json
+translations\audit\queue\323_expl_cn.json
+translations\audit\queue\322_expl_vn.json
+translations\audit\queue\322_expl_en.json
+translations\audit\queue\322_expl_cn.json
+translations\audit\queue\321_expl_vn.json
+translations\audit\queue\321_expl_en.json
+translations\audit\queue\321_expl_cn.json
+translations\audit\queue\320_expl_vn.json
+translations\audit\queue\320_expl_en.json
+translations\audit\queue\320_expl_cn.json
+translations\audit\queue\313_expl_cn.json
+translations\audit\queue\312_expl_vn.json
+translations\audit\queue\312_expl_en.json
+translations\audit\queue\312_expl_cn.json
+translations\audit\queue\311_expl_vn.json
+translations\audit\queue\311_expl_en.json
+translations\audit\queue\311_expl_cn.json
+translations\audit\queue\310_expl_vn.json
+translations\audit\queue\310_expl_en.json
+translations\audit\queue\310_expl_cn.json
+translations\audit\queue\309_expl_vn.json
+translations\audit\queue\309_expl_en.json
+translations\audit\queue\309_expl_cn.json
+translations\audit\queue\308_expl_vn.json
+translations\audit\queue\308_expl_en.json
+translations\audit\queue\308_expl_cn.json
+translations\audit\queue\307_expl_vn.json
+translations\audit\queue\307_expl_en.json
+translations\audit\queue\307_expl_cn.json
+translations\audit\queue\306_expl_vn.json
+translations\audit\queue\306_expl_en.json
+translations\audit\queue\306_expl_cn.json
+translations\audit\queue\305_expl_vn.json
+translations\audit\queue\305_expl_en.json
+translations\audit\queue\305_expl_cn.json
+translations\audit\queue\304_expl_vn.json
+translations\audit\queue\304_expl_en.json
+translations\audit\queue\316_expl_en.json
+translations\audit\queue\316_expl_cn.json
+translations\audit\queue\315_expl_vn.json
+translations\audit\queue\315_expl_en.json
+translations\audit\queue\315_expl_cn.json
+translations\audit\queue\314_expl_vn.json
+translations\audit\queue\314_expl_en.json
+translations\audit\queue\314_expl_cn.json
+translations\audit\queue\313_expl_vn.json
+translations\audit\queue\313_expl_en.json
+translations\audit\queue\318_expl_cn.json
+translations\audit\queue\317_expl_vn.json
+translations\audit\queue\317_expl_en.json
+translations\audit\queue\317_expl_cn.json
+translations\audit\queue\316_expl_vn.json
+translations\audit\queue\318_expl_vn.json
+translations\audit\queue\318_expl_en.json
+translations\audit\queue\319_expl_cn.json
+translations\audit\queue\319_expl_en.json
+translations\audit\queue\319_expl_vn.json
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/out/211_choices_en.txt'" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Tail 80 -LiteralPath 'translations/audit/out/211_choices_en.txt'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 543ms:
+translations\audit\out\102_flags_vn.txt
+translations\audit\out\102_flags_en.txt
+translations\audit\out\102_flags_cn.txt
+translations\audit\out\101_flags_vn.txt
+translations\audit\out\101_flags_en.txt
+translations\audit\out\101_flags_cn.txt
+translations\audit\out\100_flags_vn.txt
+translations\audit\out\100_flags_en.txt
+translations\audit\out\100_flags_cn.txt
+translations\audit\queue\325_expl_en.json
+translations\audit\queue\325_expl_cn.json
+translations\audit\queue\324_expl_vn.json
+translations\audit\queue\324_expl_en.json
+translations\audit\queue\324_expl_cn.json
+translations\audit\queue\323_expl_vn.json
+translations\audit\queue\323_expl_en.json
+translations\audit\queue\323_expl_cn.json
+translations\audit\queue\322_expl_vn.json
+translations\audit\queue\322_expl_en.json
+translations\audit\queue\322_expl_cn.json
+translations\audit\queue\321_expl_vn.json
+translations\audit\queue\321_expl_en.json
+translations\audit\queue\321_expl_cn.json
+translations\audit\queue\320_expl_vn.json
+translations\audit\queue\320_expl_en.json
+translations\audit\queue\320_expl_cn.json
+translations\audit\queue\313_expl_cn.json
+translations\audit\queue\312_expl_vn.json
+translations\audit\queue\312_expl_en.json
+translations\audit\queue\312_expl_cn.json
+translations\audit\queue\311_expl_vn.json
+translations\audit\queue\311_expl_en.json
+translations\audit\queue\311_expl_cn.json
+translations\audit\queue\310_expl_vn.json
+translations\audit\queue\310_expl_en.json
+translations\audit\queue\310_expl_cn.json
+translations\audit\queue\309_expl_vn.json
+translations\audit\queue\309_expl_en.json
+translations\audit\queue\309_expl_cn.json
+translations\audit\queue\308_expl_vn.json
+translations\audit\queue\308_expl_en.json
+translations\audit\queue\308_expl_cn.json
+translations\audit\queue\307_expl_vn.json
+translations\audit\queue\307_expl_en.json
+translations\audit\queue\307_expl_cn.json
+translations\audit\queue\306_expl_vn.json
+translations\audit\queue\306_expl_en.json
+translations\audit\queue\306_expl_cn.json
+translations\audit\queue\305_expl_vn.json
+translations\audit\queue\305_expl_en.json
+translations\audit\queue\305_expl_cn.json
+translations\audit\queue\304_expl_vn.json
+translations\audit\queue\304_expl_en.json
+translations\audit\queue\316_expl_en.json
+translations\audit\queue\316_expl_cn.json
+translations\audit\queue\315_expl_vn.json
+translations\audit\queue\315_expl_en.json
+translations\audit\queue\315_expl_cn.json
+translations\audit\queue\314_expl_vn.json
+translations\audit\queue\314_expl_en.json
+translations\audit\queue\314_expl_cn.json
+translations\audit\queue\313_expl_vn.json
+translations\audit\queue\313_expl_en.json
+translations\audit\queue\318_expl_cn.json
+translations\audit\queue\317_expl_vn.json
+translations\audit\queue\317_expl_en.json
+translations\audit\queue\317_expl_cn.json
+translations\audit\queue\316_expl_vn.json
+translations\audit\queue\318_expl_vn.json
+translations\audit\queue\318_expl_en.json
+translations\audit\queue\319_expl_cn.json
+translations\audit\queue\319_expl_en.json
+translations\audit\queue\319_expl_vn.json
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/out/211_choices_en.txt'" in C:\Users\user\projects\?硫몃럢????녿궢??쀫퓮-AI??쀪숲
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Tail 80 -LiteralPath 'translations/audit/out/211_choices_en.txt'" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n '\"field\": \"c\\[' 'translations/audit/findings.json' | Select-Object -First 5" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:25:06.807731Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.5 seconds
+Output:
+
+ exited 1 in 545ms:
+2026-10-10T13:25:06.919389Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n 'severity|false_positive|suggestion' 'translations/audit/out' | Select-Object -First 10" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:25:11.063395Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+translations/audit/out\100_flags_cn.txt:15:너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/100_flags_cn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+translations/audit/out\100_flags_cn.txt:4754:[{"n":163,"field":"c[1]","severity":"major","issue":"‘안전지대’를 ‘导流线(도류선)’으로 오역해 서로 다른 도로시설을 가리킨다.","suggestion":"道路上设置的安全地带内有行人时，或者在未设置车道的狭窄道路上经过行人旁边时，应当保持安全距离并慢行。"},{"n":163,"field":"c[4]","severity":"critical","issue":"‘일시정지’를 ‘慢行(서행)’으로 번역해 의무 수준과 정답 판단이 바뀐다.","suggestion":"在儿童保护区内未设置信号灯的人行横道前（设有停止线时，指该停止线），不论是否有行人横过，都必须停车。"},{"n":195,"field":"c[3]","severity":"critical","issue":"‘통행을 허용할 수 없다’를 ‘통행을 제한할 수 있다’로 번역해 진술의 의미와 정오가 바뀐다.","suggestion":"警察署长认为特别必要时，不得允许车辆通行。"},{"n":200,"field":"c[4]","severity":"major","issue":"‘횡단보도가 없는 도로’라는 핵심 조건이 번역에서 누락되어 적용 범위가 달라진다.","suggestion":"行人正在横过未设置人行横道的道路时，应当保持安全距离并慢行。"},{"n":239,"field":"c[4]","severity":"major","issue":"‘신호기 없는 교차로’를 ‘신호기가 설치된 교차로’로 반대로 번역했다.","suggestion":"在未设置交通信号灯的交叉路口左转时，如果有行人正在横过道路，应迅速从其前方通过。"},{"n":242,"field":"c[1]","severity":"critical","issue":"‘항상 1차로에 설치’를 ‘대부분 1차로에 설치’로 완화해 선택지의 정오 판단이 달라질 수 있다.","suggestion":"高速公路自动收费车道始终设置在第一车道，因此应提前从普通车道变更至高速公路自动收费车道并安全通过。"},{"n":306,"field":"c[2]","severity":"major","issue":"‘안전지대’를 ‘导流线(도류선)’으로 오역해 보호 대상이 있는 장소를 다른 시설로 바꿨다.","suggestion":"儿童站在安全地带内时，应保持安全距离并慢行。"}]
+translations/audit/out\100_flags_cn.txt:4757:[{"n":163,"field":"c[1]","severity":"major","issue":"‘안전지대’를 ‘导流线(도류선)’으로 오역해 서로 다른 도로시설을 가리킨다.","suggestion":"道路上设置的安全地带内有行人时，或者在未设置车道的狭窄道路上经过行人旁边时，应当保持安全距离并慢行。"},{"n":163,"field":"c[4]","severity":"critical","issue":"‘일시정지’를 ‘慢行(서행)’으로 번역해 의무 수준과 정답 판단이 바뀐다.","suggestion":"在儿童保护区内未设置信号灯的人行横道前（设有停止线时，指该停止线），不论是否有行人横过，都必须停车。"},{"n":195,"field":"c[3]","severity":"critical","issue":"‘통행을 허용할 수 없다’를 ‘통행을 제한할 수 있다’로 번역해 진술의 의미와 정오가 바뀐다.","suggestion":"警察署长认为特别必要时，不得允许车辆通行。"},{"n":200,"field":"c[4]","severity":"major","issue":"‘횡단보도가 없는 도로’라는 핵심 조건이 번역에서 누락되어 적용 범위가 달라진다.","suggestion":"行人正在横过未设置人行横道的道路时，应当保持安全距离并慢行。"},{"n":239,"field":"c[4]","severity":"major","issue":"‘신호기 없는 교차로’를 ‘신호기가 설치된 교차로’로 반대로 번역했다.","suggestion":"在未设置交通信号灯的交叉路口左转时，如果有行人正在横过道路，应迅速从其前方通过。"},{"n":242,"field":"c[1]","severity":"critical","issue":"‘항상 1차로에 설치’를 ‘대부분 1차로에 설치’로 완화해 선택지의 정오 판단이 달라질 수 있다.","suggestion":"高速公路自动收费车道始终设置在第一车道，因此应提前从普通车道变更至高速公路自动收费车道并安全通过。"},{"n":306,"field":"c[2]","severity":"major","issue":"‘안전지대’를 ‘导流线(도류선)’으로 오역해 보호 대상이 있는 장소를 다른 시설로 바꿨다.","suggestion":"儿童站在安全地带内时，应保持安全距离并慢行。"}]
+translations/audit/out\100_flags_vn.txt:14:너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/100_flags_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+translations/audit/out\100_flags_vn.txt:2130:    "severity": "major",
+translations/audit/out\100_flags_vn.txt:2132:    "suggestion": "Khi đi qua giao lộ không có điều khiển giao thông."
+translations/audit/out\100_flags_vn.txt:2137:    "severity": "major",
+translations/audit/out\100_flags_vn.txt:2139:    "suggestion": "Xe ô tô chuyên dụng, phạt tù tối đa 2 năm hoặc phạt tiền hình sự tối đa 5 triệu Won."
+translations/audit/out\100_flags_vn.txt:2144:    "severity": "minor",
+translations/audit/out\100_flags_vn.txt:2146:    "suggestion": "Hai hình phạt dành cho người lái ô tô làm người đi bộ bị thương với chẩn đoán điều trị 2 tuần do hàng hóa rơi từ xe của mình là gì?"
+
+ exited 1 in 551ms:
+translations/audit/out\100_flags_cn.txt:15:너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/100_flags_cn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+translations/audit/out\100_flags_cn.txt:4754:[{"n":163,"field":"c[1]","severity":"major","issue":"‘안전지대’를 ‘导流线(도류선)’으로 오역해 서로 다른 도로시설을 가리킨다.","suggestion":"道路上设置的安全地带内有行人时，或者在未设置车道的狭窄道路上经过行人旁边时，应当保持安全距离并慢行。"},{"n":163,"field":"c[4]","severity":"critical","issue":"‘일시정지’를 ‘慢行(서행)’으로 번역해 의무 수준과 정답 판단이 바뀐다.","suggestion":"在儿童保护区内未设置信号灯的人行横道前（设有停止线时，指该停止线），不论是否有行人横过，都必须停车。"},{"n":195,"field":"c[3]","severity":"critical","issue":"‘통행을 허용할 수 없다’를 ‘통행을 제한할 수 있다’로 번역해 진술의 의미와 정오가 바뀐다.","suggestion":"警察署长认为特别必要时，不得允许车辆通行。"},{"n":200,"field":"c[4]","severity":"major","issue":"‘횡단보도가 없는 도로’라는 핵심 조건이 번역에서 누락되어 적용 범위가 달라진다.","suggestion":"行人正在横过未设置人行横道的道路时，应当保持安全距离并慢行。"},{"n":239,"field":"c[4]","severity":"major","issue":"‘신호기 없는 교차로’를 ‘신호기가 설치된 교차로’로 반대로 번역했다.","suggestion":"在未设置交通信号灯的交叉路口左转时，如果有行人正在横过道路，应迅速从其前方通过。"},{"n":242,"field":"c[1]","severity":"critical","issue":"‘항상 1차로에 설치’를 ‘대부분 1차로에 설치’로 완화해 선택지의 정오 판단이 달라질 수 있다.","suggestion":"高速公路自动收费车道始终设置在第一车道，因此应提前从普通车道变更至高速公路自动收费车道并安全通过。"},{"n":306,"field":"c[2]","severity":"major","issue":"‘안전지대’를 ‘导流线(도류선)’으로 오역해 보호 대상이 있는 장소를 다른 시설로 바꿨다.","suggestion":"儿童站在安全地带内时，应保持安全距离并慢行。"}]
+translations/audit/out\100_flags_cn.txt:4757:[{"n":163,"field":"c[1]","severity":"major","issue":"‘안전지대’를 ‘导流线(도류선)’으로 오역해 서로 다른 도로시설을 가리킨다.","suggestion":"道路上设置的安全地带内有行人时，或者在未设置车道的狭窄道路上经过行人旁边时，应当保持安全距离并慢行。"},{"n":163,"field":"c[4]","severity":"critical","issue":"‘일시정지’를 ‘慢行(서행)’으로 번역해 의무 수준과 정답 판단이 바뀐다.","suggestion":"在儿童保护区内未设置信号灯的人行横道前（设有停止线时，指该停止线），不论是否有行人横过，都必须停车。"},{"n":195,"field":"c[3]","severity":"critical","issue":"‘통행을 허용할 수 없다’를 ‘통행을 제한할 수 있다’로 번역해 진술의 의미와 정오가 바뀐다.","suggestion":"警察署长认为特别必要时，不得允许车辆通行。"},{"n":200,"field":"c[4]","severity":"major","issue":"‘횡단보도가 없는 도로’라는 핵심 조건이 번역에서 누락되어 적용 범위가 달라진다.","suggestion":"行人正在横过未设置人行横道的道路时，应当保持安全距离并慢行。"},{"n":239,"field":"c[4]","severity":"major","issue":"‘신호기 없는 교차로’를 ‘신호기가 설치된 교차로’로 반대로 번역했다.","suggestion":"在未设置交通信号灯的交叉路口左转时，如果有行人正在横过道路，应迅速从其前方通过。"},{"n":242,"field":"c[1]","severity":"critical","issue":"‘항상 1차로에 설치’를 ‘대부분 1차로에 설치’로 완화해 선택지의 정오 판단이 달라질 수 있다.","suggestion":"高速公路自动收费车道始终设置在第一车道，因此应提前从普通车道变更至高速公路自动收费车道并安全通过。"},{"n":306,"field":"c[2]","severity":"major","issue":"‘안전지대’를 ‘导流线(도류선)’으로 오역해 보호 대상이 있는 장소를 다른 시설로 바꿨다.","suggestion":"儿童站在安全地带内时，应保持安全距离并慢行。"}]
+translations/audit/out\100_flags_vn.txt:14:너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/100_flags_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+translations/audit/out\100_flags_vn.txt:2130:    "severity": "major",
+translations/audit/out\100_flags_vn.txt:2132:    "suggestion": "Khi đi qua giao lộ không có điều khiển giao thông."
+translations/audit/out\100_flags_vn.txt:2137:    "severity": "major",
+translations/audit/out\100_flags_vn.txt:2139:    "suggestion": "Xe ô tô chuyên dụng, phạt tù tối đa 2 năm hoặc phạt tiền hình sự tối đa 5 triệu Won."
+translations/audit/out\100_flags_vn.txt:2144:    "severity": "minor",
+translations/audit/out\100_flags_vn.txt:2146:    "suggestion": "Hai hình phạt dành cho người lái ô tô làm người đi bộ bị thương với chẩn đoán điều trị 2 tuần do hàng hóa rơi từ xe của mình là gì?"
+
+2026-10-10T13:25:11.088170Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+codex
+[{"n":443,"field":"c[4]","severity":"critical","issue":"원문의 ‘고장 차량 전방 200m’에서 방향 정보가 누락되어 오답인 선택지가 적절한 조치처럼 보인다.","suggestion":"The safety tripod sign must be installed 200 m in front of the point where the broken-down vehicle is located."},{"n":445,"field":"c[3]","severity":"major","issue":"원문의 ‘고장 차량 뒤쪽 500m’를 ‘차량 앞쪽 500m’로 반대 방향으로 번역했다.","suggestion":"If it is not possible to move the vehicle, install a safety tripod 500 m behind the broken-down vehicle."},{"n":456,"field":"c[5]","severity":"major","issue":"한국어 원문에는 선택지가 4개뿐인데 대응하지 않는 다섯 번째 영어 선택지가 추가되어 문제 구조와 정답 판단을 왜곡한다.","suggestion":""},{"n":477,"field":"b","severity":"critical","issue":"원문은 위험을 인지한 순간부터 완전히 정지할 때까지의 정지거리를 묻지만, 괄호 설명이 브레이크를 밟은 지점부터의 거리로 한정해 피로·음주운전 선택지의 정답 근거를 없앴다.","suggestion":"Which TWO situations can result in the longest stopping distance, measured from the moment the driver perceives danger and applies the brake pedal until the vehicle comes to a complete stop?"}]
+tokens used
+59,857
+[{"n":443,"field":"c[4]","severity":"critical","issue":"원문의 ‘고장 차량 전방 200m’에서 방향 정보가 누락되어 오답인 선택지가 적절한 조치처럼 보인다.","suggestion":"The safety tripod sign must be installed 200 m in front of the point where the broken-down vehicle is located."},{"n":445,"field":"c[3]","severity":"major","issue":"원문의 ‘고장 차량 뒤쪽 500m’를 ‘차량 앞쪽 500m’로 반대 방향으로 번역했다.","suggestion":"If it is not possible to move the vehicle, install a safety tripod 500 m behind the broken-down vehicle."},{"n":456,"field":"c[5]","severity":"major","issue":"한국어 원문에는 선택지가 4개뿐인데 대응하지 않는 다섯 번째 영어 선택지가 추가되어 문제 구조와 정답 판단을 왜곡한다.","suggestion":""},{"n":477,"field":"b","severity":"critical","issue":"원문은 위험을 인지한 순간부터 완전히 정지할 때까지의 정지거리를 묻지만, 괄호 설명이 브레이크를 밟은 지점부터의 거리로 한정해 피로·음주운전 선택지의 정답 근거를 없앴다.","suggestion":"Which TWO situations can result in the longest stopping distance, measured from the moment the driver perceives danger and applies the brake pedal until the vehicle comes to a complete stop?"}]
