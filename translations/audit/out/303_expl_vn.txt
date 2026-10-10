@@ -1,0 +1,231 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12625-461a-76c3-9b48-ded8f28a18dc
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/303_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/303_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 525ms:
+[
+ {
+  "n": 62,
+  "ko_e": "?먮룞李??깅줉踰덊샇???깆쓽 湲곗???愿??怨좎떆(援?넗援먰넻遺 怨좎떆 ??017-245??2017.4.18. ?쇰?媛쒖젙)",
+  "tr_e": "Th척ng b찼o v沼?ti챗u chu梳쯰 li챗n quan 휃梳퓆 bi沼긪 s沼?휃훱ng k첵 xe c퉤 gi沼쌻, v.v. (Th척ng b찼o c沼쬪 B沼?휂梳쩿 휃ai, H梳?t梳쬷g v횪 Giao th척ng s沼?2017-245, s沼춁 휃沼뷼 m沼셳 ph梳쬷 ng횪y 18.4.2017)"
+ },
+ {
+  "n": 63,
+  "ko_e": "?섏씠?⑥뒪李⑤줈???⑥감濡?李⑦룺 3.0m, ?ㅼ감濡?李⑦룺 3.6m?대떎.",
+  "tr_e": "L횪n Hi-pass 휃퉤n l횪n c처 chi沼걏 r沼셬g l횪n 3.0m, 휃a l횪n c처 chi沼걏 r沼셬g l횪n 3.6m."
+ },
+ {
+  "n": 64,
+  "ko_e": "?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 蹂꾪몴15?? 鍮꾩궗?낆슜 寃쏀삎쨌?뚰삎 ?뱁빀?먮룞李⑥쓽 寃???좏슚湲곌컙(李⑤졊 4??珥덇낵)? 1?꾩씠??",
+  "tr_e": "Ph沼?l沼쩭 15-2 Th척ng t튼 thi h횪nh Lu梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻: Th沼쓎 h梳죒 hi沼뇎 l沼켧 ki沼긩 휃沼땙h c沼쬪 xe kh찼ch h梳죒g nh梳?c沼?nh沼?kh척ng kinh doanh (tu沼뷼 xe tr챗n 4 n훱m) l횪 1 n훱m."
+ },
+ {
+  "n": 65,
+  "ko_e": "?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 蹂꾪몴15?? 鍮꾩궗?낆슜 寃쏀삎쨌?뚰삎 ?붾Ъ?먮룞李⑥쓽 寃???좏슚湲곌컙(李⑤졊 4???댄븯)? 2?꾩씠??",
+  "tr_e": "Ph沼?l沼쩭 15-2 Th척ng t튼 thi h횪nh Lu梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻: Th沼쓎 h梳죒 hi沼뇎 l沼켧 ki沼긩 휃沼땙h c沼쬪 xe t梳즜 h梳죒g nh梳?c沼?nh沼?kh척ng kinh doanh (tu沼뷼 xe t沼?4 n훱m tr沼?xu沼몁g) l횪 2 n훱m."
+ },
+ {
+  "n": 66,
+  "ko_e": "?먮룞李④?由щ쾿 ?쒗뻾????議곗젣2??젣1???꾩떆?댄뻾 ?덇? ?좏슚湲곌컙? 10???대궡?대떎.",
+  "tr_e": "휂i沼긩 1 kho梳즢 2 휂i沼걏 7 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻: Th沼쓎 h梳죒 hi沼뇎 l沼켧 gi梳쪅 ph챕p ch梳죣 t梳죑 th沼쓎 l횪 trong v챵ng 10 ng횪y."
+ },
+ {
+  "n": 67,
+  "ko_e": "?먮룞李⑤벑濡앸졊 ??2議? ??6議??먮룞李??뚯쑀沅뚯쓽 蹂?숈씠 ???뚯뿉???댁쟾?깅줉???섏뿬???쒕떎.",
+  "tr_e": "휂i沼걏 22, 휂i沼걏 26 Ngh沼?휃沼땙h 휃훱ng k첵 xe c퉤 gi沼쌻: Khi c처 s沼?thay 휃沼뷼 quy沼걆 s沼?h沼칤 xe c퉤 gi沼쌻 th챙 ph梳즜 휃훱ng k첵 sang t챗n."
+ },
+ {
+  "n": 68,
+  "ko_e": "?꾨줈援먰넻踰???4議곗젣1???좎뿉 痍⑦븳 ?곹깭?먯꽌???댁쟾 湲덉?) ?꾧뎄?좎? ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먮룞李⑤벑, ?몃㈃?꾩감 ?먮뒗 ?먯쟾嫄곕? ?댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ??5議?怨쇰줈?????깆쓽 ?댁쟾 湲덉?) ?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ?좎뿉 痍⑦븳 ?곹깭 ?몄뿉 怨쇰줈, 吏덈퀝, ?먮뒗 ?쎈Ъ (留덉빟, ?留? ?μ젙?좎꽦?섏빟???????곹뼢怨?洹?諛뽰쓽 ?ъ쑀濡??뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李????먮뒗 ?몃㈃?꾩감瑜??댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ??6議곗쓽2(?먯쑉二쇳뻾?먮룞李??댁쟾?먯쓽 以?섏궗???? ?????댁쟾?먭? ?먯쑉二쇳뻾?쒖뒪?쒖쓣 ?ъ슜?섏뿬 ?댁쟾?섎뒗 寃쎌슦?먮뒗 ??9議?紐⑤뱺 ?댁쟾?먯쓽 以?섏궗???? ????젣10???대????꾪솕 ?ъ슜 湲덉?), ??1???곸긽?쒖떆?μ튂 ?쒖껌 湲덉?) 諛???1 ?몄쓽2(?곸긽?쒖떆?μ튂 議곗옉 湲덉?)??洹쒖젙???곸슜?섏? ?꾨땲?쒕떎.",
+  "tr_e": "Kho梳즢 1 휂i沼걏 44 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(C梳쩷 l찼i xe khi say r튼沼즩): B梳쩿 k沼?ai c크ng kh척ng 휃튼沼즓 l찼i xe c퉤 gi沼쌻 v횪 t튼퉤ng t沼? t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g ho梳톍 xe 휃梳죖 trong t챙nh tr梳죒g say r튼沼즩. 휂i沼걏 45 (C梳쩷 l찼i xe khi m沼뇍 m沼뢩, v.v.): Ng튼沼쓎 l찼i xe c퉤 gi沼쌻 v횪 t튼퉤ng t沼?ho梳톍 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g, ngo횪i t챙nh tr梳죒g say r튼沼즩, kh척ng 휃튼沼즓 l찼i xe c퉤 gi沼쌻 v횪 t튼퉤ng t沼?ho梳톍 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g trong t챙nh tr梳죒g c처 nguy c퉤 kh척ng th沼?l찼i xe b챙nh th튼沼쓓g do m沼뇍 m沼뢩, b沼뇆h t梳춗 ho梳톍 梳즢h h튼沼웢g c沼쬪 thu沼멵 (ma t첬y, c梳쬷 sa, thu沼멵 h튼沼썀g th梳쬷, v.v.) v횪 c찼c l첵 do kh찼c. Kho梳즢 2 휂i沼걏 56-2 (Quy 휃沼땙h ph梳즜 tu창n th沼?c沼쬪 ng튼沼쓎 l찼i xe c퉤 gi沼쌻 l찼i t沼?휃沼셬g, v.v.): Tr튼沼쓓g h沼즤 ng튼沼쓎 l찼i xe s沼?d沼쩸g h沼?th沼몁g l찼i t沼?휃沼셬g 휃沼?l찼i xe th챙 kh척ng 찼p d沼쩸g quy 휃沼땙h t梳죍 휃i沼긩 10 (c梳쩷 d첫ng 휃i沼뇆 tho梳죍 di 휃沼셬g), 휃i沼긩 11 (c梳쩷 xem thi梳퓍 b沼?hi沼긪 th沼?h챙nh 梳즢h) v횪 휃i沼긩 11-2 (c梳쩷 thao t찼c thi梳퓍 b沼?hi沼긪 th沼?h챙nh 梳즢h) kho梳즢 1 휂i沼걏 49 (Quy 휃沼땙h ph梳즜 tu창n th沼?c沼쬪 m沼뛦 ng튼沼쓎 l찼i xe, v.v.)."
+ },
+ {
+  "n": 69,
+  "ko_e": "援먰넻?덉쟾踰??쒗뻾????5議????? 援먰넻?덉쟾踰뺤긽 6媛쒖썡 ?숈븞 蹂닿??섏뿬???쒕떎.",
+  "tr_e": "Kho梳즢 2 휂i沼걏 45 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 An to횪n giao th척ng: Theo Lu梳춗 An to횪n giao th척ng ph梳즜 l튼u gi沼?trong 6 th찼ng."
+ },
+ {
+  "n": 70,
+  "ko_e": "?먮룞李⑤벑濡앸졊 ??6議??댁쟾?깅줉?좎껌) ?먮룞李⑤? 留ㅼ닔???좊???15???대궡 ?댁쟾 ?깅줉?댁빞 ?쒕떎.",
+  "tr_e": "휂i沼걏 26 Ngh沼?휃沼땙h 휃훱ng k첵 xe c퉤 gi沼쌻 (휂훱ng k첵 sang t챗n): Ph梳즜 휃훱ng k첵 sang t챗n trong v챵ng 15 ng횪y k沼?t沼?ng횪y mua xe."
+ },
+ {
+  "n": 71,
+  "ko_e": "?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 ??7議??????뺢린寃?ъ쓽 湲곌컙? 寃?ъ쑀?④린媛꾨쭔猷뚯씪(??5議곗쓽 洹쒖젙???섑븯??寃?ъ쑀?④린 媛꾩쓣 ?곗옣 ?먮뒗 ?좎삁??寃쎌슦?먮뒗 洹?留뚮즺?쇱쓣 留먰븳?? ??90?쇰?????31?쇨퉴吏濡??섎ŉ, ??湲곌컙?댁뿉 ?뺢린寃?ъ뿉?? ?곹빀?먯젙??諛쏆? 寃쎌슦?먮뒗 寃?ъ쑀?④린媛꾨쭔猷뚯씪???뺢린寃?щ? 諛쏆? 寃껋쑝濡?蹂몃떎.",
+  "tr_e": "Kho梳즢 2 휂i沼걏 77 Th척ng t튼 thi h횪nh Lu梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻: Th沼쓎 h梳죒 ki沼긩 휃沼땙h 휃沼땙h k沼?l횪 t沼?90 ng횪y tr튼沼쌵 휃梳퓆 31 ng횪y sau ng횪y h梳퓍 h梳죒 hi沼뇎 l沼켧 ki沼긩 휃沼땙h (tr튼沼쓓g h沼즤 gia h梳죒 ho梳톍 ho찾n th沼쓎 h梳죒 hi沼뇎 l沼켧 ki沼긩 휃沼땙h theo quy 휃沼땙h 휂i沼걏 75 th챙 l횪 ng횪y h梳퓍 h梳죒 휃처); n梳퓎 휃튼沼즓 k梳퓍 lu梳춏 휃梳죜 trong ki沼긩 휃沼땙h 휃沼땙h k沼?trong th沼쓎 h梳죒 n횪y th챙 coi nh튼 휃찾 ki沼긩 휃沼땙h 휃沼땙h k沼?v횪o ng횪y h梳퓍 h梳죒 hi沼뇎 l沼켧 ki沼긩 휃沼땙h."
+ },
+ {
+  "n": 72,
+  "ko_e": "?먮룞李⑥넀?대같?곷낫?λ쾿 ??8議?怨쇳깭猷? ??떎??媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?먯뿉寃뚮뒗 300留????댄븯??怨쇳깭猷뚮?  遺怨쇳븳?? 1. ??議곗젣1?????????퉴吏??洹쒖젙???곕Ⅸ ?섎Т蹂댄뿕??媛?낇븯吏 ?꾨땲??????6議?踰뚯튃) ?〓떎??媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?먮뒗 1???댄븯??吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+  "tr_e": "휂i沼걏 48 Lu梳춗 B梳즣 휃梳즡 b沼밿 th튼沼쓓g thi沼뇍 h梳죍 xe c퉤 gi沼쌻 (X沼?ph梳죜 h횪nh ch챠nh) ??횁p d沼쩸g ph梳죜 h횪nh ch챠nh t沼?3 tri沼뇎 won tr沼?xu沼몁g 휃沼멼 v沼쌻 ng튼沼쓎 thu沼셛 m沼셳 trong c찼c 휃i沼긩 sau. 1. Ng튼沼쓎 kh척ng tham gia b梳즣 hi沼긩 b梳칣 bu沼셛 theo quy 휃沼땙h t沼?kho梳즢 1 휃梳퓆 kho梳즢 3 휂i沼걏 5. 휂i沼걏 46 (X沼?ph梳죜) ??Ng튼沼쓎 thu沼셛 m沼셳 trong c찼c 휃i沼긩 sau b沼?ph梳죜 t첫 t沼?1 n훱m tr沼?xu沼몁g ho梳톍 ph梳죜 ti沼걆 t沼?10 tri沼뇎 won tr沼?xu沼몁g."
+ },
+ {
+  "n": 73,
+  "ko_e": "?먮룞李④?由щ쾿 ??2議??먮룞李??뚯쑀沅뚯씠 留ㅻℓ, ?곸냽, 怨듬ℓ, 寃쎈ℓ ?깆쑝濡?蹂寃쎈맆 寃쎌슦 ?묒닔?몄씠 踰뺤젙湲고븳 ???뚯쑀沅뚯쓽  ?댁쟾?깅줉???댁빞 ?쒕떎.",
+  "tr_e": "휂i沼걏 12 Lu梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻: Khi quy沼걆 s沼?h沼칤 xe c퉤 gi沼쌻 thay 휃沼뷼 do mua b찼n, th沼첺 k梳? 휃梳쪀 gi찼 c척ng, 휃梳쪀 gi찼, v.v. th챙 b챗n nh梳춏 chuy沼긪 nh튼沼즢g ph梳즜 휃훱ng k첵 sang t챗n quy沼걆 s沼?h沼칤 trong th沼쓎 h梳죒 lu梳춗 휃沼땙h."
+ },
+ {
+  "n": 74,
+  "ko_e": "?먮룞李④?由щ쾿 ??3議??먮룞李?寃?? ?먮룞李??뚯쑀?먮뒗 援?넗援먰넻遺?κ????ㅼ떆?섎뒗 ?좉퇋寃?? ?뺢린寃?? ?쒕떇寃?? ???쒓??? ?섎━寃?щ? 諛쏆븘???쒕떎.",
+  "tr_e": "휂i沼걏 43 Lu梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻 (Ki沼긩 휃沼땙h xe c퉤 gi沼쌻): Ch沼?xe c퉤 gi沼쌻 ph梳즜 th沼켧 hi沼뇆 ki沼긩 휃沼땙h m沼쌻, ki沼긩 휃沼땙h 휃沼땙h k沼? ki沼긩 휃沼땙h c梳즜 t梳죓 (tuning), ki沼긩 휃沼땙h t梳죑 th沼쓎, ki沼긩 휃沼땙h s沼춁 ch沼칊 do B沼?tr튼沼웢g B沼?휂梳쩿 휃ai, H梳?t梳쬷g v횪 Giao th척ng th沼켧 hi沼뇆."
+ },
+ {
+  "n": 75,
+  "ko_e": "?먮룞李④?由щ쾿 ??議??????먮룞李??깅줉??愿???щТ???쒙쉈援곤쉈援ъ껌???대떦?쒕떎.",
+  "tr_e": "Kho梳즢 1 휂i沼걏 8 Lu梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻: C척ng vi沼놻 v沼?휃훱ng k첵 xe c퉤 gi沼쌻 do 沼쫦 ban th횪nh ph沼?qu梳춏/huy沼뇆 ph沼?tr찼ch."
+ },
+ {
+  "n": 76,
+  "ko_e": "?먮룞李⑤벑濡앸졊 ??議??먮룞李⑤벑濡앹? ?좉퇋, 蹂寃? ?댁쟾, 留먯냼, ?뺣쪟, ??밴텒, 寃쎌젙, ?덇퀬?깅줉???덇퀬, ?뱁뿀?깅줉? 沅뚮━??濡? ?ㅼ젙?깅줉 ?깆씠 ?덈떎. (?먮룞李⑤벑濡앸졊)",
+  "tr_e": "휂i沼걏 3 Ngh沼?휃沼땙h 휃훱ng k첵 xe c퉤 gi沼쌻: 휂훱ng k첵 xe c퉤 gi沼쌻 c처 휃훱ng k첵 m沼쌻, thay 휃沼뷼, sang t챗n, x처a, k챗 bi챗n, th梳?ch梳쩺, 휃챠nh ch챠nh, 휃훱ng k첵 c梳즢h b찼o; 휃훱ng k첵 b梳켷g s찼ng ch梳?c처 휃훱ng k첵 quy沼걆, 휃훱ng k첵 thi梳퓍 l梳춑, v.v. (Ngh沼?휃沼땙h 휃훱ng k첵 xe c퉤 gi沼쌻)"
+ },
+ {
+  "n": 77,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????8議곗뿉 ?곕씪 ?먮룞李?李쎌쑀由?媛?쒓킅???ш낵?⑥쓽 湲곗?? ?욌㈃ 李쎌쑀由ъ쓽 寃쎌슦 70?쇱꽱?? ?댁쟾?? 醫뚯슦 ?녿㈃ 李쎌쑀由ъ쓽 寃쎌슦 40?쇱꽱???댁뼱???쒕떎.",
+  "tr_e": "Theo 휂i沼걏 28 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? ti챗u chu梳쯰 t沼?l沼?truy沼걆 qua 찼nh s찼ng nh챙n th梳쪅 c沼쬪 k챠nh xe: k챠nh ch梳칗 gi처 tr튼沼쌵 ph梳즜 휃梳죜 70 ph梳쬷 tr훱m, k챠nh hai b챗n tr찼i ph梳즜 gh梳?l찼i ph梳즜 휃梳죜 40 ph梳쬷 tr훱m."
+ },
+ {
+  "n": 78,
+  "ko_e": "?댁쟾 以??꾪뿕?곹솴???몄??섍퀬 ?먮떒?섎ŉ ?됰룞紐낅졊 ??釉뚮젅?댄겕媛 ?묐룞?쒕떎.",
+  "tr_e": "Trong khi l찼i xe, sau khi nh梳춏 bi梳퓍 v횪 ph찼n 휃o찼n t챙nh hu沼몁g nguy hi沼긩 r沼밿 ra l沼뇆h h횪nh 휃沼셬g th챙 phanh m沼쌻 ho梳죜 휃沼셬g."
+ },
+ {
+  "n": 79,
+  "ko_e": "?먮룞李④? 異⑸룎?????댁쟾?먯? 吏곸젒 ?묒큺?섏뿬 異⑷꺽 ?먮꼫吏瑜??≪닔?댁＜?댁빞 ?쒕떎.",
+  "tr_e": "Khi xe c퉤 gi沼쌻 va ch梳죑 th챙 ph梳즜 ti梳퓈 x첬c tr沼켧 ti梳퓈 v沼쌻 ng튼沼쓎 l찼i 휃沼?h梳쩺 th沼?n훱ng l튼沼즢g va ch梳죑."
+ },
+ {
+  "n": 80,
+  "ko_e": "?댁쟾???깆씠 ?怨??대┫ ?뚮뒗 ?ㅼ뿉???ㅻ뒗 李⑤웾???덈뒗吏瑜??뺤씤?쒕떎.",
+  "tr_e": "Khi ng튼沼쓎 l찼i v횪 nh沼칗g ng튼沼쓎 kh찼c l챗n xu沼몁g xe th챙 ph梳즜 ki沼긩 tra xem c처 xe 휃ang 휃梳퓆 t沼?ph챠a sau hay kh척ng."
+ },
+ {
+  "n": 81,
+  "ko_e": "?숆탳 ??蹂댄뻾濡쒖뿉???대┛?닿? 吏?섍컝 寃쎌슦 ?쇱떆?뺤??댁빞 ?섎ŉ, 泥좉만 嫄대꼸紐⑹뿉??李⑤떒湲곌? ?대젮媛?ㅻ뒗 寃쎌슦 吏꾩엯??硫????쒕떎. ?먰븳 ?쇨컙 ?댁쟾 ?쒖뿉??諛섎???李⑤웾??二쇳뻾??諛⑺빐媛 ?섏? ?딅룄濡??꾩“?깆쓣 ?섑뼢?쇰줈 議곗젙?댁빞 ?쒕떎.",
+  "tr_e": "Khi c처 tr梳?em 휃i qua tr챗n l沼멼 휃i b沼?tr튼沼쌵 tr튼沼쓓g h沼뛠 th챙 ph梳즜 d沼쳌g l梳죍 h梳쿻, v횪 khi r횪o ch梳칗 沼?휃튼沼쓓g ngang 휃튼沼쓓g s梳칣 s梳칛 h梳?xu沼몁g th챙 kh척ng 휃튼沼즓 휃i v횪o. Ngo횪i ra, khi l찼i xe ban 휃챗m ph梳즜 휃i沼걏 ch沼뎝h 휃챔n pha xu沼몁g ch梳?휃沼?chi梳퓎 g梳쬷 휃沼?kh척ng g창y c梳즢 tr沼?cho xe ch梳죣 沼?chi沼걏 ng튼沼즓 l梳죍."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/303_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 507ms:
+[
+ {
+  "n": 62,
+  "ko_e": "자동차 등록번호판 등의 기준에 관한 고시(국토교통부 고시 제2017-245호 2017.4.18. 일부개정)",
+  "tr_e": "Thông báo về tiêu chuẩn liên quan đến biển số đăng ký xe cơ giới, v.v. (Thông báo của Bộ Đất đai, Hạ tầng và Giao thông số 2017-245, sửa đổi một phần ngày 18.4.2017)"
+ },
+ {
+  "n": 63,
+  "ko_e": "하이패스차로는 단차로 차폭 3.0m, 다차로 차폭 3.6m이다.",
+  "tr_e": "Làn Hi-pass đơn làn có chiều rộng làn 3.0m, đa làn có chiều rộng làn 3.6m."
+ },
+ {
+  "n": 64,
+  "ko_e": "자동차관리법 시행규칙 별표15의2 비사업용 경형·소형 승합자동차의 검사 유효기간(차령 4년 초과)은 1년이다.",
+  "tr_e": "Phụ lục 15-2 Thông tư thi hành Luật Quản lý xe cơ giới: Thời hạn hiệu lực kiểm định của xe khách hạng nhẹ/cỡ nhỏ không kinh doanh (tuổi xe trên 4 năm) là 1 năm."
+ },
+ {
+  "n": 65,
+  "ko_e": "자동차관리법 시행규칙 별표15의2 비사업용 경형·소형 화물자동차의 검사 유효기간(차령 4년 이하)은 2년이다.",
+  "tr_e": "Phụ lục 15-2 Thông tư thi hành Luật Quản lý xe cơ giới: Thời hạn hiệu lực kiểm định của xe tải hạng nhẹ/cỡ nhỏ không kinh doanh (tuổi xe từ 4 năm trở xuống) là 2 năm."
+ },
+ {
+  "n": 66,
+  "ko_e": "자동차관리법 시행령 제7조제2항제1호 임시운행 허가 유효기간은 10일 이내이다.",
+  "tr_e": "Điểm 1 khoản 2 Điều 7 Nghị định thi hành Luật Quản lý xe cơ giới: Thời hạn hiệu lực giấy phép chạy tạm thời là trong vòng 10 ngày."
+ },
+ {
+  "n": 67,
+  "ko_e": "자동차등록령 제22조, 제26조 자동차 소유권의 변동이 된 때에는 이전등록을 하여야 한다.",
+  "tr_e": "Điều 22, Điều 26 Nghị định đăng ký xe cơ giới: Khi có sự thay đổi quyền sở hữu xe cơ giới thì phải đăng ký sang tên."
+ },
+ {
+  "n": 68,
+  "ko_e": "도로교통법 제44조제1항(술에 취한 상태에서의 운전 금지) 누구든지 술에 취한 상태에서 자동차등, 노면전차 또는 자전거를 운전하여서는 아니 된다. 제45조(과로한 때 등의 운전 금지) 자동차등 또는 노면전차의 운전자는 술에 취한 상태 외에 과로, 질병, 또는 약물 (마약, 대마, 향정신성의약품 등)의 영향과 그 밖의 사유로 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차 등 또는 노면전차를 운전하여서는 아니 된다. 제56조의2(자율주행자동차 운전자의 준수사항 등) 제2항 운전자가 자율주행시스템을 사용하여 운전하는 경우에는 제49조(모든 운전자의 준수사항 등) 제1항제10호(휴대용 전화 사용 금지), 제11호(영상표시장치 시청 금지) 및 제11 호의2(영상표시장치 조작 금지)의 규정을 적용하지 아니한다.",
+  "tr_e": "Khoản 1 Điều 44 Luật Giao thông đường bộ (Cấm lái xe khi say rượu): Bất kỳ ai cũng không được lái xe cơ giới và tương tự, tàu điện mặt đường hoặc xe đạp trong tình trạng say rượu. Điều 45 (Cấm lái xe khi mệt mỏi, v.v.): Người lái xe cơ giới và tương tự hoặc tàu điện mặt đường, ngoài tình trạng say rượu, không được lái xe cơ giới và tương tự hoặc tàu điện mặt đường trong tình trạng có nguy cơ không thể lái xe bình thường do mệt mỏi, bệnh tật hoặc ảnh hưởng của thuốc (ma túy, cần sa, thuốc hướng thần, v.v.) và các lý do khác. Khoản 2 Điều 56-2 (Quy định phải tuân thủ của người lái xe cơ giới lái tự động, v.v.): Trường hợp người lái xe sử dụng hệ thống lái tự động để lái xe thì không áp dụng quy định tại điểm 10 (cấm dùng điện thoại di động), điểm 11 (cấm xem thiết bị hiển thị hình ảnh) và điểm 11-2 (cấm thao tác thiết bị hiển thị hình ảnh) khoản 1 Điều 49 (Quy định phải tuân thủ của mọi người lái xe, v.v.)."
+ },
+ {
+  "n": 69,
+  "ko_e": "교통안전법 시행령 제45조 제2항, 교통안전법상 6개월 동안 보관하여야 한다.",
+  "tr_e": "Khoản 2 Điều 45 Nghị định thi hành Luật An toàn giao thông: Theo Luật An toàn giao thông phải lưu giữ trong 6 tháng."
+ },
+ {
+  "n": 70,
+  "ko_e": "자동차등록령 제26조(이전등록신청) 자동차를 매수한 날부터 15일 이내 이전 등록해야 한다.",
+  "tr_e": "Điều 26 Nghị định đăng ký xe cơ giới (Đăng ký sang tên): Phải đăng ký sang tên trong vòng 15 ngày kể từ ngày mua xe."
+ },
+ {
+  "n": 71,
+  "ko_e": "자동차관리법 시행규칙 제77조 제2항 정기검사의 기간은 검사유효기간만료일(제75조의 규정에 의하여 검사유효기 간을 연장 또는 유예한 경우에는 그 만료일을 말한다) 전 90일부터 후 31일까지로 하며, 이 기간내에 정기검사에서  적합판정을 받은 경우에는 검사유효기간만료일에 정기검사를 받은 것으로 본다.",
+  "tr_e": "Khoản 2 Điều 77 Thông tư thi hành Luật Quản lý xe cơ giới: Thời hạn kiểm định định kỳ là từ 90 ngày trước đến 31 ngày sau ngày hết hạn hiệu lực kiểm định (trường hợp gia hạn hoặc hoãn thời hạn hiệu lực kiểm định theo quy định Điều 75 thì là ngày hết hạn đó); nếu được kết luận đạt trong kiểm định định kỳ trong thời hạn này thì coi như đã kiểm định định kỳ vào ngày hết hạn hiệu lực kiểm định."
+ },
+ {
+  "n": 72,
+  "ko_e": "자동차손해배상보장법 제48조(과태료) ③다음 각 호의 어느 하나에 해당하는 자에게는 300만 원 이하의 과태료를  부과한다. 1. 제5조제1항부터 제3항까지의 규정에 따른 의무보험에 가입하지 아니한 자 제46조(벌칙) ②다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만 원 이하의 벌금에 처한다.",
+  "tr_e": "Điều 48 Luật Bảo đảm bồi thường thiệt hại xe cơ giới (Xử phạt hành chính) ③ Áp dụng phạt hành chính từ 3 triệu won trở xuống đối với người thuộc một trong các điểm sau. 1. Người không tham gia bảo hiểm bắt buộc theo quy định từ khoản 1 đến khoản 3 Điều 5. Điều 46 (Xử phạt) ② Người thuộc một trong các điểm sau bị phạt tù từ 1 năm trở xuống hoặc phạt tiền từ 10 triệu won trở xuống."
+ },
+ {
+  "n": 73,
+  "ko_e": "자동차관리법 제12조 자동차 소유권이 매매, 상속, 공매, 경매 등으로 변경될 경우 양수인이 법정기한 내 소유권의  이전등록을 해야 한다.",
+  "tr_e": "Điều 12 Luật Quản lý xe cơ giới: Khi quyền sở hữu xe cơ giới thay đổi do mua bán, thừa kế, đấu giá công, đấu giá, v.v. thì bên nhận chuyển nhượng phải đăng ký sang tên quyền sở hữu trong thời hạn luật định."
+ },
+ {
+  "n": 74,
+  "ko_e": "자동차관리법 제43조(자동차 검사) 자동차 소유자는 국토교통부장관이 실시하는 신규검사, 정기검사, 튜닝검사, 임 시검사, 수리검사를 받아야 한다.",
+  "tr_e": "Điều 43 Luật Quản lý xe cơ giới (Kiểm định xe cơ giới): Chủ xe cơ giới phải thực hiện kiểm định mới, kiểm định định kỳ, kiểm định cải tạo (tuning), kiểm định tạm thời, kiểm định sửa chữa do Bộ trưởng Bộ Đất đai, Hạ tầng và Giao thông thực hiện."
+ },
+ {
+  "n": 75,
+  "ko_e": "자동차관리법 제8조 제1항 자동차 등록에 관한 사무는 시･군･구청이 담당한다.",
+  "tr_e": "Khoản 1 Điều 8 Luật Quản lý xe cơ giới: Công việc về đăng ký xe cơ giới do Ủy ban thành phố/quận/huyện phụ trách."
+ },
+ {
+  "n": 76,
+  "ko_e": "자동차등록령 제3조 자동차등록은 신규, 변경, 이전, 말소, 압류, 저당권, 경정, 예고등록이 있고, 특허등록은 권리등 록, 설정등록 등이 있다. (자동차등록령)",
+  "tr_e": "Điều 3 Nghị định đăng ký xe cơ giới: Đăng ký xe cơ giới có đăng ký mới, thay đổi, sang tên, xóa, kê biên, thế chấp, đính chính, đăng ký cảnh báo; đăng ký bằng sáng chế có đăng ký quyền, đăng ký thiết lập, v.v. (Nghị định đăng ký xe cơ giới)"
+ },
+ {
+  "n": 77,
+  "ko_e": "도로교통법 시행령 제28조에 따라 자동차 창유리 가시광선 투과율의 기준은 앞면 창유리의 경우 70퍼센트, 운전석  좌우 옆면 창유리의 경우 40퍼센트 이어야 한다.",
+  "tr_e": "Theo Điều 28 Nghị định thi hành Luật Giao thông đường bộ, tiêu chuẩn tỷ lệ truyền qua ánh sáng nhìn thấy của kính xe: kính chắn gió trước phải đạt 70 phần trăm, kính hai bên trái phải ghế lái phải đạt 40 phần trăm."
+ },
+ {
+  "n": 78,
+  "ko_e": "운전 중 위험상황을 인지하고 판단하며 행동명령 후 브레이크가 작동된다.",
+  "tr_e": "Trong khi lái xe, sau khi nhận biết và phán đoán tình huống nguy hiểm rồi ra lệnh hành động thì phanh mới hoạt động."
+ },
+ {
+  "n": 79,
+  "ko_e": "자동차가 충돌할 때 운전자와 직접 접촉하여 충격 에너지를 흡수해주어야 한다.",
+  "tr_e": "Khi xe cơ giới va chạm thì phải tiếp xúc trực tiếp với người lái để hấp thụ năng lượng va chạm."
+ },
+ {
+  "n": 80,
+  "ko_e": "운전자 등이 타고 내릴 때는 뒤에서 오는 차량이 있는지를 확인한다.",
+  "tr_e": "Khi người lái và những người khác lên xuống xe thì phải kiểm tra xem có xe đang đến từ phía sau hay không."
+ },
+ {
+  "n": 81,
+  "ko_e": "학교 앞 보행로에서 어린이가 지나갈 경우 일시정지해야 하며, 철길 건널목에서 차단기가 내려가려는 경우 진입하 면 안 된다. 또한 야간 운전 시에는 반대편 차량의 주행에 방해가 되지 않도록 전조등을 하향으로 조정해야 한다.",
+  "tr_e": "Khi có trẻ em đi qua trên lối đi bộ trước trường học thì phải dừng lại hẳn, và khi rào chắn ở đường ngang đường sắt sắp hạ xuống thì không được đi vào. Ngoài ra, khi lái xe ban đêm phải điều chỉnh đèn pha xuống chế độ chiếu gần để không gây cản trở cho xe chạy ở chiều ngược lại."
+ }
+]
+
+codex
+[{"n":77,"field":"e","severity":"major","issue":"‘kính hai bên trái phải ghế lái’는 문법적으로 심하게 깨져 운전석 좌우 측면 유리라는 의미가 불명확하다.","suggestion":"Theo Điều 28 Nghị định thi hành Luật Giao thông đường bộ, tỷ lệ truyền ánh sáng nhìn thấy phải đạt ít nhất 70% đối với kính chắn gió phía trước và ít nhất 40% đối với kính cửa sổ hai bên trái và phải của ghế lái."}]
+tokens used
+13,845
+[{"n":77,"field":"e","severity":"major","issue":"‘kính hai bên trái phải ghế lái’는 문법적으로 심하게 깨져 운전석 좌우 측면 유리라는 의미가 불명확하다.","suggestion":"Theo Điều 28 Nghị định thi hành Luật Giao thông đường bộ, tỷ lệ truyền ánh sáng nhìn thấy phải đạt ít nhất 70% đối với kính chắn gió phía trước và ít nhất 40% đối với kính cửa sổ hai bên trái và phải của ghế lái."}]

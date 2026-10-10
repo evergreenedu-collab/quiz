@@ -1,0 +1,746 @@
+Reading additional input from stdin...
+2026-10-10T13:34:12.722885Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12605-7136-7bf3-a4a6-93c326617489
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/214_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/214_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 523ms:
+[
+ {
+  "n": 561,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈??援ш컙 ?먮뒗 ?μ냼???ㅼ튂?섎뒗 ?몃㈃?쒖떆???됱콈??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "以묒븰???쒖떆, ?덉쟾吏????곗깋?대떎.",
+   "踰꾩뒪?꾩슜李⑤줈 ?쒖떆, ?덉쟾吏? ?쒖떆???몃??됱씠??",
+   "?뚮갑?쒖꽕 二쇰? ?뺤감?ㅼ＜李?湲덉? ?쒖떆??鍮④컙?됱씠??",
+   "二쇱감 湲덉? ?쒖떆, ?뺤감?ㅼ＜李?湲덉? ?쒖떆 諛??덉쟾吏???鍮④컙?됱씠??"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is a correct description of  the color of road signs installed on sections of the road or in certain places?",
+  "tr_c": [
+   "The centerline marking and the safe zone are white.",
+   "Exclusive bus lanes and safety zone markings are yellow.",
+   "Stop/Parking prohibition signs around firefighting facilities are red.",
+   "No parking signs, no stopping/parking signs, and safe zones are red."
+  ]
+ },
+ {
+  "n": 562,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???욎?瑜닿린??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?욎감???곗륫???ㅻⅨ 李④? ?욎감? ?섎???媛怨??덈뒗 寃쎌슦 ?욎?瑜닿린瑜??댁꽌?????쒕떎.",
+   "理쒓렐??媛쒖꽕???곕꼸, ?ㅻ━ ?? 援먯감濡쒖뿉?쒕뒗 ?욎?瑜닿린媛 媛?ν븯??",
+   "李⑥쓽 ?댁쟾?먭? ?욎꽌媛???ㅻⅨ 李⑥쓽 醫뚯륫 ?놁쓣 吏?섏꽌 洹?李⑥쓽 ?욎쑝濡??섍???寃껋쓣 留먰븳??",
+   "怨좎냽?꾨줈?먯꽌 ?뱀슜李⑤뒗 踰꾩뒪?꾩슜李⑤줈瑜??댁슜?섏뿬 ?욎?瑜닿린 ?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is true about overtaking?",
+  "tr_c": [
+   "If the vehicle in front of you has another vehicle traveling side by side on its right, you cannot overtake the vehicle in  front of you.",
+   "Overtaking is allowed in recently built tunnels, bridges, and intersections.",
+   "Overtaking is when you approach from behind and pass the vehicle on the left, traveling in the same direction.",
+   "A passenger vehicle can use the exclusive bus lane on an expressway to overtake another vehicle."
+  ]
+ },
+ {
+  "n": 563,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李④? ?꾨땶 寃껋??",
+  "ko_c": [
+   "?뱀슜?먮룞李?,
+   "?먯쟾嫄?,
+   "?뱀닔?먮룞李?,
+   "?뱁빀?먮룞李?
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT considered a  motor vehicle?",
+  "tr_c": [
+   "An automobile",
+   "A bicycle",
+   "A special vehicle",
+   "A bus"
+  ]
+ },
+ {
+  "n": 564,
+  "ko_b": "援먰넻?ш퀬泥섎━ ?밸?踰뺤긽 ?쇳빐?먯쓽 紐낆떆???섏궗??諛섑븯??怨듭냼瑜??쒓린?????덈뒗 ?띾룄?꾨컲 援먰넻?ш퀬??",
+  "ko_c": [
+   "理쒓퀬?띾룄媛 100?щ줈誘명꽣??怨좎냽?꾨줈?먯꽌 留ㅼ떆 110?щ줈誘명꽣濡?二쇳뻾?섎떎媛 諛쒖깮??援먰넻?ш퀬",
+   "理쒓퀬?띾룄媛 80?щ줈誘명꽣???몃룄 3李⑤줈 ?쇰컲?꾨줈?먯꽌 留ㅼ떆 95?щ줈誘명꽣濡?二쇳뻾?섎떎媛 諛쒖깮??援먰넻?ш퀬",
+   "理쒓퀬?띾룄媛 90?щ줈誘명꽣???먮룞李⑥쟾?⑸룄濡쒖뿉??留ㅼ떆 100?щ줈誘명꽣濡?二쇳뻾?섎떎媛 諛쒖깮??援먰넻?ш퀬",
+   "理쒓퀬?띾룄媛 60?щ줈誘명꽣???몃룄 1李⑤줈 ?쇰컲?꾨줈?먯꽌 留ㅼ떆 82?щ줈誘명꽣濡?二쇳뻾?섎떎媛 諛쒖깮??援먰넻?ш퀬"
+  ],
+  "a": "4",
+  "tr_b": "According to the Act on Special Cases Concerning the Settlement of Traffic Accidents, which of the following is considered a speeding-related accident wherein the driver causing the accident can be prosecuted against the stated intention of the victim?",
+  "tr_c": [
+   "An accident caused by driving at 110 km/h on an expressway where the speed limit is 100 km/h",
+   "An accident caused by driving at 95 km/h on a general road with three lanes in one direction where the speed limit is  80 km/h",
+   "An accident caused by driving at 100 km/h on an automobile road where the speed limit is 90 km/h",
+   "An accident caused by driving at 82 km/h on a general road with one lane in one direction where the speed limit is 60  km/h"
+  ]
+ },
+ {
+  "n": 565,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??4???깊솕??媛濡쒗삎 ?좏샇??諛곗뿴 ?쒖꽌濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?곕줈遺???곸깋 ???뱀깋?붿궡?????⑹깋 ???뱀깋",
+   "醫뚮줈遺???곸깋 ???⑹깋???뱀깋?붿궡?????뱀깋",
+   "醫뚮줈遺???⑹깋 ?믪쟻?????뱀깋?붿궡?????뱀깋",
+   "?곕줈遺???뱀깋?붿궡?????⑹깋?믪쟻?????뱀깋"
+  ],
+  "a": "2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct order of  horizontal traffic lights in a four-color scheme?",
+  "tr_c": [
+   "From the right: red, green arrow, yellow, and green",
+   "From the left: red, yellow, green arrow, and green",
+   "From the left: yellow, red, green arrow, and green",
+   "From the right: green arrow, yellow, red, and green"
+  ]
+ },
+ {
+  "n": 566,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곸꽦寃??湲곗???媛뽰텛?덈뒗吏瑜??먯젙?섎뒗 ?쒕쪟媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "援??嫄닿컯蹂댄뿕踰뺤뿉 ?곕Ⅸ 嫄닿컯寃吏?寃곌낵?듬낫??",
+   "?섎즺踰뺤뿉 ?곕씪 ?섏궗媛 諛쒓툒??吏꾨떒??,
+   "蹂묒뿭踰뺤뿉 ?곕Ⅸ 蹂묒뿭?먯젙 ?좎껜寃??寃곌낵 ?듬낫??,
+   "????덇꼍?ы삊?뚯옣??諛쒓툒???쒕젰寃?ъ꽌"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT a required  document for the verification of aptitude test requirements?",
+  "tr_c": [
+   "A health examination report as per the National Health Insurance Act",
+   "A written diagnosis issued by a doctor in accordance with the Medical Service Act",
+   "Notice of Physical Examination Results for Military Service under the Military Service Act",
+   "An eyesight test report issued by the president of the Korean Optometric Association"
+  ]
+ },
+ {
+  "n": 567,
+  "ko_b": "?ㅼ쓬 以??ъ슜?섎뒗 ?щ엺 ?먮뒗 湲곌? ?깆쓽 ?좎껌???섑븯???쑣룸룄寃쎌같泥?옣??吏?뺥븷 ???덈뒗 湲닿툒?먮룞李⑤줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?덉븸怨듦툒李⑤웾",
+   "寃쎌같???먮룞李?以?踰붿즲?섏궗, 援먰넻?⑥냽, 洹?諛뽰쓽 湲닿툒??寃쎌같?낅Т ?섑뻾???ъ슜?섎뒗 ?먮룞李?,
+   "?꾪뙆媛먯떆?낅Т???ъ슜?섎뒗 ?먮룞李?,
+   "?섏궗湲곌????먮룞李?以?踰붿즲?섏궗瑜??꾪븯???ъ슜?섎뒗 ?먮룞李?
+  ],
+  "a": "3",
+  "tr_b": "Which of the following can be designated as an emergency vehicle by the commissioner of the City/Do (Province) police agency at the request of the organization or the person intending to use the vehicle?",
+  "tr_c": [
+   "A blood bank vehicle",
+   "A police vehicle used for criminal investigation, traffic control, and other emergency police activities",
+   "A vehicle used for radio wave monitoring",
+   "A vehicle used for criminal investigation among vehicles belonging to investigation agencies"
+  ]
+ },
+ {
+  "n": 568,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??湲닿툒?먮룞李⑥쓽 以?섏궗??쑝濡??녹? 寃?2媛吏??",
+  "ko_c": [
+   "?띾룄??愿??洹쒖젙???꾨컲?섎뒗 ?먮룞李??깆쓣 ?⑥냽?섎뒗 湲닿툒?먮룞李⑤뒗 ?먮룞李⑥쓽 ?덉쟾?댄뻾???꾩슂??湲곗??먯꽌 ?뺥븳 湲닿툒???숈감??援ъ“瑜?媛뽰텛?댁빞 ?쒕떎.",
+   "援?궡???붿씤?????寃쏀샇?낅Т?섑뻾??怨듬Т濡??ъ슜?섎뒗 湲닿툒?먮룞李⑤뒗 ?ъ씠?뚯쓣 ?몃━嫄곕굹 寃쎄킅?깆쓣 耳쒖? ?딆븘???쒕떎.",
+   "?쇰컲?먮룞李⑤뒗 ?꾩“???먮뒗 鍮꾩긽?쒖떆?깆쓣 耳쒖꽌 湲닿툒??紐⑹쟻?쇰줈 ?댄뻾?섍퀬 ?덉쓬???쒖떆?섏뿬??湲닿툒?먮룞李⑤줈 蹂????녿떎.",
+   "湲닿툒?먮룞李⑤뒗 ?먯튃?곸쑝濡??ъ씠?뚯쓣 ?몃━嫄곕굹 寃쎄킅?깆쓣 耳쒖빞留??곗꽑?듯뻾 諛?踰뺤뿉???뺥븳 ?밸?瑜??곸슜諛쏆쓣 ???덈떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are the TWO correct  statements regarding emergency vehicles?",
+  "tr_c": [
+   "An emergency vehicle used for the control of speeding violations must have a structure defined in the \"Standards on  the Safe Operation of Vehicles.\"",
+   "Emergency vehicles used for security services for domestic and foreign VIPs are not required to use a siren or a light  bar.",
+   "A normal vehicle is not considered an emergency vehicle even if its headlights and emergency lights are turned on to indicate that it is being used for emergency purposes.",
+   "As a rule, ambulances have traffic priority and special status according to the law only when they are using their siren or they have turned on their emergency vehicle lighting."
+  ]
+ },
+ {
+  "n": 569,
+  "ko_b": "?ㅼ쓬? ?꾨줈援먰넻踰뺤뿉???뺤쓽?섍퀬 ?덈뒗 ?⑹뼱?대떎. ?뚮쭪? ?댁슜 2媛吏??",
+  "ko_c": [
+   "\"李⑤줈\"? ?곗꽍?? ?덉쟾?쒖? ?먮뒗 洹몄? 鍮꾩듂???멸났援ъ“臾쇱쓣 ?댁슜?섏뿬 寃쎄퀎(罌껆븣)瑜??쒖떆?섏뿬 紐⑤뱺 李④? ?듯뻾?????덈룄濡? ?ㅼ튂???꾨줈??遺遺꾩쓣 留먰븳??",
+   "\"李⑥꽑\"?대? 李⑤줈? 李⑤줈瑜?援щ텇?섍린 ?꾪븯??洹?寃쎄퀎吏?먯쓣 ?덉쟾?쒖?濡??쒖떆???좎쓣 留먰븳??",
+   "\"李⑤룄\"? 李⑤쭏媛 ??以꾨줈 ?꾨줈???뺥븯?ъ쭊 遺遺꾩쓣 ?듯뻾?섎룄濡?李⑥꽑?쇰줈 援щ텇???꾨줈??遺遺꾩쓣 留먰븳??",
+   "\"蹂대룄\"? ?곗꽍???깆쑝濡?寃쎄퀎瑜??쒖떆?섏뿬 蹂댄뻾?먭? ?듯뻾?????덈룄濡????꾨줈??遺遺꾩쓣 留먰븳??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the TWO correct definitions based on those stipulated by the Road Traffic Act?",
+  "tr_c": [
+   "A \"lane\" refers to the part of a road where all vehicles can travel and which is demarcated by a line of curbstones, a safety sign, or a similar artificial structure.",
+   "A \"vehicle line\" refers to a boundary marked by a safety sign in order to indicate separate roadways.",
+   "A \"roadway\" refers to the part of a road marked by a line to have vehicles and horses travel in a single file.",
+   "A \"sidewalk\" refers to the part of a road demarcated by a line of curbstones for thoroughfare by pedestrians."
+  ]
+ },
+ {
+  "n": 570,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄곗쓽 ?듯뻾諛⑸쾿??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "蹂대룄 諛?李⑤룄濡?援щ텇???꾨줈?먯꽌??李⑤룄濡??듯뻾?섏뿬???쒕떎.",
+   "援먯감濡쒖뿉???고쉶?꾪븯怨좎옄 ??寃쎌슦 誘몃━ ?꾨줈???곗륫媛?μ옄由щ? ?쒗뻾?섎㈃???고쉶?꾪빐???쒕떎.",
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯怨좎옄 ???뚮뒗 ?쒗뻾?쇰줈 ?꾨줈??以묒븰 ?먮뒗 醫뚯륫媛?μ옄由ъ뿉 遺숈뼱??醫뚰쉶?꾪빐???쒕떎.",
+   "?먯쟾嫄곕룄濡쒓? ?곕줈 ?ㅼ튂??怨녹뿉?쒕뒗 洹??먯쟾嫄곕룄濡쒕줈 ?듯뻾?섏뿬???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT true about riding a  bicycle?",
+  "tr_c": [
+   "If a road is divided into a roadway and a sidewalk, bicycle riders must travel on the roadway.",
+   "To turn right at an intersection, bicycle riders must use the rightmost lane and slow down before making the turn.",
+   "To turn left at an intersection, bicycle riders must use the centerline or leftmost lane and slow down before making the turn.",
+   "Bicycle riders must use the bicycle lane if there is any."
+  ]
+ },
+ {
+  "n": 571,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???⑹뼱???뺤쓽??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쒖옄?숈감?꾩슜?꾨줈?앸? ?먮룞李⑤쭔???ㅻ땺 ???덈룄濡??ㅼ튂???꾨줈瑜?留먰븳??",
+   "?쒖옄?꾧굅?꾨줈?앸? ?덉쟾?쒖?, ?꾪뿕諛⑹????명?由щ굹 洹몄? 鍮꾩듂???멸났援ъ“臾쇰줈 寃쎄퀎瑜??쒖떆?섏뿬 ?먯쟾嫄곕쭔 ?듯뻾?????덈룄       濡??ㅼ튂???꾨줈瑜?留먰븳??",
+   "?쒖옄?숈감?기앹씠? ?먮룞李⑥? ?곕쭏瑜?留먰븳??",
+   "?쒖옄?꾧굅?기앹씠? ?먯쟾嫄곗? ?꾧린?먯쟾嫄곕? 留먰븳??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is true about the definition of terms under the Road Traffic Act and its Enforcement  Decree?",
+  "tr_c": [
+   "The term ?쏿utomobile road??refers to a road designed exclusively for motor vehicles.",
+   "The term ?쐀icycle track??refers to a road where safety signs, fences, or similar artificial structures mark the boundaries to allow only bicycles to pass.",
+   "The term ?쐌otor vehicles, etc.??refers to motor vehicles and horses.",
+   "The term ?쐀icycles, etc.??refers to bicycles and electric bicycles."
+  ]
+ },
+ {
+  "n": 572,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂 ?댁쟾??以?섏궗??쑝濡?留욎? ?딆? 寃껋??",
+  "ko_c": [
+   "媛쒖씤???대룞?μ튂???댁쟾硫댄뿀瑜?諛쏆? ?딆븘???댁쟾?????덈떎.",
+   "?뱀감?뺤썝??珥덇낵?섏뿬 ?숈듅?먮? ?쒖슦怨??댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?댁쟾?먮뒗 ?몃챸蹂댄샇?κ뎄瑜?李⑹슜?섍퀬 ?댄뻾?섏뿬???쒕떎.",
+   "?먯쟾嫄곕룄濡쒓? ?곕줈 ?덈뒗 怨녹뿉?쒕뒗 洹??먯쟾嫄곕룄濡쒕줈 ?듯뻾?섏뿬???쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT true about drivers  of personal mobility devices (PMDs)?",
+  "tr_c": [
+   "A driver's license is not required to operate a PMD.",
+   "It is not allowed to have more riders than the permitted capacity on a PMD.",
+   "Drivers of PMDs must wear protective gear to operate the device.",
+   "Drivers of PMDs must use the bicycle lane if there is any."
+  ]
+ },
+ {
+  "n": 573,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?먯쟾嫄곕? ?怨?蹂대룄 ?듯뻾???????녿뒗 ?щ엺??",
+  "ko_c": [
+   "?뚯옣?좎씤蹂듭?踰뺛띿뿉 ?곕씪 ?좎껜?μ븷?몄쑝濡??깅줉???щ엺",
+   "?대┛??,
+   "?좎껜??遺?곸쑝濡??앷퀬遺뺣?瑜??섍퀬 ?덈뒗 ?щ엺",
+   "?뚭뎅媛?좉났?????덉슦 諛?吏?먯뿉 愿??踰뺣쪧?띿뿉 ?곕Ⅸ 援???좉났?먮줈???곸씠?깃툒 ??湲됰?????湲됯퉴吏???대떦?섎뒗 ?щ엺"
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act, which of the following persons may NOT use a sidewalk while riding a bicycle?",
+  "tr_c": [
+   "A person registered as physically handicapped according to the Act on the Welfare of Persons with Disabilities",
+   "A child",
+   "A person with a plaster cast due to a bodily injury",
+   "A person of distinguished service to the state with Disability Rating 1 through 7 according to the Act on the Honorable Treatment of and Support for Persons of Distinguished Service to the State"
+  ]
+ },
+ {
+  "n": 574,
+  "ko_b": "?꾨갑???먯쟾嫄곕? ?뚭퀬 李⑤룄瑜??〓떒?섎뒗 ?щ엺???덉쓣 ??媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "?〓떒?섎뒗 ?먯쟾嫄곗쓽 醫뙿룹슦痢?怨듦컙???댁슜?섏뿬 ?좎냽?섍쾶 ?듯뻾?쒕떎.",
+   "李⑤웾???묎렐?뺣룄瑜??뚮젮二쇨린 ?꾪빐 ?꾩“?깃낵 寃쎌쓬湲곕? ?ъ슜?쒕떎.",
+   "?먯쟾嫄??〓떒吏?먭낵 ?쇱젙??嫄곕━瑜??먭퀬 ?쇱떆?뺤? ?쒕떎.",
+   "?먮룞李??댁쟾?먭? ?곗꽑沅뚯씠 ?덉쑝誘濡??〓떒?섎뒗 ?щ엺???뺤??섍쾶 ?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "There is a pedestrian walking his/her bicycle to cross the street ahead of you. Which of the following is the  safest way to approach?",
+  "tr_c": [
+   "Swiftly drive past the pedestrian from whichever side is more open.",
+   "Use the headlights and horn to let the pedestrian know you are approaching.",
+   "Fully stop the vehicle at a certain distance from the pedestrian.",
+   "Make the pedestrian stop as you have the right of way."
+  ]
+ },
+ {
+  "n": 575,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛??蹂댄샇援ъ뿭 ?댁쓽 李⑤줈媛 ?ㅼ튂?섏? ?딆? 醫곸? ?꾨줈?먯꽌 ?먯쟾嫄곕? 二쇳뻾?섏뿬 蹂댄뻾???놁쓣 吏?섍컝  ???덉쟾??嫄곕━瑜??먯? ?딄퀬 ?쒗뻾?섏? ?딆? 寃쎌슦 踰붿튃 湲덉븸??",
+  "ko_c": [
+   "10留???,
+   "8留???,
+   "4留???,
+   "2留???
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the amount of penalty imposed on a person who rides a bicycle on a narrow road within a school zone where a lane is not installed and who does not slow down while passing by a pedestrian without securing a safe distance?",
+  "tr_c": [
+   "KRW 100,000",
+   "KRW 80,000",
+   "KRW 40,000",
+   "KRW 20,000"
+  ]
+ },
+ {
+  "n": 576,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???대┛?닿? ?꾨줈?먯꽌 ???寃쎌슦 ?몃챸蹂댄샇?κ뎄瑜?李⑹슜?섏뿬???섎뒗 ?됱젙?덉쟾遺?뱀쑝濡??뺥븯???꾪뿕?깆씠 ?? ??닿린援ъ뿉 ?대떦?섏? ?딅뒗 寃껋??",
+  "ko_c": [
+   "?λ낫??,
+   "?꾨룞?대쪣?됲뻾李?,
+   "濡ㅻ윭?ㅼ??댄듃",
+   "?ㅼ??댄듃蹂대뱶"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is not a high-risk personal mobility device/sports equipment stipulated by the Ordinance of the Ministry of Interior and Safety to require children to wear protective gear when riding on the road?",
+  "tr_c": [
+   "Kick scooters",
+   "Self-balancing scooters (segway)",
+   "Roller skates",
+   "Skateboards"
+  ]
+ },
+ {
+  "n": 577,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄??듯뻾諛⑸쾿??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄??댁쟾?먮뒗 ?덉쟾?쒖?濡??듯뻾???덉슜??寃쎌슦瑜??쒖쇅?섍퀬??2? ?댁긽???섎???李⑤룄瑜??듯뻾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?먯쟾嫄??댁쟾?먭? ?〓떒蹂대룄瑜??댁슜?섏뿬 ?꾨줈瑜??〓떒???뚯뿉???먯쟾嫄곕? ?뚭퀬 ?듯뻾?섏뿬???쒕떎.",
+   "?먯쟾嫄??댁쟾?먮뒗 ?꾨줈???뚯넀, ?꾨줈 怨듭궗??洹?諛뽰쓽 ?μ븷 ?깆쑝濡??꾨줈瑜??듯뻾?????녿뒗 寃쎌슦?먮룄 蹂대룄瑜??듯뻾?????녿떎.",
+   "?먯쟾嫄??댁쟾?먮뒗 ?먯쟾嫄??꾨줈媛 ?ㅼ튂?섏? ?꾨땲??怨녹뿉?쒕뒗 ?꾨줈 以묒븰?쇰줈 遺숈뼱???듯뻾?섏뿬???쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following are the TWO correct  statements regarding cycling?",
+  "tr_c": [
+   "Unless allowed by a safety sign, two or more cyclists must not ride side by side on a road.",
+   "When crossing a crosswalk, a cyclist must dismount and push his/her bicycle across.",
+   "A cyclist must not use a sidewalk even if the road is not accessible due to damage, construction, or other interferences.",
+   "Where there is no bicycle track, a cyclist must ride close to the center of the road."
+  ]
+ },
+ {
+  "n": 578,
+  "ko_b": "?먯쟾嫄??댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧??(  )??誘몃쭔???대┛?댁쓽 蹂댄샇?먮뒗 ?대┛?닿? ?꾧린?먯쟾嫄곕? ?댄뻾?섍쾶 ?섏뿬?쒕뒗 ?꾨땲  ?쒕떎. (     ) ?덉뿉 湲곗??쇰줈 ?뚮쭪? 寃껋??",
+  "ko_c": [
+   "10",
+   "13",
+   "15",
+   "18"
+  ],
+  "a": "2",
+  "tr_b": "According to the Act on the Promotion of Bicycle Riding, a guardian must not allow a child under the age of (   ) to operate an electric bicycle. Which of the following fills in the (   ) correctly?",
+  "tr_c": [
+   "10",
+   "13",
+   "15",
+   "18"
+  ]
+ },
+ {
+  "n": 579,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄곕벑???듯뻾諛⑸쾿?쇰줈 ?곸젅???됱쐞媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "吏꾪뻾諛⑺뼢 媛??醫뚯륫 李⑤줈?먯꽌 醫뚰쉶?꾪븯???",
+   "?꾨줈 ?뚯넀 蹂듦뎄怨듭궗媛 ?덉뼱??蹂대룄濡??듯뻾?섏???",
+   "?〓떒蹂대룄 ?댁슜 ???대젮???뚭퀬 ?〓떒?섏???",
+   "蹂댄뻾???ш퀬瑜?諛⑹??섍린 ?꾪빐 ?쒗뻾???섏???"
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT the correct way to  ride a bicycle?",
+  "tr_c": [
+   "Turn left on the leftmost lane.",
+   "Pass through the sidewalk as there was construction to repair damage on the roadway.",
+   "When using a crosswalk, get off and drag across.",
+   "Slow down to prevent pedestrian accidents."
+  ]
+ },
+ {
+  "n": 580,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄??댁쟾?먭? 吏耳쒖빞 ???댁슜?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐媛 ???뚮뒗 ?쒗뻾 諛??쇱떆?뺤??댁빞 ?쒕떎.",
+   "?대┛?닿? ?먯쟾嫄곕? ?댁쟾?섎뒗 寃쎌슦??蹂대룄濡??듯뻾?????녿떎.",
+   "?먯쟾嫄곗쓽 ?듯뻾??湲덉???援ш컙?먯꽌???먯쟾嫄곕? ?뚭퀬 媛??섎룄 ?녿떎.",
+   "湲멸??μ옄由ш뎄??뿉?쒕뒗 2?源뚯? ?먯쟾嫄곌? ?섎????듯뻾?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct behavior of  a cyclist?",
+  "tr_c": [
+   "If the bicycle impedes the passage of pedestrians, slow down or stop temporarily.",
+   "A child riding a bicycle is not allowed to do so on the sidewalk.",
+   "Dragging a bicycle is not allowed in sections where the passage of bicycles is prohibited.",
+   "Up to two bicycles can pass side by side in the roadside area."
+  ]
+ },
+ {
+  "n": 581,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄??꾧린?먯쟾嫄??쒖쇅) ?댁쟾?먯쓽 ?꾨줈 ?듯뻾 諛⑸쾿?쇰줈 媛??諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?대┛?닿? ?먯쟾嫄곕? ?怨?蹂대룄瑜??듯뻾?섏???",
+   "?덉쟾?쒖?濡??먯쟾嫄??듯뻾???덉슜??蹂대룄瑜??듯뻾?섏???",
+   "?꾨줈???뚯넀?쇰줈 遺?앹씠?섍쾶 蹂대룄瑜??듯뻾?섏???",
+   "?듯뻾 李⑤웾???놁뼱 ?꾨줈 以묒븰?쇰줈 ?듯뻾?섏???"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT an advisable practice for cyclists (excluding electric bicycles)?",
+  "tr_c": [
+   "A child riding a bicycle on a sidewalk",
+   "Cycling on a sidewalk with a safety sign indicating that cyclists are allowed",
+   "Cycling on a sidewalk because the road is damaged",
+   "Cycling along the middle of the road as there are no cars around"
+  ]
+ },
+ {
+  "n": 582,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??媛쒖씤???대룞?μ튂 ?댁쟾?먯뿉 ????ㅻ챸?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?〓떒蹂대룄瑜??댁슜?섏뿬 ?꾨줈瑜??〓떒???뚯뿉??媛쒖씤???대룞?μ튂?먯꽌 ?대젮???뚭굅???ㅺ퀬 蹂댄뻾?섏뿬???쒕떎.",
+   "?먯쟾嫄곕룄濡쒓? ?ㅼ튂?섏? ?꾨땲??怨녹뿉?쒕뒗 ?꾨줈 ?곗륫 媛?μ옄由ъ뿉 遺숈뼱???듯뻾?섏뿬???쒕떎.",
+   "?꾨룞?대쪣?됲뻾李⑤뒗 ?뱀감?뺤썝 1紐낆쓣 珥덇낵?섏뿬 ?숈듅?먮? ?쒖슦怨??댁쟾?????덈떎.",
+   "諛ㅼ뿉 ?꾨줈瑜??듯뻾?섎뒗 ?뚯뿉???꾩“?깃낵 誘몃벑??耳쒓굅???쇨킅????諛쒓킅?μ튂瑜?李⑹슜?섏뿬???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT true about drivers  of personal mobility devices?",
+  "tr_c": [
+   "When crossing a crosswalk, get off the device and walk by either carrying or pushing the device.",
+   "If there is no bicycle lane, ride the device on the far right side of the road.",
+   "A self-balancing scooter is designed to carry more than 1 person.",
+   "When driving at night, turn on the headlights and tail lights or wear other light-emitting devices."
+  ]
+ },
+ {
+  "n": 583,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄??댁쟾?먯쓽 援먯감濡?醫뚰쉶???듯뻾諛⑸쾿??????ㅻ챸?대떎. 留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨줈???곗륫 媛?μ옄由щ줈 遺숈뼱 ?쒗뻾?섎㈃??援먯감濡쒖쓽 媛?μ옄由?遺遺꾩쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?꾨줈??醫뚯륫 媛?μ옄由щ줈 遺숈뼱 ?쒗뻾?섎㈃??援먯감濡쒖쓽 媛?μ옄由?遺遺꾩쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?꾨줈??1李⑤줈 以묒븰?쇰줈 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒븰???댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?꾨줈??媛???섏쐞李⑤줈瑜??댁슜?섏뿬 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒떖 ?덉そ?쇰줈 醫뚰쉶?꾪븯?ъ빞 ?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is the correct method for  a cyclist to turn left at an intersection?",
+  "tr_c": [
+   "Ride slowly along the right edge of the road before turning left around the edge of the intersection.",
+   "Ride slowly along the left edge of the road before turning left around the edge of the intersection.",
+   "Ride slowly down the middle of the first lane of the road before turning left through the middle of the intersection.",
+   "Ride slowly down the far-right lane of the road before turning left through the center of the intersection."
+  ]
+ },
+ {
+  "n": 584,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜李④? ?먯쟾嫄??꾩슜李⑤줈瑜??듯뻾?섎떎 ?⑥냽?섎뒗 寃쎌슦 ?꾨줈援먰넻踰뺤긽 泥섎쾶??",
+  "ko_c": [
+   "1???댄븯 吏뺤뿭??泥섑븳??",
+   "300留????댄븯 踰뚭툑??泥섑븳??",
+   "踰붿튃湲?4留??먯쓽 ?듦퀬泥섎텇??泥섑븳??",
+   "泥섎쾶?????녿떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, what is the penalty imposed on the driver of a  passenger car if he/she is caught driving on an exclusive bicycle track?",
+  "tr_c": [
+   "Imprisonment for up to 1 year",
+   "A criminal fine of not more than KRW 3 million",
+   "Notification of traffic penalty of KRW 40,000",
+   "No penalty"
+  ]
+ },
+ {
+  "n": 585,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄곕룄濡쒕? 二쇳뻾?????덈뒗 ?꾧린?먯쟾嫄곗쓽 湲곗??쇰줈 ?녹? ?딆? 寃껋??",
+  "ko_c": [
+   "遺李⑸맂 ?μ튂??臾닿쾶瑜??ы븿???먯쟾嫄??꾩껜 以묐웾??30?щ줈洹몃옩 誘몃쭔??寃?,
+   "?쒖냽 25?щ줈誘명꽣 ?댁긽?쇰줈 ?吏곸씪 寃쎌슦 ?꾨룞湲곌? ?묐룞?섏? ?꾨땲??寃?,
+   "?꾨룞湲곕쭔?쇰줈???吏곸씠吏 ?꾨땲??寃?,
+   "理쒓퀬?뺢꺽異쒕젰 11?щ줈???珥덇낵?섎뒗 ?꾧린?먯쟾嫄?
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT true about the  criteria for electric bicycles that can travel on bicycle tracks?",
+  "tr_c": [
+   "The gross weight of the bicycle, including the weight of attached devices, is less than 30 kg.",
+   "The electric motor must not operate if the speed exceeds 25 km/h.",
+   "The bicycle must not move solely by the electric motor.",
+   "Electric bicycle with maximum rated output of more than 11 kW."
+  ]
+ },
+ {
+  "n": 586,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄??댁쟾?먭? 諛ㅼ뿉 ?꾨줈瑜??듯뻾?????щ컮瑜?二쇳뻾 諛⑸쾿?쇰줈 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "寃쎌쓬湲곕? ?먯＜ ?ъ슜?섎㈃??二쇳뻾?쒕떎.",
+   "?꾩“?깃낵 誘몃벑??耳쒓퀬 二쇳뻾?쒕떎.",
+   "諛섏궗議곕겮 ?깆쓣 李⑹슜?섍퀬 二쇳뻾?쒕떎.",
+   "?쇨킅????諛쒓킅?μ튂瑜?李⑹슜?섍퀬 二쇳뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT true about riding a  bicycle at night?",
+  "tr_c": [
+   "Frequently use the bicycle bell or horn.",
+   "Turn on the headlights and tail lights.",
+   "Wear a reflective vest.",
+   "Wear a light-emitting device."
+  ]
+ },
+ {
+  "n": 587,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄??댁쟾?먭? 踰뺢퇋瑜??꾨컲??寃쎌슦 踰붿튃湲???곸씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?좏샇?꾨컲",
+   "以묒븰?좎묠踰?,
+   "?〓떒蹂대룄 蹂댄뻾???〓떒 諛⑺빐",
+   "?쒗븳?띾룄 ?꾨컲"
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following is NOT subject to a traffic  penalty if a bicycle rider violates traffic laws?",
+  "tr_c": [
+   "Violating traffic lights",
+   "Crossing the centerline",
+   "Obstructing pedestrians on a crosswalk",
+   "Exceeding the speed limit"
+  ]
+ },
+ {
+  "n": 588,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄곕룄濡쒖쓽 ?댁슜怨?愿?⑦븳 ?댁슜?쇰줈 ?곸젅移??딆? 2媛吏??",
+  "ko_c": [
+   "?몄씤???먯쟾嫄곕? ???寃쎌슦 蹂대룄濡??듯뻾?????덈떎.",
+   "?먯쟾嫄곗쟾?⑸룄濡쒖뿉???먮룞湲곗옣移섏옄?꾧굅媛 ?듯뻾?????녿떎.",
+   "?먯쟾嫄곕룄濡쒕뒗 媛쒖씤???대룞?μ튂媛 ?듯뻾?????녿떎.",
+   "?먯쟾嫄곗쟾?⑸룄濡쒕뒗 ?꾨줈援먰넻踰뺤긽 ?꾨줈???ы븿?섏? ?딅뒗??"
+  ],
+  "a": "3, 4",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following describe the INCORRECT  use of the bicycle lane? (Select TWO)",
+  "tr_c": [
+   "A senior person can ride a bicycle on the sidewalk.",
+   "Motorcycles are not allowed on exclusive bicycle tracks.",
+   "Personal mobility devices are not allowed on exclusive bicycle tracks.",
+   "According to the Road Traffic Act, exclusive bicycle tracks are not considered roads."
+  ]
+ },
+ {
+  "n": 589,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먯쟾嫄곌? ?듯뻾?????덈뒗 ?꾨줈??紐낆묶???대떦?섏? ?딅뒗 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄??꾩슜?꾨줈",
+   "?먯쟾嫄??곗꽑李⑤줈",
+   "?먯쟾嫄겸ㅼ썝?숆린?μ튂?먯쟾嫄?寃몄슜?꾨줈",
+   "?먯쟾嫄??곗꽑?꾨줈"
+  ],
+  "a": "2, 3",
+  "tr_b": "According to the Road Traffic Act and its Enforcement Decree, which of the following statements regarding the  names of the roads/lanes that can be used by bicycles are INCORRECT? (Select TWO)",
+  "tr_c": [
+   "Exclusive bicycle track",
+   "Bicycle priority lane",
+   "Bicycle and motorcycle lane",
+   "Bicycle priority road"
+  ]
+ },
+ {
+  "n": 590,
+  "ko_b": "?곕즺???뚮퉬 ?⑥쑉??媛???믪? ?댁쟾諛⑸쾿? ?",
+  "ko_c": [
+   "理쒓퀬?띾룄濡?二쇳뻾?쒕떎.",
+   "理쒖??띾룄濡?二쇳뻾?쒕떎.",
+   "寃쎌젣?띾룄濡?二쇳뻾?쒕떎.",
+   "?덉쟾?띾룄濡?二쇳뻾?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following driving methods results in the highest fuel efficiency?",
+  "tr_c": [
+   "Driving at the highest speed",
+   "Driving at the lowest speed",
+   "Driving at an economical speed",
+   "Driving at a safe speed"
+  ]
+ },
+ {
+  "n": 591,
+  "ko_b": "移쒗솚寃?寃쎌젣?댁쟾 諛⑸쾿?쇰줈 媛???곸젅??寃껋??",
+  "ko_c": [
+   "媛?ν븳 鍮⑤━ 媛?랁븳??",
+   "?대━留됯만?먯꽌???쒕룞???꾧퀬 ?대젮?⑤떎.",
+   "??댁뼱 怨듦린?뺤쓣 ??텣??",
+   "湲됯컧?띿? ?섎룄濡??쇳븳??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the best approach to eco-friendly, economical driving?",
+  "tr_c": [
+   "Accelerate as fast as possible.",
+   "Turn off the engine as you enter a downhill road.",
+   "Lower the air pressure of tires.",
+   "Avoid rapid deceleration, if possible."
+  ]
+ },
+ {
+  "n": 592,
+  "ko_b": "?먮룞李??먯뼱而??ъ슜 諛⑸쾿 諛??먭???愿???ㅻ챸?쇰줈 媛????뱁븳 寃껋??",
+  "ko_c": [
+   "?먯뼱而⑥? 泥섏쓬 耳???怨좊떒?쇰줈 ?쒖옉?섏뿬 ??⑥쑝濡??꾪솚?쒕떎.",
+   "?먯뼱而??됰ℓ??6媛쒖썡 留덈떎 援먰솚?쒕떎.",
+   "?먯뼱而⑥쓽 ?ㅼ젙 ?⑤룄????뵪 16?꾧? 媛???곸젅?섎떎.",
+   "?먯뼱而??ъ슜 ??媛?ν븯硫??몃? 怨듦린 ?좎엯 紐⑤뱶濡??묐룞?섎㈃ ?④낵?곸씠??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following correctly describes how an air-conditioner in a vehicle should be used and maintained?",
+  "tr_c": [
+   "Turn on the air-conditioner to full and then turn it down to a lower level.",
+   "Replace the coolant every six months.",
+   "The ideal temperature setting for an air-conditioner is 16째C.",
+   "Operate the air-conditioner in outer air inflow mode for greater cooling efficiency."
+  ]
+ },
+ {
+  "n": 593,
+  "ko_b": "?ㅼ쓬 以??먮룞李??곕퉬 ?μ긽 諛⑸쾿?쇰줈 媛??諛붾엺吏곹븳 寃껋??",
+  "ko_c": [
+   "二쇱쑀??????긽 ?곕즺瑜?媛??二쇱쑀?쒕떎.",
+   "?붿쭊?ㅼ씪 援먰솚 ???ㅼ씪?꾪꽣? ?먯뼱?꾪꽣瑜??④퍡 援먰솚??以??",
+   "?뺤????뚯뿉????踰덉뿉 媛뺥븳 ?섏쑝濡?釉뚮젅?댄겕 ?섎떖??諛잛븘 ?쒕룞?쒕떎.",
+   "媛?랁럹?ш낵 釉뚮젅?댄겕 ?섎떖???먯＜ ?ъ슜?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the most appropriate method of improving a vehicle?셲 fuel efficiency?",
+  "tr_c": [
+   "Always fill up the fuel tank completely.",
+   "When replacing engine oil, replace the oil filter and the air filter as well.",
+   "When making a stop, step on the brake pedal once with strong force.",
+   "Frequently use the accelerator and brake pedals."
+  ]
+ },
+ {
+  "n": 594,
+  "ko_b": "二쇳뻾 以묒뿉 媛???섎떖?먯꽌 諛쒖쓣 ?쇨굅????⑥쑝濡?湲곗뼱瑜?蹂?랁븯??李⑤웾???띾룄瑜?以꾩씠???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "湲곗뼱 以묐┰",
+   "??釉뚮젅?댄겕",
+   "二쇱감 釉뚮젅?댄겕",
+   "?붿쭊 釉뚮젅?댄겕"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is a brake/gear that helps bring down a car's speed when the driver takes his/her foot  off the accelerator or downshifts?",
+  "tr_c": [
+   "Neutral gear",
+   "Foot brake",
+   "Parking brake",
+   "Engine brake"
+  ]
+ },
+ {
+  "n": 595,
+  "ko_b": "?ㅼ쓬 以??먮룞李??곕퉬瑜??μ긽?쒗궎???댁쟾諛⑸쾿?쇰줈 媛??諛붾엺吏곹븳 寃껋??",
+  "ko_c": [
+   "?먮룞李?怨좎옣???鍮꾪븯??媛곸쥌 怨듦뎄 諛?遺?덉쓣 ?ｊ퀬 ?댄뻾?쒕떎.",
+   "?뺤냽 二쇳뻾?쒕떎.",
+   "湲됱텧諛? 湲됯??? 湲됱젣???깆쓣 ?섏떆濡??쒕떎.",
+   "?곕퉬 ?μ긽???꾪빐 ??댁뼱 怨듦린?뺤쓣 30?쇱꽱?몃줈 以꾩뿬???댄뻾?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the most advisable method of driving in order to improve a vehicle?셲 fuel efficiency?",
+  "tr_c": [
+   "Drive with various tools and parts loaded so that you are prepared for a possible breakdown.",
+   "Maintain a steady speed while driving.",
+   "Perform quick starts, quick acceleration, and quick braking frequently.",
+   "Drive with your tire pressure reduced by 30 percent for improved fuel efficiency."
+  ]
+ },
+ {
+  "n": 596,
+  "ko_b": "?ㅼ쓬 以??댁쟾?듦? 媛쒖꽑???듯븳 移쒗솚寃?寃쎌젣?댁쟾???꾨땶 寃껋??",
+  "ko_c": [
+   "?먮룞李??곕즺瑜?媛???좎??쒕떎.",
+   "異쒕컻? 遺?쒕읇寃??쒕떎.",
+   "?뺤냽二쇳뻾???좎??쒕떎.",
+   "寃쎌젣?띾룄瑜?以?섑븳??"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is NOT an eco-friendly, economical way of driving through the improvement of driving  habits?",
+  "tr_c": [
+   "Keep the vehicle fuel at the full level.",
+   "Start the car smoothly.",
+   "Keep driving at a constant speed.",
+   "Comply with the economical speed."
+  ]
+ },
+ {
+  "n": 597,
+  "ko_b": "?ㅼ쓬 以??먮룞李⑥쓽 移쒗솚寃?寃쎌젣?댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "??댁뼱 怨듦린?뺤쓣 ??쾶 ?쒕떎.",
+   "?먯뼱而??묐룞? ??⑥쑝濡??쒖옉?쒕떎.",
+   "?붿쭊?ㅼ씪??援먰솚?????ㅼ씪?꾪꽣? ?먯뼱?대━?덈뒗 援먰솚?섏? ?딄퀬 怨꾩냽 ?ъ슜?쒕떎.",
+   "?먮룞李??곕즺???덈컲?뺣룄留?梨꾩슫??"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is an eco-friendly, economical method of driving?",
+  "tr_c": [
+   "Reduce air pressure in the tires.",
+   "Start the air-conditioner at a low level",
+   "Do not replace the oil filter and air filter when replacing the engine oil.",
+   "Keep the fuel tank filled to about half its capacity."
+  ]
+ },
+ {
+  "n": 598,
+  "ko_b": "?섏냼?먮룞李?愿???ㅻ챸 以??곸젅?섏? ?딆? 寃껋??",
+  "ko_c": [
+   "李⑤웾 ?붿옱媛 諛쒖깮?덉쓣 ??李⑤웾?먯꽌 ?⑥뼱吏??덉쟾??怨녹쑝濡???쇳븯???",
+   "?섏냼 ?꾩텧 寃쎄퀬?깆씠 ?쒖떆 ?섏뿀????利됱떆 ?덉쟾??怨녹뿉 ?뺤감 ???쒕룞???덈떎.",
+   "?섏냼?뱀슜李??댁쟾?먮뒗 蹂꾨룄???덉쟾援먯쑁???댁닔?섏? ?딆븘???쒕떎.",
+   "?섏냼?먮룞李?異⑹쟾?뚯뿉???댁쟾?먭? ?꾩쓽濡?異⑹쟾???ㅻ퉬瑜?議곗옉?섏???"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT true about an FCEV?",
+  "tr_c": [
+   "When the vehicle catches fire, quickly evacuate and move far from the fire for safety.",
+   "If the hydrogen leak detector turns on, immediately park in a safe location and turn off the engine.",
+   "The driver of an FCEV is not required to take safety education.",
+   "The driver of an FCEV can manipulate equipment at the hydrogen charging station."
+  ]
+ },
+ {
+  "n": 599,
+  "ko_b": "?ㅼ쓬 以?寃쎌젣?댁쟾??????댁쟾?먯쓽 ?щ컮瑜??댁쟾?듦??쇰줈 媛??諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?대━留됯만 ?댁쟾 ??媛?랁럹??諛잛? ?딄린",
+   "寃쎌젣???덉빟???꾪빐 ?좎궗?곕즺 ?ъ슜?섍린",
+   "異쒕컻? 泥쒖쿇?? 湲됱젙吏?섏? ?딄린",
+   "二쇨린????댁뼱 怨듦린???먭??섍린"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the least desirable driving habit in terms of economical driving?",
+  "tr_c": [
+   "Do not step on the accelerator pedal when driving downhill.",
+   "Use similar fuels for economic savings.",
+   "Start slowly and do not stop suddenly.",
+   "Check the tire pressure regularly."
+  ]
+ },
+ {
+  "n": 600,
+  "ko_b": "?섍꼍移쒗솕???먮룞李⑥쓽 媛쒕컻 諛?蹂닿툒 珥됱쭊??愿??踰뺣쪧???섍꼍移쒗솕???먮룞李??꾩슜二쇱감援ъ뿭??二쇱감?댁꽌?????섎뒗 ?먮룞李⑤뒗?",
+  "ko_c": [
+   "?꾧린?먮룞李?,
+   "?쒖뼇愿묒옄?숈감",
+   "?섏씠釉뚮━?쒖옄?숈감",
+   "?섏냼?꾧린?먮룞李?
+  ],
+  "a": "2",
+  "tr_b": "According to the Act on the Promotion of Development and Distribution of Environment-friendly Motor Vehicles,  which of the following vehicles is NOT allowed to park in an EV parking space?",
+  "tr_c": [
+   "EV",
+   "Solar vehicle",
+   "Hybrid vehicle",
+   "FCEV"
+  ]
+ }
+]
+
+codex
+[{"n":568,"field":"c[3]","severity":"major","issue":"원문의 주어인 '긴급자동차'를 '구급차(ambulances)'로 잘못 한정하여 적용 대상이 달라졌다.","suggestion":"As a rule, emergency vehicles have traffic priority and receive the special treatment prescribed by law only when they sound a siren or turn on an emergency warning light."},{"n":571,"field":"c[0]","severity":"minor","issue":"핵심 용어와 인용부호가 문자 깨짐으로 표시되어 문장을 정상적으로 읽기 어렵다.","suggestion":"The term \"motorway\" refers to a road designed exclusively for motor vehicles."},{"n":571,"field":"c[1]","severity":"minor","issue":"핵심 용어와 인용부호가 문자 깨짐으로 표시되어 문장을 정상적으로 읽기 어렵다.","suggestion":"The term \"bicycle track\" refers to a road where safety signs, fences, or similar artificial structures mark the boundaries to allow only bicycles to pass."},{"n":571,"field":"c[2]","severity":"minor","issue":"핵심 용어와 인용부호가 문자 깨짐으로 표시되어 문장을 정상적으로 읽기 어렵다.","suggestion":"The term \"motor vehicles, etc.\" refers to motor vehicles and horses."},{"n":571,"field":"c[3]","severity":"minor","issue":"핵심 용어와 인용부호가 문자 깨짐으로 표시되어 문장을 정상적으로 읽기 어렵다.","suggestion":"The term \"bicycles, etc.\" refers to bicycles and electric bicycles."},{"n":592,"field":"c[2]","severity":"minor","issue":"온도 단위 기호가 깨져 '16째C'로 표시되었다.","suggestion":"The ideal temperature setting for an air-conditioner is 16°C."}]
+tokens used
+24,142
+[{"n":568,"field":"c[3]","severity":"major","issue":"원문의 주어인 '긴급자동차'를 '구급차(ambulances)'로 잘못 한정하여 적용 대상이 달라졌다.","suggestion":"As a rule, emergency vehicles have traffic priority and receive the special treatment prescribed by law only when they sound a siren or turn on an emergency warning light."},{"n":571,"field":"c[0]","severity":"minor","issue":"핵심 용어와 인용부호가 문자 깨짐으로 표시되어 문장을 정상적으로 읽기 어렵다.","suggestion":"The term \"motorway\" refers to a road designed exclusively for motor vehicles."},{"n":571,"field":"c[1]","severity":"minor","issue":"핵심 용어와 인용부호가 문자 깨짐으로 표시되어 문장을 정상적으로 읽기 어렵다.","suggestion":"The term \"bicycle track\" refers to a road where safety signs, fences, or similar artificial structures mark the boundaries to allow only bicycles to pass."},{"n":571,"field":"c[2]","severity":"minor","issue":"핵심 용어와 인용부호가 문자 깨짐으로 표시되어 문장을 정상적으로 읽기 어렵다.","suggestion":"The term \"motor vehicles, etc.\" refers to motor vehicles and horses."},{"n":571,"field":"c[3]","severity":"minor","issue":"핵심 용어와 인용부호가 문자 깨짐으로 표시되어 문장을 정상적으로 읽기 어렵다.","suggestion":"The term \"bicycles, etc.\" refers to bicycles and electric bicycles."},{"n":592,"field":"c[2]","severity":"minor","issue":"온도 단위 기호가 깨져 '16째C'로 표시되었다.","suggestion":"The ideal temperature setting for an air-conditioner is 16°C."}]

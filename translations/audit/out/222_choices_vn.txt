@@ -1,0 +1,1027 @@
+Reading additional input from stdin...
+2026-10-10T13:57:12.987800Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1261a-80e0-78b1-bb24-31a4c2d206ee
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/222_choices_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/222_choices_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 531ms:
+[
+ {
+  "n": 881,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?덈뒗 ?꾨줈?먯꽌???덉쟾?댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "?좏샇湲곗쓽 吏꾪뻾?좏샇媛 ?덉쓣 ???쒖꽌??吏꾩엯 ?듦낵?쒕떎.",
+   "李⑤떒湲곌? ?대젮媛怨??덉쓣 ???좎냽??吏꾩엯 ?듦낵?쒕떎.",
+   "泥좊룄嫄대꼸紐?吏꾩엯 ?꾩뿉 寃쎈낫湲곌? ?몃━硫?媛?랁븯???듦낵?쒕떎.",
+   "李⑤떒湲곌? ?щ씪媛怨??덉쓣 ??湲곗뼱瑜??먯＜ 諛붽퓭媛硫??듦낵?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "C찼ch l찼i xe n횪o l횪 an to횪n t梳죍 휃o梳죒 휃튼沼쓓g c처 bi沼긪  b찼o an to횪n sau?",
+  "tr_c": [
+   "T沼?t沼?v튼沼즨 qua khi c처 t챠n hi沼뇎 cho ph챕p.",
+   "Nhanh ch처ng v튼沼즨 qua khi thanh ch梳칗 휃ang h梳?xu沼몁g.",
+   "N梳퓎 c챵i b찼o vang l챗n tr튼沼쌵 khi 휃i v횪o l沼멼 giao c梳칣 v沼쌻  휃튼沼쓓g s梳칣 th챙 t훱ng t沼멵 휃沼?휃i qua.",
+   "휂沼뷼 s沼?li챗n t沼쩭 chu梳쯰 b沼?v튼沼즨 qua khi thanh ch梳칗 휃ang  d梳쬷 휃튼沼즓 n창ng l챗n."
+  ]
+ },
+ {
+  "n": 882,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?삵븯??寃껋??",
+  "ko_c": [
+   "?곗꽑?꾨줈?먯꽌 ?곗꽑?꾨줈媛 ?꾨땶 ?꾨줈? 援먯감?⑥쓣 ?뚮━???쒖??대떎.",
+   "?쇰갑?듯뻾 援먯감濡쒕? ?섑??대뒗 ?쒖??대떎.",
+   "?숈씪諛⑺뼢?듯뻾?꾨줈?먯꽌 ?묒륫諛⑹쑝濡??듯뻾?섏뿬????吏?먯씠 ?덉쓬???뚮━?? ?쒖??대떎.",
+   "2諛⑺뼢 ?듯뻾???ㅼ떆?⑥쓣 ?뚮━???쒖??대떎."
+  ],
+  "a": "1",
+  "tr_b": "Bi沼긪 b찼o an to횪n sau 휃창y c처 첵 ngh칫a l횪 g챙?",
+  "tr_c": [
+   "Bi沼긪 b찼o ch沼?s沼?giao c梳칣 c沼쬪 휃튼沼쓓g 튼u ti챗n v沼쌻 휃튼沼쓓g  kh척ng 튼u ti챗n.",
+   "Bi沼긪 b찼o th沼?hi沼뇆 휃튼沼쓓g giao nhau m沼셳 chi沼걏.",
+   "Bi沼긪 b찼o cho bi梳퓍 휃i沼긩 m횪 xe ph梳즜 l튼u th척ng v沼?hai  h튼沼썀g t沼?휃o梳죒 휃튼沼쓓g l튼u th척ng c첫ng h튼沼썀g.",
+   "Bi沼긪 b찼o cho bi梳퓍 휃ang th沼켧 hi沼뇆 l튼u th척ng 2 chi沼걏."
+  ]
+ },
+ {
+  "n": 883,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "A???숈꽍?꾨줈?쒖?濡??숈꽍???곕젮媛 ?덈뒗 吏?먯뿉 ?ㅼ튂?쒕떎.",
+   "A???꾨줈???쇰???媛뺣?, ?대?, 怨꾧끝 ??異붾씫?꾪뿕吏?먯씤 寃쎌슦???ㅼ튂?쒕떎.",
+   "B??鍮꾪뻾湲곌? ?붾뱾由?留뚰겮 ?≫뭾??媛뺥븯寃?遺덉뼱 二쇱쓽?댁빞 ??吏?먯뿉 ?ㅼ튂?쒕떎.",
+   "B??援곗궗 怨듯빆 洹쇱젒?쇰줈 紐⑤뱺 李⑤쭏???듯뻾???덈? 湲덉??섎뒗 吏?먯뿉        ?ㅼ튂?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Bi沼긪 b찼o an to횪n n횪o sau 휃창y l횪 휃첬ng?",
+  "tr_c": [
+   "Bi沼긪 A l횪 bi沼긪 b찼o 휃튼沼쓓g 휃찼 l沼? 휃튼沼즓 l梳칛 휃梳톞 t梳죍 휃i沼긩  c처 nguy c퉤 휃찼 l沼?",
+   "Bi沼긪 A 휃튼沼즓 l梳칛 휃梳톞 trong tr튼沼쓓g h沼즤 m沼셳 b챗n 휃튼沼쓓g  l횪 b沼?s척ng, b찾i bi沼긪, thung l크ng, v.v., t沼쯢 l횪 휃i沼긩 c처 nguy  c퉤 r퉤i xu沼몁g.",
+   "Bi沼긪 B 휃튼沼즓 l梳칛 휃梳톞 t梳죍 휃i沼긩 c처 gi처 ngang th沼뷼 m梳죒h  휃梳퓆 m沼쯢 l횪m m찼y bay rung l梳칌, c梳쬷 ph梳즜 ch첬 첵.",
+   "Bi沼긪 B 휃튼沼즓 l梳칛 휃梳톞 t梳죍 휃i沼긩 g梳쬷 s창n bay qu창n s沼? n퉤i  tuy沼뇍 휃沼멼 c梳쩷 l튼u th척ng c沼쬪 t梳쩿 c梳?c찼c ph튼퉤ng ti沼뇆. A B"
+  ]
+ },
+ {
+  "n": 884,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨줈???쇰???怨꾧끝 ??異붾씫?꾪뿕吏??엫???뚮━??蹂댁“?쒖?",
+   "?꾨줈???쇰???媛뺣? ??異붾씫?꾪뿕吏??엫???뚮━??洹쒖젣?쒖?",
+   "?꾨줈???쇰???怨꾧끝 ??異붾씫?꾪뿕吏??엫???뚮━??二쇱쓽?쒖?",
+   "?꾨줈???쇰???媛뺣? ??異붾씫?꾪뿕吏??엫???뚮━??吏?쒗몴吏"
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? gi梳즜 th챠ch n횪o  휃첬ng v沼?bi沼긪 b찼o an to횪n sau?",
+  "tr_c": [
+   "Bi沼긪 b찼o h沼?tr沼?cho bi梳퓍 m沼셳 b챗n 휃튼沼쓓g l횪 khu v沼켧 c처  nguy c퉤 r퉤i xu沼몁g thung l크ng",
+   "Bi沼긪 b찼o quy 휃沼땙h cho bi梳퓍 m沼셳 b챗n 휃튼沼쓓g l횪 khu v沼켧 c처  nguy c퉤 r퉤i xu沼몁g s척ng",
+   "Bi沼긪 b찼o nguy hi沼긩 c梳즢h b찼o cho bi梳퓍 m沼셳 b챗n 휃튼沼쓓g l횪  khu v沼켧 c처 nguy c퉤 r퉤i xu沼몁g thung l크ng",
+   "Bi沼긪 ch沼?d梳쳌 cho bi梳퓍 m沼셳 b챗n 휃튼沼쓓g l횪 khu v沼켧 c처 nguy  c퉤 r퉤i xu沼몁g s척ng"
+  ]
+ },
+ {
+  "n": 885,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "2諛⑺뼢 ?듯뻾 ?쒖??대떎.",
+   "以묒븰遺꾨━? ?앸궓 ?쒖??대떎.",
+   "?묒륫諛⑺넻???쒖??대떎.",
+   "以묒븰遺꾨━? ?쒖옉 ?쒖??대떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o an to횪n d튼沼쌻 휃창y?",
+  "tr_c": [
+   "Bi沼긪 b찼o l튼u th척ng 2 chi沼걏",
+   "Bi沼긪 b찼o k梳퓍 th첬c d梳즜 ph창n c찼ch",
+   "Bi沼긪 b찼o l튼u th척ng c梳?hai b챗n",
+   "Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch"
+  ]
+ },
+ {
+  "n": 886,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뚯쟾??援먯감濡쒗몴吏",
+   "?좏꽩 諛?醫뚰쉶??李⑤웾 二쇱쓽?쒖?",
+   "鍮꾩떊??援먯감濡쒗몴吏",
+   "醫뚮줈 援쎌? ?꾨줈"
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o an to횪n n횪y?",
+  "tr_c": [
+   "Bi沼긪 b찼o v챵ng xuy梳퓆 tr챵n",
+   "Bi沼긪 b찼o ch첬 첵 xe r梳?tr찼i v횪 quay 휃梳쬾",
+   "Bi沼긪 b찼o 휃튼沼쓓g giao nhau kh척ng c처 휃챔n t챠n hi沼뇎",
+   "Bi沼긪 b찼o 휃튼沼쓓g g梳쩺 kh첬c v沼?ph챠a b챗n tr찼i"
+  ]
+ },
+ {
+  "n": 887,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?ㅼ튂?섎뒗 ?μ냼濡?媛???뚮쭪? 怨녹??",
+  "ko_c": [
+   "?꾨줈媛 醫뚮줈 援쎌뼱 李⑤줈?댄깉??諛쒖깮?????덈뒗 ?꾨줈",
+   "?댟룸퉬 ?깆쓽 ?먯씤?쇰줈 ?먮룞李⑤벑??誘몃걚?ъ?湲??ъ슫 ?꾨줈",
+   "?꾨줈媛 ?댁쨷?쇰줈 援쎌뼱 李⑤줈?댄깉??諛쒖깮?????덈뒗 ?꾨줈",
+   "?대━留됯꼍?ш? ?ы븯???띾룄瑜?以꾩뿬???섎뒗 ?꾨줈"
+  ],
+  "a": "2",
+  "tr_b": "휂沼땇 휃i沼긩 n횪o ph첫 h沼즤 nh梳쩿 휃沼?l梳칛 휃梳톞 bi沼긪 b찼o n횪y?",
+  "tr_c": [
+   "휂튼沼쓓g g梳쩺 kh첬c v沼?b챗n tr찼i m횪 hi沼뇆 t튼沼즢g ch沼놻h l횪n c처  th沼?x梳즭 ra",
+   "휂튼沼쓓g tr퉤n tr튼沼즨 do tuy梳퓍 ho梳톍 m튼a",
+   "휂튼沼쓓g quanh co m횪 hi沼뇆 t튼沼즢g ch沼놻h l횪n c처 th沼?x梳즭 ra",
+   "휂튼沼쓓g xu沼몁g d沼멵 휃沼쯰g, c梳쬷 gi梳즡 t沼멵"
+  ]
+ },
+ {
+  "n": 888,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "李⑥쓽 ?고쉶????寃껋쓣 吏?쒗븯???쒖??대떎.",
+   "李⑥쓽 吏곸쭊??湲덉??섍쾶 ?섎뒗 二쇱쓽?쒖??대떎.",
+   "?꾨갑 ?곕줈 援쎌? ?꾨줈?????二쇱쓽?쒖??대떎.",
+   "李⑥쓽 ?고쉶?꾩쓣 湲덉??섎뒗 二쇱쓽?쒖??대떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼쌻 bi沼긪 b찼o an to횪n n횪y?",
+  "tr_c": [
+   "Bi沼긪 b찼o ch沼?th沼?xe s梳?r梳?ph梳즜",
+   "Bi沼긪 b찼o nguy hi沼긩 c梳쩷 xe 휃i th梳쿻g",
+   "Bi沼긪 b찼o nguy hi沼긩 c梳즢h b찼o 휃튼沼쓓g g梳쩺 kh첬c v沼?b챗n  ph梳즜 沼?ph챠a tr튼沼쌵",
+   "Bi沼긪 b찼o nguy hi沼긩 c梳즢h b찼o c梳쩷 xe r梳?ph梳즜"
+  ]
+ },
+ {
+  "n": 889,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ쓬 ?덉쟾?쒖?媛 ?ㅼ튂??怨녹뿉?쒖쓽 ?댁쟾 諛⑸쾿?쇰줈 留욌뒗  寃껋??",
+  "ko_c": [
+   "?먮룞李⑥쟾?⑸룄濡쒖뿉 ?ㅼ튂?섎ŉ 李④컙嫄곕━瑜?50誘명꽣 ?댁긽 ?뺣낫?쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈???ㅼ튂?섎ŉ 李④컙嫄곕━瑜?50誘명꽣 ?댁긽 ?뺣낫?쒕떎.",
+   "?먮룞李⑥쟾?⑸룄濡쒖뿉 ?ㅼ튂?섎ŉ 50誘명꽣 ?꾨갑 援먰넻?뺤껜 援ш컙?대?濡??쒗뻾?쒕떎.",
+   "?쇰갑?듯뻾 ?꾨줈???ㅼ튂?섎ŉ 50誘명꽣 ?꾨갑 援먰넻?뺤껜 援ш컙?대?濡??쒗뻾?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? c찼ch l찼i xe  n횪o l횪 휃첬ng t梳죍 khu v沼켧 휃튼沼즓 l梳칛 휃梳톞 bi沼긪 b찼o an to횪n  sau?",
+  "tr_c": [
+   "휂튼沼즓 l梳칛 휃梳톞 tr챗n 휃튼沼쓓g d횪nh ri챗ng cho xe 척 t척 v횪 ph梳즜  휃梳즡 b梳즣 kho梳즢g c찼ch gi沼칊 c찼c xe tr챗n 50m.",
+   "휂튼沼즓 l梳칛 휃梳톞 tr챗n 휃튼沼쓓g m沼셳 chi沼걏 v횪 ph梳즜 휃梳즡 b梳즣  kho梳즢g c찼ch gi沼칊 c찼c xe t沼?50m tr沼?l챗n.",
+   "휂튼沼즓 l梳칛 휃梳톞 tr챗n 휃튼沼쓓g d횪nh ri챗ng cho xe 척 t척 v횪 l횪  휃o梳죒 휃튼沼쓓g ph챠a tr튼沼쌵 50m hay b沼?첫n 沼?n챗n ph梳즜 휃i  ch梳춎.",
+   "휂튼沼즓 l梳칛 휃梳톞 tr챗n 휃튼沼쓓g m沼셳 chi沼걏 v횪 l횪 휃o梳죒 휃튼沼쓓g ph챠a  tr튼沼쌵 50m hay b沼?첫n 沼?n챗n ph梳즜 휃i ch梳춎."
+  ]
+ },
+ {
+  "n": 890,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ쓬???덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "吏?쒗몴吏?대ŉ, ?먮룞李⑥쓽 ?듯뻾?띾룄媛 ?됯퇏 留ㅼ떆 50?щ줈誘명꽣瑜?珥덇낵?댁꽌?? ?꾨땲 ?쒕떎.",
+   "洹쒖젣?쒖??대ŉ, ?먮룞李⑥쓽 ?듯뻾?띾룄媛 ?됯퇏 留ㅼ떆 50?щ줈誘명꽣瑜?珥덇낵?댁꽌?? ?꾨땲 ?쒕떎.",
+   "吏?쒗몴吏?대ŉ, ?먮룞李⑥쓽 理쒓퀬?띾룄媛 留ㅼ떆 50?щ줈誘명꽣瑜?珥덇낵?댁꽌???꾨땲 ?쒕떎.",
+   "洹쒖젣?쒖??대ŉ, ?먮룞李⑥쓽 理쒓퀬?띾룄媛 留ㅼ떆 50?щ줈誘명꽣瑜?珥덇낵?댁꽌???꾨땲 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? gi梳즜 th챠ch n횪o  휃첬ng v沼?bi沼긪 b찼o an to횪n sau?",
+  "tr_c": [
+   "L횪 bi沼긪 b찼o h튼沼썀g d梳쳌, t沼멵 휃沼?l튼u th척ng c沼쬪 xe kh척ng  휃튼沼즓 qu찼 m沼쯢 trung b챙nh 50 km/gi沼?",
+   "L횪 bi沼긪 b찼o quy 휃沼땙h, t沼멵 휃沼?l튼u th척ng c沼쬪 xe kh척ng  휃튼沼즓 qu찼 m沼쯢 trung b챙nh 50 km/gi沼?",
+   "L횪 bi沼긪 b찼o h튼沼썀g d梳쳌, t沼멵 휃沼?t沼멼 휃a c沼쬪 xe kh척ng 휃튼沼즓  qu찼 m沼쯢 50 km/gi沼?",
+   "L횪 bi沼긪 b찼o quy 휃沼땙h, t沼멵 휃沼?t沼멼 휃a c沼쬪 xe kh척ng 휃튼沼즓  qu찼 m沼쯢 50 km/gi沼?"
+  ]
+ },
+ {
+  "n": 891,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "蹂댄뻾?먮뒗 ?듯뻾?????덈떎.",
+   "蹂댄뻾?먮퓧留??꾨땲??紐⑤뱺 李⑤쭏???듯뻾?????녿떎.",
+   "?꾨줈??以묒븰 ?먮뒗 醫뚯륫???ㅼ튂?쒕떎.",
+   "?듯뻾湲덉? 湲곌컙? ?④퍡 ?쒖떆?????녿떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o sau?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i b沼?c처 th沼?qua l梳죍.",
+   "Ng튼沼쓎 휃i b沼?v횪 t梳쩿 c梳?c찼c xe 휃沼걏 kh척ng 휃튼沼즓 qua l梳죍.",
+   "Bi沼긪 b찼o 휃튼沼즓 휃梳톞 沼?b챗n tr찼i ho梳톍 gi沼칊 휃튼沼쓓g.",
+   "Kh척ng th沼?c첫ng bi沼긳 th沼?th沼쓎 gian c梳쩷 qua l梳죍."
+  ]
+ },
+ {
+  "n": 892,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 媛???녹? 寃껋??",
+  "ko_c": [
+   "?대쪣?먮룞李?諛??먯쟾嫄곗쓽 ?듯뻾??湲덉??쒕떎.",
+   "?대쪣?먮룞李?諛??먮룞湲곗옣移섏옄?꾧굅???듯뻾??湲덉??쒕떎.",
+   "?대쪣?먮룞李⑥? ?먯쟾嫄??댁쇅??李⑤쭏???몄젣???듯뻾?????덈떎.",
+   "?대쪣?먮룞李⑥? ?먮룞湲곗옣移섏옄?꾧굅 ?댁쇅??李⑤쭏???몄젣???듯뻾 ?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng nh梳쩿 v沼?bi沼긪 b찼o sau?",
+  "tr_c": [
+   "C梳쩷 xe m찼y hai b찼nh v횪 xe 휃梳죖 l튼u th척ng",
+   "C梳쩷 xe m찼y hai b찼nh v횪 xe 휃梳죖 g梳칗 휃沼셬g c퉤 l튼u th척ng",
+   "Tr沼?xe 휃梳죖 v횪 xe m찼y hai b찼nh, c찼c ph튼퉤ng ti沼뇆 th척 s퉤 v횪  c퉤 gi沼쌻 c처 th沼?휃i qua b梳쩿 c沼?l첬c n횪o",
+   "Tr沼?xe 휃梳죖 g梳칗 휃沼셬g c퉤 v횪 xe m찼y hai b찼nh, c찼c ph튼퉤ng  ti沼뇆 th척 s퉤 v횪 c퉤 gi沼쌻 c처 th沼?휃i qua b梳쩿 c沼?l첬c n횪o"
+  ]
+ },
+ {
+  "n": 893,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "李⑥쓽 吏꾩엯??湲덉??쒕떎.",
+   "紐⑤뱺 李⑥? 蹂댄뻾?먯쓽 吏꾩엯??湲덉??쒕떎.",
+   "?꾪뿕臾??곸옱 ?붾Ъ李?吏꾩엯??湲덉??쒕떎.",
+   "吏꾩엯湲덉?湲곌컙 ?깆쓣 ?뚮━??蹂댁“?쒖????ㅼ튂?????녿떎."
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o sau?",
+  "tr_c": [
+   "C梳쩷 xe v횪o.",
+   "C梳쩷 t梳쩿 c梳?c찼c lo梳죍 xe v횪 ng튼沼쓎 휃i b沼?v횪o.",
+   "C梳쩷 kh척ng cho xe t梳즜 ch沼?c찼c lo梳죍 h횪ng nguy hi沼긩 v횪o.",
+   "Kh척ng th沼?l梳칛 bi沼긪 b찼o ph沼?b찼o th沼쓎 gian c梳쩷 v횪o."
+  ]
+ },
+ {
+  "n": 894,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 媛???녹? 寃껋??",
+  "ko_c": [
+   "吏곸쭊?섎뒗 李⑤웾??留롮? ?꾨줈???ㅼ튂?쒕떎.",
+   "湲덉??댁빞 ??吏?먯쓽 ?꾨줈 醫뚯륫???ㅼ튂?쒕떎.",
+   "?대윴 吏?먯뿉?쒕뒗 諛섎뱶???좏꽩?섏뿬 ?섎룎?꾧????쒕떎.",
+   "醫뚳쉈?곗륫 ?꾨줈瑜??댁슜?섎뒗 ???ㅻⅨ ?꾨줈瑜??댁슜?댁빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng nh梳쩿 v沼?bi沼긪 b찼o sau?",
+  "tr_c": [
+   "Bi沼긪 b찼o 휃튼沼즓 휃梳톞 沼?휃튼沼쓓g c처 nhi沼걏 xe 휃i th梳쿻g.",
+   "Bi沼긪 b찼o 휃튼沼즓 휃梳톞 沼?ph챠a tr찼i 휃튼沼쓓g 沼?khu v沼켧 ph梳즜 c梳쩷.",
+   "沼?nh沼칗g 휃i沼긩 nh튼 th梳?n횪y, ph梳즜 quay 휃梳쬾 xe 휃i ng튼沼즓 l梳죍.",
+   "Ph梳즜 휃i 휃튼沼쓓g kh찼c nh튼 휃튼沼쓓g b챗n tr찼i, ph梳즜."
+  ]
+ },
+ {
+  "n": 895,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "李⑤쭏???좏꽩??湲덉??섎뒗 洹쒖젣?쒖??대떎.",
+   "李⑤쭏(?몃㈃?꾩감???쒖쇅?쒕떎.)???좏꽩??湲덉??섎뒗 吏?쒗몴吏?대떎.",
+   "媛쒖씤???대룞?μ튂???좏꽩??湲덉??섎뒗 二쇱쓽?쒖??대떎.",
+   "?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅?쒕떎.)???좏꽩??湲덉??섎뒗 吏?쒗몴吏?대떎."
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? gi梳즜 th챠ch n횪o  휃첬ng v沼?bi沼긪 b찼o an to횪n sau?",
+  "tr_c": [
+   "L횪 bi沼긪 b찼o quy 휃沼땙h c梳쩷 xe quay 휃梳쬾.",
+   "L횪 bi沼긪 hi沼뇎 l沼뇆h c梳쩷 c찼c lo梳죍 xe (ngo梳죍 tr沼?xe 휃i沼뇆 m梳톞  휃梳쩿) quay 휃梳쬾.",
+   "L횪 bi沼긪 b찼o nguy hi沼긩 c梳쩷 ph튼퉤ng ti沼뇆 di chuy沼긪 c찼  nh창n quay 휃梳쬾.",
+   "L횪 bi沼긪 hi沼뇎 l沼뇆h c梳쩷 xe 척 t척 (ngo梳죍 tr沼?ph튼퉤ng ti沼뇆 di  chuy沼긪 c찼 nh창n) quay 휃梳쬾."
+  ]
+ },
+ {
+  "n": 896,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???愿???ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?붾Ъ???ｊ린 ?꾪빐 ?좎떆 二쇱감?????덈떎.",
+   "?밴컼???대젮二쇨린 ?꾪빐 ?쇱떆?곸쑝濡??뺤감?????덈떎.",
+   "二쇱감 諛??뺤감瑜?湲덉??섎뒗 援ш컙???ㅼ튂?쒕떎.",
+   "?대쪣?먮룞李⑤뒗 二쇱감?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o sau?",
+  "tr_c": [
+   "C처 th沼?휃沼?xe m沼셳 l첬c 휃沼?휃튼a h횪ng h처a l챗n xe.",
+   "C처 th沼?d沼쳌g xe m沼셳 l첬c 휃沼?cho kh찼ch xu沼몁g xe.",
+   "Bi沼긪 b찼o 휃튼沼즓 휃梳톞 沼?휃o梳죒 휃튼沼쓓g c梳쩷 휃沼?xe v횪 d沼쳌g xe.",
+   "Xe m찼y hai b찼nh c처 th沼?휃沼?휃튼沼즓."
+  ]
+ },
+ {
+  "n": 897,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?삵븯??寃껋??",
+  "ko_c": [
+   "李⑦룺 ?쒗븳",
+   "李??믪씠 ?쒗븳",
+   "李④컙嫄곕━ ?뺣낫",
+   "?곕꼸???믪씠"
+  ],
+  "a": "2",
+  "tr_b": "횦 ngh칫a c沼쬪 bi沼긪 b찼o an to횪n sau 휃창y l횪 g챙?",
+  "tr_c": [
+   "Gi沼쌻 h梳죒 chi沼걏 r沼셬g xe.",
+   "Gi沼쌻 h梳죒 chi沼걏 cao xe.",
+   "휂梳즡 b梳즣 kho梳즢g c찼ch gi沼칊 c찼c xe.",
+   "Chi沼걏 cao c沼쬪 휃튼沼쓓g h梳쬶."
+  ]
+ },
+ {
+  "n": 898,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?삵븯??寃껋??",
+  "ko_c": [
+   "李??믪씠 ?쒗븳",
+   "李④컙嫄곕━ ?뺣낫",
+   "李⑦룺 ?쒗븳",
+   "李?湲몄씠 ?쒗븳"
+  ],
+  "a": "3",
+  "tr_b": "횦 ngh칫a c沼쬪 bi沼긪 b찼o an to횪n sau 휃창y l횪 g챙?",
+  "tr_c": [
+   "Gi沼쌻 h梳죒 chi沼걏 cao xe",
+   "휂梳즡 b梳즣 kho梳즢g c찼ch gi沼칊 c찼c xe",
+   "Gi沼쌻 h梳죒 b沼?ngang xe",
+   "Gi沼쌻 h梳죒 chi沼걏 d횪i xe"
+  ]
+ },
+ {
+  "n": 899,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?덈뒗 ?꾨줈?먯꽌???댁쟾 諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?ㅺ??ㅻ뒗 李⑤웾???덉쓣 ?뚯뿉留??뺤??섎㈃ ?쒕떎.",
+   "?꾨줈??李⑤웾???놁쓣 ?뚯뿉???뺤??댁빞 ?쒕떎.",
+   "?대┛?대뱾??湲몄쓣 嫄대꼸 ?뚯뿉留??뺤??쒕떎.",
+   "?곸깋?깆씠 耳쒖쭊 ?뚯뿉留??뺤??섎㈃ ?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "C찼ch l찼i xe n횪o 휃첬ng khi tr챗n 휃튼沼쓓g c처 bi沼긪 b찼o sau?",
+  "tr_c": [
+   "Ch沼?d沼쳌g l梳죍 khi c처 xe 휃梳퓆 g梳쬷.",
+   "Ph梳즜 d沼쳌g l梳죍 k沼?c梳?khi kh척ng c처 xe l튼u th척ng tr챗n 휃튼沼쓓g.",
+   "Ch沼?d沼쳌g l梳죍 khi c처 tr梳?em 휃i b沼?sang 휃튼沼쓓g.",
+   "Ch沼?d沼쳌g l梳죍 khi c처 t챠n hi沼뇎 휃챔n 휃沼?"
+  ]
+ },
+ {
+  "n": 900,
+  "ko_b": "?ㅼ쓬 洹쒖젣?쒖?瑜??ㅼ튂?????덈뒗 ?μ냼??",
+  "ko_c": [
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 援먰넻??鍮덈쾲??援먯감濡?,
+   "鍮꾪깉湲?怨좉갗留덈（ 遺洹?,
+   "援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녿뒗 援먯감濡?,
+   "?좏샇湲곌? ?녿뒗 泥좉만 嫄대꼸紐?
+  ],
+  "a": "2",
+  "tr_b": "Bi沼긪 b찼o quy 휃沼땙h sau c처 th沼?휃튼沼즓 l梳칛 휃梳톞 沼?khu v沼켧  n횪o?",
+  "tr_c": [
+   "휂튼沼쓓g giao nhau t梳쩺 n梳춑 ch튼a 휃튼沼즓 ph창n lu沼뱊g giao  th척ng",
+   "G梳쬷 휃沼뎝h d沼멵",
+   "휂튼沼쓓g giao nhau ch튼a 휃튼沼즓 ph창n lu沼뱊g giao th척ng,  kh척ng th沼?quan s찼t tr찼i ph梳즜",
+   "휂o梳죒 휃튼沼쓓g giao v沼쌻 휃튼沼쓓g t횪u kh척ng c처 휃챔n t챠n hi沼뇎"
+  ]
+ },
+ {
+  "n": 901,
+  "ko_b": "?ㅼ쓬 洹쒖젣?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "?꾪뿕臾쇱쓣 ?ㅼ? 李⑤웾 ?듯뻾湲덉?",
+   "?꾨갑??李⑤웾 ?붿옱濡??명븳 援먰넻 ?듭젣 以?,
+   "李⑤웾?붿옱媛 ?먯＜ 諛쒖깮?섎뒗 怨?,
+   "?곕텋諛쒖깮吏??쑝濡?李⑤웾 ?듯뻾湲덉?"
+  ],
+  "a": "1",
+  "tr_b": "Bi沼긪 b찼o quy 휃沼땙h sau c처 첵 ngh칫a g챙?",
+  "tr_c": [
+   "C梳쩷 xe ch沼?v梳춗 li沼뇎 nguy hi沼긩",
+   "C梳쩷 xe v챙 ph챠a tr튼沼쌵 c처 xe b沼?ch찼y",
+   "N퉤i th튼沼쓓g xuy챗n x梳즭 ra h沼뢠 ho梳죒 척 t척",
+   "Khu v沼켧 d沼?ph찼t sinh ch찼y r沼쳌g, c梳쩷 xe 휃i v횪o"
+  ]
+ },
+ {
+  "n": 902,
+  "ko_b": "?ㅼ쓬 洹쒖젣?쒖?媛 ?ㅼ튂??吏??뿉???댄뻾??湲덉???李⑤웾??",
+  "ko_c": [
+   "?대쪣?먮룞李?,
+   "?뱁빀?먮룞李?,
+   "?뱀슜?먮룞李?,
+   "?먮룞湲곗옣移섏옄?꾧굅"
+  ],
+  "a": "2",
+  "tr_b": "Lo梳죍 xe c梳쩷 l튼u th척ng trong khu v沼켧 l梳칛 휃梳톞 bi沼긪 b찼o  quy 휃沼땙h n횪y l횪 xe n횪o?",
+  "tr_c": [
+   "Xe m찼y hai b찼nh",
+   "Xe 척 t척 ch沼?kh찼ch",
+   "Xe 척 t척 con",
+   "Xe 휃梳죖 g梳칗 휃沼셬g c퉤"
+  ]
+ },
+ {
+  "n": 903,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????살쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?쇰젹二쇱감?쒖?",
+   "?곸뒿?뺤껜援ш컙?쒖?",
+   "?쇨컙?듯뻾二쇱쓽?쒖?",
+   "李⑥꽑蹂寃쎄뎄媛꾪몴吏"
+  ],
+  "a": "2",
+  "tr_b": "C창u n횪o gi梳즜 th챠ch 휃첬ng v沼?bi沼긪 b찼o an to횪n sau 휃창y?",
+  "tr_c": [
+   "Bi沼긪 b찼o 휃沼?xe theo h횪ng d沼뛠",
+   "Bi沼긪 b찼o khu v沼켧 th튼沼쓓g xuy챗n b沼?t梳칌 ngh梳퐊",
+   "Bi沼긪 b찼o ch첬 첵 khi l튼u th척ng v횪o ban 휃챗m",
+   "Bi沼긪 b찼o khu v沼켧 thay 휃沼뷼 l횪n xe"
+  ]
+ },
+ {
+  "n": 904,
+  "ko_b": "?ㅼ쓬 洹쒖젣?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "而ㅻ툕湲?二쇱쓽",
+   "?먮룞李?吏꾩엯湲덉?",
+   "?욎?瑜닿린 湲덉?",
+   "怨쇱냽諛⑹????ㅼ튂 吏??
+  ],
+  "a": "3",
+  "tr_b": "Bi沼긪 b찼o quy 휃沼땙h sau c처 첵 ngh칫a g챙?",
+  "tr_c": [
+   "Ch첬 첵 kh첬c cua",
+   "C梳쩷 xe 척 t척",
+   "C梳쩷 v튼沼즨",
+   "Khu v沼켧 c처 g沼?gi梳즡 t沼멵"
+  ]
+ },
+ {
+  "n": 905,
+  "ko_b": "?ㅼ쓬???덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "以묐웾 5.5t ?댁긽 李⑥쓽 ?〓떒???쒗븳?섎뒗 寃?,
+   "以묐웾 5.5t 珥덇낵 李⑥쓽 ?〓떒???쒗븳?섎뒗 寃?,
+   "以묐웾 5.5t ?댁긽 李⑥쓽 ?듯뻾???쒗븳?섎뒗 寃?,
+   "以묐웾 5.5t 珥덇낵 李⑥쓽 ?듯뻾???쒗븳?섎뒗 寃?
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o an to횪n sau?",
+  "tr_c": [
+   "H梳죒 ch梳?xe tr沼뛫g t梳즜 5,5 t梳쩸 tr沼?l챗n b훱ng qua 휃튼沼쓓g",
+   "H梳죒 ch梳?xe tr沼뛫g t梳즜 tr챗n 5,5 t梳쩸 b훱ng qua 휃튼沼쓓g",
+   "H梳죒 ch梳?l튼u th척ng c沼쬪 xe tr沼뛫g t梳즜 5,5 t梳쩸 tr沼?l챗n",
+   "H梳죒 ch梳?l튼u th척ng c沼쬪 xe tr沼뛫g t梳즜 tr챗n 5,5 t梳쩸"
+  ]
+ },
+ {
+  "n": 906,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뱀슜?먮룞李⑥쓽 ?듯뻾??湲덉??섎뒗 寃껋씠??",
+   "?꾪뿕臾??대컲 ?먮룞李⑥쓽 ?듯뻾??湲덉??섎뒗 寃껋씠??",
+   "?뱁빀?먮룞李⑥쓽 ?듯뻾??湲덉??섎뒗 寃껋씠??",
+   "?붾Ъ?먮룞李⑥쓽 ?듯뻾??湲덉??섎뒗 寃껋씠??"
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o an to횪n sau?",
+  "tr_c": [
+   "C梳쩷 xe 척 t척 con l튼u th척ng.",
+   "C梳쩷 xe v梳춏 chuy沼긪 ch梳쩿 nguy hi沼긩 l튼u th척ng.",
+   "C梳쩷 xe 척 t척 ch沼?kh찼ch l튼u th척ng.",
+   "C梳쩷 xe t梳즜 l튼u th척ng."
+  ]
+ },
+ {
+  "n": 907,
+  "ko_b": "?ㅼ쓬?먯꽌 ?쒖감?됯꼍怨좊벑???쒖떆?댁슜?쇰줈 ?由?寃껋? ?",
+  "ko_c": [
+   "洹몃┝?좎? ?붿쭊 ?쒖뼱 ?μ튂 諛?諛곌린媛???쒖뼱? 愿???쇱꽌 ?댁긽???뚮━??      寃쎄퀬??,
+   "洹몃┝?〓뒗 ?뚯뀛??遺議???蹂댁땐???뚮━??寃쎄퀬??,
+   "洹몃┝??? ??댁뼱 怨듦린?뺤씠 ??쓣???쒖?怨듦린?뺤쑝濡?蹂댁땐 ?먮뒗 ??댁뼱 ??      ?먯긽?쒕? ?뚮━??寃쎄퀬??,
+   "洹몃┝?ｋ뒗 ABS 釉뚮젅?댄겕 湲곕뒫怨?愿??寃쎄퀬??
+  ],
+  "a": "4",
+  "tr_b": "Bi沼긳 hi沼뇆 sai c沼쬪 ?쑧먄쮖 c梳즢h b찼o xe??l횪 g챙?",
+  "tr_c": [
+   "H챙nh ??l횪 휃챔n c梳즢h b찼o th척ng b찼o v沼?s沼?c沼?c沼쬪 thi梳퓍 b沼? 휃i沼걏 khi沼긪 휃沼셬g c퉤 v횪 h沼?th沼몁g ki沼긩 so찼t kh챠 th梳즜 c첫ng  c찼c c梳즡 bi梳퓆 li챗n quan.",
+   "H챙nh ??l횪 휃챔n c梳즢h b찼o th척ng b찼o c梳쬷 b沼?sung dung  d沼땉h r沼춁 k챠nh khi thi梳퓎.",
+   "H챙nh ??l횪 휃챔n c梳즢h b찼o th척ng b찼o c梳쬷 b퉤m 찼p su梳쩿 l沼몆  theo ti챗u chu梳쯰 ho梳톍 t챙nh tr梳죒g h튼 h沼뢮g l沼몆 khi 찼p su梳쩿  l沼몆 th梳쩺.",
+   "H챙nh ??l횪 휃챔n c梳즢h b찼o li챗n quan 휃梳퓆 ch沼쯢 n훱ng phanh  ABS. ????????
+  ]
+ },
+ {
+  "n": 908,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????ㅼ튂?μ냼?????湲곗??쇰줈 諛붾Ⅴ吏 ?딅뒗 寃껋??",
+  "ko_c": [
+   "A ?쒖????몃㈃?꾩감 援먯감濡???50誘명꽣?먯꽌 120誘명꽣 ?ъ씠???꾨줈 以묒븰 ?????곗륫???ㅼ튂?쒕떎.",
+   "B ?쒖????뚯쟾援먯감濡???30誘명꽣 ?댁? 120誘명꽣???꾨줈 ?곗륫???ㅼ튂?쒕떎.",
+   "C ?쒖????대━留?寃쎌궗媛 ?쒖옉?섎뒗 吏????30誘명꽣 ?댁? 200誘명꽣???꾨줈  ?곗륫???ㅼ튂?쒕떎.",
+   "D ?쒖????꾨줈 ??씠 醫곸븘吏??吏????30誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫 ???ㅼ튂?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Ti챗u chu梳쯰 n횪o kh척ng 휃첬ng v沼?n퉤i g梳칗 bi沼긪 b찼o an  to횪n sau?",
+  "tr_c": [
+   "Bi沼긪 b찼o A 휃튼沼즓 g梳칗 沼?b챗n ph梳즜 ho梳톍 gi沼칊 휃튼沼쓓g trong  kho梳즢g 50m ~ 120m tr튼沼쌵 휃o梳죒 휃튼沼쓓g giao nhau v沼쌻 xe  휃i沼뇆 m梳톞 휃梳쩿.",
+   "Bi沼긪 b찼o B 휃튼沼즓 g梳칗 沼?b챗n ph梳즜 휃튼沼쓓g trong kho梳즢g  30m ~ 120m tr튼沼쌵 v챵ng xuy梳퓆.",
+   "Bi沼긪 b찼o C 휃튼沼즓 g梳칗 沼?b챗n ph梳즜 휃튼沼쓓g trong kho梳즢g  30m ~ 200m tr튼沼쌵 휃i沼긩 b梳칣 휃梳쬾 휃o梳죒 휃튼沼쓓g d沼멵.",
+   "Bi沼긪 b찼o D 휃튼沼즓 g梳칗 沼?b챗n ph梳즜 휃튼沼쓓g trong kho梳즢g  30m ~ 200m tr튼沼쌵 휃i沼긩 chi沼걏 r沼셬g c沼쬪 휃튼沼쓓g b沼?b처p  h梳퉝 l梳죍.   A   B C D"
+  ]
+ },
+ {
+  "n": 909,
+  "ko_b": "?ㅼ쓬 洹쒖젣?쒖?媛 ?ㅼ튂??吏??뿉???댄뻾??媛?ν븳 李⑤웾??",
+  "ko_c": [
+   "?붾Ъ?먮룞李?,
+   "寃쎌슫湲?,
+   "?몃옓??,
+   "?먯닔??
+  ],
+  "a": "1",
+  "tr_b": "Ph튼퉤ng ti沼뇆 n횪o d튼沼쌻 휃창y c처 th沼?l튼u th척ng trong khu  v沼켧 c처 bi沼긪 b찼o quy 휃沼땙h n횪y?",
+  "tr_c": [
+   "Xe t梳즜",
+   "Xe m찼y c횪y",
+   "Xe m찼y k챕o",
+   "Xe k챕o b梳켷g tay"
+  ]
+ },
+ {
+  "n": 910,
+  "ko_b": "?ㅼ쓬 洹쒖젣?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "理쒖??띾룄 ?쒗븳?쒖?",
+   "理쒓퀬?띾룄 ?쒗븳?쒖?",
+   "李④컙嫄곕━ ?뺣낫?쒖?",
+   "?덉쟾?띾룄 ?좎??쒖?"
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼쌻 bi沼긪 b찼o quy 휃沼땙h sau?",
+  "tr_c": [
+   "Gi沼쌻 h梳죒 t沼멵 휃沼?t沼멼 thi沼긳",
+   "Gi沼쌻 h梳죒 t沼멵 휃沼?t沼멼 휃a",
+   "휂梳즡 b梳즣 kho梳즢g c찼ch an to횪n gi沼칊 c찼c ph튼퉤ng ti沼뇆",
+   "Duy tr챙 t沼멵 휃沼?an to횪n"
+  ]
+ },
+ {
+  "n": 911,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???紐낆묶?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?묒륫諛??듯뻾?쒖?",
+   "?묒륫諛??듯뻾湲덉? ?쒖?",
+   "以묒븰遺꾨━? ?쒖옉?쒖?",
+   "以묒븰遺꾨━? 醫낅즺?쒖?"
+  ],
+  "a": "1",
+  "tr_b": "T챗n g沼뛦 휃첬ng c沼쬪 bi沼긪 b찼o an to횪n sau l횪 g챙?",
+  "tr_c": [
+   "Bi沼긪 b찼o 휃i c梳?hai ph챠a",
+   "Bi沼긪 b찼o c梳쩷 휃i l梳죍 hai chi沼걏",
+   "Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch",
+   "Bi沼긪 b찼o k梳퓍 th첬c d梳즜 ph창n c찼ch"
+  ]
+ },
+ {
+  "n": 912,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?좏샇??愿怨꾩뾾??李⑤웾 ?듯뻾???놁쓣 ??醫뚰쉶?꾪븷 ???덈떎.",
+   "?곸깋?좏샇???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딆쓣 ?뚯뿉??醫뚰쉶???????덈떎.",
+   "鍮꾨낫?몄씠誘濡?醫뚰쉶???좏샇媛 ?놁쑝硫?醫뚰쉶?꾪븷 ???녿떎.",
+   "?뱀깋?좏샇?먯꽌 ?ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딆쓣 ?뚯뿉??醫뚰쉶?꾪븷 ???덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o sau?",
+  "tr_c": [
+   "Khi kh척ng c처 xe, c처 th沼?r梳?tr찼i b梳쩿 k沼?휃챔n t챠n hi沼뇎.",
+   "Khi kh척ng g창y c梳즢 tr沼?휃梳퓆 ph튼퉤ng ti沼뇆 giao th척ng kh찼c  th챙 c처 th沼?r梳?tr찼i trong l첬c t챠n hi沼뇎 giao th척ng b梳춗 휃챔n 휃沼?",
+   "V챙 l횪 휃o梳죒 휃튼沼쓓g kh척ng 휃튼沼즓 b梳즣 v沼?n챗n n梳퓎 kh척ng c처  t챠n hi沼뇎 r梳?tr찼i th챙 kh척ng 휃튼沼즓 r梳?tr찼i.",
+   "N梳퓎 kh척ng g창y c梳즢 tr沼?ph튼퉤ng ti沼뇆 giao th척ng kh찼c th챙  c처 th沼?r梳?tr찼i trong l첬c t챠n hi沼뇎 giao th척ng b梳춗 휃챔n xanh."
+  ]
+ },
+ {
+  "n": 913,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???紐낆묶??",
+  "ko_c": [
+   "?묒륫諛??듯뻾?쒖?",
+   "醫뚳쉈?고쉶???쒖?",
+   "以묒븰遺꾨━? ?쒖옉?쒖?",
+   "以묒븰遺꾨━? 醫낅즺?쒖?"
+  ],
+  "a": "2",
+  "tr_b": "T챗n g沼뛦 c沼쬪 bi沼긪 b찼o sau l횪 g챙?",
+  "tr_c": [
+   "Bi沼긪 b찼o 휃i l梳죍 hai chi沼걏",
+   "Bi沼긪 b찼o r梳?tr찼i, ph梳즜",
+   "Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch",
+   "Bi沼긪 b찼o k梳퓍 th첬c d梳즜 ph창n c찼ch"
+  ]
+ },
+ {
+  "n": 914,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "李④? 醫뚰쉶?????좏꽩??寃껋쓣 吏?쒗븯???덉쟾?쒖??대떎.",
+   "李④? 醫뚰쉶???먮뒗 ?좏꽩??寃껋쓣 吏?쒗븯???덉쟾?쒖??대떎.",
+   "醫뚰쉶??李④? ?좏꽩李?蹂대떎 ?곗꽑?꾩쓣 吏?쒗븯???덉쟾?쒖??대떎.",
+   "醫뚰쉶??李⑤낫???좏꽩李④? ?곗꽑?꾩쓣 吏?쒗븯???덉쟾?쒖??대떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o an to횪n sau?",
+  "tr_c": [
+   "Bi沼긪 b찼o an to횪n cho ph챕p xe r梳?tr찼i sau 휃처 quay 휃梳쬾.",
+   "Bi沼긪 b찼o an to횪n cho ph챕p xe r梳?tr찼i ho梳톍 quay 휃梳쬾.",
+   "Bi沼긪 b찼o an to횪n cho bi梳퓍 xe r梳?tr찼i 휃튼沼즓 튼u ti챗n h퉤n xe  quay 휃梳쬾.",
+   "Bi沼긪 b찼o an to횪n cho bi梳퓍 xe quay 휃梳쬾 휃튼沼즓 튼u ti챗n h퉤n  so v沼쌻 xe r梳?tr찼i."
+  ]
+ },
+ {
+  "n": 915,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "二쇱감?μ뿉 吏꾩엯?????붿궡??諛⑺뼢?쇰줈 ?듯뻾??寃껋쓣 吏?쒗븯??寃?,
+   "醫뚰쉶?꾩씠 湲덉???吏??뿉???고쉶 ?꾨줈濡??듯뻾??寃껋쓣 吏?쒗븯??寃?,
+   "?뚯쟾援먯감濡쒖씠誘濡?二쇱쓽?섏뿬 ?뚯쟾??寃껋쓣 吏?쒗븯??寃?,
+   "醫뚯륫硫댁쑝濡??듯뻾??寃껋쓣 吏?쒗븯??寃?
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 ch沼?d梳쳌 an to횪n sau?",
+  "tr_c": [
+   "Ch沼?d梳쳌 khi 휃i v횪o b찾i 휃沼?xe th챙 휃i theo h튼沼썀g m크i t챗n",
+   "Ch沼?d梳쳌 휃i theo h튼沼썀g 휃튼沼쓓g r梳?ph梳즜 trong khu v沼켧 c梳쩷  r梳?tr찼i",
+   "V챙 l횪 휃튼沼쓓g v챵ng xuy梳퓆 n챗n ch첬 첵 khi quay v챵ng",
+   "Ch沼?d梳쳌 휃i sang b챗n tr찼i"
+  ]
+ },
+ {
+  "n": 916,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "諛깆깋?붿궡??諛⑺뼢?쇰줈 吏꾪뻾?섎뒗 李⑤웾???곗꽑 ?듯뻾?????덈떎.",
+   "?곸깋?붿궡??諛⑺뼢?쇰줈 吏꾪뻾?섎뒗 李⑤웾???곗꽑 ?듯뻾?????덈떎.",
+   "諛깆깋?붿궡??諛⑺뼢??李⑤웾? ?듯뻾?????녿떎.",
+   "?곸깋?붿궡??諛⑺뼢??李⑤웾? ?듯뻾?????녿떎."
+  ],
+  "a": "1",
+  "tr_b": "횦 ngh칫a c沼쬪 bi沼긪 b찼o an to횪n d튼沼쌻 휃창y l횪 g챙?",
+  "tr_c": [
+   "휂튼沼쓓g 튼u ti챗n cho c찼c xe 휃i theo h튼沼썀g m크i t챗n m횪u  tr梳칗g.",
+   "휂튼沼쓓g 튼u ti챗n cho c찼c xe 휃i theo h튼沼썀g m크i t챗n m횪u 휃沼?",
+   "C梳쩷 c찼c xe 휃i theo h튼沼썀g m크i t챗n m횪u tr梳칗g.",
+   "C梳쩷 c찼c xe 휃i theo h튼沼썀g m크i t챗n m횪u 휃沼?"
+  ]
+ },
+ {
+  "n": 917,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄??〓떒??媛?ν븳 ?먯쟾嫄고슒?⑤룄媛 ?덈떎.",
+   "?먯쟾嫄??〓떒??遺덇??ν븳 寃껋쓣 ?뚮━嫄곕굹 吏?쒗븯怨??덈떎.",
+   "?먯쟾嫄곗? 蹂댄뻾?먭? ?〓떒?????덈떎.",
+   "?먯쟾嫄곗? 蹂댄뻾?먯쓽 ?〓떒??二쇱쓽?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "횦 ngh칫a c沼쬪 bi沼긪 b찼o an to횪n sau l횪 g챙?",
+  "tr_c": [
+   "C처 l沼멼 b훱ng qua 휃튼沼쓓g d횪nh cho xe 휃梳죖 휃沼?xe 휃梳죖 qua  휃튼沼쓓g.",
+   "Ch沼?th沼?ho梳톍 b찼o hi沼뇎 xe 휃梳죖 kh척ng th沼?qua 휃튼沼쓓g.",
+   "Xe 휃梳죖 v횪 ng튼沼쓎 휃i b沼?c처 th沼?sang 휃튼沼쓓g.",
+   "Ch첬 첵 cho xe 휃梳죖 v횪 ng튼沼쓎 휃i b沼?sang 휃튼沼쓓g."
+  ]
+ },
+ {
+  "n": 918,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "醫뚯륫?꾨줈???쇰갑?듯뻾 ?꾨줈?대떎.",
+   "?곗륫?꾨줈???쇰갑?듯뻾 ?꾨줈?대떎.",
+   "紐⑤뱺 ?꾨줈???쇰갑?듯뻾 ?꾨줈?대떎.",
+   "吏곸쭊?꾨줈???쇰갑?듯뻾 ?꾨줈?대떎."
+  ],
+  "a": "4",
+  "tr_b": "횦 ngh칫a c沼쬪 bi沼긪 b찼o an to횪n sau l횪 g챙?",
+  "tr_c": [
+   "휂튼沼쓓g b챗n tr찼i l횪 휃튼沼쓓g m沼셳 chi沼걏.",
+   "휂튼沼쓓g b챗n ph梳즜 l횪 휃튼沼쓓g m沼셳 chi沼걏.",
+   "T梳쩿 c梳?c찼c 휃튼沼쓓g 휃沼걏 l횪 휃튼沼쓓g m沼셳 chi沼걏.",
+   "휂튼沼쓓g th梳쿻g ph챠a tr튼沼쌵 l횪 휃튼沼쓓g m沼셳 chi沼걏."
+  ]
+ },
+ {
+  "n": 919,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?ㅼ튂??李⑤줈 ?듯뻾諛⑸쾿?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "?꾨룞?λ낫?쒕뒗 ???쒖?媛 ?ㅼ튂??李⑤줈瑜??듯뻾?????덈떎.",
+   "?꾧린?먯쟾嫄곕뒗 ???쒖?媛 ?ㅼ튂??李⑤줈瑜??듯뻾?????녿떎.",
+   "?먯쟾嫄곗씤 寃쎌슦留????쒖?媛 ?ㅼ튂??李⑤줈瑜??듯뻾?????덈떎.",
+   "?먮룞李⑤뒗 ???쒖?媛 ?ㅼ튂??李⑤줈瑜??듯뻾?????덈떎."
+  ],
+  "a": "1",
+  "tr_b": "C찼ch n횪o l횪 c찼ch 휃i 휃첬ng tr챗n l횪n 휃튼沼쓓g 휃튼沼즓 l梳칛  bi沼긪 b찼o an to횪n sau?",
+  "tr_c": [
+   "Xe tr튼沼즨 휃i沼뇆 Kickboard 휃튼沼즓 l튼u th척ng tr챗n l횪n 휃튼沼쓓g  l梳칛 휃梳톞 bi沼긪 b찼o n횪y.",
+   "Xe 휃梳죖 휃i沼뇆 kh척ng 휃튼沼즓 l튼u th척ng tr챗n l횪n 휃튼沼쓓g l梳칛 휃梳톞  bi沼긪 b찼o n횪y.",
+   "Ch沼?xe 휃梳죖 m沼쌻 휃튼沼즓 l튼u th척ng tr챗n l횪n 휃튼沼쓓g l梳칛 휃梳톞  bi沼긪 b찼o n횪y.",
+   "Xe 척 t척 휃튼沼즓 l튼u th척ng tr챗n l횪n 휃튼沼쓓g l梳칛 휃梳톞 bi沼긪 b찼o n횪y."
+  ]
+ },
+ {
+  "n": 920,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄곕쭔 ?듯뻾?섎룄濡?吏?쒗븳??",
+   "?먯쟾嫄?諛?蹂댄뻾??寃몄슜 ?꾨줈?꾩쓣 吏?쒗븳??",
+   "?대┛??蹂댄샇援ъ뿭 ?덉뿉???대┛???먮뒗 ?좎븘??蹂댄샇瑜?吏?쒗븳??",
+   "?먯쟾嫄고슒?⑤룄?꾩쓣 吏?쒗븳??"
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?bi沼긪 b찼o an to횪n sau?",
+  "tr_c": [
+   "Ch沼?th沼?ch沼?c처 xe 휃梳죖 m沼쌻 휃튼沼즓 l튼u th척ng.",
+   "Ch沼?th沼?휃튼沼쓓g d횪nh ri챗ng cho xe 휃梳죖 v횪 ng튼沼쓎 휃i b沼?",
+   "Ch沼?th沼?b梳즣 v沼?thi梳퓎 nhi v횪 tr梳?nh沼?trong khu v沼켧 b梳즣 v沼?tr梳?em.",
+   "Ch沼?th沼?l沼멼 sang 휃튼沼쓓g c沼쬪 xe 휃梳죖."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path('translations/audit/queue/222_choices_vn.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+def fix(s):
+    try: return s.encode('cp949').decode('utf-8')
+    except: return s
+for x in data:
+    print('\\n',x['n'], fix(x['ko_b']))
+    for i,(k,t) in enumerate(zip(x['ko_c'],x['tr_c']),1): print(i,fix(k),'|||',fix(t))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:57:26.771114Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:13 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 652ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:13 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/222_choices_vn.json'|ConvertFrom-Json; "'$kr=[Text.Encoding]::GetEncoding(949); $u=[Text.Encoding]::UTF8; function F([string]$s){try{$u.GetString($kr.GetBytes($s))}catch{$s}}; foreach($x in $d){"`n$($x.n) $(F $x.ko_b)"; for($i=0;$i -lt $x.ko_c.Count;$i++){"$($i+1) $(F $x.ko_c[$i]) ||| $(F $x.tr_c[$i])"}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 701ms:
+
+881 ���� ����ǥ���� �ִ� ���ο����� �������� �����?
+1 ��ȣ���� �����ȣ�� ���� �� ������ ���� ����Ѵ�. ||| T? t? v??t qua khi co tin hi?u cho phep.
+2 ���ܱⰡ �������� ���� �� �ż��� ���� ����Ѵ�. ||| Nhanh chong v??t qua khi thanh ch?n ��ang h? xu?ng.
+3 ö���ǳθ� ���� ���� �溸�Ⱑ �︮�� �����Ͽ� ����Ѵ�. ||| N?u coi bao vang len tr??c khi ��i vao l?i giao c?t v?i  ��??ng s?t thi t?ng t?c ��? ��i qua.
+4 ���ܱⰡ �ö󰡰� ���� �� �� ���� �ٲ㰡�� ����Ѵ�. ||| ��?i s? lien t?c chu?n b? v??t qua khi thanh ch?n ��ang  d?n ��??c nang len.
+
+882 ���� ����ǥ���� ���ϴ� ����?
+1 �켱���ο��� �켱���ΰ� �ƴ� ���ο� �������� �˸��� ǥ���̴�. ||| Bi?n bao ch? s? giao c?t c?a ��??ng ?u tien v?i ��??ng  khong ?u tien.
+2 �Ϲ����� �����θ� ��Ÿ���� ǥ���̴�. ||| Bi?n bao th? hi?n ��??ng giao nhau m?t chi?u.
+3 ���Ϲ������൵�ο��� ���������� �����Ͽ��� �� ������ ������ �˸���  ǥ���̴�. ||| Bi?n bao cho bi?t ��i?m ma xe ph?i l?u thong v? hai  h??ng t? ��o?n ��??ng l?u thong cung h??ng.
+4 2���� ������ �ǽõ��� �˸��� ǥ���̴�. ||| Bi?n bao cho bi?t ��ang th?c hi?n l?u thong 2 chi?u.
+
+883 ���� ����ǥ���� ���� �������� ���� ����?
+1 A�� ��������ǥ���� ������ ����� �ִ� ������ ��ġ�Ѵ�. ||| Bi?n A la bi?n bao ��??ng ��a l?, ��??c l?p ��?t t?i ��i?m  co nguy c? ��a l?.
+2 A�� ������ �Ϻ��� ����, �غ�, ��� �� �߶����������� ��쿡 ��ġ�Ѵ�. ||| Bi?n A ��??c l?p ��?t trong tr??ng h?p m?t ben ��??ng  la b? song, bai bi?n, thung l?ng, v.v., t?c la ��i?m co nguy  c? r?i xu?ng.
+3 B�� ����Ⱑ ��鸱 ��ŭ Ⱦǳ�� ���ϰ� �Ҿ� �����ؾ� �� ������ ��ġ�Ѵ�. ||| Bi?n B ��??c l?p ��?t t?i ��i?m co gio ngang th?i m?nh  ��?n m?c lam may bay rung l?c, c?n ph?i chu y.
+4 B�� ���� ���� �������� ��� ������ ������ ���� �����ϴ� ������        ��ġ�Ѵ�. ||| Bi?n B ��??c l?p ��?t t?i ��i?m g?n san bay quan s?, n?i  tuy?t ��?i c?m l?u thong c?a t?t c? cac ph??ng ti?n. A B
+
+884 ���α�����ɻ� ���� ����ǥ���� ���� �������� �´� ����?
+1 ������ �Ϻ��� ��� �� �߶������������� �˸��� ����ǥ�� ||| Bi?n bao h? tr? cho bi?t m?t ben ��??ng la khu v?c co  nguy c? r?i xu?ng thung l?ng
+2 ������ �Ϻ��� ���� �� �߶������������� �˸��� ����ǥ�� ||| Bi?n bao quy ��?nh cho bi?t m?t ben ��??ng la khu v?c co  nguy c? r?i xu?ng song
+3 ������ �Ϻ��� ��� �� �߶������������� �˸��� ����ǥ�� ||| Bi?n bao nguy hi?m c?nh bao cho bi?t m?t ben ��??ng la  khu v?c co nguy c? r?i xu?ng thung l?ng
+4 ������ �Ϻ��� ���� �� �߶������������� �˸��� ����ǥ�� ||| Bi?n ch? d?n cho bi?t m?t ben ��??ng la khu v?c co nguy  c? r?i xu?ng song
+
+885 ���� ����ǥ���� ���� �������� �´� ����?
+1 2���� ���� ǥ���̴�. ||| Bi?n bao l?u thong 2 chi?u
+2 �߾Ӻи��� ���� ǥ���̴�. ||| Bi?n bao k?t thuc d?i phan cach
+3 ���������� ǥ���̴�. ||| Bi?n bao l?u thong c? hai ben
+4 �߾Ӻи��� ���� ǥ���̴�. ||| Bi?n bao b?t ��?u d?i phan cach
+
+886 ���� ����ǥ���� ���� �������� �´� ����?
+1 ȸ���� ������ǥ�� ||| Bi?n bao vong xuy?n tron
+2 ���� �� ��ȸ�� ���� ����ǥ�� ||| Bi?n bao chu y xe r? trai va quay ��?u
+3 ���ȣ ������ǥ�� ||| Bi?n bao ��??ng giao nhau khong co ��en tin hi?u
+4 �·� ���� ���� ||| Bi?n bao ��??ng g?p khuc v? phia ben trai
+
+887 ���� ����ǥ���� ��ġ�Ǵ� ��ҷ� ���� �˸��� ����?
+1 ���ΰ� �·� ���� ������Ż�� �߻��� �� �ִ� ���� ||| ��??ng g?p khuc v? ben trai ma hi?n t??ng ch?ch lan co  th? x?y ra
+2 ������ ���� �������� �ڵ������� �̲������ ���� ���� ||| ��??ng tr?n tr??t do tuy?t ho?c m?a
+3 ���ΰ� �������� ���� ������Ż�� �߻��� �� �ִ� ���� ||| ��??ng quanh co ma hi?n t??ng ch?ch lan co th? x?y ra
+4 ��������簡 ���Ͽ� �ӵ��� �ٿ��� �ϴ� ���� ||| ��??ng xu?ng d?c ��?ng, c?n gi?m t?c
+
+888 ���� ����ǥ���� ���� �������� �´� ����?
+1 ���� ��ȸ�� �� ���� �����ϴ� ǥ���̴�. ||| Bi?n bao ch? th? xe s? r? ph?i
+2 ���� ������ �����ϰ� �ϴ� ����ǥ���̴�. ||| Bi?n bao nguy hi?m c?m xe ��i th?ng
+3 ���� ��� ���� ���ο� ���� ����ǥ���̴�. ||| Bi?n bao nguy hi?m c?nh bao ��??ng g?p khuc v? ben  ph?i ? phia tr??c
+4 ���� ��ȸ���� �����ϴ� ����ǥ���̴�. ||| Bi?n bao nguy hi?m c?nh bao c?m xe r? ph?i
+
+889 ���α�����ɻ� ���� ����ǥ���� ��ġ�� �������� ���� ������� �´�  ����?
+1 �ڵ������뵵�ο� ��ġ�Ǹ� �����Ÿ��� 50���� �̻� Ȯ���Ѵ�. ||| ��??c l?p ��?t tren ��??ng danh rieng cho xe o to va ph?i  ��?m b?o kho?ng cach gi?a cac xe tren 50m.
+2 �Ϲ����� ���ο� ��ġ�Ǹ� �����Ÿ��� 50���� �̻� Ȯ���Ѵ�. ||| ��??c l?p ��?t tren ��??ng m?t chi?u va ph?i ��?m b?o  kho?ng cach gi?a cac xe t? 50m tr? len.
+3 �ڵ������뵵�ο� ��ġ�Ǹ� 50���� ���� ������ü �����̹Ƿ� �����Ѵ�. ||| ��??c l?p ��?t tren ��??ng danh rieng cho xe o to va la  ��o?n ��??ng phia tr??c 50m hay b? un ? nen ph?i ��i  ch?m.
+4 �Ϲ����� ���ο� ��ġ�Ǹ� 50���� ���� ������ü �����̹Ƿ� �����Ѵ�. ||| ��??c l?p ��?t tren ��??ng m?t chi?u va la ��o?n ��??ng phia  tr??c 50m hay b? un ? nen ph?i ��i ch?m.
+
+890 ���α�����ɻ� ������ ����ǥ���� ���� �������� �´� ����?
+1 ����ǥ���̸�, �ڵ����� ����ӵ��� ��� �Ž� 50ų�ι��͸� �ʰ��ؼ���  �ƴ� �ȴ�. ||| La bi?n bao h??ng d?n, t?c ��? l?u thong c?a xe khong  ��??c qua m?c trung binh 50 km/gi?.
+2 ����ǥ���̸�, �ڵ����� ����ӵ��� ��� �Ž� 50ų�ι��͸� �ʰ��ؼ���  �ƴ� �ȴ�. ||| La bi?n bao quy ��?nh, t?c ��? l?u thong c?a xe khong  ��??c qua m?c trung binh 50 km/gi?.
+3 ����ǥ���̸�, �ڵ����� �ְ�ӵ��� �Ž� 50ų�ι��͸� �ʰ��ؼ��� �ƴ� �ȴ�. ||| La bi?n bao h??ng d?n, t?c ��? t?i ��a c?a xe khong ��??c  qua m?c 50 km/gi?.
+4 ����ǥ���̸�, �ڵ����� �ְ�ӵ��� �Ž� 50ų�ι��͸� �ʰ��ؼ��� �ƴ� �ȴ�. ||| La bi?n bao quy ��?nh, t?c ��? t?i ��a c?a xe khong ��??c  qua m?c 50 km/gi?.
+
+891 ���� ����ǥ���� ���� �������� �´� ����?
+1 �����ڴ� ������ �� �ִ�. ||| Ng??i ��i b? co th? qua l?i.
+2 �����ڻӸ� �ƴ϶� ��� ������ ������ �� ����. ||| Ng??i ��i b? va t?t c? cac xe ��?u khong ��??c qua l?i.
+3 ������ �߾� �Ǵ� ������ ��ġ�Ѵ�. ||| Bi?n bao ��??c ��?t ? ben trai ho?c gi?a ��??ng.
+4 ������� �Ⱓ�� �Բ� ǥ���� �� ����. ||| Khong th? cung bi?u th? th?i gian c?m qua l?i.
+
+892 ���� ����ǥ���� ���� �������� ���� ���� ����?
+1 �̷��ڵ��� �� �������� ������ �����Ѵ�. ||| C?m xe may hai banh va xe ��?p l?u thong
+2 �̷��ڵ��� �� ��������ġ�������� ������ �����Ѵ�. ||| C?m xe may hai banh va xe ��?p g?n ��?ng c? l?u thong
+3 �̷��ڵ����� ������ �̿��� ������ ������ ������ �� �ִ�. ||| Tr? xe ��?p va xe may hai banh, cac ph??ng ti?n tho s? va  c? gi?i co th? ��i qua b?t c? luc nao
+4 �̷��ڵ����� ��������ġ������ �̿��� ������ ������ ���� �� �� �ִ�. ||| Tr? xe ��?p g?n ��?ng c? va xe may hai banh, cac ph??ng  ti?n tho s? va c? gi?i co th? ��i qua b?t c? luc nao
+
+893 ���� ����ǥ���� ���� �������� �´� ����?
+1 ���� ������ �����Ѵ�. ||| C?m xe vao.
+2 ��� ���� �������� ������ �����Ѵ�. ||| C?m t?t c? cac lo?i xe va ng??i ��i b? vao.
+3 ���蹰 ���� ȭ���� ������ �����Ѵ�. ||| C?m khong cho xe t?i ch? cac lo?i hang nguy hi?m vao.
+4 ���Ա����Ⱓ ���� �˸��� ����ǥ���� ��ġ�� �� ����. ||| Khong th? l?p bi?n bao ph? bao th?i gian c?m vao.
+
+894 ���� ����ǥ���� ���� �������� ���� ���� ����?
+1 �����ϴ� ������ ���� ���ο� ��ġ�Ѵ�. ||| Bi?n bao ��??c ��?t ? ��??ng co nhi?u xe ��i th?ng.
+2 �����ؾ� �� ������ ���� ������ ��ġ�Ѵ�. ||| Bi?n bao ��??c ��?t ? phia trai ��??ng ? khu v?c ph?i c?m.
+3 �̷� ���������� �ݵ�� �����Ͽ� �ǵ��ư��� �Ѵ�. ||| ? nh?ng ��i?m nh? th? nay, ph?i quay ��?u xe ��i ng??c l?i.
+4 ��?���� ���θ� �̿��ϴ� �� �ٸ� ���θ� �̿��ؾ� �Ѵ�. ||| Ph?i ��i ��??ng khac nh? ��??ng ben trai, ph?i.
+
+895 ���α�����ɻ� ���� ����ǥ���� ���� �������� �´� ����?
+1 ������ ������ �����ϴ� ����ǥ���̴�. ||| La bi?n bao quy ��?nh c?m xe quay ��?u.
+2 ����(��������� �����Ѵ�.)�� ������ �����ϴ� ����ǥ���̴�. ||| La bi?n hi?u l?nh c?m cac lo?i xe (ngo?i tr? xe ��i?n m?t  ��?t) quay ��?u.
+3 ������ �̵���ġ�� ������ �����ϴ� ����ǥ���̴�. ||| La bi?n bao nguy hi?m c?m ph??ng ti?n di chuy?n ca  nhan quay ��?u.
+4 �ڵ�����(������ �̵���ġ�� �����Ѵ�.)�� ������ �����ϴ� ����ǥ���̴�. ||| La bi?n hi?u l?nh c?m xe o to (ngo?i tr? ph??ng ti?n di  chuy?n ca nhan) quay ��?u.
+
+896 ���� ����ǥ���� ���� �������� �´� ����?
+1 ȭ���� �Ʊ� ���� ��� ������ �� �ִ�. ||| Co th? ��? xe m?t luc ��? ��?a hang hoa len xe.
+2 �°��� �����ֱ� ���� �Ͻ������� ������ �� �ִ�. ||| Co th? d?ng xe m?t luc ��? cho khach xu?ng xe.
+3 ���� �� ������ �����ϴ� ������ ��ġ�Ѵ�. ||| Bi?n bao ��??c ��?t ? ��o?n ��??ng c?m ��? xe va d?ng xe.
+4 �̷��ڵ����� ������ �� �ִ�. ||| Xe may hai banh co th? ��? ��??c.
+
+897 ���� ����ǥ���� ���ϴ� ����?
+1 ���� ���� ||| Gi?i h?n chi?u r?ng xe.
+2 �� ���� ���� ||| Gi?i h?n chi?u cao xe.
+3 �����Ÿ� Ȯ�� ||| ��?m b?o kho?ng cach gi?a cac xe.
+4 �ͳ��� ���� ||| Chi?u cao c?a ��??ng h?m.
+
+898 ���� ����ǥ���� ���ϴ� ����?
+1 �� ���� ���� ||| Gi?i h?n chi?u cao xe
+2 �����Ÿ� Ȯ�� ||| ��?m b?o kho?ng cach gi?a cac xe
+3 ���� ���� ||| Gi?i h?n b? ngang xe
+4 �� ���� ���� ||| Gi?i h?n chi?u dai xe
+
+899 ���� ����ǥ���� �ִ� ���ο����� ���� ������� �´� ����?
+1 �ٰ����� ������ ���� ������ �����ϸ� �ȴ�. ||| Ch? d?ng l?i khi co xe ��?n g?n.
+2 ���ο� ������ ���� ������ �����ؾ� �Ѵ�. ||| Ph?i d?ng l?i k? c? khi khong co xe l?u thong tren ��??ng.
+3 ��̵��� ���� �ǳ� ������ �����Ѵ�. ||| Ch? d?ng l?i khi co tr? em ��i b? sang ��??ng.
+4 �������� ���� ������ �����ϸ� �ȴ�. ||| Ch? d?ng l?i khi co tin hi?u ��en ��?.
+
+900 ���� ����ǥ���� ��ġ�� �� �ִ� ��Ҵ�?
+1 ���������� �ϰ� ���� �ƴ��ϰ� ������ ����� ������ ||| ��??ng giao nhau t?p n?p ch?a ��??c phan lu?ng giao  thong
+2 ��Ż�� ������� �α� ||| G?n ��?nh d?c
+3 ���������� �ϰ� ���� �ƴ��ϰ� �¿츦 Ȯ���� �� ���� ������ ||| ��??ng giao nhau ch?a ��??c phan lu?ng giao thong,  khong th? quan sat trai ph?i
+4 ��ȣ�Ⱑ ���� ö�� �ǳθ� ||| ��o?n ��??ng giao v?i ��??ng tau khong co ��en tin hi?u
+
+901 ���� ����ǥ���� �ǹ��ϴ� ����?
+1 ���蹰�� ���� ���� ������� ||| C?m xe ch? v?t li?u nguy hi?m
+2 ���濡 ���� ȭ��� ���� ���� ���� �� ||| C?m xe vi phia tr??c co xe b? chay
+3 ����ȭ�簡 ���� �߻��ϴ� �� ||| N?i th??ng xuyen x?y ra h?a ho?n o to
+4 ��ҹ߻��������� ���� ������� ||| Khu v?c d? phat sinh chay r?ng, c?m xe ��i vao
+
+902 ���� ����ǥ���� ��ġ�� �������� ������ ������ ������?
+1 �̷��ڵ��� ||| Xe may hai banh
+2 �����ڵ��� ||| Xe o to ch? khach
+3 �¿��ڵ��� ||| Xe o to con
+4 ��������ġ������ ||| Xe ��?p g?n ��?ng c?
+
+903 ���� ����ǥ���� ������ �´� ����?
+1 �Ϸ�����ǥ�� ||| Bi?n bao ��? xe theo hang d?c
+2 �����ü����ǥ�� ||| Bi?n bao khu v?c th??ng xuyen b? t?c ngh?n
+3 �߰���������ǥ�� ||| Bi?n bao chu y khi l?u thong vao ban ��em
+4 �������汸��ǥ�� ||| Bi?n bao khu v?c thay ��?i lan xe
+
+904 ���� ����ǥ���� �ǹ��ϴ� ����?
+1 Ŀ��� ���� ||| Chu y khuc cua
+2 �ڵ��� ���Ա��� ||| C?m xe o to
+3 �������� ���� ||| C?m v??t
+4 ���ӹ����� ��ġ ���� ||| Khu v?c co g? gi?m t?c
+
+905 ������ ����ǥ���� ���� �������� �´� ����?
+1 �߷� 5.5t �̻� ���� Ⱦ���� �����ϴ� �� ||| H?n ch? xe tr?ng t?i 5,5 t?n tr? len b?ng qua ��??ng
+2 �߷� 5.5t �ʰ� ���� Ⱦ���� �����ϴ� �� ||| H?n ch? xe tr?ng t?i tren 5,5 t?n b?ng qua ��??ng
+3 �߷� 5.5t �̻� ���� ������ �����ϴ� �� ||| H?n ch? l?u thong c?a xe tr?ng t?i 5,5 t?n tr? len
+4 �߷� 5.5t �ʰ� ���� ������ �����ϴ� �� ||| H?n ch? l?u thong c?a xe tr?ng t?i tren 5,5 t?n
+
+906 ���� ����ǥ���� ���� �������� �´� ����?
+1 �¿��ڵ����� ������ �����ϴ� ���̴�. ||| C?m xe o to con l?u thong.
+2 ���蹰 ��� �ڵ����� ������ �����ϴ� ���̴�. ||| C?m xe v?n chuy?n ch?t nguy hi?m l?u thong.
+3 �����ڵ����� ������ �����ϴ� ���̴�. ||| C?m xe o to ch? khach l?u thong.
+4 ȭ���ڵ����� ������ �����ϴ� ���̴�. ||| C?m xe t?i l?u thong.
+
+907 �������� ��������� ǥ�ó������� Ʋ�� ���� ?
+1 �׸����� ���� ���� ��ġ �� ��Ⱑ�� ����� ���� ���� �̻��� �˸���       ���� ||| Hinh �� la ��en c?nh bao thong bao v? s? c? c?a thi?t b?  ��i?u khi?n ��?ng c? va h? th?ng ki?m soat khi th?i cung  cac c?m bi?n lien quan.
+2 �׸����� ���ž� ���� �� ������ �˸��� ���� ||| Hinh �� la ��en c?nh bao thong bao c?n b? sung dung  d?ch r?a kinh khi thi?u.
+3 �׸����� Ÿ�̾� ������� ������ ǥ�ذ�������� ���� �Ǵ� Ÿ�̾� ��       �ջ��¸� �˸��� ���� ||| Hinh �� la ��en c?nh bao thong bao c?n b?m ap su?t l?p  theo tieu chu?n ho?c tinh tr?ng h? h?ng l?p khi ap su?t  l?p th?p.
+4 �׸����� ABS �극��ũ ��ɰ� ���� ���� ||| Hinh �� la ��en c?nh bao lien quan ��?n ch?c n?ng phanh  ABS. �� �� �� ��
+
+908 ���� ����ǥ���� ��ġ��ҿ� ���� �������� �ٸ��� �ʴ� ����?
+1 A ǥ���� ������� ������ �� 50���Ϳ��� 120���� ������ ���� �߾� �� �� ������ ��ġ�Ѵ�. ||| Bi?n bao A ��??c g?n ? ben ph?i ho?c gi?a ��??ng trong  kho?ng 50m ~ 120m tr??c ��o?n ��??ng giao nhau v?i xe  ��i?n m?t ��?t.
+2 B ǥ���� ȸ�������� �� 30���� ���� 120������ ���� ������ ��ġ�Ѵ�. ||| Bi?n bao B ��??c g?n ? ben ph?i ��??ng trong kho?ng  30m ~ 120m tr??c vong xuy?n.
+3 C ǥ���� ������ ��簡 ���۵Ǵ� ���� �� 30���� ���� 200������ ����  ������ ��ġ�Ѵ�. ||| Bi?n bao C ��??c g?n ? ben ph?i ��??ng trong kho?ng  30m ~ 200m tr??c ��i?m b?t ��?u ��o?n ��??ng d?c.
+4 D ǥ���� ���� ���� �������� ���� �� 30���� ���� 200������ ���� ���� �� ��ġ�Ѵ�. ||| Bi?n bao D ��??c g?n ? ben ph?i ��??ng trong kho?ng  30m ~ 200m tr??c ��i?m chi?u r?ng c?a ��??ng b? bop  h?p l?i.   A   B C D
+
+909 ���� ����ǥ���� ��ġ�� �������� ������ ������ ������?
+1 ȭ���ڵ��� ||| Xe t?i
+2 ���� ||| Xe may cay
+3 Ʈ���� ||| Xe may keo
+4 �ռ��� ||| Xe keo b?ng tay
+
+910 ���� ����ǥ���� ���� �������� �´� ����?
+1 �����ӵ� ����ǥ�� ||| Gi?i h?n t?c ��? t?i thi?u
+2 �ְ�ӵ� ����ǥ�� ||| Gi?i h?n t?c ��? t?i ��a
+3 �����Ÿ� Ȯ��ǥ�� ||| ��?m b?o kho?ng cach an toan gi?a cac ph??ng ti?n
+4 �����ӵ� ����ǥ�� ||| Duy tri t?c ��? an toan
+
+911 ���� ����ǥ���� ��Ī���� �´� ����?
+1 ������ ����ǥ�� ||| Bi?n bao ��i c? hai phia
+2 ������ ������� ǥ�� ||| Bi?n bao c?m ��i l?i hai chi?u
+3 �߾Ӻи��� ����ǥ�� ||| Bi?n bao b?t ��?u d?i phan cach
+4 �߾Ӻи��� ����ǥ�� ||| Bi?n bao k?t thuc d?i phan cach
+
+912 ���� ����ǥ���� ���� �������� �´� ����?
+1 ��ȣ�� ������� ���� ������ ���� �� ��ȸ���� �� �ִ�. ||| Khi khong co xe, co th? r? trai b?t k? ��en tin hi?u.
+2 ������ȣ�� �ٸ� ���뿡 ���ذ� ���� ���� ������ ��ȸ�� �� �� �ִ�. ||| Khi khong gay c?n tr? ��?n ph??ng ti?n giao thong khac  thi co th? r? trai trong luc tin hi?u giao thong b?t ��en ��?.
+3 ��ȣ�̹Ƿ� ��ȸ�� ��ȣ�� ������ ��ȸ���� �� ����. ||| Vi la ��o?n ��??ng khong ��??c b?o v? nen n?u khong co  tin hi?u r? trai thi khong ��??c r? trai.
+4 �����ȣ���� �ٸ� ���뿡 ���ذ� ���� ���� ������ ��ȸ���� �� �ִ�. ||| N?u khong gay c?n tr? ph??ng ti?n giao thong khac thi  co th? r? trai trong luc tin hi?u giao thong b?t ��en xanh.
+
+913 ���� ����ǥ���� ��Ī��?
+1 ������ ����ǥ�� ||| Bi?n bao ��i l?i hai chi?u
+2 ��?��ȸ�� ǥ�� ||| Bi?n bao r? trai, ph?i
+3 �߾Ӻи��� ����ǥ�� ||| Bi?n bao b?t ��?u d?i phan cach
+4 �߾Ӻи��� ����ǥ�� ||| Bi?n bao k?t thuc d?i phan cach
+
+914 ���� ����ǥ���� ���� �������� �´� ����?
+1 ���� ��ȸ�� �� ������ ���� �����ϴ� ����ǥ���̴�. ||| Bi?n bao an toan cho phep xe r? trai sau ��o quay ��?u.
+2 ���� ��ȸ�� �Ǵ� ������ ���� �����ϴ� ����ǥ���̴�. ||| Bi?n bao an toan cho phep xe r? trai ho?c quay ��?u.
+3 ��ȸ�� ���� ������ ���� �켱���� �����ϴ� ����ǥ���̴�. ||| Bi?n bao an toan cho bi?t xe r? trai ��??c ?u tien h?n xe  quay ��?u.
+4 ��ȸ�� ������ �������� �켱���� �����ϴ� ����ǥ���̴�. ||| Bi?n bao an toan cho bi?t xe quay ��?u ��??c ?u tien h?n  so v?i xe r? trai.
+
+915 ���� ����ǥ���� ���� �������� �´� ����?
+1 �����忡 ������ �� ȭ��ǥ �������� ������ ���� �����ϴ� �� ||| Ch? d?n khi ��i vao bai ��? xe thi ��i theo h??ng m?i ten
+2 ��ȸ���� ������ �������� ��ȸ ���η� ������ ���� �����ϴ� �� ||| Ch? d?n ��i theo h??ng ��??ng r? ph?i trong khu v?c c?m  r? trai
+3 ȸ���������̹Ƿ� �����Ͽ� ȸ���� ���� �����ϴ� �� ||| Vi la ��??ng vong xuy?n nen chu y khi quay vong
+4 ���������� ������ ���� �����ϴ� �� ||| Ch? d?n ��i sang ben trai
+
+916 ���� ����ǥ���� �ǹ��ϴ� ����?
+1 ���ȭ��ǥ �������� �����ϴ� ������ �켱 ������ �� �ִ�. ||| ��??ng ?u tien cho cac xe ��i theo h??ng m?i ten mau  tr?ng.
+2 ����ȭ��ǥ �������� �����ϴ� ������ �켱 ������ �� �ִ�. ||| ��??ng ?u tien cho cac xe ��i theo h??ng m?i ten mau ��?.
+3 ���ȭ��ǥ ������ ������ ������ �� ����. ||| C?m cac xe ��i theo h??ng m?i ten mau tr?ng.
+4 ����ȭ��ǥ ������ ������ ������ �� ����. ||| C?m cac xe ��i theo h??ng m?i ten mau ��?.
+
+917 ���� ����ǥ���� �ǹ��ϴ� ����?
+1 ������ Ⱦ���� ������ ������Ⱦ�ܵ��� �ִ�. ||| Co l?i b?ng qua ��??ng danh cho xe ��?p ��? xe ��?p qua  ��??ng.
+2 ������ Ⱦ���� �Ұ����� ���� �˸��ų� �����ϰ� �ִ�. ||| Ch? th? ho?c bao hi?u xe ��?p khong th? qua ��??ng.
+3 �����ſ� �����ڰ� Ⱦ���� �� �ִ�. ||| Xe ��?p va ng??i ��i b? co th? sang ��??ng.
+4 �����ſ� �������� Ⱦ�ܿ� �����Ѵ�. ||| Chu y cho xe ��?p va ng??i ��i b? sang ��??ng.
+
+918 ���� ����ǥ���� �ǹ��ϴ� ����?
+1 �������δ� �Ϲ����� �����̴�. ||| ��??ng ben trai la ��??ng m?t chi?u.
+2 �������δ� �Ϲ����� �����̴�. ||| ��??ng ben ph?i la ��??ng m?t chi?u.
+3 ��� ���δ� �Ϲ����� �����̴�. ||| T?t c? cac ��??ng ��?u la ��??ng m?t chi?u.
+4 �������δ� �Ϲ����� �����̴�. ||| ��??ng th?ng phia tr??c la ��??ng m?t chi?u.
+
+919 ���� ����ǥ���� ��ġ�� ���� ���������� �ùٸ� ����?
+1 ����ű����� �� ǥ���� ��ġ�� ���θ� ������ �� �ִ�. ||| Xe tr??t ��i?n Kickboard ��??c l?u thong tren lan ��??ng  l?p ��?t bi?n bao nay.
+2 ���������Ŵ� �� ǥ���� ��ġ�� ���θ� ������ �� ����. ||| Xe ��?p ��i?n khong ��??c l?u thong tren lan ��??ng l?p ��?t  bi?n bao nay.
+3 �������� ��츸 �� ǥ���� ��ġ�� ���θ� ������ �� �ִ�. ||| Ch? xe ��?p m?i ��??c l?u thong tren lan ��??ng l?p ��?t  bi?n bao nay.
+4 �ڵ����� �� ǥ���� ��ġ�� ���θ� ������ �� �ִ�. ||| Xe o to ��??c l?u thong tren lan ��??ng l?p ��?t bi?n bao nay.
+
+920 ���� ����ǥ���� ���� �������� �´� ����?
+1 �����Ÿ� �����ϵ��� �����Ѵ�. ||| Ch? th? ch? co xe ��?p m?i ��??c l?u thong.
+2 ������ �� ������ ��� �������� �����Ѵ�. ||| Ch? th? ��??ng danh rieng cho xe ��?p va ng??i ��i b?.
+3 ��� ��ȣ���� �ȿ��� ��� �Ǵ� ������ ��ȣ�� �����Ѵ�. ||| Ch? th? b?o v? thi?u nhi va tr? nh? trong khu v?c b?o v? tr? em.
+4 ������Ⱦ�ܵ����� �����Ѵ�. ||| Ch? th? l?i sang ��??ng c?a xe ��?p.
+
+codex
+[{"n":901,"field":"c[2]","severity":"major","issue":"‘전방 차량 화재로 교통 통제 중’이라는 뜻을 단순히 ‘앞 차량에 불이 나서 통행 금지’로 번역해 교통 통제 중이라는 핵심 의미가 빠졌다.","suggestion":"Đang kiểm soát giao thông do xe phía trước bị cháy."},{"n":907,"field":"c[3]","severity":"major","issue":"타이어 공기압 저하 또는 타이어 손상을 알리는 경고등을 ‘공기압을 표준치로 주입해야 한다’는 지시로 바꾸어 번역했다.","suggestion":"Đèn cảnh báo cho biết áp suất lốp thấp hơn mức tiêu chuẩn hoặc lốp bị hư hỏng."},{"n":919,"field":"c[1]","severity":"major","issue":"‘개인형 이동장치’를 전동 킥보드로만 한정해 번역하여 해당 차로를 이용할 수 있는 대상 범위를 잘못 축소했다.","suggestion":"Phương tiện di chuyển cá nhân được phép lưu thông trên làn đường có đặt biển báo này."}]
+tokens used
+34,457
+[{"n":901,"field":"c[2]","severity":"major","issue":"‘전방 차량 화재로 교통 통제 중’이라는 뜻을 단순히 ‘앞 차량에 불이 나서 통행 금지’로 번역해 교통 통제 중이라는 핵심 의미가 빠졌다.","suggestion":"Đang kiểm soát giao thông do xe phía trước bị cháy."},{"n":907,"field":"c[3]","severity":"major","issue":"타이어 공기압 저하 또는 타이어 손상을 알리는 경고등을 ‘공기압을 표준치로 주입해야 한다’는 지시로 바꾸어 번역했다.","suggestion":"Đèn cảnh báo cho biết áp suất lốp thấp hơn mức tiêu chuẩn hoặc lốp bị hư hỏng."},{"n":919,"field":"c[1]","severity":"major","issue":"‘개인형 이동장치’를 전동 킥보드로만 한정해 번역하여 해당 차로를 이용할 수 있는 대상 범위를 잘못 축소했다.","suggestion":"Phương tiện di chuyển cá nhân được phép lưu thông trên làn đường có đặt biển báo này."}]

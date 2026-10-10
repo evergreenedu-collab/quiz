@@ -1,0 +1,128 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1262a-4ace-7832-82a4-c2dbfa88929d
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/306_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+codex
+파일의 원문·번역 및 자동 지적을 대조해 실질 오류만 선별하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/306_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 529ms:
+[
+ {
+  "n": 122,
+  "ko_e": "?꾨줈援먰넻踰???5議?怨쇰줈?????깆쓽 ?댁쟾 湲덉?), ??54議?踰뚯튃) 30留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳?? ??????5 議곕? ?꾨컲?섏뿬 怨쇰줈?띿쭏蹂묒쑝濡??명븯???뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감 瑜??댁쟾???щ엺(?ㅻ쭔, 媛쒖씤???대룞?μ튂瑜??댁쟾?섎뒗 寃쎌슦???쒖쇅?쒕떎)",
+  "tr_e": "Article 45 of the Road Traffic Act (Prohibition of Driving While Fatigued, etc.) and Article 154 (Penalty Provisions): punished by a fine not exceeding 300,000 won or by detention. Subparagraph 3: a person who, in violation of Article 45, drives a motor vehicle, etc. or a tram in a state in which normal driving may not be possible due to fatigue or illness (however, this excludes the case of operating a personal mobility device)."
+ },
+ {
+  "n": 123,
+  "ko_e": "?쇰줈??吏媛?諛??댁쟾 議곗옉 ?λ젰???⑥뼱吏寃??쒕떎.",
+  "tr_e": "Fatigue lowers one's perception and driving-operation ability."
+ },
+ {
+  "n": 124,
+  "ko_e": "?꾨줈援먰넻踰???48議곗쓽 2(踰뚯튃) ?좎젣44議??????먮뒗 ????쓣(?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감瑜??댁쟾???щ엺?쇰줈 ?쒖젙?쒕떎. ?ㅻ쭔, 媛쒖씤???대룞?뺤옣移섎? ?댁쟾?섎뒗 寃쎌슦???쒖쇅?쒕떎.) 踰뚭툑 ?댁긽???뺤쓣 ?좉퀬諛쏄퀬 洹??뺤씠 ?뺤젙???좊???10?????ㅼ떆 媛숈? 議??????먮뒗 2??쓣 ?꾨컲???щ엺(?뺤씠 ?ㅽ슚???щ엺???ы븿)?",
+  "tr_e": "Article 148-2 of the Road Traffic Act (Penalty Provisions): (1) a person who, having been sentenced to a fine or heavier for violating Article 44(1) or (2) (limited to a person who drove a motor vehicle, etc.; however, this excludes the case of operating a personal mobility device) and having had that sentence become final, again violates Article 44(1) or (2) within 10 years from the date the sentence became final (including a person whose sentence has been rendered invalid) is..."
+ },
+ {
+  "n": 125,
+  "ko_e": "??醫곸? ?꾨줈?먯꽌???ㅼ젣 ?띾룄蹂대떎 鍮좊Ⅴ寃??먭뺨吏꾨떎. ??二쇰??????몄씤 ?꾨줈?먯꽌???ㅼ젣蹂대떎 ?먮━寃??먭뺨吏꾨떎.  ??怨좎냽?꾨줈?먯꽌 ?꾨갑???뺤???李⑤? 二쇳뻾 以묒씤 李⑤줈 ?섎せ ?뚭퀬 異⑸룎 ?ш퀬媛 諛쒖깮?????덈떎.",
+  "tr_e": "(1) On a narrow road, one feels the speed is faster than the actual speed. (2) On a road with wide-open surroundings, one feels it is slower than actual. (4) On an expressway, one may mistake a vehicle stopped ahead for a moving vehicle and cause a collision."
+ },
+ {
+  "n": 126,
+  "ko_e": "怨듭＜嫄곕━???댁쟾?먯쓽 ?ъ떊???곹깭???곕씪 ?곹뼢??二쇨쾶 ?쒕떎.",
+  "tr_e": "The reaction distance is affected by the driver's mental and physical condition."
+ },
+ {
+  "n": 127,
+  "ko_e": "?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???⑥닚 ?뚯＜?댁쟾??寃쎌슦?먮뒗 100?쇨컙???댁쟾硫댄뿀 ?뺤?? ?뺤궗泥섎쾶?? 諛쏆쑝硫? ?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽???뚯＜ ?댁쟾?먭? ?몄쟻 ?쇳빐??援먰넻?ш퀬瑜??쇱쑝??寃쎌슦?먮뒗 ?댁쟾硫댄뿀媛 痍⑥냼?쒕떎.",
+  "tr_e": "In the case of simple drunk driving with a blood alcohol concentration of 0.03 percent or higher but less than 0.08 percent, a person receives a 100-day driver's license suspension and criminal punishment; if a drunk driver with a blood alcohol concentration of 0.03 percent or higher causes a traffic accident involving personal injury, the driver's license is revoked."
+ },
+ {
+  "n": 128,
+  "ko_e": "???꾨줈援먰넻踰???4議??????덉븸 梨꾩랬 ?깆쓽 諛⑸쾿?쇰줈 痢≪젙???붽뎄?????덈떎.            ???꾨줈援먰넻踰???4議????? ?댁쟾 ?⑥냽???뺥솗?깃낵 怨듭젙?깆쓣 ?믪씠怨??뚯＜?댁쟾?쇰줈 ?명븳 ?ы쉶???쇳빐瑜?以꾩씠湲?   ?꾪빐 ?꾩엯 [2024. 1. 3. ?쇰?媛쒖젙, 2025. 6. 4. ?쒗뻾]           ???꾨줈援먰넻踰???56議?12??           ???꾨줈援먰넻踰???3議??댁쟾硫댄뿀??痍⑥냼쨌?뺤?) ????????,
+  "tr_e": "(1) Article 44(3) of the Road Traffic Act: measurement may be requested by a method such as taking a blood sample. (2) Article 44(5) of the Road Traffic Act: introduced to enhance the accuracy and fairness of driving enforcement and to reduce the social harm caused by drunk driving [partially amended Jan. 3, 2024, enforced Jun. 4, 2025]. (3) Article 156, subparagraph 12-2 of the Road Traffic Act. (4) Article 93(1)3 of the Road Traffic Act (Revocation and Suspension of a Driver's License)."
+ },
+ {
+  "n": 129,
+  "ko_e": "援먰넻 ?섍꼍??蹂?붽? ?⑥“濡쒖슫 怨좎냽?꾨줈 ?깆뿉?쒖쓽 ?댁쟾? ?쒓?吏 ?꾨줈???쇰컲?꾨줈?먯꽌 ?댁쟾?섎뒗 寃?蹂대떎 二쇱쓽?μ씠  ?뷀솕?섍퀬 ?섎㈃ 遺議깃낵 愿怨꾩뾾??議몄쓬?댁쟾 ?됰룞??留롮븘吏꾨떎. ?꾩슱???뚯＜?댁쟾????寃쎌슦 ??뚯쓽 湲곕뒫???뷀솕?섏뼱  議몄쓬?댁쟾??媛?μ꽦???믪븘吏꾨떎. ?뱁엳 媛먭린?쎌쓽 寃쎌슦 ?꾨줈援먰넻踰뺤긽 湲덉??쎈Ъ? ?꾨땲??議몄쓬???좊컻?섎뒗 ?깅텇?????좊맂 寃쎌슦媛 ?덉쓣 ???덇린 ?뚮Ц??蹂듭슜 ???댁쟾???섎뒗 寃쎌슦 ?좎쓽?섏뿬???섎ŉ, ?댁쟾?섏뿬????寃쎌슦 蹂듭슜 ???깅텇?? ??섏뿬 ?쎌궗?먭쾶 臾몄쓽????蹂듭슜???꾩슂媛 ?덈떎.",
+  "tr_e": "Driving on an expressway, etc. where changes in the traffic environment are monotonous, dulls one's attention more than driving on urban roads or general roads, and drowsy-driving behavior increases regardless of lack of sleep. In addition, driving under the influence dulls the functioning of the cerebrum and increases the likelihood of drowsy driving. In particular, cold medicine is not a prohibited drug under the Road Traffic Act, but it may contain ingredients that induce drowsiness, so one must be careful when driving after taking it, and if one must drive, it is necessary to consult a pharmacist about the ingredients before taking it."
+ },
+ {
+  "n": 130,
+  "ko_e": "?꾨줈援먰넻踰???54議?踰뚯튃) 30留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳?? ??????5議곕? ?꾨컲?섏뿬 怨쇰줈?띿쭏蹂묒쑝濡??명븯 ???뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ?곕젮媛 ?덈뒗 ?곹깭?먯꽌 ?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감瑜??댁쟾???щ엺(?ㅻ쭔, 媛쒖씤???대룞?μ튂 瑜??댁쟾?섎뒗 寃쎌슦???쒖쇅?쒕떎)",
+  "tr_e": "Article 154 of the Road Traffic Act (Penalty Provisions): punished by a fine not exceeding 300,000 won or by detention. Subparagraph 3: a person who, in violation of Article 45, drives a motor vehicle, etc. or a tram in a state in which normal driving may not be possible due to fatigue or illness (however, this excludes the case of operating a personal mobility device)."
+ },
+ {
+  "n": 131,
+  "ko_e": "援먰넻?ш퀬泥섎━ ?밸?踰???議????? ????8???꾨줈援먰넻踰뺤뿉??洹쒖젙???쎈Ъ蹂듭슜?쇰줈 ?뺤긽?곸쑝濡??댁쟾?섏? 紐삵븷 ???ㅺ? ?덈뒗 ?곹깭?먯꽌 ?댁쟾???섎떎媛 ?몃챸?쇳빐 援먰넻?ш퀬 ?쒖뿉??5???댄븯??湲덇퀬 ?먮뒗 2泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳 ?? ?대뒗 醫낇빀蹂댄뿕 ?먮뒗 梨낆엫蹂댄뿕 媛?낆뿬遺 諛??⑹쓽 ?щ?? 愿怨꾩뾾???뺤궗泥섎쾶?섎뒗 ??ぉ?대떎.",
+  "tr_e": "Article 3(1) and (2)8 of the Act on Special Cases Concerning the Settlement of Traffic Accidents: a person who, in a state in which normal driving may not be possible due to taking drugs as prescribed in the Road Traffic Act, drives and causes a traffic accident involving personal injury is punished by imprisonment without labor for not more than 5 years or a fine not exceeding 20 million won. This is an item subject to criminal punishment regardless of whether the person is enrolled in comprehensive insurance or liability insurance and regardless of any settlement."
+ },
+ {
+  "n": 132,
+  "ko_e": "?욎감 ?댁쟾??媛묒씠 ?좎쓣 留덉떊 ?곹깭?쇨퀬 ?섎뜑?쇰룄 ?뚯＜?댁쟾???ш퀬諛쒖깮怨?吏곸젒?곸씤 ?먯씤???녿뒗 ??援먰넻?ш퀬???쇳빐 ?먭? ?섍퀬 蹂꾨룄濡??⑥닚 ?뚯＜?댁쟾????댁꽌留??뺤궗泥섎쾶怨?硫댄뿀?됱젙泥섎텇??諛쏅뒗??",
+  "tr_e": "Even if driver A, the driver of the vehicle ahead, was intoxicated, unless the drunk driving was a direct cause of the accident, A becomes the victim of the traffic accident and is separately subject to criminal punishment and an administrative license disposition only for the simple drunk driving."
+ },
+ {
+  "n": 133,
+  "ko_e": "??4議??좎뿉 痍⑦븳 ?곹깭?먯꽌???댁쟾 湲덉?) ?????좎뿉 痍⑦븳 ?곹깭??湲곗?? ?댁쟾?먯쓽 ?덉쨷?뚯퐫?щ냽?꾧? 0.03?쇱꽱?? ?댁긽??寃쎌슦濡??쒕떎.",
+  "tr_e": "Article 44(4) (Prohibition of Driving While Intoxicated): the standard for a state of intoxication is a driver's blood alcohol concentration of 0.03 percent or higher."
+ },
+ {
+  "n": 134,
+  "ko_e": "?쇰줈???곹깭 諛??쎈Ъ蹂듭슜 ?곹깭?먯꽌???댁쟾? 二쇱쓽?? ?먮떒?λ젰, 諛섏쓳?띾룄????섏? 議몄쓬?댁쟾???좊컻?섍린 ?쎈떎. ???? 留덉빟 ???쎈Ъ???곹뼢?쇰줈 ?뺤긽?곸씤 ?댁쟾??怨ㅻ????곹깭?먯꽌 ?댁쟾?섎떎媛 援먰넻?ш퀬瑜??쇨린?섏뿬 ?곹빐???대Ⅴ寃? ??寃쎌슦???뱀젙踰붿즲媛以묒쿂踰뚮벑?먭??쒕쾿瑜???議곗쓽11(?꾪뿕?댁쟾 ??移섏궗???쇰줈 泥섎쾶?쒕떎. ?ｌ쓽 寃쎌슦??5?꾩씠 寃쎄낵 ?댁빞 ?쒕떎.",
+  "tr_e": "Driving while fatigued or while under the influence of drugs tends to reduce attention, judgment, and reaction speed and to induce drowsy driving. In particular, where a person drives in a state in which normal driving is difficult due to the effects of drugs such as narcotics and causes a traffic accident resulting in injury, the person is punished under Article 5-11 of the Act on the Aggravated Punishment, etc. of Specific Crimes (Dangerous Driving Resulting in Death or Injury). In the case of (4), 5 years must have elapsed."
+ },
+ {
+  "n": 135,
+  "ko_e": "蹂대났?댁쟾???덈갑?섎뒗 諛⑸쾿? 李⑤줈 蹂寃???諛⑺뼢吏?쒕벑 耳쒓린, 鍮꾩긽?먮㈇??耳쒖＜湲? ?묐낫?섍퀬 諛곕젮?섍린, 吏??異쒕컻  ??3珥덇컙 諛곕젮?섍린, 寃쎌쓬湲??먮뒗 ?곹뼢 ?꾩“?깆쑝濡??먭레?섏? ?딄린 ?깆씠 ?덈떎.",
+  "tr_e": "Methods to prevent retaliatory driving include using the turn signal when changing lanes, turning on the hazard lights for others, yielding and being considerate, allowing 3 seconds of consideration when starting late, and not provoking others with the horn or high-beam headlights."
+ },
+ {
+  "n": 136,
+  "ko_e": "蹂대났?댁쟾???뱁뻽???? 112, 寃쎌같泥?諛??쑣룸룄寃쎌같泥??덊럹?댁?, ?덉쟾?좊Ц怨??깆뿉 ?좉퀬?섎㈃ ?쒕떎.",
+  "tr_e": "When subjected to retaliatory driving, one can report it to 112, the websites of the National Police Agency and the City/Provincial Police Agency, the Safety Report app, etc."
+ },
+ {
+  "n": 137,
+  "ko_e": "?꾨줈援먰넻踰???6議?怨듬룞 ?꾪뿕?됱쐞??湲덉?)?????먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅?쒕떎)???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡??먮뒗 醫뚯슦濡?以꾩????듯뻾?섎㈃???ㅻⅨ ?щ엺?먭쾶 ?꾪빐瑜??쇱튂嫄곕굹 援먰넻?곸쓽 ?꾪뿕??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?먰븳 2???댄븯??吏뺤뿭 ?먮뒗 500留????댄븯??踰뚭툑 ?쇰줈 泥섎쾶?????덈떎. ?꾨룞?대쪣?됲뻾李⑤뒗 媛쒖씤???대룞?μ튂濡쒖꽌 ?꾩뿉 蹂?議고빆 ?곸슜???녿떎. ?꾨줈援먰넻踰???議???1???쒖옄?숈감?기앹씠? ?먮룞李⑥? ?먮룞湲곗옣移섏옄?꾧굅瑜?留먰븳?? ?꾨줈援먰넻踰???議???8???쒖옄?숈감?앸? 泥좉만?대굹 媛?ㅻ맂 ?좎쓣 ?댁슜?섏? ?꾨땲?섍퀬 ?먮룞湲곕? ?ъ슜?섏뿬 ?댁쟾?섎뒗 李?(寃ъ씤?섎뒗 ?먮룞李⑤룄 ?먮룞李⑥쓽 ?쇰?濡?蹂몃떎)濡쒖꽌 ?ㅼ쓬 媛?紐⑹쓽 李⑤? 留먰븳?? 媛. ?뚯옄?숈감愿由щ쾿????議곗뿉 ?곕Ⅸ ?ㅼ쓬???먮룞李? ?ㅻ쭔, ?먮룞湲곗옣移섏옄?꾧굅???쒖쇅?쒕떎. 1) ?뱀슜?먮룞李?2) ?뱁빀?먮룞李?3) ?붾Ъ?먮룞李?4) ?뱀닔?먮룞李?5) ?대쪣?먮룞李??? ?뚭굔?ㅺ린怨꾧?由щ쾿????6議곗젣1???⑥꽌???곕Ⅸ 嫄댁꽕湲곌퀎",
+  "tr_e": "Article 46(1) of the Road Traffic Act (Prohibition of Joint Dangerous Conduct): the drivers of motor vehicles, etc. (excluding personal mobility devices) must not, on a road, have two or more persons jointly drive two or more motor vehicles, etc. in a row front-to-back or side-by-side without justifiable cause and thereby harm others or cause a traffic hazard. This may be punished by imprisonment for not more than 2 years or a fine not exceeding 5 million won. An electric two-wheeled self-balancing device is a personal mobility device and is not subject to the above provision. Article 2, subparagraph 21 of the Road Traffic Act: 'motor vehicle, etc.' means a motor vehicle and a motorized bicycle. Article 2, subparagraph 18 of the Road Traffic Act: a 'motor vehicle' means a vehicle driven using an engine without using railways or overhead lines (a towed motor vehicle is also regarded as part of a motor vehicle), being any of the following: (a) the following motor vehicles under Article 3 of the 'Motor Vehicle Management Act' (however, excluding motorized bicycles): 1) passenger cars, 2) buses (vans), 3) trucks, 4) special vehicles, 5) motorcycles; (b) construction machinery under the proviso to Article 26(1) of the 'Construction Machinery Management Act'."
+ },
+ {
+  "n": 138,
+  "ko_e": "?뚰삎踰뺛띿젣284議??뱀닔?묐컯)???섑븯硫??꾪뿕??臾쇨굔???먮룞李⑤? ?댁슜?섏뿬 ?뺣쾿?곸쓽 ?묐컯二꾨? 踰뷀븳 ?먮뒗 7???댄븯?? 吏뺤뿭 ?먮뒗 1泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+  "tr_e": "Under Article 284 of the 'Criminal Act' (Special Intimidation), a person who commits the crime of intimidation under the Criminal Act using a motor vehicle, a dangerous object, is punished by imprisonment for not more than 7 years or a fine not exceeding 10 million won."
+ },
+ {
+  "n": 139,
+  "ko_e": "蹂대났?댁쟾?쇰줈 ?щ엺???ㅼ튂寃???寃쎌슦??泥섎쾶? ?뺣쾿 ??258議곗쓽2(?뱀닔?곹빐)?????꾨컲?쇰줈 1???댁긽 10???댄븯?? 吏뺤뿭??泥섑븳??",
+  "tr_e": "The punishment for injuring a person by retaliatory driving is, as a violation of Article 258-2(1) of the Criminal Act (Special Bodily Injury), imprisonment for not less than 1 year but not more than 10 years."
+ },
+ {
+  "n": 140,
+  "ko_e": "?꾨줈援먰넻踰?????7議?????뿉 ?곕Ⅸ ?띾룄???꾨컲 ????8議?????뿉 ?곕Ⅸ ?〓떒?띿쑀?담냽?꾩쭊 湲덉? ?꾨컲 ????9議? ???????몄뿉 ?곕Ⅸ ?뺣떦???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮?대ŉ, ??? ??3議? ?쇱뼱?ㅺ린???쒗룺?댁쟾 ?꾨컲??곸씠 ?꾨땲??",
+  "tr_e": "Road Traffic Act: (1) speed violation under Article 17(3); (2) violation of the prohibition of crossing, U-turn, or reversing under Article 18(1); (4) generating noise without justifiable cause under Article 49(1)8. Option (3) concerns Article 23, and cutting in is not a subject of the reckless-driving violation."
+ },
+ {
+  "n": 141,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽3(?쒗룺?댁쟾 湲덉?) ?좏샇 ?먮뒗 吏???꾨컲, 以묒븰??移⑤쾾, ?띾룄???꾨컲, ?〓떒?띿쑀?담냽?꾩쭊 湲덉? ??諛? ?덉쟾嫄곕━ 誘명솗蹂? 李⑤줈 蹂寃?湲덉? ?꾨컲, 湲됱젣??湲덉? ?꾨컲, ?욎?瑜닿린 諛⑸쾿 ?먮뒗 ?욎?瑜닿린??諛⑺빐湲덉? ?꾨컲, ?뺣떦 ???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮, 怨좎냽?꾨줈?먯꽌???욎?瑜닿린 諛⑸쾿 ?꾨컲, 怨좎냽?꾨줈 ?깆뿉?쒖쓽 ?〓떒?띿쑀?담냽?꾩쭊 湲덉?",
+  "tr_e": "Article 46-3 of the Road Traffic Act (Prohibition of Reckless Driving): violation of a signal or instruction, crossing the center line, speed violation, violation of the prohibition of crossing/U-turn/reversing, failure to keep a safe distance, violation of the prohibition of lane change, violation of the prohibition of sudden braking, violation of overtaking methods or of the prohibition of obstructing overtaking, generating noise without justifiable cause, violation of overtaking methods on an expressway, and crossing/U-turn/reversing on an expressway, etc."
+ }
+]
+
+2026-10-10T14:14:36.087661Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+codex
+[{"n":135,"field":"e","severity":"major","issue":"'allowing 3 seconds of consideration when starting late'는 의미를 파악하기 어려운 심각한 비문으로, 앞차의 출발이 늦을 때 3초간 기다려 배려하라는 뜻을 제대로 전달하지 못한다.","suggestion":"Methods to prevent retaliatory driving include using turn signals when changing lanes or turning, using hazard lights to express gratitude for another driver's consideration, waiting at least three seconds when the vehicle ahead is slow to start, and refraining from provoking other drivers with the horn or high-beam headlights."}]
+tokens used
+10,496
+[{"n":135,"field":"e","severity":"major","issue":"'allowing 3 seconds of consideration when starting late'는 의미를 파악하기 어려운 심각한 비문으로, 앞차의 출발이 늦을 때 3초간 기다려 배려하라는 뜻을 제대로 전달하지 못한다.","suggestion":"Methods to prevent retaliatory driving include using turn signals when changing lanes or turning, using hazard lights to express gratitude for another driver's consideration, waiting at least three seconds when the vehicle ahead is slow to start, and refraining from provoking other drivers with the horn or high-beam headlights."}]

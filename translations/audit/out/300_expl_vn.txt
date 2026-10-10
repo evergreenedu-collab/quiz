@@ -1,0 +1,231 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12621-2a66-7d71-9634-aad6da9676fa
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/300_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/300_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 566ms:
+[
+ {
+  "n": 1,
+  "ko_e": "?꾨줈援먰넻踰???5議곗쓽2(紐⑤컮?쇱슫?꾨㈃?덉쬆 諛쒓툒 諛??댁쟾硫댄뿀利앹쓽 ?뺤씤 ??,           ?꾨줈援먰넻踰뺤떆?됯퇋移숈젣78議곗쓽2(紐⑤컮?쇱슫?꾨㈃?덉쬆???좎껌 ??",
+  "tr_e": "휂i沼걏 85-2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(C梳쩺 gi梳쪅 ph챕p l찼i xe di 휃沼셬g v횪 x찼c nh梳춏 gi梳쪅 ph챕p l찼i xe, v.v.), 휂i沼걏 78-2 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(휂훱ng k첵 gi梳쪅 ph챕p l찼i xe di 휃沼셬g, v.v.)"
+ },
+ {
+  "n": 2,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???7議겸댘??1議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議??댁쟾硫댄뿀利앹쓣 ?껋뼱踰꾨졇嫄곕굹 ?먯뼱 紐??곌쾶 ?섏뿀?????먮뒗 ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?쒌냽?꾧꼍李곗껌?μ뿉寃??좎껌?섏뿬 ?ㅼ떆 諛쒓툒諛쏆쓣 ???덈떎.",
+  "tr_e": "휂i沼걏 77~휂i沼걏 81 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 휂i沼걏 80 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Khi l횪m m梳쩿 ho梳톍 l횪m h沼뢮g gi梳쪅 ph챕p l찼i xe khi梳퓆 kh척ng th沼?s沼?d沼쩸g 휃튼沼즓 th챙 c처 th沼?휃훱ng k첵 v沼쌻 Gi찼m 휃沼멵 C퉤 quan C梳즢h s찼t Th횪nh ph沼?T沼뎝h 휃沼?휃튼沼즓 c梳쩺 l梳죍 theo quy 휃沼땙h c沼쬪 Th척ng t튼 c沼쬪 B沼?H횪nh ch챠nh v횪 An to횪n."
+ },
+ {
+  "n": 3,
+  "ko_e": "?꾨줈援먰넻踰???0議곗뿉 ?곕씪 ?댁쟾硫댄뿀瑜?諛쒓툒諛쏆? ?щ엺??援?쇅?먯꽌 ?댁쟾?섍린 ?꾪븯????6議????????몄쓽 ?뚮룄濡쒓탳????愿???묒빟?띿뿉 ?곕Ⅸ 援?젣?댁쟾硫댄뿀利앹쓣 諛쒓툒 諛쏆쑝?ㅻ㈃ ?? ??寃쎌같泥?옣???좎껌?섏뿬???섍퀬,  ?좏슚湲곌컙? 諛쒓툒諛?? ?좊???1?꾩씠??",
+  "tr_e": "휂i沼걏 80 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?quy 휃沼땙h ng튼沼쓎 휃찾 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe, n梳퓎 mu沼몁 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe qu沼멵 t梳?theo ?똂척ng 튼沼쌵 v沼?giao th척ng 휃튼沼쓓g b沼쇻?t梳죍 휃i沼긩 1 kho梳즢 1 휂i沼걏 96 휃沼?l찼i xe 沼?n튼沼쌵 ngo횪i, th챙 ph梳즜 휃훱ng k첵 v沼쌻 Gi찼m 휃沼멵 C퉤 quan C梳즢h s찼t Th횪nh ph沼?T沼뎝h, v횪 th沼쓎 h梳죒 hi沼뇎 l沼켧 l횪 1 n훱m k沼?t沼?ng횪y 휃튼沼즓 c梳쩺."
+ },
+ {
+  "n": 4,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18 ?뱀감?뺤썝 15?몄듅???뱁빀?먮룞李⑤뒗 1醫???뺣㈃???먮뒗 1醫?蹂댄넻硫댄뿀媛 ?꾩슂?섍퀬 湲닿툒???숈감 ?낅Т??醫낆궗?섎뒗 ?щ엺? ?꾨줈援먰넻踰??쒗뻾????8議곗쓽2 ????뿉 ?곕Ⅸ ?좉퇋(3?쒓컙) 諛??뺢린援먰넻?덉쟾援먯쑁(2?쒓컙)??諛쏆븘?? ?쒕떎.",
+  "tr_e": "Ph沼?l沼쩭 18 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Xe kh찼ch c처 s沼쯢 ch沼쯠 15 ng튼沼쓎 c梳쬷 gi梳쪅 ph챕p l찼i xe h梳죒g 1 lo梳죍 l沼썀 ho梳톍 gi梳쪅 ph챕p l찼i xe h梳죒g 1 lo梳죍 th튼沼쓓g, v횪 ng튼沼쓎 l횪m c척ng vi沼놻 v沼?xe 튼u ti챗n ph梳즜 tham gia gi찼o d沼쩭 an to횪n giao th척ng m沼쌻 (3 gi沼? v횪 gi찼o d沼쩭 an to횪n giao th척ng 휃沼땙h k沼?(2 gi沼? theo kho梳즢 2 휂i沼걏 38-2 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?"
+ },
+ {
+  "n": 5,
+  "ko_e": "?꾨줈援먰넻踰???1議??곗뒿?댁쟾硫댄뿀???⑤젰) ?곗뒿?댁쟾硫댄뿀??洹?硫댄뿀瑜?諛쏆? ?좊???1???숈븞 ?⑤젰??媛吏꾨떎.          ?ㅻ쭔, ?곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?좊???1???댁쟾?대씪???곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?щ엺????醫?蹂댄넻硫댄뿀 ?먮뒗 ??醫?蹂댄넻 硫댄뿀瑜?諛쏆? 寃쎌슦 ?곗뒿?댁쟾硫댄뿀??洹??⑤젰???껊뒗??",
+  "tr_e": "휂i沼걏 81 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Hi沼뇎 l沼켧 c沼쬪 gi梳쪅 ph챕p l찼i xe t梳춑 l찼i): Gi梳쪅 ph챕p l찼i xe t梳춑 l찼i c처 hi沼뇎 l沼켧 trong 1 n훱m k沼?t沼?ng횪y 휃튼沼즓 c梳쩺. Tuy nhi챗n, ngay c梳?tr튼沼쌵 khi 휃沼?1 n훱m k沼?t沼?ng횪y 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe t梳춑 l찼i, n梳퓎 ng튼沼쓎 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe t梳춑 l찼i 휃찾 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe h梳죒g 1 lo梳죍 th튼沼쓓g ho梳톍 gi梳쪅 ph챕p l찼i xe h梳죒g 2 lo梳죍 th튼沼쓓g th챙 gi梳쪅 ph챕p l찼i xe t梳춑 l찼i m梳쩿 hi沼뇎 l沼켧."
+ },
+ {
+  "n": 6,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??4議??댁쟾硫댄뿀??議곌굔 ?? ????뿉 ?섍굅, ?댁쟾硫댄뿀 議곌굔??遺怨쇨린以? 蹂꾪몴20 A???먮룞蹂?띻린, B???섏닔, C???섏”, D??蹂댁껌湲? E??泥?컖?μ븷???쒖? 諛?蹂쇰줉嫄곗슱, F???섎룞?쒕룞湲겸ㅺ??띻린, G???뱀닔?쒖옉  諛??뱀씤李? H???곗륫 諛⑺뼢吏?쒓린, I???쇱そ ?묒??덉씠?곗씠硫? ?좎껜?μ븷?몄씠 ?댁쟾硫댄뿀?쒗뿕???묒떆????議곌굔??留욌뒗 李⑤웾?쇰줈  ?쒗뿕???묒떆 諛??⑷꺽?댁빞 ?섎ŉ, ?⑷꺽 ???대떦 議곌굔??留욌뒗 硫댄뿀利?諛쒓툒",
+  "tr_e": "C훱n c沼?kho梳즢 3 휂i沼걏 54 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(휂i沼걏 ki沼뇆 c沼쬪 gi梳쪅 ph챕p l찼i xe, v.v.), ti챗u chu梳쯰 찼p 휃梳톞 휃i沼걏 ki沼뇆 c沼쬪 gi梳쪅 ph챕p l찼i xe t梳죍 Ph沼?l沼쩭 20 l횪: A l횪 h沼셮 s沼?t沼?휃沼셬g, B l횪 tay gi梳? C l횪 ch창n gi梳? D l횪 m찼y tr沼?th챠nh, E l횪 bi沼긪 b찼o ng튼沼쓎 khi梳퓅 th챠nh v횪 g튼퉤ng l沼밿, F l횪 phanh 휃i沼걏 khi沼긪 b梳켷g tay/ga 휃i沼걏 khi沼긪 b梳켷g tay, G l횪 xe ch梳?t梳죓 휃梳톍 bi沼뇍 v횪 휃튼沼즓 ph챗 duy沼뇍, H l횪 휃챔n xi nhan b챗n ph梳즜, I l횪 ch창n ga b챗n tr찼i; khi ng튼沼쓎 khuy梳퓍 t梳춗 th창n th沼?d沼?thi s찼t h梳죅h l찼i xe ph梳즜 d沼?thi v횪 휃沼?b梳켷g xe ph첫 h沼즤 v沼쌻 휃i沼걏 ki沼뇆, v횪 sau khi 휃沼?s梳?휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe ph첫 h沼즤 v沼쌻 휃i沼걏 ki沼뇆 휃처."
+ },
+ {
+  "n": 7,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18 鍮꾧퀬3, 珥앹쨷??750?щ줈洹몃옩??珥덇낵?섎뒗 3?ㅼ씠?섏쓽 ?쇨껄?몄옄?숈감瑜?寃ъ씤?섍린 ?꾪빐????寃ъ씤?섎뒗 ?먮룞李⑤? ?댁쟾?????덈뒗 硫댄뿀? ??醫??뚰삎寃ъ씤李⑤㈃???먮뒗 ??뺢껄?몄감硫댄뿀瑜?媛吏怨??덉뼱???쒕떎.",
+  "tr_e": "Ghi ch첬 3 Ph沼?l沼쩭 18 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 휂沼?k챕o xe 휃튼沼즓 k챕o (r퉤-mo처c) t沼?3 t梳쩸 tr沼?xu沼몁g c처 t沼븂g tr沼뛫g l튼沼즢g v튼沼즨 qu찼 750 kil척gam, ph梳즜 c처 gi梳쪅 ph챕p l찼i xe cho ph챕p l찼i xe k챕o v횪 gi梳쪅 ph챕p l찼i xe k챕o lo梳죍 nh沼?h梳죒g 1 ho梳톍 gi梳쪅 ph챕p l찼i xe k챕o lo梳죍 l沼썀 h梳죒g 1."
+ },
+ {
+  "n": 8,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18(?댁쟾?????덈뒗 李⑥쓽 醫낅쪟)???곕씪 ?ㅽ봽?몃윮? ??醫???뺣㈃?? 諛곌린??125?쒖떆 珥덇낵  ?대쪣?먮룞李⑤뒗 2醫??뚰삎硫댄뿀媛 ?꾩슂?섎떎.",
+  "tr_e": "Theo Ph沼?l沼쩭 18 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(C찼c lo梳죍 xe 휃튼沼즓 ph챕p l찼i), xe ben (dump truck) c梳쬷 gi梳쪅 ph챕p l찼i xe h梳죒g 1 lo梳죍 l沼썀, xe hai b찼nh c처 dung t챠ch xi-lanh tr챗n 125cc c梳쬷 gi梳쪅 ph챕p l찼i xe h梳죒g 2 lo梳죍 nh沼?"
+ },
+ {
+  "n": 9,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18, ??醫?蹂댄넻硫댄뿀濡??뱀감?뺤썝 15紐??댄븯???뱁빀?먮룞李??댁쟾媛?? ?? ?? ?ｋ뒗 ?뱀감?뺤썝  10紐??댄븯???뱁빀?먮룞李??댁쟾媛??,
+  "tr_e": "Ph沼?l沼쩭 18 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? V沼쌻 gi梳쪅 ph챕p l찼i xe h梳죒g 1 lo梳죍 th튼沼쓓g c처 th沼?l찼i xe kh찼ch c처 s沼쯢 ch沼쯠 t沼?15 ng튼沼쓎 tr沼?xu沼몁g; ?? ?? ??l횪 xe kh찼ch c처 s沼쯢 ch沼쯠 t沼?10 ng튼沼쓎 tr沼?xu沼몁g c처 th沼?l찼i 휃튼沼즓."
+ },
+ {
+  "n": 10,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????5議??????????섎ぉ???곕씪 ??醫??댁쟾硫댄뿀??18???댁긽?쇰줈, ???덉쓣 ?숈떆???④퀬 ?? ?쒕젰??0.5 ?댁긽(?ㅻ쭔, ?쒖そ ?덉쓣 蹂댁? 紐삵븯???щ엺? ?ㅻⅨ 履??덉쓽 ?쒕젰??0.6 ?댁긽?댁뼱???쒕떎.)???쒕젰???덉뼱???쒕떎. ?먰븳  遺됱??? ?뱀깋 諛??몃??됱쓽 ?됱콈 ?앸퀎??媛?ν빐???섎굹 ?ｌ? 紐삵빐??痍⑤뱷??媛?ν븯??",
+  "tr_e": "Theo 휃i沼긩 b m沼쩭 1 kho梳즢 1 휂i沼걏 45 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? gi梳쪅 ph챕p l찼i xe h梳죒g 2 d횪nh cho ng튼沼쓎 t沼?18 tu沼뷼 tr沼?l챗n, ph梳즜 c처 th沼?l沼켧 khi m沼?휃沼뱊g th沼쓎 hai m梳칣 휃梳죜 t沼?0.5 tr沼?l챗n (tuy nhi챗n, ng튼沼쓎 kh척ng nh챙n 휃튼沼즓 m沼셳 b챗n m梳칣 th챙 m梳칣 c챵n l梳죍 ph梳즜 c처 th沼?l沼켧 t沼?0.6 tr沼?l챗n). Ngo횪i ra ph梳즜 ph창n bi沼뇍 휃튼沼즓 m횪u 휃沼? xanh l찼 v횪 v횪ng, nh튼ng d첫 kh척ng nghe 휃튼沼즓 v梳쳌 c처 th沼?휃튼沼즓 c梳쩺."
+ },
+ {
+  "n": 11,
+  "ko_e": "?꾨줈援먰넻踰???議???9???섎ぉ ?뺤쓽 李몄“ ?쒖썝?숆린?μ튂?먯쟾嫄겸앸? ?ㅼ쓬 媛?紐⑹쓽 ?대뒓 ?섎굹???대떦?섎뒗 李⑤? 留먰븳?? 媛. ?뚯옄?숈감愿由щ쾿????議곗뿉 ?곕Ⅸ ?대쪣?먮룞李?媛?대뜲 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰?쇰줈 ?섎뒗 寃쎌슦?먮뒗 理쒓퀬?뺢꺽異쒕젰  11?щ줈????댄븯)???대쪣?먮룞李??? 洹?諛뽰뿉 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰?쇰줈 ?섎뒗 寃쎌슦?먮뒗 理쒓퀬?뺢꺽異쒕젰 11?щ줈????댄븯)???먮룞湲곕? ??李??뚯옄?꾧굅  ?댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧????議곗젣1?몄쓽2???곕Ⅸ ?꾧린?먯쟾嫄?諛???1?몄쓽3???곕Ⅸ ?ㅼ쇅?대룞濡쒕큸? ?쒖쇅?쒕떎)",
+  "tr_e": "Xem 휃沼땙h ngh칫a t梳죍 휃i沼긩 b m沼쩭 19 휂i沼걏 2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? ?똛e 휃梳죖 g梳칗 휃沼셬g c퉤??l횪 xe thu沼셛 m沼셳 trong c찼c 휃i沼긩 sau. a. Trong s沼?xe hai b찼nh theo 휂i沼걏 3 ?똋u梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻?? xe hai b찼nh c처 dung t챠ch xi-lanh t沼?125cc tr沼?xu沼몁g (tr튼沼쓓g h沼즤 d첫ng 휃i沼뇆 l횪m 휃沼셬g l沼켧 th챙 c척ng su梳쩿 휃沼땙h m沼쯢 t沼멼 휃a t沼?11 kil척watt tr沼?xu沼몁g). b. Ngo횪i ra, xe g梳칗 휃沼셬g c퉤 c처 dung t챠ch xi-lanh t沼?125cc tr沼?xu沼몁g (tr튼沼쓓g h沼즤 d첫ng 휃i沼뇆 l횪m 휃沼셬g l沼켧 th챙 c척ng su梳쩿 휃沼땙h m沼쯢 t沼멼 휃a t沼?11 kil척watt tr沼?xu沼몁g) (kh척ng bao g沼뱈 xe 휃梳죖 휃i沼뇆 theo 휃i沼긩 1-2 휂i沼걏 2 ?똋u梳춗 v沼?th첬c 휃梳쯻 s沼?d沼쩸g xe 휃梳죖??v횪 robot di chuy沼긪 ngo횪i tr沼쓎 theo 휃i沼긩 21-3)."
+ },
+ {
+  "n": 12,
+  "ko_e": "?꾨줈援먰넻踰???2議????????몄뿉 ?곕씪 ??醫???뺣㈃?덈뒗 19??誘몃쭔?닿굅???먮룞李??대쪣?먮룞李⑤뒗 ?쒖쇅?쒕떎)???댁쟾 寃쎈젰??1??誘몃쭔???щ엺? 諛쏆쓣 ???녿떎.",
+  "tr_e": "Theo 휃i沼긩 6 kho梳즢 1 휂i沼걏 82 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? gi梳쪅 ph챕p l찼i xe h梳죒g 1 lo梳죍 l沼썀 kh척ng 휃튼沼즓 c梳쩺 cho ng튼沼쓎 d튼沼쌻 19 tu沼뷼 ho梳톍 ng튼沼쓎 c처 kinh nghi沼뇅 l찼i xe c퉤 gi沼쌻 (tr沼?xe hai b찼nh) d튼沼쌻 1 n훱m."
+ },
+ {
+  "n": 13,
+  "ko_e": "?? ???꾨줈援먰넻踰뺤떆?됰졊 ??5議??댁쟾硫댄뿀利?媛깆떊諛쒓툒 諛??뺢린 ?곸꽦寃?ъ쓽 ?곌린 ?? ????         ???꾨줈援먰넻踰뺤떆?됰졊 ??5議??댁쟾硫댄뿀利?媛깆떊諛쒓툒 諛??뺢린 ?곸꽦寃?ъ쓽 ?곌린 ?? ????          ???꾨줈援먰넻踰뺤떆?됯퇋移???3議??댁쟾硫댄뿀利?媛깆떊諛쒓툒 諛??뺢린?곸꽦寃?ъ쓽 ?곌린) ???? 蹂꾩? ??9???쒖떇",
+  "tr_e": "?? ??kho梳즢 1 휂i沼걏 55 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Gia h梳죒 c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe v횪 ho찾n ki沼긩 tra n훱ng l沼켧 휃沼땙h k沼? v.v.); ??kho梳즢 3 휂i沼걏 55 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Gia h梳죒 c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe v횪 ho찾n ki沼긩 tra n훱ng l沼켧 휃沼땙h k沼? v.v.); ??kho梳즢 3 휂i沼걏 83 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Gia h梳죒 c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe v횪 ho찾n ki沼긩 tra n훱ng l沼켧 휃沼땙h k沼?, m梳쳕 s沼?59 t梳죍 Ph沼?l沼쩭 ri챗ng."
+ },
+ {
+  "n": 14,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????9議?????뿉 ?곕씪 ?꾨줈二쇳뻾?쒗뿕??遺덊빀寃⑺븳 ?щ엺? 遺덊빀寃⑺븳 ?좊???3?쇱씠 吏???꾩뿉 ?ㅼ떆 ?꾨줈二쇳뻾?쒗뿕???묒떆?????덈떎. 15.?섏갑?쒖슫??留덉씪由ъ?' ?쒕룄??????ㅻ챸?쇰줈 ?곸젅移??딆? 2媛吏?? ??援먰넻踰뺢퇋瑜???吏?ㅺ퀬 ?대? ?ㅼ쿇???댁쟾?먯뿉寃??ㅼ쭏?곸씤 ?몄꽱?곕툕瑜?遺?ы븯???쒕룄?대떎. ???댁쟾?먭? ?뺤?泥섎텇??諛쏄쾶 ??寃쎌슦 ?꾩궛?먯닔?먯꽌 怨듭젣?????덈떎. ??踰붿튃湲덉씠??怨쇳깭猷?誘몃궔?먮룄 留덉씪由ъ? ?쒕룄??臾댁쐞諛섃ㅻТ?ш퀬 ?쒖빟??李몄뿬?????덈떎. ???쒖빟 ?ㅼ쿇湲곌컙 以묒뿉 援먰넻?ш퀬瑜??좊컻?섍굅??援먰넻踰뺢퇋瑜??꾨컲?섎㈃ ?ㅼ떆 ?쒖빟?????녿떎.",
+  "tr_e": "Theo kho梳즢 4 휂i沼걏 49 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? ng튼沼쓎 tr튼沼즨 s찼t h梳죅h l찼i xe tr챗n 휃튼沼쓓g c처 th沼?d沼?thi l梳죍 s찼t h梳죅h l찼i xe tr챗n 휃튼沼쓓g sau khi qua 3 ng횪y k沼?t沼?ng횪y tr튼沼즨. 15. Hai 휃i沼걏 n횪o KH횚NG ph첫 h沼즤 khi m척 t梳?v沼?ch梳?휃沼?'T챠ch 휃i沼긩 l찼i xe t沼몋'? ??L횪 ch梳?휃沼?trao 튼u 휃찾i th沼켧 ch梳쩿 cho ng튼沼쓎 l찼i xe tu창n th沼?t沼몋 v횪 th沼켧 hi沼뇆 t沼몋 lu梳춗 giao th척ng. ??Khi ng튼沼쓎 l찼i xe b沼?x沼?ph梳죜 휃챙nh ch沼?th챙 c처 th沼?휃튼沼즓 kh梳쪀 tr沼?t沼?휃i沼긩 t챠ch l크y. ??Ng튼沼쓎 ch튼a n沼셮 ti沼걆 ph梳죜 vi c梳즢h ho梳톍 ti沼걆 ph梳죜 h횪nh ch챠nh c크ng c처 th沼?tham gia cam k梳퓍 kh척ng vi ph梳죑, kh척ng tai n梳죒 c沼쬪 ch梳?휃沼?t챠ch 휃i沼긩. ??N梳퓎 g창y tai n梳죒 giao th척ng ho梳톍 vi ph梳죑 lu梳춗 giao th척ng trong th沼쓎 gian th沼켧 hi沼뇆 cam k梳퓍 th챙 kh척ng th沼?cam k梳퓍 l梳죍."
+ },
+ {
+  "n": 15,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃?붾퀎??28?뺤슫?꾩옄媛 ?뺤?泥섎텇??諛쏄쾶 ??寃쎌슦 ?꾩궛?먯닔?먯꽌 ?대? 怨듭젣?????덈떎. ?댁쟾硫댄뿀瑜??뚯????꾧뎄??留덉씪由ъ? ?쒕룄??李몄뿬?????덉?留? 踰붿튃湲덉씠??怨쇳깭猷?誘몃궔?먮뒗 ?쒖빟?????녾퀬, ?쒖빟 ?ㅼ쿇湲곌컙 以묒뿉 援먰넻?ш퀬 媛 諛쒖깮?섍굅??援먰넻踰뺢퇋瑜??꾨컲?대룄 ?ㅼ떆 ?쒖빟?????덈떎(?댁쟾硫댄뿀 ?뱁삙?먯닔 遺?ъ뿉 愿??湲곗? 怨좎떆).",
+  "tr_e": "Ph沼?l沼쩭 28 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Khi ng튼沼쓎 l찼i xe b沼?x沼?ph梳죜 휃챙nh ch沼?th챙 c처 th沼?kh梳쪀 tr沼?휃i沼걏 n횪y t沼?휃i沼긩 t챠ch l크y. B梳쩿 k沼?ai c처 gi梳쪅 ph챕p l찼i xe 휃沼걏 c처 th沼?tham gia ch梳?휃沼?t챠ch 휃i沼긩, nh튼ng ng튼沼쓎 ch튼a n沼셮 ti沼걆 ph梳죜 vi c梳즢h ho梳톍 ti沼걆 ph梳죜 h횪nh ch챠nh th챙 kh척ng th沼?cam k梳퓍, v횪 ngay c梳?khi x梳즭 ra tai n梳죒 giao th척ng ho梳톍 vi ph梳죑 lu梳춗 giao th척ng trong th沼쓎 gian th沼켧 hi沼뇆 cam k梳퓍 th챙 v梳쳌 c처 th沼?cam k梳퓍 l梳죍 (Th척ng b찼o v沼?ti챗u chu梳쯰 trao 휃i沼긩 튼u 휃찾i gi梳쪅 ph챕p l찼i xe)."
+ },
+ {
+  "n": 16,
+  "ko_e": "?꾨줈援먰넻踰???議???9??, ?먯쟾嫄??댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧 ??議?????\"媛쒖씤???대룞?μ튂\"? ??9???섎ぉ???먮룞 湲곗옣移섏옄?꾧굅 以??쒖냽 25?щ줈誘명꽣 ?댁긽?쇰줈 ?댄뻾??寃쎌슦 ?꾨룞湲곌? ?묐룞?섏? ?꾨땲?섍퀬 李⑥껜 以묐웾??30?щ줈洹몃옩 誘몃쭔??寃껋쑝 濡쒖꽌 ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??寃껋쓣 留먰븯硫? ?깊뙋媛곷룄??洹쒖젙?섏뼱 ?덉? ?딅떎.",
+  "tr_e": "휂i沼긩 19-2 휂i沼걏 2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 휃i沼긩 1 휂i沼걏 3 Lu梳춗 v沼?th첬c 휃梳쯻 s沼?d沼쩸g xe 휃梳죖. ?똖hi梳퓍 b沼?di chuy沼긪 c찼 nh창n??l횪 lo梳죍 trong s沼?xe 휃梳죖 g梳칗 휃沼셬g c퉤 t梳죍 휃i沼긩 b m沼쩭 19, khi v梳춏 h횪nh t沼?t沼멵 휃沼?25 kil척m챕t/gi沼?tr沼?l챗n th챙 m척 t퉤 휃i沼뇆 kh척ng ho梳죜 휃沼셬g v횪 tr沼뛫g l튼沼즢g th창n xe d튼沼쌻 30 kil척gam, do Th척ng t튼 c沼쬪 B沼?H횪nh ch챠nh v횪 An to횪n quy 휃沼땙h; g처c leo d沼멵 kh척ng 휃튼沼즓 quy 휃沼땙h."
+ },
+ {
+  "n": 17,
+  "ko_e": "?꾨줈援먰넻踰???議???9???섎ぉ 洹?諛뽰뿉 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰?쇰줈 ?섎뒗 寃쎌슦?먮뒗 理쒓퀬 ?뺢꺽異쒕젰 11?щ줈 ????댄븯)???먮룞湲곕? ??李??먯쟾嫄??댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧 ??議????몄쓽 2???곕Ⅸ ?꾧린?먯쟾嫄?諛???1?몄쓽3???곕Ⅸ ?ㅼ쇅?대룞濡쒕큸? ?쒖쇅?쒕떎) 19??2???쒓컻?명삎 ?대룞?μ튂?앸? ??9???섎ぉ???먮룞湲곗옣移섏옄?꾧굅 以??쒖냽 25?щ줈誘명꽣 ?댁긽?쇰줈 ?댄뻾??寃쎌슦 ?꾨룞湲곌? ?묐룞 ?섏? ?꾨땲?섍퀬 李⑥껜 以묐웾??30?щ줈洹몃옩 誘몃쭔??寃껋쑝濡쒖꽌 ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??寃껋쓣 留먰븳?? * PAS (Pedal Assist System)???꾧린?먯쟾嫄?: ?섎떖怨??꾨룞湲곗쓽 ?숈떆?숇젰?쇰줈 ?吏곸씠硫??꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???녿뒗 ?먯쟾嫄?* Throttle???꾧린?먯쟾嫄?: ?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄곕줈??踰뺣졊 ???섍컻?명삎?대룞?μ튂?숇줈 遺꾨쪟?쒕떎",
+  "tr_e": "휂i沼긩 b m沼쩭 19 휂i沼걏 2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Ngo횪i ra, xe g梳칗 휃沼셬g c퉤 c처 dung t챠ch xi-lanh t沼?125cc tr沼?xu沼몁g (tr튼沼쓓g h沼즤 d첫ng 휃i沼뇆 l횪m 휃沼셬g l沼켧 th챙 c척ng su梳쩿 휃沼땙h m沼쯢 t沼멼 휃a t沼?11 kil척watt tr沼?xu沼몁g) (kh척ng bao g沼뱈 xe 휃梳죖 휃i沼뇆 theo 휃i沼긩 1-2 휂i沼걏 2 Lu梳춗 v沼?th첬c 휃梳쯻 s沼?d沼쩸g xe 휃梳죖 v횪 robot di chuy沼긪 ngo횪i tr沼쓎 theo 휃i沼긩 21-3). 휂i沼긩 19-2: ?똖hi梳퓍 b沼?di chuy沼긪 c찼 nh창n??l횪 lo梳죍 trong s沼?xe 휃梳죖 g梳칗 휃沼셬g c퉤 t梳죍 휃i沼긩 b m沼쩭 19, khi v梳춏 h횪nh t沼?t沼멵 휃沼?25 kil척m챕t/gi沼?tr沼?l챗n th챙 m척 t퉤 휃i沼뇆 kh척ng ho梳죜 휃沼셬g v횪 tr沼뛫g l튼沼즢g th창n xe d튼沼쌻 30 kil척gam, do Th척ng t튼 c沼쬪 B沼?H횪nh ch챠nh v횪 An to횪n quy 휃沼땙h. * Xe 휃梳죖 휃i沼뇆 lo梳죍 PAS (Pedal Assist System): l횪 xe 휃梳죖 di chuy沼긪 b梳켷g 휃沼셬g l沼켧 휃沼뱊g th沼쓎 c沼쬪 b횪n 휃梳죖 v횪 m척 t퉤 휃i沼뇆, kh척ng th沼?di chuy沼긪 ch沼?b梳켷g 휃沼셬g l沼켧 c沼쬪 m척 t퉤 휃i沼뇆. * Xe 휃梳죖 휃i沼뇆 lo梳죍 Throttle: l횪 xe 휃梳죖 c처 th沼?di chuy沼긪 ch沼?b梳켷g 휃沼셬g l沼켧 c沼쬪 m척 t퉤 휃i沼뇆, theo ph찼p lu梳춗 휃튼沼즓 ph창n lo梳죍 l횪 'thi梳퓍 b沼?di chuy沼긪 c찼 nh창n'."
+ },
+ {
+  "n": 18,
+  "ko_e": "?꾨줈援먰넻踰???82議??댁쟾硫댄뿀寃곌꺽?ъ쑀)??洹쒖젙???섑븯硫??⑥냽 寃쎌같愿 ??뻾?쇰줈 ?낃굔?섏뼱 痍⑥냼?섎뒗 寃쎌슦 痍⑤뱷 寃곌꺽 湲곌컙 1?? ?뚯＜?댁쟾???섎떎媛 3???댁긽 援먰넻?ш퀬瑜??쇱쑝??寃쎌슦 ?댁쟾硫댄뿀媛 痍⑥냼???좊줈遺??3??,
+  "tr_e": "Theo quy 휃沼땙h t梳죍 휂i沼걏 82 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(L첵 do kh척ng 휃沼?휃i沼걏 ki沼뇆 c梳쩺 gi梳쪅 ph챕p l찼i xe), tr튼沼쓓g h沼즤 b沼?l梳춑 bi챗n b梳즢 kh沼웙 t沼?do h횪nh hung c梳즢h s찼t 휃ang l횪m nhi沼뇅 v沼?ki沼긩 tra d梳쳌 휃梳퓆 b沼?h沼쭃 gi梳쪅 ph챕p th챙 th沼쓎 gian kh척ng 휃沼?휃i沼걏 ki沼뇆 휃沼?c梳쩺 l梳죍 l횪 1 n훱m; tr튼沼쓓g h沼즤 g창y tai n梳죒 giao th척ng t沼?3 l梳쬷 tr沼?l챗n khi l찼i xe say r튼沼즩 th챙 l횪 3 n훱m k沼?t沼?ng횪y b沼?h沼쭃 gi梳쪅 ph챕p l찼i xe."
+ },
+ {
+  "n": 19,
+  "ko_e": "?곷Ц?댁쟾硫댄뿀利??덈궡(?쒓뎅?꾨줈援먰넻怨듬떒) ?댁쟾?????덈뒗 湲곌컙??援??留덈떎 ?곸씠?섎ŉ, ?遺遺?3媛쒖썡 ?뺣룄???④린媛꾨쭔 ?덉슜 ?섍퀬 ?덉쑝誘濡??κ린泥대쪟瑜??섎뒗 寃쎌슦 ?대떦援??댁쟾硫댄뿀瑜?痍⑤뱷?댁빞 ?쒕떎.",
+  "tr_e": "H튼沼썀g d梳쳌 v沼?gi梳쪅 ph챕p l찼i xe b梳즢 ti梳퓆g Anh (C퉤 quan An to횪n Giao th척ng 휂튼沼쓓g b沼?H횪n Qu沼멵): Th沼쓎 h梳죒 휃튼沼즓 ph챕p l찼i xe kh찼c nhau t첫y t沼쳌g qu沼멵 gia, ph梳쬷 l沼썀 ch沼?cho ph챕p th沼쓎 gian ng梳칗 kho梳즢g 3 th찼ng, v챙 v梳춞 tr튼沼쓓g h沼즤 l튼u tr첬 d횪i h梳죒 th챙 ph梳즜 thi l梳쪅 gi梳쪅 ph챕p l찼i xe c沼쬪 qu沼멵 gia 휃처."
+ },
+ {
+  "n": 20,
+  "ko_e": "?꾨줈援먰넻踰???議??⑹뼱) ?먮룞湲곗옣移섏옄?꾧굅? ?먮룞李④?由щ쾿???대쪣?먮룞李?媛?대뜲 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰 ?쇰줈 ?섎뒗 寃쎌슦?먮뒗 理쒓퀬?뺢꺽異쒕젰 11?щ줈????댄븯)???대쪣?먮룞李⑥? 洹?諛뽰뿉 諛곌린??125?쒖떆 ?댄븯(?꾧린瑜??숇젰?쇰줈 ?섎뒗  寃쎌슦?먮뒗 理쒓퀬?뺢꺽異쒕젰 11?щ줈????댄븯)???먮룞湲곕? ??李?,
+  "tr_e": "휂i沼걏 2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Thu梳춗 ng沼?: Xe 휃梳죖 g梳칗 휃沼셬g c퉤 l횪 xe hai b찼nh c처 dung t챠ch xi-lanh t沼?125cc tr沼?xu沼몁g (tr튼沼쓓g h沼즤 d첫ng 휃i沼뇆 l횪m 휃沼셬g l沼켧 th챙 c척ng su梳쩿 휃沼땙h m沼쯢 t沼멼 휃a t沼?11 kil척watt tr沼?xu沼몁g) theo Lu梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻, v횪 c찼c xe g梳칗 휃沼셬g c퉤 kh찼c c처 dung t챠ch xi-lanh t沼?125cc tr沼?xu沼몁g (tr튼沼쓓g h沼즤 d첫ng 휃i沼뇆 l횪m 휃沼셬g l沼켧 th챙 c척ng su梳쩿 휃沼땙h m沼쯢 t沼멼 휃a t沼?11 kil척watt tr沼?xu沼몁g)."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/300_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 513ms:
+[
+ {
+  "n": 1,
+  "ko_e": "도로교통법 제85조의2(모바일운전면허증 발급 및 운전면허증의 확인 등),           도로교통법시행규칙제78조의2(모바일운전면허증의 신청 등)",
+  "tr_e": "Điều 85-2 Luật Giao thông đường bộ (Cấp giấy phép lái xe di động và xác nhận giấy phép lái xe, v.v.), Điều 78-2 Thông tư thi hành Luật Giao thông đường bộ (Đăng ký giấy phép lái xe di động, v.v.)"
+ },
+ {
+  "n": 2,
+  "ko_e": "도로교통법시행규칙 제77조∼제81조, 도로교통법 시행규칙 제80조 운전면허증을 잃어버렸거나 헐어 못 쓰게 되었을 때 에는 행정안전부령으로 정하는 바에 따라 시ㆍ도경찰청장에게 신청하여 다시 발급받을 수 있다.",
+  "tr_e": "Điều 77~Điều 81 Thông tư thi hành Luật Giao thông đường bộ, Điều 80 Thông tư thi hành Luật Giao thông đường bộ: Khi làm mất hoặc làm hỏng giấy phép lái xe khiến không thể sử dụng được thì có thể đăng ký với Giám đốc Cơ quan Cảnh sát Thành phố/Tỉnh để được cấp lại theo quy định của Thông tư của Bộ Hành chính và An toàn."
+ },
+ {
+  "n": 3,
+  "ko_e": "도로교통법 제80조에 따라 운전면허를 발급받은 사람이 국외에서 운전하기 위하여 제96조 제1항 제1호의 「도로교통 에 관한 협약」에 따른 국제운전면허증을 발급 받으려면 시, 도 경찰청장에 신청하여야 하고,  유효기간은 발급받 은 날부터 1년이다.",
+  "tr_e": "Điều 80 Luật Giao thông đường bộ quy định người đã được cấp giấy phép lái xe, nếu muốn được cấp giấy phép lái xe quốc tế theo 「Công ước về giao thông đường bộ」 tại điểm 1 khoản 1 Điều 96 để lái xe ở nước ngoài, thì phải đăng ký với Giám đốc Cơ quan Cảnh sát Thành phố/Tỉnh, và thời hạn hiệu lực là 1 năm kể từ ngày được cấp."
+ },
+ {
+  "n": 4,
+  "ko_e": "도로교통법 시행규칙 별표18 승차정원 15인승의 승합자동차는 1종 대형면허 또는 1종 보통면허가 필요하고 긴급자 동차 업무에 종사하는 사람은 도로교통법 시행령 제38조의2 제2항에 따른 신규(3시간) 및 정기교통안전교육(2시간)을 받아야  한다.",
+  "tr_e": "Phụ lục 18 Thông tư thi hành Luật Giao thông đường bộ: Xe khách có sức chứa 15 người cần giấy phép lái xe hạng 1 loại lớn hoặc giấy phép lái xe hạng 1 loại thường, và người làm công việc về xe ưu tiên phải tham gia giáo dục an toàn giao thông mới (3 giờ) và giáo dục an toàn giao thông định kỳ (2 giờ) theo khoản 2 Điều 38-2 Nghị định thi hành Luật Giao thông đường bộ."
+ },
+ {
+  "n": 5,
+  "ko_e": "도로교통법 제81조(연습운전면허의 효력) 연습운전면허는 그 면허를 받은 날부터 1년 동안 효력을 가진다.          다만, 연습운전면허를 받은 날부터 1년 이전이라도 연습운전면허를 받은 사람이 제1종 보통면허 또는 제2종 보통 면허를 받은 경우 연습운전면허는 그 효력을 잃는다.",
+  "tr_e": "Điều 81 Luật Giao thông đường bộ (Hiệu lực của giấy phép lái xe tập lái): Giấy phép lái xe tập lái có hiệu lực trong 1 năm kể từ ngày được cấp. Tuy nhiên, ngay cả trước khi đủ 1 năm kể từ ngày được cấp giấy phép lái xe tập lái, nếu người được cấp giấy phép lái xe tập lái đã được cấp giấy phép lái xe hạng 1 loại thường hoặc giấy phép lái xe hạng 2 loại thường thì giấy phép lái xe tập lái mất hiệu lực."
+ },
+ {
+  "n": 6,
+  "ko_e": "도로교통법 시행규칙 제54조(운전면허의 조건 등) 제3항에 의거, 운전면허 조건의 부과기준은 별표20 A는 자동변속기, B는 의수, C는 의족, D는 보청기, E는 청각장애인 표지 및 볼록거울, F는 수동제동기․가속기, G는 특수제작  및 승인차, H는 우측 방향지시기, I는 왼쪽 엑셀레이터이며, 신체장애인이 운전면허시험에 응시할 때 조건에 맞는 차량으로  시험에 응시 및 합격해야 하며, 합격 후 해당 조건에 맞는 면허증 발급",
+  "tr_e": "Căn cứ khoản 3 Điều 54 Thông tư thi hành Luật Giao thông đường bộ (Điều kiện của giấy phép lái xe, v.v.), tiêu chuẩn áp đặt điều kiện của giấy phép lái xe tại Phụ lục 20 là: A là hộp số tự động, B là tay giả, C là chân giả, D là máy trợ thính, E là biển báo người khiếm thính và gương lồi, F là phanh điều khiển bằng tay/ga điều khiển bằng tay, G là xe chế tạo đặc biệt và được phê duyệt, H là đèn xi nhan bên phải, I là chân ga bên trái; khi người khuyết tật thân thể dự thi sát hạch lái xe phải dự thi và đỗ bằng xe phù hợp với điều kiện, và sau khi đỗ sẽ được cấp giấy phép lái xe phù hợp với điều kiện đó."
+ },
+ {
+  "n": 7,
+  "ko_e": "도로교통법 시행규칙 별표18 비고3, 총중량 750킬로그램을 초과하는 3톤이하의 피견인자동차를 견인하기 위해서 는 견인하는 자동차를 운전할 수 있는 면허와 제1종 소형견인차면허 또는 대형견인차면허를 가지고 있어야 한다.",
+  "tr_e": "Ghi chú 3 Phụ lục 18 Thông tư thi hành Luật Giao thông đường bộ: Để kéo xe được kéo (rơ-moóc) từ 3 tấn trở xuống có tổng trọng lượng vượt quá 750 kilôgam, phải có giấy phép lái xe cho phép lái xe kéo và giấy phép lái xe kéo loại nhỏ hạng 1 hoặc giấy phép lái xe kéo loại lớn hạng 1."
+ },
+ {
+  "n": 8,
+  "ko_e": "도로교통법 시행규칙 별표18(운전할 수 있는 차의 종류)에 따라 덤프트럭은 제1종 대형면허, 배기량 125시시 초과  이륜자동차는 2종 소형면허가 필요하다.",
+  "tr_e": "Theo Phụ lục 18 Thông tư thi hành Luật Giao thông đường bộ (Các loại xe được phép lái), xe ben (dump truck) cần giấy phép lái xe hạng 1 loại lớn, xe hai bánh có dung tích xi-lanh trên 125cc cần giấy phép lái xe hạng 2 loại nhỏ."
+ },
+ {
+  "n": 9,
+  "ko_e": "도로교통법 시행규칙 별표18, 제1종 보통면허로 승차정원 15명 이하의 승합자동차 운전가능, ①, ②, ④는 승차정원  10명 이하의 승합자동차 운전가능",
+  "tr_e": "Phụ lục 18 Thông tư thi hành Luật Giao thông đường bộ: Với giấy phép lái xe hạng 1 loại thường có thể lái xe khách có sức chứa từ 15 người trở xuống; ①, ②, ④ là xe khách có sức chứa từ 10 người trở xuống có thể lái được."
+ },
+ {
+  "n": 10,
+  "ko_e": "도로교통법 시행령 제45조 제1항 제1호 나목에 따라 제2종 운전면허는 18세 이상으로, 두 눈을 동시에 뜨고 잰  시력이 0.5 이상(다만, 한쪽 눈을 보지 못하는 사람은 다른 쪽 눈의 시력이 0.6 이상이어야 한다.)의 시력이 있어야 한다. 또한  붉은색, 녹색 및 노란색의 색채 식별이 가능해야 하나 듣지 못해도 취득이 가능하다.",
+  "tr_e": "Theo điểm b mục 1 khoản 1 Điều 45 Nghị định thi hành Luật Giao thông đường bộ, giấy phép lái xe hạng 2 dành cho người từ 18 tuổi trở lên, phải có thị lực khi mở đồng thời hai mắt đạt từ 0.5 trở lên (tuy nhiên, người không nhìn được một bên mắt thì mắt còn lại phải có thị lực từ 0.6 trở lên). Ngoài ra phải phân biệt được màu đỏ, xanh lá và vàng, nhưng dù không nghe được vẫn có thể được cấp."
+ },
+ {
+  "n": 11,
+  "ko_e": "도로교통법 제2조 제19호 나목 정의 참조 “원동기장치자전거”란 다음 각 목의 어느 하나에 해당하는 차를 말한다. 가. 「자동차관리법」 제3조에 따른 이륜자동차 가운데 배기량 125시시 이하(전기를 동력으로 하는 경우에는 최고정격출력  11킬로와트 이하)의 이륜자동차 나. 그 밖에 배기량 125시시 이하(전기를 동력으로 하는 경우에는 최고정격출력 11킬로와트 이하)의 원동기를 단 차(「자전거  이용 활성화에 관한 법률」 제2조제1호의2에 따른 전기자전거 및 제21호의3에 따른 실외이동로봇은 제외한다)",
+  "tr_e": "Xem định nghĩa tại điểm b mục 19 Điều 2 Luật Giao thông đường bộ. 「Xe đạp gắn động cơ」 là xe thuộc một trong các điểm sau. a. Trong số xe hai bánh theo Điều 3 「Luật Quản lý xe cơ giới」, xe hai bánh có dung tích xi-lanh từ 125cc trở xuống (trường hợp dùng điện làm động lực thì công suất định mức tối đa từ 11 kilôwatt trở xuống). b. Ngoài ra, xe gắn động cơ có dung tích xi-lanh từ 125cc trở xuống (trường hợp dùng điện làm động lực thì công suất định mức tối đa từ 11 kilôwatt trở xuống) (không bao gồm xe đạp điện theo điểm 1-2 Điều 2 「Luật về thúc đẩy sử dụng xe đạp」 và robot di chuyển ngoài trời theo điểm 21-3)."
+ },
+ {
+  "n": 12,
+  "ko_e": "도로교통법 제82조 제1항 제6호에 따라 제1종 대형면허는 19세 미만이거나 자동차(이륜자동차는 제외한다)의 운전 경력이 1년 미만인 사람은 받을 수 없다.",
+  "tr_e": "Theo điểm 6 khoản 1 Điều 82 Luật Giao thông đường bộ, giấy phép lái xe hạng 1 loại lớn không được cấp cho người dưới 19 tuổi hoặc người có kinh nghiệm lái xe cơ giới (trừ xe hai bánh) dưới 1 năm."
+ },
+ {
+  "n": 13,
+  "ko_e": "①, ③ 도로교통법시행령 제55조(운전면허증 갱신발급 및 정기 적성검사의 연기 등) 제1항          ④ 도로교통법시행령 제55조(운전면허증 갱신발급 및 정기 적성검사의 연기 등) 제3항           ② 도로교통법시행규칙 제83조(운전면허증 갱신발급 및 정기적성검사의 연기) 제3항, 별지 제59호 서식",
+  "tr_e": "①, ③ khoản 1 Điều 55 Nghị định thi hành Luật Giao thông đường bộ (Gia hạn cấp đổi giấy phép lái xe và hoãn kiểm tra năng lực định kỳ, v.v.); ④ khoản 3 Điều 55 Nghị định thi hành Luật Giao thông đường bộ (Gia hạn cấp đổi giấy phép lái xe và hoãn kiểm tra năng lực định kỳ, v.v.); ② khoản 3 Điều 83 Thông tư thi hành Luật Giao thông đường bộ (Gia hạn cấp đổi giấy phép lái xe và hoãn kiểm tra năng lực định kỳ), mẫu số 59 tại Phụ lục riêng."
+ },
+ {
+  "n": 14,
+  "ko_e": "도로교통법 시행령 제49조 제4항에 따라 도로주행시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 도로주행시험에 응시할 수 있다. 15.‘착한운전 마일리지' 제도에 대한 설명으로 적절치 않은 2가지는? ① 교통법규를 잘 지키고 이를 실천한 운전자에게 실질적인 인센티브를 부여하는 제도이다. ② 운전자가 정지처분을 받게 될 경우 누산점수에서 공제할 수 있다. ③ 범칙금이나 과태료 미납자도 마일리지 제도의 무위반․무사고 서약에 참여할 수 있다. ④ 서약 실천기간 중에 교통사고를 유발하거나 교통법규를 위반하면 다시 서약할 수 없다.",
+  "tr_e": "Theo khoản 4 Điều 49 Nghị định thi hành Luật Giao thông đường bộ, người trượt sát hạch lái xe trên đường có thể dự thi lại sát hạch lái xe trên đường sau khi qua 3 ngày kể từ ngày trượt. 15. Hai điều nào KHÔNG phù hợp khi mô tả về chế độ 'Tích điểm lái xe tốt'? ① Là chế độ trao ưu đãi thực chất cho người lái xe tuân thủ tốt và thực hiện tốt luật giao thông. ② Khi người lái xe bị xử phạt đình chỉ thì có thể được khấu trừ từ điểm tích lũy. ③ Người chưa nộp tiền phạt vi cảnh hoặc tiền phạt hành chính cũng có thể tham gia cam kết không vi phạm, không tai nạn của chế độ tích điểm. ④ Nếu gây tai nạn giao thông hoặc vi phạm luật giao thông trong thời gian thực hiện cam kết thì không thể cam kết lại."
+ },
+ {
+  "n": 15,
+  "ko_e": "도로교통법 시행규칙〔별표 28〕운전자가 정지처분을 받게 될 경우 누산점수에서 이를 공제할 수 있다. 운전면허를 소지한 누구나 마일리지 제도에 참여할 수 있지만, 범칙금이나 과태료 미납자는 서약할 수 없고, 서약 실천기간 중에 교통사고 가 발생하거나 교통법규를 위반해도 다시 서약할 수 있다(운전면허 특혜점수 부여에 관한 기준 고시).",
+  "tr_e": "Phụ lục 28 Thông tư thi hành Luật Giao thông đường bộ: Khi người lái xe bị xử phạt đình chỉ thì có thể khấu trừ điều này từ điểm tích lũy. Bất kỳ ai có giấy phép lái xe đều có thể tham gia chế độ tích điểm, nhưng người chưa nộp tiền phạt vi cảnh hoặc tiền phạt hành chính thì không thể cam kết, và ngay cả khi xảy ra tai nạn giao thông hoặc vi phạm luật giao thông trong thời gian thực hiện cam kết thì vẫn có thể cam kết lại (Thông báo về tiêu chuẩn trao điểm ưu đãi giấy phép lái xe)."
+ },
+ {
+  "n": 16,
+  "ko_e": "도로교통법 제2조 제19호2, 자전거 이용 활성화에 관한 법률 제3조 제1호 \"개인형 이동장치\"란 제19호 나목의 원동 기장치자전거 중 시속 25킬로미터 이상으로 운행할 경우 전동기가 작동하지 아니하고 차체 중량이 30킬로그램 미만인 것으 로서 행정안전부령으로 정하는 것을 말하며, 등판각도는 규정되어 있지 않다.",
+  "tr_e": "Điểm 19-2 Điều 2 Luật Giao thông đường bộ, điểm 1 Điều 3 Luật về thúc đẩy sử dụng xe đạp. 「Thiết bị di chuyển cá nhân」 là loại trong số xe đạp gắn động cơ tại điểm b mục 19, khi vận hành từ tốc độ 25 kilômét/giờ trở lên thì mô tơ điện không hoạt động và trọng lượng thân xe dưới 30 kilôgam, do Thông tư của Bộ Hành chính và An toàn quy định; góc leo dốc không được quy định."
+ },
+ {
+  "n": 17,
+  "ko_e": "도로교통법 제2조 제19호 나목 그 밖에 배기량 125시시 이하(전기를 동력으로 하는 경우에는 최고 정격출력 11킬로 와트 이하)의 원동기를 단 차(자전거 이용 활성화에 관한 법률 제2조 제1호의 2에 따른 전기자전거 및 제21호의3에 따른 실외이동로봇은 제외한다) 19의 2호 “개인형 이동장치”란 제19호 나목의 원동기장치자전거 중 시속 25킬로미터 이상으로 운행할 경우 전동기가 작동 하지 아니하고 차체 중량이 30킬로그램 미만인 것으로서 행정안전부령으로 정하는 것을 말한다. * PAS (Pedal Assist System)형 전기자전거 : 페달과 전동기의 동시동력으로 움직이며 전동기의 동력만으로 움직일 수 없는 자전거 * Throttle형 전기자전거 : 전동기의 동력만으로 움직일 수 있는 자전거로서 법령 상 ‘개인형이동장치’로 분류한다",
+  "tr_e": "Điểm b mục 19 Điều 2 Luật Giao thông đường bộ: Ngoài ra, xe gắn động cơ có dung tích xi-lanh từ 125cc trở xuống (trường hợp dùng điện làm động lực thì công suất định mức tối đa từ 11 kilôwatt trở xuống) (không bao gồm xe đạp điện theo điểm 1-2 Điều 2 Luật về thúc đẩy sử dụng xe đạp và robot di chuyển ngoài trời theo điểm 21-3). Điểm 19-2: 「Thiết bị di chuyển cá nhân」 là loại trong số xe đạp gắn động cơ tại điểm b mục 19, khi vận hành từ tốc độ 25 kilômét/giờ trở lên thì mô tơ điện không hoạt động và trọng lượng thân xe dưới 30 kilôgam, do Thông tư của Bộ Hành chính và An toàn quy định. * Xe đạp điện loại PAS (Pedal Assist System): là xe đạp di chuyển bằng động lực đồng thời của bàn đạp và mô tơ điện, không thể di chuyển chỉ bằng động lực của mô tơ điện. * Xe đạp điện loại Throttle: là xe đạp có thể di chuyển chỉ bằng động lực của mô tơ điện, theo pháp luật được phân loại là 'thiết bị di chuyển cá nhân'."
+ },
+ {
+  "n": 18,
+  "ko_e": "도로교통법 제 82조(운전면허결격사유)의 규정에 의하면 단속 경찰관 폭행으로 입건되어 취소되는 경우 취득 결격 기간 1년, 음주운전을 하다가 3회 이상 교통사고를 일으킨 경우 운전면허가 취소된 날로부터 3년",
+  "tr_e": "Theo quy định tại Điều 82 Luật Giao thông đường bộ (Lý do không đủ điều kiện cấp giấy phép lái xe), trường hợp bị lập biên bản khởi tố do hành hung cảnh sát đang làm nhiệm vụ kiểm tra dẫn đến bị hủy giấy phép thì thời gian không đủ điều kiện để cấp lại là 1 năm; trường hợp gây tai nạn giao thông từ 3 lần trở lên khi lái xe say rượu thì là 3 năm kể từ ngày bị hủy giấy phép lái xe."
+ },
+ {
+  "n": 19,
+  "ko_e": "영문운전면허증 안내(한국도로교통공단) 운전할 수 있는 기간이 국가마다 상이하며, 대부분 3개월 정도의 단기간만 허용 하고 있으므로 장기체류를 하는 경우 해당국 운전면허를 취득해야 한다.",
+  "tr_e": "Hướng dẫn về giấy phép lái xe bản tiếng Anh (Cơ quan An toàn Giao thông Đường bộ Hàn Quốc): Thời hạn được phép lái xe khác nhau tùy từng quốc gia, phần lớn chỉ cho phép thời gian ngắn khoảng 3 tháng, vì vậy trường hợp lưu trú dài hạn thì phải thi lấy giấy phép lái xe của quốc gia đó."
+ },
+ {
+  "n": 20,
+  "ko_e": "도로교통법 제2조(용어) 원동기장치자전거란 자동차관리법상 이륜자동차 가운데 배기량 125시시 이하(전기를 동력 으로 하는 경우에는 최고정격출력 11킬로와트 이하)의 이륜자동차와 그 밖에 배기량 125시시 이하(전기를 동력으로 하는  경우에는 최고정격출력 11킬로와트 이하)의 원동기를 단 차",
+  "tr_e": "Điều 2 Luật Giao thông đường bộ (Thuật ngữ): Xe đạp gắn động cơ là xe hai bánh có dung tích xi-lanh từ 125cc trở xuống (trường hợp dùng điện làm động lực thì công suất định mức tối đa từ 11 kilôwatt trở xuống) theo Luật Quản lý xe cơ giới, và các xe gắn động cơ khác có dung tích xi-lanh từ 125cc trở xuống (trường hợp dùng điện làm động lực thì công suất định mức tối đa từ 11 kilôwatt trở xuống)."
+ }
+]
+
+codex
+[]
+tokens used
+22,257
+[]

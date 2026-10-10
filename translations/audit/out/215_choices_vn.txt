@@ -1,0 +1,1390 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12608-9ce3-77b2-aca9-059db2649230
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/215_choices_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/215_choices_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 530ms:
+[
+ {
+  "n": 601,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李⑥뿉 ????ㅻ챸?쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "?섏냼??媛?곗꽦 媛?ㅼ씠誘濡?紐⑤뱺 ?섏냼?먮룞李??댁쟾?먮뒗 怨좎븬媛???덉쟾愿由щ쾿?뱀뿉 ?곕씪 ?댁쟾???밸퀎援먯쑁???댁닔?섏뿬???쒕떎.",
+   "?섏냼?먮룞李⑤뒗 ?섏냼瑜??곗냼?쒗궎湲??뚮Ц???섍꼍?ㅼ뿼???좊컻?쒕떎.",
+   "?섏냼?먮룞李⑥뿉???붿옱 ??湲닿툒?곹솴 諛쒖깮 ????컻諛⑹?瑜??꾪븳 蹂꾨룄???덉쟾?μ튂媛 ?녿떎.",
+   "?섏냼?먮룞李??댁쟾?먮뒗 ?대떦 李⑤웾???덉쟾?댄뻾??吏?μ씠 ?녿뒗吏 ?먭??섍퀬 ?덉쟾?섍쾶 ?댁쟾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?xe 척 t척 Hydro?",
+  "tr_c": [
+   "Kh챠 Hydro l횪 kh챠 gas d沼?ch찼y n챗n t梳쩿 c梳?ng튼沼쓎 l찼i xe 척 t척 Hydro 휃沼걏 ph梳즜 tham gia gi찼o d沼쩭 휃梳톍 bi沼뇍 d횪nh cho ng튼沼쓎 l찼i xe theo Ph찼p l沼뇆h Qu梳즢 l첵 an to횪n kh챠 gas cao 찼p.",
+   "Xe 척 t척 Hydro 휃沼몋 ch찼y kh챠 Hydro n챗n kh척ng g창y 척 nhi沼꿲 m척i tr튼沼쓓g.",
+   "Trong xe 척 t척 Hydro kh척ng c처 thi梳퓍 b沼?an to횪n ri챗ng 휃沼?ph챵ng ch沼몁g ch찼y n沼?khi ph찼t sinh t챙nh hu沼몁g kh梳쯰 c梳쩺 nh튼  h沼뢠 ho梳죒 v.v...",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe 척 t척 Hydro ph梳즜 ki沼긩 tra c처 梳즢h h튼沼웢g 휃梳퓆 vi沼놻 l찼i xe an to횪n hay kh척ng v횪 l찼i xe m沼셳 c찼ch an  to횪n."
+  ]
+ },
+ {
+  "n": 602,
+  "ko_b": "?ㅼ쓬 以??먮룞李?諛곌린媛?ㅼ쓽 誘몄꽭癒쇱?瑜?以꾩씠湲??꾪븳 媛???곸젅???댁쟾諛⑸쾿??",
+  "ko_c": [
+   "異쒕컻???뚮뒗 媛?랁럹?ъ쓣 ?섍퍘 諛잕퀬 異쒕컻?쒕떎.",
+   "湲됯??띿쓣 ?섏? ?딄퀬 遺?쒕읇寃?異쒕컻?쒕떎.",
+   "二쇳뻾???뚮뒗 ?섏떆濡?媛?띻낵 ?뺤?瑜?諛섎났?쒕떎.",
+   "?뺤감 諛?二쇱감???뚮뒗 ?쒕룞???꾩? ?딄퀬 怨듯쉶?꾪븳??"
+  ],
+  "a": "2",
+  "tr_b": "Ph튼퉤ng ph찼p l찼i xe n횪o ph첫 h沼즤 nh梳쩿 휃沼?gi梳즡 b沼쩳 si챗u nh沼?c沼쬪 kh챠 th梳즜 척 t척?",
+  "tr_c": [
+   "휂梳죖 m梳죒h h梳퓍 s沼쯢 v횪o ch창n ga 휃沼?xu梳쩿 ph찼t.",
+   "Xu梳쩿 ph찼t nh梳?nh횪ng v횪 kh척ng c梳쬷 t훱ng t沼멵 nhanh.",
+   "Th튼沼쓓g xuy챗n t훱ng t沼멵 v횪 d沼쳌g xe nhi沼걏 l梳쬷 khi l찼i xe.",
+   "Khi d沼쳌g ho梳톍 휃沼?xe, quay v沼?s沼?0 v횪 kh척ng t梳칣 휃沼셬g c퉤."
+  ]
+ },
+ {
+  "n": 603,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李⑥쓽 二쇱슂 援ъ꽦?덉씠 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?곕즺?꾩??쒖뒪???ㅽ깮)",
+   "?섏냼??μ슜湲?,
+   "?댁뿰湲곌????섑빐 援щ룞?섎뒗 諛쒖쟾湲?,
+   "援щ룞??紐⑦꽣"
+  ],
+  "a": "3",
+  "tr_b": "B沼?ph梳춏 n횪o sau 휃창y kh척ng ph梳즜 l횪 b沼?ph梳춏 c梳쪀 t梳죓 ch챠nh c沼쬪 xe 척 t척 Hydro?",
+  "tr_c": [
+   "H沼?th沼몁g pin nhi챗n li沼뇎 (Stack)",
+   "B챙nh ch沼쯠 hydro",
+   "M찼y ph찼t 휃i沼뇆 ch梳죣 b梳켷g 휃沼셬g c퉤 휃沼몋 trong",
+   "휂沼셬g c퉤 chuy沼긪 휃沼셬g"
+  ]
+ },
+ {
+  "n": 604,
+  "ko_b": "?ㅼ쓬 以?移쒗솚寃쎌슫?꾧낵 愿?⑤맂 ?댁슜?쇰줈 留욌뒗 寃?2媛吏??",
+  "ko_c": [
+   "?⑥떎媛??媛먯텞 紐⑺몴移섎? 洹쒖젙??援먰넗 ?섏젙?쒖? 愿?⑥씠 ?덈떎.",
+   "?湲곗삤?쇱쓣 ?쇱쑝?ㅻ뒗 臾쇱쭏?먮뒗 ?꾪솕?섏냼, ?쇱궛?뷀깂?? ?댁궛?뷀깂?? 吏덉냼?고솕臾??깆씠 ?덈떎.",
+   "?먮룞李??ㅻ궡 ?⑤룄瑜??믪씠湲??꾪빐 ?붿쭊 ?쒕룞 ???μ떆媛?怨듯쉶?꾩쓣 ?쒕떎.",
+   "?섏떆濡??먮룞李?寃?щ? ?섍퀬, 二쇳뻾嫄곕━ 2,000?щ줈誘명꽣留덈떎 ?붿쭊?ㅼ씪??臾댁“嫄?援먰솚?댁빞 ?쒕떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "Hai n沼셢 dung n횪o sau 휃창y 휃첬ng v沼?vi沼놻 li챗n quan 휃梳퓆 l찼i xe th창n thi沼뇆 v沼쌻 m척i tr튼沼쓓g?",
+  "tr_c": [
+   "C처 li챗n quan 휃梳퓆 Ngh沼?휃沼땙h th튼 Kyoto quy 휃沼땙h v沼?ch沼?s沼?m沼쩭 ti챗u gi梳즡 thi沼긳 kh챠 nh횪 k챠nh.",
+   "Hydrocarbon, carbon monoxide, carbon dioxide, oxit nit퉤 c처 trong c찼c v梳춗 ch梳쩿 g창y ra 척 nhi沼꿲 kh챠 quy沼긪.",
+   "휂沼?t훱ng nhi沼뇍 휃沼?trong xe 척 t척, ta s梳?kh沼웙 휃沼셬g xe v횪 휃沼?휃沼셬g c퉤 ch梳죣 kh척ng t梳즜 trong m沼셳 th沼쓎 gian d횪i.",
+   "Th튼沼쓓g xuy챗n ki沼긩 tra xe 척 t척 v횪 b梳칣 bu沼셛 ph梳즜 thay d梳쬾 m찼y m沼뾦 khi xe ch梳죣 휃튼沼즓 2.000 km."
+  ]
+ },
+ {
+  "n": 605,
+  "ko_b": "?ㅼ쓬 以??좏빐??諛곌린媛?ㅻ? 媛??留롮씠 諛곗텧?섎뒗 ?먮룞李⑤뒗?",
+  "ko_c": [
+   "?꾧린?먮룞李?,
+   "?섏냼?먮룞李?,
+   "LPG?먮룞李?,
+   "?명썑 ???붿젮?먮룞李?
+  ],
+  "a": "4",
+  "tr_b": "Xe n횪o sau 휃창y th梳즜 ra kh챠 th梳즜 휃沼셛 h梳죍 nhi沼걏 nh梳쩿?",
+  "tr_c": [
+   "Xe 척 t척 휃i沼뇆",
+   "Xe 척 t척 Hydro",
+   "Xe 척 t척 LPG",
+   "Xe 척 t척 c크 d첫ng d梳쬾 diesel"
+  ]
+ },
+ {
+  "n": 606,
+  "ko_b": "移쒗솚寃?寃쎌젣?댁쟾 以?愿??二쇳뻾(fuel cut) 諛⑸쾿???꾨땶 寃껋??",
+  "ko_c": [
+   "援먯감濡?吏꾩엯 ??誘몃━ 媛???섎떖?먯꽌 諛쒖쓣 ?쇨퀬 ?붿쭊釉뚮젅?댄겕瑜??쒖슜?쒕떎.",
+   "?됱??먯꽌???띾룄瑜?以꾩씠吏 ?딄퀬 怨꾩냽?댁꽌 媛???섎떖??諛잙뒗??",
+   "?대━留됯만?먯꽌???붿쭊釉뚮젅?댄겕瑜??곸젅???쒖슜?쒕떎.",
+   "?ㅻⅤ留됯만 吏꾩엯 ?꾩뿉??媛?랁븯??愿?깆쓣 ?댁슜?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Ph튼퉤ng ph찼p n횪o kh척ng ph梳즜 l횪 ph튼퉤ng ph찼p ch梳죣 theo qu찼n t챠nh (gi梳즡 ti챗u th沼?nhi챗n li沼뇎) 휃沼?l찼i xe ti梳퓍  ki沼뇅, th창n thi沼뇆 v沼쌻 m척i tr튼沼쓓g?",
+  "tr_c": [
+   "B沼?ch창n ra kh沼뢩 ch창n ga tr튼沼쌵 khi v횪o 휃튼沼쓓g giao nhau v횪 d첫ng phanh 휃沼셬g c퉤.",
+   "Kh척ng gi梳즡 t沼멵 tr챗n 휃튼沼쓓g b梳켷g ph梳쿻g v횪 duy tr챙 nh梳쩸 ch창n ga.",
+   "D첫ng phanh 휃沼셬g c퉤 tr챗n 휃튼沼쓓g xu沼몁g d沼멵 m沼셳 c찼ch th챠ch h沼즤.",
+   "T梳춏 d沼쩸g qu찼n t챠nh b梳켷g c찼ch t훱ng t沼멵 tr튼沼쌵 khi l찼i xe l챗n 휃튼沼쓓g l챗n d沼멵."
+  ]
+ },
+ {
+  "n": 607,
+  "ko_b": "?ㅼ쓬 以??먮룞李?諛곌린媛???ъ닚?섏옣移?Exhaust Gas Recirculation, EGR)媛 二쇰줈 ?듭젣?섎뒗 臾쇱쭏??",
+  "ko_c": [
+   "吏덉냼?고솕臾?NOx)",
+   "?꾪솕?섏냼(HC)",
+   "?쇱궛?뷀깂??CO)",
+   "?댁궛?뷀깂??CO2)"
+  ],
+  "a": "1",
+  "tr_b": "Ch梳쩿 n횪o sau 휃창y ch沼?y梳퓎 b沼?kh沼몁g ch梳?b梳켷g h沼?th沼몁g tu梳쬷 ho횪n kh챠 th梳즜 (EGR) xe 척 t척?",
+  "tr_c": [
+   "Oxit nito (NOx)",
+   "Hydrocarbon (HC)",
+   "Kh챠 Carbon monoxide (CO)",
+   "Carbon dioxide (CO2)"
+  ]
+ },
+ {
+  "n": 608,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李??먭???????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?섏냼??媛?곗꽦 媛?ㅼ씠誘濡??섏냼?먮룞李⑥쓽 二쇨린?곸씤 ?먭????꾩닔?곸씠??",
+   "?섏냼?먮룞李??먭?? ?섍린媛 ???섎뒗 ?μ냼?먯꽌 ?ㅼ떆?댁빞 ?쒕떎.",
+   "?섏냼?먮룞李??먭? ??媛?ㅻ같愿?쇱씤, 異⑹쟾援??깆쓽 ?섏냼 ?꾩텧  ?щ?瑜??뺤씤?댁빞 ?쒕떎.",
+   "?섏냼?먮룞李⑤? ?댁쟾?섎뒗 ?먮뒗 ?대떦 李⑤웾???덉쟾 ?댄뻾??吏?μ씠 ?녿뒗吏 ?먭??댁빞 ???섎Т媛 ?녿떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?vi沼놻 ki沼긩 tra xe 척 t척 Hydro?",
+  "tr_c": [
+   "Hydro l횪 kh챠 휃沼몋 n챗n b梳칣 bu沼셛 ph梳즜 ki沼긩 tra xe 척 t척 Hydro 휃沼땙h k沼?",
+   "Vi沼놻 ki沼긩 tra xe 척 t척 Hydro ph梳즜 휃튼沼즓 th沼켧 hi沼뇆 沼?n퉤i tho찼ng kh챠.",
+   "Khi ki沼긩 tra xe 척 t척 Hydro, ph梳즜 ki沼긩 tra 휃튼沼쓓g 沼몁g gas, c沼븂g s梳죅 c처 b沼?r챵 r沼?kh챠 hydro hay kh척ng.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe 척 t척 Hydro kh척ng c처 ngh칫a v沼?ph梳즜 ki沼긩 tra c처 g챙 c梳즢 tr沼?xe v梳춏 h횪nh an to횪n hay kh척ng."
+  ]
+ },
+ {
+  "n": 609,
+  "ko_b": "?섏냼?먮룞李??댁쟾?먯쓽 異⑹쟾???댁슜 ??二쇱쓽?ы빆?쇰줈 ?щ컮瑜댁? ?딆? 寃껋??",
+  "ko_c": [
+   "?섏냼?먮룞李?異⑹쟾??二쇰??먯꽌 ?≪뿰???섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "?섏냼?먮룞李??곕즺 異⑹쟾 以묒뿉 ?먮룞李⑤? ?대룞?????덈떎.",
+   "?섏냼?먮룞李??곕즺 異⑹쟾 以묒뿉???쒕룞???덈떎.",
+   "異⑹쟾??吏곸썝???먮━瑜?鍮꾩썱?????꾩쓽濡?異⑹쟾湲곕? 議곗옉?섏? ?딅뒗??"
+  ],
+  "a": "2",
+  "tr_b": "N沼셢 dung n횪o kh척ng 휃첬ng v沼?ng튼沼쓎 휃i沼걏 khi沼긪 xe 척 t척 Hydro ph梳즜 ch첬 첵 khi s沼?d沼쩸g tr梳죑 s梳죅?",
+  "tr_c": [
+   "Kh척ng 휃튼沼즓 h첬t thu沼멵 沼?xung quanh tr梳죑 s梳죅 xe 척 t척 Hydro.",
+   "C처 th沼?di chuy沼긪 xe trong l첬c 휃ang s梳죅 nhi챗n li沼뇎 cho xe 척 t척 Hydro.",
+   "T梳칣 휃沼셬g c퉤 khi 휃ang s梳죅 nhi챗n li沼뇎 cho xe 척 t척 Hydro.",
+   "Kh척ng t沼?첵 휃i沼걏 ch沼뎝h m찼y s梳죅 khi kh척ng c처 nh창n vi챗n tr梳죑 s梳죅."
+  ]
+ },
+ {
+  "n": 610,
+  "ko_b": "?ㅼ쓬 以??섏냼?먮룞李??곕즺瑜?異⑹쟾?????댁쟾?먯쓽 ?됰룞?쇰줈 ?곸젅移??딆? 寃껋??",
+  "ko_c": [
+   "?섏냼?먮룞李⑥뿉 ?곕즺瑜?異⑹쟾?섍린 ?꾩뿉 ?쒕룞???덈떎.",
+   "?섏냼?먮룞李?異⑹쟾??異⑹쟾湲?二쇰??먯꽌 ?≪뿰???섏???",
+   "?섏냼?먮룞李?異⑹쟾???댁쓽 ?ㅻ퉬 ?깆쓣 ?꾩쓽濡?議곗옉?섏? ?딆븯??",
+   "?곕즺 異⑹쟾???꾨즺 ???댄썑 ?쒕룞??嫄몄뿀??"
+  ],
+  "a": "2",
+  "tr_b": "H횪nh 휃沼셬g n횪o kh척ng ph첫 h沼즤 c沼쬪 ng튼沼쓎 휃i沼걏 khi沼긪 xe khi 휃ang s梳죅 nhi챗n li沼뇎 cho xe 척 t척 Hydro?",
+  "tr_c": [
+   "T梳칣 휃沼셬g c퉤 tr튼沼쌵 khi s梳죅 nhi챗n li沼뇎 cho xe 척 t척 Hydro.",
+   "H첬t thu沼멵 l찼 沼?xung quanh m찼y s梳죅 c沼쬪 tr梳죑 s梳죅 xe 척 t척 Hydro.",
+   "Kh척ng t沼?첵 휃i沼걏 ch沼뎝h c찼c thi梳퓍 b沼?trong tr梳죑 s梳죅 xe 척 t척 Hydro.",
+   "Kh沼웙 휃沼셬g xe sau khi 휃찾 s梳죅 nhi챗n li沼뇎 xong."
+  ]
+ },
+ {
+  "n": 611,
+  "ko_b": "?붾Ъ???곸옱???ㅽ봽?몃윮???대━留됯만???대젮?ㅻ뒗 寃쎌슦 ?ㅼ쓬 以?媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "湲곗뼱瑜?以묐┰???볤퀬 二쇳뻾?섏뿬 ?곕즺瑜??덉빟?쒕떎.",
+   "釉뚮젅?댄겕 ?섎떖???섎늻??諛잛쑝硫??쒕룞???④낵媛 ?놁뼱 ??踰덉뿉 諛잙뒗??",
+   "?욎감??湲됱젙吏瑜??鍮꾪븯??異⑸텇??李④컙 嫄곕━瑜??좎??쒕떎.",
+   "寃쎌쓬湲곕? ?ш쾶 ?몃━怨??띾룄瑜??믪씠硫댁꽌 ?좎냽?섍쾶 二쇳뻾?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Bi沼뇆 ph찼p l찼i xe n횪o an to횪n nh梳쩿 trong tr튼沼쓓g h沼즤 xe 척 t척 t梳즜 ch沼?h횪ng ho찼 휃i t沼?tr챗n d沼멵 xu沼몁g?",
+  "tr_c": [
+   "Ti梳퓍 ki沼뇅 nhi챗n li沼뇎 b梳켷g c찼ch 휃沼?c梳쬷 v沼?s沼?0 (s沼?N) khi l찼i xe.",
+   "N梳퓎 휃梳죖 nhi沼걏 l梳쬷 v횪o ch창n phanh th챙 kh척ng c처 t찼c d沼쩸g phanh n챗n ch沼?휃梳죖 m沼셳 l梳쬷.",
+   "Duy tr챙 휃沼?c沼?ly gi沼칊 c찼c xe 휃沼?ph챵ng tr튼沼쓓g h沼즤 xe ph챠a tr튼沼쌵 d沼쳌g 휃沼셳 ng沼셳.",
+   "B梳쩷 c챵i th梳춗 to, t훱ng t沼멵 v횪 ph처ng 휃i th梳춗 nhanh."
+  ]
+ },
+ {
+  "n": 612,
+  "ko_b": "?ㅼ쓬 以??붾Ъ???곸옱遺덈웾 ?깆쑝濡??명븳 援먰넻?ш퀬瑜?以꾩씠湲??꾪븳 ?댁쟾?먯쓽 議곗튂?ы빆?쇰줈 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "?붾Ъ???ｊ퀬 ?대룞???뚮뒗 諛섎뱶????컻瑜??뚯슫??",
+   "?덈퉬 ??댁뼱 ??怨좎젙??遺李⑸Ъ? ?먭????꾩슂媛 ?녿떎.",
+   "?붾Ъ???좎냽???대컲???꾪빐 ?붾Ъ? ?먯뒯?섍쾶 臾띕뒗??",
+   "媛源뚯슫 嫄곕━瑜??대룞?섎뒗 寃쎌슦?먮뒗 ?붾Ъ??怨좎젙???꾩슂媛 ?녿떎."
+  ],
+  "a": "1",
+  "tr_b": "Bi沼뇆 ph찼p x沼?l첵 n횪o l횪 휃첬ng 휃梳칗 nh梳쩿 c沼쬪 ng튼沼쓎 l찼i xe gi첬p gi梳즡 thi沼긳 tai n梳죒 giao th척ng x梳즭 ra do l沼뾦 ch梳쩿  h횪ng h처a c沼쬪 xe t梳즜 ch沼?h횪ng?",
+  "tr_c": [
+   "Khi ch沼?h횪ng ho찼 v횪 di chuy沼긪, nh梳쩿 thi梳퓍 ph梳즜 d첫ng t梳쩷 휃梳춞 휃沼?ph沼?l챗n.",
+   "Kh척ng c梳쬷 ph梳즜 ki沼긩 tra c찼c ph沼?t첫ng c沼?휃沼땙h nh튼 l沼몆 d沼?ph챵ng.",
+   "Bu沼셛 l沼뢮g c찼c h횪ng ho찼 nh梳켶 v梳춏 chuy沼긪 h횪ng ho찼 휃튼沼즓 nhanh h퉤n.",
+   "Kh척ng c梳쬷 c沼?휃沼땙h h횪ng ho찼 khi di chuy沼긪 沼?kho梳즢g c찼ch g梳쬷."
+  ]
+ },
+ {
+  "n": 613,
+  "ko_b": "?붾Ъ?먮룞李⑥쓽 ?붾Ъ ?곸옱??????ㅻ챸 以?媛???녹? ?딆? 寃껋??",
+  "ko_c": [
+   "?붾Ъ???곸옱???뚮뒗 ?곸옱??媛?대뜲遺??醫뚯슦濡??곸옱?쒕떎.",
+   "?붾Ъ?먮룞李⑤뒗 臾닿쾶 以묒떖????履쎌뿉 ?덇린 ?뚮Ц???곸옱?⑥쓽 ?ㅼそ遺???곸옱?쒕떎.",
+   "?곸옱???꾨옒履쎌뿉 ?곷??곸쑝濡?臾닿굅???붾Ъ???곸옱?쒕떎.",
+   "?붾Ъ??紐⑤몢 ?곸옱???꾩뿉???붾Ъ??李⑤웾 諛뽰쑝濡??숉븯?섏? ?딅룄濡?怨좎젙?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o sau 휃창y l횪 kh척ng 휃첬ng nh梳쩿 v沼?vi沼놻 x梳퓈 h횪ng h처a c沼쬪 xe t梳즜 ch沼?h횪ng?",
+  "tr_c": [
+   "Khi x梳퓈 h횪ng h처a, ph梳즜 x梳퓈 t沼?gi沼칊 r沼밿 sang hai b챗n tr찼i ph梳즜.",
+   "Tr沼뛫g t창m t梳즜 tr沼뛫g c沼쬪 xe t梳즜 ch沼?h횪ng l횪 沼?ph챠a tr튼沼쌵 n챗n ph梳즜 x梳퓈 h횪ng t沼?ph챠a sau c沼쬪 th첫ng h횪ng.",
+   "X梳퓈 h횪ng t튼퉤ng 휃沼멼 n梳톘g 沼?ph챠a d튼沼쌻 c沼쬪 th첫ng xe.",
+   "Sau khi x梳퓈 t梳쩿 c梳?h횪ng h처a, c梳쬷 c沼?휃沼땙h 휃沼?h횪ng h처a kh척ng b沼?r퉤i ra kh沼뢩 xe."
+  ]
+ },
+ {
+  "n": 614,
+  "ko_b": "???諛??뱀닔 ?먮룞李⑥쓽 ?쒕룞?뱀꽦??????ㅻ챸?대떎. ?섎せ??寃껋??",
+  "ko_c": [
+   "?섏쨷??蹂?붿뿉 ?곕씪 ?щ씪吏꾨떎.",
+   "??댁뼱??怨듦린?뺢낵 ?몃젅?쒓? 怨좊Ⅴ吏 紐삵븯硫??쒕룞嫄곕━媛 ?щ씪吏꾨떎.",
+   "李⑤웾 以묐웾???곕씪 ?щ씪吏꾨떎.",
+   "李⑤웾???곸옱?됱씠 而ㅼ쭏?섎줉 ?ㅼ젣 ?쒕룞嫄곕━??吏㏃븘吏꾨떎."
+  ],
+  "a": "4",
+  "tr_b": "D튼沼쌻 휃창y l횪 m척 t梳?v沼?휃梳톍 t챠nh phanh c沼쬪 xe c沼?l沼썀 v횪 xe chuy챗n d沼쩸g. N沼셢 dung n횪o kh척ng 휃첬ng?",
+  "tr_c": [
+   "Kh찼c nhau t첫y theo s沼?thay 휃沼뷼 c沼쬪 t梳즜 tr沼뛫g.",
+   "N梳퓎 찼p su梳쩿 v횪 ta-l척ng c沼쬪 l沼몆 xe kh척ng 휃沼뱊g 휃沼걏 th챙 kho梳즢g c찼ch 휃梳죖 phanh s梳?thay 휃沼뷼.",
+   "Kh찼c nhau t첫y theo tr沼뛫g l튼沼즢g c沼쬪 xe.",
+   "C횪ng ch梳쩿 t梳즜 l챗n xe nhi沼걏 th챙 kho梳즢g c찼ch 휃梳죖 phanh th沼켧 t梳?c횪ng ng梳칗 l梳죍."
+  ]
+ },
+ {
+  "n": 615,
+  "ko_b": "?ㅼ쓬 以???곷쾭?ㅼ쓽 ?뱀꽦??????ㅻ챸?대떎. 媛??嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?몄빟?먮굹 ?μ븷?몄씠 ?쎄쾶 ?????덈떎.",
+   "李⑥껜諛붾떏???믪씠媛 ?쇰컲踰꾩뒪 蹂대떎 ??떎.",
+   "異쒖엯援ъ뿉 怨꾨떒 ???寃쎌궗?먯씠 ?ㅼ튂?섏뼱 ?덈떎.",
+   "?쇰컲踰꾩뒪??鍮꾪빐 李⑥껜???믪씠媛 1/2?대떎."
+  ],
+  "a": "4",
+  "tr_b": "D튼沼쌻 휃창y l횪 n沼셢 dung gi梳즜 th챠ch v沼?휃梳톍 휃i沼긩 c沼쬪 xe bu첵t s횪n th梳쩺. N沼셢 dung n횪o l횪 kh척ng 휃첬ng nh梳쩿?",
+  "tr_c": [
+   "L횪 lo梳죍 xe bu첵t m횪 ng튼沼쓎 gi횪 y梳퓎 v횪 ng튼沼쓎 t횪n t梳춗 c처 th沼?l챗n xe d沼?d횪ng.",
+   "S횪n c沼쬪 xe th梳쩺 h퉤n so v沼쌻 xe bu첵t th척ng th튼沼쓓g.",
+   "沼?c沼춁 l챗n l梳칛 휃梳톞 t梳쩷 v찼n d沼멵 thay cho b梳춃 l챗n xu沼몁g.",
+   "Chi沼걏 cao c沼쬪 th창n xe b梳켷g 1/2 so v沼쌻 xe bu첵t th척ng th튼沼쓓g."
+  ]
+ },
+ {
+  "n": 616,
+  "ko_b": "?댄뻾湲곕줉怨꾨? ?ㅼ튂?섏? ?딆? 寃ъ씤???뱀닔?먮룞李??붾Ъ?먮룞李??댁닔?ъ뾽踰뺤뿉 ?곕Ⅸ ?먮룞李⑥뿉 ?쒗븿)瑜??댁쟾??寃쎌슦 ?댁쟾?? 泥섎쾶 洹쒖젙??",
+  "ko_c": [
+   "怨쇳깭猷?10留???,
+   "踰붿튃湲?10留???,
+   "怨쇳깭猷?7留???,
+   "踰붿튃湲?7留???
+  ],
+  "a": "4",
+  "tr_b": "Quy 휃沼땙h x沼?ph梳죜 n횪o cho ng튼沼쓎 l찼i xe trong tr튼沼쓓g h沼즤 l찼i xe chuy챗n d沼쩸g lo梳죍 휃梳쬾 k챕o (휃沼멼 v沼쌻 c찼c xe theo  Lu梳춗 Kinh doanh v梳춏 t梳즜 b梳켷g xe 척 t척 t梳즜) kh척ng l梳칛 thi梳퓍 b沼?gi찼m s찼t h횪nh tr챙nh?",
+  "tr_c": [
+   "Ph梳죜 h횪nh ch챠nh 100.000 Won",
+   "Ph梳죜 ti沼걆 vi ph梳죑 giao th척ng 100.000 Won",
+   "Ph梳죜 h횪nh ch챠nh 70.000 Won",
+   "Ph梳죜 ti沼걆 vi ph梳죑 giao th척ng 70.000 Won"
+  ]
+ },
+ {
+  "n": 617,
+  "ko_b": "?붾Ъ?먮룞李⑥쓽 ?곸옱臾?異붾씫諛⑹?瑜??꾪븳 ?ㅻ챸?쇰줈 媛???녹? ?딆? 寃껋??",
+  "ko_c": [
+   "援щⅤ湲??ъ슫 ?붾Ъ? 怨좎젙紐⑹씠???붾Ъ諛쏆묠?瑜??ъ슜?쒕떎.",
+   "嫄댁꽕湲곌퀎 ?깆쓣 ?곸옱?섏????뚮뒗 ??댁뼱, 濡쒗봽 ?깆쓣 ?ъ슜?쒕떎.",
+   "?곸옱???꾪썑醫뚯슦??怨듦컙???덉쓣 ?뚮뒗 硫덉땄紐??깆쓣 ?ъ슜?쒕떎.",
+   "?곸옱臾?異붾씫諛⑹? ?꾨컲??寃쎌슦??踰붿튃湲덉? 5留??먯뿉 踰뚯젏? 10?먯씠??"
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 kh척ng 휃첬ng nh梳쩿 v沼?vi沼놻 ph챵ng ng沼첺 r퉤i h횪ng h처a c沼쬪 xe t梳즜 ch沼?h횪ng?",
+  "tr_c": [
+   "V沼쌻 nh沼칗g h횪ng h처a d沼?l훱n, s沼?d沼쩸g gi찼 c沼?휃沼땙h ho梳톍 k沼?k챗 h횪ng h처a.",
+   "S沼?d沼쩸g d창y ch찾o, d창y th沼쳌g khi ch沼?m찼y x창y d沼켷g.",
+   "Khi c처 kho梳즢g tr沼몁g 沼?ph챠a tr튼沼쌵, sau, b챗n ph梳즜, b챗n tr찼i th첫ng ch沼쯠 h횪ng, c梳쬷 s沼?d沼쩸g thanh ch梳칗.",
+   "Tr튼沼쓓g h沼즤 vi ph梳죑 l횪m r퉤i h횪ng h처a ch梳쩿 tr챗n xe b沼?ph梳죜 ti沼걆 50.000 Won v횪 tr沼?10 휃i沼긩."
+  ]
+ },
+ {
+  "n": 618,
+  "ko_b": "?좎긽?댁넚??紐⑹쟻?쇰줈 ?깅줉???ъ뾽???붾Ъ?먮룞李??댁쟾?먭? 諛섎뱶??媛뽰텛?댁빞 ?섎뒗 寃껋??",
+  "ko_c": [
+   "李⑤웾?뺣퉬湲곗닠 ?먭꺽利?,
+   "?붾Ъ?댁넚醫낆궗 ?먭꺽利?,
+   "?앹떆?댁쟾???먭꺽利?,
+   "??醫??뱀닔硫댄뿀"
+  ],
+  "a": "2",
+  "tr_b": "Ng튼沼쓎 l찼i xe t梳즜 ch沼?h횪ng h처a th튼퉤ng m梳죍 ph梳즜 c梳쬷 c처 ch沼쯰g ch沼?n횪o 휃튼沼즓 휃훱ng k챠 v沼쌻 m沼쩭 휃챠ch kinh doanh  v梳춏 t梳즜?",
+  "tr_c": [
+   "Ch沼쯰g ch沼?k沼?thu梳춗 b梳즣 d튼沼죒g xe",
+   "Ch沼쯰g ch沼?h횪nh ngh沼?l찼i xe t梳즜",
+   "Ch沼쯰g ch沼?l찼i xe taxi",
+   "B梳켷g l찼i xe chuy챗n d沼쩸g h梳죒g 1"
+  ]
+ },
+ {
+  "n": 619,
+  "ko_b": "?ㅼ쓬? ??뺥솕臾쇱옄?숈감???뱀꽦??????ㅻ챸?대떎. 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "?붾Ъ??醫낅쪟???곕씪 ?좏쉶 諛섍꼍怨??덉젙?깆씠 ?ш쾶 蹂?????덈떎.",
+   "湲?異뺢컙嫄곕━ ?뚮Ц???덉젙?꾧? ?꾩?????떎.",
+   "?뱀슜李⑥뿉 鍮꾪빐 ?몃뱾蹂듭썝?μ씠 ?먰솢?섎떎.",
+   "李⑥껜??臾닿쾶??媛踰쇱슦???ш린???뱀슜李⑤낫???щ떎."
+  ],
+  "a": "1",
+  "tr_b": "D튼沼쌻 휃창y l횪 n沼셢 dung gi梳즜 th챠ch v沼?휃梳톍 휃i沼긩 c沼쬪 xe t梳즜 c처 tr沼뛫g t梳즜 l沼썀. C창u 휃첬ng nh梳쩿 l횪 c창u n횪o?",
+  "tr_c": [
+   "T첫y v횪o ch沼쬷g lo梳죍 h횪ng ho찼 m횪 b찼n k챠nh quay v챵ng v횪 휃沼?an to횪n c처 s沼?bi梳퓆 휃沼뷼 l沼썀.",
+   "휂沼?an to횪n th梳쩺 v챙 kho梳즢g c찼ch gi沼칊 c찼c tr沼쩭 d횪i.",
+   "Kh梳?n훱ng tr梳?l찼i c沼쬪 tay l찼i tr척i ch梳즭 h퉤n so v沼쌻 xe 척 t척 con.",
+   "Tr沼뛫g l튼沼즢g c沼쬪 xe nh梳?nh튼ng k챠ch c沼?th챙 l沼썀 h퉤n xe 척 t척 con."
+  ]
+ },
+ {
+  "n": 620,
+  "ko_b": "?ㅼ쓬 以??댁넚?ъ뾽???먮룞李????꾨줈援먰넻踰뺤긽 ?댄뻾湲곕줉怨꾨? ?ㅼ튂?섏뿬???섎뒗 ?먮룞李??댁쟾?먯쓽 諛붾엺吏곹븳 ?댁쟾?됱쐞??",
+  "ko_c": [
+   "?댄뻾湲곕줉怨꾧? ?ㅼ튂?섏뼱 ?덉? ?꾨땲???먮룞李??댁쟾?됱쐞",
+   "怨좎옣 ?깆쑝濡??ъ슜?????녿뒗 ?댄뻾湲곕줉怨꾧? ?ㅼ튂???먮룞李??댁쟾?됱쐞",
+   "?댄뻾湲곕줉怨꾨? ?먮옒??紐⑹쟻?濡??ъ슜?섏? ?꾨땲?섍퀬 ?먮룞李⑤? ?댁쟾?섎뒗 ?됱쐞",
+   "二쇨린?곸씤 ?댄뻾湲곕줉怨?愿由щ줈 怨좎옣 ?깆쓣 ?ъ쟾???덈갑?섎뒗 ?됱쐞"
+  ],
+  "a": "4",
+  "tr_b": "H횪nh vi n횪o l횪 휃첬ng 휃梳칗 nh梳쩿 c沼쬪 ng튼沼쓎 l찼i xe 척 t척 ph梳즜 l梳칛 휃梳톞 m찼y ghi h횪nh tr챙nh theo Lu梳춗 Giao th척ng  휃튼沼쓓g b沼?휃沼멼 v沼쌻 c찼c xe d첫ng cho m沼쩭 휃챠ch kinh doanh v梳춏 t梳즜, v.v?",
+  "tr_c": [
+   "H횪nh vi l찼i xe kh척ng c처 l梳칛 휃梳톞 m찼y ghi h횪nh tr챙nh",
+   "H횪nh vi l찼i xe c처 l梳칛 휃梳톞 m찼y ghi h횪nh tr챙nh nh튼ng kh척ng s沼?d沼쩸g 휃튼沼즓 do b沼?h沼뢮g",
+   "H횪nh vi l찼i xe c처 l梳칛 휃梳톞 m찼y ghi h횪nh tr챙nh nh튼ng kh척ng 휃튼沼즓 s沼?d沼쩸g 휃첬ng v沼쌻 m沼쩭 휃챠ch v沼몁 c처",
+   "H횪nh vi 휃沼?ph챵ng tr튼沼쌵 h沼뢮g h처c b梳켷g vi沼놻 qu梳즢 l첵 m찼y ghi h횪nh tr챙nh 휃沼땙h k챙"
+  ]
+ },
+ {
+  "n": 621,
+  "ko_b": "??醫???뺣㈃?덉쓽 痍⑤뱷???꾩슂??泥?젰湲곗???(?? 蹂댁껌湲??ъ슜???쒖쇅)",
+  "ko_c": [
+   "25?곗떆踰?,
+   "35?곗떆踰?,
+   "45?곗떆踰?,
+   "55?곗떆踰?
+  ],
+  "a": "4",
+  "tr_b": "Ti챗u chu梳쯰 n횪o v沼?th챠nh l沼켧 l횪 c梳쬷 thi梳퓍 휃沼?휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe c沼?l沼썀 h梳죒g 1 (tuy nhi챗n, ngo梳죍 tr沼? nh沼칗g ng튼沼쓎 s沼?d沼쩸g m찼y tr沼?th챠nh)?",
+  "tr_c": [
+   "25 decibel (dB)",
+   "35 decibel (dB)",
+   "45 decibel (dB)",
+   "55 decibel (dB)"
+  ]
+ },
+ {
+  "n": 622,
+  "ko_b": "?ㅼ쓬 以???뺥솕臾쇱옄?숈감???뱀쭠??????ㅻ챸?쇰줈 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "?곸옱?붾Ъ???꾩튂???믪씠???곕씪 李⑤웾??以묒떖?꾩튂???щ씪吏꾨떎.",
+   "以묒떖? ?곻쉈??訝듾툔)??諛⑺뼢?쇰줈??嫄곗쓽 蹂?붽? ?녿떎.",
+   "以묒떖?믪씠??吏꾨룞?뱀꽦??嫄곗쓽 ?곹뼢??誘몄튂吏 ?딅뒗??",
+   "吏꾨룞?뱀꽦???놁뼱 ??뺥솕臾쇱옄?숈감??吏꾨룞媛곸? ?뱀슜李⑥뿉 鍮꾪빐 留ㅼ슦 ?묐떎."
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch 휃첬ng nh梳쩿 v沼?휃梳톍 tr튼ng c沼쬪 xe t梳즜 ch沼?h횪ng h처a tr沼뛫g t梳즜 l沼썀 l횪 g챙?",
+  "tr_c": [
+   "V沼?tr챠 tr沼뛫g t창m c沼쬪 xe thay 휃沼뷼 t첫y theo 휃沼?cao hay v沼?tr챠 c沼쬪 h횪ng h처a chuy챗n ch沼?",
+   "Tr沼뛫g t창m g梳쬷 nh튼 kh척ng c처 s沼?bi梳퓆 휃沼뷼 theo ph튼퉤ng h튼沼썀g tr챗n, d튼沼쌻.",
+   "휂沼?cao tr沼뛫g t창m g梳쬷 nh튼 kh척ng g창y 梳즢h h튼沼웢g t沼쌻 휃梳톍 t챠nh rung.",
+   "Do kh척ng c처 휃梳톍 t챠nh rung n챗n c梳즡 gi찼c rung c沼쬪 xe t梳즜 ch沼?h횪ng h처a tr沼뛫g t梳즜 l沼썀 r梳쩿 챠t so v沼쌻 xe 척 t척 con."
+  ]
+ },
+ {
+  "n": 623,
+  "ko_b": "?ㅼ쓬 以???뺥솕臾쇱옄?숈감???댁쟾?뱀꽦??????ㅻ챸?쇰줈 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "臾닿굅??以묐웾怨?湲?異뺢굅 ?뚮Ц???덉젙?꾨뒗 ??떎.",
+   "怨좎냽二쇳뻾 ?쒖뿉 李⑥껜媛 ?붾뱾由ш린 ?뚮Ц???쒓컙?곸쑝濡?吏곸쭊?덉젙?깆씠 ?섎튌吏??寃쎌슦媛 ?덈떎.",
+   "?댁쟾?瑜?議곗옉?????뚰삎?뱀슜李⑥????щ━ ?몃뱾蹂듭썝???먰솢?섎떎.",
+   "?댁쟾?앹씠 ?믪븘???댁긽湲고썑 ???뚯뿉???쒖빞媛 ?붿슧 醫뗭븘吏꾨떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng nh梳쩿 v沼?휃梳톍 t챠nh v梳춏 chuy沼긪 c沼쬪 xe t梳즜 ch沼?h횪ng h처a?",
+  "tr_c": [
+   "휂沼?an to횪n th梳쩺 do tr沼뛫g l튼沼즢g n梳톘g v횪 c찼c tr沼쩭 d횪i.",
+   "Th창n xe rung khi 휃i v沼쌻 t沼멵 휃沼?cao n챗n x梳즭 ra tr튼沼쓓g h沼즤 m梳쩿 沼븂 휃沼땙h t梳죑 th沼쓎 khi ch梳죣 tr챗n 휃튼沼쓓g th梳쿻g.",
+   "Khi v梳춏 h횪nh tay l찼i, kh梳?n훱ng tr梳?l찼i c沼쬪 tay l찼i tr척i ch梳즭 h퉤n so v沼쌻 xe 척 t척 con.",
+   "Do ch沼?ng沼밿 c沼쬪 ng튼沼쓎 l찼i cao n챗n khi th沼쓎 ti梳퓍 c처 b梳쩿 th튼沼쓓g, t梳쬶 nh챙n s梳?tr沼?n챗n t沼몋 h퉤n."
+  ]
+ },
+ {
+  "n": 624,
+  "ko_b": "?ㅼ쓬 以?????붾Ъ?먮룞李⑥쓽 ?ш컖吏?? ?쒕룞 ???섏쨷蹂?붿뿉 ????ㅻ챸?쇰줈 媛???뚮쭪? 寃껋??",
+  "ko_c": [
+   "?ш컖吏???蹂대떅???덈뒗 李⑥? ?녿뒗 李④? 蹂꾨줈 李⑥씠媛 ?녿떎.",
+   "?? ?룸컮?댁쓽 ?쒕룞?μ? ?섏쨷??蹂?붿???愿怨꾩뾾??",
+   "?댁쟾???곗륫蹂대떎??醫뚯륫 ?ш컖吏?媛 ?⑥뵮 ?볥떎.",
+   "?붾Ъ ?섏쨷??蹂?붿뿉 ?곕씪 ?쒕룞?μ뿉 李⑥씠媛 諛쒖깮?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng nh梳쩿 v沼?s沼?thay 휃沼뷼 c沼쬪 t梳즜 tr沼뛫g xe t梳즜 ch沼?h횪ng h처a c沼?l沼썀 khi phanh l梳죍 沼?nh沼칗g n퉤i  khu梳쩿 t梳쬶 nh챙n c沼쬪 xe?",
+  "tr_c": [
+   "Xe c처 mui ph챠a tr튼沼쌵 v횪 xe kh척ng c처 mui ph챠a tr튼沼쌵 kh척ng c처 kh찼c bi沼뇍 g챙 l沼썀 l梳칖 v沼?휃i沼긩 m첫.",
+   "L沼켧 phanh c沼쬪 b찼nh xe tr튼沼쌵 v횪 b찼nh xe sau kh척ng c처 li챗n quan g챙 휃梳퓆 thay 휃沼뷼 c沼쬪 t梳즜 tr沼뛫g.",
+   "휂i沼긩 m첫 b챗n tr찼i r沼셬g h퉤n nhi沼걏 so v沼쌻 휃i沼긩 m첫 b챗n ph梳즜 c沼쬪 gh梳?l찼i.",
+   "Ph찼t sinh ch챗nh l沼놻h l沼켧 phanh tu沼?thu沼셛 v횪o thay 휃沼뷼 t梳즜 tr沼뛫g h횪ng ho찼."
+  ]
+ },
+ {
+  "n": 625,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???붾Ъ?먮룞李⑥쓽 ?곸옱?⑸웾 ?덉쟾湲곗????꾨컲??李⑤웾??",
+  "ko_c": [
+   "?먮룞李?湲몄씠??10遺꾩쓽 2瑜??뷀븳 湲몄씠",
+   "?꾩궗寃쎌쑝濡??ㅼそ???뺤씤?????덈뒗 踰붿쐞???덈퉬",
+   "吏?곸쑝濡쒕???3.9誘명꽣 ?믪씠",
+   "援ъ“ 諛??깅뒫???곕Ⅴ???곸옱以묐웾??105?쇱꽱??
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? xe t梳즜 n횪o vi ph梳죑 ti챗u chu梳쯰 an to횪n v沼?ch梳쩿 t梳즜 h횪ng h처a?",
+  "tr_c": [
+   "Chi沼걏 d횪i c沼쬪 h횪ng h처a d횪i h퉤n 2/10 chi沼걏 d횪i c沼쬪 xe 척 t척",
+   "Chi沼걏 r沼셬g c沼쬪 h횪ng h처a n梳켶 trong ph梳죑 vi c처 th沼?ki沼긩 tra ph챠a sau b梳켷g g튼퉤ng chi梳퓎 h梳춙",
+   "Chi沼걏 cao h횪ng h처a l횪 3,9m t챠nh t沼?m梳톞 휃梳쩿",
+   "Kh沼멼 l튼沼즢g h횪ng h처a b梳켷g 105% tr沼뛫g t梳즜 c沼쬪 xe theo k梳퓍 c梳쪀 v횪 t챠nh n훱ng"
+  ]
+ },
+ {
+  "n": 626,
+  "ko_b": "?ㅼ쓬 ??醫??뱀닔硫댄뿀??????ㅻ챸 以??녹? 寃껋??",
+  "ko_c": [
+   "?뚰삎寃ъ씤李?硫댄뿀???곸옱以묐웾 3.5?ㅼ쓽 寃ъ씤???뱀닔?먮룞李⑤? ?댁쟾?????덈떎.",
+   "?뚰삎寃ъ씤李?硫댄뿀???곸옱以묐웾 4?ㅼ쓽 ?붾Ъ?먮룞李⑤? ?댁쟾?????덈떎.",
+   "援щ궃李?硫댄뿀???뱀감?뺤썝 12紐낆씤 ?뱁빀?먮룞李⑤? ?댁쟾?????덈떎.",
+   "???寃ъ씤李?硫댄뿀???곸옱以묐웾 10?ㅼ쓽 ?붾Ъ?먮룞李⑤? ?댁쟾?????덈떎."
+  ],
+  "a": "2",
+  "tr_b": "N沼셢 dung n횪o sau 휃창y m척 t梳?휃첬ng v沼?gi梳쪅 ph챕p l찼i xe chuy챗n d沼쩸g h梳죒g 1?",
+  "tr_c": [
+   "V沼쌻 Gi梳쪅 ph챕p la?i xe k챕o c沼?nh沼? c처 th沼?휃i沼걏 khi沼긪 xe chuy챗n d沼쩸g ki沼긳 xe k챕o c처 t梳즜 tr沼뛫g 3,5 t梳쩸.",
+   "V沼쌻 Gi梳쪅 ph챕p la?i xe k챕o c沼?nh沼? c처 th沼?휃i沼걏 khi沼긪 xe t梳즜 ch沼?h횪ng c처 t梳즜 tr沼뛫g 4 t梳쩸.",
+   "V沼쌻 Gi梳쪅 ph챕p l찼i xe c沼쯷 h沼? c처 th沼?휃i沼걏 khi沼긪 xe kha?ch 12 ch沼?",
+   "V沼쌻 Gi梳쪅 ph챕p l찼i xe k챕o c沼?l沼썀, c처 th沼?휃i沼걏 khi沼긪 xe t梳즜 co? t梳즜 tr沼뛫g 10 t梳쩸."
+  ]
+ },
+ {
+  "n": 627,
+  "ko_b": "??뺤감???댁쟾?뱀꽦??????ㅻ챸?쇰줈 ?섎せ??寃껋??",
+  "ko_c": [
+   "臾닿굅??以묐웾怨?湲?異뺢굅 ?뚮Ц???덉젙?꾨뒗 ?믪쑝?? ?몃뱾??議곗옉?????뚰삎李⑥? ?щ━ ?몃뱾 蹂듭썝???뷀븯??",
+   "?뚰삎李⑥뿉 鍮꾪빐 ?댁쟾?앹씠 ?믪븘 李⑥쓽 諛붾줈 ?욌쭔 蹂닿퀬 ?댁쟾?섍쾶 ?섎?濡?吏곸쭊 ?덉젙?깆씠 醫뗭븘吏꾨떎.",
+   "?붾Ъ??醫낅쪟? ?곸옱 ?꾩튂???곕씪 ?좏쉶 ?뱀꽦???ш쾶 蹂?뷀븳??",
+   "?붾Ъ??醫낅쪟? ?곸옱 ?꾩튂???곕씪 ?덉젙?깆씠 ?ш쾶 蹂?뷀븳??"
+  ],
+  "a": "2",
+  "tr_b": "C창u n횪o gi梳즜 th챠ch kh척ng 휃첬ng v沼?휃梳톍 휃i沼긩 l찼i xe c沼?l沼썀?",
+  "tr_c": [
+   "휂沼?沼븂 휃沼땙h cao nh沼?tr沼뛫g l튼沼즢g l沼썀 v횪 chi沼걏 d횪i tr沼쩭 l沼썀, nh튼ng kh찼c v沼쌻 xe c沼?nh沼?沼?ch沼?khi thao t찼c tay l찼i th챙 kh처  b梳?l찼i v沼?v沼?tr챠 c크.",
+   "Gh梳?l찼i cao h퉤n so v沼쌻 xe c沼?nh沼? ch沼?nh챙n th梳쿻g ph챠a tr튼沼쌵 khi l찼i xe n챗n 휃沼?沼븂 휃沼땙h cao khi 휃i th梳쿻g.",
+   "휂梳톍 t챠nh quay v챵ng s梳?thay 휃沼뷼 l沼썀 t첫y thu沼셛 v횪o lo梳죍 h횪ng h처a v횪 v沼?tr챠 h횪ng h처a ch梳쩿 l챗n xe.",
+   "휂沼?沼븂 휃沼땙h thay 휃沼뷼 l沼썀 t첫y thu沼셛 v횪o lo梳죍 h횪ng h처a v횪 v沼?tr챠 h횪ng h처a ch梳쩿 l챗n xe."
+  ]
+ },
+ {
+  "n": 628,
+  "ko_b": "?먮룞李?諛??먮룞李⑤??덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃???곕씪 ?먮룞李??곌껐?먮룞李??쒖쇅)??湲몄씠??(  )誘명꽣瑜?珥덇낵?섏뿬?쒕뒗  ?꾨땲 ?쒕떎. (   )??湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "10",
+   "11",
+   "12",
+   "13"
+  ],
+  "a": "4",
+  "tr_b": "Chi沼걏 d횪i c沼쬪 척 t척 (ngo梳죍 tr沼?xe li챗n k梳퓍) kh척ng 휃튼沼즓 qu찼 (         )m theo quy t梳칌 v沼?ti챗u chu梳쯰 v횪 t챠nh  n훱ng c沼쬪 xe 척 t척 v횪 ph沼?t첫ng xe 척 t척. N沼셢 dung n횪o 휃첬ng trong (      )?",
+  "tr_c": [
+   "10",
+   "11",
+   "12",
+   "13"
+  ]
+ },
+ {
+  "n": 629,
+  "ko_b": "??뺤듅?⑹옄?숈감 ?댄뻾 以?李⑤궡?먯꽌 ?밴컼??異ㅼ텛???됱쐞瑜?諛⑹튂?섏???寃쎌슦 ?댁쟾?먯쓽 泥섎쾶??",
+  "ko_c": [
+   "踰붿튃湲?9留??? 踰뚯젏 30??,
+   "踰붿튃湲?10留??? 踰뚯젏 40??,
+   "踰붿튃湲?11留??? 踰뚯젏 50??,
+   "踰붿튃湲?12留??? 踰뚯젏 60??
+  ],
+  "a": "2",
+  "tr_b": "Tr튼沼쓓g h沼즤 ng튼沼쓎 l찼i xe kh찼ch c沼?l沼썀 휃沼?m梳톍 cho kh찼ch nh梳즭 m첬a trong xe, h챙nh ph梳죜 휃沼멼 v沼쌻 ng튼沼쓎 l찼i xe l횪 g챙?",
+  "tr_c": [
+   "N沼셮 ti沼걆 ph梳죜 90.000 Won v횪 ch沼땥 30 휃i沼긩 ph梳죜",
+   "N沼셮 ti沼걆 ph梳죜 100.000 Won v횪 ch沼땥 40 휃i沼긩 ph梳죜",
+   "N沼셮 ti沼걆 ph梳죜 110.000 Won v횪 ch沼땥 50 휃i沼긩 ph梳죜",
+   "N沼셮 ti沼걆 ph梳죜 120.000 Won v횪 ch沼땥 60 휃i沼긩 ph梳죜"
+  ]
+ },
+ {
+  "n": 630,
+  "ko_b": "4.5???붾Ъ?먮룞李⑥쓽 ?붾Ъ ?곸옱?⑥뿉 ?щ엺???쒖슦怨??댄뻾??寃쎌슦 踰붿튃湲덉븸??",
+  "ko_c": [
+   "5留???,
+   "4留???,
+   "3留???,
+   "2留???
+  ],
+  "a": "1",
+  "tr_b": "M沼쯢 x沼?ph梳죜 vi ph梳죑 l횪 bao nhi챗u trong tr튼沼쓓g h沼즤 ch沼?ng튼沼쓎 tr챗n th첫ng xe t梳즜 4,5 t梳쩸?",
+  "tr_c": [
+   "50.000 Won",
+   "40.000 Won",
+   "30.000 Won",
+   "20.000 Won"
+  ]
+ },
+ {
+  "n": 631,
+  "ko_b": "怨좎냽踰꾩뒪媛 諛ㅼ뿉 ?꾨줈瑜??듯뻾????耳쒖빞 ???깊솕??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾩“?? 李⑦룺?? 誘몃벑, 踰덊샇?? ?ㅻ궡議곕챸??,
+   "?꾩“?? 誘몃벑",
+   "誘몃벑, 李⑦룺?? 踰덊샇??,
+   "誘몃벑, 李⑦룺??
+  ],
+  "a": "1",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?c찼c lo梳죍 휃챔n ph梳즜 b梳춗 l챗n khi 휃i tr챗n 휃튼沼쓓g cao t沼멵 v횪o ban 휃챗m?",
+  "tr_c": [
+   "휂챔n pha, 휃챔n h척ng, 휃챔n h梳춙, 휃챔n bi沼긪 s沼? 휃챔n b챗n trong xe",
+   "휂챔n pha, 휃챔n h梳춙",
+   "휂챔n h梳춙, 휃챔n h척ng, 휃챔n bi沼긪 s沼?,
+   "휂챔n h梳춙, 휃챔n h척ng, 휃챔n bi沼긪 s沼?
+  ]
+ },
+ {
+  "n": 632,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 李⑥쓽 ?뱀감 ?먮뒗 ?곸옱諛⑸쾿??愿???ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "?댁쟾?먮뒗 ?뱀감?몄썝??愿?섏뿬 ??듬졊?뱀쑝濡??뺥븯???댄뻾?곸쓽 ?덉쟾湲곗????섏뼱???뱀감?쒗궓 ?곹깭濡??댁쟾?댁꽌???꾨땲 ?쒕떎.",
+   "?댁쟾?먮뒗 ?댁쟾 以??怨??덈뒗 ?щ엺???⑥뼱吏吏 ?꾨땲?섎룄濡?臾몄쓣 ?뺥솗???щ떕?????꾩슂??議곗튂瑜??섏뿬???쒕떎.",
+   "?댁쟾?먮뒗 ?댁쟾 以??ㅼ? ?붾Ъ???⑥뼱吏吏 ?꾨땲?섎룄濡???컻瑜??뚯슦嫄곕굹 臾띕뒗 ???뺤떎?섍쾶 怨좎젙?댁빞 ?쒕떎.",
+   "?댁쟾?먮뒗 ?곸쑀?꾨굹 ?숇Ъ???덉쟾???꾪븯???덇퀬 ?댁쟾?섏뿬???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?c찼ch 휃i v횪 ch沼?h횪ng tr챗n xe theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe kh척ng 휃튼沼즓 ph챕p l찼i xe trong t챙nh tr梳죒g s沼?ng튼沼쓎 tr챗n xe v튼沼즨 qu찼 m沼쯢 ti챗u chu梳쯰 an to횪n khi 휃i沼걏 khi沼긪 xe 휃튼沼즓 quy 휃沼땙h b沼웙 Ph찼p l沼뇆h T沼븂g th沼몁g.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe ph梳즜 th沼켧 hi沼뇆 c찼c bi沼뇆 ph찼p c梳쬷 thi梳퓍 nh튼 ki沼긩 tra c沼춁 휃처ng m沼?ch梳칌 ch梳칗 휃沼?trong l첬c l찼i xe nh沼칗g ng튼沼쓎 tr챗n xe kh척ng b沼?r퉤i kh沼뢩 xe.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe ph梳즜 c沼?휃沼땙h ch梳칌 ch梳칗 nh튼 che ph沼?ho梳톍 bu沼셛, c沼셳 휃沼?h횪ng h처a tr챗n xe trong l첬c l찼i xe kh척ng  b沼?r퉤i kh沼뢩 xe.",
+   "Ng튼沼쓎 휃i沼걏 khi沼긪 xe ph梳즜 v沼첺 l찼i xe v沼첺 척m 휃沼?휃梳즡 b梳즣 an to횪n cho tr梳?v횪 th첬 c튼ng."
+  ]
+ },
+ {
+  "n": 633,
+  "ko_b": "?붾Ъ?먮룞李⑥쓽 ?곸옱?붾Ъ ?댄깉 諛⑹???????ㅻ챸?쇰줈 ?щ컮瑜댁? ?딆? 寃껋??",
+  "ko_c": [
+   "?붾Ъ?먮룞李⑥뿉 ?먯뇙???곸옱?⑥쓣 ?ㅼ튂?섏뿬 ?댁넚?쒕떎.",
+   "?⑥쑉?곸씤 ?댁넚???꾪빐 ?곸옱以묐웾??120?쇱꽱???대궡濡??곸옱?쒕떎.",
+   "?붾Ъ???곸옱?섎뒗 寃쎌슦 湲됱젙吏, ?뚯쟾 ??李⑤웾??二쇳뻾???섑빐 ?ㅼ? ?붾Ъ???⑥뼱吏嫄곕굹 ?좊━吏 ?딅룄濡???컻???ъ옣???댁빞 ?쒕떎.",
+   "7???댁긽??肄붿씪???곸옱?섎뒗 寃쎌슦?먮뒗 ?덈쾭釉붾줉?쇰줈 2以??댁긽 怨좎젙?섎릺 以꾨떦 怨좎젙?먯쓣 2媛??댁긽 ?ъ슜?섏뿬 怨좎젙?댁빞 ?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 kh척ng 휃첬ng v沼?c찼ch ph챵ng tr찼nh h횪ng h처a ch梳쩿 tr챗n xe ch沼?h횪ng b沼?r퉤i?",
+  "tr_c": [
+   "C梳쬷 l梳칛 th첫ng xe d梳죒g 휃처ng k챠n cho xe ch沼?h횪ng.",
+   "휂沼?휃梳즡 b梳즣 hi沼뇎 su梳쩿 v梳춏 chuy沼긪 h횪ng, n챗n ch梳쩿 h횪ng t沼멼 휃a b梳켷g 120% tr沼뛫g l튼沼즢g xe.",
+   "Tr튼沼쓓g h沼즤 c처 ch沼?h횪ng tr챗n xe, ph梳즜 che ph沼?ho梳톍 휃처ng g처i sao cho h횪ng h처a kh척ng b沼?r퉤i ho梳톍 b沼?th沼뷼 bay khi  휃i沼걏 khi沼긪 xe nh튼 phanh g梳쩺, r梳? v.v.",
+   "Tr튼沼쓓g h沼즤 ch沼?c찼c cu沼셬 d창y t沼?7 t梳쩸 tr沼?l챗n, ph梳즜 c沼?휃沼땙h b梳켷g t沼멼 thi沼긳 2 pa l훱ng x챠ch (lever block), m沼뾦 x챠ch c沼? 휃沼땙h t沼멼 thi沼긳 2 휃i沼긩."
+  ]
+ },
+ {
+  "n": 634,
+  "ko_b": "??醫???뺣㈃?덉? ??醫?蹂댄넻硫댄뿀???댁쟾踰붿쐞瑜?援щ퀎?섎뒗 ?붾Ъ?먮룞李⑥쓽 ?곸옱以묐웾 湲곗???",
+  "ko_c": [
+   "12??誘몃쭔",
+   "10??誘몃쭔",
+   "4???댄븯",
+   "2???댄븯"
+  ],
+  "a": "1",
+  "tr_b": "Ti챗u chu梳쯰 n횪o v沼?tr沼뛫g l튼沼즢g ch梳쩿 h횪ng h처a 휃沼?ph창n bi沼뇍 ph梳죑 vi 휃i沼걏 khi沼긪 xe gi沼칊 b梳켷g l찼i xe tr沼뛫g t梳즜  l沼썀 h梳죒g 1 v횪 b梳켷g l찼i xe ph沼?th척ng h梳죒g 1?",
+  "tr_c": [
+   "D튼沼쌻 12 t梳쩸",
+   "D튼沼쌻 10 t梳쩸",
+   "T沼?4 t梳쩸 tr沼?xu沼몁g",
+   "T沼?2 t梳쩸 tr沼?xu沼몁g"
+  ]
+ },
+ {
+  "n": 635,
+  "ko_b": "??醫?蹂댄넻硫댄뿀 ?뚯??먭? 珥앹쨷??750kg 珥덇낵 3???댄븯???쇨껄?몄옄?숈감瑜?寃ъ씤?섍린 ?꾪빐 異붽?濡??뚯??섏뿬???섎뒗 硫댄뿀??",
+  "ko_c": [
+   "??醫??뚰삎寃ъ씤李⑤㈃??,
+   "??醫?蹂댄넻硫댄뿀",
+   "??醫???뺣㈃??,
+   "??醫?援щ궃李⑤㈃??
+  ],
+  "a": "1",
+  "tr_b": "Ng튼沼쓎 s沼?h沼칤 gi梳쪅 ph챕p l찼i xe ph沼?th척ng h梳죒g 1 n梳퓎 mu沼몁 k챕o xe c처 t沼븂g tr沼뛫g l튼沼즢g t沼?750kg 휃梳퓆 t沼멼 휃a  l횪 3 t梳쩸 th챙 ph梳즜 s沼?h沼칤 th챗m gi梳쪅 ph챕p l찼i xe n횪o sau 휃창y?",
+  "tr_c": [
+   "Gi梳쪅 ph챕p l찼i xe k챕o c沼?nh沼?h梳죒g 1",
+   "Gi梳쪅 ph챕p l찼i xe ph沼?th척ng h梳죒g 2",
+   "Gi梳쪅 ph챕p l찼i xe c沼?l沼썀 h梳죒g 1",
+   "Gi梳쪅 ph챕p l찼i xe c沼쯷 h沼?h梳죒g 1"
+  ]
+ },
+ {
+  "n": 636,
+  "ko_b": "?ㅼ쓬 以?珥앹쨷??750?щ줈洹몃옩 ?댄븯???쇨껄?몄옄?숈감瑜?寃ъ씤?????녿뒗 ?댁쟾硫댄뿀??",
+  "ko_c": [
+   "??醫?蹂댄넻硫댄뿀",
+   "??醫?蹂댄넻?곗뒿硫댄뿀",
+   "??醫???뺣㈃??,
+   "??醫?蹂댄넻硫댄뿀"
+  ],
+  "a": "2",
+  "tr_b": "Gi梳쪅 ph챕p l찼i xe n횪o d튼沼쌻 휃창y kh척ng th沼?l찼i xe 휃梳쬾 k챕o 휃沼?k챕o r퉤 mo처c c처 t沼븂g tr沼뛫g l튼沼즢g t沼?750kg tr沼? xu沼몁g?",
+  "tr_c": [
+   "B梳켷g l찼i ph沼?th척ng h梳죒g 1",
+   "B梳켷g t梳춑 l찼i ph沼?th척ng h梳죒g 1",
+   "B梳켷g l찼i xe tr沼뛫g t梳즜 l沼썀 h梳죒g 1",
+   "B梳켷g l찼i ph沼?th척ng h梳죒g 2"
+  ]
+ },
+ {
+  "n": 637,
+  "ko_b": "怨좎냽?꾨줈媛 ?꾨땶 怨녹뿉??珥앹쨷?됱씠 1泥?諛깊궗濡쒓렇?⑥씤 ?먮룞李⑤? 珥앹쨷??5泥쒗궗濡쒓렇?⑥씤 ?뱁빀?먮룞李⑤줈 寃ъ씤????理쒓퀬?띾룄??",
+  "ko_c": [
+   "留ㅼ떆 50?щ줈誘명꽣",
+   "留ㅼ떆 40?щ줈誘명꽣",
+   "留ㅼ떆 30?щ줈誘명꽣",
+   "留ㅼ떆 20?щ줈誘명꽣"
+  ],
+  "a": "3",
+  "tr_b": "T沼멵 휃沼?t沼멼 휃a l횪 bao nhi챗u khi k챕o m沼셳 chi梳풻 xe c처 t沼븂g tr沼뛫g l튼沼즢g 1.500 kg b梳켷g m沼셳 chi梳풻 xe kha?ch co?  t沼븂g tr沼뛫g l튼沼즢g 5.000 kg tr챗n 휃o梳죒 휃튼沼쓓g kh척ng ph梳즜 휃튼沼쓓g cao t沼멵?",
+  "tr_c": [
+   "50 km/gi沼?,
+   "40 km/gi沼?,
+   "30 km/gi沼?,
+   "20 km/gi沼?
+  ]
+ },
+ {
+  "n": 638,
+  "ko_b": "?먮룞李⑤? 寃ъ씤?섎뒗 寃쎌슦??????ㅻ챸?쇰줈 諛붾Ⅴ吏 紐삵븳 寃껋??",
+  "ko_c": [
+   "3?ㅼ쓣 珥덇낵?섎뒗 ?먮룞李⑤? 寃ъ씤?섍린 ?꾪빐?쒕뒗 寃ъ씤?섎뒗 ?먮룞李⑤? ?댁쟾?????덈뒗 硫댄뿀? ??醫???뺢껄?몄감硫댄뿀瑜?媛吏怨? ?덉뼱???쒕떎.",
+   "?쇰컲?꾨줈?먯꽌 珥앹쨷??2泥쒗궗濡쒓렇??誘몃쭔???먮룞李⑤? 珥앹쨷?됱씠 洹몄쓽 3諛??댁긽???먮룞李⑤줈 寃ъ씤?섎뒗 寃쎌슦?먮뒗 留ㅼ떆 30?щ줈 誘명꽣 ?대궡濡??듯뻾?????덈떎.",
+   "?쇰컲?꾨줈?먯꽌 寃ъ씤李④? ?꾨땶 李⑤웾?쇰줈 ?ㅻⅨ 李⑤웾??寃ъ씤???뚯뿉???꾨줈???쒗븳?띾룄濡?吏꾪뻾?????덈떎.",
+   "寃ъ씤?먮룞李④? ?꾨땶 ?쇰컲?먮룞李⑤줈 ?ㅻⅨ 李⑤웾??寃ъ씤?섎젮??寃쎌슦?먮뒗 ?대떦 李⑥쥌???댁쟾?????덈뒗 硫댄뿀瑜?媛吏怨??덉뼱???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Gi梳즜 th챠ch n횪o kh척ng 휃첬ng v沼?k챕o xe 척 t척?",
+  "tr_c": [
+   "휂沼?k챕o xe 척 t척 c처 tr沼뛫g l튼沼즢g h퉤n 3 t梳쩸, ph梳즜 c처 b梳켷g l찼i xe 휃튼沼즓 ph챕p 휃i沼걏 khi沼긪 xe k챕o v횪 b梳켷g l찼i xe k챕o c沼?l沼썀  lo梳죍 1.",
+   "Khi d첫ng xe 척 t척 k챕o 휃沼?k챕o xe kh찼c tr챗n 휃튼沼쓓g cao t沼멵 c처 h퉤n 2 l횪n 휃튼沼쓓g m沼셳 chi沼걏, ph梳즜 ch梳죣 v沼쌻 t沼멵 휃沼?gi梳즡  1/2 so v沼쌻 t沼멵 휃沼?t沼멼 휃a.",
+   "Tr챗n 휃튼沼쓓g th척ng th튼沼쓓g, trong tr튼沼쓓g h沼즤 xe c처 t沼븂g tr沼뛫g l튼沼즢g d튼沼쌻 2.000 kg b沼?k챕o b沼웙 xe c처 t沼븂g tr沼뛫g l튼沼즢g g梳쩺 챠t nh梳쩿 3 l梳쬷 xe 휃처, th챙 t沼멵 휃沼?l튼u th척ng 휃튼沼즓 ph챕p l횪 kh척ng qu찼 30 km/h.",
+   "Khi d첫ng xe 척 t척 th척ng th튼沼쓓g kh척ng ph梳즜 l횪 xe k챕o 휃沼?k챕o xe kh찼c, ph梳즜 c처 b梳켷g l찼i 휃튼沼즓 ph챕p 휃i沼걏 khi沼긪 lo梳죍 xe 휃처."
+  ]
+ },
+ {
+  "n": 639,
+  "ko_b": "?ㅼ쓬 以??뱀닔???묒뾽???섑뻾?섍린 ?꾪빐 ?쒖옉??珥앹쨷??3.5???댄븯???뱀닔?먮룞李?援щ궃李⑤벑? ?쒖쇅)瑜??댁쟾?????덈뒗 硫댄뿀??",
+  "ko_c": [
+   "??醫?蹂댄넻?곗뒿硫댄뿀",
+   "??醫?蹂댄넻?곗뒿硫댄뿀",
+   "??醫?蹂댄넻硫댄뿀",
+   "??醫??뚰삎硫댄뿀"
+  ],
+  "a": "3",
+  "tr_b": "Gi梳쪅 ph챕p l찼i xe n횪o c처 th沼?l찼i xe chuy챗n d沼쩸g c처 t沼븂g tr沼뛫g l튼沼즢g s梳즢 xu梳쩿 t沼멼 휃a 3,5 t梳쩸 (ngo梳죍 tr沼?xe c沼쯷  h沼? 휃沼?th沼켧 hi沼뇆 c찼c thao t찼c chuy챗n d沼쩸g?",
+  "tr_c": [
+   "B梳켷g t梳춑 l찼i ph沼?th척ng h梳죒g 1",
+   "B梳켷g t梳춑 l찼i ph沼?th척ng h梳죒g 2",
+   "B梳켷g l찼i ph沼?th척ng h梳죒g 2",
+   "B梳켷g t梳춑 l찼i xe tr沼뛫g t梳즜 nh沼?h梳죒g 1"
+  ]
+ },
+ {
+  "n": 640,
+  "ko_b": "?ㅼ쓬 以??꾨줈援먰넻踰뺤긽 ?뚰삎寃ъ씤李??댁쟾?먭? 吏耳쒖빞???ы빆?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뚰삎寃ъ씤李??댁쟾?먮뒗 湲닿툒???낅Т瑜??섑뻾?섎?濡??덉쟾?좊? 李⑹슜?섏? ?딆븘??臾대갑?섎떎.",
+   "?뚰삎寃ъ씤李??댁쟾?먮뒗 二쇳뻾 以??쇱긽 ?낅Т瑜??꾪븳 ?대????ъ슜??媛?ν븯??",
+   "?뚰삎寃ъ씤李??댁쟾?먮뒗 ?댄뻾 ????醫??뱀닔(?뚰삎寃ъ씤李?硫댄뿀瑜?痍⑤뱷?섍퀬 ?뚯??섏뿬???쒕떎.",
+   "?뚰삎寃ъ씤李??댁쟾?먮뒗 ?ш퀬?꾩옣 異쒕룞 ?쒖뿉??洹쒖젙???띾룄瑜?珥덇낵?섏뿬 ?댄뻾?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "H梳죒g m沼쩭 n횪o 휃첬ng v沼걆g튼沼쓎 l찼i xe 휃梳쬾 k챕o h梳죒g nh沼?ph梳즜 tu창n th沼?theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ng튼沼쓎 l찼i xe 휃梳쬾 k챕o h梳죒g nh沼?kh척ng c梳쬷 c횪i d창y an to횪n khi th沼켧 hi沼뇆 c척ng v沼?kh梳쯰 c梳쩺.",
+   "Ng튼沼쓎 l찼i xe 휃梳쬾 k챕o h梳죒g nh沼?휃튼沼즓 s沼?d沼쩸g 휃i沼뇆 tho梳죍 di 휃沼셬g cho c척ng vi沼놻 h횪ng ng횪y khi 휃ang l찼i xe.",
+   "Ng튼沼쓎 l찼i xe 휃梳쬾 k챕o h梳죒g nh沼?c梳쬷 c처 gi梳쪅 ph챕p l찼i xe chuy챗n d沼쩸g h梳죒g 1 (xe 휃梳쬾 k챕o h梳죒g nh沼? v횪 lu척n ph梳즜  mang theo ng튼沼쓎.",
+   "Ng튼沼쓎 l찼i xe 휃梳쬾 k챕o h梳죒g nh沼?c처 th沼?v튼沼즨 t沼멵 휃沼?gi沼쌻 h梳죒 khi 휃ang t沼쌻 hi沼뇆 tr튼沼쓓g tai n梳죒."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+s='Gi梳즜 th챠ch n횪o l횪'
+print(s.encode('cp949').decode('utf-8'))
+print('?ㅼ쓬'.encode('cp949').decode('utf-8',errors='replace'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:37:56.441148Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:6 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 680ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:6 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/215_choices_vn.json' | ConvertFrom-Json; "'$cp=[Text.Encoding]::GetEncoding(949); $u=[Text.Encoding]::UTF8; function Fix($s){if($null -eq $s){return $null}; $u.GetString($cp.GetBytes([string]$s))}; foreach($x in $data){ Write-Output ('"'### '+"'$x.n); Write-Output ('"'B: '+(Fix "'$x.ko_b)); Write-Output ('"'T: '+(Fix "'$x.tr_b)); for($i=0;$i -lt $x.ko_c.Count;$i++){Write-Output (('"'C{0}: ' -f ("'$i+1))+(Fix $x.ko_c[$i])); Write-Output (('"'V{0}: ' -f ("'$i+1))+(Fix $x.tr_c[$i]))}; if($x.check){Write-Output ('"'CHECK: '+"'$x.check)}; if($x.detail){Write-Output ('"'DETAIL: '+"'$x.detail)} }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 754ms:
+### 601
+B: ���� �� �����ڵ����� ���� �������� ���� ����?
+T: Gi?i thich nao la ��ung v? xe o to Hydro?
+C1: ���Ҵ� ������ �����̹Ƿ� ��� �����ڵ��� �����ڴ� ��а��� �����������ɿ� ���� ������ Ư�������� �̼��Ͽ��� �Ѵ�.
+V1: Khi Hydro la khi gas d? chay nen t?t c? ng??i lai xe o to Hydro ��?u ph?i tham gia giao d?c ��?c bi?t danh cho ng??i lai xe theo Phap l?nh Qu?n ly an toan khi gas cao ap.
+C2: �����ڵ����� ���Ҹ� ���ҽ�Ű�� ������ ȯ������� ���ߵȴ�.
+V2: Xe o to Hydro ��?t chay khi Hydro nen khong gay o nhi?m moi tr??ng.
+C3: �����ڵ������� ȭ�� �� ��޻�Ȳ �߻� �� ���߹����� ���� ������ ������ġ�� ����.
+V3: Trong xe o to Hydro khong co thi?t b? an toan rieng ��? phong ch?ng chay n? khi phat sinh tinh hu?ng kh?n c?p nh?  h?a ho?n v.v...
+C4: �����ڵ��� �����ڴ� �ش� ������ �������࿡ ������ ������ �����ϰ� �����ϰ� �����Ͽ��� �Ѵ�.
+V4: Ng??i ��i?u khi?n xe o to Hydro ph?i ki?m tra co ?nh h??ng ��?n vi?c lai xe an toan hay khong va lai xe m?t cach an  toan.
+### 602
+B: ���� �� �ڵ��� ��Ⱑ���� �̼������� ���̱� ���� ���� ������ ���������?
+T: Ph??ng phap lai xe nao phu h?p nh?t ��? gi?m b?i sieu nh? c?a khi th?i o to?
+C1: ����� ���� ��������� ���� ��� ����Ѵ�.
+V1: ��?p m?nh h?t s?c vao chan ga ��? xu?t phat.
+C2: �ް����� ���� �ʰ� �ε巴�� ����Ѵ�.
+V2: Xu?t phat nh? nhang va khong c?n t?ng t?c nhanh.
+C3: ������ ���� ���÷� ���Ӱ� ������ �ݺ��Ѵ�.
+V3: Th??ng xuyen t?ng t?c va d?ng xe nhi?u l?n khi lai xe.
+C4: ���� �� ������ ���� �õ��� ���� �ʰ� ��ȸ���Ѵ�.
+V4: Khi d?ng ho?c ��? xe, quay v? s? 0 va khong t?t ��?ng c?.
+### 603
+B: ���� �� �����ڵ����� �ֿ� ����ǰ�� �ƴ� ����?
+T: B? ph?n nao sau ��ay khong ph?i la b? ph?n c?u t?o chinh c?a xe o to Hydro?
+C1: ���������ý���(����)
+V1: H? th?ng pin nhien li?u (Stack)
+C2: ����������
+V2: Binh ch?a hydro
+C3: ��������� ���� �����Ǵ� ������
+V3: May phat ��i?n ch?y b?ng ��?ng c? ��?t trong
+C4: ������ ����
+V4: ��?ng c? chuy?n ��?ng
+### 604
+B: ���� �� ģȯ������� ���õ� �������� �´� �� 2������?
+T: Hai n?i dung nao sau ��ay ��ung v? vi?c lien quan ��?n lai xe than thi?n v?i moi tr??ng?
+C1: �½ǰ��� ���� ��ǥġ�� ������ ���� �������� ������ �ִ�.
+V1: Co lien quan ��?n Ngh? ��?nh th? Kyoto quy ��?nh v? ch? s? m?c tieu gi?m thi?u khi nha kinh.
+C2: �������� ����Ű�� �������� źȭ����, �ϻ�ȭź��, �̻�ȭź��, ���һ�ȭ�� ���� �ִ�.
+V2: Hydrocarbon, carbon monoxide, carbon dioxide, oxit nit? co trong cac v?t ch?t gay ra o nhi?m khi quy?n.
+C3: �ڵ��� �ǳ� �µ��� ���̱� ���� ���� �õ� �� ��ð� ��ȸ���� �Ѵ�.
+V3: ��? t?ng nhi?t ��? trong xe o to, ta s? kh?i ��?ng xe va ��? ��?ng c? ch?y khong t?i trong m?t th?i gian dai.
+C4: ���÷� �ڵ��� �˻縦 �ϰ�, ����Ÿ� 2,000ų�ι��͸��� ���������� ������ ��ȯ�ؾ� �Ѵ�.
+V4: Th??ng xuyen ki?m tra xe o to va b?t bu?c ph?i thay d?u may m?i khi xe ch?y ��??c 2.000 km.
+### 605
+B: ���� �� ������ ��Ⱑ���� ���� ���� �����ϴ� �ڵ�����?
+T: Xe nao sau ��ay th?i ra khi th?i ��?c h?i nhi?u nh?t?
+C1: �����ڵ���
+V1: Xe o to ��i?n
+C2: �����ڵ���
+V2: Xe o to Hydro
+C3: LPG�ڵ���
+V3: Xe o to LPG
+C4: ���� �� �����ڵ���
+V4: Xe o to c? dung d?u diesel
+### 606
+B: ģȯ�� �������� �� ���� ����(fuel cut) ����� �ƴ� ����?
+T: Ph??ng phap nao khong ph?i la ph??ng phap ch?y theo quan tinh (gi?m tieu th? nhien li?u) ��? lai xe ti?t  ki?m, than thi?n v?i moi tr??ng?
+C1: ������ ���� �� �̸� ���� ��޿��� ���� ���� �����극��ũ�� Ȱ���Ѵ�.
+V1: B? chan ra kh?i chan ga tr??c khi vao ��??ng giao nhau va dung phanh ��?ng c?.
+C2: ���������� �ӵ��� ������ �ʰ� ����ؼ� ���� ����� ��´�.
+V2: Khong gi?m t?c tren ��??ng b?ng ph?ng va duy tri nh?n chan ga.
+C3: �������濡���� �����극��ũ�� ������ Ȱ���Ѵ�.
+V3: Dung phanh ��?ng c? tren ��??ng xu?ng d?c m?t cach thich h?p.
+C4: �������� ���� ������ �����Ͽ� ������ �̿��Ѵ�.
+V4: T?n d?ng quan tinh b?ng cach t?ng t?c tr??c khi lai xe len ��??ng len d?c.
+### 607
+B: ���� �� �ڵ��� ��Ⱑ�� ���ȯ��ġ(Exhaust Gas Recirculation, EGR)�� �ַ� �����ϴ� ������?
+T: Ch?t nao sau ��ay ch? y?u b? kh?ng ch? b?ng h? th?ng tu?n hoan khi th?i (EGR) xe o to?
+C1: ���һ�ȭ��(NOx)
+V1: Oxit nito (NOx)
+C2: źȭ����(HC)
+V2: Hydrocarbon (HC)
+C3: �ϻ�ȭź��(CO)
+V3: Khi Carbon monoxide (CO)
+C4: �̻�ȭź��(CO2)
+V4: Carbon dioxide (CO2)
+### 608
+B: ���� �� �����ڵ��� ���˿� ���� �������� Ʋ�� ����?
+T: Gi?i thich nao khong ��ung v? vi?c ki?m tra xe o to Hydro?
+C1: ���Ҵ� ������ �����̹Ƿ� �����ڵ����� �ֱ����� ������ �ʼ����̴�.
+V1: Hydro la khi ��?t nen b?t bu?c ph?i ki?m tra xe o to Hydro ��?nh k?.
+C2: �����ڵ��� ������ ȯ�Ⱑ �� �Ǵ� ��ҿ��� �ǽ��ؾ� �Ѵ�.
+V2: Vi?c ki?m tra xe o to Hydro ph?i ��??c th?c hi?n ? n?i thoang khi.
+C3: �����ڵ��� ���� �� �����������, ������ ���� ���� ����  ���θ� Ȯ���ؾ� �Ѵ�.
+V3: Khi ki?m tra xe o to Hydro, ph?i ki?m tra ��??ng ?ng gas, c?ng s?c co b? ro r? khi hydro hay khong.
+C4: �����ڵ����� �����ϴ� �ڴ� �ش� ������ ���� ���࿡ ������ ������ �����ؾ� �� �ǹ��� ����.
+V4: Ng??i ��i?u khi?n xe o to Hydro khong co ngh?a v? ph?i ki?m tra co gi c?n tr? xe v?n hanh an toan hay khong.
+### 609
+B: �����ڵ��� �������� ������ �̿� �� ���ǻ������� �ùٸ��� ���� ����?
+T: N?i dung nao khong ��ung v? ng??i ��i?u khi?n xe o to Hydro ph?i chu y khi s? d?ng tr?m s?c?
+C1: �����ڵ��� ������ �ֺ����� ����� �Ͽ����� �ƴ� �ȴ�.
+V1: Khong ��??c hut thu?c ? xung quanh tr?m s?c xe o to Hydro.
+C2: �����ڵ��� ���� ���� �߿� �ڵ����� �̵��� �� �ִ�.
+V2: Co th? di chuy?n xe trong luc ��ang s?c nhien li?u cho xe o to Hydro.
+C3: �����ڵ��� ���� ���� �߿��� �õ��� ����.
+V3: T?t ��?ng c? khi ��ang s?c nhien li?u cho xe o to Hydro.
+C4: ������ ������ �ڸ��� ����� �� ���Ƿ� �����⸦ �������� �ʴ´�.
+V4: Khong t? y ��i?u ch?nh may s?c khi khong co nhan vien tr?m s?c.
+### 610
+B: ���� �� �����ڵ��� ���Ḧ ������ �� �������� �ൿ���� ����ġ ���� ����?
+T: Hanh ��?ng nao khong phu h?p c?a ng??i ��i?u khi?n xe khi ��ang s?c nhien li?u cho xe o to Hydro?
+C1: �����ڵ����� ���Ḧ �����ϱ� ���� �õ��� ����.
+V1: T?t ��?ng c? tr??c khi s?c nhien li?u cho xe o to Hydro.
+C2: �����ڵ��� ������ ������ �ֺ����� ����� �Ͽ���.
+V2: Hut thu?c la ? xung quanh may s?c c?a tr?m s?c xe o to Hydro.
+C3: �����ڵ��� ������ ���� ���� ���� ���Ƿ� �������� �ʾҴ�.
+V3: Khong t? y ��i?u ch?nh cac thi?t b? trong tr?m s?c xe o to Hydro.
+C4: ���� ������ �Ϸ� �� ���� �õ��� �ɾ���.
+V4: Kh?i ��?ng xe sau khi ��a s?c nhien li?u xong.
+### 611
+B: ȭ���� ������ ����Ʈ���� ���������� �������� ��� ���� �� ���� ������ ���� �����?
+T: Bi?n phap lai xe nao an toan nh?t trong tr??ng h?p xe o to t?i ch? hang hoa ��i t? tren d?c xu?ng?
+C1: �� �߸��� ���� �����Ͽ� ���Ḧ �����Ѵ�.
+V1: Ti?t ki?m nhien li?u b?ng cach ��? c?n v? s? 0 (s? N) khi lai xe.
+C2: �극��ũ ����� ������ ������ ������ ȿ���� ���� �� ���� ��´�.
+V2: N?u ��?p nhi?u l?n vao chan phanh thi khong co tac d?ng phanh nen ch? ��?p m?t l?n.
+C3: ������ �������� ����Ͽ� ����� ���� �Ÿ��� �����Ѵ�.
+V3: Duy tri ��? c? ly gi?a cac xe ��? phong tr??ng h?p xe phia tr??c d?ng ��?t ng?t.
+C4: �����⸦ ũ�� �︮�� �ӵ��� ���̸鼭 �ż��ϰ� �����Ѵ�.
+V4: B?m coi th?t to, t?ng t?c va phong ��i th?t nhanh.
+### 612
+B: ���� �� ȭ���� ����ҷ� ������ ���� ������� ���̱� ���� �������� ��ġ�������� ���� �˸��� ����?
+T: Bi?n phap x? ly nao la ��ung ��?n nh?t c?a ng??i lai xe giup gi?m thi?u tai n?n giao thong x?y ra do l?i ch?t  hang hoa c?a xe t?i ch? hang?
+C1: ȭ���� �ư� �̵��� ���� �ݵ�� ������ �����.
+V1: Khi ch? hang hoa va di chuy?n, nh?t thi?t ph?i dung t?m ��?y ��? ph? len.
+C2: ���� Ÿ�̾� �� ������ �������� ������ �ʿ䰡 ����.
+V2: Khong c?n ph?i ki?m tra cac ph? tung c? ��?nh nh? l?p d? phong.
+C3: ȭ���� �ż��� ����� ���� ȭ���� �����ϰ� ���´�.
+V3: Bu?c l?ng cac hang hoa nh?m v?n chuy?n hang hoa ��??c nhanh h?n.
+C4: ����� �Ÿ��� �̵��ϴ� ��쿡�� ȭ���� ������ �ʿ䰡 ����.
+V4: Khong c?n c? ��?nh hang hoa khi di chuy?n ? kho?ng cach g?n.
+### 613
+B: ȭ���ڵ����� ȭ�� ���翡 ���� ���� �� ���� ���� ���� ����?
+T: Gi?i thich nao sau ��ay la khong ��ung nh?t v? vi?c x?p hang hoa c?a xe t?i ch? hang?
+C1: ȭ���� ������ ���� ������ ������� �¿�� �����Ѵ�.
+V1: Khi x?p hang hoa, ph?i x?p t? gi?a r?i sang hai ben trai ph?i.
+C2: ȭ���ڵ����� ���� �߽��� �� �ʿ� �ֱ� ������ �������� ���ʺ��� �����Ѵ�.
+V2: Tr?ng tam t?i tr?ng c?a xe t?i ch? hang la ? phia tr??c nen ph?i x?p hang t? phia sau c?a thung hang.
+C3: ������ �Ʒ��ʿ� ��������� ���ſ� ȭ���� �����Ѵ�.
+V3: X?p hang t??ng ��?i n?ng ? phia d??i c?a thung xe.
+C4: ȭ���� ��� ������ �Ŀ��� ȭ���� ���� ������ �������� �ʵ��� �����Ѵ�.
+V4: Sau khi x?p t?t c? hang hoa, c?n c? ��?nh ��? hang hoa khong b? r?i ra kh?i xe.
+### 614
+B: ���� �� Ư�� �ڵ����� ����Ư���� ���� �����̴�. �߸��� ����?
+T: D??i ��ay la mo t? v? ��?c tinh phanh c?a xe c? l?n va xe chuyen d?ng. N?i dung nao khong ��ung?
+C1: ������ ��ȭ�� ���� �޶�����.
+V1: Khac nhau tuy theo s? thay ��?i c?a t?i tr?ng.
+C2: Ÿ�̾��� ����а� Ʈ���尡 ����� ���ϸ� �����Ÿ��� �޶�����.
+V2: N?u ap su?t va ta-long c?a l?p xe khong ��?ng ��?u thi kho?ng cach ��?p phanh s? thay ��?i.
+C3: ���� �߷��� ���� �޶�����.
+V3: Khac nhau tuy theo tr?ng l??ng c?a xe.
+C4: ������ ���緮�� Ŀ������ ���� �����Ÿ��� ª������.
+V4: Cang ch?t t?i len xe nhi?u thi kho?ng cach ��?p phanh th?c t? cang ng?n l?i.
+### 615
+B: ���� �� ��������� Ư���� ���� �����̴�. ���� �Ÿ��� �� ����?
+T: D??i ��ay la n?i dung gi?i thich v? ��?c ��i?m c?a xe buyt san th?p. N?i dung nao la khong ��ung nh?t?
+C1: ����ڳ� ������� ���� Ż �� �ִ�.
+V1: La lo?i xe buyt ma ng??i gia y?u va ng??i tan t?t co th? len xe d? dang.
+C2: ��ü�ٴ��� ���̰� �Ϲݹ��� ���� ����.
+V2: San c?a xe th?p h?n so v?i xe buyt thong th??ng.
+C3: ���Ա��� ��� ��� ������� ��ġ�Ǿ� �ִ�.
+V3: ? c?a len l?p ��?t t?m van d?c thay cho b?c len xu?ng.
+C4: �Ϲݹ����� ���� ��ü�� ���̰� 1/2�̴�.
+V4: Chi?u cao c?a than xe b?ng 1/2 so v?i xe buyt thong th??ng.
+### 616
+B: �����ϰ踦 ��ġ���� ���� ������ Ư���ڵ���(ȭ���ڵ��� ���������� ���� �ڵ����� ����)�� ������ ��� ������  ó�� ������?
+T: Quy ��?nh x? ph?t nao cho ng??i lai xe trong tr??ng h?p lai xe chuyen d?ng lo?i ��?u keo (��?i v?i cac xe theo  Lu?t Kinh doanh v?n t?i b?ng xe o to t?i) khong l?p thi?t b? giam sat hanh trinh?
+C1: ���·� 10�� ��
+V1: Ph?t hanh chinh 100.000 Won
+C2: ��Ģ�� 10�� ��
+V2: Ph?t ti?n vi ph?m giao thong 100.000 Won
+C3: ���·� 7�� ��
+V3: Ph?t hanh chinh 70.000 Won
+C4: ��Ģ�� 7�� ��
+V4: Ph?t ti?n vi ph?m giao thong 70.000 Won
+### 617
+B: ȭ���ڵ����� ���繰 �߶������ ���� �������� ���� ���� ���� ����?
+T: Gi?i thich nao la khong ��ung nh?t v? vi?c phong ng?a r?i hang hoa c?a xe t?i ch? hang?
+C1: ������ ���� ȭ���� �������̳� ȭ����ħ�븦 ����Ѵ�.
+V1: V?i nh?ng hang hoa d? l?n, s? d?ng gia c? ��?nh ho?c k? ke hang hoa.
+C2: �Ǽ���� ���� �����Ͽ��� ���� ���̾�, ���� ���� ����Ѵ�.
+V2: S? d?ng day chao, day th?ng khi ch? may xay d?ng.
+C3: ������ �����¿쿡 ������ ���� ���� ����� ���� ����Ѵ�.
+V3: Khi co kho?ng tr?ng ? phia tr??c, sau, ben ph?i, ben trai thung ch?a hang, c?n s? d?ng thanh ch?n.
+C4: ���繰 �߶���� ������ ��쿡 ��Ģ���� 5�� ���� ������ 10���̴�.
+V4: Tr??ng h?p vi ph?m lam r?i hang hoa ch?t tren xe b? ph?t ti?n 50.000 Won va tr? 10 ��i?m.
+### 618
+B: �������� �������� ��ϵ� ����� ȭ���ڵ��� �����ڰ� �ݵ�� ���߾�� �ϴ� ����?
+T: Ng??i lai xe t?i ch? hang hoa th??ng m?i ph?i c?n co ch?ng ch? nao ��??c ��?ng ki v?i m?c ��ich kinh doanh  v?n t?i?
+C1: ���������� �ڰ���
+V1: Ch?ng ch? k? thu?t b?o d??ng xe
+C2: ȭ��������� �ڰ���
+V2: Ch?ng ch? hanh ngh? lai xe t?i
+C3: �ýÿ����� �ڰ���
+V3: Ch?ng ch? lai xe taxi
+C4: ��1�� Ư������
+V4: B?ng lai xe chuyen d?ng h?ng 1
+### 619
+B: ������ ����ȭ���ڵ����� Ư���� ���� �����̴�. ���� �˸��� ����?
+T: D??i ��ay la n?i dung gi?i thich v? ��?c ��i?m c?a xe t?i co tr?ng t?i l?n. Cau ��ung nh?t la cau nao?
+C1: ȭ���� ������ ���� ��ȸ �ݰ�� �������� ũ�� ���� �� �ִ�.
+V1: Tuy vao ch?ng lo?i hang hoa ma ban kinh quay vong va ��? an toan co s? bi?n ��?i l?n.
+C2: �� �ణ�Ÿ� ������ �������� ������ ����.
+V2: ��? an toan th?p vi kho?ng cach gi?a cac tr?c dai.
+C3: �¿����� ���� �ڵ麹������ ��Ȱ�ϴ�.
+V3: Kh? n?ng tr? lai c?a tay lai troi ch?y h?n so v?i xe o to con.
+C4: ��ü�� ���Դ� �����쳪 ũ��� �¿������� ũ��.
+V4: Tr?ng l??ng c?a xe nh? nh?ng kich c? thi l?n h?n xe o to con.
+### 620
+B: ���� �� ��ۻ���� �ڵ��� �� ���α������ �����ϰ踦 ��ġ�Ͽ��� �ϴ� �ڵ��� �������� �ٶ����� ����������?
+T: Hanh vi nao la ��ung ��?n nh?t c?a ng??i lai xe o to ph?i l?p ��?t may ghi hanh trinh theo Lu?t Giao thong  ��??ng b? ��?i v?i cac xe dung cho m?c ��ich kinh doanh v?n t?i, v.v?
+C1: �����ϰ谡 ��ġ�Ǿ� ���� �ƴ��� �ڵ��� ��������
+V1: Hanh vi lai xe khong co l?p ��?t may ghi hanh trinh
+C2: ���� ������ ����� �� ���� �����ϰ谡 ��ġ�� �ڵ��� ��������
+V2: Hanh vi lai xe co l?p ��?t may ghi hanh trinh nh?ng khong s? d?ng ��??c do b? h?ng
+C3: �����ϰ踦 ������ ������� ������� �ƴ��ϰ� �ڵ����� �����ϴ� ����
+V3: Hanh vi lai xe co l?p ��?t may ghi hanh trinh nh?ng khong ��??c s? d?ng ��ung v?i m?c ��ich v?n co
+C4: �ֱ����� �����ϰ� ������ ���� ���� ������ �����ϴ� ����
+V4: Hanh vi ��? phong tr??c h?ng hoc b?ng vi?c qu?n ly may ghi hanh trinh ��?nh ki
+### 621
+B: ��1�� ���������� ��濡 �ʿ��� û�±�����?(��, ��û�� ����� ����)
+T: Tieu chu?n nao v? thinh l?c la c?n thi?t ��? ��??c c?p gi?y phep lai xe c? l?n h?ng 1 (tuy nhien, ngo?i tr?  nh?ng ng??i s? d?ng may tr? thinh)?
+C1: 25���ú�
+V1: 25 decibel (dB)
+C2: 35���ú�
+V2: 35 decibel (dB)
+C3: 45���ú�
+V3: 45 decibel (dB)
+C4: 55���ú�
+V4: 55 decibel (dB)
+### 622
+B: ���� �� ����ȭ���ڵ����� Ư¡�� ���� �������� ���� �˸��� ����?
+T: Gi?i thich ��ung nh?t v? ��?c tr?ng c?a xe t?i ch? hang hoa tr?ng t?i l?n la gi?
+C1: ����ȭ���� ��ġ�� ���̿� ���� ������ �߽���ġ�� �޶�����.
+V1: V? tri tr?ng tam c?a xe thay ��?i tuy theo ��? cao hay v? tri c?a hang hoa chuyen ch?.
+C2: �߽��� ��?��(߾��)�� �������δ� ���� ��ȭ�� ����.
+V2: Tr?ng tam g?n nh? khong co s? bi?n ��?i theo ph??ng h??ng tren, d??i.
+C3: �߽ɳ��̴� ����Ư���� ���� ������ ��ġ�� �ʴ´�.
+V3: ��? cao tr?ng tam g?n nh? khong gay ?nh h??ng t?i ��?c tinh rung.
+C4: ����Ư���� ���� ����ȭ���ڵ����� �������� �¿����� ���� �ſ� �۴�.
+V4: Do khong co ��?c tinh rung nen c?m giac rung c?a xe t?i ch? hang hoa tr?ng t?i l?n r?t it so v?i xe o to con.
+### 623
+B: ���� �� ����ȭ���ڵ����� ����Ư���� ���� �������� ���� �˸��� ����?
+T: Gi?i thich nao la ��ung nh?t v? ��?c tinh v?n chuy?n c?a xe t?i ch? hang hoa?
+C1: ���ſ� �߷��� �� ��� ������ �������� ����.
+V1: ��? an toan th?p do tr?ng l??ng n?ng va cac tr?c dai.
+C2: ������� �ÿ� ��ü�� ��鸮�� ������ ���������� ������������ �������� ��찡 �ִ�.
+V2: Than xe rung khi ��i v?i t?c ��? cao nen x?y ra tr??ng h?p m?t ?n ��?nh t?m th?i khi ch?y tren ��??ng th?ng.
+C3: �����븦 ������ �� �����¿����ʹ� �޸� �ڵ麹���� ��Ȱ�ϴ�.
+V3: Khi v?n hanh tay lai, kh? n?ng tr? lai c?a tay lai troi ch?y h?n so v?i xe o to con.
+C4: �������� ��Ƽ� �̻���� �� ������ �þ߰� ���� ��������.
+V4: Do ch? ng?i c?a ng??i lai cao nen khi th?i ti?t co b?t th??ng, t?m nhin s? tr? nen t?t h?n.
+### 624
+B: ���� �� ���� ȭ���ڵ����� �簢����� ���� �� ���ߺ�ȭ�� ���� �������� ���� �˸��� ����?
+T: Gi?i thich nao ��ung nh?t v? s? thay ��?i c?a t?i tr?ng xe t?i ch? hang hoa c? l?n khi phanh l?i ? nh?ng n?i  khu?t t?m nhin c?a xe?
+C1: �簢����� ������ �ִ� ���� ���� ���� ���� ���̰� ����.
+V1: Xe co mui phia tr??c va xe khong co mui phia tr??c khong co khac bi?t gi l?n l?m v? ��i?m mu.
+C2: ��, �޹����� �������� ������ ��ȭ�ʹ� �������.
+V2: L?c phanh c?a banh xe tr??c va banh xe sau khong co lien quan gi ��?n thay ��?i c?a t?i tr?ng.
+C3: ������ �������ٴ� ���� �簢���밡 �ξ� �д�.
+V3: ��i?m mu ben trai r?ng h?n nhi?u so v?i ��i?m mu ben ph?i c?a gh? lai.
+C4: ȭ�� ������ ��ȭ�� ���� �����¿� ���̰� �߻��Ѵ�.
+V4: Phat sinh chenh l?ch l?c phanh tu? thu?c vao thay ��?i t?i tr?ng hang hoa.
+### 625
+B: ���α�����ɻ� ȭ���ڵ����� ����뷮 ���������� ������ ������?
+T: Theo Phap l?nh Giao thong ��??ng b?, xe t?i nao vi ph?m tieu chu?n an toan v? ch?t t?i hang hoa?
+C1: �ڵ��� ������ 10���� 2�� ���� ����
+V1: Chi?u dai c?a hang hoa dai h?n 2/10 chi?u dai c?a xe o to
+C2: �Ļ������ ������ Ȯ���� �� �ִ� ������ �ʺ�
+V2: Chi?u r?ng c?a hang hoa n?m trong ph?m vi co th? ki?m tra phia sau b?ng g??ng chi?u h?u
+C3: �������κ��� 3.9���� ����
+V3: Chi?u cao hang hoa la 3,9m tinh t? m?t ��?t
+C4: ���� �� ���ɿ� ������ �����߷��� 105�ۼ�Ʈ
+V4: Kh?i l??ng hang hoa b?ng 105% tr?ng t?i c?a xe theo k?t c?u va tinh n?ng
+### 626
+B: ���� ��1�� Ư�����㿡 ���� ���� �� ���� ����?
+T: N?i dung nao sau ��ay mo t? ��ung v? gi?y phep lai xe chuyen d?ng h?ng 1?
+C1: ���������� ����� �����߷� 3.5���� ������ Ư���ڵ����� ������ �� �ִ�.
+V1: V?i Gi?y phep la?i xe keo c? nh?, co th? ��i?u khi?n xe chuyen d?ng ki?u xe keo co t?i tr?ng 3,5 t?n.
+C2: ���������� ����� �����߷� 4���� ȭ���ڵ����� ������ �� �ִ�.
+V2: V?i Gi?y phep la?i xe keo c? nh?, co th? ��i?u khi?n xe t?i ch? hang co t?i tr?ng 4 t?n.
+C3: ������ ����� �������� 12���� �����ڵ����� ������ �� �ִ�.
+V3: V?i Gi?y phep lai xe c?u h?, co th? ��i?u khi?n xe kha?ch 12 ch?.
+C4: ���� ������ ����� �����߷� 10���� ȭ���ڵ����� ������ �� �ִ�.
+V4: V?i Gi?y phep lai xe keo c? l?n, co th? ��i?u khi?n xe t?i co? t?i tr?ng 10 t?n.
+### 627
+B: �������� ����Ư���� ���� �������� �߸��� ����?
+T: Cau nao gi?i thich khong ��ung v? ��?c ��i?m lai xe c? l?n?
+C1: ���ſ� �߷��� �� ��� ������ �������� ������, �ڵ��� ������ �� �������� �޸� �ڵ� ������ ���ϴ�.
+V1: ��? ?n ��?nh cao nh? tr?ng l??ng l?n va chi?u dai tr?c l?n, nh?ng khac v?i xe c? nh? ? ch? khi thao tac tay lai thi kho  b? lai v? v? tri c?.
+C2: �������� ���� �������� ��� ���� �ٷ� �ո� ���� �����ϰ� �ǹǷ� ���� �������� ��������.
+V2: Gh? lai cao h?n so v?i xe c? nh?, ch? nhin th?ng phia tr??c khi lai xe nen ��? ?n ��?nh cao khi ��i th?ng.
+C3: ȭ���� ������ ���� ��ġ�� ���� ��ȸ Ư���� ũ�� ��ȭ�Ѵ�.
+V3: ��?c tinh quay vong s? thay ��?i l?n tuy thu?c vao lo?i hang hoa va v? tri hang hoa ch?t len xe.
+C4: ȭ���� ������ ���� ��ġ�� ���� �������� ũ�� ��ȭ�Ѵ�.
+V4: ��? ?n ��?nh thay ��?i l?n tuy thu?c vao lo?i hang hoa va v? tri hang hoa ch?t len xe.
+### 628
+B: �ڵ��� �� �ڵ�����ǰ�� ���ɰ� ���ؿ� ���� ��Ģ�� ���� �ڵ���(�����ڵ��� ����)�� ���̴� (  )���͸� �ʰ��Ͽ�����  �ƴ� �ȴ�. (   )�� �������� �´� ����?
+T: Chi?u dai c?a o to (ngo?i tr? xe lien k?t) khong ��??c qua (         )m theo quy t?c v? tieu chu?n va tinh  n?ng c?a xe o to va ph? tung xe o to. N?i dung nao ��ung trong (      )?
+C1: 10
+V1: 10
+C2: 11
+V2: 11
+C3: 12
+V3: 12
+C4: 13
+V4: 13
+### 629
+B: ���������ڵ��� ���� �� �������� �°��� ���ߴ� ������ ��ġ�Ͽ��� ��� �������� ó����?
+T: Tr??ng h?p ng??i lai xe khach c? l?n ��? m?c cho khach nh?y mua trong xe, hinh ph?t ��?i v?i ng??i lai xe la gi?
+C1: ��Ģ�� 9�� ��, ���� 30��
+V1: N?p ti?n ph?t 90.000 Won va ch?u 30 ��i?m ph?t
+C2: ��Ģ�� 10�� ��, ���� 40��
+V2: N?p ti?n ph?t 100.000 Won va ch?u 40 ��i?m ph?t
+C3: ��Ģ�� 11�� ��, ���� 50��
+V3: N?p ti?n ph?t 110.000 Won va ch?u 50 ��i?m ph?t
+C4: ��Ģ�� 12�� ��, ���� 60��
+V4: N?p ti?n ph?t 120.000 Won va ch?u 60 ��i?m ph?t
+### 630
+B: 4.5�� ȭ���ڵ����� ȭ�� �����Կ� ����� �¿�� ������ ��� ��Ģ�ݾ���?
+T: M?c x? ph?t vi ph?m la bao nhieu trong tr??ng h?p ch? ng??i tren thung xe t?i 4,5 t?n?
+C1: 5�� ��
+V1: 50.000 Won
+C2: 4�� ��
+V2: 40.000 Won
+C3: 3�� ��
+V3: 30.000 Won
+C4: 2�� ��
+V4: 20.000 Won
+### 631
+B: ��ӹ����� �㿡 ���θ� ������ �� �Ѿ� �� ��ȭ�� ���� �������� �´� ����?
+T: Gi?i thich nao ��ung v? cac lo?i ��en ph?i b?t len khi ��i tren ��??ng cao t?c vao ban ��em?
+C1: ������, ������, �̵�, ��ȣ��, �ǳ������
+V1: ��en pha, ��en hong, ��en h?u, ��en bi?n s?, ��en ben trong xe
+C2: ������, �̵�
+V2: ��en pha, ��en h?u
+C3: �̵�, ������, ��ȣ��
+V3: ��en h?u, ��en hong, ��en bi?n s?
+C4: �̵�, ������
+V4: ��en h?u, ��en hong, ��en bi?n s?
+### 632
+B: ���α������ ���� ���� �Ǵ� �������� ���� �������� Ʋ�� ����?
+T: Gi?i thich nao khong ��ung v? cach ��i va ch? hang tren xe theo Lu?t Giao thong ��??ng b??
+C1: �����ڴ� �����ο��� ���Ͽ� ����ɷ����� ���ϴ� ������� ���������� �Ѿ ������Ų ���·� �����ؼ��� �ƴ� �ȴ�.
+V1: Ng??i ��i?u khi?n xe khong ��??c phep lai xe trong tinh tr?ng s? ng??i tren xe v??t qua m?c tieu chu?n an toan khi ��i?u khi?n xe ��??c quy ��?nh b?i Phap l?nh T?ng th?ng.
+C2: �����ڴ� ���� �� Ÿ�� �ִ� ����� �������� �ƴ��ϵ��� ���� ��Ȯ�� ���ݴ� �� �ʿ��� ��ġ�� �Ͽ��� �Ѵ�.
+V2: Ng??i ��i?u khi?n xe ph?i th?c hi?n cac bi?n phap c?n thi?t nh? ki?m tra c?a ��ong m? ch?c ch?n ��? trong luc lai xe nh?ng ng??i tren xe khong b? r?i kh?i xe.
+C3: �����ڴ� ���� �� ���� ȭ���� �������� �ƴ��ϵ��� ������ ����ų� ���� �� Ȯ���ϰ� �����ؾ� �Ѵ�.
+V3: Ng??i ��i?u khi?n xe ph?i c? ��?nh ch?c ch?n nh? che ph? ho?c bu?c, c?t ��? hang hoa tren xe trong luc lai xe khong  b? r?i kh?i xe.
+C4: �����ڴ� �����Ƴ� ������ ������ ���Ͽ� �Ȱ� �����Ͽ��� �Ѵ�.
+V4: Ng??i ��i?u khi?n xe ph?i v?a lai xe v?a om ��? ��?m b?o an toan cho tr? va thu c?ng.
+### 633
+B: ȭ���ڵ����� ����ȭ�� ��Ż ������ ���� �������� �ùٸ��� ���� ����?
+T: Gi?i thich nao la khong ��ung v? cach phong tranh hang hoa ch?t tren xe ch? hang b? r?i?
+C1: ȭ���ڵ����� ����� �������� ��ġ�Ͽ� ����Ѵ�.
+V1: C?n l?p thung xe d?ng ��ong kin cho xe ch? hang.
+C2: ȿ������ ����� ���� �����߷��� 120�ۼ�Ʈ �̳��� �����Ѵ�.
+V2: ��? ��?m b?o hi?u su?t v?n chuy?n hang, nen ch?t hang t?i ��a b?ng 120% tr?ng l??ng xe.
+C3: ȭ���� �����ϴ� ��� ������, ȸ�� �� ������ ���࿡ ���� ���� ȭ���� �������ų� ������ �ʵ��� ������ ������ �ؾ� �Ѵ�.
+V3: Tr??ng h?p co ch? hang tren xe, ph?i che ph? ho?c ��ong goi sao cho hang hoa khong b? r?i ho?c b? th?i bay khi  ��i?u khi?n xe nh? phanh g?p, r?, v.v.
+C4: 7�� �̻��� ������ �����ϴ� ��쿡�� ����������� 2�� �̻� �����ϵ� �ٴ� �������� 2�� �̻� ����Ͽ� �����ؾ� �Ѵ�.
+V4: Tr??ng h?p ch? cac cu?n day t? 7 t?n tr? len, ph?i c? ��?nh b?ng t?i thi?u 2 pa l?ng xich (lever block), m?i xich c?  ��?nh t?i thi?u 2 ��i?m.
+### 634
+B: ��1�� ��������� ��1�� ��������� ���������� �����ϴ� ȭ���ڵ����� �����߷� ������?
+T: Tieu chu?n nao v? tr?ng l??ng ch?t hang hoa ��? phan bi?t ph?m vi ��i?u khi?n xe gi?a b?ng lai xe tr?ng t?i  l?n h?ng 1 va b?ng lai xe ph? thong h?ng 1?
+C1: 12�� �̸�
+V1: D??i 12 t?n
+C2: 10�� �̸�
+V2: D??i 10 t?n
+C3: 4�� ����
+V3: T? 4 t?n tr? xu?ng
+C4: 2�� ����
+V4: T? 2 t?n tr? xu?ng
+### 635
+B: ��1�� ������� �����ڰ� ���߷� 750kg �ʰ� 3�� ������ �ǰ����ڵ����� �����ϱ� ���� �߰��� �����Ͽ��� �ϴ� �����?
+T: Ng??i s? h?u gi?y phep lai xe ph? thong h?ng 1 n?u mu?n keo xe co t?ng tr?ng l??ng t? 750kg ��?n t?i ��a  la 3 t?n thi ph?i s? h?u them gi?y phep lai xe nao sau ��ay?
+C1: ��1�� ��������������
+V1: Gi?y phep lai xe keo c? nh? h?ng 1
+C2: ��2�� �������
+V2: Gi?y phep lai xe ph? thong h?ng 2
+C3: ��1�� ��������
+V3: Gi?y phep lai xe c? l?n h?ng 1
+C4: ��1�� ����������
+V4: Gi?y phep lai xe c?u h? h?ng 1
+### 636
+B: ���� �� ���߷� 750ų�α׷� ������ �ǰ����ڵ����� ������ �� ���� ���������?
+T: Gi?y phep lai xe nao d??i ��ay khong th? lai xe ��?u keo ��? keo r? mooc co t?ng tr?ng l??ng t? 750kg tr?  xu?ng?
+C1: ��1�� �������
+V1: B?ng lai ph? thong h?ng 1
+C2: ��1�� ���뿬������
+V2: B?ng t?p lai ph? thong h?ng 1
+C3: ��1�� ��������
+V3: B?ng lai xe tr?ng t?i l?n h?ng 1
+C4: ��2�� �������
+V4: B?ng lai ph? thong h?ng 2
+### 637
+B: ��ӵ��ΰ� �ƴ� ������ ���߷��� 1õ5��ų�α׷��� �ڵ����� ���߷� 5õų�α׷��� �����ڵ����� ������ �� �ְ�ӵ���?
+T: T?c ��? t?i ��a la bao nhieu khi keo m?t chi?c xe co t?ng tr?ng l??ng 1.500 kg b?ng m?t chi?c xe kha?ch co?  t?ng tr?ng l??ng 5.000 kg tren ��o?n ��??ng khong ph?i ��??ng cao t?c?
+C1: �Ž� 50ų�ι���
+V1: 50 km/gi?
+C2: �Ž� 40ų�ι���
+V2: 40 km/gi?
+C3: �Ž� 30ų�ι���
+V3: 30 km/gi?
+C4: �Ž� 20ų�ι���
+V4: 20 km/gi?
+### 638
+B: �ڵ����� �����ϴ� ��쿡 ���� �������� �ٸ��� ���� ����?
+T: Gi?i thich nao khong ��ung v? keo xe o to?
+C1: 3���� �ʰ��ϴ� �ڵ����� �����ϱ� ���ؼ��� �����ϴ� �ڵ����� ������ �� �ִ� ����� ��1�� �������������㸦 ������  �־�� �Ѵ�.
+V1: ��? keo xe o to co tr?ng l??ng h?n 3 t?n, ph?i co b?ng lai xe ��??c phep ��i?u khi?n xe keo va b?ng lai xe keo c? l?n  lo?i 1.
+C2: �Ϲݵ��ο��� ���߷� 2õų�α׷� �̸��� �ڵ����� ���߷��� ���� 3�� �̻��� �ڵ����� �����ϴ� ��쿡�� �Ž� 30ų�� ���� �̳��� ������ �� �ִ�.
+V2: Khi dung xe o to keo ��? keo xe khac tren ��??ng cao t?c co h?n 2 lan ��??ng m?t chi?u, ph?i ch?y v?i t?c ��? gi?m  1/2 so v?i t?c ��? t?i ��a.
+C3: �Ϲݵ��ο��� �������� �ƴ� �������� �ٸ� ������ ������ ������ ������ ���Ѽӵ��� ������ �� �ִ�.
+V3: Tren ��??ng thong th??ng, trong tr??ng h?p xe co t?ng tr?ng l??ng d??i 2.000 kg b? keo b?i xe co t?ng tr?ng l??ng g?p it nh?t 3 l?n xe ��o, thi t?c ��? l?u thong ��??c phep la khong qua 30 km/h.
+C4: �����ڵ����� �ƴ� �Ϲ��ڵ����� �ٸ� ������ �����Ϸ��� ��쿡�� �ش� ������ ������ �� �ִ� ���㸦 ������ �־�� �Ѵ�.
+V4: Khi dung xe o to thong th??ng khong ph?i la xe keo ��? keo xe khac, ph?i co b?ng lai ��??c phep ��i?u khi?n lo?i xe ��o.
+### 639
+B: ���� �� Ư���� �۾��� �����ϱ� ���� ���۵� ���߷� 3.5�� ������ Ư���ڵ���(���������� ����)�� ������ �� �ִ� �����?
+T: Gi?y phep lai xe nao co th? lai xe chuyen d?ng co t?ng tr?ng l??ng s?n xu?t t?i ��a 3,5 t?n (ngo?i tr? xe c?u  h?) ��? th?c hi?n cac thao tac chuyen d?ng?
+C1: ��1�� ���뿬������
+V1: B?ng t?p lai ph? thong h?ng 1
+C2: ��2�� ���뿬������
+V2: B?ng t?p lai ph? thong h?ng 2
+C3: ��2�� �������
+V3: B?ng lai ph? thong h?ng 2
+C4: ��1�� ��������
+V4: B?ng t?p lai xe tr?ng t?i nh? h?ng 1
+### 640
+B: ���� �� ���α������ ���������� �����ڰ� ���Ѿ��� �������� �´� ����?
+T: H?ng m?c nao ��ung v?ng??i lai xe ��?u keo h?ng nh? ph?i tuan th? theo Lu?t Giao thong ��??ng b??
+C1: ���������� �����ڴ� ����� ������ �����ϹǷ� �����츦 �������� �ʾƵ� �����ϴ�.
+V1: Ng??i lai xe ��?u keo h?ng nh? khong c?n cai day an toan khi th?c hi?n cong v? kh?n c?p.
+C2: ���������� �����ڴ� ���� �� �ϻ� ������ ���� �޴��� ����� �����ϴ�.
+V2: Ng??i lai xe ��?u keo h?ng nh? ��??c s? d?ng ��i?n tho?i di ��?ng cho cong vi?c hang ngay khi ��ang lai xe.
+C3: ���������� �����ڴ� ���� �� ��1�� Ư��(����������)���㸦 ����ϰ� �����Ͽ��� �Ѵ�.
+V3: Ng??i lai xe ��?u keo h?ng nh? c?n co gi?y phep lai xe chuyen d?ng h?ng 1 (xe ��?u keo h?ng nh?) va luon ph?i  mang theo ng??i.
+C4: ���������� �����ڴ� ������� �⵿ �ÿ��� ������ �ӵ��� �ʰ��Ͽ� ������ �� �ִ�.
+V4: Ng??i lai xe ��?u keo h?ng nh? co th? v??t t?c ��? gi?i h?n khi ��ang t?i hi?n tr??ng tai n?n.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data=Get-Content -Raw -Encoding UTF8 '"'translations/audit/queue/215_choices_vn.json'|ConvertFrom-Json; "'$cp=[Text.Encoding]::GetEncoding(949);$u=[Text.Encoding]::UTF8;function F($s){$u.GetString($cp.GetBytes([string]$s))};foreach($x in $data|Where-Object {$_.n -ge 620 -and $_.n -le 623}){[pscustomobject]@{n=$x.n;ko_b=F $x.ko_b;tr_b=F $x.tr_b;ko_c=@($x.ko_c|%{F $_});tr_c=@($x.tr_c|%{F $_});a=$x.a;check=$x.check;detail=$x.detail}|ConvertTo-Json -Depth 5}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 669ms:
+{
+    "n":  620,
+    "ko_b":  "���� �� ��ۻ���� �ڵ��� �� ���α������ �����ϰ踦 ��ġ�Ͽ��� �ϴ� �ڵ��� �������� �ٶ����� ����������?",
+    "tr_b":  "Hanh vi nao la ��ung ��?n nh?t c?a ng??i lai xe o to ph?i l?p ��?t may ghi hanh trinh theo Lu?t Giao thong  ��??ng b? ��?i v?i cac xe dung cho m?c ��ich kinh doanh v?n t?i, v.v?",
+    "ko_c":  [
+                 "�����ϰ谡 ��ġ�Ǿ� ���� �ƴ��� �ڵ��� ��������",
+                 "���� ������ ����� �� ���� �����ϰ谡 ��ġ�� �ڵ��� ��������",
+                 "�����ϰ踦 ������ ������� ������� �ƴ��ϰ� �ڵ����� �����ϴ� ����",
+                 "�ֱ����� �����ϰ� ������ ���� ���� ������ �����ϴ� ����"
+             ],
+    "tr_c":  [
+                 "Hanh vi lai xe khong co l?p ��?t may ghi hanh trinh",
+                 "Hanh vi lai xe co l?p ��?t may ghi hanh trinh nh?ng khong s? d?ng ��??c do b? h?ng",
+                 "Hanh vi lai xe co l?p ��?t may ghi hanh trinh nh?ng khong ��??c s? d?ng ��ung v?i m?c ��ich v?n co",
+                 "Hanh vi ��? phong tr??c h?ng hoc b?ng vi?c qu?n ly may ghi hanh trinh ��?nh ki"
+             ],
+    "a":  "4",
+    "check":  null,
+    "detail":  null
+}
+{
+    "n":  621,
+    "ko_b":  "��1�� ���������� ��濡 �ʿ��� û�±�����?(��, ��û�� ����� ����)",
+    "tr_b":  "Tieu chu?n nao v? thinh l?c la c?n thi?t ��? ��??c c?p gi?y phep lai xe c? l?n h?ng 1 (tuy nhien, ngo?i tr?  nh?ng ng??i s? d?ng may tr? thinh)?",
+    "ko_c":  [
+                 "25���ú�",
+                 "35���ú�",
+                 "45���ú�",
+                 "55���ú�"
+             ],
+    "tr_c":  [
+                 "25 decibel (dB)",
+                 "35 decibel (dB)",
+                 "45 decibel (dB)",
+                 "55 decibel (dB)"
+             ],
+    "a":  "4",
+    "check":  null,
+    "detail":  null
+}
+{
+    "n":  622,
+    "ko_b":  "���� �� ����ȭ���ڵ����� Ư¡�� ���� �������� ���� �˸��� ����?",
+    "tr_b":  "Gi?i thich ��ung nh?t v? ��?c tr?ng c?a xe t?i ch? hang hoa tr?ng t?i l?n la gi?",
+    "ko_c":  [
+                 "����ȭ���� ��ġ�� ���̿� ���� ������ �߽���ġ�� �޶�����.",
+                 "�߽��� ��?��(߾��)�� �������δ� ���� ��ȭ�� ����.",
+                 "�߽ɳ��̴� ����Ư���� ���� ������ ��ġ�� �ʴ´�.",
+                 "����Ư���� ���� ����ȭ���ڵ����� �������� �¿����� ���� �ſ� �۴�."
+             ],
+    "tr_c":  [
+                 "V? tri tr?ng tam c?a xe thay ��?i tuy theo ��? cao hay v? tri c?a hang hoa chuyen ch?.",
+                 "Tr?ng tam g?n nh? khong co s? bi?n ��?i theo ph??ng h??ng tren, d??i.",
+                 "��? cao tr?ng tam g?n nh? khong gay ?nh h??ng t?i ��?c tinh rung.",
+                 "Do khong co ��?c tinh rung nen c?m giac rung c?a xe t?i ch? hang hoa tr?ng t?i l?n r?t it so v?i xe o to con."
+             ],
+    "a":  "1",
+    "check":  null,
+    "detail":  null
+}
+{
+    "n":  623,
+    "ko_b":  "���� �� ����ȭ���ڵ����� ����Ư���� ���� �������� ���� �˸��� ����?",
+    "tr_b":  "Gi?i thich nao la ��ung nh?t v? ��?c tinh v?n chuy?n c?a xe t?i ch? hang hoa?",
+    "ko_c":  [
+                 "���ſ� �߷��� �� ��� ������ �������� ����.",
+                 "������� �ÿ� ��ü�� ��鸮�� ������ ���������� ������������ �������� ��찡 �ִ�.",
+                 "�����븦 ������ �� �����¿����ʹ� �޸� �ڵ麹���� ��Ȱ�ϴ�.",
+                 "�������� ��Ƽ� �̻���� �� ������ �þ߰� ���� ��������."
+             ],
+    "tr_c":  [
+                 "��? an toan th?p do tr?ng l??ng n?ng va cac tr?c dai.",
+                 "Than xe rung khi ��i v?i t?c ��? cao nen x?y ra tr??ng h?p m?t ?n ��?nh t?m th?i khi ch?y tren ��??ng th?ng.",
+                 "Khi v?n hanh tay lai, kh? n?ng tr? lai c?a tay lai troi ch?y h?n so v?i xe o to con.",
+                 "Do ch? ng?i c?a ng??i lai cao nen khi th?i ti?t co b?t th??ng, t?m nhin s? tr? nen t?t h?n."
+             ],
+    "a":  "2",
+    "check":  null,
+    "detail":  null
+}
+
+2026-10-10T13:38:29.983692Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+codex
+[
+  {
+    "n": 625,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "원문은 적재물 길이가 자동차 길이에 그 길이의 20%를 더한 한도를 초과하는 경우인데, 번역은 적재물이 자동차 길이의 20%보다 긴 경우로 오역했다.",
+    "suggestion": "Chiều dài của hàng hóa vượt quá chiều dài của xe cộng thêm 2/10 chiều dài của xe."
+  },
+  {
+    "n": 631,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "원문은 미등과 차폭등만 열거하지만 번역에는 번호등이 추가되어 3번 선택지와 사실상 같아졌다.",
+    "suggestion": "Đèn hậu, đèn báo chiều rộng."
+  },
+  {
+    "n": 633,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "원문의 기준은 차량 자체 중량이 아니라 적재중량의 120% 이내인데, 번역은 차량 중량의 120%로 바꾸었다.",
+    "suggestion": "Để vận chuyển hiệu quả, hàng hóa được xếp trong phạm vi 120% tải trọng cho phép."
+  },
+  {
+    "n": 635,
+    "field": "b",
+    "severity": "minor",
+    "issue": "원문은 총중량이 750kg을 초과하는 피견인자동차인데, 번역의 'từ 750kg'은 750kg 자체도 포함한다.",
+    "suggestion": "Người có giấy phép lái xe hạng 1 phổ thông muốn kéo rơ moóc có tổng trọng lượng trên 750 kg đến tối đa 3 tấn thì phải có thêm giấy phép lái xe nào sau đây?"
+  },
+  {
+    "n": 638,
+    "field": "c[2]",
+    "severity": "critical",
+    "issue": "원문의 일반도로 견인 조건과 시속 30km 제한이 사라지고, 고속도로·편도 2차로·최고속도의 절반이라는 전혀 다른 내용으로 번역되었다.",
+    "suggestion": "Trên đường thông thường, khi xe có tổng trọng lượng dưới 2.000 kg được kéo bằng xe có tổng trọng lượng ít nhất gấp 3 lần, có thể chạy với tốc độ không quá 30 km/h."
+  },
+  {
+    "n": 638,
+    "field": "c[3]",
+    "severity": "critical",
+    "issue": "원문은 견인차가 아닌 차량으로 견인할 때 도로의 제한속도로 진행할 수 있다는 내용인데, 번역에는 2번 선택지의 중량 및 시속 30km 조건이 잘못 들어갔다.",
+    "suggestion": "Trên đường thông thường, khi dùng xe không phải là xe chuyên dụng kéo để kéo xe khác, có thể chạy theo tốc độ giới hạn của đường."
+  }
+]
+tokens used
+45,243
+[
+  {
+    "n": 625,
+    "field": "c[1]",
+    "severity": "major",
+    "issue": "원문은 적재물 길이가 자동차 길이에 그 길이의 20%를 더한 한도를 초과하는 경우인데, 번역은 적재물이 자동차 길이의 20%보다 긴 경우로 오역했다.",
+    "suggestion": "Chiều dài của hàng hóa vượt quá chiều dài của xe cộng thêm 2/10 chiều dài của xe."
+  },
+  {
+    "n": 631,
+    "field": "c[4]",
+    "severity": "major",
+    "issue": "원문은 미등과 차폭등만 열거하지만 번역에는 번호등이 추가되어 3번 선택지와 사실상 같아졌다.",
+    "suggestion": "Đèn hậu, đèn báo chiều rộng."
+  },
+  {
+    "n": 633,
+    "field": "c[2]",
+    "severity": "major",
+    "issue": "원문의 기준은 차량 자체 중량이 아니라 적재중량의 120% 이내인데, 번역은 차량 중량의 120%로 바꾸었다.",
+    "suggestion": "Để vận chuyển hiệu quả, hàng hóa được xếp trong phạm vi 120% tải trọng cho phép."
+  },
+  {
+    "n": 635,
+    "field": "b",
+    "severity": "minor",
+    "issue": "원문은 총중량이 750kg을 초과하는 피견인자동차인데, 번역의 'từ 750kg'은 750kg 자체도 포함한다.",
+    "suggestion": "Người có giấy phép lái xe hạng 1 phổ thông muốn kéo rơ moóc có tổng trọng lượng trên 750 kg đến tối đa 3 tấn thì phải có thêm giấy phép lái xe nào sau đây?"
+  },
+  {
+    "n": 638,
+    "field": "c[2]",
+    "severity": "critical",
+    "issue": "원문의 일반도로 견인 조건과 시속 30km 제한이 사라지고, 고속도로·편도 2차로·최고속도의 절반이라는 전혀 다른 내용으로 번역되었다.",
+    "suggestion": "Trên đường thông thường, khi xe có tổng trọng lượng dưới 2.000 kg được kéo bằng xe có tổng trọng lượng ít nhất gấp 3 lần, có thể chạy với tốc độ không quá 30 km/h."
+  },
+  {
+    "n": 638,
+    "field": "c[3]",
+    "severity": "critical",
+    "issue": "원문은 견인차가 아닌 차량으로 견인할 때 도로의 제한속도로 진행할 수 있다는 내용인데, 번역에는 2번 선택지의 중량 및 시속 30km 조건이 잘못 들어갔다.",
+    "suggestion": "Trên đường thông thường, khi dùng xe không phải là xe chuyên dụng kéo để kéo xe khác, có thể chạy theo tốc độ giới hạn của đường."
+  }
+]

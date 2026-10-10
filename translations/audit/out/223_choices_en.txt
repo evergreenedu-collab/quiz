@@ -1,0 +1,745 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1261b-fb33-7eb3-8d20-e523558a9e6f
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/223_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/223_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 527ms:
+[
+ {
+  "n": 921,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?ㅼ튂??援먯감濡쒖쓽 ?ㅻ챸 諛??듯뻾諛⑸쾿?쇰줈 ?щ컮瑜?寃껋??",
+  "ko_c": [
+   "以묒븰援먰넻?ъ쓽 媛?μ옄由ъ뿉???붾Ъ李???Truck Apron)???ㅼ튂?????녿떎.",
+   "援먯감濡쒖뿉 吏꾩엯 諛?吏꾩텧 ?쒖뿉??諛섎뱶??諛⑺뼢吏?쒕벑???묐룞?댁빞 ?쒕떎.",
+   "諛⑺뼢吏?쒕벑? 吏꾩엯 ?쒖뿉 ?묐룞?댁빞 ?섎ŉ 吏꾩텧 ?쒕뒗 ?묐룞?섏? ?딆븘???쒕떎.",
+   "援먯감濡??덉뿉 吏꾩엯?섎젮??李④? ?붿궡?쒕갑?μ쑝濡??뚯쟾?섎뒗 李⑤낫???곗꽑?대떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is true about using an  intersection with this road sign?",
+  "tr_c": [
+   "A truck apron cannot be situated on the sides of a traffic island.",
+   "You must always turn on the turn signal when entering  and leaving the intersection.",
+   "You must turn on the turn signal when entering the  intersection but not necessarily when leaving the  intersection.",
+   "A vehicle entering the intersection has the right of way to  vehicles already making a turn."
+  ]
+ },
+ {
+  "n": 922,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄곕룄濡쒖뿉??2? ?댁긽 ?먯쟾嫄곗쓽 ?섎????듯뻾???덉슜?쒕떎.",
+   "?먯쟾嫄곗쓽 ?〓떒?꾩엫??吏?쒗븳??",
+   "?먯쟾嫄곕쭔 ?듯뻾?섎룄濡?吏?쒗븳??",
+   "?먯쟾嫄?二쇱감?μ씠 ?덉쓬???뚮┛??"
+  ],
+  "a": "1",
+  "tr_b": "What does this safety sign signify?",
+  "tr_c": [
+   "Two or more bicycles can travel side by side on the  bicycle road",
+   "A crossing for bicycles",
+   "Bicycle thoroughfare only",
+   "A bicycle parking lot"
+  ]
+ },
+ {
+  "n": 923,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄고슒?⑤룄 ?쒖??대떎.",
+   "?먯쟾嫄곗슦?좊룄濡??쒖??대떎.",
+   "?먯쟾嫄?諛?蹂댄뻾??寃몄슜?꾨줈 ?쒖??대떎.",
+   "?먯쟾嫄?諛?蹂댄뻾???듯뻾援щ텇 ?쒖??대떎."
+  ],
+  "a": "4",
+  "tr_b": "What does this safety sign alert drivers to?",
+  "tr_c": [
+   "A crossing for bicycles",
+   "Bicycles have the right of way",
+   "A road for bicycles and pedestrians",
+   "Lane separation for pedestrians and bicycles"
+  ]
+ },
+ {
+  "n": 924,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섎?? ???쒖?媛 ?ㅼ튂???꾨줈?먯꽌 ?댁쟾?됰룞???????紐낆쑝濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "吏꾪뻾諛⑺뼢蹂??듯뻾援щ텇 ?쒖??대ŉ 洹쒖젣?쒖??대떎.",
+   "李④? 醫뚰쉶?꾬쉈吏곸쭊 ?먮뒗 ?고쉶?꾪븷 寃껋쓣 ?덈궡?섎뒗 二쇱쓽?쒖??대떎.",
+   "李④? 醫뚰쉶?꾩쓣 ?섎젮??寃쎌슦 援먯감濡쒖쓽 以묒떖 諛붽묑履쎌쓣 ?댁슜?쒕떎.",
+   "李④? 醫뚰쉶?꾩쓣 ?섎젮??寃쎌슦 誘몃━ ?꾨줈??以묒븰?좎쓣 ?곕씪 ?쒗뻾?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is true about this road sign?",
+  "tr_c": [
+   "It is a regulatory sign that informs the traffic direction and flow.",
+   "It is a sign that directs vehicles turning right or left or  traveling straight.",
+   "A vehicle that is trying to turn left must use the outermost lane.",
+   "A vehicle that is trying to turn left must switch to the  leftmost lane and slow down."
+  ]
+ },
+ {
+  "n": 925,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?? 愿?⑦븳 ?ㅻ챸?쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "媛쒖씤???대룞?μ튂 二쇱감湲덉? 援ъ뿭?꾩쓣 ?뚮━??二쇱쓽?쒖??대떎.",
+   "?대떦 ?쒖?媛 ?ㅼ튂??援ъ뿭?먮뒗 ?ㅽ넗諛붿씠???쇱떆?곸쑝濡?二쇱감?????덈떎.",
+   "?대떦 ?쒖?媛 ?ㅼ튂??援ъ뿭?먮뒗 ?뱀슜?먮룞李⑤룄 ?쇱떆?곸쑝濡?二쇱감?????덈떎.",
+   "媛쒖씤???대룞?μ튂 二쇱감?μ씠 ?덉쓬???뚮━??吏?쒗몴吏?대떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements regarding this  safety sign is correct?",
+  "tr_c": [
+   "It is a caution sign indicating a no-parking zone for  personal mobility devices.",
+   "Motorcycles are allowed to park here temporarily.",
+   "Cars are allowed to park here temporarily.",
+   "It is a caution sign indicating the location of a personal  mobility device parking area."
+  ]
+ },
+ {
+  "n": 926,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖? 以??꾨줈援먰넻踰뺣졊???곕Ⅸ 洹쒖젣?쒖???紐?媛쒖씤媛?",
+  "ko_c": [
+   "1媛?,
+   "2媛?,
+   "3媛?,
+   "4媛?
+  ],
+  "a": "3",
+  "tr_b": "How many regulatory signs under the Road Traffic  Act and its Enforcement Decree are there among  these road signs?",
+  "tr_c": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "n": 927,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??吏?쒗몴吏媛 ?ㅼ튂???꾨줈???듯뻾諛⑸쾿?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뱀닔?먮룞李⑤뒗 ???꾨줈瑜??듯뻾?????녿떎.",
+   "?붾Ъ?먮룞李⑤뒗 ???꾨줈瑜??듯뻾?????녿떎.",
+   "?대쪣?먮룞李⑤뒗 湲닿툒?먮룞李⑥씤 寃쎌슦留????꾨줈瑜??듯뻾?????덈떎.",
+   "?먮룞湲곗옣移섏옄?꾧굅??湲닿툒?먮룞李⑥씤 寃쎌슦留????꾨줈瑜??듯뻾?????덈떎."
+  ],
+  "a": "3",
+  "tr_b": "According to the Road Traffic Act and its  Enforcement Decree, which of the following is the  correct way of passing a road where this guide sign is  installed?",
+  "tr_c": [
+   "A special vehicle is not allowed on this road.",
+   "Trucks are not allowed on this road.",
+   "Only a two-wheeled vehicle with an emergency purpose  is allowed on this road.",
+   "Only a motorcycle with an emergency purpose is  allowed on this road."
+  ]
+ },
+ {
+  "n": 928,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖?媛 ?ㅼ튂???꾨줈瑜??듯뻾?????녿뒗 李⑤줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾧린?먯쟾嫄?,
+   "?꾨룞?대쪣?됲뻾李?,
+   "媛쒖씤???대룞?μ튂",
+   "?먮룞湲곗옣移섏옄?꾧굅(媛쒖씤???대룞?μ튂 ?쒖쇅)"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following vehicles cannot pass  through the road where this safety sign is installed?",
+  "tr_c": [
+   "Electric bicycle",
+   "Electric two-wheeled parallel vehicle",
+   "Personal mobility device",
+   "Motorcycle (excluding personal mobility devices)"
+  ]
+ },
+ {
+  "n": 929,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭 ?덉뿉???대┛???먮뒗 ?좎븘??蹂댄샇瑜?吏?쒗븳??",
+   "蹂댄뻾?먭? ?〓떒蹂대룄濡??듯뻾??寃껋쓣 吏?쒗븳??",
+   "蹂댄뻾???꾩슜?꾨줈?꾩쓣 吏?쒗븳??",
+   "?몄씤 蹂댄샇援ъ뿭 ?덉뿉???몄씤??蹂댄샇瑜?吏?쒗븳??"
+  ],
+  "a": "3",
+  "tr_b": "What does this safety sign signify?",
+  "tr_c": [
+   "Children must be accompanied by a guardian in a school zone.",
+   "Pedestrians must use a crosswalk to cross the road.",
+   "There is an exclusive road for pedestrians ahead.",
+   "Elderly persons must be protected in a silver zone."
+  ]
+ },
+ {
+  "n": 930,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "李④? 吏곸쭊 ??醫뚰쉶?꾪븷 寃껋쓣 吏?쒗븳??",
+   "李④? 醫뚰쉶????吏곸쭊??寃껋쓣 吏?쒗븳??",
+   "李④? 吏곸쭊 ?먮뒗 醫뚰쉶?꾪븷 寃껋쓣 吏?쒗븳??",
+   "醫뚰쉶?꾪븯??李⑤낫??吏곸쭊?섎뒗 李④? ?곗꽑?꾩쓣 吏?쒗븳??"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the correct explanation of  this road safety sign?",
+  "tr_c": [
+   "It directs vehicles to go straight and turn left.",
+   "It directs vehicles to turn left and go straight.",
+   "It directs vehicles to go straight or turn left.",
+   "It directs that vehicles going straight have priority over  vehicles turning left."
+  ]
+ },
+ {
+  "n": 931,
+  "ko_b": "?ㅼ쓬 A, B? 愿?⑤맂 ?ㅻ챸 以??녹? ?딆? 寃?2媛吏??",
+  "ko_c": [
+   "A??蹂댄뻾???곗꽑 ?꾨줈瑜??섎??섎뒗 吏?쒗몴吏?대ŉ, B??蹂댄뻾???곗꽑        ?꾨줈瑜??섎??섎뒗 ?몃㈃?쒖떆 ?대떎.",
+   "蹂댄뻾???곗꽑 ?꾨줈?먯꽌??蹂댄뻾?먭? ?꾨줈????遺遺꾩쑝濡??듯뻾?????덈떎.",
+   "蹂댄뻾???곗꽑 ?꾨줈?먯꽌??蹂댄뻾?먭? ?곗꽑?대?濡?怨좎쓽濡?李⑤쭏??吏꾪뻾??諛⑺빐?대룄 ?쒕떎.",
+   "蹂댄뻾???곗꽑 ?꾨줈?먯꽌??蹂댄뻾?먮쭔 ?듯뻾?????덈떎. A B"
+  ],
+  "a": "3, 4",
+  "tr_b": "Which two statements about A and B among the  following are incorrect? (Choose two)",
+  "tr_c": [
+   "A is a guide sign indicating a pedestrian-priority road,  and B is a road marking indicating a pedestrian-priority  road.",
+   "On a pedestrian-priority road, pedestrians can use the  entire road.",
+   "On a pedestrian-priority road, pedestrians have priority  so they may intentionally obstruct vehicle traffic.",
+   "On a pedestrian-priority road, only pedestrians are  allowed to use the road. A B"
+  ]
+ },
+ {
+  "n": 932,
+  "ko_b": "?ㅼ쓬???덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?몄씤蹂댄샇援ъ뿭?대?濡?李⑤쭏???듯뻾??湲덉??섎뒗 寃?,
+   "?몄씤蹂댄샇援ъ뿭?먯꽌 ?몄씤???섎???嫄몄뼱媛?寃껋쓣 ?덉슜?섎뒗 寃?,
+   "?몄씤蹂댄샇援ъ뿭?먯꽌 ?몄씤???섎???嫄몄뼱媛?寃껋쓣 湲덉??섎뒗 寃?,
+   "?몄씤蹂댄샇援ъ뿭?먯꽌 ?몄씤??蹂댄샇瑜?吏?쒗븯??寃?
+  ],
+  "a": "4",
+  "tr_b": "According to the Road Traffic Act, which is the  correct explanation of this road safety sign?",
+  "tr_c": [
+   "Vehicle traffic is prohibited in elderly protection zones.",
+   "Elderly persons are allowed to walk side by side in the  elderly protection zone.",
+   "Elderly persons are prohibited from walking side by side  in the elderly protection zone.",
+   "Drivers are instructed to protect elderly people in the  elderly protection zone."
+  ]
+ },
+ {
+  "n": 933,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섑???醫뚰쉶??媛먯쓳?좏샇??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "李⑤웾???꾨줈 ???ш컖???쒖떆(寃吏?? ?덉뿉 ?뺤감?섎㈃ ?쇱꽌媛 ?묐룞?섎ŉ,      李⑤웾??媛먯??쒕떎.",
+   "醫뚰쉶??李⑤웾???놁쓣 ?뚮뒗 吏곸쭊 ?좏샇???쒓컙????遺?ы븷 ???덈떎.",
+   "援먰넻???먮쫫???먰솢?섍쾶 ?섍퀬, ?湲곗삤?쇱쓽 媛먯냼 ?④낵媛 湲곕??쒕떎.",
+   "?묐룞???꾪빐?쒕뒗 ?뺤감?섏뿬 ?꾨줈 醫뚯륫???ㅼ튂???ㅼ쐞移섎? ?꾨Ⅸ ???좎떆     湲곕떎?ㅼ빞 ?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements about the  activated left-turn signal shown on the safety sign  is incorrect?",
+  "tr_c": [
+   "When a vehicle stops within the rectangular marking  (detection line) on the road, the sensor is activated  and detects the vehicle.",
+   "When there are no left-turning vehicles, extra time can  be allocated to the straight-through signal.",
+   "It helps improve traffic flow, and air pollution is  expected to be reduced.",
+   "To operate it, the driver must stop and press a switch  installed on the left-hand side of the road, and then  wait briefly."
+  ]
+ },
+ {
+  "n": 934,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???醫낅쪟濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?고쉶???쒖?",
+   "?곕줈 援쎌? ?꾨줈 ?쒖?",
+   "?고쉶???곗꽑 ?쒖?",
+   "?곗륫諛??곗꽑 ?쒖?"
+  ],
+  "a": "1",
+  "tr_b": "Which of the following is the correct type of this  road sign?",
+  "tr_c": [
+   "Make a right turn",
+   "Right-bending road",
+   "Right turns first",
+   "Right-side vehicles first"
+  ]
+ },
+ {
+  "n": 935,
+  "ko_b": "?ㅼ쓬怨?媛숈? 援먰넻?덉쟾?쒖꽕???ㅼ튂??援먯감濡쒖뿉?쒖쓽 ?듯뻾諛⑸쾿 以?留욌뒗 寃껋??",
+  "ko_c": [
+   "醫뚰쉶???뱀깋 ?붿궡?쒖떆媛 ?깊솕??寃쎌슦?먮쭔 醫뚰쉶?꾪븷 ???덈떎.",
+   "醫뚰쉶???좏샇 ??醫뚰쉶?꾪븯嫄곕굹 吏꾪뻾?좏샇 ??諛섎? 諛⑸㈃?먯꽌 ?ㅻ뒗 李⑤웾??諛⑺빐 媛 ?섏? ?꾨땲?섎룄濡?醫뚰쉶?꾪븷 ???덈떎.",
+   "?좏샇?깃낵 愿怨꾩뾾??諛섎? 諛⑸㈃?먯꽌 ?ㅻ뒗 李⑤웾??諛⑺빐媛 ?섏? ?꾨땲?섎룄濡?醫??뚯쟾?????덈떎.",
+   "?⑹깋?깊솕 ??諛섎? 諛⑸㈃?먯꽌 ?ㅻ뒗 李⑤웾??諛⑺빐媛 ?섏? ?꾨땲?섎룄濡?醫뚰쉶?꾪븷 ???덈떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the correct method of  passing an intersection that has this facility for traffic  safety?",
+  "tr_c": [
+   "You can only turn left when the left-turn green arrow is lit.",
+   "When there is a left-turn signal or a green light for straight traffic, you can turn left without obstructing vehicles coming from the opposite direction.",
+   "Regardless of the traffic lights, you can turn left without  obstructing vehicles coming from the opposite direction.",
+   "When the yellow light is on, you can turn left, making  sure not to obstruct vehicles coming from the opposite  direction."
+  ]
+ },
+ {
+  "n": 936,
+  "ko_b": "以묒븰?좏몴???꾩뿉 ?ㅼ튂???꾨줈?덉쟾?쒖꽕??????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "以묒븰???몃㈃?쒖떆???ㅼ튂???꾨줈?덉쟾?쒖꽕臾쇱? 以묒븰遺꾨━遊됱씠??",
+   "援먰넻?ш퀬 諛쒖깮???꾪뿕???믪? 怨녹쑝濡??꾪뿕援ш컙???덇퀬?섎뒗 紐⑹쟻?쇰줈 ?ㅼ튂?쒕떎.",
+   "?댁쟾?먯쓽 二쇱쓽媛 ?붽뎄?섎뒗 ?μ냼???몃㈃?쒖떆瑜?蹂댁“?섏뿬 ?쒖꽑???좊룄?섎뒗  ?쒖꽕臾쇱씠??",
+   "?숈씪 諛?諛섎?諛⑺뼢 援먰넻?먮쫫??怨듦컙?곸쑝濡?遺꾨━?섍린 ?꾪빐 ?ㅼ튂?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "Which of the following statements regarding road  safety facilities installed on this centerline mark is  NOT correct?",
+  "tr_c": [
+   "The road safety facility installed on the centerline road  marking is a median barrier.",
+   "It is installed for the purpose of giving warning as the  place has high risk of traffic accidents.",
+   "It guides the eyes of the driver by supporting the  marking on the road in a place where the driver's  attention is required.",
+   "It is installed to separate the same and opposite traffic  flow spatially."
+  ]
+ },
+ {
+  "n": 937,
+  "ko_b": "?ㅼ쓬 ?몃㈃?쒖떆媛 ?쒖떆?섎뒗 ?살??",
+  "ko_c": [
+   "?꾨갑??怨쇱냽諛⑹????먮뒗 援먯감濡쒖뿉 ?ㅻⅤ留?寃쎌궗硫댁씠 ?덈떎.",
+   "?꾨갑 ?꾨줈媛 醫곸븘吏怨??덈떎.",
+   "李⑤웾 ???媛 ?숈떆???듯뻾?????덈떎.",
+   "?곗븙吏???꾨줈?대떎."
+  ],
+  "a": "1",
+  "tr_b": "What is the meaning of this road surface marking?",
+  "tr_c": [
+   "There is a speed bump ahead or an uphill road at the  intersection ahead.",
+   "The road ahead is narrowing.",
+   "Two cars may pass through at the same time.",
+   "This is a mountainous road."
+  ]
+ },
+ {
+  "n": 938,
+  "ko_b": "?ㅼ쓬???몃㈃?쒖떆媛 ?ㅼ튂?섎뒗 ?μ냼濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "李⑤쭏????＜?됱쓣 湲덉??섎뒗 ?꾨줈??援ш컙???ㅼ튂",
+   "李⑤쭏???좏꽩??湲덉??섎뒗 ?꾨줈??援ш컙???ㅼ튂",
+   "?뚯쟾援먯감濡??댁뿉????＜?됱쓣 湲덉??섎뒗 ?꾨줈??援ш컙???ㅼ튂",
+   "?뚯쟾援먯감濡??댁뿉???좏꽩??湲덉??섎뒗 ?꾨줈??援ш컙???ㅼ튂"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the correct place for this  road surface marking?",
+  "tr_c": [
+   "It is installed in the section of a road where reverse  driving of vehicles and horses is prohibited.",
+   "It is installed in the section of a road where vehicles and  horses are prohibited from making a U-turn.",
+   "It is installed in the section of a road where reverse  driving is prohibited within roundabouts.",
+   "It is installed in the section of a road where making a  U-turn is prohibited within roundabouts."
+  ]
+ },
+ {
+  "n": 939,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 ?곸깋 ?몃㈃?쒖떆??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "李⑤룄? 蹂대룄瑜?援ы쉷?섎뒗 湲멸??μ옄由?援ъ뿭???쒖떆?섎뒗 寃?,
+   "李⑥쓽 李⑤줈蹂寃쎌쓣 ?쒗븳?섎뒗 寃?,
+   "蹂댄뻾?먮? 蹂댄샇?댁빞 ?섎뒗 援ъ뿭???쒖떆?섎뒗 寃?,
+   "?뚮갑?쒖꽕 ?깆씠 ?ㅼ튂??援ъ뿭???쒖떆?섎뒗 寃?
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the correct explanation of  the red road marking in the given situation?",
+  "tr_c": [
+   "The red road marking is used to mark the roadside area  that divides the roadway from the sidewalk.",
+   "The red road marking is used to restrict lane changing  by vehicles.",
+   "The red road marking is used to mark an area where  pedestrians should be protected.",
+   "The red road marking is used to mark an area where  firefighting facilities are installed."
+  ]
+ },
+ {
+  "n": 940,
+  "ko_b": "?ㅼ쓬怨?媛숈? ?몃㈃?쒖떆???곕Ⅸ ?댁쟾?됰룞?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭?쇰줈 二쇱감??遺덇??섎굹 ?뺤감??媛?ν븯誘濡?吏㏃? ?쒓컙 湲멸????먮━???뺤감?섏뿬 ?대┛?대? ?쒖슫??",
+   "?대┛??蹂댄샇援ъ뿭 ???〓떒蹂대룄 ?덇퀬?쒖떆媛 ?덉쑝誘濡?誘몃━ ?쒗뻾?댁빞 ?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭?쇰줈 ?대┛??諛??곸쑀???덉쟾???좎쓽?댁빞 ?섎ŉ 吏洹몄옱洹???硫댄몴?쒖뿉 ?섑븯???쒗뻾?섏뿬???쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭? ?쒓컙???댁쁺 ?щ?? 愿怨꾩뾾???좎떆 ?뺤감??媛?ν븯??"
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is the correct way to drive  after seeing the road surface marking in the given  situation?",
+  "tr_c": [
+   "This is a school zone. You are not allowed to park in this  area or idle along the sidewalk to drop off or pick up  children.",
+   "There is marking that indicates a pedestrian crossing in  the school zone. You must reduce speed ahead.",
+   "This is a school zone and you must drive with caution to  watch out for children. The zigzag lines instruct drivers  to slow down.",
+   "It is possible to stop briefly in a school zone regardless  of whether it is time-regulated or not."
+  ]
+ },
+ {
+  "n": 941,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "怨좎썝?앺슒?⑤낫???쒖떆?대떎.",
+   "蹂쇰줉 ?щ떎由ш섦怨?怨쇱냽諛⑹????뺥깭濡??섎ŉ ?믪씠??10cm濡??쒕떎.",
+   "?댁쟾?먯쓽 二쇱쓽瑜??섍린?쒗궗 ?꾩슂媛 ?덈뒗 吏?먯뿉 ?ㅼ튂?쒕떎.",
+   "紐⑤뱺 ?꾨줈???ㅼ튂?????덈떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following statements regarding this  road surface marking is INCORRECT?",
+  "tr_c": [
+   "A raised crosswalk is present in the area.",
+   "A crosswalk shaped like a block-ladder and a speed  bump with height of 10cm.",
+   "A sign that can be installed to caution drivers.",
+   "These markings can be installed on all roads."
+  ]
+ },
+ {
+  "n": 942,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨갑???덉쟾吏?媛 ?덉쓬???뚮━??寃껋씠??",
+   "李④? ?묐낫?섏뿬?????μ냼?꾩쓣 ?쒖떆?섎뒗 寃껋씠??",
+   "?꾨갑???〓떒蹂대룄媛 ?덉쓬???뚮━??寃껋씠??",
+   "二쇱감?????덈뒗 ?μ냼?꾩쓣 ?쒖떆?섎뒗 寃껋씠??"
+  ],
+  "a": "3",
+  "tr_b": "What does this road surface marking indicate?",
+  "tr_c": [
+   "A safety zone is up ahead.",
+   "Vehicles must yield.",
+   "A crosswalk is up ahead.",
+   "Parking is allowed."
+  ]
+ },
+ {
+  "n": 943,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄??꾩슜?꾨줈?꾩쓣 ?쒖떆?섎뒗 寃껋씠??",
+   "?먯쟾嫄곕벑???〓떒?꾩엫???쒖떆?섎뒗 寃껋씠??",
+   "?먯쟾嫄곗＜李⑥옣??二쇱감?섎룄濡?吏?쒗븯??寃껋씠??",
+   "?먯쟾嫄곕룄濡쒖뿉??2? ?댁긽 ?먯쟾嫄곗쓽 ?섎????듯뻾???덉슜?섎뒗 寃껋씠??"
+  ],
+  "a": "2",
+  "tr_b": "What does this road surface marking indicate?",
+  "tr_c": [
+   "A bicycle-only lane.",
+   "A crossing for bicycles.",
+   "Bicycles must be parked at a bicycle parking lot.",
+   "Two or more bicycles can travel side by side on a bicycle  track."
+  ]
+ },
+ {
+  "n": 944,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?〓떒蹂대룄?꾩쓣 ?쒖떆?섎뒗 寃껋씠??",
+   "李④? ?ㅼ뼱媛 ?뺤감?섎뒗 寃껋쓣 湲덉??섎뒗 ?쒖떆?대떎.",
+   "李④? ?묐낫?섏뿬?????μ냼?꾩쓣 ?쒖떆?섎뒗 寃껋씠??",
+   "援먯감濡쒖뿉 ?ㅻⅤ留?寃쎌궗硫댁씠 ?덉쓬???쒖떆?섎뒗 寃껋씠??"
+  ],
+  "a": "3",
+  "tr_b": "What does this road surface marking indicate?",
+  "tr_c": [
+   "It indicates a crosswalk.",
+   "It is a sign that prohibits a vehicle from entering and  stopping.",
+   "It is a sign indicating that it is the place to yield.",
+   "It indicates that there is an uphill slope from the  intersection."
+  ]
+ },
+ {
+  "n": 945,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "李④? ?묐낫?섏뿬?????μ냼?꾩쓣 ?쒖떆?섎뒗 寃껋씠??",
+   "?몄긽???μ븷臾쇱씠 ?덉쓬???쒖떆?섎뒗 寃껋씠??",
+   "李④? ?ㅼ뼱媛 ?뺤감?섎뒗 寃껋쓣 湲덉??섎뒗 ?쒖떆?대떎.",
+   "二쇱감?????덈뒗 ?μ냼?꾩쓣 ?쒖떆?섎뒗 寃껋씠??"
+  ],
+  "a": "3",
+  "tr_b": "What does this road surface marking indicate?",
+  "tr_c": [
+   "Vehicles must yield.",
+   "There are obstacles on the road surface.",
+   "Vehicles must not stop inside the markings.",
+   "Parking is allowed."
+  ]
+ },
+ {
+  "n": 946,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섎?濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?먯쟾嫄??곗꽑?꾨줈 ?쒖떆",
+   "?먯쟾嫄??꾩슜?꾨줈 ?쒖떆",
+   "?먯쟾嫄??〓떒???쒖떆",
+   "?먯쟾嫄?蹂댄샇援ъ뿭 ?쒖떆"
+  ],
+  "a": "1",
+  "tr_b": "What does this road surface marking indicate?",
+  "tr_c": [
+   "Bicycle-first road",
+   "Bicycles only",
+   "Bicycle crossing",
+   "A cyclist protection zone"
+  ]
+ },
+ {
+  "n": 947,
+  "ko_b": "?ㅼ쓬 李⑤룄 遺臾몄쓽 媛?μ옄由ъ뿉 ?ㅼ튂???몃㈃?쒖떆???ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?뺤감瑜?湲덉??섍퀬 二쇱감瑜??덉슜??怨녹쓣 ?쒖떆?섎뒗 寃?,
+   "?뺤감 諛?二쇱감湲덉?瑜??쒖떆?섎뒗 寃?,
+   "?뺤감瑜??덉슜?섍퀬 二쇱감湲덉?瑜??쒖떆?섎뒗 寃?,
+   "援ъ뿭?ㅼ떆媛꾟ㅼ옣??諛?李⑥쓽 醫낅쪟瑜??뺥븯??二쇱감瑜??덉슜?????덉쓬???쒖떆?섎뒗 寃?
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the correct explanation  regarding the road markings installed on the edge of  the roadway section as shown in this picture?",
+  "tr_c": [
+   "These markings prohibit stopping and mark places  where parking is permitted.",
+   "These markings indicate prohibition of stopping and parking.",
+   "These markings allow stopping and prohibit parking.",
+   "These markings indicate that parking is allowed by  specifying the area, time, place, and type of vehicle."
+  ]
+ },
+ {
+  "n": 948,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섎?濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??⑹깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??뱀깋?깊솕  ?숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?,
+   "援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤웾???ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?딅룄濡??곸깋 ??硫몃벑???숈븞 援먯감濡??덉뿉???湲고븯??吏?먯쓣 ?쒖떆?섎뒗 寃?
+  ],
+  "a": "3",
+  "tr_b": "What does this road surface marking indicate?",
+  "tr_c": [
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are red.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are yellow.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the  lights are green.",
+   "Vehicles turning left at the intersection must wait within  the designated area inside the intersection while the red  lights are flashing."
+  ]
+ },
+ {
+  "n": 949,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????섎?濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "媛볤만 ?쒖떆",
+   "李⑤줈蹂寃??쒗븳???쒖떆",
+   "?좏꽩 援ъ뿭???쒖떆",
+   "湲멸??μ옄由ш뎄??꽑 ?쒖떆"
+  ],
+  "a": "4",
+  "tr_b": "What does this road surface marking indicate?",
+  "tr_c": [
+   "A roadside",
+   "A direction change restriction line",
+   "A U-turn area",
+   "A roadside area"
+  ]
+ },
+ {
+  "n": 950,
+  "ko_b": "?ㅼ쓬 ?몃㈃?쒖떆???섎?濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾨갑??援먯감濡쒓? ?덉쓬???뚮━??寃껋씠??",
+   "?뺤????쒖떆濡??댄뻾 以??뺤??댁빞 ??寃쎌슦 洹?吏?먯쓣 ?쒖떆?섎뒗 寃껋씠??",
+   "怨좎썝???〓떒蹂대룄 ?쒖떆?대떎.",
+   "?꾨갑???덉쟾吏?媛 ?덉쓬???뚮━??寃껋씠??"
+  ],
+  "a": "2",
+  "tr_b": "What does this road surface marking indicate?",
+  "tr_c": [
+   "There is an intersection ahead.",
+   "A stop line indicating where to stop.",
+   "A raised crosswalk.",
+   "There is a safety zone ahead."
+  ]
+ },
+ {
+  "n": 951,
+  "ko_b": "?ㅼ쓬 諛⑺뼢?쒖?? 愿?⑤맂 ?ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "150m ?욎뿉??6踰??쇰컲援?룄? ?⑸쪟?쒕떎.",
+   "?섎뱾紐?IC)??紐낆묶? 援고룷??",
+   "怨좎냽?꾨줈 湲곗젏?먯꽌 47踰덉㎏ ?섎뱾紐?IC)?대씪???섎??대떎.",
+   "怨좎냽?꾨줈? 怨좎냽?꾨줈瑜??곌껐??二쇰뒗 遺꾧린??JCT) ?쒖??대떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is true about this directional sign?",
+  "tr_c": [
+   "The road will merge with National Highway No. 6 150 m ahead.",
+   "The name of the intersection is Gunpo.",
+   "This is the 47th intersection on this freeway.",
+   "This is a junction that connects two freeways."
+  ]
+ },
+ {
+  "n": 952,
+  "ko_b": "怨좎냽?꾨줈???ㅼ튂???쒖????띿쓽 ???143?욊? ?섎??섎뒗 寃껋??",
+  "ko_c": [
+   "??꾧킅??떆泥?퉴吏???붿뿬嫄곕━",
+   "??꾧킅??떆 ?됱젙援ъ뿭 寃쎄퀎?좉퉴吏???붿뿬嫄곕━",
+   "?꾨룄????꾧킅??떆 以묎컙吏?먭퉴吏???붿뿬嫄곕━",
+   "媛??癒쇱? ?욧쾶 ?섎뒗 ???吏???섎뱾紐⑷퉴吏???붿뿬嫄곕━"
+  ],
+  "a": "4",
+  "tr_b": "What does Daejeon 143 km indicate in this road  sign found on the expressway sign?",
+  "tr_c": [
+   "The remaining distance to Daejeon City Hall",
+   "The remaining distance to the administrative borderline of  Daejeon",
+   "The remaining distance to the center point of Daejeon  with respect to its latitude",
+   "The remaining distance to the first intersection of the  Daejeon region"
+  ]
+ },
+ {
+  "n": 953,
+  "ko_b": "?ㅼ쓬 ?ъ쭊 ?띿쓽 ?좏꽩?쒖???????ㅻ챸?쇰줈 ?由?寃껋??",
+  "ko_c": [
+   "李⑤쭏媛 ?좏꽩??吏?먯쓽 ?꾨줈???곗륫???ㅼ튂?????덈떎.",
+   "李⑤쭏媛 ?좏꽩??吏?먯쓽 ?꾨줈??以묒븰???ㅼ튂?????덈떎.",
+   "吏?쒗몴吏?대?濡??뱀깋?깊솕 ?쒖뿉留??좏꽩?????덈떎.",
+   "?좏꽩?쒖???援먰넻?덉쟾?쒖? 以?吏?쒗몴吏???대떦?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Which of the following is NOT true about the  U-turn sign in this picture?",
+  "tr_c": [
+   "The sign can be placed on the right side of the road where  motor vehicles and horses can make a U-turn.",
+   "The sign can be placed at the center of the road where  motor vehicles and horses can make a U-turn.",
+   "This is an indication sign, and a U-turn can only be made  when the traffic light is green.",
+   "The U-turn sign is an indication sign among traffic safety signs."
+  ]
+ },
+ {
+  "n": 954,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖????살쑝濡?媛???녹? 寃껋??",
+  "ko_c": [
+   "?먮룞李⑥? ?대쪣?먮룞李⑤뒗 08:00 ~ 20:00 ?듯뻾??湲덉?",
+   "?먮룞李⑥? ?대쪣?먮룞李?諛??먮룞湲곗옣移섏옄?꾧굅??08:00 ~ 20:00 ?듯뻾??湲덉?",
+   "?먮룞李⑥? ?먮룞湲곗옣移섏옄?꾧굅??08:00 ~ 20:00 ?듯뻾??湲덉?",
+   "?먮룞李⑥? ?먯쟾嫄곕뒗 08:00 ~ 20:00 ?듯뻾??湲덉?"
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is the correct interpretation  of these safety sign and supplementary sign?",
+  "tr_c": [
+   "No vehicle or two-wheeled vehicle thoroughfare from  08:00 to 20:00",
+   "No vehicle, motorcycle, or two-wheeled vehicle  thoroughfare from 08:00 to 20:00",
+   "No vehicle or motorcycle thoroughfare from 08:00 to 20:00",
+   "No vehicle or bicycle thoroughfare from 08:00 to 20:00"
+  ]
+ },
+ {
+  "n": 955,
+  "ko_b": "?ㅼ쓬???덉쟾?쒖????곕씪 寃ъ씤?섎뒗 寃쎌슦媛 ?꾨땶 寃껋??",
+  "ko_c": [
+   "?댁쟾?먭? 李⑥뿉???좊굹 4遺??숈븞 ?붿옣?ㅼ뿉 ?ㅻ??ㅻ뒗 寃쎌슦",
+   "?댁쟾?먭? 李⑥뿉???좊굹 10遺??숈븞 吏먯쓣 諛곕떖?섍퀬 ?ㅻ뒗 寃쎌슦",
+   "?댁쟾?먭? 李⑤? ?뺤??쒗궎怨??댁쟾?앹뿉 10遺??숈븞 ?됱븘 ?덈뒗 寃쎌슦",
+   "?댁쟾?먭? 李⑤? ?뺤??쒗궎怨??댁쟾?앹뿉 4遺??숈븞 ?됱븘 ?덈뒗 寃쎌슦"
+  ],
+  "a": "4",
+  "tr_b": "When will a vehicle NOT be towed under this road sign?",
+  "tr_c": [
+   "The driver left the vehicle for 4 minutes to go to the  restroom.",
+   "The driver left the vehicle for 10 minutes to make a  delivery.",
+   "The driver stopped the vehicle and stayed in the driver's  seat for 10 minutes.",
+   "The driver stopped the vehicle and stayed in the driver's  seat for 4 minutes."
+  ]
+ },
+ {
+  "n": 956,
+  "ko_b": "?ㅼ쓬 洹몃┝??????ㅻ챸 以??곸젅?섏? ?딆? 寃껋? ?",
+  "ko_c": [
+   "嫄대Ъ???녿뒗 ?꾨줈蹂?대굹 怨듯꽣???ㅼ튂?섎뒗 二쇱냼?뺣낫?쒖꽕(湲곗큹踰덊샇???대떎.",
+   "?뱀깋濡쒖쓽 ?쒖옉 吏?먯쑝濡쒕???4.73km 吏?먯쓽 ?ㅻⅨ履??꾨줈蹂???ㅼ튂??湲곗큹 踰덊샇?먯씠??",
+   "?뱀깋濡쒖쓽 ?쒖옉 吏?먯쑝濡쒕???40.73km 吏?먯쓽 ?쇱そ ?꾨줈蹂???ㅼ튂??湲곗큹踰??명뙋?대떎.",
+   "湲곗큹踰덊샇?먯뿉 ?쒓린???꾨줈紐낃낵 湲곗큹踰덊샇濡??대떦 吏?먯쓽 ?뺥솗???꾩튂瑜??? ???덈떎."
+  ],
+  "a": "2",
+  "tr_b": "Which of the following is NOT true about this picture?",
+  "tr_c": [
+   "It is an address information facility (basic number sign)  installed on a road or a vacant lot where there are no  buildings.",
+   "It is a basic number sign installed on the right side of  the road, 4.73 km from the starting point of Noksaek-ro.",
+   "It is a basic number sign installed on the left side of the  road, 40.73 km from the starting point of Noksaek-ro.",
+   "The road name and basic number displayed on the  basic number sign allow you to determine the exact  location of that point."
+  ]
+ },
+ {
+  "n": 957,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쇱슂?? 怨듯쑕?쇰쭔 踰꾩뒪?꾩슜李⑤줈 ?듯뻾 李⑤쭔 ?듯뻾?????덉쓬???뚮┛??",
+   "?쇱슂?? 怨듯쑕?쇱쓣 ?쒖쇅?섍퀬 踰꾩뒪?꾩슜李⑤줈 ?듯뻾 李⑤쭔 ?듯뻾?????덉쓬???뚮┛??",
+   "紐⑤뱺 ?붿씪??踰꾩뒪?꾩슜李⑤줈 ?듯뻾 李⑤쭔 ?듯뻾?????덉쓬???뚮┛??",
+   "?쇱슂?? 怨듯쑕?쇱쓣 ?쒖쇅?섍퀬 紐⑤뱺 李④? ?듯뻾?????덉쓬???뚮┛??"
+  ],
+  "a": "2",
+  "tr_b": "What do these safety sign and supplementary sign signify?",
+  "tr_c": [
+   "Only buses can travel in this lane on Sundays and public  holidays.",
+   "Only buses can travel in this lane except on Sundays  and public holidays.",
+   "Only buses can travel in this lane at all times.",
+   "All vehicles can travel in this lane on days other than  Sundays and public holidays."
+  ]
+ },
+ {
+  "n": 958,
+  "ko_b": "?ㅼ쓬 ?덉쟾?쒖???????ㅻ챸?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭?먯꽌 ?대┛?댄넻?숇쾭?ㅺ? ?대┛???뱁븯李⑤? ?꾪빐 ?쒖??먯뿉       ?쒖떆???쒓컙 ?숈븞 ?뺤감瑜??????덈떎.",
+   "?대┛??蹂댄샇援ъ뿭?먯꽌 ?대┛?댄넻?숇쾭?ㅺ? ?대┛???뱁븯李⑤? ?꾪빐 ?쒖??먯뿉       ?쒖떆???쒓컙 ?숈븞 ?뺤감? 二쇱감 紐⑤몢 ?????덈떎.",
+   "?대┛??蹂댄샇援ъ뿭?먯꽌 ?먮룞李⑤벑???대┛?댁쓽 ?뱁븯李⑤? ?꾪빐 ?뺤감瑜??????덈떎.",
+   "?대┛??蹂댄샇援ъ뿭?먯꽌 ?먮룞李⑤벑???대┛?댁쓽 ?뱁븯李⑤? ?꾪빐 ?뺤감??????      ?덉쑝??二쇱감???????녿떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is NOT true about this road sign?",
+  "tr_c": [
+   "A school bus can idle for the duration indicated on the  loading and unloading zone sign in a school zone.",
+   "A school bus can either idle or park for the duration  indicated on the loading and unloading zone sign in a  school zone.",
+   "Any vehicle can idle to drop off and pick up children in the  school zone.",
+   "Any vehicle can idle to drop off and pick up children in the  school zone, but parking is not allowed."
+  ]
+ },
+ {
+  "n": 959,
+  "ko_b": "?꾨줈?쒖?洹쒖튃???ㅼ쓬 ?꾨줈?쒖???紐낆묶?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?꾪뿕援ш컙 ?덇퀬?쒖?",
+   "?띾룄?쒗븳 ?댁젣?쒖?",
+   "?⑸쪟吏???좊룄?쒖?",
+   "異쒓뎄媛먯냽 ?좊룄?쒖?"
+  ],
+  "a": "4",
+  "tr_b": "Which of the following is the correct name of this  road sign according to the Road Sign Regulations?",
+  "tr_c": [
+   "Danger zone warning sign",
+   "Speed limit release sign",
+   "Junction point guide sign",
+   "Exit deceleration guide sign"
+  ]
+ },
+ {
+  "n": 960,
+  "ko_b": "?ㅼ쓬 ?꾨줈紐낇뙋??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쇱そ怨??ㅻⅨ履??묐갑?μ슜 ?꾨줈紐낇뙋?대떎.",
+   "???믠????꾩튂???꾨줈 ?앸굹??吏?먯씠??",
+   "媛뺣궓?濡쒕뒗 699誘명꽣?대떎.",
+   "?쒓컯?⑤?濡쒋앸뒗 ?꾨줈?대쫫???섑??몃떎."
+  ],
+  "a": "4",
+  "tr_b": "Which of the following correctly describes this sign?",
+  "tr_c": [
+   "This is a street sign that can be used to guide drivers to  the left or right.",
+   "\"1?믠?indicates where the road will end.",
+   "Gangnam-daero is 699 m away.",
+   "\"Gangnam-daero\" is the name of the road."
+  ]
+ }
+]
+
+codex
+[{"n":929,"field":"c[0]","severity":"major","issue":"어린이 보호를 지시한다는 뜻을 보호자 동반 의무로 오역했다.","suggestion":"It instructs drivers to protect children or infants in a child protection zone."},{"n":940,"field":"c[0]","severity":"major","issue":"원문은 주차는 불가하지만 지정 시간에는 정차가 가능하다는 내용인데, 번역은 정차도 금지된다고 의미를 반전했다.","suggestion":"This is a school zone. Parking is prohibited, but stopping is permitted during the designated hours, so you may stop at the roadside to pick up or drop off children."},{"n":949,"field":"c[0]","severity":"major","issue":"‘갓길 표시’를 일반적인 roadside로 번역해 정답의 ‘길가장자리구역선’과 구분하기 어렵다.","suggestion":"A road shoulder marking"},{"n":951,"field":"c[1]","severity":"major","issue":"‘나들목(IC)의 명칭’을 교차로(intersection)의 명칭으로 오역했다.","suggestion":"The name of the interchange (IC) is Gunpo."},{"n":951,"field":"c[2]","severity":"major","issue":"‘47번째 나들목(IC)’을 일반 교차로로 오역했다.","suggestion":"It is the 47th interchange (IC) from the starting point of the expressway."},{"n":958,"field":"c[0]","severity":"major","issue":"법률상 ‘정차’를 엔진 공회전을 뜻하는 idle로 오역했다.","suggestion":"A school bus may stop during the hours indicated on the passenger loading and unloading zone sign in a school zone."},{"n":958,"field":"c[1]","severity":"major","issue":"법률상 ‘정차와 주차’를 ‘idling 또는 주차’로 오역해 정차의 의미를 왜곡했다.","suggestion":"A school bus may both stop and park during the hours indicated on the passenger loading and unloading zone sign in a school zone."},{"n":958,"field":"c[2]","severity":"major","issue":"법률상 ‘정차’를 엔진 공회전을 뜻하는 idle로 오역했다.","suggestion":"Any vehicle may stop to pick up or drop off children in a school zone."},{"n":958,"field":"c[3]","severity":"major","issue":"법률상 ‘정차’를 idle로 오역해 정차와 주차의 법적 구분을 왜곡했다.","suggestion":"Any vehicle may stop to pick up or drop off children in a school zone, but may not park."},{"n":960,"field":"c[1]","severity":"major","issue":"지명 또는 도로명 부분이 깨진 문자로 표시되어 문장의 핵심 내용을 이해할 수 없는 심각한 비문이다.","suggestion":"The place named on the sign indicates the point where the road ends."}]
+tokens used
+20,751
+[{"n":929,"field":"c[0]","severity":"major","issue":"어린이 보호를 지시한다는 뜻을 보호자 동반 의무로 오역했다.","suggestion":"It instructs drivers to protect children or infants in a child protection zone."},{"n":940,"field":"c[0]","severity":"major","issue":"원문은 주차는 불가하지만 지정 시간에는 정차가 가능하다는 내용인데, 번역은 정차도 금지된다고 의미를 반전했다.","suggestion":"This is a school zone. Parking is prohibited, but stopping is permitted during the designated hours, so you may stop at the roadside to pick up or drop off children."},{"n":949,"field":"c[0]","severity":"major","issue":"‘갓길 표시’를 일반적인 roadside로 번역해 정답의 ‘길가장자리구역선’과 구분하기 어렵다.","suggestion":"A road shoulder marking"},{"n":951,"field":"c[1]","severity":"major","issue":"‘나들목(IC)의 명칭’을 교차로(intersection)의 명칭으로 오역했다.","suggestion":"The name of the interchange (IC) is Gunpo."},{"n":951,"field":"c[2]","severity":"major","issue":"‘47번째 나들목(IC)’을 일반 교차로로 오역했다.","suggestion":"It is the 47th interchange (IC) from the starting point of the expressway."},{"n":958,"field":"c[0]","severity":"major","issue":"법률상 ‘정차’를 엔진 공회전을 뜻하는 idle로 오역했다.","suggestion":"A school bus may stop during the hours indicated on the passenger loading and unloading zone sign in a school zone."},{"n":958,"field":"c[1]","severity":"major","issue":"법률상 ‘정차와 주차’를 ‘idling 또는 주차’로 오역해 정차의 의미를 왜곡했다.","suggestion":"A school bus may both stop and park during the hours indicated on the passenger loading and unloading zone sign in a school zone."},{"n":958,"field":"c[2]","severity":"major","issue":"법률상 ‘정차’를 엔진 공회전을 뜻하는 idle로 오역했다.","suggestion":"Any vehicle may stop to pick up or drop off children in a school zone."},{"n":958,"field":"c[3]","severity":"major","issue":"법률상 ‘정차’를 idle로 오역해 정차와 주차의 법적 구분을 왜곡했다.","suggestion":"Any vehicle may stop to pick up or drop off children in a school zone, but may not park."},{"n":960,"field":"c[1]","severity":"major","issue":"지명 또는 도로명 부분이 깨진 문자로 표시되어 문장의 핵심 내용을 이해할 수 없는 심각한 비문이다.","suggestion":"The place named on the sign indicates the point where the road ends."}]

@@ -80,8 +80,10 @@ def main():
     findings = json.loads((PROJ / "translations" / "audit" / "findings.json").read_text(encoding="utf-8"))
     applied, review = [], []
     docs = {}
+    expls = {}
     for lang in HTML:
         docs[lang] = load_q(PROJ / HTML[lang])
+        expls[lang] = json.loads((PROJ / "translations" / f"expl_{lang}.json").read_text(encoding="utf-8"))
 
     # 대상별 최우선 1건만 (critical > major, 그다음 issue 긴 것)
     rank = {"critical": 0, "major": 1}
@@ -110,6 +112,8 @@ def main():
             continue
         if field == "b":
             old = q.get("b", "")
+            if norm(old) == sugg:
+                continue   # 이미 적용됨 (재실행 무해)
             if not (0.35 <= len(sugg) / max(len(norm(old)), 1) <= 3.0) or sim(old, sugg) < 0.25:
                 review.append({**it, "skip_reason": "b 유사도/길이 가드"})
                 continue
@@ -123,16 +127,31 @@ def main():
                 review.append({**it, "skip_reason": "보기 인덱스 미확정"})
                 continue
             old = choices[idx]
+            if norm(old) == sugg:
+                continue   # 이미 적용됨 (재실행 무해)
             if not (0.35 <= len(sugg) / max(len(norm(old)), 1) <= 3.0):
                 review.append({**it, "skip_reason": "길이 가드"})
                 continue
             if args.apply:
                 q["c"][idx] = sugg
             applied.append({**it, "target": f"c[{idx + 1}](1-base)", "old": old})
+        elif field == "e":
+            old = expls[lang].get(str(n), "")
+            if norm(old) == sugg:
+                continue
+            if not old or len(sugg) / max(len(norm(old)), 1) < 0.5:
+                review.append({**it, "skip_reason": "e 부분 제안 — 수동 검토"})
+                continue
+            if args.apply:
+                expls[lang][str(n)] = str(it["suggestion"]).strip()
+            applied.append({**it, "target": "e", "old": old[:120]})
         else:
             review.append({**it, "skip_reason": f"미지원 field {field}"})
 
     if args.apply:
+        for lang, d in expls.items():
+            p = PROJ / "translations" / f"expl_{lang}.json"
+            p.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
         for lang, (html, s, end, Q) in docs.items():
             path = PROJ / HTML[lang]
             path.write_text(html[:s] + json.dumps(Q, ensure_ascii=False, separators=(",", ":"))

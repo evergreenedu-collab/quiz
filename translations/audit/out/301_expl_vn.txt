@@ -1,0 +1,285 @@
+Reading additional input from stdin...
+2026-10-10T14:05:39.523193Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12622-3ca7-7533-92ae-0a19e14b0298
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/301_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/301_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 527ms:
+[
+ {
+  "n": 21,
+  "ko_e": "?꾨줈援먰넻踰???議??뺤쓽) 4. ?곗꽍??李⑤룄? 蹂대룄瑜?援щ텇?섎뒗 ???깆쑝濡??댁뼱吏??좎쓣 留먰븳??)",
+  "tr_e": "휂i沼걏 2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(휂沼땙h ngh칫a) 4. 휂튼沼쓓g b처 v沼뎎 (l횪 휃튼沼쓓g 휃튼沼즓 n沼멼 b梳켷g 휃찼, v.v. ph창n chia gi沼칊 l챵ng 휃튼沼쓓g xe ch梳죣 v횪 v沼뎎 h챔)."
+ },
+ {
+  "n": 22,
+  "ko_e": "?꾨줈援먰넻踰???3議곗쓽2(?먯쟾嫄곕벑???듯뻾諛⑸쾿???밸?) ?????먯쟾嫄곕벑???댁쟾?먭? ?〓떒蹂대룄瑜??댁슜?섏뿬 ?꾨줈瑜??〓떒 ???뚯뿉???먯쟾嫄곕벑?먯꽌 ?대젮???먯쟾嫄곕벑???뚭굅???ㅺ퀬 蹂댄뻾?섏뿬???쒕떎.",
+  "tr_e": "Kho梳즢 6 휂i沼걏 13-2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Quy 휃沼땙h 휃梳톍 l沼?v沼?ph튼퉤ng ph찼p l튼u th척ng c沼쬪 xe 휃梳죖 v횪 t튼퉤ng t沼?: Khi ng튼沼쓎 l찼i xe 휃梳죖 v횪 t튼퉤ng t沼?b훱ng qua 휃튼沼쓓g b梳켷g v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?th챙 ph梳즜 xu沼몁g kh沼뢩 xe 휃梳죖 v횪 t튼퉤ng t沼?휃沼?d梳칣 ho梳톍 b챗 xe 휃梳죖 v횪 휃i b沼?"
+ },
+ {
+  "n": 23,
+  "ko_e": "?꾨줈援먰넻踰???7議?????,
+  "tr_e": "Kho梳즢 1 휂i沼걏 87 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?
+ },
+ {
+  "n": 24,
+  "ko_e": "?꾨줈援먰넻踰???7議곗쓽2, ?꾨줈援먰넻踰뺤떆?됯퇋移???7議??댁쟾硫댄뿀?쒗뿕?묒떆) ?좊텇利앸챸?쒕? ?쒖떆?섏? 紐삵븯???щ엺? ?좎껌 ?몄씠 ?먰븯??寃쎌슦 ?꾩옄??諛⑸쾿?쇰줈 吏臾몄젙蹂대? ?議고븯??蹂몄씤 ?뺤씤?????덈떎.",
+  "tr_e": "휂i沼걏 87-2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 휂i沼걏 57 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(D沼?thi s찼t h梳죅h gi梳쪅 ph챕p l찼i xe): Ng튼沼쓎 kh척ng xu梳쩿 tr챙nh 휃튼沼즓 gi梳쪅 t沼?ch沼쯰g minh nh창n th창n, n梳퓎 ng튼沼쓎 휃훱ng k첵 mong mu沼몁, c처 th沼?휃튼沼즓 x찼c nh梳춏 danh t챠nh b梳켷g c찼ch 휃沼멼 chi梳퓎 th척ng tin v창n tay theo ph튼퉤ng ph찼p 휃i沼뇆 t沼?"
+ },
+ {
+  "n": 25,
+  "ko_e": "怨좎븬媛?ㅼ븞?꾧?由щ쾿 ?쒗뻾洹쒖튃 ??1議곗젣1??蹂꾪몴31",
+  "tr_e": "Ph沼?l沼쩭 31 kho梳즢 1 휂i沼걏 51 Th척ng t튼 thi h횪nh Lu梳춗 Qu梳즢 l첵 an to횪n kh챠 gas 찼p su梳쩿 cao"
+ },
+ {
+  "n": 26,
+  "ko_e": "?꾨줈援먰넻踰???3議?援먰넻?덉쟾援먯쑁)?????ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?щ엺???쑣룸룄寃쎌같泥?옣?먭쾶 ?좎껌?섎뒗  寃쎌슦?먮뒗 ??듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?밸퀎援먰넻?덉쟾 沅뚯옣援먯쑁??諛쏆쓣 ???덈떎. ??寃쎌슦 沅뚯옣援먯쑁??諛쏄린 ??1?? ?대궡???대떦 援먯쑁??諛쏆? ?꾨땲???щ엺???쒖젙?쒕떎.",
+  "tr_e": "Kho梳즢 3 휂i沼걏 73 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Gi찼o d沼쩭 an to횪n giao th척ng): Ng튼沼쓎 thu沼셛 m沼셳 trong c찼c 휃i沼긩 sau, khi 휃훱ng k첵 v沼쌻 Gi찼m 휃沼멵 C퉤 quan C梳즢h s찼t Th횪nh ph沼?T沼뎝h, c처 th沼?tham gia gi찼o d沼쩭 khuy梳퓆 kh챠ch an to횪n giao th척ng 휃梳톍 bi沼뇍 theo quy 휃沼땙h c沼쬪 Ngh沼?휃沼땙h. Tr튼沼쓓g h沼즤 n횪y ch沼?gi沼쌻 h梳죒 沼?ng튼沼쓎 ch튼a tham gia gi찼o d沼쩭 휃처 trong v챵ng 1 n훱m tr튼沼쌵 khi tham gia gi찼o d沼쩭 khuy梳퓆 kh챠ch."
+ },
+ {
+  "n": 27,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 ??5議??먮룞李⑤벑???댁쟾???꾩슂???곸꽦??湲곗?) ?ㅻ쭔, ?쒖そ ?덉쓣 蹂댁? 紐삵븯???щ엺????醫?蹂댄넻 ?댁쟾硫댄뿀瑜?痍⑤뱷?섎젮??寃쎌슦 ?먮룞李⑤벑???댁쟾???꾩슂???곸꽦??湲곗??먯꽌 ?ㅻⅨ 履??덉쓽 ?쒕젰??0.8?댁긽?닿퀬 ?섑룊???쇨? 120???댁긽?대ŉ, ?섏쭅?쒖빞媛 20???댁긽?닿퀬, 以묒떖?쒖빞 20?????붿젏怨?諛섎㏏???놁뼱???쒕떎.",
+  "tr_e": "휂i沼걏 45 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Ti챗u chu梳쯰 v沼?n훱ng l沼켧 c梳쬷 thi梳퓍 휃沼?l찼i xe c퉤 gi沼쌻, v.v.): Tuy nhi챗n, tr튼沼쓓g h沼즤 ng튼沼쓎 kh척ng nh챙n 휃튼沼즓 m沼셳 b챗n m梳칣 mu沼몁 thi l梳쪅 gi梳쪅 ph챕p l찼i xe h梳죒g 1 lo梳죍 th튼沼쓓g th챙 theo ti챗u chu梳쯰 n훱ng l沼켧 c梳쬷 thi梳퓍 휃沼?l찼i xe, m梳칣 c챵n l梳죍 ph梳즜 c처 th沼?l沼켧 t沼?0.8 tr沼?l챗n, t梳쬶 nh챙n ngang t沼?120 휃沼?tr沼?l챗n, t梳쬶 nh챙n d沼뛠 t沼?20 휃沼?tr沼?l챗n, v횪 trong ph梳죑 vi t梳쬶 nh챙n trung t창m 20 휃沼?kh척ng c처 휃i沼긩 m첫 v횪 b찼n manh."
+ },
+ {
+  "n": 28,
+  "ko_e": "?꾨줈援먰넻踰?87議???????????醫??댁쟾硫댄뿀瑜?諛쒓툒諛쏆? 65???댁긽 75??誘몃쭔???щ엺? 5?꾨쭏???뺢린?곸꽦寃?щ?  諛쏆븘???쒕떎. ?ㅻ쭔 ?쒖そ ?덈쭔 蹂댁? 紐삵븯???щ엺?쇰줈????醫?硫댄뿀 以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?꾩씠??",
+  "tr_e": "휂i沼긩 1 kho梳즢 1 휂i沼걏 87 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Ng튼沼쓎 t沼?65 tu沼뷼 휃梳퓆 d튼沼쌻 75 tu沼뷼 휃찾 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe h梳죒g 1 ph梳즜 ki沼긩 tra n훱ng l沼켧 휃沼땙h k沼?5 n훱m m沼셳 l梳쬷. Tuy nhi챗n, ng튼沼쓎 ch沼?kh척ng nh챙n 휃튼沼즓 m沼셳 b챗n m梳칣 v횪 휃찾 thi l梳쪅 gi梳쪅 ph챕p lo梳죍 th튼沼쓓g trong gi梳쪅 ph챕p h梳죒g 1 th챙 l횪 3 n훱m."
+ },
+ {
+  "n": 29,
+  "ko_e": "?댁쟾硫댄뿀??痍⑥냼 泥섎텇??諛쏆? ?? ?댁쟾硫댄뿀???⑤젰 ?뺤? 泥섎텇??諛쏆? ?? ?댁쟾硫댄뿀利앹쓣 ?껋뼱踰꾨━怨??ㅼ떆 援먮? 諛쏆?  ??洹??껋뼱踰꾨┛ ?댁쟾硫댄뿀利앹쓣 李얠? ?? ?곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?щ엺????醫?蹂댄넻?댁쟾硫댄뿀 ?먮뒗 ??醫?蹂댄넻?댁쟾硫댄뿀 瑜?諛쏆? ?뚯뿉??7???대궡??二쇱냼吏瑜?愿?좏븯???쑣룸룄寃쎌같泥?옣?먭쾶 ?댁쟾硫댄뿀利앹쓣 諛섎궔?섏뿬???쒕떎.",
+  "tr_e": "Khi b沼?x沼?ph梳죜 h沼쭃 gi梳쪅 ph챕p l찼i xe, khi b沼?x沼?ph梳죜 휃챙nh ch沼?hi沼뇎 l沼켧 gi梳쪅 ph챕p l찼i xe, khi t챙m l梳죍 휃튼沼즓 gi梳쪅 ph챕p l찼i xe 휃찾 m梳쩿 sau khi l횪m m梳쩿 v횪 휃튼沼즓 c梳쩺 l梳죍, khi ng튼沼쓎 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe t梳춑 l찼i 휃찾 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe h梳죒g 1 lo梳죍 th튼沼쓓g ho梳톍 gi梳쪅 ph챕p l찼i xe h梳죒g 2 lo梳죍 th튼沼쓓g th챙 ph梳즜 n沼셮 l梳죍 gi梳쪅 ph챕p l찼i xe cho Gi찼m 휃沼멵 C퉤 quan C梳즢h s찼t Th횪nh ph沼?T沼뎝h qu梳즢 l첵 n퉤i c튼 tr첬 trong v챵ng 7 ng횪y."
+ },
+ {
+  "n": 30,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾 2026. 1. 1.] ??7議??댁쟾硫댄뿀利앹쓽 媛깆떊怨??뺢린 ?곸꽦寃?? ???댁쟾硫댄뿀瑜?諛쏆? ?щ엺? ?ㅼ쓬 媛??몄쓽 援щ텇???곕Ⅸ 湲곌컙 ?대궡????듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?쒌냽?꾧꼍李곗껌?μ쑝濡쒕????댁쟾硫댄뿀利앹쓣 媛깆떊?섏뿬 諛쒓툒諛??꾩빞 ?쒕떎. 1. 理쒖큹???댁쟾硫댄뿀利?媛깆떊湲곌컙? ??3議곗젣1???먮뒗 ????뿉 ?곕Ⅸ ?댁쟾硫댄뿀?쒗뿕???⑷꺽???좊???湲곗궛?섏뿬 10??(?댁쟾硫댄뿀?쒗뿕 ?⑷꺽?쇱뿉 65???댁긽 75??誘몃쭔???щ엺? 5?? 75???댁긽???щ엺? 3?? ?쒖そ ?덈쭔 蹂댁? 紐삵븯???щ엺?쇰줈????醫??댁쟾硫댄뿀 以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?????섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡 2. ?????몄쓽 ?댁쟾硫댄뿀利?媛깆떊湲곌컙? 吏곸쟾???댁쟾硫댄뿀利?媛깆떊?쇰???湲곗궛?섏뿬 留?10??吏곸쟾???댁쟾硫댄뿀利?媛깆떊????65???댁긽 75??誘몃쭔???щ엺? 5?? 75???댁긽???щ엺? 3?? ?쒖そ ?덈쭔 蹂댁? 紐삵븯???щ엺?쇰줈????醫??댁쟾硫댄뿀 以?蹂댄넻硫댄뿀瑜?痍⑤뱷???щ엺? 3?????섎뒗 ?좎씠 ?랁븯???댁쓽 ?앹씪 ?꾪썑 媛곴컖 6媛쒖썡 ?대궡",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[thi h횪nh ng횪y 1.1.2026] 휂i沼걏 87 (C梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe v횪 ki沼긩 tra n훱ng l沼켧 휃沼땙h k沼? ??Ng튼沼쓎 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe ph梳즜 휃튼沼즓 Gi찼m 휃沼멵 C퉤 quan C梳즢h s찼t Th횪nh ph沼?T沼뎝h c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe trong th沼쓎 h梳죒 theo ph창n lo梳죍 t梳죍 c찼c 휃i沼긩 sau, theo quy 휃沼땙h c沼쬪 Ngh沼?휃沼땙h. 1. Th沼쓎 h梳죒 c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe l梳쬷 휃梳쬾 l횪 trong v챵ng 6 th찼ng tr튼沼쌵 v횪 sau ng횪y sinh nh梳춗 c沼쬪 n훱m c처 ng횪y tr챵n 10 n훱m t챠nh t沼?ng횪y 휃沼?s찼t h梳죅h gi梳쪅 ph챕p l찼i xe theo kho梳즢 1 ho梳톍 kho梳즢 2 휂i沼걏 83 (휃沼멼 v沼쌻 ng튼沼쓎 t沼?65 휃梳퓆 d튼沼쌻 75 tu沼뷼 v횪o ng횪y 휃沼?s찼t h梳죅h l횪 5 n훱m, ng튼沼쓎 t沼?75 tu沼뷼 tr沼?l챗n l횪 3 n훱m, ng튼沼쓎 ch沼?kh척ng nh챙n 휃튼沼즓 m沼셳 b챗n m梳칣 v횪 휃찾 thi l梳쪅 gi梳쪅 ph챕p lo梳죍 th튼沼쓓g trong gi梳쪅 ph챕p h梳죒g 1 l횪 3 n훱m). 2. Th沼쓎 h梳죒 c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe ngo횪i 휃i沼긩 1 l횪 trong v챵ng 6 th찼ng tr튼沼쌵 v횪 sau ng횪y sinh nh梳춗 c沼쬪 n훱m c처 ng횪y tr챵n m沼뾦 10 n훱m t챠nh t沼?ng횪y c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe li沼걆 tr튼沼쌵 (휃沼멼 v沼쌻 ng튼沼쓎 t沼?65 휃梳퓆 d튼沼쌻 75 tu沼뷼 v횪o ng횪y c梳쩺 휃沼뷼 li沼걆 tr튼沼쌵 l횪 5 n훱m, ng튼沼쓎 t沼?75 tu沼뷼 tr沼?l챗n l횪 3 n훱m, ng튼沼쓎 ch沼?kh척ng nh챙n 휃튼沼즓 m沼셳 b챗n m梳칣 v횪 휃찾 thi l梳쪅 gi梳쪅 ph챕p lo梳죍 th튼沼쓓g trong gi梳쪅 ph챕p h梳죒g 1 l횪 3 n훱m)."
+ },
+ {
+  "n": 31,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???8議??곷Ц ?댁쟾硫댄뿀利앹쓽 ?좎껌 ?? ?곗뒿?댁쟾硫댄뿀 ?뚯??먮뒗 ?곷Ц?댁쟾硫댄뿀利?諛쒓툒 ??곸씠 ?꾨땲??",
+  "tr_e": "휂i沼걏 78 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(휂훱ng k첵 gi梳쪅 ph챕p l찼i xe b梳즢 ti梳퓆g Anh, v.v.): Ng튼沼쓎 c처 gi梳쪅 ph챕p l찼i xe t梳춑 l찼i kh척ng thu沼셛 휃沼멼 t튼沼즢g 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe b梳즢 ti梳퓆g Anh."
+ },
+ {
+  "n": 32,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18(?댁쟾?????덈뒗 李⑥쓽 醫낅쪟)",
+  "tr_e": "Ph沼?l沼쩭 18 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(C찼c lo梳죍 xe 휃튼沼즓 ph챕p l찼i)"
+ },
+ {
+  "n": 33,
+  "ko_e": "?꾨줈援먰넻踰뺤젣84議곗쓽2 遺?뺥뻾?꾩옄?????議곗튂, 遺?뺥뻾?꾨줈 ?쒗뿕??臾댄슚濡?泥섎━???щ엺? 洹?泥섎텇???덈뒗 ?좊??? 2?꾧컙 ?대떦?쒗뿕???묒떆?섏? 紐삵븳??",
+  "tr_e": "휂i沼걏 84-2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Bi沼뇆 ph찼p 휃沼멼 v沼쌻 ng튼沼쓎 gian l梳춏): Ng튼沼쓎 b沼?x沼?l첵 v척 hi沼뇎 k沼?thi do gian l梳춏 th챙 kh척ng 휃튼沼즓 d沼?thi k沼?thi 휃처 trong 2 n훱m k沼?t沼?ng횪y c처 x沼?ph梳죜 휃처."
+ },
+ {
+  "n": 34,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????5議?????,
+  "tr_e": "Kho梳즢 1 휂i沼걏 55 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?
+ },
+ {
+  "n": 35,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????5議??????댁쟾硫댄뿀利?媛깆떊湲곌컙???곌린瑜?諛쏆? ?щ엺? 洹??ъ쑀媛 ?놁뼱吏??좊???3媛쒖썡 ?대궡 ???댁쟾硫댄뿀利앹쓣 媛깆떊?섏뿬 諛쒓툒諛쏆븘???쒕떎.",
+  "tr_e": "Kho梳즢 3 휂i沼걏 55 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Ng튼沼쓎 휃튼沼즓 gia h梳죒 th沼쓎 h梳죒 c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe ph梳즜 휃튼沼즓 c梳쩺 휃沼뷼 gi梳쪅 ph챕p l찼i xe trong v챵ng 3 th찼ng k沼?t沼?ng횪y l첵 do 휃처 kh척ng c챵n."
+ },
+ {
+  "n": 36,
+  "ko_e": "怨좎븬媛?ㅼ븞?꾧?由щ쾿 ?쒗뻾洹쒖튃 ?쒗뻾洹쒖튃 ??1議곗젣1??蹂꾪몴31",
+  "tr_e": "Ph沼?l沼쩭 31 kho梳즢 1 휂i沼걏 51 Th척ng t튼 thi h횪nh Lu梳춗 Qu梳즢 l첵 an to횪n kh챠 gas 찼p su梳쩿 cao"
+ },
+ {
+  "n": 37,
+  "ko_e": "?꾨줈援먰넻踰???0議곗쓽3 ?뚯＜?댁쟾 諛⑹??μ튂 遺李?議곌굔遺 ?댁쟾硫댄뿀瑜?諛쏆? ?댁쟾?먮벑??以?섏궗?? 媛숈? 踰???3議????꾨㈃?덉쓽 痍⑥냼쨌?뺤?) ????- ?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑???쑣룸룄寃쎌같泥?뿉 ?깅줉?섏? ?꾨땲?섍퀬 ?댁쟾??寃쎌슦?먮뒗 硫댄뿀媛 痍⑥냼?쒕떎.(??1?? - ?뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂?섏? ?꾨땲?섍굅???ㅼ튂湲곗???遺?⑺븯吏 ?꾨땲???뚯＜?댁쟾 諛⑹??μ튂媛 ?ㅼ튂???먮룞李⑤벑???댁쟾??寃쎌슦 硫댄뿀瑜?痍⑥냼?쒕떎.(??2?? - ?뚯＜?댁쟾 諛⑹??μ튂???뺣퉬瑜??꾪빐 ?댁껜쨌議곗옉 ?먮뒗 洹?諛뽰쓽 諛⑸쾿?쇰줈 ?⑥슜???⑥뼱吏?寃껋쓣 ?뚮㈃???대떦?μ튂媛 ?ㅼ튂???먮룞 李⑤벑???댁쟾??寃쎌슦?먮뒗 硫댄뿀媛 痍⑥냼?쒕떎. (??3??",
+  "tr_e": "휂i沼걏 50-3 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Quy 휃沼땙h ph梳즜 tu창n th沼?c沼쬪 ng튼沼쓎 l찼i xe 휃튼沼즓 c梳쩺 gi梳쪅 ph챕p l찼i xe c처 휃i沼걏 ki沼뇆 l梳칛 thi梳퓍 b沼?ng훱n l찼i xe say r튼沼즩, v.v.), kho梳즢 1 휂i沼걏 93 c첫ng Lu梳춗 (H沼쭃, 휃챙nh ch沼?gi梳쪅 ph챕p l찼i xe): - Tr튼沼쓓g h沼즤 l찼i xe c퉤 gi沼쌻 v횪 t튼퉤ng t沼?c처 l梳칛 thi梳퓍 b沼?ng훱n l찼i xe say r튼沼즩 m횪 kh척ng 휃훱ng k첵 v沼쌻 C퉤 quan C梳즢h s찼t Th횪nh ph沼?T沼뎝h th챙 b沼?h沼쭃 gi梳쪅 ph챕p (휃i沼긩 21). - Tr튼沼쓓g h沼즤 l찼i xe c퉤 gi沼쌻 v횪 t튼퉤ng t沼?kh척ng l梳칛 thi梳퓍 b沼?ng훱n l찼i xe say r튼沼즩 ho梳톍 l梳칛 thi梳퓍 b沼?ng훱n l찼i xe say r튼沼즩 kh척ng 휃梳죜 ti챗u chu梳쯰 l梳칛 휃梳톞 th챙 b沼?h沼쭃 gi梳쪅 ph챕p (휃i沼긩 22). - Tr튼沼쓓g h沼즤 bi梳퓍 r천 thi梳퓍 b沼?ng훱n l찼i xe say r튼沼즩 휃찾 b沼?gi梳즡 hi沼뇎 d沼쩸g do th찼o d沼? thao t첬ng ho梳톍 ph튼퉤ng ph찼p kh찼c v沼쌻 danh ngh칫a b梳즣 d튼沼죒g m횪 v梳쳌 l찼i xe c퉤 gi沼쌻 v횪 t튼퉤ng t沼?c처 l梳칛 thi梳퓍 b沼?휃처 th챙 b沼?h沼쭃 gi梳쪅 ph챕p (휃i沼긩 23)."
+ },
+ {
+  "n": 38,
+  "ko_e": "?앹쑀 諛??앹쑀?泥댁뿰猷??ъ뾽踰??쒗뻾??蹂꾪몴6 怨쇳깭猷??쒗뻾湲곗? 媛吏??앹쑀?쒗뭹?꾩쓣 ?뚮㈃??李⑤웾 ?곕즺濡??ъ슜??寃쎌슦  ?ъ슜?됱뿉 ?곕씪 2諛깅쭔 ?먯뿉??2泥쒕쭔 ?먭퉴吏 怨쇳깭猷뚭? 遺怨쇰맆 ???덈떎.",
+  "tr_e": "Ph沼?l沼쩭 6 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Kinh doanh d梳쬾 m沼?v횪 nhi챗n li沼뇎 thay th梳?d梳쬾 m沼? ti챗u chu梳쯰 thi h횪nh x沼?ph梳죜 h횪nh ch챠nh: Tr튼沼쓓g h沼즤 bi梳퓍 r천 l횪 s梳즢 ph梳쯯 d梳쬾 gi梳?m횪 v梳쳌 d첫ng l횪m nhi챗n li沼뇎 xe th챙 t첫y theo l튼沼즢g s沼?d沼쩸g c처 th沼?b沼?ph梳죜 h횪nh ch챠nh t沼?2 tri沼뇎 won 휃梳퓆 20 tri沼뇎 won."
+ },
+ {
+  "n": 40,
+  "ko_e": "媛吏쒖꽍?좊? ?먮룞李??곕즺濡??ъ슜?섏???寃쎌슦, ?ㅽ솢????섎줈 ?명븳 留덉같??利앷?濡??곕즺 怨좎븬 ?뚰봽 諛??몄젥???뚯넀?? 諛쒖깮?????덈떎.",
+  "tr_e": "Tr튼沼쓓g h沼즤 d첫ng d梳쬾 gi梳?l횪m nhi챗n li沼뇎 xe, do 휃沼?b척i tr퉤n gi梳즡 khi梳퓆 l沼켧 ma s찼t t훱ng, c처 th沼?g창y h沼뢮g b퉤m cao 찼p nhi챗n li沼뇎 v횪 kim phun (injector)."
+ },
+ {
+  "n": 41,
+  "ko_e": "?댁쟾??怨꾧린??諛?釉뚮젅?댄겕 ?섎떖 ?뺤긽?묐룞 ?щ????뱀감 ???댁쟾?앹뿉?쒖쓽 ?먭??ы빆?대떎.",
+  "tr_e": "Vi沼놻 ki沼긩 tra b梳즢g 휃沼뱊g h沼?gh梳?l찼i v횪 t챙nh tr梳죒g ho梳죜 휃沼셬g b챙nh th튼沼쓓g c沼쬪 b횪n 휃梳죖 phanh l횪 h梳죒g m沼쩭 ki沼긩 tra t梳죍 gh梳?l찼i sau khi l챗n xe."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+p=Path(r'translations/audit/queue/301_expl_vn.json')
+b=p.read_bytes()
+print(b[:100].hex())
+print(p.read_text(encoding='utf-8')[:120].encode('unicode_escape').decode())
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T14:05:52.013922Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 698ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Format-Hex -LiteralPath 'translations/audit/queue/301_expl_vn.json' | Select-Object -First 8 | Out-String" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 657ms:
+
+
+           경로: C:\Users\user\projects\외국인-학과시험-AI튜터\translations\audit\queue\301_expl_vn.json
+
+           00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+00000000   5B 0D 0A 20 7B 0D 0A 20 20 22 6E 22 3A 20 32 31  [.. {..  "n": 21
+00000010   2C 0D 0A 20 20 22 6B 6F 5F 65 22 3A 20 22 EB 8F  ,..  "ko_e": "ë
+00000020   84 EB A1 9C EA B5 90 ED 86 B5 EB B2 95 20 EC A0  ë¡êµíµë² ì 
+00000030   9C 32 EC A1 B0 28 EC A0 95 EC 9D 98 29 20 34 2E  2ì¡°(ì ì) 4.
+00000040   20 EC 97 B0 EC 84 9D EC 84 A0 28 EC B0 A8 EB 8F   ì°ìì (ì°¨ë
+00000050   84 EC 99 80 20 EB B3 B4 EB 8F 84 EB A5 BC 20 EA  ì ë³´ëë¥¼ ê
+00000060   B5 AC EB B6 84 ED 95 98 EB 8A 94 20 EB 8F 8C 20  µ¬ë¶íë ë 
+00000070   EB 93 B1 EC 9C BC EB A1 9C 20 EC 9D B4 EC 96 B4  ë±ì¼ë¡ ì´ì´
+
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false); $OutputEncoding = [Console]::OutputEncoding; Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/301_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 534ms:
+[
+ {
+  "n": 21,
+  "ko_e": "도로교통법 제2조(정의) 4. 연석선(차도와 보도를 구분하는 돌 등으로 이어진 선을 말한다.)",
+  "tr_e": "Điều 2 Luật Giao thông đường bộ (Định nghĩa) 4. Đường bó vỉa (là đường được nối bằng đá, v.v. phân chia giữa lòng đường xe chạy và vỉa hè)."
+ },
+ {
+  "n": 22,
+  "ko_e": "도로교통법 제13조의2(자전거등의 통행방법의 특례) 제6항 자전거등의 운전자가 횡단보도를 이용하여 도로를 횡단 할 때에는 자전거등에서 내려서 자전거등을 끌거나 들고 보행하여야 한다.",
+  "tr_e": "Khoản 6 Điều 13-2 Luật Giao thông đường bộ (Quy định đặc lệ về phương pháp lưu thông của xe đạp và tương tự): Khi người lái xe đạp và tương tự băng qua đường bằng vạch sang đường cho người đi bộ thì phải xuống khỏi xe đạp và tương tự để dắt hoặc bê xe đạp và đi bộ."
+ },
+ {
+  "n": 23,
+  "ko_e": "도로교통법 제87조 제1항",
+  "tr_e": "Khoản 1 Điều 87 Luật Giao thông đường bộ"
+ },
+ {
+  "n": 24,
+  "ko_e": "도로교통법 제87조의2, 도로교통법시행규칙 제57조(운전면허시험응시) 신분증명서를 제시하지 못하는 사람은 신청 인이 원하는 경우 전자적 방법으로 지문정보를 대조하여 본인 확인할 수 있다.",
+  "tr_e": "Điều 87-2 Luật Giao thông đường bộ, Điều 57 Thông tư thi hành Luật Giao thông đường bộ (Dự thi sát hạch giấy phép lái xe): Người không xuất trình được giấy tờ chứng minh nhân thân, nếu người đăng ký mong muốn, có thể được xác nhận danh tính bằng cách đối chiếu thông tin vân tay theo phương pháp điện tử."
+ },
+ {
+  "n": 25,
+  "ko_e": "고압가스안전관리법 시행규칙 제51조제1항 별표31",
+  "tr_e": "Phụ lục 31 khoản 1 Điều 51 Thông tư thi hành Luật Quản lý an toàn khí gas áp suất cao"
+ },
+ {
+  "n": 26,
+  "ko_e": "도로교통법 제73조(교통안전교육)제3항 다음 각 호의 어느 하나에 해당하는 사람이 시·도경찰청장에게 신청하는  경우에는 대통령령으로 정하는 바에 따라 특별교통안전 권장교육을 받을 수 있다. 이 경우 권장교육을 받기 전 1년  이내에 해당 교육을 받지 아니한 사람에 한정한다.",
+  "tr_e": "Khoản 3 Điều 73 Luật Giao thông đường bộ (Giáo dục an toàn giao thông): Người thuộc một trong các điểm sau, khi đăng ký với Giám đốc Cơ quan Cảnh sát Thành phố/Tỉnh, có thể tham gia giáo dục khuyến khích an toàn giao thông đặc biệt theo quy định của Nghị định. Trường hợp này chỉ giới hạn ở người chưa tham gia giáo dục đó trong vòng 1 năm trước khi tham gia giáo dục khuyến khích."
+ },
+ {
+  "n": 27,
+  "ko_e": "도로교통법시행령 제45조(자동차등의 운전에 필요한 적성의 기준) 다만, 한쪽 눈을 보지 못하는 사람이 제1종 보통 운전면허를 취득하려는 경우 자동차등의 운전에 필요한 적성의 기준에서 다른 쪽 눈의 시력이 0.8이상이고 수평시 야가 120도 이상이며, 수직시야가 20도 이상이고, 중심시야 20도 내 암점과 반맹이 없어야 한다.",
+  "tr_e": "Điều 45 Nghị định thi hành Luật Giao thông đường bộ (Tiêu chuẩn về năng lực cần thiết để lái xe cơ giới, v.v.): Tuy nhiên, trường hợp người không nhìn được một bên mắt muốn thi lấy giấy phép lái xe hạng 1 loại thường thì theo tiêu chuẩn năng lực cần thiết để lái xe, mắt còn lại phải có thị lực từ 0.8 trở lên, tầm nhìn ngang từ 120 độ trở lên, tầm nhìn dọc từ 20 độ trở lên, và trong phạm vi tầm nhìn trung tâm 20 độ không có điểm mù và bán manh."
+ },
+ {
+  "n": 28,
+  "ko_e": "도로교통법 87조 제1항 제1호 제1종 운전면허를 발급받은 65세 이상 75세 미만인 사람은 5년마다 정기적성검사를  받아야 한다. 다만 한쪽 눈만 보지 못하는 사람으로서 제1종 면허 중 보통면허를 취득한 사람은 3년이다.",
+  "tr_e": "Điểm 1 khoản 1 Điều 87 Luật Giao thông đường bộ: Người từ 65 tuổi đến dưới 75 tuổi đã được cấp giấy phép lái xe hạng 1 phải kiểm tra năng lực định kỳ 5 năm một lần. Tuy nhiên, người chỉ không nhìn được một bên mắt và đã thi lấy giấy phép loại thường trong giấy phép hạng 1 thì là 3 năm."
+ },
+ {
+  "n": 29,
+  "ko_e": "운전면허의 취소 처분을 받은 때, 운전면허의 효력 정지 처분을 받은 때, 운전면허증을 잃어버리고 다시 교부 받은  후 그 잃어버린 운전면허증을 찾은 때, 연습운전면허를 받은 사람이 제1종 보통운전면허 또는 제2종 보통운전면허 를 받은 때에는 7일 이내에 주소지를 관할하는 시·도경찰청장에게 운전면허증을 반납하여야 한다.",
+  "tr_e": "Khi bị xử phạt hủy giấy phép lái xe, khi bị xử phạt đình chỉ hiệu lực giấy phép lái xe, khi tìm lại được giấy phép lái xe đã mất sau khi làm mất và được cấp lại, khi người được cấp giấy phép lái xe tập lái đã được cấp giấy phép lái xe hạng 1 loại thường hoặc giấy phép lái xe hạng 2 loại thường thì phải nộp lại giấy phép lái xe cho Giám đốc Cơ quan Cảnh sát Thành phố/Tỉnh quản lý nơi cư trú trong vòng 7 ngày."
+ },
+ {
+  "n": 30,
+  "ko_e": "도로교통법[시행 2026. 1. 1.] 제87조(운전면허증의 갱신과 정기 적성검사) ① 운전면허를 받은 사람은 다음 각 호의 구분에 따른 기간 이내에 대통령령으로 정하는 바에 따라 시ㆍ도경찰청장으로부터 운전면허증을 갱신하여 발급받 아야 한다. 1. 최초의 운전면허증 갱신기간은 제83조제1항 또는 제2항에 따른 운전면허시험에 합격한 날부터 기산하여 10년 (운전면허시험 합격일에 65세 이상 75세 미만인 사람은 5년, 75세 이상인 사람은 3년, 한쪽 눈만 보지 못하는 사람으로서 제1종 운전면허 중 보통면허를 취득한 사람은 3년)이 되는 날이 속하는 해의 생일 전후 각각 6개월 이내 2. 제1호 외의 운전면허증 갱신기간은 직전의 운전면허증 갱신일부터 기산하여 매 10년(직전의 운전면허증 갱신일 에 65세 이상 75세 미만인 사람은 5년, 75세 이상인 사람은 3년, 한쪽 눈만 보지 못하는 사람으로서 제1종 운전면허 중 보통면허를 취득한 사람은 3년)이 되는 날이 속하는 해의 생일 전후 각각 6개월 이내",
+  "tr_e": "Luật Giao thông đường bộ [thi hành ngày 1.1.2026] Điều 87 (Cấp đổi giấy phép lái xe và kiểm tra năng lực định kỳ) ① Người được cấp giấy phép lái xe phải được Giám đốc Cơ quan Cảnh sát Thành phố/Tỉnh cấp đổi giấy phép lái xe trong thời hạn theo phân loại tại các điểm sau, theo quy định của Nghị định. 1. Thời hạn cấp đổi giấy phép lái xe lần đầu là trong vòng 6 tháng trước và sau ngày sinh nhật của năm có ngày tròn 10 năm tính từ ngày đỗ sát hạch giấy phép lái xe theo khoản 1 hoặc khoản 2 Điều 83 (đối với người từ 65 đến dưới 75 tuổi vào ngày đỗ sát hạch là 5 năm, người từ 75 tuổi trở lên là 3 năm, người chỉ không nhìn được một bên mắt và đã thi lấy giấy phép loại thường trong giấy phép hạng 1 là 3 năm). 2. Thời hạn cấp đổi giấy phép lái xe ngoài điểm 1 là trong vòng 6 tháng trước và sau ngày sinh nhật của năm có ngày tròn mỗi 10 năm tính từ ngày cấp đổi giấy phép lái xe liền trước (đối với người từ 65 đến dưới 75 tuổi vào ngày cấp đổi liền trước là 5 năm, người từ 75 tuổi trở lên là 3 năm, người chỉ không nhìn được một bên mắt và đã thi lấy giấy phép loại thường trong giấy phép hạng 1 là 3 năm)."
+ },
+ {
+  "n": 31,
+  "ko_e": "도로교통법시행규칙 제78조(영문 운전면허증의 신청 등) 연습운전면허 소지자는 영문운전면허증 발급 대상이 아니다.",
+  "tr_e": "Điều 78 Thông tư thi hành Luật Giao thông đường bộ (Đăng ký giấy phép lái xe bản tiếng Anh, v.v.): Người có giấy phép lái xe tập lái không thuộc đối tượng được cấp giấy phép lái xe bản tiếng Anh."
+ },
+ {
+  "n": 32,
+  "ko_e": "도로교통법 시행규칙 별표18(운전할 수 있는 차의 종류)",
+  "tr_e": "Phụ lục 18 Thông tư thi hành Luật Giao thông đường bộ (Các loại xe được phép lái)"
+ },
+ {
+  "n": 33,
+  "ko_e": "도로교통법제84조의2 부정행위자에 대한 조치, 부정행위로 시험이 무효로 처리된 사람은 그 처분이 있는 날부터  2년간 해당시험에 응시하지 못한다.",
+  "tr_e": "Điều 84-2 Luật Giao thông đường bộ (Biện pháp đối với người gian lận): Người bị xử lý vô hiệu kỳ thi do gian lận thì không được dự thi kỳ thi đó trong 2 năm kể từ ngày có xử phạt đó."
+ },
+ {
+  "n": 34,
+  "ko_e": "도로교통법 시행령 제55조 제1항",
+  "tr_e": "Khoản 1 Điều 55 Nghị định thi hành Luật Giao thông đường bộ"
+ },
+ {
+  "n": 35,
+  "ko_e": "도로교통법 시행령 제55조 제3항 운전면허증 갱신기간의 연기를 받은 사람은 그 사유가 없어진 날부터 3개월 이내 에 운전면허증을 갱신하여 발급받아야 한다.",
+  "tr_e": "Khoản 3 Điều 55 Nghị định thi hành Luật Giao thông đường bộ: Người được gia hạn thời hạn cấp đổi giấy phép lái xe phải được cấp đổi giấy phép lái xe trong vòng 3 tháng kể từ ngày lý do đó không còn."
+ },
+ {
+  "n": 36,
+  "ko_e": "고압가스안전관리법 시행규칙 시행규칙 제51조제1항 별표31",
+  "tr_e": "Phụ lục 31 khoản 1 Điều 51 Thông tư thi hành Luật Quản lý an toàn khí gas áp suất cao"
+ },
+ {
+  "n": 37,
+  "ko_e": "도로교통법 제50조의3 음주운전 방지장치 부착 조건부 운전면허를 받은 운전자등의 준수사항, 같은 법 제93조(운 전면허의 취소·정지) 제1항 - 음주운전 방지장치가 설치된 자동차등을 시·도경찰청에 등록하지 아니하고 운전한 경우에는 면허가 취소된다.(제21호) - 음주운전 방지장치가 설치되지 아니하거나 설치기준에 부합하지 아니한 음주운전 방지장치가 설치된 자동차등을 운전한 경우 면허를 취소된다.(제22호) - 음주운전 방지장치의 정비를 위해 해체·조작 또는 그 밖의 방법으로 효용이 떨어진 것을 알면서 해당장치가 설치된 자동 차등을 운전한 경우에는 면허가 취소된다. (제23호)",
+  "tr_e": "Điều 50-3 Luật Giao thông đường bộ (Quy định phải tuân thủ của người lái xe được cấp giấy phép lái xe có điều kiện lắp thiết bị ngăn lái xe say rượu, v.v.), khoản 1 Điều 93 cùng Luật (Hủy, đình chỉ giấy phép lái xe): - Trường hợp lái xe cơ giới và tương tự có lắp thiết bị ngăn lái xe say rượu mà không đăng ký với Cơ quan Cảnh sát Thành phố/Tỉnh thì bị hủy giấy phép (điểm 21). - Trường hợp lái xe cơ giới và tương tự không lắp thiết bị ngăn lái xe say rượu hoặc lắp thiết bị ngăn lái xe say rượu không đạt tiêu chuẩn lắp đặt thì bị hủy giấy phép (điểm 22). - Trường hợp biết rõ thiết bị ngăn lái xe say rượu đã bị giảm hiệu dụng do tháo dỡ, thao túng hoặc phương pháp khác với danh nghĩa bảo dưỡng mà vẫn lái xe cơ giới và tương tự có lắp thiết bị đó thì bị hủy giấy phép (điểm 23)."
+ },
+ {
+  "n": 38,
+  "ko_e": "석유 및 석유대체연료 사업법 시행령 별표6 과태료 시행기준 가짜 석유제품임을 알면서 차량 연료로 사용할 경우  사용량에 따라 2백만 원에서 2천만 원까지 과태료가 부과될 수 있다.",
+  "tr_e": "Phụ lục 6 Nghị định thi hành Luật Kinh doanh dầu mỏ và nhiên liệu thay thế dầu mỏ, tiêu chuẩn thi hành xử phạt hành chính: Trường hợp biết rõ là sản phẩm dầu giả mà vẫn dùng làm nhiên liệu xe thì tùy theo lượng sử dụng có thể bị phạt hành chính từ 2 triệu won đến 20 triệu won."
+ },
+ {
+  "n": 40,
+  "ko_e": "가짜석유를 자동차 연료로 사용하였을 경우, 윤활성 저하로 인한 마찰력 증가로 연료 고압 펌프 및 인젝터 파손이  발생할 수 있다.",
+  "tr_e": "Trường hợp dùng dầu giả làm nhiên liệu xe, do độ bôi trơn giảm khiến lực ma sát tăng, có thể gây hỏng bơm cao áp nhiên liệu và kim phun (injector)."
+ },
+ {
+  "n": 41,
+  "ko_e": "운전석 계기판 및 브레이크 페달 정상작동 여부는 승차 후 운전석에서의 점검사항이다.",
+  "tr_e": "Việc kiểm tra bảng đồng hồ ghế lái và tình trạng hoạt động bình thường của bàn đạp phanh là hạng mục kiểm tra tại ghế lái sau khi lên xe."
+ }
+]
+
+codex
+[]
+tokens used
+18,773
+[]

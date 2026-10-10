@@ -1,0 +1,1289 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12612-9b9d-7463-87d6-0449974b93a5
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/219_choices_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/219_choices_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 548ms:
+[
+ {
+  "n": 761,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?대┛??蹂댄샇援ъ뿭?대?濡?蹂댄뻾?먭? ?녿뜑?쇰룄 寃쎌쓬湲곕? 怨꾩냽 ?몃━硫?吏꾪뻾?쒕떎.",
+   "以묒븰?좎쓣 ?섏뼱 吏꾪뻾?섎뒗 李⑤웾???덉쑝誘濡??띾룄瑜???떠 ?ш퀬???꾪뿕??以꾩씤??",
+   "醫뚯륫 嫄대Ъ 二쇱감?μ쑝濡??ㅼ뼱媛??吏꾩엯濡쒓? ?덉쑝誘濡?以묒븰?좎쓣 ?섏뼱 吏꾩엯?섎뒗 寃껋씠 媛?ν븯??",
+   "留욎??몄뿉??吏꾪뻾 以묒씤 踰꾩뒪濡??명빐 ?쒖빞 ?뺣낫媛 ?대젮??援먰뻾 ???띾룄瑜??붿슧 以꾩뿬 蹂댄뻾?먭? ?덈뒗吏 ?댄???",
+   "?대┛??蹂댄샇援ъ뿭 ??怨쇱냽諛⑹??깆뿉?쒕뒗 二쇱감??湲덉??섏?留??뺤감??媛?ν븯??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Keep honking to pass a school zone, even if there are  no pedestrians.",
+   "Slow down to reduce the risk of an accident, as there  may be vehicles crossing the centerline.",
+   "Crossing the centerline is allowed, as there is an  entrance to the parking lot in the building on the left.",
+   "Slow down further to watch out for pedestrians, as the  bus on the opposite side of the road obstructs your view.",
+   "Parking is prohibited at speed bumps in a school zone,  but stopping is allowed."
+  ]
+ },
+ {
+  "n": 762,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?꾨갑 李⑤웾?좏샇???곸깋?깊솕?먯꽌 ?고쉶?꾪븯?ㅻ뒗 寃쎌슦 ?쇱떆?뺤? ?놁씠 ?꾨갑 ?〓떒蹂대룄瑜??듦낵?????덈떎.",
+   "?곗륫 蹂댄뻾?좏샇媛 ?뱀깋?깊솕?닿퀬 蹂댄뻾?먭? ?덉쑝誘濡??고쉶?꾪븯?ㅻ뒗 寃쎌슦 ?〓떒蹂대룄 ?꾩뿉 ?쇱떆?뺤??쒕떎.",
+   "蹂댄뻾?좏샇媛 ?곸깋?깊솕濡?諛붾??꾩뿉??蹂댄뻾?먭? ?〓떒蹂대룄瑜?蹂댄뻾 以묒씤 寃쎌슦 寃쎌쓬湲곕? ?몃젮 蹂댄뻾???ъ큺?쒕떎.",
+   "?곗륫 蹂댄뻾?좏샇媛 ?뱀깋?깊솕?대?濡?李⑤웾?좏샇???깊솕? 愿怨꾩뾾??醫뚰쉶?꾪븷 ???덈떎.",
+   "?ㅻ뒭寃??〓떒?섎뒗 蹂댄뻾?먭? ?덉쓣 ???덉쑝誘濡??덉쟾???붿슧 二쇱쓽?섎ŉ ?댁쟾?쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "If the traffic light ahead is red and you intend to turn  right, you may pass through the crosswalk ahead  without stopping.",
+   "If the pedestrian signal on the right is green and  pedestrians are crossing, stop before the crosswalk if you  intend to turn right.",
+   "If the pedestrian signal turns red but the pedestrians are  still crossing, honk to rush them.",
+   "You can turn left regardless of the traffic light as the  pedestrian signal on the right is green.",
+   "Drive with extra caution, as pedestrians may be crossing  belatedly."
+  ]
+ },
+ {
+  "n": 763,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?곗륫 怨⑤ぉ湲몄뿉???섑??섎뒗 李⑤웾???덉쓣 ???덉쑝誘濡?鍮좊Ⅴ寃?援먯감濡쒕? ?듦낵?쒕떎.",
+   "?꾨갑 醫뚯륫??二쇱감???뚮갑李⑤줈 ?명븯???쒖빞 ?뺣낫媛 怨ㅻ????곹솴?대?濡??띾룄瑜???텛怨??꾨갑 ?곹솴?????댄???",
+   "?대┛??蹂댄샇援ъ뿭 ?댁뿉?쒕뒗 ?〓떒蹂대룄??蹂댄뻾?먭? ?덈뒗 寃쎌슦?먮쭔 ?쇱떆?뺤? ??吏꾪뻾?쒕떎.",
+   "?고쉶?꾪븯?ㅻ뒗 寃쎌슦 ?곗륫 怨⑤ぉ湲몄뿉???섏삤??李⑤웾?대굹 蹂댄뻾?먮? ???댄뵾硫?吏꾪뻾?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭? 紐⑤몢 理쒓퀬 ?쒗븳?띾룄媛 ?쒖냽 30 ?щ줈誘명꽣 ?대?濡?理쒓퀬 ?쒗븳?띾룄 ?대궡濡?二쇳뻾?섎㈃ ?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Pass through the intersection quickly in anticipation of  vehicles emerging from the alley on your right.",
+   "Slow down to observe the situation ahead, as the fire  truck parked on the opposite side of the road is  obstructing your view.",
+   "In a school zone, stop and proceed only if there are  pedestrians in the crosswalk.",
+   "If you plan to turn right, watch out for vehicles or  pedestrians coming out of the alley on your right.",
+   "You should drive within the maximum speed limit, as the  speed limit in all school zones is set at 30km/h."
+  ]
+ },
+ {
+  "n": 764,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?곗궛????蹂댄뻾???덉쟾???붿슧 二쇱쓽?섎ŉ ?댁쟾?쒕떎.",
+   "二쇱쐞??蹂댄뻾?먭? 留롮쑝誘濡??띾룄瑜??믪뿬 鍮좊Ⅴ寃??듦낵?쒕떎.",
+   "?대┛??蹂댄샇援ъ뿭???꾨땶 怨녹씠???섎뜑?쇰룄 ?숆탳 ?욎씠誘濡?蹂댄뻾?먯쓽 ?덉쟾??二쇱쓽?섎ŉ 吏꾪뻾?쒕떎.",
+   "?좏샇湲??녿뒗 援먯감濡쒓? ?꾨갑???덇퀬 醫뚯슦痢??쒖빞 ?뺣낫媛 遺덇????곹솴?대?濡??쒗뻾?섎ŉ 吏꾪뻾?쒕떎.",
+   "二쇱감??李⑤웾 ?ъ씠濡?蹂댄뻾?먭? ?섑??????덉쑝誘濡?寃쎌쓬湲곕? 怨꾩냽 ?몃━怨?寃쎄퀬?섎ŉ 吏꾪뻾?쒕떎."
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Drive while being extremely cautious about pedestrians  with umbrellas.",
+   "Speed up to pass quickly, as there are many pedestrians  around.",
+   "Even if you are not in a school zone, pay attention to  pedestrian safety as you are in front of a school.",
+   "Proceed slowly as there is an intersection ahead with no  traffic lights and visibility is limited on both sides.",
+   "Pedestrians may appear between parked cars, so honk  to warn them."
+  ]
+ },
+ {
+  "n": 765,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "蹂댄뻾?먭? ?녿뜑?쇰룄 寃쎌쓬湲곕? 怨꾩냽 ?몃━硫?吏꾪뻾?쒕떎.",
+   "?곗륫 二쇱감???붾Ъ李⑤웾 ?ㅻ줈 怨⑤ぉ湲몄씠 ?덉뼱 蹂댄뻾?먮굹 李⑤웾???곹솴?????댄뵾湲??꾪빐 ?쇱떆?뺤? ??援먯감濡쒖뿉 吏꾩엯?쒕떎.",
+   "?〓떒蹂대룄???좏샇湲곌? ?놁쑝誘濡?蹂댄뻾?먭? ?녿뒗 寃쎌슦 ?쒗뻾?섎ŉ 洹몃?濡?吏꾪뻾?쒕떎.",
+   "?꾨갑??以묒븰?좎쓣 ?섏뼱 吏꾪뻾?섎뒗 李⑤웾???덉쑝誘濡??띾룄瑜???떠 ?ш퀬???꾪뿕??以꾩씤??",
+   "?고쉶?꾪븯?ㅻ뒗 寃쎌슦 ?곗륫 ?쒖젙吏?앺몴吏媛 ?덉쑝??李⑤웾?좏샇湲곌? ?놁쑝誘濡??쇱떆?뺤??섏? ?딄퀬 洹몃?濡??고쉶?꾪븳??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Keep honking to proceed, even if there are no  pedestrians.",
+   "Temporarily stop to watch out for pedestrians and vehicles before entering the intersection, as there is an alley behind a parked truck on the right side.",
+   "Proceed slowly if there are no pedestrians, as there is no  traffic signal at the crosswalk.",
+   "Slow down to reduce the risk of an accident, as there  are vehicles crossing the centerline ahead.",
+   "When intending to turn right, do so without stopping as  there is a stop sign on the right, but no traffic light."
+  ]
+ },
+ {
+  "n": 766,
+  "ko_b": "?ㅼ쓬 以??뚮갑湲곕낯踰뺣졊???뚮갑?먮룞李??꾩슜援ъ뿭??????ㅻ챸?쇰줈 ?녹? ?딆? 2媛吏??",
+  "ko_c": [
+   "?뚮갑?쒕룞???먰솢???섑뻾???꾪븯??怨듬룞二쇳깮???ㅼ튂?쒕떎.",
+   "?꾧뎄?좎? ?꾩슜援ъ뿭??李⑤? 二쇱감?섍굅???꾩슜援ъ뿭?먯쓽 吏꾩엯??媛濡쒕쭑????諛⑺빐?됱쐞瑜??섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+   "怨듬룞二쇳깮??嫄댁텞二쇰뒗 ?덉쇅 ?놁씠 媛??숇퀎濡?1媛쒖냼 ?댁긽 ?ㅼ튂?댁빞 ?쒕떎.",
+   "?ъ쭊怨?媛숈씠 二쇱감?섏???寃쎌슦 怨쇳깭猷?遺怨쇰??곸씠??",
+   "?꾩슜援ъ뿭 ?쒖?瑜?吏?곌굅???쇱넀?섎뒗 ?됱쐞???꾩슜援ъ뿭 諛⑺빐?됱쐞???대떦?섏? ?딅뒗??"
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following descriptions regarding the  exclusive use areas for fire engines under the  Framework Act on Firefighting Services are incorrect?  (Select TWO)",
+  "tr_c": [
+   "They are installed in apartment buildings to facilitate  firefighting operations.",
+   "No one should park a vehicle in the designated area or  block access to it in any way.",
+   "The owner of an apartment building must install at least  one in each building, without exception.",
+   "Parking as shown in the photo is subject to an  administrative fine.",
+   "Removing or damaging the \"exclusive use area\" sign  does not constitute obstruction of the exclusive use area."
+  ]
+ },
+ {
+  "n": 767,
+  "ko_b": "?뚮갑?먮룞李?湲닿툒異쒕룞 以??듯뻾 諛⑺빐 李⑤웾??媛뺤젣泥섎텇??愿???ㅻ챸?쇰줈 ?由?2媛吏??",
+  "ko_c": [
+   "?뚮갑?쒕룞??諛⑺빐媛 ?섎뒗 遺덈쾿 二쇱감??李⑤웾???대룞?????덈떎.",
+   "?뚮갑?쒕룞??諛⑺빐媛 ?섎뒗 二쇱감 援ы쉷???댁뿉 二쇱감??李⑤웾???쒓굅?????덈떎.",
+   "?뚮갑?먮룞李⑥쓽 ?듯뻾??諛⑺빐媛 ?섎뒗 臾쇨굔???쒓굅?섍굅???대룞?쒗궗 ???덈떎.",
+   "媛뺤젣泥섎텇??遺덈쾿 二쇱감??李⑤웾 ?댁쟾?먮뒗 ?먯떎蹂댁긽??泥?뎄?????덈떎.",
+   "媛뺤젣泥섎텇??二쇱감 援ы쉷???댁뿉 二쇱감??李⑤웾 ?댁쟾?먮뒗 ?먰빐諛곗긽??泥?뎄?????덈떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following descriptions regarding the  compulsory disposition of vehicles that obstruct  emergency fire engine traffic are incorrect? (Select  TWO)",
+  "tr_c": [
+   "Illegally parked vehicles that interfere with firefighting  activities can be moved.",
+   "Parked vehicles within parking lines that interfere with  firefighting activities can be removed.",
+   "Objects that obstruct the passage of firefighting vehicles  can be moved or removed.",
+   "The driver of a vehicle that has been towed due to  illegal parking may claim compensation for any losses.",
+   "The driver of a vehicle parked within a designated  parking space but has been towed may claim  compensation for damages."
+  ]
+ },
+ {
+  "n": 768,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 踰뺣졊???꾨컲???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "B ?댁쟾?????쒖냽 100 ?щ줈誘명꽣濡?二쇳뻾?쒕떎.",
+   "A ?댁쟾?????쒖냽 70 ?щ줈誘명꽣濡?二쇳뻾?쒕떎.",
+   "B ?댁쟾????援먯감濡쒖뿉???욎?瑜닿린?쒕떎.",
+   "A ?댁쟾????援먯감濡쒖뿉???욎?瑜닿린?쒕떎.",
+   "B ?댁쟾?????욎감? ?덉쟾嫄곕━瑜??뺣낫?섏? ?딅뒗??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following driving methods violate the  law in the given situation? (Select TWO)",
+  "tr_c": [
+   "Driver B - Drives at 100 km/h.",
+   "Driver A - Drives at 70 km/h.",
+   "Driver B - Overtakes at an intersection.",
+   "Driver A - Overtakes at an intersection.",
+   "Driver B - Does not maintain a safe distance with the  vehicle ahead."
+  ]
+ },
+ {
+  "n": 769,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "湲닿툒?먮룞李④? ?묎렐?섎뒗 寃쎌슦 ?쇰컲 李⑤웾? ?꾨줈 醫뚯슦痢≪쑝濡??쇱뼇?섏뿬 吏꾨줈瑜??묐낫?댁빞 ?쒕떎.",
+   "湲닿툒?먮룞李⑥쓽 ?ㅻ? ?곕씪 吏꾪뻾?섎㈃ ?붿슧 鍮⑤━ ?댄뻾?????덉쑝誘濡??ㅻ뵲??吏꾪뻾?쒕떎.",
+   "?곗륫??湲닿툒?먮룞李④? 吏꾨줈蹂寃??????녿룄濡??띾룄瑜??붿슧 ?믪뿬 吏꾪뻾?쒕떎.",
+   "湲닿툒?먮룞李④? 湲닿툒???⑸Т瑜?留덉튂怨??뚯븘媛??寃쎌슦 寃쎄킅?깆씠???ъ씠?뚯쓣 ?묐룞?섏? ?딆쑝誘濡??쇱뼇???꾩슂???녿떎.",
+   "湲닿툒?먮룞李④? ?꾪뻾?섏뿬 ?곕씪?ㅻ뒗 寃껋쓣 諛쒓껄?섎㈃ ?욎?瑜닿린 ?????녿룄濡??띾룄瑜??믪뿬 吏꾪뻾?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "If an emergency vehicle is approaching, vehicles must  move over to the left or right side of the road to yield  the right of way.",
+   "Follow behind the emergency vehicle as it will allow you  to travel faster.",
+   "Speed up to prevent the emergency vehicle from  changing lanes.",
+   "If the emergency vehicle is returning from an urgent  business, it does not activate its strobe lights or siren, so  there is no need to yield.",
+   "If you see an emergency vehicle behind, speed up so  that it cannot overtake you."
+  ]
+ },
+ {
+  "n": 770,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "吏꾨줈 ?묐낫??2李⑤줈留?媛?ν븯誘濡?1李⑤줈?먯꽌 吏꾪뻾 以묒씤 寃쎌슦???꾨갑??湲닿툒?먮룞李⑤? 二쇱쓽???꾩슂???녿떎.",
+   "?꾨갑??援먯감濡쒓? ?덈뒗 寃쎌슦 援먯감濡쒕? ?쇳빐 吏꾨줈瑜??묐낫?쒕떎.",
+   "2李⑤줈濡?鍮좊Ⅴ寃?李⑤줈蹂寃쏀븯??鍮꾩긽?깆쓣 耳쒓퀬 湲닿툒?먮룞李?蹂대떎 ?욎꽌??二쇳뻾?쒕떎.",
+   "湲닿툒?먮룞李⑥쓽 ?욎뿉 吏꾪뻾?섎뒗 寃쎌슦?쇰㈃ ?꾨줈 醫뚯슦痢≪쑝濡??쇱뼇?섏뿬 吏꾨줈瑜??묐낫?쒕떎.",
+   "湲닿툒?먮룞李⑥쓽 ?ㅻ? ?곕씪 吏꾪뻾?섎㈃ ?붿슧 鍮⑤━ ?댄뻾?????덉쑝誘濡?湲닿툒?먮룞李④? 吏?섍컙 ??2李⑤줈濡?李⑤줈蹂寃쏀븯??諛붿떦  ?ㅻ뵲瑜몃떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "The right of way can only be yielded in the second lane, so if you are in the first lane, there is no need to watch out for emergency vehicles behind.",
+   "If there is an intersection ahead, avoid it and yield the  right of way.",
+   "Quickly switch to the second lane, turn on the hazard  lights, and drive ahead of the emergency vehicle.",
+   "If you are traveling in front of an emergency vehicle,  move to the left or right side of the road and yield the  right of way.",
+   "Since you can travel faster if you follow behind the emergency vehicle, switch to the second lane and closely follow behind after the emergency vehicle passes through."
+  ]
+ },
+ {
+  "n": 771,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 援먰넻?덉쟾?쒖꽕怨??댁뿉 ?곕Ⅸ ?됰룞?쇰줈 媛???щ컮瑜?2媛吏??",
+  "ko_c": [
+   "?〓떒蹂대룄 ???먯쟾嫄곕? ?怨??댁슜?????덈떎.",
+   "?먯쟾嫄고슒?⑤룄 - ?먯쟾嫄고슒?⑤룄媛 ?덈뒗 ?꾨줈瑜??〓떒???뚯뿉???먯쟾嫄곕? ?怨??먯쟾嫄고슒?⑤룄瑜??댁슜?쒕떎.",
+   "蹂댄뻾?좏샇?????뱀깋?깊솕???먮㈇ ?곹깭?쇰㈃ 蹂댄뻾?먮뒗 ?〓떒??鍮좊Ⅴ寃??쒖옉?섏뿬???쒕떎.",
+   "蹂댄뻾?좏샇?????먯쟾嫄??좏샇?깆씠 ?ㅼ튂?섏? ?딆? 寃쎌슦 ?먯쟾嫄곕뒗 蹂댄뻾?좏샇?깆쓽 吏?쒖뿉 ?곕Ⅸ??",
+   "李⑤웾?좏샇?????먯쟾嫄??좏샇?깆씠 ?ㅼ튂?섏? ?딆? 寃쎌슦 ?먯쟾嫄곕뒗 李⑤웾?좏샇?깆쓽 吏?쒖뿉 ?곕Ⅸ??"
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following traffic safety facilities and  actions are the most appropriate in the given  situation? (Select TWO)",
+  "tr_c": [
+   "Crosswalk - You can cross while riding on your bike.",
+   "Bike crosswalk - Ride the bicycle to cross a roadway with  a bike crossing.",
+   "Pedestrian signal - Pedestrians should start crossing  quickly when the green traffic light is flashing.",
+   "Pedestrian signal - If a bike signal is not installed,  bicycle riders must follow the pedestrian signal.",
+   "Traffic light - If a bike signal is not installed, bicycle  riders must follow the traffic signal."
+  ]
+ },
+ {
+  "n": 772,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???섎せ???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?고쉶?꾪븯?ㅻ㈃ ?뺤??좎쓽 吏곸쟾???쇱떆?뺤??????고쉶?꾪븳??",
+   "?고쉶?꾪븷 ?뚯뿉??誘몃━ ?꾨줈???곗륫 媛?μ옄由щ? ?쒗뻾?섎㈃???고쉶?꾪븯?ъ빞 ?쒕떎.",
+   "?고쉶?꾪븯??李⑥쓽 ?댁쟾?먮뒗 ?좏샇???곕씪 ?뺤??섍굅??吏꾪뻾?섎뒗 蹂댄뻾???먮뒗 ?먯쟾嫄곕벑??二쇱쓽?섏뿬???쒕떎.",
+   "?숈듅?먭? ?섏감???뚯뿉???좎떆 ?뺤감?섎뒗 寃껋씠誘濡??뚰솕???욎뿉 ?뺤감?????덈떎.",
+   "?쒕궡?꾨줈?먯꽌???쇨컙?대씪??二쇰???諛앷린 ?뚮Ц???꾩“?깆쓣 耳??꾩슂???녿떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the most incorrect ways  to drive in the given situation? (Select TWO)",
+  "tr_c": [
+   "To turn right, stop just before the stop line, and then  turn right.",
+   "When turning right, proceed slowly along the right edge  of the road before turning.",
+   "Drivers turning right must pay attention to pedestrians,  bicycle riders, and others who are stopping or  proceeding, depending on the signal.",
+   "If a passenger is getting out of the car, you can stop  briefly in front of a fire hydrant.",
+   "On city streets, it is unnecessary to turn on the  headlights because the surroundings are well-lit even at  night."
+  ]
+ },
+ {
+  "n": 773,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???섎せ???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄??댁쟾?먮뒗 ?먯쟾嫄곕? ?怨??〓떒蹂대룄瑜??듯뻾?????덈떎.",
+   "?먯쟾嫄??댁쟾?먭? ?대┛?대씪硫?蹂대룄瑜??듯뻾?????덈떎.",
+   "?먯쟾嫄??댁쟾?먮뒗 ?덉쟾紐⑤? 李⑹슜?댁빞 ?쒕떎.",
+   "?먯쟾嫄??댁쟾?먮뒗 諛ㅼ뿉 ?꾨줈瑜??듯뻾?섎뒗 ?뚯뿉???꾩“?깃낵 誘몃벑??耳쒓굅???쇨킅????諛쒓킅?μ튂瑜?李⑹슜?섏뿬???쒕떎.",
+   "?대┛?댄넻?숇쾭?ㅻ뒗 ?대┛?댁쓽 ?뱁븯李??몄쓽瑜??꾪빐 ?꾨줈??醫뚯륫??二쇱감?섍굅???뺤감?????덈떎."
+  ],
+  "a": "1, 5",
+  "tr_b": "Which of the following are the most incorrect ways  to drive in the given situation? (Select TWO)",
+  "tr_c": [
+   "Bicycle riders may ride their bicycle when crossing a  crosswalk.",
+   "A bicycle rider who is a child may ride on the sidewalk.",
+   "A bicycle rider must wear a helmet.",
+   "Bicycle riders must turn on their front and rear lights or  wear other light-emitting devices when riding on the  road at night.",
+   "School buses can park or stop on the left side of the  road for the convenience of children getting on and off  the bus."
+  ]
+ },
+ {
+  "n": 774,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?띻린怨꾧? 二쇳뻾 以묒씠 ?꾨땲?쇰㈃ ?댁쟾?먮뒗 ?밸퀎??二쇱쓽??寃껋? ?녿떎.",
+   "?띿뼱珥뚮룄濡쒕뒗 ?쒗븳?띾룄 洹쒖젙???놁쑝誘濡?媛?랁븯???댁쟾?쒕떎.",
+   "?몃㈃??紐⑤옒? 癒쇱?媛 留롮쑝誘濡??대? 二쇱쓽?섎㈃???댁쟾?쒕떎.",
+   "?띻린怨꾩뿉 ?대Ⅴ湲??꾨????쇱떆?뺤??섍굅??媛먯냽?섎뒗 ???띻린怨꾩? ?덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "?띻린怨??댁쟾?먯뿉寃?諛⑺빐媛 ?섏? ?딅룄濡?寃쎌쓬湲곕뒗 ?덈? ?묐룞?섏? ?딅뒗??"
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Drivers need not be particularly careful unless the  agricultural machine is in motion.",
+   "Speed up as there are no speed limits on rural roads.",
+   "Drive carefully as there is a lot of sand and dust on the  road.",
+   "Maintain a safe distance from the agricultural machine  by stopping temporarily or slowing down before  approaching it.",
+   "Never honk to avoid disturbing the agricultural machine  driver."
+  ]
+ },
+ {
+  "n": 775,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?띿뼱珥뚮룄濡쒕뒗 ?쒗븳?띾룄 洹쒖젙???놁쑝誘濡?媛?랁븯??吏꾪뻾?쒕떎.",
+   "?뱀슜李⑥? ?띻린怨??ъ씠??吏꾪뻾怨듦컙???덈떎 ?섎뜑?쇰룄 寃쎌슫湲곗뿉 ?묒듅?섎뒗 ?щ엺???덉쟾???꾪빐 ?쇱떆?뺤? ?쒕떎.",
+   "?띻린怨꾩뿉 ?대Ⅴ湲??꾨????쇱떆?뺤??섍굅??媛먯냽?섎뒗 ???띻린怨꾩? ?덉쟾嫄곕━瑜??뺣낫?쒕떎.",
+   "?띻린怨??댁쟾?먯뿉寃?諛⑺빐媛 ?섏? ?딅룄濡?寃쎌쓬湲곕뒗 ?덈? ?묐룞?섏? ?딅뒗??",
+   "?꾨줈 醫뚯슦痢?湲멸??μ옄由ш뎄??? ?뺤감??湲덉??섎굹 二쇱감???덉슜?섎?濡?二쇱감?????덈떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Speed up as there are no speed limits on rural roads.",
+   "Even if there is enough space to pass between your  vehicle and the agricultural machine, stop for the safety  of the person riding the cultivator.",
+   "Maintain a safe distance from the agricultural machine  by stopping temporarily or slowing down before  approaching it.",
+   "Never honk to avoid disturbing the agricultural machine  driver.",
+   "Stopping is prohibited in the roadside areas on both  sides of the road, but parking is allowed."
+  ]
+ },
+ {
+  "n": 776,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?좏샇湲곌? ?묐룞?섏? ?딄린 ?뚮Ц??援먯감濡?吏꾩엯 ??援먯감濡??곹솴?????댄뵾怨?吏꾩엯?쒕떎.",
+   "?고쉶?꾪븯?ㅻ뒗 寃쎌슦 寃쎌슫湲?醫뚯륫?쇰줈 寃쎌쓬湲곕? ?몃━硫?寃쎌슫湲곕? ?욎?瑜닿린?쒕떎.",
+   "寃쎌슫湲곕뒗 ?댄뻾?띾룄媛 ?먮━湲??뚮Ц???띾룄瑜??щ젮 癒쇱? ?고쉶?꾪븳??",
+   "3李⑤줈?먯꽌 吏곸쭊?섎젮??寃쎌슦 寃쎌슫湲곗쓽 吏꾪뻾?곹깭瑜??뺥솗???뺤씤?섍퀬 吏꾪뻾?쒕떎.",
+   "寃쎌슫湲곌? 吏곸쭊?????덉쑝誘濡?誘몃━ ?덉긽?섍퀬 2李⑤줈濡?湲됲엳 李⑤줈蹂寃쏀븯??吏곸쭊?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Since the signals are not working, carefully observe the  intersection before entering.",
+   "When turning right, honk and overtake the cultivator on  its left.",
+   "Since the cultivator is moving slowly, speed up and turn  right ahead of it.",
+   "If you intend to go straight in the third lane, be sure to  check the cultivator's position.",
+   "Anticipate the cultivator going straight, and then quickly  switch to the second lane and go straight."
+  ]
+ },
+ {
+  "n": 777,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "寃쎌슫湲곕? ?욎?瑜닿린?섍린 ?꾪빐 以묒븰?좎쓣 ?섏뼱 二쇳뻾?대룄 ?쒕떎.",
+   "寃쎌슫湲곌? 二쇱감??李⑤웾???듦낵?섎㈃ ?곗륫 怨듦컙???댁슜?섏뿬 鍮좊Ⅸ ?띾룄濡??욎?瑜닿린?쒕떎.",
+   "寃쎌슫湲??댁쟾?먭? 癒쇱? 媛?쇰뒗 ?먯쭞???섎뜑?쇰룄 ?덉쟾嫄곕━瑜??좎??섎ŉ ?덉쟾?섍쾶 ?ㅻ뵲瑜몃떎.",
+   "寃쎌슫湲곌? 2李⑤줈濡?李⑤줈蹂寃쏀븯硫??묐낫?섎뒗 寃쎌슦 以묒븰?좎쓣 ?섏? ?딅뒗 踰붿쐞?먯꽌 寃쎌슫湲?醫뚯륫?쇰줈 吏꾪뻾?쒕떎.",
+   "二쇱감??李⑤웾 ?욎쑝濡?蹂댄뻾?먭? ?섑???寃껉퉴吏 ?덉긽?섎ŉ 吏꾪뻾???꾩슂???녿떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "You can drive over the centerline to overtake the  cultivator.",
+   "When the cultivator passes a parked vehicle, use the  space on the right side to overtake it at high speed.",
+   "Even if the cultivator driver signals you to go ahead,  maintain a safe distance and follow safely.",
+   "If the cultivator driver yields by moving to the second  lane, proceed to the left of the cultivator without  crossing the centerline.",
+   "There is no need to anticipate pedestrians appearing in  front of parked vehicles."
+  ]
+ },
+ {
+  "n": 778,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "吏곸쭊?섎젮??寃쎌슦 ?꾨갑 李⑤웾?좏샇?깆씠 ?곸깋?깊솕?대?濡??쒗뻾?섎ŉ ?덉쟾?섍쾶 ?좏뻾李⑤웾 ?ㅽ렪???뺤감?쒕떎.",
+   "李⑤웾?좏샇?깆씠 ?뱀깋?깊솕濡?諛붾뚮㈃ ?쇰떒 ?꾩옱 李⑤줈?먯꽌 吏꾪뻾?섎떎媛 異⑸텇??嫄곕━媛 ?뺣낫?????덉쟾?섍쾶 李⑤줈蹂寃쏀븳??",
+   "醫뚰쉶?꾩감濡쒕줈 李⑤줈瑜?蹂寃쏀븯??李⑤웾?좏샇?깆씠 ?뱀깋?깊솕濡?諛붾뚮㈃ ?щ묠由?留욎???李⑤줈瑜??댁슜?섏뿬 吏꾪뻾?쒕떎.",
+   "?몃옓?곕? ?곕씪 ?꾪뻾?섎뒗 寃쎌슦 ?몃옓?곗쓽 ?곗륫?쇰줈 ?욎?瑜닿린?????덈떎.",
+   "?좏꽩?섎젮??寃쎌슦 李⑤웾 ?좏샇?깆씠 ?곸깋?깊솕???좏꽩??媛?ν븯??"
+  ],
+  "a": "1, 2",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "If you intend to go straight, drive slowly and stop safely  behind the vehicle ahead as the traffic light is red.",
+   "When the light turns green, stay in your lane and safely  change lanes when there is enough distance.",
+   "If you switch to the left-turn lane and the light turns  green, quickly use the opposite lane to proceed.",
+   "When following a tractor, you can overtake it on the  right side.",
+   "When intending to make a U-turn, you may do so when  the traffic light turns red."
+  ]
+ },
+ {
+  "n": 779,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?몃옓?곌? ?뺤감?섍퀬 ?덉쑝誘濡?寃쎌쓬湲곕? 怨꾩냽 ?몃젮 吏꾪뻾??寃껋쓣 ?ъ큺?쒕떎.",
+   "留욎???李⑤웾???듦낵?섎㈃ 諛붾줈 以묒븰?좎쓣 ?섏뼱 醫뚯륫?쇰줈 ?욎?瑜닿린?쒕떎.",
+   "?곗륫 ?붾Ъ李⑤웾???뺤감 以?媛묒옄湲?異쒕컻?????덉쑝誘濡??鍮꾪븯???댁쟾?쒕떎.",
+   "?몃옓???곗륫??怨듦컙???덉쑝硫?洹?怨듦컙???댁슜?섏뿬 ?욎?瑜닿린?쒕떎.",
+   "?먮룞李⑥뿉 鍮꾪빐 ?몃옓?곗쓽 ?띾룄媛 ?먮━誘濡?臾대━?섍쾶 ?욎?瑜닿린?섍린蹂대떎???덉쟾??嫄곕━瑜??좎??섎ŉ 吏꾪뻾?쒕떎."
+  ],
+  "a": "3 ,5",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "The tractor has stopped, so you may honk continuously  to rush the tractor driver to proceed.",
+   "As soon as the vehicle on the opposite side passes  through, cross the centerline and overtake to the left.",
+   "Drive cautiously, anticipating that the truck on the right  may suddenly start moving while it is stopped.",
+   "If there is space on the right of the tractor, use it to  overtake.",
+   "Since the tractor moves slower than cars, maintain a  safe distance instead of aggressively attempting to  overtake."
+  ]
+ },
+ {
+  "n": 780,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "蹂댄뻾蹂댁“???섏옄李⑤뒗 蹂댄뻾?먮줈 媛꾩＜?섎?濡?異⑸텇??嫄곕━瑜??먭퀬 吏꾪뻾?쒕떎.",
+   "?꾨갑 ?붾Ъ李⑥쓽 ?욎?瑜닿린媛 ?꾨즺?섎㈃ 諛붾줈 ?ㅻ뵲???욎?瑜닿린?쒕떎.",
+   "?꾨갑 ?곹솴??????뺤씤??遺덇??섎?濡??붾Ъ李⑤? 諛붿떦 ?ㅻ뵲瑜대ŉ 吏꾪뻾?쒕떎.",
+   "蹂댄뻾蹂댁“???섏옄李⑤뒗 蹂대룄濡??듯뻾?섏뿬???섎?濡?寃쎌쓬湲곕? ?몃━怨?醫뚯륫 蹂대룄濡??듯뻾??寃껋쓣 ?붽뎄?쒕떎.",
+   "鍮꾩긽?먮㈇?깆쓣 耳쒓퀬 ?쒗뻾?섏뿬 ?꾪뻾李⑤웾???꾨갑???꾪뿕?곹솴???뚮젮以??"
+  ],
+  "a": "1 ,5",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Maintain sufficient distance from a wheelchair to aid  walking, as it is considered a pedestrian.",
+   "Once the truck in front of you has finished overtaking,  follow closely behind it to overtake.",
+   "Follow closely behind the truck, as you cannot see the  situation ahead.",
+   "Honk and request the person using a wheelchair to aid  walking to pass on the left sidewalk, as the device must  travel on the sidewalk.",
+   "Turn on the hazard lights and proceed slowly to alert  the oncoming traffic of the hazard ahead."
+  ]
+ },
+ {
+  "n": 781,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 吏곸쭊?섎젮??寃쎌슦 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?대┛?댄넻?숇쾭?ㅺ? 異쒕컻???뚭퉴吏 援먯감濡쒖뿉 吏꾩엯?섏? ?딅뒗??",
+   "?대┛?댄넻?숇쾭?ㅺ? ?뺤감?섍퀬 ?덉쑝誘濡?醫뚯륫?쇰줈 ?듯뻾?쒕떎.",
+   "?대┛?댄넻?숇쾭???댁쟾?먯쓽 ?먯쭞???곕씪 醫뚯륫?쇰줈 ?듯뻾?쒕떎.",
+   "援먯감濡쒖뿉 吏꾩엯?섏뿬 ?대┛?댄넻?숇쾭???ㅼ뿉??湲곕떎由곕떎.",
+   "諛섎????붾Ъ?먮룞李??ㅼ뿉???섑??????덈뒗 蹂댄뻾?먯뿉 ?鍮꾪븳??"
+  ],
+  "a": "1, 5",
+  "tr_b": "Which of the following are the safe ways to drive  when you are trying to go straight in the given  situation? (Select TWO)",
+  "tr_c": [
+   "Do not enter the intersection until the school bus has  departed.",
+   "Since the school bus is stopped, you should pass it on  the left.",
+   "Follow the hand signals of the school bus driver and  pass it on the left.",
+   "Enter the intersection and wait behind the school bus.",
+   "Be prepared for pedestrians who may appear behind the  oncoming truck."
+  ]
+ },
+ {
+  "n": 782,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?먯쟾嫄??댁쟾?먯뿉寃??곹뼢?깆쑝濡?寃쎄퀬?섎ŉ 鍮좊Ⅴ寃??듦낵?쒕떎.",
+   "?먯쟾嫄??댁쟾?먭? 臾대떒 ?〓떒??媛?μ꽦???덉쑝誘濡?二쇱쓽?섎ŉ ???됱쑝濡??듦낵?쒕떎.",
+   "?먯쟾嫄곕뒗 李⑥씠誘濡??꾩옱 洹??먮━??硫덉떠?덉쓣 寃껋쑝濡??덉륫?섎ŉ  援먯감濡쒕? ?듦낵?쒕떎.",
+   "?먯쟾嫄??댁쟾?먭? ?꾪뿕???됰룞???섏? 紐삵븯?꾨줉 寃쎌쓬湲곕? 諛섎났 ?ъ슜?섎ŉ ?좎냽???듦낵?쒕떎.",
+   "?먯쟾嫄??댁쟾?먭? 李⑤룄 ?꾩뿉 ?덉쑝誘濡??놁そ?쇰줈???덉쟾??嫄곕━ 瑜??뺣낫?????덈룄濡??듯뻾?쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Quickly drive through the intersection while using  high-beam headlights to warn the bicycle rider.",
+   "Drive through the intersection at a lower speed but stay  cautious as the bicycle may enter abruptly.",
+   "Anticipate that the bicycle will stay in its lane and drive  through the intersection.",
+   "Quickly drive through the intersection while repeatedly  honking to warn the bicycle rider not to do anything  dangerous.",
+   "Because the bicycle is on the car lane, pass through  while ensuring that the bicycle has sufficient space on  the side."
+  ]
+ },
+ {
+  "n": 783,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 援먯감濡쒕? ?듦낵?섎젮??寃쎌슦 ?덉긽?섎뒗 ?꾪뿕 2媛吏??",
+  "ko_c": [
+   "3李⑤줈???섏???李⑤웾???고쉶???????덈떎.",
+   "2李⑤줈???섏???李⑤웾??1李⑤줈 履쎌쑝濡?湲됱감濡?蹂寃쏀븷 ???덈떎.",
+   "援먭컖?쇰줈 遺??臾대떒?〓떒 ?섎뒗 蹂댄뻾?먭? ?섑??????덈떎.",
+   "?〓떒蹂대룄瑜?????쾶 嫄대꼫?ㅻ뒗 蹂댄뻾?먮? ?꾪빐 ?쇱떆?뺤? ?쒕떎.",
+   "?ㅼ감媛 ???욎쑝濡??욎?瑜닿린瑜??????덈떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following are the anticipated hazards  when driving through an intersection in the given  situation? (Select TWO)",
+  "tr_c": [
+   "The black vehicle in lane 3 can turn right.",
+   "The white vehicle in lane 2 can make a sudden shift to  lane 1.",
+   "A jaywalking pedestrian may suddenly appear from  behind the bridge pier.",
+   "All vehicles must stop since a pedestrian may try to  cross the street at the last second.",
+   "The vehicle behind may try to overtake you."
+  ]
+ },
+ {
+  "n": 784,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?뱀깋 ?좏샇?대?濡?媛?랁븯??鍮좊Ⅴ寃?吏곸쭊?쇰줈 援먯감濡쒕? ?듦낵?쒕떎.",
+   "鍮꾩긽 ?먮㈇?깆쓣 耳쒓퀬 二쇰? 李⑤웾???뚮━硫?2李⑤줈?먯꽌 ?고쉶?꾪븳??",
+   "?욎そ 3李⑤줈?먯꽌 ?쇱そ?쇰줈 媛묒옄湲?吏꾨줈 蹂寃쎌쓣 ?섎뒗 李④? ?덉쓣 ?? ?덈뒗 ?꾪뿕???鍮꾪븯硫댁꽌 ?댁쟾?쒕떎.",
+   "?ㅼそ 李④? ?덈Т 媛源뚯씠 ?곕씪?ㅻ?濡??덉쟾嫄곕━ ?뺣낫瑜??꾪빐 ?띾룄瑜? 鍮⑤━ ?믪뿬 ?좎냽??援먯감濡쒕? ?듦낵?쒕떎.",
+   "援먯감濡?二쇰? ?곹솴???덉쑝濡??뺤씤?섎㈃???쒖꽌???띾룄瑜??믪뿬 ?듦낵?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "The traffic light is green, so you can speed up and  quickly drive straight through the intersection.",
+   "Turn right from the second lane with the hazard lights  on to alert oncoming traffic.",
+   "Drive cautiously, anticipating a hazard as a vehicle on  the third lane ahead may suddenly switch to the left lane.",
+   "Since the vehicle behind you is tailgating, increase your  speed quickly to create a safe distance and swiftly pass  through the intersection.",
+   "Gradually increase your speed to pass through the  intersection  while  keeping  your  eyes  open  for  surrounding traffic."
+  ]
+ },
+ {
+  "n": 785,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾 諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?좏샇媛 諛붾?吏곹썑??鍮좊Ⅴ寃?媛?랁븯???좎냽??援먯감濡쒕? ?듦낵?쒕떎.",
+   "?쇱そ 諛⑺뼢吏?쒕벑??耳쒓퀬 ?ㅻⅨ 李⑤웾??二쇱쓽?섎㈃??醫뚰쉶?꾪븳??",
+   "援먯감濡??댁뿉??湲됯??랁븯???ㅻⅨ履쎌쑝濡?吏꾨줈蹂寃쏀븯硫??듦낵?쒕떎.",
+   "醫뚰쉶?꾪븯???곗깋 ?뱀슜李④? 硫덉텛???댁쑀瑜??앷컖?섍퀬 ?쒗뻾?섎㈃?? ?꾪뿕???鍮꾪븳??",
+   "?좏샇?꾨컲 李⑤웾???덈뒗吏 醫뙿룹슦瑜??뺤씤?섎㈃???쒖꽌???띾룄瑜??????듦낵?쒕떎."
+  ],
+  "a": "4, 5",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Accelerate quickly after the light changes to pass  through the intersection swiftly.",
+   "Turn left with your left-turn signal on, while paying  attention to other vehicles.",
+   "Accelerate sharply within the intersection and switch to  the right lane to pass through.",
+   "Consider why the white car is stopping and proceed  slowly, preparing for any hazards.",
+   "Gradually increase your speed to pass through while  checking both sides for any vehicles disobeying the  traffic signal."
+  ]
+ },
+ {
+  "n": 786,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?뚰넻???먰솢?섍쾶 ?섍린 ?꾪빐 ?곸깋 ?좏샇??誘몃━ ?뺤??좎쓣 ?섏뼱 ? 湲고븯?ㅺ? 醫뚰쉶?꾪븳??",
+   "諛섎????꾨줈?먯꽌 ?고쉶?꾪븯??鍮④컙??李⑤웾? 醫뚰쉶??李⑤웾???곗꽑 ?닿린 ?뚮Ц??二쇱쓽???꾩슂媛 ?녿떎.",
+   "李⑤웾???ш컖吏?濡??명빐 ?대쪣李⑤? ?쒓컙?곸쑝濡?紐?蹂????덇린  ??臾몄뿉 二쇱쓽?댁빞 ?쒕떎.",
+   "援먯감濡??몃㈃???쒖떆???곗깋 ?듯뻾 ?좊룄?좎쓣 ?곕씪 醫뚰쉶?꾪븳??",
+   "醫뚰쉶?꾪븯硫댁꽌 ?ㅻⅨ履?諛⑺뼢吏?쒕벑??耳쒓퀬 ?쇱そ ?꾨줈??3李⑤줈濡? 諛붾줈 吏꾩엯?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "To facilitate smooth traffic flow, wait ahead of the stop  line at the red light before turning left.",
+   "There is no need to pay attention to the red vehicle  turning right on the opposite side of the road as vehicles  turning left have the right of way.",
+   "Be careful as the blind spots of your car may cause you  to lose sight of the two-wheeled vehicle momentarily.",
+   "Turn left following the white traffic guide lines on the  intersection pavement.",
+   "While turning left, turn on the right-turn signal and  move directly into the third lane on the left side of the  road."
+  ]
+ },
+ {
+  "n": 787,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "留롮? 李⑤웾??援먯감濡??듦낵瑜??꾪빐 ??李⑥? 理쒕???遺숈뼱??二쇳뻾?쒕떎.",
+   "?욎そ 3李⑤줈?먯꽌 ?쇱そ?쇰줈 媛묒옄湲?吏꾨줈 蹂寃쏀븯??李⑤웾???鍮꾪븷  ?꾩슂媛 ?덈떎.",
+   "?욎そ 李⑤웾???뺤껜 ?щ?? 愿怨꾩뾾??援먯감濡쒖뿉 吏꾩엯?섏뿬 ?뚰넻?????쒗븯寃??쒕떎.",
+   "鍮꾩긽 ?먮㈇?깆쓣 耳쒓퀬 李⑤웾???녿뒗 諛섎???1李⑤줈濡??덉쟾?섍쾶 ?욎쭏 ??吏곸쭊?쒕떎.",
+   "?뺤껜濡??명빐 ?뱀깋 ?좏샇??援먯감濡쒕? ?듦낵 紐???寃?媛숈쑝硫??뺤??? 吏곸쟾???뺤??쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "Which of the following are the safest ways to drive  in the given situation? (Select TWO)",
+  "tr_c": [
+   "Stay as close as possible to the car ahead to pass  through the busy intersection.",
+   "Be prepared for a vehicle in the third lane to switch to  the left lane suddenly.",
+   "Enter the intersection to maintain smooth traffic flow,  regardless of whether the vehicles ahead have stopped.",
+   "Turn on the hazard lights and safely overtake by moving  into the opposite first lane, and then continue straight  ahead.",
+   "If it appears that you may not pass through the  intersection at the green light, stop just before the stop  line."
+  ]
+ },
+ {
+  "n": 788,
+  "ko_b": "?ㅼ쓬怨?媛숈? ?곹솴?먯꽌 醫뚰쉶?꾪븯?ㅺ퀬 ?쒕떎. 媛???꾪뿕???댁쟾諛⑸쾿  2媛吏??",
+  "ko_c": [
+   "鍮꾩긽 ?먮㈇?깆쓣 耳쒓퀬 ?덉쟾吏?瑜??듦낵?섏뿬 1李⑤줈濡?吏꾩엯????醫뚰쉶???쒕떎.",
+   "醫뚰쉶??李⑤줈??吏꾩엯 ?꾩뿉????李⑤웾??理쒕???遺숈뼱???좎냽??醫뚰쉶???쒕떎.",
+   "1李⑤줈濡?吏꾨줈 蹂寃쏀븷 ?뚮뒗 ?ㅻ뵲瑜대뒗 ?ㅼそ 李⑤웾??二쇱쓽?댁빞 ?쒕떎.",
+   "?곗깋 ?먯꽑 李⑥꽑?먯꽌 1李⑤줈濡?吏꾨줈 蹂寃쏀븳 ?꾩뿉 醫뚰쉶?꾪븳??",
+   "醫뚰쉶??李⑤줈濡?吏꾨줈 蹂寃쏀븷 ?뚮뒗 諛붾줈 ??李⑤웾??二쇱쓽???꾩슂媛  ?덈떎."
+  ],
+  "a": "1, 2",
+  "tr_b": "You want to turn left in the given situation. Which of  the following are the TWO most dangerous ways to  drive? (Select TWO)",
+  "tr_c": [
+   "Turn on the hazard lights, pass through the safety zone  to enter the first lane, and turn left.",
+   "Once in the left-turn lane, stay as close as possible to  the vehicle ahead and quickly turn left.",
+   "Take caution of the vehicles behind you as you switch to  the first lane.",
+   "Switch to the first lane from the lane with white dotted  lines, and then turn left.",
+   "When switching to the left-turn lane, be mindful of the  vehicle directly in front of you."
+  ]
+ },
+ {
+  "n": 789,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "李⑥쓽 ?듯뻾??諛⑺빐?섏? ?딅룄濡?吏?띿쟻?쇰줈 寃쎌쓬湲곕? ?ъ슜?쒕떎.",
+   "B??李⑥쓽 ?쇱そ?쇰줈 ?듯뻾??寃껋쑝濡??덉긽?섏뿬 洹몃?濡?二쇳뻾?쒕떎.",
+   "B???〓떒??諛⑺빐?섏? ?딅룄濡??〓떒???앸궇 ?뚭퉴吏 ?뺤??쒕떎.",
+   "?꾨줈媛 ?꾨땶 ?μ냼??李⑥쓽 ?듯뻾???곗꽑?대?濡?B媛 ?〓떒?섏? 紐삵븯??濡?寃쎌쓬湲곗쓣 ?몃┛??",
+   "B???놁쓣 吏?섎뒗 寃쎌슦 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?댁빞 ?쒕떎."
+  ],
+  "a": "3, 5",
+  "tr_b": "Which of the following are the safe ways to drive in the given situation? (Select TWO)",
+  "tr_c": [
+   "Repeatedly honk to warn B not to interrupt the way.",
+   "Continue to drive as B is expected to travel to the left.",
+   "Stop until B has reached the opposite side.",
+   "Vehicles have the right of way in places other than roads. Honk to make sure that B does not start crossing the road. ??Drive slowly while passing by B and maintain a safe distance. ??A vehicle approaching the entrance to an apartment parking lot"
+  ]
+ },
+ {
+  "n": 790,
+  "ko_b": "?ㅼ쓬怨?媛숈? ?곹솴?먯꽌 媛???덉쟾?섍쾶 ?좏꽩?????덈뒗 諛⑸쾿 2 媛吏??",
+  "ko_c": [
+   "?좏꽩??媛?ν븳 ?좏샇???곗깋 ?먯꽑???좏꽩援ъ뿭 ?댁뿉???욎감遺?? ?쒖꽌?濡??좏꽩?쒕떎.",
+   "?쇱そ 遺?꾨줈?먯꽌 二쇰룄濡쒕줈 ?⑸쪟?섎뒗 ?고쉶?꾪븯??李⑤웾? 議곗떖 ???꾩슂媛 ?녿떎.",
+   "諛섎????꾨줈??李⑤웾??諛⑺빐瑜?二쇱? ?딅뒗?ㅻ㈃ ?좏샇??愿怨꾩뾾?? ?몄젣???좏꽩?????덈떎.",
+   "??李⑤웾 諛붾줈 ?ㅼ뿉??癒쇱? ?좏꽩?섎뒗 李⑤웾? 二쇱쓽???꾩슂媛 ?녿떎.",
+   "諛섎????꾨줈?먯꽌 ?좏샇?꾨컲?쇰줈 吏곸쭊?섎뒗 李⑤웾???덉쓣 ???덇린 ???덉쑝濡??뺤씤?섍퀬 ?좏꽩?쒕떎."
+  ],
+  "a": "1, 5",
+  "tr_b": "Which of the following are the safest ways to make  a U-turn in the given situation? (Select TWO)",
+  "tr_c": [
+   "Make a U-turn within the U-turn area marked by white  dotted lines when the signal allows, starting with the car  in front of you.",
+   "There is no need to watch out for right-turning vehicles  from a left side road onto the main road.",
+   "You can make a U-turn at any time regardless of the  signal, as long as you do not obstruct traffic on the  opposite side of the road.",
+   "There is no need to yield to a car making a U-turn first  from immediately behind you.",
+   "Be sure to look before making a U-turn, as there may  be cars disobeying the traffic signal on the opposite side  of the road."
+  ]
+ },
+ {
+  "n": 791,
+  "ko_b": "?ㅼ쓬怨?媛숈? 援먯감濡쒖뿉???고쉶?꾪븯?ㅺ퀬 ?쒕떎. 媛???덉쟾???댁쟾  諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "援먯감濡??뺤????꾩뿉 ?쇱떆?뺤? ?놁씠 ?쒗뻾?섎㈃???고쉶?꾪븳??",
+   "援먯감濡?吏곸쟾 ?좏샇???덈뒗 ?〓떒蹂대룄??蹂댄뻾?먭? ?덈뒗吏 諛섎뱶?? ?뺤씤?쒕떎.",
+   "?쇱そ ?꾨줈?먯꽌 ?ㅻⅨ履??꾨줈濡?吏곸쭊?섎뒗 李⑤웾? 諛섎뱶???뺤씤?? ?꾩슂???녿떎.",
+   "?ㅻⅨ履??ъ씠?쒕??ъ뿉 蹂댁씠???ㅻ뵲瑜대뒗 ?대쪣李⑤? 二쇱쓽?댁빞 ?쒕떎.",
+   "?고쉶??吏곹썑 ?좏샇?깆씠 ?덈뒗 ?〓떒蹂대룄??蹂댄뻾?먮뒗 諛섎뱶???뺤씤 ???꾩슂???녿떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "You want to turn right in the given situation. Which  of the following are the safest ways to drive? (Select  TWO)",
+  "tr_c": [
+   "Turn right while slowing down without coming to a full  stop before the intersection stop line.",
+   "Always check for pedestrians at the crosswalk with a  traffic light just before the intersection.",
+   "It is not necessary to check for vehicles going straight  from the left to the right side of the road.",
+   "Be cautious of a two-wheeled vehicle following you as  seen in the right side-view mirror.",
+   "It is not necessary to check for pedestrians at the  crosswalk with a traffic light immediately after a right  turn."
+  ]
+ },
+ {
+  "n": 792,
+  "ko_b": "?ㅼ쓬怨?媛숈? ?곹솴?먯꽌 ?고쉶?꾪븷 ??媛???꾪뿕???댁쟾 諛⑸쾿 2 媛吏??",
+  "ko_c": [
+   "?뺤????꾩뿉 ?뺤??????고쉶???쇱깋?깆씠 吏꾪뻾 ?좏샇濡?諛붾???源뚯? ?湲고븳??",
+   "?고쉶???쇱깋?깆뿉 ?뱀깋 ?붿궡???좏샇濡?蹂寃쎈맂 ?꾩뿉???욎そ?? ?곹솴???뺤씤?섍퀬 ?고쉶?꾪븳??",
+   "?고쉶???쇱깋?깆씠 ?곸깋 ?좏샇?쇰룄 蹂댄뻾?먭? ?녿떎硫??쇱떆?뺤? ?? 泥쒖쿇???고쉶?꾪븳??",
+   "?고쉶?꾪븯怨?諛붾줈 ?섑??섎뒗 ?ㅻⅨ履??꾨줈???〓떒蹂대룄??二쇱쓽?? ?꾩슂媛 ?녿떎.",
+   "?ㅻⅨ履?蹂대룄?먯꽌 媛묒옄湲??〓떒蹂대룄濡??곗뼱?섏삱 ???덈뒗 蹂댄뻾????二쇱쓽?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the most dangerous  ways to turn right in the given situation? (Select TWO)",
+  "tr_c": [
+   "Stop before the stop line and wait for the right-turn  signal to change to green.",
+   "Even after the right-turn signal turns green, keep your  eyes on the road ahead to ensure safety.",
+   "Even if the right-turn signal is red, stop temporarily and  make the turn slowly if there are no pedestrians.",
+   "There is no need to pay attention to crosswalks on the  right side of the road immediately after turning right.",
+   "Watch out for pedestrians who may suddenly run into  the crosswalk from the right sidewalk."
+  ]
+ },
+ {
+  "n": 793,
+  "ko_b": "?ㅼ쓬???꾨줈瑜??듯뻾?섎젮??寃쎌슦 媛???щ컮瑜??댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?대┛?댄넻?숇쾭?ㅺ? ?ㅻⅨ履쎌쑝濡?吏꾨줈 蹂寃쏀븷 媛?μ꽦???덉쑝誘濡????꾨? 以꾩씠硫??덉쟾??嫄곕━瑜??좎??쒕떎.",
+   "?대┛?댄넻?숇쾭?ㅺ? ?쒕룞?섎ŉ 媛먯냽?섎뒗 ?곹솴?대?濡??욎?瑜닿린 諛⑸쾿?? ?곕씪 ?덉쟾?섍쾶 ?욎?瑜닿린?쒕떎.",
+   "3李⑤줈 ?꾨룞?λ낫?쒕? 二쇱쓽?섎ŉ 吏꾨줈瑜?蹂寃쏀븯怨??곗륫?쇰줈 ?욎?瑜닿린?쒕떎.",
+   "?대┛?댄넻?숇쾭???욎そ??蹂댁씠吏 ?딅뒗 ?곹솴?대?濡?吏꾨줈蹂寃쏀븯吏 ??怨?媛먯냽?섎ŉ ?덉쟾??嫄곕━瑜??좎??쒕떎.",
+   "?대┛?댄넻?숇쾭???댁쟾?먯뿉寃?理쒖??띾룄 ?꾨컲?꾩쓣 ?뚮젮二쇨린 ?꾪븯?? 寃쎌쓬湲곕? ?ъ슜?쒕떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the desirable ways to  drive in the given situation? (Select TWO)",
+  "tr_c": [
+   "Slow down and keep a safe distance as the school bus  may switch to the right lane.",
+   "The school bus is slowing down, so drive safely to  overtake the bus.",
+   "Keep an eye on the electric kick scooter in lane 3 and  switch to the right lane to overtake the school bus.",
+   "Because you cannot check the front of the school bus,  stay in the lane and reduce speed to maintain a safe  distance.",
+   "Honk at the school bus driver to inform him/her that  the bus is violating the minimum speed limit."
+  ]
+ },
+ {
+  "n": 794,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 鍮꾨낫??醫뚰쉶?꾪븷 ??媛?????꾪뿕 ?붿씤 2媛吏??",
+  "ko_c": [
+   "諛섎???2李⑤줈?먯꽌 鍮좊Ⅴ寃?吏곸쭊???ㅻ뒗 李⑤웾???덉쓣 ???덈떎.",
+   "諛섎???1李⑤줈 ?붾Ъ李??ㅼ뿉 李⑤웾??醫뚰쉶?꾪븯湲??꾪빐 ?뺤??????????덈떎.",
+   "?ㅻ뵲瑜대뒗 ?ㅼそ 李⑤웾??媛묒옄湲?2李⑤줈濡?吏꾨줈 蹂寃쏀븷 ???덈떎.",
+   "?쇱そ ?꾨줈??蹂댄뻾?먭? ?〓떒蹂대룄瑜?嫄대꼫媛????덈떎.",
+   "諛섎???1李⑤줈?먯꽌 ?붾Ъ李④? 鍮꾨낫??醫뚰쉶?꾩쓣 ?????덈떎."
+  ],
+  "a": "1, 4",
+  "tr_b": "Which of the following are the biggest risk factors  when making an unprotected left turn in the given  situation? (Select TWO)",
+  "tr_c": [
+   "There may be a vehicle coming at high speed from the  opposite second lane.",
+   "A vehicle may be stopped behind a truck in the  opposite lane, waiting to turn left.",
+   "A vehicle behind you may suddenly switch to the  second lane.",
+   "A pedestrian on the left side of the road may cross the  crosswalk.",
+   "A truck may make an unprotected left turn from the  opposite first lane."
+  ]
+ },
+ {
+  "n": 795,
+  "ko_b": "?ㅼ쓬 ?꾨줈 ?곹솴?먯꽌 媛???꾪뿕???붿씤 2媛吏??",
+  "ko_c": [
+   "吏꾪뻾 諛⑺뼢 1李⑤줈?먯꽌 ?좎냽?섍쾶 醫뚰쉶?꾪븯??李⑥? 異⑸룎?????덈떎.",
+   "?ㅻⅨ履??꾨줈?먯꽌 ?고쉶?꾪븯??李⑥? 異⑸룎?????덈떎.",
+   "諛섎????꾨줈?먯꽌 ?고쉶?꾪븯??李⑥? 異⑸룎?????덈떎.",
+   "諛섎????꾨줈?먯꽌 ?좏꽩?섎뒗 李⑥? 異⑸룎?????덈떎.",
+   "吏꾪뻾 諛⑺뼢 3李⑤줈 ?ㅼそ?먯꽌 ?고쉶?꾪븯?ㅻ뒗 李⑥? 異⑸룎?????덈떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the most dangerous  ways to drive? (Select TWO)",
+  "tr_c": [
+   "You may collide with a car making a quick left turn in  the lane where you are driving.",
+   "You may collide with a car turning right from the road  on your right.",
+   "You may collide with a car turning right from the  opposite road.",
+   "You may collide with a car making a U-turn on the  opposite road.",
+   "You may collide with a car trying to turn right from the  third lane behind you."
+  ]
+ },
+ {
+  "n": 796,
+  "ko_b": "?ㅼ쓬 ?ъ쭊怨?媛숈? ?쒖감濡쒖텞?뚰삎 ?뚯쟾援먯감濡쒋앹뿉???고쉶???듯뻾諛⑸쾿?? ????ㅻ챸?쇰줈 ?щ컮瑜?2媛吏??",
+  "ko_c": [
+   "?뚯쟾援먯감濡?吏꾩엯 ???덉쟾?섍쾶 ?고쉶?꾨갑?μ쑝濡?鍮좎졇?섍컙??",
+   "?뚯쟾援먯감濡??대줈 吏꾩엯?섏? ?딄퀬 誘몃━ ?꾨줈???곗륫 媛?μ옄由?李⑤줈瑜??댁슜      ?섏뿬 ?쒗뻾?섎㈃???고쉶?꾪븳??",
+   "?뚯쟾援먯감濡?吏꾩엯 ??諛붾줈 ?고쉶?꾩쓣 ??寃쎌슦?쒓탳李⑤줈 ?듯뻾諛⑸쾿?꾨컲?앹씠??",
+   "?고쉶??李⑤줈???덈뒗 ?〓떒蹂대룄??蹂댄뻾???щ?? 愿怨꾩뾾???쇱떆 ?뺤??댁빞  ?쒕떎.",
+   "?뚯쟾援먯감濡?吏꾩엯 ???쒓퀎諛⑺뼢?쇰줈 ?ш쾶 ?뚯쟾?섏뿬 ?고쉶?꾪븯?ъ빞 ?쒕떎."
+  ],
+  "a": "2, 3",
+  "tr_b": "Which of the following descriptions regarding  right-turn traffic at a \"lane-reduced roundabout\" in  the given picture are correct? (Select TWO)",
+  "tr_c": [
+   "Enter the roundabout and safely exit the roundabout to  the right.",
+   "Turn right while driving slowly in the rightmost lane of  the roadway without entering the roundabout.",
+   "Turning right immediately after entering a roundabout is  a \"violation of the right of way in an intersection.\"",
+   "A vehicle must come to a complete stop at the  crosswalk in the right-turn lane, regardless of whether  there are pedestrians or not.",
+   "The driver must make a large turn clockwise to turn  right after entering the roundabout."
+  ]
+ },
+ {
+  "n": 797,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?고쉶?꾪븯?ㅻ뒗 寃쎌슦 ?쒗뻾?쇰줈 ?〓떒蹂대룄瑜??듯뻾?쒕떎.",
+   "?고쉶?꾪븯?ㅻ뒗 寃쎌슦 ?〓떒蹂대룄 ?욎뿉??諛섎뱶???쇱떆?뺤? ?쒕떎.",
+   "吏곸쭊?섎젮??寃쎌슦 ?ㅻⅨ 李⑤낫???곗꽑?대?濡??쒗뻾?섎ŉ 吏꾩엯?쒕떎.",
+   "吏곸쭊 諛??고쉶?꾪븯?ㅻ뒗 寃쎌슦 紐⑤몢 ?쇱떆?뺤?????吏꾩엯?쒕떎.",
+   "?고쉶?꾪븯?ㅻ뒗 寃쎌슦留??쇱떆?뺤?????吏꾩엯?쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Which of the following are the safe ways to drive in  the given situation? (Select TWO)",
+  "tr_c": [
+   "Drive slowly through the crosswalk to turn right.",
+   "Stop before the crosswalk when trying to turn right.",
+   "Slowly enter the intersection to go straight, as you have  the right of way.",
+   "Make a full stop before going straight or turning right.",
+   "Make a full stop only when you are trying to turn right."
+  ]
+ },
+ {
+  "n": 798,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 12??諛⑺뼢?쇰줈 吏꾩텧?섎젮??寃쎌슦 媛???덉쟾?????꾨갑踰?2媛吏??",
+  "ko_c": [
+   "?뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮???뱀슜?먮룞李⑥뿉 ?묐낫?섍린 ?꾪빐 ?뺤감?쒕떎.",
+   "醫뚯륫諛⑺뼢吏?쒓린瑜??묐룞?섎ŉ ?붾Ъ李⑦꽦?쇰줈 吏꾩엯?쒕떎.",
+   "?곗륫諛⑺뼢吏?쒓린瑜??묐룞?섎ŉ 12??諛⑺뼢?쇰줈 ?듯뻾?쒕떎.",
+   "吏꾩텧 ?쒓린瑜??볦튇 寃쎌슦 ??諛뷀??뚯쟾?섏뿬 吏꾩텧?쒕떎.",
+   "12??諛⑺뼢?쇰줈 吏곸쭊?섎젮??寃쎌슦?대?濡?諛⑺뼢吏?쒓린瑜??묐룞?섏?  ?꾨땲 ?쒕떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Which of the following are the safe ways to drive  when a vehicle is trying to head in the 12 o?셛lock  direction in the given situation? (Select TWO)",
+  "tr_c": [
+   "Stop to yield to the passenger vehicle about to enter  the roundabout.",
+   "Turn on the left-turn signal and enter the truck apron.",
+   "Turn on the right-turn signal and drive in the 12 o?셛lock  direction.",
+   "If the vehicle misses the chance to get out from the  roundabout, it should circle around one more time to  exit in the right direction.",
+   "The vehicle is trying to head in the 12 o'clock direction,  so turn signals are not required."
+  ]
+ },
+ {
+  "n": 799,
+  "ko_b": "?ㅼ쓬 ?곹솴?먯꽌 ?고쉶?꾪븯?ㅻ뒗 寃쎌슦 媛???덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "?ㅻⅨ履??쒖빞?뺣낫媛 ?대젮?곕?濡??뺤??????고쉶???쒕떎.",
+   "?〓떒蹂대룄 ?꾩뿉 蹂댄뻾?먭? ?놁쑝誘濡?洹몃?濡??좎냽?섍쾶 ?듦낵?쒕떎.",
+   "諛섎?諛⑺뼢 ?먮룞李?吏꾪뻾??諛⑺빐?섏? ?딄쾶 ?뺤????꾩뿉???뺤??쒕떎.",
+   "癒쇱? 援먯감濡쒖뿉 吏꾩엯???곹깭?대?濡?洹몃?濡?吏꾪뻾?쒕떎.",
+   "蹂댄뻾?먭? ?〓떒蹂대룄??吏꾩엯?섏? 紐삵븯?꾨줉 寃쎌쓬湲곕? ?몃┛??"
+  ],
+  "a": "1, 3",
+  "tr_b": "Which of the following are the safe ways to drive  when trying to turn right in the given situation?  (Select TWO)",
+  "tr_c": [
+   "Since it is difficult to have clear visibility on the right,  come to a stop and then turn right.",
+   "Since there are no pedestrians on the crosswalk,  proceed through swiftly.",
+   "Stop before the stop line to avoid obstructing the  movement of oncoming vehicles.",
+   "Since you entered the intersection first, proceed to turn  right.",
+   "Honk to prevent pedestrians from entering the  crosswalk."
+  ]
+ },
+ {
+  "n": 800,
+  "ko_b": "?쇱そ李⑤줈(1李⑤줈)?먯꽌 吏곸쭊?섎ŉ 援먯감濡쒖뿉 ?묎렐?섍퀬 ?덈뒗 ?곹솴 ?대떎. ?덉쟾???댁쟾諛⑸쾿 2媛吏??",
+  "ko_c": [
+   "諛섎?履?諛⑺뼢??李④? ?놁쑝誘濡??쇱そ?쇰줈 ?욎?瑜닿린?섏뿬 ?듦낵?쒕떎.",
+   "媛먯냽?섎ŉ 1李⑤줈 ?앹떆? ?덉쟾??嫄곕━瑜??먭퀬 ?묎렐?쒕떎.",
+   "寃쎌쓬湲곕? ?ъ슜?섏뿬 ?앹떆瑜?硫덉텛寃??섍퀬 ?앹떆???ㅻⅨ履쎌쑝濡?鍮?瑜닿쾶 ?듯뻾?쒕떎.",
+   "3李⑤줈濡??곗냽 吏꾨줈蹂寃쏀븯???뺤감?쒕떎.",
+   "2李⑤줈濡?吏꾨줈蹂寃쏀븯??寃쎌슦 ?앹떆? 蹂댄뻾?먯뿉 ?묎렐 ??媛먯냽?쒕떎."
+  ],
+  "a": "2, 5",
+  "tr_b": "You are approaching an intersection while traveling  straight from the left lane (first lane). Which of the  following are the TWO safest ways to drive?",
+  "tr_c": [
+   "There is no traffic in the opposite direction, so overtake  the car ahead to the left side.",
+   "Slow down and approach the taxi in the first lane with a  safe distance.",
+   "Honk to stop the taxi and quickly pass to its right side.",
+   "Continue to switch to the third lane and stop.",
+   "Slow down as you approach the taxi and pedestrians if  you are switching to the second lane."
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+p='translations/audit/queue/219_choices_en.json'
+d=json.load(open(p,encoding='utf-8'))
+for x in d:
+ print('\\n',x['n'], 'A=',x.get('a'), 'CHECK=',x.get('check'), 'DETAIL=',x.get('detail'))
+ print('B:',x.get('tr_b'))
+ for i,c in enumerate(x.get('tr_c',[]),1): print(f'{i}: {c}')
+ print('E:',x.get('tr_e'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:48:52.466804Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:11 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 658ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:11 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d = Get-Content -Raw -LiteralPath '"'translations/audit/queue/219_choices_en.json' | ConvertFrom-Json; foreach("'$x in $d){ Write-Output ("N={0} A={1} CHECK={2} DETAIL={3}" -f $x.n,$x.a,$x.check,$x.detail); Write-Output ("B="+$x.tr_b); for($i=0;$i -lt $x.tr_c.Count;$i++){Write-Output ("C{0}={1}" -f ($i+1),$x.tr_c[$i])}; if($x.tr_e){Write-Output ("E="+$x.tr_e)} }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 658ms:
+N=761 A=2, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Keep honking to pass a school zone, even if there are  no pedestrians.
+C2=Slow down to reduce the risk of an accident, as there  may be vehicles crossing the centerline.
+C3=Crossing the centerline is allowed, as there is an  entrance to the parking lot in the building on the left.
+C4=Slow down further to watch out for pedestrians, as the  bus on the opposite side of the road obstructs your view.
+C5=Parking is prohibited at speed bumps in a school zone,  but stopping is allowed.
+N=762 A=2, 5 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=If the traffic light ahead is red and you intend to turn  right, you may pass through the crosswalk ahead  without stopping.
+C2=If the pedestrian signal on the right is green and  pedestrians are crossing, stop before the crosswalk if you  intend to turn right.
+C3=If the pedestrian signal turns red but the pedestrians are  still crossing, honk to rush them.
+C4=You can turn left regardless of the traffic light as the  pedestrian signal on the right is green.
+C5=Drive with extra caution, as pedestrians may be crossing  belatedly.
+N=763 A=2, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Pass through the intersection quickly in anticipation of  vehicles emerging from the alley on your right.
+C2=Slow down to observe the situation ahead, as the fire  truck parked on the opposite side of the road is  obstructing your view.
+C3=In a school zone, stop and proceed only if there are  pedestrians in the crosswalk.
+C4=If you plan to turn right, watch out for vehicles or  pedestrians coming out of the alley on your right.
+C5=You should drive within the maximum speed limit, as the  speed limit in all school zones is set at 30km/h.
+N=764 A=1, 3 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Drive while being extremely cautious about pedestrians  with umbrellas.
+C2=Speed up to pass quickly, as there are many pedestrians  around.
+C3=Even if you are not in a school zone, pay attention to  pedestrian safety as you are in front of a school.
+C4=Proceed slowly as there is an intersection ahead with no  traffic lights and visibility is limited on both sides.
+C5=Pedestrians may appear between parked cars, so honk  to warn them.
+N=765 A=2, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Keep honking to proceed, even if there are no  pedestrians.
+C2=Temporarily stop to watch out for pedestrians and vehicles before entering the intersection, as there is an alley behind a parked truck on the right side.
+C3=Proceed slowly if there are no pedestrians, as there is no  traffic signal at the crosswalk.
+C4=Slow down to reduce the risk of an accident, as there  are vehicles crossing the centerline ahead.
+C5=When intending to turn right, do so without stopping as  there is a stop sign on the right, but no traffic light.
+N=766 A=3, 5 CHECK= DETAIL=
+B=Which of the following descriptions regarding the  exclusive use areas for fire engines under the  Framework Act on Firefighting Services are incorrect?  (Select TWO)
+C1=They are installed in apartment buildings to facilitate  firefighting operations.
+C2=No one should park a vehicle in the designated area or  block access to it in any way.
+C3=The owner of an apartment building must install at least  one in each building, without exception.
+C4=Parking as shown in the photo is subject to an  administrative fine.
+C5=Removing or damaging the "exclusive use area" sign  does not constitute obstruction of the exclusive use area.
+N=767 A=4, 5 CHECK= DETAIL=
+B=Which of the following descriptions regarding the  compulsory disposition of vehicles that obstruct  emergency fire engine traffic are incorrect? (Select  TWO)
+C1=Illegally parked vehicles that interfere with firefighting  activities can be moved.
+C2=Parked vehicles within parking lines that interfere with  firefighting activities can be removed.
+C3=Objects that obstruct the passage of firefighting vehicles  can be moved or removed.
+C4=The driver of a vehicle that has been towed due to  illegal parking may claim compensation for any losses.
+C5=The driver of a vehicle parked within a designated  parking space but has been towed may claim  compensation for damages.
+N=768 A=2, 4 CHECK= DETAIL=
+B=Which of the following driving methods violate the  law in the given situation? (Select TWO)
+C1=Driver B - Drives at 100 km/h.
+C2=Driver A - Drives at 70 km/h.
+C3=Driver B - Overtakes at an intersection.
+C4=Driver A - Overtakes at an intersection.
+C5=Driver B - Does not maintain a safe distance with the  vehicle ahead.
+N=769 A=1, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=If an emergency vehicle is approaching, vehicles must  move over to the left or right side of the road to yield  the right of way.
+C2=Follow behind the emergency vehicle as it will allow you  to travel faster.
+C3=Speed up to prevent the emergency vehicle from  changing lanes.
+C4=If the emergency vehicle is returning from an urgent  business, it does not activate its strobe lights or siren, so  there is no need to yield.
+C5=If you see an emergency vehicle behind, speed up so  that it cannot overtake you.
+N=770 A=2, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=The right of way can only be yielded in the second lane, so if you are in the first lane, there is no need to watch out for emergency vehicles behind.
+C2=If there is an intersection ahead, avoid it and yield the  right of way.
+C3=Quickly switch to the second lane, turn on the hazard  lights, and drive ahead of the emergency vehicle.
+C4=If you are traveling in front of an emergency vehicle,  move to the left or right side of the road and yield the  right of way.
+C5=Since you can travel faster if you follow behind the emergency vehicle, switch to the second lane and closely follow behind after the emergency vehicle passes through.
+N=771 A=2, 4 CHECK= DETAIL=
+B=Which of the following traffic safety facilities and  actions are the most appropriate in the given  situation? (Select TWO)
+C1=Crosswalk - You can cross while riding on your bike.
+C2=Bike crosswalk - Ride the bicycle to cross a roadway with  a bike crossing.
+C3=Pedestrian signal - Pedestrians should start crossing  quickly when the green traffic light is flashing.
+C4=Pedestrian signal - If a bike signal is not installed,  bicycle riders must follow the pedestrian signal.
+C5=Traffic light - If a bike signal is not installed, bicycle  riders must follow the traffic signal.
+N=772 A=4, 5 CHECK= DETAIL=
+B=Which of the following are the most incorrect ways  to drive in the given situation? (Select TWO)
+C1=To turn right, stop just before the stop line, and then  turn right.
+C2=When turning right, proceed slowly along the right edge  of the road before turning.
+C3=Drivers turning right must pay attention to pedestrians,  bicycle riders, and others who are stopping or  proceeding, depending on the signal.
+C4=If a passenger is getting out of the car, you can stop  briefly in front of a fire hydrant.
+C5=On city streets, it is unnecessary to turn on the  headlights because the surroundings are well-lit even at  night.
+N=773 A=1, 5 CHECK= DETAIL=
+B=Which of the following are the most incorrect ways  to drive in the given situation? (Select TWO)
+C1=Bicycle riders may ride their bicycle when crossing a  crosswalk.
+C2=A bicycle rider who is a child may ride on the sidewalk.
+C3=A bicycle rider must wear a helmet.
+C4=Bicycle riders must turn on their front and rear lights or  wear other light-emitting devices when riding on the  road at night.
+C5=School buses can park or stop on the left side of the  road for the convenience of children getting on and off  the bus.
+N=774 A=3, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Drivers need not be particularly careful unless the  agricultural machine is in motion.
+C2=Speed up as there are no speed limits on rural roads.
+C3=Drive carefully as there is a lot of sand and dust on the  road.
+C4=Maintain a safe distance from the agricultural machine  by stopping temporarily or slowing down before  approaching it.
+C5=Never honk to avoid disturbing the agricultural machine  driver.
+N=775 A=2, 3 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Speed up as there are no speed limits on rural roads.
+C2=Even if there is enough space to pass between your  vehicle and the agricultural machine, stop for the safety  of the person riding the cultivator.
+C3=Maintain a safe distance from the agricultural machine  by stopping temporarily or slowing down before  approaching it.
+C4=Never honk to avoid disturbing the agricultural machine  driver.
+C5=Stopping is prohibited in the roadside areas on both  sides of the road, but parking is allowed.
+N=776 A=1, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Since the signals are not working, carefully observe the  intersection before entering.
+C2=When turning right, honk and overtake the cultivator on  its left.
+C3=Since the cultivator is moving slowly, speed up and turn  right ahead of it.
+C4=If you intend to go straight in the third lane, be sure to  check the cultivator's position.
+C5=Anticipate the cultivator going straight, and then quickly  switch to the second lane and go straight.
+N=777 A=3, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=You can drive over the centerline to overtake the  cultivator.
+C2=When the cultivator passes a parked vehicle, use the  space on the right side to overtake it at high speed.
+C3=Even if the cultivator driver signals you to go ahead,  maintain a safe distance and follow safely.
+C4=If the cultivator driver yields by moving to the second  lane, proceed to the left of the cultivator without  crossing the centerline.
+C5=There is no need to anticipate pedestrians appearing in  front of parked vehicles.
+N=778 A=1, 2 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=If you intend to go straight, drive slowly and stop safely  behind the vehicle ahead as the traffic light is red.
+C2=When the light turns green, stay in your lane and safely  change lanes when there is enough distance.
+C3=If you switch to the left-turn lane and the light turns  green, quickly use the opposite lane to proceed.
+C4=When following a tractor, you can overtake it on the  right side.
+C5=When intending to make a U-turn, you may do so when  the traffic light turns red.
+N=779 A=3 ,5 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=The tractor has stopped, so you may honk continuously  to rush the tractor driver to proceed.
+C2=As soon as the vehicle on the opposite side passes  through, cross the centerline and overtake to the left.
+C3=Drive cautiously, anticipating that the truck on the right  may suddenly start moving while it is stopped.
+C4=If there is space on the right of the tractor, use it to  overtake.
+C5=Since the tractor moves slower than cars, maintain a  safe distance instead of aggressively attempting to  overtake.
+N=780 A=1 ,5 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Maintain sufficient distance from a wheelchair to aid  walking, as it is considered a pedestrian.
+C2=Once the truck in front of you has finished overtaking,  follow closely behind it to overtake.
+C3=Follow closely behind the truck, as you cannot see the  situation ahead.
+C4=Honk and request the person using a wheelchair to aid  walking to pass on the left sidewalk, as the device must  travel on the sidewalk.
+C5=Turn on the hazard lights and proceed slowly to alert  the oncoming traffic of the hazard ahead.
+N=781 A=1, 5 CHECK= DETAIL=
+B=Which of the following are the safe ways to drive  when you are trying to go straight in the given  situation? (Select TWO)
+C1=Do not enter the intersection until the school bus has  departed.
+C2=Since the school bus is stopped, you should pass it on  the left.
+C3=Follow the hand signals of the school bus driver and  pass it on the left.
+C4=Enter the intersection and wait behind the school bus.
+C5=Be prepared for pedestrians who may appear behind the  oncoming truck.
+N=782 A=2, 5 CHECK= DETAIL=
+B=Which of the following are the safe ways to drive in  the given situation? (Select TWO)
+C1=Quickly drive through the intersection while using  high-beam headlights to warn the bicycle rider.
+C2=Drive through the intersection at a lower speed but stay  cautious as the bicycle may enter abruptly.
+C3=Anticipate that the bicycle will stay in its lane and drive  through the intersection.
+C4=Quickly drive through the intersection while repeatedly  honking to warn the bicycle rider not to do anything  dangerous.
+C5=Because the bicycle is on the car lane, pass through  while ensuring that the bicycle has sufficient space on  the side.
+N=783 A=2, 3 CHECK= DETAIL=
+B=Which of the following are the anticipated hazards  when driving through an intersection in the given  situation? (Select TWO)
+C1=The black vehicle in lane 3 can turn right.
+C2=The white vehicle in lane 2 can make a sudden shift to  lane 1.
+C3=A jaywalking pedestrian may suddenly appear from  behind the bridge pier.
+C4=All vehicles must stop since a pedestrian may try to  cross the street at the last second.
+C5=The vehicle behind may try to overtake you.
+N=784 A=3, 5 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=The traffic light is green, so you can speed up and  quickly drive straight through the intersection.
+C2=Turn right from the second lane with the hazard lights  on to alert oncoming traffic.
+C3=Drive cautiously, anticipating a hazard as a vehicle on  the third lane ahead may suddenly switch to the left lane.
+C4=Since the vehicle behind you is tailgating, increase your  speed quickly to create a safe distance and swiftly pass  through the intersection.
+C5=Gradually increase your speed to pass through the  intersection  while  keeping  your  eyes  open  for  surrounding traffic.
+N=785 A=4, 5 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Accelerate quickly after the light changes to pass  through the intersection swiftly.
+C2=Turn left with your left-turn signal on, while paying  attention to other vehicles.
+C3=Accelerate sharply within the intersection and switch to  the right lane to pass through.
+C4=Consider why the white car is stopping and proceed  slowly, preparing for any hazards.
+C5=Gradually increase your speed to pass through while  checking both sides for any vehicles disobeying the  traffic signal.
+N=786 A=3, 4 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=To facilitate smooth traffic flow, wait ahead of the stop  line at the red light before turning left.
+C2=There is no need to pay attention to the red vehicle  turning right on the opposite side of the road as vehicles  turning left have the right of way.
+C3=Be careful as the blind spots of your car may cause you  to lose sight of the two-wheeled vehicle momentarily.
+C4=Turn left following the white traffic guide lines on the  intersection pavement.
+C5=While turning left, turn on the right-turn signal and  move directly into the third lane on the left side of the  road.
+N=787 A=2, 5 CHECK= DETAIL=
+B=Which of the following are the safest ways to drive  in the given situation? (Select TWO)
+C1=Stay as close as possible to the car ahead to pass  through the busy intersection.
+C2=Be prepared for a vehicle in the third lane to switch to  the left lane suddenly.
+C3=Enter the intersection to maintain smooth traffic flow,  regardless of whether the vehicles ahead have stopped.
+C4=Turn on the hazard lights and safely overtake by moving  into the opposite first lane, and then continue straight  ahead.
+C5=If it appears that you may not pass through the  intersection at the green light, stop just before the stop  line.
+N=788 A=1, 2 CHECK= DETAIL=
+B=You want to turn left in the given situation. Which of  the following are the TWO most dangerous ways to  drive? (Select TWO)
+C1=Turn on the hazard lights, pass through the safety zone  to enter the first lane, and turn left.
+C2=Once in the left-turn lane, stay as close as possible to  the vehicle ahead and quickly turn left.
+C3=Take caution of the vehicles behind you as you switch to  the first lane.
+C4=Switch to the first lane from the lane with white dotted  lines, and then turn left.
+C5=When switching to the left-turn lane, be mindful of the  vehicle directly in front of you.
+N=789 A=3, 5 CHECK= DETAIL=
+B=Which of the following are the safe ways to drive in the given situation? (Select TWO)
+C1=Repeatedly honk to warn B not to interrupt the way.
+C2=Continue to drive as B is expected to travel to the left.
+C3=Stop until B has reached the opposite side.
+C4=Vehicles have the right of way in places other than roads. Honk to make sure that B does not start crossing the road. ??Drive slowly while passing by B and maintain a safe distance. ??A vehicle approaching the entrance to an apartment parking lot
+N=790 A=1, 5 CHECK= DETAIL=
+B=Which of the following are the safest ways to make  a U-turn in the given situation? (Select TWO)
+C1=Make a U-turn within the U-turn area marked by white  dotted lines when the signal allows, starting with the car  in front of you.
+C2=There is no need to watch out for right-turning vehicles  from a left side road onto the main road.
+C3=You can make a U-turn at any time regardless of the  signal, as long as you do not obstruct traffic on the  opposite side of the road.
+C4=There is no need to yield to a car making a U-turn first  from immediately behind you.
+C5=Be sure to look before making a U-turn, as there may  be cars disobeying the traffic signal on the opposite side  of the road.
+N=791 A=2, 4 CHECK= DETAIL=
+B=You want to turn right in the given situation. Which  of the following are the safest ways to drive? (Select  TWO)
+C1=Turn right while slowing down without coming to a full  stop before the intersection stop line.
+C2=Always check for pedestrians at the crosswalk with a  traffic light just before the intersection.
+C3=It is not necessary to check for vehicles going straight  from the left to the right side of the road.
+C4=Be cautious of a two-wheeled vehicle following you as  seen in the right side-view mirror.
+C5=It is not necessary to check for pedestrians at the  crosswalk with a traffic light immediately after a right  turn.
+N=792 A=3, 4 CHECK= DETAIL=
+B=Which of the following are the most dangerous  ways to turn right in the given situation? (Select TWO)
+C1=Stop before the stop line and wait for the right-turn  signal to change to green.
+C2=Even after the right-turn signal turns green, keep your  eyes on the road ahead to ensure safety.
+C3=Even if the right-turn signal is red, stop temporarily and  make the turn slowly if there are no pedestrians.
+C4=There is no need to pay attention to crosswalks on the  right side of the road immediately after turning right.
+C5=Watch out for pedestrians who may suddenly run into  the crosswalk from the right sidewalk.
+N=793 A=1, 4 CHECK= DETAIL=
+B=Which of the following are the desirable ways to  drive in the given situation? (Select TWO)
+C1=Slow down and keep a safe distance as the school bus  may switch to the right lane.
+C2=The school bus is slowing down, so drive safely to  overtake the bus.
+C3=Keep an eye on the electric kick scooter in lane 3 and  switch to the right lane to overtake the school bus.
+C4=Because you cannot check the front of the school bus,  stay in the lane and reduce speed to maintain a safe  distance.
+C5=Honk at the school bus driver to inform him/her that  the bus is violating the minimum speed limit.
+N=794 A=1, 4 CHECK= DETAIL=
+B=Which of the following are the biggest risk factors  when making an unprotected left turn in the given  situation? (Select TWO)
+C1=There may be a vehicle coming at high speed from the  opposite second lane.
+C2=A vehicle may be stopped behind a truck in the  opposite lane, waiting to turn left.
+C3=A vehicle behind you may suddenly switch to the  second lane.
+C4=A pedestrian on the left side of the road may cross the  crosswalk.
+C5=A truck may make an unprotected left turn from the  opposite first lane.
+N=795 A=2, 4 CHECK= DETAIL=
+B=Which of the following are the most dangerous  ways to drive? (Select TWO)
+C1=You may collide with a car making a quick left turn in  the lane where you are driving.
+C2=You may collide with a car turning right from the road  on your right.
+C3=You may collide with a car turning right from the  opposite road.
+C4=You may collide with a car making a U-turn on the  opposite road.
+C5=You may collide with a car trying to turn right from the  third lane behind you.
+N=796 A=2, 3 CHECK= DETAIL=
+B=Which of the following descriptions regarding  right-turn traffic at a "lane-reduced roundabout" in  the given picture are correct? (Select TWO)
+C1=Enter the roundabout and safely exit the roundabout to  the right.
+C2=Turn right while driving slowly in the rightmost lane of  the roadway without entering the roundabout.
+C3=Turning right immediately after entering a roundabout is  a "violation of the right of way in an intersection."
+C4=A vehicle must come to a complete stop at the  crosswalk in the right-turn lane, regardless of whether  there are pedestrians or not.
+C5=The driver must make a large turn clockwise to turn  right after entering the roundabout.
+N=797 A=2, 4 CHECK= DETAIL=
+B=Which of the following are the safe ways to drive in  the given situation? (Select TWO)
+C1=Drive slowly through the crosswalk to turn right.
+C2=Stop before the crosswalk when trying to turn right.
+C3=Slowly enter the intersection to go straight, as you have  the right of way.
+C4=Make a full stop before going straight or turning right.
+C5=Make a full stop only when you are trying to turn right.
+N=798 A=3, 4 CHECK= DETAIL=
+B=Which of the following are the safe ways to drive  when a vehicle is trying to head in the 12 o?셛lock  direction in the given situation? (Select TWO)
+C1=Stop to yield to the passenger vehicle about to enter  the roundabout.
+C2=Turn on the left-turn signal and enter the truck apron.
+C3=Turn on the right-turn signal and drive in the 12 o?셛lock  direction.
+C4=If the vehicle misses the chance to get out from the  roundabout, it should circle around one more time to  exit in the right direction.
+C5=The vehicle is trying to head in the 12 o'clock direction,  so turn signals are not required.
+N=799 A=1, 3 CHECK= DETAIL=
+B=Which of the following are the safe ways to drive  when trying to turn right in the given situation?  (Select TWO)
+C1=Since it is difficult to have clear visibility on the right,  come to a stop and then turn right.
+C2=Since there are no pedestrians on the crosswalk,  proceed through swiftly.
+C3=Stop before the stop line to avoid obstructing the  movement of oncoming vehicles.
+C4=Since you entered the intersection first, proceed to turn  right.
+C5=Honk to prevent pedestrians from entering the  crosswalk.
+N=800 A=2, 5 CHECK= DETAIL=
+B=You are approaching an intersection while traveling  straight from the left lane (first lane). Which of the  following are the TWO safest ways to drive?
+C1=There is no traffic in the opposite direction, so overtake  the car ahead to the left side.
+C2=Slow down and approach the taxi in the first lane with a  safe distance.
+C3=Honk to stop the taxi and quickly pass to its right side.
+C4=Continue to switch to the third lane and stop.
+C5=Slow down as you approach the taxi and pedestrians if  you are switching to the second lane.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n '\"n\"\\s*:\\s*(784|789|798)' translations | Select-Object -First 50" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T13:49:11.962645Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+
+ exited 1 in 620ms:
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -l '789' translations | Select-Object -First 30" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 605ms:
+translations\audit\out\102_flags_cn.txt
+translations\audit\out\104_flags_en.txt
+translations\audit\queue\102_flags_cn.json
+translations\audit\out\202_choices_cn.txt
+translations\audit\queue\104_flags_en.json
+translations\risky_questions.json
+translations\validation_report.json
+translations\audit\out\205_choices_cn.txt
+translations\audit\out\208_choices_cn.txt
+translations\audit\out\210_choices_en.txt
+translations\audit\out\219_choices_cn.txt
+translations\audit\out\219_choices_en.txt
+translations\audit\queue\219_choices_cn.json
+translations\audit\queue\219_choices_en.json
+translations\audit\queue\219_choices_vn.json
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw '"'translations/audit/queue/219_choices_en.json'|ConvertFrom-Json; "'$cp=[Text.Encoding]::GetEncoding(949); $u=[Text.Encoding]::UTF8; foreach($x in $d|? n -in 784,789,798){'"'N='+"'$x.n; $vals=@($x.ko_b)+@($x.ko_c); foreach($s in $vals){$u.GetString($cp.GetBytes($s))}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 605ms:
+N=784
+?�음 ?�황?�서 가???�전???�전 방법 2가지??
+?�색 ?�호?��?�?가?�하??빠르�?직진?�로 교차로�? ?�과?�다.
+비상 ?�멸?�을 켜고 주�? 차량???�리�?2차로?�서 ?�회?�한??
+?�쪽 3차로?�서 ?�쪽?�로 갑자�?진로 변경을 ?�는 차�? ?�을 ?? ?�는 ?�험???�비하면서 ?�전?�다.
+?�쪽 차�? ?�무 가까이 ?�라?��?�??�전거리 ?�보�??�해 ?�도�? 빨리 ?�여 ?�속??교차로�? ?�과?�다.
+교차�?주�? ?�황???�으�??�인?�면???�서???�도�??�여 ?�과?�다.
+N=789
+?�음 ?�황?�서 가???�전???�전방법 2가지??
+차의 ?�행??방해?��? ?�도�?지?�적?�로 경음기�? ?�용?�다.
+B??차의 ?�쪽?�로 ?�행??것으�??�상?�여 그�?�?주행?�다.
+B???�단??방해?��? ?�도�??�단???�날 ?�까지 ?��??�다.
+?�로가 ?�닌 ?�소??차의 ?�행???�선?��?�?B가 ?�단?��? 못하??�?경음기을 ?�린??
+B???�을 지?�는 경우 ?�전??거리�??�고 ?�행?�야 ?�다.
+N=798
+?�음 ?�황?�서 12??방향?�로 진출?�려??경우 가???�전?????�방�?2가지??
+?�전교차로에 진입?�려???�용?�동차에 ?�보?�기 ?�해 ?�차?�다.
+좌측방향지?�기�??�동?�며 ?�물차턱?�로 진입?�다.
+?�측방향지?�기�??�동?�며 12??방향?�로 ?�행?�다.
+진출 ?�기�??�친 경우 ??바�??�전?�여 진출?�다.
+12??방향?�로 직진?�려??경우?��?�?방향지?�기�??�동?��?  ?�니 ?�다.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -LiteralPath 'translations/audit/out/219_choices_en.txt' | Select-String -Pattern '789|798' -Context 0,8" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 605ms:
+
+>   "n": 789,
+    "ko_b": "??쇱벉 ?怨뱀넺?癒?퐣 揶쎛????됱읈????곸읈獄쎻뫖苡?2揶쎛筌왖??",
+    "ko_c": [
+     "筌△뫁?????뻬??獄쎻뫚鍮??? ??낅즲嚥?筌왖??우읅??곗쨮 野껋럩?ф묾怨? ?????뺣뼄.",
+     "B??筌△뫁????긱걹??곗쨮 ???뻬??野껉퍔?앮에???됯맒??뤿연 域밸챶?嚥?雅뚯눛六??뺣뼄.",
+     "B????볥뼊??獄쎻뫚鍮??? ??낅즲嚥???볥뼊????멸텊 ???돱筌왖 ?類???뺣뼄.",
+     "?袁⑥쨮揶쎛 ?袁⑤빒 ?關???筌△뫁?????뻬???怨쀪퐨???嚥?B揶쎛 ??볥뼊??? 筌륁궢釉??嚥?野껋럩?ф묾怨쀬뱽 ?紐꺿뵛??",
+     "B????곸뱽 筌왖??롫뮉 野껋럩????됱읈??椰꾧퀡?곭몴??癒????쀫뻬??곷튊 ??뺣뼄."
+    ],
+>   "n": 798,
+    "ko_b": "??쇱벉 ?怨뱀넺?癒?퐣 12??獄쎻뫚堉??곗쨮 筌욊쑴???롮젻??野껋럩??揶쎛????됱읈?????袁④컩甕?2揶쎛筌왖??",
+    "ko_c": [
+     "???읈?대Ŋ媛먩에?뽯퓠 筌욊쑴???롮젻???諭??癒?짗筌△뫁肉??臾먮궖??띾┛ ?袁る퉸 ?類ㅺ컧??뺣뼄.",
+     "?ル슣瑜ヨ쳸?븍샨筌왖??볥┛???臾먮짗??렽??遺압わ㎕??쉐??곗쨮 筌욊쑴???뺣뼄.",
+     "?怨쀫?獄쎻뫚堉?쭪???볥┛???臾먮짗??렽?12??獄쎻뫚堉??곗쨮 ???뻬??뺣뼄.",
+     "筌욊쑴????볥┛???蹂?뒊 野껋럩????獄쏅??????읈??뤿연 筌욊쑴???뺣뼄.",
+     "12??獄쎻뫚堉??곗쨮 筌욊낯彛??롮젻??野껋럩????嚥?獄쎻뫚堉?쭪???볥┛???臾먮짗???  ?袁⑤빍 ??뺣뼄."
+    ],
+> N=789 A=3, 5 CHECK= DETAIL=
+  B=Which of the following are the safe ways to drive in the given situation? (Select TWO)
+  C1=Repeatedly honk to warn B not to interrupt the way.
+  C2=Continue to drive as B is expected to travel to the left.
+  C3=Stop until B has reached the opposite side.
+  C4=Vehicles have the right of way in places other than roads. Honk to make sure that B does not start crossing the ro
+ad. ??Drive slowly while passing by B and maintain a safe distance. ??A vehicle approaching the entrance to an apartmen
+t parking lot
+  N=790 A=1, 5 CHECK= DETAIL=
+  B=Which of the following are the safest ways to make  a U-turn in the given situation? (Select TWO)
+  C1=Make a U-turn within the U-turn area marked by white  dotted lines when the signal allows, starting with the car  
+in front of you.
+> N=798 A=3, 4 CHECK= DETAIL=
+  B=Which of the following are the safe ways to drive  when a vehicle is trying to head in the 12 o??쌾ock  direction in
+ the given situation? (Select TWO)
+  C1=Stop to yield to the passenger vehicle about to enter  the roundabout.
+  C2=Turn on the left-turn signal and enter the truck apron.
+  C3=Turn on the right-turn signal and drive in the 12 o??쌾ock  direction.
+  C4=If the vehicle misses the chance to get out from the  roundabout, it should circle around one more time to  exit i
+n the right direction.
+  C5=The vehicle is trying to head in the 12 o'clock direction,  so turn signals are not required.
+  N=799 A=1, 3 CHECK= DETAIL=
+  B=Which of the following are the safe ways to drive  when trying to turn right in the given situation?  (Select TWO)
+> "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -n '\"n\"\\s*:\\s*(784|789|798)' transl
+ations | Select-Object -First 50" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+  2026-10-10T13:49:11.962645Z ERROR codex_core::tools::router: error=Exit code: 1
+  Wall time: 0.6 seconds
+  Output:
+  
+   exited 1 in 620ms:
+  exec
+> "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -l '789' translations | Select-Object -
+First 30" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+   succeeded in 605ms:
+  translations\audit\out\102_flags_cn.txt
+  translations\audit\out\104_flags_en.txt
+  translations\audit\queue\102_flags_cn.json
+  translations\audit\out\202_choices_cn.txt
+  translations\audit\queue\104_flags_en.json
+  translations\risky_questions.json
+  translations\validation_report.json
+> "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw '"'translations/audit/
+queue/219_choices_en.json'|ConvertFrom-Json; "'$cp=[Text.Encoding]::GetEncoding(949); $u=[Text.Encoding]::UTF8; foreach
+($x in $d|? n -in 784,789,798){'"'N='+"'$x.n; $vals=@($x.ko_b)+@($x.ko_c); foreach($s in $vals){$u.GetString($cp.GetByt
+es($s))}}' in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+   succeeded in 605ms:
+  N=784
+  ?占쎌쓬 ?占쏀솴?占쎌꽌 媛???占쎌쟾???占쎌쟾 諛⑸쾿 2媛吏??
+  ?占쎌깋 ?占쏀샇?占쏙옙?占?媛?占쏀븯??鍮좊Ⅴ占?吏곸쭊?占쎈줈 援먯감濡쒙옙? ?占쎄낵?占쎈떎.
+  鍮꾩긽 ?占쎈㈇?占쎌쓣 耳쒓퀬 二쇽옙? 李⑤웾???占쎈━占?2李⑤줈?占쎌꽌 ?占쏀쉶?占쏀븳??
+  ?占쎌そ 3李⑤줈?占쎌꽌 ?占쎌そ?占쎈줈 媛묒옄占?吏꾨줈 蹂寃쎌쓣 ?占쎈뒗 李⑨옙? ?占쎌쓣 ?? ?占쎈뒗 ?占쏀뿕???占쎈퉬?섎㈃???占쎌쟾?占쎈떎.
+  ?占쎌そ 李⑨옙? ?占쎈Т 媛源뚯씠 ?占쎈씪?占쏙옙?占??占쎌쟾嫄곕━ ?占쎈낫占??占쏀빐 ?占쎈룄占? 鍮⑤━ ?占쎌뿬 ?占쎌냽??援먯감濡쒙옙? ?占쎄낵?占쎈떎.
+  援먯감占?二쇽옙? ?占쏀솴???占쎌쑝占??占쎌씤?占쎈㈃???占쎌꽌???占쎈룄占??占쎌뿬 ?占쎄낵?占쎈떎.
+> N=789
+  ?占쎌쓬 ?占쏀솴?占쎌꽌 媛???占쎌쟾???占쎌쟾諛⑸쾿 2媛吏??
+  李⑥쓽 ?占쏀뻾??諛⑺빐?占쏙옙? ?占쎈룄占?吏?占쎌쟻?占쎈줈 寃쎌쓬湲곤옙? ?占쎌슜?占쎈떎.
+  B??李⑥쓽 ?占쎌そ?占쎈줈 ?占쏀뻾??寃껋쑝占??占쎌긽?占쎌뿬 洹몌옙?占?二쇳뻾?占쎈떎.
+  B???占쎈떒??諛⑺빐?占쏙옙? ?占쎈룄占??占쎈떒???占쎈궇 ?占쎄퉴吏 ?占쏙옙??占쎈떎.
+  ?占쎈줈媛 ?占쎈땶 ?占쎌냼??李⑥쓽 ?占쏀뻾???占쎌꽑?占쏙옙?占?B媛 ?占쎈떒?占쏙옙? 紐삵븯??占?寃쎌쓬湲곗쓣 ?占쎈┛??
+  B???占쎌쓣 吏?占쎈뒗 寃쎌슦 ?占쎌쟾??嫄곕━占??占쎄퀬 ?占쏀뻾?占쎌빞 ?占쎈떎.
+> N=798
+  ?占쎌쓬 ?占쏀솴?占쎌꽌 12??諛⑺뼢?占쎈줈 吏꾩텧?占쎈젮??寃쎌슦 媛???占쎌쟾?????占쎈갑占?2媛吏??
+  ?占쎌쟾援먯감濡쒖뿉 吏꾩엯?占쎈젮???占쎌슜?占쎈룞李⑥뿉 ?占쎈낫?占쎄린 ?占쏀빐 ?占쎌감?占쎈떎.
+  醫뚯륫諛⑺뼢吏?占쎄린占??占쎈룞?占쎈ŉ ?占쎈Ъ李⑦꽦?占쎈줈 吏꾩엯?占쎈떎.
+  ?占쎌륫諛⑺뼢吏?占쎄린占??占쎈룞?占쎈ŉ 12??諛⑺뼢?占쎈줈 ?占쏀뻾?占쎈떎.
+  吏꾩텧 ?占쎄린占??占쎌튇 寃쎌슦 ??諛뷂옙??占쎌쟾?占쎌뿬 吏꾩텧?占쎈떎.
+  12??諛⑺뼢?占쎈줈 吏곸쭊?占쎈젮??寃쎌슦?占쏙옙?占?諛⑺뼢吏?占쎄린占??占쎈룞?占쏙옙?  ?占쎈땲 ?占쎈떎.
+  
+  exec
+> "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -LiteralPath 'translations/aud
+it/out/219_choices_en.txt' | Select-String -Pattern '789|798' -Context 0,8" in C:\Users\user\projects\?멸뎅???숆낵?쒗뿕-AI?쒗꽣
+
+
+
+codex
+[{"n":789,"field":"c[4]","severity":"major","issue":"4번 선택지에 5번 선택지와 다음 문항의 문구까지 잘못 합쳐져 심각한 비문이 되었다.","suggestion":"Vehicles have the right of way even in places other than roads, so repeatedly honk to prevent B from crossing."},{"n":789,"field":"c[5]","severity":"critical","issue":"정답인 5번 선택지가 독립 항목에서 누락되어 정답 판단이 불가능하다.","suggestion":"Drive slowly while maintaining a safe distance when passing B."},{"n":798,"field":"b","severity":"minor","issue":"‘12 o'clock’이 문자 인코딩 오류로 깨져 표시된다.","suggestion":"Which of the following are the safe ways to drive when a vehicle is trying to head in the 12 o'clock direction in the given situation? (Select TWO)"},{"n":798,"field":"c[3]","severity":"minor","issue":"‘12 o'clock’이 문자 인코딩 오류로 깨져 표시된다.","suggestion":"Turn on the right-turn signal and drive in the 12 o'clock direction."}]
+tokens used
+35,436
+[{"n":789,"field":"c[4]","severity":"major","issue":"4번 선택지에 5번 선택지와 다음 문항의 문구까지 잘못 합쳐져 심각한 비문이 되었다.","suggestion":"Vehicles have the right of way even in places other than roads, so repeatedly honk to prevent B from crossing."},{"n":789,"field":"c[5]","severity":"critical","issue":"정답인 5번 선택지가 독립 항목에서 누락되어 정답 판단이 불가능하다.","suggestion":"Drive slowly while maintaining a safe distance when passing B."},{"n":798,"field":"b","severity":"minor","issue":"‘12 o'clock’이 문자 인코딩 오류로 깨져 표시된다.","suggestion":"Which of the following are the safe ways to drive when a vehicle is trying to head in the 12 o'clock direction in the given situation? (Select TWO)"},{"n":798,"field":"c[3]","severity":"minor","issue":"‘12 o'clock’이 문자 인코딩 오류로 깨져 표시된다.","suggestion":"Turn on the right-turn signal and drive in the 12 o'clock direction."}]

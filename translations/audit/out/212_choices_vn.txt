@@ -1,0 +1,1642 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12600-c86c-71d2-92c4-b821aec00eef
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/212_choices_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/212_choices_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 534ms:
+[
+ {
+  "n": 481,
+  "ko_b": "醫뚯꽍 ?덉쟾??李⑹슜??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "媛源뚯슫 嫄곕━瑜??댄뻾??寃쎌슦?먮뒗 ???④낵媛 ?놁쑝誘濡?李⑹슜?섏? ?딆븘???쒕떎.",
+   "?먮룞李⑥쓽 ?뱀감?먮뒗 ?덉쟾???꾪븯??醫뚯꽍 ?덉쟾?좊? 李⑹슜?섏뿬???쒕떎.",
+   "?대┛?대뒗 遺紐⑥쓽 ?꾩???諛쏆쓣 ???덈뒗 ?댁쟾????醫뚯꽍???쒖슦怨? 醫뚯꽍 ?덉쟾?좊? 李⑹슜?쒗궎??寃껋씠 ?덉쟾?섎떎.",
+   "湲닿툒???⑸Т濡?異쒕룞?섎뒗 寃쎌슦 ?댁쇅?먮뒗 湲닿툒?먮룞李⑥쓽 ?댁쟾?먮룄 醫뚯꽍 ?덉쟾?좊? 諛섎뱶??李⑹슜?섏뿬???쒕떎."
+  ],
+  "a": "2, 4",
+  "tr_b": "Hai gi梳즜 th챠ch n횪o 휃첬ng v沼?vi沼놻 th梳칣 d창y an to횪n?",
+  "tr_c": [
+   "Khi 휃i qu찾ng 휃튼沼쓓g ng梳칗 th챙 d창y an to횪n kh척ng c처 t찼c d沼쩸g g챙 n챗n kh척ng c梳쬷 th梳칣 c크ng 휃튼沼즓.",
+   "V챙 an to횪n n챗n ng튼沼쓎 tr챗n xe ph梳즜 th梳칣 d창y an to횪n.",
+   "휂沼멼 v沼쌻 tr梳?em th챙 휃梳톞 ng沼밿 沼?gh梳?c梳죒h gh梳?l찼i 휃沼?c처 th沼?nh梳춏 휃튼沼즓 s沼?gi첬p 휃沼?c沼쬪 b沼?m梳? v횪 th梳칣 d창y an to횪n 휃沼? 휃梳즡 b梳즣 an to횪n.",
+   "Ng튼沼쓎 l찼i xe kh梳쯰 c梳쩺 ngo횪i nh沼칗g l첬c 휃튼沼즓 휃i沼걏 휃沼셬g l횪m nhi沼뇅 v沼?kh梳쯰 c梳쩺 th챙 c크ng ph梳즜 th梳칣 d창y an to횪n."
+  ]
+ },
+ {
+  "n": 482,
+  "ko_b": "援먰넻?ш퀬濡??ш컖??泥숈텛 怨⑥젅 遺?곸씠 ?덉긽?섎뒗 寃쎌슦??媛???곸젅??議곗튂諛⑸쾿??",
+  "ko_c": [
+   "?섏떇???덈뒗吏 ?뺤씤?섍퀬 利됱떆 ?ы룓?뚯깮?좎쓣 ?ㅼ떆?쒕떎.",
+   "遺?곸옄瑜?遺異뺥븯???덉쟾??怨녹쑝濡??대룞?섍퀬 119???좉퀬?쒕떎.",
+   "?곴린???먯깋??諛쒖깮?????덉쑝誘濡??섏엫由ы엳踰뺤쓣 ?쒗뻾?쒕떎.",
+   "湲닿툒??寃쎌슦媛 ?꾨땲硫??댁넚???댁꽌?????섎ŉ, 遺?앹씠??寃쎌슦?먮뒗 ?댁넚?댁빞 ?쒕떎硫?遺紐⑹쓣 ?댁슜?댁꽌 泥숈텛遺遺꾩쓣 怨좎젙?? ???덉쟾??怨녹쑝濡??곗꽑 ??쇳빐???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Ph튼퉤ng ph찼p x沼?l첵 ph첫 h沼즤 nh梳쩿 v沼?tr튼沼쓓g h沼즤 ph沼뢮g 휃o찼n b沼?ch梳쩸 th튼퉤ng c沼셳 s沼몁g nghi챗m tr沼뛫g do tai  n梳죒 giao th척ng?",
+  "tr_c": [
+   "Ki沼긩 tra ng튼沼쓎 b沼?th튼퉤ng c챵n 첵 th沼쯢 hay kh척ng v횪 ti梳퓆 h횪nh h척 h梳쩺 nh창n t梳죓 ngay.",
+   "D챙u ng튼沼쓎 b沼?th튼퉤ng 휃梳퓆 n퉤i an to횪n r沼밿 g沼뛦 cho 119.",
+   "휂튼沼쓓g h척 h梳쩺 tr챗n c처 th沼?b沼?t梳칌 ngh梳퐊 n챗n c梳쬷 th沼켧 hi沼뇆 bi沼뇆 ph찼p Heimlich (휃梳쯻 b沼쩸g).",
+   "N梳퓎 kh척ng ph梳즜 tr튼沼쓓g h沼즤 kh梳쯰 c梳쩺 th챙 kh척ng 휃튼沼즓 di chuy沼긪 ng튼沼쓎 b沼?th튼퉤ng. Tr튼沼쓓g h沼즤 b梳쩿 kh梳?kh찼ng ph梳즜 chuy沼긪 ng튼沼쓎 b沼?th튼퉤ng 휃i th챙 s沼?d沼쩸g n梳퉝 g沼?휃沼?c沼?휃沼땙h c沼셳 s沼몁g, sau 휃처 튼u ti챗n chuy沼긪 휃梳퓆 n퉤i an to횪n."
+  ]
+ },
+ {
+  "n": 483,
+  "ko_b": "援먰넻?ш퀬 諛쒖깮 ??遺?곸옄???섏떇 ?곹깭瑜??뺤씤?섎뒗 諛⑸쾿?쇰줈 媛??癒쇱? ?댁빞 ??寃껋??",
+  "ko_c": [
+   "遺?곸옄??留λ컯 ?좊Т瑜??뺤씤?쒕떎.",
+   "留먯쓣 嫄몄뼱蹂닿굅???닿묠瑜?媛蹂띻쾶 ?먮뱶??蹂몃떎.",
+   "?대뒓 遺?꾩뿉 異쒗삁???ы븳吏 ?댄렣蹂몃떎.",
+   "?낆븞???댄렣??湲곕룄???대Ъ吏덉씠 ?덈뒗吏 ?뺤씤?쒕떎."
+  ],
+  "a": "2",
+  "tr_b": "Khi x梳즭 ra tai n梳죒 giao th척ng, bi沼뇆 ph찼p tr튼沼쌵 ti챗n 휃沼?ki沼긩 tra tr梳죒g th찼i 첵 th沼쯢 c沼쬪 ng튼沼쓎 b沼?th튼퉤ng l횪 g챙?",
+  "tr_c": [
+   "B梳칣 m梳죅h c沼쬪 ng튼沼쓎 b沼?th튼퉤ng 휃沼?ki沼긩 tra.",
+   "Th沼?n처i chuy沼뇆 ho梳톍 v沼?nh梳?v횪o vai.",
+   "Quan s찼t xem ch沼?n횪o ch梳즭 m찼u nhi沼걏 nh梳쩿.",
+   "Ki沼긩 tra m沼뱈 xem c처 d沼?v梳춗 trong kh챠 qu梳즢 hay kh척ng."
+  ]
+ },
+ {
+  "n": 484,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?ш퀬 諛쒖깮 ??湲닿툒???뷀븯??寃쎌슦 ?숈듅?먯뿉寃?議곗튂瑜??섎룄濡??섍퀬 ?댁쟾??怨꾩냽?????덈뒗 李???2媛吏??",
+  "ko_c": [
+   "蹂묒썝?쇰줈 遺?곸옄瑜??대컲 以묒씤 ?뱀슜?먮룞李?,
+   "?붿옱吏꾩븬 ???뚮갑?쒕줈 ?뚯븘?ㅻ뒗 ?뚮갑?먮룞李?,
+   "援먰넻?ш퀬 ?꾩옣?쇰줈 異쒕룞?섎뒗 寃ъ씤?먮룞李?,
+   "?고렪?붾Ъ???ｊ퀬 媛??以묒씤 ?고렪臾쇱옄?숈감"
+  ],
+  "a": "1, 4",
+  "tr_b": "Khi x梳즭 ra tai n梳죒 giao th척ng, theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? 2 lo梳죍 xe n횪o c처 th沼?y챗u c梳쬾 ng튼沼쓎 휃i  c첫ng h沼?tr沼?x沼?l첵 휃沼?ti梳퓈 t沼쩭 l튼u th척ng trong tr튼沼쓓g h沼즤 kh梳쯰 c梳쩺?",
+  "tr_c": [
+   "Xe con 휃ang 휃튼a ng튼沼쓎 b沼?th튼퉤ng 휃i b沼뇆h vi沼뇆",
+   "Xe c沼쯷 h沼뢠 sau khi 휃i ch沼칊 ch찼y v沼?,
+   "Xe c沼쯷 h沼?giao th척ng 휃ang ch梳죣 휃梳퓆 hi沼뇆 tr튼沼쓓g tai n梳죒 giao th척ng",
+   "Xe 척 t척 b튼u ch챠nh 휃ang ch沼?h횪ng b튼u ph梳쯯/b튼u ki沼뇆."
+  ]
+ },
+ {
+  "n": 485,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?ш퀬 諛쒖깮 ??怨꾩냽 ?댁쟾?????덈뒗 寃쎌슦濡??녹? 2媛吏??",
+  "ko_c": [
+   "湲닿툒???섏옄瑜??섏넚 以묒씤 援ш툒李??댁쟾?먮뒗 ?숈듅?먮줈 ?섏뿬湲??꾩슂??議곗튂 ?깆쓣 ?섍쾶?섍퀬 怨꾩냽 ?댁쟾?섏???",
+   "湲닿툒???뚯쓽??李몄꽍?섍린 ?꾪빐 ?대룞 以묒씤 ?댁쟾?먮뒗 ?숈듅?먮줈 ?섏뿬湲??꾩슂??議곗튂 ?깆쓣 ?섍쾶?섍퀬 怨꾩냽 ?댁쟾?섏???",
+   "湲닿툒???고렪臾쇱쓣 ?섏넚?섎뒗 李⑤웾 ?댁쟾?먮뒗 ?숈듅?먮줈 ?섏뿬湲??꾩슂??議곗튂 ?깆쓣 ?섍쾶?섍퀬 怨꾩냽 ?댁쟾?섏???",
+   "湲닿툒???쏀뭹???섏넚 以묒씤 援ш툒李??댁쟾?먮뒗 ?숈듅?먮줈 ?섏뿬湲??꾩슂??議곗튂 ?깆쓣 ?섍쾶?섍퀬 怨꾩냽 ?댁쟾?섏???"
+  ],
+  "a": "1, 3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? 2 휃찼p 찼n n횪o 휃첬ng v沼쌻 tr튼沼쓓g h沼즤 c처 th沼?ti梳퓈 t沼쩭 휃i khi x梳즭 ra tai n梳죒  giao th척ng?",
+  "tr_c": [
+   "Ng튼沼쓎 l찼i xe c梳쩺 c沼쯷 휃ang ch沼?b沼뇆h nh창n 휃i c梳쩺 c沼쯷 휃沼?ng튼沼쓎 휃i c첫ng th沼켧 hi沼뇆 c찼c bi沼뇆 ph찼p x沼?l첵 c梳쬷 thi梳퓍 v횪  ti梳퓈 t沼쩭 휃i.",
+   "Ng튼沼쓎 l찼i xe 휃ang di chuy沼긪 휃沼?tham gia cu沼셛 h沼뛭 kh梳쯰 c梳쩺 휃沼?ng튼沼쓎 휃i c첫ng th沼켧 hi沼뇆 c찼c bi沼뇆 ph찼p x沼?l첵 c梳쬷  thi梳퓍 v횪 ti梳퓈 t沼쩭 휃i.",
+   "Ng튼沼쓎 l찼i xe ch沼?b튼u ph梳쯯 kh梳쯰 c梳쩺 휃沼?ng튼沼쓎 휃i c첫ng th沼켧 hi沼뇆 c찼c bi沼뇆 ph찼p x沼?l첵 c梳쬷 thi梳퓍 v횪 ti梳퓈 t沼쩭 휃i.",
+   "Ng튼沼쓎 l찼i xe c梳쩺 c沼쯷 휃ang ch沼?d튼沼즓 ph梳쯯 kh梳쯰 c梳쩺 휃沼?ng튼沼쓎 휃i c첫ng th沼켧 hi沼뇆 c찼c bi沼뇆 ph찼p x沼?l첵 c梳쬷 thi梳퓍 v횪 ti梳퓈  t沼쩭 휃i."
+  ]
+ },
+ {
+  "n": 486,
+  "ko_b": "?쇨컙???꾨줈?먯꽌 濡쒕뱶??road kill)???덈갑?섍린 ?꾪븳 ?댁쟾諛⑸쾿?쇰줈 諛붾엺吏곹븯吏 ?딆? 寃껋??",
+  "ko_c": [
+   "?щ엺?대굹 李⑤웾???뺣옒媛 ?곸? 援?룄???곌만??二쇳뻾???뚮뒗 媛먯냽?댄뻾???댁빞 ?쒕떎.",
+   "?쇱깮?숇Ъ 諛쒓껄 ?쒖뿉???쒗뻾?쇰줈 ?묎렐?섍퀬 ?쒖쟻??媛볤만???몄썙 ?숇Ъ怨쇱쓽 異⑸룎??諛⑹??쒕떎.",
+   "?쇱깮?숇Ъ 諛쒓껄 ?쒖뿉???꾩“?깆쓣 ??梨?寃쎌쓬湲곕? 媛蹂띻쾶 ?몃젮 ?꾨쭩媛?꾨줉 ?좊룄?쒕떎.",
+   "異쒗쁽?섎뒗 ?숇Ъ??諛쒓껄???⑹씠?섍쾶 ?섍린 ?꾪빐 媛湲됱쟻 媛볤만??媛源뚯슫 ?꾨줈瑜?二쇳뻾?쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "N沼셢 dung n횪o kh척ng ph梳즜 l횪 c찼ch l찼i xe ph챵ng tr찼nh tai n梳죒 ?쑧뫣줺 ph梳즜 휃沼셬g v梳춗 qua 휃튼沼쓓g (road kill)??tr챗n  휃튼沼쓓g v횪o ban 휃챗m?",
+  "tr_c": [
+   "Khi l튼u th척ng tr챗n 휃튼沼쓓g qu沼멵 l沼?ho梳톍 휃튼沼쓓g n첬i 챠t ng튼沼쓎 v횪 xe qua l梳죍, ph梳즜 ch첬 첵 gi梳즡 t沼멵 휃沼?",
+   "Khi ph찼t hi沼뇆 c처 휃沼셬g v梳춗 hoang d찾, 휃i ch梳춎 t沼?t沼?r沼밿 d沼쳌g l梳죍 沼?l횪n 휃튼沼쓓g ph沼?휃沼?tr찼nh va ch梳죑 v沼쌻 휃沼셬g v梳춗.",
+   "Khi ph찼t hi沼뇆 c처 휃沼셬g v梳춗 hoang d찾, nh梳?nh횪ng nh梳쩸 c챵i k梳퓍 h沼즤 v沼쌻 t梳칣 휃챔n pha tr튼沼쌵 휃沼?d沼?휃沼셬g v梳춗 b沼?ch梳죣.",
+   "N梳퓎 c처 th沼?n챗n l튼u th척ng 沼?ph梳쬷 휃튼沼쓓g g梳쬷 v沼쌻 l횪n 휃튼沼쓓g ph沼?휃沼?d沼?d횪ng ph찼t hi沼뇆 ra 휃沼셬g v梳춗."
+  ]
+ },
+ {
+  "n": 487,
+  "ko_b": "怨좎냽?꾨줈?먯꽌 怨좎옣 ?깆쑝濡?湲닿툒 ?곹솴 諛쒖깮 ???쇱젙 嫄곕━瑜?臾대즺濡?寃ъ씤?쒕퉬?ㅻ? ?쒓났??二쇰뒗 湲곌???",
+  "ko_c": [
+   "?쒓뎅?꾨줈援먰넻怨듬떒",
+   "?쒓뎅?꾨줈怨듭궗",
+   "寃쎌같泥?,
+   "?쒓뎅援먰넻?덉쟾怨듬떒"
+  ],
+  "a": "2",
+  "tr_b": "C퉤 quan n횪o d튼沼쌻 휃창y cung c梳쩺 d沼땉h v沼?k챕o xe mi沼꿳 ph챠 tr챗n m沼셳 qu찾ng 휃튼沼쓓g nh梳쩿 휃沼땙h trong tr튼沼쓓g h沼즤  kh梳쯰 c梳쩺 nh튼 h沼뢮g xe tr챗n 휃튼沼쓓g cao t沼멵?",
+  "tr_c": [
+   "C퉤 quan Giao th척ng 휃튼沼쓓g b沼?H횪n Qu沼멵",
+   "C퉤 quan 휂튼沼쓓g b沼?H횪n Qu沼멵",
+   "C沼쩭 C梳즢h s찼t",
+   "C퉤 quan An to횪n giao th척ng H횪n Qu沼멵"
+  ]
+ },
+ {
+  "n": 488,
+  "ko_b": "?꾨줈?먯꽌 濡쒕뱶??road kill)??諛쒖깮?섏?????議곗튂?붾졊?쇰줈 諛붾Ⅴ吏 ?딆? 寃껋??",
+  "ko_c": [
+   "媛먯뿼蹂??꾪뿕???덉쓣 ???덉쑝誘濡??숇Ъ?ъ껜 ?깆쓣 ?⑤?濡?留뚯?吏 ?딅뒗??",
+   "濡쒕뱶???ш퀬媛 諛쒖깮?섎㈃ ?쇱깮?숇Ъ援ъ“?쇳꽣??吏?먯껜 肄쒖꽱?겸섏???쾲??+ 120踰댿숇벑???좉퀬?쒕떎.",
+   "2李⑥궗怨?諛⑹?瑜??꾪빐 ?ш퀬 ?뱁븳 ?숇Ъ???먭린 李⑥뿉 ?ｊ퀬 二쇳뻾?쒕떎.",
+   "2李⑥궗怨?諛⑹?? ?먰솢???뚰넻???꾪븳 議곗튂瑜???寃쎌슦?먮뒗 ?좉퀬?섏? ?딆븘???쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "C찼ch x沼?l첵 n횪o l횪 kh척ng 휃첬ng khi ph찼t sinh tai n梳죒 ?쑧뫣줺 ph梳즜 휃沼셬g v梳춗 qua 휃튼沼쓓g (road kill)??tr챗n 휃튼沼쓓g?",
+  "tr_c": [
+   "V챙 c처 nguy c퉤 m梳칌 b沼뇆h truy沼걆 nhi沼꿲 n챗n kh척ng t첫y ti沼뇆 ch梳죑 v횪o x찼c 휃沼셬g v梳춗.",
+   "Khi ph찼t sinh tai n梳죒 ?쑧뫣줺 ph梳즜 휃沼셬g v梳춗 qua 휃튼沼쓓g (road kill)?? ph梳즜 b찼o l챗n Trung t창m C沼쯷 tr沼?휂沼셬g v梳춗 hoang d찾 ho梳톍 T沼븂g 휃횪i 휃沼땇 ph튼퉤ng s沼??쏮찾 v첫ng + 120??",
+   "휂沼?ph챵ng tr찼nh tai n梳죒 th沼?c梳쩺 x梳즭 ra, ph梳즜 l梳춑 t沼쯢 휃튼a 휃沼셬g v梳춗 b沼?tai n梳죒 l챗n xe c沼쬪 m챙nh.",
+   "N梳퓎 휃찾 th沼켧 hi沼뇆 c찼c bi沼뇆 ph찼p x沼?l첵 ph챵ng tr찼nh tai n梳죒 th沼?c梳쩺 v횪 휃梳즡 b梳즣 l튼u th척ng cho giao th척ng, th챙 kh척ng  c梳쬷 ph梳즜 khai b찼o n沼칊."
+  ]
+ },
+ {
+  "n": 489,
+  "ko_b": "蹂대났?댁쟾 ?먮뒗 援먰넻?ш퀬 諛쒖깮??諛⑹??섍린 ?꾪븳 遺꾨끂議곗젅湲곕쾿??????ㅻ챸?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "媛먯젙???볦뼱?ㅻⅤ???곹솴?먯꽌 ?좎떆 鍮좎졇?섏? ?쒓컙???ъ쑀瑜?媛뽮퀬 留덉쓬???덉젙??李얜뒗 遺꾨끂議곗젅諛⑸쾿???ㅽ넲踰꾪듉湲곕쾿?대씪 ?쒕떎.",
+   "遺꾨끂瑜??좊컻?섎뒗 遺?뺤쟻???ш퀬瑜?以묒??섍퀬 ?됱냼 ?앷컖?????됰났???λ㈃??1-2遺꾧컙 ?좎삱??吏묒쨷?섎뒗 遺꾨끂議곗젅諛⑸쾿?? ??꾩븘?껉린踰뺤씠???쒕떎.",
+   "遺꾨끂瑜??좊컻?섎뒗 醫낇빀???좊뀗泥닿퀎? 怨쇨굅???쒓끝???ш퀬??????섎룞???몄떇寃쏀뿕???먯떊?먭쾶 吏덈Ц?섎뒗 諛⑸쾿??寃쏀뿕?뚯긽 吏덈Ц湲곕쾿?대씪 ?쒕떎.",
+   "?묓뙏, ?ㅻ━, ?꾨옯諛? 媛?? ?닿묠 ??紐몄쓽 媛?遺遺꾩쓣 理쒕???湲댁옣?쒖섟?ㅺ? ?댁셿?쒖폒 ?몄븞???곹깭瑜?諛섎났?섎뒗 諛⑸쾿??湲댁옣???꾪썕?④린踰뺤씠???쒕떎."
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o l횪 휃첬ng v沼?c찼ch ki沼긩 so찼t c퉤n gi梳춏 휃沼?ph챵ng tr찼nh l찼i xe tr梳?휃크a hay ph찼t sinh tai n梳죒 giao  th척ng?",
+  "tr_c": [
+   "Ki沼긩 so찼t c퉤n gi梳춏 b梳켷g c찼ch, trong t챙nh hu沼몁g c梳즡 x첬c d창ng l챗n s척i s沼쩭, c梳쬷 t梳죑 tho찼t kh沼뢩 t챙nh hu沼몁g v횪 th튼 gi찾n trong m沼셳 th沼쓎 gian 휃沼?c梳즡 x첬c 沼븂 휃沼땙h l梳죍, 휃창y l횪 ph튼퉤ng ph찼p ?쏶top Button??",
+   "Ki沼긩 so찼t c퉤n gi梳춏 b梳켷g c찼ch d沼쳌g suy ngh칫 v沼?s沼?c沼?ti챗u c沼켧 d梳쳌 휃梳퓆 ph梳쳌 n沼?v횪 t梳춑 trung 1~2 ph첬t ngh칫 휃梳퓆 nh沼칗g h챙nh 梳즢h h梳죒h ph첬c th튼沼쓓g ng횪y, 휃창y l횪 ph튼퉤ng ph찼p ?쏷ime Out??",
+   "Ph튼퉤ng ph찼p t沼?휃梳톞 c창u h沼뢩 cho b梳즢 th창n v沼?kinh nghi沼뇅 nh梳춏 th沼쯢 th沼?휃沼셬g li챗n quan 휃梳퓆 tai n梳죒 휃찾 b沼?b처p m챕o trong qu찼 kh沼?v횪 휃沼쯢 tin chung d梳쳌 휃梳퓆 ph梳쳌 n沼? 휃창y l횪 ?쏱h튼퉤ng ph찼p 휃梳톞 c창u h沼뢩 h沼밿 t튼沼웢g kinh nghi沼뇅??",
+   "Ph튼퉤ng ph찼p l梳톚 휃i l梳톚 l梳죍 휃沼셬g t찼c k챕o c훱ng h梳퓍 m沼쯢 c찼c b沼?ph梳춏 c퉤 th沼?nh튼 hai c찼nh tay, ch창n, b沼쩸g d튼沼쌻, ng沼켧, vai v.v... r沼밿 th梳?l沼뢮g, 휃창y l횪 ?쏱h튼퉤ng ph찼p luy沼뇆 t梳춑 gi梳즡 c훱ng th梳쿻g??"
+  ]
+ },
+ {
+  "n": 490,
+  "ko_b": "??슦濡??명븯??吏?섏감?꾧? 臾쇱뿉 ?좉꺼 ?덈뒗 ?곹솴?대떎. ?ㅼ쓬 以?媛???덉쟾???댁쟾 諛⑸쾿??",
+  "ko_c": [
+   "臾쇱뿉 諛뷀닿? ???좉만 ?뚭퉴吏??臾댁궗???듦낵?????덉쑝???쒗뻾?쇰줈 吏?섍컙??",
+   "理쒕???鍮좊Ⅸ ?띾룄濡?鍮좎졇 ?섍컙??",
+   "?고쉶?꾨줈瑜??뺤씤???꾩뿉 ?뚯븘媛꾨떎.",
+   "?듦낵?섎떎媛 ?쒕룞??爰쇱?硫?諛붾줈 ?ㅼ떆 ?쒕룞??嫄멸퀬 鍮좎졇 ?섏삩??"
+  ],
+  "a": "3",
+  "tr_b": "휂튼沼쓓g h梳쬶 ph챠a tr튼沼쌵 b沼?ng梳춑 n튼沼쌵 do m튼a l沼썀. Ph튼퉤ng ph찼p l찼i xe n횪o l횪 an to횪n nh梳쩿?",
+  "tr_c": [
+   "Xe c처 th沼?di chuy沼긪 an to횪n khi b찼nh xe ch튼a b沼?ng梳춑 ho횪n to횪n trong n튼沼쌵, n챗n c沼?l찼i ch梳춎 휃i qua.",
+   "L찼i xe qua ch沼?ng梳춑 nhanh nh梳쩿 c처 th沼?",
+   "Ki沼긩 tra 휃튼沼쓓g v챵ng r沼밿 quay l梳죍.",
+   "L찼i xe qua. N梳퓎 휃沼셬g c퉤 t梳칣, kh沼웙 휃沼셬g l梳죍 ngay l梳춑 t沼쯢 v횪 ti梳퓈 t沼쩭 l찼i xe qua."
+  ]
+ },
+ {
+  "n": 491,
+  "ko_b": "援먰넻?ш퀬 ???묎툒?곹솴 諛쒖깮 ??議곗튂?붾졊怨?嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "?꾪뿕?щ? ?뺤씤",
+   "?섏옄??諛섏쓳 ?뺤씤",
+   "湲곕룄 ?뺣낫 諛??명씉 ?뺤씤",
+   "?섏옄??紐⑹쟻吏? ?좎긽 ?뺤씤"
+  ],
+  "a": "4",
+  "tr_b": "N沼셢 dung n횪o kh척ng 휃첬ng v沼쌻 c찼ch x沼?l첵 khi x梳즭 ra t챙nh hu沼몁g kh梳쯰 c梳쩺 nh튼 tai n梳죒 giao th척ng?",
+  "tr_c": [
+   "Ki沼긩 tra xem c처 nguy hi沼긩 kh척ng",
+   "Ki沼긩 tra ph梳즢 沼쯰g c沼쬪 n梳죒 nh창n",
+   "휂梳즡 b梳즣 휃튼沼쓓g th沼?v횪 ki沼긩 tra h척 h梳쩺",
+   "Ki沼긩 tra 휃i沼긩 휃梳퓆 v횪 nh창n th창n c沼쬪 n梳죒 nh창n"
+  ]
+ },
+ {
+  "n": 492,
+  "ko_b": "二쇳뻾 以??먮룞李??뚮컻 ?곹솴??????щ컮瑜??泥?諛⑸쾿怨?嫄곕━媛 癒?寃껋??",
+  "ko_c": [
+   "二쇳뻾 以??몃뱾???ы븯寃??⑤━硫??몃뱾??苑??↔퀬 怨꾩냽 二쇳뻾?쒕떎.",
+   "?먮룞李⑥뿉???곌린媛 ?섎㈃ 利됱떆 ?덉쟾??怨녹쑝濡??대룞 ???쒕룞???덈떎.",
+   "??댁뼱 ?묓겕媛 ?섎㈃ ?몃뱾??苑??↔퀬 媛먯냽?섎ŉ ?덉쟾??怨녹뿉 ?뺤감?쒕떎.",
+   "泥좉만嫄대꼸紐??듦낵 以??쒕룞??爰쇱졇???ㅼ떆 嫄몃━吏 ?딅뒗?ㅻ㈃ ?좎냽????????좉퀬?쒕떎."
+  ],
+  "a": "1",
+  "tr_b": "C찼ch n횪o sau 휃창y l횪 kh척ng 휃첬ng khi x沼?l첵 t챙nh hu沼몁g nguy hi沼긩 l첬c l찼i xe?",
+  "tr_c": [
+   "N梳칖 ch梳칌 tay l찼i n梳퓎 n처 rung l梳칌 m梳죒h v횪 ti梳퓈 t沼쩭 l찼i xe.",
+   "N梳퓎 kh처i b沼멵 ra t沼?xe, t梳쩺 v횪o n퉤i an to횪n v횪 t梳칣 m찼y.",
+   "N梳퓎 x梳즭 ra n沼?l沼몆, gi沼?ch梳칌 tay l찼i, gi梳즡 t沼멵 v횪 d沼쳌g xe 沼?n퉤i an to횪n.",
+   "N梳퓎 휃沼셬g c퉤 d沼쳌g khi 휃i qua 휃튼沼쓓g ray t횪u h沼뢠, s퉤 t찼n kh沼뢩 ph튼퉤ng ti沼뇆 ngay l梳춑 t沼쯢 v횪 th척ng b찼o cho c퉤 quan  ch沼쯢 n훱ng."
+  ]
+ },
+ {
+  "n": 493,
+  "ko_b": "援먰넻?ш퀬 ?꾩옣?먯꽌 利앷굅?뺣낫瑜??꾪븳 ?ъ쭊 珥ъ쁺 諛⑸쾿?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "釉붾옓諛뺤뒪 ?곸긽??珥ъ쁺?섎뒗 寃쎌슦 異붽??섏뿬 ?ъ쭊 珥ъ쁺???꾩슂媛 ?녿떎.",
+   "?꾨줈???붿쭊?ㅼ씪, ?됯컖???깆쓽 ?붿쟻? ?ㅻ옯?숈븞 吏?띾릺誘濡?珥ъ쁺?섏? ?딆븘???쒕떎.",
+   "?뚰렪臾? ?먮룞李⑥? ?꾨줈???뚯넀遺?????숈씪????곸뿉 ???洹쇱젒珥ъ쁺怨??먭굅由?珥ъ쁺??媛숈씠 ?쒕떎.",
+   "李⑤웾 諛뷀댁쓽 吏꾪뻾諛⑺뼢???ㅽ봽?덉씠 ?깆쑝濡??쒖떆?섍굅??珥ъ쁺?????붾떎."
+  ],
+  "a": "3, 4",
+  "tr_b": "Hai n沼셢 dung n횪o sau 휃창y 휃첬ng v沼쌻 c찼ch quay phim, ch沼쩺 梳즢h 휃沼?l횪m b梳켷g ch沼쯰g t梳죍 hi沼뇆 tr튼沼쓓g tai n梳죒  giao th척ng?",
+  "tr_c": [
+   "N梳퓎 휃찾 c처 video c沼쬪 h沼셮 휃en (blackbox) th챙 kh척ng c梳쬷 quay phim, ch沼쩺 梳즢h th챗m.",
+   "C찼c d梳쪀 v梳퓍 nh튼 d梳쬾 휃沼셬g c퉤, n튼沼쌵 l횪m l梳죒h, v.v... l튼u l梳죍 r梳쩿 l창u tr챗n 휃튼沼쓓g n챗n kh척ng c梳쬷 ph梳즜 quay phim, ch沼쩺  梳즢h l梳죍.",
+   "C梳쬷 quay phim, ch沼쩺 梳즢h g梳쬷 v횪 xa c첫ng m沼셳 휃沼멼 t튼沼즢g nh튼 c찼c m梳즢h v沼? ph梳쬷 b沼?h튼 h梳죍 c沼쬪 xe v횪 휃튼沼쓓g, v.v...",
+   "휂찼nh d梳쪀 h튼沼썀g xoay c沼쬪 b찼nh xe b梳켷g b챙nh x沼땤 ho梳톍 quay phim, ch沼쩺 梳즢h l梳죍."
+  ]
+ },
+ {
+  "n": 494,
+  "ko_b": "?ㅼ쓬 以??κ굅由??댄뻾 ?꾩뿉 諛섎뱶???먭??댁빞 ???곗꽑?쒖쐞 2媛吏??",
+  "ko_c": [
+   "李⑤웾 泥?껐 ?곹깭 ?먭?",
+   "DMB(?곸긽?쒖떆?μ튂) ?묐룞?щ? ?먭?",
+   "媛곸쥌 ?ㅼ씪瑜??먭?",
+   "??댁뼱 ?곹깭 ?먭?"
+  ],
+  "a": "3, 4",
+  "tr_b": "Tr튼沼쌵 khi 휃i xa c梳쬷 튼u ti챗n ki沼긩 tra 2 l沼켥 ch沼뛫 n횪o d튼沼쌻 휃창y?",
+  "tr_c": [
+   "Ki沼긩 tra t챙nh tr梳죒g v沼?sinh s梳죅h s梳?c沼쬪 xe",
+   "Ho梳죜 휃沼셬g c沼쬪 h沼?th沼몁g DMB (thi梳퓍 b沼?hi沼긪 th沼?h챙nh 梳즢h)",
+   "C찼c lo梳죍 d梳쬾",
+   "T챙nh tr梳죒g l沼몆"
+  ]
+ },
+ {
+  "n": 495,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾硫댄뿀 痍⑥냼 ?ъ쑀???대떦?섎뒗 寃껋??",
+  "ko_c": [
+   "?뺢린 ?곸꽦寃??湲곌컙 留뚮즺 ?ㅼ쓬 ?좊????곸꽦寃?щ? 諛쏆? ?꾨땲?섍퀬 6媛쒖썡??珥덇낵??寃쎌슦",
+   "?댁쟾?먭? ?⑥냽 怨듬Т??寃쎌같怨듬Т?? ?쒙쉈援곤쉈援?怨듬Т??????뻾?섏뿬 遺덇뎄???뺤궗 ?낃굔??寃쎌슦",
+   "?먮룞李??깅줉 ???먮룞李??깅줉踰덊샇?먯쓣 遺李⑺븯吏 ?딄퀬 ?댁쟾??寃쎌슦",
+   "??醫?蹂댄넻硫댄뿀瑜?媛깆떊?섏? ?딄퀬 2?꾩쓣 珥덇낵??寃쎌슦"
+  ],
+  "a": "2",
+  "tr_b": "L첵 do 휃첬ng c沼쬪 vi沼놻 t튼沼쌵 b梳켷g l찼i xe theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?l횪 g챙?",
+  "tr_c": [
+   "L찼i xe kh척ng ti梳퓆 h횪nh ki沼긩 tra xe theo 휃沼땙h k沼? qu찼 h梳죒 6 th찼ng k沼?t沼?ng횪y h梳퓍 h梳죒 ki沼긩 tra.",
+   "L찼i xe 휃ang b沼?kh沼웙 t沼?t梳죍 ngo梳죍 do c처 h횪nh vi b梳죓 l沼켧 ch沼몁g 휃沼멼 c척ng ch沼쯢 thi h횪nh nhi沼뇅 v沼?(c梳즢h s찼t, c척ng ch沼쯢  qu梳춏-huy沼뇆-th횪nh ph沼?.",
+   "L찼i xe 휃찾 휃훱ng k첵 xe nh튼ng 휃i沼걏 khi沼긪 xe kh척ng g梳칗 bi沼긪 s沼?xe.",
+   "L찼i xe kh척ng 휃沼뷼 m沼쌻 b梳켷g l찼i ph沼?th척ng h梳죒g 2, qu찼 h梳죒 2 n훱m."
+  ]
+ },
+ {
+  "n": 496,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??踰붿튃湲??⑸? ?듦퀬?쒕? 諛쏆? ?щ엺??1李??⑸? 湲곌컙 寃쎄낵 ??20???대궡 ?⑸??댁빞 ??湲덉븸?쇰줈 留욌뒗  寃껋??",
+  "ko_c": [
+   "?듦퀬 諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 10???뷀븳 湲덉븸",
+   "?듦퀬 諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 20???뷀븳 湲덉븸",
+   "?듦퀬 諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 30???뷀븳 湲덉븸",
+   "?듦퀬 諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 40???뷀븳 湲덉븸"
+  ],
+  "a": "2",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? ng튼沼쓎 nh梳춏 Gi梳쪅 b찼o n沼셮 ph梳죜 nh튼ng 휃沼?qu찼 th沼쓎 h梳죒 n沼셮 ph梳죜 l梳쬷 1  th챙 ph梳즜 n沼셮 ph梳죜 trong v챵ng 20 ng횪y v沼쌻 s沼?ti沼걆 l횪 bao nhi챗u?",
+  "tr_c": [
+   "Ph梳즜 n沼셮 th챗m 10% ti沼걆 ph梳죜 n沼셮 ch梳춎.",
+   "Ph梳즜 n沼셮 th챗m 20% ti沼걆 ph梳죜 n沼셮 ch梳춎.",
+   "Ph梳즜 n沼셮 th챗m 30% ti沼걆 ph梳죜 n沼셮 ch梳춎.",
+   "Ph梳즜 n沼셮 th챗m 40% ti沼걆 ph梳죜 n沼셮 ch梳춎."
+  ]
+ },
+ {
+  "n": 497,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾩궛 ?먯닔 珥덇낵濡??명븳 ?댁쟾硫댄뿀 痍⑥냼 湲곗??쇰줈 ?녹? 寃껋??",
+  "ko_c": [
+   "1?꾧컙 100???댁긽",
+   "2?꾧컙 191???댁긽",
+   "3?꾧컙 271???댁긽",
+   "5?꾧컙 301???댁긽"
+  ],
+  "a": "3",
+  "tr_b": "휂i沼긩 ph梳죜 v튼沼즨 qu찼 bao nhi챗u th챙 b沼?t튼沼쌵 b梳켷g l찼i xe theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "T沼?100 휃i沼긩 ph梳죜 tr沼?l챗n trong 1 n훱m",
+   "T沼?191 휃i沼긩 ph梳죜 tr沼?l챗n trong 2 n훱m",
+   "T沼?271 휃i沼긩 ph梳죜 tr沼?l챗n trong 3 n훱m",
+   "T沼?301 휃i沼긩 ph梳죜 tr沼?l챗n trong 5 n훱m"
+  ]
+ },
+ {
+  "n": 498,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??援먰넻?ш퀬 寃곌낵???곕Ⅸ 踰뚯젏 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?됱젙 泥섎텇??諛쏆쓣 ?댁쟾??蹂몄씤???몄쟻 ?쇳빐????댁꽌???몄쟻 ?쇳빐 援먰넻?ш퀬 援щ텇???곕씪 踰뚯젏??遺怨쇳븳??",
+   "?먮룞李???? ?щ엺 援먰넻?ш퀬??寃쎌슦 ?띾갑 怨쇱떎???뚯뿉??踰뚯젏??遺怨쇳븯吏 ?딅뒗??",
+   "援먰넻?ш퀬 諛쒖깮 ?먯씤??遺덇???젰?닿굅???쇳빐?먯쓽 紐낅갚??怨쇱떎???뚯뿉??踰뚯젏??2遺꾩쓽 1濡?媛먭꼍?쒕떎.",
+   "?먮룞李???? ?먮룞李???援먰넻?ш퀬??寃쎌슦?먮뒗 洹??ш퀬 ?먯씤 以?以묓븳 ?꾨컲 ?됱쐞瑜????댁쟾?먯뿉寃뚮쭔 踰뚯젏??遺怨쇳븳??"
+  ],
+  "a": "4",
+  "tr_b": "N沼셢 dung n횪o 휃첬ng v沼?chu梳쯰 휃i沼긩 ph梳죜 t첫y theo h梳춙 qu梳?tai n梳죒 giao th척ng theo Ph찼p l沼뇆h Giao th척ng  휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ng튼沼쓎 l찼i xe khi g창y ra tai n梳죒 b沼?x沼?ph梳죜 h횪nh ch챠nh nh튼ng b梳즢 th창n c크ng b沼?th튼퉤ng th챙 c크ng b沼?t챠nh 휃i沼긩 ph梳죜 theo ph창n lo梳죍 tai n梳죒 giao th척ng g창y th튼퉤ng t챠ch v沼?ng튼沼쓎.",
+   "Tr튼沼쓓g h沼즤 tai n梳죒 giao th척ng gi沼칊 xe v횪 ng튼沼쓎 n梳퓎 l횪 do l沼뾦 c沼쬪 hai b챗n th챙 kh척ng b沼?t챠nh 휃i沼긩 ph梳죜.",
+   "Khi l첵 do x梳즭 ra tai n梳죒 l횪 b梳쩿 kh梳?kh찼ng hay l횪 do l沼뾦 r천 r횪ng c沼쬪 n梳죒 nh창n th챙 gi梳즡 nh梳?m沼셳 n沼춁 휃i沼긩 ph梳죜.",
+   "Trong tai n梳죒 giao th척ng gi沼칊 xe v沼쌻 xe, ch沼?t챠nh 휃i沼긩 ph梳죜 cho ng튼沼쓎 l찼i xe c처 vi ph梳죑 nghi챗m tr沼뛫g trong c찼c  nguy챗n nh창n g창y ra tai n梳죒."
+  ]
+ },
+ {
+  "n": 499,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곸긽湲곕줉留ㅼ껜???섑빐 ?낆쬆?섎뒗 二쇱감?꾨컲?????怨쇳깭猷뚯쓽 ?ㅻ챸?쇰줈 ?뚮쭪? 寃껋??",
+  "ko_c": [
+   "?뱀슜李⑥쓽 ?뚯쑀?먮뒗 3留??먯쓽 怨쇳깭猷뚮? ?댁빞 ?쒕떎.",
+   "?뱁빀李⑥쓽 ?뚯쑀?먮뒗 7留??먯쓽 怨쇳깭猷뚮? ?댁빞 ?쒕떎.",
+   "湲곌컙 ?댁뿉 怨쇳깭猷뚮? ?댁? ?딆븘??遺덉씠?듭? ?녿떎.",
+   "媛숈? ?μ냼?먯꽌 2?쒓컙 ?댁긽 二쇱감 ?꾨컲???섎뒗 寃쎌슦 怨쇳깭猷뚭? 媛以묐맂??"
+  ],
+  "a": "4",
+  "tr_b": "Gi梳즜 th챠ch n횪o 휃첬ng v沼?ti沼걆 ph梳죜 do vi ph梳죑 휃沼?xe 휃튼沼즓 ghi l梳죍 b梳켷g thi梳퓍 b沼?ghi h챙nh theo Ph찼p l沼뇆h Giao  th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ch沼?s沼?h沼칤 xe 척 t척 con ph梳즜 n沼셮 ph梳죜 h횪nh ch챠nh 30.000 Won.",
+   "Ch沼?s沼?h沼칤 xe kh찼ch ph梳즜 n沼셮 ph梳죜 h횪nh ch챠nh 70.000 Won.",
+   "Kh척ng n沼셮 ti沼걆 ph梳죜 h횪nh ch챠nh 휃첬ng h梳죒 c크ng kh척ng b沼?b梳쩿 l沼즜 g챙.",
+   "Tr튼沼쓓g h沼즤 vi ph梳죑 휃沼?xe do 휃沼?t沼?2 ti梳퓆g tr沼?l챗n t梳죍 c첫ng m沼셳 휃沼땇 휃i沼긩 th챙 ti沼걆 ph梳죜 h횪nh ch챠nh s梳?b沼?t훱ng n梳톘g."
+  ]
+ },
+ {
+  "n": 500,
+  "ko_b": "?ㅼ쓬 以?援먰넻?ш퀬瑜??쇱쑝???댁쟾?먭? 醫낇빀蹂댄뿕?대굹 怨듭젣議고빀??媛?낅릺???덉뼱 援먰넻?ш퀬泥섎━?밸?踰뺤쓽 ?밸?媛 ?곸슜?섎뒗  寃쎌슦濡?留욌뒗 寃껋??",
+  "ko_c": [
+   "?덉쟾?댁쟾 ?섎Т?꾨컲?쇰줈 ?먮룞李⑤? ?먭눼?섍퀬 寃쎌긽??援먰넻?ш퀬瑜???寃쎌슦",
+   "援먰넻?ш퀬濡??щ엺???щ쭩???대Ⅴ寃???寃쎌슦",
+   "援먰넻?ш퀬瑜??쇨린????遺?곸옄 援ы샇瑜??섏? ?딆? 梨??꾩＜??寃쎌슦",
+   "?좏샇 ?꾨컲?쇰줈 寃쎌긽??援먰넻?ш퀬瑜??쇱쑝??寃쎌슦"
+  ],
+  "a": "1",
+  "tr_b": "Tr튼沼쓓g h沼즤 n횪o ng튼沼쓎 l찼i xe g창y tai n梳죒 giao th척ng c처 tham gia b梳즣 hi沼긩 t沼븂g h沼즤 hay thu沼셛 Hi沼뇈 h沼셢  T튼퉤ng tr沼?휃튼沼즓 찼p d沼쩸g 휃i沼걏 l沼?휃梳톍 bi沼뇍 c沼쬪 Lu梳춗 휃梳톍 bi沼뇍 v沼?X沼?l첵 tai n梳죒 giao th척ng?",
+  "tr_c": [
+   "Vi ph梳죑 ngh칫a v沼?l찼i xe an to횪n, l횪m h튼 h梳죍 xe v횪 g창y ra tai n梳죒 nh梳?",
+   "G창y tai n梳죒 giao th척ng d梳쳌 휃梳퓆 t沼?vong cho ng튼沼쓎.",
+   "B沼?tr沼몁 sau khi g창y ra tai n梳죒 giao th척ng m횪 kh척ng c沼쯷 ng튼沼쓎 b沼?th튼퉤ng.",
+   "G창y ra tai n梳죒 giao th척ng nh梳?do vi ph梳죑 t챠n hi沼뇎."
+  ]
+ },
+ {
+  "n": 501,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???꾨줈?먯꽌 ?숉샇??7紐낆씠 4???李⑤웾???섎늻???怨?怨듬룞?쇰줈 ?ㅻⅨ ?щ엺?먭쾶 ?꾪빐瑜??쇱퀜 ?뺤궗?낃굔 ???덈떎. 泥섎쾶湲곗??쇰줈 ?由?寃껋?? (媛쒖씤???대룞?μ튂???쒖쇅)",
+  "ko_c": [
+   "2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "?곷컻 利됱떆 硫댄뿀?뺤?",
+   "援ъ냽??寃쎌슦 硫댄뿀痍⑥냼",
+   "?뺤궗?낃굔??寃쎌슦 踰뚯젏 40??
+  ],
+  "a": "2",
+  "tr_b": "B梳즭 ng튼沼쓎 c첫ng 휃i tr챗n 4 chi梳풻 xe tr챗n 휃튼沼쓓g c첫ng c처 h횪nh vi g창y nguy hi沼긩 cho ng튼沼쓎 kh찼c v횪 휃찾 b沼?x沼?l첵 h챙nh s沼? M沼쯢 x沼?ph梳죜 n횪o kh척ng 휃첬ng theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? (Tr沼?thi梳퓍 b沼?di chuy沼긪 c찼 nh창n)",
+  "tr_c": [
+   "Ph梳죜 t첫 t沼멼 휃a 2 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 5 tri沼뇎 Won",
+   "휂챙nh ch沼?b梳켷g l찼i ngay khi ph찼t hi沼뇆 vi ph梳죑",
+   "H沼쭃 b梳켷g l찼i trong tr튼沼쓓g h沼즤 b沼?giam gi沼?,
+   "Tr沼?40 휃i沼긩 trong tr튼沼쓓g h沼즤 b沼?x沼?l첵 h챙nh s沼?
+  ]
+ },
+ {
+  "n": 502,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??댁쟾?먭? ?쒗룺?댁쟾?쇰줈 ?뺤궗?낃굔?섏뿀?? ?댁쟾硫댄뿀 ?됱젙泥섎텇??",
+  "ko_c": [
+   "硫댄뿀 痍⑥냼",
+   "硫댄뿀 ?뺤? 100??,
+   "硫댄뿀 ?뺤? 60??,
+   "硫댄뿀 ?뺤? 40??
+  ],
+  "a": "4",
+  "tr_b": "Ng튼沼쓎 l찼i xe 휃찾 b沼?c찼o bu沼셛 h챙nh s沼?v챙 l찼i xe 梳쯷 theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? X沼?ph梳죜 h횪nh ch챠nh 휃沼멼  v沼쌻 gi梳쪅 ph챕p l찼i xe trong tr튼沼쓓g h沼즤 n횪y l횪 g챙?",
+  "tr_c": [
+   "H沼쭃 gi梳쪅 ph챕p",
+   "T梳죑 휃챙nh ch沼?gi梳쪅 ph챕p 100 ng횪y",
+   "T梳죑 휃챙nh ch沼?gi梳쪅 ph챕p 60 ng횪y",
+   "T梳죑 휃챙nh ch沼?gi梳쪅 ph챕p 40 ng횪y"
+  ]
+ },
+ {
+  "n": 503,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먯쟾嫄곕? ?댁쟾??寃쎌슦 ?대뼸寃??섎뒗媛?",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "踰붿튃湲?3留??먯쓽 ?듦퀬泥섎텇?쒕떎.",
+   "怨쇳깭猷?4留??먯쓣 遺怨쇳븳??",
+   "10留????댄븯??踰뚭툑 ?먮뒗 援щ쪟??泥섑븳??"
+  ],
+  "a": "2",
+  "tr_b": "Tr튼沼쓓g h沼즤 휃i xe 휃梳죖 trong tr梳죒g th찼i say r튼沼즩 b沼?x沼?l첵 nh튼 th梳?n횪o theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Kh척ng b沼?x沼?ph梳죜.",
+   "B沼?g沼춊 gi梳쪅 b찼o ph梳죜 ti沼걆 vi ph梳죑 giao th척ng v沼쌻 s沼?ti沼걆 ph梳죜 l횪 30.000 Won.",
+   "X沼?ph梳죜 h횪nh ch챠nh 40.000 Won.",
+   "Ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 100.000 Won ho梳톍 t梳죑 giam."
+  ]
+ },
+ {
+  "n": 504,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙?좊쭔???곷떦???댁쑀媛 ?덈뒗 ?먯쟾嫄??댁쟾?먭? 寃쎌같怨듬Т?먯쓽 ?뺣떦???뚯＜ 痢≪젙 ?붽뎄??遺덉쓳??寃쎌슦 泥섎쾶??",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "怨쇳깭猷?7留??먯쓣 遺怨쇳븳??",
+   "踰붿튃湲?10留??먯쓽 ?듦퀬泥섎텇?쒕떎.",
+   "10留????댄븯??踰뚭툑 ?먮뒗 援щ쪟??泥섑븳??"
+  ],
+  "a": "3",
+  "tr_b": "X沼?ph梳죜 nh튼 th梳?n횪o theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?휃沼멼 v沼쌻 ng튼沼쓎 휃i xe 휃梳죖 c처 l첵 do ch챠nh 휃찼ng 휃沼?c척ng nh梳춏 r梳켷g 휃찾 say r튼沼즩 nh튼ng kh척ng tu창n th沼?y챗u c梳쬾 h沼즤 ph찼p c沼쬪 c梳즢h s찼t v沼?vi沼놻 휃o n沼뱊g 휃沼?c沼뱊?",
+  "tr_c": [
+   "Kh척ng x沼?ph梳죜.",
+   "X沼?ph梳죜 h횪nh ch챠nh 70.000 Won.",
+   "B沼?g沼춊 gi梳쪅 b찼o ph梳죜 ti沼걆 vi ph梳죑 giao th척ng v沼쌻 s沼?ti沼걆 ph梳죜 l횪 100.000 Won.",
+   "Ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 100.000 Won ho梳톍 t梳죑 giam."
+  ]
+ },
+ {
+  "n": 505,
+  "ko_b": "援먰넻?ш퀬泥섎━?밸?踰뺤긽 ?뺤궗 泥섎쾶?섎뒗 寃쎌슦濡?留욌뒗 2媛吏??",
+  "ko_c": [
+   "醫낇빀蹂댄뿕??媛?낇븯吏 ?딆? 李④? 臾쇱쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝?ㅺ퀬 ?쇳빐?먯? ?⑹쓽????,
+   "?앹떆怨듭젣議고빀??媛?낇븳 ?앹떆媛 以묒븰?좎쓣 移⑤쾾?섏뿬 ?몄쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝????,
+   "醫낇빀蹂댄뿕??媛?낇븳 李④? ?좏샇瑜??꾨컲?섏뿬 ?몄쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝????,
+   "?붾Ъ怨듭젣議고빀??媛?낇븳 ?붾Ъ李④? ?덉쟾?댁쟾 遺덉씠?됱쑝濡??몄쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝????
+  ],
+  "a": "2, 3",
+  "tr_b": "Hai tr튼沼쓓g h沼즤 휃첬ng v沼?x沼?ph梳죜 h챙nh s沼?theo Lu梳춗 휃梳톍 bi沼뇍 v沼?X沼?l첵 tai n梳죒 giao th척ng?",
+  "tr_c": [
+   "Khi xe kh척ng tham gia b梳즣 hi沼긩 t沼븂g h沼즤 g창y tai n梳죒 giao th척ng c처 thi沼뇍 h梳죍 v沼?t횪i s梳즢 v횪 h챵a gi梳즜 v沼쌻 n梳죒 nh창n.",
+   "Khi xe taxi tham gia Li챗n 휃o횪n taxi l梳쩸 v횪o v梳죅h ph창n l횪n gi沼칊 휃튼沼쓓g, g창y tai n梳죒 thi沼뇍 h梳죍 v沼?ng튼沼쓎.",
+   "Khi xe tham gia b梳즣 hi沼긩 t沼븂g h沼즤 vi ph梳죑 t챠n hi沼뇎 giao th척ng g창y tai n梳죒 thi沼뇍 h梳죍 v沼?ng튼沼쓎.",
+   "Khi xe t梳즜 휃찾 tham gia Qu沼?b梳즣 hi沼긩 h횪ng h처a g창y tai n梳죒 giao th척ng c처 thi沼뇍 h梳죍 v沼?ng튼沼쓎 do kh척ng tu창n th沼?l찼i  xe an to횪n."
+  ]
+ },
+ {
+  "n": 506,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??踰붿튃湲??⑸? ?듦퀬?쒕? 諛쏆? ?щ엺??2李??⑸?湲곌컙??寃쎄낵??寃쎌슦??????ㅻ챸?쇰줈 留욌뒗 2媛吏??",
+  "ko_c": [
+   "吏泥??놁씠 利됯껐?ы뙋??泥?뎄?섏뿬???쒕떎.",
+   "利됯껐?ы뙋??諛쏆? ?꾨땲?????댁쟾硫댄뿀瑜?40???뺤??쒕떎.",
+   "怨쇳깭猷?遺怨쇳븳??",
+   "踰붿튃湲덉븸??100遺꾩쓽 30???뷀븳 湲덉븸???⑸??섎㈃ 利됯껐?ы뙋??泥?뎄?섏? ?딅뒗??"
+  ],
+  "a": "1, 2",
+  "tr_b": "Hai gi梳즜 th챠ch 휃첬ng v沼?tr튼沼쓓g h沼즤 ng튼沼쓎 nh梳춏 th척ng b찼o n沼셮 ph梳죜 qu찼 th沼쓎 h梳죒 n沼셮 ph梳죜 l梳쬷 2 theo Ph찼p  l沼뇆h Giao th척ng 휃튼沼쓓g b沼?l횪 g챙?",
+  "tr_c": [
+   "Ph梳즜 휃沼?ngh沼?T챵a 찼n ra ph찼n quy梳퓍 r첬t g沼뛫 ngay l梳춑 t沼쯢.",
+   "N梳퓎 kh척ng thi h횪nh ph찼n quy梳퓍 r첬t g沼뛫, v척 hi沼뇎 h처a b梳켷g l찼i xe trong v챵ng 40 ng횪y.",
+   "Ph梳즜 n沼셮 ti沼걆 ph梳죜 h횪nh ch챠nh.",
+   "N梳퓎 nh튼 n沼셮 th챗m 30% ti沼걆 ph梳죜 th챙 s梳?kh척ng y챗u c梳쬾 ph찼n quy梳퓍 r첬t g沼뛫."
+  ]
+ },
+ {
+  "n": 507,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李??댁쟾?먭? 二셋룹젙李⑤맂 李⑤쭔 ?먭눼?섎뒗 援먰넻?ш퀬瑜??쇱쑝?ㅺ퀬 ?대? ?몄??섍퀬?쒕룄 ?쇳빐?먯뿉寃? ?몄쟻?ы빆???쒓났?섏? ?꾨땲??寃쎌슦 ?대뼸寃??섎뒗媛?",
+  "ko_c": [
+   "泥섎쾶?섏? ?딅뒗??",
+   "怨쇳깭猷?10留??먯쓣 遺怨쇳븳??",
+   "踰붿튃湲?12留??먯쓽 ?듦퀬泥섎텇?쒕떎.",
+   "30留????댄븯??踰뚭툑 ?먮뒗 援щ쪟??泥섑븳??"
+  ],
+  "a": "3",
+  "tr_b": "휂i沼걏 n횪o sau 휃창y 휃첬ng v沼쌻 tr튼沼쓓g h沼즤 ng튼沼쓎 l찼i xe 척 t척 ch沼?kh찼ch g창y tai n梳죒 l횪m h튼 h沼뢮g ch沼?ph튼퉤ng ti沼뇆 휃ang d沼쳌g/휃沼? d첫 휃찾 nh梳춏 bi梳퓍 r천 v沼?vi沼놻 nh튼ng kh척ng cung c梳쩺 th척ng tin nh창n th창n cho n梳죒 nh창n, s梳?b沼?x沼?l첵 nh튼 th梳?n횪o theo quy 휃沼땙h c沼쬪 Lu梳춗 Giao th척ng 휂튼沼쓓g b沼?",
+  "tr_c": [
+   "Kh척ng b沼?x沼?ph梳죜.",
+   "B沼?ph梳죜 h횪nh ch챠nh 100.000 Won.",
+   "B沼?g沼춊 gi梳쪅 b찼o ph梳죜 ti沼걆 vi ph梳죑 giao th척ng v沼쌻 s沼?ti沼걆 ph梳죜 l횪 120.000 Won.",
+   "Ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 300.000 Won ho梳톍 t梳죑 giam."
+  ]
+ },
+ {
+  "n": 508,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???좎뿉 痍⑦븳 ?곹깭濡??뱀슜李⑤? ?댁쟾???щ엺????? 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋?? (10????1???꾨컲??寃쎌슦)",
+  "ko_c": [
+   "1???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "3???댄븯??吏뺤뿭?대굹 1泥?00留????댄븯??踰뚭툑",
+   "2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "C창u n횪o 휃첬ng v沼쌻 m沼쯢 x沼?ph梳죜 ng튼沼쓎 l찼i xe 척 t척 con trong t챙nh tr梳죒g say r튼沼즩 v沼쌻 n沼뱊g 휃沼?c沼뱊 trong m찼u l횪 t沼?0,03 ~ 0.08% theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?(Tr튼沼쓓g h沼즤 vi ph梳죑 l梳쬷 휃梳쬾 trong v챵ng 10 n훱m)?",
+  "tr_c": [
+   "B沼?ph梳죜 t첫 t沼멼 휃a 1 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 5 tri沼뇎 Won",
+   "B沼?ph梳죜 t첫 t沼멼 휃a 2 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 10 tri沼뇎 Won",
+   "B沼?ph梳죜 t첫 t沼멼 휃a 3 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 15 tri沼뇎 Won",
+   "B沼?ph梳죜 t첫 t沼?2 n훱m 휃梳퓆 5 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼?10 tri沼뇎 Won 휃梳퓆 20 tri沼뇎 Won"
+  ]
+ },
+ {
+  "n": 509,
+  "ko_b": "?꾨줈援먰넻踰???吏꾨줈?묐낫 諛??묐낫?댁쟾??愿???ㅻ챸?대떎. ????븞???ㅼ뼱媛?留먮줈 ?щ컮瑜닿쾶 吏앹??댁쭊 寃껋?? - 鍮꾪깉湲?醫곸? ?꾨줈?먯꽌 湲닿툒?먮룞李??몄쓽 ?먮룞李④? ?쒕줈 留덉＜ 蹂닿퀬 吏꾪뻾?섎뒗 寃쎌슦?먮뒗 (?? ?먮룞李④? ?꾨줈???곗륫 媛?μ옄由щ줈 ?쇳븯??吏꾨줈瑜??묐낫?섏뿬???쒕떎. - 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒖뿉??(???섎젮怨??섎뒗 李⑥쓽 ?댁쟾?먮뒗 洹?援먯감濡쒖뿉??吏곸쭊?섍굅??(???섎젮???ㅻⅨ 李④? ?덉쓣 ?뚯뿉??洹?李⑥뿉 吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+  "ko_c": [
+   "?좎삱?쇨????≪슦?뚯쟾 ??쥖?뚯쟾",
+   "?좎삱?쇨????≪쥖?뚯쟾 ??슦?뚯쟾",
+   "?좊궡?ㅺ????≪쥖?뚯쟾 ??슦?뚯쟾",
+   "?좊궡?ㅺ????≪슦?뚯쟾 ??쥖?뚯쟾"
+  ],
+  "a": "2",
+  "tr_b": "휂i沼걏 n횪o sau 휃창y 휃첬ng v沼?vi沼놻 nh튼沼쓓g 휃튼沼쓓g v횪 l찼i xe nh튼沼쓓g 휃튼沼쓓g, theo quy 휃沼땙h c沼쬪 Lu梳춗 Giao th척ng 휂튼沼쓓g b沼? H찾y ch沼뛫 c梳톚 t沼?ph첫 h沼즤 휃沼?휃i沼걆 v횪o c찼c ch沼?tr沼몁g ???? - Tr챗n 휃튼沼쓓g d沼멵 h梳퉝, khi c찼c ph튼퉤ng ti沼뇆 kh척ng ph梳즜 l횪 xe kh梳쯰 c梳쩺 g梳톚 nhau t沼?hai h튼沼썀g 휃沼멼 di沼뇆, th챙 xe (?? ph梳즜 tr찼nh sang l沼?휃튼沼쓓g b챗n ph梳즜 휃沼?nh튼沼쓓g 휃튼沼쓓g. - T梳죍 ng찾 t튼 kh척ng c처 휃i沼걏 ti梳퓍 giao th척ng, ng튼沼쓎 l찼i xe mu沼몁 (?? ph梳즜 nh튼沼쓓g 휃튼沼쓓g cho xe kh찼c 휃ang 휃i th梳쿻g ho梳톍 mu沼몁 (?? t梳죍 ng찾 t튼 휃처.",
+  "tr_c": [
+   "?졘멼 l챗n ?죚梳?ph梳즜 ?줿梳?tr찼i",
+   "?졘멼 l챗n ?죚梳?tr찼i ?줿梳?ph梳즜",
+   "?졘멼 xu沼몁g ?죚梳?tr찼i ?줿梳?ph梳즜",
+   "?졘멼 xu沼몁g ?죚梳?ph梳즜 ?줿梳?tr찼i"
+  ]
+ },
+ {
+  "n": 510,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???곗뒿?댁쟾硫댄뿀 ?뚯??먭? ?덉쨷?뚯퐫?щ냽??(   )?쇱꽱???댁긽???섏뼱???댁쟾?????곗뒿?댁쟾硫댄뿀瑜?痍⑥냼???? (   )?덉뿉 湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "0.03",
+   "0.05",
+   "0.08",
+   "0.10"
+  ],
+  "a": "1",
+  "tr_b": "Khi ng튼沼쓎 c처 gi梳쪅 ph챕p t梳춑 l찼i 휃i沼걏 khi沼긪 xe trong t챙nh tr梳죒g v튼沼즨 qu찼 ( ) % n沼뱊g 휃沼?c沼뱊 trong m찼u s梳?b沼?h沼쭃 gi梳쪅 ph챕p t梳춑 l찼i n횪y theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? Ti챗u chu梳쯰 n횪o sau 휃창y 휃첬ng trong ( )?",
+  "tr_c": [
+   "0,03",
+   "0,05",
+   "0,08",
+   "0,10"
+  ]
+ },
+ {
+  "n": 511,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???댁쟾?먭? ?⑥냽 寃쎌같怨듬Т???깆뿉 ?????뻾???섏뿬 ?뺤궗 ?낃굔????泥섎텇?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "踰뚯젏 40?먯쓣 遺怨쇳븳??",
+   "踰뚯젏 100?먯쓣 遺怨쇳븳??",
+   "?댁쟾硫댄뿀瑜?痍⑥냼 泥섎텇?쒕떎.",
+   "利됯껐?ы뙋??泥?뎄?쒕떎."
+  ],
+  "a": "3",
+  "tr_b": "Bi沼뇆 ph찼p x沼?l첵 n횪o 휃첬ng v沼?ng튼沼쓎 l찼i xe b沼?k梳퓍 찼n h챙nh s沼?do b梳죓 h횪nh c梳즢h s찼t thi h횪nh c척ng v沼?theo Ph찼p  l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "40 휃i沼긩 ph梳죜",
+   "100 휃i沼긩 ph梳죜",
+   "T튼沼쌵 b梳켷g l찼i xe",
+   "휂沼?tr챙nh ph찼n quy梳퓍 r첬t g沼뛫"
+  ]
+ },
+ {
+  "n": 512,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???몄쟻 ?쇳빐 ?덈뒗 援먰넻?ш퀬瑜??쇨린?섍퀬 ?꾩＜??李⑤웾???댁쟾?먮? 寃嫄고븯嫄곕굹 ?좉퀬?섏뿬 寃嫄고븯寃??????꾩옄(援먰넻?ш퀬???쇳빐?먭? ?꾨땶 寃쎌슦)?먭쾶 寃嫄??먮뒗 ?좉퀬????留덈떎 (    )???뱁삙?먯닔瑜?遺?ы븳?? (    )??留욌뒗 寃껋??",
+  "ko_c": [
+   "10??,
+   "20??,
+   "30??,
+   "40??
+  ],
+  "a": "4",
+  "tr_b": "T梳톘g ( ) 휃i沼긩 휃梳톍 bi沼뇍 cho ng튼沼쓎 l찼i xe b梳칣 휃튼沼즓 ho梳톍 khai b찼o b梳칣 휃튼沼즓 ng튼沼쓎 l찼i xe g창y tai n梳죒 l횪m thi沼뇍 h梳죍 v沼?ng튼沼쓎 r沼밿 b沼?tr沼몁 (tr튼沼쓓g h沼즤 kh척ng ph梳즜 l횪 ng튼沼쓎 b沼?n梳죒 trong tai n梳죒 giao th척ng) theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "10 휃i沼긩",
+   "20 휃i沼긩",
+   "30 휃i沼긩",
+   "40 휃i沼긩"
+  ]
+ },
+ {
+  "n": 513,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???뱀슜?먮룞李??댁쟾?먯뿉 ????꾨컲?됱쐞蹂?踰붿튃湲덉씠 ?由?寃껋??",
+  "ko_c": [
+   "?띾룄 ?꾨컲(留ㅼ떆 60?щ줈誘명꽣 珥덇낵)??寃쎌슦 12留???,
+   "?좏샇 ?꾨컲??寃쎌슦 6留???,
+   "以묒븰?좎묠踰붿쓽 寃쎌슦 6留???,
+   "?욎?瑜닿린 湲덉? ?쒓린쨌?μ냼 ?꾨컲??寃쎌슦 5留???
+  ],
+  "a": "4",
+  "tr_b": "Kho梳즢 ti沼걆 ph梳죜 n횪o sau 휃창y kh척ng 휃첬ng v沼쌻 h횪nh vi vi ph梳죑 c沼쬪 ng튼沼쓎 l찼i xe 척 t척 theo Ph찼p l沼뇆h Giao  th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "Ph梳죜 120.000 Won khi vi ph梳죑 t沼멵 휃沼?(v튼沼즨 qu찼 60 km/gi沼?",
+   "Ph梳죜 60.000 Won khi vi pha黔m t챠n hi챗黔u 휃챔n giao th척ng",
+   "Ph梳죜 60.000 Won khi l梳쩸 v梳죅h ph창n c찼ch",
+   "Ph梳죜 50.000 won khi vi pha黔m th퉤?i gian, 휃沼땇 휃i沼긩 c梳쩷 v튼沼즨"
+  ]
+ },
+ {
+  "n": 514,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???붿옱吏꾩븬???곌껐?≪닔愿 ?ㅻ퉬???≪닔援щ줈遺??5誘명꽣 ?대궡 ?뱀슜?먮룞李⑤? ?뺤감??寃쎌슦 踰붿튃湲덉??(?덉쟾??吏 誘몄꽕移?",
+  "ko_c": [
+   "4留???,
+   "3留???,
+   "2留???,
+   "泥섎쾶?섏? ?딅뒗??"
+  ],
+  "a": "1",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? ti沼걆 ph梳죜 trong tr튼沼쓓g h沼즤 d沼쳌g xe 척 t척 con trong ph梳죑 vi 5m t沼?휃튼沼쓓g 沼몁g d梳쳌 n튼沼쌵 c沼쬪 thi梳퓍 b沼?沼몁g d梳쳌 n튼沼쌵 li챗n k梳퓍 d첫ng 휃沼?ch沼칊 ch찼y l횪 bao nhi챗u? (Kh척ng l梳칛 휃梳톞 bi沼긪 c梳즢h b찼o an to횪n)",
+  "tr_c": [
+   "40.000 Won",
+   "30.000 Won",
+   "20.000 Won",
+   "Kh척ng b沼?x沼?ph梳죜"
+  ]
+ },
+ {
+  "n": 515,
+  "ko_b": "?꾨줈援먰넻踰뺤긽 踰뚯젏 遺怨쇨린以???ㅻⅨ ?꾨컲?됱쐞 ?섎굹??",
+  "ko_c": [
+   "?밴컼??李⑤궡 ?뚮??됱쐞 諛⑹튂?댁쟾",
+   "泥좉만嫄대꼸紐??듦낵諛⑸쾿 ?꾨컲",
+   "怨좎냽?꾨줈 媛볤만 ?듯뻾 ?꾨컲",
+   "?댁쟾硫댄뿀利??깆쓽 ?쒖떆?섎Т?꾨컲"
+  ],
+  "a": "1",
+  "tr_b": "Ha?nh vi vi ph梳죑 n횪o sau 휃창y c처 m沼쯢 휃i沼긩 ph梳죜 kh찼c v沼쌻 c찼c h횪nh vi c챵n l梳죍 theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "La?i xe b沼?qua ha?nh vi g창y 沼뱊 횪o trong xe c沼쬪 h횪nh kh찼ch",
+   "Vi ph梳죑 c찼ch v튼沼즨 qua 휃튼沼쓓g giao c梳칣 v沼쌻 휃튼沼쓓g s梳칣",
+   "Vi ph梳죑 do ch梳죣 va?o l횪n 휃튼沼쓓g ph沼?c沼쬪 휃튼沼쓓g cao t沼멵",
+   "Vi ph梳죑 ngh칫a v沼?xu梳쩿 tr챙nh b梳켷g l찼i xe, v.v."
+  ]
+ },
+ {
+  "n": 516,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??利됯껐?ы뙋??泥?뎄???댁쟾?먭? 利됯껐?ы뙋???좉퀬 ?꾧퉴吏 ?듦퀬諛쏆? 踰붿튃湲덉븸??(    )???뷀븳 湲덉븸?? ?닿퀬 ?⑸?瑜?利앸챸?섎뒗 ?쒕쪟瑜??쒖텧?섎㈃ 寃쎌같?쒖옣? ?댁쟾?먯뿉 ???利됯껐?ы뙋 泥?뎄瑜?痍⑥냼?섏뿬???쒕떎. (   )?덉뿉 留욌뒗 寃껋??",
+  "ko_c": [
+   "100遺꾩쓽 20",
+   "100遺꾩쓽 30",
+   "100遺꾩쓽 50",
+   "100遺꾩쓽 70"
+  ],
+  "a": "3",
+  "tr_b": "Theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼? tr튼沼쌵 khi c처 ph찼n quy梳퓍 r첬t g沼뛫, n梳퓎 ng튼沼쓎 l찼i xe tr챙nh 휃튼沼즓 h沼?s퉤 ch沼쯰g minh 휃찾 n沼셮 th챗m ( ) kho梳즢 ti沼걆 ph梳죜 휃튼沼즓 th척ng b찼o th챙 C梳즢h s찼t tr튼沼웢g ph梳즜 h沼쭃 휃沼?ngh沼?ph찼n quy梳퓍 r첬t g沼뛫 휃沼멼 v沼쌻 ng튼沼쓎 l찼i xe.",
+  "tr_c": [
+   "20%",
+   "30%",
+   "50%",
+   "70%"
+  ]
+ },
+ {
+  "n": 517,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙?좊쭔???곷떦???댁쑀媛 ?덈뒗 ?먮룞李??댁쟾?먭? 寃쎌같怨듬Т?먯쓽 ?뺣떦???뚯＜ 痢≪젙 ?붽뎄??遺덉쓳??寃쎌슦 泥섎쾶湲곗??쇰줈 留욌뒗 寃껋?? (10???대궡 1???꾨컲??寃쎌슦)",
+  "ko_c": [
+   "1???댁긽 2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+   "1???댁긽 3???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "1???댁긽 4???댄븯??吏뺤뿭?대굹 500留????댁긽 1泥쒕쭔 ???댄븯??踰뚭툑",
+   "1???댁긽 5???댄븯??吏뺤뿭?대굹 500留????댁긽 2泥쒕쭔 ???댄븯??踰뚭툑"
+  ],
+  "a": "4",
+  "tr_b": "N沼셢 dung n횪o 휃첬ng v沼쌻 ti챗u chu梳쯰 x沼?ph梳죜 ng튼沼쓎 l찼i xe 척 t척 c처 l첵 do ch챠nh 휃찼ng 휃沼?c척ng nh梳춏 l횪 휃ang trong tr梳죒g th찼i say r튼沼즩 nh튼ng kh척ng tu창n th沼?y챗u c梳쬾 휃o n沼뱊g 휃沼?c沼뱊 ch챠nh 휃찼ng c沼쬪 c梳즢h s찼t theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?(Tr튼沼쓓g h沼즤 vi ph梳죑 l梳쬷 휃梳쬾 trong v챵ng 10 n훱m)?",
+  "tr_c": [
+   "Ph梳죜 t첫 t沼?1 n훱m 휃梳퓆 2 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 5 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼?1 n훱m 휃梳퓆 3 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 10 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼?1 n훱m 휃梳퓆 4 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼?5 tri沼뇎 Won 휃梳퓆 10 tri沼뇎 Won",
+   "Ph梳죜 t첫 t沼?1 n훱m 휃梳퓆 5 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼?5 tri沼뇎 Won 휃梳퓆 20 tri沼뇎 Won"
+  ]
+ },
+ {
+  "n": 518,
+  "ko_b": "?먮룞李?踰덊샇?먯쓣 媛由ш퀬 ?먮룞李⑤? ?댄뻾??寃쎌슦??踰뚯튃?쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "1???댄븯??吏뺤뿭 ?먮뒗 1,000留뚯썝 ?댄븯??踰뚭툑",
+   "1???댄븯??吏뺤뿭 ?먮뒗 2,000留뚯썝 ?댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 1,000留뚯썝 ?댄븯??踰뚭툑",
+   "2???댄븯??吏뺤뿭 ?먮뒗 2,000留뚯썝 ?댄븯??踰뚭툑"
+  ],
+  "a": "1",
+  "tr_b": "M沼쯢 x沼?ph梳죜 khi 휃i沼걏 khi沼긪 xe 척 t척 che bi沼긪 s沼?",
+  "tr_c": [
+   "Ph梳죜 t첫 t沼멼 휃a 1 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 10 tri沼뇎 won",
+   "Ph梳죜 t첫 t沼멼 휃a 1 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 20 tri沼뇎 won",
+   "Ph梳죜 t첫 t沼멼 휃a 2 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 10 tri沼뇎 won",
+   "Ph梳죜 t첫 t沼멼 휃a 2 n훱m ho梳톍 ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 20 tri沼뇎 won"
+  ]
+ },
+ {
+  "n": 519,
+  "ko_b": "?꾨줈援먰넻踰뺣졊???먮룞李??댁쟾?먭? 怨좎냽?꾨줈?먯꽌 ?먮룞李??댁뿉 怨좎옣?먮룞李⑥쓽 ?쒖?瑜?鍮꾩튂?섏? ?딄퀬 ?댄뻾?섏??? ?대뼸寃? ?섎뒗媛?",
+  "ko_c": [
+   "2留??먯쓽 怨쇳깭猷뚭? 遺怨쇰맂??",
+   "3留??먯쓽 踰붿튃湲덉쑝濡??듦퀬 泥섎텇?쒕떎.",
+   "30留????댄븯??踰뚭툑?쇰줈 泥섎쾶?쒕떎.",
+   "?꾨Т??泥섎쾶?대굹 泥섎텇?섏? ?딅뒗??"
+  ],
+  "a": "1",
+  "tr_b": "Ng튼沼쓎 l찼i xe 척 t척 휃i tr챗n 휃튼沼쓓g cao t沼멵 m횪 kh척ng 휃沼?bi沼긪 c梳즢h b찼o h沼뢮g xe trong 척 t척 th챙 s梳?b沼?x沼?ph梳죜 nh튼  th梳?n횪o theo Ph찼p l沼뇆h Giao th척ng 휃튼沼쓓g b沼?",
+  "tr_c": [
+   "B沼?ph梳죜 ti沼걆 h횪nh ch챠nh 20.000 Won.",
+   "B沼?x沼?ph梳죜 g沼춊 gi梳쪅 b찼o v횪 n沼셮 ti沼걆 ph梳죜 vi ph梳죑 giao th척ng 30.000 won.",
+   "B沼?ph梳죜 ti沼걆 h챙nh s沼?t沼멼 휃a 30.000 Won.",
+   "Ho횪n to횪n kh척ng b沼?x沼?ph梳죜 hay x沼?l첵 g챙."
+  ]
+ },
+ {
+  "n": 520,
+  "ko_b": "?꾨줈援먰넻踰뺣졊??怨좎냽?꾨줈?먯꽌 ?뱀슜?먮룞李??댁쟾?먯쓽 怨쇱냽?됱쐞?????踰붿튃湲?湲곗??쇰줈 留욌뒗 寃껋??",
+  "ko_c": [
+   "?쒗븳?띾룄湲곗? ?쒖냽 60?щ줈誘명꽣 珥덇낵 80?щ줈誘명꽣 ?댄븯 ??踰붿튃湲?12留???,
+   "?쒗븳?띾룄湲곗? ?쒖냽 40?щ줈誘명꽣 珥덇낵 60?щ줈誘명꽣 ?댄븯 ??踰붿튃湲?8留???,
+   "?쒗븳?띾룄湲곗? ?쒖냽 20?щ줈誘명꽣 珥덇낵 40?щ줈誘명꽣 ?댄븯 ??踰붿튃湲?5留???,
+   "?쒗븳?띾룄湲곗? ?쒖냽 20?щ줈誘명꽣 ?댄븯 ??踰붿튃湲?2留???
+  ],
+  "a": "1",
+  "tr_b": "M沼쯢 ph梳죜 n횪o 찼p d沼쩸g v沼쌻 ng튼沼쓎 l찼i xe 척 t척 con ch梳죣 qu찼 t沼멵 휃沼?cho ph챕p tr챗n 휃튼沼쓓g cao t沼멵 theo Ph찼p  l沼뇆h Giao th척ng 휃튼沼쓓g b沼?,
+  "tr_c": [
+   "V튼沼즨 qu찼 t沼?60 km/gi沼?휃梳퓆 80 km/gi沼???Ph梳죜 ti沼걆 vi ph梳죑 giao th척ng 120.000 Won",
+   "V튼沼즨 qu찼 t沼?40 km/gi沼?휃梳퓆 60 km/gi沼???Ph梳죜 ti沼걆 vi ph梳죑 giao th척ng 80.000 Won",
+   "V튼沼즨 qu찼 t沼?20 km/gi沼?휃梳퓆 40 km/gi沼???Ph梳죜 ti沼걆 vi ph梳죑 giao th척ng 50.000 Won",
+   "V튼沼즨 qu찼 20 km/gi沼?tr沼?xu沼몁g ??Ph梳죜 ti沼걆 vi ph梳죑 giao th척ng 20.000 Won"
+  ]
+ }
+]
+
+codex
+파일의 문자 인코딩이 터미널에서 깨져 보여 UTF-8로 다시 읽고, 문항별 원문과 베트남어 번역의 실질 의미 차이만 선별하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/212_choices_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 520ms:
+[
+ {
+  "n": 481,
+  "ko_b": "좌석 안전띠 착용에 대한 설명으로 맞는 2가지는?",
+  "ko_c": [
+   "가까운 거리를 운행할 경우에는 큰 효과가 없으므로 착용하지 않아도 된다.",
+   "자동차의 승차자는 안전을 위하여 좌석 안전띠를 착용하여야 한다.",
+   "어린이는 부모의 도움을 받을 수 있는 운전석 옆 좌석에 태우고, 좌석 안전띠를 착용시키는 것이 안전하다.",
+   "긴급한 용무로 출동하는 경우 이외에는 긴급자동차의 운전자도 좌석 안전띠를 반드시 착용하여야 한다."
+  ],
+  "a": "2, 4",
+  "tr_b": "Hai giải thích nào đúng về việc thắt dây an toàn?",
+  "tr_c": [
+   "Khi đi quãng đường ngắn thì dây an toàn không có tác dụng gì nên không cần thắt cũng được.",
+   "Vì an toàn nên người trên xe phải thắt dây an toàn.",
+   "Đối với trẻ em thì đặt ngồi ở ghế cạnh ghế lái để có thể nhận được sự giúp đỡ của bố mẹ, và thắt dây an toàn để  đảm bảo an toàn.",
+   "Người lái xe khẩn cấp ngoài những lúc được điều động làm nhiệm vụ khẩn cấp thì cũng phải thắt dây an toàn."
+  ]
+ },
+ {
+  "n": 482,
+  "ko_b": "교통사고로 심각한 척추 골절 부상이 예상되는 경우에 가장 적절한 조치방법은?",
+  "ko_c": [
+   "의식이 있는지 확인하고 즉시 심폐소생술을 실시한다.",
+   "부상자를 부축하여 안전한 곳으로 이동하고 119에 신고한다.",
+   "상기도 폐색이 발생될 수 있으므로 하임리히법을 시행한다.",
+   "긴급한 경우가 아니면 이송을 해서는 안 되며, 부득이한 경우에는 이송해야 한다면 부목을 이용해서 척추부분을 고정한  후 안전한 곳으로 우선 대피해야 한다."
+  ],
+  "a": "4",
+  "tr_b": "Phương pháp xử lý phù hợp nhất về trường hợp phỏng đoán bị chấn thương cột sống nghiêm trọng do tai  nạn giao thông?",
+  "tr_c": [
+   "Kiểm tra người bị thương còn ý thức hay không và tiến hành hô hấp nhân tạo ngay.",
+   "Dìu người bị thương đến nơi an toàn rồi gọi cho 119.",
+   "Đường hô hấp trên có thể bị tắc nghẽn nên cần thực hiện biện pháp Heimlich (đẩy bụng).",
+   "Nếu không phải trường hợp khẩn cấp thì không được di chuyển người bị thương. Trường hợp bất khả kháng phải chuyển người bị thương đi thì sử dụng nẹp gỗ để cố định cột sống, sau đó ưu tiên chuyển đến nơi an toàn."
+  ]
+ },
+ {
+  "n": 483,
+  "ko_b": "교통사고 발생 시 부상자의 의식 상태를 확인하는 방법으로 가장 먼저 해야 할 것은?",
+  "ko_c": [
+   "부상자의 맥박 유무를 확인한다.",
+   "말을 걸어보거나 어깨를 가볍게 두드려 본다.",
+   "어느 부위에 출혈이 심한지 살펴본다.",
+   "입안을 살펴서 기도에 이물질이 있는지 확인한다."
+  ],
+  "a": "2",
+  "tr_b": "Khi xảy ra tai nạn giao thông, biện pháp trước tiên để kiểm tra trạng thái ý thức của người bị thương là gì?",
+  "tr_c": [
+   "Bắt mạch của người bị thương để kiểm tra.",
+   "Thử nói chuyện hoặc vỗ nhẹ vào vai.",
+   "Quan sát xem chỗ nào chảy máu nhiều nhất.",
+   "Kiểm tra mồm xem có dị vật trong khí quản hay không."
+  ]
+ },
+ {
+  "n": 484,
+  "ko_b": "도로교통법령상 교통사고 발생 시 긴급을 요하는 경우 동승자에게 조치를 하도록 하고 운전을 계속할 수 있는 차 량 2가지는?",
+  "ko_c": [
+   "병원으로 부상자를 운반 중인 승용자동차",
+   "화재진압 후 소방서로 돌아오는 소방자동차",
+   "교통사고 현장으로 출동하는 견인자동차",
+   "우편화물을 싣고 가던 중인 우편물자동차"
+  ],
+  "a": "1, 4",
+  "tr_b": "Khi xảy ra tai nạn giao thông, theo Pháp lệnh Giao thông đường bộ, 2 loại xe nào có thể yêu cầu người đi  cùng hỗ trợ xử lý để tiếp tục lưu thông trong trường hợp khẩn cấp?",
+  "tr_c": [
+   "Xe con đang đưa người bị thương đi bệnh viện",
+   "Xe cứu hỏa sau khi đi chữa cháy về",
+   "Xe cứu hộ giao thông đang chạy đến hiện trường tai nạn giao thông",
+   "Xe ô tô bưu chính đang chở hàng bưu phẩm/bưu kiện."
+  ]
+ },
+ {
+  "n": 485,
+  "ko_b": "도로교통법령상 교통사고 발생 시 계속 운전할 수 있는 경우로 옳은 2가지는?",
+  "ko_c": [
+   "긴급한 환자를 수송 중인 구급차 운전자는 동승자로 하여금 필요한 조치 등을 하게하고 계속 운전하였다.",
+   "긴급한 회의에 참석하기 위해 이동 중인 운전자는 동승자로 하여금 필요한 조치 등을 하게하고 계속 운전하였다.",
+   "긴급한 우편물을 수송하는 차량 운전자는 동승자로 하여금 필요한 조치 등을 하게하고 계속 운전하였다.",
+   "긴급한 약품을 수송 중인 구급차 운전자는 동승자로 하여금 필요한 조치 등을 하게하고 계속 운전하였다."
+  ],
+  "a": "1, 3",
+  "tr_b": "Theo Pháp lệnh Giao thông đường bộ, 2 đáp án nào đúng với trường hợp có thể tiếp tục đi khi xảy ra tai nạn  giao thông?",
+  "tr_c": [
+   "Người lái xe cấp cứu đang chở bệnh nhân đi cấp cứu để người đi cùng thực hiện các biện pháp xử lý cần thiết và  tiếp tục đi.",
+   "Người lái xe đang di chuyển để tham gia cuộc họp khẩn cấp để người đi cùng thực hiện các biện pháp xử lý cần  thiết và tiếp tục đi.",
+   "Người lái xe chở bưu phẩm khẩn cấp để người đi cùng thực hiện các biện pháp xử lý cần thiết và tiếp tục đi.",
+   "Người lái xe cấp cứu đang chở dược phẩm khẩn cấp để người đi cùng thực hiện các biện pháp xử lý cần thiết và tiếp  tục đi."
+  ]
+ },
+ {
+  "n": 486,
+  "ko_b": "야간에 도로에서 로드킬(road kill)을 예방하기 위한 운전방법으로 바람직하지 않은 것은?",
+  "ko_c": [
+   "사람이나 차량의 왕래가 적은 국도나 산길을 주행할 때는 감속운행을 해야 한다.",
+   "야생동물 발견 시에는 서행으로 접근하고 한적한 갓길에 세워 동물과의 충돌을 방지한다.",
+   "야생동물 발견 시에는 전조등을 끈 채 경음기를 가볍게 울려 도망가도록 유도한다.",
+   "출현하는 동물의 발견을 용이하게 하기 위해 가급적 갓길에 가까운 도로를 주행한다."
+  ],
+  "a": "4",
+  "tr_b": "Nội dung nào không phải là cách lái xe phòng tránh tai nạn “đâm phải động vật qua đường (road kill)” trên  đường vào ban đêm?",
+  "tr_c": [
+   "Khi lưu thông trên đường quốc lộ hoặc đường núi ít người và xe qua lại, phải chú ý giảm tốc độ.",
+   "Khi phát hiện có động vật hoang dã, đi chậm từ từ rồi dừng lại ở làn đường phụ để tránh va chạm với động vật.",
+   "Khi phát hiện có động vật hoang dã, nhẹ nhàng nhấn còi kết hợp với tắt đèn pha trước để dụ động vật bỏ chạy.",
+   "Nếu có thể nên lưu thông ở phần đường gần với làn đường phụ để dễ dàng phát hiện ra động vật."
+  ]
+ },
+ {
+  "n": 487,
+  "ko_b": "고속도로에서 고장 등으로 긴급 상황 발생 시 일정 거리를 무료로 견인서비스를 제공해 주는 기관은?",
+  "ko_c": [
+   "한국도로교통공단",
+   "한국도로공사",
+   "경찰청",
+   "한국교통안전공단"
+  ],
+  "a": "2",
+  "tr_b": "Cơ quan nào dưới đây cung cấp dịch vụ kéo xe miễn phí trên một quãng đường nhất định trong trường hợp  khẩn cấp như hỏng xe trên đường cao tốc?",
+  "tr_c": [
+   "Cơ quan Giao thông đường bộ Hàn Quốc",
+   "Cơ quan Đường bộ Hàn Quốc",
+   "Cục Cảnh sát",
+   "Cơ quan An toàn giao thông Hàn Quốc"
+  ]
+ },
+ {
+  "n": 488,
+  "ko_b": "도로에서 로드킬(road kill)이 발생하였을 때 조치요령으로 바르지 않은 것은?",
+  "ko_c": [
+   "감염병 위험이 있을 수 있으므로 동물사체 등을 함부로 만지지 않는다.",
+   "로드킬 사고가 발생하면 야생동물구조센터나 지자체 콜센터‘지역번호 + 120번’등에 신고한다.",
+   "2차사고 방지를 위해 사고 당한 동물을 자기 차에 싣고 주행한다.",
+   "2차사고 방지와 원활한 소통을 위한 조치를 한 경우에는 신고하지 않아도 된다."
+  ],
+  "a": "3",
+  "tr_b": "Cách xử lý nào là không đúng khi phát sinh tai nạn “đâm phải động vật qua đường (road kill)” trên đường?",
+  "tr_c": [
+   "Vì có nguy cơ mắc bệnh truyền nhiễm nên không tùy tiện chạm vào xác động vật.",
+   "Khi phát sinh tai nạn “đâm phải động vật qua đường (road kill)”, phải báo lên Trung tâm Cứu trợ Động vật hoang dã hoặc Tổng đài địa phương số “Mã vùng + 120”.",
+   "Để phòng tránh tai nạn thứ cấp xảy ra, phải lập tức đưa động vật bị tai nạn lên xe của mình.",
+   "Nếu đã thực hiện các biện pháp xử lý phòng tránh tai nạn thứ cấp và đảm bảo lưu thông cho giao thông, thì không  cần phải khai báo nữa."
+  ]
+ },
+ {
+  "n": 489,
+  "ko_b": "보복운전 또는 교통사고 발생을 방지하기 위한 분노조절기법에 대한 설명으로 맞는 것은?",
+  "ko_c": [
+   "감정이 끓어오르는 상황에서 잠시 빠져나와 시간적 여유를 갖고 마음의 안정을 찾는 분노조절방법을 스톱버튼기법이라 한다.",
+   "분노를 유발하는 부정적인 사고를 중지하고 평소 생각해 둔 행복한 장면을 1-2분간 떠올려 집중하는 분노조절방법을  타임아웃기법이라 한다.",
+   "분노를 유발하는 종합적 신념체계와 과거의 왜곡된 사고에 대한 수동적 인식경험을 자신에게 질문하는 방법을 경험회상 질문기법이라 한다.",
+   "양팔, 다리, 아랫배, 가슴, 어깨 등 몸의 각 부분을 최대한 긴장시켰다가 이완시켜 편안한 상태를 반복하는 방법을 긴장이 완훈련기법이라 한다."
+  ],
+  "a": "4",
+  "tr_b": "Giải thích nào là đúng về cách kiểm soát cơn giận để phòng tránh lái xe trả đũa hay phát sinh tai nạn giao  thông?",
+  "tr_c": [
+   "Kiểm soát cơn giận bằng cách, trong tình huống cảm xúc dâng lên sôi sục, cần tạm thoát khỏi tình huống và thư giãn trong một thời gian để cảm xúc ổn định lại, đây là phương pháp “Stop Button”.",
+   "Kiểm soát cơn giận bằng cách dừng suy nghĩ về sự cố tiêu cực dẫn đến phẫn nộ và tập trung 1~2 phút nghĩ đến những hình ảnh hạnh phúc thường ngày, đây là phương pháp “Time Out”.",
+   "Phương pháp tự đặt câu hỏi cho bản thân về kinh nghiệm nhận thức thụ động liên quan đến tai nạn đã bị bóp méo trong quá khứ và đức tin chung dẫn đến phẫn nộ, đây là “Phương pháp đặt câu hỏi hồi tưởng kinh nghiệm”.",
+   "Phương pháp lặp đi lặp lại động tác kéo căng hết mức các bộ phận cơ thể như hai cánh tay, chân, bụng dưới, ngực, vai v.v... rồi thả lỏng, đây là “Phương pháp luyện tập giảm căng thẳng”."
+  ]
+ },
+ {
+  "n": 490,
+  "ko_b": "폭우로 인하여 지하차도가 물에 잠겨 있는 상황이다. 다음 중 가장 안전한 운전 방법은?",
+  "ko_c": [
+   "물에 바퀴가 다 잠길 때까지는 무사히 통과할 수 있으니 서행으로 지나간다.",
+   "최대한 빠른 속도로 빠져 나간다.",
+   "우회도로를 확인한 후에 돌아간다.",
+   "통과하다가 시동이 꺼지면 바로 다시 시동을 걸고 빠져 나온다."
+  ],
+  "a": "3",
+  "tr_b": "Đường hầm phía trước bị ngập nước do mưa lớn. Phương pháp lái xe nào là an toàn nhất?",
+  "tr_c": [
+   "Xe có thể di chuyển an toàn khi bánh xe chưa bị ngập hoàn toàn trong nước, nên cứ lái chậm đi qua.",
+   "Lái xe qua chỗ ngập nhanh nhất có thể.",
+   "Kiểm tra đường vòng rồi quay lại.",
+   "Lái xe qua. Nếu động cơ tắt, khởi động lại ngay lập tức và tiếp tục lái xe qua."
+  ]
+ },
+ {
+  "n": 491,
+  "ko_b": "교통사고 등 응급상황 발생 시 조치요령과 거리가 먼 것은?",
+  "ko_c": [
+   "위험여부 확인",
+   "환자의 반응 확인",
+   "기도 확보 및 호흡 확인",
+   "환자의 목적지와 신상 확인"
+  ],
+  "a": "4",
+  "tr_b": "Nội dung nào không đúng với cách xử lý khi xảy ra tình huống khẩn cấp như tai nạn giao thông?",
+  "tr_c": [
+   "Kiểm tra xem có nguy hiểm không",
+   "Kiểm tra phản ứng của nạn nhân",
+   "Đảm bảo đường thở và kiểm tra hô hấp",
+   "Kiểm tra điểm đến và nhân thân của nạn nhân"
+  ]
+ },
+ {
+  "n": 492,
+  "ko_b": "주행 중 자동차 돌발 상황에 대한 올바른 대처 방법과 거리가 먼 것은?",
+  "ko_c": [
+   "주행 중 핸들이 심하게 떨리면 핸들을 꽉 잡고 계속 주행한다.",
+   "자동차에서 연기가 나면 즉시 안전한 곳으로 이동 후 시동을 끈다.",
+   "타이어 펑크가 나면 핸들을 꽉 잡고 감속하며 안전한 곳에 정차한다.",
+   "철길건널목 통과 중 시동이 꺼져서 다시 걸리지 않는다면 신속히 대피 후 신고한다."
+  ],
+  "a": "1",
+  "tr_b": "Cách nào sau đây là không đúng khi xử lý tình huống nguy hiểm lúc lái xe?",
+  "tr_c": [
+   "Nắm chắc tay lái nếu nó rung lắc mạnh và tiếp tục lái xe.",
+   "Nếu khói bốc ra từ xe, tấp vào nơi an toàn và tắt máy.",
+   "Nếu xảy ra nổ lốp, giữ chắc tay lái, giảm tốc và dừng xe ở nơi an toàn.",
+   "Nếu động cơ dừng khi đi qua đường ray tàu hỏa, sơ tán khỏi phương tiện ngay lập tức và thông báo cho cơ quan  chức năng."
+  ]
+ },
+ {
+  "n": 493,
+  "ko_b": "교통사고 현장에서 증거확보를 위한 사진 촬영 방법으로 맞는 2가지는?",
+  "ko_c": [
+   "블랙박스 영상이 촬영되는 경우 추가하여 사진 촬영할 필요가 없다.",
+   "도로에 엔진오일, 냉각수 등의 흔적은 오랫동안 지속되므로 촬영하지 않아도 된다.",
+   "파편물, 자동차와 도로의 파손부위 등 동일한 대상에 대해 근접촬영과 원거리 촬영을 같이 한다.",
+   "차량 바퀴의 진행방향을 스프레이 등으로 표시하거나 촬영을 해 둔다."
+  ],
+  "a": "3, 4",
+  "tr_b": "Hai nội dung nào sau đây đúng với cách quay phim, chụp ảnh để làm bằng chứng tại hiện trường tai nạn  giao thông?",
+  "tr_c": [
+   "Nếu đã có video của hộp đen (blackbox) thì không cần quay phim, chụp ảnh thêm.",
+   "Các dấu vết như dầu động cơ, nước làm lạnh, v.v... lưu lại rất lâu trên đường nên không cần phải quay phim, chụp  ảnh lại.",
+   "Cần quay phim, chụp ảnh gần và xa cùng một đối tượng như các mảnh vỡ, phần bị hư hại của xe và đường, v.v...",
+   "Đánh dấu hướng xoay của bánh xe bằng bình xịt hoặc quay phim, chụp ảnh lại."
+  ]
+ },
+ {
+  "n": 494,
+  "ko_b": "다음 중 장거리 운행 전에 반드시 점검해야 할 우선순위 2가지는?",
+  "ko_c": [
+   "차량 청결 상태 점검",
+   "DMB(영상표시장치) 작동여부 점검",
+   "각종 오일류 점검",
+   "타이어 상태 점검"
+  ],
+  "a": "3, 4",
+  "tr_b": "Trước khi đi xa cần ưu tiên kiểm tra 2 lựa chọn nào dưới đây?",
+  "tr_c": [
+   "Kiểm tra tình trạng vệ sinh sạch sẽ của xe",
+   "Hoạt động của hệ thống DMB (thiết bị hiển thị hình ảnh)",
+   "Các loại dầu",
+   "Tình trạng lốp"
+  ]
+ },
+ {
+  "n": 495,
+  "ko_b": "도로교통법령상 운전면허 취소 사유에 해당하는 것은?",
+  "ko_c": [
+   "정기 적성검사 기간 만료 다음 날부터 적성검사를 받지 아니하고 6개월을 초과한 경우",
+   "운전자가 단속 공무원(경찰공무원, 시･군･구 공무원)을 폭행하여 불구속 형사 입건된 경우",
+   "자동차 등록 후 자동차 등록번호판을 부착하지 않고 운전한 경우",
+   "제2종 보통면허를 갱신하지 않고 2년을 초과한 경우"
+  ],
+  "a": "2",
+  "tr_b": "Lý do đúng của việc tước bằng lái xe theo Pháp lệnh Giao thông đường bộ là gì?",
+  "tr_c": [
+   "Lái xe không tiến hành kiểm tra xe theo định kỳ, quá hạn 6 tháng kể từ ngày hết hạn kiểm tra.",
+   "Lái xe đang bị khởi tố tại ngoại do có hành vi bạo lực chống đối công chức thi hành nhiệm vụ (cảnh sát, công chức  quận-huyện-thành phố).",
+   "Lái xe đã đăng ký xe nhưng điều khiển xe không gắn biển số xe.",
+   "Lái xe không đổi mới bằng lái phổ thông hạng 2, quá hạn 2 năm."
+  ]
+ },
+ {
+  "n": 496,
+  "ko_b": "도로교통법령상 범칙금 납부 통고서를 받은 사람이 1차 납부 기간 경과 시 20일 이내 납부해야 할 금액으로 맞는  것은?",
+  "ko_c": [
+   "통고 받은 범칙금에 100분의 10을 더한 금액",
+   "통고 받은 범칙금에 100분의 20을 더한 금액",
+   "통고 받은 범칙금에 100분의 30을 더한 금액",
+   "통고 받은 범칙금에 100분의 40을 더한 금액"
+  ],
+  "a": "2",
+  "tr_b": "Theo Pháp lệnh Giao thông đường bộ, người nhận Giấy báo nộp phạt nhưng để quá thời hạn nộp phạt lần 1  thì phải nộp phạt trong vòng 20 ngày với số tiền là bao nhiêu?",
+  "tr_c": [
+   "Phải nộp thêm 10% tiền phạt nộp chậm.",
+   "Phải nộp thêm 20% tiền phạt nộp chậm.",
+   "Phải nộp thêm 30% tiền phạt nộp chậm.",
+   "Phải nộp thêm 40% tiền phạt nộp chậm."
+  ]
+ },
+ {
+  "n": 497,
+  "ko_b": "도로교통법령상 누산 점수 초과로 인한 운전면허 취소 기준으로 옳은 것은?",
+  "ko_c": [
+   "1년간 100점 이상",
+   "2년간 191점 이상",
+   "3년간 271점 이상",
+   "5년간 301점 이상"
+  ],
+  "a": "3",
+  "tr_b": "Điểm phạt vượt quá bao nhiêu thì bị tước bằng lái xe theo Pháp lệnh Giao thông đường bộ?",
+  "tr_c": [
+   "Từ 100 điểm phạt trở lên trong 1 năm",
+   "Từ 191 điểm phạt trở lên trong 2 năm",
+   "Từ 271 điểm phạt trở lên trong 3 năm",
+   "Từ 301 điểm phạt trở lên trong 5 năm"
+  ]
+ },
+ {
+  "n": 498,
+  "ko_b": "도로교통법령상 교통사고 결과에 따른 벌점 기준으로 맞는 것은?",
+  "ko_c": [
+   "행정 처분을 받을 운전자 본인의 인적 피해에 대해서도 인적 피해 교통사고 구분에 따라 벌점을 부과한다.",
+   "자동차 등 대 사람 교통사고의 경우 쌍방 과실인 때에는 벌점을 부과하지 않는다.",
+   "교통사고 발생 원인이 불가항력이거나 피해자의 명백한 과실인 때에는 벌점을 2분의 1로 감경한다.",
+   "자동차 등 대 자동차 등 교통사고의 경우에는 그 사고 원인 중 중한 위반 행위를 한 운전자에게만 벌점을 부과한다."
+  ],
+  "a": "4",
+  "tr_b": "Nội dung nào đúng về chuẩn điểm phạt tùy theo hậu quả tai nạn giao thông theo Pháp lệnh Giao thông  đường bộ?",
+  "tr_c": [
+   "Người lái xe khi gây ra tai nạn bị xử phạt hành chính nhưng bản thân cũng bị thương thì cũng bị tính điểm phạt theo phân loại tai nạn giao thông gây thương tích về người.",
+   "Trường hợp tai nạn giao thông giữa xe và người nếu là do lỗi của hai bên thì không bị tính điểm phạt.",
+   "Khi lý do xảy ra tai nạn là bất khả kháng hay là do lỗi rõ ràng của nạn nhân thì giảm nhẹ một nửa điểm phạt.",
+   "Trong tai nạn giao thông giữa xe với xe, chỉ tính điểm phạt cho người lái xe có vi phạm nghiêm trọng trong các  nguyên nhân gây ra tai nạn."
+  ]
+ },
+ {
+  "n": 499,
+  "ko_b": "도로교통법령상 영상기록매체에 의해 입증되는 주차위반에 대한 과태료의 설명으로 알맞은 것은?",
+  "ko_c": [
+   "승용차의 소유자는 3만 원의 과태료를 내야 한다.",
+   "승합차의 소유자는 7만 원의 과태료를 내야 한다.",
+   "기간 내에 과태료를 내지 않아도 불이익은 없다.",
+   "같은 장소에서 2시간 이상 주차 위반을 하는 경우 과태료가 가중된다."
+  ],
+  "a": "4",
+  "tr_b": "Giải thích nào đúng về tiền phạt do vi phạm đỗ xe được ghi lại bằng thiết bị ghi hình theo Pháp lệnh Giao  thông đường bộ?",
+  "tr_c": [
+   "Chủ sở hữu xe ô tô con phải nộp phạt hành chính 30.000 Won.",
+   "Chủ sở hữu xe khách phải nộp phạt hành chính 70.000 Won.",
+   "Không nộp tiền phạt hành chính đúng hạn cũng không bị bất lợi gì.",
+   "Trường hợp vi phạm đỗ xe do đỗ từ 2 tiếng trở lên tại cùng một địa điểm thì tiền phạt hành chính sẽ bị tăng nặng."
+  ]
+ },
+ {
+  "n": 500,
+  "ko_b": "다음 중 교통사고를 일으킨 운전자가 종합보험이나 공제조합에 가입되어 있어 교통사고처리특례법의 특례가 적용되는  경우로 맞는 것은?",
+  "ko_c": [
+   "안전운전 의무위반으로 자동차를 손괴하고 경상의 교통사고를 낸 경우",
+   "교통사고로 사람을 사망에 이르게 한 경우",
+   "교통사고를 야기한 후 부상자 구호를 하지 않은 채 도주한 경우",
+   "신호 위반으로 경상의 교통사고를 일으킨 경우"
+  ],
+  "a": "1",
+  "tr_b": "Trường hợp nào người lái xe gây tai nạn giao thông có tham gia bảo hiểm tổng hợp hay thuộc Hiệp hội  Tương trợ được áp dụng điều lệ đặc biệt của Luật đặc biệt về Xử lý tai nạn giao thông?",
+  "tr_c": [
+   "Vi phạm nghĩa vụ lái xe an toàn, làm hư hại xe và gây ra tai nạn nhẹ.",
+   "Gây tai nạn giao thông dẫn đến tử vong cho người.",
+   "Bỏ trốn sau khi gây ra tai nạn giao thông mà không cứu người bị thương.",
+   "Gây ra tai nạn giao thông nhẹ do vi phạm tín hiệu."
+  ]
+ },
+ {
+  "n": 501,
+  "ko_b": "도로교통법령상 도로에서 동호인 7명이 4대의 차량에 나누어 타고 공동으로 다른 사람에게 위해를 끼쳐 형사입건 되 었다. 처벌기준으로 틀린 것은? (개인형 이동장치는 제외)",
+  "ko_c": [
+   "2년 이하의 징역이나 500만 원 이하의 벌금",
+   "적발 즉시 면허정지",
+   "구속된 경우 면허취소",
+   "형사입건된 경우 벌점 40점"
+  ],
+  "a": "2",
+  "tr_b": "Bảy người cùng đi trên 4 chiếc xe trên đường cùng có hành vi gây nguy hiểm cho người khác và đã bị xử lý hình sự. Mức xử phạt nào không đúng theo Pháp lệnh Giao thông đường bộ? (Trừ thiết bị di chuyển cá nhân)",
+  "tr_c": [
+   "Phạt tù tối đa 2 năm hoặc phạt tiền hình sự tối đa 5 triệu Won",
+   "Đình chỉ bằng lái ngay khi phát hiện vi phạm",
+   "Hủy bằng lái trong trường hợp bị giam giữ",
+   "Trừ 40 điểm trong trường hợp bị xử lý hình sự"
+  ]
+ },
+ {
+  "n": 502,
+  "ko_b": "도로교통법령상 자동차 운전자가 난폭운전으로 형사입건되었다. 운전면허 행정처분은?",
+  "ko_c": [
+   "면허 취소",
+   "면허 정지 100일",
+   "면허 정지 60일",
+   "면허 정지 40일"
+  ],
+  "a": "4",
+  "tr_b": "Người lái xe đã bị cáo buộc hình sự vì lái xe ẩu theo Pháp lệnh Giao thông đường bộ. Xử phạt hành chính đối  với giấy phép lái xe trong trường hợp này là gì?",
+  "tr_c": [
+   "Hủy giấy phép",
+   "Tạm đình chỉ giấy phép 100 ngày",
+   "Tạm đình chỉ giấy phép 60 ngày",
+   "Tạm đình chỉ giấy phép 40 ngày"
+  ]
+ },
+ {
+  "n": 503,
+  "ko_b": "도로교통법령상 술에 취한 상태에서 자전거를 운전한 경우 어떻게 되는가?",
+  "ko_c": [
+   "처벌하지 않는다.",
+   "범칙금 3만 원의 통고처분한다.",
+   "과태료 4만 원을 부과한다.",
+   "10만 원 이하의 벌금 또는 구류에 처한다."
+  ],
+  "a": "2",
+  "tr_b": "Trường hợp đi xe đạp trong trạng thái say rượu bị xử lý như thế nào theo Pháp lệnh Giao thông đường bộ?",
+  "tr_c": [
+   "Không bị xử phạt.",
+   "Bị gửi giấy báo phạt tiền vi phạm giao thông với số tiền phạt là 30.000 Won.",
+   "Xử phạt hành chính 40.000 Won.",
+   "Phạt tiền hình sự tối đa 100.000 Won hoặc tạm giam."
+  ]
+ },
+ {
+  "n": 504,
+  "ko_b": "도로교통법령상 술에 취한 상태에 있다고 인정할만한 상당한 이유가 있는 자전거 운전자가 경찰공무원의 정당한 음주 측정 요구에 불응한 경우 처벌은?",
+  "ko_c": [
+   "처벌하지 않는다.",
+   "과태료 7만 원을 부과한다.",
+   "범칙금 10만 원의 통고처분한다.",
+   "10만 원 이하의 벌금 또는 구류에 처한다."
+  ],
+  "a": "3",
+  "tr_b": "Xử phạt như thế nào theo Pháp lệnh Giao thông đường bộ đối với người đi xe đạp có lý do chính đáng để công nhận rằng đã say rượu nhưng không tuân thủ yêu cầu hợp pháp của cảnh sát về việc đo nồng độ cồn?",
+  "tr_c": [
+   "Không xử phạt.",
+   "Xử phạt hành chính 70.000 Won.",
+   "Bị gửi giấy báo phạt tiền vi phạm giao thông với số tiền phạt là 100.000 Won.",
+   "Phạt tiền hình sự tối đa 100.000 Won hoặc tạm giam."
+  ]
+ },
+ {
+  "n": 505,
+  "ko_b": "교통사고처리특례법상 형사 처벌되는 경우로 맞는 2가지는?",
+  "ko_c": [
+   "종합보험에 가입하지 않은 차가 물적 피해가 있는 교통사고를 일으키고 피해자와 합의한 때",
+   "택시공제조합에 가입한 택시가 중앙선을 침범하여 인적 피해가 있는 교통사고를 일으킨 때",
+   "종합보험에 가입한 차가 신호를 위반하여 인적 피해가 있는 교통사고를 일으킨 때",
+   "화물공제조합에 가입한 화물차가 안전운전 불이행으로 인적 피해가 있는 교통사고를 일으킨 때"
+  ],
+  "a": "2, 3",
+  "tr_b": "Hai trường hợp đúng về xử phạt hình sự theo Luật đặc biệt về Xử lý tai nạn giao thông?",
+  "tr_c": [
+   "Khi xe không tham gia bảo hiểm tổng hợp gây tai nạn giao thông có thiệt hại về tài sản và hòa giải với nạn nhân.",
+   "Khi xe taxi tham gia Liên đoàn taxi lấn vào vạch phân làn giữa đường, gây tai nạn thiệt hại về người.",
+   "Khi xe tham gia bảo hiểm tổng hợp vi phạm tín hiệu giao thông gây tai nạn thiệt hại về người.",
+   "Khi xe tải đã tham gia Quỹ bảo hiểm hàng hóa gây tai nạn giao thông có thiệt hại về người do không tuân thủ lái  xe an toàn."
+  ]
+ },
+ {
+  "n": 506,
+  "ko_b": "도로교통법령상 범칙금 납부 통고서를 받은 사람이 2차 납부기간을 경과한 경우에 대한 설명으로 맞는 2가지는?",
+  "ko_c": [
+   "지체 없이 즉결심판을 청구하여야 한다.",
+   "즉결심판을 받지 아니한 때 운전면허를 40일 정지한다.",
+   "과태료 부과한다.",
+   "범칙금액에 100분의 30을 더한 금액을 납부하면 즉결심판을 청구하지 않는다."
+  ],
+  "a": "1, 2",
+  "tr_b": "Hai giải thích đúng về trường hợp người nhận thông báo nộp phạt quá thời hạn nộp phạt lần 2 theo Pháp  lệnh Giao thông đường bộ là gì?",
+  "tr_c": [
+   "Phải đề nghị Tòa án ra phán quyết rút gọn ngay lập tức.",
+   "Nếu không thi hành phán quyết rút gọn, vô hiệu hóa bằng lái xe trong vòng 40 ngày.",
+   "Phải nộp tiền phạt hành chính.",
+   "Nếu như nộp thêm 30% tiền phạt thì sẽ không yêu cầu phán quyết rút gọn."
+  ]
+ },
+ {
+  "n": 507,
+  "ko_b": "도로교통법령상 승용자동차 운전자가 주·정차된 차만 손괴하는 교통사고를 일으키고 이를 인지하고서도 피해자에게  인적사항을 제공하지 아니한 경우 어떻게 되는가?",
+  "ko_c": [
+   "처벌하지 않는다.",
+   "과태료 10만 원을 부과한다.",
+   "범칙금 12만 원의 통고처분한다.",
+   "30만 원 이하의 벌금 또는 구류에 처한다."
+  ],
+  "a": "3",
+  "tr_b": "Điều nào sau đây đúng với trường hợp người lái xe ô tô chở khách gây tai nạn làm hư hỏng chỉ phương tiện đang dừng/đỗ, dù đã nhận biết rõ vụ việc nhưng không cung cấp thông tin nhân thân cho nạn nhân, sẽ bị xử lý như thế nào theo quy định của Luật Giao thông Đường bộ?",
+  "tr_c": [
+   "Không bị xử phạt.",
+   "Bị phạt hành chính 100.000 Won.",
+   "Bị gửi giấy báo phạt tiền vi phạm giao thông với số tiền phạt là 120.000 Won.",
+   "Phạt tiền hình sự tối đa 300.000 Won hoặc tạm giam."
+  ]
+ },
+ {
+  "n": 508,
+  "ko_b": "도로교통법령상 혈중알코올농도 0.03퍼센트 이상 0.08퍼센트 미만의 술에 취한 상태로 승용차를 운전한 사람에 대한  처벌기준으로 맞는 것은? (10년 내 1회 위반한 경우)",
+  "ko_c": [
+   "1년 이하의 징역이나 500만 원 이하의 벌금",
+   "2년 이하의 징역이나 1천만 원 이하의 벌금",
+   "3년 이하의 징역이나 1천500만 원 이하의 벌금",
+   "2년 이상 5년 이하의 징역이나 1천만 원 이상 2천만 원 이하의 벌금"
+  ],
+  "a": "1",
+  "tr_b": "Câu nào đúng với mức xử phạt người lái xe ô tô con trong tình trạng say rượu với nồng độ cồn trong máu là từ 0,03 ~ 0.08% theo Pháp lệnh Giao thông đường bộ (Trường hợp vi phạm lần đầu trong vòng 10 năm)?",
+  "tr_c": [
+   "Bị phạt tù tối đa 1 năm hoặc phạt tiền hình sự tối đa 5 triệu Won",
+   "Bị phạt tù tối đa 2 năm hoặc phạt tiền hình sự tối đa 10 triệu Won",
+   "Bị phạt tù tối đa 3 năm hoặc phạt tiền hình sự tối đa 15 triệu Won",
+   "Bị phạt tù từ 2 năm đến 5 năm hoặc phạt tiền hình sự từ 10 triệu Won đến 20 triệu Won"
+  ]
+ },
+ {
+  "n": 509,
+  "ko_b": "도로교통법 상 진로양보 및 양보운전에 관한 설명이다. ㉠~㉢안에 들어갈 말로 올바르게 짝지어진 것은? - 비탈길 좁은 도로에서 긴급자동차 외의 자동차가 서로 마주 보고 진행하는 경우에는 (㉠) 자동차가 도로의 우측 가장자리로 피하여 진로를 양보하여야 한다. - 교통정리를 하고 있지 아니하는 교차로에서 (㉡)하려고 하는 차의 운전자는 그 교차로에서 직진하거나 (㉢)하려는 다른 차가 있을 때에는 그 차에 진로를 양보하여야 한다.",
+  "ko_c": [
+   "㉠올라가는 ㉡우회전 ㉢좌회전",
+   "㉠올라가는 ㉡좌회전 ㉢우회전",
+   "㉠내려가는 ㉡좌회전 ㉢우회전",
+   "㉠내려가는 ㉡우회전 ㉢좌회전"
+  ],
+  "a": "2",
+  "tr_b": "Điều nào sau đây đúng về việc nhường đường và lái xe nhường đường, theo quy định của Luật Giao thông Đường bộ? Hãy chọn cặp từ phù hợp để điền vào các chỗ trống ㉠~㉢. - Trên đường dốc hẹp, khi các phương tiện không phải là xe khẩn cấp gặp nhau từ hai hướng đối diện, thì xe (㉠) phải tránh sang lề đường bên phải để nhường đường. - Tại ngã tư không có điều tiết giao thông, người lái xe muốn (㉡) phải nhường đường cho xe khác đang đi thẳng hoặc muốn (㉢) tại ngã tư đó.",
+  "tr_c": [
+   "㉠đi lên ㉡rẽ phải ㉢rẽ trái",
+   "㉠đi lên ㉡rẽ trái ㉢rẽ phải",
+   "㉠đi xuống ㉡rẽ trái ㉢rẽ phải",
+   "㉠đi xuống ㉡rẽ phải ㉢rẽ trái"
+  ]
+ },
+ {
+  "n": 510,
+  "ko_b": "도로교통법령상 연습운전면허 소지자가 혈중알코올농도 (   )퍼센트 이상을 넘어서 운전한 때 연습운전면허를 취소한 다. (   )안에 기준으로 맞는 것은?",
+  "ko_c": [
+   "0.03",
+   "0.05",
+   "0.08",
+   "0.10"
+  ],
+  "a": "1",
+  "tr_b": "Khi người có giấy phép tập lái điều khiển xe trong tình trạng vượt quá ( ) % nồng độ cồn trong máu sẽ bị hủy giấy phép tập lái này theo Pháp lệnh Giao thông đường bộ. Tiêu chuẩn nào sau đây đúng trong ( )?",
+  "tr_c": [
+   "0,03",
+   "0,05",
+   "0,08",
+   "0,10"
+  ]
+ },
+ {
+  "n": 511,
+  "ko_b": "도로교통법령상 운전자가 단속 경찰공무원 등에 대한 폭행을 하여 형사 입건된 때 처분으로 맞는 것은?",
+  "ko_c": [
+   "벌점 40점을 부과한다.",
+   "벌점 100점을 부과한다.",
+   "운전면허를 취소 처분한다.",
+   "즉결심판을 청구한다."
+  ],
+  "a": "3",
+  "tr_b": "Biện pháp xử lý nào đúng về người lái xe bị kết án hình sự do bạo hành cảnh sát thi hành công vụ theo Pháp  lệnh Giao thông đường bộ?",
+  "tr_c": [
+   "40 điểm phạt",
+   "100 điểm phạt",
+   "Tước bằng lái xe",
+   "Đệ trình phán quyết rút gọn"
+  ]
+ },
+ {
+  "n": 512,
+  "ko_b": "도로교통법령상 인적 피해 있는 교통사고를 야기하고 도주한 차량의 운전자를 검거하거나 신고하여 검거하게 한 운 전자(교통사고의 피해자가 아닌 경우)에게 검거 또는 신고할 때 마다 (    )의 특혜점수를 부여한다. (    )에 맞는 것은?",
+  "ko_c": [
+   "10점",
+   "20점",
+   "30점",
+   "40점"
+  ],
+  "a": "4",
+  "tr_b": "Tặng ( ) điểm đặc biệt cho người lái xe bắt được hoặc khai báo bắt được người lái xe gây tai nạn làm thiệt hại về người rồi bỏ trốn (trường hợp không phải là người bị nạn trong tai nạn giao thông) theo Pháp lệnh Giao thông đường bộ.",
+  "tr_c": [
+   "10 điểm",
+   "20 điểm",
+   "30 điểm",
+   "40 điểm"
+  ]
+ },
+ {
+  "n": 513,
+  "ko_b": "도로교통법령상 승용자동차 운전자에 대한 위반행위별 범칙금이 틀린 것은?",
+  "ko_c": [
+   "속도 위반(매시 60킬로미터 초과)의 경우 12만 원",
+   "신호 위반의 경우 6만 원",
+   "중앙선침범의 경우 6만 원",
+   "앞지르기 금지 시기·장소 위반의 경우 5만 원"
+  ],
+  "a": "4",
+  "tr_b": "Khoản tiền phạt nào sau đây không đúng với hành vi vi phạm của người lái xe ô tô theo Pháp lệnh Giao  thông đường bộ?",
+  "tr_c": [
+   "Phạt 120.000 Won khi vi phạm tốc độ (vượt quá 60 km/giờ)",
+   "Phạt 60.000 Won khi vi phạm tín hiệu đèn giao thông",
+   "Phạt 60.000 Won khi lấn vạch phân cách",
+   "Phạt 50.000 won khi vi phạm thời gian, địa điểm cấm vượt"
+  ]
+ },
+ {
+  "n": 514,
+  "ko_b": "도로교통법령상 화재진압용 연결송수관 설비의 송수구로부터 5미터 이내 승용자동차를 정차한 경우 범칙금은?(안전표 지 미설치)",
+  "ko_c": [
+   "4만 원",
+   "3만 원",
+   "2만 원",
+   "처벌되지 않는다."
+  ],
+  "a": "1",
+  "tr_b": "Theo Pháp lệnh Giao thông đường bộ, tiền phạt trong trường hợp dừng xe ô tô con trong phạm vi 5m từ đường ống dẫn nước của thiết bị ống dẫn nước liên kết dùng để chữa cháy là bao nhiêu? (Không lắp đặt biển cảnh báo an toàn)",
+  "tr_c": [
+   "40.000 Won",
+   "30.000 Won",
+   "20.000 Won",
+   "Không bị xử phạt"
+  ]
+ },
+ {
+  "n": 515,
+  "ko_b": "도로교통법상 벌점 부과기준이 다른 위반행위 하나는?",
+  "ko_c": [
+   "승객의 차내 소란행위 방치운전",
+   "철길건널목 통과방법 위반",
+   "고속도로 갓길 통행 위반",
+   "운전면허증 등의 제시의무위반"
+  ],
+  "a": "1",
+  "tr_b": "Hành vi vi phạm nào sau đây có mức điểm phạt khác với các hành vi còn lại theo Luật Giao thông đường bộ?",
+  "tr_c": [
+   "Lái xe bỏ qua hành vi gây ồn ào trong xe của hành khách",
+   "Vi phạm cách vượt qua đường giao cắt với đường sắt",
+   "Vi phạm do chạy vào làn đường phụ của đường cao tốc",
+   "Vi phạm nghĩa vụ xuất trình bằng lái xe, v.v."
+  ]
+ },
+ {
+  "n": 516,
+  "ko_b": "도로교통법령상 즉결심판이 청구된 운전자가 즉결심판의 선고 전까지 통고받은 범칙금액에 (    )을 더한 금액을  내고 납부를 증명하는 서류를 제출하면 경찰서장은 운전자에 대한 즉결심판 청구를 취소하여야 한다. (   )안에 맞는 것은?",
+  "ko_c": [
+   "100분의 20",
+   "100분의 30",
+   "100분의 50",
+   "100분의 70"
+  ],
+  "a": "3",
+  "tr_b": "Theo Pháp lệnh Giao thông đường bộ, trước khi có phán quyết rút gọn, nếu người lái xe trình được hồ sơ chứng minh đã nộp thêm ( ) khoản tiền phạt được thông báo thì Cảnh sát trưởng phải hủy đề nghị phán quyết rút gọn đối với người lái xe.",
+  "tr_c": [
+   "20%",
+   "30%",
+   "50%",
+   "70%"
+  ]
+ },
+ {
+  "n": 517,
+  "ko_b": "도로교통법령상 술에 취한 상태에 있다고 인정할만한 상당한 이유가 있는 자동차 운전자가 경찰공무원의 정당한 음주 측정 요구에 불응한 경우 처벌기준으로 맞는 것은? (10년 이내 1회 위반한 경우)",
+  "ko_c": [
+   "1년 이상 2년 이하의 징역이나 500만 원 이하의 벌금",
+   "1년 이상 3년 이하의 징역이나 1천만 원 이하의 벌금",
+   "1년 이상 4년 이하의 징역이나 500만 원 이상 1천만 원 이하의 벌금",
+   "1년 이상 5년 이하의 징역이나 500만 원 이상 2천만 원 이하의 벌금"
+  ],
+  "a": "4",
+  "tr_b": "Nội dung nào đúng với tiêu chuẩn xử phạt người lái xe ô tô có lý do chính đáng để công nhận là đang trong trạng thái say rượu nhưng không tuân thủ yêu cầu đo nồng độ cồn chính đáng của cảnh sát theo Pháp lệnh Giao thông đường bộ (Trường hợp vi phạm lần đầu trong vòng 10 năm)?",
+  "tr_c": [
+   "Phạt tù từ 1 năm đến 2 năm hoặc phạt tiền hình sự tối đa 5 triệu Won",
+   "Phạt tù từ 1 năm đến 3 năm hoặc phạt tiền hình sự tối đa 10 triệu Won",
+   "Phạt tù từ 1 năm đến 4 năm hoặc phạt tiền hình sự từ 5 triệu Won đến 10 triệu Won",
+   "Phạt tù từ 1 năm đến 5 năm hoặc phạt tiền hình sự từ 5 triệu Won đến 20 triệu Won"
+  ]
+ },
+ {
+  "n": 518,
+  "ko_b": "자동차 번호판을 가리고 자동차를 운행한 경우의 벌칙으로 맞는 것은?",
+  "ko_c": [
+   "1년 이하의 징역 또는 1,000만원 이하의 벌금",
+   "1년 이하의 징역 또는 2,000만원 이하의 벌금",
+   "2년 이하의 징역 또는 1,000만원 이하의 벌금",
+   "2년 이하의 징역 또는 2,000만원 이하의 벌금"
+  ],
+  "a": "1",
+  "tr_b": "Mức xử phạt khi điều khiển xe ô tô che biển số?",
+  "tr_c": [
+   "Phạt tù tối đa 1 năm hoặc phạt tiền hình sự tối đa 10 triệu won",
+   "Phạt tù tối đa 1 năm hoặc phạt tiền hình sự tối đa 20 triệu won",
+   "Phạt tù tối đa 2 năm hoặc phạt tiền hình sự tối đa 10 triệu won",
+   "Phạt tù tối đa 2 năm hoặc phạt tiền hình sự tối đa 20 triệu won"
+  ]
+ },
+ {
+  "n": 519,
+  "ko_b": "도로교통법령상 자동차 운전자가 고속도로에서 자동차 내에 고장자동차의 표지를 비치하지 않고 운행하였다. 어떻게  되는가?",
+  "ko_c": [
+   "2만 원의 과태료가 부과된다.",
+   "3만 원의 범칙금으로 통고 처분된다.",
+   "30만 원 이하의 벌금으로 처벌된다.",
+   "아무런 처벌이나 처분되지 않는다."
+  ],
+  "a": "1",
+  "tr_b": "Người lái xe ô tô đi trên đường cao tốc mà không để biển cảnh báo hỏng xe trong ô tô thì sẽ bị xử phạt như  thế nào theo Pháp lệnh Giao thông đường bộ?",
+  "tr_c": [
+   "Bị phạt tiền hành chính 20.000 Won.",
+   "Bị xử phạt gửi giấy báo và nộp tiền phạt vi phạm giao thông 30.000 won.",
+   "Bị phạt tiền hình sự tối đa 30.000 Won.",
+   "Hoàn toàn không bị xử phạt hay xử lý gì."
+  ]
+ },
+ {
+  "n": 520,
+  "ko_b": "도로교통법령상 고속도로에서 승용자동차 운전자의 과속행위에 대한 범칙금 기준으로 맞는 것은?",
+  "ko_c": [
+   "제한속도기준 시속 60킬로미터 초과 80킬로미터 이하 – 범칙금 12만 원",
+   "제한속도기준 시속 40킬로미터 초과 60킬로미터 이하 – 범칙금 8만 원",
+   "제한속도기준 시속 20킬로미터 초과 40킬로미터 이하 – 범칙금 5만 원",
+   "제한속도기준 시속 20킬로미터 이하 – 범칙금 2만 원"
+  ],
+  "a": "1",
+  "tr_b": "Mức phạt nào áp dụng với người lái xe ô tô con chạy quá tốc độ cho phép trên đường cao tốc theo Pháp  lệnh Giao thông đường bộ",
+  "tr_c": [
+   "Vượt quá từ 60 km/giờ đến 80 km/giờ – Phạt tiền vi phạm giao thông 120.000 Won",
+   "Vượt quá từ 40 km/giờ đến 60 km/giờ – Phạt tiền vi phạm giao thông 80.000 Won",
+   "Vượt quá từ 20 km/giờ đến 40 km/giờ – Phạt tiền vi phạm giao thông 50.000 Won",
+   "Vượt quá 20 km/giờ trở xuống – Phạt tiền vi phạm giao thông 20.000 Won"
+  ]
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); $d = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/212_choices_vn.json' | ConvertFrom-Json; "'$d | Where-Object { $_.n -ge 495 -and $_.n -le 503 } | ConvertTo-Json -Depth 8' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 621ms:
+[
+    {
+        "n":  495,
+        "ko_b":  "도로교통법령상 운전면허 취소 사유에 해당하는 것은?",
+        "ko_c":  [
+                     "정기 적성검사 기간 만료 다음 날부터 적성검사를 받지 아니하고 6개월을 초과한 경우",
+                     "운전자가 단속 공무원(경찰공무원, 시･군･구 공무원)을 폭행하여 불구속 형사 입건된 경우",
+                     "자동차 등록 후 자동차 등록번호판을 부착하지 않고 운전한 경우",
+                     "제2종 보통면허를 갱신하지 않고 2년을 초과한 경우"
+                 ],
+        "a":  "2",
+        "tr_b":  "Lý do đúng của việc tước bằng lái xe theo Pháp lệnh Giao thông đường bộ là gì?",
+        "tr_c":  [
+                     "Lái xe không tiến hành kiểm tra xe theo định kỳ, quá hạn 6 tháng kể từ ngày hết hạn kiểm tra.",
+                     "Lái xe đang bị khởi tố tại ngoại do có hành vi bạo lực chống đối công chức thi hành nhiệm vụ (cảnh sát, công chức  quận-huyện-thành phố).",
+                     "Lái xe đã đăng ký xe nhưng điều khiển xe không gắn biển số xe.",
+                     "Lái xe không đổi mới bằng lái phổ thông hạng 2, quá hạn 2 năm."
+                 ]
+    },
+    {
+        "n":  496,
+        "ko_b":  "도로교통법령상 범칙금 납부 통고서를 받은 사람이 1차 납부 기간 경과 시 20일 이내 납부해야 할 금액으로 맞는  것은?",
+        "ko_c":  [
+                     "통고 받은 범칙금에 100분의 10을 더한 금액",
+                     "통고 받은 범칙금에 100분의 20을 더한 금액",
+                     "통고 받은 범칙금에 100분의 30을 더한 금액",
+                     "통고 받은 범칙금에 100분의 40을 더한 금액"
+                 ],
+        "a":  "2",
+        "tr_b":  "Theo Pháp lệnh Giao thông đường bộ, người nhận Giấy báo nộp phạt nhưng để quá thời hạn nộp phạt lần 1  thì phải nộp phạt trong vòng 20 ngày với số tiền là bao nhiêu?",
+        "tr_c":  [
+                     "Phải nộp thêm 10% tiền phạt nộp chậm.",
+                     "Phải nộp thêm 20% tiền phạt nộp chậm.",
+                     "Phải nộp thêm 30% tiền phạt nộp chậm.",
+                     "Phải nộp thêm 40% tiền phạt nộp chậm."
+                 ]
+    },
+    {
+        "n":  497,
+        "ko_b":  "도로교통법령상 누산 점수 초과로 인한 운전면허 취소 기준으로 옳은 것은?",
+        "ko_c":  [
+                     "1년간 100점 이상",
+                     "2년간 191점 이상",
+                     "3년간 271점 이상",
+                     "5년간 301점 이상"
+                 ],
+        "a":  "3",
+        "tr_b":  "Điểm phạt vượt quá bao nhiêu thì bị tước bằng lái xe theo Pháp lệnh Giao thông đường bộ?",
+        "tr_c":  [
+                     "Từ 100 điểm phạt trở lên trong 1 năm",
+                     "Từ 191 điểm phạt trở lên trong 2 năm",
+                     "Từ 271 điểm phạt trở lên trong 3 năm",
+                     "Từ 301 điểm phạt trở lên trong 5 năm"
+                 ]
+    },
+    {
+        "n":  498,
+        "ko_b":  "도로교통법령상 교통사고 결과에 따른 벌점 기준으로 맞는 것은?",
+        "ko_c":  [
+                     "행정 처분을 받을 운전자 본인의 인적 피해에 대해서도 인적 피해 교통사고 구분에 따라 벌점을 부과한다.",
+                     "자동차 등 대 사람 교통사고의 경우 쌍방 과실인 때에는 벌점을 부과하지 않는다.",
+                     "교통사고 발생 원인이 불가항력이거나 피해자의 명백한 과실인 때에는 벌점을 2분의 1로 감경한다.",
+                     "자동차 등 대 자동차 등 교통사고의 경우에는 그 사고 원인 중 중한 위반 행위를 한 운전자에게만 벌점을 부과한다."
+                 ],
+        "a":  "4",
+        "tr_b":  "Nội dung nào đúng về chuẩn điểm phạt tùy theo hậu quả tai nạn giao thông theo Pháp lệnh Giao thông  đường bộ?",
+        "tr_c":  [
+                     "Người lái xe khi gây ra tai nạn bị xử phạt hành chính nhưng bản thân cũng bị thương thì cũng bị tính điểm phạt theo phân loại tai nạn giao thông gây thương tích về người.",
+                     "Trường hợp tai nạn giao thông giữa xe và người nếu là do lỗi của hai bên thì không bị tính điểm phạt.",
+                     "Khi lý do xảy ra tai nạn là bất khả kháng hay là do lỗi rõ ràng của nạn nhân thì giảm nhẹ một nửa điểm phạt.",
+                     "Trong tai nạn giao thông giữa xe với xe, chỉ tính điểm phạt cho người lái xe có vi phạm nghiêm trọng trong các  nguyên nhân gây ra tai nạn."
+                 ]
+    },
+    {
+        "n":  499,
+        "ko_b":  "도로교통법령상 영상기록매체에 의해 입증되는 주차위반에 대한 과태료의 설명으로 알맞은 것은?",
+        "ko_c":  [
+                     "승용차의 소유자는 3만 원의 과태료를 내야 한다.",
+                     "승합차의 소유자는 7만 원의 과태료를 내야 한다.",
+                     "기간 내에 과태료를 내지 않아도 불이익은 없다.",
+                     "같은 장소에서 2시간 이상 주차 위반을 하는 경우 과태료가 가중된다."
+                 ],
+        "a":  "4",
+        "tr_b":  "Giải thích nào đúng về tiền phạt do vi phạm đỗ xe được ghi lại bằng thiết bị ghi hình theo Pháp lệnh Giao  thông đường bộ?",
+        "tr_c":  [
+                     "Chủ sở hữu xe ô tô con phải nộp phạt hành chính 30.000 Won.",
+                     "Chủ sở hữu xe khách phải nộp phạt hành chính 70.000 Won.",
+                     "Không nộp tiền phạt hành chính đúng hạn cũng không bị bất lợi gì.",
+                     "Trường hợp vi phạm đỗ xe do đỗ từ 2 tiếng trở lên tại cùng một địa điểm thì tiền phạt hành chính sẽ bị tăng nặng."
+                 ]
+    },
+    {
+        "n":  500,
+        "ko_b":  "다음 중 교통사고를 일으킨 운전자가 종합보험이나 공제조합에 가입되어 있어 교통사고처리특례법의 특례가 적용되는  경우로 맞는 것은?",
+        "ko_c":  [
+                     "안전운전 의무위반으로 자동차를 손괴하고 경상의 교통사고를 낸 경우",
+                     "교통사고로 사람을 사망에 이르게 한 경우",
+                     "교통사고를 야기한 후 부상자 구호를 하지 않은 채 도주한 경우",
+                     "신호 위반으로 경상의 교통사고를 일으킨 경우"
+                 ],
+        "a":  "1",
+        "tr_b":  "Trường hợp nào người lái xe gây tai nạn giao thông có tham gia bảo hiểm tổng hợp hay thuộc Hiệp hội  Tương trợ được áp dụng điều lệ đặc biệt của Luật đặc biệt về Xử lý tai nạn giao thông?",
+        "tr_c":  [
+                     "Vi phạm nghĩa vụ lái xe an toàn, làm hư hại xe và gây ra tai nạn nhẹ.",
+                     "Gây tai nạn giao thông dẫn đến tử vong cho người.",
+                     "Bỏ trốn sau khi gây ra tai nạn giao thông mà không cứu người bị thương.",
+                     "Gây ra tai nạn giao thông nhẹ do vi phạm tín hiệu."
+                 ]
+    },
+    {
+        "n":  501,
+        "ko_b":  "도로교통법령상 도로에서 동호인 7명이 4대의 차량에 나누어 타고 공동으로 다른 사람에게 위해를 끼쳐 형사입건 되 었다. 처벌기준으로 틀린 것은? (개인형 이동장치는 제외)",
+        "ko_c":  [
+                     "2년 이하의 징역이나 500만 원 이하의 벌금",
+                     "적발 즉시 면허정지",
+                     "구속된 경우 면허취소",
+                     "형사입건된 경우 벌점 40점"
+                 ],
+        "a":  "2",
+        "tr_b":  "Bảy người cùng đi trên 4 chiếc xe trên đường cùng có hành vi gây nguy hiểm cho người khác và đã bị xử lý hình sự. Mức xử phạt nào không đúng theo Pháp lệnh Giao thông đường bộ? (Trừ thiết bị di chuyển cá nhân)",
+        "tr_c":  [
+                     "Phạt tù tối đa 2 năm hoặc phạt tiền hình sự tối đa 5 triệu Won",
+                     "Đình chỉ bằng lái ngay khi phát hiện vi phạm",
+                     "Hủy bằng lái trong trường hợp bị giam giữ",
+                     "Trừ 40 điểm trong trường hợp bị xử lý hình sự"
+                 ]
+    },
+    {
+        "n":  502,
+        "ko_b":  "도로교통법령상 자동차 운전자가 난폭운전으로 형사입건되었다. 운전면허 행정처분은?",
+        "ko_c":  [
+                     "면허 취소",
+                     "면허 정지 100일",
+                     "면허 정지 60일",
+                     "면허 정지 40일"
+                 ],
+        "a":  "4",
+        "tr_b":  "Người lái xe đã bị cáo buộc hình sự vì lái xe ẩu theo Pháp lệnh Giao thông đường bộ. Xử phạt hành chính đối  với giấy phép lái xe trong trường hợp này là gì?",
+        "tr_c":  [
+                     "Hủy giấy phép",
+                     "Tạm đình chỉ giấy phép 100 ngày",
+                     "Tạm đình chỉ giấy phép 60 ngày",
+                     "Tạm đình chỉ giấy phép 40 ngày"
+                 ]
+    },
+    {
+        "n":  503,
+        "ko_b":  "도로교통법령상 술에 취한 상태에서 자전거를 운전한 경우 어떻게 되는가?",
+        "ko_c":  [
+                     "처벌하지 않는다.",
+                     "범칙금 3만 원의 통고처분한다.",
+                     "과태료 4만 원을 부과한다.",
+                     "10만 원 이하의 벌금 또는 구류에 처한다."
+                 ],
+        "a":  "2",
+        "tr_b":  "Trường hợp đi xe đạp trong trạng thái say rượu bị xử lý như thế nào theo Pháp lệnh Giao thông đường bộ?",
+        "tr_c":  [
+                     "Không bị xử phạt.",
+                     "Bị gửi giấy báo phạt tiền vi phạm giao thông với số tiền phạt là 30.000 Won.",
+                     "Xử phạt hành chính 40.000 Won.",
+                     "Phạt tiền hình sự tối đa 100.000 Won hoặc tạm giam."
+                 ]
+    }
+]
+
+2026-10-10T13:29:23.533517Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `base_instructions` at line 139 column 5
+codex
+[{"n":482,"field":"c[1]","severity":"major","issue":"‘심폐소생술’을 인공호흡만을 뜻하는 표현으로 번역해 응급조치의 범위를 축소했다.","suggestion":"Kiểm tra xem người bị thương còn ý thức hay không và lập tức tiến hành hồi sức tim phổi (CPR)."},{"n":493,"field":"c[4]","severity":"major","issue":"‘차량 바퀴의 진행방향’을 바퀴의 ‘회전 방향’으로 오역해 촬영해야 할 증거를 잘못 안내한다.","suggestion":"Đánh dấu hướng di chuyển của bánh xe bằng sơn xịt hoặc chụp ảnh lại."},{"n":495,"field":"c[1]","severity":"major","issue":"운전자의 ‘정기 적성검사’를 차량 정기검사로 오역했다.","suggestion":"Không thực hiện kiểm tra năng lực lái xe định kỳ trong hơn 6 tháng kể từ ngày hết thời hạn kiểm tra."},{"n":508,"field":"b","severity":"major","issue":"혈중알코올농도 범위의 상한인 ‘0.08% 미만’을 단순 ‘0.08%까지’처럼 번역해 0.08% 포함 여부가 불명확하다.","suggestion":"Câu nào đúng với mức xử phạt người lái xe ô tô con trong tình trạng say rượu với nồng độ cồn trong máu từ 0,03% trở lên nhưng dưới 0,08% theo Pháp lệnh Giao thông đường bộ? (Trường hợp vi phạm một lần trong vòng 10 năm)"},{"n":510,"field":"b","severity":"major","issue":"‘0.03% 이상’을 ‘초과(vượt quá)’로 번역해 정확히 0.03%인 경우를 제외하는 의미가 되었다.","suggestion":"Theo Pháp lệnh Giao thông đường bộ, giấy phép tập lái sẽ bị hủy nếu người có giấy phép này lái xe với nồng độ cồn trong máu từ ( )% trở lên. Tiêu chuẩn đúng để điền vào ( ) là gì?"},{"n":511,"field":"b","severity":"major","issue":"‘형사 입건’을 형사 유죄판결을 받은 상태로 오역해 처분이 적용되는 법적 단계를 바꾸었다.","suggestion":"Theo Pháp lệnh Giao thông đường bộ, biện pháp xử lý nào đúng khi người lái xe bị khởi tố hình sự vì hành hung cảnh sát đang làm nhiệm vụ kiểm soát?"},{"n":519,"field":"c[3]","severity":"critical","issue":"벌금 ‘30만 원’을 ‘30,000원’으로 번역해 금액이 10분의 1로 잘못됐다.","suggestion":"Bị phạt tiền hình sự tối đa 300.000 Won."}]
+tokens used
+42,401
+[{"n":482,"field":"c[1]","severity":"major","issue":"‘심폐소생술’을 인공호흡만을 뜻하는 표현으로 번역해 응급조치의 범위를 축소했다.","suggestion":"Kiểm tra xem người bị thương còn ý thức hay không và lập tức tiến hành hồi sức tim phổi (CPR)."},{"n":493,"field":"c[4]","severity":"major","issue":"‘차량 바퀴의 진행방향’을 바퀴의 ‘회전 방향’으로 오역해 촬영해야 할 증거를 잘못 안내한다.","suggestion":"Đánh dấu hướng di chuyển của bánh xe bằng sơn xịt hoặc chụp ảnh lại."},{"n":495,"field":"c[1]","severity":"major","issue":"운전자의 ‘정기 적성검사’를 차량 정기검사로 오역했다.","suggestion":"Không thực hiện kiểm tra năng lực lái xe định kỳ trong hơn 6 tháng kể từ ngày hết thời hạn kiểm tra."},{"n":508,"field":"b","severity":"major","issue":"혈중알코올농도 범위의 상한인 ‘0.08% 미만’을 단순 ‘0.08%까지’처럼 번역해 0.08% 포함 여부가 불명확하다.","suggestion":"Câu nào đúng với mức xử phạt người lái xe ô tô con trong tình trạng say rượu với nồng độ cồn trong máu từ 0,03% trở lên nhưng dưới 0,08% theo Pháp lệnh Giao thông đường bộ? (Trường hợp vi phạm một lần trong vòng 10 năm)"},{"n":510,"field":"b","severity":"major","issue":"‘0.03% 이상’을 ‘초과(vượt quá)’로 번역해 정확히 0.03%인 경우를 제외하는 의미가 되었다.","suggestion":"Theo Pháp lệnh Giao thông đường bộ, giấy phép tập lái sẽ bị hủy nếu người có giấy phép này lái xe với nồng độ cồn trong máu từ ( )% trở lên. Tiêu chuẩn đúng để điền vào ( ) là gì?"},{"n":511,"field":"b","severity":"major","issue":"‘형사 입건’을 형사 유죄판결을 받은 상태로 오역해 처분이 적용되는 법적 단계를 바꾸었다.","suggestion":"Theo Pháp lệnh Giao thông đường bộ, biện pháp xử lý nào đúng khi người lái xe bị khởi tố hình sự vì hành hung cảnh sát đang làm nhiệm vụ kiểm soát?"},{"n":519,"field":"c[3]","severity":"critical","issue":"벌금 ‘30만 원’을 ‘30,000원’으로 번역해 금액이 10분의 1로 잘못됐다.","suggestion":"Bị phạt tiền hình sự tối đa 300.000 Won."}]
