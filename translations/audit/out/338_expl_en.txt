@@ -1,0 +1,157 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12851-7afd-7f21-871f-42137f624e75
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/338_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/338_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 505ms:
+[
+ {
+  "n": 766,
+  "ko_e": "?????뚮갑湲곕낯踰???1議곗쓽2(?뚮갑?먮룞李??꾩슜援ъ뿭 ?? ???뚮갑湲곕낯踰??쒗뻾????議곗쓽13(?뚮갑?먮룞李??꾩슜援ъ뿭???ㅼ튂 湲곗?쨌諛⑸쾿) ???뚮갑湲곕낯踰??쒗뻾????9議?怨쇳깭猷?遺怨쇨린以) 蹂꾪몴 3 ???뚮갑湲곕낯踰??쒗뻾????議곗쓽14(?꾩슜援ъ뿭 諛⑺빐?됱쐞??湲곗?)",
+  "tr_e": "(1),(2) Article 21-2 of the Framework Act on Firefighting Services (Exclusive Zones for Fire Trucks, etc.). (3) Article 7-13 of the Enforcement Decree of the Framework Act on Firefighting Services (Standards and Methods for Installing Exclusive Zones for Fire Trucks). (4) Article 19 of the Enforcement Decree of the Framework Act on Firefighting Services (Criteria for Imposing Administrative Fines), Table 3. (5) Article 7-14 of the Enforcement Decree of the Framework Act on Firefighting Services (Standards for Acts Obstructing Exclusive Zones)."
+ },
+ {
+  "n": 767,
+  "ko_e": "?뚮갑湲곕낯踰???5議?媛뺤젣泥섎텇 ?? ???뚮갑蹂몃??? ?뚮갑?쒖옣 ?먮뒗 ?뚮갑??μ? ?щ엺??援ъ텧?섍굅??遺덉씠 踰덉???寃껋쓣 留됯린 ?꾪븯??湲닿툒?섎떎怨??몄젙???뚯뿉??????뿉 ?곕Ⅸ ?뚮갑??곷Ъ ?먮뒗 ?좎? ?몄쓽 ?뚮갑??곷Ъ怨??좎?????섏뿬 ????뿉 ?곕Ⅸ 泥섎텇???????덈떎. ???뚮갑蹂몃??? ?뚮갑?쒖옣 ?먮뒗 ?뚮갑??μ? ?뚮갑?쒕룞???꾪븯??湲닿툒?섍쾶 異쒕룞???뚯뿉???뚮갑?먮룞李⑥쓽 ???됯낵 ?뚮갑?쒕룞??諛⑺빐媛 ?섎뒗 二쇱감 ?먮뒗 ?뺤감??李⑤웾 諛?臾쇨굔 ?깆쓣 ?쒓굅?섍굅???대룞?쒗궗 ???덈떎. ???뚮갑蹂몃??? ?뚮갑?쒖옣 ?먮뒗 ?뚮갑??μ? ????뿉 ?곕Ⅸ ?뚮갑?쒕룞??諛⑺빐媛 ?섎뒗 二쇱감 ?먮뒗 ?뺤감??李⑤웾???쒓굅???대룞???꾪븯??愿??吏諛⑹옄移섎떒泥???愿??湲곌???寃ъ씤李⑤웾怨??몃젰 ?깆뿉 ???吏?먯쓣 ?붿껌?????덇퀬, ?붿껌??諛쏆? 愿??湲곌????μ? ?뺣떦???ъ쑀媛 ?놁쑝硫??댁뿉 ?묒“?섏뿬???쒕떎. ???쒌냽?꾩??щ뒗 ????뿉 ?곕씪 寃ъ씤李⑤웾怨??몃젰 ?깆쓣 吏?먰븳 ?먯뿉寃??쒌냽?꾩쓽 議곕?濡??뺥븯??諛붿뿉 ?곕씪 鍮꾩슜??吏湲됲븷 ???덈떎. ??9議곗쓽2(?먯떎蹂댁긽) ????3. ??5議곗젣2???먮뒗 ????뿉 ?곕Ⅸ 泥섎텇?쇰줈 ?명븯???먯떎???낆? ?? ?ㅻ쭔, 媛숈? 議?????뿉 ?대떦 ?섎뒗 寃쎌슦濡쒖꽌 踰뺣졊???꾨컲?섏뿬 ?뚮갑?먮룞李⑥쓽 ?듯뻾怨??뚮갑?쒕룞??諛⑺빐媛 ??寃쎌슦???쒖쇅?쒕떎",
+  "tr_e": "Article 25 of the Framework Act on Firefighting Services (Compulsory Disposition, etc.). (2) The head of a fire headquarters, the head of a fire station, or a fire captain may, when deemed urgent to rescue a person or prevent the spread of fire, make the disposition under paragraph (1) with respect to fire-fighting objects and land other than those under paragraph (1). (3) The head of a fire headquarters, the head of a fire station, or a fire captain may remove or move vehicles and objects that are parked or stopped and obstruct the passage of fire trucks and firefighting activities when urgently dispatching for firefighting activities. (4) The head of a fire headquarters, the head of a fire station, or a fire captain may request support such as tow vehicles and personnel from relevant agencies, including the competent local government, for the removal or movement of vehicles that are parked or stopped and obstruct firefighting activities under paragraph (3), and the head of a relevant agency that receives the request must cooperate unless there is a legitimate reason not to. (5) A City/Do Governor may pay expenses, as prescribed by the ordinance of the City/Do, to a person who provided tow vehicles and personnel, etc. under paragraph (4). Article 49-2 (Loss Compensation) (1) 3. A person who suffered loss due to a disposition under Article 25 (2) or (3). However, this excludes cases falling under paragraph (3) of the same Article where firefighting activities and the passage of fire trucks were obstructed in violation of statutes."
+ },
+ {
+  "n": 768,
+  "ko_e": "?꾨줈援먰넻踰???0議?湲닿툒?먮룞李⑥뿉 ????밸?) 湲닿툒?먮룞李⑥뿉 ??섏뿬???ㅼ쓬 媛??몄쓽 ?ы빆???곸슜?섏? ?꾨땲?쒕떎. ??留? ???몃?????2?멸퉴吏???ы빆? 湲닿툒?먮룞李?以???議곗젣22?멸?紐⑸????ㅻぉ源뚯????먮룞李⑥? ??듬졊?뱀쑝濡??뺥븯 ??寃쎌같???먮룞李⑥뿉 ??댁꽌留??곸슜?섏? ?꾨땲?쒕떎.",
+  "tr_e": "Article 30 of the Road Traffic Act (Exceptions for Emergency Vehicles). The following matters do not apply to emergency vehicles. However, the matters in subparagraphs 4 through 12 do not apply only to vehicles under items (a) through (c) of Article 2 subparagraph 22 and police vehicles prescribed by Presidential Decree among emergency vehicles."
+ },
+ {
+  "n": 769,
+  "ko_e": "異쒕룞?섎뒗 湲닿툒?먮룞李⑤? 諛쒓껄??寃쎌슦 援먯감濡쒖뿉?쒕뒗 援먯감濡쒕? ?쇳빐???뺤감?섍퀬, ?댁쇅 援ъ뿭? 湲닿툒?먮룞李④? ?곗꽑 ???됲븷 ???덈룄濡?吏꾨줈瑜??묐낫?섎ŉ, 湲닿툒?먮룞李⑤? ?ㅻ뵲瑜닿굅??異붿썡?뱁븯吏 ?딅룄濡??띾룄瑜??믪뿬 吏꾪뻾?섎뒗 寃껋? ?덉쟾??吏 ?딅뒗 ?댁쟾諛⑸쾿?대떎.",
+  "tr_e": "When an emergency vehicle on dispatch is spotted, at an intersection stop clear of the intersection, and in other areas yield the way so that the emergency vehicle can pass first; increasing speed to follow or avoid being overtaken by an emergency vehicle is an unsafe driving method."
+ },
+ {
+  "n": 770,
+  "ko_e": "異쒕룞 以묒씤 湲닿툒?먮룞李⑤? 諛쒓껄?섎㈃ ?꾨줈 醫뚯슦痢≪쑝濡??쇱뼇?섍굅?? 援먯감濡쒖씤 寃쎌슦 援먯감濡쒕? ?쇳빐 吏꾨줈瑜??묐낫?쒕떎.  湲닿툒?먮룞李⑥쓽 吏꾨줈濡?怨꾩냽 二쇳뻾?섍굅???꾪뻾?섏뿬 吏꾪뻾?섎뒗 寃껋? ?꾪뿕?섎ŉ, 諛섎뱶??2李⑤줈 ?곗륫?쇰줈 ?쇱뼇?섏뿬 ?묐낫?? ?꾩슂???녿떎.",
+  "tr_e": "When an emergency vehicle on dispatch is spotted, pull over to the left or right side of the road, or at an intersection avoid the intersection and yield the way. Continuing to drive in the emergency vehicle's path or following behind it is dangerous, and one does not necessarily have to pull over to the right of the second lane to yield."
+ },
+ {
+  "n": 771,
+  "ko_e": "蹂댄뻾?좏샇??以??뱀깋?깊솕???먮㈇???뚯뿉?? 蹂댄뻾?먮뒗 ?〓떒???쒖옉?섏뿬?쒕뒗 ?꾨땲 ?섍퀬, ?〓떒?섍퀬 ?덈뒗 蹂댄뻾?먮뒗 ?좎냽 ?섍쾶 ?〓떒???꾨즺?섍굅??洹??〓떒??以묒??섍퀬 蹂대룄濡??섎룎?꾩????쒕떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴2]).          ?먯쟾嫄곕벑??二쇳뻾?섎뒗 寃쎌슦 ?먯쟾嫄곗＜?됱떊?몃벑???ㅼ튂?섏? ?딆? ?μ냼?먯꽌??李⑤웾?좏샇?깆쓽 吏?쒖뿉 ?곕Ⅸ?? ?먯쟾嫄고슒?⑤룄 ???먯쟾嫄고슒?⑥떊?몃벑???ㅼ튂?섏? ?딆? 寃쎌슦 ?먯쟾嫄곕벑? 蹂댄뻾?좏샇?깆쓽 吏?쒖뿉 ?곕Ⅸ???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴2]).",
+  "tr_e": "When a pedestrian signal is a flashing green, a pedestrian must not begin crossing, and a pedestrian who is crossing must quickly complete the crossing or stop crossing and return to the sidewalk (Table 2 of the Enforcement Rule of the Road Traffic Act). When riding a bicycle, etc., at a place where no bicycle traffic light is installed, one follows the indications of the vehicle signal. Where a bicycle crossing signal is not installed at a bicycle crossing, a bicycle, etc. follows the indications of the pedestrian signal (Table 2 of the Enforcement Rule of the Road Traffic Act)."
+ },
+ {
+  "n": 772,
+  "ko_e": "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉???고쉶?꾩쓣 ?섎젮??寃쎌슦?먮뒗 誘몃━ ?꾨줈???곗륫 媛?μ옄由щ? ?쒗뻾?섎㈃???고쉶?꾪븯?ъ빞 ?쒕떎. ??寃쎌슦 ?고쉶?꾪븯??李⑥쓽 ?댁쟾?먮뒗 ?좏샇???곕씪 ?뺤??섍굅??吏꾪뻾?섎뒗 蹂댄뻾???먮뒗 ?먯쟾嫄곕벑??二쇱쓽?섏뿬???쒕떎(?꾨줈援먰넻踰???5議?????. ?쒖꽌?됤?孃먫죱)?대? ?댁쟾?먭? 李??먮뒗 ?몃㈃?꾩감瑜?利됱떆 ?뺤??쒗궗 ???덈뒗 ?뺣룄???먮┛ ?띾룄濡?吏꾪뻾?섎뒗 寃껋쓣 留먰븳 ???꾨줈援먰넻踰???議???8??. ?닿? 吏??꾨????닿? ?④린 ?꾧퉴吏 紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ??듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?꾩“???띸뀱 ??, 李⑦룺??邕듿퉭??, 誘몃벑(弱양뇠)怨?洹?諛뽰쓽 ?깊솕瑜?耳쒖빞 ?쒕떎(?꾨줈援먰넻踰???7議?????????.",
+  "tr_e": "When a driver of any vehicle intends to turn right at an intersection, the driver must turn right while slowing down along the right edge of the road in advance. In this case, the driver turning right must pay attention to pedestrians or cyclists, etc., who stop or proceed according to the signal (Article 25 (1) of the Road Traffic Act). \"Slowing down (seohaeng)\" means proceeding at a slow speed at which the driver can immediately stop the vehicle or streetcar (Article 2 subparagraph 28 of the Road Traffic Act). From sunset to sunrise, the driver of any vehicle or streetcar must turn on the headlights, clearance lamps, tail lamps, and other lights as prescribed by Presidential Decree (item 1 of Article 37 (1) of the Road Traffic Act)."
+ },
+ {
+  "n": 773,
+  "ko_e": "?먯쟾嫄곕벑???댁쟾?먮뒗 ?먯쟾嫄곕룄濡???5議곗젣1??뿉 ?곕씪 ?먯쟾嫄곕쭔 ?듯뻾?????덈룄濡??ㅼ튂???꾩슜李⑤줈瑜??ы븿?쒕떎. ?댄븯 ??議곗뿉??媛숇떎)媛 ?곕줈 ?덈뒗 怨녹뿉?쒕뒗 洹??먯쟾嫄곕룄濡쒕줈 ?듯뻾?섏뿬???쒕떎(?꾨줈援먰넻踰???3議곗쓽2 ????. ?먯쟾 嫄곕벑???댁쟾?먮뒗 ?먯쟾嫄곕룄濡쒓? ?ㅼ튂?섏? ?꾨땲??怨녹뿉?쒕뒗 ?꾨줈 ?곗륫 媛?μ옄由ъ뿉 遺숈뼱???듯뻾?섏뿬???쒕떎(?꾨줈援??듬쾿 ??3議곗쓽2 ????. ?먯쟾嫄곕벑???댁쟾?먮뒗 ????諛???3議곗젣1??뿉??遺덇뎄?섍퀬 ?대┛?? ?몄씤, ?좎껜?μ븷?몄뿉 ?대떦?섎뒗 寃쎌슦?먮뒗 蹂대룄瑜??듯뻾?????덈떎. ??寃쎌슦 ?먯쟾嫄곕벑???댁쟾?먮뒗 蹂대룄 以묒븰?쇰줈遺??李⑤룄 履??먮뒗 ?덉쟾?쒖?濡?吏?뺣맂 怨녹쑝濡??쒗뻾???ъ빞 ?섎ŉ, 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐媛 ???뚯뿉???쇱떆?뺤??섏뿬???쒕떎(?꾨줈援먰넻踰???3議곗쓽2 ????????. ?먯쟾嫄곕벑???댁쟾?먮뒗 ?먯쟾嫄곕룄濡?諛??뚮룄濡쒕쾿?띿뿉 ?곕Ⅸ ?꾨줈瑜??댁쟾???뚯뿉???됱젙?덉쟾遺?뱀쑝濡??뺥븯???몃챸蹂댄샇 ?κ뎄 瑜?李⑹슜?섏뿬???섎ŉ, ?숈듅?먯뿉寃뚮룄 ?대? 李⑹슜?섎룄濡??섏뿬???쒕떎(?꾨줈援먰넻踰???0議?????. ?먯쟾嫄곕벑???댁쟾?먮뒗 諛ㅼ뿉 ?꾨줈瑜??듯뻾?섎뒗 ?뚯뿉???꾩“?깃낵 誘몃벑??耳쒓굅???쇨킅????諛쒓킅?μ튂瑜?李⑹슜?섏뿬???쒕떎(?꾨줈援먰넻踰???0議?????. 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?꾨줈?먯꽌 ?뺤감???뚯뿉??李⑤룄???ㅻⅨ履?媛?μ옄由ъ뿉 ?뺤감??寃??꾨줈援먰넻踰??쒗뻾????1議?????????.",
+  "tr_e": "Where a bicycle road (including an exclusive lane installed for bicycles only under Article 15 (1); hereinafter the same in this Article) is separately provided, a cyclist, etc. must travel on that bicycle road (Article 13-2 (1) of the Road Traffic Act). Where no bicycle road is installed, a cyclist, etc. must travel hugging the right edge of the road (Article 13-2 (2) of the Road Traffic Act). Notwithstanding paragraph (1) and Article 13 (1), a cyclist, etc. who is a child, an elderly person, or a person with a physical disability may travel on the sidewalk. In this case, the cyclist, etc. must slow down toward the roadway side from the center of the sidewalk or at a place designated by a traffic sign, and must come to a complete stop when it would obstruct pedestrians' passage (Article 13-2 (4) 1 of the Road Traffic Act). When traveling on a bicycle road or a road under the Road Act, a cyclist, etc. must wear the personal protective gear prescribed by Ministry of the Interior and Safety ordinance and must ensure that any passenger also wears it (Article 50 (4) of the Road Traffic Act). When traveling on a road at night, a cyclist, etc. must turn on the headlight and tail lamp or wear a reflective band or other light-emitting device (Article 50 (9) of the Road Traffic Act). When stopping on a road, a driver of any vehicle must stop at the right edge of the roadway (item 1 of Article 11 (1) of the Enforcement Decree of the Road Traffic Act)."
+ },
+ {
+  "n": 774,
+  "ko_e": "?띿뼱珥뚮룄濡쒕룄 ?꾨줈援먰넻踰뺤긽 ?꾨줈???대떦?쒕떎(?꾨줈援먰넻踰???議??????ㅻぉ). ?쒗븳?띾룄 ?쒖?媛 ?녿뜑?쇰룄 ?쇰컲?꾨줈 ??理쒓퀬?띾룄???쒖냽 60 ?щ줈誘명꽣 ?대떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議??????????섎ぉ).",
+  "tr_e": "A rural/fishing-village road is also a road under the Road Traffic Act (item (c) of Article 2 subparagraph 1 of the Road Traffic Act). Even without a speed limit sign, the maximum speed on a general road is 60 kilometers per hour (item (b) of Article 19 (1) 1 of the Enforcement Rule of the Road Traffic Act)."
+ },
+ {
+  "n": 775,
+  "ko_e": "?띿뼱珥뚮룄濡쒕룄 ?꾨줈援먰넻踰뺤긽 ?꾨줈???대떦?쒕떎(?꾨줈援먰넻踰???議??????ㅻぉ). ?쒗븳?띾룄 ?쒖?媛 ?녿뜑?쇰룄 ?쇰컲?꾨줈 ??理쒓퀬?띾룄???쒖냽 60 ?щ줈誘명꽣 ?대떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議??????????섎ぉ). ?띻린怨??댁쟾 以묒뿉???띻린怨? ?뚯쓬???щ?濡??꾩슂??寃쎌슦?먮뒗 寃쎌쓬湲곕? ?ъ슜?섏뿬 ?띻린怨??댁쟾?먯쓽 二쇱쓽瑜??섍린?쒗궗 ???덈떎.",
+  "tr_e": "A rural/fishing-village road is also a road under the Road Traffic Act (item (c) of Article 2 subparagraph 1 of the Road Traffic Act). Even without a speed limit sign, the maximum speed on a general road is 60 kilometers per hour (item (b) of Article 19 (1) 1 of the Enforcement Rule of the Road Traffic Act). Because farm machinery makes loud noise while operating, one may, if necessary, use the horn to draw the attention of the farm machinery operator."
+ },
+ {
+  "n": 776,
+  "ko_e": "?꾨갑???띾룄媛 ?먮┛ 寃쎌슫湲곗? 媛숈? ?띻린怨꾧? ?덈뒗 寃쎌슦 ?띾룄媛 ?먮룞李⑥뿉 鍮꾪빐 ?먮━誘濡?寃쎌슫湲곗쓽 ?곹깭瑜????댄렣  ?댁쟾?섏뿬???쒕떎. 誘몃━ ?덉긽?섍퀬 湲됱감濡?蹂寃쏀븯???댁쟾?섍굅???욎?瑜닿린?섎젮??寃껋? ?꾪뿕?섎떎.",
+  "tr_e": "When there is slow farm machinery such as a power tiller ahead, its speed is slow compared with a car, so one must drive while carefully watching the state of the power tiller. Anticipating in advance and making a sudden lane change or attempting to overtake is dangerous."
+ },
+ {
+  "n": 777,
+  "ko_e": "?꾨갑???띾룄媛 ?먮┛ 寃쎌슫湲곗? 媛숈? ?띻린怨꾧? ?덈뒗 寃쎌슦 ?띾룄媛 ?먮룞李⑥뿉 鍮꾪빐 ?먮━誘濡?寃쎌슫湲곗쓽 ?곹깭瑜????댄렣  ?댁쟾?섏뿬???쒕떎. 誘몃━ ?덉긽?섍퀬 ?댁쟾?섍굅???욎?瑜닿린?섎젮??寃껋? ?꾪뿕?섎떎. 寃쎌슫湲??댁쟾?먭? ?먯쭞?쇰줈 ?욎?瑜닿린 瑜??붿껌?쒕떎 ?섎뜑?쇰룄 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?댁꽌?????쒕떎. ?곗륫 怨듦컙???듯빐 ?욎?瑜닿린?섎뒗 寃껋? ?욎?瑜닿린?? ?щ컮瑜?諛⑸쾿???꾨땲??",
+  "tr_e": "When there is slow farm machinery such as a power tiller ahead, its speed is slow compared with a car, so one must drive while carefully watching the state of the power tiller. Anticipating in advance and driving or attempting to overtake is dangerous. Even if the power tiller operator gestures with his hand to request overtaking, one must not overtake by crossing the center line. Overtaking through the space on the right is not a proper method of overtaking."
+ },
+ {
+  "n": 778,
+  "ko_e": "?꾨갑???띾룄媛 ?먮┛ 寃쎌슫湲곕굹 ?몃옓?곗? 媛숈? ?띻린怨꾧? ?덈뒗 寃쎌슦 ?띾룄媛 ?먮룞李⑥뿉 鍮꾪빐 ?먮━誘濡??띻린怨꾩쓽 吏꾪뻾  ?곹깭瑜????댄렣 ?댁쟾?섏뿬???쒕떎. 誘몃━ ?덉긽?섍퀬 湲됱쭊濡?蹂寃쏀븯嫄곕굹 ?욎?瑜닿린?섎젮??寃껋? ?꾪뿕?섎떎. ?욎?瑜닿린?? ?꾨갑李⑤웾??醫뚯륫?쇰줈 吏꾪뻾?댁빞 ?섎ŉ, ?좏꽩??吏?쒗몴吏???곕씪 ?쒓린瑜?以?섑빐???쒕떎.",
+  "tr_e": "When there is slow farm machinery such as a power tiller or tractor ahead, its speed is slow compared with a car, so one must drive while carefully watching the progress of the farm machinery. Anticipating in advance and making a sudden course change or attempting to overtake is dangerous. Overtaking must be done on the left side of the vehicle ahead, and when making a U-turn one must observe the timing according to the instruction sign."
+ },
+ {
+  "n": 779,
+  "ko_e": "?꾨갑???띾룄媛 ?먮┛ 寃쎌슫湲곕굹 ?몃옓?곗? 媛숈? ?띻린怨꾧? ?덈뒗 寃쎌슦 ?띾룄媛 ?먮룞李⑥뿉 鍮꾪빐 ?먮━誘濡??띻린怨꾩쓽 吏꾪뻾  ?곹깭瑜????댄렣 ?댁쟾?섏뿬???쒕떎. 誘몃━ ?덉긽?섍퀬 ?댁쟾?섍굅???욎?瑜닿린?섎젮??寃껋? ?꾪뿕?섎떎. 以묒븰?좎쓣 ?섏뼱 ?욎? 瑜닿린?섎뒗 寃껋? ?꾪뿕?섎?濡??덉쟾???댁쟾諛⑸쾿???꾨땲??",
+  "tr_e": "When there is slow farm machinery such as a power tiller or tractor ahead, its speed is slow compared with a car, so one must drive while carefully watching the progress of the farm machinery. Anticipating in advance and driving or attempting to overtake is dangerous. Overtaking by crossing the center line is dangerous and is not a safe driving method."
+ },
+ {
+  "n": 780,
+  "ko_e": "蹂댄뻾蹂댁“???섏옄李⑤뒗 蹂댄뻾?먮줈 媛꾩＜?섍퀬 ?덉쑝??蹂대룄瑜??댁슜?섏? ?딅뒗 寃쎌슦媛 留롮쑝誘濡?蹂댄뻾蹂댁“???섏옄李⑤? 諛쒓껄 ??寃쎌슦 蹂댄뻾?먮? 蹂댄샇?섎뒗 寃껉낵 媛숈씠 ?덉쟾???뺣낫??二쇱뼱???쒕떎. 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?섎뒗 寃껋? ?꾪뿕?섎?濡? ?덉쟾???댁쟾諛⑸쾿???꾨땲硫? ?꾨갑 ?욎?瑜닿린 李⑤웾??諛붾줈 ?ㅻ뵲瑜대ŉ 吏꾪뻾?섎뒗 寃껋? ?꾪뿕?섎떎.",
+  "tr_e": "A walking-aid mobility device is regarded as a pedestrian, but because it often does not use the sidewalk, when a walking-aid mobility device is spotted one must secure its safety just as one protects a pedestrian. Overtaking by crossing the center line is dangerous and is not a safe driving method, and following immediately behind an overtaking vehicle ahead is dangerous."
+ },
+ {
+  "n": 781,
+  "ko_e": "?꾨줈援먰넻踰???3議????? 李⑤쭏???댁쟾?먮뒗 ?꾨줈(蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌??李⑤룄瑜?留먰븳????以묒븰(以묒븰?????ㅼ튂?섏뼱 ?덈뒗 寃쎌슦?먮뒗 洹?以묒븰?좎쓣 留먰븳?? ?댄븯 媛숇떎) ?곗륫 遺遺꾩쓣 ?듯뻾?섏뿬???쒕떎. ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴2. ?⑹깋?깊솕???먮㈇? ?섏감留덈뒗 ?ㅻⅨ 援먰넻 ?먮뒗 ?덉쟾?쒖????쒖떆??二쇱쓽?섎㈃??吏꾪뻾?????덈떎?숈씠誘濡??욎そ???대┛?댄넻?숇쾭?ㅺ? 異쒕컻?섏뿬 援먯감濡쒖뿉 吏꾩엯?????덈뒗 ?뚯뿉??二쇱쓽瑜??댄뵾怨?吏꾪뻾?댁빞 ?쒕떎. ?꾨줈援먰넻踰???1議? ???대┛?댄넻?숇쾭?ㅺ? ?꾨줈???뺤감?섏뿬 ?대┛?대굹 ?곸쑀?꾧? ?怨??대━??以묒엫???쒖떆?섎뒗 ?먮㈇???깆쓽 ?μ튂瑜??묐룞 以묒씪 ?뚯뿉???대┛?댄넻?숇쾭?ㅺ? ?뺤감??李⑤줈? 洹?李⑤줈??諛붾줈 ??李⑤줈濡??듯뻾?섎뒗 李⑥쓽 ?댁쟾?먮뒗 ?대┛?댄넻?숇쾭?????대Ⅴ湲??꾩뿉 ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎. ??????쓽 寃쎌슦 以묒븰?좎씠 ?ㅼ튂?섏? ?꾨땲???꾨줈 ? ?몃룄 1李⑤줈???꾨줈?먯꽌??諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먮룄 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜????곹깭濡??꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜댁? 紐삵븳??",
+  "tr_e": "Article 13 (3) of the Road Traffic Act. A driver must travel on the right side of the center of the road (on a road divided into a sidewalk and roadway, this means the roadway; where a center line is installed, this means that center line; hereinafter the same). Table 2 of the Enforcement Rule of the Road Traffic Act. A flashing yellow light means 'a vehicle may proceed while paying attention to other traffic or the indications of traffic signs,' so even when the school bus ahead departs and can enter the intersection, one must proceed with caution. Article 51 of the Road Traffic Act. (1) When a school bus is stopped on the road with the flashing lights or other devices operating to indicate that children or infants are getting on or off, the driver of a vehicle traveling in the lane where the school bus is stopped and in the lane immediately adjacent to it must come to a complete stop before reaching the school bus, confirm safety, and then slow down. (2) In the case of paragraph (1), on a road with no center line installed and on a road with one lane in each direction, the driver of a vehicle traveling in the opposite direction must also come to a complete stop before reaching the school bus, confirm safety, and then slow down. (3) No driver of any vehicle may overtake a school bus traveling on the road while displaying that it is carrying children or infants."
+ },
+ {
+  "n": 782,
+  "ko_e": "?꾪뿕?덉륫. ?꾨줈援먰넻踰뺤뿉 ?곕씪 洹몃?濡?吏꾪뻾?섎뒗 寃껋? ?꾨컲?대씪怨??????녿떎. 洹몃윭??臾몄젣???곹솴?먯꽌??援먯감濡쒕? ?듯뻾 ?섎뒗 李⑤쭏媛 ?녾린 ?뚮Ц???먯쟾嫄??댁쟾?먮뒗 ?ㅻⅨ 李⑥쓽 吏꾩엯???덉륫?섏? ?딄퀬 臾대떒?〓떒??媛?μ꽦???믩떎. ??臾대떒?〓떒 ???섏? ?딅뒗?ㅺ퀬 ?섏뿬??援먯감濡쒕? ?듦낵??吏?먯쓽 ?먯쟾嫄곕뒗 2李⑤줈 履쎌뿉 ?꾩튂?섍퀬 ?덉쑝誘濡?援먯감濡쒕? ?듦낵?섎뒗 ?댁쟾????洹??먯쟾嫄곗????놁そ?쇰줈???덉쟾??怨듦컙??留뚮뱾硫??쒗뻾?쇰줈 ?듯뻾?섎뒗 寃껋씠 ?덉쟾???댁쟾諛⑸쾿?대씪怨??????덈떎.",
+  "tr_e": "Hazard anticipation. Proceeding straight ahead in accordance with the Road Traffic Act cannot be said to be a violation. However, in the situation in the question, because there is no vehicle passing through the intersection, the cyclist is highly likely to cross the road illegally without anticipating other vehicles' entry. Also, even if the cyclist does not cross the road illegally, the bicycle at the point past the intersection is positioned toward the second lane, so the driver passing through the intersection should proceed slowly while also creating safe space to the side of that bicycle, which can be said to be a safe driving method."
+ },
+ {
+  "n": 783,
+  "ko_e": "?꾨줈??援먭컖???ㅼ튂???섍꼍?쇰줈 援먭컖 醫뚯슦痢≪뿉??吏꾩엯?섎뒗 ?대쪣李⑥? 蹂댄뻾?????꾪뿕???덉륫?섎ŉ ?댁쟾?댁빞 ?쒕떎.",
+  "tr_e": "This is an environment where bridge piers are installed on the road, so one must drive while anticipating dangers such as motorcycles and pedestrians entering from the left and right sides of the piers."
+ },
+ {
+  "n": 784,
+  "ko_e": "1李⑤줈 ?뱀? 3李⑤줈 ?욎そ?먯꽌 2李⑤줈濡?媛묒옄湲?吏꾨줈 蹂寃쏀븯硫댁꽌 吏곸쭊?섎뒗 李⑤웾???덉쓣 ???덇퀬, 1쨌3李⑤줈???뺤감 以묒씤  李⑤웾?쇰줈 ?명빐 援먯감濡??쇱そ?대굹 ?ㅻⅨ履??꾨줈 ?곹솴???뺤씤???대젮?뚯꽌 ?좏샇?꾨컲?쇰줈 二쇳뻾?섎뒗 李⑤웾??諛쒓껄?섍린 ???듬떎. 洹몃옒???좏샇媛 諛붾?吏곹썑?먮뒗 ?쒗뻾?섎㈃???덉쑝濡?援먯감濡??곹솴???뺤씤?섍퀬 ?듦낵?섎뒗 ?듦????ㅼ씠??寃껋씠 醫??? ?먰븳 ?고쉶?꾪븯?ㅻ뒗 寃쎌슦?먮뒗 ?고쉶??李⑤줈?먯꽌 ?쒖꽌?濡??고쉶?꾪븯??寃껋씠 ?덉쟾???댁쟾 諛⑸쾿?대떎. ?곗깋 ?ㅼ꽑 李??좎뿉?쒕뒗 吏꾨줈 蹂寃쏀븯?ъ꽌???덈맂??",
+  "tr_e": "There may be a vehicle suddenly changing lanes from the first or third lane ahead into the second lane and going straight, and because of vehicles stopped in the first and third lanes, it is difficult to check the road situation on the left or right of the intersection, making it hard to spot a vehicle proceeding in violation of the signal. Therefore, it is good to develop the habit of slowing down right after the signal changes, visually confirming the intersection situation, and then passing through. Also, when intending to turn right, turning right in order from the right-turn lane is a safe driving method. One must not change course at a white solid line lane line."
+ },
+ {
+  "n": 785,
+  "ko_e": "?댁쟾?먮뒗 援먯감濡쒖뿉??醫뚰쉶?꾩씠???고쉶?꾪븯湲??꾪빐?쒕뒗 誘몃━ 醫뙿룹슦?뚯쟾 李⑤줈濡?吏꾩엯?댁꽌 醫뙿룹슦?뚯쟾?댁빞 ?쒕떎.  援먯감濡쒖뿉???뱀깋 諛?醫뚰쉶???숈떆 ?좏샇 蹂寃?吏곹썑 1李⑤줈?먯꽌 癒쇱? 異쒕컻??醫뚰쉶??李⑤웾 ?댁쟾?먭? 釉뚮젅?댄겕瑜?諛잙뒗  ?댁쑀???쇱そ ?꾨줈?먯꽌 ?좏샇 ?꾨컲?섎뒗 李⑤웾 ???꾪뿕 ?붿씤??諛쒖깮?덈떎???살씠湲곗뿉 2李⑤줈??3李⑤줈 李⑤웾? ?쒗뻾?섎㈃?? ?꾪뿕 ?붿씤???鍮꾪빐???섍퀬, ?먰븳 援먯감濡? ?곕꼸 ?? ?ㅻ━ ?꾩뿉?쒕뒗 ?ㅻⅨ 李⑤? ?욎?瑜댁? 紐삵븳??",
+  "tr_e": "To turn left or right at an intersection, a driver must enter the left- or right-turn lane in advance and then turn left or right. When a left-turning vehicle that started first from the first lane right after the simultaneous green and left-turn signal change presses its brakes, it means a danger factor such as a signal-violating vehicle from the left road has occurred, so vehicles in the second or third lane must slow down and prepare for the danger factor; also, one may not overtake another vehicle at an intersection, inside a tunnel, or on a bridge."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+s='異쒕룞'
+for enc in ['cp949','euc_kr','latin1']:
+ try:
+  print(enc, s.encode(enc).decode('utf-8'))
+ except Exception as e: print(type(e).__name__)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-11T00:16:44.193153Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 658ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+codex
+[{"n":782,"field":"e","severity":"major","issue":"자전거의 '왼쪽으로' 안전 공간을 확보하라는 방향 정보가 번역에서 단순히 '옆으로'로 약화되었다.","suggestion":"Hazard anticipation. Proceeding straight ahead in accordance with the Road Traffic Act cannot be said to be a violation. However, in the situation in the question, because there is no vehicle passing through the intersection, the cyclist is highly likely to cross the road illegally without anticipating other vehicles' entry. Also, even if the cyclist does not cross the road illegally, the bicycle beyond the intersection is positioned toward the second lane, so the driver passing through the intersection should proceed slowly while leaving a safe space to the left of the bicycle."}]
+tokens used
+16,722
+[{"n":782,"field":"e","severity":"major","issue":"자전거의 '왼쪽으로' 안전 공간을 확보하라는 방향 정보가 번역에서 단순히 '옆으로'로 약화되었다.","suggestion":"Hazard anticipation. Proceeding straight ahead in accordance with the Road Traffic Act cannot be said to be a violation. However, in the situation in the question, because there is no vehicle passing through the intersection, the cyclist is highly likely to cross the road illegally without anticipating other vehicles' entry. Also, even if the cyclist does not cross the road illegally, the bicycle beyond the intersection is positioned toward the second lane, so the driver passing through the intersection should proceed slowly while leaving a safe space to the left of the bicycle."}]

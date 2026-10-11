@@ -1,0 +1,332 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12801-e8e1-7c10-b5f7-e89719dcdd84
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/319_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/319_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 522ms:
+[
+ {
+  "n": 382,
+  "ko_e": "?⑹깋 ?먯꽑???덈뒗 痢≪뿉?쒕뒗 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?????덉쑝???⑹깋 ?ㅼ꽑???덈뒗 痢≪뿉?쒕뒗 以묒븰?좎쓣 ?섏뼱 ?욎?瑜?湲고븷 ???녿떎.",
+  "tr_e": "On the side with the yellow dashed line, you may overtake by crossing the center line, but on the side with the yellow solid line, you may not overtake by crossing the center line."
+ },
+ {
+  "n": 383,
+  "ko_e": "?꾨줈援먰넻踰???4議?泥좉만 嫄대꼸紐⑹쓽 ?듦낵) ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 泥좉만 嫄대꼸紐??댄븯 ?쒓굔?먮ぉ?앹씠?? ?쒕떎)???듦낵?섎젮??寃쎌슦?먮뒗 嫄대꼸紐??욎뿉???쇱떆?뺤??섏뿬 ?덉쟾?쒖? ?뺤씤???꾩뿉 ?듦낵?섏뿬???쒕떎. ?ㅻ쭔, ?좏샇湲? ?깆씠 ?쒖떆?섎뒗 ?좏샇???곕Ⅴ??寃쎌슦?먮뒗 ?뺤??섏? ?꾨땲?섍퀬 ?듦낵?????덈떎.          ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 嫄대꼸紐⑹쓽 李⑤떒湲곌? ?대젮???덇굅???대젮吏?ㅺ퀬 ?섎뒗 寃쎌슦 ?먮뒗 嫄대꼸紐⑹쓽 寃?蹂닿린媛 ?몃━怨??덈뒗 ?숈븞?먮뒗 洹?嫄대꼸紐⑹쑝濡??ㅼ뼱媛?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Road Traffic Act Article 24 (Passage of Railroad Crossings) (1) Every driver of a vehicle or streetcar who intends to pass through a railroad crossing (hereinafter crossing) must come to a complete stop before the crossing, confirm that it is safe, and then pass. However, when following the signal indicated by a traffic light, etc., the driver may pass without stopping. (2) Every driver of a vehicle or streetcar must not enter a crossing while the crossing barrier is down or about to come down, or while the crossing alarm is sounding."
+ },
+ {
+  "n": 384,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??[蹂꾪몴2] ?좏샇???쒓린 諛?諛⑸쾿, 吏꾨줈瑜?蹂寃쏀븯怨좎옄 ?섎뒗 寃쎌슦??洹?吏?먯뿉 ?대Ⅴ湲???30誘명꽣 ?댁긽 ??吏?먯뿉 ?대Ⅴ?????諛⑺뼢吏?쒓린瑜?議곗옉?쒕떎.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 2] Timing and Method of Signals. When intending to change course, operate the turn signal upon reaching a point at least 30 meters before that point."
+ },
+ {
+  "n": 385,
+  "ko_e": "媛蹂???띾룄?쒗븳?쒖?瑜??곕씪???쒕떎.",
+  "tr_e": "You must follow the variable speed limit sign."
+ },
+ {
+  "n": 386,
+  "ko_e": "怨좎냽?꾨줈??寃쎌같泥?옣, 怨좎냽?꾨줈瑜??쒖쇅???꾨줈???쑣룸룄寃쎌같泥?옣???띾룄 洹쒖젣沅뚯옄?대떎.",
+  "tr_e": "For highways, the Commissioner General of the National Police Agency, and for roads other than highways, the Commissioner of the City/Provincial Police Agency, is the authority regulating speed."
+ },
+ {
+  "n": 387,
+  "ko_e": "?곸깋?좏샇 ???뺤???吏곸쟾???뺤??섍퀬, 援먯감濡??대Ⅴ湲????⑹깋?좏샇 ?쒖뿉???뺤???吏곸쟾???뺤??댁빞 ?쒕떎.",
+  "tr_e": "At a red signal, stop immediately before the stop line, and at a yellow signal before reaching the intersection, you must also stop immediately before the stop line."
+ },
+ {
+  "n": 388,
+  "ko_e": "援먯감濡쒖뿉???고쉶?????곗륫 ?꾨줈 ?〓떒蹂대룄 蹂댄뻾 ?좏샇?깆씠 ?뱀깋?대씪??蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐瑜?二쇱? ?꾨땲?섎뒗 踰붿쐞  ?댁뿉???듦낵?????덈떎. ?ㅻ쭔, 蹂댄뻾 ?좏샇??痢〓㈃??李⑤웾 蹂댁“ ?좏샇?깆씠 ?ㅼ튂?섏뼱 ?덈뒗 寃쎌슦, 蹂댁“ ?좏샇?깆씠 ?곸깋?? ???듦낵?섎㈃ ?좏샇 ?꾨컲???대떦?????덉쑝誘濡??듦낵?????녾퀬, 蹂댄뻾?먭? ?〓떒蹂대룄 ?곸뿉 議댁옱?섎㈃ 吏꾪뻾?섎뒗 李⑥?  蹂댄뻾?먭? 硫由??⑥뼱???덈떎 ?섎뜑?쇰룄 蹂댄뻾???듯뻾??諛⑺빐瑜?二쇰뒗 寃껋씠誘濡??듦낵?????녿떎.",
+  "tr_e": "When turning right at an intersection, even if the pedestrian signal light of the crosswalk on the right-side road is green, you may pass within the range that does not obstruct the passage of pedestrians. However, if a vehicle auxiliary signal light is installed on the side of the pedestrian signal light, passing when the auxiliary signal light is red may constitute a signal violation, so you may not pass; and if a pedestrian is on the crosswalk, you may not pass because it obstructs the pedestrian's passage even if the proceeding vehicle and the pedestrian are far apart."
+ },
+ {
+  "n": 389,
+  "ko_e": "?좏샇??洹??됱쐞瑜??섍퀬???섎뒗 吏??醫뚰쉶?꾪븷 寃쎌슦?먮뒗 洹?援먯감濡쒖쓽 媛?μ옄由????대Ⅴ湲???30誘명꽣(怨좎냽?꾨줈?먯꽌?? 100誘명꽣) ?댁긽??吏?먯뿉 ?대Ⅴ??????댁빞 ?섍퀬, 誘몃━ ?띾룄瑜?以꾩씤 ??1李⑤줈 ?먮뒗 醫뚰쉶??李⑤줈濡??쒗뻾?섎ŉ 吏꾩엯?댁빞  ?쒕떎. ?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 ??議??먮룞李⑥쓽 醫낅퀎援щ텇 蹂꾪몴1 ?먮룞李⑥쓽 醫낅쪟)",
+  "tr_e": "A signal must be given upon reaching a point at least 30 meters (100 meters on a highway) before the point where you intend to perform the act (at the edge of the intersection when turning left), and you must reduce speed in advance and enter the first lane or the left-turn lane while slowing down. Enforcement Rule of the Motor Vehicle Management Act Article 2 (Classification of Motor Vehicle Types, Table 1 Types of Motor Vehicles)."
+ },
+ {
+  "n": 390,
+  "ko_e": "?ㅻ뵲瑜대뒗 李⑥? 嫄곕━媛 ?덉쓣 ???띾룄瑜??좎???梨?李⑤줈瑜?蹂寃쏀븯怨? ?묎렐?섍퀬 ?덉쓣 ?뚮뒗 ?띾룄瑜???텛???ㅼ감瑜?癒쇱?  ?듦낵?쒗궓??",
+  "tr_e": "When there is distance from the following vehicle, change lanes while maintaining speed, and when it is approaching, reduce speed and let the vehicle behind pass first."
+ },
+ {
+  "n": 391,
+  "ko_e": "??李⑤줈??援щ텇??吏볥뒗 李⑥꽑 以??ㅼ꽑? 李⑤줈瑜?蹂寃쏀븷 ???녿뒗 ?좎씠?? ???먯꽑? 李⑤줈瑜?蹂寃쏀븷 ???덈뒗 ?좎씠??  ???ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗 寃쎌슦 ?ㅼ꽑 履쎌뿉???먯꽑諛⑺뼢?쇰줈??李⑤줈 蹂寃쎌씠 遺덇??ν븯?? ???ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗  寃쎌슦 ?먯꽑 履쎌뿉???ㅼ꽑諛⑺뼢?쇰줈??李⑤줈 蹂寃쎌씠 媛?ν븯??",
+  "tr_e": "(1) Among the lines dividing lanes, a solid line is a line where lane changes cannot be made. (2) A dashed line is a line where lane changes can be made. (3) Where a solid line and a dashed line run parallel, a lane change from the solid line side toward the dashed line direction is not possible. (4) Where a solid line and a dashed line run parallel, a lane change from the dashed line side toward the solid line direction is possible."
+ },
+ {
+  "n": 392,
+  "ko_e": "?곸깋?깊솕???먮㈇????李⑤쭏???뺤??좎씠???〓떒蹂대룄媛 ?덉쓣 ?뚯뿉??洹?吏곸쟾?대굹 援먯감濡쒖쓽 吏곸쟾???쇱떆?뺤????? ?ㅻⅨ 援먰넻??二쇱쓽?섎㈃??吏꾪뻾?????덈떎.",
+  "tr_e": "When the red light is flashing, a vehicle or horse must, where there is a stop line or crosswalk, come to a complete stop immediately before it or immediately before the intersection, and then may proceed while paying attention to other traffic."
+ },
+ {
+  "n": 393,
+  "ko_e": "鍮꾨낫?몄쥖?뚯쟾 ?쒖?媛 ?덈뒗 怨녹뿉?쒕뒗 ?뱀깋?좏샇媛 耳쒖쭊 ?곹깭?먯꽌 ?ㅻⅨ 援먰넻??二쇱쓽?섎㈃??醫뚰쉶???????덈떎. ?뱀깋???몄뿉??醫뚰쉶?꾪븯?ㅺ? 留욎??몄쓽 吏곸쭊李⑤웾怨?異⑸룎??寃쎌슦 醫뚰쉶??李⑤웾??寃쎄낵???쇰컲?ш퀬 媛?댁옄媛 ?쒕떎.",
+  "tr_e": "At a place with an unprotected left turn sign, you may turn left while paying attention to other traffic when the green light is on. If you collide with an oncoming straight-proceeding vehicle while turning left on the green light, the left-turning vehicle becomes the at-fault party in an ordinary accident caused by minor negligence."
+ },
+ {
+  "n": 394,
+  "ko_e": "怨좎냽?꾨줈??理쒖??띾룄??紐⑤뱺 怨좎냽?꾨줈?먯꽌 ?숈씪?섍쾶 ?쒖냽  50?щ줈誘명꽣濡?洹쒖젙?섏뼱 ?덉쑝硫? ?먮룞李⑥쟾?⑸룄濡쒖뿉?쒕뒗  理쒓퀬?띾룄? 理쒖??띾룄 ?????쒗븳???덈떎. ?쇰컲?꾨줈?먯꽌??理쒖??띾룄 ?쒗븳???녾퀬, ?몃룄2李⑤줈 ?댁긽 怨좎냽?꾨줈??理쒓퀬 ?띾룄??李⑥쥌???곕씪 ?ㅻⅤ寃?洹쒖젙?섏뼱 ?덈떎.",
+  "tr_e": "The minimum speed on an expressway is uniformly prescribed as 50 kilometers per hour on all expressways, and on a motor-vehicle-only road, both a maximum speed and a minimum speed are limited. On ordinary roads, there is no minimum speed limit, and the maximum speed on an expressway with two or more lanes each way is prescribed differently depending on the vehicle type."
+ },
+ {
+  "n": 395,
+  "ko_e": "?⑹깋?ㅼ꽑? ?욎?瑜닿린媛 湲덉??섎ŉ ?곕꼸 ?덉씠???ㅻ━ ?꾨뒗 ?욎?瑜닿린 湲덉??μ냼?닿퀬 ?욎감媛 ?ㅻⅨ 李⑤? ?욎?瑜닿퀬 ?덈뒗  寃쎌슦?먮뒗 ?욎?瑜닿린瑜??????녾쾶 洹쒖젙?섏뼱 ?덈떎.",
+  "tr_e": "A yellow solid line prohibits overtaking; inside tunnels and on bridges are overtaking-prohibited places, and it is prescribed that overtaking cannot be done when the vehicle ahead is overtaking another vehicle."
+ },
+ {
+  "n": 396,
+  "ko_e": "?꾨줈援먰넻踰???議?????諛???3議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6 ?쇰젴踰덊샇 501踰?蹂듭꽑?대뱺 ?⑥꽑?대뱺 ?섏쓣 ???녾퀬  踰꾩뒪媛 ?뱁븯李⑤? ?꾪빐 ?뺤감??寃쎌슦?먮뒗 ?욎?瑜닿린瑜??????녿떎. ?먰븳 以묒븰?좎? 李⑤룄 ??씠 6誘명꽣 ?댁긽??怨녹뿉 ?ㅼ튂?쒕떎.",
+  "tr_e": "Under Article 2, Item 5 and Article 13 of the Road Traffic Act, and Enforcement Rule of the Road Traffic Act [Table 6], serial number 501, whether the center line is a double line or a single line it may not be crossed, and when a bus has stopped to pick up or drop off passengers, overtaking is not allowed. Also, a center line is installed where the roadway width is 6 meters or more."
+ },
+ {
+  "n": 397,
+  "ko_e": "?몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 2李⑤줈???쇱そ李⑤줈???대떦?섎?濡??듯뻾?????덈뒗 李⑥쥌? ?뱀슜?먮룞李?諛?寃쏀삎쨌?뚰삎쨌以묓삎  ?뱁빀?먮룞李⑥씠??(?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 9)",
+  "tr_e": "On a three-lane (one-way) expressway, the 2nd lane is a left lane, so the vehicles allowed to travel in it are passenger cars and light, small, and medium-sized passenger vans. (Enforcement Rule of the Road Traffic Act [Table 9])"
+ },
+ {
+  "n": 398,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴9] 李⑤줈???곕Ⅸ ?듯뻾李⑥쓽 湲곗?           ?몃룄2李⑤줈 怨좎냽?꾨줈?먯꽌 ?욎?瑜닿린瑜??섎젮??紐⑤뱺 ?먮룞李? ?ㅻ쭔, 李⑤웾?듯뻾??利앷? ???꾨줈?곹솴?쇰줈 ?명븯??遺?앹씠 ?섍쾶 ?쒖냽 80?щ줈誘명꽣 誘몃쭔?쇰줈 ?듯뻾???섎컰???녿뒗 寃쎌슦?먮뒗 ?욎?瑜닿린瑜??섎뒗 寃쎌슦媛 ?꾨땲?쇰룄 ?듯뻾?????덈떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 9], standards for vehicles traveling by lane: on a two-lane (one-way) expressway, any vehicle intending to overtake. However, where, due to road conditions such as increased traffic volume, a vehicle unavoidably has to travel at less than 80 km/h, it may travel in that lane even when not overtaking."
+ },
+ {
+  "n": 399,
+  "ko_e": "?꾨줈援먰넻踰???0議?媛볤만 ?듯뻾湲덉? ?? ?꾨줈援먰넻踰???4議?怨좎냽?꾨줈?깆뿉?쒖쓽 ?뺤감 諛?二쇱감??湲덉?) ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8. 19?? ?뱀슜?먮룞李⑤벑 6留???,
+  "tr_e": "Road Traffic Act Article 60 (Prohibition of Traveling on the Shoulder, etc.), Road Traffic Act Article 64 (Prohibition of Stopping and Parking on Expressways, etc.), Enforcement Decree of the Road Traffic Act [Table 8], Item 19: passenger cars, etc. 60,000 won."
+ },
+ {
+  "n": 400,
+  "ko_e": "1李⑤줈瑜??쒖쇅??李⑤줈瑜?諛섏쑝濡??섎늻??洹?以?1李⑤줈??媛源뚯슫 遺遺꾩쓽 李⑤줈. ?ㅻ쭔, 1李⑤줈瑜??쒖쇅??李⑤줈???섍? ?????寃쎌슦 媛?대뜲 李⑤줈???쒖쇅?쒕떎.",
+  "tr_e": "It refers to the lanes in the portion closer to the 1st lane, obtained by dividing the lanes excluding the 1st lane in half. However, where the number of lanes excluding the 1st lane is odd, the middle lane is excluded."
+ },
+ {
+  "n": 401,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴9] 紐⑤뱺 李⑤뒗 吏?뺣맂 李⑤줈蹂대떎 ?ㅻⅨ履쎌뿉 ?덈뒗 李⑤줈濡??듯뻾?????덈떎. ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8. ??9?? ?뱀슜?먮룞李⑤벑 4留????꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28. 3. ??1?? 踰뚯젏 10??,
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 9]: any vehicle may travel in a lane to the right of its designated lane. Enforcement Decree of the Road Traffic Act [Table 8], Item 39: passenger cars, etc. 40,000 won. Enforcement Rule of the Road Traffic Act [Table 28], 3, Item 21: 10 penalty points."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path('translations/audit/queue/319_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+    print('\\n',x['n'])
+    for k,v in x.items():
+        if k.startswith('ko_'):
+            try: v=v.encode('cp949').decode('utf-8')
+            except Exception as e: v=f'[decode failed: {e}] '+v
+            print(k, v)
+        elif k.startswith(('tr_','check','detail')): print(k,v)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:49:50.064534Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:15 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 669ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:15 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/319_expl_en.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; foreach($x in $data){ Write-Output "`n$($x.n)"; foreach($p in $x.PSObject.Properties){ if($p.Name -like '"'ko_*'){ "'$s=$utf8.GetString($cp949.GetBytes([string]$p.Value)); Write-Output "$($p.Name): $s" } elseif($p.Name -like '"'tr_*' -or "'$p.Name -eq '"'check' -or "'$p.Name -eq '"'detail'){ Write-Output \""'$($p.Name): $($p.Value)" } } }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 771ms:
+ConvertFrom-Json : 잘못된 개체가 전달되었습니다. ':' 또는 '}'가 필요합니다. (8709): [
+ {
+  "n": 382,
+  "ko_e": "?⑹깋 ?먯꽑???덈뒗 痢≪뿉?쒕뒗 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?????덉쑝???⑹깋 ?ㅼ꽑???덈뒗 痢≪뿉?쒕뒗 以묒븰?좎쓣 ?섏뼱 ?욎?瑜?湲고븷 ???녿떎.",
+  "tr_e": "On the side with the yellow dashed line, you may overtake by crossing the center line, but on the side with 
+the yellow solid line, you may not overtake by crossing the center line."
+ },
+ {
+  "n": 383,
+  "ko_e": "?꾨줈援먰넻踰???4議?泥좉만 嫄대꼸紐⑹쓽 ?듦낵) ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 泥좉만 嫄대꼸紐??댄븯 ?쒓굔?먮ぉ?앹씠?? ?쒕떎)???듦낵?섎젮??寃쎌슦?먮뒗 嫄대꼸紐??
+욎뿉???쇱떆?뺤??섏뿬 ?덉쟾?쒖? ?뺤씤???꾩뿉 ?듦낵?섏뿬???쒕떎. ?ㅻ쭔, ?좏샇湲? ?깆씠 ?쒖떆?섎뒗 ?좏샇???곕Ⅴ??寃쎌슦?먮뒗 ?뺤??섏? ?꾨땲?섍퀬 ?듦낵?????덈떎.          ??
+紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 嫄대꼸紐⑹쓽 李⑤떒湲곌? ?대젮???덇굅???대젮吏?ㅺ퀬 ?섎뒗 寃쎌슦 ?먮뒗 嫄대꼸紐⑹쓽 寃?蹂닿린媛 ?몃━怨??덈뒗 ?숈븞?먮뒗 洹?嫄대꼸紐⑹쑝濡??ㅼ뼱媛?쒕뒗
+ ?꾨땲 ?쒕떎.",
+  "tr_e": "Road Traffic Act Article 24 (Passage of Railroad Crossings) (1) Every driver of a vehicle or streetcar who i
+ntends to pass through a railroad crossing (hereinafter crossing) must come to a complete stop before the crossing, con
+firm that it is safe, and then pass. However, when following the signal indicated by a traffic light, etc., the driver 
+may pass without stopping. (2) Every driver of a vehicle or streetcar must not enter a crossing while the crossing barr
+ier is down or about to come down, or while the crossing alarm is sounding."
+ },
+ {
+  "n": 384,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??[蹂꾪몴2] ?좏샇???쒓린 諛?諛⑸쾿, 吏꾨줈瑜?蹂寃쏀븯怨좎옄 ?섎뒗 寃쎌슦??洹?吏?먯뿉 ?대Ⅴ湲???30誘명꽣 ?댁긽 ??吏?먯뿉 ?대Ⅴ?????諛⑺뼢吏?쒓
+린瑜?議곗옉?쒕떎.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 2] Timing and Method of Signals. When intending to change 
+course, operate the turn signal upon reaching a point at least 30 meters before that point."
+ },
+ {
+  "n": 385,
+  "ko_e": "媛蹂???띾룄?쒗븳?쒖?瑜??곕씪???쒕떎.",
+  "tr_e": "You must follow the variable speed limit sign."
+ },
+ {
+  "n": 386,
+  "ko_e": "怨좎냽?꾨줈??寃쎌같泥?옣, 怨좎냽?꾨줈瑜??쒖쇅???꾨줈???쑣룸룄寃쎌같泥?옣???띾룄 洹쒖젣沅뚯옄?대떎.",
+  "tr_e": "For highways, the Commissioner General of the National Police Agency, and for roads other than highways, the
+ Commissioner of the City/Provincial Police Agency, is the authority regulating speed."
+ },
+ {
+  "n": 387,
+  "ko_e": "?곸깋?좏샇 ???뺤???吏곸쟾???뺤??섍퀬, 援먯감濡??대Ⅴ湲????⑹깋?좏샇 ?쒖뿉???뺤???吏곸쟾???뺤??댁빞 ?쒕떎.",
+  "tr_e": "At a red signal, stop immediately before the stop line, and at a yellow signal before reaching the intersect
+ion, you must also stop immediately before the stop line."
+ },
+ {
+  "n": 388,
+  "ko_e": "援먯감濡쒖뿉???고쉶?????곗륫 ?꾨줈 ?〓떒蹂대룄 蹂댄뻾 ?좏샇?깆씠 ?뱀깋?대씪??蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐瑜?二쇱? ?꾨땲?섎뒗 踰붿쐞  ?댁뿉???듦낵?????덈떎. ?ㅻ쭔, 蹂댄뻾 
+?좏샇??痢〓㈃??李⑤웾 蹂댁“ ?좏샇?깆씠 ?ㅼ튂?섏뼱 ?덈뒗 寃쎌슦, 蹂댁“ ?좏샇?깆씠 ?곸깋?? ???듦낵?섎㈃ ?좏샇 ?꾨컲???대떦?????덉쑝誘濡??듦낵?????녾퀬, 蹂댄뻾?먭? ?〓떒蹂대룄 ?곸뿉
+ 議댁옱?섎㈃ 吏꾪뻾?섎뒗 李⑥?  蹂댄뻾?먭? 硫由??⑥뼱???덈떎 ?섎뜑?쇰룄 蹂댄뻾???듯뻾??諛⑺빐瑜?二쇰뒗 寃껋씠誘濡??듦낵?????녿떎.",
+  "tr_e": "When turning right at an intersection, even if the pedestrian signal light of the crosswalk on the right-sid
+e road is green, you may pass within the range that does not obstruct the passage of pedestrians. However, if a vehicle
+ auxiliary signal light is installed on the side of the pedestrian signal light, passing when the auxiliary signal ligh
+t is red may constitute a signal violation, so you may not pass; and if a pedestrian is on the crosswalk, you may not p
+ass because it obstructs the pedestrian's passage even if the proceeding vehicle and the pedestrian are far apart."
+ },
+ {
+  "n": 389,
+  "ko_e": "?좏샇??洹??됱쐞瑜??섍퀬???섎뒗 吏??醫뚰쉶?꾪븷 寃쎌슦?먮뒗 洹?援먯감濡쒖쓽 媛?μ옄由????대Ⅴ湲???30誘명꽣(怨좎냽?꾨줈?먯꽌?? 100誘명꽣) ?댁긽??吏?먯뿉 ?대Ⅴ???
+???댁빞 ?섍퀬, 誘몃━ ?띾룄瑜?以꾩씤 ??1李⑤줈 ?먮뒗 醫뚰쉶??李⑤줈濡??쒗뻾?섎ŉ 吏꾩엯?댁빞  ?쒕떎. ?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 ??議??먮룞李⑥쓽 醫낅퀎援щ텇 蹂꾪몴1 ?먮룞李⑥쓽 醫낅쪟)",
+  "tr_e": "A signal must be given upon reaching a point at least 30 meters (100 meters on a highway) before the point w
+here you intend to perform the act (at the edge of the intersection when turning left), and you must reduce speed in ad
+vance and enter the first lane or the left-turn lane while slowing down. Enforcement Rule of the Motor Vehicle Manageme
+nt Act Article 2 (Classification of Motor Vehicle Types, Table 1 Types of Motor Vehicles)."
+ },
+ {
+  "n": 390,
+  "ko_e": "?ㅻ뵲瑜대뒗 李⑥? 嫄곕━媛 ?덉쓣 ???띾룄瑜??좎???梨?李⑤줈瑜?蹂寃쏀븯怨? ?묎렐?섍퀬 ?덉쓣 ?뚮뒗 ?띾룄瑜???텛???ㅼ감瑜?癒쇱?  ?듦낵?쒗궓??",
+  "tr_e": "When there is distance from the following vehicle, change lanes while maintaining speed, and when it is appr
+oaching, reduce speed and let the vehicle behind pass first."
+ },
+ {
+  "n": 391,
+  "ko_e": "??李⑤줈??援щ텇??吏볥뒗 李⑥꽑 以??ㅼ꽑? 李⑤줈瑜?蹂寃쏀븷 ???녿뒗 ?좎씠?? ???먯꽑? 李⑤줈瑜?蹂寃쏀븷 ???덈뒗 ?좎씠??  ???ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗 寃쎌슦 ?ㅼ
+꽑 履쎌뿉???먯꽑諛⑺뼢?쇰줈??李⑤줈 蹂寃쎌씠 遺덇??ν븯?? ???ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗  寃쎌슦 ?먯꽑 履쎌뿉???ㅼ꽑諛⑺뼢?쇰줈??李⑤줈 蹂寃쎌씠 媛?ν븯??",
+  "tr_e": "(1) Among the lines dividing lanes, a solid line is a line where lane changes cannot be made. (2) A dashed l
+ine is a line where lane changes can be made. (3) Where a solid line and a dashed line run parallel, a lane change from
+ the solid line side toward the dashed line direction is not possible. (4) Where a solid line and a dashed line run par
+allel, a lane change from the dashed line side toward the solid line direction is possible."
+ },
+ {
+  "n": 392,
+  "ko_e": "?곸깋?깊솕???먮㈇????李⑤쭏???뺤??좎씠???〓떒蹂대룄媛 ?덉쓣 ?뚯뿉??洹?吏곸쟾?대굹 援먯감濡쒖쓽 吏곸쟾???쇱떆?뺤????? ?ㅻⅨ 援먰넻??二쇱쓽?섎㈃??吏꾪뻾?????덈떎.",
+  "tr_e": "When the red light is flashing, a vehicle or horse must, where there is a stop line or crosswalk, come to a 
+complete stop immediately before it or immediately before the intersection, and then may proceed while paying attention
+ to other traffic."
+ },
+ {
+  "n": 393,
+  "ko_e": "鍮꾨낫?몄쥖?뚯쟾 ?쒖?媛 ?덈뒗 怨녹뿉?쒕뒗 ?뱀깋?좏샇媛 耳쒖쭊 ?곹깭?먯꽌 ?ㅻⅨ 援먰넻??二쇱쓽?섎㈃??醫뚰쉶???????덈떎. ?뱀깋???몄뿉??醫뚰쉶?꾪븯?ㅺ? 留욎??몄쓽 吏곸쭊
+李⑤웾怨?異⑸룎??寃쎌슦 醫뚰쉶??李⑤웾??寃쎄낵???쇰컲?ш퀬 媛?댁옄媛 ?쒕떎.",
+  "tr_e": "At a place with an unprotected left turn sign, you may turn left while paying attention to other traffic whe
+n the green light is on. If you collide with an oncoming straight-proceeding vehicle while turning left on the green li
+ght, the left-turning vehicle becomes the at-fault party in an ordinary accident caused by minor negligence."
+ },
+ {
+  "n": 394,
+  "ko_e": "怨좎냽?꾨줈??理쒖??띾룄??紐⑤뱺 怨좎냽?꾨줈?먯꽌 ?숈씪?섍쾶 ?쒖냽  50?щ줈誘명꽣濡?洹쒖젙?섏뼱 ?덉쑝硫? ?먮룞李⑥쟾?⑸룄濡쒖뿉?쒕뒗  理쒓퀬?띾룄? 理쒖??띾룄 ?????쒗븳???
+덈떎. ?쇰컲?꾨줈?먯꽌??理쒖??띾룄 ?쒗븳???녾퀬, ?몃룄2李⑤줈 ?댁긽 怨좎냽?꾨줈??理쒓퀬 ?띾룄??李⑥쥌???곕씪 ?ㅻⅤ寃?洹쒖젙?섏뼱 ?덈떎.",
+  "tr_e": "The minimum speed on an expressway is uniformly prescribed as 50 kilometers per hour on all expressways, and
+ on a motor-vehicle-only road, both a maximum speed and a minimum speed are limited. On ordinary roads, there is no min
+imum speed limit, and the maximum speed on an expressway with two or more lanes each way is prescribed differently depe
+nding on the vehicle type."
+ },
+ {
+  "n": 395,
+  "ko_e": "?⑹깋?ㅼ꽑? ?욎?瑜닿린媛 湲덉??섎ŉ ?곕꼸 ?덉씠???ㅻ━ ?꾨뒗 ?욎?瑜닿린 湲덉??μ냼?닿퀬 ?욎감媛 ?ㅻⅨ 李⑤? ?욎?瑜닿퀬 ?덈뒗  寃쎌슦?먮뒗 ?욎?瑜닿린瑜??????녾쾶 
+洹쒖젙?섏뼱 ?덈떎.",
+  "tr_e": "A yellow solid line prohibits overtaking; inside tunnels and on bridges are overtaking-prohibited places, an
+d it is prescribed that overtaking cannot be done when the vehicle ahead is overtaking another vehicle."
+ },
+ {
+  "n": 396,
+  "ko_e": "?꾨줈援먰넻踰???議?????諛???3議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6 ?쇰젴踰덊샇 501踰?蹂듭꽑?대뱺 ?⑥꽑?대뱺 ?섏쓣 ???녾퀬  踰꾩뒪媛 ?뱁븯李⑤? ?꾪빐 ?뺤감??寃쎌슦?
+먮뒗 ?욎?瑜닿린瑜??????녿떎. ?먰븳 以묒븰?좎? 李⑤룄 ??씠 6誘명꽣 ?댁긽??怨녹뿉 ?ㅼ튂?쒕떎.",
+  "tr_e": "Under Article 2, Item 5 and Article 13 of the Road Traffic Act, and Enforcement Rule of the Road Traffic Act
+ [Table 6], serial number 501, whether the center line is a double line or a single line it may not be crossed, and whe
+n a bus has stopped to pick up or drop off passengers, overtaking is not allowed. Also, a center line is installed wher
+e the roadway width is 6 meters or more."
+ },
+ {
+  "n": 397,
+  "ko_e": "?몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 2李⑤줈???쇱そ李⑤줈???대떦?섎?濡??듯뻾?????덈뒗 李⑥쥌? ?뱀슜?먮룞李?諛?寃쏀삎쨌?뚰삎쨌以묓삎  ?뱁빀?먮룞李⑥씠??(?꾨줈援먰넻踰??쒗뻾洹쒖튃 
+蹂꾪몴 9)",
+  "tr_e": "On a three-lane (one-way) expressway, the 2nd lane is a left lane, so the vehicles allowed to travel in it a
+re passenger cars and light, small, and medium-sized passenger vans. (Enforcement Rule of the Road Traffic Act [Table 9
+])"
+ },
+ {
+  "n": 398,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴9] 李⑤줈???곕Ⅸ ?듯뻾李⑥쓽 湲곗?           ?몃룄2李⑤줈 怨좎냽?꾨줈?먯꽌 ?욎?瑜닿린瑜??섎젮??紐⑤뱺 ?먮룞李? ?ㅻ쭔, 李⑤웾?듯뻾??利앷
+? ???꾨줈?곹솴?쇰줈 ?명븯??遺?앹씠 ?섍쾶 ?쒖냽 80?щ줈誘명꽣 誘몃쭔?쇰줈 ?듯뻾???섎컰???녿뒗 寃쎌슦?먮뒗 ?욎?瑜닿린瑜??섎뒗 寃쎌슦媛 ?꾨땲?쇰룄 ?듯뻾?????덈떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 9], standards for vehicles traveling by lane: on a two-lane 
+(one-way) expressway, any vehicle intending to overtake. However, where, due to road conditions such as increased traff
+ic volume, a vehicle unavoidably has to travel at less than 80 km/h, it may travel in that lane even when not overtakin
+g."
+ },
+ {
+  "n": 399,
+  "ko_e": "?꾨줈援먰넻踰???0議?媛볤만 ?듯뻾湲덉? ?? ?꾨줈援먰넻踰???4議?怨좎냽?꾨줈?깆뿉?쒖쓽 ?뺤감 諛?二쇱감??湲덉?) ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8. 19?? ?뱀슜?먮룞李⑤벑 6留???
+,
+  "tr_e": "Road Traffic Act Article 60 (Prohibition of Traveling on the Shoulder, etc.), Road Traffic Act Article 64 (P
+rohibition of Stopping and Parking on Expressways, etc.), Enforcement Decree of the Road Traffic Act [Table 8], Item 19
+: passenger cars, etc. 60,000 won."
+ },
+ {
+  "n": 400,
+  "ko_e": "1李⑤줈瑜??쒖쇅??李⑤줈瑜?諛섏쑝濡??섎늻??洹?以?1李⑤줈??媛源뚯슫 遺遺꾩쓽 李⑤줈. ?ㅻ쭔, 1李⑤줈瑜??쒖쇅??李⑤줈???섍? ?????寃쎌슦 媛?대뜲 李⑤줈???쒖쇅?쒕떎.",
+  "tr_e": "It refers to the lanes in the portion closer to the 1st lane, obtained by dividing the lanes excluding the 1
+st lane in half. However, where the number of lanes excluding the 1st lane is odd, the middle lane is excluded."
+ },
+ {
+  "n": 401,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴9] 紐⑤뱺 李⑤뒗 吏?뺣맂 李⑤줈蹂대떎 ?ㅻⅨ履쎌뿉 ?덈뒗 李⑤줈濡??듯뻾?????덈떎. ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8. ??9?? ?뱀슜?먮룞李⑤벑 4留
+????꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28. 3. ??1?? 踰뚯젏 10??,
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 9]: any vehicle may travel in a lane to the right of its des
+ignated lane. Enforcement Decree of the Road Traffic Act [Table 8], Item 39: passenger cars, etc. 40,000 won. Enforceme
+nt Rule of the Road Traffic Act [Table 28], 3, Item 21: 10 penalty points."
+ }
+]
+위치 줄:2 문자:85
++ ... translations/audit/queue/319_expl_en.json' | ConvertFrom-Json; $cp949 ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+codex
+[]
+tokens used
+16,713
+[]

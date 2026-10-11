@@ -1,0 +1,125 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12807-818a-76a3-af2a-ccbecce0d856
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/323_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/323_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 527ms:
+[
+ {
+  "n": 463,
+  "ko_e": "利앸컻?꾩긽? 留덉＜ ?ㅻ뒗 ??李⑤웾 紐⑤몢 ?곹뼢 ?꾩“?깆씪 ??諛쒖깮?쒕떎.",
+  "tr_e": "The evaporation phenomenon (in which an object such as a pedestrian becomes invisible in the glare between two vehicles) occurs when both oncoming vehicles have their high beams on."
+ },
+ {
+  "n": 464,
+  "ko_e": "?쇨컙?댁쟾怨?媛곸꽦????쇨컙?댁쟾?쒓퀎???꾩“??遺덈튆??鍮꾩튂??踰붿쐞 ?댁뿉 ?쒖젙?섏뼱 洹??쒓퀎??二쇨컙??鍮꾪빐 ?몃㈃怨??욎감???꾨???遺덈튆留뚯씠 蹂댁씠寃??섎?濡?留ㅼ슦 ?⑥“濡쒖슫 ?쒓퀎媛 ?쒕떎. 洹몃옒??臾댁쓽?앹쨷???⑥“濡쒖슫 ?쒓퀎???듭닕?댁졇 ?댁쟾?먮뒗 ?쇱쥌??媛먭컖留?鍮??곹깭??鍮좎졇 ?ㅼ뼱媛寃??쒕떎. 洹몃젃寃??섎㈃ ?꾩뿰?곸쑝濡??덇뎄?숈옉???쒕컻移?紐삵빐 ?먭레?????諛섏쓳???뷀빐吏寃????? ?대윭???꾩긽??怨좎“?섎㈃ 洹쇱쑁?대굹 ?뚰뙆??諛섏쓳????섎릺??李⑥감 議몄쓬???ㅻ뒗 ?곹깭???대Ⅴ寃??쒕떎. ?댁? 媛숈씠 媛곸꽦?꾧? ??섎맂 ?곹깭?먯꽌 二쇳뻾?섎뒗 寃껋쓣 ?대Ⅸ諛붴섍컖?깆??섏＜?됤숈씠?쇨퀬 ?쒕떎.",
+  "tr_e": "Night driving and reduced alertness: at night the field of vision is limited to the range illuminated by the headlights, so compared with daytime only the road surface and the tail lights of the vehicle ahead are visible, making the field of vision very monotonous. As a result, the driver unconsciously grows accustomed to the monotonous view and falls into a kind of sensory-numbness state. When this happens, eye movement inevitably becomes less active and the reaction to stimuli becomes duller. As this phenomenon intensifies, the responses of muscles and brain waves also decline, gradually reaching a drowsy state. Driving in such a state of reduced alertness is called so-called 'reduced-alertness driving.'"
+ },
+ {
+  "n": 465,
+  "ko_e": "二쇨컙蹂대떎 ?쒖빞?뺣낫媛 ?대젮?뚯?湲??뚮Ц??二쇱쓽???꾩슂媛 ?덈떎.",
+  "tr_e": "Because securing a field of vision is harder than in the daytime, caution is needed."
+ },
+ {
+  "n": 467,
+  "ko_e": "諛곗꽑? ?꾩쓽濡?議곗옉?섎㈃ ???섎ŉ, 李⑤웾 ?덉뿉 ?쇳쉶??遺?꾧??ㅻ? ?먮뒗 寃껋? ?꾪뿕?섎떎. ?쇳쉶???쇱씠?곗뿉????컻諛⑹? ?μ튂媛 ?놁뼱 ?щ쫫泥?李??덉뿉 ?먮㈃ ?꾪뿕?섎떎.",
+  "tr_e": "You must not tamper with the wiring at will, and keeping a disposable butane gas canister inside the vehicle is dangerous. A disposable lighter has no explosion-prevention device, so leaving it inside the car in summer is dangerous."
+ },
+ {
+  "n": 468,
+  "ko_e": "??李⑥???異붾룎???덈갑?섍린 ?꾪빐 ?덉쟾嫄곕━瑜?異⑸텇???뺣낫?섍퀬, ?꾪뿕???鍮꾪븯???몄젣?좎? ?쒕룞?????덈룄濡?以鍮꾪븳 ?? 遺?앹씠?섍쾶 異붾룎?섍쾶 ?섎뒗 寃쎌슦???鍮꾪븯??釉뚮젅?댄겕 ?섎떖???섍퍘 諛잛븘 媛먯냽?섏뿬 ?쇳빐瑜?理쒖냼?뷀븳?? ?몃뱾? 湲됲븯 寃?醫뚯륫?쇰줈 爰얠뼱 以묒븰?좎쓣 ?섏뼱媛硫?諛섎??몄뿉??二쇳뻾?섎뒗 李⑤웾怨쇱쓽 ?ш퀬媛 諛쒖깮?????덈떎. ?먰븳 ?덉쓣 媛먮뒗 寃껉낵 ??댄띁, ?곹뼢?깆쓣 議곗옉?섎뒗 寃껋? 異붾룎???쇳빐瑜?媛먯냼?쒗궎??寃껉낵 ?곴??녿떎.",
+  "tr_e": "To prevent a rear-end collision with the vehicle ahead, secure a sufficient safe distance and be ready to brake at any time in preparation for danger. In case a collision becomes unavoidable, press the brake pedal firmly to decelerate and minimize the damage. Turning the steering wheel sharply to the left and crossing the center line can cause an accident with a vehicle traveling in the opposite direction. Also, closing your eyes or operating the wipers or high beams has nothing to do with reducing the damage of a rear-end collision."
+ },
+ {
+  "n": 469,
+  "ko_e": "怨좎냽?쇰줈 二쇳뻾?섎뒗 李⑤웾????댁뼱 怨듦린?뺤씠 遺議깊븯硫??ㅽ깲?⑹썾?대툕 ?꾩긽??諛쒖깮?섎ŉ, 怨좎냽?쇰줈 二쇳뻾?섎뒗 李⑤웾?? ??댁뼱媛 留덈え???곹깭?먯꽌 臾?怨좎씤 怨녹쓣 吏?섍?硫??섏씠?쒕줈?뚮젅?대떇 ?꾩긽??諛쒖깮?쒕떎. ?섏씠???꾩긽? ?쒕룞湲??섎떖 ??怨쇰룄?섍쾶 ?ъ슜?덉쓣 ?? ?⑤뱶 諛??쇱씠?앹쓽 留덉같怨꾩닔媛 ??븘???쒕룞?μ씠 ?낇솕?섎㈃??誘몃걚?ъ????꾩긽??留먰븳??  踰좎씠?쇰줉 ?꾩긽怨??섏씠???꾩긽? ?쒕룞?μ튂???댁긽?쇰줈 ?섑??섎뒗 ?꾩긽?대떎.",
+  "tr_e": "If a high-speed vehicle has insufficient tire pressure, standing wave occurs; and if a high-speed vehicle passes over a pool of water with worn tires, hydroplaning occurs. Fade is a phenomenon in which, when the brake pedal is used excessively, the friction coefficient of the pads and linings drops, worsening braking force and causing slipping. Vapor lock and fade are phenomena that appear due to problems in the braking system."
+ },
+ {
+  "n": 470,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴6, ?숈듅?먭? 13??誘몃쭔??寃쎌슦 怨쇳깭猷?6留???           ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??1議?醫뚯꽍?덉쟾??誘몄갑???ъ쑀)????湲닿툒?먮룞李④? 洹?蹂몃옒???⑸룄濡??댄뻾?섍퀬 ?덈뒗 ??,
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 6]: where the passenger is under 13 years old, an administrative fine of 60,000 won. Enforcement Rule of the Road Traffic Act Article 31 (Grounds for Not Wearing a Seat Belt) Item 4: when an emergency vehicle is being operated for its original purpose."
+ },
+ {
+  "n": 471,
+  "ko_e": "?댁쟾?먮뱾??寃쎌슦 醫뚯꽍議곗젙???덉뼱 癒몃━諛쏆묠?????댁꽌??議곗젅?섎뒗 寃쎌슦媛 留롮? ?딅떎. ?곕씪??援먰넻?ш퀬濡?異⑷꺽 ??癒몃━瑜?怨좎젙?쒖폒以????덈뒗 癒몃━諛쏆묠????먯떊??癒몃━??留욌룄濡?議곗젅???꾩슂?섎떎.",
+  "tr_e": "Drivers often do not adjust the headrest when adjusting their seat. Therefore, the headrest, which can hold the head in place upon impact in a traffic accident, also needs to be adjusted to fit your own head."
+ },
+ {
+  "n": 472,
+  "ko_e": "援먯감濡? ?ㅻ━ ?? ?곕꼸 ???깆? ?욎?瑜닿린媛 湲덉????μ냼?대ŉ, ?곕꼸 吏꾩엯 ?쒕뒗 ?붿닚???꾩긽??諛쒖깮?섍퀬 諛깆깋 ?먯꽑?? ?몃㈃?쒖떆??寃쎌슦 李⑤줈蹂寃쎌씠 媛?ν븯??",
+  "tr_e": "Intersections, bridges, tunnels, and the like are places where overtaking is prohibited; dark adaptation occurs when entering a tunnel; and where the road marking is a white dotted line, a lane change is possible."
+ },
+ {
+  "n": 473,
+  "ko_e": "?좎떊?몃? ?섏? ?딄퀬 吏꾨줈瑜?蹂寃????ㅻⅨ 援먰넻??諛⑺빐?섏? ?딆븯?ㅺ퀬 ?섎뜑?쇰룄 ?좏샇遺덉씠?됱쓽 援먰넻踰뺢퇋?꾨컲 ??곸씠 ?쒕떎.          ?≪쭊濡?蹂寃쎌씠 ?앸궃 ?꾩뿉??諛붾줈 ?좏샇瑜?以묒??댁빞 ?쒕떎.          ??쭊濡?蹂寃????좏샇瑜??섏? ?딆쑝硫??뱀슜李⑥? ?뱁빀李??깆? 3留??먯쓽 踰붿튃湲???곸씠 ?쒕떎.            ?ｊ퀬?띾룄濡쒖뿉??吏꾨줈 蹂寃???100誘명꽣 ?댁쟾吏?먮???吏꾨줈蹂寃쎌씠 ?꾨즺???뚭퉴吏 ?좏샇瑜??쒕떎.",
+  "tr_e": "(1) Changing course without signaling is subject to a traffic-law violation for failure to signal, even if it did not obstruct other traffic. (2) After the lane change is complete, you must stop signaling immediately. (3) Failure to signal when changing lanes subjects passenger cars, passenger vans, etc., to a fine of 30,000 won. (4) On an expressway, signal from a point 100 meters before the lane change until the change is complete."
+ },
+ {
+  "n": 474,
+  "ko_e": "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?욎감??醫뚯륫???ㅻⅨ 李④? ?욎감? ?섎???媛怨??덈뒗 寃쎌슦, ?욎감媛 ?ㅻⅨ 李⑤? ?욎?瑜닿퀬 ?덇굅?? ?욎?瑜닿퀬???섎뒗 寃쎌슦?먮뒗 ?욎감瑜??욎?瑜닿린?섏? 紐삵븳?? (?꾨줈援먰넻踰???1議? ??2議?",
+  "tr_e": "The driver of any vehicle may not overtake the vehicle ahead where another vehicle is running alongside the vehicle ahead on its left, or where the vehicle ahead is overtaking or intends to overtake another vehicle. (Road Traffic Act Articles 21 and 22)"
+ },
+ {
+  "n": 475,
+  "ko_e": "?ㅻⅨ 李⑤? ?욎?瑜닿린?섎젮???먮룞李⑥쓽 ?띾룄???대떦 ?꾨줈??理쒓퀬 ?띾룄 ?대궡?먯꽌留??욎?瑜닿린媛 媛?ν븯??",
+  "tr_e": "A vehicle intending to overtake another vehicle may overtake only within the maximum speed of that road."
+ },
+ {
+  "n": 476,
+  "ko_e": "鍮꾩긽二쇱감???寃쎌같??湲닿툒?먮룞李⑥? ?뚮갑李????쇰컲?먮룞李⑤룄 ?뺤감 ?먮뒗 二쇱감?????덈떎.",
+  "tr_e": "An emergency parking bay may be used for stopping or parking not only by police emergency vehicles and fire engines but also by ordinary vehicles."
+ },
+ {
+  "n": 477,
+  "ko_e": "?댁쟾?먭? ?꾪뿕???먮겮怨? 釉뚮젅?댄겕 ?섎떖??諛잛븘???ㅼ젣濡??먮룞李④? 硫덉텛寃??섎뒗 ?뚯쐞 ?먮룞李⑥쓽 ?뺤?嫄곕━??怨쇰줈  諛??뚯＜ ?댁쟾 ?? 李⑤웾??以묐웾??臾닿쾪嫄곕굹 ?띾룄媛 鍮좊??섎줉, ??댁뼱??留덈え?곹깭媛 ?ы븷?섎줉 湲몄뼱吏꾨떎.",
+  "tr_e": "The so-called stopping distance of a vehicle, from when the driver perceives danger and presses the brake pedal until the vehicle actually stops, lengthens when driving while fatigued or drunk, the heavier the vehicle's weight or the faster the speed, and the more severe the tire wear."
+ },
+ {
+  "n": 478,
+  "ko_e": "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?뱀감 ?몄썝, ?곸옱 以묐웾 諛??곸옱 ?⑸웾??愿?섏뿬 ?댄뻾?곸쓽 ?덉쟾 湲곗????섏뼱???뱀감?쒗궎嫄곕굹   ?곸옱?섍퀬 ?댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?ㅻ쭔, 異쒕컻吏瑜?愿?좏븯??寃쎌같?쒖옣???덇?瑜?諛쏆? ?뚯뿉??洹몃윭?섏? ?꾨땲?섎떎. (?꾨줈援먰넻踰???9議?",
+  "tr_e": "The driver of any vehicle must not carry passengers or load beyond the operational safety standards regarding the number of passengers, load weight, and load capacity, and drive. However, this does not apply where permission has been obtained from the chief of the police station having jurisdiction over the point of departure. (Road Traffic Act Article 39)"
+ },
+ {
+  "n": 479,
+  "ko_e": "?욎감? ?뺤?嫄곕━ ?댁긽???좎??섍퀬 ?욎감? 異붾룎?섏? ?딆쓣 ?뺣룄濡?異⑸텇??媛먯냽?섎ŉ ?덉쟾嫄곕━瑜??뺣낫?쒕떎. (?꾨줈援먰넻 踰???9議?",
+  "tr_e": "Maintain more than the stopping distance from the vehicle ahead, decelerate sufficiently so as not to rear-end it, and secure a safe distance. (Road Traffic Act Article 19)"
+ },
+ {
+  "n": 480,
+  "ko_e": "???댁쟾?먭? ?덉쟾?좊? 李⑹슜?섏? ?딆? 寃쎌슦 踰붿튃湲?3留??먯씠 遺怨쇰맂??           ???쇰컲?곸쑝濡?寃쎈???????명??먯긽? 2?먯떇?먯꽌 ??留롮씠 諛쒖깮?쒕떎.           ??13??誘몃쭔???대┛?닿? ?덉쟾?좊? 李⑹슜?섏? ?딆쑝硫?怨쇳깭猷?6留??먯씠 遺怨쇰맂??          ???덉쟾?좊뒗 李⑹슜諛⑹떇???곕씪 2?먯떇, 3?먯떇, 4?먯떇?쇰줈 援щ텇?쒕떎.",
+  "tr_e": "(1) If the driver does not wear a seat belt, a fine of 30,000 won is imposed. (2) Whiplash injury to the neck generally occurs more with a two-point belt. (3) If a child under 13 does not wear a seat belt, an administrative fine of 60,000 won is imposed. (4) Seat belts are classified as two-point, three-point, and four-point according to how they are worn."
+ },
+ {
+  "n": 481,
+  "ko_e": "?먮룞李⑥쓽 ?뱀감?먮뒗 ?덉쟾???꾪븯??醫뚯꽍 ?덉쟾?좊? 李⑹슜?섏뿬???섍퀬 湲닿툒???⑸Т濡?異쒕룞?섎뒗 寃쎌슦 ?댁쇅?먮뒗 湲닿툒???숈감???댁쟾?먮룄 醫뚯꽍 ?덉쟾?좊? 諛섎뱶??李⑹슜?섏뿬???쒕떎. (?꾨줈援먰넻踰???0議?",
+  "tr_e": "Vehicle occupants must wear seat belts for safety, and except when responding to an urgent duty, the driver of an emergency vehicle must also wear a seat belt without fail. (Road Traffic Act Article 50)"
+ },
+ {
+  "n": 482,
+  "ko_e": "援먰넻?ш퀬濡?泥숈텛怨⑥젅???덉긽?섎뒗 ?섏옄媛 ?덈뒗 寃쎌슦 湲닿툒??寃쎌슦媛 ?꾨땲硫??댁넚???댁꽌?????쒕떎. ?댁넚 ?꾩뿉 ?곸젅?? 泥섏튂媛 ?대（?댁?吏 ?딆쑝硫??뚯씠?????녿뒗 ?좉꼍?숈쟻 ?먯긽???낇솕?쒗궗 ?곕젮媛 ?ш린 ?뚮Ц?대떎. ?곕씪??2李??ш퀬?꾪뿕 ????諛⑹??섍린 ?꾪빐 遺?앹씠 ?댁넚?댁빞 ?쒕떎硫?遺紐⑹쓣 ?댁슜?댁꽌 泥숈텛遺遺꾩쓣 怨좎젙?????덉쟾??怨녹쑝濡??곗꽑 ??쇳빐???쒕떎.",
+  "tr_e": "Where there is a patient in a traffic accident with a suspected spinal fracture, do not transport them unless it is an emergency. This is because, if appropriate treatment is not given before transport, there is a great risk of worsening irreversible neurological damage. Therefore, if transport becomes unavoidable to prevent risks such as a secondary accident, first immobilize the spine using a splint and then evacuate them to a safe place as a priority."
+ },
+ {
+  "n": 483,
+  "ko_e": "?섏떇 ?곹깭瑜??뺤씤?섍린 ?꾪빐?쒕뒗 遺?곸옄?먭쾶 留먯쓣 嫄몄뼱蹂닿굅?? ?닿묠瑜?媛蹂띻쾶 ?먮뱶??蹂닿굅?? ?붿쓣 瑗ъ쭛?댁꽌 ?뺤씤????諛⑸쾿???덈떎.",
+  "tr_e": "To check the state of consciousness, methods include speaking to the injured person, lightly tapping their shoulder, or pinching their arm."
+ }
+]
+
+codex
+[]
+tokens used
+9,346
+[]

@@ -1,0 +1,231 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12812-590a-7431-b985-33d71fcb3491
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/330_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/330_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 524ms:
+[
+ {
+  "n": 605,
+  "ko_e": "寃쎌쑀瑜??곕즺濡??ъ슜?섎뒗 ?명썑 ???붿젮?먮룞李④? 媛??留롮? ?좏빐 諛곌린媛?ㅻ? 諛곗텧?섎뒗 ?먮룞李⑥씠??",
+  "tr_e": "Xe diesel c크 s沼?d沼쩸g d梳쬾 diesel l횪m nhi챗n li沼뇎 l횪 lo梳죍 xe th梳즜 ra nhi沼걏 kh챠 th梳즜 휃沼셛 h梳죍 nh梳쩿."
+ },
+ {
+  "n": 606,
+  "ko_e": "?곕즺 怨듦툒 李⑤떒 湲곕뒫(fuel cut)???곴레 ?쒖슜?섎뒗 愿???댁쟾(?쇱젙???띾룄 ?좎? ??媛???섎떖??諛잛? ?딅뒗 寃껋쓣 留먰븳 ??)???앺솢?뷀븳??",
+  "tr_e": "H찾y th튼沼쓓g xuy챗n th沼켧 hi沼뇆 l찼i theo qu찼n t챠nh (ch沼?vi沼놻 kh척ng 휃梳죖 b횪n 휃梳죖 ga khi duy tr챙 t沼멵 휃沼?nh梳쩿 휃沼땙h) t梳춏 d沼쩸g t챠ch c沼켧 ch沼쯢 n훱ng c梳칣 cung c梳쩺 nhi챗n li沼뇎 (fuel cut)."
+ },
+ {
+  "n": 607,
+  "ko_e": "諛곌린媛???ъ닚?섏옣移?Exhaust Gas Recirculation, EGR)??遺덊솢?깆씤 諛곌린媛?ㅼ쓽 ?쇰?瑜??≪엯 怨꾪넻?쇰줈 ?ъ닚?섏떆??怨? ?붿쭊???≪엯?섎뒗 ?쇳빀 媛?ㅼ뿉 ?쇳빀?섏뼱???곗냼 ?쒖쓽 理쒓퀬 ?⑤룄瑜??대젮 ?좏빐???ㅼ뿼臾쇱쭏??NOx(吏덉냼?고솕臾??? 二쇰줈 ?듭젣?섎뒗 ?μ튂?대떎.",
+  "tr_e": "H沼?th沼몁g tu梳쬷 ho횪n kh챠 x梳?(Exhaust Gas Recirculation, EGR) l횪 h沼?th沼몁g tu梳쬷 ho횪n l梳죍 m沼셳 ph梳쬷 kh챠 x梳?tr퉤 v횪o h沼?th沼몁g n梳죖, h챵a v횪o kh챠 h沼뾫 h沼즤 휃튼沼즓 n梳죖 v횪o 휃沼셬g c퉤, h梳?nhi沼뇍 휃沼?cao nh梳쩿 khi ch찼y 휃沼?ch沼?y梳퓎 沼쯢 ch梳?NOx (oxit nit퉤) l횪 ch梳쩿 척 nhi沼꿲 휃沼셛 h梳죍."
+ },
+ {
+  "n": 608,
+  "ko_e": "援먰넻?덉쟾踰???議?李⑤웾 ?댁쟾???깆쓽 ?섎Т)???섑븯硫?李⑤웾???댁쟾?섎뒗 ???깆? 踰뺣졊???뺥븯??諛붿뿉 ?곕씪 ?뱁빐 李⑤웾 ???덉쟾?댄뻾??吏?μ씠 ?녿뒗吏瑜??먭??섍퀬 蹂댄뻾?먯? ?먯쟾嫄??댁슜?먯뿉寃??꾪뿕怨??쇳빐瑜?二쇱? ?꾨땲?섎룄濡??덉쟾?섍쾶  ?댁쟾?섏뿬???쒕떎.",
+  "tr_e": "Theo 휂i沼걏 7 Lu梳춗 An to횪n giao th척ng (ngh칫a v沼?c沼쬪 ng튼沼쓎 l찼i xe v.v.), ng튼沼쓎 l찼i xe v.v. ph梳즜 ki沼긩 tra xem xe 휃처 c처 tr沼?ng梳죍 g챙 cho vi沼놻 v梳춏 h횪nh an to횪n hay kh척ng theo quy 휃沼땙h c沼쬪 ph찼p lu梳춗 v횪 ph梳즜 l찼i xe an to횪n 휃沼?kh척ng g창y nguy hi沼긩 v횪 thi沼뇍 h梳죍 cho ng튼沼쓎 휃i b沼?v횪 ng튼沼쓎 s沼?d沼쩸g xe 휃梳죖."
+ },
+ {
+  "n": 609,
+  "ko_e": "???섏냼?먮룞李?異⑹쟾??二쇰??먯꽌???≪뿰??湲덉??섏뼱 ?덈떎. ???섏냼?먮룞李??곕즺 異⑹쟾 ?꾨즺 ?곹깭瑜??뺤씤?????대룞?쒕떎. ???섏냼?먮룞李??곕즺 異⑹쟾 ?댁쟾???쒕룞??諛섎뱶???덈떎. ???섏냼?먮룞李?異⑹쟾???ㅻ퉬??異⑹쟾??吏곸썝留뚯씠 ?묐룞?????덈떎.",
+  "tr_e": "??C梳쩷 h첬t thu沼멵 沼?khu v沼켧 xung quanh tr梳죑 n梳죖 xe ch梳죣 b梳켷g hydro. ??Di chuy沼긪 sau khi 휃찾 x찼c nh梳춏 tr梳죒g th찼i ho횪n t梳쩿 n梳죖 nhi챗n li沼뇎 xe ch梳죣 b梳켷g hydro. ??Nh梳쩿 휃沼땙h ph梳즜 t梳칣 m찼y tr튼沼쌵 khi n梳죖 nhi챗n li沼뇎 xe ch梳죣 b梳켷g hydro. ??Ch沼?nh창n vi챗n tr梳죑 n梳죖 m沼쌻 c처 th沼?thao t찼c thi梳퓍 b沼?c沼쬪 tr梳죑 n梳죖 xe ch梳죣 b梳켷g hydro."
+ },
+ {
+  "n": 610,
+  "ko_e": "?섏냼?먮룞李?異⑹쟾?????쒖꽕?먯꽌??吏?뺣맂 ?μ냼瑜??쒖쇅?섍퀬 ?≪뿰???섏뿬?쒕뒗 ???쒕떎. ?뚭퀬?뺢??ㅼ븞?꾧?由щ쾿???쒗뻾洹쒖튃 蹂꾪몴5, KGS Code FP216/FP217 2.1.2 ?붽린???嫄곕━???곕씪 媛?ㅼ꽕鍮꾩쓽 ?몃㈃?쇰줈遺?? ?붽린 痍④툒?섎뒗 ?μ냼源뚯? 8m?댁긽???고쉶嫄곕━瑜??먯뼱???쒕떎.",
+  "tr_e": "Trong c찼c c퉤 s沼?trong tr梳죑 n梳죖 xe ch梳죣 b梳켷g hydro, kh척ng 휃튼沼즓 h첬t thu沼멵 ngo梳죍 tr沼?n퉤i 휃튼沼즓 ch沼?휃沼땙h. Theo Ph沼?l沼쩭 5 Th척ng t튼 thi h횪nh ?똋u梳춗 Qu梳즢 l첵 an to횪n kh챠 찼p su梳쩿 cao?? KGS Code FP216/FP217 2.1.2 Kho梳즢g c찼ch v沼쌻 ngu沼뱊 l沼춁, ph梳즜 gi沼?kho梳즢g c찼ch v챵ng t沼?8m tr沼?l챗n t沼?m梳톞 ngo횪i c沼쬪 thi梳퓍 b沼?kh챠 휃梳퓆 n퉤i s沼?d沼쩸g ngu沼뱊 l沼춁."
+ },
+ {
+  "n": 611,
+  "ko_e": "吏먯쓣 ?ㅼ? ?ㅽ봽?몃윮? ?곸옱臾쇱쓽 臾닿쾶濡??명빐 釉뚮젅?댄겕 ?μ튂媛 ?뚯뿴???곕젮媛 ?덉쑝誘濡???⑥쑝濡?湲곗뼱瑜??좎??섏뿬  ?붿쭊釉뚮젅?댄겕瑜??ъ슜?섎ŉ 釉뚮젅?댄겕 ?섎떖???먯＜ ?섎늻??諛잛븘 釉뚮젅?댄겕 ?μ튂??臾대━瑜?理쒖냼?뷀븯?꾨줉 ?섍퀬 ?덉쟾嫄곕━ 瑜?異⑸텇???좎??섏뿬???쒕떎.",
+  "tr_e": "Xe ben ch沼?h횪ng c처 nguy c퉤 v沼?h沼?th沼몁g phanh do tr沼뛫g l튼沼즢g c沼쬪 v梳춗 ch沼? n챗n ph梳즜 gi沼?s沼?沼?m沼쯢 th梳쩺 휃沼?s沼?d沼쩸g phanh 휃沼셬g c퉤, 휃梳죖 b횪n 휃梳죖 phanh th횪nh nhi沼걏 l梳쬷 th튼沼쓓g xuy챗n 휃沼?gi梳즡 thi沼긳 g찼nh n梳톘g cho h沼?th沼몁g phanh v횪 ph梳즜 gi沼?kho梳즢g c찼ch an to횪n 휃梳쭃 휃沼?"
+ },
+ {
+  "n": 612,
+  "ko_e": "?붾Ъ???ｊ퀬 ?대룞???뚮뒗 諛섎뱶??媛源뚯슫 嫄곕━?쇰룄 ?붾Ъ???쇳듉??怨좎젙?섍퀬 ??컻瑜??뚯썙 ?좊룞???녿룄濡??섍퀬 異쒕컻  ?꾩뿉 ?덈퉬 ??댁뼱 ??遺李⑸Ъ???댁긽 ?좊Т瑜??먭?節ν솗?명븯怨??쒖젙 ??異쒕컻?섏뿬???쒕떎.",
+  "tr_e": "Khi di chuy沼긪 ch沼?h횪ng h처a, d첫 l횪 kho梳즢g c찼ch g梳쬷 c크ng nh梳쩿 휃沼땙h ph梳즜 c沼?휃沼땙h ch梳칌 ch梳칗 h횪ng h처a v횪 ph沼?b梳죜 휃沼?kh척ng b沼?x챗 d沼땉h, ki沼긩 tra x찼c nh梳춏 t챙nh tr梳죒g b梳쩿 th튼沼쓓g c沼쬪 c찼c v梳춗 g梳칗 k챔m nh튼 l沼몆 d沼?ph챵ng v.v. tr튼沼쌵 khi kh沼웙 h횪nh v횪 kh沼웙 h횪nh sau khi kh梳칌 ph沼쩭."
+ },
+ {
+  "n": 613,
+  "ko_e": "?붾Ъ?댁넚???먭꺽?쒗뿕 援먯옱 以??붾Ъ痍④툒?붾졊, ?붾Ъ ?곸옱?⑥뿉 ?붾Ъ ?곸옱 ???욎そ?대굹 ?ㅼそ?쇰줈 臾닿쾶媛 移섏슦移섏? ?딅룄 濡?洹좏삎?섍쾶 ?곸옱?쒕떎.",
+  "tr_e": "Trong gi찼o tr챙nh thi c梳쩺 ch沼쯰g ch沼?v梳춏 t梳즜 h횪ng h처a, ph梳쬷 h튼沼썀g d梳쳌 x沼?l첵 h횪ng h처a, khi x梳퓈 h횪ng v횪o th첫ng xe ph梳즜 x梳퓈 c창n b梳켷g sao cho tr沼뛫g l튼沼즢g kh척ng d沼뱊 v沼?ph챠a tr튼沼쌵 ho梳톍 ph챠a sau."
+ },
+ {
+  "n": 614,
+  "ko_e": "李⑤웾??以묐웾(?곸옱????而ㅼ쭏?섎줉 ?ㅼ젣 ?쒕룞嫄곕━??湲몄뼱吏誘濡? ?덉쟾嫄곕━???좎?? 釉뚮젅?댄겕 ?섎떖 議곗옉??二쇱쓽?섏뿬 ???쒕떎.",
+  "tr_e": "Tr沼뛫g l튼沼즢g (t梳즜 tr沼뛫g) c沼쬪 xe c횪ng l沼썀 th챙 qu찾ng 휃튼沼쓓g phanh th沼켧 t梳?c횪ng d횪i, n챗n ph梳즜 ch첬 첵 duy tr챙 kho梳즢g c찼ch an to횪n v횪 thao t찼c b횪n 휃梳죖 phanh."
+ },
+ {
+  "n": 615,
+  "ko_e": "諛붾떏????퀬 異쒖엯援ъ뿉 怨꾨떒???녿뒗 踰꾩뒪?대떎. 湲곗〈 踰꾩뒪??怨꾨떒???ㅻⅤ?대━湲??섎뱺 援먰넻?쎌옄?? ?뱁엳 ?μ븷?몃뱾?? ?대룞沅뚯쓣 蹂댁옣?섍린 ?꾪빐 ?꾩엯?섏뿀??",
+  "tr_e": "L횪 xe bu첵t c처 s횪n th梳쩺 v횪 kh척ng c처 b梳춃 thang 沼?c沼춁 l챗n xu沼몁g. 휂튼沼즓 휃튼a v횪o 휃沼?b梳즣 휃梳즡 quy沼걆 di chuy沼긪 c沼쬪 nh沼칗g ng튼沼쓎 y梳퓎 th梳?v沼?giao th척ng kh처 l챗n xu沼몁g b梳춃 thang c沼쬪 xe bu첵t hi沼뇆 c처, 휃梳톍 bi沼뇍 l횪 ng튼沼쓎 khuy梳퓍 t梳춗."
+ },
+ {
+  "n": 616,
+  "ko_e": "?꾨줈援먰넻踰???0議????? ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8 16???댄뻾湲곕줉怨꾧? ?ㅼ튂?섏? ?꾨땲???뱁빀?먮룞李⑤벑(?뱀닔?먮룞 李????댁쟾??寃쎌슦?먮뒗 踰붿튃湲?7留??? 援먰넻?덉쟾踰???5議곗젣1?? 援먰넻?덉쟾踰??쒗뻾??蹂꾪몴9 ?댄뻾湲곕줉?μ튂瑜?遺李⑺븯 吏 ?꾨땲??寃쎌슦?먮뒗 怨쇳깭猷?50~150留???,
+  "tr_e": "Kho梳즢 5 휂i沼걏 50 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? s沼?16 Ph沼?l沼쩭 8 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Tr튼沼쓓g h沼즤 l찼i xe kh찼ch v.v. (xe chuy챗n d沼쩸g) ch튼a l梳칛 thi梳퓍 b沼?ghi h횪nh tr챙nh th챙 b沼?ph梳죜 ti沼걆 70.000 won; Kho梳즢 1 휂i沼걏 55 Lu梳춗 An to횪n giao th척ng, Ph沼?l沼쩭 9 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 An to횪n giao th척ng: Tr튼沼쓓g h沼즤 kh척ng g梳칗 thi梳퓍 b沼?ghi h횪nh tr챙nh th챙 b沼?ph梳죜 h횪nh ch챠nh 500.000~1.500.000 won."
+ },
+ {
+  "n": 617,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8, ?곸옱臾?異붾씫諛⑹? ?꾨컲 : 4??珥덇낵 ?붾Ъ?먮룞李?踰붿튃湲?5留??? 4???댄븯 ?붾Ъ?먮룞李?踰붿튃 湲?4留??? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28, ?곸옱臾?異붾씫諛⑹??꾨컲 踰뚯젏 15??,
+  "tr_e": "Ph沼?l沼쩭 8 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? vi ph梳죑 ng훱n r퉤i v梳춗 ch沼? xe t梳즜 tr챗n 4 t梳쩸 ph梳죜 ti沼걆 50.000 won, xe t梳즜 t沼?4 t梳쩸 tr沼?xu沼몁g ph梳죜 ti沼걆 40.000 won; Ph沼?l沼쩭 28 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 휃i沼긩 ph梳죜 vi ph梳죑 ng훱n r퉤i v梳춗 ch沼?15 휃i沼긩."
+ },
+ {
+  "n": 618,
+  "ko_e": "?ъ뾽???곸뾽?? ?붾Ъ?먮룞李??⑸떖節κ컻蹂꾬쉈?쇰컲) ?댁쟾?먮뒗 諛섎뱶???붾Ъ?댁넚醫낆궗?먭꺽??痍⑤뱷 ???댁쟾?섏뿬???쒕떎.",
+  "tr_e": "Ng튼沼쓎 l찼i xe t梳즜 kinh doanh (lo梳죍 h챙nh v梳춏 t梳즜 h횪ng h처a g沼뱈: v梳춏 t梳즜 l梳??⑸떖, c찼 th沼?媛쒕퀎, th척ng th튼沼쓓g ?쇰컲) nh梳쩿 휃沼땙h ph梳즜 l梳쪅 ch沼쯰g ch沼?h횪nh ngh沼?v梳춏 t梳즜 h횪ng h처a r沼밿 m沼쌻 휃튼沼즓 l찼i."
+ },
+ {
+  "n": 619,
+  "ko_e": "??뺥솕臾쇱감???뱀슜李⑥뿉 鍮꾪빐 ?몃뱾蹂듭썝?μ씠 ?먰솢?섏? 紐삵븯怨?李⑥껜媛 臾닿쾪怨?湲?異뺢굅 ?뚮Ц???곷??곸쑝濡??덉젙?꾧?  ?믪쑝硫? ?붾Ъ??醫낅쪟???곕씪 ?좏쉶諛섍꼍怨??덉젙?깆씠 ?ш쾶 蹂?????덈떎.",
+  "tr_e": "So v沼쌻 xe con, xe t梳즜 c沼?l沼썀 c처 l沼켧 h沼밿 v척 l훱ng kh척ng tr퉤n tru, do th창n xe n梳톘g v횪 chi沼걏 d횪i c퉤 s沼?d횪i n챗n 휃沼?沼븂 휃沼땙h t튼퉤ng 휃沼멼 cao, v횪 b찼n k챠nh quay v챵ng c첫ng 휃沼?沼븂 휃沼땙h c처 th沼?thay 휃沼뷼 l沼썀 t첫y theo lo梳죍 h횪ng h처a."
+ },
+ {
+  "n": 620,
+  "ko_e": "?꾨줈援먰넻踰???0議??뱀젙 ?댁쟾?먯쓽 以?섏궗?? ????媛????댄뻾湲곕줉怨꾧? ?ㅼ튂?섏뼱 ?덉? ?꾨땲?섍굅??怨좎옣 ?깆쑝濡??ъ슜?????녿뒗 ?댄뻾湲곕줉怨꾧? ?ㅼ튂???먮룞李⑤? ?댁쟾?섍굅???댄뻾湲곕줉怨꾨? ?먮옒??紐⑹쟻?濡??ъ슜?섏? ?꾨땲?섍퀬 ?먮룞李⑤? ?댁쟾?섎뒗 ?됱쐞瑜??댁꽌???꾨땲 ?쒕떎.",
+  "tr_e": "C찼c 휃i沼긩 c沼쬪 kho梳즢 5 휂i沼걏 50 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(휃i沼걏 c梳쬷 tu창n th沼?c沼쬪 ng튼沼쓎 l찼i xe 휃梳톍 휃沼땙h): Kh척ng 휃튼沼즓 th沼켧 hi沼뇆 h횪nh vi l찼i xe kh척ng l梳칛 thi梳퓍 b沼?ghi h횪nh tr챙nh, ho梳톍 l찼i xe c처 l梳칛 thi梳퓍 b沼?ghi h횪nh tr챙nh b沼?h沼뢮g v.v. kh척ng s沼?d沼쩸g 휃튼沼즓, ho梳톍 l찼i xe m횪 kh척ng s沼?d沼쩸g thi梳퓍 b沼?ghi h횪nh tr챙nh 휃첬ng m沼쩭 휃챠ch ban 휃梳쬾."
+ },
+ {
+  "n": 621,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????45議?1??뿉 ?섑븯????뺣㈃???먮뒗 ?뱀닔硫댄뿀瑜?痍⑤뱷?섎젮??寃쎌슦???댁쟾???꾩슂???곸꽦 湲곗? ? 55?곗떆踰?蹂댁껌湲곕? ?ъ슜?섎뒗 ?щ엺? 40?곗떆踰????뚮━瑜??ㅼ쓣 ???덉뼱???쒕떎.",
+  "tr_e": "Theo kho梳즢 1 휂i沼걏 45 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? ti챗u chu梳쯰 n훱ng l沼켧 c梳쬷 thi梳퓍 휃沼?l찼i trong tr튼沼쓓g h沼즤 mu沼몁 l梳쪅 gi梳쪅 ph챕p h梳죒g l沼썀 ho梳톍 gi梳쪅 ph챕p h梳죒g 휃梳톍 bi沼뇍 l횪 ph梳즜 nghe 휃튼沼즓 창m thanh 55 decibel (ng튼沼쓎 d첫ng m찼y tr沼?th챠nh l횪 40 decibel)."
+ },
+ {
+  "n": 622,
+  "ko_e": "??뺥솕臾쇱감??吏꾨룞?뱀꽦???덇퀬 吏꾨룞媛곸? ?뱀슜李⑥뿉 鍮꾪빐 留ㅼ슦 ?щŉ, 以묒떖?믪씠??吏꾨룞?뱀꽦???곹뼢??誘몄튂硫?以묒떖?  ?곻쉈??諛⑺뼢?쇰줈??誘몄튇??",
+  "tr_e": "Xe t梳즜 c沼?l沼썀 c처 휃梳톍 t챠nh rung 휃沼셬g v횪 g처c rung r梳쩿 l沼썀 so v沼쌻 xe con, chi沼걏 cao tr沼뛫g t창m 梳즢h h튼沼웢g 휃梳퓆 휃梳톍 t챠nh rung 휃沼셬g v횪 tr沼뛫g t창m c크ng 梳즢h h튼沼웢g theo h튼沼썀g l챗n xu沼몁g."
+ },
+ {
+  "n": 623,
+  "ko_e": "??뺥솕臾쇱감媛 ?댁쟾?앹씠 ?믩떎怨??댁긽湲고썑 ???쒖빞媛 醫뗭븘吏??寃껋? ?꾨땲硫? ?뚰삎?뱀슜李⑥뿉 鍮꾪빐 ?몃뱾蹂듭썝?μ씠 ?먰솢 移?紐삵븯怨?臾닿굅??以묐웾怨?湲?異뺢굅 ?뚮Ц???덉젙?꾨뒗 ?뱀슜李⑥뿉 鍮꾪빐 ?믩떎.",
+  "tr_e": "Xe t梳즜 c沼?l沼썀 c처 gh梳?l찼i cao nh튼ng kh척ng ph梳즜 v챙 th梳?m횪 t梳쬶 nh챙n t沼몋 h퉤n khi th沼쓎 ti梳퓍 b梳쩿 th튼沼쓓g, so v沼쌻 xe con nh沼?th챙 l沼켧 h沼밿 v척 l훱ng kh척ng tr퉤n tru v횪 do tr沼뛫g l튼沼즢g n梳톘g v횪 chi沼걏 d횪i c퉤 s沼?d횪i n챗n 휃沼?沼븂 휃沼땙h cao h퉤n so v沼쌻 xe con."
+ },
+ {
+  "n": 624,
+  "ko_e": "????붾Ъ李⑥쓽 ?ш컖吏???蹂대떅?좊Т ?щ????곕씪 ??李⑥씠媛 ?덇퀬, ?섏쨷??蹂?붿뿉 ?곕씪 ?욑쉈?룸컮?댁쓽 ?쒕룞?μ뿉 ?곹뼢 ??誘몄튂硫??댁쟾??醫뚯륫蹂대떎???곗륫 ?ш컖吏?媛 ?⑥뵮 ?볥떎.",
+  "tr_e": "휂i沼긩 m첫 c沼쬪 xe t梳즜 c沼?l沼썀 c처 s沼?kh찼c bi沼뇍 l沼썀 t첫y theo c처 n梳칛 ca-p척 hay kh척ng, 梳즢h h튼沼웢g 휃梳퓆 l沼켧 phanh c沼쬪 b찼nh tr튼沼쌵/sau t첫y theo s沼?thay 휃沼뷼 t梳즜 tr沼뛫g, v횪 휃i沼긩 m첫 b챗n ph梳즜 r沼셬g h퉤n nhi沼걏 so v沼쌻 b챗n tr찼i gh梳?l찼i."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; Get-Content -Raw -Encoding UTF8 -LiteralPath 'translations/audit/queue/330_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 498ms:
+[
+ {
+  "n": 605,
+  "ko_e": "경유를 연료로 사용하는 노후 된 디젤자동차가 가장 많은 유해 배기가스를 배출하는 자동차이다.",
+  "tr_e": "Xe diesel cũ sử dụng dầu diesel làm nhiên liệu là loại xe thải ra nhiều khí thải độc hại nhất."
+ },
+ {
+  "n": 606,
+  "ko_e": "연료 공급 차단 기능(fuel cut)을 적극 활용하는 관성 운전(일정한 속도 유지 때 가속 페달을 밟지 않는 것을 말한 다.)을 생활화한다.",
+  "tr_e": "Hãy thường xuyên thực hiện lái theo quán tính (chỉ việc không đạp bàn đạp ga khi duy trì tốc độ nhất định) tận dụng tích cực chức năng cắt cung cấp nhiên liệu (fuel cut)."
+ },
+ {
+  "n": 607,
+  "ko_e": "배기가스 재순환장치(Exhaust Gas Recirculation, EGR)는 불활성인 배기가스의 일부를 흡입 계통으로 재순환시키 고, 엔진에 흡입되는 혼합 가스에 혼합되어서 연소 시의 최고 온도를 내려 유해한 오염물질인 NOx(질소산화물)을  주로 억제하는 장치이다.",
+  "tr_e": "Hệ thống tuần hoàn khí xả (Exhaust Gas Recirculation, EGR) là hệ thống tuần hoàn lại một phần khí xả trơ vào hệ thống nạp, hòa vào khí hỗn hợp được nạp vào động cơ, hạ nhiệt độ cao nhất khi cháy để chủ yếu ức chế NOx (oxit nitơ) là chất ô nhiễm độc hại."
+ },
+ {
+  "n": 608,
+  "ko_e": "교통안전법 제7조(차량 운전자 등의 의무)에 의하면 차량을 운전하는 자 등은 법령이 정하는 바에 따라 당해 차량 이 안전운행에 지장이 없는지를 점검하고 보행자와 자전거 이용자에게 위험과 피해를 주지 아니하도록 안전하게  운전하여야 한다.",
+  "tr_e": "Theo Điều 7 Luật An toàn giao thông (nghĩa vụ của người lái xe v.v.), người lái xe v.v. phải kiểm tra xem xe đó có trở ngại gì cho việc vận hành an toàn hay không theo quy định của pháp luật và phải lái xe an toàn để không gây nguy hiểm và thiệt hại cho người đi bộ và người sử dụng xe đạp."
+ },
+ {
+  "n": 609,
+  "ko_e": "① 수소자동차 충전소 주변에서는 흡연이 금지되어 있다. ② 수소자동차 연료 충전 완료 상태를 확인한 후 이동한다. ③ 수소자동차 연료 충전 이전에 시동을 반드시 끈다. ④ 수소자동차 충전소 설비는 충전소 직원만이 작동할 수 있다.",
+  "tr_e": "① Cấm hút thuốc ở khu vực xung quanh trạm nạp xe chạy bằng hydro. ② Di chuyển sau khi đã xác nhận trạng thái hoàn tất nạp nhiên liệu xe chạy bằng hydro. ③ Nhất định phải tắt máy trước khi nạp nhiên liệu xe chạy bằng hydro. ④ Chỉ nhân viên trạm nạp mới có thể thao tác thiết bị của trạm nạp xe chạy bằng hydro."
+ },
+ {
+  "n": 610,
+  "ko_e": "수소자동차 충전소 내 시설에서는 지정된 장소를 제외하고 흡연을 하여서는 안 된다. 「고압가스안전관리법」 시행규칙 별표5, KGS Code FP216/FP217 2.1.2 화기와의 거리에 따라 가스설비의 외면으로부터  화기 취급하는 장소까지 8m이상의 우회거리를 두어야 한다.",
+  "tr_e": "Trong các cơ sở trong trạm nạp xe chạy bằng hydro, không được hút thuốc ngoại trừ nơi được chỉ định. Theo Phụ lục 5 Thông tư thi hành 「Luật Quản lý an toàn khí áp suất cao」, KGS Code FP216/FP217 2.1.2 Khoảng cách với nguồn lửa, phải giữ khoảng cách vòng từ 8m trở lên từ mặt ngoài của thiết bị khí đến nơi sử dụng nguồn lửa."
+ },
+ {
+  "n": 611,
+  "ko_e": "짐을 실은 덤프트럭은 적재물의 무게로 인해 브레이크 장치가 파열될 우려가 있으므로 저단으로 기어를 유지하여  엔진브레이크를 사용하며 브레이크 페달을 자주 나누어 밟아 브레이크 장치에 무리를 최소화하도록 하고 안전거리 를 충분히 유지하여야 한다.",
+  "tr_e": "Xe ben chở hàng có nguy cơ vỡ hệ thống phanh do trọng lượng của vật chở, nên phải giữ số ở mức thấp để sử dụng phanh động cơ, đạp bàn đạp phanh thành nhiều lần thường xuyên để giảm thiểu gánh nặng cho hệ thống phanh và phải giữ khoảng cách an toàn đầy đủ."
+ },
+ {
+  "n": 612,
+  "ko_e": "화물을 싣고 이동할 때는 반드시 가까운 거리라도 화물을 튼튼히 고정하고 덮개를 씌워 유동이 없도록 하고 출발  전에 예비 타이어 등 부착물의 이상 유무를 점검･확인하고 시정 후 출발하여야 한다.",
+  "tr_e": "Khi di chuyển chở hàng hóa, dù là khoảng cách gần cũng nhất định phải cố định chắc chắn hàng hóa và phủ bạt để không bị xê dịch, kiểm tra xác nhận tình trạng bất thường của các vật gắn kèm như lốp dự phòng v.v. trước khi khởi hành và khởi hành sau khi khắc phục."
+ },
+ {
+  "n": 613,
+  "ko_e": "화물운송사 자격시험 교재 중 화물취급요령, 화물 적재함에 화물 적재 시 앞쪽이나 뒤쪽으로 무게가 치우치지 않도 록 균형되게 적재한다.",
+  "tr_e": "Trong giáo trình thi cấp chứng chỉ vận tải hàng hóa, phần hướng dẫn xử lý hàng hóa, khi xếp hàng vào thùng xe phải xếp cân bằng sao cho trọng lượng không dồn về phía trước hoặc phía sau."
+ },
+ {
+  "n": 614,
+  "ko_e": "차량의 중량(적재량)이 커질수록 실제 제동거리는 길어지므로, 안전거리의 유지와 브레이크 페달 조작에 주의하여 야 한다.",
+  "tr_e": "Trọng lượng (tải trọng) của xe càng lớn thì quãng đường phanh thực tế càng dài, nên phải chú ý duy trì khoảng cách an toàn và thao tác bàn đạp phanh."
+ },
+ {
+  "n": 615,
+  "ko_e": "바닥이 낮고 출입구에 계단이 없는 버스이다. 기존 버스의 계단을 오르내리기 힘든 교통약자들, 특히 장애인들의  이동권을 보장하기 위해 도입되었다.",
+  "tr_e": "Là xe buýt có sàn thấp và không có bậc thang ở cửa lên xuống. Được đưa vào để bảo đảm quyền di chuyển của những người yếu thế về giao thông khó lên xuống bậc thang của xe buýt hiện có, đặc biệt là người khuyết tật."
+ },
+ {
+  "n": 616,
+  "ko_e": "도로교통법 제50조 제5항, 도로교통법 시행령 별표8 16호 운행기록계가 설치되지 아니한 승합자동차등(특수자동 차)을 운전한 경우에는 범칙금 7만 원, 교통안전법 제55조제1항, 교통안전법 시행령 별표9 운행기록장치를 부착하 지 아니한 경우에는 과태료 50~150만 원",
+  "tr_e": "Khoản 5 Điều 50 Luật Giao thông đường bộ, số 16 Phụ lục 8 Nghị định thi hành Luật Giao thông đường bộ: Trường hợp lái xe khách v.v. (xe chuyên dụng) chưa lắp thiết bị ghi hành trình thì bị phạt tiền 70.000 won; Khoản 1 Điều 55 Luật An toàn giao thông, Phụ lục 9 Nghị định thi hành Luật An toàn giao thông: Trường hợp không gắn thiết bị ghi hành trình thì bị phạt hành chính 500.000~1.500.000 won."
+ },
+ {
+  "n": 617,
+  "ko_e": "도로교통법 시행령 별표8, 적재물 추락방지 위반 : 4톤 초과 화물자동차 범칙금 5만 원, 4톤 이하 화물자동차 범칙 금 4만 원, 도로교통법 시행규칙 별표28, 적재물 추락방지위반 벌점 15점",
+  "tr_e": "Phụ lục 8 Nghị định thi hành Luật Giao thông đường bộ, vi phạm ngăn rơi vật chở: xe tải trên 4 tấn phạt tiền 50.000 won, xe tải từ 4 tấn trở xuống phạt tiền 40.000 won; Phụ lục 28 Thông tư thi hành Luật Giao thông đường bộ, điểm phạt vi phạm ngăn rơi vật chở 15 điểm."
+ },
+ {
+  "n": 618,
+  "ko_e": "사업용(영업용) 화물자동차(용달･개별･일반) 운전자는 반드시 화물운송종사자격을 취득 후 운전하여야 한다.",
+  "tr_e": "Người lái xe tải kinh doanh (loại hình vận tải hàng hóa gồm: vận tải lẻ 용달, cá thể 개별, thông thường 일반) nhất định phải lấy chứng chỉ hành nghề vận tải hàng hóa rồi mới được lái."
+ },
+ {
+  "n": 619,
+  "ko_e": "대형화물차는 승용차에 비해 핸들복원력이 원활하지 못하고 차체가 무겁고 긴 축거 때문에 상대적으로 안정도가  높으며, 화물의 종류에 따라 선회반경과 안정성이 크게 변할 수 있다.",
+  "tr_e": "So với xe con, xe tải cỡ lớn có lực hồi vô lăng không trơn tru, do thân xe nặng và chiều dài cơ sở dài nên độ ổn định tương đối cao, và bán kính quay vòng cùng độ ổn định có thể thay đổi lớn tùy theo loại hàng hóa."
+ },
+ {
+  "n": 620,
+  "ko_e": "도로교통법 제50조(특정 운전자의 준수사항) 제5항 각 호 운행기록계가 설치되어 있지 아니하거나 고장 등으로 사용할 수 없는 운행기록계가 설치된 자동차를 운전하거나 운행기록계를 원래의 목적대로 사용하지 아니하고 자동차를 운전하는 행위를 해서는 아니 된다.",
+  "tr_e": "Các điểm của khoản 5 Điều 50 Luật Giao thông đường bộ (điều cần tuân thủ của người lái xe đặc định): Không được thực hiện hành vi lái xe không lắp thiết bị ghi hành trình, hoặc lái xe có lắp thiết bị ghi hành trình bị hỏng v.v. không sử dụng được, hoặc lái xe mà không sử dụng thiết bị ghi hành trình đúng mục đích ban đầu."
+ },
+ {
+  "n": 621,
+  "ko_e": "도로교통법 시행령 제 45조 1항에 의하여 대형면허 또는 특수면허를 취득하려는 경우의 운전에 필요한 적성 기준 은 55데시벨(보청기를 사용하는 사람은 40데시벨)의 소리를 들을 수 있어야 한다.",
+  "tr_e": "Theo khoản 1 Điều 45 Nghị định thi hành Luật Giao thông đường bộ, tiêu chuẩn năng lực cần thiết để lái trong trường hợp muốn lấy giấy phép hạng lớn hoặc giấy phép hạng đặc biệt là phải nghe được âm thanh 55 decibel (người dùng máy trợ thính là 40 decibel)."
+ },
+ {
+  "n": 622,
+  "ko_e": "대형화물차는 진동특성이 있고 진동각은 승용차에 비해 매우 크며, 중심높이는 진동특성에 영향을 미치며 중심은  상･하 방향으로도 미친다.",
+  "tr_e": "Xe tải cỡ lớn có đặc tính rung động và góc rung rất lớn so với xe con, chiều cao trọng tâm ảnh hưởng đến đặc tính rung động và trọng tâm cũng ảnh hưởng theo hướng lên xuống."
+ },
+ {
+  "n": 623,
+  "ko_e": "대형화물차가 운전석이 높다고 이상기후 시 시야가 좋아지는 것은 아니며, 소형승용차에 비해 핸들복원력이 원활 치 못하고 무거운 중량과 긴 축거 때문에 안정도는 승용차에 비해 높다.",
+  "tr_e": "Xe tải cỡ lớn có ghế lái cao nhưng không phải vì thế mà tầm nhìn tốt hơn khi thời tiết bất thường, so với xe con nhỏ thì lực hồi vô lăng không trơn tru và do trọng lượng nặng và chiều dài cơ sở dài nên độ ổn định cao hơn so với xe con."
+ },
+ {
+  "n": 624,
+  "ko_e": "대형 화물차의 사각지대는 보닛유무 여부에 따라 큰 차이가 있고, 하중의 변화에 따라 앞･뒷바퀴의 제동력에 영향 을 미치며 운전석 좌측보다는 우측 사각지대가 훨씬 넓다.",
+  "tr_e": "Điểm mù của xe tải cỡ lớn có sự khác biệt lớn tùy theo có nắp ca-pô hay không, ảnh hưởng đến lực phanh của bánh trước/sau tùy theo sự thay đổi tải trọng, và điểm mù bên phải rộng hơn nhiều so với bên trái ghế lái."
+ }
+]
+
+codex
+[]
+tokens used
+16,822
+[]

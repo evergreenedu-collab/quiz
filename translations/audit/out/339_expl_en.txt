@@ -1,0 +1,155 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12853-1b8a-7aa0-bb02-1e8a6e247ac3
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/339_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/339_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 521ms:
+[
+ {
+  "n": 786,
+  "ko_e": "?댁쟾?먮뒗 援먯감濡??곹솴????긽 ?덉쑝濡??뺤씤?섎뒗 ?듦???媛?몄빞 ?섍퀬 醫뚰쉶?꾪븷 ?뚮뒗 諛섎????꾨줈?먯꽌 ?고쉶?꾪븯??李⑤웾?먮룄 二쇱쓽?댁빞 ?쒕떎. 醫뚰쉶???쒖뿉 ?듯뻾 ?좊룄?좎쓣 以?섑븯硫댁꽌 1李⑤줈?먯꽌 異쒕컻?섏뿬 ?쇱そ ?꾨줈??1李⑤줈濡? 2李⑤줈 ??異쒕컻???뚮뒗 ?쇱そ ?꾨줈??2李⑤줈濡?吏꾩엯?섎뒗 寃??덉쟾??醫뚰쉶??諛⑸쾿?대떎. ?쇱そ ?꾨줈??吏꾩엯???꾩뿉 ?쒖감?곸쑝濡??곗깋 ?먯꽑??李⑥꽑?먯꽌 李⑤줈瑜?蹂寃쏀빐???쒕떎. ?먰븳 ?뚯쟾 ?쒖뿉??李⑤웾??A?꾨윭濡??명빐 諛쒖깮?섎뒗 ?ш컖吏?濡??명빐 ?대쪣李⑤굹 蹂댄뻾?먮? ?쒓컙?곸쑝濡?紐?蹂????덈떎???먮룄 ??긽 ?좎쓽?댁빞 ?쒕떎. 諛섎?濡??앷컖?섎㈃ ?대쪣李??댁쟾?먮굹 ?먮룞 李??댁쟾?먯씪 ?뚮룄 ?ㅻⅨ 李⑤웾?ㅼ씠 ?섎? ??긽 蹂????덈떎???앷컖? ?섎せ??寃껋씠怨??곕씪???뺤??좎쓣 以?섑븯????援먰넻 踰뺢퇋瑜?吏?ㅻ뒗 ?댁쟾?먭? ?섏뼱???쒕떎.",
+  "tr_e": "A driver must always have the habit of visually confirming the intersection situation, and when turning left must also pay attention to vehicles turning right from the opposite road. When turning left, following the traffic guide line, entering the first lane of the left road when starting from the first lane, and entering the second lane of the left road when starting from the second lane is a safe left-turn method. After entering the left road, one must change lanes sequentially at the white broken line lane lines. Also, when turning, one must always be mindful that a motorcycle or pedestrian may momentarily be missed due to the blind spot created by the vehicle's A-pillar. Conversely, whether one is a motorcyclist or a car driver, the assumption that other vehicles can always see me is wrong, so one must become a driver who obeys traffic laws, such as observing the stop line."
+ },
+ {
+  "n": 787,
+  "ko_e": "援먯감濡쒖쓽 ?뺤감湲덉?吏? ?쒖떆???듯뻾?됱씠 留롮븘???곸뒿?곸씤 ?뺤껜媛 諛쒖깮?섎뒗 怨녹씠?? 鍮꾨줉 ?뱀깋 ?좏샇?쇨퀬 ?섎뜑?쇰룄  瑗щ━臾쇨린濡?臾대━?섍쾶 ?듦낵?섎떎媛 援먯감濡??덉뿉???뺤껜?섏뼱 ?ㅻⅨ 李⑤웾???먮쫫??諛⑺빐?댁꽌???덈맂?? 吏꾩엯?섎젮??援?李⑤줈???뺤껜媛 ?덉긽?섎㈃ ?뺤????꾩뿉 ?뺤??섍퀬 ?ㅼ쓬 ?뱀깋 ?좏샇??異쒕컻?섎뒗 ?ъ쑀濡쒖슫 ?댁쟾?먭? ?섏옄. ?욎そ 3李⑤줈????鍮꾩뼱?덈뒗 2李⑤줈濡?湲됲븯寃?吏꾨줈 蹂寃쏀븯??李⑤웾????댁꽌??二쇱쓽???꾩슂媛 ?덈떎.",
+  "tr_e": "The no-stopping zone marking at an intersection is placed where heavy traffic causes chronic congestion. Even at a green signal, one must not force one's way through by \"blocking the box\" (entering an intersection without room to clear it) and then become stuck within the intersection, obstructing the flow of other vehicles. If congestion is anticipated at the intersection one is about to enter, be a relaxed driver who stops before the stop line and departs at the next green signal. One also needs to be cautious of a vehicle from the third lane ahead hurriedly changing lanes into the empty second lane."
+ },
+ {
+  "n": 788,
+  "ko_e": "?덉쟾吏? ?쒖떆???몄긽???μ븷臾쇱씠 ?덇굅???덉쟾 ?뺣낫媛 ?꾩슂???덉쟾吏?濡쒖꽌 ??吏????ㅼ뼱媛吏 紐삵븿???쒖떆?섎뒗 寃껋씠?? 洹몃옒???덉쟾吏?瑜??듦낵?댁꽌 ?댁쟾?댁꽌???덈맂?? ?먰븳 吏꾨줈瑜?蹂寃쏀븷 ?뚮뒗 諛⑺뼢吏?쒕벑??誘몃━ 耳쒓퀬, ?왖룸뮘, 醫뙿룹슦瑜??뺤씤?섍퀬, ?곗깋 ?먯꽑??李⑥꽑?먯꽌 蹂寃쏀빐???쒕떎. ?먰븳 吏꾨줈 蹂寃쏀븷 ?뚮뒗 諛붾줈 ?욎そ 李⑤웾?대굹 ?ㅼそ 李⑤웾????李⑤웾蹂대떎 癒쇱? 湲됲븯寃?吏꾨줈 蹂寃쏀븯??寃쎌슦???덉쑝???왖룸뮘 李⑤웾??二쇱쓽?댁빞 ?쒕떎. 醫뚰쉶?꾧낵 ?좏꽩???숈떆???????덈뒗 李⑤줈??寃쎌슦?먮뒗 ?욎감媛 ?좏꽩?????섎룄 ?덇린???덉쟾嫄곕━瑜??뺣낫?섎㈃??醫뚰쉶?꾪븯??諛⑹뼱?댁쟾???꾩슂?섎떎.",
+  "tr_e": "A safety zone marking indicates a safety zone where there is an obstacle on the road surface or where securing safety is necessary, showing that one may not enter this zone. Therefore, one must not drive through a safety zone. Also, when changing lanes, turn on the turn signal in advance, check front, back, left, and right, and change at a white broken line lane line. Also, when changing lanes, there are cases where the vehicle immediately ahead or behind hurriedly changes course before mine, so one must be cautious of the vehicles ahead and behind. In the case of a lane where a left turn and a U-turn can be made simultaneously, because the vehicle ahead may make a U-turn, defensive driving that secures a safe distance while turning left is also necessary."
+ },
+ {
+  "n": 790,
+  "ko_e": "醫뚰쉶???좏샇 ???좏꽩?????덈뒗 援먯감濡쒖씠硫? 醫뚰쉶???좏샇 蹂寃?吏곹썑??諛섎????꾨줈?먯꽌 ?좏샇?꾨컲?쇰줈 吏곸쭊?섎뒗  李⑤웾怨?諛섎???遺?꾨줈?먯꽌 ?고쉶?꾪븯硫댁꽌 二쇰룄濡쒕줈 湲됲븯寃?吏꾩엯?섎뒗 李⑤웾?쇰줈 ?명븳 ?꾪뿕?먮룄 ?鍮꾪빐???쒕떎. 洹몃옒 ???좏꽩??媛?ν븳 ?좏샇濡?蹂寃쎈릺?대룄 二쇰???吏곸젒 ?덉쑝濡??뺤씤?섎㈃?? 李⑤?李⑤? ?쒖꽌?濡??좏꽩?섍퀬, ?좏꽩 ?좏샇?? ?좏꽩?섎뒗 ?뚯뿉????李⑤웾???? ??李⑤웾?먮룄 二쇱쓽???꾩슂媛 ?덈떎.",
+  "tr_e": "This is an intersection where a U-turn is possible during the left-turn signal, and one must also prepare for the danger from a vehicle going straight in violation of the signal from the opposite road right after the left-turn signal change and from a vehicle hurriedly entering the main road while turning right from the opposite sub-road. Therefore, even when the signal changes to allow a U-turn, one must visually confirm the surroundings, U-turn in order one by one, and even when making a U-turn on the U-turn signal, one needs to pay attention to the vehicles ahead of and behind my vehicle."
+ },
+ {
+  "n": 791,
+  "ko_e": "李⑤웾 ?좏샇 以??곸깋 ?좏샇???섎???李⑤쭏???뺤??? ?〓떒蹂대룄 諛?援먯감濡쒖쓽 吏곸쟾?먯꽌 ?뺤??댁빞 ?쒕떎. 李⑤쭏???고쉶?꾪븯????寃쎌슦?먮뒗 ?뺤??? ?〓떒蹂대룄 諛?援먯감濡쒖쓽 吏곸쟾?먯꽌 ?뺤??????좏샇???곕씪 吏꾪뻾?섎뒗 ?ㅻⅨ 李⑤쭏??援먰넻??諛⑺빐?섏? ?딄퀬 ?고쉶?꾪븷 ???덈떎. 洹몃읆?먮룄 遺덇뎄?섍퀬 李⑤쭏???고쉶???쇱깋?깆씠 ?곸깋???깊솕??寃쎌슦 ?고쉶?꾪븷 ???녿떎. ?곕씪??援먯감濡?吏곸쟾 ?뺤??좎뿉 ?쇱떆 ?뺤? ???〓떒蹂대룄??蹂댄뻾???щ?? 蹂댄뻾???좏샇???щ?瑜?諛섎뱶???뺤씤?댁빞 ?섍퀬, ?고쉶??吏곹썑 ?〓떒蹂대룄??蹂댄뻾???깆뿉 ??대룄 二쇱쓽?댁빞 ?쒕떎. ?먰븳 ?ㅻⅨ履??ъ씠?쒕??ъ뿉 蹂댁씠???대쪣李④? 蹂대룄? ??李??ъ씠 瑜?臾대━?섍쾶 二쇳뻾?섏뿬 吏곸쭊?섎뒗 寃쎌슦???덇린???곗륫 諛⑺뼢吏?쒕벑??誘몃━ 耳쒕뒗 ???鍮꾪븷 ?꾩슂???덈떎. ?먰븳 ?고쉶?꾪븷 ?뚮뒗 ?쇱そ ?꾨줈?먯꽌 吏곸쭊?섎뒗 李⑤웾?대굹 諛섎????꾨줈?먯꽌 醫뚰쉶?꾪븯??李⑤웾 ?깆뿉 ??댁꽌??二쇱쓽???꾩슂媛 ?덈떎.",
+  "tr_e": "The meaning of a red signal among vehicle signals is that a vehicle must stop just before the stop line, crosswalk, and intersection. When a vehicle intends to turn right, it may turn right after stopping just before the stop line, crosswalk, and intersection, without obstructing the traffic of other vehicles proceeding according to the signal. Nevertheless, a vehicle cannot turn right when the dedicated right-turn signal (a three-aspect right-turn signal) is a red lamp. Therefore, one must come to a complete stop at the stop line just before the intersection, then always check whether there are pedestrians on the crosswalk and whether the pedestrian signal is on, and must also pay attention to pedestrians, etc., on the crosswalk right after turning right. Also, because a motorcycle visible in the right side mirror may forcibly travel and go straight between the sidewalk and my vehicle, one also needs to prepare by turning on the right turn signal in advance. In addition, when turning right, one needs to pay attention to vehicles going straight from the left road and vehicles turning left from the opposite road."
+ },
+ {
+  "n": 792,
+  "ko_e": "李⑤웾 ?좏샇 以??곸깋 ?좏샇???섎???李⑤쭏???뺤??? ?〓떒蹂대룄 諛?援먯감濡쒖쓽 吏곸쟾?먯꽌 ?뺤??댁빞 ?쒕떎. 李⑤쭏???고쉶?꾪븯 ?ㅻ뒗 寃쎌슦?먮뒗 ?뺤??? ?〓떒蹂대룄 諛?援먯감濡쒖쓽 吏곸쟾?먯꽌 ?뺤??????좏샇???곕씪 吏꾪뻾?섎뒗 ?ㅻⅨ 李⑤쭏??援먰넻??諛⑺빐 ?섏? ?딄퀬 ?고쉶?꾪븷 ???덈떎. 洹몃읆?먮룄 遺덇뎄?섍퀬 李⑤쭏???고쉶???쇱깋?깆씠 ?곸깋???깊솕??寃쎌슦 ?고쉶???????녿떎. ?곕씪??援먯감濡??고쉶???쇱깋 ?좏샇?깆씠 ?곸깋 ?좏샇??寃쎌슦?먮뒗 ?뺤????꾩뿉 ?뺤??섍퀬 ?뱀깋 ?붿궡???좏샇 蹂寃쎄퉴吏 ?湲??댁빞 ?쒕떎. ?먰븳 ?ㅻⅨ履?蹂대룄???놁뿉 ?뺤감 以묒씤 李⑤웾 ?왖룸뮘 ?ъ씠?먯꽌 ????섏삱 ???덈뒗 蹂댄뻾?먯? ?고쉶??吏곹썑??留뚮굹???〓떒蹂대룄??蹂댄뻾???щ?????댁꽌??二쇱쓽???꾩슂媛 ?덈떎.",
+  "tr_e": "The meaning of a red signal among vehicle signals is that a vehicle must stop just before the stop line, crosswalk, and intersection. When a vehicle intends to turn right, it may turn right after stopping just before the stop line, crosswalk, and intersection, without obstructing the traffic of other vehicles proceeding according to the signal. Nevertheless, a vehicle cannot turn right when the dedicated right-turn signal (a three-aspect right-turn signal) is a red lamp. Therefore, when the intersection's dedicated right-turn signal is a red signal, one must stop before the stop line and wait until it changes to a green arrow signal. Also, one needs to pay attention to pedestrians who may dart out from the right sidewalk or from between the front and rear of a vehicle stopped alongside, and to pedestrians on the crosswalk encountered right after turning right."
+ },
+ {
+  "n": 793,
+  "ko_e": "?꾨줈援먰넻踰???1議??대┛?댄넻?숇쾭?ㅼ쓽 ?밸퀎蹂댄샇) ???대┛?댄넻?숇쾭?ㅺ? ?꾨줈???뺤감?섏뿬 ?대┛?대굹 ?곸쑀?꾧? ?怨??대━??以묒엫???쒖떆?섎뒗 ?먮㈇???깆쓽 ?μ튂瑜??묐룞 以묒씪 ?뚯뿉???대┛?댄넻?숇쾭?ㅺ? ?뺤감??李⑤줈? 洹?李⑤줈??諛붾줈 ??李⑤줈濡??듯뻾?섎뒗 李⑥쓽 ?댁쟾?먮뒗 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎. ??????쓽 寃쎌슦 以묒븰?좎씠 ?ㅼ튂?섏? ?꾨땲???꾨줈? ?몃룄 1李⑤줈???꾨줈?먯꽌??諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먮룄 ?대┛?댄넻?숇쾭 ?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜????곹깭濡??꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜댁? 紐삵븳?? ?먮룞李?諛??먮룞李?遺?덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃. ??8議??깊솕?????洹?諛뽰쓽 湲곗?) ???? ?대┛?댁슫?≪슜 ?뱁빀?먮룞李??먮뒗 ?ㅼ쓬 媛곹샇??湲곗????곹빀???쒖떆?깆쓣 ?ㅼ튂?섏뿬???쒕떎. ???? ?꾨줈???뺤??섎젮怨??섍굅??異쒕컻?섎젮怨??섎뒗 ?뚯뿉???ㅼ쓬 媛?紐⑹쓽 湲곗????곹빀??寃? ?꾨줈???뺤??섎젮???뚯뿉???⑹깋?쒖떆???먮뒗 ?몃컯?됲몴?쒕벑???먮㈇?섎룄濡??댁쟾?먭? 議곗옉?????덉뼱????寃??대┛?댄넻?숇쾭?ㅼ쓽 ?⑹깋?먮㈇ ?깊솕媛 ?묐룞 以묒씤 ?곹깭?닿린 ?뚮Ц???대┛?댄넻?숇쾭?ㅻ뒗 ?꾨줈???곗륫 媛?μ옄由ъ뿉 ?뺤??섎젮??怨쇱젙?????덈떎. ?곕씪???대┛?댄넻?숇쾭?ㅼ쓽 ?띾룄媛 ?덉륫怨??щ━ 湲됯컧?랁븷 ???덈뒗 ?곹솴?대떎. ???대┛?댄넻?숇쾭?ㅼ쓽 ?믪씠 ?뚮Ц???꾨갑 ?쒖빞媛 ?쒗븳???곹깭?대?濡??욎そ 援먰넻?곹솴???덉쟾??寃껋씠?쇰뒗 ?덉륫? ?쇨??쇳븳??",
+  "tr_e": "Article 51 of the Road Traffic Act (Special Protection of School Buses). (1) When a school bus is stopped on the road with the flashing lights or other devices operating to indicate that children or infants are getting on or off, the driver of a vehicle traveling in the lane where the school bus is stopped and in the lane immediately adjacent to it must come to a complete stop before reaching the school bus, confirm safety, and then slow down. (2) In the case of paragraph (1), on a road with no center line installed and on a road with one lane in each direction, the driver of a vehicle traveling in the opposite direction must also come to a complete stop before reaching the school bus, confirm safety, and then slow down. (3) No driver of any vehicle may overtake a school bus traveling on the road while displaying that it is carrying children or infants. Rules on the Performance and Standards of Motor Vehicles and Motor Vehicle Parts. Article 48 (Other Standards for Lights) (4). A bus for transporting children must be equipped with indicator lamps meeting the following standards. Subparagraph 5. When about to stop on or depart from the road, it must meet the following standards. When about to stop on the road, the driver must be able to operate the amber or yellow indicator lamp to flash. Because the school bus's amber flashing light is operating, the school bus may be in the process of stopping at the right edge of the road. Therefore, this is a situation where the school bus's speed may suddenly decelerate contrary to expectation. Also, because forward visibility is limited due to the height of the school bus, one should refrain from assuming that the traffic situation ahead will be safe."
+ },
+ {
+  "n": 794,
+  "ko_e": "鍮꾨낫??醫뚰쉶?꾪븯???뚯뿉??諛섎????꾨줈?먯꽌 ?뱀깋 ?좏샇??二쇳뻾?섎뒗 吏곸쭊 李⑤웾??二쇱쓽?댁빞 ?섎ŉ, 洹?李⑤웾???띾룄媛  ?앷컖蹂대떎 鍮좊? ???덇퀬 諛섎???1李⑤줈???뱁빀李??뚮Ц??2李⑤줈?먯꽌 ?щ젮?ㅻ뒗 吏곸쭊 李⑤웾??蹂댁? 紐삵븷 ?섎룄 ?덈떎. ?먰븳  ?쇱そ ?꾨줈???〓떒蹂대룄媛 ?덈뒗 寃쎌슦 蹂댄뻾?섎뒗 蹂댄뻾???깆뿉 ??댁꽌 二쇱쓽?댁빞 ?쒕떎.",
+  "tr_e": "When making an unprotected left turn, one must pay attention to straight-going vehicles traveling on a green signal from the opposite road, whose speed may be faster than expected, and one may fail to see a straight-going vehicle running in the second lane because of a van (passenger van) in the opposite first lane. Also, if there is a crosswalk on the left road, one must pay attention to pedestrians, etc., crossing it."
+ },
+ {
+  "n": 795,
+  "ko_e": "?좏샇媛 ?⑹깋?대굹 ?곸깋?쇰줈 諛붾뚮㈃ ?댁쟾?먮뒗 鍮⑤━ 援먯감濡쒕? 鍮좎졇?섍??ㅺ퀬 ?띾룄瑜??믪씠寃??섎뒗?? ?대븣 ?ㅻⅨ履??꾨줈 ?먯꽌 臾대━?섍쾶 ?고쉶?꾪븯??李⑥? ?ш퀬??媛?μ꽦???덈떎. ?먰븳 諛섎????꾨줈?먯꽌 醫뚰쉶???좏샇媛 耳쒖쭏 寃껋쓣 ?앷컖?섍퀬 誘몃━ 援먯감濡쒖뿉 吏꾩엯?섍굅??醫뚰쉶???좏샇 蹂寃???湲됱텧諛쒗븯??醫뚰쉶??李⑥???異⑸룎???섎룄 ?덇퀬, 諛섎????꾨줈?먯꽌 ???댄븯??李⑤웾?섍퀬??異⑸룎?????덈뒗?? ?좏샇?꾨컲 吏곸쭊 李⑤웾? 諛섎????꾨줈??醫뚰쉶??李⑤웾??媛?ㅼ꽌 ?좏꽩?섎뒗 李④? ?덈낫???섎룄 ?덇퀬, 諛섎?濡??좏꽩?섎뒗 李⑤웾? 醫뚰쉶??李⑥뿉 媛?ㅼ꽌 ?좏샇?꾨컲?섎뒗 吏곸쭊 李⑤? 紐?蹂??섎룄 ?덉뼱???ш퀬媛 諛쒖깮?쒕떎. ?곕씪??援먯감濡쒖뿉?쒖쓽 ?좏샇 以?섎뒗 ?덉쟾?댁쟾???꾪빐 諛섎뱶???꾩슂?섎떎.",
+  "tr_e": "When the light changes to yellow or red, drivers tend to speed up to clear the intersection quickly, and at this moment there is a risk of a collision with a car forcing a right turn from the road on the right. In addition, there can be a collision with a left-turning car that enters the intersection early in anticipation of the left-turn signal on the opposite road, or that starts suddenly after the left-turn signal changes; there can also be a collision with a car making a U-turn on the opposite road. The vehicle going straight in violation of the signal may not see the U-turning car because it is hidden by the left-turning car on the opposite road, and conversely the U-turning car may not see the straight-going car running the signal because it is hidden by the left-turning car, so an accident occurs. Therefore, obeying the signals at an intersection is essential for safe driving."
+ },
+ {
+  "n": 796,
+  "ko_e": "* ?꾨줈援먰넻踰???5議?援먯감濡??듯뻾諛⑸쾿) * ?뚯쟾援먯감濡쒖꽕怨꾩?移?.2(?뚯쟾援먯감濡??좏삎) ?쒖감濡쒖텞?뚰삎 ?뚯쟾援먯감濡쒋?-李⑤줈異뺤냼???뚯쟾援먯감濡? ?고쉶?꾩감?됯낵 吏곸쭊, 醫뚰쉶??李⑤웾 ?숈꽑??遺꾨쪟 ?뚯쟾援먯감濡??댁뿉??李⑤줈蹂寃쎌씠 ?쇱뼱?섏? ?딅뒗 ?뺤떇 -?섏꽑???뚯쟾援먯감濡? ?고쉶??李⑤줈 ?숈꽑???뚯쟾援먯감濡쒕궡?먯꽌 蹂꾨룄 遺꾨━ -李⑤줈蹂寃쎌뼲?쒗삎2李⑤줈???뚯쟾援먯감濡? 湲곗〈 ?뚯쟾援먯감濡?李⑥꽑 議곗젙???듯븯??李⑤줈 蹂寃쎌쓣 ?듭젣???뺥깭",
+  "tr_e": "* Road Traffic Act Article 25 (Method of Passing Through Intersections) * Roundabout Design Guidelines 2.2 (Types of Roundabouts) \"Lane-reduction roundabout\" - Lane-reduction roundabout: a type in which the paths of right-turning vehicles and straight-going and left-turning vehicles are separated so that no lane change occurs within the roundabout - Spiral roundabout: a type in which the right-turn lane path is separately divided within the roundabout - Lane-change-suppressing two-lane roundabout: a form that suppresses lane changes by adjusting the existing roundabout lanes."
+ },
+ {
+  "n": 797,
+  "ko_e": "?꾨줈援먰넻踰???1議??쒗뻾 ?먮뒗 ?쇱떆?뺤????μ냼) ???? 紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹 ???대떦?섎뒗 怨녹뿉?쒕뒗 ?쇱떆?뺤??섏뿬???쒕떎. 1. 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녾굅??援먰넻??鍮덈쾲??援먯감濡?2. ?쒋ㅻ룄寃쎌같泥?옣???꾨줈?먯꽌???꾪뿕??諛⑹??섍퀬 援먰넻???덉쟾怨??먰솢???뚰넻???뺣낫?섍린 ?꾪븯???꾩슂?섎떎怨??몄젙?????덉쟾?쒖?濡?吏?뺥븳 怨?蹂닿린???곹솴? ?ㅻⅨ履쎌쓽 ?뺤씤???대젮???μ냼濡쒖꽌 ?쇱떆?뺤??섏뿬 ???μ냼?대ŉ, ???뚮뒗 吏곸쭊 諛??고쉶?꾪븯?ㅻ뒗 寃쎌슦 紐⑤몢 ?쇱떆?뺤??섏뿬 ?쒕떎. ?꾨줈援먰넻踰???7議????? 紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ?숇쾿 ??2議곗젣1??뿉 ?곕Ⅸ ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂 ???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤??좎쓣 留먰븳??)?먯꽌??蹂??됱옄???〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 31 (Places to Slow Down or Come to a Complete Stop) Paragraph 2. The driver of every vehicle or streetcar must come to a complete stop at any of the following places: 1. An intersection where traffic is not being controlled and the left and right cannot be checked, or where traffic is heavy. 2. A place designated with a traffic sign by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent danger on the road and to secure traffic safety and smooth flow. The situation in the example is a place where checking the right side is difficult and where one must come to a complete stop; in this case one must come to a complete stop whether intending to go straight or to turn right. Road Traffic Act Article 27 Paragraph 7. At a crosswalk without a traffic light installed among the crosswalks located within a school zone under Article 12(1) of the same Act, the driver of every vehicle or streetcar must come to a complete stop before the crosswalk (where a stop line is installed, before that stop line), regardless of whether a pedestrian is crossing."
+ },
+ {
+  "n": 798,
+  "ko_e": "?꾨줈援먰넻踰???5議곗쓽2(?뚯쟾援먯감濡??듯뻾諛⑸쾿) ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?뚯쟾援먯감濡쒖뿉?쒕뒗 諛섏떆怨꾨갑?μ쑝濡??듯뻾?섏뿬???쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮??寃쎌슦?먮뒗 ?쒗뻾?섍굅???쇱떆?뺤??섏뿬???섎ŉ, ?대? 吏꾪뻾?섍퀬 ?덈뒗 ?ㅻⅨ 李④? ?덈뒗 ?뚯뿉??洹?李⑥뿉 吏꾨줈瑜??묐낫?섏뿬???쒕떎. ??????諛?????뿉 ?곕씪 ?뚯쟾援먯감濡??듯뻾???꾪븯???먯씠??諛⑺뼢吏?쒓린 ?먮뒗 ?깊솕濡쒖뜥 ?좏샇瑜??섎뒗 李④? ?덈뒗 寃쎌슦 洹??ㅼ감???댁쟾?먮뒗 ?좏샇瑜????욎감??吏꾪뻾??諛⑺빐 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?꾨줈援먰넻踰???8議?李⑥쓽 ?좏샇) ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 醫뚰쉶?꾠냽?고쉶?꾠냽?〓떒?띿쑀?담냽?쒗뻾???뺤? ?먮뒗 ?꾩쭊???섍굅??媛숈? 諛⑺뼢?쇰줈 吏꾪뻾?섎㈃??吏꾨줈瑜?諛붽씀?ㅺ퀬 ?섎뒗 寃쎌슦? ?뚯쟾援먯감濡쒖뿉 吏꾩엯?섍굅???뚯쟾 援먯감濡쒖뿉??吏꾩텧?섎뒗 寃쎌슦?먮뒗 ?먯씠??諛⑺뼢吏?쒓린 ?먮뒗 ?깊솕濡쒖뜥 洹??됱쐞媛 ?앸궇 ?뚭퉴吏 ?좏샇瑜??섏뿬???쒕떎. ?뱀슜?먮룞李⑤굹 ?붾Ъ?먮룞李④? ?묐낫?놁씠 臾대━?섍쾶 吏꾩엯?섎젮??寃쎌슦 12??諛⑺뼢 吏꾩텧???쇨?怨??ㅼ떆 諛섏떆怨꾨갑?μ쑝濡?360???뚯쟾?섏뿬 12?쒕줈 吏꾩텧?쒕떎.",
+  "tr_e": "Road Traffic Act Article 25-2 (Method of Passing Through Roundabouts) (1) The driver of every vehicle must travel counterclockwise at a roundabout. (2) The driver of every vehicle intending to enter a roundabout must slow down or come to a complete stop, and when there is another vehicle already proceeding, must yield the way to that vehicle. (3) When there is a vehicle signaling with a hand, turn signal, or lights to pass through a roundabout under Paragraphs 1 and 2, the driver of the vehicle behind it must not obstruct the progress of the preceding vehicle that gave the signal. Road Traffic Act Article 38 (Signals by Vehicles) (1) The driver of every vehicle must, when making a left turn, right turn, crossing, U-turn, slowing down, stopping, or reversing, or when changing lanes while proceeding in the same direction, and when entering or exiting a roundabout, signal with a hand, turn signal, or lights until the action is completed. If a passenger car or truck attempts to force its way in without yielding, refrain from exiting at the 12 o'clock direction, and go around counterclockwise 360 degrees again and exit at 12 o'clock."
+ },
+ {
+  "n": 799,
+  "ko_e": "?꾪뿕?덉륫. ?꾨줈?먯꽌 ?ㅼ튂???〓떒蹂대룄???좏샇?깆씠 ?ㅼ튂?섏? ?딆? ?〓떒蹂대룄?대떎. ?대븣 ?댁쟾?먮뒗 諛섎?諛⑺뼢?먯꽌 醫뚰쉶 ?꾩쓣 ?섎젮???댁쟾?먯? ?ㅻⅨ履쎌쓽 ?〓떒蹂대룄瑜??ν빐???щ젮媛???대┛?대? ?뺤씤?????덈떎. ???고쉶???섎젮??寃쎌슦?먮뒗  ?꾨줈援먰넻踰뺣졊???곕씪 ?ㅻⅨ 李⑤쭏??援먰넻??諛⑺뻾???섏? ?딆븘???섍퀬 ?ㅻⅨ履쎌뿉 ?뺤감 諛?二쇱감諛⑸쾿???꾨컲??李⑤뱾濡? ?명빐 ?ㅻⅨ履쎌쓽 ?〓떒蹂대룄媛 媛?ㅼ????ш컖吏?(閭삭쭜?겼마)??議댁옱?????덈뒗 蹂댄뻾?먮? ?덉륫?섏뿬 ?뺤?????二쇱쓽瑜? ?댄뵾怨??섏꽌 ?고쉶???됰룞???댁빞 ?쒕떎.",
+  "tr_e": "Hazard prediction. The crosswalk installed on the road is a crosswalk without a traffic light. At this point the driver can see a driver intending to make a left turn from the opposite direction and a child running toward the crosswalk on the right. Also, when intending to turn right, one must not obstruct the traffic of other vehicles under the Road Traffic Act, and one must anticipate a pedestrian who may be in the blind spot where the crosswalk on the right is hidden by vehicles that violated the parking and stopping rules on the right, then stop, look out for hazards, and only then make the right turn."
+ },
+ {
+  "n": 800,
+  "ko_e": "1李⑤줈???듯뻾以묒씤 ?앹떆媛 ?ㅻⅨ履?蹂댄뻾?먮? ?뺤씤?섍퀬 ?쒕룞?섎ŉ 議고뼢?μ튂瑜??ㅻⅨ履쎌쑝濡??묐룞?쒗궓 ?곹깭?대떎. ?곕씪???ㅻ?  ?곕Ⅴ???댁쟾?먮뒗 ?앹떆??媛묒옉?ㅻ윴 湲됯컧?띿쓣 二쇱쓽?섎ŉ ?덉쟾嫄곕━瑜??좎??댁빞 ?쒕떎. ???ㅻⅨ履쎌쑝濡?吏꾨줈蹂寃쏀븯??寃쎌슦????二쇱감??李⑤뱾???쇳빐 2李⑤줈?먯꽌 ?뺤감?????밴컼???묒듅?쒗궗 寃껋씠 ?덇껄?섎?濡?媛먯냽?섏뿬 援먯감濡쒕줈 ?묎렐?댁빞 ?쒕떎.",
+  "tr_e": "The taxi traveling in the first lane has spotted a pedestrian on the right and is braking with its steering turned to the right. Therefore, the driver following behind must be careful of the taxi's sudden deceleration and maintain a safe distance. Also, even when changing lanes to the right, the taxi is expected to avoid the parked cars, stop in the second lane, and pick up passengers, so one must slow down when approaching the intersection."
+ },
+ {
+  "n": 801,
+  "ko_e": "?꾨줈援먰넻踰???3議? ?꾨줈?좎? 蹂댁닔 怨듭궗濡??명빐 ?곗륫?듯뻾??遺덇?????寃쎌슦, ?꾨줈援먰넻踰뺤뿉 ?곕씪 醫뚯륫???듯뻾?????덈떎. ????諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 ?먮룞李⑥뿉???꾩???二쇱쓽媛 ?꾩슂?섎떎. 諛섎?諛⑺뼢 ?뱀슜李④? 醫뚰쉶?꾪븯?ㅻ뒗 寃쎌슦 異⑸룎媛?μ꽦???믨린 ?뚮Ц???꾩슂?섎떎硫??뺤??섏뿬???쒕떎. ???쒖떆???곹솴?먯꽌 ?곗깋 ?뱀슜李⑤뒗 ?듯뻾以묒씠硫? ?뺤감, ???뚯쟾 ?먮뒗 吏곸쭊(以묒븰??移⑤쾾) 諛?醫뚰쉶??以묒븰??移⑤쾾) ?됰룞??以???媛吏瑜??????덈떎. ?뱁엳, ?쇰? ?댁쟾?먮뱾???대㈃ ?꾨줈?먯꽌 以묒븰?좎쓣 移⑤쾾?섏뿬 吏곸쭊?섍굅??醫뚰쉶?꾪븯???щ?媛 ?덇린 ?뚮Ц???꾨갑?먯꽌 吏꾩엯?섎뒗 李⑥쓽 ?댁쟾??紐⑤몢媛 硫덉텧 寃껋씠???덇껄?섍굅???고쉶?꾨쭔 ??寃껋씠?쇨퀬 ?덈떒?섎뒗 寃껋? ?꾪뿕?섎떎.",
+  "tr_e": "Road Traffic Act Article 13. When it is impossible to travel on the right side due to road maintenance and repair work, one may travel on the left side under the Road Traffic Act. In this case, marked caution is needed regarding vehicles proceeding from the opposite direction. If an oncoming passenger car intends to turn left, there is a high possibility of a collision, so one must stop if necessary. Also, in the situation given, the white passenger car is in motion and may do one of the following: stop, turn right, go straight (crossing the center line), or turn left (crossing the center line). In particular, since some drivers cross the center line on a back road to go straight or turn left, it is dangerous to assume that all drivers of vehicles entering from the front will stop or to prejudge that they will only turn right."
+ },
+ {
+  "n": 802,
+  "ko_e": "?꾩떖吏 ?대㈃?꾨줈??蹂댄뻾?? ?먯쟾嫄? 諛섎젮?숇Ъ ???ㅼ뼇??援먰넻 二쇱껜媛 ?쇱옱?섏뿬 ?뚮컻 ?꾪뿕??留롫떎. ?댁쟾?먮뒗 ?대윭?? ?꾪뿕???鍮꾪빐 二쇱쓽 源딄쾶 ?댁쟾?댁빞 ?쒕떎. ?뱁엳, ?대┛?닿? 媛묒옄湲??꾨줈濡???대굹?????덉쑝誘濡??띾룄瑜?以꾩씠怨??쒗뻾?????쒕떎(??. 諛섎㈃, 寃쎌쓬湲곕굹 ?꾩“?깆쓣 遺덊븘?뷀븯寃??ъ슜?섏뿬 蹂댄뻾?먮굹 ?곷? ?댁쟾?먯뿉寃??꾪삊??二쇰뒗 ?됱쐞(?????  ?띾룄瑜??믪뿬 鍮좊Ⅴ寃??듦낵?섎뒗 ?됱쐞(????紐⑤몢 踰뺢퇋???꾨컲?????덉쑝硫??덉쟾?섏? ?딅떎. ?곕씪???뺣떟? ?좉낵 ??씠??",
+  "tr_e": "Back roads in urban areas have many sudden hazards because various traffic participants such as pedestrians, bicycles, and pets are mixed together. Drivers must drive carefully in preparation for such hazards. In particular, since a child may suddenly dart out into the road, one must reduce speed and slow down (??. On the other hand, unnecessarily using the horn or headlights to threaten pedestrians or other drivers (?? ?? and passing through quickly by increasing speed (?? can all violate the law and are unsafe. Therefore, the correct answers are ??and ??"
+ },
+ {
+  "n": 803,
+  "ko_e": "?꾪뿕? ??긽 ?좎옱?섏뼱?덈떎. ?꾪뿕?덉륫? ?좎옱???꾪뿕???덉륫?섍퀬 ?鍮꾪븯??寃껋씠?? 吏?섏＜李⑥옣?먯꽌???꾨줈? ????瑜??꾪뿕??議댁옱?????덉쑝??二쇱쓽?섎ŉ ?댁쟾?댁빞 ?쒕떎. 二쇱감??李⑤웾 ?ъ씠?먯꽌 蹂댄뻾?먭? 媛묒옄湲??섑??????덉쑝誘濡? 諛섎뱶???쒗뻾?댁빞 ?섍퀬(??, 二쇱감 以묒씤 李⑤웾???덉긽移?紐삵븳 ?쒓컙??異쒕컻?????덉쑝誘濡??대? 二쇱쓽?섎ŉ ?댁쟾?댁빞 ?쒕떎 (??. ?쒗렪, ?몃㈃?쒖떆瑜?諛섎뱶??以?섑빐???쒕떎(??. ?뱀젙 二쇱감援ъ뿭留?蹂닿굅????, 寃쎌쓬湲곕? 遺덊븘?뷀븯寃?怨꾩냽 ?몃━?? ?됱쐞(?? 紐⑤몢 ?덉쟾?섏? 紐삵븳 ?댁쟾諛⑸쾿?대떎. ?곕씪???뺣떟? ?좉낵 ?≪씠??",
+  "tr_e": "Hazards are always latent. Hazard prediction is predicting and preparing for latent hazards. In an underground parking lot, hazards different from those on the road may exist, so one must drive carefully. Since a pedestrian may suddenly appear between parked vehicles, one must slow down (??, and since a parked vehicle may start moving at an unexpected moment, one must drive with caution about this (??. Meanwhile, one must always observe road markings (??. Looking only at a particular parking area (?? and continuously sounding the horn unnecessarily (?? are both unsafe driving methods. Therefore, the correct answers are ??and ??"
+ },
+ {
+  "n": 804,
+  "ko_e": "?쒖떆???곹솴???μ냼??二쇨굅吏???대┛??蹂댄샇援ъ뿭?대떎. ?대┛??蹂댄샇援ъ뿭???좏샇???녿뒗 ?〓떒蹂대룄瑜?吏꾩엯?섎젮??寃???蹂댄뻾?먯쓽 ?〓떒 ?좊Т? 愿怨꾩뾾???뺤????꾩뿉 吏꾩엯?댁빞 ?쒕떎. ?뱁엳 ?〓떒蹂대룄 洹쇱쿂??二쇱감??李④? ?덈뒗 寃쎌슦 ?〓떒 ?섎젮??蹂댄뻾?먭? 蹂댁씠吏 ?딆쑝誘濡??뺤??????쒗뻾?쇰줈 ?듯뻾?섎젮??寃쎌슦?먮룄 蹂댄뻾?먯쓽 吏꾩엯???鍮꾪븯?ъ빞 ?쒕떎. ??濡??몄쓽 怨녹뿉???꾨줈??吏꾩엯?섎젮??李⑥쓽 ?댁쟾?먮뒗 ?쇰떒 ?뺤??댁빞 ?섎굹, ?쇰? ?댁쟾?먮뒗 ?꾨줈??臾대━??吏꾩엯???섍린 ???쒕떎. ?곕씪???꾨줈 ?몄쓽 怨녹뿉???꾨줈??吏꾩엯?섎젮??李④? ?뺤씤?섎㈃ ?쒗뻾?섎ŉ 二쇱쓽?댁빞 ?쒕떎.",
+  "tr_e": "The place in the situation given is a residential-area school zone. When intending to enter a crosswalk without a traffic light in a school zone, one must stop before entering, regardless of whether a pedestrian is crossing. In particular, when there is a car parked near the crosswalk, a pedestrian intending to cross may not be visible, so even when intending to pass slowly after stopping, one must prepare for a pedestrian entering. The driver of a vehicle intending to enter the road from a place off the road must first come to a complete stop, but some drivers force their way onto the road. Therefore, when a vehicle intending to enter the road from off the road is identified, one must slow down and be careful."
+ },
+ {
+  "n": 805,
+  "ko_e": "?쒖떆???곹솴? 二쇨굅吏??諛?怨듬룞二쇳깮???듯뻾?섎뒗 以묒뿉 鍮덈쾲?섍쾶 寃쏀뿕?섍쾶 ?섎뒗 ?곹솴?대떎. ?????꾪뙆??議곌꼍?? ?뚯떇臾쇱벐?덇린 ?섍굅?? 湲고? 怨듭옉臾??깆뿉 媛?ㅼ졇 ?덈뒗 ?μ냼????떆 二쇱쓽?댁빞 ?쒕떎. ?꾩쓽 A吏??뿉 ?밸퀎??二쇱쓽?댁빞 ?섎ŉ ?쒗뻾?쇰줈 ?묎렐?섏뿬 醫뚰쉶?꾪븯湲곗쟾 ?뺤감?섎뒗 ?듦???媛?몄빞 ?쒕떎. ?곗깋?뱀슜李⑤뒗 ?곗깋?깆씠 耳쒖졇 ?덈뒗 ?곹깭?대? 濡??꾩쭊???덉륫?섎뒗 ?곹솴?대떎. ?곕씪???꾩쭊???섎뒗 ?곹솴?몄?, ?꾩쭊 湲곗뼱瑜?議곗옉???곹깭?먯꽌 ?뺤감以묒씤吏瑜?二쇱쓽?섎ŉ ?댄렣???쒕떎. 二쇨굅吏??쓽 ?대┛?댁쓽 ?됰룞? ?덉륫??遺덇??섎?濡??대┛?댁쓽 李⑤룄吏꾩엯???덉륫?섎ŉ ?댁쟾?댁빞 ?쒕떎. 留덈? ? 異⑸룎??媛?μ꽦 諛??ㅼ감???異⑸룎 媛?μ꽦? ?꾩?????떎.",
+  "tr_e": "The situation given is one frequently experienced while traveling through residential areas and apartment complexes. At such times, one must always be careful of places hidden by apartment landscaping trees, food-waste collection bins, and other structures. One must be especially careful of area A above, approach slowly, and develop the habit of stopping before turning left. The white passenger car has its reversing lights (white lights) on, so a situation of expected reversing is present. Therefore, one must carefully observe whether it is in the process of reversing or is stopped with the reverse gear engaged. Since the behavior of children in residential areas cannot be predicted, one must drive while anticipating a child entering the roadway. The possibility of colliding with the sack or colliding with the vehicle behind is markedly low."
+ },
+ {
+  "n": 806,
+  "ko_e": "?쒖떆???곹솴?먯꽌 ?대┛?닿? ?〓떒?섍퀬 ?덈뒗 以묒씠?? ?????댁쟾?먮뒗 ?〓떒蹂대룄 吏곸쟾???ㅼ튂???뺤??좎뿉 硫덉떠???쒕떎.  ?????고쉶?꾪븯?ㅻ뒗 ?댁쟾?먮뒗 ?〓떒蹂대룄??蹂댄뻾?먭? ?〓떒???꾨즺???뚭퉴吏 湲곕떎?ㅼ빞 ?쒕떎. ??諛섎??먯꽌 援먯감濡쒕줈  吏꾩엯???ㅻ뒗 ?먮룞李⑤뒗 醫뚰쉶?꾩쓣 ?섎젮??李⑥씠誘濡?洹?李④? 醫뚰쉶?꾩쓣 ?꾨즺???뚭퉴吏 ?湲고빐???쒕떎. 洹???紐⑤뱺 諛⑺뼢 ???덉쟾???뺤씤?섍퀬 ?고쉶?꾪빐???쒕떎. ?곸깋?먮㈇? ?쇱떆?뺤? ??吏꾩엯??寃껋쓣 吏?쒗븯???좏샇?대떎.",
+  "tr_e": "In the situation given, a child is crossing. At this point the driver must stop at the stop line installed just before the crosswalk. Here, the driver intending to turn right must wait until the pedestrian on the crosswalk has completed crossing. Also, since the car entering the intersection from the opposite side is a car intending to turn left, one must wait until that car has completed its left turn. After that, confirm the safety in all directions and make the right turn. A flashing red light is a signal indicating to enter after coming to a complete stop."
+ }
+]
+
+codex
+[
+  {
+    "n": 802,
+    "field": "e",
+    "severity": "major",
+    "issue": "선택지 번호가 '??'로 깨지고 괄호가 닫히지 않아 어떤 선택지가 정답인지 확인할 수 없다.",
+    "suggestion": "Back roads in urban areas present many sudden hazards because pedestrians, bicycles, pets, and other road users share the space. Drivers must remain alert and drive carefully. In particular, a child may suddenly run into the road, so drivers must reduce speed and proceed slowly. Unnecessarily sounding the horn or flashing the headlights to intimidate pedestrians or other drivers, or speeding through the area, violates traffic rules and is unsafe."
+  },
+  {
+    "n": 803,
+    "field": "e",
+    "severity": "major",
+    "issue": "선택지 번호와 최종 정답이 모두 '??'로 깨져 학습자가 정답을 판별할 수 없다.",
+    "suggestion": "Hazards are always present. Hazard prediction means anticipating and preparing for hidden hazards. In an underground parking lot, a pedestrian may suddenly emerge between parked vehicles, so drivers must proceed slowly. A parked vehicle may also begin moving unexpectedly, so drivers must remain alert. Road markings must always be obeyed. Focusing only on a particular parking space or sounding the horn continuously without necessity is unsafe."
+  }
+]
+tokens used
+19,698
+[
+  {
+    "n": 802,
+    "field": "e",
+    "severity": "major",
+    "issue": "선택지 번호가 '??'로 깨지고 괄호가 닫히지 않아 어떤 선택지가 정답인지 확인할 수 없다.",
+    "suggestion": "Back roads in urban areas present many sudden hazards because pedestrians, bicycles, pets, and other road users share the space. Drivers must remain alert and drive carefully. In particular, a child may suddenly run into the road, so drivers must reduce speed and proceed slowly. Unnecessarily sounding the horn or flashing the headlights to intimidate pedestrians or other drivers, or speeding through the area, violates traffic rules and is unsafe."
+  },
+  {
+    "n": 803,
+    "field": "e",
+    "severity": "major",
+    "issue": "선택지 번호와 최종 정답이 모두 '??'로 깨져 학습자가 정답을 판별할 수 없다.",
+    "suggestion": "Hazards are always present. Hazard prediction means anticipating and preparing for hidden hazards. In an underground parking lot, a pedestrian may suddenly emerge between parked vehicles, so drivers must proceed slowly. A parked vehicle may also begin moving unexpectedly, so drivers must remain alert. Road markings must always be obeyed. Focusing only on a particular parking space or sounding the horn continuously without necessity is unsafe."
+  }
+]

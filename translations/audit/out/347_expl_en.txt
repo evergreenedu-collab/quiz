@@ -1,0 +1,231 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1285f-4d81-7460-9da7-4ed450c186fa
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/347_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/347_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 530ms:
+[
+ {
+  "n": 953,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?좏꽩?쒖?(吏?쒗몴吏 311踰? 李⑤쭏媛 ?좏꽩??吏?먯쓽 ?꾨줈?곗륫 ?먮뒗 以묒븰???ㅼ튂",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, U-turn sign (instruction sign No. 311). Installed on the right side or center of the road at a point where a vehicle makes a U-turn."
+ },
+ {
+  "n": 954,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?먮룞李ⓥㅼ씠瑜쒖옄?숈감 諛??먮룞湲곗옣移섏옄?꾧굅?듯뻾湲덉??쒖?(洹쒖젣?쒖떆 206) ?먮룞李⑥? ?대쪣???숈감 諛??먮룞湲곗옣移섏옄?꾧굅???듯뻾??吏?뺣맂 ?쒓컙??湲덉??섎뒗 寃껋쓣 ?섎??쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, no-passage sign for motor vehicles, motorcycles, and motorized bicycles (regulatory sign 206). It means prohibiting the passage of motor vehicles, motorcycles, and motorized bicycles at a designated time."
+ },
+ {
+  "n": 955,
+  "ko_e": "?꾨줈援먰넻踰???議??뺤쓽) 二쇱감? ?댁쟾?먭? ?밴컼??湲곕떎由ш굅???붾Ъ???ｊ굅??李④? 怨좎옣 ?섍굅??洹?諛뽰쓽 ?ъ쑀濡?李⑤? 怨꾩냽 ?뺤? ?곹깭???먮뒗 寃??먮뒗 ?댁쟾?먭? 李⑥뿉???좊굹??利됱떆 洹?李⑤? ?댁쟾?????녿뒗 ?곹깭???먮뒗 寃껋쓣 留먰븳?? ?뺤감? ?댁쟾?먭? 5遺꾩쓣 珥덇낵?섏? ?꾨땲?섍퀬 李⑤? ?뺤??쒗궎??寃껋쑝濡쒖꽌 二쇱감 ?몄쓽 ?뺤? ?곹깭瑜?留먰븳?? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱감湲덉??쒖?(洹쒖젣?쒖? 219踰? 李⑥쓽 二쇱감瑜?湲덉??섎뒗 寃껋씠?? 寃ъ씤吏??몴吏(蹂댁“?쒖? 428踰?",
+  "tr_e": "Road Traffic Act Article 2 (Definitions). Parking means keeping a vehicle continuously in a stationary state while the driver waits for a passenger, loads cargo, the vehicle breaks down, or for other reasons, or keeping a vehicle in a state where the driver has left it and cannot immediately drive it. Stopping means the driver keeping a vehicle stationary for not more than 5 minutes, being a stationary state other than parking. Enforcement Rule of the Road Traffic Act Table 6, no-parking sign (regulatory sign No. 219). It prohibits vehicle parking. Tow-away zone sign (supplementary sign No. 428)."
+ },
+ {
+  "n": 956,
+  "ko_e": "湲곗큹踰덊샇?먯? 媛濡쒕벑쨌援먰넻?좏샇?굿룸룄濡쒗몴吏 ?깆씠 ?ㅼ튂??吏二? ?꾨줈援ш컙???곕꼸 諛?援먮웾 ?깆뿉???꾩튂瑜??쒖떆???????꾩슂?깆씠 ?덈뒗 ?μ냼, 洹?諛뽰뿉 ?쒖옣 ?깆씠 ?꾩슂?섎떎怨??몄젙?섎뒗 ?μ냼???ㅼ튂?쒕떎. ?꾨줈紐낆＜?뚮쾿 ??議??꾨줈紐낇뙋怨?湲곗큹踰덊샇?먯쓽 ?ㅼ튂) ?????꾨줈紐낆＜?뚮쾿 ??議??꾨줈紐낇뙋怨?湲곗큹踰덊샇?먯쓽 ?ㅼ튂) ????二쇱냼?뺣낫?쒖꽕洹쒖튃 ??5議?湲곗큹踰덊샇?먯쓽 ?ㅼ튂諛⑸쾿) ????????二쇱냼?뺣낫?쒖꽕洹쒖튃 ??4議?湲곗큹踰덊샇?먯쓽 ?ㅼ튂?μ냼 ??          ?꾨줈紐낆＜?뚮쾿 ??1議?嫄대Ъ踰덊샇??遺??, 媛숈? 踰??쒗뻾????3議?嫄대Ъ踰덊샇??遺??湲곗?)",
+  "tr_e": "A base number plate is installed on posts where streetlights, traffic lights, road signs, etc., are installed, at places such as tunnels and bridges of road sections where it is necessary to indicate the location, and at other places the mayor, etc., deems necessary. Road Name Address Act Article 9 (Installation of Road Name Plates and Base Number Plates) Paragraph 2. Road Name Address Act Article 9 (Installation of Road Name Plates and Base Number Plates) Paragraph 1. Address Information Facility Rule Article 15 (Method of Installing Base Number Plates) Paragraph 1 Subparagraph 3. Address Information Facility Rule Article 14 (Installation Locations of Base Number Plates, etc.). Road Name Address Act Article 11 (Assignment of Building Numbers), Article 23 (Standards for Assigning Building Numbers) of the same Act's Enforcement Decree."
+ },
+ {
+  "n": 957,
+  "ko_e": "吏?뺣맂 ?좎쓣 ?쒖쇅?섍퀬 踰꾩뒪?꾩슜李⑤줈 ?듯뻾 李⑤쭔 ?듯뻾?????덉쓬???섎??쒕떎.",
+  "tr_e": "It means that, except on designated days, only vehicles allowed to pass in the bus-exclusive lane may pass."
+ },
+ {
+  "n": 958,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 320?? ?대┛?댁듅?섏감?쒖떆 ?대┛??蹂댄샇援ъ뿭?먯꽌 ?대┛?댄넻?숇쾭?ㅼ? ?먮룞李⑤벑???대┛?? ?뱁븯李⑤? ?꾪빐 ?쒖??먯뿉 ?쒖떆???쒓컙 ?숈븞 ?뺤감 諛?二쇱감?????덈룄濡?吏?쒗븯??寃껋쑝濡??대┛??蹂댄샇援ъ뿭?먯꽌 ?대┛???듯븰踰꾩뒪? ?먮룞李⑤벑???대┛?댁쓽 ?뱁븯李⑤? ?꾪빐 ?뺤감 諛?二쇱감?????덈뒗 ?μ냼 諛??꾩슂??吏???먮뒗 援ш컙???꾨줈  ?곗륫???ㅼ튂?섍굅??援ш컙???쒖옉 諛????먮뒗 ?쒓컙??蹂댁“?쒖?瑜?遺李㈑룹꽕移?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, 320-4, child boarding/alighting marking. A sign instructing that, in a school zone, school buses and vehicles, etc., may park and stop during the time shown on the sign for children's boarding and alighting; installed on the right side of the road at a place and necessary point or section in a school zone where school buses and vehicles, etc., may park and stop for children's boarding and alighting, or with a supplementary sign marking the start and end of the section or the time attached and installed."
+ },
+ {
+  "n": 959,
+  "ko_e": "?꾨줈?쒖?洹쒖튃(援?넗援먰넻遺?? 異쒓뎄媛먯냽?좊룄?쒖?(?꾨줈?쒖???洹쒓꺽?곸꽭 諛??ㅼ튂諛⑸쾿 426-3踰? 泥?踰덉㎏ 異쒓뎄媛먯냽李⑤줈 ???쒖젏遺???꾨갑 300m, 200m, 100m 吏?먯뿉 媛곴컖 ?ㅼ튂?쒕떎.",
+  "tr_e": "Road Sign Rule (Ministry of Land, Infrastructure and Transport ordinance), exit deceleration guidance sign (Detailed Specifications and Installation Methods of Road Signs No. 426-3). Installed 300 m, 200 m, and 100 m ahead, respectively, from the start of the first exit deceleration lane."
+ },
+ {
+  "n": 960,
+  "ko_e": "媛뺣궓?濡쒖쓽 ?볦? 湲??쒖옉?먯쓣 ?섎??섎ŉ ???믠????꾩튂???꾨줈???쒖옉?먯쓣 ?섎??섍퀬 媛뺣궓?濡쒖쓽 湲몄씠??6.99?щ줈 誘명꽣?꾩쓣 ?섎??쒕떎.",
+  "tr_e": "It means the starting point of the wide road Gangnam-daero, and \"1??" this location means the starting point of the road, and it means that the length of Gangnam-daero is 6.99 kilometers."
+ },
+ {
+  "n": 961,
+  "ko_e": "怨좎냽?꾨줈媛 ?쒖옉?섎뒗 湲곗젏?먯꽌 ?꾩옱 ?꾩튂源뚯? 嫄곕━瑜??뚮젮二쇰뒗 ?쒖? 李④? 怨좎옣 ?섍굅???ш퀬 ?덇린移?紐삵븳 ?곹솴?먯꽌 ???꾩튂瑜??뺥솗???????덈떎. -珥덈줉??諛뷀깢 ?レ옄: 湲곗젏?쇰줈 遺?곗쓽 嫄곕━(km) -?곗깋 諛뷀깢 ?レ옄: ?뚯닔??嫄곕━(km)",
+  "tr_e": "A sign informing the distance from the starting point where the expressway begins to the current location. When a vehicle breaks down or in an unexpected situation such as an accident, one can know one's location accurately. -Green background numbers: distance from the starting point (km) -White background numbers: decimal distance (km)."
+ },
+ {
+  "n": 962,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6. 532??2. ?媛곸꽑?〓떒蹂대룄?쒖떆 紐⑤뱺 諛⑺뼢?쇰줈 ?듯뻾??媛?ν븳 ?〓떒蹂대룄(?〓떒蹂대룄 ?쒖떆  ?ъ씠 鍮?怨듦컙???〓떒蹂대룄???ы븿?쒕떎)?꾩쓣 ?쒖떆?섎뒗 寃? 蹂대룄 ?듯뻾?됱씠 留롪굅???대┛??蹂댄샇援ъ뿭 ??蹂댄뻾???덉쟾怨??몃━瑜??뺣낫?????덈뒗 吏?먯뿉 ?ㅼ튂?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 532-2. Diagonal crosswalk marking. A marking indicating a crosswalk on which passage is possible in all directions (the empty space between the crosswalk markings is also included in the crosswalk). Installed at points where sidewalk traffic is heavy or where pedestrian safety and convenience can be secured, such as school zones."
+ },
+ {
+  "n": 963,
+  "ko_e": "二쇱냼?뺣낫?쒖꽕洹쒖튃 [蹂꾪몴 13] <媛쒖젙 2024. 7.19> ?띕뒗 湲곗큹踰덊샇??  ?룹? ?쇰컲??嫄대Ъ踰덊샇?먯씠怨? ?몃뒗 援???좎궛  諛?愿愿묒슜 嫄대Ъ踰덊샇?? ?밸뒗 愿怨듭꽌??嫄대Ъ踰덊샇?먯씠??",
+  "tr_e": "Address Information Facility Rule [Table 13] <amended 2024. 7.19>. ??is a base number plate, ??is a general-use building number plate, ??is a national heritage and tourism building number plate, and ??is a public office building number plate."
+ },
+ {
+  "n": 965,
+  "ko_e": "?꾨줈援ш컙 ?깆쓽 ?ㅼ젙쨌蹂寃쎌뿉 愿???몃?湲곗? [?됱젙?덉쟾遺 ?덇퇋 ??62?? 2021.6.9., ?쒖젙] ??議?1. ?ㅻⅨ ?꾨줈援ш컙怨??곌껐 ??吏?먯씠??異쒖엯援щ? ?쒖옉吏?먯쑝濡??섎릺 ?쒖옉吏?먭낵 ?앹??먯씠 媛숈? 議곌굔??寃쎌슦 ?쒖뿉???? ?⑥뿉??遺곸쓽 諛⑺뼢?쇰줈 ?ㅼ젙",
+  "tr_e": "Detailed Standards on the Setting and Change of Road Sections, etc. [Ministry of the Interior and Safety Established Rule No. 162, 2021.6.9., enacted] Article 5. 1. Set the starting point as the point connected to another road section or the entrance/exit, but where the starting point and end point are of the same condition, set the direction from west to east and from south to north."
+ },
+ {
+  "n": 966,
+  "ko_e": "?고쉶?꾪븯?ㅻ뒗 ?먮룞李④? 吏곸쭊?섎뒗 李⑥쓽 ?띾룄瑜??먮┝?쇰줈 異붿젙?섎뒗 寃쎌슦 二쇱감??李⑤뱾???쇳빐??1李⑤줈濡???踰덉뿉 吏??낇븯???щ?媛 留롫떎. ?곕씪???고쉶?꾪븯???먮룞李④? ?덈뒗 寃쎌슦 吏곸쭊???곗꽑?대씪???덈????먮떒???쇨?怨??고쉶???먮룞 李??댁쟾?먭? 臾대━?섍쾶 吏꾩엯?섎뒗 寃쎌슦瑜??덉륫?섎ŉ ?댁쟾???꾩슂?깆씠 ?덈떎.",
+  "tr_e": "When a vehicle intending to turn right presumes the speed of a straight-going vehicle to be slow, there are many cases where it enters the first lane in one move, avoiding the parked cars. Therefore, when there is a vehicle turning right, one must refrain from the absolute judgment that going straight has priority, and needs to drive while anticipating the case where the right-turning vehicle's driver forces its way in."
+ },
+ {
+  "n": 967,
+  "ko_e": "援먯감濡쒖뿉 吏꾩엯?섏뿬 ?듯뻾?섎뒗 李⑤쭏???댁쟾?먮뒗 吏꾩엯???꾩튂瑜?湲곗??쇰줈 吏꾩텧?섍린 ?꾪븳 吏꾪뻾寃쎈줈瑜??곕씪 ?덉쟾?섍쾶  援먯감濡쒕? ?듦낵?댁빞 ?쒕떎. 洹몃윭??臾몄젣???곸긽泥섎읆 援먯감濡쒖쓽 ?좊룄?좎씠 ?녿뒗 寃쎌슦 ?먮뒗 ?좊룄?좎씠 ?덈뒗 寃쎌슦???섎뜑?????덉긽?섎뒗 寃쎈줈瑜?踰쀬뼱?섎뒗 寃쎌슦媛 鍮덈쾲?섎떎. ?곕씪??援먯감濡쒕? ?듦낵?섎뒗 寃쎌슦 ?욎そ ?먮룞李⑤뒗 臾쇰줎 ?놁そ ?먮룞李⑥쓽  吏꾪뻾寃쎈줈??二쇱쓽?섎ŉ ?댁쟾???꾩슂?깆씠 ?덈떎.",
+  "tr_e": "The driver of a vehicle that has entered and is traveling through an intersection must pass through the intersection safely, following the traveling path for exiting based on the position where it entered. However, as in the video in the problem, when there is no guide line at the intersection, or even when there is a guide line, cases of deviating from the expected path are frequent. Therefore, when passing through an intersection, one needs to drive with attention to the traveling paths not only of the vehicle ahead but also of the vehicle to the side."
+ },
+ {
+  "n": 968,
+  "ko_e": "援먯감濡?醫뚯슦痢≪쓽 援먰넻?곹솴??嫄댁“臾??깆뿉 ?섑빐 ?뺤씤??遺덇????곹솴?대떎. ??寃쎌슦 醫뚯슦痢≪쓽 ?먮룞李⑤뱾? ?⑹깋?깊솕?? ?곸깋?깊솕媛 ?뺤씤?섏뼱???뺤??섏? 紐삵븯怨??좏샇 諛?吏?쒖쐞諛섏쑝濡??곌껐?섏뼱 援먰넻?ш퀬瑜??쇱쑝??媛?μ꽦???랁썑?섎떎.  ?곕씪??吏꾪뻾諛⑺뼢 ?좏샇媛 ?뱀깋?깊솕???좎??쇰룄 援먯감濡??묎렐 ?쒖뿉??媛먯냽?섎뒗 ?댁쟾?쒕룄媛 ?꾩슂?섎떎.",
+  "tr_e": "This is a situation where the traffic conditions on the left and right of the intersection cannot be checked due to buildings, etc. In this case, the vehicles on the left and right, even when a yellow or red light is confirmed, may fail to stop and lead to a signal and instruction violation, with a strong possibility of causing a traffic accident. Therefore, even if the signal in the direction of travel is green, a driving attitude of decelerating when approaching the intersection is needed."
+ },
+ {
+  "n": 969,
+  "ko_e": "?꾨줈援먰넻踰???7議?蹂댄뻾?먮낫??, ?꾨줈援먰넻踰???9議?紐⑤뱺 ?댁쟾?먯쓽 以?섏궗???? ?대┛??蹂댄샇援ъ뿭?먯꽌???대┛?닿? ?몄젣 ?대뒓 ?쒓컙???섑??좎? 紐곕씪 ?띾룄瑜?以꾩씠怨??쒗뻾?섏뿬???쒕떎. 媛묒옄湲??섑??? ?대┛?대줈 ?명빐 ?욎감 湲됱젣?숉븯硫??ㅻ뵲瑜대뒗 李④? 異붾룎?????덇린 ?뚮Ц???덉쟾嫄곕━瑜??뺣낫?섏뿬???쒕떎. ?대┛???놁쓣  ?듦낵???뚯뿉??異⑸텇??媛꾧꺽???좎??섎㈃??諛섎뱶???쒗뻾?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 27 (Protection of Pedestrians), Road Traffic Act Article 49 (Matters to Be Observed by All Drivers, etc.). In a school zone, since one cannot know when or at what moment a child will appear, one must reduce speed and slow down. Because a child appearing suddenly could cause the car ahead to brake suddenly and the following car to rear-end it, one must secure a safe distance. When passing beside a child, one must always slow down while maintaining a sufficient gap."
+ },
+ {
+  "n": 970,
+  "ko_e": "?낃컙?먯씠???쒖????ㅼ뿉 ?덈뒗 蹂댄뻾?먮뒗 ?μ븷臾쇱뿉 ?섑븳 ?ш컖吏????덉쑝誘濡??댁쟾?먭? ?뺤씤?섍린 ?대졄?? ????蹂댄뻾 ?먮뒗 硫由ъ뿉???ㅻ뒗 ?먮룞李⑥쓽 議댁옱??愿?ъ씠 ?녾굅???먮뒗 洹??먮룞李⑤? 諛쒓껄?덉쓣吏?쇰룄 ?곷떦??癒?嫄곕━?대?濡??〓떒 ???????덈떎怨??ㅽ뙋?섏뿬 臾대떒?〓떒????媛?μ꽦???덈떎. ?먰븳 ?〓떒蹂대룄???욌뮘?먯꽌 臾대떒?〓떒??留롫떎???먮룄 諛⑹뼱 ?댁쟾???꾪빐 湲곗뼲?댁빞 ?섍쿋??",
+  "tr_e": "A pedestrian behind a signboard or sign is in a blind spot created by the obstacle, so it is difficult for the driver to see them. At this time, the pedestrian may be uninterested in the presence of a car coming from far away, or even if they have spotted the car, may misjudge that they can cross because it is a considerable distance away and jaywalk. Also, one should remember for defensive driving that jaywalking is common in front of and behind crosswalks."
+ },
+ {
+  "n": 971,
+  "ko_e": "?몃룄1李⑤줈???꾨줈??遺덈쾿?쇰줈 二쇱감??李⑤웾?ㅻ줈 ?명빐 以묒븰?좎쓣 ?섏뼱 二쇳뻾???섎컰???녿떎. ??寃쎌슦 ?댁쟾?먮뒗 吏꾪뻾諛??μ씠??諛섎?諛⑺뼢?먯꽌 二쇳뻾?섎뒗 李⑤쭏??二쇱쓽?섎㈃???댁쟾?섏뿬???쒕떎. ?뱁엳 ?대┛??蹂댄샇援ъ뿭?먯꽌???꾨줈援먰넻踰뺤쓣  ?꾨컲?섎뒗 ?대┛??諛?泥?냼?꾩씠 ?댁쟾?섎뒗 ?먯쟾嫄??깆뿉 ?좎쓽???꾩슂?깆씠 ?덈떎.",
+  "tr_e": "On a road with one lane each way, due to illegally parked vehicles, one has no choice but to drive over the center line. In this case, the driver must drive with attention to vehicles traveling in the direction of travel or from the opposite direction. In particular, in a school zone, there is a need to be careful of bicycles, etc., ridden by children and adolescents who violate the Road Traffic Act."
+ },
+ {
+  "n": 972,
+  "ko_e": "?꾨줈援먰넻踰???7議?蹂댄뻾?먯쓽 蹂댄샇) ???? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴2(?좏샇湲곌? ?쒖떆?섎뒗 ?좏샇??醫낅쪟 諛??좏샇???? 蹂댄뻾 ?뱀깋?좏샇瑜?吏?ㅼ? ?딄굅???좏샇瑜??덉륫?섏뿬 誘몃━ 異쒕컻?섎뒗 蹂댄뻾?먯뿉 二쇱쓽?섏뿬???쒕떎. 蹂댄뻾 ?뱀깋?좏샇媛 ?먮㈇ ????媛묒옄湲??곌린 ?쒖옉?섏뿬 ?〓떒?섎뒗 蹂댄뻾?먯뿉 二쇱쓽?섏뿬???쒕떎. ?고쉶?꾪븷 ?뚯뿉???〓떒蹂대룄???대젮?쒖꽌 ?湲고븯?? 蹂댄뻾?먭? 留먮젮?쒕뒗 ?꾩긽??二쇱쓽?섏뿬???쒕떎. ?고쉶?꾪븷 ??諛섎??몄뿉??吏곸쭊?섎뒗 李⑤웾??二쇱쓽?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 27 (Protection of Pedestrians) Paragraph 2, Enforcement Rule of the Road Traffic Act Table 2 (Types of Signals Displayed by Traffic Lights and Meanings of Signals). One must be careful of pedestrians who do not obey the green pedestrian signal or who start early in anticipation of the signal. One must be careful of pedestrians who suddenly start running to cross when the green pedestrian signal is flashing. When turning right, one must be careful of the phenomenon of pedestrians who have stepped down to wait at the crosswalk being drawn in. When turning right, one must be careful of vehicles going straight from the opposite side."
+ },
+ {
+  "n": 973,
+  "ko_e": "遺덊듅???댁쟾?먭? 吏洹몄옱洹??댁쟾???섍굅?? ?닿? ?듯뻾?섎뒗 李⑤줈?먯꽌 怨좎쓽濡??쒕룞???섎㈃??吏꾨줈瑜?留됰뒗 ?됱쐞瑜??섎뒗  寃쎌슦 洹??댁쟾?먯뿉寃?吏곸젒 ??묓븯吏 ?딄퀬 ?꾨줈??吏꾩텧濡쒕줈 ?뚰뵾 諛??고쉶?섍굅?? ?닿쾶???깆쑝濡?吏꾩엯?섏뿬 ?먮룞李?臾????좉렇怨?利됱떆 ?좉퀬?섏뿬 ??묓븯??寃껋씠 諛붾엺吏곹븯??",
+  "tr_e": "When an unspecified driver drives in a zigzag or commits an act of deliberately braking and blocking the course in the lane one is traveling in, it is advisable not to respond to that driver directly, but to avoid and detour to a road exit, or to enter a rest area, etc., lock the vehicle doors, and immediately report it and respond."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; Get-Content -Raw -Encoding UTF8 -LiteralPath 'translations/audit/queue/347_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 520ms:
+[
+ {
+  "n": 953,
+  "ko_e": "도로교통법 시행규칙 별표6, 유턴표지(지시표지 311번) 차마가 유턴할 지점의 도로우측 또는 중앙에 설치",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, U-turn sign (instruction sign No. 311). Installed on the right side or center of the road at a point where a vehicle makes a U-turn."
+ },
+ {
+  "n": 954,
+  "ko_e": "도로교통법 시행규칙 별표6 자동차․이륜자동차 및 원동기장치자전거통행금지표지(규제표시 206) 자동차와 이륜자 동차 및 원동기장치자전거의 통행을 지정된 시간에 금지하는 것을 의미한다.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, no-passage sign for motor vehicles, motorcycles, and motorized bicycles (regulatory sign 206). It means prohibiting the passage of motor vehicles, motorcycles, and motorized bicycles at a designated time."
+ },
+ {
+  "n": 955,
+  "ko_e": "도로교통법 제2조(정의) 주차란 운전자가 승객을 기다리거나 화물을 싣거나 차가 고장 나거나 그 밖의 사유로 차를 계속 정지 상태에 두는 것 또는 운전자가 차에서 떠나서 즉시 그 차를 운전할 수 없는 상태에 두는 것을 말한다. 정차란 운전자가 5분을 초과하지 아니하고 차를 정지시키는 것으로서 주차 외의 정지 상태를 말한다. 도로교통법 시행규칙 별표6, 주차금지표지(규제표지 219번) 차의 주차를 금지하는 것이다. 견인지역표지(보조표지 428번)",
+  "tr_e": "Road Traffic Act Article 2 (Definitions). Parking means keeping a vehicle continuously in a stationary state while the driver waits for a passenger, loads cargo, the vehicle breaks down, or for other reasons, or keeping a vehicle in a state where the driver has left it and cannot immediately drive it. Stopping means the driver keeping a vehicle stationary for not more than 5 minutes, being a stationary state other than parking. Enforcement Rule of the Road Traffic Act Table 6, no-parking sign (regulatory sign No. 219). It prohibits vehicle parking. Tow-away zone sign (supplementary sign No. 428)."
+ },
+ {
+  "n": 956,
+  "ko_e": "기초번호판은 가로등·교통신호등·도로표지 등이 설치된 지주, 도로구간의 터널 및 교량 등에서 위치를 표시해 야 할 필요성이 있는 장소, 그 밖에 시장 등이 필요하다고 인정하는 장소에 설치한다. 도로명주소법 제9조(도로명판과 기초번호판의 설치) 제2항 도로명주소법 제9조(도로명판과 기초번호판의 설치) 제1항 주소정보시설규칙 제15조(기초번호판의 설치방법) 제1항 제3호 주소정보시설규칙 제14조(기초번호판의 설치장소 등)          도로명주소법 제11조(건물번호의 부여), 같은 법 시행령 제23조(건물번호의 부여 기준)",
+  "tr_e": "A base number plate is installed on posts where streetlights, traffic lights, road signs, etc., are installed, at places such as tunnels and bridges of road sections where it is necessary to indicate the location, and at other places the mayor, etc., deems necessary. Road Name Address Act Article 9 (Installation of Road Name Plates and Base Number Plates) Paragraph 2. Road Name Address Act Article 9 (Installation of Road Name Plates and Base Number Plates) Paragraph 1. Address Information Facility Rule Article 15 (Method of Installing Base Number Plates) Paragraph 1 Subparagraph 3. Address Information Facility Rule Article 14 (Installation Locations of Base Number Plates, etc.). Road Name Address Act Article 11 (Assignment of Building Numbers), Article 23 (Standards for Assigning Building Numbers) of the same Act's Enforcement Decree."
+ },
+ {
+  "n": 957,
+  "ko_e": "지정된 날을 제외하고 버스전용차로 통행 차만 통행할 수 있음을 의미한다.",
+  "tr_e": "It means that, except on designated days, only vehicles allowed to pass in the bus-exclusive lane may pass."
+ },
+ {
+  "n": 958,
+  "ko_e": "도로교통법 시행규칙 별표6 320의4 어린이승하차표시 어린이 보호구역에서 어린이통학버스와 자동차등이 어린이  승하차를 위해 표지판에 표시된 시간 동안 정차 및 주차할 수 있도록 지시하는 것으로 어린이 보호구역에서 어린이 통학버스와 자동차등이 어린이의 승하차를 위해 정차 및 주차할 수 있는 장소 및 필요한 지점 또는 구간의 도로  우측에 설치하거나 구간의 시작 및 끝 또는 시간의 보조표지를 부착·설치",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, 320-4, child boarding/alighting marking. A sign instructing that, in a school zone, school buses and vehicles, etc., may park and stop during the time shown on the sign for children's boarding and alighting; installed on the right side of the road at a place and necessary point or section in a school zone where school buses and vehicles, etc., may park and stop for children's boarding and alighting, or with a supplementary sign marking the start and end of the section or the time attached and installed."
+ },
+ {
+  "n": 959,
+  "ko_e": "도로표지규칙(국토교통부령) 출구감속유도표지(도로표지의 규격상세 및 설치방법 426-3번) 첫 번째 출구감속차로 의 시점부터 전방 300m, 200m, 100m 지점에 각각 설치한다.",
+  "tr_e": "Road Sign Rule (Ministry of Land, Infrastructure and Transport ordinance), exit deceleration guidance sign (Detailed Specifications and Installation Methods of Road Signs No. 426-3). Installed 300 m, 200 m, and 100 m ahead, respectively, from the start of the first exit deceleration lane."
+ },
+ {
+  "n": 960,
+  "ko_e": "강남대로의 넓은 길 시작점을 의미하며 “1→” 이 위치는 도로의 시작점을 의미하고 강남대로의 길이는 6.99킬로 미터임을 의미한다.",
+  "tr_e": "It means the starting point of the wide road Gangnam-daero, and \"1→\" this location means the starting point of the road, and it means that the length of Gangnam-daero is 6.99 kilometers."
+ },
+ {
+  "n": 961,
+  "ko_e": "고속도로가 시작되는 기점에서 현재 위치까지 거리를 알려주는 표지 차가 고장 나거나 사고 예기치 못한 상황에서 내 위치를 정확히 알 수 있다. -초록색 바탕 숫자: 기점으로 부터의 거리(km) -흰색 바탕 숫자: 소수점 거리(km)",
+  "tr_e": "A sign informing the distance from the starting point where the expressway begins to the current location. When a vehicle breaks down or in an unexpected situation such as an accident, one can know one's location accurately. -Green background numbers: distance from the starting point (km) -White background numbers: decimal distance (km)."
+ },
+ {
+  "n": 962,
+  "ko_e": "도로교통법 시행규칙 별표6. 532의 2. 대각선횡단보도표시 모든 방향으로 통행이 가능한 횡단보도(횡단보도 표시  사이 빈 공간도 횡단보도에 포함한다)임을 표시하는 것. 보도 통행량이 많거나 어린이 보호구역 등 보행자 안전과 편리를 확보할 수 있는 지점에 설치한다.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 532-2. Diagonal crosswalk marking. A marking indicating a crosswalk on which passage is possible in all directions (the empty space between the crosswalk markings is also included in the crosswalk). Installed at points where sidewalk traffic is heavy or where pedestrian safety and convenience can be secured, such as school zones."
+ },
+ {
+  "n": 963,
+  "ko_e": "주소정보시설규칙 [별표 13] <개정 2024. 7.19> Ⓐ는 기초번호판,  Ⓑ은 일반용 건물번호판이고, Ⓒ는 국가유산  및 관광용 건물번호판, Ⓓ는 관공서용 건물번호판이다.",
+  "tr_e": "Address Information Facility Rule [Table 13] <amended 2024. 7.19>. Ⓐ is a base number plate, Ⓑ is a general-use building number plate, Ⓒ is a national heritage and tourism building number plate, and Ⓓ is a public office building number plate."
+ },
+ {
+  "n": 965,
+  "ko_e": "도로구간 등의 설정·변경에 관한 세부기준 [행정안전부 예규 제162호, 2021.6.9., 제정] 제5조 1. 다른 도로구간과 연결 된 지점이나 출입구를 시작지점으로 하되 시작지점과 끝지점이 같은 조건일 경우 서에서 동, 남에서 북의 방향으로 설정",
+  "tr_e": "Detailed Standards on the Setting and Change of Road Sections, etc. [Ministry of the Interior and Safety Established Rule No. 162, 2021.6.9., enacted] Article 5. 1. Set the starting point as the point connected to another road section or the entrance/exit, but where the starting point and end point are of the same condition, set the direction from west to east and from south to north."
+ },
+ {
+  "n": 966,
+  "ko_e": "우회전하려는 자동차가 직진하는 차의 속도를 느림으로 추정하는 경우 주차된 차들을 피해서 1차로로 한 번에 진 입하는 사례가 많다. 따라서 우회전하는 자동차가 있는 경우 직진이 우선이라는 절대적 판단을 삼가고 우회전 자동 차 운전자가 무리하게 진입하는 경우를 예측하며 운전할 필요성이 있다.",
+  "tr_e": "When a vehicle intending to turn right presumes the speed of a straight-going vehicle to be slow, there are many cases where it enters the first lane in one move, avoiding the parked cars. Therefore, when there is a vehicle turning right, one must refrain from the absolute judgment that going straight has priority, and needs to drive while anticipating the case where the right-turning vehicle's driver forces its way in."
+ },
+ {
+  "n": 967,
+  "ko_e": "교차로에 진입하여 통행하는 차마의 운전자는 진입한 위치를 기준으로 진출하기 위한 진행경로를 따라 안전하게  교차로를 통과해야 한다. 그러나 문제의 영상처럼 교차로의 유도선이 없는 경우 또는 유도선이 있는 경우라 하더라 도 예상되는 경로를 벗어나는 경우가 빈번하다. 따라서 교차로를 통과하는 경우 앞쪽 자동차는 물론 옆쪽 자동차의  진행경로에 주의하며 운전할 필요성이 있다.",
+  "tr_e": "The driver of a vehicle that has entered and is traveling through an intersection must pass through the intersection safely, following the traveling path for exiting based on the position where it entered. However, as in the video in the problem, when there is no guide line at the intersection, or even when there is a guide line, cases of deviating from the expected path are frequent. Therefore, when passing through an intersection, one needs to drive with attention to the traveling paths not only of the vehicle ahead but also of the vehicle to the side."
+ },
+ {
+  "n": 968,
+  "ko_e": "교차로 좌우측의 교통상황이 건조물 등에 의해 확인이 불가한 상황이다. 이 경우 좌우측의 자동차들은 황색등화나  적색등화가 확인되어도 정지하지 못하고 신호 및 지시위반으로 연결되어 교통사고를 일으킬 가능성이 농후하다.  따라서 진행방향 신호가 녹색등화라 할지라도 교차로 접근 시에는 감속하는 운전태도가 필요하다.",
+  "tr_e": "This is a situation where the traffic conditions on the left and right of the intersection cannot be checked due to buildings, etc. In this case, the vehicles on the left and right, even when a yellow or red light is confirmed, may fail to stop and lead to a signal and instruction violation, with a strong possibility of causing a traffic accident. Therefore, even if the signal in the direction of travel is green, a driving attitude of decelerating when approaching the intersection is needed."
+ },
+ {
+  "n": 969,
+  "ko_e": "도로교통법 제27조(보행자보호), 도로교통법 제49조(모든 운전자의 준수사항 등) 어린이 보호구역에서는 어린이가 언제 어느 순간에 나타날지 몰라 속도를 줄이고 서행하여야 한다. 갑자기 나타난  어린이로 인해 앞차 급제동하면 뒤따르는 차가 추돌할 수 있기 때문에 안전거리를 확보하여야 한다. 어린이 옆을  통과할 때에는 충분한 간격을 유지하면서 반드시 서행하여야 한다.",
+  "tr_e": "Road Traffic Act Article 27 (Protection of Pedestrians), Road Traffic Act Article 49 (Matters to Be Observed by All Drivers, etc.). In a school zone, since one cannot know when or at what moment a child will appear, one must reduce speed and slow down. Because a child appearing suddenly could cause the car ahead to brake suddenly and the following car to rear-end it, one must secure a safe distance. When passing beside a child, one must always slow down while maintaining a sufficient gap."
+ },
+ {
+  "n": 970,
+  "ko_e": "입간판이나 표지판 뒤에 있는 보행자는 장애물에 의한 사각지대에 있으므로 운전자가 확인하기 어렵다. 이 때 보행 자는 멀리에서 오는 자동차의 존재에 관심이 없거나 또는 그 자동차를 발견했을지라도 상당히 먼 거리이므로 횡단 을 할 수 있다고 오판하여 무단횡단을 할 가능성이 있다. 또한 횡단보도의 앞뒤에서 무단횡단이 많다는 점도 방어 운전을 위해 기억해야 하겠다.",
+  "tr_e": "A pedestrian behind a signboard or sign is in a blind spot created by the obstacle, so it is difficult for the driver to see them. At this time, the pedestrian may be uninterested in the presence of a car coming from far away, or even if they have spotted the car, may misjudge that they can cross because it is a considerable distance away and jaywalk. Also, one should remember for defensive driving that jaywalking is common in front of and behind crosswalks."
+ },
+ {
+  "n": 971,
+  "ko_e": "편도1차로의 도로에 불법으로 주차된 차량들로 인해 중앙선을 넘어 주행할 수밖에 없다. 이 경우 운전자는 진행방 향이나 반대방향에서 주행하는 차마에 주의하면서 운전하여야 한다. 특히 어린이 보호구역에서는 도로교통법을  위반하는 어린이 및 청소년이 운전하는 자전거 등에 유의할 필요성이 있다.",
+  "tr_e": "On a road with one lane each way, due to illegally parked vehicles, one has no choice but to drive over the center line. In this case, the driver must drive with attention to vehicles traveling in the direction of travel or from the opposite direction. In particular, in a school zone, there is a need to be careful of bicycles, etc., ridden by children and adolescents who violate the Road Traffic Act."
+ },
+ {
+  "n": 972,
+  "ko_e": "도로교통법 제27조(보행자의 보호) 제2항, 도로교통법 시행규칙 별표2(신호기가 표시하는 신호의 종류 및 신호의 뜻) 보행 녹색신호를 지키지 않거나 신호를 예측하여 미리 출발하는 보행자에 주의하여야 한다. 보행 녹색신호가 점멸 할 때 갑자기 뛰기 시작하여 횡단하는 보행자에 주의하여야 한다. 우회전할 때에는 횡단보도에 내려서서 대기하는  보행자가 말려드는 현상에 주의하여야 한다. 우회전할 때 반대편에서 직진하는 차량에 주의하여야 한다.",
+  "tr_e": "Road Traffic Act Article 27 (Protection of Pedestrians) Paragraph 2, Enforcement Rule of the Road Traffic Act Table 2 (Types of Signals Displayed by Traffic Lights and Meanings of Signals). One must be careful of pedestrians who do not obey the green pedestrian signal or who start early in anticipation of the signal. One must be careful of pedestrians who suddenly start running to cross when the green pedestrian signal is flashing. When turning right, one must be careful of the phenomenon of pedestrians who have stepped down to wait at the crosswalk being drawn in. When turning right, one must be careful of vehicles going straight from the opposite side."
+ },
+ {
+  "n": 973,
+  "ko_e": "불특정 운전자가 지그재그 운전을 하거나, 내가 통행하는 차로에서 고의로 제동을 하면서 진로를 막는 행위를 하는  경우 그 운전자에게 직접 대응하지 않고 도로의 진출로로 회피 및 우회하거나, 휴게소 등으로 진입하여 자동차 문 을 잠그고 즉시 신고하여 대응하는 것이 바람직하다.",
+  "tr_e": "When an unspecified driver drives in a zigzag or commits an act of deliberately braking and blocking the course in the lane one is traveling in, it is advisable not to respond to that driver directly, but to avoid and detour to a road exit, or to enter a rest area, etc., lock the vehicle doors, and immediately report it and respond."
+ }
+]
+
+codex
+[]
+tokens used
+15,149
+[]

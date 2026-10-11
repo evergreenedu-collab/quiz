@@ -1,0 +1,266 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12801-a010-7f20-9ab5-3cb19f6ef01f
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/319_expl_cn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/319_expl_cn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 529ms:
+[
+ {
+  "n": 382,
+  "ko_e": "?⑹깋 ?먯꽑???덈뒗 痢≪뿉?쒕뒗 以묒븰?좎쓣 ?섏뼱 ?욎?瑜닿린?????덉쑝???⑹깋 ?ㅼ꽑???덈뒗 痢≪뿉?쒕뒗 以묒븰?좎쓣 ?섏뼱 ?욎?瑜?湲고븷 ???녿떎.",
+  "tr_e": "?ⓩ쐣容꾥돯?싩봇?꾡?堊㎩룾擁딂퓝訝?퓘瀛욤텈饔?펽鵝녶쑉?됮퍍?꿨츩瀛욜쉪訝堊㏛툖孃쀨텏瓦뉏릎恙껆봇擁낁쉐??
+ },
+ {
+  "n": 383,
+  "ko_e": "?꾨줈援먰넻踰???4議?泥좉만 嫄대꼸紐⑹쓽 ?듦낵) ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 泥좉만 嫄대꼸紐??댄븯 ?쒓굔?먮ぉ?앹씠?? ?쒕떎)???듦낵?섎젮??寃쎌슦?먮뒗 嫄대꼸紐??욎뿉???쇱떆?뺤??섏뿬 ?덉쟾?쒖? ?뺤씤???꾩뿉 ?듦낵?섏뿬???쒕떎. ?ㅻ쭔, ?좏샇湲? ?깆씠 ?쒖떆?섎뒗 ?좏샇???곕Ⅴ??寃쎌슦?먮뒗 ?뺤??섏? ?꾨땲?섍퀬 ?듦낵?????덈떎.          ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 嫄대꼸紐⑹쓽 李⑤떒湲곌? ?대젮???덇굅???대젮吏?ㅺ퀬 ?섎뒗 寃쎌슦 ?먮뒗 嫄대꼸紐⑹쓽 寃?蹂닿린媛 ?몃━怨??덈뒗 ?숈븞?먮뒗 洹?嫄대꼸紐⑹쑝濡??ㅼ뼱媛?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "?볢러雅ㅹ싨퀡寧?4?∽펷?곮러?볟룭?꾦싪퓝竊됤몺 餓삡퐬饔?푺?뽪쐣饔①뵷饔?쉪要얗㈅雅븝펽轝꿴싪퓝?곮러?볟룭竊덁빳訝뗧㎞?쒒걪?ｂ앾펹?띰펽佯붷쑉?볟룭?띶걶饔?‘溫ㅶ삸??츎?ⓨ릮?싪퓝?귚퐜堊앮뜮雅ㅹ싦에?루겘嶺됭〃鹽븀쉪岳▼뤇?띰펽??툖?쒑쉐?싪퓝?귘몼 餓삡퐬饔?푺?뽪쐣饔①뵷饔?쉪要얗㈅雅븝펽?③걪?ｇ쉪?뤸쓥?얌툔?뽩뜵弱녷붂訝뗦뿶竊뚧닑?볟룭?꾥??ε솳閭ｅ쑉勇ｅ뱧?잓뿴竊뚥툖孃쀨퓵?θ??볟룭??
+ },
+ {
+  "n": 384,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??[蹂꾪몴2] ?좏샇???쒓린 諛?諛⑸쾿, 吏꾨줈瑜?蹂寃쏀븯怨좎옄 ?섎뒗 寃쎌슦??洹?吏?먯뿉 ?대Ⅴ湲???30誘명꽣 ?댁긽 ??吏?먯뿉 ?대Ⅴ?????諛⑺뼢吏?쒓린瑜?議곗옉?쒕떎.",
+  "tr_e": "?볢러雅ㅹ싨퀡?썼죱餓??ヨ〃2] 岳▼뤇?꾣뿶?뷴룋?방퀡竊뚧Р?섉쎍烏뚩퓵瓮?봇?띰펽?ⓨ댆渦얕??곁궧??0映념빳訝듿쑑?방뿶?띴퐳饔у릲???
+ },
+ {
+  "n": 385,
+  "ko_e": "媛蹂???띾룄?쒗븳?쒖?瑜??곕씪???쒕떎.",
+  "tr_e": "佯붶풚??룾?섇폀?먬잍젃恙쀣?
+ },
+ {
+  "n": 386,
+  "ko_e": "怨좎냽?꾨줈??寃쎌같泥?옣, 怨좎냽?꾨줈瑜??쒖쇅???꾨줈???쑣룸룄寃쎌같泥?옣???띾룄 洹쒖젣沅뚯옄?대떎.",
+  "tr_e": "遙섌잌뀶瓮?뵳鈺?캗?낂빣?곲쳵?잌뀶瓮?빳鸚뽫쉪?볢러?긷툊쨌?볢?野잌럢?요맏?잌벧鰲꾢댍?껇끹?
+ },
+ {
+  "n": 387,
+  "ko_e": "?곸깋?좏샇 ???뺤???吏곸쟾???뺤??섍퀬, 援먯감濡??대Ⅴ湲????⑹깋?좏샇 ?쒖뿉???뺤???吏곸쟾???뺤??댁빞 ?쒕떎.",
+  "tr_e": "瀛?돯岳▼뤇?뜹쑉?쒏?瀛욘??띷뼶?쒑쉐竊뚦댆渦얌벡?됭러?ｅ뎺容꾥돯岳▼뤇?뜸튋佯붷쑉?쒏?瀛욘??띷뼶?쒑쉐??
+ },
+ {
+  "n": 388,
+  "ko_e": "援먯감濡쒖뿉???고쉶?????곗륫 ?꾨줈 ?〓떒蹂대룄 蹂댄뻾 ?좏샇?깆씠 ?뱀깋?대씪??蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐瑜?二쇱? ?꾨땲?섎뒗 踰붿쐞  ?댁뿉???듦낵?????덈떎. ?ㅻ쭔, 蹂댄뻾 ?좏샇??痢〓㈃??李⑤웾 蹂댁“ ?좏샇?깆씠 ?ㅼ튂?섏뼱 ?덈뒗 寃쎌슦, 蹂댁“ ?좏샇?깆씠 ?곸깋?? ???듦낵?섎㈃ ?좏샇 ?꾨컲???대떦?????덉쑝誘濡??듦낵?????녾퀬, 蹂댄뻾?먭? ?〓떒蹂대룄 ?곸뿉 議댁옱?섎㈃ 吏꾪뻾?섎뒗 李⑥?  蹂댄뻾?먭? 硫由??⑥뼱???덈떎 ?섎뜑?쇰룄 蹂댄뻾???듯뻾??諛⑺빐瑜?二쇰뒗 寃껋씠誘濡??듦낵?????녿떎.",
+  "tr_e": "?ⓧ벡?됭러?ｅ뤂饔ф뿶竊뚦뜵鵝욕뤂堊㏝걪瓮?볶烏뚧Ø?볡쉪閭θ죱岳▼뤇??맏瀯욤돯竊뚥튋??쑉訝띶┬閻띹죱雅븅싪죱?꾥똽?닷냵?싪퓝?귚퐜壤볠?烏뚥에?루겘堊㏝씊溫얏쐣饔?푺渦끻뒰岳▼뤇??뿶竊뚩푷?⒳에?루겘訝븀벚?꿩뿶?싪퓝??꺗掠욂틢瓦앭룏岳▼뤇竊뚦썱閭ㅴ툖孃쀩싪퓝竊쏂죱雅뷴춼?ⓧ틢雅븃죱與ら걪訝딀뿶竊뚦뜵鵝욤죱瓦쏁쉪饔?푺訝롨죱雅븀쎑瓮앲푵瓦쒙펽阿잌콪雅롥┬閻띹죱雅븅싪죱竊뚦썱閭ㅴ툖孃쀩싪퓝??
+ },
+ {
+  "n": 389,
+  "ko_e": "?좏샇??洹??됱쐞瑜??섍퀬???섎뒗 吏??醫뚰쉶?꾪븷 寃쎌슦?먮뒗 洹?援먯감濡쒖쓽 媛?μ옄由????대Ⅴ湲???30誘명꽣(怨좎냽?꾨줈?먯꽌?? 100誘명꽣) ?댁긽??吏?먯뿉 ?대Ⅴ??????댁빞 ?섍퀬, 誘몃━ ?띾룄瑜?以꾩씤 ??1李⑤줈 ?먮뒗 醫뚰쉶??李⑤줈濡??쒗뻾?섎ŉ 吏꾩엯?댁빞  ?쒕떎. ?먮룞李④?由щ쾿 ?쒗뻾洹쒖튃 ??議??먮룞李⑥쓽 醫낅퀎援щ텇 蹂꾪몴1 ?먮룞李⑥쓽 醫낅쪟)",
+  "tr_e": "岳▼뤇佯붷쑉?계씨轝꿨츩?썼?烏뚥맏?곁궧竊덂랩饔ф뿶訝븃?雅ㅵ룊瓮?룭?꾥씁煐섓펹??0映놂펷遙섌잌뀶瓮?툓訝?00映놂펹餓δ툓?곁궧?띈퓵烏뚳펽亮뜹틪窯꾢뀍?뤻잌릮?뤻잍뀬烏뚩퓵?ηК1饔?걪?뽩랩饔ц쉐?볝귝굵饔???녷퀡?썼죱鰲꾢닕寧??∽펷黎썼쉐?꾤쭕?ュ뙷???ヨ〃1 黎썼쉐?꾤쭕映삼펹"
+ },
+ {
+  "n": 390,
+  "ko_e": "?ㅻ뵲瑜대뒗 李⑥? 嫄곕━媛 ?덉쓣 ???띾룄瑜??좎???梨?李⑤줈瑜?蹂寃쏀븯怨? ?묎렐?섍퀬 ?덉쓣 ?뚮뒗 ?띾룄瑜???텛???ㅼ감瑜?癒쇱?  ?듦낵?쒗궓??",
+  "tr_e": "訝롥릮?뤺쉐渦녷쐣瓮앯┿?뜸퓷?곲잌벧?섉쎍饔?걪竊뚧??ⓩ렏瓦묉뿶?숁붂??잌벧溫⒴릮饔?뀍?싪퓝??
+ },
+ {
+  "n": 391,
+  "ko_e": "??李⑤줈??援щ텇??吏볥뒗 李⑥꽑 以??ㅼ꽑? 李⑤줈瑜?蹂寃쏀븷 ???녿뒗 ?좎씠?? ???먯꽑? 李⑤줈瑜?蹂寃쏀븷 ???덈뒗 ?좎씠??  ???ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗 寃쎌슦 ?ㅼ꽑 履쎌뿉???먯꽑諛⑺뼢?쇰줈??李⑤줈 蹂寃쎌씠 遺덇??ν븯?? ???ㅼ꽑怨??먯꽑??蹂묓뻾?섎뒗  寃쎌슦 ?먯꽑 履쎌뿉???ㅼ꽑諛⑺뼢?쇰줈??李⑤줈 蹂寃쎌씠 媛?ν븯??",
+  "tr_e": "???뷴늽饔?걪?꾥쉐?볡봇訝?펽若욅봇??툖??룜?닺쉐?볡쉪瀛욍귘몼 ?싩봇??룾?섉쎍饔?걪?꾤봇?귘몾 若욅봇訝롨솞瀛욕뭉烏뚧뿶竊뚥툖??퍗若욅봇訝堊㎩릲?싩봇?밧릲?섉쎍饔?걪?귘몿 若욅봇訝롨솞瀛욕뭉烏뚧뿶竊뚦룾餓롨솞瀛요?堊㎩릲若욅봇?밧릲?섉쎍饔?걪??
+ },
+ {
+  "n": 392,
+  "ko_e": "?곸깋?깊솕???먮㈇????李⑤쭏???뺤??좎씠???〓떒蹂대룄媛 ?덉쓣 ?뚯뿉??洹?吏곸쟾?대굹 援먯감濡쒖쓽 吏곸쟾???쇱떆?뺤????? ?ㅻⅨ 援먰넻??二쇱쓽?섎㈃??吏꾪뻾?????덈떎.",
+  "tr_e": "瀛?돯??뿪?곫뿶竊뚩쉐要у쑉?됧걶閭®봇?뽨볶烏뚧Ø?볠뿶竊뚦틪?ⓨ끀閭ｅ뎺?방닑雅ㅵ룊瓮?룭閭ｅ뎺?밧걶饔?릮竊뚦쑉力ⓩ꼷?뜸퍟雅ㅹ싩쉪?끻넻訝뗨죱瓦쎼?
+ },
+ {
+  "n": 393,
+  "ko_e": "鍮꾨낫?몄쥖?뚯쟾 ?쒖?媛 ?덈뒗 怨녹뿉?쒕뒗 ?뱀깋?좏샇媛 耳쒖쭊 ?곹깭?먯꽌 ?ㅻⅨ 援먰넻??二쇱쓽?섎㈃??醫뚰쉶???????덈떎. ?뱀깋???몄뿉??醫뚰쉶?꾪븯?ㅺ? 留욎??몄쓽 吏곸쭊李⑤웾怨?異⑸룎??寃쎌슦 醫뚰쉶??李⑤웾??寃쎄낵???쇰컲?ш퀬 媛?댁옄媛 ?쒕떎.",
+  "tr_e": "?ⓩ쐣?욂퓷?ㅵ랩饔ф젃恙쀧쉪?경뼶竊뚦룾?①뼁?꿜에?룝벽壅루쉪?뜻곦툔力ⓩ꼷?뜸퍟雅ㅹ싧랩饔с귛쑉瀯욤돯岳▼뤇訝뗥랩饔ф뿶訝롥??®쉪?닺죱饔?푺?멩뮒?꾣깄?듕툔竊뚦랩饔ц쉐渦녷닇訝븃슥瓦뉐ㅁ訝?т틟?끿쉪?졾??끹?
+ },
+ {
+  "n": 394,
+  "ko_e": "怨좎냽?꾨줈??理쒖??띾룄??紐⑤뱺 怨좎냽?꾨줈?먯꽌 ?숈씪?섍쾶 ?쒖냽  50?щ줈誘명꽣濡?洹쒖젙?섏뼱 ?덉쑝硫? ?먮룞李⑥쟾?⑸룄濡쒖뿉?쒕뒗  理쒓퀬?띾룄? 理쒖??띾룄 ?????쒗븳???덈떎. ?쇰컲?꾨줈?먯꽌??理쒖??띾룄 ?쒗븳???녾퀬, ?몃룄2李⑤줈 ?댁긽 怨좎냽?꾨줈??理쒓퀬 ?띾룄??李⑥쥌???곕씪 ?ㅻⅤ寃?洹쒖젙?섏뼱 ?덈떎.",
+  "tr_e": "遙섌잌뀶瓮?쉪?鵝롩잌벧?ⓩ??됮쳵?잌뀶瓮?툓?멨릪竊뚩쭊若싦맏驪뤷컦??0?ч뇤竊뚧굵饔╊툜?③걪瓮?툓?遙섌잌벧?뚧?鵝롩잌벧?썸쐣?먨댍?귚??ч걪瓮?툓亦→쐣?鵝롩잌벧?먨댍竊뚦뜒??饔?걪餓δ툓遙섌잌뀶瓮?쉪?遙섌잌벧?방뜮饔?쭕鰲꾢츣訝띶릪??
+ },
+ {
+  "n": 395,
+  "ko_e": "?⑹깋?ㅼ꽑? ?욎?瑜닿린媛 湲덉??섎ŉ ?곕꼸 ?덉씠???ㅻ━ ?꾨뒗 ?욎?瑜닿린 湲덉??μ냼?닿퀬 ?욎감媛 ?ㅻⅨ 李⑤? ?욎?瑜닿퀬 ?덈뒗  寃쎌슦?먮뒗 ?욎?瑜닿린瑜??????녾쾶 洹쒖젙?섏뼱 ?덈떎.",
+  "tr_e": "容꾥돯若욅봇獵곫?擁낁쉐竊뚪슙?볟냵?뽪‥訝딀삸獵곫?擁낁쉐?뷸?竊뚩쭊若싧뎺饔???②텈擁듿끀餓뽬쉐渦녷뿶訝띶풓擁낁쉐??
+ },
+ {
+  "n": 396,
+  "ko_e": "?꾨줈援먰넻踰???議?????諛???3議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6 ?쇰젴踰덊샇 501踰?蹂듭꽑?대뱺 ?⑥꽑?대뱺 ?섏쓣 ???녾퀬  踰꾩뒪媛 ?뱁븯李⑤? ?꾪빐 ?뺤감??寃쎌슦?먮뒗 ?욎?瑜닿린瑜??????녿떎. ?먰븳 以묒븰?좎? 李⑤룄 ??씠 6誘명꽣 ?댁긽??怨녹뿉 ?ㅼ튂?쒕떎.",
+  "tr_e": "?볢러雅ㅹ싨퀡寧??←К5?룟룋寧?3?▲곲걪瓮?벡?싨퀡?썼죱鰲꾢닕?꾥〃6佯뤷뤇501?뤄펽?좄???룎瀛욤퓲??뜒瀛욥꺗訝띶풓擁딁봇竊뚦뀶雅ㅸ쉐訝뷰툓訝뗥??뚦걶饔?뿶訝띶풓擁낁쉐?귛룱鸚뽳펽訝?퓘瀛욤?營?쑉饔?죱?볟?佯?映념빳訝딁쉪?경뼶??
+ },
+ {
+  "n": 397,
+  "ko_e": "?몃룄 3李⑤줈 怨좎냽?꾨줈?먯꽌 2李⑤줈???쇱そ李⑤줈???대떦?섎?濡??듯뻾?????덈뒗 李⑥쥌? ?뱀슜?먮룞李?諛?寃쏀삎쨌?뚰삎쨌以묓삎  ?뱁빀?먮룞李⑥씠??(?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 9)",
+  "tr_e": "?ⓨ뜒??饔?걪?꾦쳵?잌뀶瓮?툓竊뚨К2饔?걪掠욂틢藥╊쑨饔?걪竊뚦썱閭ㅵ룾?싪죱?꾥쉐?뗤맏阿섊뵪饔?룋饔삣엹쨌弱뤷엹쨌訝?엹若?쉐?귨펷?볢러雅ㅹ싨퀡?썼죱鰲꾢닕?꾥〃9竊?
+ },
+ {
+  "n": 398,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴9] 李⑤줈???곕Ⅸ ?듯뻾李⑥쓽 湲곗?           ?몃룄2李⑤줈 怨좎냽?꾨줈?먯꽌 ?욎?瑜닿린瑜??섎젮??紐⑤뱺 ?먮룞李? ?ㅻ쭔, 李⑤웾?듯뻾??利앷? ???꾨줈?곹솴?쇰줈 ?명븯??遺?앹씠 ?섍쾶 ?쒖냽 80?щ줈誘명꽣 誘몃쭔?쇰줈 ?듯뻾???섎컰???녿뒗 寃쎌슦?먮뒗 ?욎?瑜닿린瑜??섎뒗 寃쎌슦媛 ?꾨땲?쇰룄 ?듯뻾?????덈떎.",
+  "tr_e": "?볢러雅ㅹ싨퀡?썼죱鰲꾢닕[?꾥〃9]?됭쉐?볟닋?녺쉪?싪죱饔?푺?뉐뇛?귛쑉?뺝릲2饔?걪遙섌잌뀶瓮?툓誤곮텈饔?쉪??됪굵饔╉귚퐜??펽?좄쉐役곲뇧罌욃뒥嶺됮걪瓮?듁?듣뚥툖孃쀤툖餓ζ뿶??0?ч뇤餓δ툔?싪죱?띰펽?념슴訝띷삸擁낁쉐?꾣깄?듕튋??빳?싪죱??
+ },
+ {
+  "n": 399,
+  "ko_e": "?꾨줈援먰넻踰???0議?媛볤만 ?듯뻾湲덉? ?? ?꾨줈援먰넻踰???4議?怨좎냽?꾨줈?깆뿉?쒖쓽 ?뺤감 諛?二쇱감??湲덉?) ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8. 19?? ?뱀슜?먮룞李⑤벑 6留???,
+  "tr_e": "?볢러雅ㅹ싨퀡寧?0?∽펷獵곫??②러?⑶싪죱嶺됵펹?볢러雅ㅹ싨퀡寧?4?∽펷獵곫??③쳵?잌뀶瓮?춬鸚꾢걶饔?룋要삭쉐竊됮걪瓮?벡?싨퀡?썼죱餓ㅹ셿烏?寧?9?룔귚튂?②쉐嶺?訝뉔윪??
+ },
+ {
+  "n": 400,
+  "ko_e": "1李⑤줈瑜??쒖쇅??李⑤줈瑜?諛섏쑝濡??섎늻??洹?以?1李⑤줈??媛源뚯슫 遺遺꾩쓽 李⑤줈. ?ㅻ쭔, 1李⑤줈瑜??쒖쇅??李⑤줈???섍? ?????寃쎌슦 媛?대뜲 李⑤줈???쒖쇅?쒕떎.",
+  "tr_e": "弱녽솮寧?饔?걪鸚뽫쉪饔?걪訝?녵맏雅뚳펽?뜸릎?좄퓩寧?饔?걪?ⓨ늽?꾥쉐?볝귚퐜??펽?ㅷК1饔?걪鸚뽫쉪饔?걪?겻맏也뉑빊?띰펽訝?뿴饔?걪?ㅵ쨼??
+ },
+ {
+  "n": 401,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴9] 紐⑤뱺 李⑤뒗 吏?뺣맂 李⑤줈蹂대떎 ?ㅻⅨ履쎌뿉 ?덈뒗 李⑤줈濡??듯뻾?????덈떎. ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8. ??9?? ?뱀슜?먮룞李⑤벑 4留????꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28. 3. ??1?? 踰뚯젏 10??,
+  "tr_e": "?볢러雅ㅹ싨퀡?썼죱鰲꾢닕[?꾥〃9]??됭쉐渦녶쓦??쑉驪붹뙁若싪쉐?볣씈?녕쉪饔?걪?싪죱?귡걪瓮?벡?싨퀡?썼죱餓ㅹ셿烏?寧?9?룔귚튂?②쉐嶺?訝뉔윪?껁귡걪瓮?벡?싨퀡?썼죱鰲꾢닕?꾥〃28寧?窈밭К21?룔귝돜??0??
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/319_expl_cn.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+print(json.dumps(data, ensure_ascii=True, indent=2))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:49:26.515830Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 688ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$s = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/319_expl_cn.json'; "'$j = $s | ConvertFrom-Json | ConvertTo-Json -Depth 10; $sb = [System.Text.StringBuilder]::new(); foreach($ch in $j.ToCharArray()){ $i=[int][char]$ch; if($i -gt 127){ [void]$sb.Append(('"'\\u{0:x4}' -f "'$i)) } else { [void]$sb.Append($ch) } }; $sb.ToString()' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 1077ms:
+{
+    "value":  [
+                  {
+                      "n":  382,
+                      "ko_e":  "\ud669\uc0c9 \uc810\uc120\uc774 \uc788\ub294 \uce21\uc5d0\uc11c\ub294 \uc911\uc559\uc120\uc744 \ub118\uc5b4 \uc55e\uc9c0\ub974\uae30\ud560 \uc218 \uc788\uc73c\ub098 \ud669\uc0c9 \uc2e4\uc120\uc774 \uc788\ub294 \uce21\uc5d0\uc11c\ub294 \uc911\uc559\uc120\uc744 \ub118\uc5b4 \uc55e\uc9c0\ub974 \uae30\ud560 \uc218 \uc5c6\ub2e4.",
+                      "tr_e":  "\u5728\u6709\u9ec4\u8272\u865a\u7ebf\u7684\u4e00\u4fa7\u53ef\u8d8a\u8fc7\u4e2d\u5fc3\u7ebf\u8d85\u8f66\uff0c\u4f46\u5728\u6709\u9ec4\u8272\u5b9e\u7ebf\u7684\u4e00\u4fa7\u4e0d\u5f97\u8d8a\u8fc7\u4e2d\u5fc3\u7ebf\u8d85\u8f66\u3002"
+                  },
+                  {
+                      "n":  383,
+                      "ko_e":  "\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c24\uc870(\ucca0\uae38 \uac74\ub110\ubaa9\uc758 \ud1b5\uacfc) \u2460 \ubaa8\ub4e0 \ucc28 \ub610\ub294 \ub178\uba74\uc804\ucc28\uc758 \uc6b4\uc804\uc790\ub294 \ucca0\uae38 \uac74\ub110\ubaa9(\uc774\ud558 \u201c\uac74\ub110\ubaa9\u201d\uc774\ub77c  \ud55c\ub2e4)\uc744 \ud1b5\uacfc\ud558\ub824\ub294 \uacbd\uc6b0\uc5d0\ub294 \uac74\ub110\ubaa9 \uc55e\uc5d0\uc11c \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec \uc548\uc804\ud55c\uc9c0 \ud655\uc778\ud55c \ud6c4\uc5d0 \ud1b5\uacfc\ud558\uc5ec\uc57c \ud55c\ub2e4. \ub2e4\ub9cc, \uc2e0\ud638\uae30  \ub4f1\uc774 \ud45c\uc2dc\ud558\ub294 \uc2e0\ud638\uc5d0 \ub530\ub974\ub294 \uacbd\uc6b0\uc5d0\ub294 \uc815\uc9c0\ud558\uc9c0 \uc544\ub2c8\ud558\uace0 \ud1b5\uacfc\ud560 \uc218 \uc788\ub2e4.          \u2461 \ubaa8\ub4e0 \ucc28 \ub610\ub294 \ub178\uba74\uc804\ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uac74\ub110\ubaa9\uc758 \ucc28\ub2e8\uae30\uac00 \ub0b4\ub824\uc838 \uc788\uac70\ub098 \ub0b4\ub824\uc9c0\ub824\uace0 \ud558\ub294 \uacbd\uc6b0 \ub610\ub294 \uac74\ub110\ubaa9\uc758 \uacbd \ubcf4\uae30\uac00 \uc6b8\ub9ac\uace0 \uc788\ub294 \ub3d9\uc548\uc5d0\ub294 \uadf8 \uac74\ub110\ubaa9\uc73c\ub85c \ub4e4\uc5b4\uac00\uc11c\ub294 \uc544\ub2c8 \ub41c\ub2e4.",
+                      "tr_e":  "\u9053\u8def\u4ea4\u901a\u6cd5\u7b2c24\u6761\uff08\u94c1\u8def\u9053\u53e3\u7684\u901a\u8fc7\uff09\u2460 \u4efb\u4f55\u8f66\u8f86\u6216\u6709\u8f68\u7535\u8f66\u7684\u9a7e\u9a76\u4eba\uff0c\u6b32\u901a\u8fc7\u94c1\u8def\u9053\u53e3\uff08\u4ee5\u4e0b\u79f0\u201c\u9053\u53e3\u201d\uff09\u65f6\uff0c\u5e94\u5728\u9053\u53e3\u524d\u505c\u8f66\u786e\u8ba4\u662f\u5426\u5b89\u5168\u540e\u901a\u8fc7\u3002\u4f46\u4f9d\u636e\u4ea4\u901a\u4fe1\u53f7\u706f\u7b49\u8868\u793a\u7684\u4fe1\u53f7\u65f6\uff0c\u53ef\u4e0d\u505c\u8f66\u901a\u8fc7\u3002\u2461 \u4efb\u4f55\u8f66\u8f86\u6216\u6709\u8f68\u7535\u8f66\u7684\u9a7e\u9a76\u4eba\uff0c\u5728\u9053\u53e3\u7684\u680f\u6746\u653e\u4e0b\u6216\u5373\u5c06\u653e\u4e0b\u65f6\uff0c\u6216\u9053\u53e3\u7684\u8b66\u62a5\u5668\u6b63\u5728\u9e23\u54cd\u671f\u95f4\uff0c\u4e0d\u5f97\u8fdb\u5165\u8be5\u9053\u53e3\u3002"
+                  },
+                  {
+                      "n":  384,
+                      "ko_e":  "\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\ub839 [\ubcc4\ud45c2] \uc2e0\ud638\uc758 \uc2dc\uae30 \ubc0f \ubc29\ubc95, \uc9c4\ub85c\ub97c \ubcc0\uacbd\ud558\uace0\uc790 \ud558\ub294 \uacbd\uc6b0\ub294 \uadf8 \uc9c0\uc810\uc5d0 \uc774\ub974\uae30 \uc804 30\ubbf8\ud130 \uc774\uc0c1 \uc758 \uc9c0\uc810\uc5d0 \uc774\ub974\ub800\uc744 \ub54c \ubc29\ud5a5\uc9c0\uc2dc\uae30\ub97c \uc870\uc791\ud55c\ub2e4.",
+                      "tr_e":  "\u9053\u8def\u4ea4\u901a\u6cd5\u65bd\u884c\u4ee4[\u522b\u88682] \u4fe1\u53f7\u7684\u65f6\u673a\u53ca\u65b9\u6cd5\uff0c\u6b32\u53d8\u66f4\u884c\u8fdb\u8def\u7ebf\u65f6\uff0c\u5728\u5230\u8fbe\u8be5\u5730\u70b9\u524d30\u7c73\u4ee5\u4e0a\u5730\u70b9\u65f6\u64cd\u4f5c\u8f6c\u5411\u706f\u3002"
+                  },
+                  {
+                      "n":  385,
+                      "ko_e":  "\uac00\ubcc0\ud615 \uc18d\ub3c4\uc81c\ud55c\ud45c\uc9c0\ub97c \ub530\ub77c\uc57c \ud55c\ub2e4.",
+                      "tr_e":  "\u5e94\u4f9d\u636e\u53ef\u53d8\u5f0f\u9650\u901f\u6807\u5fd7\u3002"
+                  },
+                  {
+                      "n":  386,
+                      "ko_e":  "\uace0\uc18d\ub3c4\ub85c\ub294 \uacbd\ucc30\uccad\uc7a5, \uace0\uc18d\ub3c4\ub85c\ub97c \uc81c\uc678\ud55c \ub3c4\ub85c\ub294 \uc2dc\u00b7\ub3c4\uacbd\ucc30\uccad\uc7a5\uc774 \uc18d\ub3c4 \uaddc\uc81c\uad8c\uc790\uc774\ub2e4.",
+                      "tr_e":  "\u9ad8\u901f\u516c\u8def\u7531\u8b66\u5bdf\u5385\u957f\u3001\u9ad8\u901f\u516c\u8def\u4ee5\u5916\u7684\u9053\u8def\u7531\u5e02\u00b7\u9053\u8b66\u5bdf\u5385\u957f\u4e3a\u901f\u5ea6\u89c4\u5236\u6743\u8005\u3002"
+                  },
+                  {
+                      "n":  387,
+                      "ko_e":  "\uc801\uc0c9\uc2e0\ud638 \uc2dc \uc815\uc9c0\uc120 \uc9c1\uc804\uc5d0 \uc815\uc9c0\ud558\uace0, \uad50\ucc28\ub85c \uc774\ub974\uae30 \uc804 \ud669\uc0c9\uc2e0\ud638 \uc2dc\uc5d0\ub3c4 \uc815\uc9c0\uc120 \uc9c1\uc804\uc5d0 \uc815\uc9c0\ud574\uc57c \ud55c\ub2e4.",
+                      "tr_e":  "\u7ea2\u8272\u4fe1\u53f7\u65f6\u5728\u505c\u6b62\u7ebf\u6b63\u524d\u65b9\u505c\u8f66\uff0c\u5230\u8fbe\u4ea4\u53c9\u8def\u53e3\u524d\u9ec4\u8272\u4fe1\u53f7\u65f6\u4e5f\u5e94\u5728\u505c\u6b62\u7ebf\u6b63\u524d\u65b9\u505c\u8f66\u3002"
+                  },
+                  {
+                      "n":  388,
+                      "ko_e":  "\uad50\ucc28\ub85c\uc5d0\uc11c \uc6b0\ud68c\uc804 \uc2dc \uc6b0\uce21 \ub3c4\ub85c \ud6a1\ub2e8\ubcf4\ub3c4 \ubcf4\ud589 \uc2e0\ud638\ub4f1\uc774 \ub179\uc0c9\uc774\ub77c\ub3c4 \ubcf4\ud589\uc790\uc758 \ud1b5\ud589\uc5d0 \ubc29\ud574\ub97c \uc8fc\uc9c0 \uc544\ub2c8\ud558\ub294 \ubc94\uc704  \ub0b4\uc5d0\uc11c \ud1b5\uacfc\ud560 \uc218 \uc788\ub2e4. \ub2e4\ub9cc, \ubcf4\ud589 \uc2e0\ud638\ub4f1 \uce21\uba74\uc5d0 \ucc28\ub7c9 \ubcf4\uc870 \uc2e0\ud638\ub4f1\uc774 \uc124\uce58\ub418\uc5b4 \uc788\ub294 \uacbd\uc6b0, \ubcf4\uc870 \uc2e0\ud638\ub4f1\uc774 \uc801\uc0c9\uc77c  \ub54c \ud1b5\uacfc\ud558\uba74 \uc2e0\ud638 \uc704\ubc18\uc5d0 \ud574\ub2f9\ub420 \uc218 \uc788\uc73c\ubbc0\ub85c \ud1b5\uacfc\ud560 \uc218 \uc5c6\uace0, \ubcf4\ud589\uc790\uac00 \ud6a1\ub2e8\ubcf4\ub3c4 \uc0c1\uc5d0 \uc874\uc7ac\ud558\uba74 \uc9c4\ud589\ud558\ub294 \ucc28\uc640  \ubcf4\ud589\uc790\uac00 \uba40\ub9ac \ub5a8\uc5b4\uc838 \uc788\ub2e4 \ud558\ub354\ub77c\ub3c4 \ubcf4\ud589\uc790 \ud1b5\ud589\uc5d0 \ubc29\ud574\ub97c \uc8fc\ub294 \uac83\uc774\ubbc0\ub85c \ud1b5\uacfc\ud560 \uc218 \uc5c6\ub2e4.",
+                      "tr_e":  "\u5728\u4ea4\u53c9\u8def\u53e3\u53f3\u8f6c\u65f6\uff0c\u5373\u4f7f\u53f3\u4fa7\u9053\u8def\u4eba\u884c\u6a2a\u9053\u7684\u6b65\u884c\u4fe1\u53f7\u706f\u4e3a\u7eff\u8272\uff0c\u4e5f\u53ef\u5728\u4e0d\u59a8\u788d\u884c\u4eba\u901a\u884c\u7684\u8303\u56f4\u5185\u901a\u8fc7\u3002\u4f46\u5f53\u6b65\u884c\u4fe1\u53f7\u706f\u4fa7\u9762\u8bbe\u6709\u8f66\u8f86\u8f85\u52a9\u4fe1\u53f7\u706f\u65f6\uff0c\u8f85\u52a9\u4fe1\u53f7\u706f\u4e3a\u7ea2\u8272\u65f6\u901a\u8fc7\u53ef\u80fd\u5c5e\u4e8e\u8fdd\u53cd\u4fe1\u53f7\uff0c\u56e0\u6b64\u4e0d\u5f97\u901a\u8fc7\uff1b\u884c\u4eba\u5b58\u5728\u4e8e\u4eba\u884c\u6a2a\u9053\u4e0a\u65f6\uff0c\u5373\u4f7f\u884c\u8fdb\u7684\u8f66\u8f86\u4e0e\u884c\u4eba\u76f8\u8ddd\u8f83\u8fdc\uff0c\u4e5f\u5c5e\u4e8e\u59a8\u788d\u884c\u4eba\u901a\u884c\uff0c\u56e0\u6b64\u4e0d\u5f97\u901a\u8fc7\u3002"
+                  },
+                  {
+                      "n":  389,
+                      "ko_e":  "\uc2e0\ud638\ub294 \uadf8 \ud589\uc704\ub97c \ud558\uace0\uc790 \ud558\ub294 \uc9c0\uc810(\uc88c\ud68c\uc804\ud560 \uacbd\uc6b0\uc5d0\ub294 \uadf8 \uad50\ucc28\ub85c\uc758 \uac00\uc7a5\uc790\ub9ac)\uc5d0 \uc774\ub974\uae30 \uc804 30\ubbf8\ud130(\uace0\uc18d\ub3c4\ub85c\uc5d0\uc11c\ub294  100\ubbf8\ud130) \uc774\uc0c1\uc758 \uc9c0\uc810\uc5d0 \uc774\ub974\ub800\uc744 \ub54c \ud574\uc57c \ud558\uace0, \ubbf8\ub9ac \uc18d\ub3c4\ub97c \uc904\uc778 \ud6c4 1\ucc28\ub85c \ub610\ub294 \uc88c\ud68c\uc804 \ucc28\ub85c\ub85c \uc11c\ud589\ud558\uba70 \uc9c4\uc785\ud574\uc57c  \ud55c\ub2e4. \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95 \uc2dc\ud589\uaddc\uce59 \uc81c2\uc870(\uc790\ub3d9\ucc28\uc758 \uc885\ubcc4\uad6c\ubd84 \ubcc4\ud45c1 \uc790\ub3d9\ucc28\uc758 \uc885\ub958)",
+                      "tr_e":  "\u4fe1\u53f7\u5e94\u5728\u5230\u8fbe\u6b32\u5b9e\u65bd\u8be5\u884c\u4e3a\u5730\u70b9\uff08\u5de6\u8f6c\u65f6\u4e3a\u8be5\u4ea4\u53c9\u8def\u53e3\u7684\u8fb9\u7f18\uff09\u524d30\u7c73\uff08\u9ad8\u901f\u516c\u8def\u4e0a\u4e3a100\u7c73\uff09\u4ee5\u4e0a\u5730\u70b9\u65f6\u8fdb\u884c\uff0c\u5e76\u5e94\u9884\u5148\u51cf\u901f\u540e\u51cf\u901f\u6162\u884c\u8fdb\u5165\u7b2c1\u8f66\u9053\u6216\u5de6\u8f6c\u8f66\u9053\u3002\u6c7d\u8f66\u7ba1\u7406\u6cd5\u65bd\u884c\u89c4\u5219\u7b2c2\u6761\uff08\u6c7d\u8f66\u7684\u79cd\u522b\u533a\u5206 \u522b\u88681 \u6c7d\u8f66\u7684\u79cd\u7c7b\uff09"
+                  },
+                  {
+                      "n":  390,
+                      "ko_e":  "\ub4a4\ub530\ub974\ub294 \ucc28\uc640 \uac70\ub9ac\uac00 \uc788\uc744 \ub54c \uc18d\ub3c4\ub97c \uc720\uc9c0\ud55c \ucc44 \ucc28\ub85c\ub97c \ubcc0\uacbd\ud558\uace0, \uc811\uadfc\ud558\uace0 \uc788\uc744 \ub54c\ub294 \uc18d\ub3c4\ub97c \ub2a6\ucd94\uc5b4 \ub4a4\ucc28\ub97c \uba3c\uc800  \ud1b5\uacfc\uc2dc\ud0a8\ub2e4.",
+                      "tr_e":  "\u4e0e\u540e\u968f\u8f66\u8f86\u6709\u8ddd\u79bb\u65f6\u4fdd\u6301\u901f\u5ea6\u53d8\u66f4\u8f66\u9053\uff0c\u6b63\u5728\u63a5\u8fd1\u65f6\u5219\u653e\u6162\u901f\u5ea6\u8ba9\u540e\u8f66\u5148\u901a\u8fc7\u3002"
+                  },
+                  {
+                      "n":  391,
+                      "ko_e":  "\u2460 \ucc28\ub85c\uc758 \uad6c\ubd84\uc744 \uc9d3\ub294 \ucc28\uc120 \uc911 \uc2e4\uc120\uc740 \ucc28\ub85c\ub97c \ubcc0\uacbd\ud560 \uc218 \uc5c6\ub294 \uc120\uc774\ub2e4. \u2461 \uc810\uc120\uc740 \ucc28\ub85c\ub97c \ubcc0\uacbd\ud560 \uc218 \uc788\ub294 \uc120\uc774\ub2e4.  \u2462 \uc2e4\uc120\uacfc \uc810\uc120\uc774 \ubcd1\ud589\ud558\ub294 \uacbd\uc6b0 \uc2e4\uc120 \ucabd\uc5d0\uc11c \uc810\uc120\ubc29\ud5a5\uc73c\ub85c\ub294 \ucc28\ub85c \ubcc0\uacbd\uc774 \ubd88\uac00\ub2a5\ud558\ub2e4. \u2463 \uc2e4\uc120\uacfc \uc810\uc120\uc774 \ubcd1\ud589\ud558\ub294  \uacbd\uc6b0 \uc810\uc120 \ucabd\uc5d0\uc11c \uc2e4\uc120\ubc29\ud5a5\uc73c\ub85c\ub294 \ucc28\ub85c \ubcc0\uacbd\uc774 \uac00\ub2a5\ud558\ub2e4.",
+                      "tr_e":  "\u2460 \u533a\u5206\u8f66\u9053\u7684\u8f66\u9053\u7ebf\u4e2d\uff0c\u5b9e\u7ebf\u662f\u4e0d\u53ef\u53d8\u66f4\u8f66\u9053\u7684\u7ebf\u3002\u2461 \u865a\u7ebf\u662f\u53ef\u53d8\u66f4\u8f66\u9053\u7684\u7ebf\u3002\u2462 \u5b9e\u7ebf\u4e0e\u865a\u7ebf\u5e76\u884c\u65f6\uff0c\u4e0d\u53ef\u4ece\u5b9e\u7ebf\u4e00\u4fa7\u5411\u865a\u7ebf\u65b9\u5411\u53d8\u66f4\u8f66\u9053\u3002\u2463 \u5b9e\u7ebf\u4e0e\u865a\u7ebf\u5e76\u884c\u65f6\uff0c\u53ef\u4ece\u865a\u7ebf\u4e00\u4fa7\u5411\u5b9e\u7ebf\u65b9\u5411\u53d8\u66f4\u8f66\u9053\u3002"
+                  },
+                  {
+                      "n":  392,
+                      "ko_e":  "\uc801\uc0c9\ub4f1\ud654\uc758 \uc810\uba78\uc77c \ub54c \ucc28\ub9c8\ub294 \uc815\uc9c0\uc120\uc774\ub098 \ud6a1\ub2e8\ubcf4\ub3c4\uac00 \uc788\uc744 \ub54c\uc5d0\ub294 \uadf8 \uc9c1\uc804\uc774\ub098 \uad50\ucc28\ub85c\uc758 \uc9c1\uc804\uc5d0 \uc77c\uc2dc\uc815\uc9c0\ud55c \ud6c4  \ub2e4\ub978 \uad50\ud1b5\uc5d0 \uc8fc\uc758\ud558\uba74\uc11c \uc9c4\ud589\ud560 \uc218 \uc788\ub2e4.",
+                      "tr_e":  "\u7ea2\u8272\u706f\u95ea\u70c1\u65f6\uff0c\u8f66\u9a6c\u5728\u6709\u505c\u6b62\u7ebf\u6216\u4eba\u884c\u6a2a\u9053\u65f6\uff0c\u5e94\u5728\u5176\u6b63\u524d\u65b9\u6216\u4ea4\u53c9\u8def\u53e3\u6b63\u524d\u65b9\u505c\u8f66\u540e\uff0c\u5728\u6ce8\u610f\u5176\u4ed6\u4ea4\u901a\u7684\u60c5\u51b5\u4e0b\u884c\u8fdb\u3002"
+                  },
+                  {
+                      "n":  393,
+                      "ko_e":  "\ube44\ubcf4\ud638\uc88c\ud68c\uc804 \ud45c\uc9c0\uac00 \uc788\ub294 \uacf3\uc5d0\uc11c\ub294 \ub179\uc0c9\uc2e0\ud638\uac00 \ucf1c\uc9c4 \uc0c1\ud0dc\uc5d0\uc11c \ub2e4\ub978 \uad50\ud1b5\uc5d0 \uc8fc\uc758\ud558\uba74\uc11c \uc88c\ud68c\uc804 \ud560 \uc218 \uc788\ub2e4. \ub179\uc0c9\uc2e0 \ud638\uc5d0\uc11c \uc88c\ud68c\uc804\ud558\ub2e4\uac00 \ub9de\uc740\ud3b8\uc758 \uc9c1\uc9c4\ucc28\ub7c9\uacfc \ucda9\ub3cc\ud55c \uacbd\uc6b0 \uc88c\ud68c\uc804 \ucc28\ub7c9\uc774 \uacbd\uacfc\uc2e4 \uc77c\ubc18\uc0ac\uace0 \uac00\ud574\uc790\uac00 \ub41c\ub2e4.",
+                      "tr_e":  "\u5728\u6709\u975e\u4fdd\u62a4\u5de6\u8f6c\u6807\u5fd7\u7684\u5730\u65b9\uff0c\u53ef\u5728\u7eff\u8272\u4fe1\u53f7\u4eae\u8d77\u7684\u72b6\u6001\u4e0b\u6ce8\u610f\u5176\u4ed6\u4ea4\u901a\u5de6\u8f6c\u3002\u5728\u7eff\u8272\u4fe1\u53f7\u4e0b\u5de6\u8f6c\u65f6\u4e0e\u5bf9\u9762\u7684\u76f4\u884c\u8f66\u8f86\u76f8\u649e\u7684\u60c5\u51b5\u4e0b\uff0c\u5de6\u8f6c\u8f66\u8f86\u6210\u4e3a\u8f7b\u8fc7\u5931\u4e00\u822c\u4e8b\u6545\u7684\u52a0\u5bb3\u8005\u3002"
+                  },
+                  {
+                      "n":  394,
+                      "ko_e":  "\uace0\uc18d\ub3c4\ub85c\uc758 \ucd5c\uc800\uc18d\ub3c4\ub294 \ubaa8\ub4e0 \uace0\uc18d\ub3c4\ub85c\uc5d0\uc11c \ub3d9\uc77c\ud558\uac8c \uc2dc\uc18d  50\ud0ac\ub85c\ubbf8\ud130\ub85c \uaddc\uc815\ub418\uc5b4 \uc788\uc73c\uba70, \uc790\ub3d9\ucc28\uc804\uc6a9\ub3c4\ub85c\uc5d0\uc11c\ub294  \ucd5c\uace0\uc18d\ub3c4\uc640 \ucd5c\uc800\uc18d\ub3c4 \ub458 \ub2e4 \uc81c\ud55c\uc774 \uc788\ub2e4. \uc77c\ubc18\ub3c4\ub85c\uc5d0\uc11c\ub294 \ucd5c\uc800\uc18d\ub3c4 \uc81c\ud55c\uc774 \uc5c6\uace0, \ud3b8\ub3c42\ucc28\ub85c \uc774\uc0c1 \uace0\uc18d\ub3c4\ub85c\uc758 \ucd5c\uace0 \uc18d\ub3c4\ub294 \ucc28\uc885\uc5d0 \ub530\ub77c \ub2e4\ub974\uac8c \uaddc\uc815\ub418\uc5b4 \uc788\ub2e4.",
+                      "tr_e":  "\u9ad8\u901f\u516c\u8def\u7684\u6700\u4f4e\u901f\u5ea6\u5728\u6240\u6709\u9ad8\u901f\u516c\u8def\u4e0a\u76f8\u540c\uff0c\u89c4\u5b9a\u4e3a\u6bcf\u5c0f\u65f650\u516c\u91cc\uff0c\u6c7d\u8f66\u4e13\u7528\u9053\u8def\u4e0a\u6700\u9ad8\u901f\u5ea6\u548c\u6700\u4f4e\u901f\u5ea6\u90fd\u6709\u9650\u5236\u3002\u4e00\u822c\u9053\u8def\u4e0a\u6ca1\u6709\u6700\u4f4e\u901f\u5ea6\u9650\u5236\uff0c\u5355\u54112\u8f66\u9053\u4ee5\u4e0a\u9ad8\u901f\u516c\u8def\u7684\u6700\u9ad8\u901f\u5ea6\u6839\u636e\u8f66\u79cd\u89c4\u5b9a\u4e0d\u540c\u3002"
+                  },
+                  {
+                      "n":  395,
+                      "ko_e":  "\ud669\uc0c9\uc2e4\uc120\uc740 \uc55e\uc9c0\ub974\uae30\uac00 \uae08\uc9c0\ub418\uba70 \ud130\ub110 \uc548\uc774\ub098 \ub2e4\ub9ac \uc704\ub294 \uc55e\uc9c0\ub974\uae30 \uae08\uc9c0\uc7a5\uc18c\uc774\uace0 \uc55e\ucc28\uac00 \ub2e4\ub978 \ucc28\ub97c \uc55e\uc9c0\ub974\uace0 \uc788\ub294  \uacbd\uc6b0\uc5d0\ub294 \uc55e\uc9c0\ub974\uae30\ub97c \ud560 \uc218 \uc5c6\uac8c \uaddc\uc815\ub418\uc5b4 \uc788\ub2e4.",
+                      "tr_e":  "\u9ec4\u8272\u5b9e\u7ebf\u7981\u6b62\u8d85\u8f66\uff0c\u96a7\u9053\u5185\u6216\u6865\u4e0a\u662f\u7981\u6b62\u8d85\u8f66\u573a\u6240\uff0c\u89c4\u5b9a\u524d\u8f66\u6b63\u5728\u8d85\u8d8a\u5176\u4ed6\u8f66\u8f86\u65f6\u4e0d\u5f97\u8d85\u8f66\u3002"
+                  },
+                  {
+                      "n":  396,
+                      "ko_e":  "\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c2\uc870 \uc81c5\ud638 \ubc0f \uc81c13\uc870, \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c 6 \uc77c\ub828\ubc88\ud638 501\ubc88 \ubcf5\uc120\uc774\ub4e0 \ub2e8\uc120\uc774\ub4e0 \ub118\uc744 \uc218 \uc5c6\uace0  \ubc84\uc2a4\uac00 \uc2b9\ud558\ucc28\ub97c \uc704\ud574 \uc815\ucc28\ud55c \uacbd\uc6b0\uc5d0\ub294 \uc55e\uc9c0\ub974\uae30\ub97c \ud560 \uc218 \uc5c6\ub2e4. \ub610\ud55c \uc911\uc559\uc120\uc740 \ucc28\ub3c4 \ud3ed\uc774 6\ubbf8\ud130 \uc774\uc0c1\uc778 \uacf3\uc5d0 \uc124\uce58\ud55c\ub2e4.",
+                      "tr_e":  "\u9053\u8def\u4ea4\u901a\u6cd5\u7b2c2\u6761\u7b2c5\u53f7\u53ca\u7b2c13\u6761\u3001\u9053\u8def\u4ea4\u901a\u6cd5\u65bd\u884c\u89c4\u5219\u9644\u88686\u5e8f\u53f7501\u53f7\uff0c\u65e0\u8bba\u662f\u53cc\u7ebf\u8fd8\u662f\u5355\u7ebf\u90fd\u4e0d\u5f97\u8d8a\u7ebf\uff0c\u516c\u4ea4\u8f66\u4e3a\u4e0a\u4e0b\u5ba2\u800c\u505c\u8f66\u65f6\u4e0d\u5f97\u8d85\u8f66\u3002\u53e6\u5916\uff0c\u4e2d\u5fc3\u7ebf\u8bbe\u7f6e\u5728\u8f66\u884c\u9053\u5bbd\u5ea66\u7c73\u4ee5\u4e0a\u7684\u5730\u65b9\u3002"
+                  },
+                  {
+                      "n":  397,
+                      "ko_e":  "\ud3b8\ub3c4 3\ucc28\ub85c \uace0\uc18d\ub3c4\ub85c\uc5d0\uc11c 2\ucc28\ub85c\ub294 \uc67c\ucabd\ucc28\ub85c\uc5d0 \ud574\ub2f9\ud558\ubbc0\ub85c \ud1b5\ud589\ud560 \uc218 \uc788\ub294 \ucc28\uc885\uc740 \uc2b9\uc6a9\uc790\ub3d9\ucc28 \ubc0f \uacbd\ud615\u00b7\uc18c\ud615\u00b7\uc911\ud615  \uc2b9\ud569\uc790\ub3d9\ucc28\uc774\ub2e4.(\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c 9)",
+                      "tr_e":  "\u5728\u5355\u54113\u8f66\u9053\u7684\u9ad8\u901f\u516c\u8def\u4e0a\uff0c\u7b2c2\u8f66\u9053\u5c5e\u4e8e\u5de6\u4fa7\u8f66\u9053\uff0c\u56e0\u6b64\u53ef\u901a\u884c\u7684\u8f66\u578b\u4e3a\u4e58\u7528\u8f66\u53ca\u8f7b\u578b\u00b7\u5c0f\u578b\u00b7\u4e2d\u578b\u5ba2\u8f66\u3002\uff08\u9053\u8def\u4ea4\u901a\u6cd5\u65bd\u884c\u89c4\u5219\u9644\u88689\uff09"
+                  },
+                  {
+                      "n":  398,
+                      "ko_e":  "\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 [\ubcc4\ud45c9] \ucc28\ub85c\uc5d0 \ub530\ub978 \ud1b5\ud589\ucc28\uc758 \uae30\uc900           \ud3b8\ub3c42\ucc28\ub85c \uace0\uc18d\ub3c4\ub85c\uc5d0\uc11c \uc55e\uc9c0\ub974\uae30\ub97c \ud558\ub824\ub294 \ubaa8\ub4e0 \uc790\ub3d9\ucc28. \ub2e4\ub9cc, \ucc28\ub7c9\ud1b5\ud589\ub7c9 \uc99d\uac00 \ub4f1 \ub3c4\ub85c\uc0c1\ud669\uc73c\ub85c \uc778\ud558\uc5ec \ubd80\ub4dd\uc774 \ud558\uac8c \uc2dc\uc18d 80\ud0ac\ub85c\ubbf8\ud130 \ubbf8\ub9cc\uc73c\ub85c \ud1b5\ud589\ud560 \uc218\ubc16\uc5d0 \uc5c6\ub294 \uacbd\uc6b0\uc5d0\ub294 \uc55e\uc9c0\ub974\uae30\ub97c \ud558\ub294 \uacbd\uc6b0\uac00 \uc544\ub2c8\ub77c\ub3c4 \ud1b5\ud589\ud560 \uc218 \uc788\ub2e4.",
+                      "tr_e":  "\u9053\u8def\u4ea4\u901a\u6cd5\u65bd\u884c\u89c4\u5219[\u9644\u88689]\u6309\u8f66\u9053\u5212\u5206\u7684\u901a\u884c\u8f66\u8f86\u6807\u51c6\u3002\u5728\u5355\u54112\u8f66\u9053\u9ad8\u901f\u516c\u8def\u4e0a\u8981\u8d85\u8f66\u7684\u6240\u6709\u6c7d\u8f66\u3002\u4f46\u662f\uff0c\u56e0\u8f66\u6d41\u91cf\u589e\u52a0\u7b49\u9053\u8def\u72b6\u51b5\u800c\u4e0d\u5f97\u4e0d\u4ee5\u65f6\u901f80\u516c\u91cc\u4ee5\u4e0b\u901a\u884c\u65f6\uff0c\u5373\u4f7f\u4e0d\u662f\u8d85\u8f66\u7684\u60c5\u51b5\u4e5f\u53ef\u4ee5\u901a\u884c\u3002"
+                  },
+                  {
+                      "n":  399,
+                      "ko_e":  "\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c60\uc870(\uac13\uae38 \ud1b5\ud589\uae08\uc9c0 \ub4f1) \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c64\uc870(\uace0\uc18d\ub3c4\ub85c\ub4f1\uc5d0\uc11c\uc758 \uc815\ucc28 \ubc0f \uc8fc\ucc28\uc758 \uae08\uc9c0) \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\ub839 \ubcc4\ud45c8. 19\ud638. \uc2b9\uc6a9\uc790\ub3d9\ucc28\ub4f1 6\ub9cc \uc6d0",
+                      "tr_e":  "\u9053\u8def\u4ea4\u901a\u6cd5\u7b2c60\u6761\uff08\u7981\u6b62\u5728\u8def\u80a9\u901a\u884c\u7b49\uff09\u9053\u8def\u4ea4\u901a\u6cd5\u7b2c64\u6761\uff08\u7981\u6b62\u5728\u9ad8\u901f\u516c\u8def\u7b49\u5904\u505c\u8f66\u53ca\u9a7b\u8f66\uff09\u9053\u8def\u4ea4\u901a\u6cd5\u65bd\u884c\u4ee4\u9644\u88688\u7b2c19\u53f7\u3002\u4e58\u7528\u8f66\u7b496\u4e07\u97e9\u5143"
+                  },
+                  {
+                      "n":  400,
+                      "ko_e":  "1\ucc28\ub85c\ub97c \uc81c\uc678\ud55c \ucc28\ub85c\ub97c \ubc18\uc73c\ub85c \ub098\ub204\uc5b4 \uadf8 \uc911 1\ucc28\ub85c\uc5d0 \uac00\uae4c\uc6b4 \ubd80\ubd84\uc758 \ucc28\ub85c. \ub2e4\ub9cc, 1\ucc28\ub85c\ub97c \uc81c\uc678\ud55c \ucc28\ub85c\uc758 \uc218\uac00 \ud640\uc218 \uc778 \uacbd\uc6b0 \uac00\uc6b4\ub370 \ucc28\ub85c\ub294 \uc81c\uc678\ud55c\ub2e4.",
+                      "tr_e":  "\u5c06\u9664\u7b2c1\u8f66\u9053\u5916\u7684\u8f66\u9053\u4e00\u5206\u4e3a\u4e8c\uff0c\u5176\u4e2d\u9760\u8fd1\u7b2c1\u8f66\u9053\u90e8\u5206\u7684\u8f66\u9053\u3002\u4f46\u662f\uff0c\u9664\u7b2c1\u8f66\u9053\u5916\u7684\u8f66\u9053\u6570\u4e3a\u5947\u6570\u65f6\uff0c\u4e2d\u95f4\u8f66\u9053\u9664\u5916\u3002"
+                  },
+                  {
+                      "n":  401,
+                      "ko_e":  "\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 [\ubcc4\ud45c9] \ubaa8\ub4e0 \ucc28\ub294 \uc9c0\uc815\ub41c \ucc28\ub85c\ubcf4\ub2e4 \uc624\ub978\ucabd\uc5d0 \uc788\ub294 \ucc28\ub85c\ub85c \ud1b5\ud589\ud560 \uc218 \uc788\ub2e4. \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\ub839 \ubcc4\ud45c8. \uc81c39\ud638. \uc2b9\uc6a9\uc790\ub3d9\ucc28\ub4f1 4\ub9cc \uc6d0 \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c28. 3. \uc81c21\ud638. \ubc8c\uc810 10\uc810",
+                      "tr_e":  "\u9053\u8def\u4ea4\u901a\u6cd5\u65bd\u884c\u89c4\u5219[\u9644\u88689]\u6240\u6709\u8f66\u8f86\u5747\u53ef\u5728\u6bd4\u6307\u5b9a\u8f66\u9053\u9760\u53f3\u7684\u8f66\u9053\u901a\u884c\u3002\u9053\u8def\u4ea4\u901a\u6cd5\u65bd\u884c\u4ee4\u9644\u88688\u7b2c39\u53f7\u3002\u4e58\u7528\u8f66\u7b494\u4e07\u97e9\u5143\u3002\u9053\u8def\u4ea4\u901a\u6cd5\u65bd\u884c\u89c4\u5219\u9644\u886828\u7b2c3\u9879\u7b2c21\u53f7\u3002\u6263\u520610\u5206"
+                  }
+              ],
+    "Count":  20
+}
+
+codex
+[]
+tokens used
+23,525
+[]

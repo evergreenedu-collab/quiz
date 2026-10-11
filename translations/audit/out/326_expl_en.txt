@@ -1,0 +1,125 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1280c-2562-74f0-99cf-22f08c9afc63
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/326_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/326_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 527ms:
+[
+ {
+  "n": 525,
+  "ko_e": "媛쒖씤???대룞?μ튂瑜?臾대㈃???댁쟾??寃쎌슦?먮뒗 ?꾨줈援먰넻踰???56議?踰뚯튃)???섑빐 泥섎쾶湲곗?? 20留????댄븯 踰뚭툑?대굹 援щ쪟 ?먮뒗 怨쇰즺?대떎. ?ㅼ젣 泥섎쾶? ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8???섑빐 踰붿튃湲?10留??먯쑝濡??듦퀬泥섎텇 ?쒕떎.",
+  "tr_e": "Where a person drives a personal mobility device without a license, the punishment standard under Road Traffic Act Article 156 (Penal Provisions) is a fine of up to 200,000 won, detention, or a minor fine. In practice, under Enforcement Decree of the Road Traffic Act [Table 8], a notified penalty fine of 100,000 won is imposed."
+ },
+ {
+  "n": 526,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 蹂꾪몴 6, ?쒗븳?띾룄(留ㅼ떆 20?щ줈誘명꽣 ?댄븯)瑜??꾨컲??李⑥쓽 怨좎슜二쇰벑?먭쾶 怨쇳깭猷?4留???遺怨?,
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 6]: an administrative fine of 40,000 won is imposed on the employer, etc., of a vehicle that violated the speed limit (by 20 km/h or less)."
+ },
+ {
+  "n": 527,
+  "ko_e": "?꾨줈瑜??듯뻾?섍퀬 ?덈뒗 李⑥뿉??諛뽰쑝濡?臾쇨굔???섏???寃쎌슦 踰뚯젏 10?먯씠 遺怨쇰맂?? (?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 28)",
+  "tr_e": "Throwing an object out of a vehicle traveling on the road incurs 10 penalty points. (Enforcement Rule of the Road Traffic Act [Table 28])"
+ },
+ {
+  "n": 528,
+  "ko_e": "1?꾧컙 援먰넻?ш퀬 諛?踰뺢퇋?꾨컲???놁뼱??10?먯쓽 ?뱁삙?먯닔瑜?遺?ы븳?? 寃쎌같愿??諛⑸Ц肉먮쭔 ?꾨땲???명꽣??(www.efine.go.kr) ?쇰줈???쒖빟?쒕? ?쒖텧?????덈떎. (?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 28 1???쇰컲湲곗? ?? 踰뚯젏??醫낇빀愿由?  ?ㅻ쭔 援먰넻?ш퀬濡??щ엺???щ쭩???대Ⅴ寃??섍굅?? ?뚯＜?댁쟾, ?쒗룺?댁쟾, ?먮룞李⑤벑 ?댁슜踰붿즲, ?먮룞李⑤? ?붿튂嫄곕굹 鍮쇱븮?  寃쎌슦???쒖쇅?쒕떎.",
+  "tr_e": "10 bonus points are granted only if there have been no traffic accidents or legal violations for one year. The pledge can be submitted not only by visiting a police office but also online (www.efine.go.kr). (Enforcement Rule of the Road Traffic Act [Table 28], Paragraph 1 General Standards, (b) Comprehensive Management of Penalty Points.) However, cases where a person causes a death by a traffic accident, drunk driving, reckless driving, a crime using a vehicle, etc., or stealing or robbing a vehicle are excluded."
+ },
+ {
+  "n": 529,
+  "ko_e": "???꾨줈援먰넻踰???議???4?? ???꾨줈援먰넻踰???0議곗쓽3 ???? ???댁쟾硫댄뿀 寃곌꺽湲곌컙??醫낅즺???섎떎???졻숇??? 遺李⑷린媛꾩쓣 ?곗젙?쒕떎(?꾨줈援먰넻踰???0議곗쓽2 ????.  ??媛쒖씤???대룞?μ튂瑜??댁쟾??寃쎌슦???쒖쇅?쒕떎(?꾨줈援먰넻踰???80議곗쓽2 ????.",
+  "tr_e": "(1) Road Traffic Act Article 2 Item 34. (2) Road Traffic Act Article 50-3 Paragraph 1. (3) The attachment period is counted from 'the day after' the driver's license disqualification period ends (Road Traffic Act Article 80-2 Paragraph 2). (4) The case of driving a personal mobility device is excluded (Road Traffic Act Article 80-2 Paragraph 1)."
+ },
+ {
+  "n": 530,
+  "ko_e": "?꾨줈援먰넻踰???3議?援먰넻?덉쟾援먯쑁) 泥섏쓬?쇰줈 ?댁쟾硫댄뿀瑜?諛쏆쑝?ㅻ뒗 ?щ엺? 援먰넻?덉쟾援먯쑁??諛쏆븘???쒕떎. 泥섎텇踰뚯젏?? 40??誘몃쭔???щ엺? 援먰넻踰뺢퇋援먯쑁??諛쏆쓣 ???덈떎.",
+  "tr_e": "Road Traffic Act Article 73 (Traffic Safety Education): a person seeking a driver's license for the first time must receive traffic safety education. A person whose disposition penalty points are less than 40 may receive traffic-law education."
+ },
+ {
+  "n": 531,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 蹂꾪몴 6, 援먯감濡쑣룻슒?⑤낫?꽷룰굔?먮ぉ?대굹 蹂대룄? 李⑤룄媛 援щ텇???꾨줈??蹂대룄??2?쒓컙 ?댁긽 二쇱감?? ?뱀슜?먮룞李⑥쓽 怨좎슜二쇰벑?먭쾶 怨쇳깭猷?5留??먯쓣 遺怨쇳븳??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 6]: an administrative fine of 50,000 won is imposed on the employer, etc., of a passenger car parked for 2 hours or more on an intersection, crosswalk, railroad crossing, or the sidewalk of a road where the sidewalk and roadway are separated."
+ },
+ {
+  "n": 532,
+  "ko_e": "?꾨줈援먰넻踰???3議??댁쟾硫댄뿀??痍⑥냼?띿젙吏) ?쒗븳?띾룄瑜?理쒓퀬?띾룄蹂대떎 ?쒖냽 100?щ줈誘명꽣瑜?珥덇낵???띾룄濡?3???댁긽  ?먮룞李⑤벑???댁쟾??寃쎌슦",
+  "tr_e": "Road Traffic Act Article 93 (Revocation/Suspension of a Driver's License): where a person drives a vehicle, etc., three or more times at a speed exceeding the maximum speed by more than 100 km/h."
+ },
+ {
+  "n": 533,
+  "ko_e": "?꾨줈援먰넻踰???48議곗쓽2(踰뚯튃) ?좎젣44議??????먮뒗 ????쓣(?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감瑜??댁쟾???щ엺?쇰줈 ?쒖젙?쒕떎. ?ㅻ쭔, 媛쒖씤???대룞?뺤옣移섎? ?댁쟾?섎뒗 寃쎌슦???쒖쇅?쒕떎.) 踰뚭툑 ?댁긽???뺤쓣 ?좉퀬諛쏄퀬 洹??뺤씠 ?뺤젙???좊???10?????ㅼ떆 媛숈? 議??????먮뒗 2??쓣 ?꾨컲???щ엺(?뺤씠 ?ㅽ슚???щ엺???ы븿)? 1. ??4議?????쓣 ?꾨컲???щ엺? 1???댁긽 6???댄븯??吏뺤뿭?대굹 500留????댁긽 3泥쒕쭔 ???댄븯??踰뚭툑 2. ??4議?????쓣 ?꾨컲???щ엺 以??덉쨷?뚯퐫?щ냽?꾧? 0.2?쇱꽱???댁긽???щ엺? 2???댁긽 6???댄븯??吏뺤뿭?대굹 1泥?留????댁긽 3泥쒕쭔 ???댄븯??踰뚭툑 3. ??4議?????쓣 ?꾨컲???щ엺 以??덉쨷?뚯퐫?щ냽?꾧? 0.03?쇱꽱???댁긽 0.2?쇱꽱??誘몃쭔???щ엺? 1???댁긽 5???댄븯 ??吏뺤뿭?대굹 500留????댁긽 2泥쒕쭔 ???댄븯??踰뚭툑",
+  "tr_e": "Road Traffic Act Article 148-2 (Penal Provisions) Paragraph 1: a person who, having been sentenced to a fine or heavier punishment for a violation of Article 44 Paragraph 1 or 2 (limited to a person who drove a vehicle, etc., or a tram; however, the case of driving a personal mobility device is excluded) and whose sentence became final, again violates the same Article Paragraph 1 or 2 within 10 years from the day the sentence became final (including a person whose sentence has lapsed) is punished as follows: 1. A person who violated Article 44 Paragraph 2: imprisonment for 1 to 6 years or a fine of 5 million to 30 million won. 2. Among those who violated Article 44 Paragraph 1, a person with a blood alcohol concentration of 0.2 percent or more: imprisonment for 2 to 6 years or a fine of 10 million to 30 million won. 3. Among those who violated Article 44 Paragraph 1, a person with a blood alcohol concentration of 0.03 percent or more but less than 0.2 percent: imprisonment for 1 to 5 years or a fine of 5 million to 20 million won."
+ },
+ {
+  "n": 534,
+  "ko_e": "?꾨줈援먰넻踰???48議곗쓽2(踰뚯튃) ??젣44議곗젣 1??쓣 ?꾨컲?섏뿬 ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감瑜??댁쟾?? ?щ엺? ?ㅼ쓬 媛??몄쓽 援щ텇???곕씪 泥섎쾶?쒕떎.",
+  "tr_e": "Road Traffic Act Article 148-2 (Penal Provisions) Paragraph 3: a person who, in violation of Article 44 Paragraph 1, drives a vehicle, etc., or a tram while intoxicated is punished as follows."
+ },
+ {
+  "n": 535,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28, 議곗튂 ??遺덉씠?됱뿉 ?곕Ⅸ 踰뚯젏湲곗????곕씪 臾쇱쟻 ?쇳빐媛 諛쒖깮??援먰넻?ш퀬瑜??쇱쑝???? ?꾩＜????踰뚯젏 15?먯쓣 遺怨쇳븳??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 28]: under the penalty-point standards for failure to take measures, etc., 15 penalty points are imposed for fleeing after causing a traffic accident that resulted in property damage."
+ },
+ {
+  "n": 536,
+  "ko_e": "?꾨줈援먰넻踰???9議????? ?쒗뻾??蹂꾪몴8, 4??珥덇낵 ?붾Ъ?먮룞李⑥쓽 ?곸옱臾?異붾씫諛⑹? ?꾨컲 ?됱쐞??踰붿튃湲?5留??먯씠??",
+  "tr_e": "Road Traffic Act Article 39 Paragraph 4, Enforcement Decree [Table 8]: the act of a freight vehicle with a loading capacity exceeding 4 tons violating the prevention of load falling is subject to a penalty fine of 50,000 won."
+ },
+ {
+  "n": 537,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴1 ??3???댁긽 ?뱀감?섏뿬???쒕떎. ???뱀감?먭? 6???댁긽?댁뼱???쒕떎. ???ъ뾽???뱁빀李⑥씠嫄??? ?듯븰 ?먮뒗 ?듦렐?⑹쑝濡??쒙쉈?꾧꼍李곗껌?μ쓽 吏?뺤쓣 諛쏅뒗 ?깆쓽 議곌굔??異⑹”?섏뿬???듯뻾??媛?ν븯?? 36?몄듅 ?댁긽?? ??뺤듅?⑹감? 36?몄듅 誘몃쭔???ъ뾽???뱁빀李?洹몃━怨??좉퀬?꾩쬆??援먮? 諛쏆? ?대┛?댄넻?숇쾭?ㅻ뒗 怨좎냽?꾨줈 ?몄쓽 ?꾨줈????踰꾩뒪?꾩슜李⑤줈???듯뻾??媛?ν븯??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 1]: (1) At least 3 persons must be aboard. (3) There must be at least 6 occupants. (4) Passage is possible only if it is a commercial passenger van, or it meets conditions such as being designated by the Commissioner of the City/Provincial Police Agency for school-commuting or work-commuting use. Large passenger vans of 36 seats or more, commercial passenger vans of fewer than 36 seats, and children's school buses that have received a report certificate may travel in a bus exclusive lane on roads other than expressways."
+ },
+ {
+  "n": 538,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴16 4. 75???댁긽???щ엺?????援먰넻?덉쟾援먯쑁 援먯쑁?쒓컙? 2?쒓컙?대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 16], 4: the traffic safety education time for a person aged 75 or older is 2 hours."
+ },
+ {
+  "n": 539,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 28, ?댁쟾硫댄뿀 痍⑥냼쨌?뺤?泥섎텇 湲곗????곕씪 以묒븰?좎묠踰?踰뚯젏 30?? 以묒긽 1紐낅떦 踰뚯젏 15??  寃쎌긽 1紐낅떦 踰뚯젏 5?먯씠??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 28]: under the standards for driver's license revocation/suspension dispositions, 30 penalty points for crossing the center line, 15 penalty points per person for serious injury, and 5 penalty points per person for minor injury."
+ },
+ {
+  "n": 540,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴6, ?꾨줈?먯꽌 ?대┛?닿? 媛쒖씤???대룞?μ튂瑜??댁쟾?섍쾶 ???대┛?댁쓽 蹂댄샇?먮뒗 怨쇳깭猷?10留????꾨줈援먰넻踰??쒗뻾??蹂꾪몴8, ?좎뿉 痍⑦븳 ?곹깭?먯꽌???먯쟾嫄곕벑???댁쟾???щ엺 以?媛쒖씤???대룞?μ튂(踰붿튃湲?10留???, ?먯쟾嫄?(踰붿튃湲?3留뚯썝)",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 6]: the guardian of a child who lets the child operate a personal mobility device on the road faces an administrative fine of 100,000 won. Enforcement Decree of the Road Traffic Act [Table 8]: among persons who operate a bicycle, etc., while intoxicated, a personal mobility device (penalty fine 100,000 won), a bicycle (penalty fine 30,000 won)."
+ },
+ {
+  "n": 541,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴1 怨좎냽?꾨줈 踰꾩뒪?꾩슜李⑤줈瑜??듯뻾?????덈뒗 ?먮룞李⑤뒗 9?몄듅 ?댁긽 ?뱀슜?먮룞李?諛??뱁빀?먮룞李??대떎. ?ㅻ쭔, 9?몄듅 ?댁긽 12?몄듅 ?댄븯???뱀슜?먮룞李?諛??뱁빀?먮룞李⑤뒗 6???댁긽 ?뱀감??寃쎌슦???쒗븯???듯뻾??媛?ν븯??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 1]: vehicles allowed to travel in an expressway bus exclusive lane are passenger cars and passenger vans of 9 or more seats. However, passenger cars and passenger vans of 9 to 12 seats may travel only when 6 or more persons are aboard."
+ },
+ {
+  "n": 542,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴2 ?⑹깋 ?깊솕???먮㈇ ??李⑤쭏???ㅻⅨ 援먰넻 ?먮뒗 ?덉쟾?쒖????쒖떆??二쇱쓽?섎㈃??吏꾪뻾?????덈떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 2]: when a yellow light is flashing, vehicles or horses (邕딃━) may proceed while paying attention to other traffic or traffic signs."
+ },
+ {
+  "n": 543,
+  "ko_e": "?듯뻾猷뚮? ?⑸??섏? ?꾨땲?섍퀬 ?좊즺?꾨줈瑜??듯뻾?섎뒗 ?됱쐞 ???듯뻾猷뚯쓽 10諛곗뿉 ?대떦?섎뒗 湲덉븸??遺怨쇳븷 ???덈떎.(?좊즺 ?꾨줈踰???0議?諛??좊즺?꾨줈踰??쒗뻾????4議?",
+  "tr_e": "The act of traveling on a toll road without paying the toll may incur a charge equal to 10 times the toll. (Toll Road Act Article 20 and Enforcement Decree of the Toll Road Act Article 14)"
+ },
+ {
+  "n": 544,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????0議??꾩슜李⑤줈 ?듯뻾李??몄뿉 ?꾩슜李⑤줈濡??듯뻾?????덈뒗 寃쎌슦)",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 10 (Cases Where Vehicles Other Than Exclusive-Lane Vehicles May Travel in the Exclusive Lane)."
+ }
+]
+
+codex
+[{"n":537,"field":"e","severity":"major","issue":"원문의 연속된 항목 번호를 (1), (3), (4)로 잘못 옮겨 선택지 대응을 혼동시킨다.","suggestion":"Enforcement Decree of the Road Traffic Act [Table 1]: (1) At least 3 persons must be aboard. (2) There must be at least 6 occupants. (3) Passage is permitted only for a commercial passenger van or a vehicle meeting conditions such as designation by the Commissioner of a City/Provincial Police Agency for school or work commuting. Large passenger vans with 36 or more seats, commercial passenger vans with fewer than 36 seats, and reported children’s school buses may use bus-only lanes on roads other than expressways."},{"n":542,"field":"e","severity":"minor","issue":"차마를 옮긴 부분에 깨진 문자열 '(邕딃━)'이 삽입되어 심각한 비문이 되었다.","suggestion":"Enforcement Rule of the Road Traffic Act [Table 2]: When a yellow signal is flashing, vehicles and horses may proceed with caution while paying attention to other traffic and traffic safety signs."}]
+tokens used
+12,506
+[{"n":537,"field":"e","severity":"major","issue":"원문의 연속된 항목 번호를 (1), (3), (4)로 잘못 옮겨 선택지 대응을 혼동시킨다.","suggestion":"Enforcement Decree of the Road Traffic Act [Table 1]: (1) At least 3 persons must be aboard. (2) There must be at least 6 occupants. (3) Passage is permitted only for a commercial passenger van or a vehicle meeting conditions such as designation by the Commissioner of a City/Provincial Police Agency for school or work commuting. Large passenger vans with 36 or more seats, commercial passenger vans with fewer than 36 seats, and reported children’s school buses may use bus-only lanes on roads other than expressways."},{"n":542,"field":"e","severity":"minor","issue":"차마를 옮긴 부분에 깨진 문자열 '(邕딃━)'이 삽입되어 심각한 비문이 되었다.","suggestion":"Enforcement Rule of the Road Traffic Act [Table 2]: When a yellow signal is flashing, vehicles and horses may proceed with caution while paying attention to other traffic and traffic safety signs."}]

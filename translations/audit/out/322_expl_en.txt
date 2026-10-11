@@ -1,0 +1,205 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12806-2b10-7580-9567-614d4e2d1148
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/322_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/322_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 522ms:
+[
+ {
+  "n": 442,
+  "ko_e": "???李⑤웾???꾩“?깆뿉 ?섑빐 ?덉씠 遺??寃쎌슦?먮뒗 ?꾩“?깆쓽 遺덈튆???뺣㈃?쇰줈 蹂댁? 留먭퀬, ?꾨줈 ?곗륫??媛?μ옄由?履쎌쓣  蹂대㈃???댁쟾?섎뒗 寃껋씠 諛붾엺吏곹븯??",
+  "tr_e": "If you are dazzled by the headlights of an oncoming vehicle, it is desirable not to look directly at the headlight beam but to drive while looking toward the right edge of the road."
+ },
+ {
+  "n": 443,
+  "ko_e": "?꾨줈援먰넻踰???6議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議?怨좎옣?먮룞李⑥쓽 ?쒖떆",
+  "tr_e": "Road Traffic Act Article 66, Enforcement Rule of the Road Traffic Act Article 40, marking of a broken-down vehicle."
+ },
+ {
+  "n": 444,
+  "ko_e": "?꾨줈援먰넻踰???7議?李⑥? ?몃㈃?꾩감???깊솕) ?좊え??李⑥쓽 ?댁쟾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 寃쎌슦?먮뒗  ??듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?꾩“?? 李⑦룺?? 誘몃벑怨?洹?諛뽰쓽 ?깊솕瑜?耳쒖빞 ?쒕떎.",
+  "tr_e": "Road Traffic Act Article 37 (Lights of Vehicles and Trams) Paragraph 1: the driver of any vehicle must turn on the headlights, clearance lamps, tail lights, and other lights, as prescribed by Presidential Decree, in any of the following cases."
+ },
+ {
+  "n": 445,
+  "ko_e": "?꾨줈援먰넻踰???6議?怨좎옣?깆쓽 議곗튂), ??7議??댁쟾?먯쓽 怨좎냽?꾨줈 ?깆뿉?쒖쓽 以?섏궗??, ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議?怨????먮룞李⑥쓽 ?쒖?) 怨좎옣 ?먮룞李⑥쓽 ?대룞??媛?ν븯硫?媛볤만濡???꺼 ?볤퀬 ?덉쟾???μ냼?먯꽌 ?꾩????붿껌?쒕떎.",
+  "tr_e": "Road Traffic Act Article 66 (Measures in Case of Breakdown, etc.), Article 67 (Matters to Be Observed by Drivers on Expressways, etc.), Enforcement Rule of the Road Traffic Act Article 40 (Markings of a Broken-Down Vehicle): if the broken-down vehicle can be moved, move it to the shoulder and request help from a safe place."
+ },
+ {
+  "n": 446,
+  "ko_e": "?몃뱾???쒖そ?쇰줈 ?좊━??寃쎌슦 ????댁뼱???묓겕??媛?μ꽦???믨린 ?뚮Ц???뗫툕?덉씠?щ? 諛잛쑝硫?寃쎈줈瑜??댄깉??媛???깆씠 ?믩떎.",
+  "tr_e": "If the steering wheel pulls to one side, it is likely a front-tire blowout, so pressing the foot brake is likely to cause the vehicle to leave its course."
+ },
+ {
+  "n": 447,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議?怨좎옣?먮룞李⑥쓽 ?쒖?)???곕씪 諛ㅼ뿉 怨좎냽?꾨줈?먯꽌???덉쟾?쇨컖?? ?④퍡 ?щ갑 500誘명꽣  吏?먯뿉???앸퀎?????덈뒗 ?곸깋???ш킅?좏샇, ?꾧린?쒕벑 ?먮뒗 遺덇퐙?좏샇瑜?異붽?濡??ㅼ튂?섏뿬???쒕떎.",
+  "tr_e": "Under Enforcement Rule of the Road Traffic Act Article 40 (Markings of a Broken-Down Vehicle), at night on an expressway, in addition to the warning triangle, you must also set up a red flashing signal, electric lantern, or flare that can be identified from a point 500 meters in all directions."
+ },
+ {
+  "n": 448,
+  "ko_e": "??댁뼱媛 ?곗?硫?湲됱젣?숈쓣 ?쇨?硫? 李⑤웾??吏곸쭊 二쇳뻾???섎룄濡??섍퀬, ?붿쭊 釉뚮젅?댄겕瑜??댁슜?섏뿬 ?덉쟾??怨녹뿉 ?뺤? ?섎룄濡??쒕떎.",
+  "tr_e": "If a tire bursts, refrain from sudden braking, keep the vehicle traveling straight, and use engine braking to bring it to a stop in a safe place."
+ },
+ {
+  "n": 449,
+  "ko_e": "?꾨줈援먰넻踰???7議??댁쟾?먯쓽 怨좎냽?꾨줈?깆뿉?쒖쓽 以?섏궗?? ??怨좎냽?꾨줈?깆쓣 ?댄뻾?섎뒗 ?먮룞李⑥쓽 ?댁쟾?먮뒗 援먰넻?? ?덉쟾怨??먰솢???뚰넻???뺣낫?섍린 ?꾪븯????6議곗뿉 ?곕Ⅸ 怨좎옣?먮룞李⑥쓽 ?쒖?瑜???긽 鍮꾩튂?섎ŉ, 怨좎옣?대굹 洹?諛뽰쓽 遺???댄븳 ?ъ쑀濡??먮룞李⑤? ?댄뻾?????녾쾶 ?섏뿀???뚯뿉???먮룞李⑤? ?꾨줈???곗륫 媛?μ옄由ъ뿉 ?뺤??쒗궎怨??됱젙?덉쟾遺???쇰줈 ?뺥븯??諛붿뿉 ?곕씪 洹??쒖?瑜??ㅼ튂?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 67 (Matters to Be Observed by Drivers on Expressways, etc.) Paragraph 2: to ensure traffic safety and smooth flow, the driver of a vehicle traveling on an expressway, etc., must always keep the broken-down vehicle markings under Article 66 on board, and when the vehicle can no longer be driven due to a breakdown or other unavoidable reason, must stop the vehicle at the right edge of the road and set up the markings as prescribed by Ordinance of the Ministry of the Interior and Safety."
+ },
+ {
+  "n": 450,
+  "ko_e": "怨듭궗援ш컙??寃쎌슦 援ш컙蹂꾨줈 ?쒖냽 80?щ줈誘명꽣? ?쒖냽 60?щ줈誘명꽣濡??쒗븳?섏뼱 ?덉뼱 ?띾룄?쒗븳?쒖?瑜??몄??섍퀬 異⑸텇?? 媛먯냽?섏뿬 ?댄뻾?섏뿬???쒕떎.(援?넗遺 ?꾨줈怨듭궗??援먰넻愿由ъ?移? 援먰넻怨좎냽?꾨줈 怨듭궗??援먰넻愿由ш린以)",
+  "tr_e": "In construction zones, sections are limited to 80 km/h and 60 km/h, so you must recognize the speed-limit signs and slow down sufficiently while driving. (Ministry of Land, Infrastructure and Transport traffic management guidelines for road construction sites; traffic management standards for expressway construction sites)"
+ },
+ {
+  "n": 451,
+  "ko_e": "紐⑹쟻吏 ?붽툑?뚯뿉???뺤궛?대떦?먯뿉寃?吏꾩엯???μ냼瑜??ㅻ챸?섍퀬 ?뺤궛?쒕떎.",
+  "tr_e": "At the destination tollgate, explain to the toll attendant (toll collector) the location where you entered and settle the toll."
+ },
+ {
+  "n": 452,
+  "ko_e": "?곕꼸 ???붿옱????쇨? 理쒖슦?좎씠誘濡??꾪뿕??怨쇱냼?됯??섏뿬 李⑤웾 ?덉뿉 癒몃Т瑜대뒗 寃껋? ?꾪뿕???됰룞?대ŉ, ?붿쭊???? ???ㅻ? 苑귥븘??梨??좎냽?섍쾶 ?섏감?섍퀬 ??쇳빐???쒕떎.",
+  "tr_e": "Because evacuation is the top priority in a tunnel fire, staying inside the vehicle by underestimating the danger is a dangerous act; you must turn off the engine, leave the key in place, and get out and evacuate quickly."
+ },
+ {
+  "n": 453,
+  "ko_e": "?붿닚??諛앹? 怨녹뿉???대몢??怨녹쑝濡??ㅼ뼱媛???泥섏쓬?먮뒗 蹂댁씠吏 ?딅뜕 寃껋씠 ?쒓컙??吏??蹂댁씠湲??쒖옉?섎뒗 ?꾩긽) 諛? 紐낆닚???대몢??怨녹뿉??諛앹? 怨녹쑝濡??섏솕?????먯감 諛앹? 鍮쏆뿉 ?곸쓳?섎뒗 ?꾩긽)?쇰줈 ?명븳 ?ш퀬?덈갑???꾪빐 ?곕꼸?? ?듯뻾???쒖뿉???됱냼蹂대떎 10~20% 媛먯냽?섍퀬 ?꾩“?? 李⑦룺?? 誘몃벑 ?깆쓽 ?깊솕瑜?諛섎뱶??耳쒖빞 ?쒕떎. ?? 寃곕튃怨?2李⑥궗怨? ?깆쓣 ?덈갑?섍린 ?꾪빐 ?쇰컲?꾨줈 蹂대떎 ???덉쟾嫄곕━瑜??뺣낫?섍퀬 湲됱젣?숈뿉 ????鍮꾨룄 ?꾩슂?섎떎.",
+  "tr_e": "To prevent accidents caused by dark adaptation (the phenomenon in which, when entering a dark place from a bright one, things not visible at first begin to be seen after time passes) and light adaptation (the phenomenon in which, when coming out into a bright place from a dark one, one gradually adapts to the bright light), when traveling through a tunnel slow down by 10-20 percent from the usual speed and be sure to turn on the headlights, clearance lamps, tail lights, and other lights. Also, to prevent icing and secondary accidents, secure a greater safe distance than on ordinary roads and be prepared for sudden braking."
+ },
+ {
+  "n": 454,
+  "ko_e": "???쒕룞?μ씠 ?⑥뼱吏꾨떎. ???몄젣?숈쑝濡??명빐 ?놁쑝濡?誘몃걚?ъ쭏 ???덈떎. ??ABS??鍮쀪만 ?먯떖??媛먯냼, ?쇱젙 ?띾룄?먯꽌  ?쒕룞 嫄곕━媛 ?대뒓 ?뺣룄 媛먯냼?쒕떎.",
+  "tr_e": "(1) Braking force decreases. (3) Uneven braking can cause the vehicle to skid sideways. (4) ABS reduces centrifugal force on wet roads and reduces the braking distance to some extent at a given speed."
+ },
+ {
+  "n": 455,
+  "ko_e": "吏吏꾩씠 諛쒖깮??寃쎌슦 李⑤? ?댁쟾?섎뒗 寃껋? 留ㅼ슦 ?꾪뿕?섎떎. 異⑸텇??二쇱쓽瑜??섎㈃??援먯감濡쒕? ?쇳빐???꾨줈 ?곗륫???뺤감 ?쒗궎怨? ?쇰뵒?ㅼ쓽 ?뺣낫瑜????ｊ퀬 遺洹쇱뿉 寃쎌같愿???덉쑝硫?吏?쒖뿉 ?곕씪???됰룞?쒕떎. 李⑤? ?먭퀬 ??쇳븷 寃쎌슦 李⑥쓽  ?쒕룞? ?꾧퀬 ?댁뇿瑜?苑귥? 梨???쇳븳??",
+  "tr_e": "Driving a car during an earthquake is very dangerous. While being sufficiently careful, avoid intersections and stop at the right side of the road, listen carefully to radio information, and if there is a police officer nearby, act according to their instructions. If you leave the vehicle to evacuate, turn off the engine and leave the key in place before evacuating."
+ },
+ {
+  "n": 457,
+  "ko_e": "????컻 ?깆쓽 ?꾪뿕???鍮꾪빐 ?쒕룞??爰쇱빞 ?쒕떎. ??痢〓꼍 履쎌쑝濡??뺤감?쒖폒???묎툒 李⑤웾 ?깆씠 ?뚰넻?????덈떎. ?? ?먮룞李??댁뇿瑜?苑귥븘 ?먯뼱?쇰쭔 ?ㅻⅨ ?곹솴 諛쒖깮 ??議곗튂 媛?ν븯??",
+  "tr_e": "(1) You must turn off the engine to guard against dangers such as an explosion. (3) You must stop the vehicle toward the side wall so that emergency vehicles, etc., can pass. (4) You must leave the vehicle key in place so that action can be taken if another situation arises."
+ },
+ {
+  "n": 458,
+  "ko_e": "??怨좎냽 ?댄뻾 ?쒖뿉 二쇰줈 諛쒖깮?쒕떎. ??誘몃걚?ъ쭚 ?꾩긽???섑븳 ?몃㈃ ?붿쟻? ?ш퀬 泥섎━??以묒슂???먮즺媛 ?쒕떎.",
+  "tr_e": "(2) It mainly occurs during high-speed driving. (3) Road-surface marks caused by skidding are important evidence for accident investigation."
+ },
+ {
+  "n": 459,
+  "ko_e": "?먮룞李④? 李⑤줈瑜??댄깉?섎뒗 寃쎌슦??而ㅻ툕 湲몄뿉??湲됲엳 ?몃뱾??議곗옉???뚯뿉 二쇰줈 諛쒖깮?쒕떎. ?먰븳 ??댁뼱 ?몃젅?쒓?  ?녹븯嫄곕굹 ??댁뼱 怨듦린?뺤씠 ?덈Т ?믨굅???몃㈃??誘몃걚?ъ슦硫??몃㈃怨???댁뼱??留덉같?μ씠 ?⑥뼱??李④? ?꾨줈瑜??댄깉??嫄곕굹 以묒븰?좎쓣 移⑤쾾?????덈떎.",
+  "tr_e": "A vehicle leaving its lane mainly occurs when the steering wheel is turned sharply on a curve. Also, if the tire tread is worn, the tire pressure is too high, or the road surface is slippery, the friction between the road and the tires decreases, and the vehicle may leave the road or cross the center line."
+ },
+ {
+  "n": 460,
+  "ko_e": "怨좎냽?꾨줈 二쇳뻾 以?李⑤웾???붿옱媛 諛쒖깮????議곗튂 ?붾졊 1. 李⑤웾??媛볤만濡??대룞?쒕떎. 2. ?쒕룞???꾧퀬 李⑤웾?먯꽌 ?щ묠由? ?대┛?? 3. 珥덇린 ?붿옱 吏꾪솕媛 媛?ν븯硫?李⑤웾??鍮꾩튂???뚰솕湲곕? ?ъ슜?섏뿬 遺덉쓣 ?덈떎. 4. 珥덇린 ?붿옱 吏꾪솕???ㅽ뙣?덉쓣  ?뚮뒗 李⑤웾????컻?????덉쑝誘濡?硫由???쇳븳?? 5. 119 ?깆뿉 李⑤웾 ?붿옱 ?좉퀬瑜??쒕떎.",
+  "tr_e": "How to respond when a fire breaks out in a vehicle while driving on an expressway: 1. Move the vehicle to the shoulder. 2. Turn off the engine and get out of the vehicle quickly. 3. If early firefighting is possible, use the fire extinguisher kept in the vehicle to put out the fire. 4. If early firefighting fails, the vehicle may explode, so evacuate far away. 5. Report the vehicle fire to 119, etc."
+ },
+ {
+  "n": 461,
+  "ko_e": "?꾨줈 怨듭궗?μ? 二쇱쓽-?꾪솕-?묒뾽-醫낃껐援ш컙?쇰줈 援ъ꽦?섏뼱 ?덈떎.                洹?以??꾪솕援ш컙? 李⑤줈?섍? 媛먯냼?섎뒗 援ш컙?쇰줈 李⑥꽑蹂寃쎌씠 ?꾩슂??援ш컙?대떎. ?덉쟾???듯뻾???꾪빐?쒕뒗 ?ъ쟾 李⑥꽑蹂 寃?諛??쒗뻾???꾩닔?곸씠??",
+  "tr_e": "A road construction site consists of the warning, transition (merge), work, and termination sections. Among these, the transition section is where the number of lanes decreases and a lane change is required. For safe passage, changing lanes in advance and slowing down are essential."
+ },
+ {
+  "n": 462,
+  "ko_e": "利앸컻?꾩긽??留됯린 ?꾪빐?쒕뒗 諛섎???李⑤웾??遺덈튆???뺣㈃?쇰줈 爾먮떎蹂댁? ?딅뒗??",
+  "tr_e": "To prevent the evaporation phenomenon (a glare-induced effect in which an object such as a pedestrian becomes invisible in the oncoming headlight glare), do not look directly at the light of the oncoming vehicle."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+p='translations/audit/queue/322_expl_en.json'
+with open(p,encoding='utf-8') as f: d=json.load(f)
+for x in d:
+ s=x.get('ko_e','')
+ try: s=s.encode('cp949').decode('utf-8')
+ except Exception as e: s='[FAIL] '+str(e)
+ print(x['n'], s)
+ print('EN:',x.get('tr_e'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:54:23.710709Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.6 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:12 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 635ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:12 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/322_expl_en.json' | ConvertFrom-Json; "'$utf8 = [System.Text.Encoding]::UTF8; $cp949 = [System.Text.Encoding]::GetEncoding(949); foreach ($x in $data) { $fixed = $utf8.GetString($cp949.GetBytes($x.ko_e)); Write-Output ("{0}: {1}" -f $x.n,$fixed); Write-Output ("EN: {0}" -f $x.tr_e) }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 605ms:
+442: ?�??차량???�조?�에 ?�해 ?�이 부??경우?�는 ?�조?�의 불빛???�면?�로 보�? 말고, ?�로 ?�측??가?�자�?쪽을  보면???�전?�는 것이 바람직하??
+EN: If you are dazzled by the headlights of an oncoming vehicle, it is desirable not to look directly at the headlight beam but to drive while looking toward the right edge of the road.
+443: ?�로교통�???6�? ?�로교통�??�행규칙 ??0�?고장?�동차의 ?�시
+EN: Road Traffic Act Article 66, Enforcement Rule of the Road Traffic Act Article 40, marking of a broken-down vehicle.
+444: ?�로교통�???7�?차�? ?�면?�차???�화) ?�모??차의 ?�전?�는 ?�음 �??�의 ?�느 ?�나???�당?�는 경우?�는  ?�?�령?�으�??�하??바에 ?�라 ?�조?? 차폭?? 미등�?�?밖의 ?�화�?켜야 ?�다.
+EN: Road Traffic Act Article 37 (Lights of Vehicles and Trams) Paragraph 1: the driver of any vehicle must turn on the headlights, clearance lamps, tail lights, and other lights, as prescribed by Presidential Decree, in any of the following cases.
+445: ?�로교통�???6�?고장?�의 조치), ??7�??�전?�의 고속?�로 ?�에?�의 준?�사??, ?�로교통�??�행규칙 ??0�?�????�동차의 ?��?) 고장 ?�동차의 ?�동??가?�하�?갓길�???�� ?�고 ?�전???�소?�서 ?��????�청?�다.
+EN: Road Traffic Act Article 66 (Measures in Case of Breakdown, etc.), Article 67 (Matters to Be Observed by Drivers on Expressways, etc.), Enforcement Rule of the Road Traffic Act Article 40 (Markings of a Broken-Down Vehicle): if the broken-down vehicle can be moved, move it to the shoulder and request help from a safe place.
+446: ?�들???�쪽?�로 ?�리??경우 ???�?�어???�크??가?�성???�기 ?�문???�브?�이?��? 밟으�?경로�??�탈??가???�이 ?�다.
+EN: If the steering wheel pulls to one side, it is likely a front-tire blowout, so pressing the foot brake is likely to cause the vehicle to leave its course.
+447: ?�로교통�??�행규칙 ??0�?고장?�동차의 ?��?)???�라 밤에 고속?�로?�서???�전?�각?�?� ?�께 ?�방 500미터  지?�에???�별?????�는 ?�색???�광?�호, ?�기?�등 ?�는 불꽃?�호�?추�?�??�치?�여???�다.
+EN: Under Enforcement Rule of the Road Traffic Act Article 40 (Markings of a Broken-Down Vehicle), at night on an expressway, in addition to the warning triangle, you must also set up a red flashing signal, electric lantern, or flare that can be identified from a point 500 meters in all directions.
+448: ?�?�어가 ?��?�?급제?�을 ?��?�? 차량??직진 주행???�도�??�고, ?�진 브레?�크�??�용?�여 ?�전??곳에 ?��? ?�도�??�다.
+EN: If a tire bursts, refrain from sudden braking, keep the vehicle traveling straight, and use engine braking to bring it to a stop in a safe place.
+449: ?�로교통�???7�??�전?�의 고속?�로?�에?�의 준?�사?? ??고속?�로?�을 ?�행?�는 ?�동차의 ?�전?�는 교통?? ?�전�??�활???�통???�보?�기 ?�하????6조에 ?�른 고장?�동차의 ?��?�???�� 비치?�며, 고장?�나 �?밖의 부???�한 ?�유�??�동차�? ?�행?????�게 ?�었???�에???�동차�? ?�로???�측 가?�자리에 ?��??�키�??�정?�전부???�로 ?�하??바에 ?�라 �??��?�??�치?�여???�다.
+EN: Road Traffic Act Article 67 (Matters to Be Observed by Drivers on Expressways, etc.) Paragraph 2: to ensure traffic safety and smooth flow, the driver of a vehicle traveling on an expressway, etc., must always keep the broken-down vehicle markings under Article 66 on board, and when the vehicle can no longer be driven due to a breakdown or other unavoidable reason, must stop the vehicle at the right edge of the road and set up the markings as prescribed by Ordinance of the Ministry of the Interior and Safety.
+450: 공사구간??경우 구간별로 ?�속 80?�로미터?� ?�속 60?�로미터�??�한?�어 ?�어 ?�도?�한?��?�??��??�고 충분?? 감속?�여 ?�행?�여???�다.(�?��부 ?�로공사??교통관리�?�? 교통고속?�로 공사??교통관리기준)
+EN: In construction zones, sections are limited to 80 km/h and 60 km/h, so you must recognize the speed-limit signs and slow down sufficiently while driving. (Ministry of Land, Infrastructure and Transport traffic management guidelines for road construction sites; traffic management standards for expressway construction sites)
+451: 목적지 ?�금?�에???�산?�당?�에�?진입???�소�??�명?�고 ?�산?�다.
+EN: At the destination tollgate, explain to the toll attendant (toll collector) the location where you entered and settle the toll.
+452: ?�널 ???�재???�?��? 최우?�이므�??�험??과소?��??�여 차량 ?�에 머무르는 것�? ?�험???�동?�며, ?�진???? ???��? 꽂아??�??�속?�게 ?�차?�고 ?�?�해???�다.
+EN: Because evacuation is the top priority in a tunnel fire, staying inside the vehicle by underestimating the danger is a dangerous act; you must turn off the engine, leave the key in place, and get out and evacuate quickly.
+453: ?�순??밝�? 곳에???�두??곳으�??�어�???처음?�는 보이지 ?�던 것이 ?�간??지??보이�??�작?�는 ?�상) �? 명순???�두??곳에??밝�? 곳으�??�왔?????�차 밝�? 빛에 ?�응?�는 ?�상)?�로 ?�한 ?�고?�방???�해 ?�널?? ?�행???�에???�소보다 10~20% 감속?�고 ?�조?? 차폭?? 미등 ?�의 ?�화�?반드??켜야 ?�다. ?? 결빙�?2차사�? ?�을 ?�방?�기 ?�해 ?�반?�로 보다 ???�전거리�??�보?�고 급제?�에 ?�???�비도 ?�요?�다.
+EN: To prevent accidents caused by dark adaptation (the phenomenon in which, when entering a dark place from a bright one, things not visible at first begin to be seen after time passes) and light adaptation (the phenomenon in which, when coming out into a bright place from a dark one, one gradually adapts to the bright light), when traveling through a tunnel slow down by 10-20 percent from the usual speed and be sure to turn on the headlights, clearance lamps, tail lights, and other lights. Also, to prevent icing and secondary accidents, secure a greater safe distance than on ordinary roads and be prepared for sudden braking.
+454: ???�동?�이 ?�어진다. ???�제?�으�??�해 ?�으�?미끄?�질 ???�다. ??ABS??빗길 ?�심??감소, ?�정 ?�도?�서  ?�동 거리가 ?�느 ?�도 감소?�다.
+EN: (1) Braking force decreases. (3) Uneven braking can cause the vehicle to skid sideways. (4) ABS reduces centrifugal force on wet roads and reduces the braking distance to some extent at a given speed.
+455: 지진이 발생??경우 차�? ?�전?�는 것�? 매우 ?�험?�다. 충분??주의�??�면??교차로�? ?�해???�로 ?�측???�차 ?�키�? ?�디?�의 ?�보�????�고 부근에 경찰관???�으�?지?�에 ?�라???�동?�다. 차�? ?�고 ?�?�할 경우 차의  ?�동?� ?�고 ?�쇠�?꽂�? �??�?�한??
+EN: Driving a car during an earthquake is very dangerous. While being sufficiently careful, avoid intersections and stop at the right side of the road, listen carefully to radio information, and if there is a police officer nearby, act according to their instructions. If you leave the vehicle to evacuate, turn off the engine and leave the key in place before evacuating.
+457: ????�� ?�의 ?�험???�비해 ?�동??꺼야 ?�다. ??측벽 쪽으�??�차?�켜???�급 차량 ?�이 ?�통?????�다. ?? ?�동�??�쇠�?꽂아 ?�어?�만 ?�른 ?�황 발생 ??조치 가?�하??
+EN: (1) You must turn off the engine to guard against dangers such as an explosion. (3) You must stop the vehicle toward the side wall so that emergency vehicles, etc., can pass. (4) You must leave the vehicle key in place so that action can be taken if another situation arises.
+458: ??고속 ?�행 ?�에 주로 발생?�다. ??미끄?�짐 ?�상???�한 ?�면 ?�적?� ?�고 처리??중요???�료가 ?�다.
+EN: (2) It mainly occurs during high-speed driving. (3) Road-surface marks caused by skidding are important evidence for accident investigation.
+459: ?�동차�? 차로�??�탈?�는 경우??커브 길에??급히 ?�들??조작???�에 주로 발생?�다. ?�한 ?�?�어 ?�레?��?  ?�았거나 ?�?�어 공기?�이 ?�무 ?�거???�면??미끄?�우�??�면�??�?�어??마찰?�이 ?�어??차�? ?�로�??�탈??거나 중앙?�을 침범?????�다.
+EN: A vehicle leaving its lane mainly occurs when the steering wheel is turned sharply on a curve. Also, if the tire tread is worn, the tire pressure is too high, or the road surface is slippery, the friction between the road and the tires decreases, and the vehicle may leave the road or cross the center line.
+460: 고속?�로 주행 �?차량???�재가 발생????조치 ?�령 1. 차량??갓길�??�동?�다. 2. ?�동???�고 차량?�서 ?�빨�? ?�린?? 3. 초기 ?�재 진화가 가?�하�?차량??비치???�화기�? ?�용?�여 불을 ?�다. 4. 초기 ?�재 진화???�패?�을  ?�는 차량????��?????�으므�?멀�??�?�한?? 5. 119 ?�에 차량 ?�재 ?�고�??�다.
+EN: How to respond when a fire breaks out in a vehicle while driving on an expressway: 1. Move the vehicle to the shoulder. 2. Turn off the engine and get out of the vehicle quickly. 3. If early firefighting is possible, use the fire extinguisher kept in the vehicle to put out the fire. 4. If early firefighting fails, the vehicle may explode, so evacuate far away. 5. Report the vehicle fire to 119, etc.
+461: ?�로 공사?��? 주의-?�화-?�업-종결구간?�로 구성?�어 ?�다.                �?�??�화구간?� 차로?��? 감소?�는 구간?�로 차선변경이 ?�요??구간?�다. ?�전???�행???�해?�는 ?�전 차선변 �?�??�행???�수?�이??
+EN: A road construction site consists of the warning, transition (merge), work, and termination sections. Among these, the transition section is where the number of lanes decreases and a lane change is required. For safe passage, changing lanes in advance and slowing down are essential.
+462: 증발?�상??막기 ?�해?�는 반�???차량??불빛???�면?�로 쳐다보�? ?�는??
+EN: To prevent the evaporation phenomenon (a glare-induced effect in which an object such as a pedestrian becomes invisible in the oncoming headlight glare), do not look directly at the light of the oncoming vehicle.
+
+codex
+[{"n":447,"field":"e","severity":"major","issue":"‘전방 500미터 지점에서 식별할 수 있는’을 ‘500미터 떨어진 모든 방향에서 식별 가능한’으로 번역하여 식별 방향을 잘못 전달했다.","suggestion":"Under Article 40 of the Enforcement Rule of the Road Traffic Act, at night on an expressway, in addition to the warning triangle, you must also set up a red flashing signal, electric lantern, or flare that can be identified from a point 500 meters ahead."}]
+tokens used
+12,712
+[{"n":447,"field":"e","severity":"major","issue":"‘전방 500미터 지점에서 식별할 수 있는’을 ‘500미터 떨어진 모든 방향에서 식별 가능한’으로 번역하여 식별 방향을 잘못 전달했다.","suggestion":"Under Article 40 of the Enforcement Rule of the Road Traffic Act, at night on an expressway, in addition to the warning triangle, you must also set up a red flashing signal, electric lantern, or flare that can be identified from a point 500 meters ahead."}]

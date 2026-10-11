@@ -1,0 +1,569 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12859-4a14-7a12-a44f-fb433922412b
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/343_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/343_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 535ms:
+[
+ {
+  "n": 871,
+  "ko_e": "?대떦 ?덉쟾?쒖???二쇱쓽?쒖?濡??꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6]???ㅼ튂洹쒖젙 諛??μ냼媛 洹쒖젙?섏뼱 ?덈떎. A ?쒖????≫뭾?? ?곕젮媛 ?덈뒗 吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 137踰?. B ?쒖????곕꼸?낃뎄 ??50誘명꽣  ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 138踰?. C ?쒖????꾪뿕吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫?? ?ㅼ튂?쒕떎(二쇱쓽?쒖? 140踰?. D ?쒖????곸뒿?뺤껜援ш컙 ??50誘명꽣?먯꽌 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 141踰?.",
+  "tr_e": "Bi沼긪 b찼o giao th척ng n횪y l횪 bi沼긪 b찼o nguy hi沼긩, c처 quy 휃沼땙h v沼?vi沼놻 l梳칛 휃梳톞 v횪 휃沼땇 휃i沼긩 t梳죍 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6]. Bi沼긪 A 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 gi처 ngang t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 b찼o nguy hi沼긩 s沼?137). Bi沼긪 B 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch c沼춁 h梳쬶 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 b찼o nguy hi沼긩 s沼?138). Bi沼긪 C 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch khu v沼켧 nguy hi沼긩 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 b찼o nguy hi沼긩 s沼?140). Bi沼긪 D 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃o梳죒 th튼沼쓓g xuy챗n 첫n t梳칌 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 b찼o nguy hi沼긩 s沼?141)."
+ },
+ {
+  "n": 872,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?≫뭾?쒖?(二쇱쓽?쒖? 137踰?, ?쇱깮?숇Ъ蹂댄샇?쒖?(二쇱쓽?쒖? 139踰?  ???ㅻⅤ留됯꼍?ы몴吏?  ?곸뒿?뺤껜援ш컙?쒖???二쇱쓽?쒖??대떎. ??李⑦룺?쒗븳?쒖?? 李④컙嫄곕━?뺣낫?쒖???洹쒖젣?쒖??대떎. ??끂硫댁쟾李⑥쟾?⑸룄濡쒗몴 吏? ?고쉶?꾨줈?쒖???吏?쒗몴吏?대떎. ??鍮꾨낫?몄쥖?뚯쟾?쒖?? 醫뚰쉶??諛??좏꽩?쒖???吏?쒗몴吏?대떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, Bi沼긪 b찼o gi처 ngang (bi沼긪 b찼o nguy hi沼긩 s沼?137), Bi沼긪 b찼o b梳즣 v沼?휃沼셬g v梳춗 hoang d찾 (bi沼긪 b찼o nguy hi沼긩 s沼?139). ??Bi沼긪 b찼o d沼멵 l챗n v횪 bi沼긪 b찼o 휃o梳죒 th튼沼쓓g xuy챗n 첫n t梳칌 l횪 bi沼긪 b찼o nguy hi沼긩. ??Bi沼긪 b찼o gi沼쌻 h梳죒 chi沼걏 r沼셬g xe v횪 bi沼긪 b찼o gi沼?kho梳즢g c찼ch gi沼칊 c찼c xe l횪 bi沼긪 b찼o c梳쩷/h梳죒 ch梳?(bi沼긪 b찼o quy ch梳?. ??Bi沼긪 b찼o 휃튼沼쓓g ri챗ng cho t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g v횪 bi沼긪 b찼o 휃튼沼쓓g v챵ng l횪 bi沼긪 b찼o hi沼뇎 l沼뇆h. ??Bi沼긪 b찼o r梳?tr찼i kh척ng c처 휃챔n b梳즣 h沼?v횪 bi沼긪 b찼o r梳?tr찼i v횪 quay 휃梳쬾 (U-turn) l횪 bi沼긪 b찼o hi沼뇎 l沼뇆h."
+ },
+ {
+  "n": 873,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 130.?숈꽍?꾨줈?쒖?       - ?숈꽍?곕젮吏????30誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?130. Bi沼긪 b찼o 휃튼沼쓓g c처 휃찼 r퉤i - l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i t沼?30 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 874,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 138??2.援먮웾?쒖? 援먮웾?댁엳?뚯쓣?뚮━??寃? 援먮웾???덈뒗 吏????50誘명꽣?먯꽌 200誘명꽣 ???꾨줈?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?138-2. Bi沼긪 b찼o c梳쬾. B찼o hi沼뇎 c처 c梳쬾, l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 c梳쬾 t沼?50 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 875,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 123.以묒븰遺꾨━??쒖옉?쒖?",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?123. Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch gi沼칊."
+ },
+ {
+  "n": 876,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 119.?곗륫李⑤줈 ?놁뼱吏??몃룄 2李⑤줈 ?댁긽???꾨줈?먯꽌 ?곗륫李⑤줈媛 ?놁뼱吏????ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?119. M梳쩿 l횪n 휃튼沼쓓g b챗n ph梳즜. L梳칛 휃梳톞 khi l횪n 휃튼沼쓓g b챗n ph梳즜 bi梳퓆 m梳쩿 tr챗n 휃튼沼쓓g m沼셳 chi沼걏 c처 t沼?2 l횪n tr沼?l챗n."
+ },
+ {
+  "n": 877,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 123.以묒븰遺꾨━? ?쒖옉?쒖? 以묒븰遺꾨━?媛?쒖옉?⑥쓣 ?뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?123. Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch gi沼칊. B찼o hi沼뇎 d梳즜 ph창n c찼ch gi沼칊 b梳칣 휃梳쬾."
+ },
+ {
+  "n": 878,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 128.?몃㈃怨좊Ⅴ吏紐삵븿?쒖? ?몃㈃?닿퀬瑜댁?紐삵븿?꾩븣由щ뒗 寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?128. Bi沼긪 b찼o m梳톞 휃튼沼쓓g kh척ng b梳켷g ph梳쿻g. B찼o hi沼뇎 m梳톞 휃튼沼쓓g kh척ng b梳켷g ph梳쿻g."
+ },
+ {
+  "n": 879,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 134.?먯쟾嫄고몴吏 ?먯쟾嫄??듯뻾??留롮? 吏?먯씠 ?덉쓬???뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?134. Bi沼긪 b찼o xe 휃梳죖. B찼o hi沼뇎 c처 휃i沼긩 nhi沼걏 xe 휃梳죖 휃i l梳죍."
+ },
+ {
+  "n": 880,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 116.?ㅻⅤ留됯꼍?ы몴吏 ?ㅻⅤ留됯꼍?ш? ?덉쓬???뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?116. Bi沼긪 b찼o d沼멵 l챗n. B찼o hi沼뇎 c처 d沼멵 l챗n."
+ },
+ {
+  "n": 881,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 泥좉만嫄대꼸紐⑺몴吏(二쇱쓽?쒖떆 110踰? 泥좉만嫄대꼸紐⑹씠?덉쓬???뚮━??寃?",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6] Bi沼긪 b찼o 휃튼沼쓓g ngang qua 휃튼沼쓓g s梳칣 (bi沼긪 b찼o nguy hi沼긩 s沼?110). B찼o hi沼뇎 c처 휃튼沼쓓g ngang qua 휃튼沼쓓g s梳칣."
+ },
+ {
+  "n": 882,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?? 媛쒕퀎湲곗?. 1.二쇱쓽?쒖? 106踰? ?곗꽑?꾨줈?먯꽌 ?곗꽑?꾨줈媛 ?꾨땶 ?꾨줈? 援먯감?섎뒗 寃쎌슦",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6 ?? Ti챗u chu梳쯰 ri챗ng. 1. Bi沼긪 b찼o nguy hi沼긩 s沼?106, tr튼沼쓓g h沼즤 휃튼沼쓓g 튼u ti챗n giao c梳칣 v沼쌻 휃튼沼쓓g kh척ng ph梳즜 휃튼沼쓓g 튼u ti챗n."
+ },
+ {
+  "n": 883,
+  "ko_e": "A???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6], ?숈꽍?꾨줈?쒖?(二쇱쓽?쒖? 130踰?. ?숈꽍???곕젮媛 ?덈뒗 吏?먯뿉 ?ㅼ튂?쒕떎. ?숈꽍 ?곕젮 吏????30誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎.          B???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6], 鍮꾪뻾湲고몴吏(二쇱쓽?쒖? 136踰?. 鍮꾪뻾?μ쓽 鍮꾪뻾湲??댁갑瑜?諛⑺뼢??洹쇱젒???꾨줈??           ?ㅼ튂?쒕떎. 鍮꾪뻾湲??댁갑瑜?吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫???ㅼ튂?쒕떎.",
+  "tr_e": "A l횪 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6], Bi沼긪 b찼o 휃튼沼쓓g c처 휃찼 r퉤i (bi沼긪 b찼o nguy hi沼긩 s沼?130). L梳칛 휃梳톞 t梳죍 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i. L梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i t沼?30 m챕t 휃梳퓆 200 m챕t. B l횪 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6], Bi沼긪 b찼o m찼y bay (bi沼긪 b찼o nguy hi沼긩 s沼?136). L梳칛 휃梳톞 tr챗n 휃튼沼쓓g g梳쬷 v沼쌻 h튼沼썀g c梳쩿/h梳?c찼nh c沼쬪 m찼y bay t梳죍 s창n bay. L梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c梳쩿/h梳?c찼nh c沼쬪 m찼y bay t沼?50 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 884,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 媛뺣??꾨줈?쒖?(二쇱쓽?쒖? 127踰? ?꾨줈???쇰???媛뺣??ㅽ빐蹂?ㅺ퀎怨〓벑 異붾씫 ?꾪뿕吏??엫????由щ뒗 寃껋씠??",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, Bi沼긪 b찼o 휃튼沼쓓g ven s척ng (bi沼긪 b찼o nguy hi沼긩 s沼?127). B찼o hi沼뇎 m沼셳 b챗n c沼쬪 휃튼沼쓓g l횪 khu v沼켧 nguy hi沼긩 r퉤i/ng찾 nh튼 b沼?s척ng, b沼?bi沼긪, khe n첬i..."
+ },
+ {
+  "n": 885,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 122 ?묒륫諛⑺넻?됲몴吏濡??숈씪諛⑺뼢?듯뻾?꾨줈?먯꽌?묒륫諛⑹쑝濡쒗넻?됲븯?ъ빞?좎? ?먯씠?덉쓬?꾩븣由щ뒗寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?122 l횪 bi沼긪 b찼o 휃i l梳죍 hai b챗n, b찼o hi沼뇎 c처 휃i沼긩 ph梳즜 휃i l梳죍 theo hai b챗n tr챗n 휃튼沼쓓g 휃i c첫ng chi沼걏."
+ },
+ {
+  "n": 886,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 109 ?뚯쟾?뺢탳李⑤줈?쒖?濡?援먯감濡???30誘명꽣?먯꽌 120誘명꽣???꾨줈 ?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?109 l횪 bi沼긪 b찼o v챵ng xuy梳퓆, l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch giao l沼?t沼?30 m챕t 휃梳퓆 120 m챕t."
+ },
+ {
+  "n": 887,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 126 誘몃걚?ъ슫 ?꾨줈?쒖?濡??꾨줈 寃곕튃 ?깆뿉 ?섑빐 ?먮룞李⑤벑??誘몃걚?ъ슫 ?꾨줈?? ?ㅼ튂?쒕떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?126 l횪 bi沼긪 b찼o 휃튼沼쓓g tr퉤n tr튼沼즨, l梳칛 휃梳톞 tr챗n 휃튼沼쓓g m횪 xe 척 t척... b沼?tr퉤n tr튼沼즨 do 휃튼沼쓓g 휃처ng b훱ng..."
+ },
+ {
+  "n": 888,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 111 ?곕줈援쎌? ?꾨줈?쒖? ?꾨갑 ?곕줈 援쎌? ?꾨줈?????二쇱쓽?쒖??대떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?111 l횪 bi沼긪 b찼o 휃튼沼쓓g cong sang ph梳즜, l횪 bi沼긪 b찼o nguy hi沼긩 v沼?휃튼沼쓓g cong sang ph梳즜 ph챠a tr튼沼쌵."
+ },
+ {
+  "n": 890,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 洹쒖젣?쒖? 224. 理쒓퀬?띾룄?쒗븳?쒖? ?쒖??먯뿉 ?쒖떆???띾룄濡??먮룞李⑤벑??理쒓퀬?띾룄瑜?吏 ?뺥븯??寃껋씠?? ?ㅼ튂湲곗? 諛??μ냼???먮룞李??깆쓽 理쒓퀬?띾룄瑜??쒗븳?섎뒗 援ъ뿭, ?꾨줈??援ш컙 ?먮뒗 ?μ냼?댁쓽 ?꾩슂?? 吏???곗륫???ㅼ튂?쒕떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o quy ch梳?s沼?224. Bi沼긪 b찼o gi沼쌻 h梳죒 t沼멵 휃沼?t沼멼 휃a, quy 휃沼땙h t沼멵 휃沼?t沼멼 휃a c沼쬪 xe 척 t척... theo t沼멵 휃沼?ghi tr챗n bi沼긪 b찼o. Ti챗u chu梳쯰 v횪 휃沼땇 휃i沼긩 l梳칛 휃梳톞: l梳칛 휃梳톞 沼?b챗n ph梳즜 휃i沼긩 c梳쬷 thi梳퓍 trong khu v沼켧, 휃o梳죒 휃튼沼쓓g ho梳톍 n퉤i gi沼쌻 h梳죒 t沼멵 휃沼?t沼멼 휃a c沼쬪 xe 척 t척..."
+ },
+ {
+  "n": 891,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 洹쒖젣?쒖? 201, ?듯뻾湲덉??쒖?濡?蹂댄뻾??肉??꾨땲??紐⑤뱺 李⑤쭏???듯뻾?????녿떎. ?꾨줈?? 援ш컙 ?먮뒗 ?μ냼???꾨줈??以묒븰 ?먮뒗 ?곗륫???ㅼ튂, ?듯뻾湲덉?援ш컙쨌湲곌컙 諛??댁쑀瑜?紐낆떆??蹂댁“?쒖?瑜?遺李㈑룹꽕移?媛??",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o quy ch梳?s沼?201, l횪 bi沼긪 b찼o c梳쩷 휃i l梳죍, kh척ng ch沼?ng튼沼쓎 휃i b沼?m횪 m沼뛦 xe c沼?휃沼걏 kh척ng 휃튼沼즓 휃i l梳죍. L梳칛 휃梳톞 沼?gi沼칊 ho梳톍 b챗n ph梳즜 휃튼沼쓓g c沼쬪 휃o梳죒 ho梳톍 n퉤i tr챗n 휃튼沼쓓g, c처 th沼?g梳칗/l梳칛 th챗m bi沼긪 b찼o ph沼?ghi r천 휃o梳죒, th沼쓎 gian v횪 l첵 do c梳쩷 휃i l梳죍."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+import json
+p=Path(r'translations/audit/queue/343_expl_vn.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ print('\\n',x['n'])
+ for k,v in x.items():
+  if k"'!='"'n':
+   try: s=v.encode('cp949',errors='replace').decode('utf-8',errors='replace')
+   except: s=v
+   print(k, s)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-11T00:25:17.037622Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:14 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 715ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:14 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$utf8=[Text.Encoding]::UTF8; $cp=[Text.Encoding]::GetEncoding(949); $data=Get-Content -Raw -LiteralPath '"'translations/audit/queue/343_expl_vn.json' | ConvertFrom-Json; foreach("'$x in $data){ Write-Output "`n$($x.n)"; foreach($p in $x.PSObject.Properties){if($p.Name -ne '"'n'){ "'$bytes=$cp.GetBytes([string]$p.Value); $s=$utf8.GetString($bytes); Write-Output "$($p.Name): $s"}}}' in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-11T00:25:22.684468Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+ConvertFrom-Json : 잘못된 개체가 전달되었습니다. ':' 또는 '}'가 필요합니다. (3031): [
+ {
+  "n": 871,
+  "ko_e": "?대떦 ?덉쟾?쒖???二쇱쓽?쒖?濡??꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6]???ㅼ튂洹쒖젙 諛??μ냼媛 洹쒖젙?섏뼱 ?덈떎. A ?쒖????≫뭾?? ?곕젮媛 ?덈뒗 吏????50誘명꽣 ?댁?
+ 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 137踰?. B ?쒖????곕꼸?낃뎄 ??50誘명꽣  ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 138踰?. C ?쒖????꾪뿕吏????5
+0誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫?? ?ㅼ튂?쒕떎(二쇱쓽?쒖? 140踰?. D ?쒖????곸뒿?뺤껜援ш컙 ??50誘명꽣?먯꽌 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 141踰?.",
+  "tr_e": "Bi沼긪 b찼o giao th척ng n횪y l횪 bi沼긪 b찼o nguy hi沼긩, c처 quy 휃沼땙h v沼?vi沼놻 l梳칛 휃梳톞 v횪 휃沼땇 휃i沼긩 t梳죍 Th척ng t튼 thi h횪nh
+ Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6]. Bi沼긪 A 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 gi처 ngang t沼?50 m챕t 휃
+梳퓆 200 m챕t (bi沼긪 b찼o nguy hi沼긩 s沼?137). Bi沼긪 B 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch c沼춁 h梳쬶 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 
+b찼o nguy hi沼긩 s沼?138). Bi沼긪 C 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch khu v沼켧 nguy hi沼긩 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 b찼o ngu
+y hi沼긩 s沼?140). Bi沼긪 D 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃o梳죒 th튼沼쓓g xuy챗n 첫n t梳칌 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 b찼o ngu
+y hi沼긩 s沼?141)."
+ },
+ {
+  "n": 872,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?≫뭾?쒖?(二쇱쓽?쒖? 137踰?, ?쇱깮?숇Ъ蹂댄샇?쒖?(二쇱쓽?쒖? 139踰?  ???ㅻⅤ留됯꼍?ы몴吏?  ?곸뒿?뺤껜援ш컙?쒖???二쇱쓽?쒖??대
+떎. ??李⑦룺?쒗븳?쒖?? 李④컙嫄곕━?뺣낫?쒖???洹쒖젣?쒖??대떎. ??끂硫댁쟾李⑥쟾?⑸룄濡쒗몴 吏? ?고쉶?꾨줈?쒖???吏?쒗몴吏?대떎. ??鍮꾨낫?몄쥖?뚯쟾?쒖?? 醫뚰쉶??諛??좏꽩?쒖???吏
+?쒗몴吏?대떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, Bi沼긪 b찼o gi처 ngang (bi沼긪 b찼o nguy hi沼긩 s沼?137), Bi沼긪 b
+찼o b梳즣 v沼?휃沼셬g v梳춗 hoang d찾 (bi沼긪 b찼o nguy hi沼긩 s沼?139). ??Bi沼긪 b찼o d沼멵 l챗n v횪 bi沼긪 b찼o 휃o梳죒 th튼沼쓓g xuy챗n 첫n t梳칌 l횪 bi沼
+긪 b찼o nguy hi沼긩. ??Bi沼긪 b찼o gi沼쌻 h梳죒 chi沼걏 r沼셬g xe v횪 bi沼긪 b찼o gi沼?kho梳즢g c찼ch gi沼칊 c찼c xe l횪 bi沼긪 b찼o c梳쩷/h梳죒 ch梳?(bi沼
+긪 b찼o quy ch梳?. ??Bi沼긪 b찼o 휃튼沼쓓g ri챗ng cho t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g v횪 bi沼긪 b찼o 휃튼沼쓓g v챵ng l횪 bi沼긪 b찼o hi沼뇎 l沼뇆h. ??Bi沼긪 b찼o 
+r梳?tr찼i kh척ng c처 휃챔n b梳즣 h沼?v횪 bi沼긪 b찼o r梳?tr찼i v횪 quay 휃梳쬾 (U-turn) l횪 bi沼긪 b찼o hi沼뇎 l沼뇆h."
+ },
+ {
+  "n": 873,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 130.?숈꽍?꾨줈?쒖?       - ?숈꽍?곕젮吏????30誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?130. Bi沼긪 b찼o 휃튼沼쓓g c처 휃찼 r퉤i - l梳칛 휃梳톞 沼?b챗n ph梳즜 
+휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i t沼?30 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 874,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 138??2.援먮웾?쒖? 援먮웾?댁엳?뚯쓣?뚮━??寃? 援먮웾???덈뒗 吏????50誘명꽣?먯꽌 200誘명꽣 ???꾨줈?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?138-2. Bi沼긪 b찼o c梳쬾. B찼o hi沼뇎 c처 c梳쬾, l梳칛 휃梳톞 沼?b챗n
+ ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 c梳쬾 t沼?50 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 875,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 123.以묒븰遺꾨━??쒖옉?쒖?",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?123. Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch gi沼칊."
+ },
+ {
+  "n": 876,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 119.?곗륫李⑤줈 ?놁뼱吏??몃룄 2李⑤줈 ?댁긽???꾨줈?먯꽌 ?곗륫李⑤줈媛 ?놁뼱吏????ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?119. M梳쩿 l횪n 휃튼沼쓓g b챗n ph梳즜. L梳칛 휃梳톞 khi l횪n 휃튼沼쓓g 
+b챗n ph梳즜 bi梳퓆 m梳쩿 tr챗n 휃튼沼쓓g m沼셳 chi沼걏 c처 t沼?2 l횪n tr沼?l챗n."
+ },
+ {
+  "n": 877,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 123.以묒븰遺꾨━? ?쒖옉?쒖? 以묒븰遺꾨━?媛?쒖옉?⑥쓣 ?뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?123. Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch gi沼칊. B찼o hi沼뇎 
+d梳즜 ph창n c찼ch gi沼칊 b梳칣 휃梳쬾."
+ },
+ {
+  "n": 878,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 128.?몃㈃怨좊Ⅴ吏紐삵븿?쒖? ?몃㈃?닿퀬瑜댁?紐삵븿?꾩븣由щ뒗 寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?128. Bi沼긪 b찼o m梳톞 휃튼沼쓓g kh척ng b梳켷g ph梳쿻g. B찼o hi沼뇎 
+m梳톞 휃튼沼쓓g kh척ng b梳켷g ph梳쿻g."
+ },
+ {
+  "n": 879,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 134.?먯쟾嫄고몴吏 ?먯쟾嫄??듯뻾??留롮? 吏?먯씠 ?덉쓬???뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?134. Bi沼긪 b찼o xe 휃梳죖. B찼o hi沼뇎 c처 휃i沼긩 nhi沼걏 xe 휃梳죖
+ 휃i l梳죍."
+ },
+ {
+  "n": 880,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 116.?ㅻⅤ留됯꼍?ы몴吏 ?ㅻⅤ留됯꼍?ш? ?덉쓬???뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?116. Bi沼긪 b찼o d沼멵 l챗n. B찼o hi沼뇎 c처 d沼멵 l챗n."
+ },
+ {
+  "n": 881,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 泥좉만嫄대꼸紐⑺몴吏(二쇱쓽?쒖떆 110踰? 泥좉만嫄대꼸紐⑹씠?덉쓬???뚮━??寃?",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6] Bi沼긪 b찼o 휃튼沼쓓g ngang qua 휃튼沼쓓g s梳칣 (bi沼긪 b찼o nguy hi沼
+긩 s沼?110). B찼o hi沼뇎 c처 휃튼沼쓓g ngang qua 휃튼沼쓓g s梳칣."
+ },
+ {
+  "n": 882,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?? 媛쒕퀎湲곗?. 1.二쇱쓽?쒖? 106踰? ?곗꽑?꾨줈?먯꽌 ?곗꽑?꾨줈媛 ?꾨땶 ?꾨줈? 援먯감?섎뒗 寃쎌슦",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6 ?? Ti챗u chu梳쯰 ri챗ng. 1. Bi沼긪 b찼o nguy hi沼긩 s沼?106, tr튼沼
+쓓g h沼즤 휃튼沼쓓g 튼u ti챗n giao c梳칣 v沼쌻 휃튼沼쓓g kh척ng ph梳즜 휃튼沼쓓g 튼u ti챗n."
+ },
+ {
+  "n": 883,
+  "ko_e": "A???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6], ?숈꽍?꾨줈?쒖?(二쇱쓽?쒖? 130踰?. ?숈꽍???곕젮媛 ?덈뒗 吏?먯뿉 ?ㅼ튂?쒕떎. ?숈꽍 ?곕젮 吏????30誘명꽣 ?댁? 200誘명
+꽣???꾨줈?곗륫???ㅼ튂?쒕떎.          B???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6], 鍮꾪뻾湲고몴吏(二쇱쓽?쒖? 136踰?. 鍮꾪뻾?μ쓽 鍮꾪뻾湲??댁갑瑜?諛⑺뼢??洹쇱젒???꾨줈??          
+ ?ㅼ튂?쒕떎. 鍮꾪뻾湲??댁갑瑜?吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫???ㅼ튂?쒕떎.",
+  "tr_e": "A l횪 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6], Bi沼긪 b찼o 휃튼沼쓓g c처 휃찼 r퉤i (bi沼긪 b찼o nguy hi沼긩 s沼
+?130). L梳칛 휃梳톞 t梳죍 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i. L梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i t沼?30 m챕t 휃梳퓆 200 m챕t.
+ B l횪 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6], Bi沼긪 b찼o m찼y bay (bi沼긪 b찼o nguy hi沼긩 s沼?136). L梳칛 휃梳톞 tr챗
+n 휃튼沼쓓g g梳쬷 v沼쌻 h튼沼썀g c梳쩿/h梳?c찼nh c沼쬪 m찼y bay t梳죍 s창n bay. L梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c梳쩿/h梳?c찼nh c沼쬪 m찼y bay 
+t沼?50 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 884,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 媛뺣??꾨줈?쒖?(二쇱쓽?쒖? 127踰? ?꾨줈???쇰???媛뺣??ㅽ빐蹂?ㅺ퀎怨〓벑 異붾씫 ?꾪뿕吏??엫????由щ뒗 寃껋씠??",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, Bi沼긪 b찼o 휃튼沼쓓g ven s척ng (bi沼긪 b찼o nguy hi沼긩 s沼?127). B
+찼o hi沼뇎 m沼셳 b챗n c沼쬪 휃튼沼쓓g l횪 khu v沼켧 nguy hi沼긩 r퉤i/ng찾 nh튼 b沼?s척ng, b沼?bi沼긪, khe n첬i..."
+ },
+ {
+  "n": 885,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 122 ?묒륫諛⑺넻?됲몴吏濡??숈씪諛⑺뼢?듯뻾?꾨줈?먯꽌?묒륫諛⑹쑝濡쒗넻?됲븯?ъ빞?좎? ?먯씠?덉쓬?꾩븣由щ뒗寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?122 l횪 bi沼긪 b찼o 휃i l梳죍 hai b챗n, 
+b찼o hi沼뇎 c처 휃i沼긩 ph梳즜 휃i l梳죍 theo hai b챗n tr챗n 휃튼沼쓓g 휃i c첫ng chi沼걏."
+ },
+ {
+  "n": 886,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 109 ?뚯쟾?뺢탳李⑤줈?쒖?濡?援먯감濡???30誘명꽣?먯꽌 120誘명꽣???꾨줈 ?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?109 l횪 bi沼긪 b찼o v챵ng xuy梳퓆, l梳칛 
+휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch giao l沼?t沼?30 m챕t 휃梳퓆 120 m챕t."
+ },
+ {
+  "n": 887,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 126 誘몃걚?ъ슫 ?꾨줈?쒖?濡??꾨줈 寃곕튃 ?깆뿉 ?섑빐 ?먮룞李⑤벑??誘몃걚?ъ슫 ?꾨줈?? ?ㅼ튂?쒕떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?126 l횪 bi沼긪 b찼o 휃튼沼쓓g tr퉤n tr튼沼즨
+, l梳칛 휃梳톞 tr챗n 휃튼沼쓓g m횪 xe 척 t척... b沼?tr퉤n tr튼沼즨 do 휃튼沼쓓g 휃처ng b훱ng..."
+ },
+ {
+  "n": 888,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 111 ?곕줈援쎌? ?꾨줈?쒖? ?꾨갑 ?곕줈 援쎌? ?꾨줈?????二쇱쓽?쒖??대떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?111 l횪 bi沼긪 b찼o 휃튼沼쓓g cong sang 
+ph梳즜, l횪 bi沼긪 b찼o nguy hi沼긩 v沼?휃튼沼쓓g cong sang ph梳즜 ph챠a tr튼沼쌵."
+ },
+ {
+  "n": 890,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 洹쒖젣?쒖? 224. 理쒓퀬?띾룄?쒗븳?쒖? ?쒖??먯뿉 ?쒖떆???띾룄濡??먮룞李⑤벑??理쒓퀬?띾룄瑜?吏 ?뺥븯??寃껋씠?? ?ㅼ튂湲곗? 諛??μ냼???
+먮룞李??깆쓽 理쒓퀬?띾룄瑜??쒗븳?섎뒗 援ъ뿭, ?꾨줈??援ш컙 ?먮뒗 ?μ냼?댁쓽 ?꾩슂?? 吏???곗륫???ㅼ튂?쒕떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o quy ch梳?s沼?224. Bi沼긪 b찼o gi沼쌻 h梳죒 t沼멵 휃沼?t沼멼 
+휃a, quy 휃沼땙h t沼멵 휃沼?t沼멼 휃a c沼쬪 xe 척 t척... theo t沼멵 휃沼?ghi tr챗n bi沼긪 b찼o. Ti챗u chu梳쯰 v횪 휃沼땇 휃i沼긩 l梳칛 휃梳톞: l梳칛 휃梳톞 沼?b챗n 
+ph梳즜 휃i沼긩 c梳쬷 thi梳퓍 trong khu v沼켧, 휃o梳죒 휃튼沼쓓g ho梳톍 n퉤i gi沼쌻 h梳죒 t沼멵 휃沼?t沼멼 휃a c沼쬪 xe 척 t척..."
+ },
+ {
+  "n": 891,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 洹쒖젣?쒖? 201, ?듯뻾湲덉??쒖?濡?蹂댄뻾??肉??꾨땲??紐⑤뱺 李⑤쭏???듯뻾?????녿떎. ?꾨줈?? 援ш컙 ?먮뒗 ?μ냼???꾨줈??以묒븰 ?먮뒗
+ ?곗륫???ㅼ튂, ?듯뻾湲덉?援ш컙쨌湲곌컙 諛??댁쑀瑜?紐낆떆??蹂댁“?쒖?瑜?遺李㈑룹꽕移?媛??",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o quy ch梳?s沼?201, l횪 bi沼긪 b찼o c梳쩷 휃i l梳죍, kh척ng
+ ch沼?ng튼沼쓎 휃i b沼?m횪 m沼뛦 xe c沼?휃沼걏 kh척ng 휃튼沼즓 휃i l梳죍. L梳칛 휃梳톞 沼?gi沼칊 ho梳톍 b챗n ph梳즜 휃튼沼쓓g c沼쬪 휃o梳죒 ho梳톍 n퉤i tr챗n 휃튼沼쓓g, c
+처 th沼?g梳칗/l梳칛 th챗m bi沼긪 b찼o ph沼?ghi r천 휃o梳죒, th沼쓎 gian v횪 l첵 do c梳쩷 휃i l梳죍."
+ }
+]
+위치 줄:2 문자:151
++ ... translations/audit/queue/343_expl_vn.json' | ConvertFrom-Json; foreac ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+ exited 1 in 735ms:
+ConvertFrom-Json : 잘못된 개체가 전달되었습니다. ':' 또는 '}'가 필요합니다. (3031): [
+ {
+  "n": 871,
+  "ko_e": "?대떦 ?덉쟾?쒖???二쇱쓽?쒖?濡??꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6]???ㅼ튂洹쒖젙 諛??μ냼媛 洹쒖젙?섏뼱 ?덈떎. A ?쒖????≫뭾?? ?곕젮媛 ?덈뒗 吏????50誘명꽣 ?댁?
+ 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 137踰?. B ?쒖????곕꼸?낃뎄 ??50誘명꽣  ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 138踰?. C ?쒖????꾪뿕吏????5
+0誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫?? ?ㅼ튂?쒕떎(二쇱쓽?쒖? 140踰?. D ?쒖????곸뒿?뺤껜援ш컙 ??50誘명꽣?먯꽌 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 141踰?.",
+  "tr_e": "Bi沼긪 b찼o giao th척ng n횪y l횪 bi沼긪 b찼o nguy hi沼긩, c처 quy 휃沼땙h v沼?vi沼놻 l梳칛 휃梳톞 v횪 휃沼땇 휃i沼긩 t梳죍 Th척ng t튼 thi h횪nh
+ Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6]. Bi沼긪 A 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 gi처 ngang t沼?50 m챕t 휃
+梳퓆 200 m챕t (bi沼긪 b찼o nguy hi沼긩 s沼?137). Bi沼긪 B 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch c沼춁 h梳쬶 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 
+b찼o nguy hi沼긩 s沼?138). Bi沼긪 C 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch khu v沼켧 nguy hi沼긩 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 b찼o ngu
+y hi沼긩 s沼?140). Bi沼긪 D 휃튼沼즓 l梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃o梳죒 th튼沼쓓g xuy챗n 첫n t梳칌 t沼?50 m챕t 휃梳퓆 200 m챕t (bi沼긪 b찼o ngu
+y hi沼긩 s沼?141)."
+ },
+ {
+  "n": 872,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?≫뭾?쒖?(二쇱쓽?쒖? 137踰?, ?쇱깮?숇Ъ蹂댄샇?쒖?(二쇱쓽?쒖? 139踰?  ???ㅻⅤ留됯꼍?ы몴吏?  ?곸뒿?뺤껜援ш컙?쒖???二쇱쓽?쒖??대
+떎. ??李⑦룺?쒗븳?쒖?? 李④컙嫄곕━?뺣낫?쒖???洹쒖젣?쒖??대떎. ??끂硫댁쟾李⑥쟾?⑸룄濡쒗몴 吏? ?고쉶?꾨줈?쒖???吏?쒗몴吏?대떎. ??鍮꾨낫?몄쥖?뚯쟾?쒖?? 醫뚰쉶??諛??좏꽩?쒖???吏
+?쒗몴吏?대떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, Bi沼긪 b찼o gi처 ngang (bi沼긪 b찼o nguy hi沼긩 s沼?137), Bi沼긪 b
+찼o b梳즣 v沼?휃沼셬g v梳춗 hoang d찾 (bi沼긪 b찼o nguy hi沼긩 s沼?139). ??Bi沼긪 b찼o d沼멵 l챗n v횪 bi沼긪 b찼o 휃o梳죒 th튼沼쓓g xuy챗n 첫n t梳칌 l횪 bi沼
+긪 b찼o nguy hi沼긩. ??Bi沼긪 b찼o gi沼쌻 h梳죒 chi沼걏 r沼셬g xe v횪 bi沼긪 b찼o gi沼?kho梳즢g c찼ch gi沼칊 c찼c xe l횪 bi沼긪 b찼o c梳쩷/h梳죒 ch梳?(bi沼
+긪 b찼o quy ch梳?. ??Bi沼긪 b찼o 휃튼沼쓓g ri챗ng cho t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g v횪 bi沼긪 b찼o 휃튼沼쓓g v챵ng l횪 bi沼긪 b찼o hi沼뇎 l沼뇆h. ??Bi沼긪 b찼o 
+r梳?tr찼i kh척ng c처 휃챔n b梳즣 h沼?v횪 bi沼긪 b찼o r梳?tr찼i v횪 quay 휃梳쬾 (U-turn) l횪 bi沼긪 b찼o hi沼뇎 l沼뇆h."
+ },
+ {
+  "n": 873,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 130.?숈꽍?꾨줈?쒖?       - ?숈꽍?곕젮吏????30誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?130. Bi沼긪 b찼o 휃튼沼쓓g c처 휃찼 r퉤i - l梳칛 휃梳톞 沼?b챗n ph梳즜 
+휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i t沼?30 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 874,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 138??2.援먮웾?쒖? 援먮웾?댁엳?뚯쓣?뚮━??寃? 援먮웾???덈뒗 吏????50誘명꽣?먯꽌 200誘명꽣 ???꾨줈?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?138-2. Bi沼긪 b찼o c梳쬾. B찼o hi沼뇎 c처 c梳쬾, l梳칛 휃梳톞 沼?b챗n
+ ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 c梳쬾 t沼?50 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 875,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 123.以묒븰遺꾨━??쒖옉?쒖?",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?123. Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch gi沼칊."
+ },
+ {
+  "n": 876,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 119.?곗륫李⑤줈 ?놁뼱吏??몃룄 2李⑤줈 ?댁긽???꾨줈?먯꽌 ?곗륫李⑤줈媛 ?놁뼱吏????ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?119. M梳쩿 l횪n 휃튼沼쓓g b챗n ph梳즜. L梳칛 휃梳톞 khi l횪n 휃튼沼쓓g 
+b챗n ph梳즜 bi梳퓆 m梳쩿 tr챗n 휃튼沼쓓g m沼셳 chi沼걏 c처 t沼?2 l횪n tr沼?l챗n."
+ },
+ {
+  "n": 877,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 123.以묒븰遺꾨━? ?쒖옉?쒖? 以묒븰遺꾨━?媛?쒖옉?⑥쓣 ?뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?123. Bi沼긪 b찼o b梳칣 휃梳쬾 d梳즜 ph창n c찼ch gi沼칊. B찼o hi沼뇎 
+d梳즜 ph창n c찼ch gi沼칊 b梳칣 휃梳쬾."
+ },
+ {
+  "n": 878,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 128.?몃㈃怨좊Ⅴ吏紐삵븿?쒖? ?몃㈃?닿퀬瑜댁?紐삵븿?꾩븣由щ뒗 寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?128. Bi沼긪 b찼o m梳톞 휃튼沼쓓g kh척ng b梳켷g ph梳쿻g. B찼o hi沼뇎 
+m梳톞 휃튼沼쓓g kh척ng b梳켷g ph梳쿻g."
+ },
+ {
+  "n": 879,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 134.?먯쟾嫄고몴吏 ?먯쟾嫄??듯뻾??留롮? 吏?먯씠 ?덉쓬???뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?134. Bi沼긪 b찼o xe 휃梳죖. B찼o hi沼뇎 c처 휃i沼긩 nhi沼걏 xe 휃梳죖
+ 휃i l梳죍."
+ },
+ {
+  "n": 880,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 116.?ㅻⅤ留됯꼍?ы몴吏 ?ㅻⅤ留됯꼍?ш? ?덉쓬???뚮━??寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6. S沼?116. Bi沼긪 b찼o d沼멵 l챗n. B찼o hi沼뇎 c처 d沼멵 l챗n."
+ },
+ {
+  "n": 881,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 泥좉만嫄대꼸紐⑺몴吏(二쇱쓽?쒖떆 110踰? 泥좉만嫄대꼸紐⑹씠?덉쓬???뚮━??寃?",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6] Bi沼긪 b찼o 휃튼沼쓓g ngang qua 휃튼沼쓓g s梳칣 (bi沼긪 b찼o nguy hi沼
+긩 s沼?110). B찼o hi沼뇎 c처 휃튼沼쓓g ngang qua 휃튼沼쓓g s梳칣."
+ },
+ {
+  "n": 882,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?? 媛쒕퀎湲곗?. 1.二쇱쓽?쒖? 106踰? ?곗꽑?꾨줈?먯꽌 ?곗꽑?꾨줈媛 ?꾨땶 ?꾨줈? 援먯감?섎뒗 寃쎌슦",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6 ?? Ti챗u chu梳쯰 ri챗ng. 1. Bi沼긪 b찼o nguy hi沼긩 s沼?106, tr튼沼
+쓓g h沼즤 휃튼沼쓓g 튼u ti챗n giao c梳칣 v沼쌻 휃튼沼쓓g kh척ng ph梳즜 휃튼沼쓓g 튼u ti챗n."
+ },
+ {
+  "n": 883,
+  "ko_e": "A???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6], ?숈꽍?꾨줈?쒖?(二쇱쓽?쒖? 130踰?. ?숈꽍???곕젮媛 ?덈뒗 吏?먯뿉 ?ㅼ튂?쒕떎. ?숈꽍 ?곕젮 吏????30誘명꽣 ?댁? 200誘명
+꽣???꾨줈?곗륫???ㅼ튂?쒕떎.          B???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6], 鍮꾪뻾湲고몴吏(二쇱쓽?쒖? 136踰?. 鍮꾪뻾?μ쓽 鍮꾪뻾湲??댁갑瑜?諛⑺뼢??洹쇱젒???꾨줈??          
+ ?ㅼ튂?쒕떎. 鍮꾪뻾湲??댁갑瑜?吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫???ㅼ튂?쒕떎.",
+  "tr_e": "A l횪 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6], Bi沼긪 b찼o 휃튼沼쓓g c처 휃찼 r퉤i (bi沼긪 b찼o nguy hi沼긩 s沼
+?130). L梳칛 휃梳톞 t梳죍 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i. L梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c처 nguy c퉤 휃찼 r퉤i t沼?30 m챕t 휃梳퓆 200 m챕t.
+ B l횪 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[ph沼?l沼쩭 6], Bi沼긪 b찼o m찼y bay (bi沼긪 b찼o nguy hi沼긩 s沼?136). L梳칛 휃梳톞 tr챗
+n 휃튼沼쓓g g梳쬷 v沼쌻 h튼沼썀g c梳쩿/h梳?c찼nh c沼쬪 m찼y bay t梳죍 s창n bay. L梳칛 휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch 휃i沼긩 c梳쩿/h梳?c찼nh c沼쬪 m찼y bay 
+t沼?50 m챕t 휃梳퓆 200 m챕t."
+ },
+ {
+  "n": 884,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 媛뺣??꾨줈?쒖?(二쇱쓽?쒖? 127踰? ?꾨줈???쇰???媛뺣??ㅽ빐蹂?ㅺ퀎怨〓벑 異붾씫 ?꾪뿕吏??엫????由щ뒗 寃껋씠??",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, Bi沼긪 b찼o 휃튼沼쓓g ven s척ng (bi沼긪 b찼o nguy hi沼긩 s沼?127). B
+찼o hi沼뇎 m沼셳 b챗n c沼쬪 휃튼沼쓓g l횪 khu v沼켧 nguy hi沼긩 r퉤i/ng찾 nh튼 b沼?s척ng, b沼?bi沼긪, khe n첬i..."
+ },
+ {
+  "n": 885,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 122 ?묒륫諛⑺넻?됲몴吏濡??숈씪諛⑺뼢?듯뻾?꾨줈?먯꽌?묒륫諛⑹쑝濡쒗넻?됲븯?ъ빞?좎? ?먯씠?덉쓬?꾩븣由щ뒗寃?,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?122 l횪 bi沼긪 b찼o 휃i l梳죍 hai b챗n, 
+b찼o hi沼뇎 c처 휃i沼긩 ph梳즜 휃i l梳죍 theo hai b챗n tr챗n 휃튼沼쓓g 휃i c첫ng chi沼걏."
+ },
+ {
+  "n": 886,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 109 ?뚯쟾?뺢탳李⑤줈?쒖?濡?援먯감濡???30誘명꽣?먯꽌 120誘명꽣???꾨줈 ?곗륫???ㅼ튂",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?109 l횪 bi沼긪 b찼o v챵ng xuy梳퓆, l梳칛 
+휃梳톞 沼?b챗n ph梳즜 휃튼沼쓓g, c찼ch giao l沼?t沼?30 m챕t 휃梳퓆 120 m챕t."
+ },
+ {
+  "n": 887,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 126 誘몃걚?ъ슫 ?꾨줈?쒖?濡??꾨줈 寃곕튃 ?깆뿉 ?섑빐 ?먮룞李⑤벑??誘몃걚?ъ슫 ?꾨줈?? ?ㅼ튂?쒕떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?126 l횪 bi沼긪 b찼o 휃튼沼쓓g tr퉤n tr튼沼즨
+, l梳칛 휃梳톞 tr챗n 휃튼沼쓓g m횪 xe 척 t척... b沼?tr퉤n tr튼沼즨 do 휃튼沼쓓g 휃처ng b훱ng..."
+ },
+ {
+  "n": 888,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 111 ?곕줈援쎌? ?꾨줈?쒖? ?꾨갑 ?곕줈 援쎌? ?꾨줈?????二쇱쓽?쒖??대떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o nguy hi沼긩 s沼?111 l횪 bi沼긪 b찼o 휃튼沼쓓g cong sang 
+ph梳즜, l횪 bi沼긪 b찼o nguy hi沼긩 v沼?휃튼沼쓓g cong sang ph梳즜 ph챠a tr튼沼쌵."
+ },
+ {
+  "n": 890,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 洹쒖젣?쒖? 224. 理쒓퀬?띾룄?쒗븳?쒖? ?쒖??먯뿉 ?쒖떆???띾룄濡??먮룞李⑤벑??理쒓퀬?띾룄瑜?吏 ?뺥븯??寃껋씠?? ?ㅼ튂湲곗? 諛??μ냼???
+먮룞李??깆쓽 理쒓퀬?띾룄瑜??쒗븳?섎뒗 援ъ뿭, ?꾨줈??援ш컙 ?먮뒗 ?μ냼?댁쓽 ?꾩슂?? 吏???곗륫???ㅼ튂?쒕떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o quy ch梳?s沼?224. Bi沼긪 b찼o gi沼쌻 h梳죒 t沼멵 휃沼?t沼멼 
+휃a, quy 휃沼땙h t沼멵 휃沼?t沼멼 휃a c沼쬪 xe 척 t척... theo t沼멵 휃沼?ghi tr챗n bi沼긪 b찼o. Ti챗u chu梳쯰 v횪 휃沼땇 휃i沼긩 l梳칛 휃梳톞: l梳칛 휃梳톞 沼?b챗n 
+ph梳즜 휃i沼긩 c梳쬷 thi梳퓍 trong khu v沼켧, 휃o梳죒 휃튼沼쓓g ho梳톍 n퉤i gi沼쌻 h梳죒 t沼멵 휃沼?t沼멼 휃a c沼쬪 xe 척 t척..."
+ },
+ {
+  "n": 891,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 洹쒖젣?쒖? 201, ?듯뻾湲덉??쒖?濡?蹂댄뻾??肉??꾨땲??紐⑤뱺 李⑤쭏???듯뻾?????녿떎. ?꾨줈?? 援ш컙 ?먮뒗 ?μ냼???꾨줈??以묒븰 ?먮뒗
+ ?곗륫???ㅼ튂, ?듯뻾湲덉?援ш컙쨌湲곌컙 諛??댁쑀瑜?紐낆떆??蹂댁“?쒖?瑜?遺李㈑룹꽕移?媛??",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?ph沼?l沼쩭 6, bi沼긪 b찼o quy ch梳?s沼?201, l횪 bi沼긪 b찼o c梳쩷 휃i l梳죍, kh척ng
+ ch沼?ng튼沼쓎 휃i b沼?m횪 m沼뛦 xe c沼?휃沼걏 kh척ng 휃튼沼즓 휃i l梳죍. L梳칛 휃梳톞 沼?gi沼칊 ho梳톍 b챗n ph梳즜 휃튼沼쓓g c沼쬪 휃o梳죒 ho梳톍 n퉤i tr챗n 휃튼沼쓓g, c
+처 th沼?g梳칗/l梳칛 th챗m bi沼긪 b찼o ph沼?ghi r천 휃o梳죒, th沼쓎 gian v횪 l첵 do c梳쩷 휃i l梳죍."
+ }
+]
+위치 줄:2 문자:151
++ ... translations/audit/queue/343_expl_vn.json' | ConvertFrom-Json; foreac ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -Encoding UTF8 -LiteralPath 'translations/audit/queue/343_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 514ms:
+[
+ {
+  "n": 871,
+  "ko_e": "해당 안전표지는 주의표지로 도로교통법 시행규칙 [별표6]에 설치규정 및 장소가 규정되어 있다. A 표지는 횡풍의  우려가 있는 지점 전 50미터 내지 200미터의 도로우측에 설치한다(주의표지 137번). B 표지는 터널입구 전 50미터  내지 200미터의 도로우측에 설치한다(주의표지 138번). C 표지는 위험지역 전 50미터 내지 200미터의 도로우측에  설치한다(주의표지 140번). D 표지는 상습정체구간 전 50미터에서 200미터의 도로우측에 설치한다(주의표지 141번).",
+  "tr_e": "Biển báo giao thông này là biển báo nguy hiểm, có quy định về việc lắp đặt và địa điểm tại Thông tư thi hành Luật Giao thông đường bộ [phụ lục 6]. Biển A được lắp đặt ở bên phải đường, cách điểm có nguy cơ gió ngang từ 50 mét đến 200 mét (biển báo nguy hiểm số 137). Biển B được lắp đặt ở bên phải đường, cách cửa hầm từ 50 mét đến 200 mét (biển báo nguy hiểm số 138). Biển C được lắp đặt ở bên phải đường, cách khu vực nguy hiểm từ 50 mét đến 200 mét (biển báo nguy hiểm số 140). Biển D được lắp đặt ở bên phải đường, cách đoạn thường xuyên ùn tắc từ 50 mét đến 200 mét (biển báo nguy hiểm số 141)."
+ },
+ {
+  "n": 872,
+  "ko_e": "도로교통법 시행규칙 별표6, 횡풍표지(주의표지 137번), 야생동물보호표지(주의표지 139번)  ① 오르막경사표지와  상습정체구간표지는 주의표지이다. ② 차폭제한표지와 차간거리확보표지는 규제표지이다. ③노면전차전용도로표 지와 우회도로표지는 지시표지이다. ④ 비보호좌회전표지와 좌회전 및 유턴표지는 지시표지이다.",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6, Biển báo gió ngang (biển báo nguy hiểm số 137), Biển báo bảo vệ động vật hoang dã (biển báo nguy hiểm số 139). ① Biển báo dốc lên và biển báo đoạn thường xuyên ùn tắc là biển báo nguy hiểm. ② Biển báo giới hạn chiều rộng xe và biển báo giữ khoảng cách giữa các xe là biển báo cấm/hạn chế (biển báo quy chế). ③ Biển báo đường riêng cho tàu điện mặt đường và biển báo đường vòng là biển báo hiệu lệnh. ④ Biển báo rẽ trái không có đèn bảo hộ và biển báo rẽ trái và quay đầu (U-turn) là biển báo hiệu lệnh."
+ },
+ {
+  "n": 873,
+  "ko_e": "도로교통법 시행규칙 별표 6. 130.낙석도로표지       - 낙석우려지점 전 30미터 내지 200미터의 도로 우측에 설치",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6. Số 130. Biển báo đường có đá rơi - lắp đặt ở bên phải đường, cách điểm có nguy cơ đá rơi từ 30 mét đến 200 mét."
+ },
+ {
+  "n": 874,
+  "ko_e": "도로교통법 시행규칙 별표 6. 138의 2.교량표지 교량이있음을알리는 것, 교량이 있는 지점 전 50미터에서 200미터 의 도로우측에 설치",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6. Số 138-2. Biển báo cầu. Báo hiệu có cầu, lắp đặt ở bên phải đường, cách điểm có cầu từ 50 mét đến 200 mét."
+ },
+ {
+  "n": 875,
+  "ko_e": "도로교통법 시행규칙 별표 6. 123.중앙분리대시작표지",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6. Số 123. Biển báo bắt đầu dải phân cách giữa."
+ },
+ {
+  "n": 876,
+  "ko_e": "도로교통법 시행규칙 별표 6. 119.우측차로 없어짐 편도 2차로 이상의 도로에서 우측차로가 없어질 때 설치",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6. Số 119. Mất làn đường bên phải. Lắp đặt khi làn đường bên phải biến mất trên đường một chiều có từ 2 làn trở lên."
+ },
+ {
+  "n": 877,
+  "ko_e": "도로교통법 시행규칙 별표 6. 123.중앙분리대 시작표지 중앙분리대가시작됨을 알리는 것",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6. Số 123. Biển báo bắt đầu dải phân cách giữa. Báo hiệu dải phân cách giữa bắt đầu."
+ },
+ {
+  "n": 878,
+  "ko_e": "도로교통법 시행규칙 별표 6. 128.노면고르지못함표지 노면이고르지못함을알리는 것",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6. Số 128. Biển báo mặt đường không bằng phẳng. Báo hiệu mặt đường không bằng phẳng."
+ },
+ {
+  "n": 879,
+  "ko_e": "도로교통법 시행규칙 별표 6. 134.자전거표지 자전거 통행이 많은 지점이 있음을 알리는 것",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6. Số 134. Biển báo xe đạp. Báo hiệu có điểm nhiều xe đạp đi lại."
+ },
+ {
+  "n": 880,
+  "ko_e": "도로교통법 시행규칙 별표 6. 116.오르막경사표지 오르막경사가 있음을 알리는 것",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6. Số 116. Biển báo dốc lên. Báo hiệu có dốc lên."
+ },
+ {
+  "n": 881,
+  "ko_e": "도로교통법 시행규칙 [별표6] 철길건널목표지(주의표시 110번) 철길건널목이있음을 알리는 것.",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ [phụ lục 6] Biển báo đường ngang qua đường sắt (biển báo nguy hiểm số 110). Báo hiệu có đường ngang qua đường sắt."
+ },
+ {
+  "n": 882,
+  "ko_e": "도로교통법 시행규칙 별표6 Ⅱ. 개별기준. 1.주의표지 106번, 우선도로에서 우선도로가 아닌 도로와 교차하는 경우",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6 Ⅱ. Tiêu chuẩn riêng. 1. Biển báo nguy hiểm số 106, trường hợp đường ưu tiên giao cắt với đường không phải đường ưu tiên."
+ },
+ {
+  "n": 883,
+  "ko_e": "A는 도로교통법 시행규칙 [별표6], 낙석도로표지(주의표지 130번). 낙석의 우려가 있는 지점에 설치한다. 낙석 우려 지점 전 30미터 내지 200미터의 도로우측에 설치한다.          B는 도로교통법 시행규칙 [별표6], 비행기표지(주의표지 136번). 비행장의 비행기 이착륙 방향에 근접한 도로에            설치한다. 비행기 이착륙 지점 전 50미터 내지 200미터의 도로 우측에 설치한다.",
+  "tr_e": "A là Thông tư thi hành Luật Giao thông đường bộ [phụ lục 6], Biển báo đường có đá rơi (biển báo nguy hiểm số 130). Lắp đặt tại điểm có nguy cơ đá rơi. Lắp đặt ở bên phải đường, cách điểm có nguy cơ đá rơi từ 30 mét đến 200 mét. B là Thông tư thi hành Luật Giao thông đường bộ [phụ lục 6], Biển báo máy bay (biển báo nguy hiểm số 136). Lắp đặt trên đường gần với hướng cất/hạ cánh của máy bay tại sân bay. Lắp đặt ở bên phải đường, cách điểm cất/hạ cánh của máy bay từ 50 mét đến 200 mét."
+ },
+ {
+  "n": 884,
+  "ko_e": "도로교통법 시행규칙 별표6, 강변도로표지(주의표지 127번) 도로의 일변이 강변․해변․계곡등 추락 위험지역임을 알 리는 것이다.",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6, Biển báo đường ven sông (biển báo nguy hiểm số 127). Báo hiệu một bên của đường là khu vực nguy hiểm rơi/ngã như bờ sông, bờ biển, khe núi..."
+ },
+ {
+  "n": 885,
+  "ko_e": "도로교통법 시행규칙 별표6, 주의표지 122 양측방통행표지로 동일방향통행도로에서양측방으로통행하여야할지 점이있음을알리는것",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6, biển báo nguy hiểm số 122 là biển báo đi lại hai bên, báo hiệu có điểm phải đi lại theo hai bên trên đường đi cùng chiều."
+ },
+ {
+  "n": 886,
+  "ko_e": "도로교통법 시행규칙 별표6, 주의표지 109 회전형교차로표지로 교차로 전 30미터에서 120미터의 도로 우측에 설치",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6, biển báo nguy hiểm số 109 là biển báo vòng xuyến, lắp đặt ở bên phải đường, cách giao lộ từ 30 mét đến 120 mét."
+ },
+ {
+  "n": 887,
+  "ko_e": "도로교통법 시행규칙 별표6, 주의표지 126 미끄러운 도로표지로 도로 결빙 등에 의해 자동차등이 미끄러운 도로에  설치한다.",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6, biển báo nguy hiểm số 126 là biển báo đường trơn trượt, lắp đặt trên đường mà xe ô tô... bị trơn trượt do đường đóng băng..."
+ },
+ {
+  "n": 888,
+  "ko_e": "도로교통법 시행규칙 별표6, 주의표지 111 우로굽은 도로표지 전방 우로 굽은 도로에 대한 주의표지이다.",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6, biển báo nguy hiểm số 111 là biển báo đường cong sang phải, là biển báo nguy hiểm về đường cong sang phải phía trước."
+ },
+ {
+  "n": 890,
+  "ko_e": "도로교통법 시행규칙 별표6, 규제표지 224. 최고속도제한표지 표지판에 표시한 속도로 자동차등의 최고속도를 지 정하는 것이다. 설치기준 및 장소는 자동차 등의 최고속도를 제한하는 구역, 도로의 구간 또는 장소내의 필요한  지점 우측에 설치한다.",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6, biển báo quy chế số 224. Biển báo giới hạn tốc độ tối đa, quy định tốc độ tối đa của xe ô tô... theo tốc độ ghi trên biển báo. Tiêu chuẩn và địa điểm lắp đặt: lắp đặt ở bên phải điểm cần thiết trong khu vực, đoạn đường hoặc nơi giới hạn tốc độ tối đa của xe ô tô..."
+ },
+ {
+  "n": 891,
+  "ko_e": "도로교통법 시행규칙 별표6, 규제표지 201, 통행금지표지로 보행자 뿐 아니라 모든 차마는 통행할 수 없다. 도로의  구간 또는 장소의 도로의 중앙 또는 우측에 설치, 통행금지구간·기간 및 이유를 명시한 보조표지를 부착·설치 가능.",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ phụ lục 6, biển báo quy chế số 201, là biển báo cấm đi lại, không chỉ người đi bộ mà mọi xe cộ đều không được đi lại. Lắp đặt ở giữa hoặc bên phải đường của đoạn hoặc nơi trên đường, có thể gắn/lắp thêm biển báo phụ ghi rõ đoạn, thời gian và lý do cấm đi lại."
+ }
+]
+
+codex
+[{"n":885,"field":"e","severity":"major","issue":"‘양방향 통행(도로가 일방통행에서 양방향 통행으로 바뀜)’을 ‘양쪽으로 통행’이라고 오역하여 표지의 의미를 잘못 이해하게 한다.","suggestion":"Thông tư thi hành Luật Giao thông đường bộ, Phụ lục 6: Biển báo nguy hiểm số 122 là biển báo giao thông hai chiều, báo hiệu đoạn đường một chiều phía trước chuyển thành đường hai chiều."}]
+tokens used
+26,555
+[{"n":885,"field":"e","severity":"major","issue":"‘양방향 통행(도로가 일방통행에서 양방향 통행으로 바뀜)’을 ‘양쪽으로 통행’이라고 오역하여 표지의 의미를 잘못 이해하게 한다.","suggestion":"Thông tư thi hành Luật Giao thông đường bộ, Phụ lục 6: Biển báo nguy hiểm số 122 là biển báo giao thông hai chiều, báo hiệu đoạn đường một chiều phía trước chuyển thành đường hai chiều."}]

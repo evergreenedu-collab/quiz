@@ -1,0 +1,249 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12854-8e43-7e83-a47f-eb2c9a8ef3fa
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/340_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/340_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 521ms:
+[
+ {
+  "n": 807,
+  "ko_e": "洹몃┝ 援먯감濡쒖뿉??李⑥쓽 ?좏샇?깆씠 ?ㅼ튂?섏뼱 ?댁쁺?섍퀬 ?덉쑝???욎そ ?〓떒蹂대룄???좏샇?깆씠 ?녿뒗 ?곹깭?대떎. 李⑥쓽 ?좏샇?? 醫뚰쉶???뱀깋?붿궡?쒖떆媛 ?깊솕?섏뼱 ?댁쟾?먮뒗 ?뱀깋?붿궡?쒓린媛 媛由ы궎??諛⑺뼢?쇰줈 吏꾪뻾?????덈떎. 洹몃윭???좏샇?깆씠  ?녿뒗 ?〓떒蹂대룄???〓떒?섎뒗 ?щ엺???덇퀬 ?〓떒?섎젮???щ엺???덉쑝誘濡??대윴 ?곹솴?먯꽌???뺤????욎そ?먯꽌 ?湲고븯硫? ?〓떒蹂대룄??蹂댄뻾?먭? ?덉쟾?섍쾶 ?〓떒???뚭퉴吏 ?湲고븯?ъ빞 ?쒕떎.",
+  "tr_e": "The intersection in the figure has vehicle traffic lights installed and in operation, but the crosswalk ahead has no traffic light. The vehicle signal is a green left-turn arrow, so the driver may proceed in the direction the green arrow indicates. However, since there is a person crossing and a person intending to cross at the crosswalk without a traffic light, in such a situation one must wait before the stop line until the pedestrians at the crosswalk cross safely."
+ },
+ {
+  "n": 808,
+  "ko_e": "二쇱뼱吏??곹솴?먯꽌 媛???꾪뿕???곹솴?쇰줈??泥レ㎏, ?숈씪諛⑺뼢 ?꾨갑 ?ㅻⅨ履쎌쑝濡?移섏슦爾??듯뻾以묒씤 ?꾨룞?λ낫???댁쟾?먮뒗 ?욎そ 蹂댄뻾?먯? 異⑸룎???쇳븯湲??꾪븯???쇱そ?쇰줈 ?대룞?섏뿬 ?듯뻾?????덈떎. ?대윭???꾨룞?λ낫?쒖쓽 ?됰룞???덉륫?섏? 紐삵븯怨??욎そ 怨듦컙?쇰줈 媛?랁븯???듯뻾?섎뒗 寃쎌슦 援먰넻?ш퀬媛 ?쎄쾶 諛쒖깮?????덈떎. ?섏㎏, ?ㅻⅨ履쎌쑝濡??듯뻾?섍퀬 ?덈뒗 蹂댄뻾?먮뒗 ?〓떒?쒖꽕???녿뒗 怨녹뿉???쎄쾶 ?〓떒???섎뒗 寃쏀뼢???덈떎. ?곕씪???대㈃?꾨줈瑜??듯뻾?섎뒗 寃쎌슦 臾대━?섍쾶 媛???섍굅???욎そ ?먮뒗 ?ㅻⅨ履쎌뿉 ?덈뒗 援먰넻李몄뿬?먭? ??긽 ?숈씪???대룞諛⑺뼢?깆쓣 媛吏?寃껋쑝濡??덉륫?섎뒗 寃껋? 援먰넻?ш퀬??諛⑹뿉 遺덈━?섎떎 ?섍쿋??",
+  "tr_e": "The most dangerous situations in the given scenario are as follows. First, the e-scooter (electric kickboard) rider traveling ahead in the same direction, veered to the right, may move to the left to avoid a collision with a pedestrian ahead. If one fails to predict this behavior of the e-scooter and accelerates into the space ahead, a traffic accident can easily occur. Second, the pedestrian traveling on the right tends to cross easily where there is no crossing facility. Therefore, when traveling on a back road, forcibly accelerating or predicting that the traffic participants ahead or on the right will always maintain the same direction of motion is disadvantageous for preventing traffic accidents."
+ },
+ {
+  "n": 809,
+  "ko_e": "?꾨줈援먰넻踰???3議????? 李⑤쭏???댁쟾?먮뒗 ?꾨줈(蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌??李⑤룄瑜?留먰븳????以묒븰(以묒븰?????ㅼ튂?섏뼱 ?덈뒗 寃쎌슦?먮뒗 洹?以묒븰?좎쓣 留먰븳?? ?댄븯 媛숇떎) ?곗륫 遺遺꾩쓣 ?듯뻾?섏뿬???쒕떎. ????李⑤쭏???댁쟾?먮뒗 ????뿉??遺덇뎄?섍퀬 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 寃쎌슦?먮뒗 ?꾨줈??以묒븰?대굹 醫뚯륫 遺遺꾩쓣 ?듯뻾?????덈떎. 1. ?꾨줈媛 ?쇰갑?듯뻾??寃쎌슦 2. ?꾨줈???뚯넀, ?꾨줈怨듭궗??洹?諛뽰쓽 ?μ븷 ?깆쑝濡??꾨줈???곗륫 遺遺꾩쓣 ?듯뻾?????녿뒗 寃쎌슦 3. ?꾨줈 ?곗륫 遺遺꾩쓽 ??씠 6誘명꽣媛 ?섏? ?꾨땲?섎뒗 ?꾨줈?먯꽌 ?ㅻⅨ 李⑤? ?욎?瑜대젮??寃쎌슦. ?ㅻ쭔, ?ㅼ쓬 媛?紐⑹쓽 ?대뒓 ?섎굹???대떦?섎뒗 寃쎌슦?먮뒗 洹몃윭?섏? ?꾨땲?섎떎. 媛. ?꾨줈??醫뚯륫 遺遺꾩쓣 ?뺤씤?????녿뒗 寃쎌슦 ?? 諛섎? 諛⑺뼢??援먰넻??諛⑺빐???곕젮媛 ?덈뒗 寃쎌슦 ?? ?덉쟾?쒖? ?깆쑝濡??욎?瑜닿린瑜?湲덉??섍굅???쒗븳?섍퀬 ?덈뒗 寃쎌슦 4. ?꾨줈 ?곗륫 遺遺꾩쓽 ??씠 李⑤쭏???듯뻾??異⑸텇?섏? ?꾨땲??寃쎌슦 5. 媛?뚮Ⅸ 鍮꾪깉湲몄쓽 援щ??ъ쭊 怨녹뿉??援먰넻???꾪뿕??諛⑹??섍린 ?꾪븯???쒌냽?꾧꼍李곗껌?μ씠 ?꾩슂?섎떎怨??몄젙?섏뿬 援ш컙 諛??듯뻾諛⑸쾿??吏?뺥븯怨??덈뒗 寃쎌슦??洹?吏?뺤뿉 ?곕씪 ?듯뻾?섎뒗 寃쎌슦. ?띻린怨??댁쟾?먮뒗 ?섏떊?몃? ?????덈뒗 ?щ엺???꾨땲?? ?꾨줈瑜??듯뻾?섎뒗 寃쎌슦 ?먮┛ ?띾룄濡??듯뻾?섍퀬 ?덈뒗 ?붾Ъ?먮룞 李? ?뱀닔?먮룞李?洹몃━怨??띻린怨??깆쓽 ?댁쟾?먭? ?섍렇???욎쭏?ъ꽌 媛?몄슂?숇씪???섎?濡??먯쭞???섎뒗 寃쎌슦媛 ?덉쑝?? ???뚯쓽 ?먯쭞? ?섏떊?멸? ?꾨땲??",
+  "tr_e": "Road Traffic Act Article 13 Paragraph 3. The driver of a vehicle must travel on the right portion of the road (on a road where the sidewalk and roadway are separated, the roadway) with respect to its center (where a center line is installed, the center line; the same applies hereinafter). Paragraph 4. Notwithstanding Paragraph 3, the driver of a vehicle may travel on the center or left portion of the road in any of the following cases: 1. When the road is one-way. 2. When it is impossible to travel on the right portion of the road due to road damage, road construction, or other obstacles. 3. When overtaking another vehicle on a road where the width of the right portion is less than 6 meters. However, this does not apply in any of the following cases: (a) When the left portion of the road cannot be checked; (b) When there is a risk of obstructing traffic from the opposite direction; (c) When overtaking is prohibited or restricted by a traffic sign, etc. 4. When the width of the right portion of the road is insufficient for the passage of the vehicle. 5. When traveling in accordance with the designation of the section and method of passage designated by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent traffic danger at a curve on a steep hill. A farm-machinery operator is not a person who can give hand signals. When traveling on the road, drivers of trucks, special vehicles, or farm machinery moving at slow speed sometimes gesture to mean \"just go ahead and pass,\" but this gesture is not a hand signal."
+ },
+ {
+  "n": 810,
+  "ko_e": "?뚯쟾援먯감濡쒖뿉?쒕뒗 ?뚯쟾??吏꾩엯蹂대떎 ?곗꽑?대?濡???긽 ?묐낫?섎뒗 ?댁쟾?먯꽭媛 ?꾩슂?섎ŉ ?뚯쟾??二쇰?李⑤웾怨??덉쟾嫄곕━  ?좎?? ?쒗뻾?섎뒗 寃껋씠 以묒슂?섎떎. 利? ?뚯쟾援먯감濡쒖뿉?쒕뒗 吏꾩엯?섎젮??李⑤웾???대? ?뚯쟾?섍퀬 ?덈뒗 李⑤웾??吏꾨줈瑜??묐낫 ?댁빞 ?쒕떎. ?먰븳 吏꾩엯 ?쒖뿉???쒗뻾?섍굅???꾩슂??寃쎌슦 ?쇱떆?뺤??댁빞 ?섎ŉ, ?뚯쟾 李⑤웾???듯뻾??諛⑺빐?섏? ?딅룄濡? ?댁빞 ?쒕떎(??. 諛섎?濡?吏꾩엯李⑤웾???곗꽑?대씪??二쇱옣(????怨?二쇰? 李⑤웾???댄뵾吏 ?딅뒗 ?댁쟾(??? 紐⑤몢 ?덉쟾?섏?  紐삵븳 ?댁쟾諛⑸쾿?대떎. ?곕씪???뺣떟? ?좉낵 ?≪씠??",
+  "tr_e": "At a roundabout, circulating vehicles have priority over entering ones, so a yielding driving attitude is always needed, and when circulating it is important to maintain a safe distance from surrounding vehicles and to slow down. That is, at a roundabout, a vehicle intending to enter must yield the way to a vehicle already circulating. Also, when entering, one must slow down or, if necessary, come to a complete stop, and must not obstruct the passage of circulating vehicles (??. Conversely, the claim that entering vehicles have priority (?? ?? and driving without looking out for surrounding vehicles (?? are all unsafe driving methods. Therefore, the correct answers are ??and ??"
+ },
+ {
+  "n": 811,
+  "ko_e": "?쒖떆???곹솴?먯꽌 寃????뱀슜李⑤뒗 ?꾨줈援먰넻踰???8議??좏꽩湲덉??꾨컲???섍퀬 ?덈떎. 寃????뱀슜李⑤뒗 ?꾪눜?깆씠 ?깊솕 ?섍퀬 ?덈뒗 ?곹깭?대?濡??뚯쟾諛섍꼍???뺣낫?섍린 ?꾪븳 ?꾪눜?됰룞???덉륫?????덈떎. ?곕씪???댁쟾?먮뒗 ?꾪눜?깆씠 ?먮벑?? ?먮룞李⑤? 諛쒓껄?섎㈃ 二쇱쓽?섎뒗 ?숈떆???쒗뻾 ?먮뒗 ?뺤??섏뿬???쒕떎. ?ㅻⅨ履?李⑤줈(2李⑤줈)?먯꽌 ?듯뻾以묒씤 ?대쪣李⑥쓽 ?댁쟾 ?먮뒗 ?욎そ ?듯뻾??諛⑺빐?쒕떎???먮떒???섎뒗 寃쎌슦 ?쇱そ?쇰줈 吏꾨줈蹂寃쏀븷 媛?μ꽦???믩떎. ?대윭??寃쎌슦 ?ㅻⅨ履쎌쓽 ?대쪣李????밸퀎??二쇱쓽???꾩슂?깆씠 ?덈떎.",
+  "tr_e": "In the situation given, the black passenger car is committing a U-turn prohibition violation under Road Traffic Act Article 18. Since the black passenger car has its reversing lights on, reversing behavior to secure a turning radius can be predicted. Therefore, when a driver spots a car with its reversing lights on, one must be careful and at the same time slow down or stop. If the motorcycle rider traveling in the right lane (second lane) judges that passage ahead is obstructed, there is a high possibility of changing lanes to the left. In such a case, there is a need to be especially careful of the motorcycle on the right."
+ },
+ {
+  "n": 812,
+  "ko_e": "??1議??대┛?댄넻?숇쾭?ㅼ쓽 ?밸퀎蹂댄샇) ???대┛?댄넻?숇쾭?ㅺ? ?꾨줈???뺤감?섏뿬 ?대┛?대굹 ?곸쑀?꾧? ?怨??대━??以묒엫???쒖떆?섎뒗 ?먮㈇???깆쓽 ?μ튂瑜??묐룞 以묒씪 ?뚯뿉???대┛?댄넻?숇쾭?ㅺ? ?뺤감??李⑤줈? 洹?李⑤줈??諛붾줈 ??李⑤줈濡??듯뻾?섎뒗 李⑥쓽 ?댁쟾?먮뒗 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎.??????쓽 寃쎌슦 以묒븰?좎씠 ?ㅼ튂?섏? ?꾨땲???꾨줈? ?몃룄 1李⑤줈???꾨줈?먯꽌??諛섎?諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?먮룄 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎.??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜????곹깭濡??꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜댁? 紐삵븳??",
+  "tr_e": "Article 51 (Special Protection of School Buses) (1) When a school bus has stopped on the road and is operating a device such as flashing lights indicating that children or infants are getting on or off, the driver of a vehicle traveling in the lane where the school bus has stopped and in the lane immediately next to it must come to a complete stop before reaching the school bus, confirm safety, and then slow down. (2) In the case of Paragraph 1, on a road without a center line and on a road with one lane each way, the driver of a vehicle proceeding from the opposite direction must also come to a complete stop before reaching the school bus, confirm safety, and then slow down. (3) The driver of every vehicle must not overtake a school bus that is traveling on the road displaying the indication that it is carrying children or infants."
+ },
+ {
+  "n": 813,
+  "ko_e": "?쒖떆??援먯감濡쒕뒗 ?섎굹?좏삎 ?뚯쟾援먯감濡쒋숈씠?? A李⑤줈?먯꽌 吏꾩엯?섎뒗 ?댁쟾?먮뒗 ?뚯쟾?섎뒗 李⑥뿉 ?묐낫????利됱떆 a李⑤줈濡? 吏꾩엯?댁빞 ?쒕떎. ???뚮뒗 諛깆깋?먯꽑???댁슜?댁빞 ?쒕떎. A李⑤줈??吏꾩텧諛⑺뼢? ?숈そ怨?遺곸そ?대떎. B李⑤줈?먯꽌 吏꾩엯?섎뒗 ?댁쟾?먮뒗  ?뚯쟾?섎뒗 李⑥뿉 ?묐낫????利됱떆 b李⑤줈濡?吏꾩엯?댁빞 ?쒕떎. B李⑤줈??吏꾩텧諛⑺뼢? ?⑥そ怨??숈そ?대떎. ???뚯쟾援먯감濡쒖뿉?? 吏꾩엯?섎젮???뚮뒗 ?쇱そ, 吏꾩텧?섎젮???뚯뿉???ㅻⅨ履?諛⑺뼢吏?쒓린瑜??묐룞?댁빞留??쒕떎.",
+  "tr_e": "The intersection given is a \"spiral roundabout.\" A driver entering from lane A must yield to circulating vehicles and then immediately enter lane a. At this time, the white dashed line must be used. The exit directions from lane A are east and north. A driver entering from lane B must yield to circulating vehicles and then immediately enter lane b. The exit directions from lane B are south and east. Also, one must operate the left turn signal when intending to enter the roundabout and the right turn signal when intending to exit."
+ },
+ {
+  "n": 814,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴2] ?고쉶?꾪븯?ㅻ뒗 李⑤쭏???고쉶???쇱깋?깆씠 ?덈뒗 寃쎌슦 ?ㅻⅨ ?좏샇?깆뿉??遺덇뎄?섍퀬 ?댁뿉 ???쇱빞 ?쒕떎怨?紐낆떆?섏뼱 ?덈떎. ?고쉶???쇱깋?깆씠 ?ㅼ튂?섏뼱 ?덈뒗 援먯감濡쒖쓽 寃쎌슦 ?곸깋?좏샇??吏꾪뻾?섍쾶 ?섎㈃ ?좏샇?꾨컲?? ?대떦?섎ŉ ?고쉶???붿궡???깊솕??寃쎌슦?먮쭔 ?고쉶?꾩씠 媛?ν븯??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 2] specifies that a vehicle intending to turn right must, where there is a three-color right-turn light, follow it notwithstanding the other traffic lights. At an intersection where a three-color right-turn light is installed, proceeding on a red signal constitutes a signal violation, and a right turn is possible only when the right-turn arrow is lit."
+ },
+ {
+  "n": 815,
+  "ko_e": "?꾨줈援먰넻踰???5議?援먯감濡쒗넻?됰갑踰? 紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ?좏샇湲곕줈 援먰넻?뺣━瑜??섍퀬 ?덈뒗 援먯감濡쒖뿉  ?ㅼ뼱媛?ㅻ뒗 寃쎌슦?먮뒗 吏꾪뻾?섎젮??吏꾨줈???욎そ???덈뒗 李??먮뒗 ?몃㈃?꾩감???곹솴???곕씪 援먯감濡??뺤??좎씠 ?ㅼ튂?섏뼱  ?덈뒗 寃쎌슦?먮뒗 洹??뺤??좎쓣 ?섏? 遺遺꾩쓣 留먰븳?????뺤??섍쾶 ?섏뼱 ?ㅻⅨ 李??먮뒗 ?몃㈃?꾩감???듯뻾??諛⑺빐媛 ???곕젮 媛 ?덈뒗 寃쎌슦?먮뒗 洹?援먯감濡쒖뿉 ?ㅼ뼱媛?쒕뒗 ?꾨땲 ?쒕떎怨?紐낆떆?섍퀬 ?덈떎. ?먰븳 ?꾨줈?먮뒗 臾대━?섍쾶 吏꾩엯?섍퀬???섎뒗  ?ㅻⅨ ?댁쟾?먭? ?덉쓣 ?섎룄 ?덇린 ?뚮Ц??誘몃━ ?띾룄瑜?以꾩씠????諛⑹뼱?댁쟾???꾩슂?섎떎.",
+  "tr_e": "Road Traffic Act Article 25 (Method of Passing Through Intersections) specifies that the driver of every vehicle or streetcar, when intending to enter an intersection where traffic is being controlled by a traffic light, must not enter that intersection if, depending on the situation of the vehicle or streetcar ahead in the intended course, there is a risk of stopping within the intersection (where a stop line is installed, the portion beyond that stop line) and obstructing the passage of another vehicle or streetcar. In addition, since there may be other drivers who try to force their way onto the road, defensive driving such as reducing speed in advance is also needed."
+ },
+ {
+  "n": 816,
+  "ko_e": "蹂듭옟???대㈃?꾨줈瑜??듯뻾?섎젮???댁쟾?먮뒗 李⑤웾??媛?ㅼ쭊 蹂댄뻾?먮굹 ?곸옱臾??뱁븯李④? 鍮덈쾲???앸같 諛??붾Ъ李⑤웾 二쇰? ???꾪뿕?붿씤???녿뒗吏 二쇱쓽瑜??댄븘 ?꾩슂媛 ?덈떎.",
+  "tr_e": "A driver intending to travel a complicated back road needs to look out for hazards around delivery and cargo vehicles where pedestrians are hidden by vehicles or where loading and unloading of cargo is frequent."
+ },
+ {
+  "n": 817,
+  "ko_e": "?뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮??寃쎌슦?먮뒗 ?쒗뻾?섍굅???쇱떆?뺤? ?댁빞 ?섎ŉ ?뚯쟾李⑤웾?먭쾶 ?묐낫?댁빞 ?쒕떎. ?먰븳 ?곗깋  ?붾Ъ 李④? ???욎쑝濡??쇱뼱??寃쎌슦 ?鍮꾪븯???띾룄瑜???떠 ?붾Ъ李⑥????덉쟾嫄곕━瑜??좎??댁빞 ?쒕떎.",
+  "tr_e": "When intending to enter a roundabout, one must slow down or come to a complete stop and yield to circulating vehicles. Also, in preparation for the case where the white truck cuts in front of you, one must reduce speed and maintain a safe distance from the truck."
+ },
+ {
+  "n": 818,
+  "ko_e": "臾대떒?〓떒 蹂댄뻾?먮씪???댁쟾?먮뒗 ?〓떒?섎뒗 蹂댄뻾?먭? ?덉쟾?섍쾶 ?〓떒?????덈룄濡?二쇱쓽?섏뿬???쒕떎.",
+  "tr_e": "Even for a jaywalking pedestrian, the driver must take care to allow the crossing pedestrian to cross safely."
+ },
+ {
+  "n": 819,
+  "ko_e": "?쇰? ?댁쟾?먮뱾? ?섎뱾紐⑹씠??媛덈┝紐⑹쓽 吏곸쟾?먯꽌 ?대뒓履쎌쑝濡?吏꾩엯??吏瑜?寃곗젙?섍린 ?꾪빐 湲됯컧?랁븯嫄곕굹 吏꾩엯??湲덉? ???덉쟾吏???吏꾩엯?섏뿬 ?湲고븯?ㅺ? 臾대━?섍쾶 吏꾩엯?섍린???쒕떎. ??吏꾩엯濡쒕? 吏?섏튇 寃쎌슦 ?덉쟾吏? ?먮뒗 媛볤만?? ?뺤감?????꾩쭊?섎뒗 ?됰룞???섍린???쒕떎. ?댁? 媛숈? ?됰룞? ?ㅻⅨ ?댁쟾?먮뱾???덉륫?????녿뒗 ?됰룞??吏곸젒?곸씤 ?ш퀬 ???먯씤???????덉쓬?쇰줈 吏꾩엯???ш린?섍퀬 ?ㅼ쓬 媛덈┝紐??먮뒗 ?섎뱾紐⑹쓣 ?댁슜?섏뿬 ?덉쟾???꾨え?댁빞 ?쒕떎. 媛???덉쟾 ???댁쟾諛⑸쾿? 異쒕컻遺??紐⑹쟻吏源뚯????듯뻾寃쎈줈瑜?誘몃━ ?뚯븙?섎뒗 ?먯꽭瑜?寃몃퉬?섎뒗 寃껋씠??",
+  "tr_e": "Some drivers, in order to decide which way to enter just before an interchange or junction, decelerate suddenly or enter a safety zone where entry is prohibited and wait there, then force their way in. Also, when they have passed the entrance ramp, they sometimes stop in a safety zone or on the shoulder and reverse. Such behavior can be a direct cause of accidents because other drivers cannot predict it, so one should give up on entering and use the next junction or interchange to ensure safety. The safest driving method is to acquire the attitude of grasping the travel route from departure to destination in advance."
+ },
+ {
+  "n": 820,
+  "ko_e": "?덇만 ?덉쟾?댄뻾???꾪빐?쒕뒗 湲됱젣?? 湲됯??? 湲됲빖??議곗옉???쇨?怨?異⑸텇???덉쟾嫄곕━瑜??뺣낫?댁빞 ?쒕떎. ?먰븳 誘몃걚??吏?諛⑹?瑜??꾪빐 ?욎감??諛뷀댁옄援?쓣 ?곕씪 ?댄뻾?섎뒗 寃껋씠 諛붾엺吏곹븯硫?媛湲됱쟻 ??④린?대? ?ъ슜?쒕떎. ?뱁엳 ?곕꼸 吏꾩텧??援щ? 鍮꾨’???곕꼸 援ш컙? 寃곕튃 媛?μ꽦???믨린 ?뚮Ц??媛먯냽 ?댄뻾?댁빞 ?쒕떎.",
+  "tr_e": "For safe driving on snowy roads, one must refrain from sudden braking, sudden acceleration, and sudden steering, and secure a sufficient safe distance. Also, to prevent skidding, it is advisable to drive following the wheel tracks of the car ahead, and to use a low gear as much as possible. In particular, tunnel sections including tunnel entrances and exits have a high possibility of freezing, so one must slow down."
+ },
+ {
+  "n": 821,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴28] ?댄뻾 以??ㅻ퉬寃뚯씠?섏쓣 議곗옉?섎㈃ 二쇱쓽吏묒쨷??遺꾩궛?섏뼱 ?ш퀬 ?꾪뿕???믪븘吏誘濡??대?  ?먯젣?댁빞 ?쒕떎. ?먰븳 ?댁쟾以묒뿉???ㅻ퉬寃뚯씠?섏뿉留??섏〈?섏? 留먭퀬 ?꾨줈?쒖?瑜??④퍡 ?뺤씤?섎뒗 ?듦???湲몃윭???덉쟾???꾩뿉 ?꾩????쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 28]. Operating the navigation system while driving disperses concentration and increases the risk of an accident, so one must refrain from this. Also, while driving, one should not rely only on the navigation system but should develop the habit of also checking road signs, which helps with safe driving."
+ },
+ {
+  "n": 822,
+  "ko_e": "?띾쾲湲?援먯쇅吏???꾨줈?먯꽌???띻린怨? 李⑤웾, 蹂댄뻾?먯쓽 ?대룞???쒕컻??吏怨? ?뱁엳 ?띾줈?낃뎄? ?곌껐???꾨줈?먯꽌???덇린移? ?딆? 吏꾩엯?대굹 援먰넻踰뺢퇋瑜?以?섑븯吏 ?딅뒗 ?뚮컻?됰룞??諛쒖깮??媛?μ꽦???믪쑝誘濡??꾨갑二쇱떆 諛?諛⑹뼱?댁쟾???꾩슂?섎떎.",
+  "tr_e": "On suburban roads during the farming season, the movement of farm machinery, vehicles, and pedestrians becomes active, and in particular, on roads connected to farm-road entrances, there is a high possibility of unexpected entry or sudden actions that do not comply with traffic rules, so watching ahead and defensive driving are needed."
+ },
+ {
+  "n": 823,
+  "ko_e": "?꾨줈援먰넻踰???7議? 蹂댄뻾?먯슦?좊룄濡쒖뿉??蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃쎌슦?먮뒗 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???섎ŉ, 蹂??됱옄???듯뻾??諛⑺빐媛 ???뚯뿉???쒗뻾?섍굅???쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?듯뻾?????덈룄濡??섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 27. When passing beside a pedestrian on a pedestrian-priority road, one must keep a safe distance and slow down, and when it would obstruct the pedestrian's passage, one must slow down or come to a complete stop so that the pedestrian can pass safely."
+ },
+ {
+  "n": 824,
+  "ko_e": "李⑤웾 吏?뺤껜 ?곹솴?먯꽌???대? ?쇳븯湲??꾪빐 吏꾨줈蹂寃쎌씠 鍮덈쾲?섍쾶 諛쒖깮?????덉쑝誘濡???떆 ?꾨갑??二쇱떆?섎ŉ ?댁쟾?????쒕떎. ?먰븳 鍮쀪만?먯꽌???됱냼蹂대떎 ?쒕룞嫄곕━媛 湲몄뼱吏誘濡?異⑸텇???덉쟾嫄곕━? 媛먯냽???꾩슂?섎떎.",
+  "tr_e": "In a traffic-congestion situation, course changes may occur frequently in order to avoid it, so one must always watch ahead while driving. Also, on a rainy road, the braking distance becomes longer than usual, so a sufficient safe distance and deceleration are needed."
+ },
+ {
+  "n": 825,
+  "ko_e": "異쒖엯援?遺洹쇱뿉?쒕뒗 ?뱁엳 蹂댄뻾?먯? ?먯쟾嫄곌? ?뚮컻?곸쑝濡?吏꾩엯?????덉쑝誘濡? ?댁쟾?먮뒗 ?쒗뻾?섎ŉ 二쇱쓽?댁빞 ?쒕떎. ?먰븳 嫄대Ъ濡?吏꾩엯?섎젮怨?醫뚰쉶???湲?以묒씤 ?먮룞李⑤뒗 吏꾩텧??李⑤웾怨?蹂댄뻾?? ?먯쟾嫄??깃낵 異⑸룎???꾪뿕??而??ш퀬 媛?μ꽦???믩떎. 諛섎㈃, ?뺤긽?곸쑝濡?李⑤줈瑜??곕씪 吏꾪뻾?섎뒗 李⑤웾(??, ?뺤감??李⑤웾(??, 諛섏궗寃쎌뿉 鍮꾩튇 李⑤웾(??? ?곷? ?곸쑝濡??ш퀬 ?꾪뿕????떎. ?곕씪???ш퀬 諛쒖깮 媛?μ꽦??媛???믪? 寃껋? ?좉낵 ?≪씠?? 二쇱감???깆쓽 ?μ냼?먯꽌 ?꾨줈濡?吏꾩엯?섍린 ?꾩뿉??諛섎뱶??醫뚯슦瑜??댄렣 蹂댄뻾??諛??ㅻⅨ 李⑤웾??吏꾪뻾 ?곹솴???뺤씤?섏뿬???쒕떎.",
+  "tr_e": "Near an entrance/exit, since pedestrians and bicycles may suddenly enter, the driver must slow down and be careful. Also, a car waiting to turn left to enter a building has a high risk of colliding with entering/exiting vehicles, pedestrians, bicycles, etc., so the possibility of an accident is high. On the other hand, a vehicle proceeding normally along its lane (??, a stopped vehicle (??, and a vehicle reflected in a mirror (?? have a relatively low accident risk. Therefore, those with the highest possibility of an accident are ??and ?? Before entering the road from a place such as a parking lot, one must always look left and right to check the movement of pedestrians and other vehicles."
+ },
+ {
+  "n": 826,
+  "ko_e": "?꾨줈援먰넻踰???0議?吏꾨줈 ?묐낫???섎Т) ??紐⑤뱺李?湲닿툒李??쒖쇅)???댁쟾?먮뒗 ?ㅼ뿉???곕씪?ㅻ뒗 李⑤낫???먮┛ ?띾룄濡?媛?ㅻ뒗 寃쎌슦?먮뒗 ?꾨줈???곗륫 媛?μ옄由щ줈 ?쇳븯??吏꾨줈瑜??묐낫?섏뿬???쒕떎. ?ㅻ쭔, ?듯뻾 援щ텇???ㅼ튂???꾨줈??寃쎌슦 ?먮뒗 洹몃윭?섏? ?꾨땲?쒕떎. ??醫곸? ?꾨줈?먯꽌 湲닿툒?먮룞李??몄쓽 ?먮룞李④? ?쒕줈 留덉＜蹂닿퀬 吏꾪뻾???뚯뿉???ㅼ쓬 媛??몄쓽 援щ텇???곕Ⅸ ?먮룞李④? ?꾨줈???곗륫 媛?μ옄由щ줈 ?쇳븯??吏꾨줈瑜??묐낫?섏뿬???쒕떎. 1.鍮꾪깉湲?醫곸? ?꾨줈?먯꽌 ?먮룞李④? ?쒕줈 留덉＜蹂닿퀬 吏꾪뻾?섎뒗 寃쎌슦?먮뒗 ?щ씪媛???먮룞李?2.鍮꾪깉吏?醫곸? ?꾨줈 ?몄쓽 醫곸? ?꾨줈?먯꽌 ?щ엺???쒖썱嫄곕굹 臾쇨굔 ???ㅼ? ?먮룞李⑥? ?숈듅?먭? ?녾퀬 臾쇨굔???ｌ? ?꾨땲???먮룞李④? ?쒕줈 留덉＜蹂닿퀬 吏꾪뻾?섎뒗 寃쎌슦?먮뒗 ?숈듅?먭? ?녾퀬 臾쇨굔???ｌ? ?꾨땲???먮룞李?,
+  "tr_e": "Road Traffic Act Article 20 (Duty to Yield the Way) (1) The driver of every vehicle (excluding emergency vehicles) must, when intending to travel at a slower speed than the vehicle following behind, pull over to the right edge of the road and yield the way. However, this does not apply to roads where separate passage lanes are established. (2) When vehicles other than emergency vehicles proceed facing each other on a narrow road, the vehicle indicated in the following classifications must pull over to the right edge of the road and yield the way: 1. When vehicles proceed facing each other on a narrow uphill road, the ascending vehicle. 2. When, on a narrow road other than a sloped narrow road, a vehicle carrying people or loaded with goods and a vehicle with no passengers and no load proceed facing each other, the vehicle with no passengers and no load."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+import json
+p=Path(r'translations/audit/queue/340_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ print('\\n',x['n'])
+ for k,v in x.items():
+  if k.startswith('ko_'):
+   try: print(v.encode('latin1').decode('utf-8'))
+   except: 
+    try: print(v.encode('cp1252').decode('utf-8'))
+    except: print(v)
+ print(x.get('tr_e'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-11T00:20:00.583714Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:16 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 681ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:16 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$d=Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/340_expl_en.json'|ConvertFrom-Json; "'$e=[Text.Encoding]::UTF8; $k=[Text.Encoding]::GetEncoding(949); foreach($x in $d){ "`n$($x.n)"; $e.GetString($k.GetBytes($x.ko_e)); $x.tr_e }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 634ms:
+
+807
+�׸� �����ο��� ���� ��ȣ���� ��ġ�Ǿ� ��ǰ� ������ ���� Ⱦ�ܺ����� ��ȣ���� ���� �����̴�. ���� ��ȣ��  ��ȸ�� ���ȭ��ǥ�ð� ��ȭ�Ǿ� �����ڴ� ���ȭ��ǥ�Ⱑ ����Ű�� �������� ������ �� �ִ�. �׷��� ��ȣ����  ���� Ⱦ�ܺ����� Ⱦ���ϴ� ����� �ְ� Ⱦ���Ϸ��� ����� �����Ƿ� �̷� ��Ȳ������ ������ ���ʿ��� ����ϸ�  Ⱦ�ܺ����� �����ڰ� �����ϰ� Ⱦ���� ������ ����Ͽ��� �Ѵ�.
+The intersection in the figure has vehicle traffic lights installed and in operation, but the crosswalk ahead has no traffic light. The vehicle signal is a green left-turn arrow, so the driver may proceed in the direction the green arrow indicates. However, since there is a person crossing and a person intending to cross at the crosswalk without a traffic light, in such a situation one must wait before the stop line until the pedestrians at the crosswalk cross safely.
+
+808
+�־��� ��Ȳ���� ���� ������ ��Ȳ���δ� ù°, ���Ϲ��� ���� ���������� ġ���� �������� ����ű���� �����ڴ� ���� �����ڿ� �浹�� ���ϱ� ���Ͽ� �������� �̵��Ͽ� ������ �� �ִ�. �̷��� ����ű������ �ൿ�� �������� ���ϰ� ���� �������� �����Ͽ� �����ϴ� ��� ������� ���� �߻��� �� �ִ�. ��°, ���������� �����ϰ� �ִ� �����ڴ� Ⱦ�ܽü��� ���� ������ ���� Ⱦ���� �ϴ� ������ �ִ�. ���� �̸鵵�θ� �����ϴ� ��� �����ϰ� ���� �ϰų� ���� �Ǵ� �����ʿ� �ִ� ���������ڰ� �׻� ������ ����⼺�� ���� ������ �����ϴ� ���� ������� �濡 �Ҹ��ϴ� �ϰڴ�.
+The most dangerous situations in the given scenario are as follows. First, the e-scooter (electric kickboard) rider traveling ahead in the same direction, veered to the right, may move to the left to avoid a collision with a pedestrian ahead. If one fails to predict this behavior of the e-scooter and accelerates into the space ahead, a traffic accident can easily occur. Second, the pedestrian traveling on the right tends to cross easily where there is no crossing facility. Therefore, when traveling on a back road, forcibly accelerating or predicting that the traffic participants ahead or on the right will always maintain the same direction of motion is disadvantageous for preventing traffic accidents.
+
+809
+���α���� ��13�� ��3��. ������ �����ڴ� ����(������ ������ ���е� ���ο����� ������ ���Ѵ�)�� �߾�(�߾Ӽ� �� ��ġ�Ǿ� �ִ� ��쿡�� �� �߾Ӽ��� ���Ѵ�. ���� ����) ���� �κ��� �����Ͽ��� �Ѵ�. ��4�� ������ �����ڴ� ��3�׿��� �ұ��ϰ� ���� �� ȣ�� ��� �ϳ��� �ش��ϴ� ��쿡�� ������ �߾��̳� ���� �κ��� ������ �� �ִ�. 1. ���ΰ� �Ϲ������� ��� 2. ������ �ļ�, ���ΰ��糪 �� ���� ��� ������ ������ ���� �κ��� ������ �� ���� ��� 3. ���� ���� �κ��� ���� 6���Ͱ� ���� �ƴ��ϴ� ���ο��� �ٸ� ���� ���������� ���. �ٸ�, ���� �� ���� ��� �ϳ��� �ش��ϴ� ��쿡�� �׷����� �ƴ��ϴ�. ��. ������ ���� �κ��� Ȯ���� �� ���� ��� ��. �ݴ� ������ ������ ������ ����� �ִ� ��� ��. ����ǥ�� ������ �������⸦ �����ϰų� �����ϰ� �ִ� ��� 4. ���� ���� �κ��� ���� ������ ���࿡ ������� �ƴ��� ��� 5. ���ĸ� ��Ż���� ���η��� ������ ������ ������ �����ϱ� ���Ͽ� �ä�������û���� �ʿ��ϴٰ� �����Ͽ� ���� �� �������� �����ϰ� �ִ� ��쿡 �� ������ ���� �����ϴ� ���. ���� �����ڴ� ����ȣ�� �� �� �ִ� ����� �ƴϴ�. ���θ� �����ϴ� ��� ���� �ӵ��� �����ϰ� �ִ� ȭ���ڵ� ��, Ư���ڵ��� �׸��� ���� ���� �����ڰ� ���׳� �������� �����䡯��� �ǹ̷� ������ �ϴ� ��찡 ������, �� ���� ������ ����ȣ�� �ƴϴ�.
+Road Traffic Act Article 13 Paragraph 3. The driver of a vehicle must travel on the right portion of the road (on a road where the sidewalk and roadway are separated, the roadway) with respect to its center (where a center line is installed, the center line; the same applies hereinafter). Paragraph 4. Notwithstanding Paragraph 3, the driver of a vehicle may travel on the center or left portion of the road in any of the following cases: 1. When the road is one-way. 2. When it is impossible to travel on the right portion of the road due to road damage, road construction, or other obstacles. 3. When overtaking another vehicle on a road where the width of the right portion is less than 6 meters. However, this does not apply in any of the following cases: (a) When the left portion of the road cannot be checked; (b) When there is a risk of obstructing traffic from the opposite direction; (c) When overtaking is prohibited or restricted by a traffic sign, etc. 4. When the width of the right portion of the road is insufficient for the passage of the vehicle. 5. When traveling in accordance with the designation of the section and method of passage designated by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent traffic danger at a curve on a steep hill. A farm-machinery operator is not a person who can give hand signals. When traveling on the road, drivers of trucks, special vehicles, or farm machinery moving at slow speed sometimes gesture to mean "just go ahead and pass," but this gesture is not a hand signal.
+
+810
+ȸ�������ο����� ȸ���� ���Ժ��� �켱�̹Ƿ� �׻� �纸�ϴ� �����ڼ��� �ʿ��ϸ� ȸ���� �ֺ������� �����Ÿ�  ������ �����ϴ� ���� �߿��ϴ�. ��, ȸ�������ο����� �����Ϸ��� ������ �̹� ȸ���ϰ� �ִ� ������ ���θ� �纸 �ؾ� �Ѵ�. ���� ���� �ÿ��� �����ϰų� �ʿ��� ��� �Ͻ������ؾ� �ϸ�, ȸ�� ������ ������ �������� �ʵ���  �ؾ� �Ѵ�(��). �ݴ�� ���������� �켱�̶�� ����(��,��)�� �ֺ� ������ ������ �ʴ� ����(��)�� ��� ��������  ���� ��������̴�. ���� ������ ��� ���̴�.
+At a roundabout, circulating vehicles have priority over entering ones, so a yielding driving attitude is always needed, and when circulating it is important to maintain a safe distance from surrounding vehicles and to slow down. That is, at a roundabout, a vehicle intending to enter must yield the way to a vehicle already circulating. Also, when entering, one must slow down or, if necessary, come to a complete stop, and must not obstruct the passage of circulating vehicles (②). Conversely, the claim that entering vehicles have priority (③, ④) and driving without looking out for surrounding vehicles (⑤) are all unsafe driving methods. Therefore, the correct answers are ① and ②.
+
+811
+���õ� ��Ȳ���� ������ �¿����� ���α���� ��18�� ���ϱ��������� �ϰ� �ִ�. ������ �¿����� ������� ��ȭ �ǰ� �ִ� �����̹Ƿ� ȸ���ݰ��� Ȯ���ϱ� ���� �����ൿ�� ������ �� �ִ�. ���� �����ڴ� ������� �����  �ڵ����� �߰��ϸ� �����ϴ� ���ÿ� ���� �Ǵ� �����Ͽ��� �Ѵ�. ������ ����(2����)���� �������� �̷����� ���� �ڴ� ���� ������ ���صȴٴ� �Ǵ��� �ϴ� ��� �������� ���κ����� ���ɼ��� ���. �̷��� ��� �������� �̷��� �� Ư���� ������ �ʿ伺�� �ִ�.
+In the situation given, the black passenger car is committing a U-turn prohibition violation under Road Traffic Act Article 18. Since the black passenger car has its reversing lights on, reversing behavior to secure a turning radius can be predicted. Therefore, when a driver spots a car with its reversing lights on, one must be careful and at the same time slow down or stop. If the motorcycle rider traveling in the right lane (second lane) judges that passage ahead is obstructed, there is a high possibility of changing lanes to the left. In such a case, there is a need to be especially careful of the motorcycle on the right.
+
+812
+��51��(������й����� Ư����ȣ) �� ������й����� ���ο� �����Ͽ� ��̳� �����ư� Ÿ�� ������ ������ ǥ���ϴ� ����� ���� ��ġ�� �۵� ���� ������ ������й����� ������ ���ο� �� ������ �ٷ� �� ���η� �����ϴ� ���� �����ڴ� ������й����� �̸��� ���� �Ͻ������Ͽ� ������ Ȯ���� �� �����Ͽ��� �Ѵ�.�� ��1���� ��� �߾Ӽ��� ��ġ���� �ƴ��� ���ο� ��� 1������ ���ο����� �ݴ���⿡�� �����ϴ� ���� �����ڵ� ������й����� �̸��� ���� �Ͻ������Ͽ� ������ Ȯ���� �� �����Ͽ��� �Ѵ�.�� ��� ���� �����ڴ� ��̳� �����Ƹ� �¿�� �ִٴ� ǥ�ø� �� ���·� ���θ� �����ϴ� ������й����� �������� ���Ѵ�.
+Article 51 (Special Protection of School Buses) (1) When a school bus has stopped on the road and is operating a device such as flashing lights indicating that children or infants are getting on or off, the driver of a vehicle traveling in the lane where the school bus has stopped and in the lane immediately next to it must come to a complete stop before reaching the school bus, confirm safety, and then slow down. (2) In the case of Paragraph 1, on a road without a center line and on a road with one lane each way, the driver of a vehicle proceeding from the opposite direction must also come to a complete stop before reaching the school bus, confirm safety, and then slow down. (3) The driver of every vehicle must not overtake a school bus that is traveling on the road displaying the indication that it is carrying children or infants.
+
+813
+���õ� �����δ� �������� ȸ�������Ρ��̴�. A���ο��� �����ϴ� �����ڴ� ȸ���ϴ� ���� �纸�� �� ��� a���η�  �����ؾ� �Ѵ�. �� ���� ��������� �̿��ؾ� �Ѵ�. A������ ��������� ���ʰ� �����̴�. B���ο��� �����ϴ� �����ڴ�  ȸ���ϴ� ���� �纸�� �� ��� b���η� �����ؾ� �Ѵ�. B������ ��������� ���ʰ� �����̴�. �� ȸ�������ο���  �����Ϸ��� ���� ����, �����Ϸ��� ������ ������ �������ñ⸦ �۵��ؾ߸� �Ѵ�.
+The intersection given is a "spiral roundabout." A driver entering from lane A must yield to circulating vehicles and then immediately enter lane a. At this time, the white dashed line must be used. The exit directions from lane A are east and north. A driver entering from lane B must yield to circulating vehicles and then immediately enter lane b. The exit directions from lane B are south and east. Also, one must operate the left turn signal when intending to enter the roundabout and the right turn signal when intending to exit.
+
+814
+���α���� �����Ģ [��ǥ2] ��ȸ���Ϸ��� ������ ��ȸ�� ������� �ִ� ��� �ٸ� ��ȣ��� �ұ��ϰ� �̿� �� ��� �Ѵٰ� ��õǾ� �ִ�. ��ȸ�� ������� ��ġ�Ǿ� �ִ� �������� ��� ������ȣ�� �����ϰ� �Ǹ� ��ȣ���ݿ�  �ش��ϸ� ��ȸ�� ȭ��ǥ ��ȭ�� ��쿡�� ��ȸ���� �����ϴ�.
+Enforcement Rule of the Road Traffic Act [Table 2] specifies that a vehicle intending to turn right must, where there is a three-color right-turn light, follow it notwithstanding the other traffic lights. At an intersection where a three-color right-turn light is installed, proceeding on a red signal constitutes a signal violation, and a right turn is possible only when the right-turn arrow is lit.
+
+815
+���α���� ��25��(������������) ��� �� �Ǵ� ��������� �����ڴ� ��ȣ��� ���������� �ϰ� �ִ� �����ο�  ������ ��쿡�� �����Ϸ��� ������ ���ʿ� �ִ� �� �Ǵ� ��������� ��Ȳ�� ���� ������(�������� ��ġ�Ǿ�  �ִ� ��쿡�� �� �������� ���� �κ��� ���Ѵ�)�� �����ϰ� �Ǿ� �ٸ� �� �Ǵ� ��������� ���࿡ ���ذ� �� ��� �� �ִ� ��쿡�� �� �����ο� ������ �ƴ� �ȴٰ� ����ϰ� �ִ�. ���� ���ο��� �����ϰ� �����ϰ��� �ϴ�  �ٸ� �����ڰ� ���� ���� �ֱ� ������ �̸� �ӵ��� ���̴� �� �������� �ʿ��ϴ�.
+Road Traffic Act Article 25 (Method of Passing Through Intersections) specifies that the driver of every vehicle or streetcar, when intending to enter an intersection where traffic is being controlled by a traffic light, must not enter that intersection if, depending on the situation of the vehicle or streetcar ahead in the intended course, there is a risk of stopping within the intersection (where a stop line is installed, the portion beyond that stop line) and obstructing the passage of another vehicle or streetcar. In addition, since there may be other drivers who try to force their way onto the road, defensive driving such as reducing speed in advance is also needed.
+
+816
+������ �̸鵵�θ� �����Ϸ��� �����ڴ� ������ ������ �����ڳ� ���繰 �������� ����� �ù� �� ȭ������ �ֺ� �� ��������� ������ ���Ǹ� ���� �ʿ䰡 �ִ�.
+A driver intending to travel a complicated back road needs to look out for hazards around delivery and cargo vehicles where pedestrians are hidden by vehicles or where loading and unloading of cargo is frequent.
+
+817
+ȸ�������ο� �����Ϸ��� ��쿡�� �����ϰų� �Ͻ����� �ؾ� �ϸ� ȸ���������� �纸�ؾ� �Ѵ�. ���� ���  ȭ�� ���� �� ������ ����� ��� ����Ͽ� �ӵ��� ���� ȭ�������� �����Ÿ��� �����ؾ� �Ѵ�.
+When intending to enter a roundabout, one must slow down or come to a complete stop and yield to circulating vehicles. Also, in preparation for the case where the white truck cuts in front of you, one must reduce speed and maintain a safe distance from the truck.
+
+818
+����Ⱦ�� �����ڶ� �����ڴ� Ⱦ���ϴ� �����ڰ� �����ϰ� Ⱦ���� �� �ֵ��� �����Ͽ��� �Ѵ�.
+Even for a jaywalking pedestrian, the driver must take care to allow the crossing pedestrian to cross safely.
+
+819
+�Ϻ� �����ڵ��� ������̳� �������� �������� ��������� ������ ���� �����ϱ� ���� �ް����ϰų� ������ ���� �� �������뿡 �����Ͽ� ����ϴٰ� �����ϰ� �����ϱ⵵ �Ѵ�. �� ���Էθ� ����ģ ��� �������� �Ǵ� ���濡  ������ �� �����ϴ� �ൿ�� �ϱ⵵ �Ѵ�. �̿� ���� �ൿ�� �ٸ� �����ڵ��� ������ �� ���� �ൿ�� �������� ��� �� ������ �� �� �������� ������ �����ϰ� ���� ������ �Ǵ� ������� �̿��Ͽ� ������ �����ؾ� �Ѵ�. ���� ���� �� ��������� ��ߺ��� ������������ �����θ� �̸� �ľ��ϴ� �ڼ��� ����ϴ� ���̴�.
+Some drivers, in order to decide which way to enter just before an interchange or junction, decelerate suddenly or enter a safety zone where entry is prohibited and wait there, then force their way in. Also, when they have passed the entrance ramp, they sometimes stop in a safety zone or on the shoulder and reverse. Such behavior can be a direct cause of accidents because other drivers cannot predict it, so one should give up on entering and use the next junction or interchange to ensure safety. The safest driving method is to acquire the attitude of grasping the travel route from departure to destination in advance.
+
+820
+���� ���������� ���ؼ��� ������, �ް���, ���ڵ� ������ �ﰡ�� ����� �����Ÿ��� Ȯ���ؾ� �Ѵ�. ���� �̲�� �� ������ ���� ������ �����ڱ��� ���� �����ϴ� ���� �ٶ����ϸ� ������ ���ܱ� ����Ѵ�. Ư�� �ͳ� ������ ���� ����� �ͳ� ������ ��� ���ɼ��� ��� ������ ���� �����ؾ� �Ѵ�.
+For safe driving on snowy roads, one must refrain from sudden braking, sudden acceleration, and sudden steering, and secure a sufficient safe distance. Also, to prevent skidding, it is advisable to drive following the wheel tracks of the car ahead, and to use a low gear as much as possible. In particular, tunnel sections including tunnel entrances and exits have a high possibility of freezing, so one must slow down.
+
+821
+���α���� �����Ģ [��ǥ28] ���� �� �׺���̼��� �����ϸ� ���������� �л�Ǿ� ��� ������ ������Ƿ� �̸�  �����ؾ� �Ѵ�. ���� �����߿��� �׺���̼ǿ��� �������� ���� ����ǥ���� �Բ� Ȯ���ϴ� ������ �淯�� ������ ���� ������ �ȴ�.
+Enforcement Rule of the Road Traffic Act [Table 28]. Operating the navigation system while driving disperses concentration and increases the risk of an accident, so one must refrain from this. Also, while driving, one should not rely only on the navigation system but should develop the habit of also checking road signs, which helps with safe driving.
+
+822
+����� �������� ���ο����� ����, ����, �������� �̵��� Ȱ���� ����, Ư�� ����Ա��� ����� ���ο����� ����ġ  ���� �����̳� ������Ը� �ؼ����� �ʴ� �����ൿ�� �߻��� ���ɼ��� �����Ƿ� �����ֽ� �� �������� �ʿ��ϴ�.
+On suburban roads during the farming season, the movement of farm machinery, vehicles, and pedestrians becomes active, and in particular, on roads connected to farm-road entrances, there is a high possibility of unexpected entry or sudden actions that do not comply with traffic rules, so watching ahead and defensive driving are needed.
+
+823
+���α���� ��27��. �����ڿ켱���ο��� �������� ���� ������ ��쿡�� ������ �Ÿ��� �ΰ� �����Ͽ��� �ϸ�, �� ������ ���࿡ ���ذ� �� ������ �����ϰų� �Ͻ������Ͽ� �����ڰ� �����ϰ� ������ �� �ֵ��� �Ͽ��� �Ѵ�.
+Road Traffic Act Article 27. When passing beside a pedestrian on a pedestrian-priority road, one must keep a safe distance and slow down, and when it would obstruct the pedestrian's passage, one must slow down or come to a complete stop so that the pedestrian can pass safely.
+
+824
+���� ����ü ��Ȳ������ �̸� ���ϱ� ���� ���κ����� ����ϰ� �߻��� �� �����Ƿ� �׽� ������ �ֽ��ϸ� ������ �� �Ѵ�. ���� ���濡���� ��Һ��� �����Ÿ��� ������Ƿ� ����� �����Ÿ��� ������ �ʿ��ϴ�.
+In a traffic-congestion situation, course changes may occur frequently in order to avoid it, so one must always watch ahead while driving. Also, on a rainy road, the braking distance becomes longer than usual, so a sufficient safe distance and deceleration are needed.
+
+825
+���Ա� �αٿ����� Ư�� �����ڿ� �����Ű� ���������� ������ �� �����Ƿ�, �����ڴ� �����ϸ� �����ؾ� �Ѵ�. ���� �ǹ��� �����Ϸ��� ��ȸ�� ��� ���� �ڵ����� ������ ������ ������, ������ ��� �浹�� ������ Ŀ ��� ���ɼ��� ���. �ݸ�, ���������� ���θ� ���� �����ϴ� ����(��), ������ ����(��), �ݻ�濡 ��ģ ����(��)�� ��� ������ ��� ������ ����. ���� ��� �߻� ���ɼ��� ���� ���� ���� ��� ���̴�. ������ ���� ��ҿ��� ���η� �����ϱ� ������ �ݵ�� �¿츦 ���� ������ �� �ٸ� ������ ���� ��Ȳ�� Ȯ���Ͽ��� �Ѵ�.
+Near an entrance/exit, since pedestrians and bicycles may suddenly enter, the driver must slow down and be careful. Also, a car waiting to turn left to enter a building has a high risk of colliding with entering/exiting vehicles, pedestrians, bicycles, etc., so the possibility of an accident is high. On the other hand, a vehicle proceeding normally along its lane (③), a stopped vehicle (④), and a vehicle reflected in a mirror (⑤) have a relatively low accident risk. Therefore, those with the highest possibility of an accident are ① and ②. Before entering the road from a place such as a parking lot, one must always look left and right to check the movement of pedestrians and other vehicles.
+
+826
+���α���� ��20��(���� �纸�� �ǹ�) �� �����(����� ����)�� �����ڴ� �ڿ��� ������� ������ ���� �ӵ��� ������ ��쿡�� ������ ���� �����ڸ��� ���Ͽ� ���θ� �纸�Ͽ��� �Ѵ�. �ٸ�, ���� ������ ��ġ�� ������ ��� ���� �׷����� �ƴ��Ѵ�. �� ���� ���ο��� ����ڵ��� ���� �ڵ����� ���� ���ֺ��� ������ ������ ���� �� ȣ�� ���п� ���� �ڵ����� ������ ���� �����ڸ��� ���Ͽ� ���θ� �纸�Ͽ��� �Ѵ�. 1.��Ż�� ���� ���ο��� �ڵ����� ���� ���ֺ��� �����ϴ� ��쿡�� �ö󰡴� �ڵ��� 2.��Ż�� ���� ���� ���� ���� ���ο��� ����� �¿��ų� ���� �� ���� �ڵ����� �����ڰ� ���� ������ ���� �ƴ��� �ڵ����� ���� ���ֺ��� �����ϴ� ��쿡�� �����ڰ� ���� ������ ���� �ƴ��� �ڵ���
+Road Traffic Act Article 20 (Duty to Yield the Way) (1) The driver of every vehicle (excluding emergency vehicles) must, when intending to travel at a slower speed than the vehicle following behind, pull over to the right edge of the road and yield the way. However, this does not apply to roads where separate passage lanes are established. (2) When vehicles other than emergency vehicles proceed facing each other on a narrow road, the vehicle indicated in the following classifications must pull over to the right edge of the road and yield the way: 1. When vehicles proceed facing each other on a narrow uphill road, the ascending vehicle. 2. When, on a narrow road other than a sloped narrow road, a vehicle carrying people or loaded with goods and a vehicle with no passengers and no load proceed facing each other, the vehicle with no passengers and no load.
+
+codex
+[{"n":811,"field":"e","severity":"major","issue":"원문의 ‘횡단금지 위반’을 ‘U-turn prohibition violation(유턴 금지 위반)’로 오역하여 위반 행위의 종류를 바꾸었다.","suggestion":"In the situation shown, the black passenger car is violating the prohibition on crossing the road under Article 18 of the Road Traffic Act. Since the black passenger car has its reversing lights on, it can be expected to reverse in order to secure enough turning space. Therefore, when a driver spots a vehicle with its reversing lights on, the driver must exercise caution and slow down or stop. If the motorcycle rider traveling in the right lane (lane 2) determines that the way ahead is obstructed, there is a high possibility that the rider will change lanes to the left. In such a case, special attention must be paid to the motorcycle on the right."}]
+tokens used
+22,259
+[{"n":811,"field":"e","severity":"major","issue":"원문의 ‘횡단금지 위반’을 ‘U-turn prohibition violation(유턴 금지 위반)’로 오역하여 위반 행위의 종류를 바꾸었다.","suggestion":"In the situation shown, the black passenger car is violating the prohibition on crossing the road under Article 18 of the Road Traffic Act. Since the black passenger car has its reversing lights on, it can be expected to reverse in order to secure enough turning space. Therefore, when a driver spots a vehicle with its reversing lights on, the driver must exercise caution and slow down or stop. If the motorcycle rider traveling in the right lane (lane 2) determines that the way ahead is obstructed, there is a high possibility that the rider will change lanes to the left. In such a case, special attention must be paid to the motorcycle on the right."}]

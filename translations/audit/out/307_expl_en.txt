@@ -1,0 +1,155 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127ef-c942-7853-9bd7-2027843b9772
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/307_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/307_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 524ms:
+[
+ {
+  "n": 142,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽3 諛??숇쾿 ??51議곗쓽2???섑븯???쒗룺?댁쟾 ??1???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑?? 泥섑븳??",
+  "tr_e": "Under Article 46-3 and Article 151-2 of the Road Traffic Act, reckless driving is punished by imprisonment for not more than 1 year or a fine not exceeding 5 million won."
+ },
+ {
+  "n": 143,
+  "ko_e": "?꾨줈援먰넻踰???9議??뱀감 ?먮뒗 ?곸옱??諛⑸쾿怨??쒗븳)????紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?댁쟾 以??ㅼ? ?붾Ъ???⑥뼱吏吏 ?꾨땲???꾨줉 ??컻瑜??뚯슦嫄곕굹 臾띕뒗 ???뺤떎?섍쾶 怨좎젙?????덈룄濡??꾩슂??議곗튂瑜??섏뿬???쒕떎.",
+  "tr_e": "Article 39(4) of the Road Traffic Act (Methods of and Restrictions on Riding or Loading): the driver of any vehicle must take necessary measures, such as covering or tying down, so that the cargo loaded does not fall off while driving, ensuring it is securely fastened."
+ },
+ {
+  "n": 144,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽3 ?좏샇 ?먮뒗 吏???꾨컲, 以묒븰??移⑤쾾, ?띾룄 ?꾨컲, ?〓떒?띿쑀?담냽?꾩쭊 湲덉? ?꾨컲, ?덉쟾嫄곕━ 誘명솗 蹂? 吏꾨줈蹂寃?湲덉? ?꾨컲, 湲됱젣??湲덉? ?꾨컲, ?욎?瑜닿린 諛⑸쾿 ?먮뒗 ?욎?瑜닿린??諛⑺빐湲덉? ?꾨컲, ?뺣떦???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮, 怨좎냽?꾨줈?먯꽌???욎?瑜닿린 諛⑸쾿 ?꾨컲, 怨좎냽?꾨줈?깆뿉?쒖쓽 ?〓떒?띿쑀?담냽?꾩쭊 湲덉? ?꾨컲???대떦?섎뒗 ???댁긽???됱쐞瑜??곕떖???섍굅?? ?섎굹???됱쐞瑜?吏???먮뒗 諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊 ?먮뒗 ?꾪빐瑜?媛?섍굅??援먰넻?곸쓽 ???섏쓣 諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲?쒕떎. 蹂댄뻾?먮낫?몄쓽臾댁쐞諛섏? ?쒗룺?댁쟾???됱쐞???ы븿?섏? ?딅뒗??",
+  "tr_e": "Article 46-3 of the Road Traffic Act: one must not consecutively perform two or more of the acts of violation of a signal or instruction, crossing the center line, speed violation, violation of the prohibition of crossing/U-turn/reversing, failure to keep a safe distance, violation of the prohibition of changing lanes, violation of the prohibition of sudden braking, violation of overtaking methods or of the prohibition of obstructing overtaking, generating noise without justifiable cause, violation of overtaking methods on an expressway, and crossing/U-turn/reversing on an expressway, etc., or continuously or repeatedly perform a single act, thereby threatening or harming others or causing a traffic hazard. Violation of the duty to protect pedestrians is not included in the acts of reckless driving."
+ },
+ {
+  "n": 145,
+  "ko_e": "?쒗룺?댁쟾? ?ㅻⅨ ?щ엺?먭쾶 ?꾪뿕怨??μ븷瑜?二쇰뒗 ?댁쟾?됱쐞濡?遺덊듅?뺤씤??遺덉풄媛먭낵 ?꾪뿕??二쇰뒗 ?됱쐞濡쒌뚮룄濡쒓탳??踰뺛띿쓽 ?곸슜??諛쏆쑝硫? 蹂대났?댁쟾? ?섎룄?겶룰퀬?섏쟻?쇰줈 ?뱀젙?몄쓣 ?꾪삊?섎뒗 ?됱쐞濡??뚰삎踰뺛띿쓽 ?곸슜??諛쏅뒗??",
+  "tr_e": "Reckless driving is a driving act that endangers and obstructs others and gives displeasure and danger to unspecified persons, and is governed by the 'Road Traffic Act'; retaliatory driving is an act of intentionally and deliberately threatening a specific person, and is governed by the 'Criminal Act'."
+ },
+ {
+  "n": 146,
+  "ko_e": "?꾨줈援먰넻踰뺤젣46議곗쓽3(?쒗룺?댁쟾 湲덉?) ?먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅?쒕떎)???댁쟾?먮뒗 ?ㅼ쓬 媛???以????댁긽?? ?됱쐞瑜??곕떖???섍굅?? ?섎굹???됱쐞瑜?吏???먮뒗 諛섎났?섏뿬 ?ㅻⅨ ?щ엺?먭쾶 ?꾪삊 ?먮뒗 ?꾪빐瑜?媛?섍굅??援먰넻?곸쓽 ???섏쓣 諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Article 46-3 of the Road Traffic Act (Prohibition of Reckless Driving): the drivers of motor vehicles, etc. (excluding personal mobility devices) must not consecutively perform two or more of the following acts, or continuously or repeatedly perform a single act, thereby threatening or harming others or causing a traffic hazard."
+ },
+ {
+  "n": 147,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽3(?쒗룺?댁쟾 湲덉?) ?좏샇 ?먮뒗 吏???꾨컲, 以묒븰??移⑤쾾, ?띾룄???꾨컲, ?〓떒?띿쑀?담냽?꾩쭊 湲덉? ??諛? ?덉쟾嫄곕━ 誘명솗蹂? 李⑤줈 蹂寃?湲덉? ?꾨컲, 湲됱젣??湲덉? ?꾨컲, ?욎?瑜닿린 諛⑸쾿 ?먮뒗 ?욎?瑜닿린??諛⑺빐湲덉? ?꾨컲, ?뺣떦 ???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮, 怨좎냽?꾨줈?먯꽌???욎?瑜닿린 諛⑸쾿 ?꾨컲, 怨좎냽?꾨줈 ?깆뿉?쒖쓽 ?〓떒?띿쑀?담냽?꾩쭊 湲덉?",
+  "tr_e": "Article 46-3 of the Road Traffic Act (Prohibition of Reckless Driving): violation of a signal or instruction, crossing the center line, speed violation, violation of the prohibition of crossing/U-turn/reversing, failure to keep a safe distance, violation of the prohibition of lane change, violation of the prohibition of sudden braking, violation of overtaking methods or of the prohibition of obstructing overtaking, generating noise without justifiable cause, violation of overtaking methods on an expressway, and crossing/U-turn/reversing on an expressway, etc."
+ },
+ {
+  "n": 148,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽3(?쒗룺?댁쟾 湲덉?) ?좏샇 ?먮뒗 吏???꾨컲, 以묒븰??移⑤쾾, ?띾룄???꾨컲, ?〓떒?띿쑀?담냽?꾩쭊 湲덉? ??諛? ?덉쟾嫄곕━ 誘명솗蹂? 李⑤줈 蹂寃?湲덉? ?꾨컲, 湲됱젣??湲덉? ?꾨컲, ?욎?瑜닿린 諛⑸쾿 ?먮뒗 ?욎?瑜닿린??諛⑺빐湲덉? ?꾨컲, ?뺣떦 ???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮, 怨좎냽?꾨줈?먯꽌???욎?瑜닿린 諛⑸쾿 ?꾨컲, 怨좎냽?꾨줈 ?깆뿉?쒖쓽 ?〓떒?띿쑀?담냽?꾩쭊 湲덉?",
+  "tr_e": "Article 46-3 of the Road Traffic Act (Prohibition of Reckless Driving): violation of a signal or instruction, crossing the center line, speed violation, violation of the prohibition of crossing/U-turn/reversing, failure to keep a safe distance, violation of the prohibition of lane change, violation of the prohibition of sudden braking, violation of overtaking methods or of the prohibition of obstructing overtaking, generating noise without justifiable cause, violation of overtaking methods on an expressway, and crossing/U-turn/reversing on an expressway, etc."
+ },
+ {
+  "n": 149,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽3(?쒗룺?댁쟾 湲덉?) ?좏샇 ?먮뒗 吏???꾨컲, 以묒븰??移⑤쾾, ?띾룄???꾨컲, ?〓떒?띿쑀?담냽?꾩쭊 湲덉? ??諛? ?덉쟾嫄곕━ 誘명솗蹂? 李⑤줈 蹂寃?湲덉? ?꾨컲, 湲됱젣??湲덉? ?꾨컲, ?욎?瑜닿린 諛⑸쾿 ?먮뒗 ?욎?瑜닿린??諛⑺빐湲덉? ?꾨컲, ?뺣떦 ???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮, 怨좎냽?꾨줈?먯꽌???욎?瑜닿린 諛⑸쾿 ?꾨컲, 怨좎냽?꾨줈 ?깆뿉?쒖쓽 ?〓떒?띿쑀?담냽?꾩쭊 湲덉?",
+  "tr_e": "Article 46-3 of the Road Traffic Act (Prohibition of Reckless Driving): violation of a signal or instruction, crossing the center line, speed violation, violation of the prohibition of crossing/U-turn/reversing, failure to keep a safe distance, violation of the prohibition of lane change, violation of the prohibition of sudden braking, violation of overtaking methods or of the prohibition of obstructing overtaking, generating noise without justifiable cause, violation of overtaking methods on an expressway, and crossing/U-turn/reversing on an expressway, etc."
+ },
+ {
+  "n": 150,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽3(?쒗룺?댁쟾 湲덉?) ?좏샇 ?먮뒗 吏???꾨컲, 以묒븰??移⑤쾾, ?띾룄???꾨컲, ?〓떒?띿쑀?담냽?꾩쭊 湲덉? ??諛? ?덉쟾嫄곕━ 誘명솗蹂? 李⑤줈 蹂寃?湲덉? ?꾨컲, 湲됱젣??湲덉? ?꾨컲, ?욎?瑜닿린 諛⑸쾿 ?먮뒗 ?욎?瑜닿린??諛⑺빐湲덉? ?꾨컲, ?뺣떦 ???ъ쑀 ?녿뒗 ?뚯쓬 諛쒖깮, 怨좎냽?꾨줈?먯꽌???욎?瑜닿린 諛⑸쾿 ?꾨컲, 怨좎냽?꾨줈 ?깆뿉?쒖쓽 ?〓떒?띿쑀?담냽?꾩쭊 湲덉?",
+  "tr_e": "Article 46-3 of the Road Traffic Act (Prohibition of Reckless Driving): violation of a signal or instruction, crossing the center line, speed violation, violation of the prohibition of crossing/U-turn/reversing, failure to keep a safe distance, violation of the prohibition of lane change, violation of the prohibition of sudden braking, violation of overtaking methods or of the prohibition of obstructing overtaking, generating noise without justifiable cause, violation of overtaking methods on an expressway, and crossing/U-turn/reversing on an expressway, etc."
+ },
+ {
+  "n": 151,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽 3(?쒗룺?댁쟾 湲덉?)",
+  "tr_e": "Article 46-3 of the Road Traffic Act (Prohibition of Reckless Driving)."
+ },
+ {
+  "n": 152,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28 ?먮룞李??깆쓣 ?댁슜?섏뿬 ?뺣쾿???뱀닔?곹빐, ?뱀닔?묐컯, ?뱀닔?먭눼瑜??됲븯??援ъ냽????硫댄뿀 瑜?痍⑥냼?쒕떎. ?뺤궗 ?낃굔???뚮뒗 踰뚯젏 100?먯씠 遺怨쇰맂??",
+  "tr_e": "Table 28 of the Enforcement Rule of the Road Traffic Act: the license is revoked when a person is detained for committing special bodily injury, special intimidation, or special property damage under the Criminal Act using a motor vehicle, etc. When the person is criminally booked, 100 penalty points are imposed."
+ },
+ {
+  "n": 153,
+  "ko_e": "??6議?怨듬룞 ?꾪뿕?됱쐞??湲덉?) ?????먮룞李⑤벑???댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽???먮룞李⑤벑?? ?뺣떦???ъ쑀 ?놁씠 ?욌뮘濡??먮뒗 醫뚯슦濡?以꾩????듯뻾?섎㈃???ㅻⅨ ?щ엺?먭쾶 ?꾪빐(?긷?)瑜??쇱튂嫄곕굹 援먰넻?곸쓽 ?꾪뿕?? 諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Article 46(1) (Prohibition of Joint Dangerous Conduct): the drivers of motor vehicles, etc. must not, on a road, have two or more persons jointly drive two or more motor vehicles, etc. in a row front-to-back or side-by-side without justifiable cause and thereby harm others or cause a traffic hazard."
+ },
+ {
+  "n": 154,
+  "ko_e": "?꾨줈援먰넻踰???6議곗쓽3",
+  "tr_e": "Article 46-3 of the Road Traffic Act."
+ },
+ {
+  "n": 155,
+  "ko_e": "??댁뼱怨듦린?뺤? 理쒕? 怨듦린?뺤쓽 80%媛 ?곸젙?섎ŉ, 怨꾩젅???곕씪 ?щ쫫?먮뒗 10%?뺣룄 ?곴쾶, 寃⑥슱?먮뒗 10%?뺣룄 ?믨쾶 二??낇븯??寃껋씠 ?덉쟾???꾩????쒕떎.",
+  "tr_e": "The appropriate tire pressure is 80% of the maximum pressure, and by season it is helpful for safety to inflate about 10% less in summer and about 10% more in winter."
+ },
+ {
+  "n": 156,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28 ?먮룞李??깆쓣 ?댁슜?섏뿬 ?뺣쾿???뱀닔?곹빐, ?뱀닔?묐컯, ?뱀닔?먭눼瑜??됲븯??援ъ냽????硫댄뿀 瑜?痍⑥냼?쒕떎. ?뺤궗 ?낃굔???뚮뒗 踰뚯젏 100?먯씠 遺怨쇰맂??",
+  "tr_e": "Table 28 of the Enforcement Rule of the Road Traffic Act: the license is revoked when a person is detained for committing special bodily injury, special intimidation, or special property damage under the Criminal Act using a motor vehicle, etc. When the person is criminally booked, 100 penalty points are imposed."
+ },
+ {
+  "n": 157,
+  "ko_e": "?쒕낫?꾟?閭ι걪)? ?곗꽍?? ?덉쟾?쒖???洹몄? 鍮꾩듂???멸났援ъ“臾쇰줈 寃쎄퀎瑜??쒖떆?섏뿬 蹂댄뻾???좊え李? 蹂댄뻾蹂댁“???섏옄李? ???쎌옄??蹂댄뻾湲????됱젙?덉쟾遺?뱀쑝濡??뺥븯??湲곌뎄?띿옣移섎? ?댁슜?섏뿬 ?듯뻾?섎뒗 ?щ엺 諛???1?몄쓽3???곕Ⅸ ?ㅼ쇅?대룞濡쒕큸???ы븿?쒕떎. ?댄븯 媛숇떎)媛 ?듯뻾?????덈룄濡????꾨줈??遺遺꾩쓣 留먰븳?? (?꾨줈援먰넻踰???議곗젣10???됱젙?덉쟾遺?뱀씠 ?뺥븯??湲곌뎄 ?띿옣移??덈퉬 1誘명꽣 ?댄븯??寃? ?좊え李⑨쉈蹂댄뻾蹂댁“???섏옄李⑨쉈?몄빟?먯슜 蹂댄뻾湲곤쉈?대┛????닿린援э쉈?숇젰?녿뒗 ?먯닔?덌쉈?대쪣?먮룞李⑤벑???댁쟾?먭? ?대젮???뚭굅???ㅺ퀬 ?듯뻾?섎뒗 寃껓쉈?꾨줈蹂댁닔 ?좎? ?깆뿉 ?ъ슜?섎뒗 湲곌뎄 諛???1?몄쓽3???곕Ⅸ ?ㅼ쇅?대룞濡쒕큸 ???꾨줈援먰넻踰??쒗뻾洹쒖튃 ??議?",
+  "tr_e": "'Sidewalk' means the part of a road marked by a curb line, traffic sign, or similar artificial structure so as to allow passage of pedestrians (including persons who move using devices and equipment prescribed by Ordinance of the Ministry of the Interior and Safety, such as a baby carriage, a wheelchair for walking assistance, or a walker for the elderly and infirm, and outdoor mobile robots under subparagraph 21-3; the same applies hereinafter). (Article 2, subparagraph 10 of the Road Traffic Act.) The equipment and devices prescribed by Ordinance of the Ministry of the Interior and Safety are those with a width of 1 meter or less: baby carriages, wheelchairs for walking assistance, walkers for the elderly and infirm, children's play equipment, non-powered handcarts, motorcycles, etc. that the operator pushes or carries by dismounting, equipment used for road repair and maintenance, etc., and outdoor mobile robots under subparagraph 21-3 (Article 2 of the Enforcement Rule of the Road Traffic Act)."
+ },
+ {
+  "n": 158,
+  "ko_e": "?뱀감援щℓ???쒕씪?대툕 ?ㅻ（ 留ㅼ옣)? 理쒓렐 ?ы쉶?곸씤 援먰넻 ?댁뒋媛 ?섍퀬 ?덈떎. ?대뱾 ?湲곗뿴? 援먰넻?뺤껜???곹뼢??誘몄튌 肉먮쭔  ?꾨땲??援먰넻?덉쟾???꾪삊?섍퀬 ?덈떎. ?뱀감援щℓ???湲곗뿴?대씪怨??섏뿬???〓떒蹂대룄瑜?移⑤쾾?섏뿬 ?뺤감?섏뿬?쒕뒗 ???쒕떎.",
+  "tr_e": "Drive-through stores have recently become a social traffic issue. Their waiting lines not only affect traffic congestion but also threaten traffic safety. Even for a drive-through waiting line, one must not stop by encroaching on a crosswalk."
+ },
+ {
+  "n": 159,
+  "ko_e": "?꾨줈援먰넻踰???7議곗젣1?? ????젣2?몌쉈???? ?????꾨줈援먰넻踰??쒗뻾??蹂꾪몴8. ??1?? ?뱀슜?먮룞李⑤벑 踰붿튃湲덉븸 6留뚯썝 ?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ?욎뿉?쒕뒗 蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆 ?뺤??섏뿬???쒕떎.",
+  "tr_e": "Article 27(1), (6)2 and 3, and (7) of the Road Traffic Act; Table 8 of the Enforcement Decree of the Road Traffic Act, subparagraph 11: a fine of 60,000 won for a passenger car, etc. In front of a crosswalk without a traffic light within a school zone, a driver must come to a complete stop regardless of whether a pedestrian is crossing."
+ },
+ {
+  "n": 160,
+  "ko_e": "?꾨줈援먰넻踰???7議곗젣1?? ???? ???? ??????紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 蹂댄뻾????3議곗쓽2????뿉 ?곕씪 ?먯쟾嫄곕벑?먯꽌 ?대젮???먯쟾嫄곕벑???뚭굅????怨??듯뻾?섎뒗 ?먯쟾嫄곕벑???댁쟾?먮? ?ы븿?쒕떎)媛 ?〓떒蹂대룄瑜??듯뻾?섍퀬 ?덇굅???듯뻾?섎젮怨??섎뒗 ?뚯뿉??蹂댄뻾?먯쓽 ?〓떒??諛⑺빐?섍굅???꾪뿕??二쇱? ?꾨땲?섎룄濡?洹??〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂?섏뼱 ?덈뒗 怨녹뿉?쒕뒗 洹??뺤??좎쓣 留먰븳 ???먯꽌 ?쇱떆?뺤??섏뿬???쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡??먮뒗 洹?遺洹쇱쓽 ?꾨줈瑜??〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?꾨줈???ㅼ튂???덉쟾吏???蹂댄뻾?먭? ?덈뒗 寃쎌슦? 李⑤줈媛 ?ㅼ튂?섏? ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃쎌슦?먮뒗 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎. ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ??2議곗젣1??뿉 ?곕Ⅸ ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤??좎쓣 留먰븳???먯꽌??蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨??놁씠 ?쇱떆?뺤??섏뿬???쒕떎. <?좎꽕 2022. 1. 11.>",
+  "tr_e": "Article 27(1), (3), (4), and (7) of the Road Traffic Act. (1) The driver of any vehicle or tram must, when a pedestrian (including the driver of a bicycle, etc. who, under Article 13-2(6), dismounts and pushes or carries the bicycle, etc.) is crossing or about to cross a crosswalk, come to a complete stop in front of that crosswalk (or, where a stop line is installed, at that stop line) so as not to obstruct or endanger the pedestrian's crossing. (3) The driver of any vehicle must not obstruct the passage of pedestrians crossing an intersection without traffic control or a road near it. (4) The driver of any vehicle must, when there is a pedestrian in a safety zone installed on the road, and when passing beside a pedestrian on a narrow road without lanes, slow down while keeping a safe distance. (7) The driver of any vehicle or tram must, in front of a crosswalk without a traffic light among the crosswalks installed within a school zone under Article 12(1) (or, where a stop line is installed, at that stop line), come to a complete stop regardless of whether a pedestrian is crossing. <Newly established Jan. 11, 2022>"
+ },
+ {
+  "n": 161,
+  "ko_e": "蹂댄뻾?먮뒗 蹂댄뻾?먯슦?좊룄濡쒖뿉?쒕뒗 ?꾨줈????遺遺꾩쑝濡??듯뻾?????덈떎. ??寃쎌슦 蹂댄뻾?먮뒗 怨좎쓽濡?李⑤쭏??吏꾪뻾??諛⑺빐 ?섏뿬?쒕뒗 ?꾨땲 ?쒕떎(?꾨줈援먰넻踰???議?????????. 蹂댄뻾?먯쟾?⑸룄濡쒖쓽 ?듯뻾???덉슜??李⑤쭏???댁쟾?먮뒗 蹂댄뻾?먮? ?꾪뿕?섍쾶 ?섍굅??蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏? ?꾨땲?섎룄濡?李⑤쭏瑜?蹂댄뻾?먯쓽 嫄몄쓬 ?띾룄濡??댄뻾?섍굅???쇱떆?뺤??섏뿬???쒕떎(?꾨줈援먰넻踰???8議?????. ?쒌냽?꾧꼍李곗껌?μ씠??寃쎌같?쒖옣? 蹂댄뻾?먯슦?좊룄濡쒖뿉??蹂댄뻾?먮? 蹂댄샇?섍린 ?꾪븯???꾩슂?섎떎怨??몄젙?섎뒗 寃쎌슦?먮뒗 李⑤쭏???듯뻾?띾룄瑜??쒖냽 20?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎(?꾨줈援먰넻踰???8議곗쓽2).",
+  "tr_e": "On a pedestrian-priority road, pedestrians may pass along the entire part of the road. In this case, pedestrians must not intentionally obstruct the progress of vehicles (Article 8(3)1 of the Road Traffic Act). The driver of a vehicle permitted to pass on a pedestrian-only road must operate the vehicle at pedestrian walking speed or come to a complete stop so as not to endanger pedestrians or obstruct their passage (Article 28(3) of the Road Traffic Act). Where the Commissioner of the City/Provincial Police Agency or the chief of a police station deems it necessary to protect pedestrians on a pedestrian-priority road, they may limit the passing speed of vehicles to within 20 km/h (Article 28-2 of the Road Traffic Act)."
+ }
+]
+
+codex
+[
+  {
+    "n": 160,
+    "field": "e",
+    "severity": "major",
+    "issue": "제27조제4항의 두 독립 조건을 'and'로 연결해, 안전지대에 보행자가 있으면서 동시에 좁은 도로의 보행자 옆을 지날 때만 서행해야 하는 것으로 오해할 수 있다.",
+    "suggestion": "(4) The driver of any vehicle must slow down while keeping a safe distance when a pedestrian is in a safety zone installed on the road, or when passing beside a pedestrian on a narrow road without lanes."
+  },
+  {
+    "n": 161,
+    "field": "e",
+    "severity": "major",
+    "issue": "보행자우선도로에서 보행자의 통행 방법에 관한 조문을 제8조의3제1항이 아닌 제8조제3항제1호로 잘못 표기했다.",
+    "suggestion": "On a pedestrian-priority road, pedestrians may pass along the entire part of the road. In this case, pedestrians must not intentionally obstruct the progress of vehicles (Article 8-3(1) of the Road Traffic Act)."
+  }
+]
+tokens used
+14,445
+[
+  {
+    "n": 160,
+    "field": "e",
+    "severity": "major",
+    "issue": "제27조제4항의 두 독립 조건을 'and'로 연결해, 안전지대에 보행자가 있으면서 동시에 좁은 도로의 보행자 옆을 지날 때만 서행해야 하는 것으로 오해할 수 있다.",
+    "suggestion": "(4) The driver of any vehicle must slow down while keeping a safe distance when a pedestrian is in a safety zone installed on the road, or when passing beside a pedestrian on a narrow road without lanes."
+  },
+  {
+    "n": 161,
+    "field": "e",
+    "severity": "major",
+    "issue": "보행자우선도로에서 보행자의 통행 방법에 관한 조문을 제8조의3제1항이 아닌 제8조제3항제1호로 잘못 표기했다.",
+    "suggestion": "On a pedestrian-priority road, pedestrians may pass along the entire part of the road. In this case, pedestrians must not intentionally obstruct the progress of vehicles (Article 8-3(1) of the Road Traffic Act)."
+  }
+]

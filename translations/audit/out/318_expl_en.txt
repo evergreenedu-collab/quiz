@@ -1,0 +1,210 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12800-5731-7e80-97ed-c80fabb1361f
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/318_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/318_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 528ms:
+[
+ {
+  "n": 362,
+  "ko_e": "?꾨줈援먰넻踰???6議?醫뚯슦瑜??뺤씤?????녿뒗 寃쎌슦?먮뒗 ?쇱떆?뺤? ?섏뿬???섎ŉ, ?대떦 李④? ?듯뻾?섍퀬 ?덈뒗 ?꾨줈????낫 ??援먯감?섎뒗 ?꾨줈????씠 ?볦? 寃쎌슦?먮뒗 ?쒗뻾?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 26. When unable to check left and right, you must come to a complete stop, and when the width of the intersecting road is wider than the width of the road on which the vehicle is traveling, you must slow down."
+ },
+ {
+  "n": 363,
+  "ko_e": "?뚯쟾援먯감濡??ㅺ퀎吏移?2022.8, 援?넗援먰넻遺) 1) ?뚯쟾援먯감濡??ㅼ튂媛 沅뚯옣?섎뒗 寃쎌슦 ??援먰넻???섏???鍮꾩떊?멸탳李⑤줈濡??댁쁺?섍린?먮뒗 留롪퀬 ?좏샇援먯감濡쒕줈 ?댁쁺?섍린?먮뒗 ?덈Т ?곸뼱 ?좏샇?댁쁺???⑥쑉?????댁???寃쎌슦 ??援먰넻???섏????믪? ?딆쑝?? 援먯감濡?援먰넻?ш퀬媛 留롮씠 諛쒖깮?섎뒗 寃쎌슦 ???댁쟾?먯쓽 ?듯뻾?곗꽑沅??몄떇???대젮??寃쎌슦 ??Y?먰삎 援먯감濡? T?먰삎 援먯감濡? 援먯감濡??뺥깭媛 ?뱀씠??寃쎌슦 ??援먰넻?뺤삩???ъ뾽 援ш컙 ?댁쓽 援먯감濡?2) ?뚯쟾援먯감濡??ㅼ튂瑜?沅뚯옣?섏? ?딅뒗 寃쎌슦 ???뚯쟾援먯감濡쒖쓽 援먰넻???섏???泥섎━?⑸웾??珥덇낵?섎뒗 寃쎌슦 ???뚯쟾援먯감濡??ㅺ퀎湲곗???留뚯”?쒗궎吏 紐삵븷 寃쎌슦 ??泥⑤몢 ??媛蹂李⑤줈媛 ?댁쁺?섎뒗 寃쎌슦 ???좏샇?곕룞???대（?댁?怨??덈뒗 援ш컙 ??援먯감濡쒖씤 寃쎌슦 ??援먯감濡쒖뿉???섎굹 ?댁긽???묎렐濡쒓? ?몃룄 3李⑤줈 ?댁긽??寃쎌슦",
+  "tr_e": "Roundabout Design Guideline (August 2022, Ministry of Land, Infrastructure and Transport) 1) Cases where installing a roundabout is recommended: (1) when the traffic volume level is too high to operate as a non-signalized intersection but too low to operate as a signalized intersection, so the efficiency of signal operation is low; (2) when the traffic volume level is not high but many traffic accidents occur at the intersection; (3) when it is difficult for drivers to recognize the right of way; (4) a Y-shaped intersection, T-shaped intersection, or intersection with an unusual shape; (5) an intersection within a traffic-calming project section. 2) Cases where installing a roundabout is not recommended: (1) when the traffic volume level of the roundabout exceeds its processing capacity; (2) when the roundabout design standards cannot be satisfied; (3) when a variable lane is operated during peak hours; (4) when it is an intersection within a section where signal coordination is implemented; (5) when one or more approach roads at the intersection have three or more lanes each way."
+ },
+ {
+  "n": 364,
+  "ko_e": "?뚯쟾援먯감濡쒕뒗 ?좏샇援먯감濡쒖뿉 鍮꾪빐 ?곸땐吏???섍? ?곴퀬, ?뚯쟾以묒씤 李⑤웾?????吏꾩엯?섍퀬???섎뒗 李⑤웾???묐낫?댁빞  ?섎ŉ, ?뚯쟾援먯감濡??댁뿉 ?ъ쑀 怨듦컙???녿뒗 寃쎌슦?먮뒗 吏꾩엯?섎㈃ ???쒕떎.",
+  "tr_e": "Compared to a signalized intersection, a roundabout has fewer conflict points, a vehicle intending to enter must yield to vehicles already circulating, and if there is no available space within the roundabout, you must not enter."
+ },
+ {
+  "n": 365,
+  "ko_e": "援먯감濡쒖뿉??吏꾪뻾 以??녿㈃ 異붾룎?ш퀬媛 諛쒖깮?섎뒗 寃껋? ?좊룄?좎뿉 ????댄빐遺議깆씪 媛?μ꽦???믩떎.             (?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?졻??쇰컲湲곗? 2. ?몃㈃?쒖떆, ?△?媛쒕퀎湲곗? 5. ?몃㈃?쒖떆)",
+  "tr_e": "A side-collision accident occurring while proceeding at an intersection is highly likely due to a lack of understanding of the lane guidance markings. (Enforcement Rule of the Road Traffic Act Table 6 I. General Standards 2. Road Markings, II. Individual Standards 5. Road Markings)"
+ },
+ {
+  "n": 366,
+  "ko_e": "援먯감濡쒖뿉??鍮꾨낫??醫뚰쉶?꾪븯??李⑤웾? ?고쉶??李⑤웾 諛?媛숈? 諛⑺뼢?쇰줈 ?④퍡 醫뚰쉶???섎뒗 痢〓㈃ 李⑤웾??二쇱쓽?섎ŉ 醫뚰쉶 ?꾪빐???쒕떎. (?꾨줈援먰넻踰???5議?",
+  "tr_e": "A vehicle making an unprotected left turn at an intersection must turn left while also paying attention to right-turning vehicles and to side vehicles turning left in the same direction. (Road Traffic Act Article 25)"
+ },
+ {
+  "n": 367,
+  "ko_e": "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉???고쉶?꾩쓣 ?섍퀬???섎뒗 ?뚯뿉??誘몃━ ?꾨줈???곗륫 媛?μ옄由щ? ?곕씪 ?쒗뻾?섎㈃???고쉶 ?꾪븯?ъ빞 ?섎ŉ, 醫뚰쉶???쒖뿉??誘몃━ ?꾨줈??以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒떖 ?덉そ???댁슜?섏뿬 醫뚰쉶?꾪빐?? ?쒕떎. (?꾨줈援먰넻踰???5議?",
+  "tr_e": "Every driver of a vehicle who intends to turn right at an intersection must turn right while slowing down along the right edge of the road in advance, and when turning left, must turn left while slowing down along the center line of the road in advance, using the inside of the center of the intersection. (Road Traffic Act Article 25)"
+ },
+ {
+  "n": 368,
+  "ko_e": "?꾨줈援먰넻踰???5議곗쓽2(?뚯쟾援먯감濡??듯뻾諛⑸쾿) ?뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮??寃쎌슦?먮뒗 ?쒗뻾?섍굅???쇱떆?뺤??섏뿬???섎ŉ,  ?대? 吏꾪뻾?섍퀬 ?덈뒗 ?ㅻⅨ 李④? ?덈뒗 ?뚯뿉??洹?李⑥뿉 吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 25-2 (Method of Passing Through Roundabouts) When intending to enter a roundabout, you must slow down or come to a complete stop, and when there are other vehicles already proceeding, you must yield the right-of-way to those vehicles."
+ },
+ {
+  "n": 369,
+  "ko_e": "<?꾨줈援먰넻踰???2議??뺤감 諛?二쇱감??湲덉?)> 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 怨녹뿉?쒕뒗 李⑤?  ?뺤감?섍굅??二쇱감?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?ㅻ쭔, ??踰뺤씠????踰뺤뿉 ?곕Ⅸ 紐낅졊 ?먮뒗 寃쎌같怨듬Т?먯쓽 吏?쒕? ?곕Ⅴ??寃쎌슦?  ?꾪뿕諛⑹?瑜??꾪븯???쇱떆?뺤??섎뒗 寃쎌슦?먮뒗 洹몃윭?섏? ?꾨땲?섎떎.",
+  "tr_e": "<Road Traffic Act Article 32 (Prohibition of Stopping and Parking)> Every driver of a vehicle must not stop or park the vehicle in any of the following places. However, this does not apply when following this Act, an order under this Act, or the instructions of a police officer, or when coming to a complete stop to prevent danger."
+ },
+ {
+  "n": 370,
+  "ko_e": "?꾨줈援먰넻踰???5議곗쓽2(?뚯쟾援먯감濡??듯뻾諛⑸쾿) ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?뚯쟾援먯감濡쒖뿉?쒕뒗 諛섏떆怨꾨갑?μ쑝濡??듯뻾?섏뿬 ???쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮??寃쎌슦?먮뒗 ?쒗뻾?섍굅???쇱떆?뺤??섏뿬???섎ŉ, ?대? 吏꾪뻾??怨??덈뒗 ?ㅻⅨ 李④? ?덈뒗 ?뚯뿉??洹?李⑥뿉 吏꾨줈瑜??묐낫?섏뿬???쒕떎. ??????諛?????뿉 ?곕씪 ?뚯쟾援먯감濡??듯뻾?? ?꾪븯???먯씠??諛⑺뼢吏?쒓린 ?먮뒗 ?깊솕濡쒖뜥 ?좏샇瑜??섎뒗 李④? ?덈뒗 寃쎌슦 洹??ㅼ감???댁쟾?먮뒗 ?좏샇瑜????욎감??吏꾪뻾 ??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Road Traffic Act Article 25-2 (Method of Passing Through Roundabouts) (1) Every driver of a vehicle must pass counterclockwise at a roundabout. (2) Every driver of a vehicle must, when intending to enter a roundabout, slow down or come to a complete stop, and when there are other vehicles already proceeding, yield the right-of-way to those vehicles. (3) When there is a vehicle signaling with a hand, turn signal, or lights to pass through the roundabout in accordance with paragraphs 1 and 2, the driver of the vehicle behind it must not obstruct the progress of the signaling vehicle ahead."
+ },
+ {
+  "n": 371,
+  "ko_e": "?뚯쟾援먯감濡쒖뿉?쒕뒗 諛섏떆怨꾨갑?μ쑝濡??뚯쟾?쒕떎.",
+  "tr_e": "At a roundabout, you circulate counterclockwise."
+ },
+ {
+  "n": 372,
+  "ko_e": "?뚯쟾援먯감濡쒖뿉?쒖쓽 ?뚯쟾? 諛섏떆怨꾨갑?μ쑝濡??뚯쟾?댁빞 ?섍퀬, 吏꾟ㅼ텧?????뚯뿉??諛⑺뼢吏?쒕벑???묐룞?댁빞 ?쒕떎.",
+  "tr_e": "At a roundabout, circulation must be counterclockwise, and when entering and exiting, you must operate the turn signal."
+ },
+ {
+  "n": 373,
+  "ko_e": "?꾨줈援먰넻踰???1議??쒗뻾 ?먮뒗 ?쇱떆?뺤????μ냼) ?쒗뻾?댁빞 ???μ냼?먮뒗 ?꾨줈??援щ??ъ쭊 遺洹? 媛?뚮Ⅸ 鍮꾪깉湲몄쓽 ??由щ쭑, 鍮꾪깉湲몄쓽 怨좉갗留덈（ 遺洹쇱씠?? 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녾굅??援먰넻??鍮덈쾲??援먯감 濡? ?쑣룸룄寃쎌같泥?옣???꾨줈?먯꽌???꾪뿕??諛⑹??섍퀬 援먰넻???덉쟾怨??먰솢???뚰넻???뺣낫?섍린 ?꾪븯???꾩슂?섎떎怨????뺥븯???덉쟾?쒖?濡?吏?뺥븳 怨녹? ?쇱떆?뺤??댁빞 ???μ냼?대떎.",
+  "tr_e": "Road Traffic Act Article 31 (Places Where You Must Slow Down or Come to a Complete Stop). Places where you must slow down include a curved section of the road, a steep downhill slope, and near the crest of a slope. An intersection where traffic is not being controlled and left and right cannot be checked or where traffic is heavy, and a place designated with traffic signs by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent danger on the road and to secure the safety and smooth flow of traffic, are places where you must come to a complete stop."
+ },
+ {
+  "n": 374,
+  "ko_e": "?꾨줈援먰넻踰???1議?????援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녾굅??援먰넻??鍮덈쾲??援먯감濡쒖뿉?쒕뒗  ?쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 31 paragraph 2. At an intersection where traffic is not being controlled and left and right cannot be checked or where traffic is heavy, you must come to a complete stop."
+ },
+ {
+  "n": 375,
+  "ko_e": "?욎?瑜닿린 湲덉?援ъ뿭怨??쇱떆?뺤??댁빞 ?섎뒗 怨녹? ?ㅻⅤ寃?洹쒖젙?섍퀬 ?덈떎. ?곕꼸 ??諛??ㅻ━ ?? 媛?뚮Ⅸ 鍮꾪깉湲몄쓽 ?대━留? ?꾨줈媛 援щ??ъ쭊 遺洹쇱? ?욎?瑜닿린 湲덉?援ъ뿭?대떎. 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녾굅??援먰넻?? 鍮덈쾲??援먯감濡? ?쑣룸룄寃쎌같泥?옣???꾨줈?먯꽌???꾪뿕??諛⑹??섍퀬 援먰넻???덉쟾怨??먰솢???뚰넻???뺣낫?섍린 ?꾪븯?????뷀븯?ㅺ퀬 ?몄젙?섏뿬 ?덉쟾?쒖?濡?吏?뺥븳 怨녹? ?쇱떆?뺤??댁빞 ???μ냼?대떎. (?꾨줈援먰넻踰???1議?2??",
+  "tr_e": "Overtaking-prohibited zones and places where you must come to a complete stop are prescribed differently. Inside tunnels, on bridges, steep downhill slopes, and curved sections of the road are overtaking-prohibited zones. An intersection where traffic is not being controlled and left and right cannot be checked or where traffic is heavy, and a place designated with traffic signs by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent danger on the road and to secure the safety and smooth flow of traffic, are places where you must come to a complete stop. (Road Traffic Act Article 31 paragraph 2)"
+ },
+ {
+  "n": 376,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議?????媛蹂???띾룄?쒗븳 ?쒖?濡?理쒓퀬?띾룄瑜??뺥븳 寃쎌슦?먮뒗 ?댁뿉 ?곕씪???섎ŉ 媛蹂???띾룄?????쒖?濡??뺥븳 理쒓퀬?띾룄? 洹?諛뽰쓽 ?덉쟾?쒖?濡??뺥븳 理쒓퀬?띾룄媛 ?ㅻ? ?뚯뿉??媛蹂???띾룄?쒗븳 ?쒖????곕씪???쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 19 subparagraph 1. When the maximum speed is set by a variable speed limit sign, you must follow it, and when the maximum speed set by a variable speed limit sign differs from the maximum speed set by another traffic sign, you must follow the variable speed limit sign."
+ },
+ {
+  "n": 377,
+  "ko_e": "紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 泥좉만嫄대꼸紐⑹쓣 ?듦낵?섎젮??寃쎌슦 嫄대꼸紐??욎뿉???쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?? ???듦낵?섏뿬???쒕떎.(?꾧탳踰???4議?泥좉만嫄대꼸紐⑹쓽 ?듦낵)",
+  "tr_e": "Every driver of a vehicle or streetcar must, when intending to pass through a railroad crossing, come to a complete stop before the crossing, confirm safety, and then pass. (Road Traffic Act Article 24, Passage of Railroad Crossings)"
+ },
+ {
+  "n": 378,
+  "ko_e": "湲됱젣?숈? ?ㅼ감????ш퀬?꾪뿕??利앷??쒗궓?? ?섎뱾紐?遺洹쇱뿉??湲됯컧?랁븯???쇰컲?꾨줈濡??섏삤寃??섎㈃ ?띾룄??媛먭컖?? ?뷀빐 吏먯뿉 ?곕씪 誘몃━ ?쒗뻾?섏뿬 ?쇰컲?꾨줈 洹쒖젙 ?띾룄??留욎떠 二쇳뻾?댁빞?쒕떎. 吏꾩텧?댁빞 ?섎뒗 ?섎뱾紐⑹쓣 吏?섏튇 寃쎌슦 ?????섎뱾紐⑹쓣 ?댁슜?섏뿬 鍮좎졇 ?섏????쒕떎.",
+  "tr_e": "Sudden braking increases the risk of an accident with the vehicle behind. If you decelerate suddenly near an interchange and come out onto an ordinary road, your sense of speed becomes dull, so you must slow down in advance and drive at the regulation speed of the ordinary road. If you pass the interchange you should exit at, you must use the next interchange to exit."
+ },
+ {
+  "n": 379,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴2, 醫뚰쉶?? ?〓떒, ?좏꽩 ?먮뒗 媛숈? 諛⑺뼢?쇰줈 吏꾪뻾?섎㈃??吏꾨줈瑜??쇱そ?쇰줈 諛붽씀?ㅻ뒗 ??洹? ?됱쐞瑜??섍퀬???섎뒗 吏??醫뚰쉶?꾪븷 寃쎌슦?먮뒗 洹?援먯감濡쒖쓽 媛?μ옄由????대Ⅴ湲???30誘명꽣(怨좎냽?꾨줈?먯꽌??100誘명꽣)  ?댁긽??吏?먯뿉 ?대Ⅴ??????쇳뙏???섑룊?쇰줈 ?댁꽌 李⑥껜???쇱そ 諛뽰쑝濡??대?嫄곕굹 ?ㅻⅨ?붿쓣 李⑥껜???ㅻⅨ履?諛뽰쑝濡? ?댁뼱 ?붽퓞移섎? 援쏀? ?섏쭅?쇰줈 ?щ━嫄곕굹 ?쇱そ??諛⑺뼢 吏?쒓린 ?먮뒗 ?깊솕??議곗옉?쒕떎.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Table 2. When turning left, crossing, making a U-turn, or changing lanes to the left while proceeding in the same direction, upon reaching a point at least 30 meters (100 meters on a highway) before the point where you intend to perform the act (at the edge of the intersection when turning left), extend the left arm horizontally out of the left side of the vehicle body, or extend the right arm out of the right side of the vehicle body and bend the elbow to raise it vertically, or operate the left turn signal or lights."
+ },
+ {
+  "n": 380,
+  "ko_e": "?댁쟾?먭? ?고쉶?꾪븯怨좎옄 ?????쇳뙏??李⑥껜???쇱そ 諛뽰쑝濡??댁뼱 ?붽퓞移섎? 援쏀? ?섏쭅?쇰줈 ?щ┛??",
+  "tr_e": "When the driver intends to turn right, the driver extends the left arm out of the left side of the vehicle body and bends the elbow to raise it vertically."
+ },
+ {
+  "n": 381,
+  "ko_e": "援먰넻?덉쟾?쒖꽕???쒖떆?섎뒗 ?좏샇 ?먮뒗 吏?쒖? 援먰넻?뺣━瑜??꾪븳 寃쎌같怨듬Т???깆쓽 ?좏샇 ?먮뒗 吏?쒓? ?ㅻⅨ 寃쎌슦?먮뒗  寃쎌같怨듬Т???깆쓽 ?좏샇 ?먮뒗 吏?쒖뿉 ?곕씪???쒕떎.",
+  "tr_e": "When the signal or instruction indicated by a traffic safety facility differs from the signal or instruction of a police officer, etc. for traffic control, you must follow the signal or instruction of the police officer, etc."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/318_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+    s=x.get('ko_e','')
+    try:
+        fixed=s.encode('cp949').decode('utf-8')
+    except Exception as e:
+        fixed=f'ERR {e}'
+    print(x['n'], fixed)
+    print('EN:',x.get('tr_e'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:48:04.195744Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:15 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 686ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:15 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/318_expl_en.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; foreach($x in $data){ $fixed=$utf8.GetString($cp949.GetBytes($x.ko_e)); Write-Output ("{0}: {1}" -f $x.n,$fixed); Write-Output ("EN: {0}" -f $x.tr_e) }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 623ms:
+362: ?�로교통�???6�?좌우�??�인?????�는 경우?�는 ?�시?��? ?�여???�며, ?�당 차�? ?�행?�고 ?�는 ?�로????�� ??교차?�는 ?�로????�� ?��? 경우?�는 ?�행?�여???�다.
+EN: Road Traffic Act Article 26. When unable to check left and right, you must come to a complete stop, and when the width of the intersecting road is wider than the width of the road on which the vehicle is traveling, you must slow down.
+363: ?�전교차�??�계지�?2022.8, �?��교통부) 1) ?�전교차�??�치가 권장?�는 경우 ??교통???��???비신?�교차로�??�영?�기?�는 많고 ?�호교차로로 ?�영?�기?�는 ?�무 ?�어 ?�호?�영???�율?????��???경우 ??교통???��????��? ?�으?? 교차�?교통?�고가 많이 발생?�는 경우 ???�전?�의 ?�행?�선�??�식???�려??경우 ??Y?�형 교차�? T?�형 교차�? 교차�??�태가 ?�이??경우 ??교통?�온???�업 구간 ?�의 교차�?2) ?�전교차�??�치�?권장?��? ?�는 경우 ???�전교차로의 교통???��???처리?�량??초과?�는 경우 ???�전교차�??�계기�???만족?�키지 못할 경우 ??첨두 ??가변차로가 ?�영?�는 경우 ???�호?�동???�루?��?�??�는 구간 ??교차로인 경우 ??교차로에???�나 ?�상???�근로�? ?�도 3차로 ?�상??경우
+EN: Roundabout Design Guideline (August 2022, Ministry of Land, Infrastructure and Transport) 1) Cases where installing a roundabout is recommended: (1) when the traffic volume level is too high to operate as a non-signalized intersection but too low to operate as a signalized intersection, so the efficiency of signal operation is low; (2) when the traffic volume level is not high but many traffic accidents occur at the intersection; (3) when it is difficult for drivers to recognize the right of way; (4) a Y-shaped intersection, T-shaped intersection, or intersection with an unusual shape; (5) an intersection within a traffic-calming project section. 2) Cases where installing a roundabout is not recommended: (1) when the traffic volume level of the roundabout exceeds its processing capacity; (2) when the roundabout design standards cannot be satisfied; (3) when a variable lane is operated during peak hours; (4) when it is an intersection within a section where signal coordination is implemented; (5) when one or more approach roads at the intersection have three or more lanes each way.
+364: ?�전교차로는 ?�호교차로에 비해 ?�충지???��? ?�고, ?�전중인 차량???�??진입?�고???�는 차량???�보?�야  ?�며, ?�전교차�??�에 ?�유 공간???�는 경우?�는 진입?�면 ???�다.
+EN: Compared to a signalized intersection, a roundabout has fewer conflict points, a vehicle intending to enter must yield to vehicles already circulating, and if there is no available space within the roundabout, you must not enter.
+365: 교차로에??진행 �??�면 추돌?�고가 발생?�는 것�? ?�도?�에 ?�???�해부족일 가?�성???�다.             (?�로교통�??�행규칙 별표6 ?��??�반기�? 2. ?�면?�시, ?��?개별기�? 5. ?�면?�시)
+EN: A side-collision accident occurring while proceeding at an intersection is highly likely due to a lack of understanding of the lane guidance markings. (Enforcement Rule of the Road Traffic Act Table 6 I. General Standards 2. Road Markings, II. Individual Standards 5. Road Markings)
+366: 교차로에??비보??좌회?�하??차량?� ?�회??차량 �?같�? 방향?�로 ?�께 좌회???�는 측면 차량??주의?�며 좌회 ?�해???�다. (?�로교통�???5�?
+EN: A vehicle making an unprotected left turn at an intersection must turn left while also paying attention to right-turning vehicles and to side vehicles turning left in the same direction. (Road Traffic Act Article 25)
+367: 모든 차의 ?�전?�는 교차로에???�회?�을 ?�고???�는 ?�에??미리 ?�로???�측 가?�자리�? ?�라 ?�행?�면???�회 ?�하?�야 ?�며, 좌회???�에??미리 ?�로??중앙?�을 ?�라 ?�행?�면??교차로의 중심 ?�쪽???�용?�여 좌회?�해?? ?�다. (?�로교통�???5�?
+EN: Every driver of a vehicle who intends to turn right at an intersection must turn right while slowing down along the right edge of the road in advance, and when turning left, must turn left while slowing down along the center line of the road in advance, using the inside of the center of the intersection. (Road Traffic Act Article 25)
+368: ?�로교통�???5조의2(?�전교차�??�행방법) ?�전교차로에 진입?�려??경우?�는 ?�행?�거???�시?��??�여???�며,  ?��? 진행?�고 ?�는 ?�른 차�? ?�는 ?�에??�?차에 진로�??�보?�여???�다.
+EN: Road Traffic Act Article 25-2 (Method of Passing Through Roundabouts) When intending to enter a roundabout, you must slow down or come to a complete stop, and when there are other vehicles already proceeding, you must yield the right-of-way to those vehicles.
+369: <?�로교통�???2�??�차 �?주차??금�?)> 모든 차의 ?�전?�는 ?�음 �??�의 ?�느 ?�나???�당?�는 곳에?�는 차�?  ?�차?�거??주차?�여?�는 ?�니 ?�다. ?�만, ??법이????법에 ?�른 명령 ?�는 경찰공무?�의 지?��? ?�르??경우?�  ?�험방�?�??�하???�시?��??�는 경우?�는 그러?��? ?�니?�다.
+EN: <Road Traffic Act Article 32 (Prohibition of Stopping and Parking)> Every driver of a vehicle must not stop or park the vehicle in any of the following places. However, this does not apply when following this Act, an order under this Act, or the instructions of a police officer, or when coming to a complete stop to prevent danger.
+370: ?�로교통�???5조의2(?�전교차�??�행방법) ??모든 차의 ?�전?�는 ?�전교차로에?�는 반시계방?�으�??�행?�여 ???�다. ??모든 차의 ?�전?�는 ?�전교차로에 진입?�려??경우?�는 ?�행?�거???�시?��??�여???�며, ?��? 진행??�??�는 ?�른 차�? ?�는 ?�에??�?차에 진로�??�보?�여???�다. ??????�?????�� ?�라 ?�전교차�??�행?? ?�하???�이??방향지?�기 ?�는 ?�화로써 ?�호�??�는 차�? ?�는 경우 �??�차???�전?�는 ?�호�????�차??진행 ??방해?�여?�는 ?�니 ?�다.
+EN: Road Traffic Act Article 25-2 (Method of Passing Through Roundabouts) (1) Every driver of a vehicle must pass counterclockwise at a roundabout. (2) Every driver of a vehicle must, when intending to enter a roundabout, slow down or come to a complete stop, and when there are other vehicles already proceeding, yield the right-of-way to those vehicles. (3) When there is a vehicle signaling with a hand, turn signal, or lights to pass through the roundabout in accordance with paragraphs 1 and 2, the driver of the vehicle behind it must not obstruct the progress of the signaling vehicle ahead.
+371: ?�전교차로에?�는 반시계방?�으�??�전?�다.
+EN: At a roundabout, you circulate counterclockwise.
+372: ?�전교차로에?�의 ?�전?� 반시계방?�으�??�전?�야 ?�고, 진․출?????�에??방향지?�등???�동?�야 ?�다.
+EN: At a roundabout, circulation must be counterclockwise, and when entering and exiting, you must operate the turn signal.
+373: ?�로교통�???1�??�행 ?�는 ?�시?��????�소) ?�행?�야 ???�소?�는 ?�로??구�??�진 부�? 가?�른 비탈길의 ??리막, 비탈길의 고갯마루 부근이?? 교통?�리�??�고 ?��? ?�니?�고 좌우�??�인?????�거??교통??빈번??교차 �? ?�·도경찰�?��???�로?�서???�험??방�??�고 교통???�전�??�활???�통???�보?�기 ?�하???�요?�다�????�하???�전?��?�?지?�한 곳�? ?�시?��??�야 ???�소?�다.
+EN: Road Traffic Act Article 31 (Places Where You Must Slow Down or Come to a Complete Stop). Places where you must slow down include a curved section of the road, a steep downhill slope, and near the crest of a slope. An intersection where traffic is not being controlled and left and right cannot be checked or where traffic is heavy, and a place designated with traffic signs by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent danger on the road and to secure the safety and smooth flow of traffic, are places where you must come to a complete stop.
+374: ?�로교통�???1�?????교통?�리�??�고 ?��? ?�니?�고 좌우�??�인?????�거??교통??빈번??교차로에?�는  ?�시?��??�여???�다.
+EN: Road Traffic Act Article 31 paragraph 2. At an intersection where traffic is not being controlled and left and right cannot be checked or where traffic is heavy, you must come to a complete stop.
+375: ?��?르기 금�?구역�??�시?��??�야 ?�는 곳�? ?�르�?규정?�고 ?�다. ?�널 ??�??�리 ?? 가?�른 비탈길의 ?�리�? ?�로가 구�??�진 부근�? ?��?르기 금�?구역?�다. 교통?�리�??�고 ?��? ?�니?�고 좌우�??�인?????�거??교통?? 빈번??교차�? ?�·도경찰�?��???�로?�서???�험??방�??�고 교통???�전�??�활???�통???�보?�기 ?�하?????�하?�고 ?�정?�여 ?�전?��?�?지?�한 곳�? ?�시?��??�야 ???�소?�다. (?�로교통�???1�?2??
+EN: Overtaking-prohibited zones and places where you must come to a complete stop are prescribed differently. Inside tunnels, on bridges, steep downhill slopes, and curved sections of the road are overtaking-prohibited zones. An intersection where traffic is not being controlled and left and right cannot be checked or where traffic is heavy, and a place designated with traffic signs by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent danger on the road and to secure the safety and smooth flow of traffic, are places where you must come to a complete stop. (Road Traffic Act Article 31 paragraph 2)
+376: ?�로교통�??�행규칙 ??9�?????가변???�도?�한 ?��?�?최고?�도�??�한 경우?�는 ?�에 ?�라???�며 가변???�도?????��?�??�한 최고?�도?� �?밖의 ?�전?��?�??�한 최고?�도가 ?��? ?�에??가변???�도?�한 ?��????�라???�다.
+EN: Enforcement Rule of the Road Traffic Act Article 19 subparagraph 1. When the maximum speed is set by a variable speed limit sign, you must follow it, and when the maximum speed set by a variable speed limit sign differs from the maximum speed set by another traffic sign, you must follow the variable speed limit sign.
+377: 모든 �??�는 ?�면?�차???�전?�는 철길건널목을 ?�과?�려??경우 건널�??�에???�시?��??�여 ?�전???�인?? ???�과?�여???�다.(?�교�???4�?철길건널목의 ?�과)
+EN: Every driver of a vehicle or streetcar must, when intending to pass through a railroad crossing, come to a complete stop before the crossing, confirm safety, and then pass. (Road Traffic Act Article 24, Passage of Railroad Crossings)
+378: 급제?��? ?�차?�???�고?�험??증�??�킨?? ?�들�?부근에??급감?�하???�반?�로�??�오�??�면 ?�도??감각?? ?�해 짐에 ?�라 미리 ?�행?�여 ?�반?�로 규정 ?�도??맞춰 주행?�야?�다. 진출?�야 ?�는 ?�들목을 지?�친 경우 ?????�들목을 ?�용?�여 빠져 ?��????�다.
+EN: Sudden braking increases the risk of an accident with the vehicle behind. If you decelerate suddenly near an interchange and come out onto an ordinary road, your sense of speed becomes dull, so you must slow down in advance and drive at the regulation speed of the ordinary road. If you pass the interchange you should exit at, you must use the next interchange to exit.
+379: ?�로교통�??�행??별표2, 좌회?? ?�단, ?�턴 ?�는 같�? 방향?�로 진행?�면??진로�??�쪽?�로 바꾸?�는 ??�? ?�위�??�고???�는 지??좌회?�할 경우?�는 �?교차로의 가?�자�????�르�???30미터(고속?�로?�서??100미터)  ?�상??지?�에 ?�르?�?????�팔???�평?�로 ?�서 차체???�쪽 밖으�??��?거나 ?�른?�을 차체???�른�?밖으�? ?�어 ?�꿈치�? 굽�? ?�직?�로 ?�리거나 ?�쪽??방향 지?�기 ?�는 ?�화??조작?�다.
+EN: Enforcement Decree of the Road Traffic Act Table 2. When turning left, crossing, making a U-turn, or changing lanes to the left while proceeding in the same direction, upon reaching a point at least 30 meters (100 meters on a highway) before the point where you intend to perform the act (at the edge of the intersection when turning left), extend the left arm horizontally out of the left side of the vehicle body, or extend the right arm out of the right side of the vehicle body and bend the elbow to raise it vertically, or operate the left turn signal or lights.
+380: ?�전?��? ?�회?�하고자 ?????�팔??차체???�쪽 밖으�??�어 ?�꿈치�? 굽�? ?�직?�로 ?�린??
+EN: When the driver intends to turn right, the driver extends the left arm out of the left side of the vehicle body and bends the elbow to raise it vertically.
+381: 교통?�전?�설???�시?�는 ?�호 ?�는 지?��? 교통?�리�??�한 경찰공무???�의 ?�호 ?�는 지?��? ?�른 경우?�는  경찰공무???�의 ?�호 ?�는 지?�에 ?�라???�다.
+EN: When the signal or instruction indicated by a traffic safety facility differs from the signal or instruction of a police officer, etc. for traffic control, you must follow the signal or instruction of the police officer, etc.
+
+web search: 
+web search: "급제동은 뒤차와의 사고위험" 나들목 부근에서 일반도로 ...
+codex
+[{"n":363,"field":"e","severity":"major","issue":"‘편도 3차로 이상’을 ‘three or more lanes each way’로 번역하여 양방향 모두 3차로 이상이어야 하는 것으로 오해할 수 있다.","suggestion":"(5) when one or more approach roads at the intersection have three or more lanes in one direction."}]
+tokens used
+21,764
+[{"n":363,"field":"e","severity":"major","issue":"‘편도 3차로 이상’을 ‘three or more lanes each way’로 번역하여 양방향 모두 3차로 이상이어야 하는 것으로 오해할 수 있다.","suggestion":"(5) when one or more approach roads at the intersection have three or more lanes in one direction."}]

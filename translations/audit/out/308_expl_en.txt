@@ -1,0 +1,125 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127f1-6391-7a30-922f-803ec9046b7a
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/308_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/308_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 530ms:
+[
+ {
+  "n": 162,
+  "ko_e": "臾대떒?〓떒 以묒씤 蹂댄뻾?먮? 諛쒓껄?섎㈃ ?띾룄瑜?以꾩씠硫?硫덉텧 以鍮꾨? ?섍퀬 鍮꾩긽?깆쑝濡??ㅼ감?먮룄 ?뚮━硫댁꽌 ?덉쟾?섍쾶 ?뺤??쒕떎.",
+  "tr_e": "Upon discovering a pedestrian crossing illegally (jaywalking), reduce speed, prepare to stop, warn following vehicles with the hazard lights, and come to a stop safely."
+ },
+ {
+  "n": 163,
+  "ko_e": "?꾨줈援먰넻踰???7議?蹂댄뻾?먯쓽 蹂댄샇) ????紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ??2議곗젣1??뿉 ?곕Ⅸ ?대┛??蹂댄샇援ъ뿭  ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤??좎쓣 留먰븳?????쒕뒗 蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Article 27 of the Road Traffic Act (Protection of Pedestrians), paragraph (7): the driver of any vehicle or tram must, in front of a crosswalk without a traffic light among the crosswalks installed within a school zone under Article 12(1) (or, where a stop line is installed, at that stop line), come to a complete stop regardless of whether a pedestrian is crossing."
+ },
+ {
+  "n": 164,
+  "ko_e": "?꾨줈援먰넻踰???1議??대┛???깆뿉 ???蹂댄샇)?????대┛?댁쓽 蹂댄샇?먮뒗 ?꾨줈?먯꽌 ?대┛?닿? ?먯쟾嫄곕? ?嫄곕굹 ?됱젙?덉쟾 遺?뱀쑝濡??뺥븯???꾪뿕?깆씠 ???吏곸씠????닿린援щ? ???寃쎌슦?먮뒗 ?대┛?댁쓽 ?덉쟾???꾪븯???됱젙?덉쟾遺?뱀쑝濡??뺥븯 ???몃챸蹂댄샇?κ뎄瑜?李⑹슜?섎룄濡??섏뿬???쒕떎.          ?먯쟾嫄??댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧?쒖옄?꾧굅?앸? ?щ엺???섏쑝濡??섎떖?대굹 ?먰럹?ъ쓣 ?ъ슜?섏뿬 ?吏곸씠??援щ룞?μ튂(要??뺠짔營?? 議고뼢?μ튂(?띶릲獒앯쉰) 諛??쒕룞?μ튂(?뜹땿獒앯쉰)媛 ?덈뒗 諛뷀닿? ???댁긽??李⑤줈???됱젙?덉쟾遺?뱀쑝濡??뺥븯?? ?ш린? 援ъ“瑜?媛뽰텣 寃껋쓣 留먰븳??",
+  "tr_e": "Article 11(3) of the Road Traffic Act (Protection of Children, etc.): the guardian of a child must, when the child rides a bicycle or a moving play device with a high degree of danger as prescribed by Ordinance of the Ministry of the Interior and Safety on a road, have the child wear a personal protective device prescribed by Ordinance of the Ministry of the Interior and Safety for the child's safety. Act on the Promotion of Bicycle Use: a 'bicycle' means a vehicle with two or more wheels that has a driving device moved by human power using pedals or hand pedals, a steering device, and a braking device, and that meets the size and structure prescribed by Ordinance of the Ministry of the Interior and Safety."
+ },
+ {
+  "n": 165,
+  "ko_e": "臾대떒 ?〓떒?섎뒗 ??痍⑦븳 蹂댄뻾?먮룄 蹂댄샇????곸씠?? 蹂댄뻾???좏샇湲곗뿉 ?뱀깋?좏샇媛 ?먮㈇?섍퀬 ?덈뒗 寃쎌슦?먮룄 蹂댄뻾?먮낫 ?몃? 寃뚯쓣由??섏? 留먭퀬 ?좏샇?깆씠 ?덈뒗 援먯감濡쒖뿉???고쉶?꾪븷 寃쎌슦 ?좏샇???곕Ⅴ??蹂댄뻾?먮? 諛⑺빐?댁꽌???꾨땲 ?쒕떎.",
+  "tr_e": "An intoxicated pedestrian crossing illegally is also a subject of protection. Even when the green pedestrian signal is flashing, one must not neglect pedestrian protection, and when turning right at an intersection with traffic lights, one must not obstruct pedestrians who are following the signal."
+ },
+ {
+  "n": 166,
+  "ko_e": "???숇Ъ??紐곌퀬 媛???щ엺, ?щ떎由?룸ぉ??洹?諛뽰뿉 蹂댄뻾?먯쓽 ?듯뻾??吏?μ쓣 以??곕젮媛 ?덈뒗 臾쇨굔???대컲 以묒씤 ?щ엺,  ?꾨줈?먯꽌 泥?냼??蹂댁닔 ?깆쓽 ?묒뾽???섍퀬 ?덈뒗 ?щ엺, 援곕????洹?諛뽰뿉 ?댁뿉 以?섎뒗 ?⑥껜???됰젹, 湲??먮뒗 ?꾩닔留? ?깆쓣 ?대????μ쓽 ?됰젹, ?μ쓽 ?됰젹? 李⑤룄???곗륫?쇰줈 ?듯뻾?섏뿬???쒕떎. (?꾨줈援먰넻踰???議?諛????쒗뻾????議?",
+  "tr_e": "A person leading a large animal; a person carrying a ladder, timber, or other object likely to obstruct pedestrian passage; a person doing work such as cleaning or repair on the road; a procession of a military unit or a comparable organization; a procession carrying a flag, banner, etc.; and a funeral procession must pass along the right side of the roadway. (Article 9 of the Road Traffic Act and Article 7 of its Enforcement Decree.)"
+ },
+ {
+  "n": 167,
+  "ko_e": "?좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄?먯꽌???뱀떆 紐⑤Ⅴ??蹂댄뻾?먮? ?꾪븯???꾨갑怨?洹쇰갑 蹂대룄瑜????댄뵾怨?媛먯냽 ?댁쟾?섏뿬???쒕떎.",
+  "tr_e": "At a crosswalk without a traffic light, one must carefully watch the path ahead and nearby and drive at reduced speed for any pedestrian who may be there."
+ },
+ {
+  "n": 168,
+  "ko_e": "?꾨줈援먰넻踰???4議?泥좉만 嫄대꼸紐??듦낵) 紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 嫄대꼸紐⑹쓣 ?듦낵?섎떎媛 怨좎옣 ?깆쓽 ?ъ쑀濡? 嫄대꼸紐⑹븞?먯꽌 李??먮뒗 ?몃㈃?꾩감瑜??댄뻾?????녾쾶 ??寃쎌슦??利됱떆 ?밴컼????쇱떆?ㅺ퀬 鍮꾩긽?좏샇湲??깆쓣 ?ъ슜?섍굅?? 洹?諛뽰쓽 諛⑸쾿?쇰줈 泥좊룄怨듬Т?먯씠??寃쎌같怨듬Т?먯뿉寃?洹??ъ떎???뚮젮???쒕떎.",
+  "tr_e": "Article 24 of the Road Traffic Act (Passing Railroad Crossings): where the driver of any vehicle or tram, while passing a crossing, becomes unable to operate the vehicle or tram within the crossing due to a breakdown or other cause, the driver must immediately evacuate the passengers and use an emergency signal or other means to notify a railroad employee or a police officer of the fact."
+ },
+ {
+  "n": 169,
+  "ko_e": "?꾨줈援먰넻踰???3議?李⑤쭏???듯뻾) ????李⑤쭏???댁쟾?먮뒗 蹂대룄瑜??〓떒?섍린 吏곸쟾???쇱떆?뺤??섏뿬 醫뚯륫怨??곗륫 遺遺? ?깆쓣 ?댄? ??蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏? ?꾨땲?섎룄濡??〓떒?섏뿬???쒕떎.",
+  "tr_e": "Article 13(2) of the Road Traffic Act (Passage of Vehicles): the driver of a vehicle must, immediately before crossing a sidewalk, come to a complete stop, check the left and right portions, etc., and then cross so as not to obstruct the passage of pedestrians."
+ },
+ {
+  "n": 170,
+  "ko_e": "?꾨줈援먰넻踰???0議??꾨줈???〓떒) ????吏?섎룄???↔탳 ?깆쓽 ?꾨줈 ?〓떒?쒖꽕???댁슜?????녿뒗 吏泥댁옣?좎씤??寃쎌슦?????ㅻⅨ 援먰넻??諛⑺빐媛 ?섏? ?꾨땲?섎뒗 諛⑸쾿?쇰줈 ?꾨줈 ?〓떒?쒖꽕???댁슜?섏? ?꾨땲?섍퀬 ?꾨줈瑜??〓떒?????덈떎.",
+  "tr_e": "Article 10(2) of the Road Traffic Act (Crossing the Road): a person with a physical disability who cannot use a road-crossing facility such as an underpass or a pedestrian overpass may cross the road without using such crossing facility by a method that does not obstruct other traffic."
+ },
+ {
+  "n": 171,
+  "ko_e": "?쇨컙???꾨줈?곸쓽 蹂댄뻾?먮굹 臾쇱껜?ㅼ씠 ?쇱떆?곸쑝濡???蹂댁씠寃??섎뒗 ?쒖쬆諛??꾩긽?앹씠 ?쇱뼱?섍린 ?ъ슫 ?꾩튂???꾨줈?? 以묒븰??遺洹쇱씠??",
+  "tr_e": "The location where the 'evaporation phenomenon,' in which pedestrians or objects on the road temporarily become invisible at night, is likely to occur is near the center line of the road."
+ },
+ {
+  "n": 172,
+  "ko_e": "蹂댄뻾?먮뒗 蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌??諛섎뱶??蹂대룄濡??듯뻾?섏뿬???쒕떎. 吏泥댁옣?좎씤? ?꾨줈 ?〓떒 ?쒖꽕???댁슜 ?섏? ?꾨땲?섍퀬 ?〓떒?????덈떎. ?? ?덉쟾?쒖? ?깆뿉 ?섑븯???〓떒??湲덉???寃쎌슦?먮뒗 ?〓떒?????녿떎.           (?꾨줈援먰넻踰???0議?",
+  "tr_e": "On a road where the sidewalk and roadway are separated, pedestrians must always pass on the sidewalk. A person with a physical disability may cross without using a road-crossing facility. However, where crossing is prohibited by a traffic sign, etc., they may not cross. (Article 10 of the Road Traffic Act.)"
+ },
+ {
+  "n": 173,
+  "ko_e": "?꾨줈援먰넻踰???議?蹂댄뻾?먰넻?? ??蹂댄뻾?먮뒗 蹂대룄 ?댁뿉?쒕뒗 ?곗륫?듯뻾???먯튃?대떎.",
+  "tr_e": "Article 8 of the Road Traffic Act (Passage of Pedestrians): (4) as a principle, pedestrians must keep to the right within the sidewalk."
+ },
+ {
+  "n": 174,
+  "ko_e": "?꾨줈援먰넻踰???7議?蹂댄뻾?먯쓽 蹂댄샇) ????紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ??2議곗젣1??뿉 ?곕Ⅸ ?대┛??蹂댄샇援ъ뿭  ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤??좎쓣 留먰븳???먯꽌??蹂댄뻾 ?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Article 27(7) of the Road Traffic Act (Protection of Pedestrians): the driver of any vehicle or tram must, in front of a crosswalk without a traffic light among the crosswalks installed within a school zone under Article 12(1) (or, where a stop line is installed, at that stop line), come to a complete stop regardless of whether a pedestrian is crossing."
+ },
+ {
+  "n": 175,
+  "ko_e": "?먯쟾嫄곕? ?뚭퀬 嫄몄뼱媛???щ엺??蹂댄뻾?먯뿉 ?대떦?섍퀬, 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡쒖뿉 癒쇱? 吏꾩엯??李⑤웾?? 蹂댄뻾?먯뿉寃??묐낫?댁빞 ?쒕떎.",
+  "tr_e": "A person walking while pushing a bicycle is also a pedestrian, and a vehicle that entered first at an intersection without traffic control must also yield to pedestrians."
+ },
+ {
+  "n": 176,
+  "ko_e": "?꾨줈援먰넻踰???議????숈깮????닿낵 洹?諛뽰뿉 蹂댄뻾?먯쓽 ?듯뻾??吏?μ쓣 以??곕젮媛 ?덈떎怨??몄젙?섏뿬 ??듬졊?뱀쑝濡? ?뺥븯???щ엺?대굹 ?됰젹(?댄븯 ?쒗뻾?щ벑?앹씠???쒕떎)? ??議곗젣1??蹂몃Ц?먮룄 遺덇뎄?섍퀬 李⑤룄濡??듯뻾?????덈떎. ??寃????됰젹?깆? 李⑤룄???곗륫?쇰줈 ?듯뻾?섏뿬???쒕떎.          踰???3議???李⑤쭏???댁쟾?먮뒗 ?꾨줈(蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌??李⑤룄瑜?留먰븳????以묒븰(以묒븰?좎씠 ?ㅼ튂?섏뼱  ?덈뒗 寃쎌슦?먮뒗 洹?以묒븰?좎쓣 留먰븳?? ?댄븯 媛숇떎) ?곗륫 遺遺꾩쓣 ?듯뻾?섏뿬???쒕떎.",
+  "tr_e": "Article 9 of the Road Traffic Act: (1) a line of students and other persons or processions (hereinafter 'processions, etc.') recognized as likely to obstruct pedestrian passage and prescribed by Presidential Decree may, notwithstanding the main text of Article 8(1), pass along the roadway. In this case, the processions, etc. must pass along the right side of the roadway. Article 13(3): the driver of a vehicle must pass along the right portion of the center of the road (on a road where the sidewalk and roadway are separated, the roadway) (where a center line is installed, the center line; the same applies hereinafter)."
+ },
+ {
+  "n": 177,
+  "ko_e": "?듯뻾援щ텇 ?꾨컲(蹂대룄移⑤쾾, 蹂대룄?〓떒諛⑸쾿 ?꾨컲)  <?꾨줈援먰넻踰뺤떆?됰졊 蹂꾪몴 8>踰붿튃湲?6留???,
+  "tr_e": "Violation of the passage classification (encroaching on the sidewalk, violation of the method of crossing the sidewalk) <Table 8 of the Enforcement Decree of the Road Traffic Act>: a fine of 60,000 won."
+ },
+ {
+  "n": 178,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾?? 蹂꾪몴8 踰붿튃?됱쐞 諛?踰붿튃湲덉븸(?댁쟾?? ?? ?? ?ｋ뒗 6留??먯씠怨? ??? 5留??먯쓽 踰붿튃湲덉븸 遺怨?,
+  "tr_e": "Table 8 of the Enforcement Decree of the Road Traffic Act, offenses and fine amounts (drivers): (1), (2), and (4) are 60,000 won, and (3) is a fine of 50,000 won."
+ },
+ {
+  "n": 179,
+  "ko_e": "?꾨줈援먰넻踰???7議?蹂댄뻾?먯쓽 蹂댄샇) ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 蹂댄뻾?먭? ??0議곗젣3??뿉 ?곕씪 ?〓떒蹂대룄 媛 ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?〓떒?? ???덈룄濡??섏뿬???쒕떎.",
+  "tr_e": "Article 27 of the Road Traffic Act (Protection of Pedestrians): (5) the driver of any vehicle or tram must, when a pedestrian is crossing a road without a crosswalk under Article 10(3), come to a complete stop while keeping a safe distance so that the pedestrian can cross safely."
+ },
+ {
+  "n": 180,
+  "ko_e": "?꾨줈援먰넻踰???議???2???쒗슒?⑤낫?꾟앸?, 蹂댄뻾?먭? ?꾨줈瑜??〓떒?????덈룄濡??덉쟾?쒖?濡??쒖떆???꾨줈??遺遺꾩쓣  留먰븳??",
+  "tr_e": "Article 2, subparagraph 12 of the Road Traffic Act: a 'crosswalk' means the part of a road marked by a traffic sign so that pedestrians can cross the road."
+ },
+ {
+  "n": 181,
+  "ko_e": "?꾨줈援먰넻踰???3議??????댁? ????蹂대룄瑜??〓떒?섍린 吏곸쟾???쇱떆 ?뺤??섏뿬 醫뚯륫 諛??곗륫 遺遺??깆쓣 ?댄? ??蹂댄뻾 ?먯쓽 ?듯뻾??諛⑺빐?섏? ?꾨땲?섎룄濡??〓떒?섏뿬???쒕떎.",
+  "tr_e": "Article 13(1) and (2) of the Road Traffic Act: immediately before crossing a sidewalk, one must come to a complete stop, check the left and right portions, etc., and then cross so as not to obstruct the passage of pedestrians."
+ }
+]
+
+codex
+[]
+tokens used
+10,785
+[]

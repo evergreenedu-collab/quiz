@@ -1,0 +1,262 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127f7-75d1-7f20-9f02-2c06286c3f2c
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/312_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/312_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 558ms:
+[
+ {
+  "n": 242,
+  "ko_e": "?붾Ъ李??섏씠?⑥뒪?좊룄??二쇳솴?? ?쇰컲?섏씠?⑥뒪李⑤줈???뚮??됱씠怨??ㅼ감濡??섏씠?⑥뒪援ш컙? 留ㅼ떆 50??0?щ줈誘명꽣濡? 援ш컙???곕씪 ?ㅻⅤ??",
+  "tr_e": "V梳죅h d梳쳌 h튼沼썀g l횪n hi-pass d횪nh cho xe t梳즜 m횪u cam, l횪n hi-pass th척ng th튼沼쓓g m횪u xanh d튼퉤ng, 휃o梳죒 hi-pass nhi沼걏 l횪n l횪 50~80 ki-l척-m챕t/gi沼? kh찼c nhau t첫y theo 휃o梳죒 휃튼沼쓓g."
+ },
+ {
+  "n": 243,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???9議??먮룞李⑤벑怨??몃㈃?꾩감???띾룄)??2??          ?먮룞李⑥쟾?⑸룄濡쒖뿉?쒖쓽 理쒓퀬?띾룄??留ㅼ떆 90?щ줈誘명꽣, 理쒖??띾룄??留ㅼ떆 30?щ줈誘명꽣",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 19 (T沼멵 휃沼?c沼쬪 xe c퉤 gi沼쌻 v.v. v횪 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g) ??M沼쩭 2. Tr챗n 휃튼沼쓓g d횪nh ri챗ng cho xe c퉤 gi沼쌻, t沼멵 휃沼?t沼멼 휃a l횪 90 ki-l척-m챕t/gi沼? t沼멵 휃沼?t沼멼 thi沼긳 l횪 30 ki-l척-m챕t/gi沼?"
+ },
+ {
+  "n": 244,
+  "ko_e": "?띾룄 ?媛먯쓣 ?듯빐 ?꾨줈援먰넻 李멸??먯쓽 ?덉쟾???꾪븳 5030?뺤콉???쇳솚?쇰줈 2021. 4. 17???꾨줈援먰넻踰??쒗뻾洹쒖튃???쒗뻾 ?섏뼱 二쇨굅, ?곸뾽, 怨듭뾽吏??쓽 ?쇰컲?꾨줈??留ㅼ떆 50?щ줈誘명꽣 ?대궡, ???쑣룸룄寃쎌같泥?옣???뱁엳 ?꾩슂?섎떎怨??몄젙?섏뿬  吏?뺥븳 ?몄꽑 ?먮뒗 援ш컙?먯꽌??留ㅼ떆 60?щ줈誘명꽣 ?대궡濡??먮룞李⑤벑怨??몃㈃?꾩감???듯뻾?띾룄瑜??뺥븿.",
+  "tr_e": "L횪 m沼셳 ph梳쬷 c沼쬪 ch챠nh s찼ch 5030 v챙 an to횪n c沼쬪 ng튼沼쓎 tham gia giao th척ng 휃튼沼쓓g b沼?th척ng qua gi梳즡 t沼멵 휃沼? Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휃튼沼즓 thi h횪nh ng횪y 17/4/2021, quy 휃沼땙h t沼멵 휃沼?휃i l梳죍 c沼쬪 xe c퉤 gi沼쌻 v.v. v횪 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g tr챗n 휃튼沼쓓g th척ng th튼沼쓓g 沼?khu v沼켧 nh횪 沼? th튼퉤ng m梳죍, c척ng nghi沼뇈 l횪 trong ph梳죑 vi 50 ki-l척-m챕t/gi沼? nh튼ng 沼?tuy梳퓆 ho梳톍 휃o梳죒 do Gi찼m 휃沼멵 C척ng an t沼뎝h/th횪nh ph沼?c척ng nh梳춏 l횪 휃梳톍 bi沼뇍 c梳쬷 thi梳퓍 v횪 ch沼?휃沼땙h th챙 trong ph梳죑 vi 60 ki-l척-m챕t/gi沼?"
+ },
+ {
+  "n": 245,
+  "ko_e": "?섎돱???뺤콉?숈? ?怨듯솴 洹밸났???꾪븯??異붿쭊?섏????쒕컲 ?뺤콉(?먯궛諛깃낵). ?섍탳?듭궗怨?以꾩씠湲??쒕쭏????뚢??쒓뎅??濡쒓탳?듦났?⑥씠 二쇱턀?섍퀬 ?됱젙?덉쟾遺? 寃쎌같泥?씠 ?꾩썝?섎뒗 援먰넻?덉쟾 ?섏떇 怨좎랬 ?됱궗. ?섏??ν삎 援먰넻泥닿퀎?숇뒗 ?꾩옄, ?뺣낫, ?듭떊, ?쒖뼱 ?깆쓽 湲곗닠??援먰넻泥닿퀎???묐ぉ?쒗궓 援먰넻?쒖뒪?쒖쓣 留먰븳???먯궛諛깃낵). 臾몄젣??援먰넻?덉쟾 ?뺤콉? ?섏븞 ?꾩냽??5030?숈씠?? 2019. 4. 16. ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議?媛쒖젙???곕씪?뚭뎅?좎쓽 怨꾪쉷 諛??댁슜??愿??踰뺣쪧?띿젣 36議?????????媛紐⑸????ㅻぉ 源뚯???洹쒖젙???곕Ⅸ 二쇨굅吏?? ?곸뾽吏?? 怨듭뾽吏??쓽 ?쇰컲?꾨줈??留ㅼ떆 50?щ줈誘명꽣 ?대궡, ???쑣룸룄寃쎌같泥?옣???뱁엳 ?꾩슂?섎떎怨??몄젙?섏뿬 吏?뺥븳 ?몄꽑 ?먮뒗 援ш컙?먯꽌??留ㅼ떆 60?щ줈誘명꽣 ?대궡濡??먮룞 李⑤벑怨??몃㈃?꾩감???듯뻾?띾룄瑜??뺥뻽?? ?쒗뻾?쇱옄(2021. 4. 17.)",
+  "tr_e": "'Ch챠nh s찼ch New Deal' l횪 c찼c ch챠nh s찼ch 휃튼沼즓 th첬c 휃梳쯻 휃沼?kh梳칌 ph沼쩭 휂梳죍 kh沼쬷g ho梳즢g (B찼ch khoa to횪n th튼 Doosan). '휂梳죍 h沼셢 휃沼뱊g l챵ng gi梳즡 tai n梳죒 giao th척ng' l횪 s沼?ki沼뇆 n창ng cao 첵 th沼쯢 an to횪n giao th척ng do C퉤 quan An to횪n Giao th척ng 휂튼沼쓓g b沼?H횪n Qu沼멵 ch沼?tr챙 v횪 B沼?H횪nh ch챠nh v횪 An to횪n c첫ng C퉤 quan C梳즢h s찼t t횪i tr沼? 'H沼?th沼몁g giao th척ng th척ng minh' l횪 h沼?th沼몁g giao th척ng k梳퓍 h沼즤 c찼c c척ng ngh沼?휃i沼뇆 t沼? th척ng tin, vi沼꿳 th척ng, 휃i沼걏 khi沼긪 v.v. v횪o h沼?th沼몁g giao th척ng (B찼ch khoa to횪n th튼 Doosan). Ch챠nh s찼ch an to횪n giao th척ng trong c창u h沼뢩 l횪 'T沼멵 휃沼?an to횪n 5030'. Theo vi沼놻 s沼춁 휃沼뷼 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 19 ng횪y 16/4/2019, t沼멵 휃沼?휃i l梳죍 c沼쬪 xe c퉤 gi沼쌻 v.v. v횪 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g tr챗n 휃튼沼쓓g th척ng th튼沼쓓g 沼?khu v沼켧 nh횪 沼? th튼퉤ng m梳죍, c척ng nghi沼뇈 theo quy 휃沼땙h t梳죍 휂i沼걏 36 Kho梳즢 1 M沼쩭 1 c찼c 휃i沼긩 a 휃梳퓆 c c沼쬪?똋u梳춗 v沼?Quy ho梳죅h v횪 S沼?d沼쩸g 휂梳쩿 qu沼멵 gia?띋뫦결빰c quy 휃沼땙h l횪 trong ph梳죑 vi 50 ki-l척-m챕t/gi沼? nh튼ng 沼?tuy梳퓆 ho梳톍 휃o梳죒 do Gi찼m 휃沼멵 C척ng an t沼뎝h/th횪nh ph沼?c척ng nh梳춏 l횪 휃梳톍 bi沼뇍 c梳쬷 thi梳퓍 v횪 ch沼?휃沼땙h th챙 trong ph梳죑 vi 60 ki-l척-m챕t/gi沼? Ng횪y thi h횪nh (17/4/2021)."
+ },
+ {
+  "n": 246,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???2議곗쓽 ????愿??蹂꾪몴2 ?좏샇湲곌? ?쒖떆?섎뒗 ?좏샇??醫낅쪟 諛??좏샇????,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 2 li챗n quan 휃梳퓆 휂i沼걏 62 Kho梳즢 2. C찼c lo梳죍 t챠n hi沼뇎 v횪 첵 ngh칫a c沼쬪 t챠n hi沼뇎 do 휃챔n t챠n hi沼뇎 th沼?hi沼뇆."
+ },
+ {
+  "n": 247,
+  "ko_e": "以묒븰 踰꾩뒪?꾩슜李⑤줈(BRT) 援ш컙 ?쒕궡?꾨줈濡?二쇳뻾 以묒씪 寃쎌슦 踰꾩뒪?뺣쪟?μ씠 以묒븰???꾩튂?섍퀬 ?〓떒蹂대룄 湲몄씠媛 吏㏃븘  蹂댄뻾?먯쓽 臾대떒?〓떒 ?ш퀬媛 留롮쑝誘濡?二쇱쓽?섎ŉ ?쒗뻾?댁빞 ?쒕떎.",
+  "tr_e": "Khi 휃ang ch梳죣 tr챗n 휃튼沼쓓g n沼셢 휃척 c沼쬪 휃o梳죒 l횪n d횪nh ri챗ng cho xe bu첵t 沼?gi沼칊 (BRT), v챙 b梳퓆 xe bu첵t n梳켶 沼?gi沼칊 v횪 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?ng梳칗 n챗n c처 nhi沼걏 tai n梳죒 do ng튼沼쓎 휃i b沼?b훱ng qua 휃튼沼쓓g tr찼i ph챕p, do 휃처 ph梳즜 ch첬 첵 v횪 휃i ch梳춎."
+ },
+ {
+  "n": 248,
+  "ko_e": "李⑤줈 蹂寃쎌? 李⑤줈蹂寃쎌씠 媛?ν븳 援ш컙?먯꽌 ?덉쟾???뺤씤????李⑤줈瑜?蹂寃쏀빐???쒕떎.",
+  "tr_e": "Vi沼놻 chuy沼긪 l횪n 휃튼沼쓓g ph梳즜 휃튼沼즓 th沼켧 hi沼뇆 sau khi x찼c nh梳춏 an to횪n t梳죍 휃o梳죒 cho ph챕p chuy沼긪 l횪n 휃튼沼쓓g."
+ },
+ {
+  "n": 249,
+  "ko_e": "援먯감濡쒖뿉 ?묎렐?섏뿬 諛깆깋 ?ㅼ꽑??洹몃젮???덉쑝硫?洹?援ш컙?먯꽌??吏꾨줈 蹂寃쏀빐?쒕뒗 ???섍퀬, ?ㅻⅨ 援먰넻??二쇱쓽?섎ŉ ?쒗뻾??濡??뚯쟾?댁빞 ?쒕떎. 洹몃━怨??고쉶?꾪븷 ???좏샇???녿뒗 援먯감濡쒖뿉?쒕뒗 ?듯뻾 ?곗꽑沅뚯씠 ?덈뒗 李⑤웾?먭쾶 李⑤줈瑜??묐낫?댁빞 ?쒕떎.",
+  "tr_e": "Khi ti梳퓈 c梳춏 giao l沼?m횪 c처 v梳죅h li沼걆 m횪u tr梳칗g th챙 kh척ng 휃튼沼즓 chuy沼긪 h튼沼썀g 휃i trong 휃o梳죒 휃처, ph梳즜 r梳?b梳켷g c찼ch 휃i ch梳춎 trong khi ch첬 첵 휃梳퓆 giao th척ng kh찼c. V횪 khi r梳?ph梳즜 t梳죍 giao l沼?kh척ng c처 휃챔n t챠n hi沼뇎 th챙 ph梳즜 nh튼沼쓓g 휃튼沼쓓g cho xe c처 quy沼걆 튼u ti챗n 휃i l梳죍."
+ },
+ {
+  "n": 250,
+  "ko_e": "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?ㅻⅨ 李⑤? ?욎?瑜닿퀬???섎뒗 ?뚯뿉???욎감??醫뚯륫?쇰줈 ?듯뻾?섏뿬???쒕떎. ?욎?瑜닿퀬???섎뒗 紐⑤뱺  李⑥쓽 ?댁쟾?먮뒗 諛섎? 諛⑺뼢??援먰넻怨??욎감 ?욎そ??援먰넻?먮룄 二쇱쓽瑜?異⑸텇??湲곗슱?ъ빞 ?섎ŉ, ?욎감???띾룄節μ감濡쒖? 洹?諛????꾨줈 ?곹솴???곕씪 諛⑺뼢吏?쒓린節λ벑???먮뒗 寃쎌쓬湲곕? ?ъ슜?섎뒗 ???덉쟾???띾룄? 諛⑸쾿?쇰줈 ?욎?瑜닿린瑜??섏뿬???쒕떎.",
+  "tr_e": "Ng튼沼쓎 휃i沼걏 khi沼긪 m沼뛦 lo梳죍 xe khi mu沼몁 v튼沼즨 xe kh찼c ph梳즜 휃i qua ph챠a b챗n tr찼i c沼쬪 xe ph챠a tr튼沼쌵. Ng튼沼쓎 휃i沼걏 khi沼긪 m沼뛦 lo梳죍 xe mu沼몁 v튼沼즨 ph梳즜 ch첬 첵 휃梳쭃 휃沼?휃梳퓆 c梳?giao th척ng theo chi沼걏 ng튼沼즓 l梳죍 v횪 giao th척ng ph챠a tr튼沼쌵 c沼쬪 xe ph챠a tr튼沼쌵, v횪 ph梳즜 v튼沼즨 xe v沼쌻 t沼멵 휃沼?v횪 c찼ch th沼쯢 an to횪n nh튼 s沼?d沼쩸g 휃챔n xi nhan쨌휃챔n ho梳톍 c챵i t첫y theo t沼멵 휃沼쇑톖횪n 휃튼沼쓓g c沼쬪 xe ph챠a tr튼沼쌵 v횪 t챙nh h챙nh 휃튼沼쓓g s찼 kh찼c."
+ },
+ {
+  "n": 251,
+  "ko_e": "??李⑤웾??湲됱젣?숉븷 ?뚮? ?鍮꾪븯??異붾룎???쇳븷 ???덈뒗 嫄곕━瑜??뺣낫?섎ŉ ?욎?瑜닿린??寃쎌슦 ??李⑤웾??醫뚯륫?쇰줈  ?듯뻾?쒕떎.",
+  "tr_e": "Khi v튼沼즨 xe th챙 ph梳즜 gi沼?kho梳즢g c찼ch c처 th沼?tr찼nh va ch梳죑 휃沼?휃沼?ph챵ng khi xe ph챠a tr튼沼쌵 phanh g梳쩺, v횪 휃i qua ph챠a b챗n tr찼i c沼쬪 xe ph챠a tr튼沼쌵."
+ },
+ {
+  "n": 252,
+  "ko_e": "?뚮갑?쒖꽕 ?ㅼ튂 諛?愿由ъ뿉 愿??踰뺣쪧 ??1議??먮룞李⑥뿉 ?ㅼ튂 ?먮뒗 鍮꾩튂?섎뒗 ?뚰솕湲?  ?????뚯옄?숈감愿由щ쾿????議?????뿉 ?곕Ⅸ ?먮룞李?以??ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?먮룞李⑤? ?쒖옉?띿“由썬냽?섏엯?랁뙋留ㅽ븯?ㅻ뒗 ???먮뒗 ?????먮룞李⑥쓽 ?뚯쑀?먮뒗 李⑤웾???뚰솕湲곕? ?ㅼ튂?섍굅??鍮꾩튂?섏뿬???쒕떎. 1. 5?몄듅 ?댁긽???뱀슜?먮룞李?2. ?뱁빀?먮룞李?,
+  "tr_e": "Lu梳춗 v沼?L梳칛 휃梳톞 v횪 Qu梳즢 l첵 Thi梳퓍 b沼?Ph챵ng ch찼y ch沼칊 ch찼y 휂i沼걏 11 (B챙nh ch沼칊 ch찼y l梳칛 휃梳톞 ho梳톍 trang b沼?tr챗n xe c퉤 gi沼쌻) Kho梳즢 1. Ng튼沼쓎 mu沼몁 ch梳?t梳죓쨌l梳칛 r찼p쨌nh梳춑 kh梳쯷쨌b찼n xe thu沼셛 m沼셳 trong c찼c m沼쩭 sau 휃창y trong s沼?xe c퉤 gi沼쌻 theo 휂i沼걏 3 Kho梳즢 1?똋u梳춗 Qu梳즢 l첵 Xe c퉤 gi沼쌻?뛥o梳톍 ch沼?s沼?h沼칤 xe 휃처 ph梳즜 l梳칛 휃梳톞 ho梳톍 trang b沼?b챙nh ch沼칊 ch찼y d첫ng cho xe. 1. Xe 척 t척 con t沼?5 ch沼?ng沼밿 tr沼?l챗n 2. Xe kh찼ch"
+ },
+ {
+  "n": 253,
+  "ko_e": "?꾨줈援먰넻踰???9議?(湲닿툒?먮룞李⑥쓽 ?곗꽑 ?듯뻾) ?ｊ탳李⑤줈??洹?遺洹쇱뿉??湲닿툒?먮룞李④? ?묎렐?섎뒗 寃쎌슦?먮뒗 李⑤쭏?  ?몃㈃?꾩감???댁쟾?먮뒗 援먯감濡쒕? ?쇳븯???쇱떆?뺤??섏뿬???쒕떎.   ?ㅻえ??李⑥? ?몃㈃?꾩감???댁쟾?먮뒗 ????뿉 ?곕Ⅸ 怨??몄쓽 怨녹뿉??湲닿툒?먮룞李④? ?묎렐??寃쎌슦?먮뒗 湲닿툒?먮룞李④? ?곗꽑 ?듯뻾?????덈룄濡?吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 29 (특u ti챗n 휃i l梳죍 c沼쬪 xe 튼u ti챗n) ??Khi xe 튼u ti챗n ti梳퓈 c梳춏 t梳죍 giao l沼?ho梳톍 g梳쬷 휃처, ng튼沼쓎 휃i沼걏 khi沼긪 xe c沼?v횪 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g ph梳즜 tr찼nh giao l沼?v횪 d沼쳌g l梳죍 h梳쿻. ??Ng튼沼쓎 휃i沼걏 khi沼긪 m沼뛦 lo梳죍 xe v횪 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g, khi xe 튼u ti챗n ti梳퓈 c梳춏 沼?n퉤i kh찼c ngo횪i n퉤i t梳죍 Kho梳즢 4, ph梳즜 nh튼沼쓓g 휃튼沼쓓g 휃沼?xe 튼u ti챗n c처 th沼?휃i l梳죍 tr튼沼쌵."
+ },
+ {
+  "n": 254,
+  "ko_e": "?꾨줈援먰넻踰???9議?(湲닿툒?먮룞李⑥쓽 ?곗꽑 ?듯뻾) ?ｊ탳李⑤줈??洹?遺洹쇱뿉??湲닿툒?먮룞李④? ?묎렐?섎뒗 寃쎌슦?먮뒗 李⑤쭏?  ?몃㈃?꾩감???댁쟾?먮뒗 援먯감濡쒕? ?쇳븯???쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 29 (특u ti챗n 휃i l梳죍 c沼쬪 xe 튼u ti챗n) ??Khi xe 튼u ti챗n ti梳퓈 c梳춏 t梳죍 giao l沼?ho梳톍 g梳쬷 휃처, ng튼沼쓎 휃i沼걏 khi沼긪 xe c沼?v횪 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g ph梳즜 tr찼nh giao l沼?v횪 d沼쳌g l梳죍 h梳쿻."
+ },
+ {
+  "n": 255,
+  "ko_e": "??0議?湲닿툒?먮룞李⑥뿉 ????밸?) 湲닿툒?먮룞李⑥뿉 ??섏뿬???ㅼ쓬 媛??몄쓽 ?ы빆???곸슜?섏? ?꾨땲?쒕떎. ?ㅻ쭔, ???몃?????2?멸퉴吏???ы빆? 湲닿툒?먮룞李?以???議곗젣22?멸?紐⑸????ㅻぉ源뚯????먮룞李⑥? ??듬졊?뱀쑝濡??뺥븯??寃쎌같???먮룞 李⑥뿉 ??댁꽌留??곸슜?섏? ?꾨땲?쒕떎. <媛쒖젙 2021. 1. 12.> 1. ??7議곗뿉 ?곕Ⅸ ?먮룞李⑤벑???띾룄 ?쒗븳. ?ㅻ쭔, ??7議곗뿉 ?곕씪 湲닿툒?먮룞李⑥뿉 ??섏뿬 ?띾룄瑜??쒗븳??寃쎌슦?먮뒗 媛숈? 議곗쓽 洹쒖젙???곸슜?쒕떎. 2. ??2議곗뿉 ?곕Ⅸ ?욎?瑜닿린??湲덉? 3. ??3議곗뿉 ?곕Ⅸ ?쇱뼱?ㅺ린??湲덉? 4. ??議곗뿉 ?곕Ⅸ ?좏샇?꾨컲 5. ??3議곗젣1??뿉 ?곕Ⅸ 蹂대룄移⑤쾾 6. ??3議곗젣3??뿉 ?곕Ⅸ 以묒븰??移⑤쾾 7. ??8議곗뿉 ?곕Ⅸ ?〓떒 ?깆쓽 湲덉? 8. ??9議곗뿉 ?곕Ⅸ ?덉쟾嫄곕━ ?뺣낫 ??9. ??1議곗젣1??뿉 ?곕Ⅸ ?욎?瑜닿린 諛⑸쾿 ??10. ??2議곗뿉 ?곕Ⅸ ?뺤감 諛?二쇱감??湲덉? 11. ??3議곗뿉 ?곕Ⅸ 二쇱감湲덉? 12. ??6議곗뿉 ?곕Ⅸ 怨좎옣 ?깆쓽 議곗튂",
+  "tr_e": "휂i沼걏 30 (Quy 휃沼땙h 휃梳톍 bi沼뇍 휃沼멼 v沼쌻 xe 튼u ti챗n) 휂沼멼 v沼쌻 xe 튼u ti챗n th챙 kh척ng 찼p d沼쩸g c찼c m沼쩭 sau 휃창y. Tuy nhi챗n, c찼c m沼쩭 t沼?M沼쩭 4 휃梳퓆 M沼쩭 12 ch沼?kh척ng 찼p d沼쩸g 휃沼멼 v沼쌻 xe t沼?휃i沼긩 a 휃梳퓆 휃i沼긩 c c沼쬪 휂i沼걏 2 Kho梳즢 22 v횪 xe c梳즢h s찼t do Ngh沼?휃沼땙h c沼쬪 T沼븂g th沼몁g quy 휃沼땙h trong s沼?xe 튼u ti챗n. <s沼춁 휃沼뷼 ng횪y 12/01/2021> 1. Gi沼쌻 h梳죒 t沼멵 휃沼?c沼쬪 xe c퉤 gi沼쌻 v.v. theo 휂i沼걏 17. Tuy nhi챗n, tr튼沼쓓g h沼즤 휃찾 gi沼쌻 h梳죒 t沼멵 휃沼?휃沼멼 v沼쌻 xe 튼u ti챗n theo 휂i沼걏 17 th챙 찼p d沼쩸g quy 휃沼땙h c沼쬪 휃i沼걏 휃처. 2. C梳쩷 v튼沼즨 xe theo 휂i沼걏 22 3. C梳쩷 chen ngang theo 휂i沼걏 23 4. Vi ph梳죑 t챠n hi沼뇎 theo 휂i沼걏 5 5. L梳쩸 v沼뎎 h챔 theo 휂i沼걏 13 Kho梳즢 1 6. L梳쩸 v梳죅h tim 휃튼沼쓓g theo 휂i沼걏 13 Kho梳즢 3 7. C梳쩷 b훱ng qua v.v. theo 휂i沼걏 18 8. Gi沼?kho梳즢g c찼ch an to횪n v.v. theo 휂i沼걏 19 9. C찼ch v튼沼즨 xe v.v. theo 휂i沼걏 21 Kho梳즢 1 10. C梳쩷 d沼쳌g xe v횪 휃沼?xe theo 휂i沼걏 32 11. C梳쩷 휃沼?xe theo 휂i沼걏 33 12. X沼?l첵 khi h튼 h沼뢮g v.v. theo 휂i沼걏 66"
+ },
+ {
+  "n": 256,
+  "ko_e": "湲닿툒?먮룞李⑤뒗 節?옄?숈감愿由щ쾿節ｌ뿉 ?곕Ⅸ ?먮룞李⑥쓽 ?덉쟾 ?댄뻾???꾩슂??湲곗??먯꽌 ?뺥븳 湲닿툒?먮룞李⑥쓽 援ъ“瑜?媛뽰텛?댁빞  ?섍퀬, ?곗꽑 ?듯뻾 諛?湲닿툒?먮룞李⑥뿉 ????밸?? 洹?諛뽰뿉 踰뺤뿉??洹쒖젙???밸????곸슜??諛쏄퀬???섎뒗 ?뚯뿉???ъ씠?뚯쓣  ?몃━嫄곕굹 寃쎄킅?깆쓣 耳쒖빞 ?쒕떎. ?ㅻ쭔, ?띾룄??愿??洹쒖젙???꾨컲?섎뒗 ?먮룞李??깆쓣 ?⑥냽?섎뒗 寃쎌슦??湲닿툒?먮룞李⑥? 援??댁쇅 ?붿씤?????寃쏀샇 ?낅Т ?섑뻾??怨듬Т濡??ъ슜?섎뒗 ?먮룞李⑤뒗 洹몃윭?섏? ?꾨땲?섎떎.",
+  "tr_e": "Xe 튼u ti챗n ph梳즜 c처 k梳퓍 c梳쪀 c沼쬪 xe 튼u ti챗n do ti챗u chu梳쯰 c梳쬷 thi梳퓍 cho vi沼놻 v梳춏 h횪nh an to횪n c沼쬪 xe theo?똋u梳춗 Qu梳즢 l첵 Xe c퉤 gi沼쌻?뛮uy 휃沼땙h, v횪 khi mu沼몁 휃튼沼즓 찼p d沼쩸g quy 휃沼땙h 휃梳톍 bi沼뇍 v沼?튼u ti챗n 휃i l梳죍 v횪 quy 휃沼땙h 휃梳톍 bi沼뇍 휃沼멼 v沼쌻 xe 튼u ti챗n c첫ng c찼c quy 휃沼땙h 휃梳톍 bi沼뇍 kh찼c 휃튼沼즓 quy 휃沼땙h trong lu梳춗, th챙 ph梳즜 h첬 c챵i 튼u ti챗n ho梳톍 b梳춗 휃챔n c梳즢h b찼o. Tuy nhi챗n, xe 튼u ti챗n trong tr튼沼쓓g h沼즤 tr梳쩸 찼p xe c퉤 gi沼쌻 v.v. vi ph梳죑 quy 휃沼땙h v沼?t沼멵 휃沼?v횪 xe 휃튼沼즓 s沼?d沼쩸g v횪o c척ng v沼?th沼켧 hi沼뇆 nhi沼뇅 v沼?b梳즣 v沼?y梳퓎 nh창n trong v횪 ngo횪i n튼沼쌵 th챙 kh척ng 찼p d沼쩸g nh튼 v梳춞."
+ },
+ {
+  "n": 257,
+  "ko_e": "湲닿툒?먮룞李④? ?밸?瑜?諛쏆쑝?ㅻ㈃ ?먮룞李④?由щ쾿???곕Ⅸ ?먮룞李⑥쓽 ?덉쟾 ?댄뻾???꾩슂??援ъ“瑜?媛뽰텛怨??ъ씠?뚯쓣 ?몃━嫄???寃쎄킅?깆쓣 耳쒖빞 ?쒕떎.",
+  "tr_e": "휂沼?xe 튼u ti챗n 휃튼沼즓 h튼沼웢g quy 휃沼땙h 휃梳톍 bi沼뇍 th챙 ph梳즜 c처 k梳퓍 c梳쪀 c梳쬷 thi梳퓍 cho vi沼놻 v梳춏 h횪nh an to횪n c沼쬪 xe theo Lu梳춗 Qu梳즢 l첵 Xe c퉤 gi沼쌻, v횪 ph梳즜 h첬 c챵i 튼u ti챗n ho梳톍 b梳춗 휃챔n c梳즢h b찼o."
+ },
+ {
+  "n": 258,
+  "ko_e": "援ш툒?먮룞李⑤? 遺瑜????녿뒗 ?곹솴?먯꽌 ?쇰컲?먮룞李⑤줈 ?앸챸???꾨룆???섏옄瑜??댁넚?댁빞 ?섎뒗 湲닿툒???곹솴?먯꽌 二쇰?  ?먮룞李??댁쟾?먯쓽 ?묐낫瑜?諛쏆쑝硫댁꽌 蹂묒썝 ?깆쑝濡??댄뻾?댁빞 ?섎뒗 寃쎌슦??湲닿툒?먮룞李⑤줈 ?밸?瑜??곸슜 諛쏄린 ?꾪빐?쒕뒗  ?꾩“???먮뒗 鍮꾩긽?깆쓣 耳쒓굅??洹?諛뽰뿉 ?곷떦??諛⑸쾿?쇰줈 湲닿툒??紐⑹쟻?쇰줈 ?댄뻾?섍퀬 ?덉쓬???쒖떆?섏뿬???쒕떎.",
+  "tr_e": "Trong t챙nh hu沼몁g kh척ng th沼?g沼뛦 xe c沼쯷 th튼퉤ng, trong t챙nh hu沼몁g kh梳쯰 c梳쩺 ph梳즜 ch沼?b沼뇆h nh창n nguy k沼땉h t챠nh m梳죒g b梳켷g xe th척ng th튼沼쓓g, khi ph梳즜 ch梳죣 휃梳퓆 b沼뇆h vi沼뇆 v.v. trong khi 휃튼沼즓 ng튼沼쓎 l찼i xe xung quanh nh튼沼쓓g 휃튼沼쓓g, 휃沼?휃튼沼즓 찼p d沼쩸g quy 휃沼땙h 휃梳톍 bi沼뇍 nh튼 xe 튼u ti챗n th챙 ph梳즜 b梳춗 휃챔n pha ho梳톍 휃챔n kh梳쯰 c梳쩺 ho梳톍 b梳켷g c찼ch th챠ch h沼즤 kh찼c th沼?hi沼뇆 r梳켷g 휃ang ch梳죣 v챙 m沼쩭 휃챠ch kh梳쯰 c梳쩺."
+ },
+ {
+  "n": 259,
+  "ko_e": "?꾨줈援먰넻踰???議???2?? \"湲닿툒?먮룞李?"? ?ㅼ쓬 媛?紐⑹쓽 ?먮룞李⑤줈??洹?蹂몃옒??湲닿툒???⑸룄濡??ъ슜?섍퀬 ?덈뒗 ?먮룞 李⑤? 留먰븳?? 媛. ?뚮갑李? ?? 援ш툒李? ?? ?덉븸 怨듦툒李⑤웾, ?? 洹?諛뽰뿉 ??듬졊?뱀쑝濡??뺥븯???먮룞李?         ?꾨줈援먰넻踰??쒗뻾????議?????援?궡???붿씤(誤곦볶)?????寃쏀샇?낅Т ?섑뻾??怨듬Т(?у떃)濡??ъ슜?섎뒗 ?먮룞李? ??0?? 湲닿툒???고렪臾쇱쓽 ?댁넚???ъ슜?섎뒗 ?먮룞李?,
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 2 Kho梳즢 22. \"Xe 튼u ti챗n\" ngh칫a l횪 xe thu沼셛 c찼c m沼쩭 sau 휃창y v횪 휃ang 휃튼沼즓 s沼?d沼쩸g v횪o m沼쩭 휃챠ch kh梳쯰 c梳쩺 v沼몁 c처 c沼쬪 n처. a. Xe c沼쯷 h沼뢠, b. Xe c沼쯷 th튼퉤ng, c. Xe cung c梳쩺 m찼u, d. Xe kh찼c do Ngh沼?휃沼땙h c沼쬪 T沼븂g th沼몁g quy 휃沼땙h. Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 2 M沼쩭 5 Xe 휃튼沼즓 s沼?d沼쩸g v횪o c척ng v沼?(?у떃) th沼켧 hi沼뇆 nhi沼뇅 v沼?b梳즣 v沼?y梳퓎 nh창n (誤곦볶) trong v횪 ngo횪i n튼沼쌵, M沼쩭 10 Xe 휃튼沼즓 s沼?d沼쩸g 휃沼?v梳춏 chuy沼긪 b튼u ph梳쯯 kh梳쯰 c梳쩺."
+ },
+ {
+  "n": 260,
+  "ko_e": "??9議?湲닿툒?먮룞李⑥쓽 ?곗꽑 ?듯뻾) ???? 湲닿툒?먮룞李⑤뒗 ??3議곗젣3??뿉??遺덇뎄?섍퀬 湲닿툒?섍퀬 遺?앹씠??寃쎌슦?먮뒗 ??濡쒖쓽 以묒븰?대굹 醫뚯륫 遺遺꾩쓣 ?듯뻾?????덈떎. ???? 湲닿툒?먮룞李⑤뒗 ??踰뺤씠????踰뺤뿉 ?곕Ⅸ 紐낅졊???곕씪 ?뺤??섏뿬?? ?섎뒗 寃쎌슦?먮룄 遺덇뎄?섍퀬 湲닿툒?섍퀬 遺?앹씠??寃쎌슦?먮뒗 ?뺤??섏? ?꾨땲?????덈떎. ????릿湲됱옄?숈감???댁쟾?먮뒗 ?? ??씠??????쓽 寃쎌슦??援먰넻?덉쟾???뱁엳 二쇱쓽?섎㈃???듯뻾?섏뿬???쒕떎.",
+  "tr_e": "휂i沼걏 29 (특u ti챗n 휃i l梳죍 c沼쬪 xe 튼u ti챗n) Kho梳즢 1. Xe 튼u ti챗n, m梳톍 d첫 c처 quy 휃沼땙h t梳죍 휂i沼걏 13 Kho梳즢 3, trong tr튼沼쓓g h沼즤 kh梳쯰 c梳쩺 v횪 b梳쩿 kh梳?kh찼ng c처 th沼?휃i 沼?ph梳쬷 gi沼칊 ho梳톍 ph梳쬷 b챗n tr찼i c沼쬪 휃튼沼쓓g. Kho梳즢 2. Xe 튼u ti챗n, m梳톍 d첫 trong tr튼沼쓓g h沼즤 ph梳즜 d沼쳌g theo lu梳춗 n횪y ho梳톍 m沼뇆h l沼뇆h theo lu梳춗 n횪y, trong tr튼沼쓓g h沼즤 kh梳쯰 c梳쩺 v횪 b梳쩿 kh梳?kh찼ng c처 th沼?kh척ng d沼쳌g. Kho梳즢 3. Ng튼沼쓎 l찼i xe 튼u ti챗n trong tr튼沼쓓g h沼즤 c沼쬪 Kho梳즢 1 ho梳톍 Kho梳즢 2 ph梳즜 휃i l梳죍 trong khi 휃梳톍 bi沼뇍 ch첬 첵 휃梳퓆 an to횪n giao th척ng."
+ },
+ {
+  "n": 261,
+  "ko_e": "??0議?湲닿툒?먮룞李⑥뿉 ????밸?) 湲닿툒?먮룞李⑥뿉 ??섏뿬???ㅼ쓬 媛??몄쓽 ?ы빆???곸슜?섏? ?꾨땲?쒕떎. ?ㅻ쭔, ???몃?????2?멸퉴吏???ы빆? 湲닿툒?먮룞李?以???議곗젣22?멸?紐⑸????ㅻぉ源뚯????먮룞李⑥? ??듬졊?뱀쑝濡??뺥븯??寃쎌같???먮룞 李⑥뿉 ??댁꽌留??곸슜?섏? ?꾨땲?쒕떎. <媛쒖젙 2021. 1. 12.> 1. ??7議곗뿉 ?곕Ⅸ ?먮룞李⑤벑???띾룄 ?쒗븳. ?ㅻ쭔, ??7議곗뿉 ?곕씪 湲닿툒?먮룞李⑥뿉 ??섏뿬 ?띾룄瑜??쒗븳??寃쎌슦?먮뒗 媛숈? 議곗쓽 洹쒖젙???곸슜?쒕떎. 2. ??2議곗뿉 ?곕Ⅸ ?욎?瑜닿린??湲덉? 3. ??3議곗뿉 ?곕Ⅸ ?쇱뼱?ㅺ린??湲덉? 4. ??議곗뿉 ?곕Ⅸ ?좏샇?꾨컲 5. ??3議곗젣1??뿉 ?곕Ⅸ 蹂대룄移⑤쾾 6. ??3議곗젣3??뿉 ?곕Ⅸ 以묒븰??移⑤쾾 7. ??8議곗뿉 ?곕Ⅸ ?〓떒 ?깆쓽 湲덉? 8. ??9議곗뿉 ?곕Ⅸ ?덉쟾嫄곕━ ?뺣낫 ??9. ??1議곗젣1??뿉 ?곕Ⅸ ?욎?瑜닿린 諛⑸쾿 ??10. ??2議곗뿉 ?곕Ⅸ ?뺤감 諛?二쇱감??湲덉? 11. ??3議곗뿉 ?곕Ⅸ 二쇱감湲덉? 12. ??6議곗뿉 ?곕Ⅸ 怨좎옣 ?깆쓽 議곗튂",
+  "tr_e": "휂i沼걏 30 (Quy 휃沼땙h 휃梳톍 bi沼뇍 휃沼멼 v沼쌻 xe 튼u ti챗n) 휂沼멼 v沼쌻 xe 튼u ti챗n th챙 kh척ng 찼p d沼쩸g c찼c m沼쩭 sau 휃창y. Tuy nhi챗n, c찼c m沼쩭 t沼?M沼쩭 4 휃梳퓆 M沼쩭 12 ch沼?kh척ng 찼p d沼쩸g 휃沼멼 v沼쌻 xe t沼?휃i沼긩 a 휃梳퓆 휃i沼긩 c c沼쬪 휂i沼걏 2 Kho梳즢 22 v횪 xe c梳즢h s찼t do Ngh沼?휃沼땙h c沼쬪 T沼븂g th沼몁g quy 휃沼땙h trong s沼?xe 튼u ti챗n. <s沼춁 휃沼뷼 ng횪y 12/01/2021> 1. Gi沼쌻 h梳죒 t沼멵 휃沼?c沼쬪 xe c퉤 gi沼쌻 v.v. theo 휂i沼걏 17. Tuy nhi챗n, tr튼沼쓓g h沼즤 휃찾 gi沼쌻 h梳죒 t沼멵 휃沼?휃沼멼 v沼쌻 xe 튼u ti챗n theo 휂i沼걏 17 th챙 찼p d沼쩸g quy 휃沼땙h c沼쬪 휃i沼걏 휃처. 2. C梳쩷 v튼沼즨 xe theo 휂i沼걏 22 3. C梳쩷 chen ngang theo 휂i沼걏 23 4. Vi ph梳죑 t챠n hi沼뇎 theo 휂i沼걏 5 5. L梳쩸 v沼뎎 h챔 theo 휂i沼걏 13 Kho梳즢 1 6. L梳쩸 v梳죅h tim 휃튼沼쓓g theo 휂i沼걏 13 Kho梳즢 3 7. C梳쩷 b훱ng qua v.v. theo 휂i沼걏 18 8. Gi沼?kho梳즢g c찼ch an to횪n v.v. theo 휂i沼걏 19 9. C찼ch v튼沼즨 xe v.v. theo 휂i沼걏 21 Kho梳즢 1 10. C梳쩷 d沼쳌g xe v횪 휃沼?xe theo 휂i沼걏 32 11. C梳쩷 휃沼?xe theo 휂i沼걏 33 12. X沼?l첵 khi h튼 h沼뢮g v.v. theo 휂i沼걏 66"
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+p=Path(r'translations/audit/queue/312_expl_vn.json')
+s=p.read_text(encoding='utf-8')
+print(s.encode('unicode_escape').decode('ascii'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:38:23.419447Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 701ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false); $OutputEncoding = [Console]::OutputEncoding; Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/312_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 581ms:
+[
+ {
+  "n": 242,
+  "ko_e": "화물차 하이패스유도선 주황색, 일반하이패스차로는 파란색이고 다차로 하이패스구간은 매시 50∼80킬로미터로  구간에 따라 다르다.",
+  "tr_e": "Vạch dẫn hướng làn hi-pass dành cho xe tải màu cam, làn hi-pass thông thường màu xanh dương, đoạn hi-pass nhiều làn là 50~80 ki-lô-mét/giờ, khác nhau tùy theo đoạn đường."
+ },
+ {
+  "n": 243,
+  "ko_e": "도로교통법시행규칙 제19조(자동차등과 노면전차의 속도)① 2호           자동차전용도로에서의 최고속도는 매시 90킬로미터, 최저속도는 매시 30킬로미터",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ Điều 19 (Tốc độ của xe cơ giới v.v. và tàu điện mặt đường) ① Mục 2. Trên đường dành riêng cho xe cơ giới, tốc độ tối đa là 90 ki-lô-mét/giờ, tốc độ tối thiểu là 30 ki-lô-mét/giờ."
+ },
+ {
+  "n": 244,
+  "ko_e": "속도 저감을 통해 도로교통 참가자의 안전을 위한 5030정책의 일환으로 2021. 4. 17일 도로교통법 시행규칙이 시행 되어 주거, 상업, 공업지역의 일반도로는 매시 50킬로미터 이내, 단 시·도경찰청장이 특히 필요하다고 인정하여  지정한 노선 또는 구간에서는 매시 60킬로미터 이내로 자동차등과 노면전차의 통행속도를 정함.",
+  "tr_e": "Là một phần của chính sách 5030 vì an toàn của người tham gia giao thông đường bộ thông qua giảm tốc độ, Thông tư thi hành Luật Giao thông đường bộ được thi hành ngày 17/4/2021, quy định tốc độ đi lại của xe cơ giới v.v. và tàu điện mặt đường trên đường thông thường ở khu vực nhà ở, thương mại, công nghiệp là trong phạm vi 50 ki-lô-mét/giờ, nhưng ở tuyến hoặc đoạn do Giám đốc Công an tỉnh/thành phố công nhận là đặc biệt cần thiết và chỉ định thì trong phạm vi 60 ki-lô-mét/giờ."
+ },
+ {
+  "n": 245,
+  "ko_e": "‘뉴딜 정책’은 대공황 극복을 위하여 추진하였던 제반 정책(두산백과). ‘교통사고 줄이기 한마음 대회’ 한국도 로교통공단이 주최하고 행정안전부와 경찰청이 후원하는 교통안전 의식 고취 행사. ‘지능형 교통체계’는 전자, 정보, 통신, 제어 등의 기술을 교통체계에 접목시킨 교통시스템을 말한다(두산백과). 문제의 교통안전 정책은 ‘안 전속도 5030’이다. 2019. 4. 16. 도로교통법 시행규칙 제19조 개정에 따라「국토의 계획 및 이용에 관한 법률」제 36조 제1항 제1호 가목부터 다목 까지의 규정에 따른 주거지역, 상업지역, 공업지역의 일반도로는 매시 50킬로미터 이내, 단 시·도경찰청장이 특히 필요하다고 인정하여 지정한 노선 또는 구간에서는 매시 60킬로미터 이내로 자동 차등과 노면전차의 통행속도를 정했다. 시행일자(2021. 4. 17.)",
+  "tr_e": "'Chính sách New Deal' là các chính sách được thúc đẩy để khắc phục Đại khủng hoảng (Bách khoa toàn thư Doosan). 'Đại hội đồng lòng giảm tai nạn giao thông' là sự kiện nâng cao ý thức an toàn giao thông do Cơ quan An toàn Giao thông Đường bộ Hàn Quốc chủ trì và Bộ Hành chính và An toàn cùng Cơ quan Cảnh sát tài trợ. 'Hệ thống giao thông thông minh' là hệ thống giao thông kết hợp các công nghệ điện tử, thông tin, viễn thông, điều khiển v.v. vào hệ thống giao thông (Bách khoa toàn thư Doosan). Chính sách an toàn giao thông trong câu hỏi là 'Tốc độ an toàn 5030'. Theo việc sửa đổi Thông tư thi hành Luật Giao thông đường bộ Điều 19 ngày 16/4/2019, tốc độ đi lại của xe cơ giới v.v. và tàu điện mặt đường trên đường thông thường ở khu vực nhà ở, thương mại, công nghiệp theo quy định tại Điều 36 Khoản 1 Mục 1 các điểm a đến c của「Luật về Quy hoạch và Sử dụng Đất quốc gia」được quy định là trong phạm vi 50 ki-lô-mét/giờ, nhưng ở tuyến hoặc đoạn do Giám đốc Công an tỉnh/thành phố công nhận là đặc biệt cần thiết và chỉ định thì trong phạm vi 60 ki-lô-mét/giờ. Ngày thi hành (17/4/2021)."
+ },
+ {
+  "n": 246,
+  "ko_e": "도로교통법시행규칙 제62조의 제2항 관련 별표2 신호기가 표시하는 신호의 종류 및 신호의 뜻",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ Bảng phụ lục 2 liên quan đến Điều 62 Khoản 2. Các loại tín hiệu và ý nghĩa của tín hiệu do đèn tín hiệu thể hiện."
+ },
+ {
+  "n": 247,
+  "ko_e": "중앙 버스전용차로(BRT) 구간 시내도로로 주행 중일 경우 버스정류장이 중앙에 위치하고 횡단보도 길이가 짧아  보행자의 무단횡단 사고가 많으므로 주의하며 서행해야 한다.",
+  "tr_e": "Khi đang chạy trên đường nội đô của đoạn làn dành riêng cho xe buýt ở giữa (BRT), vì bến xe buýt nằm ở giữa và vạch sang đường cho người đi bộ ngắn nên có nhiều tai nạn do người đi bộ băng qua đường trái phép, do đó phải chú ý và đi chậm."
+ },
+ {
+  "n": 248,
+  "ko_e": "차로 변경은 차로변경이 가능한 구간에서 안전을 확인한 후 차로를 변경해야 한다.",
+  "tr_e": "Việc chuyển làn đường phải được thực hiện sau khi xác nhận an toàn tại đoạn cho phép chuyển làn đường."
+ },
+ {
+  "n": 249,
+  "ko_e": "교차로에 접근하여 백색 실선이 그려져 있으면 그 구간에서는 진로 변경해서는 안 되고, 다른 교통에 주의하며 서행으 로 회전해야 한다. 그리고 우회전할 때 신호등 없는 교차로에서는 통행 우선권이 있는 차량에게 차로를 양보해야 한다.",
+  "tr_e": "Khi tiếp cận giao lộ mà có vạch liền màu trắng thì không được chuyển hướng đi trong đoạn đó, phải rẽ bằng cách đi chậm trong khi chú ý đến giao thông khác. Và khi rẽ phải tại giao lộ không có đèn tín hiệu thì phải nhường đường cho xe có quyền ưu tiên đi lại."
+ },
+ {
+  "n": 250,
+  "ko_e": "모든 차의 운전자는 다른 차를 앞지르고자 하는 때에는 앞차의 좌측으로 통행하여야 한다. 앞지르고자 하는 모든  차의 운전자는 반대 방향의 교통과 앞차 앞쪽의 교통에도 주의를 충분히 기울여야 하며, 앞차의 속도･차로와 그 밖 의 도로 상황에 따라 방향지시기･등화 또는 경음기를 사용하는 등 안전한 속도와 방법으로 앞지르기를 하여야 한다.",
+  "tr_e": "Người điều khiển mọi loại xe khi muốn vượt xe khác phải đi qua phía bên trái của xe phía trước. Người điều khiển mọi loại xe muốn vượt phải chú ý đầy đủ đến cả giao thông theo chiều ngược lại và giao thông phía trước của xe phía trước, và phải vượt xe với tốc độ và cách thức an toàn như sử dụng đèn xi nhan·đèn hoặc còi tùy theo tốc độ·làn đường của xe phía trước và tình hình đường sá khác."
+ },
+ {
+  "n": 251,
+  "ko_e": "앞 차량이 급제동할 때를 대비하여 추돌을 피할 수 있는 거리를 확보하며 앞지르기할 경우 앞 차량의 좌측으로  통행한다.",
+  "tr_e": "Khi vượt xe thì phải giữ khoảng cách có thể tránh va chạm để đề phòng khi xe phía trước phanh gấp, và đi qua phía bên trái của xe phía trước."
+ },
+ {
+  "n": 252,
+  "ko_e": "소방시설 설치 및 관리에 관한 법률 제11조(자동차에 설치 또는 비치하는 소화기)  제1항 「자동차관리법」 제3조 제1항에 따른 자동차 중 다음 각 호의 어느 하나에 해당하는 자동차를 제작ㆍ조립ㆍ수입ㆍ판매하려는 자 또는 해 당 자동차의 소유자는 차량용 소화기를 설치하거나 비치하여야 한다. 1. 5인승 이상의 승용자동차 2. 승합자동차",
+  "tr_e": "Luật về Lắp đặt và Quản lý Thiết bị Phòng cháy chữa cháy Điều 11 (Bình chữa cháy lắp đặt hoặc trang bị trên xe cơ giới) Khoản 1. Người muốn chế tạo·lắp ráp·nhập khẩu·bán xe thuộc một trong các mục sau đây trong số xe cơ giới theo Điều 3 Khoản 1「Luật Quản lý Xe cơ giới」hoặc chủ sở hữu xe đó phải lắp đặt hoặc trang bị bình chữa cháy dùng cho xe. 1. Xe ô tô con từ 5 chỗ ngồi trở lên 2. Xe khách"
+ },
+ {
+  "n": 253,
+  "ko_e": "도로교통법 제29조 (긴급자동차의 우선 통행) ④교차로나 그 부근에서 긴급자동차가 접근하는 경우에는 차마와  노면전차의 운전자는 교차로를 피하여 일시정지하여야 한다.   ⑤모든 차와 노면전차의 운전자는 제4항에 따른 곳 외의 곳에서 긴급자동차가 접근한 경우에는 긴급자동차가 우선 통행할 수 있도록 진로를 양보하여야 한다.",
+  "tr_e": "Luật Giao thông đường bộ Điều 29 (Ưu tiên đi lại của xe ưu tiên) ④ Khi xe ưu tiên tiếp cận tại giao lộ hoặc gần đó, người điều khiển xe cộ và tàu điện mặt đường phải tránh giao lộ và dừng lại hẳn. ⑤ Người điều khiển mọi loại xe và tàu điện mặt đường, khi xe ưu tiên tiếp cận ở nơi khác ngoài nơi tại Khoản 4, phải nhường đường để xe ưu tiên có thể đi lại trước."
+ },
+ {
+  "n": 254,
+  "ko_e": "도로교통법 제29조 (긴급자동차의 우선 통행) ④교차로나 그 부근에서 긴급자동차가 접근하는 경우에는 차마와  노면전차의 운전자는 교차로를 피하여 일시정지하여야 한다.",
+  "tr_e": "Luật Giao thông đường bộ Điều 29 (Ưu tiên đi lại của xe ưu tiên) ④ Khi xe ưu tiên tiếp cận tại giao lộ hoặc gần đó, người điều khiển xe cộ và tàu điện mặt đường phải tránh giao lộ và dừng lại hẳn."
+ },
+ {
+  "n": 255,
+  "ko_e": "제30조(긴급자동차에 대한 특례) 긴급자동차에 대하여는 다음 각 호의 사항을 적용하지 아니한다. 다만, 제4호부터 제12호까지의 사항은 긴급자동차 중 제2조제22호가목부터 다목까지의 자동차와 대통령령으로 정하는 경찰용 자동 차에 대해서만 적용하지 아니한다. <개정 2021. 1. 12.> 1. 제17조에 따른 자동차등의 속도 제한. 다만, 제17조에 따라 긴급자동차에 대하여 속도를 제한한 경우에는 같은 조의 규정을 적용한다. 2. 제22조에 따른 앞지르기의 금지 3. 제23조에 따른 끼어들기의 금지 4. 제5조에 따른 신호위반 5. 제13조제1항에 따른 보도침범 6. 제13조제3항에 따른 중앙선 침범 7. 제18조에 따른 횡단 등의 금지 8. 제19조에 따른 안전거리 확보 등 9. 제21조제1항에 따른 앞지르기 방법 등 10. 제32조에 따른 정차 및 주차의 금지 11. 제33조에 따른 주차금지 12. 제66조에 따른 고장 등의 조치",
+  "tr_e": "Điều 30 (Quy định đặc biệt đối với xe ưu tiên) Đối với xe ưu tiên thì không áp dụng các mục sau đây. Tuy nhiên, các mục từ Mục 4 đến Mục 12 chỉ không áp dụng đối với xe từ điểm a đến điểm c của Điều 2 Khoản 22 và xe cảnh sát do Nghị định của Tổng thống quy định trong số xe ưu tiên. <sửa đổi ngày 12/01/2021> 1. Giới hạn tốc độ của xe cơ giới v.v. theo Điều 17. Tuy nhiên, trường hợp đã giới hạn tốc độ đối với xe ưu tiên theo Điều 17 thì áp dụng quy định của điều đó. 2. Cấm vượt xe theo Điều 22 3. Cấm chen ngang theo Điều 23 4. Vi phạm tín hiệu theo Điều 5 5. Lấn vỉa hè theo Điều 13 Khoản 1 6. Lấn vạch tim đường theo Điều 13 Khoản 3 7. Cấm băng qua v.v. theo Điều 18 8. Giữ khoảng cách an toàn v.v. theo Điều 19 9. Cách vượt xe v.v. theo Điều 21 Khoản 1 10. Cấm dừng xe và đỗ xe theo Điều 32 11. Cấm đỗ xe theo Điều 33 12. Xử lý khi hư hỏng v.v. theo Điều 66"
+ },
+ {
+  "n": 256,
+  "ko_e": "긴급자동차는 ｢자동차관리법｣에 따른 자동차의 안전 운행에 필요한 기준에서 정한 긴급자동차의 구조를 갖추어야  하고, 우선 통행 및 긴급자동차에 대한 특례와 그 밖에 법에서 규정된 특례의 적용을 받고자 하는 때에는 사이렌을  울리거나 경광등을 켜야 한다. 다만, 속도에 관한 규정을 위반하는 자동차 등을 단속하는 경우의 긴급자동차와 국 내외 요인에 대한 경호 업무 수행에 공무로 사용되는 자동차는 그러하지 아니하다.",
+  "tr_e": "Xe ưu tiên phải có kết cấu của xe ưu tiên do tiêu chuẩn cần thiết cho việc vận hành an toàn của xe theo「Luật Quản lý Xe cơ giới」quy định, và khi muốn được áp dụng quy định đặc biệt về ưu tiên đi lại và quy định đặc biệt đối với xe ưu tiên cùng các quy định đặc biệt khác được quy định trong luật, thì phải hú còi ưu tiên hoặc bật đèn cảnh báo. Tuy nhiên, xe ưu tiên trong trường hợp trấn áp xe cơ giới v.v. vi phạm quy định về tốc độ và xe được sử dụng vào công vụ thực hiện nhiệm vụ bảo vệ yếu nhân trong và ngoài nước thì không áp dụng như vậy."
+ },
+ {
+  "n": 257,
+  "ko_e": "긴급자동차가 특례를 받으려면 자동차관리법에 따른 자동차의 안전 운행에 필요한 구조를 갖추고 사이렌을 울리거 나 경광등을 켜야 한다.",
+  "tr_e": "Để xe ưu tiên được hưởng quy định đặc biệt thì phải có kết cấu cần thiết cho việc vận hành an toàn của xe theo Luật Quản lý Xe cơ giới, và phải hú còi ưu tiên hoặc bật đèn cảnh báo."
+ },
+ {
+  "n": 258,
+  "ko_e": "구급자동차를 부를 수 없는 상황에서 일반자동차로 생명이 위독한 환자를 이송해야 하는 긴급한 상황에서 주변  자동차 운전자의 양보를 받으면서 병원 등으로 운행해야 하는 경우에 긴급자동차로 특례를 적용 받기 위해서는  전조등 또는 비상등을 켜거나 그 밖에 적당한 방법으로 긴급한 목적으로 운행되고 있음을 표시하여야 한다.",
+  "tr_e": "Trong tình huống không thể gọi xe cứu thương, trong tình huống khẩn cấp phải chở bệnh nhân nguy kịch tính mạng bằng xe thông thường, khi phải chạy đến bệnh viện v.v. trong khi được người lái xe xung quanh nhường đường, để được áp dụng quy định đặc biệt như xe ưu tiên thì phải bật đèn pha hoặc đèn khẩn cấp hoặc bằng cách thích hợp khác thể hiện rằng đang chạy vì mục đích khẩn cấp."
+ },
+ {
+  "n": 259,
+  "ko_e": "도로교통법 제2조 제22호  \"긴급자동차\"란 다음 각 목의 자동차로서 그 본래의 긴급한 용도로 사용되고 있는 자동 차를 말한다. 가. 소방차, 나. 구급차, 다. 혈액 공급차량, 라. 그 밖에 대통령령으로 정하는 자동차          도로교통법 시행령 제2조 제5호 국내외 요인(要人)에 대한 경호업무 수행에 공무(公務)로 사용되는 자동차, 제10호  긴급한 우편물의 운송에 사용되는 자동차",
+  "tr_e": "Luật Giao thông đường bộ Điều 2 Khoản 22. \"Xe ưu tiên\" nghĩa là xe thuộc các mục sau đây và đang được sử dụng vào mục đích khẩn cấp vốn có của nó. a. Xe cứu hỏa, b. Xe cứu thương, c. Xe cung cấp máu, d. Xe khác do Nghị định của Tổng thống quy định. Nghị định thi hành Luật Giao thông đường bộ Điều 2 Mục 5 Xe được sử dụng vào công vụ (公務) thực hiện nhiệm vụ bảo vệ yếu nhân (要人) trong và ngoài nước, Mục 10 Xe được sử dụng để vận chuyển bưu phẩm khẩn cấp."
+ },
+ {
+  "n": 260,
+  "ko_e": "제29조(긴급자동차의 우선 통행) 제1항. 긴급자동차는 제13조제3항에도 불구하고 긴급하고 부득이한 경우에는 도 로의 중앙이나 좌측 부분을 통행할 수 있다. 제2항. 긴급자동차는 이 법이나 이 법에 따른 명령에 따라 정지하여야  하는 경우에도 불구하고 긴급하고 부득이한 경우에는 정지하지 아니할 수 있다. 제3항긴급자동차의 운전자는 제1 항이나 제2항의 경우에 교통안전에 특히 주의하면서 통행하여야 한다.",
+  "tr_e": "Điều 29 (Ưu tiên đi lại của xe ưu tiên) Khoản 1. Xe ưu tiên, mặc dù có quy định tại Điều 13 Khoản 3, trong trường hợp khẩn cấp và bất khả kháng có thể đi ở phần giữa hoặc phần bên trái của đường. Khoản 2. Xe ưu tiên, mặc dù trong trường hợp phải dừng theo luật này hoặc mệnh lệnh theo luật này, trong trường hợp khẩn cấp và bất khả kháng có thể không dừng. Khoản 3. Người lái xe ưu tiên trong trường hợp của Khoản 1 hoặc Khoản 2 phải đi lại trong khi đặc biệt chú ý đến an toàn giao thông."
+ },
+ {
+  "n": 261,
+  "ko_e": "제30조(긴급자동차에 대한 특례) 긴급자동차에 대하여는 다음 각 호의 사항을 적용하지 아니한다. 다만, 제4호부터 제12호까지의 사항은 긴급자동차 중 제2조제22호가목부터 다목까지의 자동차와 대통령령으로 정하는 경찰용 자동 차에 대해서만 적용하지 아니한다. <개정 2021. 1. 12.> 1. 제17조에 따른 자동차등의 속도 제한. 다만, 제17조에 따라 긴급자동차에 대하여 속도를 제한한 경우에는 같은 조의 규정을 적용한다. 2. 제22조에 따른 앞지르기의 금지 3. 제23조에 따른 끼어들기의 금지 4. 제5조에 따른 신호위반 5. 제13조제1항에 따른 보도침범 6. 제13조제3항에 따른 중앙선 침범 7. 제18조에 따른 횡단 등의 금지 8. 제19조에 따른 안전거리 확보 등 9. 제21조제1항에 따른 앞지르기 방법 등 10. 제32조에 따른 정차 및 주차의 금지 11. 제33조에 따른 주차금지 12. 제66조에 따른 고장 등의 조치",
+  "tr_e": "Điều 30 (Quy định đặc biệt đối với xe ưu tiên) Đối với xe ưu tiên thì không áp dụng các mục sau đây. Tuy nhiên, các mục từ Mục 4 đến Mục 12 chỉ không áp dụng đối với xe từ điểm a đến điểm c của Điều 2 Khoản 22 và xe cảnh sát do Nghị định của Tổng thống quy định trong số xe ưu tiên. <sửa đổi ngày 12/01/2021> 1. Giới hạn tốc độ của xe cơ giới v.v. theo Điều 17. Tuy nhiên, trường hợp đã giới hạn tốc độ đối với xe ưu tiên theo Điều 17 thì áp dụng quy định của điều đó. 2. Cấm vượt xe theo Điều 22 3. Cấm chen ngang theo Điều 23 4. Vi phạm tín hiệu theo Điều 5 5. Lấn vỉa hè theo Điều 13 Khoản 1 6. Lấn vạch tim đường theo Điều 13 Khoản 3 7. Cấm băng qua v.v. theo Điều 18 8. Giữ khoảng cách an toàn v.v. theo Điều 19 9. Cách vượt xe v.v. theo Điều 21 Khoản 1 10. Cấm dừng xe và đỗ xe theo Điều 32 11. Cấm đỗ xe theo Điều 33 12. Xử lý khi hư hỏng v.v. theo Điều 66"
+ }
+]
+
+codex
+[]
+tokens used
+29,173
+[]

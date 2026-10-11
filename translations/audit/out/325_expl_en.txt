@@ -1,0 +1,341 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1280a-883b-7300-b6e4-0fb4b082a4a5
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/325_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/325_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 527ms:
+[
+ {
+  "n": 504,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 蹂꾪몴8, ?좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙?좊쭔???곷떦???댁쑀媛 ?덈뒗 ?먯쟾嫄??댁쟾?먭? 寃쎌같怨듬Т?먯쓽  ?명씉議곗궗 痢≪젙??遺덉쓳??寃쎌슦 踰붿튃湲?10留??먯씠??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]: where a bicycle rider with substantial grounds to be deemed intoxicated refuses a police officer's breath test, the penalty fine is 100,000 won."
+ },
+ {
+  "n": 505,
+  "ko_e": "以묒븰?좎쓣 移⑤쾾?섍굅???좏샇瑜??꾨컲?섏뿬 ?몄쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝???뚮뒗 醫낇빀蹂댄뿕 ?먮뒗 怨듭젣議고빀??媛???섏뼱 ?덉뼱??泥섎쾶?쒕떎.(援먰넻?ш퀬泥섎━?밸?踰???議? ??議?",
+  "tr_e": "A person who causes a traffic accident with personal injury by crossing the center line or violating a signal is punished even if they have subscribed to comprehensive insurance or a mutual-aid association. (Act on Special Cases concerning the Settlement of Traffic Accidents Articles 3 and 4)"
+ },
+ {
+  "n": 506,
+  "ko_e": "踰붿튃湲??⑸? ?듦퀬?쒕? 諛쏆? ?щ엺??2李??⑸?湲곌컙??寃쎄낵??寃쎌슦 吏泥??놁씠 利됯껐?ы뙋??泥?뎄?섏뿬???쒕떎. 利됯껐?ы뙋 ??諛쏆? ?꾨땲?????댁쟾硫댄뿀瑜?40???뺤??쒕떎. 踰붿튃湲덉븸??100遺꾩쓽 50???뷀븳 湲덉븸???⑸??섎㈃ 利됯껐?ы뙋??泥?뎄??吏 ?딅뒗??(?꾨줈援먰넻踰???65議?",
+  "tr_e": "Where a person who received a fine payment notice fails to meet the second payment period, an immediate ruling (summary judgment) must be requested without delay. If the immediate ruling is not obtained, the driver's license is suspended for 40 days. If the person pays the fine amount plus 50/100, no immediate ruling is requested. (Road Traffic Act Article 165)"
+ },
+ {
+  "n": 507,
+  "ko_e": "二셋룹젙李⑤맂 李⑤쭔 ?먭눼?섎뒗 援먰넻?ш퀬瑜??쇱쑝?ㅺ퀬 ?쇳빐?먯뿉寃??몄쟻?ы빆???쒓났?섏? ?꾨땲???щ엺? ?꾨줈援먰넻踰???156議?踰뚯튃)???섑븳 泥섎쾶湲곗?? 20留????댄븯??踰뚭툑?대굹 援щ쪟 ?먮뒗 怨쇰즺?대떎. ?ㅼ젣???꾨줈援먰넻踰??쒗뻾??蹂꾪몴8?? ?섑빐 ?뱀슜?먮룞李⑤벑? 踰붿튃湲?12留??먯쑝濡??듦퀬泥섎텇 ?쒕떎.",
+  "tr_e": "A person who causes a traffic accident damaging only a parked or stopped vehicle and does not provide the victim with their personal information faces, under Road Traffic Act Article 156 (Penal Provisions), a punishment of a fine of up to 200,000 won, detention, or a minor fine. In practice, under Enforcement Decree of the Road Traffic Act [Table 8], a passenger car, etc., is subject to a notified penalty fine of 120,000 won."
+ },
+ {
+  "n": 508,
+  "ko_e": "?꾨줈援먰넻踰???48議곗쓽2(踰뚯튃) ????4議곗젣1??쓣 ?꾨컲?섏뿬 ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감瑜??댁쟾???щ엺? ?ㅼ쓬 媛??몄쓽 援щ텇???곕씪 泥섎쾶?쒕떎. 1. ?덉쨷?뚯퐫?щ냽?꾧? 0.2?쇱꽱???댁긽???щ엺? 2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑 2. ?덉쨷?뚯퐫?щ냽?꾧? 0.08?쇱꽱???댁긽 0.2?쇱꽱??誘몃쭔???щ엺? 1???댁긽 2???댄븯??吏뺤뿭?대굹 500留????댁긽 1泥쒕쭔 ???댄븯??踰뚭툑 3. ?덉쨷?뚯퐫?щ냽?꾧? 0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???щ엺? 1???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+  "tr_e": "Road Traffic Act Article 148-2 (Penal Provisions) Paragraph 3: a person who, in violation of Article 44 Paragraph 1, drives a vehicle, etc., or a tram while intoxicated is punished as follows. 1. A person with a blood alcohol concentration of 0.2 percent or more: imprisonment for 2 to 5 years or a fine of 10 million to 20 million won. 2. A person with a blood alcohol concentration of 0.08 percent or more but less than 0.2 percent: imprisonment for 1 to 2 years or a fine of 5 million to 10 million won. 3. A person with a blood alcohol concentration of 0.03 percent or more but less than 0.08 percent: imprisonment for up to 1 year or a fine of up to 5 million won."
+ },
+ {
+  "n": 510,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴 29, ?곗뒿?댁쟾硫댄뿀 ?뚯??먭? ?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽???섏뼱???댁쟾?????곗뒿???꾨㈃?덈? 痍⑥냼?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 29]: where the holder of a learner's driver's license drives with a blood alcohol concentration of 0.03 percent or higher, the learner's license is revoked."
+ },
+ {
+  "n": 511,
+  "ko_e": "?⑥냽?섎뒗 寃쎌같怨듬Т????諛??쒋ㅺ뎔?ㅺ뎄 怨듬Т?먯쓣 ??뻾?섏뿬 ?뺤궗 ?낃굔?????댁쟾硫댄뿀瑜?痍⑥냼 泥섎텇?쒕떎.(?꾨줈援먰넻踰????됯퇋移?蹂꾪몴28 2. 痍⑥냼 泥섎텇 媛쒕퀎 湲곗? 16)",
+  "tr_e": "The driver's license is revoked where a person assaults an enforcing police officer, etc., or a Si/Gun/Gu public official and is criminally booked (placed under investigation). (Enforcement Rule of the Road Traffic Act [Table 28], 2. Individual Standards for Revocation Dispositions, No. 16)"
+ },
+ {
+  "n": 512,
+  "ko_e": "?몄쟻 ?쇳빐 ?덈뒗 援먰넻?ш퀬瑜??쇨린?섍퀬 ?꾩＜??李⑤웾???댁쟾?먮? 寃嫄고븯嫄곕굹 ?좉퀬?섏뿬 寃嫄고븯寃????댁쟾??援먰넻?ш퀬 ???쇳빐?먭? ?꾨땶 寃쎌슦濡??쒖젙?쒕떎)?먭쾶??寃嫄??먮뒗 ?좉퀬???뚮쭏??40?먯쓽 ?뱁삙?먯닔瑜?遺?ы븯??湲곌컙??愿怨꾩뾾?? 洹??댁쟾?먭? ?뺤? ?먮뒗 痍⑥냼泥섎텇??諛쏄쾶 ??寃쎌슦 ?꾩궛?먯닔?먯꽌 ?대? 怨듭젣?쒕떎. ??寃쎌슦 怨듭젣?섎뒗 ?먯닔??40???⑥쐞 濡??쒕떎.(?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28 1. ?쇰컲 湲곗?)",
+  "tr_e": "A driver who apprehends, or reports and thereby causes the apprehension of, the driver of a vehicle that caused a traffic accident with personal injury and fled (limited to cases where the reporter is not the victim of the traffic accident) is granted 40 bonus points per apprehension or report; and if that reporting driver comes to receive a suspension or revocation disposition, these points are deducted from the accumulated points regardless of the period. In this case, the points deducted are in units of 40. (Enforcement Rule of the Road Traffic Act [Table 28], 1. General Standards)"
+ },
+ {
+  "n": 513,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 蹂꾪몴8, ?뱀슜?먮룞李⑥쓽 ?욎?瑜닿린 湲덉? ?쒓린쨌?μ냼 ?꾨컲? 踰붿튃湲?6留??먯씠 遺怨쇰맂??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]: a passenger car's violation of the time/place prohibitions on overtaking is subject to a penalty fine of 60,000 won."
+ },
+ {
+  "n": 514,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8 3??(?덉쟾?쒖? ?ㅼ튂) ?뱀슜?먮룞李?8留???/ 29(?덉쟾?쒖? 誘몄꽕移? ?뱀슜?먮룞李?4留???,
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8], No. 3-3 (offense of installing a traffic sign): passenger car, penalty fine 80,000 won / No. 29 (offense of failing to install a traffic sign): passenger car, penalty fine 40,000 won."
+ },
+ {
+  "n": 515,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴 28, ?밴컼??李⑤궡 ?뚮??됱쐞 諛⑹튂?댁쟾? 40?? 泥좉만嫄대꼸紐??듦낵諛⑸쾿 ?꾨컲쨌怨좎냽?꾨줈 媛볤만  ?듯뻾쨌?댁쟾硫댄뿀利??깆쓽 ?쒖떆?섎Т?꾨컲? 踰뚯젏 30?먯씠 遺怨쇰맂??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 28]: 40 points for driving while leaving a passenger's disorderly conduct inside the vehicle unchecked; 30 penalty points for violating the method of crossing a railroad crossing, traveling on the expressway shoulder, and violating the duty to present the driver's license, etc."
+ },
+ {
+  "n": 516,
+  "ko_e": "利됯껐?ы뙋??泥?뎄???쇨퀬?몄씠 利됯껐?ы뙋???좉퀬 ?꾧퉴吏 ?듦퀬諛쏆? 踰붿튃湲덉븸??100遺꾩쓽 50???뷀븳 湲덉븸???닿퀬 ?⑸?瑜? 利앸챸?섎뒗 ?쒕쪟瑜??쒖텧?섎㈃ 寃쎌같?쒖옣 ?먮뒗 ?쒖＜?밸퀎?먯튂?꾩??щ뒗 ?쇨퀬?몄뿉 ???利됯껐?ы뙋 泥?뎄瑜?痍⑥냼?섏뿬??????(?꾨줈援먰넻踰???65議??듦퀬泥섎텇 遺덉씠???깆쓽 泥섎━))",
+  "tr_e": "Where a defendant for whom an immediate ruling has been requested pays, before the pronouncement of the immediate ruling, the notified fine amount plus 50/100 and submits documents proving payment, the chief of the police station or the Governor of Jeju Special Self-Governing Province must cancel the request for an immediate ruling against the defendant. (Road Traffic Act Article 165 (Handling of Failure to Comply with a Notification Disposition, etc.))"
+ },
+ {
+  "n": 517,
+  "ko_e": "?꾨줈援먰넻踰???48議곗쓽2(踰뚯튃) ?≪닠??痍⑦븳 ?곹깭???덈떎怨??몄젙??留뚰븳 ?곷떦???댁쑀媛 ?덈뒗 ?щ엺?쇰줈????4議곗젣2 ??뿉 ?곕Ⅸ 寃쎌같怨듬Т?먯쓽 痢≪젙???묓븯吏 ?꾨땲?섎뒗 ?щ엺(?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감瑜??댁쟾?섎뒗 ?щ엺?쇰줈 ?쒖젙?쒕떎)? 1???댁긽 5???댄븯??吏뺤뿭?대굹 500留????댁긽 2泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+  "tr_e": "Road Traffic Act Article 148-2 (Penal Provisions) Paragraph 2: a person with substantial grounds to be deemed intoxicated who does not comply with a police officer's test under Article 44 Paragraph 2 (limited to a person driving a vehicle, etc., or a tram) is punished by imprisonment for 1 to 5 years or a fine of 5 million to 20 million won."
+ },
+ {
+  "n": 518,
+  "ko_e": "?먮룞李④?由щ쾿 ??0議?5??諛???1議?踰뚯튃)?꾧뎄?좎? ?깅줉踰덊샇?먯쓣 媛由ш굅???뚯븘蹂닿린 怨ㅻ??섍쾶 ?섏뿬?쒕뒗 ?꾨땲?섎ŉ, 洹몃윭???먮룞李⑤? ?댄뻾?섏뿬?쒕룄 ?꾨땲?쒕떎.",
+  "tr_e": "Motor Vehicle Management Act Article 10 Paragraph 5 and Article 81 (Penal Provisions): no one may cover the registration plate or make it hard to recognize, nor may they operate such a vehicle."
+ },
+ {
+  "n": 519,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴6 12??踰???7議?????怨좎냽?꾨줈 ?깆뿉?쒖쓽 以???ы빆???꾨컲???댁쟾?먮뒗 ?뱀슜 諛??뱁빀?먮룞 李??깆? 怨쇳깭猷?2留???,
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 6], No. 12: a driver of a passenger car or passenger van, etc., who violates the matters to be observed on expressways, etc., under Article 67 Paragraph 2 of the Act is subject to an administrative fine of 20,000 won."
+ },
+ {
+  "n": 520,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 8",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]."
+ },
+ {
+  "n": 521,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴28?? ?뺤?泥섎텇 媛쒕퀎湲곗?",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 28-3], individual standards for suspension dispositions."
+ },
+ {
+  "n": 522,
+  "ko_e": "?????쒓뎅?꾨줈援먰넻怨듬떒? ????媛??몄쓽 ?곸꽦寃??湲곗???媛뽰텛?덈뒗吏瑜??ㅼ쓬 媛??몄쓽 ?쒕쪟濡??먯젙?????덈떎.           1. ?댁쟾硫댄뿀?쒗뿕 ?좎껌?쇰???2???대궡??諛쒓툒???ㅼ쓬 媛?紐⑹쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?쒕쪟           媛. ?섏썝, 蹂묒썝 諛?醫낇빀蹂묒썝?먯꽌 諛쒗뻾???좎껜寃?ъ꽌           ?? ?뚭뎅誘쇨굔媛뺣낫?섎쾿????2議곗뿉 ?곕Ⅸ 嫄닿컯寃吏?寃곌낵 ?듬낫??          ?? ?섏궗媛 諛쒓툒??吏꾨떒??          ?? 蹂묒뿭?먯젙 ?좎껜寃???꾩뿭蹂묒????좎껜寃?щ? ?ы븿?쒕떎) 寃곌낵 ?듬낫??,
+  "tr_e": "Paragraph 2: the Korea Road Traffic Authority may determine whether the aptitude test standards under each item of Paragraph 1 are met using the following documents. 1. Any of the following documents issued within 2 years from the date of the driver's license test application: (a) a physical examination report issued by a clinic, hospital, or general hospital; (b) a health checkup result notice under Article 52 of the National Health Insurance Act; (c) a medical certificate issued by a doctor; (d) a military service physical examination (including the physical examination for active-duty volunteers) result notice."
+ },
+ {
+  "n": 523,
+  "ko_e": "?꾨줈援먰넻踰???4議??댁쟾硫댄뿀??痍⑥냼泥섎텇 ?먮뒗 ?뺤?泥섎텇, ?곗뒿?댁쟾硫댄뿀 痍⑥냼泥섎텇????섏뿬 ?댁쓽媛 ?덈뒗 ?щ엺? 洹? 泥섎텇??諛쏆? ?좊???60???대궡???쑣룸룄寃쎌같泥?옣?먭쾶 ?댁쓽瑜??좎껌?????덈떎.",
+  "tr_e": "Road Traffic Act Article 94: a person who objects to a driver's license revocation or suspension disposition, or a learner's license revocation disposition, may file an objection with the Commissioner of the City/Provincial Police Agency within 60 days from the day the disposition was received."
+ },
+ {
+  "n": 524,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???5議??곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?щ엺??以?섏궗??, 蹂꾪몴 29, ?곗뒿?댁쟾硫댄뿀 以?섏궗??쓣 ?꾨컲????(?곗뒿?섍퀬???섎뒗 ?먮룞李⑤? ?댁쟾?????덈뒗 ?댁쟾硫댄뿀瑜?諛쏆? ?좊???2?꾩씠 寃쎄낵???щ엺怨??④퍡 ?뱀감?섏뿬 洹??щ엺?? 吏?꾨? 諛쏆븘???쒕떎)?곗뒿?댁쟾硫댄뿀瑜?痍⑥냼?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 55 (Matters to Be Observed by a Holder of a Learner's Driver's License), [Table 29]: the learner's license is revoked where a person violates the matters to be observed for a learner's license (they must ride together with, and receive the guidance of, a person who has held a driver's license enabling them to drive the vehicle to be practiced for 2 years or more from the date of obtaining it)."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/325_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ s=x.get('ko_e','')
+ try: s=s.encode('cp949').decode('utf-8')
+ except Exception as e: s=f'ERR {e} | '+s
+ print(x['n'], s)
+ print('EN',x['tr_e'])
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:59:10.334638Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:13 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 684ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:13 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/325_expl_en.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; foreach($x in $data){ try {$fixed=$utf8.GetString($cp949.GetBytes($x.ko_e))} catch {$fixed=$x.ko_e}; Write-Output (('"'{0}: {1}' -f "'$x.n,$fixed)); Write-Output ('"'EN: '+"'$x.tr_e) }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 761ms:
+ConvertFrom-Json : 잘못된 개체가 전달되었습니다. ':' 또는 '}'가 필요합니다. (5352): [
+ {
+  "n": 504,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 蹂꾪몴8, ?좎뿉 痍⑦븳 ?곹깭???덈떎怨??몄젙?좊쭔???곷떦???댁쑀媛 ?덈뒗 ?먯쟾嫄??댁쟾?먭? 寃쎌같怨듬Т?먯쓽  ?명씉議곗궗 痢≪젙??遺덉쓳??寃쎌슦 踰붿튃湲
+?10留??먯씠??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]: where a bicycle rider with substantial grounds to be d
+eemed intoxicated refuses a police officer's breath test, the penalty fine is 100,000 won."
+ },
+ {
+  "n": 505,
+  "ko_e": "以묒븰?좎쓣 移⑤쾾?섍굅???좏샇瑜??꾨컲?섏뿬 ?몄쟻 ?쇳빐媛 ?덈뒗 援먰넻?ш퀬瑜??쇱쑝???뚮뒗 醫낇빀蹂댄뿕 ?먮뒗 怨듭젣議고빀??媛???섏뼱 ?덉뼱??泥섎쾶?쒕떎.(援먰넻?ш퀬泥섎━?
+밸?踰???議? ??議?",
+  "tr_e": "A person who causes a traffic accident with personal injury by crossing the center line or violating a signa
+l is punished even if they have subscribed to comprehensive insurance or a mutual-aid association. (Act on Special Case
+s concerning the Settlement of Traffic Accidents Articles 3 and 4)"
+ },
+ {
+  "n": 506,
+  "ko_e": "踰붿튃湲??⑸? ?듦퀬?쒕? 諛쏆? ?щ엺??2李??⑸?湲곌컙??寃쎄낵??寃쎌슦 吏泥??놁씠 利됯껐?ы뙋??泥?뎄?섏뿬???쒕떎. 利됯껐?ы뙋 ??諛쏆? ?꾨땲?????댁쟾硫댄뿀瑜?40???뺤
+??쒕떎. 踰붿튃湲덉븸??100遺꾩쓽 50???뷀븳 湲덉븸???⑸??섎㈃ 利됯껐?ы뙋??泥?뎄??吏 ?딅뒗??(?꾨줈援먰넻踰???65議?",
+  "tr_e": "Where a person who received a fine payment notice fails to meet the second payment period, an immediate ruli
+ng (summary judgment) must be requested without delay. If the immediate ruling is not obtained, the driver's license is
+ suspended for 40 days. If the person pays the fine amount plus 50/100, no immediate ruling is requested. (Road Traffic
+ Act Article 165)"
+ },
+ {
+  "n": 507,
+  "ko_e": "二셋룹젙李⑤맂 李⑤쭔 ?먭눼?섎뒗 援먰넻?ш퀬瑜??쇱쑝?ㅺ퀬 ?쇳빐?먯뿉寃??몄쟻?ы빆???쒓났?섏? ?꾨땲???щ엺? ?꾨줈援먰넻踰???156議?踰뚯튃)???섑븳 泥섎쾶湲곗?? 20留???
+?댄븯??踰뚭툑?대굹 援щ쪟 ?먮뒗 怨쇰즺?대떎. ?ㅼ젣???꾨줈援먰넻踰??쒗뻾??蹂꾪몴8?? ?섑빐 ?뱀슜?먮룞李⑤벑? 踰붿튃湲?12留??먯쑝濡??듦퀬泥섎텇 ?쒕떎.",
+  "tr_e": "A person who causes a traffic accident damaging only a parked or stopped vehicle and does not provide the vi
+ctim with their personal information faces, under Road Traffic Act Article 156 (Penal Provisions), a punishment of a fi
+ne of up to 200,000 won, detention, or a minor fine. In practice, under Enforcement Decree of the Road Traffic Act [Tab
+le 8], a passenger car, etc., is subject to a notified penalty fine of 120,000 won."
+ },
+ {
+  "n": 508,
+  "ko_e": "?꾨줈援먰넻踰???48議곗쓽2(踰뚯튃) ????4議곗젣1??쓣 ?꾨컲?섏뿬 ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감瑜??댁쟾???щ엺? ?ㅼ쓬 媛??몄쓽 援щ텇???곕씪 泥섎
+쾶?쒕떎. 1. ?덉쨷?뚯퐫?щ냽?꾧? 0.2?쇱꽱???댁긽???щ엺? 2???댁긽 5???댄븯??吏뺤뿭?대굹 1泥쒕쭔 ???댁긽 2泥쒕쭔 ???댄븯??踰뚭툑 2. ?덉쨷?뚯퐫?щ냽?꾧? 0.08?쇱꽱???댁긽 
+0.2?쇱꽱??誘몃쭔???щ엺? 1???댁긽 2???댄븯??吏뺤뿭?대굹 500留????댁긽 1泥쒕쭔 ???댄븯??踰뚭툑 3. ?덉쨷?뚯퐫?щ냽?꾧? 0.03?쇱꽱???댁긽 0.08?쇱꽱??誘몃쭔???щ엺? 1?
+??댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑",
+  "tr_e": "Road Traffic Act Article 148-2 (Penal Provisions) Paragraph 3: a person who, in violation of Article 44 Para
+graph 1, drives a vehicle, etc., or a tram while intoxicated is punished as follows. 1. A person with a blood alcohol c
+oncentration of 0.2 percent or more: imprisonment for 2 to 5 years or a fine of 10 million to 20 million won. 2. A pers
+on with a blood alcohol concentration of 0.08 percent or more but less than 0.2 percent: imprisonment for 1 to 2 years 
+or a fine of 5 million to 10 million won. 3. A person with a blood alcohol concentration of 0.03 percent or more but le
+ss than 0.08 percent: imprisonment for up to 1 year or a fine of up to 5 million won."
+ },
+ {
+  "n": 510,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴 29, ?곗뒿?댁쟾硫댄뿀 ?뚯??먭? ?덉쨷?뚯퐫?щ냽??0.03?쇱꽱???댁긽???섏뼱???댁쟾?????곗뒿???꾨㈃?덈? 痍⑥냼?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 29]: where the holder of a learner's driver's license drives
+ with a blood alcohol concentration of 0.03 percent or higher, the learner's license is revoked."
+ },
+ {
+  "n": 511,
+  "ko_e": "?⑥냽?섎뒗 寃쎌같怨듬Т????諛??쒋ㅺ뎔?ㅺ뎄 怨듬Т?먯쓣 ??뻾?섏뿬 ?뺤궗 ?낃굔?????댁쟾硫댄뿀瑜?痍⑥냼 泥섎텇?쒕떎.(?꾨줈援먰넻踰????됯퇋移?蹂꾪몴28 2. 痍⑥냼 泥섎텇 媛쒕퀎
+ 湲곗? 16)",
+  "tr_e": "The driver's license is revoked where a person assaults an enforcing police officer, etc., or a Si/Gun/Gu pu
+blic official and is criminally booked (placed under investigation). (Enforcement Rule of the Road Traffic Act [Table 2
+8], 2. Individual Standards for Revocation Dispositions, No. 16)"
+ },
+ {
+  "n": 512,
+  "ko_e": "?몄쟻 ?쇳빐 ?덈뒗 援먰넻?ш퀬瑜??쇨린?섍퀬 ?꾩＜??李⑤웾???댁쟾?먮? 寃嫄고븯嫄곕굹 ?좉퀬?섏뿬 寃嫄고븯寃????댁쟾??援먰넻?ш퀬 ???쇳빐?먭? ?꾨땶 寃쎌슦濡??쒖젙?쒕떎)?먭
+쾶??寃嫄??먮뒗 ?좉퀬???뚮쭏??40?먯쓽 ?뱁삙?먯닔瑜?遺?ы븯??湲곌컙??愿怨꾩뾾?? 洹??댁쟾?먭? ?뺤? ?먮뒗 痍⑥냼泥섎텇??諛쏄쾶 ??寃쎌슦 ?꾩궛?먯닔?먯꽌 ?대? 怨듭젣?쒕떎. ??寃쎌슦 怨
+듭젣?섎뒗 ?먯닔??40???⑥쐞 濡??쒕떎.(?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28 1. ?쇰컲 湲곗?)",
+  "tr_e": "A driver who apprehends, or reports and thereby causes the apprehension of, the driver of a vehicle that cau
+sed a traffic accident with personal injury and fled (limited to cases where the reporter is not the victim of the traf
+fic accident) is granted 40 bonus points per apprehension or report; and if that reporting driver comes to receive a su
+spension or revocation disposition, these points are deducted from the accumulated points regardless of the period. In 
+this case, the points deducted are in units of 40. (Enforcement Rule of the Road Traffic Act [Table 28], 1. General Sta
+ndards)"
+ },
+ {
+  "n": 513,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됰졊 蹂꾪몴8, ?뱀슜?먮룞李⑥쓽 ?욎?瑜닿린 湲덉? ?쒓린쨌?μ냼 ?꾨컲? 踰붿튃湲?6留??먯씠 遺怨쇰맂??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]: a passenger car's violation of the time/place prohibit
+ions on overtaking is subject to a penalty fine of 60,000 won."
+ },
+ {
+  "n": 514,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴8 3??(?덉쟾?쒖? ?ㅼ튂) ?뱀슜?먮룞李?8留???/ 29(?덉쟾?쒖? 誘몄꽕移? ?뱀슜?먮룞李?4留???,
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8], No. 3-3 (offense of installing a traffic sign): passen
+ger car, penalty fine 80,000 won / No. 29 (offense of failing to install a traffic sign): passenger car, penalty fine 4
+0,000 won."
+ },
+ {
+  "n": 515,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴 28, ?밴컼??李⑤궡 ?뚮??됱쐞 諛⑹튂?댁쟾? 40?? 泥좉만嫄대꼸紐??듦낵諛⑸쾿 ?꾨컲쨌怨좎냽?꾨줈 媛볤만  ?듯뻾쨌?댁쟾硫댄뿀利??깆쓽 ?쒖떆?섎Т?꾨컲
+? 踰뚯젏 30?먯씠 遺怨쇰맂??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 28]: 40 points for driving while leaving a passenger's disor
+derly conduct inside the vehicle unchecked; 30 penalty points for violating the method of crossing a railroad crossing,
+ traveling on the expressway shoulder, and violating the duty to present the driver's license, etc."
+ },
+ {
+  "n": 516,
+  "ko_e": "利됯껐?ы뙋??泥?뎄???쇨퀬?몄씠 利됯껐?ы뙋???좉퀬 ?꾧퉴吏 ?듦퀬諛쏆? 踰붿튃湲덉븸??100遺꾩쓽 50???뷀븳 湲덉븸???닿퀬 ?⑸?瑜? 利앸챸?섎뒗 ?쒕쪟瑜??쒖텧?섎㈃ 寃쎌같?쒖옣
+ ?먮뒗 ?쒖＜?밸퀎?먯튂?꾩??щ뒗 ?쇨퀬?몄뿉 ???利됯껐?ы뙋 泥?뎄瑜?痍⑥냼?섏뿬??????(?꾨줈援먰넻踰???65議??듦퀬泥섎텇 遺덉씠???깆쓽 泥섎━))",
+  "tr_e": "Where a defendant for whom an immediate ruling has been requested pays, before the pronouncement of the imme
+diate ruling, the notified fine amount plus 50/100 and submits documents proving payment, the chief of the police stati
+on or the Governor of Jeju Special Self-Governing Province must cancel the request for an immediate ruling against the 
+defendant. (Road Traffic Act Article 165 (Handling of Failure to Comply with a Notification Disposition, etc.))"
+ },
+ {
+  "n": 517,
+  "ko_e": "?꾨줈援먰넻踰???48議곗쓽2(踰뚯튃) ?≪닠??痍⑦븳 ?곹깭???덈떎怨??몄젙??留뚰븳 ?곷떦???댁쑀媛 ?덈뒗 ?щ엺?쇰줈????4議곗젣2 ??뿉 ?곕Ⅸ 寃쎌같怨듬Т?먯쓽 痢≪젙???묓븯吏
+ ?꾨땲?섎뒗 ?щ엺(?먮룞李⑤벑 ?먮뒗 ?몃㈃?꾩감瑜??댁쟾?섎뒗 ?щ엺?쇰줈 ?쒖젙?쒕떎)? 1???댁긽 5???댄븯??吏뺤뿭?대굹 500留????댁긽 2泥쒕쭔 ???댄븯??踰뚭툑??泥섑븳??",
+  "tr_e": "Road Traffic Act Article 148-2 (Penal Provisions) Paragraph 2: a person with substantial grounds to be deeme
+d intoxicated who does not comply with a police officer's test under Article 44 Paragraph 2 (limited to a person drivin
+g a vehicle, etc., or a tram) is punished by imprisonment for 1 to 5 years or a fine of 5 million to 20 million won."
+ },
+ {
+  "n": 518,
+  "ko_e": "?먮룞李④?由щ쾿 ??0議?5??諛???1議?踰뚯튃)?꾧뎄?좎? ?깅줉踰덊샇?먯쓣 媛由ш굅???뚯븘蹂닿린 怨ㅻ??섍쾶 ?섏뿬?쒕뒗 ?꾨땲?섎ŉ, 洹몃윭???먮룞李⑤? ?댄뻾?섏뿬?쒕룄 ?꾨땲?
+쒕떎.",
+  "tr_e": "Motor Vehicle Management Act Article 10 Paragraph 5 and Article 81 (Penal Provisions): no one may cover the 
+registration plate or make it hard to recognize, nor may they operate such a vehicle."
+ },
+ {
+  "n": 519,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴6 12??踰???7議?????怨좎냽?꾨줈 ?깆뿉?쒖쓽 以???ы빆???꾨컲???댁쟾?먮뒗 ?뱀슜 諛??뱁빀?먮룞 李??깆? 怨쇳깭猷?2留???,
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 6], No. 12: a driver of a passenger car or passenger van, 
+etc., who violates the matters to be observed on expressways, etc., under Article 67 Paragraph 2 of the Act is subject 
+to an administrative fine of 20,000 won."
+ },
+ {
+  "n": 520,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 8",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]."
+ },
+ {
+  "n": 521,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴28?? ?뺤?泥섎텇 媛쒕퀎湲곗?",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 28-3], individual standards for suspension dispositions."
+ },
+ {
+  "n": 522,
+  "ko_e": "?????쒓뎅?꾨줈援먰넻怨듬떒? ????媛??몄쓽 ?곸꽦寃??湲곗???媛뽰텛?덈뒗吏瑜??ㅼ쓬 媛??몄쓽 ?쒕쪟濡??먯젙?????덈떎.           1. ?댁쟾硫댄뿀?쒗뿕 ?좎껌?쇰??
+?2???대궡??諛쒓툒???ㅼ쓬 媛?紐⑹쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?쒕쪟           媛. ?섏썝, 蹂묒썝 諛?醫낇빀蹂묒썝?먯꽌 諛쒗뻾???좎껜寃?ъ꽌           ?? ?뚭뎅誘쇨굔媛뺣낫?섎쾿?
+???2議곗뿉 ?곕Ⅸ 嫄닿컯寃吏?寃곌낵 ?듬낫??          ?? ?섏궗媛 諛쒓툒??吏꾨떒??          ?? 蹂묒뿭?먯젙 ?좎껜寃???꾩뿭蹂묒????좎껜寃?щ? ?ы븿?쒕떎) 寃곌낵 ?듬낫??,
+  "tr_e": "Paragraph 2: the Korea Road Traffic Authority may determine whether the aptitude test standards under each i
+tem of Paragraph 1 are met using the following documents. 1. Any of the following documents issued within 2 years from 
+the date of the driver's license test application: (a) a physical examination report issued by a clinic, hospital, or g
+eneral hospital; (b) a health checkup result notice under Article 52 of the National Health Insurance Act; (c) a medica
+l certificate issued by a doctor; (d) a military service physical examination (including the physical examination for a
+ctive-duty volunteers) result notice."
+ },
+ {
+  "n": 523,
+  "ko_e": "?꾨줈援먰넻踰???4議??댁쟾硫댄뿀??痍⑥냼泥섎텇 ?먮뒗 ?뺤?泥섎텇, ?곗뒿?댁쟾硫댄뿀 痍⑥냼泥섎텇????섏뿬 ?댁쓽媛 ?덈뒗 ?щ엺? 洹? 泥섎텇??諛쏆? ?좊???60???대궡???쑣
+룸룄寃쎌같泥?옣?먭쾶 ?댁쓽瑜??좎껌?????덈떎.",
+  "tr_e": "Road Traffic Act Article 94: a person who objects to a driver's license revocation or suspension disposition
+, or a learner's license revocation disposition, may file an objection with the Commissioner of the City/Provincial Pol
+ice Agency within 60 days from the day the disposition was received."
+ },
+ {
+  "n": 524,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???5議??곗뒿?댁쟾硫댄뿀瑜?諛쏆? ?щ엺??以?섏궗??, 蹂꾪몴 29, ?곗뒿?댁쟾硫댄뿀 以?섏궗??쓣 ?꾨컲????(?곗뒿?섍퀬???섎뒗 ?먮룞李⑤? ?댁쟾???
+??덈뒗 ?댁쟾硫댄뿀瑜?諛쏆? ?좊???2?꾩씠 寃쎄낵???щ엺怨??④퍡 ?뱀감?섏뿬 洹??щ엺?? 吏?꾨? 諛쏆븘???쒕떎)?곗뒿?댁쟾硫댄뿀瑜?痍⑥냼?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 55 (Matters to Be Observed by a Holder of a Learner's Drive
+r's License), [Table 29]: the learner's license is revoked where a person violates the matters to be observed for a lea
+rner's license (they must ride together with, and receive the guidance of, a person who has held a driver's license ena
+bling them to drive the vehicle to be practiced for 2 years or more from the date of obtaining it)."
+ }
+]
+위치 줄:2 문자:85
++ ... translations/audit/queue/325_expl_en.json' | ConvertFrom-Json; $cp949 ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+web search: 
+web search: site:law.go.kr 도로교통법 시행령 별표 8 3의3 29 안전표지 미설치
+web search: 
+web search: 
+codex
+[{"n":514,"field":"e","severity":"major","issue":"‘안전표지가 설치된 곳에서의 정차·주차 금지 위반’을 안전표지 설치 행위로, 일반 정차·주차 금지 위반을 안전표지 미설치 행위로 잘못 번역해 위반행위의 의미가 바뀌었다.","suggestion":"Enforcement Decree of the Road Traffic Act [Table 8], No. 3-3 (violation of the prohibition on stopping or parking in a place where a safety sign is installed): passenger car, penalty fine of 80,000 won / No. 29 (violation of the prohibition on stopping or parking, excluding places where a safety sign is installed): passenger car, penalty fine of 40,000 won."}]
+tokens used
+30,249
+[{"n":514,"field":"e","severity":"major","issue":"‘안전표지가 설치된 곳에서의 정차·주차 금지 위반’을 안전표지 설치 행위로, 일반 정차·주차 금지 위반을 안전표지 미설치 행위로 잘못 번역해 위반행위의 의미가 바뀌었다.","suggestion":"Enforcement Decree of the Road Traffic Act [Table 8], No. 3-3 (violation of the prohibition on stopping or parking in a place where a safety sign is installed): passenger car, penalty fine of 80,000 won / No. 29 (violation of the prohibition on stopping or parking, excluding places where a safety sign is installed): passenger car, penalty fine of 40,000 won."}]

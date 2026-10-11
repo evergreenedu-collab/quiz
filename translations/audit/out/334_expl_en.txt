@@ -1,0 +1,125 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12817-111b-7060-a5be-b79e184c0466
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/334_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/334_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 518ms:
+[
+ {
+  "n": 685,
+  "ko_e": "?쒌냽?꾧꼍李곗껌?μ? ?쒓컙????곕씪 ?묐갑?μ쓽 ?듯뻾?됱씠 ?쒕졆?섍쾶 ?ㅻⅨ ?꾨줈?먮뒗 援먰넻?됱씠 留롮? 履쎌쑝濡?李⑤줈???섍? ?뺣??????덈룄濡??좏샇湲곗뿉 ?섑븯??李⑤줈??吏꾪뻾諛⑺뼢??吏?쒗븯??媛蹂李⑤줈瑜??ㅼ튂?????덈떎(?꾨줈援먰넻踰???4議?????. 媛蹂李⑤줈濡?吏?뺣맂 ?꾨줈援ш컙???낃뎄, 以묎컙 諛?異쒓뎄??媛濡쒗삎 ?댁깋?깆쓣 ?ㅼ튂?쒕떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴 3]). ?뱀깋?붿궡?쒖쓽 ?깊솕(?섑뼢)????李⑤쭏??吏?뺥븳 李⑤줈濡?吏꾪뻾?????덇퀬, ?곸깋X???쒖떆???깊솕???뚮뒗 洹?李⑤줈濡?吏꾪뻾?????녿떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴2]). 以묒븰??以묒뿉 ?⑹깋?ㅼ꽑? 李⑤쭏媛 ?섏뼱媛????녿뒗 寃껋쓣 ?쒖떆?섎뒗 寃껋씠怨? ?⑹깋?먯꽑? 諛섎?諛⑺뼢??援먰넻??二쇱쓽?섎㈃???쇱떆?곸쑝濡?諛섎???李⑤줈濡??섏뼱媛????덉쑝??吏꾪뻾諛⑺뼢 李⑤줈濡??ㅼ떆 ?뚯븘????⑥쓣 ?쒖떆?섎뒗 寃껋씠???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] ?쇰젴踰덊샇 501).",
+  "tr_e": "On a road where the volume of traffic in the two directions clearly differs by time of day, the Commissioner of the City/Provincial Police Agency may install a reversible lane that indicates the direction of travel of the lane by a traffic signal so that the number of lanes can be expanded toward the side with heavier traffic (Article 14 (1) of the Road Traffic Act). Horizontal two-color lights are installed at the entrance, middle, and exit of a road section designated as a reversible lane (Table 3 of the Enforcement Rule of the Road Traffic Act). When a green arrow lamp (pointing downward) is shown, vehicles may proceed in the designated lane, and when a red X-mark lamp is shown, they cannot proceed in that lane (Table 2 of the Enforcement Rule of the Road Traffic Act). Among center lines, a yellow solid line indicates that vehicles may not cross it, while a yellow broken line indicates that a vehicle may temporarily cross into the opposite lane while paying attention to oncoming traffic but must return to its lane of travel (Table 6 of the Enforcement Rule of the Road Traffic Act, serial number 501)."
+ },
+ {
+  "n": 686,
+  "ko_e": "?⑹깋蹂듭꽑? ?뺤감?㏃＜李④툑吏?쒖떆?대떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] ?쇰젴踰덊샇 516??). ?꾩슱??蹂대룄?먮뒗 ?뺤감 諛?二쇱감 媛 湲덉??쒕떎(?꾨줈援먰넻踰???2議?????.          ?몃㈃?곹깭媛 ?쇱뼱遺숈? 寃쎌슦??理쒓퀬?띾룄??100遺꾩쓽 50??以꾩씤 ?띾룄濡??댄뻾?댁빞 ?쒕떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議? ?????????섎ぉ). 鍮꾧? ?대젮 ?몃㈃???뽰뼱?덈뒗 寃쎌슦???덉씠 20諛由щ???誘몃쭔 ?볦씤 寃쎌슦?먮뒗 理쒓퀬?띾룄??100遺꾩쓽  20??以꾩씤 ?띾룄濡??댄뻾?댁빞 ?쒕떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議?????????.",
+  "tr_e": "A yellow double line is a no-stopping/no-parking marking (Table 6 of the Enforcement Rule of the Road Traffic Act, serial number 516-2). In addition, stopping and parking are prohibited on the sidewalk (Article 32 subparagraph 1 of the Road Traffic Act). When the road surface is frozen, one must drive at a speed reduced by 50 percent of the maximum speed (item (b) of Article 19 (2) 2 of the Enforcement Rule of the Road Traffic Act). When it is raining and the road surface is wet, or when less than 20 millimeters of snow has accumulated, one must drive at a speed reduced by 20 percent of the maximum speed (Article 19 (2) 1 of the Enforcement Rule of the Road Traffic Act)."
+ },
+ {
+  "n": 687,
+  "ko_e": "?먯쟾嫄곕벑???댁쟾?먮뒗 援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 寃쎌슦?먮뒗 誘몃━ ?꾨줈???곗륫 媛?μ옄由щ줈 遺숈뼱 ?쒗뻾?섎㈃??援먯감濡쒖쓽  媛?μ옄由?遺遺꾩쓣 ?댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎(?꾨줈援먰넻踰???5議?????. ?쒖옄?꾧굅?기앹씠? ?먯쟾嫄곗? 媛쒖씤???대룞 ?μ튂瑜?留먰븳???꾨줈援먰넻踰???議???1??).",
+  "tr_e": "When a cyclist, etc. intends to turn left at an intersection, the driver must move in advance close to the right edge of the road, slow down, and turn left using the edge portion of the intersection (Article 25 (3) of the Road Traffic Act). \"Bicycles, etc.\" means bicycles and personal mobility devices (Article 2 subparagraph 21-2 of the Road Traffic Act)."
+ },
+ {
+  "n": 688,
+  "ko_e": "?꾨갑 10 誘명꽣 醫뚯륫 ?곴? 吏?섏＜李⑥옣?쇰줈 吏꾩엯?섎젮硫?以묒븰?좎쓣 移⑤쾾?섎㈃???댁쟾?댁빞 ?쒕떎.           紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉??醫뚰쉶?꾩쓣 ?섎젮??寃쎌슦?먮뒗 誘몃━ ?꾨줈??以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒떖  ?덉そ???댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎(?꾨줈援먰넻踰???5議?????.          媛쒖씤???대룞?μ튂瑜??댁쟾???뚯뿉???꾩슜?꾨줈媛 ?녿뒗 寃쎌슦 李⑤룄濡?二쇳뻾?댁빞 ?쒕떎.",
+  "tr_e": "To enter the underground parking lot of the commercial building 10 meters ahead on the left, one would have to drive while crossing the center line. When a driver of any vehicle intends to turn left at an intersection, the driver must turn left in advance by slowing down along the center line of the road, using the inner side of the center of the intersection (Article 25 (2) of the Road Traffic Act). When operating a personal mobility device, one must ride on the roadway if there is no exclusive road."
+ },
+ {
+  "n": 689,
+  "ko_e": "?곗륫???뺤감??李⑤웾? ?대┛?댄넻?숇쾭?ㅼ씠?? ?대┛?댄넻?숇쾭???꾨㈃??遺李⑸맂 ?쒖????대┛??蹂댄샇?쒖?濡??대┛?대굹 ???좎븘瑜??쒖슦怨??댄뻾以묒엫???쒖떆?섎뒗 寃껋씠???꾨줈援먰넻踰???3議????? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴14]). ?대┛??蹂댄샇 援ъ뿭???ㅼ튂?섎뒗 ?대┛??蹂댄샇?쒖????꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] ?쇰젴踰덊샇 324? 媛숈씠 ?ㅼ튂?섏뼱???쒕떎. ?ъ쭊?먮뒗 ?대┛??蹂댄샇援ъ뿭???ㅼ튂?섎뒗 ?대┛??蹂댄샇?쒖?媛 ?녿떎. ?곸깋?깊솕???먮㈇???섎???李⑤쭏???뺤??좎씠???〓떒蹂대룄媛 ?덉쓣 ?뚯뿉??洹?吏곸쟾?대굹 援먯감濡쒖쓽 吏곸쟾???쇱떆?뺤??????ㅻⅨ 援먰넻??二쇱쓽?섎㈃??吏꾪뻾?????덈떎??寃껋씠???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴2]).",
+  "tr_e": "The vehicle stopped on the right is a school (children's) bus. The sign attached to the rear of a school bus is the children's protection sign, indicating that it is operating while carrying children or infants (Article 53 (1) of the Road Traffic Act, Table 14 of the Enforcement Rule of the Road Traffic Act). The children's protection sign installed in a school zone must be installed as in serial number 324 of Table 6 of the Enforcement Rule of the Road Traffic Act. There is no such school-zone children's protection sign in the photo. The meaning of a flashing red lamp is that, where there is a stop line or crosswalk, a vehicle may proceed after coming to a complete stop just before it or just before the intersection while paying attention to other traffic (Table 2 of the Enforcement Rule of the Road Traffic Act)."
+ },
+ {
+  "n": 690,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴2, ?좏샇湲곌? ?쒖떆?섎뒗 ?좏샇??醫낅쪟 諛??좏샇???? ?꾨줈援먰넻踰???7議?蹂댄뻾?먯쓽 蹂댄샇) ?? ?? 紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섍퀬 ?덇굅???듯뻾?섎젮怨??섎뒗 ?뚯뿉??蹂댄뻾?먯쓽  ?〓떒??諛⑺빐?섍굅???꾪뿕??二쇱? ?꾨땲?섎룄濡?洹??〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂?섏뼱 ?덈뒗 怨녹뿉?쒕뒗 洹??뺤??좎쓣 留먰븳?? ?먯꽌 ?쇱떆?뺤??섏뿬???쒕떎(?? ?? ???댁꽕). 蹂대룄?먯꽌 媛묒옄湲???대굹?ㅻ뒗 蹂댄뻾?먭? ?덉쓣 ???덉쑝誘濡??덉륫 諛?湲됱텧 諛쒖? ?꾪뿕???댁쟾諛⑸쾿?대떎(???댁꽕).",
+  "tr_e": "Table 2 of the Enforcement Rule of the Road Traffic Act (Types of signals indicated by traffic signals and their meanings), and Article 27 (Protection of Pedestrians) (1) of the Road Traffic Act. When a pedestrian is crossing or is about to cross a crosswalk, the driver of any vehicle or streetcar must come to a complete stop in front of that crosswalk (at the stop line where one is installed) so as not to obstruct or endanger the pedestrian's crossing (explanation for (2), (3), (5)). Because a pedestrian may suddenly dart out from the sidewalk, making assumptions and starting off suddenly are dangerous driving methods (explanation for (4))."
+ },
+ {
+  "n": 691,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴2. 李⑤웾?좏샇?? ?곸깋???깊솕 ?섎?. 2. 李⑤쭏???고쉶?꾪븯?ㅻ뒗 寃쎌슦 ?뺤??? ?〓떒蹂대룄 諛?援먯감 濡쒖쓽 吏곸쟾?먯꽌 ?뺤??????좏샇???곕씪 吏꾪뻾?섎뒗 ?ㅻⅨ 李⑤쭏??援먰넻??諛⑺빐?섏? ?딄퀬 ?고쉶?꾪븷 ???덈떎(?? ???ㅻ챸). ?꾨줈援먰넻踰???7議?蹂댄뻾?먯쓽 蹂댄샇) ???? 紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 蹂댄뻾?먭? ?〓떒蹂대룄瑜??듯뻾?섍퀬 ?덇굅 ???듯뻾?섎젮怨??섎뒗 ?뚯뿉??蹂댄뻾?먯쓽 ?〓떒??諛⑺빐?섍굅???꾪뿕??二쇱? ?꾨땲?섎룄濡?洹??〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂?????덈뒗 怨녹뿉?쒕뒗 洹??뺤??좎쓣 留먰븳???먯꽌 ?쇱떆?뺤??섏뿬???쒕떎(?? ?? ???ㅻ챸).",
+  "tr_e": "Table 2 of the Enforcement Rule of the Road Traffic Act. Vehicle signal light, meaning of a red lamp. 2. When a vehicle intends to turn right, it may turn right after stopping just before the stop line, crosswalk, and intersection, without obstructing the traffic of other vehicles proceeding according to the signal (explanation for (1), (5)). Article 27 (Protection of Pedestrians) (1) of the Road Traffic Act. When a pedestrian is crossing or is about to cross a crosswalk, the driver of any vehicle or streetcar must come to a complete stop in front of that crosswalk (at the stop line where one is installed) so as not to obstruct or endanger the pedestrian's crossing (explanation for (2), (3), (4))."
+ },
+ {
+  "n": 692,
+  "ko_e": "?대┛??蹂댄샇援ъ뿭???꾨땲?붾씪??蹂댄뻾?먯? ?먯쟾嫄곕? ?怨??깃탳?섎뒗 ?숈깮?ㅼ씠 留롮? 二쇳깮媛 ?대㈃?꾨줈?대?濡??뺣떦?? ?ъ쑀 ?놁씠 寃쎌쓬湲곕? 怨꾩냽 ?몃━??寃껋? 吏?묓븯怨??덉쟾?섍쾶 吏꾪뻾?섎뒗 寃껋씠 諛붾엺吏곹븯?? 援먯감濡?紐⑦뎮?대뒗 二쇱젙李?湲?吏?μ냼?대?濡?二쇱젙李⑤? ?댁꽌?????쒕떎.",
+  "tr_e": "Even if it is not a school zone, this is a residential-area back road where there are many pedestrians and students commuting to school by bicycle, so continuously sounding the horn without a legitimate reason should be avoided and it is advisable to proceed safely. An intersection corner is a no-stopping/no-parking area, so one must not stop or park there."
+ },
+ {
+  "n": 693,
+  "ko_e": "?고쉶???쇱깋???욎뿉???고쉶?꾪븯怨좎옄 ???뚮뒗 洹??좏샇???곕씪 吏꾪뻾?섏뿬???섎ŉ, ?고쉶???쇱깋?깆씠 ?뱀깋?붿궡?쒕벑?붾씪  ?섎뜑?쇰룄 ?ㅻ뒭寃??〓떒?섎뒗 蹂댄뻾?먭? ?덉쓣 ???덉쑝誘濡?洹??덉쟾???뺤씤?섏뿬???쒕떎. ?고쉶??李⑤줈媛 ?덈뒗 寃쎌슦 洹? 李⑤줈瑜??곕씪 ?고쉶?꾪븯?ъ빞 ?섎ŉ, 諛깆깋?ㅼ꽑 援ш컙?먯꽌??吏꾨줈蹂寃쎌씠 ?쒗븳?쒕떎.",
+  "tr_e": "When intending to turn right in front of a right-turn three-color light, one must proceed according to that signal, and even if the right-turn three-color light shows a green arrow, there may be pedestrians crossing late, so their safety must also be confirmed. If there is a right-turn lane, one must turn right along that lane, and lane changes are restricted in a white solid line section."
+ },
+ {
+  "n": 694,
+  "ko_e": "?곗륫 ?몃????쒖????꾨줈踰뺤뿉 ?섑븳 ?쒖??닿퀬, ?뚮????먮룞李⑤줈 ?쒗쁽???쒖???援먰넻?덉쟾?쒖? 以??먮룞李??꾩슜?꾨줈瑜? ?섑??대뒗 吏?쒗몴吏?대떎. 諛깆깋?ㅼ꽑? 吏꾨줈蹂寃쎌젣?쒖꽑???섑??닿퀬 鍮꾨낫??醫뚰쉶?꾩? 李⑤웾 ?좏샇媛 ?뱀깋?깊솕??寃쎌슦?? 醫뚰쉶?꾪븯?ъ빞 ?섎ŉ, ?곗륫 ?ㅼ꽑???⑹깋蹂듭꽑? 二쇱젙李⑤? 湲덉??섎뒗 ?살쓣 吏?덇퀬 ?덈떎.",
+  "tr_e": "The yellow sign on the right is a sign under the Road Act, and the sign depicted with a blue car is an indication (mandatory) sign among traffic signs indicating a motor-vehicle-only road. A white solid line indicates a lane-change restriction line, an unprotected left turn must be made when the vehicle signal is green, and the yellow double solid line on the right indicates that stopping and parking are prohibited."
+ },
+ {
+  "n": 695,
+  "ko_e": "醫뚮줈 援쎌? ?꾨줈?먯꽌???꾨갑 ?곹솴 ?뺤씤???대졄湲??뚮Ц???쒗뻾?쇰줈 ?묎렐?댁빞 ?덉쟾?섎떎. ?좏샇湲곌? ?녿뒗 援먯감濡쒖쓽 寃쎌슦  吏곸쭊 李⑤웾??臾댁“嫄??곗꽑?섎뒗 寃껋? ?꾨땲硫? ?꾪뙆?몄뿉???꾨줈濡??섏삤??李⑤웾?대굹 蹂댄뻾?먭? ?덉쓬???鍮꾪븯??寃쎌쓬湲?瑜??몃━??寃껊낫???쒗뻾?섎ŉ ?덉쟾???뺤씤?섎뒗 寃껋씠 諛붾엺吏곹븯??",
+  "tr_e": "On a road curving to the left, it is difficult to see the situation ahead, so it is safe to approach slowly. At an intersection without a traffic signal, a straight-going vehicle does not automatically have priority; in preparation for vehicles or pedestrians coming out from the apartment complex onto the road, it is advisable to slow down and confirm safety rather than sounding the horn."
+ },
+ {
+  "n": 696,
+  "ko_e": "?꾨줈諛섏궗寃쎌쓣 ?듯빐 醫뚯륫 怨⑤ぉ湲몄쓽 ?덉쟾??紐낇솗???뺤씤?섍퀬 援먯감濡?吏꾩엯 ???쒗뻾?섏뿬 ?좏샇???녿뒗 援먯감濡쒕? ?듦낵????寃껋씠 ?덉쟾?섎ŉ, ?곗륫??蹂댄뻾?먭? ?덉쑝誘濡?寃쎌쓬湲곕? ?몃━湲곕낫???덉쟾???뺣낫?섎ŉ ?쒗뻾 ?먮뒗 ?쇱떆?뺤??섎ŉ 吏꾪뻾 ?섎뒗 寃껋씠 ?덉쟾?섎떎. ?꾨줈援먰넻踰???0議곗뿉 ?섑븯??鍮꾪깉吏?醫곸? ?꾨줈?먯꽌 ?쒕줈 留덉＜ 蹂닿퀬 吏꾪뻾?섎뒗 寃쎌슦 ?щ씪媛?? 李⑤웾???묐낫?댁빞 ?쒕떎.",
+  "tr_e": "It is safe to clearly confirm the safety of the left alley through the road mirror and to slow down before entering the intersection to pass through the signal-less intersection; and because there is a pedestrian on the right, rather than sounding the horn it is safe to secure safety and proceed slowing down or coming to a complete stop. Under Article 20 of the Road Traffic Act, when vehicles meet head-on on a narrow, sloped road, the ascending vehicle must yield."
+ },
+ {
+  "n": 697,
+  "ko_e": "?꾨갑 李⑤웾?좏샇???곸깋?깊솕??寃쎌슦 誘몃━ ?쒗뻾?섎ŉ 援먯감濡????덉쟾?섍쾶 ?뺤감?섎ŉ, 醫뚯륫?쇰줈 吏꾨줈蹂寃쏀븯怨좎옄 ?섎뒗  寃쎌슦 ?꾪뻾 醫뚯륫 李⑤줈瑜?吏꾪뻾?섎뒗 李⑤웾???덈뒗吏 ?뺤씤?섏뿬 二쇳뻾?섏뿬???쒕떎. ?대┛??蹂댄샇援ъ뿭 ?댁젣 ?쒖?媛 ?덈뒗  寃쎌슦 洹멸납源뚯????대┛??蹂댄샇援ъ뿭?쇰줈 ?몄젙?섍퀬, 3李⑤줈??吏곸쭊 諛??고쉶??李⑤줈?대?濡??꾨갑???뺤감?섏뿬 ?고쉶???? ???덈뒗 怨듦컙???덉쓣 ?뚭퉴吏 ?湲고븯??寃껋씠 醫뗪퀬, ?꾨줈 ?곗륫???⑹깋?ㅼ꽑? 二쇱젙李?湲덉?援ъ뿭???쒖떆?섎뒗 寃껋씠誘濡? ?뺤감??湲덉??쒕떎.",
+  "tr_e": "When the vehicle signal ahead is red, slow down in advance and stop safely before the intersection; and when intending to change into the left lane, drive after confirming whether there is a vehicle proceeding in the rear left lane. Where there is a sign marking the end of a school zone, the area up to that point is recognized as a school zone; because the third lane is a straight-and-right-turn lane, it is good to wait at the rear until there is space to turn right; and because the yellow solid line on the right side of the road marks a no-stopping/no-parking zone, stopping is also prohibited."
+ },
+ {
+  "n": 698,
+  "ko_e": "?쇱깋?좏샇?깆씠 ?ㅼ튂??援먯감濡쒖뿉?쒕뒗 ?좏꽩?쒖?媛 ?놁쑝硫?李⑤쭏??諛⑺빐 ?щ?瑜?遺덈Ц?섍퀬 ?좏꽩???덉슜?섏? ?딆쑝硫? 吏 洹몄옱洹??뺥깭??諛깆깋?ㅼ꽑? 吏꾨줈蹂寃쎌젣?쒖꽑怨??쒗뻾???섎?瑜??숈떆??吏?덇퀬 ?덉쑝硫? ?고쉶?꾪븯怨좎옄 ?섎뒗 寃쎌슦 1媛? 李⑤줈??誘몃━ 吏꾨줈瑜?蹂寃쏀븯??寃껋씠 ?덉쟾?섎ŉ, 遺덇???寃쎌슦 P?댁쓣 ?댁슜?섏뿬 吏꾪뻾?섎뒗 寃껋씠 ?덉쟾?섎떎. ?꾨갑 李⑤웾???몃벑???곸깋?깊솕濡?諛붾????덉쑝誘濡??대? ?덉긽?섍퀬 ?띾룄瑜?以꾩씠硫??쒗뻾?섎뒗 寃껋? ?덉쟾??諛⑸쾿?대굹 ?뱀깋?깊솕?꾩뿉 ??遺덇뎄?섍퀬 湲됱젙吏?섎뒗 寃껋? ?꾪뻾李⑤웾怨쇱쓽 異붾룎 ?곕젮媛 ?덉뼱 ?꾪뿕?섎떎.",
+  "tr_e": "At an intersection with a three-color traffic light, if there is no U-turn sign, a U-turn is not permitted regardless of whether it would obstruct other vehicles; a zigzag-shaped white solid line has both the meaning of a lane-change restriction line and of slowing down; when intending to turn right, it is safe to change lanes one lane at a time in advance, and if not possible, it is safe to proceed using a P-turn. Since the vehicle signal ahead may change to red, anticipating this and reducing speed to slow down is a safe method, but suddenly stopping despite a green signal risks a rear-end collision with the following vehicle and is dangerous."
+ },
+ {
+  "n": 699,
+  "ko_e": "?⑹깋?먮㈇ ??李⑤쭏???ㅻⅨ 援먰넻 ?먮뒗 ?덉쟾?쒖????쒖떆??二쇱쓽?섎㈃??吏꾪뻾?????덈떎. ?꾨줈?곸뿉 ?띻린怨꾧? 二쇳뻾??寃쎌슦  ?띾룄媛 ?먮━湲??뚮Ц???덉쟾???좎쓽?섎ŉ 吏꾪뻾?쒕떎. ?곗륫 吏?섏감?꾩쓽 ?쒖빞 ?뺣낫媛 ???섎뒗 寃쎌슦 援먯감濡?吏꾩엯 ??二쇱쓽?쒕떎.",
+  "tr_e": "When a signal is flashing yellow, a vehicle may proceed while paying attention to other traffic or the indications of traffic signs. When farm machinery is traveling on the road, its speed is slow, so proceed with attention to safety. If visibility of the underpass on the right is not secured, be careful when entering the intersection."
+ },
+ {
+  "n": 700,
+  "ko_e": "紐⑤뱺 ?댁쟾?먮뒗 援먰넻?덉쟾?쒖?, ?좏샇湲곗뿉 ?곕Ⅸ 吏?쒖뿉 ?곕씪???쒕떎(?꾨줈援먰넻踰???議?. ?⑹깋 ?깊솕???? 李⑤쭏???뺤? ?좎씠 ?덇굅???〓떒蹂대룄媛 ?덉쓣 ?뚯뿉??洹?吏곸쟾?대굹 援먯감濡쒖쓽 吏곸쟾???뺤??섏뿬???섎ŉ, ?대? 援먯감濡쒖뿉 李⑤쭏???쇰?????吏꾩엯??寃쎌슦?먮뒗 ?좎냽??援먯감濡?諛뽰쑝濡?吏꾪뻾?댁빞 ?쒕떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴2]). ?먰븳, ?곗깋 ?ㅼ꽑 援ш컙? 李⑤줈蹂寃쎌씠 湲덉??섎?濡? 李⑤줈瑜?蹂寃쏀빐 ?좏꽩?대굹 ?고쉶?꾩쓣 ?쒕룄?섎뒗 寃껋? 踰뺢퇋?꾨컲?대ŉ, ?꾪뿕???댁쟾 ?됰룞?대떎. ?ㅻ쾲? ?⑹깋 ?좏샇瑜?臾댁떆?섍퀬 ?띾룄瑜??믪뿬 援먯감濡쒕? ?듦낵?섎뒗 寃껋쑝濡? 踰뺢퇋?꾨컲??肉먮쭔 ?꾨땲??援먯감濡???異⑸룎???믪븘 ???援먰넻?ш퀬瑜?珥덈옒?????덈떎.",
+  "tr_e": "Every driver must comply with the instructions of traffic signs and traffic signals (Article 5 of the Road Traffic Act). When the light is yellow, where there is a stop line or crosswalk, a vehicle must stop just before it or just before the intersection, and if any part of the vehicle has already entered the intersection, it must proceed quickly out of the intersection (Table 2 of the Enforcement Rule of the Road Traffic Act). Also, because lane changes are prohibited in a white solid line section, attempting to change lanes to U-turn or turn right is a violation of the law and a dangerous driving behavior. Option (5), passing through the intersection at increased speed while ignoring the yellow signal, is not only a violation of the law but also raises the chance of a collision within the intersection, which can cause a major traffic accident."
+ },
+ {
+  "n": 701,
+  "ko_e": "援먯감濡쒖뿉 ?뱀깋, ?⑹깋 諛??곸깋???쇱깋 ?깊솕留뚯씠 ?섏삤???좏샇湲곌? ?ㅼ튂?섏뼱 ?덇퀬 ?щ━ 鍮꾨낫?몄쥖?뚯쟾 ?쒖떆???좏꽩?? ?덉슜?섎뒗 ?쒖떆媛 ?녿떎硫?李⑤쭏??醫뚰쉶???먮뒗 ?좏꽩? ?먯튃?곸쑝濡??덉슜?섏? ?딅뒗?? 洹몃윭誘濡???援먯감濡쒖뿉???곸깋  ?깊솕?쒖뿉 ?뺤??좎뿉 ?뺤??섏뿬 ?덉? ?꾨땲?섍퀬 醫뚰쉶???먮뒗 ?좏꽩?섏뿬 吏꾪뻾?섏??ㅻ㈃ ?대뒗 ?밸퀎???ъ젙???녿뒗 ???꾨줈 援먰넻踰???議곗쓽 洹쒖젙???섑븳 ?좏샇湲곗쓽 ?좏샇???꾨컲?섏뿬 ?댁쟾??寃쎌슦???대떦?쒕떎怨?蹂댁븘???쒕떎 (?踰뺤썝 1996. 5.",
+  "tr_e": "If an intersection has a traffic signal showing only the three colors green, yellow, and red, and there is no separate marking permitting an unprotected left turn or a U-turn, a left turn or U-turn by a vehicle is in principle not permitted. Therefore, if at the above intersection a vehicle did not stop at the stop line at a red signal but proceeded to turn left or U-turn, this should, absent special circumstances, be regarded as a case of driving in violation of the traffic signal under Article 5 of the Road Traffic Act (Supreme Court, 1996. 5.)."
+ },
+ {
+  "n": 702,
+  "ko_e": "?⑹깋?ㅼ꽑? ?뺤감?㏃＜李④툑吏?쒖떆?대떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] ?쇰젴踰덊샇 516). 二쇱젙李??덉슜?쒓컙???쒖쇅?섍퀬??二??뺤감??湲덉??쒕떎. ?먯쟾嫄곕벑???댁쟾?먮뒗 ?먯쟾嫄곕룄濡쒓? ?ㅼ튂?섏? ?꾨땲??怨녹뿉?쒕뒗 ?꾨줈 ?곗륫 媛?μ옄由ъ뿉 遺숈뼱?????됲븯?ъ빞 ?쒕떎(?꾨줈援먰넻踰???3議곗쓽2 ????. ?ㅻ쭔, ?대┛?? ?몄씤, ?좎껜?μ븷?몄쓽 寃쎌슦??蹂대룄?먯꽌 ?먯쟾嫄곕? ?댁쟾?? ???덈떎(?꾨줈援먰넻踰???3議곗쓽2 ????????.",
+  "tr_e": "A yellow solid line is a no-stopping/no-parking marking (Table 6 of the Enforcement Rule of the Road Traffic Act, serial number 516). Except during permitted stopping/parking hours, stopping and parking are prohibited. A cyclist, etc. must ride hugging the right edge of the road where no bicycle road is installed (Article 13-2 (2) of the Road Traffic Act). However, in the case of children, the elderly, or persons with physical disabilities, a bicycle may be ridden on the sidewalk (Article 13-2 (4) 1 of the Road Traffic Act)."
+ },
+ {
+  "n": 703,
+  "ko_e": "?먮룞李④? ?뺤??섍퀬 ?덈뒗 ?곹솴?먯꽌???대??꾪솕瑜??ъ슜?????덈떎(?꾨줈援먰넻踰???9議???????0??媛紐?.           吏由ъ븞???곸긽 ?먮뒗 援먰넻?뺣낫?덈궡 ?곸긽???쒖떆?섎뒗 ?곸긽?쒖떆?μ튂(??쒖쟻?쇰줈???ㅻ퉬寃뚯씠??? ?댁쟾?먭? ?댁쟾 以? 蹂????덈뒗 ?꾩튂???곸긽???쒖떆?섎룄濡??섏뿬???쒕떎(?꾨줈援먰넻踰???9議???????1???섎ぉ 1).          ?꾨줈??援щ텇怨??곴??놁씠 ?숈듅?먮룄 ?덉쟾?좊? 留ㅼ뼱???쒕떎(?꾨줈援먰넻踰???0議?????.",
+  "tr_e": "In a situation where the vehicle is stopped, a mobile phone may be used (item (a) of Article 49 (1) 10 of the Road Traffic Act). A video display device (typically a navigation device) that displays route-guidance video or traffic-information-guidance video may be positioned so that the video is displayed in a location the driver can view while driving (item 1 of subparagraph (b) of Article 49 (1) 11 of the Road Traffic Act). Regardless of the type of road, passengers must also wear a seat belt (Article 50 (1) of the Road Traffic Act)."
+ },
+ {
+  "n": 704,
+  "ko_e": "?꾨룞?λ낫?쒖쓽 ?뱀감?뺤썝? 1紐낆씠???꾨줈援먰넻踰??쒗뻾洹쒖튃 ??3議곗쓽3).          ?꾩슜李⑤줈濡??듯뻾?????덈뒗 李④? ?꾨땲硫??꾩슜李⑤줈濡??듯뻾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎(?꾨줈援먰넻踰???5議?????.",
+  "tr_e": "The riding capacity of an electric kick scooter is one person (Article 33-3 of the Enforcement Rule of the Road Traffic Act). A vehicle that is not permitted to use an exclusive lane must not travel in the exclusive lane (Article 15 (3) of the Road Traffic Act)."
+ }
+]
+
+codex
+[{"n":696,"field":"e","severity":"critical","issue":"좁고 경사진 도로에서 양보해야 하는 차량을 반대로 번역했다. 원문은 내려가는 차량이 양보해야 한다는 의미다.","suggestion":"Under Article 20 of the Road Traffic Act, when vehicles meet head-on on a narrow, sloped road, the descending vehicle must yield to the ascending vehicle."}]
+tokens used
+13,720
+[{"n":696,"field":"e","severity":"critical","issue":"좁고 경사진 도로에서 양보해야 하는 차량을 반대로 번역했다. 원문은 내려가는 차량이 양보해야 한다는 의미다.","suggestion":"Under Article 20 of the Road Traffic Act, when vehicles meet head-on on a narrow, sloped road, the descending vehicle must yield to the ascending vehicle."}]

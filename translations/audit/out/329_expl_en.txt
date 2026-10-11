@@ -1,0 +1,405 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12810-1083-71a1-b65f-9194752f5f24
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/329_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/329_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 528ms:
+[
+ {
+  "n": 585,
+  "ko_e": "?먯쟾嫄??댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧 ??議??뺤쓽) ???? 諛뷀닿? ???댁긽??李?         ???몄쓽2 ?쒖쟾湲곗옄?꾧굅?앸? ?먯쟾嫄곕줈???щ엺???섏쓣 蹂댁땐?섍린 ?꾪븯???꾨룞湲곕? ?μ갑?섍퀬 ?ㅼ쓬 媛?紐⑹쓽 ?붽굔??紐???異⑹”?섎뒗 寃껋쓣 留먰븳?? 媛. ?섎떖(?먰럹?ъ쓣 ?ы븿?쒕떎)怨??꾨룞湲곗쓽 ?숈떆 ?숇젰?쇰줈 ?吏곸씠硫? ?꾨룞湲곕쭔?쇰줈???吏??댁? ?꾨땲??寃??? ?쒖냽 25?щ줈誘명꽣 ?댁긽?쇰줈 ?吏곸씪 寃쎌슦 ?꾨룞湲곌? ?묐룞?섏? ?꾨땲??寃??? 遺李⑸맂 ?μ튂??臾닿쾶瑜? ?ы븿???먯쟾嫄곗쓽 ?꾩껜 以묐웾??30?щ줈洹몃옩 誘몃쭔??寃?,
+  "tr_e": "Act on the Promotion of Bicycle Use Article 2 (Definitions) Item 1: a vehicle with two or more wheels. Item 1-2: an 'electric bicycle' means a bicycle equipped with an electric motor to supplement human power and meeting all of the following requirements. (a) It moves by the simultaneous power of the pedals (including hand pedals) and the electric motor, and does not move by the electric motor alone. (b) The electric motor does not operate when moving at 25 km/h or more. (c) The total weight of the bicycle, including attached devices, is less than 30 kg."
+ },
+ {
+  "n": 586,
+  "ko_e": "?꾨줈援먰넻踰???0議??뱀젙?댁쟾?먯쓽 以?섏궗???????먯쟾嫄곕벑???댁쟾?먮뒗 諛ㅼ뿉 ?꾨줈瑜??듯뻾?섎뒗 ?뚯뿉???꾩“?깃낵 誘??깆쓣 耳쒓굅???쇨킅????諛쒓킅?μ튂瑜?李⑹슜?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 50 (Matters to Be Observed by Specific Drivers) Paragraph 9: when traveling on the road at night, the rider of a bicycle, etc., must turn on the headlight and tail light or wear a light-emitting device such as a reflective band."
+ },
+ {
+  "n": 587,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 8 ?좏샇?꾨컲 3留??? 以묒븰?좎묠踰?3留??? ?〓떒蹂대룄 蹂댄뻾???〓떒 諛⑺빐 3留??먯쓽 踰붿튃湲덉뿉  泥섑븯怨??띾룄?꾨컲 洹쒖젙? ?꾨줈援먰넻踰???7議??먮룞李⑤벑怨??몃㈃?꾩감???띾룄) ???먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅???? ?댄븯 ??議곗뿉??媛숇떎)怨??몃㈃?꾩감???꾨줈 ?듯뻾 ?띾룄???됱젙?덉쟾遺?뱀쑝濡??뺥븳??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]: a penalty fine of 30,000 won for a signal violation, 30,000 won for crossing the center line, and 30,000 won for obstructing a pedestrian's crossing at a crosswalk; and as for the speeding provision, Road Traffic Act Article 17 (Speed of Motor Vehicles, etc., and Trams) Paragraph 1: the road travel speed of vehicles, etc. (excluding personal mobility devices; the same applies in this Article hereinafter) and trams is prescribed by Ordinance of the Ministry of the Interior and Safety."
+ },
+ {
+  "n": 588,
+  "ko_e": "?꾨줈援먰넻踰???議??뺤쓽) ?먯쟾嫄??꾨줈???듯뻾? ?먯쟾嫄?諛?媛쒖씤???대룞?μ튂(?먯쟾嫄곕벑) 紐⑤몢 媛?ν븯硫? ?먯쟾嫄??꾩슜??濡쒕룄 ?꾨줈???ы븿??",
+  "tr_e": "Road Traffic Act Article 2 (Definitions): both bicycles and personal mobility devices (bicycles, etc.) may travel on a bicycle road, and a bicycle-only road is also included in the definition of road."
+ },
+ {
+  "n": 589,
+  "ko_e": "?먯쟾嫄곌? ?듯뻾?????덈뒗 ?꾨줈?먮뒗 ?먯쟾嫄곗쟾?⑸룄濡? ?먯쟾嫄곗쟾?⑹감濡? ?먯쟾嫄곗슦?좊룄濡? ?먯쟾嫄걔룸낫?됱옄 寃몄슜?꾨줈媛 ?덈떎.",
+  "tr_e": "Roads on which a bicycle may travel include bicycle-only roads, bicycle-only lanes, bicycle-priority roads, and shared bicycle-and-pedestrian roads."
+ },
+ {
+  "n": 590,
+  "ko_e": "寃쎌젣?띾룄濡?二쇳뻾?섎뒗 寃껋씠 媛???곕즺???뚮퉬?⑥쑉???믪씠???댁쟾諛⑸쾿?대떎.",
+  "tr_e": "Driving at an economical speed is the driving method that most improves fuel efficiency."
+ },
+ {
+  "n": 591,
+  "ko_e": "湲됯?媛먯냽? ?곕퉬瑜???텛???먯씤???섍퀬, ??댁뼱 怨듦린?뺤쓣 吏?섏튂寃???텛硫???댁뼱??吏곴꼍??以꾩뼱?ㅼ뼱 ?곕퉬媛 ??븘 吏硫? ?대━留됯만?먯꽌 ?쒕룞???꾧쾶 ?섎㈃ 釉뚮젅?댄겕 諛곕젰 ?μ튂媛 ?묐룞?섏? ?딆븘 ?쒕룞???섏? ?딆쑝誘濡??щ컮瑜댁? 紐삵븳  ?댁쟾諛⑸쾿?대떎.",
+  "tr_e": "Sudden acceleration and deceleration are causes of lower fuel efficiency; lowering tire pressure excessively reduces the tire diameter and lowers fuel efficiency; and turning off the engine on a downhill disables the brake booster so that braking fails, so these are incorrect driving methods."
+ },
+ {
+  "n": 592,
+  "ko_e": "?먯뼱而??ъ슜? ?곕즺 ?뚮퉬 ?⑥쑉怨?愿怨꾧? ?덇퀬, ?먯뼱而??됰ℓ???ㅼ〈痢듭쓣 ?뚭눼?섎뒗 ?섍꼍?ㅼ뿼 臾쇱쭏濡쒖꽌 媛湲됱쟻 ?ъ슜?? 以꾩씠嫄곕굹 ?⑥쑉?곸쑝濡??ъ슜?⑥씠 諛붾엺吏곹븯??",
+  "tr_e": "Air-conditioner use is related to fuel efficiency, and the air-conditioner refrigerant is an environmental pollutant that destroys the ozone layer, so it is desirable to reduce its use as much as possible or use it efficiently."
+ },
+ {
+  "n": 593,
+  "ko_e": "?붿쭊?ㅼ씪? ?붿쭊 ?대????ㅽ솢 諛??됯컖, 諛遊? 泥?젙?묒슜 ?깆쓣 ?듯븳 ?붿쭊 ?깅뒫???μ긽怨??섎챸???곗옣?쒗궎??湲곕뒫?? ?섍퀬 ?덈떎. ?뱀떆?쇰룄 ?붿쭊?ㅼ씪??遺議깊븳 ?곹깭?먯꽌 ?먮룞李⑤? 怨꾩냽 二쇳뻾?섍쾶 ?섎㈃ ?붿쭊 ?대????대룞 遺遺꾩씠 怨좎갑?섏뼱  ?붿쭊 怨좎옣???먯씤???섍퀬, 援먰솚二쇨린瑜??섏뼱??寃쎌슦 ?붿쭊?ㅼ씪???먮룄媛 利앷????곕퉬?먮룄 ?섏걶 ?곹뼢??二쇨퀬 ?덉뼱 ??湲곌컙 ?댁쟾???섍린 ?꾩뿉??二쇳뻾嫄곕━???ъ슜湲곌컙??怨좊젮???먭? 諛?援먰솚???댁＜怨? ?ㅼ씪?꾪꽣 諛??먯뼱?꾪꽣???④퍡 援??섑빐二쇰뒗 寃껋씠 醫뗫떎.",
+  "tr_e": "Engine oil functions to improve engine performance and extend engine life through lubrication and cooling, sealing, and cleaning inside the engine. If you keep driving with insufficient engine oil, the moving parts inside the engine may seize, causing engine failure; and if the replacement cycle is exceeded, the viscosity of the engine oil increases and adversely affects fuel efficiency, so before long-distance driving, inspect and replace it considering the mileage and period of use, and it is good to replace the oil filter and air filter together."
+ },
+ {
+  "n": 594,
+  "ko_e": "?붿쭊釉뚮젅?댄겕 ?ъ슜??????ㅻ챸?대떎.",
+  "tr_e": "This is an explanation of the use of engine braking."
+ },
+ {
+  "n": 595,
+  "ko_e": "?뺤냽 二쇳뻾?섎뒗 寃껋씠 ?곕퉬 ?μ긽???꾩???以??",
+  "tr_e": "Driving at a constant speed helps improve fuel efficiency."
+ },
+ {
+  "n": 596,
+  "ko_e": "?댁쟾?듦? 媛쒖꽑???듯빐 ?ㅽ쁽?????덈뒗 寃쎌젣?댁쟾? 怨듯쉶??理쒖냼?? 異쒕컻??遺?쒕읇寃? ?뺤냽二쇳뻾???좎?, 寃쎌젣?띾룄  以?? 愿?깆＜???쒖슜, ?먯뼱而??ъ슜?먯젣 ?깆씠 ?덈떎.(援?넗援먰넻遺? 援먰넻?덉쟾怨듬떒???쒖떆?섎뒗 寃쎌젣?댁쟾)",
+  "tr_e": "Economical driving that can be achieved through improving driving habits includes minimizing idling, starting off smoothly, maintaining a constant speed, observing economical speeds, using coasting (inertia driving), and refraining from using the air conditioner. (Economical driving as presented by the Ministry of Land, Infrastructure and Transport and the Korea Transportation Safety Authority.)"
+ },
+ {
+  "n": 597,
+  "ko_e": "??댁뼱 怨듦린?뺤? ?곸젙?곹깭瑜??좎??섍퀬, ?먯뼱而??묐룞? 怨좊떒?먯꽌 ?쒖옉?섏뿬 ??⑥쑝濡??좎?, ?먯뼱?대━?????뚮え?? 愿由щ? 泥좎????쒕떎. 洹몃━怨??먮룞李⑥쓽 臾닿쾶瑜?以꾩씠湲??꾪빐 遺덊븘?뷀븳 吏먯쓣 鍮??몃쟻?щ? 鍮꾩슦怨??먮룞李??곕즺???덈컲 ?뺣룄留?梨꾩슫??",
+  "tr_e": "Keep the tire pressure at the proper level, run the air conditioner starting at a high setting and then maintaining it at a low setting, and thoroughly manage consumables such as the air cleaner. Also, to reduce the vehicle's weight, remove unnecessary loads to empty the trunk and fill the fuel tank only about halfway."
+ },
+ {
+  "n": 598,
+  "ko_e": "?섏냼??뺤듅?⑹옄?숈감(?뱀감?뺤썝 36?몄듅 ?댁긽)??醫낆궗?섎젮???댁쟾?먮쭔 ?덉쟾援먯쑁(?밸퀎援먯쑁)???댁닔?섏뿬???쒕떎. ?섏냼 ?먮룞李?異⑹쟾???ㅻ퉬???댁쟾?먭? ?꾩쓽濡?議곗옉?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Only drivers who intend to operate a large hydrogen-powered passenger vehicle (seating capacity of 36 or more) must complete safety education (special training). The hydrogen vehicle charging station equipment must not be operated arbitrarily by the driver."
+ },
+ {
+  "n": 599,
+  "ko_e": "?좎궗?곕즺 ?ъ슜? 李⑤웾??怨좎옣, ?섍꼍?ㅼ뿼???먯씤???????덈떎.",
+  "tr_e": "Using counterfeit fuel can cause vehicle breakdowns and environmental pollution."
+ },
+ {
+  "n": 600,
+  "ko_e": "?섍꼍移쒗솕???먮룞李⑥쓽 媛쒕컻 諛?蹂닿툒 珥됱쭊??愿??踰뺣쪧 ??1議곗쓽2?????꾧린?먮룞李? ?섏씠釉뚮━?쒖옄?숈감, ?섏냼?꾧린?먮룞李⑥뿉  ?대떦?섏? ?꾨땲?섎뒗 ?먮룞李⑤? ?섍꼍移쒗솕???먮룞李⑥쓽 ?꾩슜二쇱감援ъ뿭??二쇱감?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Under Article 11-2 (7) of the Act on Promotion of Development and Distribution of Environment-Friendly Motor Vehicles, a vehicle that is not an electric vehicle, hybrid vehicle, or hydrogen fuel cell vehicle must not be parked in a parking space reserved exclusively for environment-friendly vehicles."
+ },
+ {
+  "n": 601,
+  "ko_e": "??怨좎븬媛???덉쟾愿由щ쾿 ?쒗뻾洹쒖튃 蹂꾪몴31???곕씪 ?섏냼??뺤듅?⑹옄?숈감(?뱀감?뺤썝 36?몄듅 ?댁긽)瑜??좉퇋濡??댁쟾?섎젮???댁쟾?먮뒗 ?밸퀎援먯쑁???댁닔?섏뿬???섎굹 洹????댁쟾?먮뒗 援먯쑁??곸뿉???쒖쇅?쒕떎. ???섏냼?먮룞李⑤뒗 ?⑷린????λ맂 ?섏냼 ? ?곗냼???뷀븰諛섏쓳?쇰줈 ?앹꽦???꾧린濡?紐⑦꽣瑜?援щ룞?섏뿬 ?먮룞李⑤? ?吏곸씠??諛⑹떇?쇰줈 ?섏냼瑜??곗냼?쒗궎吏 ?딆쓬 ???섏냼???숈감?먮뒗 ?붿옱 ?깆쓽 ?댁쑀濡??⑤룄媛 ?곸듅??寃쎌슦 ?⑷린 ?깆쓽 ??컻諛⑹?瑜??꾪븳 ?덉쟾諛몃툕媛 ?섏뼱 ?덉뼱 湲닿툒?곹솴 諛쒖깮 ???덉쟾諛몃툕媛 媛쒕갑?섏뼱 ?섏냼媛 ?몃?濡?諛⑹텧?섏뼱 ??컻??諛⑹??쒕떎. ??援먰넻?덉쟾踰???議곗뿉 ?곕씪 李⑤웾???댁쟾?섎뒗 ???깆? 踰뺣졊?먯꽌 ???섎뒗 諛붿뿉 ?곕씪 ?대떦 李⑤웾???덉쟾?댄뻾??吏?μ씠 ?녿뒗吏瑜??먭??섍퀬 ?덉쟾?섍쾶 ?댁쟾?섏뿬???쒕떎.",
+  "tr_e": "(1) Under Table 31 of the Enforcement Rule of the High-Pressure Gas Safety Control Act, a driver who intends to newly operate a large hydrogen-powered passenger vehicle (seating capacity of 36 or more) must complete special training, but other drivers are excluded from the education requirement. (2) A hydrogen vehicle moves by driving a motor with electricity generated by the chemical reaction between hydrogen stored in a tank and oxygen; it does not burn hydrogen. (3) A hydrogen vehicle is equipped with a safety valve to prevent the tank from exploding when the temperature rises due to fire or other causes; in an emergency the safety valve opens and hydrogen is released to the outside, preventing an explosion. (4) Under Article 7 of the Traffic Safety Act, a person who drives a vehicle must inspect whether the vehicle has any problem in safe operation as prescribed by statute and drive safely."
+ },
+ {
+  "n": 602,
+  "ko_e": "移쒗솚寃쎌슫?꾩? 湲됱텧諛? 湲됱젣?? 湲됯??띿쓣 ?쇨????섍퀬, 二쇳뻾???뚯뿉???뺤냽二쇳뻾???섎릺 ?섏떆濡?媛?띻낵 ?뺤?瑜?諛섎났 ?섎뒗 寃껋? 諛붾엺吏곹븯吏 紐삵븯?? ?먰븳 ?뺤감 諛?二쇱감???뚯뿉??怨꾩냽 怨듯쉶?꾪븯吏 ?딆븘???쒕떎.",
+  "tr_e": "Eco-friendly driving requires refraining from sudden starts, sudden braking, and sudden acceleration, and while driving one should maintain a constant speed; it is undesirable to repeatedly accelerate and stop. Also, when stopping or parking, one should not keep the engine idling."
+ },
+ {
+  "n": 603,
+  "ko_e": "?섏냼?먮룞李⑤뒗 ?⑷린????λ맂 ?섏냼瑜??곕즺?꾩??쒖뒪???ㅽ깮)?먯꽌 ?곗냼? ?뷀븰諛섏쓳?쇰줈 ?앹꽦???꾧린濡?紐⑦꽣瑜?援щ룞?????먮룞李⑤? ?吏곸씠??諛⑹떇??,
+  "tr_e": "A hydrogen vehicle moves by driving a motor with electricity generated in the fuel cell system (stack) through the chemical reaction between hydrogen stored in a tank and oxygen."
+ },
+ {
+  "n": 604,
+  "ko_e": "怨듯쉶?꾩쓣 ?섏? 留먯븘???섎ŉ ?섏떆濡??먮룞李??먭????섍퀬 ?붿쭊?ㅼ씪???ㅼ뿼?뺣룄(??0,000km二쇳뻾)???곕씪 援먰솚?섎뒗  寃껋씠 寃쎌젣?곸씠?? 援먰넗 ?섏젙?쒕뒗 ?좎쭊援?쓽 ?⑥떎媛??媛먯텞 紐⑺몴移섎? 洹쒖젙??援?젣?묒빟?쇰줈 2005??2??16??怨듭떇  諛쒗슚?섏뿀??",
+  "tr_e": "One should not idle the engine, should inspect the vehicle frequently, and it is economical to change the engine oil according to its degree of contamination (about every 10,000 km). The Kyoto Protocol is an international agreement setting greenhouse gas reduction targets for developed countries and officially took effect on February 16, 2005."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/329_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ s=x.get('ko_e','')
+ try:
+  repaired=s.encode('cp949').decode('utf-8')
+ except Exception:
+  repaired=s.encode('cp949',errors='replace').decode('utf-8',errors='replace')
+ print(x['n'], repaired)
+ print('EN:',x.get('tr_e'))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T23:05:18.331502Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.8 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:15 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 756ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:15 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/329_expl_en.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; foreach($x in $data){ $fixed=$utf8.GetString($cp949.GetBytes($x.ko_e)); Write-Output ("{0}: {1}" -f $x.n,$fixed); Write-Output ("EN: {0}" -f $x.tr_e) }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 766ms:
+ConvertFrom-Json : 잘못된 개체가 전달되었습니다. ':' 또는 '}'가 필요합니다. (386): [
+ {
+  "n": 585,
+  "ko_e": "?먯쟾嫄??댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧 ??議??뺤쓽) ???? 諛뷀닿? ???댁긽??李?         ???몄쓽2 ?쒖쟾湲곗옄?꾧굅?앸? ?먯쟾嫄곕줈???щ엺???섏쓣 蹂댁땐?섍린 ?꾪
+븯???꾨룞湲곕? ?μ갑?섍퀬 ?ㅼ쓬 媛?紐⑹쓽 ?붽굔??紐???異⑹”?섎뒗 寃껋쓣 留먰븳?? 媛. ?섎떖(?먰럹?ъ쓣 ?ы븿?쒕떎)怨??꾨룞湲곗쓽 ?숈떆 ?숇젰?쇰줈 ?吏곸씠硫? ?꾨룞湲곕쭔?쇰줈???吏??
+댁? ?꾨땲??寃??? ?쒖냽 25?щ줈誘명꽣 ?댁긽?쇰줈 ?吏곸씪 寃쎌슦 ?꾨룞湲곌? ?묐룞?섏? ?꾨땲??寃??? 遺李⑸맂 ?μ튂??臾닿쾶瑜? ?ы븿???먯쟾嫄곗쓽 ?꾩껜 以묐웾??30?щ줈洹몃옩 誘몃쭔??
+寃?,
+  "tr_e": "Act on the Promotion of Bicycle Use Article 2 (Definitions) Item 1: a vehicle with two or more wheels. Item 
+1-2: an 'electric bicycle' means a bicycle equipped with an electric motor to supplement human power and meeting all of
+ the following requirements. (a) It moves by the simultaneous power of the pedals (including hand pedals) and the elect
+ric motor, and does not move by the electric motor alone. (b) The electric motor does not operate when moving at 25 km/
+h or more. (c) The total weight of the bicycle, including attached devices, is less than 30 kg."
+ },
+ {
+  "n": 586,
+  "ko_e": "?꾨줈援먰넻踰???0議??뱀젙?댁쟾?먯쓽 以?섏궗???????먯쟾嫄곕벑???댁쟾?먮뒗 諛ㅼ뿉 ?꾨줈瑜??듯뻾?섎뒗 ?뚯뿉???꾩“?깃낵 誘??깆쓣 耳쒓굅???쇨킅????諛쒓킅?μ튂瑜?李⑹슜?섏
+뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 50 (Matters to Be Observed by Specific Drivers) Paragraph 9: when traveling on the 
+road at night, the rider of a bicycle, etc., must turn on the headlight and tail light or wear a light-emitting device 
+such as a reflective band."
+ },
+ {
+  "n": 587,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 8 ?좏샇?꾨컲 3留??? 以묒븰?좎묠踰?3留??? ?〓떒蹂대룄 蹂댄뻾???〓떒 諛⑺빐 3留??먯쓽 踰붿튃湲덉뿉  泥섑븯怨??띾룄?꾨컲 洹쒖젙? ?꾨줈援먰넻踰??
+?7議??먮룞李⑤벑怨??몃㈃?꾩감???띾룄) ???먮룞李⑤벑(媛쒖씤???대룞?μ튂???쒖쇅???? ?댄븯 ??議곗뿉??媛숇떎)怨??몃㈃?꾩감???꾨줈 ?듯뻾 ?띾룄???됱젙?덉쟾遺?뱀쑝濡??뺥븳??",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]: a penalty fine of 30,000 won for a signal violation, 3
+0,000 won for crossing the center line, and 30,000 won for obstructing a pedestrian's crossing at a crosswalk; and as f
+or the speeding provision, Road Traffic Act Article 17 (Speed of Motor Vehicles, etc., and Trams) Paragraph 1: the road
+ travel speed of vehicles, etc. (excluding personal mobility devices; the same applies in this Article hereinafter) and
+ trams is prescribed by Ordinance of the Ministry of the Interior and Safety."
+ },
+ {
+  "n": 588,
+  "ko_e": "?꾨줈援먰넻踰???議??뺤쓽) ?먯쟾嫄??꾨줈???듯뻾? ?먯쟾嫄?諛?媛쒖씤???대룞?μ튂(?먯쟾嫄곕벑) 紐⑤몢 媛?ν븯硫? ?먯쟾嫄??꾩슜??濡쒕룄 ?꾨줈???ы븿??",
+  "tr_e": "Road Traffic Act Article 2 (Definitions): both bicycles and personal mobility devices (bicycles, etc.) may t
+ravel on a bicycle road, and a bicycle-only road is also included in the definition of road."
+ },
+ {
+  "n": 589,
+  "ko_e": "?먯쟾嫄곌? ?듯뻾?????덈뒗 ?꾨줈?먮뒗 ?먯쟾嫄곗쟾?⑸룄濡? ?먯쟾嫄곗쟾?⑹감濡? ?먯쟾嫄곗슦?좊룄濡? ?먯쟾嫄걔룸낫?됱옄 寃몄슜?꾨줈媛 ?덈떎.",
+  "tr_e": "Roads on which a bicycle may travel include bicycle-only roads, bicycle-only lanes, bicycle-priority roads, 
+and shared bicycle-and-pedestrian roads."
+ },
+ {
+  "n": 590,
+  "ko_e": "寃쎌젣?띾룄濡?二쇳뻾?섎뒗 寃껋씠 媛???곕즺???뚮퉬?⑥쑉???믪씠???댁쟾諛⑸쾿?대떎.",
+  "tr_e": "Driving at an economical speed is the driving method that most improves fuel efficiency."
+ },
+ {
+  "n": 591,
+  "ko_e": "湲됯?媛먯냽? ?곕퉬瑜???텛???먯씤???섍퀬, ??댁뼱 怨듦린?뺤쓣 吏?섏튂寃???텛硫???댁뼱??吏곴꼍??以꾩뼱?ㅼ뼱 ?곕퉬媛 ??븘 吏硫? ?대━留됯만?먯꽌 ?쒕룞???꾧쾶 ?
+섎㈃ 釉뚮젅?댄겕 諛곕젰 ?μ튂媛 ?묐룞?섏? ?딆븘 ?쒕룞???섏? ?딆쑝誘濡??щ컮瑜댁? 紐삵븳  ?댁쟾諛⑸쾿?대떎.",
+  "tr_e": "Sudden acceleration and deceleration are causes of lower fuel efficiency; lowering tire pressure excessively
+ reduces the tire diameter and lowers fuel efficiency; and turning off the engine on a downhill disables the brake boos
+ter so that braking fails, so these are incorrect driving methods."
+ },
+ {
+  "n": 592,
+  "ko_e": "?먯뼱而??ъ슜? ?곕즺 ?뚮퉬 ?⑥쑉怨?愿怨꾧? ?덇퀬, ?먯뼱而??됰ℓ???ㅼ〈痢듭쓣 ?뚭눼?섎뒗 ?섍꼍?ㅼ뿼 臾쇱쭏濡쒖꽌 媛湲됱쟻 ?ъ슜?? 以꾩씠嫄곕굹 ?⑥쑉?곸쑝濡??ъ슜?⑥씠 諛
+붾엺吏곹븯??",
+  "tr_e": "Air-conditioner use is related to fuel efficiency, and the air-conditioner refrigerant is an environmental p
+ollutant that destroys the ozone layer, so it is desirable to reduce its use as much as possible or use it efficiently.
+"
+ },
+ {
+  "n": 593,
+  "ko_e": "?붿쭊?ㅼ씪? ?붿쭊 ?대????ㅽ솢 諛??됯컖, 諛遊? 泥?젙?묒슜 ?깆쓣 ?듯븳 ?붿쭊 ?깅뒫???μ긽怨??섎챸???곗옣?쒗궎??湲곕뒫?? ?섍퀬 ?덈떎. ?뱀떆?쇰룄 ?붿쭊?ㅼ씪??遺
+議깊븳 ?곹깭?먯꽌 ?먮룞李⑤? 怨꾩냽 二쇳뻾?섍쾶 ?섎㈃ ?붿쭊 ?대????대룞 遺遺꾩씠 怨좎갑?섏뼱  ?붿쭊 怨좎옣???먯씤???섍퀬, 援먰솚二쇨린瑜??섏뼱??寃쎌슦 ?붿쭊?ㅼ씪???먮룄媛 利앷????곕퉬?
+먮룄 ?섏걶 ?곹뼢??二쇨퀬 ?덉뼱 ??湲곌컙 ?댁쟾???섍린 ?꾩뿉??二쇳뻾嫄곕━???ъ슜湲곌컙??怨좊젮???먭? 諛?援먰솚???댁＜怨? ?ㅼ씪?꾪꽣 諛??먯뼱?꾪꽣???④퍡 援??섑빐二쇰뒗 寃껋씠 醫뗫떎.",
+  "tr_e": "Engine oil functions to improve engine performance and extend engine life through lubrication and cooling, s
+ealing, and cleaning inside the engine. If you keep driving with insufficient engine oil, the moving parts inside the e
+ngine may seize, causing engine failure; and if the replacement cycle is exceeded, the viscosity of the engine oil incr
+eases and adversely affects fuel efficiency, so before long-distance driving, inspect and replace it considering the mi
+leage and period of use, and it is good to replace the oil filter and air filter together."
+ },
+ {
+  "n": 594,
+  "ko_e": "?붿쭊釉뚮젅?댄겕 ?ъ슜??????ㅻ챸?대떎.",
+  "tr_e": "This is an explanation of the use of engine braking."
+ },
+ {
+  "n": 595,
+  "ko_e": "?뺤냽 二쇳뻾?섎뒗 寃껋씠 ?곕퉬 ?μ긽???꾩???以??",
+  "tr_e": "Driving at a constant speed helps improve fuel efficiency."
+ },
+ {
+  "n": 596,
+  "ko_e": "?댁쟾?듦? 媛쒖꽑???듯빐 ?ㅽ쁽?????덈뒗 寃쎌젣?댁쟾? 怨듯쉶??理쒖냼?? 異쒕컻??遺?쒕읇寃? ?뺤냽二쇳뻾???좎?, 寃쎌젣?띾룄  以?? 愿?깆＜???쒖슜, ?먯뼱而??ъ슜?먯
+젣 ?깆씠 ?덈떎.(援?넗援먰넻遺? 援먰넻?덉쟾怨듬떒???쒖떆?섎뒗 寃쎌젣?댁쟾)",
+  "tr_e": "Economical driving that can be achieved through improving driving habits includes minimizing idling, startin
+g off smoothly, maintaining a constant speed, observing economical speeds, using coasting (inertia driving), and refrai
+ning from using the air conditioner. (Economical driving as presented by the Ministry of Land, Infrastructure and Trans
+port and the Korea Transportation Safety Authority.)"
+ },
+ {
+  "n": 597,
+  "ko_e": "??댁뼱 怨듦린?뺤? ?곸젙?곹깭瑜??좎??섍퀬, ?먯뼱而??묐룞? 怨좊떒?먯꽌 ?쒖옉?섏뿬 ??⑥쑝濡??좎?, ?먯뼱?대━?????뚮え?? 愿由щ? 泥좎????쒕떎. 洹몃━怨??먮룞李⑥
+쓽 臾닿쾶瑜?以꾩씠湲??꾪빐 遺덊븘?뷀븳 吏먯쓣 鍮??몃쟻?щ? 鍮꾩슦怨??먮룞李??곕즺???덈컲 ?뺣룄留?梨꾩슫??",
+  "tr_e": "Keep the tire pressure at the proper level, run the air conditioner starting at a high setting and then main
+taining it at a low setting, and thoroughly manage consumables such as the air cleaner. Also, to reduce the vehicle's w
+eight, remove unnecessary loads to empty the trunk and fill the fuel tank only about halfway."
+ },
+ {
+  "n": 598,
+  "ko_e": "?섏냼??뺤듅?⑹옄?숈감(?뱀감?뺤썝 36?몄듅 ?댁긽)??醫낆궗?섎젮???댁쟾?먮쭔 ?덉쟾援먯쑁(?밸퀎援먯쑁)???댁닔?섏뿬???쒕떎. ?섏냼 ?먮룞李?異⑹쟾???ㅻ퉬???댁쟾?먭? ?꾩쓽濡
+?議곗옉?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Only drivers who intend to operate a large hydrogen-powered passenger vehicle (seating capacity of 36 or mor
+e) must complete safety education (special training). The hydrogen vehicle charging station equipment must not be opera
+ted arbitrarily by the driver."
+ },
+ {
+  "n": 599,
+  "ko_e": "?좎궗?곕즺 ?ъ슜? 李⑤웾??怨좎옣, ?섍꼍?ㅼ뿼???먯씤???????덈떎.",
+  "tr_e": "Using counterfeit fuel can cause vehicle breakdowns and environmental pollution."
+ },
+ {
+  "n": 600,
+  "ko_e": "?섍꼍移쒗솕???먮룞李⑥쓽 媛쒕컻 諛?蹂닿툒 珥됱쭊??愿??踰뺣쪧 ??1議곗쓽2?????꾧린?먮룞李? ?섏씠釉뚮━?쒖옄?숈감, ?섏냼?꾧린?먮룞李⑥뿉  ?대떦?섏? ?꾨땲?섎뒗 ?먮룞李⑤? ?
+섍꼍移쒗솕???먮룞李⑥쓽 ?꾩슜二쇱감援ъ뿭??二쇱감?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Under Article 11-2 (7) of the Act on Promotion of Development and Distribution of Environment-Friendly Motor
+ Vehicles, a vehicle that is not an electric vehicle, hybrid vehicle, or hydrogen fuel cell vehicle must not be parked 
+in a parking space reserved exclusively for environment-friendly vehicles."
+ },
+ {
+  "n": 601,
+  "ko_e": "??怨좎븬媛???덉쟾愿由щ쾿 ?쒗뻾洹쒖튃 蹂꾪몴31???곕씪 ?섏냼??뺤듅?⑹옄?숈감(?뱀감?뺤썝 36?몄듅 ?댁긽)瑜??좉퇋濡??댁쟾?섎젮???댁쟾?먮뒗 ?밸퀎援먯쑁???댁닔?섏뿬???섎
+굹 洹????댁쟾?먮뒗 援먯쑁??곸뿉???쒖쇅?쒕떎. ???섏냼?먮룞李⑤뒗 ?⑷린????λ맂 ?섏냼 ? ?곗냼???뷀븰諛섏쓳?쇰줈 ?앹꽦???꾧린濡?紐⑦꽣瑜?援щ룞?섏뿬 ?먮룞李⑤? ?吏곸씠??諛⑹떇?쇰줈 
+?섏냼瑜??곗냼?쒗궎吏 ?딆쓬 ???섏냼???숈감?먮뒗 ?붿옱 ?깆쓽 ?댁쑀濡??⑤룄媛 ?곸듅??寃쎌슦 ?⑷린 ?깆쓽 ??컻諛⑹?瑜??꾪븳 ?덉쟾諛몃툕媛 ?섏뼱 ?덉뼱 湲닿툒?곹솴 諛쒖깮 ???덉쟾諛몃툕媛 
+媛쒕갑?섏뼱 ?섏냼媛 ?몃?濡?諛⑹텧?섏뼱 ??컻??諛⑹??쒕떎. ??援먰넻?덉쟾踰???議곗뿉 ?곕씪 李⑤웾???댁쟾?섎뒗 ???깆? 踰뺣졊?먯꽌 ???섎뒗 諛붿뿉 ?곕씪 ?대떦 李⑤웾???덉쟾?댄뻾??吏?μ씠
+ ?녿뒗吏瑜??먭??섍퀬 ?덉쟾?섍쾶 ?댁쟾?섏뿬???쒕떎.",
+  "tr_e": "(1) Under Table 31 of the Enforcement Rule of the High-Pressure Gas Safety Control Act, a driver who intends
+ to newly operate a large hydrogen-powered passenger vehicle (seating capacity of 36 or more) must complete special tra
+ining, but other drivers are excluded from the education requirement. (2) A hydrogen vehicle moves by driving a motor w
+ith electricity generated by the chemical reaction between hydrogen stored in a tank and oxygen; it does not burn hydro
+gen. (3) A hydrogen vehicle is equipped with a safety valve to prevent the tank from exploding when the temperature ris
+es due to fire or other causes; in an emergency the safety valve opens and hydrogen is released to the outside, prevent
+ing an explosion. (4) Under Article 7 of the Traffic Safety Act, a person who drives a vehicle must inspect whether the
+ vehicle has any problem in safe operation as prescribed by statute and drive safely."
+ },
+ {
+  "n": 602,
+  "ko_e": "移쒗솚寃쎌슫?꾩? 湲됱텧諛? 湲됱젣?? 湲됯??띿쓣 ?쇨????섍퀬, 二쇳뻾???뚯뿉???뺤냽二쇳뻾???섎릺 ?섏떆濡?媛?띻낵 ?뺤?瑜?諛섎났 ?섎뒗 寃껋? 諛붾엺吏곹븯吏 紐삵븯?? ?먰븳 
+?뺤감 諛?二쇱감???뚯뿉??怨꾩냽 怨듯쉶?꾪븯吏 ?딆븘???쒕떎.",
+  "tr_e": "Eco-friendly driving requires refraining from sudden starts, sudden braking, and sudden acceleration, and wh
+ile driving one should maintain a constant speed; it is undesirable to repeatedly accelerate and stop. Also, when stopp
+ing or parking, one should not keep the engine idling."
+ },
+ {
+  "n": 603,
+  "ko_e": "?섏냼?먮룞李⑤뒗 ?⑷린????λ맂 ?섏냼瑜??곕즺?꾩??쒖뒪???ㅽ깮)?먯꽌 ?곗냼? ?뷀븰諛섏쓳?쇰줈 ?앹꽦???꾧린濡?紐⑦꽣瑜?援щ룞?????먮룞李⑤? ?吏곸씠??諛⑹떇??,
+  "tr_e": "A hydrogen vehicle moves by driving a motor with electricity generated in the fuel cell system (stack) throu
+gh the chemical reaction between hydrogen stored in a tank and oxygen."
+ },
+ {
+  "n": 604,
+  "ko_e": "怨듯쉶?꾩쓣 ?섏? 留먯븘???섎ŉ ?섏떆濡??먮룞李??먭????섍퀬 ?붿쭊?ㅼ씪???ㅼ뿼?뺣룄(??0,000km二쇳뻾)???곕씪 援먰솚?섎뒗  寃껋씠 寃쎌젣?곸씠?? 援먰넗 ?섏젙?쒕뒗 ?좎쭊
+援?쓽 ?⑥떎媛??媛먯텞 紐⑺몴移섎? 洹쒖젙??援?젣?묒빟?쇰줈 2005??2??16??怨듭떇  諛쒗슚?섏뿀??",
+  "tr_e": "One should not idle the engine, should inspect the vehicle frequently, and it is economical to change the en
+gine oil according to its degree of contamination (about every 10,000 km). The Kyoto Protocol is an international agree
+ment setting greenhouse gas reduction targets for developed countries and officially took effect on February 16, 2005."
+ }
+]
+위치 줄:2 문자:85
++ ... translations/audit/queue/329_expl_en.json' | ConvertFrom-Json; $cp949 ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Select-String -LiteralPath 'translations/audit/queue/329_expl_en.json' -Pattern '0,000km' | ForEach-Object { "'$_.Line }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 559ms:
+  "ko_e": "공회전을 하지 말아야 하며 수시로 자동차 점검을 하고 엔진오일의 오염정도(약10,000km주행)에 따라 교환하는  것이 경제적이다. 교토 의정서는 선진국의 온실가스 감축 목표치를 규정한 국제협약으로 2005년 2월 16일 공식  발효되었다.",
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Select-String -LiteralPath 'translations/audit/queue/329_expl_en.json' -Pattern '\"n\"|\"ko_|\"tr_|\"check\"|\"detail\"' | ForEach-Object { "'$_.Line }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 524ms:
+  "n": 585,
+  "ko_e": "자전거 이용 활성화에 관한 법률 제2조(정의) 제1호, 바퀴가 둘 이상인 차          제1호의2 “전기자전거”란 자전거로서 사람의 힘을 보충하기 위하여 전동기를 장착하고 다음 각 목의 요건을 모 두 충족하는 것을 말한다. 가. 페달(손페달을 포함한다)과 전동기의 동시 동력으로 움직이며, 전동기만으로는 움직 이지 아니할 것 나. 시속 25킬로미터 이상으로 움직일 경우 전동기가 작동하지 아니할 것 다. 부착된 장치의 무게를  포함한 자전거의 전체 중량이 30킬로그램 미만일 것",
+  "tr_e": "Act on the Promotion of Bicycle Use Article 2 (Definitions) Item 1: a vehicle with two or more wheels. Item 1-2: an 'electric bicycle' means a bicycle equipped with an electric motor to supplement human power and meeting all of the following requirements. (a) It moves by the simultaneous power of the pedals (including hand pedals) and the electric motor, and does not move by the electric motor alone. (b) The electric motor does not operate when moving at 25 km/h or more. (c) The total weight of the bicycle, including attached devices, is less than 30 kg."
+  "n": 586,
+  "ko_e": "도로교통법 제50조(특정운전자의 준수사항)제9항 자전거등의 운전자는 밤에 도로를 통행하는 때에는 전조등과 미 등을 켜거나 야광띠 등 발광장치를 착용하여야 한다.",
+  "tr_e": "Road Traffic Act Article 50 (Matters to Be Observed by Specific Drivers) Paragraph 9: when traveling on the road at night, the rider of a bicycle, etc., must turn on the headlight and tail light or wear a light-emitting device such as a reflective band."
+  "n": 587,
+  "ko_e": "도로교통법 시행령 별표 8 신호위반 3만 원, 중앙선침범 3만 원, 횡단보도 보행자 횡단 방해 3만 원의 범칙금에  처하고 속도위반 규정은 도로교통법 제17조(자동차등과 노면전차의 속도) ① 자동차등(개인형 이동장치는 제외한 다. 이하 이 조에서 같다)과 노면전차의 도로 통행 속도는 행정안전부령으로 정한다.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act [Table 8]: a penalty fine of 30,000 won for a signal violation, 30,000 won for crossing the center line, and 30,000 won for obstructing a pedestrian's crossing at a crosswalk; and as for the speeding provision, Road Traffic Act Article 17 (Speed of Motor Vehicles, etc., and Trams) Paragraph 1: the road travel speed of vehicles, etc. (excluding personal mobility devices; the same applies in this Article hereinafter) and trams is prescribed by Ordinance of the Ministry of the Interior and Safety."
+  "n": 588,
+  "ko_e": "도로교통법 제2조(정의) 자전거 도로의 통행은 자전거 및 개인형 이동장치(자전거등) 모두 가능하며, 자전거 전용도 로도 도로에 포함됨.",
+  "tr_e": "Road Traffic Act Article 2 (Definitions): both bicycles and personal mobility devices (bicycles, etc.) may travel on a bicycle road, and a bicycle-only road is also included in the definition of road."
+  "n": 589,
+  "ko_e": "자전거가 통행할 수 있는 도로에는 자전거전용도로, 자전거전용차로, 자전거우선도로, 자전거·보행자 겸용도로가 있다.",
+  "tr_e": "Roads on which a bicycle may travel include bicycle-only roads, bicycle-only lanes, bicycle-priority roads, and shared bicycle-and-pedestrian roads."
+  "n": 590,
+  "ko_e": "경제속도로 주행하는 것이 가장 연료의 소비효율을 높이는 운전방법이다.",
+  "tr_e": "Driving at an economical speed is the driving method that most improves fuel efficiency."
+  "n": 591,
+  "ko_e": "급가감속은 연비를 낮추는 원인이 되고, 타이어 공기압을 지나치게 낮추면 타이어의 직경이 줄어들어 연비가 낮아 지며, 내리막길에서 시동을 끄게 되면 브레이크 배력 장치가 작동되지 않아 제동이 되지 않으므로 올바르지 못한  운전방법이다.",
+  "tr_e": "Sudden acceleration and deceleration are causes of lower fuel efficiency; lowering tire pressure excessively reduces the tire diameter and lowers fuel efficiency; and turning off the engine on a downhill disables the brake booster so that braking fails, so these are incorrect driving methods."
+  "n": 592,
+  "ko_e": "에어컨 사용은 연료 소비 효율과 관계가 있고, 에어컨 냉매는 오존층을 파괴하는 환경오염 물질로서 가급적 사용을  줄이거나 효율적으로 사용함이 바람직하다.",
+  "tr_e": "Air-conditioner use is related to fuel efficiency, and the air-conditioner refrigerant is an environmental pollutant that destroys the ozone layer, so it is desirable to reduce its use as much as possible or use it efficiently."
+  "n": 593,
+  "ko_e": "엔진오일은 엔진 내부의 윤활 및 냉각, 밀봉, 청정작용 등을 통한 엔진 성능의 향상과 수명을 연장시키는 기능을  하고 있다. 혹시라도 엔진오일이 부족한 상태에서 자동차를 계속 주행하게 되면 엔진 내부의 운동 부분이 고착되어  엔진 고장의 원인이 되고, 교환주기를 넘어설 경우 엔진오일의 점도가 증가해 연비에도 나쁜 영향을 주고 있어 장 기간 운전을 하기 전에는 주행거리나 사용기간을 고려해 점검 및 교환을 해주고, 오일필터 및 에어필터도 함께 교 환해주는 것이 좋다.",
+  "tr_e": "Engine oil functions to improve engine performance and extend engine life through lubrication and cooling, sealing, and cleaning inside the engine. If you keep driving with insufficient engine oil, the moving parts inside the engine may seize, causing engine failure; and if the replacement cycle is exceeded, the viscosity of the engine oil increases and adversely affects fuel efficiency, so before long-distance driving, inspect and replace it considering the mileage and period of use, and it is good to replace the oil filter and air filter together."
+  "n": 594,
+  "ko_e": "엔진브레이크 사용에 대한 설명이다.",
+  "tr_e": "This is an explanation of the use of engine braking."
+  "n": 595,
+  "ko_e": "정속 주행하는 것이 연비 향상에 도움을 준다.",
+  "tr_e": "Driving at a constant speed helps improve fuel efficiency."
+  "n": 596,
+  "ko_e": "운전습관 개선을 통해 실현할 수 있는 경제운전은 공회전 최소화, 출발을 부드럽게, 정속주행을 유지, 경제속도  준수, 관성주행 활용, 에어컨 사용자제 등이 있다.(국토교통부와 교통안전공단이 제시하는 경제운전)",
+  "tr_e": "Economical driving that can be achieved through improving driving habits includes minimizing idling, starting off smoothly, maintaining a constant speed, observing economical speeds, using coasting (inertia driving), and refraining from using the air conditioner. (Economical driving as presented by the Ministry of Land, Infrastructure and Transport and the Korea Transportation Safety Authority.)"
+  "n": 597,
+  "ko_e": "타이어 공기압은 적정상태를 유지하고, 에어컨 작동은 고단에서 시작하여 저단으로 유지, 에어클리너 등 소모품  관리를 철저히 한다. 그리고 자동차의 무게를 줄이기 위해 불필요한 짐을 빼 트렁크를 비우고 자동차 연료는 절반 정도만 채운다.",
+  "tr_e": "Keep the tire pressure at the proper level, run the air conditioner starting at a high setting and then maintaining it at a low setting, and thoroughly manage consumables such as the air cleaner. Also, to reduce the vehicle's weight, remove unnecessary loads to empty the trunk and fill the fuel tank only about halfway."
+  "n": 598,
+  "ko_e": "수소대형승합자동차(승차정원 36인승 이상)에 종사하려는 운전자만 안전교육(특별교육)을 이수하여야 한다. 수소 자동차 충전소 설비는 운전자가 임의로 조작하여서는 아니 된다.",
+  "tr_e": "Only drivers who intend to operate a large hydrogen-powered passenger vehicle (seating capacity of 36 or more) must complete safety education (special training). The hydrogen vehicle charging station equipment must not be operated arbitrarily by the driver."
+  "n": 599,
+  "ko_e": "유사연료 사용은 차량의 고장, 환경오염의 원인이 될 수 있다.",
+  "tr_e": "Using counterfeit fuel can cause vehicle breakdowns and environmental pollution."
+  "n": 600,
+  "ko_e": "환경친화적 자동차의 개발 및 보급 촉진에 관한 법률 제11조의2제7항 전기자동차, 하이브리드자동차, 수소전기자동차에  해당하지 아니하는 자동차를 환경친화적 자동차의 전용주차구역에 주차하여서는 아니 된다.",
+  "tr_e": "Under Article 11-2 (7) of the Act on Promotion of Development and Distribution of Environment-Friendly Motor Vehicles, a vehicle that is not an electric vehicle, hybrid vehicle, or hydrogen fuel cell vehicle must not be parked in a parking space reserved exclusively for environment-friendly vehicles."
+  "n": 601,
+  "ko_e": "① 고압가스 안전관리법 시행규칙 별표31에 따라 수소대형승합자동차(승차정원 36인승 이상)를 신규로 운전하려는 운전자는 특별교육을 이수하여야 하나 그 외 운전자는 교육대상에서 제외된다. ② 수소자동차는 용기에 저장된 수소 와 산소의 화학반응으로 생성된 전기로 모터를 구동하여 자동차를 움직이는 방식으로 수소를 연소시키지 않음 ③ 수소자 동차에는 화재 등의 이유로 온도가 상승할 경우 용기 등의 폭발방지를 위한 안전밸브가 되어 있어 긴급상황 발생 시 안전밸브가 개방되어 수소가 외부로 방출되어 폭발을 방지한다. ④ 교통안전법 제7조에 따라 차량을 운전하는 자 등은 법령에서 정 하는 바에 따라 해당 차량이 안전운행에 지장이 없는지를 점검하고 안전하게 운전하여야 한다.",
+  "tr_e": "(1) Under Table 31 of the Enforcement Rule of the High-Pressure Gas Safety Control Act, a driver who intends to newly operate a large hydrogen-powered passenger vehicle (seating capacity of 36 or more) must complete special training, but other drivers are excluded from the education requirement. (2) A hydrogen vehicle moves by driving a motor with electricity generated by the chemical reaction between hydrogen stored in a tank and oxygen; it does not burn hydrogen. (3) A hydrogen vehicle is equipped with a safety valve to prevent the tank from exploding when the temperature rises due to fire or other causes; in an emergency the safety valve opens and hydrogen is released to the outside, preventing an explosion. (4) Under Article 7 of the Traffic Safety Act, a person who drives a vehicle must inspect whether the vehicle has any problem in safe operation as prescribed by statute and drive safely."
+  "n": 602,
+  "ko_e": "친환경운전은 급출발, 급제동, 급가속을 삼가야 하고, 주행할 때에는 정속주행을 하되 수시로 가속과 정지를 반복 하는 것은 바람직하지 못하다. 또한 정차 및 주차할 때에는 계속 공회전하지 않아야 한다.",
+  "tr_e": "Eco-friendly driving requires refraining from sudden starts, sudden braking, and sudden acceleration, and while driving one should maintain a constant speed; it is undesirable to repeatedly accelerate and stop. Also, when stopping or parking, one should not keep the engine idling."
+  "n": 603,
+  "ko_e": "수소자동차는 용기에 저장된 수소를 연료전지시스템(스택)에서 산소와 화학반응으로 생성된 전기로 모터를 구동하 여 자동차를 움직이는 방식임",
+  "tr_e": "A hydrogen vehicle moves by driving a motor with electricity generated in the fuel cell system (stack) through the chemical reaction between hydrogen stored in a tank and oxygen."
+  "n": 604,
+  "ko_e": "공회전을 하지 말아야 하며 수시로 자동차 점검을 하고 엔진오일의 오염정도(약10,000km주행)에 따라 교환하는  것이 경제적이다. 교토 의정서는 선진국의 온실가스 감축 목표치를 규정한 국제협약으로 2005년 2월 16일 공식  발효되었다.",
+  "tr_e": "One should not idle the engine, should inspect the vehicle frequently, and it is economical to change the engine oil according to its degree of contamination (about every 10,000 km). The Kyoto Protocol is an international agreement setting greenhouse gas reduction targets for developed countries and officially took effect on February 16, 2005."
+
+codex
+[]
+tokens used
+23,922
+[]

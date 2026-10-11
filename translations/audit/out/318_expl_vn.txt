@@ -1,0 +1,248 @@
+Reading additional input from stdin...
+2026-10-10T22:48:35.075336Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12800-fbb0-76b0-8fe7-27366b59275a
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/318_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/318_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 522ms:
+[
+ {
+  "n": 362,
+  "ko_e": "?꾨줈援먰넻踰???6議?醫뚯슦瑜??뺤씤?????녿뒗 寃쎌슦?먮뒗 ?쇱떆?뺤? ?섏뿬???섎ŉ, ?대떦 李④? ?듯뻾?섍퀬 ?덈뒗 ?꾨줈????낫 ??援먯감?섎뒗 ?꾨줈????씠 ?볦? 寃쎌슦?먮뒗 ?쒗뻾?섏뿬???쒕떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 26. Trong tr튼沼쓓g h沼즤 kh척ng th沼?x찼c nh梳춏 tr찼i ph梳즜 th챙 ph梳즜 d沼쳌g l梳죍 h梳쿻, v횪 trong tr튼沼쓓g h沼즤 chi沼걏 r沼셬g 휃튼沼쓓g giao c梳칣 r沼셬g h퉤n chi沼걏 r沼셬g 휃튼沼쓓g m횪 xe 휃처 휃ang 휃i th챙 ph梳즜 휃i ch梳춎."
+ },
+ {
+  "n": 363,
+  "ko_e": "?뚯쟾援먯감濡??ㅺ퀎吏移?2022.8, 援?넗援먰넻遺) 1) ?뚯쟾援먯감濡??ㅼ튂媛 沅뚯옣?섎뒗 寃쎌슦 ??援먰넻???섏???鍮꾩떊?멸탳李⑤줈濡??댁쁺?섍린?먮뒗 留롪퀬 ?좏샇援먯감濡쒕줈 ?댁쁺?섍린?먮뒗 ?덈Т ?곸뼱 ?좏샇?댁쁺???⑥쑉?????댁???寃쎌슦 ??援먰넻???섏????믪? ?딆쑝?? 援먯감濡?援먰넻?ш퀬媛 留롮씠 諛쒖깮?섎뒗 寃쎌슦 ???댁쟾?먯쓽 ?듯뻾?곗꽑沅??몄떇???대젮??寃쎌슦 ??Y?먰삎 援먯감濡? T?먰삎 援먯감濡? 援먯감濡??뺥깭媛 ?뱀씠??寃쎌슦 ??援먰넻?뺤삩???ъ뾽 援ш컙 ?댁쓽 援먯감濡?2) ?뚯쟾援먯감濡??ㅼ튂瑜?沅뚯옣?섏? ?딅뒗 寃쎌슦 ???뚯쟾援먯감濡쒖쓽 援먰넻???섏???泥섎━?⑸웾??珥덇낵?섎뒗 寃쎌슦 ???뚯쟾援먯감濡??ㅺ퀎湲곗???留뚯”?쒗궎吏 紐삵븷 寃쎌슦 ??泥⑤몢 ??媛蹂李⑤줈媛 ?댁쁺?섎뒗 寃쎌슦 ???좏샇?곕룞???대（?댁?怨??덈뒗 援ш컙 ??援먯감濡쒖씤 寃쎌슦 ??援먯감濡쒖뿉???섎굹 ?댁긽???묎렐濡쒓? ?몃룄 3李⑤줈 ?댁긽??寃쎌슦",
+  "tr_e": "H튼沼썀g d梳쳌 Thi梳퓍 k梳?V챵ng xuy梳퓆 (th찼ng 8/2022, B沼?휂梳쩿 휃ai, C퉤 s沼?h梳?t梳쬷g v횪 Giao th척ng) 1) Tr튼沼쓓g h沼즤 khuy梳퓆 ngh沼?l梳칛 휃梳톞 v챵ng xuy梳퓆 ??Tr튼沼쓓g h沼즤 m沼쯢 l튼u l튼沼즢g giao th척ng nhi沼걏 휃沼?v梳춏 h횪nh th횪nh giao l沼?kh척ng t챠n hi沼뇎 nh튼ng l梳죍 qu찼 챠t 휃沼?v梳춏 h횪nh th횪nh giao l沼?c처 t챠n hi沼뇎, khi梳퓆 hi沼뇎 qu梳?v梳춏 h횪nh t챠n hi沼뇎 k챕m ??Tr튼沼쓓g h沼즤 m沼쯢 l튼u l튼沼즢g giao th척ng kh척ng cao nh튼ng tai n梳죒 giao th척ng t梳죍 giao l沼?x梳즭 ra nhi沼걏 ??Tr튼沼쓓g h沼즤 ng튼沼쓎 l찼i kh처 nh梳춏 th沼쯢 v沼?quy沼걆 튼u ti챗n 휃i l梳죍 ??Tr튼沼쓓g h沼즤 giao l沼?h챙nh ch沼?Y, giao l沼?h챙nh ch沼?T, h챙nh d梳죒g giao l沼?휃梳톍 bi沼뇍 ??Giao l沼?trong 휃o梳죒 d沼?찼n l횪m d沼땥 giao th척ng (traffic calming) 2) Tr튼沼쓓g h沼즤 kh척ng khuy梳퓆 ngh沼?l梳칛 휃梳톞 v챵ng xuy梳퓆 ??Tr튼沼쓓g h沼즤 m沼쯢 l튼u l튼沼즢g giao th척ng c沼쬪 v챵ng xuy梳퓆 v튼沼즨 qu찼 n훱ng l沼켧 x沼?l첵 ??Tr튼沼쓓g h沼즤 kh척ng th沼뢠 m찾n ti챗u chu梳쯰 thi梳퓍 k梳?v챵ng xuy梳퓆 ??Tr튼沼쓓g h沼즤 l횪n thay 휃沼뷼 휃튼沼즓 휃튼沼즓 v梳춏 h횪nh v횪o gi沼?cao 휃i沼긩 ??Tr튼沼쓓g h沼즤 l횪 giao l沼?trong 휃o梳죒 휃ang th沼켧 hi沼뇆 ph沼멼 h沼즤 t챠n hi沼뇎 ??Tr튼沼쓓g h沼즤 c처 t沼?m沼셳 휃튼沼쓓g ti梳퓈 c梳춏 tr沼?l챗n t梳죍 giao l沼?c처 t沼?3 l횪n m沼셳 chi沼걏 tr沼?l챗n"
+ },
+ {
+  "n": 364,
+  "ko_e": "?뚯쟾援먯감濡쒕뒗 ?좏샇援먯감濡쒖뿉 鍮꾪빐 ?곸땐吏???섍? ?곴퀬, ?뚯쟾以묒씤 李⑤웾?????吏꾩엯?섍퀬???섎뒗 李⑤웾???묐낫?댁빞  ?섎ŉ, ?뚯쟾援먯감濡??댁뿉 ?ъ쑀 怨듦컙???녿뒗 寃쎌슦?먮뒗 吏꾩엯?섎㈃ ???쒕떎.",
+  "tr_e": "V챵ng xuy梳퓆 c처 s沼?휃i沼긩 xung 휃沼셳 챠t h퉤n so v沼쌻 giao l沼?c처 t챠n hi沼뇎, xe mu沼몁 휃i v횪o ph梳즜 nh튼沼쓓g cho xe 휃ang ch梳죣 trong v챵ng xuy梳퓆, v횪 trong tr튼沼쓓g h沼즤 kh척ng c처 kh척ng gian tr沼몁g trong v챵ng xuy梳퓆 th챙 kh척ng 휃튼沼즓 휃i v횪o."
+ },
+ {
+  "n": 365,
+  "ko_e": "援먯감濡쒖뿉??吏꾪뻾 以??녿㈃ 異붾룎?ш퀬媛 諛쒖깮?섎뒗 寃껋? ?좊룄?좎뿉 ????댄빐遺議깆씪 媛?μ꽦???믩떎.             (?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?졻??쇰컲湲곗? 2. ?몃㈃?쒖떆, ?△?媛쒕퀎湲곗? 5. ?몃㈃?쒖떆)",
+  "tr_e": "Vi沼놻 x梳즭 ra tai n梳죒 휃창m b챗n h척ng khi 휃ang 휃i t梳죍 giao l沼?c처 kh梳?n훱ng cao l횪 do thi梳퓎 hi沼긳 bi梳퓍 v沼?v梳죅h d梳쳌 h튼沼썀g. (Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 6 I. Ti챗u chu梳쯰 chung 2. V梳죅h k梳?휃튼沼쓓g, II. Ti챗u chu梳쯰 c찼 bi沼뇍 5. V梳죅h k梳?휃튼沼쓓g)"
+ },
+ {
+  "n": 366,
+  "ko_e": "援먯감濡쒖뿉??鍮꾨낫??醫뚰쉶?꾪븯??李⑤웾? ?고쉶??李⑤웾 諛?媛숈? 諛⑺뼢?쇰줈 ?④퍡 醫뚰쉶???섎뒗 痢〓㈃ 李⑤웾??二쇱쓽?섎ŉ 醫뚰쉶 ?꾪빐???쒕떎. (?꾨줈援먰넻踰???5議?",
+  "tr_e": "Xe r梳?tr찼i kh척ng c처 휃챔n b梳즣 h沼?t梳죍 giao l沼?ph梳즜 r梳?tr찼i trong khi ch첬 첵 c梳?xe r梳?ph梳즜 v횪 xe b챗n c梳죒h c첫ng r梳?tr찼i theo c첫ng h튼沼썀g. (Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 25)"
+ },
+ {
+  "n": 367,
+  "ko_e": "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉???고쉶?꾩쓣 ?섍퀬???섎뒗 ?뚯뿉??誘몃━ ?꾨줈???곗륫 媛?μ옄由щ? ?곕씪 ?쒗뻾?섎㈃???고쉶 ?꾪븯?ъ빞 ?섎ŉ, 醫뚰쉶???쒖뿉??誘몃━ ?꾨줈??以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒떖 ?덉そ???댁슜?섏뿬 醫뚰쉶?꾪빐?? ?쒕떎. (?꾨줈援먰넻踰???5議?",
+  "tr_e": "Ng튼沼쓎 휃i沼걏 khi沼긪 m沼뛦 lo梳죍 xe khi mu沼몁 r梳?ph梳즜 t梳죍 giao l沼?ph梳즜 휃i ch梳춎 men theo m챕p ph梳즜 c沼쬪 휃튼沼쓓g t沼?tr튼沼쌵 v횪 r梳?ph梳즜, c챵n khi r梳?tr찼i th챙 ph梳즜 휃i ch梳춎 men theo v梳죅h tim 휃튼沼쓓g c沼쬪 휃튼沼쓓g t沼?tr튼沼쌵 v횪 r梳?tr찼i b梳켷g c찼ch s沼?d沼쩸g ph챠a trong t창m giao l沼? (Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 25)"
+ },
+ {
+  "n": 368,
+  "ko_e": "?꾨줈援먰넻踰???5議곗쓽2(?뚯쟾援먯감濡??듯뻾諛⑸쾿) ?뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮??寃쎌슦?먮뒗 ?쒗뻾?섍굅???쇱떆?뺤??섏뿬???섎ŉ,  ?대? 吏꾪뻾?섍퀬 ?덈뒗 ?ㅻⅨ 李④? ?덈뒗 ?뚯뿉??洹?李⑥뿉 吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 25-2 (C찼ch 휃i qua v챵ng xuy梳퓆). Khi mu沼몁 휃i v횪o v챵ng xuy梳퓆 ph梳즜 휃i ch梳춎 ho梳톍 d沼쳌g l梳죍 h梳쿻, v횪 khi c처 xe kh찼c 휃ang 휃i th챙 ph梳즜 nh튼沼쓓g 휃튼沼쓓g cho xe 휃처."
+ },
+ {
+  "n": 369,
+  "ko_e": "<?꾨줈援먰넻踰???2議??뺤감 諛?二쇱감??湲덉?)> 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 怨녹뿉?쒕뒗 李⑤?  ?뺤감?섍굅??二쇱감?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?ㅻ쭔, ??踰뺤씠????踰뺤뿉 ?곕Ⅸ 紐낅졊 ?먮뒗 寃쎌같怨듬Т?먯쓽 吏?쒕? ?곕Ⅴ??寃쎌슦?  ?꾪뿕諛⑹?瑜??꾪븯???쇱떆?뺤??섎뒗 寃쎌슦?먮뒗 洹몃윭?섏? ?꾨땲?섎떎.",
+  "tr_e": "<Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 32 (C梳쩷 d沼쳌g xe v횪 휃沼?xe)> Ng튼沼쓎 휃i沼걏 khi沼긪 m沼뛦 lo梳죍 xe kh척ng 휃튼沼즓 d沼쳌g xe ho梳톍 휃沼?xe t梳죍 m沼셳 trong nh沼칗g n퉤i thu沼셛 c찼c m沼쩭 sau 휃창y. Tuy nhi챗n, tr튼沼쓓g h沼즤 tu창n theo lu梳춗 n횪y ho梳톍 m沼뇆h l沼뇆h theo lu梳춗 n횪y hay ch沼?d梳쳌 c沼쬪 c척ng an, v횪 tr튼沼쓓g h沼즤 d沼쳌g l梳죍 h梳쿻 휃沼?ph챵ng ng沼첺 nguy hi沼긩 th챙 kh척ng 찼p d沼쩸g nh튼 v梳춞."
+ },
+ {
+  "n": 370,
+  "ko_e": "?꾨줈援먰넻踰???5議곗쓽2(?뚯쟾援먯감濡??듯뻾諛⑸쾿) ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?뚯쟾援먯감濡쒖뿉?쒕뒗 諛섏떆怨꾨갑?μ쑝濡??듯뻾?섏뿬 ???쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮??寃쎌슦?먮뒗 ?쒗뻾?섍굅???쇱떆?뺤??섏뿬???섎ŉ, ?대? 吏꾪뻾??怨??덈뒗 ?ㅻⅨ 李④? ?덈뒗 ?뚯뿉??洹?李⑥뿉 吏꾨줈瑜??묐낫?섏뿬???쒕떎. ??????諛?????뿉 ?곕씪 ?뚯쟾援먯감濡??듯뻾?? ?꾪븯???먯씠??諛⑺뼢吏?쒓린 ?먮뒗 ?깊솕濡쒖뜥 ?좏샇瑜??섎뒗 李④? ?덈뒗 寃쎌슦 洹??ㅼ감???댁쟾?먮뒗 ?좏샇瑜????욎감??吏꾪뻾 ??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 25-2 (C찼ch 휃i qua v챵ng xuy梳퓆) ??Ng튼沼쓎 휃i沼걏 khi沼긪 m沼뛦 lo梳죍 xe ph梳즜 휃i theo chi沼걏 ng튼沼즓 kim 휃沼뱊g h沼?t梳죍 v챵ng xuy梳퓆. ??Ng튼沼쓎 휃i沼걏 khi沼긪 m沼뛦 lo梳죍 xe khi mu沼몁 휃i v횪o v챵ng xuy梳퓆 ph梳즜 휃i ch梳춎 ho梳톍 d沼쳌g l梳죍 h梳쿻, v횪 khi c처 xe kh찼c 휃ang 휃i th챙 ph梳즜 nh튼沼쓓g 휃튼沼쓓g cho xe 휃처. ??Khi c처 xe ra t챠n hi沼뇎 b梳켷g tay ho梳톍 휃챔n xi nhan ho梳톍 휃챔n 휃沼?휃i qua v챵ng xuy梳퓆 theo Kho梳즢 1 v횪 Kho梳즢 2, th챙 ng튼沼쓎 l찼i xe ph챠a sau xe 휃처 kh척ng 휃튼沼즓 c梳즢 tr沼?vi沼놻 휃i ti梳퓈 c沼쬪 xe ph챠a tr튼沼쌵 휃찾 ra t챠n hi沼뇎."
+ },
+ {
+  "n": 371,
+  "ko_e": "?뚯쟾援먯감濡쒖뿉?쒕뒗 諛섏떆怨꾨갑?μ쑝濡??뚯쟾?쒕떎.",
+  "tr_e": "T梳죍 v챵ng xuy梳퓆 th챙 휃i v챵ng theo chi沼걏 ng튼沼즓 kim 휃沼뱊g h沼?"
+ },
+ {
+  "n": 372,
+  "ko_e": "?뚯쟾援먯감濡쒖뿉?쒖쓽 ?뚯쟾? 諛섏떆怨꾨갑?μ쑝濡??뚯쟾?댁빞 ?섍퀬, 吏꾟ㅼ텧?????뚯뿉??諛⑺뼢吏?쒕벑???묐룞?댁빞 ?쒕떎.",
+  "tr_e": "Vi沼놻 휃i v챵ng t梳죍 v챵ng xuy梳퓆 ph梳즜 theo chi沼걏 ng튼沼즓 kim 휃沼뱊g h沼? v횪 khi ra쨌v횪o ph梳즜 b梳춗 휃챔n xi nhan."
+ },
+ {
+  "n": 373,
+  "ko_e": "?꾨줈援먰넻踰???1議??쒗뻾 ?먮뒗 ?쇱떆?뺤????μ냼) ?쒗뻾?댁빞 ???μ냼?먮뒗 ?꾨줈??援щ??ъ쭊 遺洹? 媛?뚮Ⅸ 鍮꾪깉湲몄쓽 ??由щ쭑, 鍮꾪깉湲몄쓽 怨좉갗留덈（ 遺洹쇱씠?? 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녾굅??援먰넻??鍮덈쾲??援먯감 濡? ?쑣룸룄寃쎌같泥?옣???꾨줈?먯꽌???꾪뿕??諛⑹??섍퀬 援먰넻???덉쟾怨??먰솢???뚰넻???뺣낫?섍린 ?꾪븯???꾩슂?섎떎怨????뺥븯???덉쟾?쒖?濡?吏?뺥븳 怨녹? ?쇱떆?뺤??댁빞 ???μ냼?대떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 31 (N퉤i ph梳즜 휃i ch梳춎 ho梳톍 d沼쳌g l梳죍 h梳쿻). N퉤i ph梳즜 휃i ch梳춎 g沼뱈 khu v沼켧 휃튼沼쓓g cong, 휃o梳죒 xu沼몁g d沼멵 d沼멵 휃沼쯰g, khu v沼켧 휃沼뎝h d沼멵 c沼쬪 휃튼沼쓓g d沼멵. Giao l沼?kh척ng c처 휃i沼걏 ti梳퓍 giao th척ng v횪 kh척ng th沼?x찼c nh梳춏 tr찼i ph梳즜 ho梳톍 giao l沼?휃척ng 휃첬c giao th척ng, n퉤i do Gi찼m 휃沼멵 C척ng an t沼뎝h/th횪nh ph沼?c척ng nh梳춏 l횪 c梳쬷 thi梳퓍 휃沼?ph챵ng ng沼첺 nguy hi沼긩 tr챗n 휃튼沼쓓g v횪 b梳즣 휃梳즡 an to횪n c첫ng l튼u th척ng giao th척ng th척ng su沼몋 v횪 ch沼?휃沼땙h b梳켷g bi沼긪 b찼o giao th척ng l횪 n퉤i ph梳즜 d沼쳌g l梳죍 h梳쿻."
+ },
+ {
+  "n": 374,
+  "ko_e": "?꾨줈援먰넻踰???1議?????援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녾굅??援먰넻??鍮덈쾲??援먯감濡쒖뿉?쒕뒗  ?쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 31 Kho梳즢 2. T梳죍 giao l沼?kh척ng c처 휃i沼걏 ti梳퓍 giao th척ng v횪 kh척ng th沼?x찼c nh梳춏 tr찼i ph梳즜 ho梳톍 giao l沼?휃척ng 휃첬c giao th척ng th챙 ph梳즜 d沼쳌g l梳죍 h梳쿻."
+ },
+ {
+  "n": 375,
+  "ko_e": "?욎?瑜닿린 湲덉?援ъ뿭怨??쇱떆?뺤??댁빞 ?섎뒗 怨녹? ?ㅻⅤ寃?洹쒖젙?섍퀬 ?덈떎. ?곕꼸 ??諛??ㅻ━ ?? 媛?뚮Ⅸ 鍮꾪깉湲몄쓽 ?대━留? ?꾨줈媛 援щ??ъ쭊 遺洹쇱? ?욎?瑜닿린 湲덉?援ъ뿭?대떎. 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섍퀬 醫뚯슦瑜??뺤씤?????녾굅??援먰넻?? 鍮덈쾲??援먯감濡? ?쑣룸룄寃쎌같泥?옣???꾨줈?먯꽌???꾪뿕??諛⑹??섍퀬 援먰넻???덉쟾怨??먰솢???뚰넻???뺣낫?섍린 ?꾪븯?????뷀븯?ㅺ퀬 ?몄젙?섏뿬 ?덉쟾?쒖?濡?吏?뺥븳 怨녹? ?쇱떆?뺤??댁빞 ???μ냼?대떎. (?꾨줈援먰넻踰???1議?2??",
+  "tr_e": "Khu v沼켧 c梳쩷 v튼沼즨 xe v횪 n퉤i ph梳즜 d沼쳌g l梳죍 h梳쿻 휃튼沼즓 quy 휃沼땙h kh찼c nhau. Trong h梳쬶 v횪 tr챗n c梳쬾, 휃o梳죒 xu沼몁g d沼멵 d沼멵 휃沼쯰g, khu v沼켧 휃튼沼쓓g cong l횪 khu v沼켧 c梳쩷 v튼沼즨 xe. Giao l沼?kh척ng c처 휃i沼걏 ti梳퓍 giao th척ng v횪 kh척ng th沼?x찼c nh梳춏 tr찼i ph梳즜 ho梳톍 giao l沼?휃척ng 휃첬c giao th척ng, n퉤i do Gi찼m 휃沼멵 C척ng an t沼뎝h/th횪nh ph沼?c척ng nh梳춏 l횪 c梳쬷 thi梳퓍 휃沼?ph챵ng ng沼첺 nguy hi沼긩 tr챗n 휃튼沼쓓g v횪 b梳즣 휃梳즡 an to횪n c첫ng l튼u th척ng giao th척ng th척ng su沼몋 v횪 ch沼?휃沼땙h b梳켷g bi沼긪 b찼o giao th척ng l횪 n퉤i ph梳즜 d沼쳌g l梳죍 h梳쿻. (Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 31 Kho梳즢 2)"
+ },
+ {
+  "n": 376,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議?????媛蹂???띾룄?쒗븳 ?쒖?濡?理쒓퀬?띾룄瑜??뺥븳 寃쎌슦?먮뒗 ?댁뿉 ?곕씪???섎ŉ 媛蹂???띾룄?????쒖?濡??뺥븳 理쒓퀬?띾룄? 洹?諛뽰쓽 ?덉쟾?쒖?濡??뺥븳 理쒓퀬?띾룄媛 ?ㅻ? ?뚯뿉??媛蹂???띾룄?쒗븳 ?쒖????곕씪???쒕떎.",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 19 M沼쩭 1. Tr튼沼쓓g h沼즤 휃찾 quy 휃沼땙h t沼멵 휃沼?t沼멼 휃a b梳켷g bi沼긪 gi沼쌻 h梳죒 t沼멵 휃沼?thay 휃沼뷼 휃튼沼즓 th챙 ph梳즜 tu창n theo 휃처, v횪 khi t沼멵 휃沼?t沼멼 휃a do bi沼긪 gi沼쌻 h梳죒 t沼멵 휃沼?thay 휃沼뷼 휃튼沼즓 quy 휃沼땙h kh찼c v沼쌻 t沼멵 휃沼?t沼멼 휃a do bi沼긪 b찼o giao th척ng kh찼c quy 휃沼땙h th챙 ph梳즜 tu창n theo bi沼긪 gi沼쌻 h梳죒 t沼멵 휃沼?thay 휃沼뷼 휃튼沼즓."
+ },
+ {
+  "n": 377,
+  "ko_e": "紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 泥좉만嫄대꼸紐⑹쓣 ?듦낵?섎젮??寃쎌슦 嫄대꼸紐??욎뿉???쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?? ???듦낵?섏뿬???쒕떎.(?꾧탳踰???4議?泥좉만嫄대꼸紐⑹쓽 ?듦낵)",
+  "tr_e": "Ng튼沼쓎 휃i沼걏 khi沼긪 m沼뛦 lo梳죍 xe ho梳톍 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g, khi mu沼몁 휃i qua 휃튼沼쓓g ngang 휃튼沼쓓g s梳칣, ph梳즜 d沼쳌g l梳죍 h梳쿻 tr튼沼쌵 휃튼沼쓓g ngang, x찼c nh梳춏 an to횪n r沼밿 m沼쌻 휃i qua. (Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 24 휂i qua 휃튼沼쓓g ngang 휃튼沼쓓g s梳칣)"
+ },
+ {
+  "n": 378,
+  "ko_e": "湲됱젣?숈? ?ㅼ감????ш퀬?꾪뿕??利앷??쒗궓?? ?섎뱾紐?遺洹쇱뿉??湲됯컧?랁븯???쇰컲?꾨줈濡??섏삤寃??섎㈃ ?띾룄??媛먭컖?? ?뷀빐 吏먯뿉 ?곕씪 誘몃━ ?쒗뻾?섏뿬 ?쇰컲?꾨줈 洹쒖젙 ?띾룄??留욎떠 二쇳뻾?댁빞?쒕떎. 吏꾩텧?댁빞 ?섎뒗 ?섎뱾紐⑹쓣 吏?섏튇 寃쎌슦 ?????섎뱾紐⑹쓣 ?댁슜?섏뿬 鍮좎졇 ?섏????쒕떎.",
+  "tr_e": "Phanh g梳쩺 l횪m t훱ng nguy c퉤 tai n梳죒 v沼쌻 xe ph챠a sau. N梳퓎 gi梳즡 t沼멵 g梳쩺 g梳쬷 n첬t giao (IC) 휃沼?ra 휃튼沼쓓g th척ng th튼沼쓓g th챙 c梳즡 gi찼c v沼?t沼멵 휃沼?b沼?l沼놻h, do 휃처 ph梳즜 휃i ch梳춎 t沼?tr튼沼쌵 v횪 ch梳죣 kh沼썂 v沼쌻 t沼멵 휃沼?quy 휃沼땙h c沼쬪 휃튼沼쓓g th척ng th튼沼쓓g. Tr튼沼쓓g h沼즤 휃찾 휃i qu찼 n첬t giao c梳쬷 ra th챙 ph梳즜 d첫ng n첬t giao ti梳퓈 theo 휃沼?ra kh沼뢩."
+ },
+ {
+  "n": 379,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴2, 醫뚰쉶?? ?〓떒, ?좏꽩 ?먮뒗 媛숈? 諛⑺뼢?쇰줈 吏꾪뻾?섎㈃??吏꾨줈瑜??쇱そ?쇰줈 諛붽씀?ㅻ뒗 ??洹? ?됱쐞瑜??섍퀬???섎뒗 吏??醫뚰쉶?꾪븷 寃쎌슦?먮뒗 洹?援먯감濡쒖쓽 媛?μ옄由????대Ⅴ湲???30誘명꽣(怨좎냽?꾨줈?먯꽌??100誘명꽣)  ?댁긽??吏?먯뿉 ?대Ⅴ??????쇳뙏???섑룊?쇰줈 ?댁꽌 李⑥껜???쇱そ 諛뽰쑝濡??대?嫄곕굹 ?ㅻⅨ?붿쓣 李⑥껜???ㅻⅨ履?諛뽰쑝濡? ?댁뼱 ?붽퓞移섎? 援쏀? ?섏쭅?쇰줈 ?щ━嫄곕굹 ?쇱そ??諛⑺뼢 吏?쒓린 ?먮뒗 ?깊솕??議곗옉?쒕떎.",
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 2. Khi r梳?tr찼i, b훱ng qua, quay 휃梳쬾 xe ho梳톍 mu沼몁 chuy沼긪 h튼沼썀g 휃i sang tr찼i trong khi 휃i theo c첫ng h튼沼썀g, t梳죍 th沼쓎 휃i沼긩 휃梳퓆 휃i沼긩 c찼ch n퉤i 휃沼땙h th沼켧 hi沼뇆 h횪nh vi 휃처 (tr튼沼쓓g h沼즤 r梳?tr찼i th챙 l횪 m챕p c沼쬪 giao l沼?휃처) t沼?30 m챕t (tr챗n 휃튼沼쓓g cao t沼멵 l횪 100 m챕t) tr沼?l챗n, th챙 du沼뾦 th梳쿻g c찼nh tay tr찼i n梳켶 ngang ra ngo횪i ph챠a tr찼i th창n xe, ho梳톍 휃튼a c찼nh tay ph梳즜 ra ngo횪i ph챠a ph梳즜 th창n xe r沼밿 g梳춑 khu沼톟 tay d沼켷g th梳쿻g l챗n, ho梳톍 thao t찼c 휃챔n xi nhan hay 휃챔n ph챠a b챗n tr찼i."
+ },
+ {
+  "n": 380,
+  "ko_e": "?댁쟾?먭? ?고쉶?꾪븯怨좎옄 ?????쇳뙏??李⑥껜???쇱そ 諛뽰쑝濡??댁뼱 ?붽퓞移섎? 援쏀? ?섏쭅?쇰줈 ?щ┛??",
+  "tr_e": "Khi ng튼沼쓎 l찼i mu沼몁 r梳?ph梳즜 th챙 휃튼a c찼nh tay tr찼i ra ngo횪i ph챠a tr찼i th창n xe r沼밿 g梳춑 khu沼톟 tay d沼켷g th梳쿻g l챗n."
+ },
+ {
+  "n": 381,
+  "ko_e": "援먰넻?덉쟾?쒖꽕???쒖떆?섎뒗 ?좏샇 ?먮뒗 吏?쒖? 援먰넻?뺣━瑜??꾪븳 寃쎌같怨듬Т???깆쓽 ?좏샇 ?먮뒗 吏?쒓? ?ㅻⅨ 寃쎌슦?먮뒗  寃쎌같怨듬Т???깆쓽 ?좏샇 ?먮뒗 吏?쒖뿉 ?곕씪???쒕떎.",
+  "tr_e": "Trong tr튼沼쓓g h沼즤 t챠n hi沼뇎 ho梳톍 ch沼?d梳쳌 do c퉤 s沼?an to횪n giao th척ng th沼?hi沼뇆 kh찼c v沼쌻 t챠n hi沼뇎 ho梳톍 ch沼?d梳쳌 c沼쬪 c척ng an v.v. 휃沼?휃i沼걏 ti梳퓍 giao th척ng th챙 ph梳즜 tu창n theo t챠n hi沼뇎 ho梳톍 ch沼?d梳쳌 c沼쬪 c척ng an v.v."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/318_expl_vn.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ print('\\n###',x['n'])
+ for k,v in x.items():
+  if k"'!='"'n':
+   try: s=v.encode('cp949').decode('utf-8')
+   except Exception as e: s='ERR '+repr(e)
+   print(k,':',s)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:48:49.420182Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:14 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 707ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:14 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/318_expl_vn.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; foreach($x in $data){ Write-Output "`n### $($x.n)"; foreach($p in $x.PSObject.Properties){ if($p.Name -ne '"'n'){ "'$s=$utf8.GetString($cp949.GetBytes([string]$p.Value)); Write-Output "$($p.Name): $s" } } }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 637ms:
+
+### 362
+ko_e: ���α���� ��26�� �¿츦 Ȯ���� �� ���� ��쿡�� �Ͻ����� �Ͽ��� �ϸ�, �ش� ���� �����ϰ� �ִ� ������ ���� �� �����ϴ� ������ ���� ���� ��쿡�� �����Ͽ��� �Ѵ�.
+tr_e: Lu?t Giao thong ��??ng b? ��i?u 26. Trong tr??ng h?p khong th? xac nh?n trai ph?i thi ph?i d?ng l?i h?n, va trong tr??ng h?p chi?u r?ng ��??ng giao c?t r?ng h?n chi?u r?ng ��??ng ma xe ��o ��ang ��i thi ph?i ��i ch?m.
+
+### 363
+ko_e: ȸ�������� ������ħ(2022.8, ���䱳���) 1) ȸ�������� ��ġ�� ����Ǵ� ��� �� ���뷮 ������ ���ȣ�����η� ��ϱ⿡�� ���� ��ȣ�����η� ��ϱ⿡�� �ʹ� ���� ��ȣ��� ȿ���� �� ������ ��� �� ���뷮 ������ ���� ������, ������ ������� ���� �߻��ϴ� ��� �� �������� ����켱�� �ν��� ����� ��� �� Y���� ������, T���� ������, ������ ���°� Ư���� ��� �� ��������ȭ ��� ���� ���� ������ 2) ȸ�������� ��ġ�� �������� �ʴ� ��� �� ȸ���������� ���뷮 ������ ó���뷮�� �ʰ��ϴ� ��� �� ȸ�������� ��������� ������Ű�� ���� ��� �� ÷�� �� �������ΰ� ��Ǵ� ��� �� ��ȣ������ �̷������ �ִ� ���� �� �������� ��� �� �����ο��� �ϳ� �̻��� ���ٷΰ� ��� 3���� �̻��� ���
+tr_e: H??ng d?n Thi?t k? Vong xuy?n (thang 8/2022, B? ��?t ��ai, C? s? h? t?ng va Giao thong) 1) Tr??ng h?p khuy?n ngh? l?p ��?t vong xuy?n �� Tr??ng h?p m?c l?u l??ng giao thong nhi?u ��? v?n hanh thanh giao l? khong tin hi?u nh?ng l?i qua it ��? v?n hanh thanh giao l? co tin hi?u, khi?n hi?u qu? v?n hanh tin hi?u kem �� Tr??ng h?p m?c l?u l??ng giao thong khong cao nh?ng tai n?n giao thong t?i giao l? x?y ra nhi?u �� Tr??ng h?p ng??i lai kho nh?n th?c v? quy?n ?u tien ��i l?i �� Tr??ng h?p giao l? hinh ch? Y, giao l? hinh ch? T, hinh d?ng giao l? ��?c bi?t �� Giao l? trong ��o?n d? an lam d?u giao thong (traffic calming) 2) Tr??ng h?p khong khuy?n ngh? l?p ��?t vong xuy?n �� Tr??ng h?p m?c l?u l??ng giao thong c?a vong xuy?n v??t qua n?ng l?c x? ly �� Tr??ng h?p khong th?a man tieu chu?n thi?t k? vong xuy?n �� Tr??ng h?p lan thay ��?i ��??c ��??c v?n hanh vao gi? cao ��i?m �� Tr??ng h?p la giao l? trong ��o?n ��ang th?c hi?n ph?i h?p tin hi?u �� Tr??ng h?p co t? m?t ��??ng ti?p c?n tr? len t?i giao l? co t? 3 lan m?t chi?u tr? len
+
+### 364
+ko_e: ȸ�������δ� ��ȣ�����ο� ���� �������� ���� ����, ȸ������ ������ ���� �����ϰ��� �ϴ� ������ �纸�ؾ�  �ϸ�, ȸ�������� ���� ���� ������ ���� ��쿡�� �����ϸ� �� �ȴ�.
+tr_e: Vong xuy?n co s? ��i?m xung ��?t it h?n so v?i giao l? co tin hi?u, xe mu?n ��i vao ph?i nh??ng cho xe ��ang ch?y trong vong xuy?n, va trong tr??ng h?p khong co khong gian tr?ng trong vong xuy?n thi khong ��??c ��i vao.
+
+### 365
+ko_e: �����ο��� ���� �� ���� �ߵ����� �߻��ϴ� ���� �������� ���� ���غ����� ���ɼ��� ���.             (���α���� �����Ģ ��ǥ6 ��? �Ϲݱ��� 2. ���ǥ��, ��? �������� 5. ���ǥ��)
+tr_e: Vi?c x?y ra tai n?n ��am ben hong khi ��ang ��i t?i giao l? co kh? n?ng cao la do thi?u hi?u bi?t v? v?ch d?n h??ng. (Thong t? thi hanh Lu?t Giao thong ��??ng b? B?ng ph? l?c 6 I. Tieu chu?n chung 2. V?ch k? ��??ng, II. Tieu chu?n ca bi?t 5. V?ch k? ��??ng)
+
+### 366
+ko_e: �����ο��� ��ȣ ��ȸ���ϴ� ������ ��ȸ�� ���� �� ���� �������� �Բ� ��ȸ�� �ϴ� ���� ������ �����ϸ� ��ȸ ���ؾ� �Ѵ�. (���α���� ��25��)
+tr_e: Xe r? trai khong co ��en b?o h? t?i giao l? ph?i r? trai trong khi chu y c? xe r? ph?i va xe ben c?nh cung r? trai theo cung h??ng. (Lu?t Giao thong ��??ng b? ��i?u 25)
+
+### 367
+ko_e: ��� ���� �����ڴ� �����ο��� ��ȸ���� �ϰ��� �ϴ� ������ �̸� ������ ���� �����ڸ��� ���� �����ϸ鼭 ��ȸ ���Ͽ��� �ϸ�, ��ȸ�� �ÿ��� �̸� ������ �߾Ӽ��� ���� �����ϸ鼭 �������� �߽� ������ �̿��Ͽ� ��ȸ���ؾ�  �Ѵ�. (���α���� ��25��)
+tr_e: Ng??i ��i?u khi?n m?i lo?i xe khi mu?n r? ph?i t?i giao l? ph?i ��i ch?m men theo mep ph?i c?a ��??ng t? tr??c va r? ph?i, con khi r? trai thi ph?i ��i ch?m men theo v?ch tim ��??ng c?a ��??ng t? tr??c va r? trai b?ng cach s? d?ng phia trong tam giao l?. (Lu?t Giao thong ��??ng b? ��i?u 25)
+
+### 368
+ko_e: ���α���� ��25����2(ȸ�������� ������) ȸ�������ο� �����Ϸ��� ��쿡�� �����ϰų� �Ͻ������Ͽ��� �ϸ�,  �̹� �����ϰ� �ִ� �ٸ� ���� �ִ� ������ �� ���� ���θ� �纸�Ͽ��� �Ѵ�.
+tr_e: Lu?t Giao thong ��??ng b? ��i?u 25-2 (Cach ��i qua vong xuy?n). Khi mu?n ��i vao vong xuy?n ph?i ��i ch?m ho?c d?ng l?i h?n, va khi co xe khac ��ang ��i thi ph?i nh??ng ��??ng cho xe ��o.
+
+### 369
+ko_e: <���α���� ��32��(���� �� ������ ����)> ��� ���� �����ڴ� ���� �� ȣ�� ��� �ϳ��� �ش��ϴ� �������� ����  �����ϰų� �����Ͽ����� �ƴ� �ȴ�. �ٸ�, �� ���̳� �� ���� ���� ��� �Ǵ� ������������ ���ø� ������ ����  ��������� ���Ͽ� �Ͻ������ϴ� ��쿡�� �׷����� �ƴ��ϴ�.
+tr_e: <Lu?t Giao thong ��??ng b? ��i?u 32 (C?m d?ng xe va ��? xe)> Ng??i ��i?u khi?n m?i lo?i xe khong ��??c d?ng xe ho?c ��? xe t?i m?t trong nh?ng n?i thu?c cac m?c sau ��ay. Tuy nhien, tr??ng h?p tuan theo lu?t nay ho?c m?nh l?nh theo lu?t nay hay ch? d?n c?a cong an, va tr??ng h?p d?ng l?i h?n ��? phong ng?a nguy hi?m thi khong ap d?ng nh? v?y.
+
+### 370
+ko_e: ���α���� ��25����2(ȸ�������� ������) �� ��� ���� �����ڴ� ȸ�������ο����� �ݽð�������� �����Ͽ� �� �Ѵ�. �� ��� ���� �����ڴ� ȸ�������ο� �����Ϸ��� ��쿡�� �����ϰų� �Ͻ������Ͽ��� �ϸ�, �̹� ������ �� �ִ� �ٸ� ���� �ִ� ������ �� ���� ���θ� �纸�Ͽ��� �Ѵ�. �� ��1�� �� ��2�׿� ���� ȸ�������� ������  ���Ͽ� ���̳� �������ñ� �Ǵ� ��ȭ�ν� ��ȣ�� �ϴ� ���� �ִ� ��� �� ������ �����ڴ� ��ȣ�� �� ������ ���� �� �����Ͽ����� �ƴ� �ȴ�.
+tr_e: Lu?t Giao thong ��??ng b? ��i?u 25-2 (Cach ��i qua vong xuy?n) �� Ng??i ��i?u khi?n m?i lo?i xe ph?i ��i theo chi?u ng??c kim ��?ng h? t?i vong xuy?n. �� Ng??i ��i?u khi?n m?i lo?i xe khi mu?n ��i vao vong xuy?n ph?i ��i ch?m ho?c d?ng l?i h?n, va khi co xe khac ��ang ��i thi ph?i nh??ng ��??ng cho xe ��o. �� Khi co xe ra tin hi?u b?ng tay ho?c ��en xi nhan ho?c ��en ��? ��i qua vong xuy?n theo Kho?n 1 va Kho?n 2, thi ng??i lai xe phia sau xe ��o khong ��??c c?n tr? vi?c ��i ti?p c?a xe phia tr??c ��a ra tin hi?u.
+
+### 371
+ko_e: ȸ�������ο����� �ݽð�������� ȸ���Ѵ�.
+tr_e: T?i vong xuy?n thi ��i vong theo chi?u ng??c kim ��?ng h?.
+
+### 372
+ko_e: ȸ�������ο����� ȸ���� �ݽð�������� ȸ���ؾ� �ϰ�, ��?���� �� ������ �������õ��� �۵��ؾ� �Ѵ�.
+tr_e: Vi?c ��i vong t?i vong xuy?n ph?i theo chi?u ng??c kim ��?ng h?, va khi ra��vao ph?i b?t ��en xi nhan.
+
+### 373
+ko_e: ���α���� ��31��(���� �Ǵ� �Ͻ������� ���) �����ؾ� �� ��ҿ��� ������ ���η��� �α�, ���ĸ� ��Ż���� �� ����, ��Ż���� ������� �α��̴�. ���������� �ϰ� ���� �ƴ��ϰ� �¿츦 Ȯ���� �� ���ų� ������ ����� ���� ��, �á�������û���� ���ο����� ������ �����ϰ� ������ ������ ��Ȱ�� ������ Ȯ���ϱ� ���Ͽ� �ʿ��ϴٰ� �� ���Ͽ� ����ǥ���� ������ ���� �Ͻ������ؾ� �� ����̴�.
+tr_e: Lu?t Giao thong ��??ng b? ��i?u 31 (N?i ph?i ��i ch?m ho?c d?ng l?i h?n). N?i ph?i ��i ch?m g?m khu v?c ��??ng cong, ��o?n xu?ng d?c d?c ��?ng, khu v?c ��?nh d?c c?a ��??ng d?c. Giao l? khong co ��i?u ti?t giao thong va khong th? xac nh?n trai ph?i ho?c giao l? ��ong ��uc giao thong, n?i do Giam ��?c Cong an t?nh/thanh ph? cong nh?n la c?n thi?t ��? phong ng?a nguy hi?m tren ��??ng va b?o ��?m an toan cung l?u thong giao thong thong su?t va ch? ��?nh b?ng bi?n bao giao thong la n?i ph?i d?ng l?i h?n.
+
+### 374
+ko_e: ���α���� ��31�� ��2�� ���������� �ϰ� ���� �ƴ��ϰ� �¿츦 Ȯ���� �� ���ų� ������ ����� �����ο�����  �Ͻ������Ͽ��� �Ѵ�.
+tr_e: Lu?t Giao thong ��??ng b? ��i?u 31 Kho?n 2. T?i giao l? khong co ��i?u ti?t giao thong va khong th? xac nh?n trai ph?i ho?c giao l? ��ong ��uc giao thong thi ph?i d?ng l?i h?n.
+
+### 375
+ko_e: �������� ���������� �Ͻ������ؾ� �ϴ� ���� �ٸ��� �����ϰ� �ִ�. �ͳ� �� �� �ٸ� ��, ���ĸ� ��Ż���� ������  ���ΰ� ���η��� �α��� �������� ���������̴�. ���������� �ϰ� ���� �ƴ��ϰ� �¿츦 Ȯ���� �� ���ų� ������  ����� ������, �á�������û���� ���ο����� ������ �����ϰ� ������ ������ ��Ȱ�� ������ Ȯ���ϱ� ���Ͽ� �� ���ϴٰ� �����Ͽ� ����ǥ���� ������ ���� �Ͻ������ؾ� �� ����̴�. (���α���� ��31�� 2��)
+tr_e: Khu v?c c?m v??t xe va n?i ph?i d?ng l?i h?n ��??c quy ��?nh khac nhau. Trong h?m va tren c?u, ��o?n xu?ng d?c d?c ��?ng, khu v?c ��??ng cong la khu v?c c?m v??t xe. Giao l? khong co ��i?u ti?t giao thong va khong th? xac nh?n trai ph?i ho?c giao l? ��ong ��uc giao thong, n?i do Giam ��?c Cong an t?nh/thanh ph? cong nh?n la c?n thi?t ��? phong ng?a nguy hi?m tren ��??ng va b?o ��?m an toan cung l?u thong giao thong thong su?t va ch? ��?nh b?ng bi?n bao giao thong la n?i ph?i d?ng l?i h?n. (Lu?t Giao thong ��??ng b? ��i?u 31 Kho?n 2)
+
+### 376
+ko_e: ���α���� �����Ģ ��19�� ��1ȣ ������ �ӵ����� ǥ���� �ְ�ӵ��� ���� ��쿡�� �̿� ����� �ϸ� ������ �ӵ��� �� ǥ���� ���� �ְ�ӵ��� �� ���� ����ǥ���� ���� �ְ�ӵ��� �ٸ� ������ ������ �ӵ����� ǥ���� ����� �Ѵ�.
+tr_e: Thong t? thi hanh Lu?t Giao thong ��??ng b? ��i?u 19 M?c 1. Tr??ng h?p ��a quy ��?nh t?c ��? t?i ��a b?ng bi?n gi?i h?n t?c ��? thay ��?i ��??c thi ph?i tuan theo ��o, va khi t?c ��? t?i ��a do bi?n gi?i h?n t?c ��? thay ��?i ��??c quy ��?nh khac v?i t?c ��? t?i ��a do bi?n bao giao thong khac quy ��?nh thi ph?i tuan theo bi?n gi?i h?n t?c ��? thay ��?i ��??c.
+
+### 377
+ko_e: ��� �� �Ǵ� ��������� �����ڴ� ö��ǳθ��� ����Ϸ��� ��� �ǳθ� �տ��� �Ͻ������Ͽ� ������ Ȯ����  �� ����Ͽ��� �Ѵ�.(������ ��24�� ö��ǳθ��� ���)
+tr_e: Ng??i ��i?u khi?n m?i lo?i xe ho?c tau ��i?n m?t ��??ng, khi mu?n ��i qua ��??ng ngang ��??ng s?t, ph?i d?ng l?i h?n tr??c ��??ng ngang, xac nh?n an toan r?i m?i ��i qua. (Lu?t Giao thong ��??ng b? ��i?u 24 ��i qua ��??ng ngang ��??ng s?t)
+
+### 378
+ko_e: �������� �������� ��������� ������Ų��. ����� �αٿ��� �ް����Ͽ� �Ϲݵ��η� ������ �Ǹ� �ӵ��� ������  ���� ���� ���� �̸� �����Ͽ� �Ϲݵ��� ���� �ӵ��� ���� �����ؾ��Ѵ�. �����ؾ� �ϴ� ������� ����ģ ��� �� �� ������� �̿��Ͽ� ���� ���;� �Ѵ�.
+tr_e: Phanh g?p lam t?ng nguy c? tai n?n v?i xe phia sau. N?u gi?m t?c g?p g?n nut giao (IC) ��? ra ��??ng thong th??ng thi c?m giac v? t?c ��? b? l?ch, do ��o ph?i ��i ch?m t? tr??c va ch?y kh?p v?i t?c ��? quy ��?nh c?a ��??ng thong th??ng. Tr??ng h?p ��a ��i qua nut giao c?n ra thi ph?i dung nut giao ti?p theo ��? ra kh?i.
+
+### 379
+ko_e: ���α���� ����� ��ǥ2, ��ȸ��, Ⱦ��, ���� �Ǵ� ���� �������� �����ϸ鼭 ���θ� �������� �ٲٷ��� �� ��  ������ �ϰ��� �ϴ� ����(��ȸ���� ��쿡�� �� �������� �����ڸ�)�� �̸��� �� 30����(��ӵ��ο����� 100����)  �̻��� ������ �̸����� �� ������ �������� �켭 ��ü�� ���� ������ ���аų� �������� ��ü�� ������ ������  ���� �Ȳ�ġ�� ���� �������� �ø��ų� ������ ���� ���ñ� �Ǵ� ��ȭ�� �����Ѵ�.
+tr_e: Ngh? ��?nh thi hanh Lu?t Giao thong ��??ng b? B?ng ph? l?c 2. Khi r? trai, b?ng qua, quay ��?u xe ho?c mu?n chuy?n h??ng ��i sang trai trong khi ��i theo cung h??ng, t?i th?i ��i?m ��?n ��i?m cach n?i ��?nh th?c hi?n hanh vi ��o (tr??ng h?p r? trai thi la mep c?a giao l? ��o) t? 30 met (tren ��??ng cao t?c la 100 met) tr? len, thi du?i th?ng canh tay trai n?m ngang ra ngoai phia trai than xe, ho?c ��?a canh tay ph?i ra ngoai phia ph?i than xe r?i g?p khu?u tay d?ng th?ng len, ho?c thao tac ��en xi nhan hay ��en phia ben trai.
+
+### 380
+ko_e: �����ڰ� ��ȸ���ϰ��� �� �� ������ ��ü�� ���� ������ ���� �Ȳ�ġ�� ���� �������� �ø���.
+tr_e: Khi ng??i lai mu?n r? ph?i thi ��?a canh tay trai ra ngoai phia trai than xe r?i g?p khu?u tay d?ng th?ng len.
+
+### 381
+ko_e: ��������ü��� ǥ���ϴ� ��ȣ �Ǵ� ���ÿ� ���������� ���� ���������� ���� ��ȣ �Ǵ� ���ð� �ٸ� ��쿡��  ���������� ���� ��ȣ �Ǵ� ���ÿ� ����� �Ѵ�.
+tr_e: Trong tr??ng h?p tin hi?u ho?c ch? d?n do c? s? an toan giao thong th? hi?n khac v?i tin hi?u ho?c ch? d?n c?a cong an v.v. ��? ��i?u ti?t giao thong thi ph?i tuan theo tin hi?u ho?c ch? d?n c?a cong an v.v.
+
+codex
+[]
+tokens used
+24,371
+[]
