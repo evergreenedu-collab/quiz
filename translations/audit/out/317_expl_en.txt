@@ -1,0 +1,263 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127fe-4623-7ad2-afef-4a3edf407728
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/317_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/317_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 523ms:
+[
+ {
+  "n": 342,
+  "ko_e": "?μ븷?? ?몄씤, ?꾩궛遺 ???몄쓽利앹쭊蹂댁옣??愿??踰뺣쪧 ??7議??μ븷?몄쟾?⑹＜李④뎄????",
+  "tr_e": "Act on Guarantee of Promotion of Convenience of Persons with Disabilities, the Aged, Pregnant Women, etc. Article 17 (Disabled-Only Parking Zones, etc.)."
+ },
+ {
+  "n": 343,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????9議곗젣2??李??먮뒗 ?몃㈃?꾩감???댁쟾?먭? 踰???7議곗젣1??媛??몄뿉 ?곕씪 ?꾨줈?먯꽌 ?뺤감?섍굅?? 二쇱감????耳쒖빞 ?섎뒗 ?깊솕??醫낅쪟???ㅼ쓬 媛??몄쓽 援щ텇???곕Ⅸ??           1. ?먮룞李??대쪣?먮룞李⑤뒗 ?쒖쇅?쒕떎): ?먮룞李⑥븞?꾧린以?먯꽌 ?뺥븯??誘몃벑 諛?李⑦룺??,
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 19 paragraph 2. The types of lights that the driver of a vehicle or streetcar must turn on when stopping or parking on the road under each subparagraph of Article 37(1) of the Act are classified as follows: 1. motor vehicles (excluding two-wheeled motor vehicles): the tail lights and clearance lamps prescribed in the motor vehicle safety standards."
+ },
+ {
+  "n": 344,
+  "ko_e": "?⑹깋 ?먯꽑?쇰줈 ?ㅼ튂??媛?μ옄由?援ъ뿭?좎쓽 ?섎???二쇱감??湲덉??섍퀬, ?뺤감???????덈떎???섎??대떎.",
+  "tr_e": "The meaning of a road-edge line installed with a yellow dashed line is that parking is prohibited but stopping is permitted."
+ },
+ {
+  "n": 345,
+  "ko_e": "?꾨줈援먰넻踰???2議??뺤감 諛?二쇱감??湲덉?). 2??援먯감濡쒖쓽 媛?μ옄由щ줈遺??5誘명꽣 ?대궡??怨?",
+  "tr_e": "Road Traffic Act Article 32 (Prohibition of Stopping and Parking). Subparagraph 2, within 5 meters from the edge of an intersection."
+ },
+ {
+  "n": 346,
+  "ko_e": "?섍꼍移쒗솕???먮룞李⑥쓽 媛쒕컻 諛?蹂닿툒 珥됱쭊??愿??踰뺣쪧 ??11議곗쓽 2??4??          ?섍꼍移쒗솕???먮룞李⑥쓽 媛쒕컻 諛?蹂닿툒 珥됱쭊??愿??踰뺣쪧 ?쒗뻾????1議?,
+  "tr_e": "Act on Promotion of Development and Distribution of Environment-Friendly Motor Vehicles Article 11-2 paragraph 4. Enforcement Decree of the Act on Promotion of Development and Distribution of Environment-Friendly Motor Vehicles Article 21."
+ },
+ {
+  "n": 347,
+  "ko_e": "?붿튂由ъ튂(Dutch Reach)??1960?꾨? ?ㅻ뜙??쒖뿉???뱀슜李?痢〓㈃ ?ㅼそ?먯꽌 ?묎렐?섎뒗 ?먯쟾嫄곗? ?ш퀬瑜??덈갑?섍린 ?꾪빐???쒖옉??援먰넻?덉쟾 罹좏럹?몄씠?? ?댁쟾?먮굹 ?숈듅?먭? ?뱀슜李⑥뿉???대━湲??꾪빐??李⑤Ц??????李쎈Ц?먯꽌 癒?履??먯쑝濡??먯옟??瑜??≪븘??李⑤Ц???щ뒗 諛⑸쾿?대떎. ?대젃寃?臾몄쓣 ?대㈃ ?먯뿰?ㅻ읇寃?紐몄씠 45???댁긽 ?뚯쟾?섍쾶 ?섎㈃???ㅼそ???덉쑝濡??뺤씤?????덉뼱???뱀슜李??ㅼそ 痢〓㈃?먯꽌 ?묎렐?섎뒗 ?먯쟾嫄곗? ?ㅽ넗諛붿씠 ?깃낵 諛쒖깮?섎뒗 ?ш퀬瑜??덈갑?????덈떎. 媛쒕Ц諛쒖감?ш퀬???댁쟾???깆씠 ?먮룞李?臾몄쓣 ?닿퀬 異쒕컻?섎뒗 怨쇱젙??諛쒖깮?섎뒗 ?ш퀬瑜?留먰븳??",
+  "tr_e": "The Dutch Reach is a traffic safety campaign started in the Netherlands in the 1960s to prevent accidents with bicycles approaching from the rear side of a passenger car. It is a method in which the driver or passenger, when opening the car door to get out, grasps the handle with the hand farther from the window. Opening the door this way naturally rotates the body more than 45 degrees, allowing the person to visually check the rear, thereby preventing accidents with bicycles, motorcycles, etc. approaching from the rear side of the passenger car. An 'open-door move-off' accident refers to an accident that occurs when the driver, etc., pulls away (starts moving) while the car door is open."
+ },
+ {
+  "n": 348,
+  "ko_e": "?섍꼍移쒗솕???먮룞李⑥쓽 媛쒕컻 諛?蹂닿툒 珥됱쭊??愿??踰뺣쪧 ?쒗뻾????8議곗쓽8((?섍꼍移쒗솕???먮룞李⑥뿉 ???異⑹쟾 諛⑺빐?됱쐞 ??湲곗? ?? 湲됱냽異⑹쟾?쒖꽕??異⑹쟾援ъ뿭?먯꽌 ?꾧린?먮룞李?諛??몃?異⑹쟾?앺븯?대툕由щ뱶?먮룞李④? 2?쒓컙 ?대궡??踰붿쐞?먯꽌 ?곗뾽 ?듭궛遺?κ???怨좎떆?섎뒗 ?쒓컙??1?쒓컙??吏???꾩뿉??怨꾩냽 二쇱감?섎뒗 ?됱쐞???섍꼍移쒗솕???먮룞李⑥뿉 ???異⑹쟾 諛⑺빐?됱쐞??,
+  "tr_e": "Enforcement Decree of the Act on Promotion of Development and Distribution of Environment-Friendly Motor Vehicles Article 18-8 (Standards for Acts Obstructing the Charging of Environment-Friendly Motor Vehicles, etc.) In a charging area of a fast-charging facility, the act of an electric vehicle or externally rechargeable hybrid vehicle continuing to park even after 1 hour, the time announced by the Minister of Trade, Industry and Energy within the range of 2 hours, has passed, constitutes an act obstructing the charging of environment-friendly motor vehicles."
+ },
+ {
+  "n": 349,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????1議??????먮룞李⑥쓽 ?댁쟾?먮뒗 踰???4議곗쓽3???곕씪 寃쎌궗吏?怨녹뿉 ?뺤감?섍굅??二쇱감(?꾨줈 ?몄쓽 寃쎌궗吏?怨녹뿉???뺤감?섍굅??二쇱감????寃쎌슦瑜??ы븿?쒕떎)?섎젮??寃쎌슦 ?먮룞李⑥쓽 二쇱감 ?쒕룞?μ튂瑜??묐룞???꾩뿉 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 議곗튂瑜?痍⑦븯?ъ빞 ?쒕떎. ?ㅻ쭔, ?댁쟾?먭? ?댁쟾?앹쓣 ?좊굹吏 ?꾨땲?섍퀬 吏곸젒 ?쒕룞?μ튂瑜??묐룞?섍퀬 ?덈뒗 寃쎌슦???쒖쇅?쒕떎.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 11 paragraph 3. When the driver of a motor vehicle intends to stop or park on a slope (including stopping or parking on a slope off the road) pursuant to Article 34-3 of the Act, the driver must, after operating the parking brake of the motor vehicle, take any of the following measures. However, this is excluded when the driver does not leave the driver's seat and is directly operating the brake."
+ },
+ {
+  "n": 350,
+  "ko_e": "?꾧뎄?좎? ?μ븷?몄쟾?⑹＜李④뎄??뿉??二쇱감瑜?諛⑺빐?섎뒗 ?됱쐞瑜??섎㈃ 怨쇳깭猷?50留??먯쓣 遺怨??μ븷?멤ㅻ끂?멤ㅼ엫?곕? ?깆쓽  ?몄쓽利앹쭊 蹂댁옣??愿??踰뺣쪧 ??7議????? ?쒗뻾??蹂꾪몴3)",
+  "tr_e": "Anyone who commits an act obstructing parking in a disabled-only parking zone is subject to an administrative fine of 500,000 won (Act on Guarantee of Promotion of Convenience of Persons with Disabilities, the Aged, Pregnant Women, etc. Article 17 paragraph 5, Enforcement Decree Table 3)."
+ },
+ {
+  "n": 351,
+  "ko_e": "?댁쟾?먭? ?댁쟾?앹쑝濡쒕????좊굹???뚯뿉??李⑥쓽 ?쒕룞???꾧퀬 ?쒕룞 ?μ튂瑜?泥좎??섍쾶 ?섎뒗 ??李⑥쓽 ?뺤? ?곹깭瑜??덉쟾??寃??좎??섍퀬 ?ㅻⅨ ?щ엺???⑤?濡??댁쟾?섏? 紐삵븯?꾨줉 ?꾩슂??議곗튂瑜??섎룄濡?洹쒖젙?섍퀬 ?덈떎.",
+  "tr_e": "It is prescribed that when the driver leaves the driver's seat, the driver must turn off the engine, thoroughly apply the brake, etc. to safely maintain the stationary state of the vehicle, and take necessary measures to prevent others from operating the vehicle at will."
+ },
+ {
+  "n": 352,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????1議?????뿉 二쇱감?섎뒗 寃쎌슦 ?쒕룞?μ튂瑜??묐룞????寃쎌궗???대━留?諛⑺뼢?쇰줈 諛뷀댁뿉 怨좎엫紐? ???먮룞李⑥쓽 誘몃걚???ш퀬瑜?諛⑹??????덈뒗 寃껋쓣 ?ㅼ튂?섍퀬, 議고뼢?μ튂(?띶릲獒앯쉰)瑜??꾨줈??媛?μ옄由??먮룞李⑥뿉??媛 源뚯슫 履쎌쓣 留먰븳?? 諛⑺뼢?쇰줈 ?뚮젮?볦쓣 寃? 臾댁“嫄??꾩쭊 湲곗뼱瑜??ｋ뒗 寃껋씠 ?꾨땶 寃쎌궗???곕씪 ?대젮媛吏 ?딅룄濡?湲곗뼱瑜? ?ｌ뼱?먮뒗 寃껊룄 諛⑸쾿?대ŉ, 湲곗뼱瑜?以묐┰???먮뒗 寃껋? 吏?묓븯?ъ빞 ?쒕떎.",
+  "tr_e": "Under Enforcement Decree of the Road Traffic Act Article 11 paragraph 3, when parking, after operating the brake, install something that can prevent the motor vehicle from sliding, such as a chock, on the wheels in the downhill direction of the slope, and turn the steering device toward the edge of the road (the side closer to the vehicle). It is not that reverse gear should be engaged unconditionally; a method is to engage the gear so that the vehicle does not roll down according to the slope, and putting the gear in neutral should be avoided."
+ },
+ {
+  "n": 353,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????1議????????몄뿉 ?곕씪 ?먮룞李⑥쓽 ?댁쟾?먮뒗 踰???4議곗쓽3???곕씪 寃쎌궗吏?怨녹뿉 ?뺤감?섍굅?? 二쇱감(?꾨줈 ?몄쓽 寃쎌궗吏?怨녹뿉???뺤감?섍굅??二쇱감?섎뒗 寃쎌슦瑜??ы븿?쒕떎)?섎젮??寃쎌슦 ?먮룞李⑥쓽 二쇱감?쒕룞?μ튂瑜??묐룞 ???꾩뿉 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 議곗튂瑜?痍⑦븯?ъ빞 ?쒕떎. ?ㅻ쭔, ?댁쟾?먭? ?댁쟾?앹쓣 ?좊굹吏 ?꾨땲?섍퀬 吏곸젒  ?쒕룞?μ튂瑜??묐룞?섍퀬 ?덈뒗 寃쎌슦???쒖쇅?쒕떎.",
+  "tr_e": "Pursuant to Enforcement Decree of the Road Traffic Act Article 11 paragraph 3 subparagraph 1, when the driver of a motor vehicle intends to stop or park on a slope (including stopping or parking on a slope off the road) pursuant to Article 34-3 of the Act, the driver must, after operating the parking brake of the motor vehicle, take any of the following measures. However, this is excluded when the driver does not leave the driver's seat and is directly operating the brake."
+ },
+ {
+  "n": 354,
+  "ko_e": "?좏샇 ?湲곕? ?꾪븳 ?뺤?, ?꾪뿕 諛⑹?瑜??꾪븳 ?쇱떆?뺤???5遺꾩쓣 珥덇낵?섏뿬??二쇱감???대떦?섏? ?딅뒗?? 洹몃윭??5遺꾩쓣  珥덇낵?섏? ?딆븯吏留??댁쟾?먭? 李⑤? ?좊굹 利됱떆 ?댁쟾?????녿뒗 ?곹깭??二쇱감???대떦?쒕떎. (?꾨줈援먰넻踰???議?",
+  "tr_e": "Stopping to wait for a signal, or coming to a complete stop to prevent danger, does not constitute parking even if it exceeds 5 minutes. However, a state in which the driver has left the vehicle and cannot drive it immediately, even if it does not exceed 5 minutes, constitutes parking. (Road Traffic Act Article 2)"
+ },
+ {
+  "n": 355,
+  "ko_e": "?뺤감???⑥? ?댁쟾?먭? 5遺꾩쓣 珥덇낵?섏? ?꾨땲?섍퀬 李⑤? ?뺤??쒗궎??寃껋쑝濡쒖꽌 二쇱감 ?몄쓽 ?뺤? ?곹깭瑜?留먰븳?? (?꾨줈援??듬쾿 ??議???5??",
+  "tr_e": "Stopping means the driver stopping the vehicle for not more than 5 minutes, and refers to a stationary state other than parking. (Road Traffic Act Article 2 subparagraph 25)"
+ },
+ {
+  "n": 356,
+  "ko_e": "?뺤감 諛?二쇱감 湲덉? ?μ냼 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 怨녹뿉?쒕뒗 李⑤? ?뺤감?섍굅??二쇱감???ъ꽌???꾨땲 ?쒕떎. ?ㅻ쭔, ??踰뺤씠????踰뺤뿉 ?곕Ⅸ 紐낅졊 ?먮뒗 寃쎌같怨듬Т?먯쓽 吏?쒕? ?곕Ⅴ??寃쎌슦? ?꾪뿕諛⑹?瑜??꾪븯???쇱떆?뺤??섎뒗 寃쎌슦?먮뒗 洹몃윭?섏? ?꾨땲?섎떎. 1. 援먯감濡쒌냽?〓떒蹂대룄?띻굔?먮ぉ?대굹 蹂대룄? 李⑤룄媛 援щ텇???꾨줈??蹂대룄(?뚯＜李⑥옣踰뺛띿뿉 ?곕씪 李⑤룄? 蹂대룄??嫄몄퀜 ???ㅼ튂???몄긽二쇱감?μ? ?쒖쇅?쒕떎) 2. 援먯감濡쒖쓽 媛?μ옄由щ굹 ?꾨줈??紐⑦뎮?대줈遺??5誘명꽣 ?대궡??怨?3. ?덉쟾吏?媛 ?ㅼ튂???꾨줈?먯꽌??洹??덉쟾吏????щ갑?쇰줈遺??媛곴컖 10誘명꽣 ?대궡??怨?4. 踰꾩뒪?ш컼?먮룞李⑥쓽 ?뺣쪟吏(?쒐븰???꾩쓣 ?쒖떆?섎뒗 湲곕뫁?대굹 ?쒖????먮뒗 ?좎씠 ?ㅼ튂??怨녹쑝濡쒕???10誘명꽣 ?대궡??怨? ?ㅻ쭔, 踰꾩뒪?ш컼?먮룞李⑥쓽 ?댁쟾?먭? 洹?踰꾩뒪?ш컼?먮룞李⑥쓽 ?댄뻾?쒓컙 以묒뿉 ?댄뻾?몄꽑???곕Ⅴ???뺣쪟?μ뿉????媛앹쓣 ?쒖슦嫄곕굹 ?대━湲??꾪븯??李⑤? ?뺤감?섍굅??二쇱감?섎뒗 寃쎌슦?먮뒗 洹몃윭?섏? ?꾨땲?섎떎. 5. 嫄대꼸紐⑹쓽 媛?μ옄由??먮뒗 ?〓떒蹂대룄濡쒕???10誘명꽣 ?대궡??怨?6. ?ㅼ쓬 媛?紐⑹쓽 怨녹쑝濡쒕???5誘명꽣 ?대궡??怨?媛. ?뚯냼諛⑷린蹂몃쾿????0議곗뿉 ?곕Ⅸ ?뚮갑?⑹닔?쒖꽕 ?먮뒗 鍮꾩긽?뚰솕?μ튂媛 ?ㅼ튂??怨??? ?뚰솕?ъ삁諛? ?뚮갑?쒖꽕 ?ㅼ튂?띿쑀吏 諛??덉쟾愿由ъ뿉 愿??踰뺣쪧????議곗젣1??젣1?몄뿉 ?곕Ⅸ ?뚮갑?쒖꽕濡쒖꽌 ????밸졊?쇰줈 ?뺥븯???쒖꽕???ㅼ튂??怨?7. ?쒌냽?꾧꼍李곗껌?μ씠 ?꾨줈?먯꽌???꾪뿕??諛⑹??섍퀬 援먰넻???덉쟾怨??먰솢???뚰넻???뺣낫?섍린 ?꾪븯???꾩슂?섎떎怨??몄젙?섏뿬 吏?뺥븳 怨?8. ?쒖옣?깆씠 ??2議곗젣1??뿉 ?곕씪 吏?뺥븳 ?대┛??蹂댄샇援ъ뿭 ??4議곗쓽2(?뺤감 ?먮뒗 二쇱감瑜?湲덉??섎뒗 ?μ냼???밸?) ???ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 寃쎌슦?먮뒗 ??2議곗젣1???띿젣4?멥냽???멥냽???맞룹젣8???먮뒗 ??3議곗젣3?몄뿉??遺덇뎄?섍퀬 ?뺤감?섍굅??二쇱감?????덈떎. 1. ?뚯옄?꾧굅 ?댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧????議곗젣2?몄뿉 ?곕Ⅸ ?먯쟾嫄곗씠?⑹떆??以??꾧린?먯쟾嫄?異⑹쟾??諛??먯쟾嫄곗＜ 李⑥옣移섏뿉 ?먯쟾嫄곕? ?뺤감 ?먮뒗 二쇱감?섎뒗 寃쎌슦 2. ?쒖옣?깆쓽 ?붿껌???곕씪 ?쒌냽?꾧꼍李곗껌?μ씠 ?덉쟾?쒖?濡??먯쟾嫄곕벑???뺤감 ?먮뒗 二쇱감瑜??덉슜??寃쎌슦 ???쒌냽?꾧꼍李곗껌?μ씠 ?덉쟾?쒖?濡?援ъ뿭?띿떆媛꾠냽諛⑸쾿 諛?李⑥쓽 醫낅쪟瑜??뺥븯???뺤감??二쇱감瑜??덉슜??怨녹뿉?쒕뒗 ??2 議곗젣7?맞룹젣8???먮뒗 ??3議곗젣3?몄뿉??遺덇뎄?섍퀬 ?뺤감?섍굅??二쇱감?????덈떎.",
+  "tr_e": "Places where stopping and parking are prohibited. Every driver of a vehicle must not stop or park the vehicle in any of the following places. However, this does not apply when following this Act, an order under this Act, or the instructions of a police officer, or when coming to a complete stop to prevent danger. 1. an intersection, crosswalk, railroad crossing, or the sidewalk of a road where the sidewalk and roadway are separated (excluding on-street parking lots installed across the roadway and sidewalk under the Parking Lot Act); 2. within 5 meters from the edge of an intersection or a corner of the road; 3. within 10 meters in all directions from a safety zone on a road where one is installed; 4. within 10 meters from a pillar, sign, or line indicating a bus passenger vehicle stop (?쒐븰??. However, this does not apply when the driver of a bus passenger vehicle stops or parks to pick up or drop off passengers at a stop along the operating route during the operating hours of that bus passenger vehicle; 5. within 10 meters from the edge of a railroad crossing or a crosswalk; 6. within 5 meters from any of the following places: (a) a place where a fire-fighting water facility or emergency fire-extinguishing device under Article 10 of the Framework Act on Fire Services is installed; (b) a place where a fire-fighting system prescribed by Presidential Decree under Article 2(1) subparagraph 1 of the Act on Fire Prevention and Installation, Maintenance, and Safety Control of Fire-Fighting Systems is installed; 7. a place designated by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent danger on the road and to secure the safety and smooth flow of traffic; 8. a school zone designated by the mayor, etc. under Article 12(1). Article 34-2 (Special Cases on Places Where Stopping or Parking Is Prohibited) (1) In any of the following cases, notwithstanding Article 32 subparagraphs 1, 4, 5, 7, and 8 or Article 33 subparagraph 3, stopping or parking is allowed: 1. when stopping or parking a bicycle at an electric bicycle charging station or bicycle parking device among the bicycle-use facilities under Article 2 subparagraph 2 of the Act on Promotion of Bicycle Use; 2. when the Commissioner of the City/Provincial Police Agency has permitted the stopping or parking of bicycles, etc. with traffic signs at the request of the mayor, etc. (2) At a place where the Commissioner of the City/Provincial Police Agency has permitted stopping or parking by designating the zone, time, method, and type of vehicle with traffic signs, stopping or parking is allowed notwithstanding Article 32 subparagraphs 7 and 8 or Article 33 subparagraph 3."
+ },
+ {
+  "n": 357,
+  "ko_e": "二쇱감 湲덉??μ냼竊????〓떒蹂대룄濡쒕???10誘명꽣 ?대궡 ???뚮갑?⑹닔?쒖꽕???ㅼ튂??怨녹쑝濡쒕???5誘명꽣 ?대궡 ??鍮꾩긽?뚰솕??移섍? ?ㅼ튂??怨녹쑝濡쒕???5誘명꽣 ?대궡 ???덉쟾吏? ?щ갑?쇰줈遺??媛곴컖 10誘명꽣 ?대궡 (?꾨줈援먰넻踰???2議? ??4議곗쓽2(?뺤감 ?먮뒗 二쇱감瑜?湲덉??섎뒗 ?μ냼???밸?) ???ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 寃쎌슦?먮뒗 ??2議곗젣1???띿젣4?멥냽???멥냽???맞룹젣8???먮뒗 ??3議곗젣3?몄뿉??遺덇뎄?섍퀬 ?뺤감?섍굅??二쇱감?????덈떎. 1. ?뚯옄?꾧굅 ?댁슜 ?쒖꽦?붿뿉 愿??踰뺣쪧????議곗젣2?몄뿉 ?곕Ⅸ ?먯쟾嫄곗씠?⑹떆??以??꾧린?먯쟾嫄?異⑹쟾??諛??먯쟾嫄곗＜ 李⑥옣移섏뿉 ?먯쟾嫄곕? ?뺤감 ?먮뒗 二쇱감?섎뒗 寃쎌슦 2. ?쒖옣?깆쓽 ?붿껌???곕씪 ?쒌냽?꾧꼍李곗껌?μ씠 ?덉쟾?쒖?濡??먯쟾嫄곕벑???뺤감 ?먮뒗 二쇱감瑜??덉슜??寃쎌슦 ???쒌냽?꾧꼍李곗껌?μ씠 ?덉쟾?쒖?濡?援ъ뿭?띿떆媛꾠냽諛⑸쾿 諛?李⑥쓽 醫낅쪟瑜??뺥븯???뺤감??二쇱감瑜??덉슜??怨녹뿉?쒕뒗 ??2 議곗젣7?맞룹젣8???먮뒗 ??3議곗젣3?몄뿉??遺덇뎄?섍퀬 ?뺤감?섍굅??二쇱감?????덈떎.",
+  "tr_e": "Places where parking is prohibited: (1) within 10 meters from a crosswalk; (2) within 5 meters from a place where a fire-fighting water facility is installed; (3) within 5 meters from a place where an emergency fire-extinguishing device is installed; (4) within 10 meters in all directions from a safety zone (Road Traffic Act Article 32). Article 34-2 (Special Cases on Places Where Stopping or Parking Is Prohibited) (1) In any of the following cases, notwithstanding Article 32 subparagraphs 1, 4, 5, 7, and 8 or Article 33 subparagraph 3, stopping or parking is allowed: 1. when stopping or parking a bicycle at an electric bicycle charging station or bicycle parking device among the bicycle-use facilities under Article 2 subparagraph 2 of the Act on Promotion of Bicycle Use; 2. when the Commissioner of the City/Provincial Police Agency has permitted the stopping or parking of bicycles, etc. with traffic signs at the request of the mayor, etc. (2) At a place where the Commissioner of the City/Provincial Police Agency has permitted stopping or parking by designating the zone, time, method, and type of vehicle with traffic signs, stopping or parking is allowed notwithstanding Article 32 subparagraphs 7 and 8 or Article 33 subparagraph 3."
+ },
+ {
+  "n": 358,
+  "ko_e": "?꾨줈援먰넻踰???6議?癒쇱? 吏꾩엯??李⑤웾??李⑤줈瑜??묐낫?댁빞 ?섍퀬, 醫뚰쉶??李⑤웾? 吏곸쭊 諛??고쉶??李⑤웾?먭쾶 ?곗꽑沅뚯쓣  ?묐낫?댁빞 ?섎ŉ, 援먯감濡?以묒떖 ?덉そ???댁슜?섏뿬 醫뚰쉶?꾪빐???쒕떎.",
+  "tr_e": "Road Traffic Act Article 26. You must yield the right-of-way to the vehicle that entered first, a left-turning vehicle must yield the right of way to vehicles going straight and turning right, and must turn left using the inside of the center of the intersection."
+ },
+ {
+  "n": 359,
+  "ko_e": "?꾨줈援먰넻踰???5議곗쓽2(?뚯쟾援먯감濡??듯뻾諛⑸쾿) ???뚯쟾援먯감濡쒖뿉?쒕뒗 諛섏떆怨꾨갑?μ쑝濡??듯뻾?섏뿬???쒕떎. ???뚯쟾援먯감 濡쒖뿉 吏꾩엯?섎젮??寃쎌슦?먮뒗 ?쒗뻾?섍굅???쇱떆?뺤??섏뿬???섎ŉ, ?대? 吏꾪뻾?섍퀬 ?덈뒗 ?ㅻⅨ 李④? ?덈뒗 ?뚯뿉??洹?李⑥뿉  吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 25-2 (Method of Passing Through Roundabouts) (1) At a roundabout, you must pass counterclockwise. (2) When intending to enter a roundabout, you must slow down or come to a complete stop, and when there are other vehicles already proceeding, you must yield the right-of-way to those vehicles."
+ },
+ {
+  "n": 360,
+  "ko_e": "援먰넻?뺣━媛 ?됲븯?ъ?怨??덉? ?딆? 援먯감濡쒖뿉?쒕뒗 鍮꾨줉 醫뚰쉶??李⑤웾?대씪 ?좎??쇰룄 援먯감濡쒖뿉 ?대? ?좎쭊?낇븳 寃쎌슦?먮뒗  ?듯뻾 ?곗꽑沅뚯씠 ?덉쑝誘濡?吏곸쭊 李⑥? ?고쉶??李⑤웾?쇱??쇰룄 醫뚰쉶??李⑤웾?먭쾶 ?듯뻾 ?곗꽑沅뚯씠 ?덈떎. (?꾨줈援먰넻踰???6議?",
+  "tr_e": "At an intersection where traffic is not being controlled, even a left-turning vehicle has the right of way if it entered the intersection first, so even a vehicle going straight or turning right must yield the right of way to the left-turning vehicle. (Road Traffic Act Article 26)"
+ },
+ {
+  "n": 361,
+  "ko_e": "?꾨줈援먰넻踰???5議?諛???6議?紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉??醫뚰쉶?꾩쓣 ?섍퀬???섎뒗 ?뚯뿉??誘몃━ ?꾨줈??以묒븰?좎쓣  ?곕씪 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒떖 ?덉そ???댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎. 鍮꾨낫?몄쥖?뚯쟾 ?덉쟾?쒖?媛 ?덈뒗 寃쎌슦 吏곸쭊???붿뿉 醫뚰쉶?꾪븯?ъ빞 ?섍퀬, ?숈떆 吏꾩엯 ??寃쎌슦 醫뚰쉶?꾩감?됰낫??吏곸쭊李⑤웾???곗꽑?쒕떎.",
+  "tr_e": "Road Traffic Act Articles 25 and 26. Every driver of a vehicle who intends to turn left at an intersection must turn left while slowing down along the center line of the road in advance, using the inside of the center of the intersection. Where there is an unprotected left turn traffic sign, one must turn left on the straight (green) light, and when entering at the same time, the vehicle going straight takes priority over the left-turning vehicle."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/317_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+print(json.dumps(data, ensure_ascii=True, indent=2))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:45:45.900216Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 687ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -Encoding UTF8 -LiteralPath 'translations/audit/queue/317_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 553ms:
+[
+ {
+  "n": 342,
+  "ko_e": "장애인, 노인, 임산부 등 편의증진보장에 관한 법률 제17조(장애인전용주차구역 등)",
+  "tr_e": "Act on Guarantee of Promotion of Convenience of Persons with Disabilities, the Aged, Pregnant Women, etc. Article 17 (Disabled-Only Parking Zones, etc.)."
+ },
+ {
+  "n": 343,
+  "ko_e": "도로교통법 시행령 제19조제2항 차 또는 노면전차의 운전자가 법 제37조제1항 각 호에 따라 도로에서 정차하거나  주차할 때 켜야 하는 등화의 종류는 다음 각 호의 구분에 따른다.           1. 자동차(이륜자동차는 제외한다): 자동차안전기준에서 정하는 미등 및 차폭등",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 19 paragraph 2. The types of lights that the driver of a vehicle or streetcar must turn on when stopping or parking on the road under each subparagraph of Article 37(1) of the Act are classified as follows: 1. motor vehicles (excluding two-wheeled motor vehicles): the tail lights and clearance lamps prescribed in the motor vehicle safety standards."
+ },
+ {
+  "n": 344,
+  "ko_e": "황색 점선으로 설치한 가장자리 구역선의 의미는 주차는 금지되고, 정차는 할 수 있다는 의미이다.",
+  "tr_e": "The meaning of a road-edge line installed with a yellow dashed line is that parking is prohibited but stopping is permitted."
+ },
+ {
+  "n": 345,
+  "ko_e": "도로교통법 제32조(정차 및 주차의 금지). 2호 교차로의 가장자리로부터 5미터 이내인 곳.",
+  "tr_e": "Road Traffic Act Article 32 (Prohibition of Stopping and Parking). Subparagraph 2, within 5 meters from the edge of an intersection."
+ },
+ {
+  "n": 346,
+  "ko_e": "환경친화적 자동차의 개발 및 보급 촉진에 관한 법률 제 11조의 2제 4항           환경친화적 자동차의 개발 및 보급 촉진에 관한 법률 시행령 제21조",
+  "tr_e": "Act on Promotion of Development and Distribution of Environment-Friendly Motor Vehicles Article 11-2 paragraph 4. Enforcement Decree of the Act on Promotion of Development and Distribution of Environment-Friendly Motor Vehicles Article 21."
+ },
+ {
+  "n": 347,
+  "ko_e": "더치리치(Dutch Reach)는 1960년대 네덜란드에서 승용차 측면 뒤쪽에서 접근하는 자전거와 사고를 예방하기 위해서 시작된 교통안전 캠페인이다. 운전자나 동승자가 승용차에서 내리기 위해서 차문을 열 때 창문에서 먼 쪽 손으로 손잡이 를 잡아서 차문을 여는 방법이다. 이렇게 문을 열면 자연스럽게 몸이 45도 이상 회전하게 되면서 뒤쪽을 눈으로 확인할 수 있어서 승용차 뒤쪽 측면에서 접근하는 자전거와 오토바이 등과 발생하는 사고를 예방할 수 있다. 개문발차사고는 운전자 등이 자동차 문을 열고 출발하는 과정에 발생하는 사고를 말한다.",
+  "tr_e": "The Dutch Reach is a traffic safety campaign started in the Netherlands in the 1960s to prevent accidents with bicycles approaching from the rear side of a passenger car. It is a method in which the driver or passenger, when opening the car door to get out, grasps the handle with the hand farther from the window. Opening the door this way naturally rotates the body more than 45 degrees, allowing the person to visually check the rear, thereby preventing accidents with bicycles, motorcycles, etc. approaching from the rear side of the passenger car. An 'open-door move-off' accident refers to an accident that occurs when the driver, etc., pulls away (starts moving) while the car door is open."
+ },
+ {
+  "n": 348,
+  "ko_e": "환경친화적 자동차의 개발 및 보급 촉진에 관한 법률 시행령 제18조의8((환경친화적 자동차에 대한 충전 방해행위 의 기준 등) 급속충전시설의 충전구역에서 전기자동차 및 외부충전식하이브리드자동차가 2시간 이내의 범위에서 산업 통산부장관이 고시하는 시간인 1시간이 지난 후에도 계속 주차하는 행위는 환경친화적 자동차에 대한 충전 방해행위임",
+  "tr_e": "Enforcement Decree of the Act on Promotion of Development and Distribution of Environment-Friendly Motor Vehicles Article 18-8 (Standards for Acts Obstructing the Charging of Environment-Friendly Motor Vehicles, etc.) In a charging area of a fast-charging facility, the act of an electric vehicle or externally rechargeable hybrid vehicle continuing to park even after 1 hour, the time announced by the Minister of Trade, Industry and Energy within the range of 2 hours, has passed, constitutes an act obstructing the charging of environment-friendly motor vehicles."
+ },
+ {
+  "n": 349,
+  "ko_e": "도로교통법 시행령 제11조 제3항 자동차의 운전자는 법 제34조의3에 따라 경사진 곳에 정차하거나 주차(도로 외의 경사진 곳에서 정차하거나 주차하 는 경우를 포함한다)하려는 경우 자동차의 주차 제동장치를 작동한 후에 다음 각 호의 어느 하나에 해당하는 조치를 취하여야 한다. 다만, 운전자가 운전석을 떠나지 아니하고 직접 제동장치를 작동하고 있는 경우는 제외한다.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 11 paragraph 3. When the driver of a motor vehicle intends to stop or park on a slope (including stopping or parking on a slope off the road) pursuant to Article 34-3 of the Act, the driver must, after operating the parking brake of the motor vehicle, take any of the following measures. However, this is excluded when the driver does not leave the driver's seat and is directly operating the brake."
+ },
+ {
+  "n": 350,
+  "ko_e": "누구든지 장애인전용주차구역에서 주차를 방해하는 행위를 하면 과태료 50만 원을 부과(장애인․노인․임산부 등의  편의증진 보장에 관한 법률 제17조 제5항, 시행령 별표3)",
+  "tr_e": "Anyone who commits an act obstructing parking in a disabled-only parking zone is subject to an administrative fine of 500,000 won (Act on Guarantee of Promotion of Convenience of Persons with Disabilities, the Aged, Pregnant Women, etc. Article 17 paragraph 5, Enforcement Decree Table 3)."
+ },
+ {
+  "n": 351,
+  "ko_e": "운전자가 운전석으로부터 떠나는 때에는 차의 시동을 끄고 제동 장치를 철저하게 하는 등 차의 정지 상태를 안전하 게 유지하고 다른 사람이 함부로 운전하지 못하도록 필요한 조치를 하도록 규정하고 있다.",
+  "tr_e": "It is prescribed that when the driver leaves the driver's seat, the driver must turn off the engine, thoroughly apply the brake, etc. to safely maintain the stationary state of the vehicle, and take necessary measures to prevent others from operating the vehicle at will."
+ },
+ {
+  "n": 352,
+  "ko_e": "도로교통법 시행령 제11조 제3항에 주차하는 경우 제동장치를 작동한 후 경사의 내리막 방향으로 바퀴에 고임목  등 자동차의 미끄럼 사고를 방지할 수 있는 것을 설치하고, 조향장치(操向裝置)를 도로의 가장자리(자동차에서 가 까운 쪽을 말한다) 방향으로 돌려놓을 것, 무조건 후진 기어를 넣는 것이 아닌 경사에 따라 내려가지 않도록 기어를  넣어두는 것도 방법이며, 기어를 중립에 두는 것은 지양하여야 한다.",
+  "tr_e": "Under Enforcement Decree of the Road Traffic Act Article 11 paragraph 3, when parking, after operating the brake, install something that can prevent the motor vehicle from sliding, such as a chock, on the wheels in the downhill direction of the slope, and turn the steering device toward the edge of the road (the side closer to the vehicle). It is not that reverse gear should be engaged unconditionally; a method is to engage the gear so that the vehicle does not roll down according to the slope, and putting the gear in neutral should be avoided."
+ },
+ {
+  "n": 353,
+  "ko_e": "도로교통법 시행령 제11조 제3항 제1호에 따라 자동차의 운전자는 법 제34조의3에 따라 경사진 곳에 정차하거나  주차(도로 외의 경사진 곳에서 정차하거나 주차하는 경우를 포함한다)하려는 경우 자동차의 주차제동장치를 작동 한 후에 다음 각 호의 어느 하나에 해당하는 조치를 취하여야 한다. 다만, 운전자가 운전석을 떠나지 아니하고 직접  제동장치를 작동하고 있는 경우는 제외한다.",
+  "tr_e": "Pursuant to Enforcement Decree of the Road Traffic Act Article 11 paragraph 3 subparagraph 1, when the driver of a motor vehicle intends to stop or park on a slope (including stopping or parking on a slope off the road) pursuant to Article 34-3 of the Act, the driver must, after operating the parking brake of the motor vehicle, take any of the following measures. However, this is excluded when the driver does not leave the driver's seat and is directly operating the brake."
+ },
+ {
+  "n": 354,
+  "ko_e": "신호 대기를 위한 정지, 위험 방지를 위한 일시정지는 5분을 초과하여도 주차에 해당하지 않는다. 그러나 5분을  초과하지 않았지만 운전자가 차를 떠나 즉시 운전할 수 없는 상태는 주차에 해당한다. (도로교통법 제2조)",
+  "tr_e": "Stopping to wait for a signal, or coming to a complete stop to prevent danger, does not constitute parking even if it exceeds 5 minutes. However, a state in which the driver has left the vehicle and cannot drive it immediately, even if it does not exceed 5 minutes, constitutes parking. (Road Traffic Act Article 2)"
+ },
+ {
+  "n": 355,
+  "ko_e": "정차라 함은 운전자가 5분을 초과하지 아니하고 차를 정지시키는 것으로서 주차 외의 정지 상태를 말한다. (도로교 통법 제2조 제25호)",
+  "tr_e": "Stopping means the driver stopping the vehicle for not more than 5 minutes, and refers to a stationary state other than parking. (Road Traffic Act Article 2 subparagraph 25)"
+ },
+ {
+  "n": 356,
+  "ko_e": "정차 및 주차 금지 장소 모든 차의 운전자는 다음 각 호의 어느 하나에 해당하는 곳에서는 차를 정차하거나 주차하 여서는 아니 된다. 다만, 이 법이나 이 법에 따른 명령 또는 경찰공무원의 지시를 따르는 경우와 위험방지를 위하여 일시정지하는 경우에는 그러하지 아니하다. 1. 교차로ㆍ횡단보도ㆍ건널목이나 보도와 차도가 구분된 도로의 보도(「주차장법」에 따라 차도와 보도에 걸쳐 서 설치된 노상주차장은 제외한다) 2. 교차로의 가장자리나 도로의 모퉁이로부터 5미터 이내인 곳 3. 안전지대가 설치된 도로에서는 그 안전지대의 사방으로부터 각각 10미터 이내인 곳 4. 버스여객자동차의 정류지(停留地)임을 표시하는 기둥이나 표지판 또는 선이 설치된 곳으로부터 10미터 이내인 곳. 다만, 버스여객자동차의 운전자가 그 버스여객자동차의 운행시간 중에 운행노선에 따르는 정류장에서 승 객을 태우거나 내리기 위하여 차를 정차하거나 주차하는 경우에는 그러하지 아니하다. 5. 건널목의 가장자리 또는 횡단보도로부터 10미터 이내인 곳 6. 다음 각 목의 곳으로부터 5미터 이내인 곳 가. 「소방기본법」 제10조에 따른 소방용수시설 또는 비상소화장치가 설치된 곳 나. 「화재예방, 소방시설 설치ㆍ유지 및 안전관리에 관한 법률」 제2조제1항제1호에 따른 소방시설로서 대통 령령으로 정하는 시설이 설치된 곳 7. 시ㆍ도경찰청장이 도로에서의 위험을 방지하고 교통의 안전과 원활한 소통을 확보하기 위하여 필요하다고 인정하여 지정한 곳 8. 시장등이 제12조제1항에 따라 지정한 어린이 보호구역 제34조의2(정차 또는 주차를 금지하는 장소의 특례) ① 다음 각 호의 어느 하나에 해당하는 경우에는 제32조제1호 ㆍ제4호ㆍ제5호ㆍ제7호·제8호 또는 제33조제3호에도 불구하고 정차하거나 주차할 수 있다. 1. 「자전거 이용 활성화에 관한 법률」 제2조제2호에 따른 자전거이용시설 중 전기자전거 충전소 및 자전거주 차장치에 자전거를 정차 또는 주차하는 경우 2. 시장등의 요청에 따라 시ㆍ도경찰청장이 안전표지로 자전거등의 정차 또는 주차를 허용한 경우 ② 시ㆍ도경찰청장이 안전표지로 구역ㆍ시간ㆍ방법 및 차의 종류를 정하여 정차나 주차를 허용한 곳에서는 제32 조제7호·제8호 또는 제33조제3호에도 불구하고 정차하거나 주차할 수 있다.",
+  "tr_e": "Places where stopping and parking are prohibited. Every driver of a vehicle must not stop or park the vehicle in any of the following places. However, this does not apply when following this Act, an order under this Act, or the instructions of a police officer, or when coming to a complete stop to prevent danger. 1. an intersection, crosswalk, railroad crossing, or the sidewalk of a road where the sidewalk and roadway are separated (excluding on-street parking lots installed across the roadway and sidewalk under the Parking Lot Act); 2. within 5 meters from the edge of an intersection or a corner of the road; 3. within 10 meters in all directions from a safety zone on a road where one is installed; 4. within 10 meters from a pillar, sign, or line indicating a bus passenger vehicle stop (停留地). However, this does not apply when the driver of a bus passenger vehicle stops or parks to pick up or drop off passengers at a stop along the operating route during the operating hours of that bus passenger vehicle; 5. within 10 meters from the edge of a railroad crossing or a crosswalk; 6. within 5 meters from any of the following places: (a) a place where a fire-fighting water facility or emergency fire-extinguishing device under Article 10 of the Framework Act on Fire Services is installed; (b) a place where a fire-fighting system prescribed by Presidential Decree under Article 2(1) subparagraph 1 of the Act on Fire Prevention and Installation, Maintenance, and Safety Control of Fire-Fighting Systems is installed; 7. a place designated by the Commissioner of the City/Provincial Police Agency who deems it necessary to prevent danger on the road and to secure the safety and smooth flow of traffic; 8. a school zone designated by the mayor, etc. under Article 12(1). Article 34-2 (Special Cases on Places Where Stopping or Parking Is Prohibited) (1) In any of the following cases, notwithstanding Article 32 subparagraphs 1, 4, 5, 7, and 8 or Article 33 subparagraph 3, stopping or parking is allowed: 1. when stopping or parking a bicycle at an electric bicycle charging station or bicycle parking device among the bicycle-use facilities under Article 2 subparagraph 2 of the Act on Promotion of Bicycle Use; 2. when the Commissioner of the City/Provincial Police Agency has permitted the stopping or parking of bicycles, etc. with traffic signs at the request of the mayor, etc. (2) At a place where the Commissioner of the City/Provincial Police Agency has permitted stopping or parking by designating the zone, time, method, and type of vehicle with traffic signs, stopping or parking is allowed notwithstanding Article 32 subparagraphs 7 and 8 or Article 33 subparagraph 3."
+ },
+ {
+  "n": 357,
+  "ko_e": "주차 금지장소： ① 횡단보도로부터 10미터 이내 ② 소방용수시설이 설치된 곳으로부터 5미터 이내 ③ 비상소화장 치가 설치된 곳으로부터 5미터 이내 ④ 안전지대 사방으로부터 각각 10미터 이내 (도로교통법 제32조) 제34조의2(정차 또는 주차를 금지하는 장소의 특례) ① 다음 각 호의 어느 하나에 해당하는 경우에는 제32조제1호 ㆍ제4호ㆍ제5호ㆍ제7호·제8호 또는 제33조제3호에도 불구하고 정차하거나 주차할 수 있다. 1. 「자전거 이용 활성화에 관한 법률」 제2조제2호에 따른 자전거이용시설 중 전기자전거 충전소 및 자전거주 차장치에 자전거를 정차 또는 주차하는 경우 2. 시장등의 요청에 따라 시ㆍ도경찰청장이 안전표지로 자전거등의 정차 또는 주차를 허용한 경우 ② 시ㆍ도경찰청장이 안전표지로 구역ㆍ시간ㆍ방법 및 차의 종류를 정하여 정차나 주차를 허용한 곳에서는 제32 조제7호·제8호 또는 제33조제3호에도 불구하고 정차하거나 주차할 수 있다.",
+  "tr_e": "Places where parking is prohibited: (1) within 10 meters from a crosswalk; (2) within 5 meters from a place where a fire-fighting water facility is installed; (3) within 5 meters from a place where an emergency fire-extinguishing device is installed; (4) within 10 meters in all directions from a safety zone (Road Traffic Act Article 32). Article 34-2 (Special Cases on Places Where Stopping or Parking Is Prohibited) (1) In any of the following cases, notwithstanding Article 32 subparagraphs 1, 4, 5, 7, and 8 or Article 33 subparagraph 3, stopping or parking is allowed: 1. when stopping or parking a bicycle at an electric bicycle charging station or bicycle parking device among the bicycle-use facilities under Article 2 subparagraph 2 of the Act on Promotion of Bicycle Use; 2. when the Commissioner of the City/Provincial Police Agency has permitted the stopping or parking of bicycles, etc. with traffic signs at the request of the mayor, etc. (2) At a place where the Commissioner of the City/Provincial Police Agency has permitted stopping or parking by designating the zone, time, method, and type of vehicle with traffic signs, stopping or parking is allowed notwithstanding Article 32 subparagraphs 7 and 8 or Article 33 subparagraph 3."
+ },
+ {
+  "n": 358,
+  "ko_e": "도로교통법 제26조 먼저 진입한 차량에 차로를 양보해야 하고, 좌회전 차량은 직진 및 우회전 차량에게 우선권을  양보해야 하며, 교차로 중심 안쪽을 이용하여 좌회전해야 한다.",
+  "tr_e": "Road Traffic Act Article 26. You must yield the right-of-way to the vehicle that entered first, a left-turning vehicle must yield the right of way to vehicles going straight and turning right, and must turn left using the inside of the center of the intersection."
+ },
+ {
+  "n": 359,
+  "ko_e": "도로교통법 제25조의2(회전교차로 통행방법) ① 회전교차로에서는 반시계방향으로 통행하여야 한다. ② 회전교차 로에 진입하려는 경우에는 서행하거나 일시정지하여야 하며, 이미 진행하고 있는 다른 차가 있는 때에는 그 차에  진로를 양보하여야 한다.",
+  "tr_e": "Road Traffic Act Article 25-2 (Method of Passing Through Roundabouts) (1) At a roundabout, you must pass counterclockwise. (2) When intending to enter a roundabout, you must slow down or come to a complete stop, and when there are other vehicles already proceeding, you must yield the right-of-way to those vehicles."
+ },
+ {
+  "n": 360,
+  "ko_e": "교통정리가 행하여지고 있지 않은 교차로에서는 비록 좌회전 차량이라 할지라도 교차로에 이미 선진입한 경우에는  통행 우선권이 있으므로 직진 차와 우회전 차량일지라도 좌회전 차량에게 통행 우선권이 있다. (도로교통법 제26조)",
+  "tr_e": "At an intersection where traffic is not being controlled, even a left-turning vehicle has the right of way if it entered the intersection first, so even a vehicle going straight or turning right must yield the right of way to the left-turning vehicle. (Road Traffic Act Article 26)"
+ },
+ {
+  "n": 361,
+  "ko_e": "도로교통법 제25조 및 제26조 모든 차의 운전자는 교차로에서 좌회전을 하고자 하는 때에는 미리 도로의 중앙선을  따라 서행하면서 교차로의 중심 안쪽을 이용하여 좌회전하여야 한다. 비보호좌회전 안전표지가 있는 경우 직진등 화에 좌회전하여야 하고, 동시 진입 한 경우 좌회전차량보다 직진차량이 우선한다.",
+  "tr_e": "Road Traffic Act Articles 25 and 26. Every driver of a vehicle who intends to turn left at an intersection must turn left while slowing down along the center line of the road in advance, using the inside of the center of the intersection. Where there is an unprotected left turn traffic sign, one must turn left on the straight (green) light, and when entering at the same time, the vehicle going straight takes priority over the left-turning vehicle."
+ }
+]
+
+codex
+[]
+tokens used
+21,785
+[]

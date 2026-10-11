@@ -1,0 +1,241 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12813-76f8-7531-bc5f-b042a0cf3e7c
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/331_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/331_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 535ms:
+[
+ {
+  "n": 625,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????2議??댄뻾?곸쓽 ?덉쟾湲곗?) 踰???9議곗젣1??蹂몃Ц?먯꽌 \"??듬졊?뱀쑝濡??뺥븯???댄뻾?곸쓽 ?덉쟾湲?以?앹씠? ?ㅼ쓬 媛??몃? 留먰븳?? 3. ?붾Ъ?먮룞李⑥쓽 ?곸옱以묐웾? 援ъ“ 諛??깅뒫???곕Ⅴ???곸옱以묐웾??110?쇱꽱???대궡??寃?4. ?먮룞李??붾Ъ?먮룞李? ?대쪣?먮룞李?諛??뚰삎 3瑜쒖옄?숈감留??대떦?쒕떎)???곸옱?⑸웾? ?ㅼ쓬 媛?紐⑹쓽 援щ텇???곕Ⅸ 湲곗????섏? ?꾨땲??寃?媛. 湲몄씠: ?먮룞李?湲몄씠??洹?湲몄씠??10遺꾩쓽 1???뷀븳 湲몄씠. ?ㅻ쭔, ?대쪣?먮룞李⑤뒗 洹??뱀감?μ튂??湲몄씠 ?먮뒗 ?곸옱?μ튂??湲몄씠??30?쇳떚誘명꽣瑜??뷀븳 湲몄씠瑜?留먰븳?? ?? ?덈퉬: ?먮룞李⑥쓽 ?꾩궗寃?孃뚦????쇰줈 ?ㅼそ???뺤씤?????덈뒗 踰붿쐞(?꾩궗寃쎌쓽 ?믪씠蹂대떎 ?붾Ъ????쾶 ?곸옱??寃쎌슦?먮뒗 洹??붾Ъ?? ?꾩궗寃쎌쓽 ?믪씠蹂대떎 ?붾Ъ???믨쾶 ?곸옱??寃쎌슦?먮뒗 ?ㅼそ???뺤씤?????덈뒗 踰붿쐞瑜?留먰븳?????덈퉬 ?? ?믪씠: ?붾Ъ?먮룞李⑤뒗 吏?곸쑝濡쒕???4誘명꽣(?꾨줈援ъ“??蹂댁쟾怨??듯뻾???덉쟾??吏?μ씠 ?녿떎怨??몄젙?섏뿬 怨좎떆???꾨줈?몄꽑??寃쎌슦?먮뒗 4誘명꽣 20?쇳떚誘명꽣), ?뚰삎 3瑜쒖옄?숈감??吏?곸쑝濡쒕???2誘명꽣 50?쇳떚誘명꽣, ?대쪣?먮룞李⑤뒗 吏?곸쑝濡쒕???2誘명꽣???믪씠",
+  "tr_e": "휂i沼걏 22 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(ti챗u chu梳쯰 an to횪n v沼?v梳춏 h횪nh): 'Ti챗u chu梳쯰 an to횪n v沼?v梳춏 h횪nh do Ngh沼?휃沼땙h c沼쬪 T沼븂g th沼몁g quy 휃沼땙h' t梳죍 ph梳쬷 ch챠nh kho梳즢 1 휂i沼걏 39 c沼쬪 Lu梳춗 c처 ngh칫a l횪 c찼c 휃i沼긩 sau. 3. T梳즜 tr沼뛫g ch沼?c沼쬪 xe t梳즜 ph梳즜 trong ph梳죑 vi 110 ph梳쬷 tr훱m t梳즜 tr沼뛫g ch沼?theo c梳쪀 t梳죓 v횪 t챠nh n훱ng. 4. K챠ch th튼沼쌵 x梳퓈 h횪ng c沼쬪 xe c퉤 gi沼쌻 (ch沼?찼p d沼쩸g cho xe t梳즜, xe hai b찼nh v횪 xe ba b찼nh c沼?nh沼? kh척ng 휃튼沼즓 v튼沼즨 qu찼 ti챗u chu梳쯰 theo ph창n lo梳죍 c찼c m沼쩭 sau. a. Chi沼걏 d횪i: chi沼걏 d횪i xe c沼셬g th챗m 1/10 chi沼걏 d횪i 휃처. Tuy nhi챗n, xe hai b찼nh l횪 chi沼걏 d횪i c沼쬪 thi梳퓍 b沼?ch沼?ng튼沼쓎 ho梳톍 thi梳퓍 b沼?ch沼?h횪ng c沼셬g th챗m 30 centimet. b. Chi沼걏 r沼셬g: chi沼걏 r沼셬g c沼쬪 ph梳죑 vi c처 th沼?x찼c nh梳춏 ph챠a sau b梳켷g g튼퉤ng chi梳퓎 h梳춙 c沼쬪 xe (tr튼沼쓓g h沼즤 x梳퓈 h횪ng th梳쩺 h퉤n chi沼걏 cao g튼퉤ng chi梳퓎 h梳춙 th챙 l횪 h횪ng 휃처, tr튼沼쓓g h沼즤 x梳퓈 h횪ng cao h퉤n chi沼걏 cao g튼퉤ng chi梳퓎 h梳춙 th챙 l횪 ph梳죑 vi c처 th沼?x찼c nh梳춏 ph챠a sau). c. Chi沼걏 cao: xe t梳즜 l횪 4 m챕t t沼?m梳톞 휃梳쩿 (휃沼멼 v沼쌻 tuy梳퓆 휃튼沼쓓g 휃튼沼즓 c척ng b沼?c척ng nh梳춏 kh척ng g창y tr沼?ng梳죍 cho vi沼놻 b梳즣 t沼뱊 k梳퓍 c梳쪀 휃튼沼쓓g v횪 an to횪n l튼u th척ng l횪 4 m챕t 20 centimet), xe ba b찼nh c沼?nh沼?l횪 2 m챕t 50 centimet t沼?m梳톞 휃梳쩿, xe hai b찼nh l횪 chi沼걏 cao 2 m챕t t沼?m梳톞 휃梳쩿."
+ },
+ {
+  "n": 626,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴 18 ???뚰삎寃ъ씤李?硫댄뿀??珥앹쨷??3.5?ㅼ쓽 寃ъ씤???뱀닔?먮룞李⑤? ?댁쟾?????덈떎. ???뚰삎寃ъ씤李?硫댄뿀???곸옱以묐웾 4?ㅼ쓽 ?붾Ъ?먮룞李⑤? ?댁쟾?????덈떎. ??援щ궃李?硫댄뿀???뱀감?뺤썝 10紐??댄븯???뱁빀?먮룞李⑤? ?댁쟾?????덈떎. ?????寃ъ씤李?硫댄뿀???곸옱以묐웾 4?ㅼ쓽 ?붾Ъ?먮룞李⑤? ?댁쟾?????덈떎.",
+  "tr_e": "Ph沼?l沼쩭 18 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼???Gi梳쪅 ph챕p xe k챕o c沼?nh沼?c처 th沼?l찼i xe c퉤 gi沼쌻 휃梳톍 bi沼뇍 lo梳죍 k챕o c처 t沼븂g tr沼뛫g l튼沼즢g 3,5 t梳쩸. ??Gi梳쪅 ph챕p xe k챕o c沼?nh沼?c처 th沼?l찼i xe t梳즜 c처 t梳즜 tr沼뛫g ch沼?4 t梳쩸. ??Gi梳쪅 ph챕p xe c沼쯷 h沼?c처 th沼?l찼i xe kh찼ch c처 s沼쯢 ch沼쯠 t沼?10 ng튼沼쓎 tr沼?xu沼몁g. ??Gi梳쪅 ph챕p xe k챕o c沼?l沼썀 c처 th沼?l찼i xe t梳즜 c처 t梳즜 tr沼뛫g ch沼?4 t梳쩸."
+ },
+ {
+  "n": 627,
+  "ko_e": "??뺤감??怨좎냽 二쇳뻾 ?쒖뿉 李⑥껜媛 ?붾뱾由ш린 ?뚮Ц???쒓컙?곸쑝濡?吏곸쭊 ?덉젙?깆씠 ?섎튌吏??寃쎌슦媛 ?덉쑝硫? ?붿슧???댁쟾 ???믨린 ?뚮Ц??諛ㅼ씠????슦, ?덇컻 ??湲곗긽???섏걽 ?뚯뿉??李⑥쓽 諛붾줈 ?욌쭔 蹂닿퀬 ?댁쟾?섍쾶 ?섎?濡??붿슧 吏곸쭊 ?덉젙?????섎튌吏꾨떎. 吏곸쭊 ?덉젙?깆쓣 ?믪씠湲??꾪빐?쒕뒗 媛湲됱쟻 二쇱떆?먯쓣 硫由??먭퀬 ?몃뱾 議곗옉???좎쨷??湲고빐???쒕떎.",
+  "tr_e": "Xe c沼?l沼썀 khi ch梳죣 t沼멵 휃沼?cao th창n xe b沼?rung l梳칌 n챗n c처 tr튼沼쓓g h沼즤 t챠nh 沼븂 휃沼땙h 휃i th梳쿻g t沼쯢 th沼쓎 b沼?k챕m 휃i, h퉤n n沼칊 do gh梳?l찼i cao n챗n khi th沼쓎 ti梳퓍 x梳쪀 nh튼 ban 휃챗m, m튼a l沼썀, s튼퉤ng m첫 v.v. ch沼?nh챙n th梳쪅 ngay ph챠a tr튼沼쌵 xe khi l찼i n챗n t챠nh 沼븂 휃沼땙h 휃i th梳쿻g c횪ng k챕m 휃i. 휂沼?n창ng cao t챠nh 沼븂 휃沼땙h 휃i th梳쿻g, c梳쬷 휃梳톞 휃i沼긩 nh챙n c횪ng xa c횪ng t沼몋 v횪 th梳춏 tr沼뛫g trong thao t찼c v척 l훱ng."
+ },
+ {
+  "n": 628,
+  "ko_e": "?먮룞李?諛??먮룞李⑤??덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃 ??議?湲몄씠?띾꼫鍮?諛??믪씠) ???먮룞李⑥쓽 湲몄씠?띾꼫鍮?諛??믪씠?? ?ㅼ쓬??湲곗???珥덇낵?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "휂i沼걏 4 Quy t梳칌 v沼?t챠nh n훱ng v횪 ti챗u chu梳쯰 c沼쬪 xe c퉤 gi沼쌻 v횪 ph沼?t첫ng xe c퉤 gi沼쌻 (Chi沼걏 d횪i, chi沼걏 r沼셬g v횪 chi沼걏 cao) ??Chi沼걏 d횪i, chi沼걏 r沼셬g v횪 chi沼걏 cao c沼쬪 xe c퉤 gi沼쌻 kh척ng 휃튼沼즓 v튼沼즨 qu찼 ti챗u chu梳쯰 sau."
+ },
+ {
+  "n": 629,
+  "ko_e": "李⑤궡 ?뚮??됱쐞 諛⑹튂?댁쟾??寃쎌슦 踰붿튃湲?10留??먯뿉 踰뚯젏 40?먯씠 遺怨쇰맂?? ?꾨줈援먰넻踰???9議?紐⑤뱺 ?댁쟾?먯쓽 以?섏궗 ????, ?꾨줈援먰넻踰??쒗뻾??(蹂꾪몴 8)踰붿튃?됱쐞 諛?踰붿튃湲덉븸(?댁쟾??, ?꾨줈援먰넻踰??쒗뻾洹쒖튃 (蹂꾪몴 28) ?댁쟾硫댄뿀 痍⑥냼數??뺤?泥섎텇 湲곗?",
+  "tr_e": "Tr튼沼쓓g h沼즤 l찼i xe 휃沼?m梳톍 h횪nh vi g창y 沼뱊 횪o trong xe b沼?ph梳죜 ti沼걆 100.000 won c첫ng 40 휃i沼긩 ph梳죜. 휂i沼걏 49 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(휃i沼걏 c梳쬷 tu창n th沼?c沼쬪 m沼뛦 ng튼沼쓎 l찼i xe v.v.), Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Ph沼?l沼쩭 8) h횪nh vi vi ph梳죑 v횪 m沼쯢 ph梳죜 ti沼걆 (ng튼沼쓎 l찼i xe), Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Ph沼?l沼쩭 28) ti챗u chu梳쯰 x沼?ph梳죜 h沼쭃/휃챙nh ch沼?gi梳쪅 ph챕p l찼i xe."
+ },
+ {
+  "n": 630,
+  "ko_e": "?꾨줈援먰넻踰???9議???????2?? ?쒗뻾??蹂꾪몴8, 4??珥덇낵 ?붾Ъ?먮룞李⑥쓽 ?붾Ъ ?곸옱?⑥뿉 ?밴컼???묒듅?섎㈃ 踰붿튃湲? 5留??먯씠??",
+  "tr_e": "휂i沼긩 12 kho梳즢 1 휂i沼걏 49 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Ph沼?l沼쩭 8 Ngh沼?휃沼땙h thi h횪nh: N梳퓎 h횪nh kh찼ch l챗n th첫ng ch沼?h횪ng c沼쬪 xe t梳즜 tr챗n 4 t梳쩸 th챙 b沼?ph梳죜 ti沼걆 50.000 won."
+ },
+ {
+  "n": 631,
+  "ko_e": "怨좎냽踰꾩뒪媛 諛ㅼ뿉 ?듯뻾????耳쒖빞 ???깊솕???꾩“?? 李⑦룺?? 誘몃벑, 踰덊샇?? ?ㅻ궡議곕챸?깆씠??",
+  "tr_e": "휂챔n m횪 xe bu첵t cao t沼멵 ph梳즜 b梳춗 khi l튼u th척ng v횪o ban 휃챗m l횪 휃챔n chi梳퓎 s찼ng ph챠a tr튼沼쌵 (휃챔n 휃梳쬾), 휃챔n k챠ch th튼沼쌵 xe (휃챔n 휃沼땙h v沼?, 휃챔n h梳춙, 휃챔n bi沼긪 s沼? 휃챔n chi梳퓎 s찼ng trong xe."
+ },
+ {
+  "n": 632,
+  "ko_e": "?꾨줈援먰넻踰???9議??뱀감 ?먮뒗 ?곸옱??諛⑸쾿怨??쒗븳) 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?곸쑀?꾨굹 ?숇Ъ???덇퀬 ?댁쟾 ?μ튂瑜?議곗옉?섍굅???댁쟾??二쇱쐞??臾쇨굔???ｋ뒗 ???덉쟾??吏?μ쓣 以??곕젮 媛 ?덈뒗 ?곹깭濡??댁쟾?섏뿬?쒕뒗 ?꾨땲 ?쒕떎.",
+  "tr_e": "휂i沼걏 39 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(ph튼퉤ng ph찼p v횪 gi沼쌻 h梳죒 v沼?ch沼?ng튼沼쓎 ho梳톍 ch沼?h횪ng): Ng튼沼쓎 l찼i m沼뛦 xe kh척ng 휃튼沼즓 l찼i xe trong tr梳죒g th찼i c처 nguy c퉤 g창y tr沼?ng梳죍 cho an to횪n nh튼 b梳?tr梳?nh沼?ho梳톍 휃沼셬g v梳춗 m횪 thao t찼c thi梳퓍 b沼?l찼i, ho梳톍 ch梳쩿 휃沼?v梳춗 xung quanh gh梳?l찼i."
+ },
+ {
+  "n": 633,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????2議??댄뻾?곸쓽 ?덉쟾湲곗?)",
+  "tr_e": "휂i沼걏 22 Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(ti챗u chu梳쯰 an to횪n v沼?v梳춏 h횪nh)."
+ },
+ {
+  "n": 634,
+  "ko_e": "?곸옱以묐웾 12??誘몃쭔???붾Ъ?먮룞李⑤뒗 ??醫?蹂댄넻硫댄뿀濡??댁쟾??媛?ν븯怨??곸옱以묐웾 12???댁긽???붾Ъ?먮룞李⑤뒗 ??醫? ??뺣㈃?덈? 痍⑤뱷?섏뿬???댁쟾??媛?ν븯??",
+  "tr_e": "Xe t梳즜 c처 t梳즜 tr沼뛫g ch沼?d튼沼쌻 12 t梳쩸 c처 th沼?l찼i b梳켷g gi梳쪅 ph챕p h梳죒g 1 th척ng th튼沼쓓g, v횪 xe t梳즜 c처 t梳즜 tr沼뛫g ch沼?t沼?12 t梳쩸 tr沼?l챗n ph梳즜 l梳쪅 gi梳쪅 ph챕p h梳죒g 1 l沼썀 m沼쌻 l찼i 휃튼沼즓."
+ },
+ {
+  "n": 635,
+  "ko_e": "(?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 18 鍮꾧퀬 3) 珥앹쨷??750kg 珥덇낵 3???댄븯???쇨껄?몄옄?숈감瑜?寃ъ씤?섍린 ?꾪빐?쒕뒗 寃ъ씤?섎뒗  ?먮룞李⑤? ?댁쟾?????덈뒗 硫댄뿀? ?뚰삎寃ъ씤李⑤㈃???먮뒗 ??뺢껄?몄감硫댄뿀瑜?媛吏怨??덉뼱???쒕떎.",
+  "tr_e": "(Ghi ch첬 3 Ph沼?l沼쩭 18 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 휂沼?k챕o xe 휃튼沼즓 k챕o c처 t沼븂g tr沼뛫g l튼沼즢g tr챗n 750kg 휃梳퓆 3 t梳쩸, ph梳즜 c처 gi梳쪅 ph챕p c처 th沼?l찼i xe k챕o v횪 gi梳쪅 ph챕p xe k챕o c沼?nh沼?ho梳톍 gi梳쪅 ph챕p xe k챕o c沼?l沼썀."
+ },
+ {
+  "n": 636,
+  "ko_e": "?곗뒿硫댄뿀濡쒕뒗 ?쇨껄?몄옄?숈감瑜?寃ъ씤?????녿떎.",
+  "tr_e": "Kh척ng th沼?k챕o xe 휃튼沼즓 k챕o b梳켷g gi梳쪅 ph챕p t梳춑 l찼i."
+ },
+ {
+  "n": 637,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???0議? 珥앹쨷??2泥쒗궗濡쒓렇??誘몃쭔???먮룞李⑤? 珥앹쨷?됱씠 洹몄쓽 3諛??댁긽???먮룞李⑤줈 寃ъ씤?섎뒗  寃쎌슦?먮뒗 留ㅼ떆 30?щ줈誘명꽣?대떎.",
+  "tr_e": "휂i沼걏 20 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? tr튼沼쓓g h沼즤 k챕o xe c처 t沼븂g tr沼뛫g l튼沼즢g d튼沼쌻 2.000 kil척gam b梳켷g xe c처 t沼븂g tr沼뛫g l튼沼즢g t沼?3 l梳쬷 tr沼?l챗n c沼쬪 xe 휃처 th챙 l횪 30 kil척m챕t m沼뾦 gi沼?"
+ },
+ {
+  "n": 638,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議?- ?몃룄 2李⑤줈 ?댁긽 怨좎냽?꾨줈?먯꽌??理쒓퀬?띾룄??留ㅼ떆 100?щ줈誘명꽣[?붾Ъ?먮룞李??곸옱以묐웾 1.5?ㅼ쓣 珥덇낵?섎뒗 寃쎌슦???쒗븳?? ?댄븯 ???몄뿉??媛숇떎)?랁듅?섏옄?숈감?띿쐞?섎Ъ?대컲?먮룞李?蹂꾪몴 9 (二? 6???곕Ⅸ ?꾪뿕臾??깆쓣 ?대컲?섎뒗 ?먮룞李⑤? 留먰븳?? ?댄븯 ???몄뿉??媛숇떎) 諛?嫄댁꽕湲곌퀎??理쒓퀬?띾룄??留ㅼ떆 80?щ줈誘명꽣], 理쒖??띾룄??留ㅼ떆 50?щ줈誘명꽣 ?꾨줈援먰넻踰??쒗뻾洹쒖튃??0議?- 寃ъ씤?먮룞李④? ?꾨땶 ?먮룞李⑤줈 ?ㅻⅨ ?먮룞李⑤? 寃ъ씤?섏뿬 ?꾨줈(怨좎냽?꾨줈瑜??쒖쇅?쒕떎)瑜??듯뻾?섎뒗 ?뚯쓽 ?띾룄????9議곗뿉 遺덇뎄?섍퀬 ?ㅼ쓬 媛??몄뿉???뺥븯??諛붿뿉 ?섑븳?? 1. 珥앹쨷??2泥쒗궗濡쒓렇??誘몃쭔???먮룞李⑤? 珥앹쨷?됱씠 洹몄쓽 3諛??댁긽???먮룞李⑤줈 寃ъ씤?섎뒗 寃쎌슦?먮뒗 留ㅼ떆 30?щ줈誘명꽣 ?대궡 2. ?????몄쓽 寃쎌슦 諛??대쪣?먮룞李④? 寃ъ씤?섎뒗 寃쎌슦?먮뒗 留ㅼ떆 25?щ줈誘명꽣 ?대궡 媛숈?踰??쒗뻾洹쒖튃 蹂꾪몴18 - ?쇨껄?몄옄?숈감????醫???뺣㈃?? ??醫?蹂댄넻硫댄뿀 ?먮뒗 ??醫?蹂댄넻硫댄뿀瑜?媛吏怨??덈뒗 ?щ엺??洹?硫댄뿀濡??댁쟾?????덈뒗 ?먮룞李??뚯옄?숈감愿由щ쾿????議곗뿉 ?곕Ⅸ ?대쪣?먮룞李⑤뒗 ?쒖쇅?쒕떎)濡?寃ъ씤?????덈떎. ??寃쎌슦, 珥앹쨷??750?щ줈洹몃옩 ??珥덇낵?섎뒗 3???댄븯???쇨껄?몄옄?숈감瑜?寃ъ씤?섍린 ?꾪빐?쒕뒗 寃ъ씤?섎뒗 ?먮룞李⑤? ?댁쟾?????덈뒗 硫댄뿀? ?뚰삎寃ъ씤李⑤㈃ ???먮뒗 ??뺢껄?몄감硫댄뿀瑜?媛吏怨??덉뼱???섍퀬, 3?ㅼ쓣 珥덇낵?섎뒗 ?쇨껄?몄옄?숈감瑜?寃ъ씤?섍린 ?꾪빐?쒕뒗 寃ъ씤?섎뒗 ?먮룞李?瑜??댁쟾?????덈뒗 硫댄뿀? ??뺢껄?몄감硫댄뿀瑜?媛吏怨??덉뼱???쒕떎.",
+  "tr_e": "휂i沼걏 19 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?- T沼멵 휃沼?t沼멼 휃a tr챗n 휃튼沼쓓g cao t沼멵 t沼?2 l횪n m沼뾦 chi沼걏 tr沼?l챗n l횪 100 kil척m챕t m沼뾦 gi沼?[t沼멵 휃沼?t沼멼 휃a c沼쬪 xe t梳즜 (ch沼?trong tr튼沼쓓g h沼즤 t梳즜 tr沼뛫g ch沼?v튼沼즨 qu찼 1,5 t梳쩸; d튼沼쌻 휃창y trong 휃i沼긩 n횪y c크ng v梳춞), xe chuy챗n d沼쩸g, xe ch沼?v梳춗 nguy hi沼긩 (ch沼?xe ch沼?v梳춗 nguy hi沼긩 v.v. theo ghi ch첬 6 Ph沼?l沼쩭 9; d튼沼쌻 휃창y trong 휃i沼긩 n횪y c크ng v梳춞) v횪 m찼y x창y d沼켷g l횪 80 kil척m챕t m沼뾦 gi沼?, t沼멵 휃沼?t沼멼 thi沼긳 l횪 50 kil척m챕t m沼뾦 gi沼? 휂i沼걏 20 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?- T沼멵 휃沼?khi xe kh척ng ph梳즜 xe k챕o k챕o xe kh찼c l튼u th척ng tr챗n 휃튼沼쓓g (tr沼?휃튼沼쓓g cao t沼멵) th챙 b梳쩿 k沼?휂i沼걏 19, theo quy 휃沼땙h t梳죍 c찼c 휃i沼긩 sau. 1. Tr튼沼쓓g h沼즤 k챕o xe c처 t沼븂g tr沼뛫g l튼沼즢g d튼沼쌻 2.000 kil척gam b梳켷g xe c처 t沼븂g tr沼뛫g l튼沼즢g t沼?3 l梳쬷 tr沼?l챗n c沼쬪 xe 휃처 th챙 trong ph梳죑 vi 30 kil척m챕t m沼뾦 gi沼? 2. Tr튼沼쓓g h沼즤 ngo횪i 휃i沼긩 1 v횪 tr튼沼쓓g h沼즤 xe hai b찼nh k챕o th챙 trong ph梳죑 vi 25 kil척m챕t m沼뾦 gi沼? Ph沼?l沼쩭 18 c첫ng Th척ng t튼 thi h횪nh - Xe 휃튼沼즓 k챕o c처 th沼?휃튼沼즓 k챕o b梳켷g xe (tr沼?xe hai b찼nh theo 휂i沼걏 3 ?똋u梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻?? m횪 ng튼沼쓎 c처 gi梳쪅 ph챕p h梳죒g 1 l沼썀, gi梳쪅 ph챕p h梳죒g 1 th척ng th튼沼쓓g ho梳톍 gi梳쪅 ph챕p h梳죒g 2 th척ng th튼沼쓓g c처 th沼?l찼i b梳켷g gi梳쪅 ph챕p 휃처. Trong tr튼沼쓓g h沼즤 n횪y, 휃沼?k챕o xe 휃튼沼즓 k챕o c처 t沼븂g tr沼뛫g l튼沼즢g tr챗n 750 kil척gam 휃梳퓆 3 t梳쩸 ph梳즜 c처 gi梳쪅 ph챕p c처 th沼?l찼i xe k챕o v횪 gi梳쪅 ph챕p xe k챕o c沼?nh沼?ho梳톍 gi梳쪅 ph챕p xe k챕o c沼?l沼썀, v횪 휃沼?k챕o xe 휃튼沼즓 k챕o v튼沼즨 qu찼 3 t梳쩸 ph梳즜 c처 gi梳쪅 ph챕p c처 th沼?l찼i xe k챕o v횪 gi梳쪅 ph챕p xe k챕o c沼?l沼썀."
+ },
+ {
+  "n": 639,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴18 珥앹쨷??3.5???댄븯???뱀닔?먮룞李⑤뒗 ??醫?蹂댄넻硫댄뿀濡??댁쟾??媛?ν븯??",
+  "tr_e": "Ph沼?l沼쩭 18 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Xe chuy챗n d沼쩸g c처 t沼븂g tr沼뛫g l튼沼즢g t沼?3,5 t梳쩸 tr沼?xu沼몁g c처 th沼?l찼i b梳켷g gi梳쪅 ph챕p h梳죒g 2 th척ng th튼沼쓓g."
+ },
+ {
+  "n": 640,
+  "ko_e": "?뚰삎寃ъ씤李⑥쓽 ?댁쟾?먮룄 ?꾨줈援먰넻踰???紐⑤뱺 ?댁쟾?먯쓽 以?섏궗??쓣 吏耳쒖빞 ?섎ŉ, ?댄뻾 ???뚰삎寃ъ씤李?硫댄뿀瑜?痍⑤뱷??怨??뚯??섏뿬???쒕떎.",
+  "tr_e": "Ng튼沼쓎 l찼i xe k챕o c沼?nh沼?c크ng ph梳즜 tu창n th沼?c찼c 휃i沼걏 c梳쬷 tu창n th沼?c沼쬪 m沼뛦 ng튼沼쓎 l찼i xe theo Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? v횪 khi v梳춏 h횪nh ph梳즜 l梳쪅 v횪 mang theo gi梳쪅 ph챕p xe k챕o c沼?nh沼?"
+ },
+ {
+  "n": 641,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴 9] 李몄“",
+  "tr_e": "Xem [Ph沼?l沼쩭 9] Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?"
+ },
+ {
+  "n": 642,
+  "ko_e": "?쁧ack knife?숇뒗 ?뽰? ?몃㈃ ?깆쓽 ?꾨줈 ?섍꼍?먯꽌 ?몃옓?곗쓽 ?쒕룞?μ씠 ?몃젅?쇰윭???쒕룞?λ낫??????諛쒖깮?????덈뒗 ?꾩긽?쇰줈 ?몃젅?쇰윭??愿???대룞?쇰줈 ?몃옓?곕? 諛怨??섏븘媛硫댁꽌 ?몃옓?곗? ?몃젅?쇰윭???곌껐遺媛 湲곗뿭?먯쿂???묓엳???꾩긽??留먰븳?? ?쁲wing-out?숈? 遺덉긽???댁쑀濡??몃젅?쇰윭??諛뷀대쭔 ?쒕룞?섎뒗 寃쎌슦 ?몃젅?쇰윭媛 ?쒓퀎異붿쿂??醫뚯슦濡??붾뱾由щ뒗 ?대룞???삵븳?? ?쁥ydroplaning?숈? 臾쇱뿉 ?뽰? ?몃㈃??怨좎냽?쇰줈 ?щ┫ ????댁뼱媛 ?몃㈃怨??묒큺?섏? ?딆븘 議곗쥌 ?λ젰???곸떎?섍굅???먮뒗 遺덇??ν븳 ?곹깭瑜?留먰븳?? ?쁵apor lock?숈? 釉뚮젅?댄겕?≪뿉 湲고룷媛 諛쒖깮?섏뿬 釉뚮젅?댄겕 媛 ?쒕?濡??묐룞?섏? ?딄쾶 ?섎뒗 ?꾩긽???삵븳??",
+  "tr_e": "'jack knife' l횪 hi沼뇆 t튼沼즢g c처 th沼?x梳즭 ra trong m척i tr튼沼쓓g 휃튼沼쓓g nh튼 m梳톞 휃튼沼쓓g 튼沼썇 v.v. khi l沼켧 phanh c沼쬪 xe 휃梳쬾 k챕o (tractor) l沼썀 h퉤n l沼켧 phanh c沼쬪 r퉤-mo처c (trailer), l횪 hi沼뇆 t튼沼즢g ph梳쬷 n沼멼 gi沼칊 휃梳쬾 k챕o v횪 r퉤-mo처c g梳춑 l梳죍 nh튼 h챙nh ch沼???khi r퉤-mo처c do chuy沼긪 휃沼셬g qu찼n t챠nh 휃梳쯻 휃梳쬾 k챕o ti梳퓆 l챗n. 'swing-out' ch沼?chuy沼긪 휃沼셬g r퉤-mo처c l梳칌 l튼 tr찼i ph梳즜 nh튼 con l梳칌 휃沼뱊g h沼?khi v챙 l첵 do kh척ng r천 ch沼?b찼nh c沼쬪 r퉤-mo처c b沼?phanh. 'hydroplaning' ch沼?tr梳죒g th찼i m梳쩿 ho梳톍 kh척ng th沼?휃i沼걏 khi沼긪 do l沼몆 kh척ng ti梳퓈 x첬c v沼쌻 m梳톞 휃튼沼쓓g khi ch梳죣 t沼멵 휃沼?cao tr챗n m梳톞 휃튼沼쓓g 튼沼썇. 'vapor lock' ch沼?hi沼뇆 t튼沼즢g phanh kh척ng ho梳죜 휃沼셬g 휃첬ng c찼ch do b沼뛲 kh챠 ph찼t sinh trong d梳쬾 phanh."
+ },
+ {
+  "n": 643,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴18] - ??醫???뺣㈃?덈줈 ??뺢껄?몄감, ?뚰삎寃ъ씤李? 援щ궃李⑤뒗 ?댁쟾?????녿떎. - ??뺢껄?몄감 : 寃ъ씤???뱀닔?먮룞李? ??醫?蹂댄넻硫댄뿀濡??댁쟾?????덈뒗 李⑤웾 - ?뚰삎寃ъ씤李?: 珥앹쨷??3.5?ㅼ씠??寃ъ씤???뱀닔?먮룞李? ??醫?蹂댄넻硫댄뿀濡??댁쟾?????덈뒗 李⑤웾 - ?쇨껄?몄옄?숈감????醫???뺣㈃?? ??醫?蹂댄넻硫댄뿀 ?먮뒗 ??醫?蹂댄넻硫댄뿀瑜?媛吏怨??덈뒗 ?щ엺??洹?硫댄뿀濡??댁쟾?????덈뒗 ?먮룞李??뚯옄?숈감愿由щ쾿????議곗뿉 ?곕Ⅸ ?대쪣?먮룞李⑤뒗 ?쒖쇅?쒕떎)濡?寃ъ씤?????덈떎. ??寃쎌슦, 珥앹쨷??750?щ줈洹몃옩 ??珥덇낵?섎뒗 3???댄븯???쇨껄?몄옄?숈감瑜?寃ъ씤?섍린 ?꾪빐?쒕뒗 寃ъ씤?섎뒗 ?먮룞李⑤? ?댁쟾?????덈뒗 硫댄뿀? ?뚰삎寃ъ씤李⑤㈃ ???먮뒗 ??뺢껄?몄감硫댄뿀瑜?媛吏怨??덉뼱???섍퀬, 3?ㅼ쓣 珥덇낵?섎뒗 ?쇨껄?몄옄?숈감瑜?寃ъ씤?섍린 ?꾪빐?쒕뒗 寃ъ씤?섎뒗 ?먮룞李?瑜??댁쟾?????덈뒗 硫댄뿀? ??뺢껄?몄감硫댄뿀瑜?媛吏怨??덉뼱???쒕떎.",
+  "tr_e": "[Ph沼?l沼쩭 18] Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?- Kh척ng th沼?l찼i xe k챕o c沼?l沼썀, xe k챕o c沼?nh沼? xe c沼쯷 h沼?b梳켷g gi梳쪅 ph챕p h梳죒g 1 l沼썀. - Xe k챕o c沼?l沼썀: xe c퉤 gi沼쌻 휃梳톍 bi沼뇍 lo梳죍 k챕o, xe c처 th沼?l찼i b梳켷g gi梳쪅 ph챕p h梳죒g 2 th척ng th튼沼쓓g. - Xe k챕o c沼?nh沼? xe c퉤 gi沼쌻 휃梳톍 bi沼뇍 lo梳죍 k챕o c처 t沼븂g tr沼뛫g l튼沼즢g t沼?3,5 t梳쩸 tr沼?xu沼몁g, xe c처 th沼?l찼i b梳켷g gi梳쪅 ph챕p h梳죒g 2 th척ng th튼沼쓓g. - Xe 휃튼沼즓 k챕o c처 th沼?휃튼沼즓 k챕o b梳켷g xe (tr沼?xe hai b찼nh theo 휂i沼걏 3 ?똋u梳춗 Qu梳즢 l첵 xe c퉤 gi沼쌻?? m횪 ng튼沼쓎 c처 gi梳쪅 ph챕p h梳죒g 1 l沼썀, gi梳쪅 ph챕p h梳죒g 1 th척ng th튼沼쓓g ho梳톍 gi梳쪅 ph챕p h梳죒g 2 th척ng th튼沼쓓g c처 th沼?l찼i b梳켷g gi梳쪅 ph챕p 휃처. Trong tr튼沼쓓g h沼즤 n횪y, 휃沼?k챕o xe 휃튼沼즓 k챕o c처 t沼븂g tr沼뛫g l튼沼즢g tr챗n 750 kil척gam 휃梳퓆 3 t梳쩸 ph梳즜 c처 gi梳쪅 ph챕p c처 th沼?l찼i xe k챕o v횪 gi梳쪅 ph챕p xe k챕o c沼?nh沼?ho梳톍 gi梳쪅 ph챕p xe k챕o c沼?l沼썀, v횪 휃沼?k챕o xe 휃튼沼즓 k챕o v튼沼즨 qu찼 3 t梳쩸 ph梳즜 c처 gi梳쪅 ph챕p c처 th沼?l찼i xe k챕o v횪 gi梳쪅 ph챕p xe k챕o c沼?l沼썀."
+ },
+ {
+  "n": 644,
+  "ko_e": "?몃젅?쇰윭??醫뚰쉶?????뱀슜李⑥? 鍮꾩듂???뚯쟾媛곸쓣 ?좎??섍쾶 ?섎㈃ ?룸컮?댁뿉 ?섑븳 醫뚰쉶???湲곗감?됱쓣 異⑷꺽?섍쾶 ?섎? 濡??뱀슜李⑤낫???볤쾶 ?뚯쟾?섏뿬???섎ŉ ?대━留됯만?먯꽌 湲곗뼱瑜?以묐┰???먮뒗 寃쎌슦 ??뺤궗怨좎쓽 ?먯씤???쒕떎.",
+  "tr_e": "N梳퓎 r퉤-mo처c gi沼?g처c quay t튼퉤ng t沼?xe con khi r梳?tr찼i th챙 s梳?va ch梳죑 v沼쌻 xe 휃ang ch沼?r梳?tr찼i b梳켷g b찼nh sau, n챗n ph梳즜 quay r沼셬g h퉤n xe con, v횪 tr튼沼쓓g h沼즤 휃沼?s沼?沼?v沼?tr챠 trung gian (mo) khi xu沼몁g d沼멵 s梳?l횪 nguy챗n nh창n g창y tai n梳죒 l沼썀."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+p=Path(r'translations/audit/queue/331_expl_vn.json')
+b=p.read_bytes()
+print(b[:4])
+print(b.decode('utf-8')[:300].encode('unicode_escape').decode())
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T23:08:59.809995Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 692ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/331_expl_vn.json' | ConvertFrom-Json; foreach("'$x in $data){ $s = "N=$($x.n)`nKO=$($x.ko_e)`nTR=$($x.tr_e)`n"; $o = New-Object System.Text.StringBuilder; foreach($ch in $s.ToCharArray()){ $v=[int][char]$ch; if($v -gt 127){ [void]$o.Append(('"'\\u{0:x4}' -f "'$v)) } else { [void]$o.Append($ch) } }; $o.ToString() }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 1078ms:
+N=625
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\ub839 \uc81c22\uc870(\uc6b4\ud589\uc0c1\uc758 \uc548\uc804\uae30\uc900) \ubc95 \uc81c39\uc870\uc81c1\ud56d \ubcf8\ubb38\uc5d0\uc11c "\ub300\ud1b5\ub839\ub839\uc73c\ub85c \uc815\ud558\ub294 \uc6b4\ud589\uc0c1\uc758 \uc548\uc804\uae30 \uc900\u201d\uc774\ub780 \ub2e4\uc74c \uac01 \ud638\ub97c \ub9d0\ud55c\ub2e4. 3. \ud654\ubb3c\uc790\ub3d9\ucc28\uc758 \uc801\uc7ac\uc911\ub7c9\uc740 \uad6c\uc870 \ubc0f \uc131\ub2a5\uc5d0 \ub530\ub974\ub294 \uc801\uc7ac\uc911\ub7c9\uc758 110\ud37c\uc13c\ud2b8 \uc774\ub0b4\uc77c \uac83 4. \uc790\ub3d9\ucc28(\ud654\ubb3c\uc790\ub3d9\ucc28, \uc774\ub95c\uc790\ub3d9\ucc28 \ubc0f \uc18c\ud615 3\ub95c\uc790\ub3d9\ucc28\ub9cc \ud574\ub2f9\ud55c\ub2e4)\uc758 \uc801\uc7ac\uc6a9\ub7c9\uc740 \ub2e4\uc74c \uac01 \ubaa9\uc758 \uad6c\ubd84\uc5d0 \ub530\ub978 \uae30\uc900\uc744 \ub118\uc9c0 \uc544\ub2c8\ud560 \uac83 \uac00. \uae38\uc774: \uc790\ub3d9\ucc28 \uae38\uc774\uc5d0 \uadf8 \uae38\uc774\uc758 10\ubd84\uc758 1\uc744 \ub354\ud55c \uae38\uc774. \ub2e4\ub9cc, \uc774\ub95c\uc790\ub3d9\ucc28\ub294 \uadf8 \uc2b9\ucc28\uc7a5\uce58\uc758 \uae38\uc774 \ub610\ub294 \uc801\uc7ac\uc7a5\uce58\uc758 \uae38\uc774\uc5d0 30\uc13c\ud2f0\ubbf8\ud130\ub97c \ub354\ud55c \uae38\uc774\ub97c \ub9d0\ud55c\ub2e4. \ub098. \ub108\ube44: \uc790\ub3d9\ucc28\uc758 \ud6c4\uc0ac\uacbd(\u5f8c\u5beb\u93e1)\uc73c\ub85c \ub4a4\ucabd\uc744 \ud655\uc778\ud560 \uc218 \uc788\ub294 \ubc94\uc704(\ud6c4\uc0ac\uacbd\uc758 \ub192\uc774\ubcf4\ub2e4 \ud654\ubb3c\uc744 \ub0ae\uac8c \uc801\uc7ac\ud55c \uacbd\uc6b0\uc5d0\ub294 \uadf8 \ud654\ubb3c\uc744, \ud6c4\uc0ac\uacbd\uc758 \ub192\uc774\ubcf4\ub2e4 \ud654\ubb3c\uc744 \ub192\uac8c \uc801\uc7ac\ud55c \uacbd\uc6b0\uc5d0\ub294 \ub4a4\ucabd\uc744 \ud655\uc778\ud560 \uc218 \uc788\ub294 \ubc94\uc704\ub97c \ub9d0\ud55c\ub2e4)\uc758 \ub108\ube44 \ub2e4. \ub192\uc774: \ud654\ubb3c\uc790\ub3d9\ucc28\ub294 \uc9c0\uc0c1\uc73c\ub85c\ubd80\ud130 4\ubbf8\ud130(\ub3c4\ub85c\uad6c\uc870\uc758 \ubcf4\uc804\uacfc \ud1b5\ud589\uc758 \uc548\uc804\uc5d0 \uc9c0\uc7a5\uc774 \uc5c6\ub2e4\uace0 \uc778\uc815\ud558\uc5ec \uace0\uc2dc\ud55c \ub3c4\ub85c\ub178\uc120\uc758 \uacbd\uc6b0\uc5d0\ub294 4\ubbf8\ud130 20\uc13c\ud2f0\ubbf8\ud130), \uc18c\ud615 3\ub95c\uc790\ub3d9\ucc28\ub294 \uc9c0\uc0c1\uc73c\ub85c\ubd80\ud130 2\ubbf8\ud130 50\uc13c\ud2f0\ubbf8\ud130, \uc774\ub95c\uc790\ub3d9\ucc28\ub294 \uc9c0\uc0c1\uc73c\ub85c\ubd80\ud130 2\ubbf8\ud130\uc758 \ub192\uc774
+TR=\u0110i\u1ec1u 22 Ngh\u1ecb \u0111\u1ecbnh thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 (ti\u00eau chu\u1ea9n an to\u00e0n v\u1ec1 v\u1eadn h\u00e0nh): 'Ti\u00eau chu\u1ea9n an to\u00e0n v\u1ec1 v\u1eadn h\u00e0nh do Ngh\u1ecb \u0111\u1ecbnh c\u1ee7a T\u1ed5ng th\u1ed1ng quy \u0111\u1ecbnh' t\u1ea1i ph\u1ea7n ch\u00ednh kho\u1ea3n 1 \u0110i\u1ec1u 39 c\u1ee7a Lu\u1eadt c\u00f3 ngh\u0129a l\u00e0 c\u00e1c \u0111i\u1ec3m sau. 3. T\u1ea3i tr\u1ecdng ch\u1edf c\u1ee7a xe t\u1ea3i ph\u1ea3i trong ph\u1ea1m vi 110 ph\u1ea7n tr\u0103m t\u1ea3i tr\u1ecdng ch\u1edf theo c\u1ea5u t\u1ea1o v\u00e0 t\u00ednh n\u0103ng. 4. K\u00edch th\u01b0\u1edbc x\u1ebfp h\u00e0ng c\u1ee7a xe c\u01a1 gi\u1edbi (ch\u1ec9 \u00e1p d\u1ee5ng cho xe t\u1ea3i, xe hai b\u00e1nh v\u00e0 xe ba b\u00e1nh c\u1ee1 nh\u1ecf) kh\u00f4ng \u0111\u01b0\u1ee3c v\u01b0\u1ee3t qu\u00e1 ti\u00eau chu\u1ea9n theo ph\u00e2n lo\u1ea1i c\u00e1c m\u1ee5c sau. a. Chi\u1ec1u d\u00e0i: chi\u1ec1u d\u00e0i xe c\u1ed9ng th\u00eam 1/10 chi\u1ec1u d\u00e0i \u0111\u00f3. Tuy nhi\u00ean, xe hai b\u00e1nh l\u00e0 chi\u1ec1u d\u00e0i c\u1ee7a thi\u1ebft b\u1ecb ch\u1edf ng\u01b0\u1eddi ho\u1eb7c thi\u1ebft b\u1ecb ch\u1edf h\u00e0ng c\u1ed9ng th\u00eam 30 centimet. b. Chi\u1ec1u r\u1ed9ng: chi\u1ec1u r\u1ed9ng c\u1ee7a ph\u1ea1m vi c\u00f3 th\u1ec3 x\u00e1c nh\u1eadn ph\u00eda sau b\u1eb1ng g\u01b0\u01a1ng chi\u1ebfu h\u1eadu c\u1ee7a xe (tr\u01b0\u1eddng h\u1ee3p x\u1ebfp h\u00e0ng th\u1ea5p h\u01a1n chi\u1ec1u cao g\u01b0\u01a1ng chi\u1ebfu h\u1eadu th\u00ec l\u00e0 h\u00e0ng \u0111\u00f3, tr\u01b0\u1eddng h\u1ee3p x\u1ebfp h\u00e0ng cao h\u01a1n chi\u1ec1u cao g\u01b0\u01a1ng chi\u1ebfu h\u1eadu th\u00ec l\u00e0 ph\u1ea1m vi c\u00f3 th\u1ec3 x\u00e1c nh\u1eadn ph\u00eda sau). c. Chi\u1ec1u cao: xe t\u1ea3i l\u00e0 4 m\u00e9t t\u1eeb m\u1eb7t \u0111\u1ea5t (\u0111\u1ed1i v\u1edbi tuy\u1ebfn \u0111\u01b0\u1eddng \u0111\u01b0\u1ee3c c\u00f4ng b\u1ed1 c\u00f4ng nh\u1eadn kh\u00f4ng g\u00e2y tr\u1edf ng\u1ea1i cho vi\u1ec7c b\u1ea3o t\u1ed3n k\u1ebft c\u1ea5u \u0111\u01b0\u1eddng v\u00e0 an to\u00e0n l\u01b0u th\u00f4ng l\u00e0 4 m\u00e9t 20 centimet), xe ba b\u00e1nh c\u1ee1 nh\u1ecf l\u00e0 2 m\u00e9t 50 centimet t\u1eeb m\u1eb7t \u0111\u1ea5t, xe hai b\u00e1nh l\u00e0 chi\u1ec1u cao 2 m\u00e9t t\u1eeb m\u1eb7t \u0111\u1ea5t.
+
+N=626
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95\uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c 18 \u2460 \uc18c\ud615\uacac\uc778\ucc28 \uba74\ud5c8\ub294 \ucd1d\uc911\ub7c9 3.5\ud1a4\uc758 \uacac\uc778\ud615 \ud2b9\uc218\uc790\ub3d9\ucc28\ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub2e4. \u2461 \uc18c\ud615\uacac\uc778\ucc28 \uba74\ud5c8\ub294 \uc801\uc7ac\uc911\ub7c9 4\ud1a4\uc758 \ud654\ubb3c\uc790\ub3d9\ucc28\ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub2e4. \u2462 \uad6c\ub09c\ucc28 \uba74\ud5c8\ub294 \uc2b9\ucc28\uc815\uc6d0 10\uba85 \uc774\ud558\uc758 \uc2b9\ud569\uc790\ub3d9\ucc28\ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub2e4. \u2463 \ub300\ud615 \uacac\uc778\ucc28 \uba74\ud5c8\ub294 \uc801\uc7ac\uc911\ub7c9 4\ud1a4\uc758 \ud654\ubb3c\uc790\ub3d9\ucc28\ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub2e4.
+TR=Ph\u1ee5 l\u1ee5c 18 Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 \u2460 Gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 nh\u1ecf c\u00f3 th\u1ec3 l\u00e1i xe c\u01a1 gi\u1edbi \u0111\u1eb7c bi\u1ec7t lo\u1ea1i k\u00e9o c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng 3,5 t\u1ea5n. \u2461 Gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 nh\u1ecf c\u00f3 th\u1ec3 l\u00e1i xe t\u1ea3i c\u00f3 t\u1ea3i tr\u1ecdng ch\u1edf 4 t\u1ea5n. \u2462 Gi\u1ea5y ph\u00e9p xe c\u1ee9u h\u1ed9 c\u00f3 th\u1ec3 l\u00e1i xe kh\u00e1ch c\u00f3 s\u1ee9c ch\u1ee9a t\u1eeb 10 ng\u01b0\u1eddi tr\u1edf xu\u1ed1ng. \u2463 Gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 l\u1edbn c\u00f3 th\u1ec3 l\u00e1i xe t\u1ea3i c\u00f3 t\u1ea3i tr\u1ecdng ch\u1edf 4 t\u1ea5n.
+
+N=627
+KO=\ub300\ud615\ucc28\ub294 \uace0\uc18d \uc8fc\ud589 \uc2dc\uc5d0 \ucc28\uccb4\uac00 \ud754\ub4e4\ub9ac\uae30 \ub54c\ubb38\uc5d0 \uc21c\uac04\uc801\uc73c\ub85c \uc9c1\uc9c4 \uc548\uc815\uc131\uc774 \ub098\ube60\uc9c0\ub294 \uacbd\uc6b0\uac00 \uc788\uc73c\uba70, \ub354\uc6b1\uc774 \uc6b4\uc804 \uc11d \ub192\uae30 \ub54c\ubb38\uc5d0 \ubc24\uc774\ub098 \ud3ed\uc6b0, \uc548\uac1c \ub4f1 \uae30\uc0c1\uc774 \ub098\uc060 \ub54c\uc5d0\ub294 \ucc28\uc758 \ubc14\ub85c \uc55e\ub9cc \ubcf4\uace0 \uc6b4\uc804\ud558\uac8c \ub418\ubbc0\ub85c \ub354\uc6b1 \uc9c1\uc9c4 \uc548\uc815\uc131 \uc774 \ub098\ube60\uc9c4\ub2e4. \uc9c1\uc9c4 \uc548\uc815\uc131\uc744 \ub192\uc774\uae30 \uc704\ud574\uc11c\ub294 \uac00\uae09\uc801 \uc8fc\uc2dc\uc810\uc744 \uba40\ub9ac \ub450\uace0 \ud578\ub4e4 \uc870\uc791\uc5d0 \uc2e0\uc911\uc744 \uae30\ud574\uc57c \ud55c\ub2e4.
+TR=Xe c\u1ee1 l\u1edbn khi ch\u1ea1y t\u1ed1c \u0111\u1ed9 cao th\u00e2n xe b\u1ecb rung l\u1eafc n\u00ean c\u00f3 tr\u01b0\u1eddng h\u1ee3p t\u00ednh \u1ed5n \u0111\u1ecbnh \u0111i th\u1eb3ng t\u1ee9c th\u1eddi b\u1ecb k\u00e9m \u0111i, h\u01a1n n\u1eefa do gh\u1ebf l\u00e1i cao n\u00ean khi th\u1eddi ti\u1ebft x\u1ea5u nh\u01b0 ban \u0111\u00eam, m\u01b0a l\u1edbn, s\u01b0\u01a1ng m\u00f9 v.v. ch\u1ec9 nh\u00ecn th\u1ea5y ngay ph\u00eda tr\u01b0\u1edbc xe khi l\u00e1i n\u00ean t\u00ednh \u1ed5n \u0111\u1ecbnh \u0111i th\u1eb3ng c\u00e0ng k\u00e9m \u0111i. \u0110\u1ec3 n\u00e2ng cao t\u00ednh \u1ed5n \u0111\u1ecbnh \u0111i th\u1eb3ng, c\u1ea7n \u0111\u1eb7t \u0111i\u1ec3m nh\u00ecn c\u00e0ng xa c\u00e0ng t\u1ed1t v\u00e0 th\u1eadn tr\u1ecdng trong thao t\u00e1c v\u00f4 l\u0103ng.
+
+N=628
+KO=\uc790\ub3d9\ucc28 \ubc0f \uc790\ub3d9\ucc28\ubd80\ud488\uc758 \uc131\ub2a5\uacfc \uae30\uc900\uc5d0 \uad00\ud55c \uaddc\uce59 \uc81c4\uc870(\uae38\uc774\u318d\ub108\ube44 \ubc0f \ub192\uc774) \u2460 \uc790\ub3d9\ucc28\uc758 \uae38\uc774\u318d\ub108\ube44 \ubc0f \ub192\uc774\ub294  \ub2e4\uc74c\uc758 \uae30\uc900\uc744 \ucd08\uacfc\ud558\uc5ec\uc11c\ub294 \uc544\ub2c8 \ub41c\ub2e4.
+TR=\u0110i\u1ec1u 4 Quy t\u1eafc v\u1ec1 t\u00ednh n\u0103ng v\u00e0 ti\u00eau chu\u1ea9n c\u1ee7a xe c\u01a1 gi\u1edbi v\u00e0 ph\u1ee5 t\u00f9ng xe c\u01a1 gi\u1edbi (Chi\u1ec1u d\u00e0i, chi\u1ec1u r\u1ed9ng v\u00e0 chi\u1ec1u cao) \u2460 Chi\u1ec1u d\u00e0i, chi\u1ec1u r\u1ed9ng v\u00e0 chi\u1ec1u cao c\u1ee7a xe c\u01a1 gi\u1edbi kh\u00f4ng \u0111\u01b0\u1ee3c v\u01b0\u1ee3t qu\u00e1 ti\u00eau chu\u1ea9n sau.
+
+N=629
+KO=\ucc28\ub0b4 \uc18c\ub780\ud589\uc704 \ubc29\uce58\uc6b4\uc804\uc758 \uacbd\uc6b0 \ubc94\uce59\uae08 10\ub9cc \uc6d0\uc5d0 \ubc8c\uc810 40\uc810\uc774 \ubd80\uacfc\ub41c\ub2e4. \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c49\uc870(\ubaa8\ub4e0 \uc6b4\uc804\uc790\uc758 \uc900\uc218\uc0ac \ud56d \ub4f1), \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\ub839 (\ubcc4\ud45c 8)\ubc94\uce59\ud589\uc704 \ubc0f \ubc94\uce59\uae08\uc561(\uc6b4\uc804\uc790), \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 (\ubcc4\ud45c 28) \uc6b4\uc804\uba74\ud5c8 \ucde8\uc18c\u2981 \uc815\uc9c0\ucc98\ubd84 \uae30\uc900
+TR=Tr\u01b0\u1eddng h\u1ee3p l\u00e1i xe \u0111\u1ec3 m\u1eb7c h\u00e0nh vi g\u00e2y \u1ed3n \u00e0o trong xe b\u1ecb ph\u1ea1t ti\u1ec1n 100.000 won c\u00f9ng 40 \u0111i\u1ec3m ph\u1ea1t. \u0110i\u1ec1u 49 Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 (\u0111i\u1ec1u c\u1ea7n tu\u00e2n th\u1ee7 c\u1ee7a m\u1ecdi ng\u01b0\u1eddi l\u00e1i xe v.v.), Ngh\u1ecb \u0111\u1ecbnh thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 (Ph\u1ee5 l\u1ee5c 8) h\u00e0nh vi vi ph\u1ea1m v\u00e0 m\u1ee9c ph\u1ea1t ti\u1ec1n (ng\u01b0\u1eddi l\u00e1i xe), Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 (Ph\u1ee5 l\u1ee5c 28) ti\u00eau chu\u1ea9n x\u1eed ph\u1ea1t h\u1ee7y/\u0111\u00ecnh ch\u1ec9 gi\u1ea5y ph\u00e9p l\u00e1i xe.
+
+N=630
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c49\uc870 \uc81c1\ud56d \uc81c12\ud638, \uc2dc\ud589\ub839 \ubcc4\ud45c8, 4\ud1a4 \ucd08\uacfc \ud654\ubb3c\uc790\ub3d9\ucc28\uc758 \ud654\ubb3c \uc801\uc7ac\ud568\uc5d0 \uc2b9\uac1d\uc774 \ud0d1\uc2b9\ud558\uba74 \ubc94\uce59\uae08  5\ub9cc \uc6d0\uc774\ub2e4.
+TR=\u0110i\u1ec3m 12 kho\u1ea3n 1 \u0110i\u1ec1u 49 Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9, Ph\u1ee5 l\u1ee5c 8 Ngh\u1ecb \u0111\u1ecbnh thi h\u00e0nh: N\u1ebfu h\u00e0nh kh\u00e1ch l\u00ean th\u00f9ng ch\u1edf h\u00e0ng c\u1ee7a xe t\u1ea3i tr\u00ean 4 t\u1ea5n th\u00ec b\u1ecb ph\u1ea1t ti\u1ec1n 50.000 won.
+
+N=631
+KO=\uace0\uc18d\ubc84\uc2a4\uac00 \ubc24\uc5d0 \ud1b5\ud589\ud560 \ub54c \ucf1c\uc57c \ud560 \ub4f1\ud654\ub294 \uc804\uc870\ub4f1, \ucc28\ud3ed\ub4f1, \ubbf8\ub4f1, \ubc88\ud638\ub4f1, \uc2e4\ub0b4\uc870\uba85\ub4f1\uc774\ub2e4.
+TR=\u0110\u00e8n m\u00e0 xe bu\u00fdt cao t\u1ed1c ph\u1ea3i b\u1eadt khi l\u01b0u th\u00f4ng v\u00e0o ban \u0111\u00eam l\u00e0 \u0111\u00e8n chi\u1ebfu s\u00e1ng ph\u00eda tr\u01b0\u1edbc (\u0111\u00e8n \u0111\u1ea7u), \u0111\u00e8n k\u00edch th\u01b0\u1edbc xe (\u0111\u00e8n \u0111\u1ecbnh v\u1ecb), \u0111\u00e8n h\u1eadu, \u0111\u00e8n bi\u1ec3n s\u1ed1, \u0111\u00e8n chi\u1ebfu s\u00e1ng trong xe.
+
+N=632
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c39\uc870(\uc2b9\ucc28 \ub610\ub294 \uc801\uc7ac\uc758 \ubc29\ubc95\uacfc \uc81c\ud55c) \ubaa8\ub4e0 \ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uc601\uc720\uc544\ub098 \ub3d9\ubb3c\uc744 \uc548\uace0 \uc6b4\uc804 \uc7a5\uce58\ub97c \uc870\uc791\ud558\uac70\ub098 \uc6b4\uc804\uc11d \uc8fc\uc704\uc5d0 \ubb3c\uac74\uc744 \uc2e3\ub294 \ub4f1 \uc548\uc804\uc5d0 \uc9c0\uc7a5\uc744 \uc904 \uc6b0\ub824 \uac00 \uc788\ub294 \uc0c1\ud0dc\ub85c \uc6b4\uc804\ud558\uc5ec\uc11c\ub294 \uc544\ub2c8 \ub41c\ub2e4.
+TR=\u0110i\u1ec1u 39 Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 (ph\u01b0\u01a1ng ph\u00e1p v\u00e0 gi\u1edbi h\u1ea1n v\u1ec1 ch\u1edf ng\u01b0\u1eddi ho\u1eb7c ch\u1edf h\u00e0ng): Ng\u01b0\u1eddi l\u00e1i m\u1ecdi xe kh\u00f4ng \u0111\u01b0\u1ee3c l\u00e1i xe trong tr\u1ea1ng th\u00e1i c\u00f3 nguy c\u01a1 g\u00e2y tr\u1edf ng\u1ea1i cho an to\u00e0n nh\u01b0 b\u1ebf tr\u1ebb nh\u1ecf ho\u1eb7c \u0111\u1ed9ng v\u1eadt m\u00e0 thao t\u00e1c thi\u1ebft b\u1ecb l\u00e1i, ho\u1eb7c ch\u1ea5t \u0111\u1ed3 v\u1eadt xung quanh gh\u1ebf l\u00e1i.
+
+N=633
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\ub839 \uc81c22\uc870(\uc6b4\ud589\uc0c1\uc758 \uc548\uc804\uae30\uc900)
+TR=\u0110i\u1ec1u 22 Ngh\u1ecb \u0111\u1ecbnh thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 (ti\u00eau chu\u1ea9n an to\u00e0n v\u1ec1 v\u1eadn h\u00e0nh).
+
+N=634
+KO=\uc801\uc7ac\uc911\ub7c9 12\ud1a4 \ubbf8\ub9cc\uc758 \ud654\ubb3c\uc790\ub3d9\ucc28\ub294 \uc81c1\uc885 \ubcf4\ud1b5\uba74\ud5c8\ub85c \uc6b4\uc804\uc774 \uac00\ub2a5\ud558\uace0 \uc801\uc7ac\uc911\ub7c9 12\ud1a4 \uc774\uc0c1\uc758 \ud654\ubb3c\uc790\ub3d9\ucc28\ub294 \uc81c1\uc885  \ub300\ud615\uba74\ud5c8\ub97c \ucde8\ub4dd\ud558\uc5ec\uc57c \uc6b4\uc804\uc774 \uac00\ub2a5\ud558\ub2e4.
+TR=Xe t\u1ea3i c\u00f3 t\u1ea3i tr\u1ecdng ch\u1edf d\u01b0\u1edbi 12 t\u1ea5n c\u00f3 th\u1ec3 l\u00e1i b\u1eb1ng gi\u1ea5y ph\u00e9p h\u1ea1ng 1 th\u00f4ng th\u01b0\u1eddng, v\u00e0 xe t\u1ea3i c\u00f3 t\u1ea3i tr\u1ecdng ch\u1edf t\u1eeb 12 t\u1ea5n tr\u1edf l\u00ean ph\u1ea3i l\u1ea5y gi\u1ea5y ph\u00e9p h\u1ea1ng 1 l\u1edbn m\u1edbi l\u00e1i \u0111\u01b0\u1ee3c.
+
+N=635
+KO=(\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c 18 \ube44\uace0 3) \ucd1d\uc911\ub7c9 750kg \ucd08\uacfc 3\ud1a4 \uc774\ud558\uc758 \ud53c\uacac\uc778\uc790\ub3d9\ucc28\ub97c \uacac\uc778\ud558\uae30 \uc704\ud574\uc11c\ub294 \uacac\uc778\ud558\ub294  \uc790\ub3d9\ucc28\ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \uba74\ud5c8\uc640 \uc18c\ud615\uacac\uc778\ucc28\uba74\ud5c8 \ub610\ub294 \ub300\ud615\uacac\uc778\ucc28\uba74\ud5c8\ub97c \uac00\uc9c0\uace0 \uc788\uc5b4\uc57c \ud55c\ub2e4.
+TR=(Ghi ch\u00fa 3 Ph\u1ee5 l\u1ee5c 18 Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9) \u0110\u1ec3 k\u00e9o xe \u0111\u01b0\u1ee3c k\u00e9o c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng tr\u00ean 750kg \u0111\u1ebfn 3 t\u1ea5n, ph\u1ea3i c\u00f3 gi\u1ea5y ph\u00e9p c\u00f3 th\u1ec3 l\u00e1i xe k\u00e9o v\u00e0 gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 nh\u1ecf ho\u1eb7c gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 l\u1edbn.
+
+N=636
+KO=\uc5f0\uc2b5\uba74\ud5c8\ub85c\ub294 \ud53c\uacac\uc778\uc790\ub3d9\ucc28\ub97c \uacac\uc778\ud560 \uc218 \uc5c6\ub2e4.
+TR=Kh\u00f4ng th\u1ec3 k\u00e9o xe \u0111\u01b0\u1ee3c k\u00e9o b\u1eb1ng gi\u1ea5y ph\u00e9p t\u1eadp l\u00e1i.
+
+N=637
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95\uc2dc\ud589\uaddc\uce59 \uc81c20\uc870, \ucd1d\uc911\ub7c9 2\ucc9c\ud0ac\ub85c\uadf8\ub7a8 \ubbf8\ub9cc\uc778 \uc790\ub3d9\ucc28\ub97c \ucd1d\uc911\ub7c9\uc774 \uadf8\uc758 3\ubc30 \uc774\uc0c1\uc778 \uc790\ub3d9\ucc28\ub85c \uacac\uc778\ud558\ub294  \uacbd\uc6b0\uc5d0\ub294 \ub9e4\uc2dc 30\ud0ac\ub85c\ubbf8\ud130\uc774\ub2e4.
+TR=\u0110i\u1ec1u 20 Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9, tr\u01b0\u1eddng h\u1ee3p k\u00e9o xe c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng d\u01b0\u1edbi 2.000 kil\u00f4gam b\u1eb1ng xe c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng t\u1eeb 3 l\u1ea7n tr\u1edf l\u00ean c\u1ee7a xe \u0111\u00f3 th\u00ec l\u00e0 30 kil\u00f4m\u00e9t m\u1ed7i gi\u1edd.
+
+N=638
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \uc81c19\uc870 - \ud3b8\ub3c4 2\ucc28\ub85c \uc774\uc0c1 \uace0\uc18d\ub3c4\ub85c\uc5d0\uc11c\uc758 \ucd5c\uace0\uc18d\ub3c4\ub294 \ub9e4\uc2dc 100\ud0ac\ub85c\ubbf8\ud130[\ud654\ubb3c\uc790\ub3d9\ucc28(\uc801\uc7ac\uc911\ub7c9 1.5\ud1a4\uc744 \ucd08\uacfc\ud558\ub294 \uacbd\uc6b0\uc5d0 \ud55c\ud55c\ub2e4. \uc774\ud558 \uc774 \ud638\uc5d0\uc11c \uac19\ub2e4)\u318d\ud2b9\uc218\uc790\ub3d9\ucc28\u318d\uc704\ud5d8\ubb3c\uc6b4\ubc18\uc790\ub3d9\ucc28(\ubcc4\ud45c 9 (\uc8fc) 6\uc5d0 \ub530\ub978 \uc704\ud5d8\ubb3c \ub4f1\uc744 \uc6b4\ubc18\ud558\ub294 \uc790\ub3d9\ucc28\ub97c \ub9d0\ud55c\ub2e4. \uc774\ud558 \uc774 \ud638\uc5d0\uc11c \uac19\ub2e4) \ubc0f \uac74\uc124\uae30\uacc4\uc758 \ucd5c\uace0\uc18d\ub3c4\ub294 \ub9e4\uc2dc 80\ud0ac\ub85c\ubbf8\ud130], \ucd5c\uc800\uc18d\ub3c4\ub294 \ub9e4\uc2dc 50\ud0ac\ub85c\ubbf8\ud130 \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59\uc81c20\uc870 - \uacac\uc778\uc790\ub3d9\ucc28\uac00 \uc544\ub2cc \uc790\ub3d9\ucc28\ub85c \ub2e4\ub978 \uc790\ub3d9\ucc28\ub97c \uacac\uc778\ud558\uc5ec \ub3c4\ub85c(\uace0\uc18d\ub3c4\ub85c\ub97c \uc81c\uc678\ud55c\ub2e4)\ub97c \ud1b5\ud589\ud558\ub294 \ub54c\uc758 \uc18d\ub3c4\ub294 \uc81c19\uc870\uc5d0 \ubd88\uad6c\ud558\uace0 \ub2e4\uc74c \uac01 \ud638\uc5d0\uc11c \uc815\ud558\ub294 \ubc14\uc5d0 \uc758\ud55c\ub2e4. 1. \ucd1d\uc911\ub7c9 2\ucc9c\ud0ac\ub85c\uadf8\ub7a8 \ubbf8\ub9cc\uc778 \uc790\ub3d9\ucc28\ub97c \ucd1d\uc911\ub7c9\uc774 \uadf8\uc758 3\ubc30 \uc774\uc0c1\uc778 \uc790\ub3d9\ucc28\ub85c \uacac\uc778\ud558\ub294 \uacbd\uc6b0\uc5d0\ub294 \ub9e4\uc2dc 30\ud0ac\ub85c\ubbf8\ud130 \uc774\ub0b4 2. \uc81c1\ud638 \uc678\uc758 \uacbd\uc6b0 \ubc0f \uc774\ub95c\uc790\ub3d9\ucc28\uac00 \uacac\uc778\ud558\ub294 \uacbd\uc6b0\uc5d0\ub294 \ub9e4\uc2dc 25\ud0ac\ub85c\ubbf8\ud130 \uc774\ub0b4 \uac19\uc740\ubc95 \uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c18 - \ud53c\uacac\uc778\uc790\ub3d9\ucc28\ub294 \uc81c1\uc885 \ub300\ud615\uba74\ud5c8, \uc81c1\uc885 \ubcf4\ud1b5\uba74\ud5c8 \ub610\ub294 \uc81c2\uc885 \ubcf4\ud1b5\uba74\ud5c8\ub97c \uac00\uc9c0\uace0 \uc788\ub294 \uc0ac\ub78c\uc774 \uadf8 \uba74\ud5c8\ub85c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \uc790\ub3d9\ucc28(\u300c\uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\u300d \uc81c3\uc870\uc5d0 \ub530\ub978 \uc774\ub95c\uc790\ub3d9\ucc28\ub294 \uc81c\uc678\ud55c\ub2e4)\ub85c \uacac\uc778\ud560 \uc218 \uc788\ub2e4. \uc774 \uacbd\uc6b0, \ucd1d\uc911\ub7c9 750\ud0ac\ub85c\uadf8\ub7a8 \uc744 \ucd08\uacfc\ud558\ub294 3\ud1a4 \uc774\ud558\uc758 \ud53c\uacac\uc778\uc790\ub3d9\ucc28\ub97c \uacac\uc778\ud558\uae30 \uc704\ud574\uc11c\ub294 \uacac\uc778\ud558\ub294 \uc790\ub3d9\ucc28\ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \uba74\ud5c8\uc640 \uc18c\ud615\uacac\uc778\ucc28\uba74 \ud5c8 \ub610\ub294 \ub300\ud615\uacac\uc778\ucc28\uba74\ud5c8\ub97c \uac00\uc9c0\uace0 \uc788\uc5b4\uc57c \ud558\uace0, 3\ud1a4\uc744 \ucd08\uacfc\ud558\ub294 \ud53c\uacac\uc778\uc790\ub3d9\ucc28\ub97c \uacac\uc778\ud558\uae30 \uc704\ud574\uc11c\ub294 \uacac\uc778\ud558\ub294 \uc790\ub3d9\ucc28 \ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \uba74\ud5c8\uc640 \ub300\ud615\uacac\uc778\ucc28\uba74\ud5c8\ub97c \uac00\uc9c0\uace0 \uc788\uc5b4\uc57c \ud55c\ub2e4.
+TR=\u0110i\u1ec1u 19 Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 - T\u1ed1c \u0111\u1ed9 t\u1ed1i \u0111a tr\u00ean \u0111\u01b0\u1eddng cao t\u1ed1c t\u1eeb 2 l\u00e0n m\u1ed7i chi\u1ec1u tr\u1edf l\u00ean l\u00e0 100 kil\u00f4m\u00e9t m\u1ed7i gi\u1edd [t\u1ed1c \u0111\u1ed9 t\u1ed1i \u0111a c\u1ee7a xe t\u1ea3i (ch\u1ec9 trong tr\u01b0\u1eddng h\u1ee3p t\u1ea3i tr\u1ecdng ch\u1edf v\u01b0\u1ee3t qu\u00e1 1,5 t\u1ea5n; d\u01b0\u1edbi \u0111\u00e2y trong \u0111i\u1ec3m n\u00e0y c\u0169ng v\u1eady), xe chuy\u00ean d\u1ee5ng, xe ch\u1edf v\u1eadt nguy hi\u1ec3m (ch\u1ec9 xe ch\u1edf v\u1eadt nguy hi\u1ec3m v.v. theo ghi ch\u00fa 6 Ph\u1ee5 l\u1ee5c 9; d\u01b0\u1edbi \u0111\u00e2y trong \u0111i\u1ec3m n\u00e0y c\u0169ng v\u1eady) v\u00e0 m\u00e1y x\u00e2y d\u1ef1ng l\u00e0 80 kil\u00f4m\u00e9t m\u1ed7i gi\u1edd], t\u1ed1c \u0111\u1ed9 t\u1ed1i thi\u1ec3u l\u00e0 50 kil\u00f4m\u00e9t m\u1ed7i gi\u1edd. \u0110i\u1ec1u 20 Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 - T\u1ed1c \u0111\u1ed9 khi xe kh\u00f4ng ph\u1ea3i xe k\u00e9o k\u00e9o xe kh\u00e1c l\u01b0u th\u00f4ng tr\u00ean \u0111\u01b0\u1eddng (tr\u1eeb \u0111\u01b0\u1eddng cao t\u1ed1c) th\u00ec b\u1ea5t k\u1ec3 \u0110i\u1ec1u 19, theo quy \u0111\u1ecbnh t\u1ea1i c\u00e1c \u0111i\u1ec3m sau. 1. Tr\u01b0\u1eddng h\u1ee3p k\u00e9o xe c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng d\u01b0\u1edbi 2.000 kil\u00f4gam b\u1eb1ng xe c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng t\u1eeb 3 l\u1ea7n tr\u1edf l\u00ean c\u1ee7a xe \u0111\u00f3 th\u00ec trong ph\u1ea1m vi 30 kil\u00f4m\u00e9t m\u1ed7i gi\u1edd. 2. Tr\u01b0\u1eddng h\u1ee3p ngo\u00e0i \u0111i\u1ec3m 1 v\u00e0 tr\u01b0\u1eddng h\u1ee3p xe hai b\u00e1nh k\u00e9o th\u00ec trong ph\u1ea1m vi 25 kil\u00f4m\u00e9t m\u1ed7i gi\u1edd. Ph\u1ee5 l\u1ee5c 18 c\u00f9ng Th\u00f4ng t\u01b0 thi h\u00e0nh - Xe \u0111\u01b0\u1ee3c k\u00e9o c\u00f3 th\u1ec3 \u0111\u01b0\u1ee3c k\u00e9o b\u1eb1ng xe (tr\u1eeb xe hai b\u00e1nh theo \u0110i\u1ec1u 3 \u300cLu\u1eadt Qu\u1ea3n l\u00fd xe c\u01a1 gi\u1edbi\u300d) m\u00e0 ng\u01b0\u1eddi c\u00f3 gi\u1ea5y ph\u00e9p h\u1ea1ng 1 l\u1edbn, gi\u1ea5y ph\u00e9p h\u1ea1ng 1 th\u00f4ng th\u01b0\u1eddng ho\u1eb7c gi\u1ea5y ph\u00e9p h\u1ea1ng 2 th\u00f4ng th\u01b0\u1eddng c\u00f3 th\u1ec3 l\u00e1i b\u1eb1ng gi\u1ea5y ph\u00e9p \u0111\u00f3. Trong tr\u01b0\u1eddng h\u1ee3p n\u00e0y, \u0111\u1ec3 k\u00e9o xe \u0111\u01b0\u1ee3c k\u00e9o c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng tr\u00ean 750 kil\u00f4gam \u0111\u1ebfn 3 t\u1ea5n ph\u1ea3i c\u00f3 gi\u1ea5y ph\u00e9p c\u00f3 th\u1ec3 l\u00e1i xe k\u00e9o v\u00e0 gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 nh\u1ecf ho\u1eb7c gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 l\u1edbn, v\u00e0 \u0111\u1ec3 k\u00e9o xe \u0111\u01b0\u1ee3c k\u00e9o v\u01b0\u1ee3t qu\u00e1 3 t\u1ea5n ph\u1ea3i c\u00f3 gi\u1ea5y ph\u00e9p c\u00f3 th\u1ec3 l\u00e1i xe k\u00e9o v\u00e0 gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 l\u1edbn.
+
+N=639
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c18 \ucd1d\uc911\ub7c9 3.5\ud1a4 \uc774\ud558\uc758 \ud2b9\uc218\uc790\ub3d9\ucc28\ub294 \uc81c2\uc885 \ubcf4\ud1b5\uba74\ud5c8\ub85c \uc6b4\uc804\uc774 \uac00\ub2a5\ud558\ub2e4.
+TR=Ph\u1ee5 l\u1ee5c 18 Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9: Xe chuy\u00ean d\u1ee5ng c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng t\u1eeb 3,5 t\u1ea5n tr\u1edf xu\u1ed1ng c\u00f3 th\u1ec3 l\u00e1i b\u1eb1ng gi\u1ea5y ph\u00e9p h\u1ea1ng 2 th\u00f4ng th\u01b0\u1eddng.
+
+N=640
+KO=\uc18c\ud615\uacac\uc778\ucc28\uc758 \uc6b4\uc804\uc790\ub3c4 \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc0c1 \ubaa8\ub4e0 \uc6b4\uc804\uc790\uc758 \uc900\uc218\uc0ac\ud56d\uc744 \uc9c0\ucf1c\uc57c \ud558\uba70, \uc6b4\ud589 \uc2dc \uc18c\ud615\uacac\uc778\ucc28 \uba74\ud5c8\ub97c \ucde8\ub4dd\ud558 \uace0 \uc18c\uc9c0\ud558\uc5ec\uc57c \ud55c\ub2e4.
+TR=Ng\u01b0\u1eddi l\u00e1i xe k\u00e9o c\u1ee1 nh\u1ecf c\u0169ng ph\u1ea3i tu\u00e2n th\u1ee7 c\u00e1c \u0111i\u1ec1u c\u1ea7n tu\u00e2n th\u1ee7 c\u1ee7a m\u1ecdi ng\u01b0\u1eddi l\u00e1i xe theo Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9, v\u00e0 khi v\u1eadn h\u00e0nh ph\u1ea3i l\u1ea5y v\u00e0 mang theo gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 nh\u1ecf.
+
+N=641
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 [\ubcc4\ud45c 9] \ucc38\uc870
+TR=Xem [Ph\u1ee5 l\u1ee5c 9] Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9.
+
+N=642
+KO=\u2018jack knife\u2019\ub294 \uc816\uc740 \ub178\uba74 \ub4f1\uc758 \ub3c4\ub85c \ud658\uacbd\uc5d0\uc11c \ud2b8\ub799\ud130\uc758 \uc81c\ub3d9\ub825\uc774 \ud2b8\ub808\uc77c\ub7ec\uc758 \uc81c\ub3d9\ub825\ubcf4\ub2e4 \ud074 \ub54c \ubc1c\uc0dd\ud560 \uc218 \uc788\ub294 \ud604\uc0c1\uc73c\ub85c \ud2b8\ub808\uc77c\ub7ec\uc758 \uad00\uc131 \uc6b4\ub3d9\uc73c\ub85c \ud2b8\ub799\ud130\ub97c \ubc00\uace0 \ub098\uc544\uac00\uba74\uc11c \ud2b8\ub799\ud130\uc640 \ud2b8\ub808\uc77c\ub7ec\uc758 \uc5f0\uacb0\ubd80\uac00 \uae30\uc5ed\uc790\ucc98\ub7fc \uc811\ud788\ub294 \ud604\uc0c1\uc744 \ub9d0\ud55c\ub2e4. \u2018swing-out\u2019\uc740 \ubd88\uc0c1\uc758 \uc774\uc720\ub85c \ud2b8\ub808\uc77c\ub7ec\uc758 \ubc14\ud034\ub9cc \uc81c\ub3d9\ub418\ub294 \uacbd\uc6b0 \ud2b8\ub808\uc77c\ub7ec\uac00 \uc2dc\uacc4\ucd94\ucc98\ub7fc \uc88c\uc6b0\ub85c \ud754\ub4e4\ub9ac\ub294 \uc6b4\ub3d9\uc744 \ub73b\ud55c\ub2e4. \u2018hydroplaning\u2019\uc740 \ubb3c\uc5d0 \uc816\uc740 \ub178\uba74\uc744 \uace0\uc18d\uc73c\ub85c \ub2ec\ub9b4 \ub54c \ud0c0\uc774\uc5b4\uac00 \ub178\uba74\uacfc \uc811\ucd09\ud558\uc9c0 \uc54a\uc544 \uc870\uc885 \ub2a5\ub825\uc774 \uc0c1\uc2e4\ub418\uac70\ub098 \ub610\ub294 \ubd88\uac00\ub2a5\ud55c \uc0c1\ud0dc\ub97c \ub9d0\ud55c\ub2e4. \u2018vapor lock\u2019\uc740 \ube0c\ub808\uc774\ud06c\uc561\uc5d0 \uae30\ud3ec\uac00 \ubc1c\uc0dd\ud558\uc5ec \ube0c\ub808\uc774\ud06c \uac00 \uc81c\ub300\ub85c \uc791\ub3d9\ud558\uc9c0 \uc54a\uac8c \ub418\ub294 \ud604\uc0c1\uc744 \ub73b\ud55c\ub2e4.
+TR='jack knife' l\u00e0 hi\u1ec7n t\u01b0\u1ee3ng c\u00f3 th\u1ec3 x\u1ea3y ra trong m\u00f4i tr\u01b0\u1eddng \u0111\u01b0\u1eddng nh\u01b0 m\u1eb7t \u0111\u01b0\u1eddng \u01b0\u1edbt v.v. khi l\u1ef1c phanh c\u1ee7a xe \u0111\u1ea7u k\u00e9o (tractor) l\u1edbn h\u01a1n l\u1ef1c phanh c\u1ee7a r\u01a1-mo\u00f3c (trailer), l\u00e0 hi\u1ec7n t\u01b0\u1ee3ng ph\u1ea7n n\u1ed1i gi\u1eefa \u0111\u1ea7u k\u00e9o v\u00e0 r\u01a1-mo\u00f3c g\u1eadp l\u1ea1i nh\u01b0 h\u00ecnh ch\u1eef \u3131 khi r\u01a1-mo\u00f3c do chuy\u1ec3n \u0111\u1ed9ng qu\u00e1n t\u00ednh \u0111\u1ea9y \u0111\u1ea7u k\u00e9o ti\u1ebfn l\u00ean. 'swing-out' ch\u1ec9 chuy\u1ec3n \u0111\u1ed9ng r\u01a1-mo\u00f3c l\u1eafc l\u01b0 tr\u00e1i ph\u1ea3i nh\u01b0 con l\u1eafc \u0111\u1ed3ng h\u1ed3 khi v\u00ec l\u00fd do kh\u00f4ng r\u00f5 ch\u1ec9 b\u00e1nh c\u1ee7a r\u01a1-mo\u00f3c b\u1ecb phanh. 'hydroplaning' ch\u1ec9 tr\u1ea1ng th\u00e1i m\u1ea5t ho\u1eb7c kh\u00f4ng th\u1ec3 \u0111i\u1ec1u khi\u1ec3n do l\u1ed1p kh\u00f4ng ti\u1ebfp x\u00fac v\u1edbi m\u1eb7t \u0111\u01b0\u1eddng khi ch\u1ea1y t\u1ed1c \u0111\u1ed9 cao tr\u00ean m\u1eb7t \u0111\u01b0\u1eddng \u01b0\u1edbt. 'vapor lock' ch\u1ec9 hi\u1ec7n t\u01b0\u1ee3ng phanh kh\u00f4ng ho\u1ea1t \u0111\u1ed9ng \u0111\u00fang c\u00e1ch do b\u1ecdt kh\u00ed ph\u00e1t sinh trong d\u1ea7u phanh.
+
+N=643
+KO=\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 [\ubcc4\ud45c18] - \uc81c1\uc885 \ub300\ud615\uba74\ud5c8\ub85c \ub300\ud615\uacac\uc778\ucc28, \uc18c\ud615\uacac\uc778\ucc28, \uad6c\ub09c\ucc28\ub294 \uc6b4\uc804\ud560 \uc218 \uc5c6\ub2e4. - \ub300\ud615\uacac\uc778\ucc28 : \uacac\uc778\ud615 \ud2b9\uc218\uc790\ub3d9\ucc28, \uc81c2\uc885 \ubcf4\ud1b5\uba74\ud5c8\ub85c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \ucc28\ub7c9 - \uc18c\ud615\uacac\uc778\ucc28 : \ucd1d\uc911\ub7c9 3.5\ud1a4\uc774\ud558 \uacac\uc778\ud615 \ud2b9\uc218\uc790\ub3d9\ucc28, \uc81c2\uc885 \ubcf4\ud1b5\uba74\ud5c8\ub85c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \ucc28\ub7c9 - \ud53c\uacac\uc778\uc790\ub3d9\ucc28\ub294 \uc81c1\uc885 \ub300\ud615\uba74\ud5c8, \uc81c1\uc885 \ubcf4\ud1b5\uba74\ud5c8 \ub610\ub294 \uc81c2\uc885 \ubcf4\ud1b5\uba74\ud5c8\ub97c \uac00\uc9c0\uace0 \uc788\ub294 \uc0ac\ub78c\uc774 \uadf8 \uba74\ud5c8\ub85c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \uc790\ub3d9\ucc28(\u300c\uc790\ub3d9\ucc28\uad00\ub9ac\ubc95\u300d \uc81c3\uc870\uc5d0 \ub530\ub978 \uc774\ub95c\uc790\ub3d9\ucc28\ub294 \uc81c\uc678\ud55c\ub2e4)\ub85c \uacac\uc778\ud560 \uc218 \uc788\ub2e4. \uc774 \uacbd\uc6b0, \ucd1d\uc911\ub7c9 750\ud0ac\ub85c\uadf8\ub7a8 \uc744 \ucd08\uacfc\ud558\ub294 3\ud1a4 \uc774\ud558\uc758 \ud53c\uacac\uc778\uc790\ub3d9\ucc28\ub97c \uacac\uc778\ud558\uae30 \uc704\ud574\uc11c\ub294 \uacac\uc778\ud558\ub294 \uc790\ub3d9\ucc28\ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \uba74\ud5c8\uc640 \uc18c\ud615\uacac\uc778\ucc28\uba74 \ud5c8 \ub610\ub294 \ub300\ud615\uacac\uc778\ucc28\uba74\ud5c8\ub97c \uac00\uc9c0\uace0 \uc788\uc5b4\uc57c \ud558\uace0, 3\ud1a4\uc744 \ucd08\uacfc\ud558\ub294 \ud53c\uacac\uc778\uc790\ub3d9\ucc28\ub97c \uacac\uc778\ud558\uae30 \uc704\ud574\uc11c\ub294 \uacac\uc778\ud558\ub294 \uc790\ub3d9\ucc28 \ub97c \uc6b4\uc804\ud560 \uc218 \uc788\ub294 \uba74\ud5c8\uc640 \ub300\ud615\uacac\uc778\ucc28\uba74\ud5c8\ub97c \uac00\uc9c0\uace0 \uc788\uc5b4\uc57c \ud55c\ub2e4.
+TR=[Ph\u1ee5 l\u1ee5c 18] Th\u00f4ng t\u01b0 thi h\u00e0nh Lu\u1eadt Giao th\u00f4ng \u0111\u01b0\u1eddng b\u1ed9 - Kh\u00f4ng th\u1ec3 l\u00e1i xe k\u00e9o c\u1ee1 l\u1edbn, xe k\u00e9o c\u1ee1 nh\u1ecf, xe c\u1ee9u h\u1ed9 b\u1eb1ng gi\u1ea5y ph\u00e9p h\u1ea1ng 1 l\u1edbn. - Xe k\u00e9o c\u1ee1 l\u1edbn: xe c\u01a1 gi\u1edbi \u0111\u1eb7c bi\u1ec7t lo\u1ea1i k\u00e9o, xe c\u00f3 th\u1ec3 l\u00e1i b\u1eb1ng gi\u1ea5y ph\u00e9p h\u1ea1ng 2 th\u00f4ng th\u01b0\u1eddng. - Xe k\u00e9o c\u1ee1 nh\u1ecf: xe c\u01a1 gi\u1edbi \u0111\u1eb7c bi\u1ec7t lo\u1ea1i k\u00e9o c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng t\u1eeb 3,5 t\u1ea5n tr\u1edf xu\u1ed1ng, xe c\u00f3 th\u1ec3 l\u00e1i b\u1eb1ng gi\u1ea5y ph\u00e9p h\u1ea1ng 2 th\u00f4ng th\u01b0\u1eddng. - Xe \u0111\u01b0\u1ee3c k\u00e9o c\u00f3 th\u1ec3 \u0111\u01b0\u1ee3c k\u00e9o b\u1eb1ng xe (tr\u1eeb xe hai b\u00e1nh theo \u0110i\u1ec1u 3 \u300cLu\u1eadt Qu\u1ea3n l\u00fd xe c\u01a1 gi\u1edbi\u300d) m\u00e0 ng\u01b0\u1eddi c\u00f3 gi\u1ea5y ph\u00e9p h\u1ea1ng 1 l\u1edbn, gi\u1ea5y ph\u00e9p h\u1ea1ng 1 th\u00f4ng th\u01b0\u1eddng ho\u1eb7c gi\u1ea5y ph\u00e9p h\u1ea1ng 2 th\u00f4ng th\u01b0\u1eddng c\u00f3 th\u1ec3 l\u00e1i b\u1eb1ng gi\u1ea5y ph\u00e9p \u0111\u00f3. Trong tr\u01b0\u1eddng h\u1ee3p n\u00e0y, \u0111\u1ec3 k\u00e9o xe \u0111\u01b0\u1ee3c k\u00e9o c\u00f3 t\u1ed5ng tr\u1ecdng l\u01b0\u1ee3ng tr\u00ean 750 kil\u00f4gam \u0111\u1ebfn 3 t\u1ea5n ph\u1ea3i c\u00f3 gi\u1ea5y ph\u00e9p c\u00f3 th\u1ec3 l\u00e1i xe k\u00e9o v\u00e0 gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 nh\u1ecf ho\u1eb7c gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 l\u1edbn, v\u00e0 \u0111\u1ec3 k\u00e9o xe \u0111\u01b0\u1ee3c k\u00e9o v\u01b0\u1ee3t qu\u00e1 3 t\u1ea5n ph\u1ea3i c\u00f3 gi\u1ea5y ph\u00e9p c\u00f3 th\u1ec3 l\u00e1i xe k\u00e9o v\u00e0 gi\u1ea5y ph\u00e9p xe k\u00e9o c\u1ee1 l\u1edbn.
+
+N=644
+KO=\ud2b8\ub808\uc77c\ub7ec\ub294 \uc88c\ud68c\uc804 \uc2dc \uc2b9\uc6a9\ucc28\uc640 \ube44\uc2b7\ud55c \ud68c\uc804\uac01\uc744 \uc720\uc9c0\ud558\uac8c \ub418\uba74 \ub4b7\ubc14\ud034\uc5d0 \uc758\ud55c \uc88c\ud68c\uc804 \ub300\uae30\ucc28\ub7c9\uc744 \ucda9\uaca9\ud558\uac8c \ub418\ubbc0 \ub85c \uc2b9\uc6a9\ucc28\ubcf4\ub2e4 \ub113\uac8c \ud68c\uc804\ud558\uc5ec\uc57c \ud558\uba70 \ub0b4\ub9ac\ub9c9\uae38\uc5d0\uc11c \uae30\uc5b4\ub97c \uc911\ub9bd\uc5d0 \ub450\ub294 \uacbd\uc6b0 \ub300\ud615\uc0ac\uace0\uc758 \uc6d0\uc778\uc774 \ub41c\ub2e4.
+TR=N\u1ebfu r\u01a1-mo\u00f3c gi\u1eef g\u00f3c quay t\u01b0\u01a1ng t\u1ef1 xe con khi r\u1ebd tr\u00e1i th\u00ec s\u1ebd va ch\u1ea1m v\u1edbi xe \u0111ang ch\u1edd r\u1ebd tr\u00e1i b\u1eb1ng b\u00e1nh sau, n\u00ean ph\u1ea3i quay r\u1ed9ng h\u01a1n xe con, v\u00e0 tr\u01b0\u1eddng h\u1ee3p \u0111\u1ec3 s\u1ed1 \u1edf v\u1ecb tr\u00ed trung gian (mo) khi xu\u1ed1ng d\u1ed1c s\u1ebd l\u00e0 nguy\u00ean nh\u00e2n g\u00e2y tai n\u1ea1n l\u1edbn.
+
+
+codex
+[{"n":632,"field":"e","severity":"major","issue":"‘영유아나 동물을 안고 운전장치를 조작하는 행위’가 ‘영유아나 동물이 운전장치를 조작한다’는 뜻으로 읽히는 심각한 비문이다.","suggestion":"Điều 39 Luật Giao thông đường bộ (phương pháp và giới hạn chở người hoặc hàng hóa): Người điều khiển phương tiện không được lái xe trong tình trạng có nguy cơ gây mất an toàn, chẳng hạn như vừa bế trẻ sơ sinh, trẻ nhỏ hoặc động vật vừa thao tác thiết bị điều khiển, hoặc để đồ vật xung quanh ghế lái."}]
+tokens used
+35,730
+[{"n":632,"field":"e","severity":"major","issue":"‘영유아나 동물을 안고 운전장치를 조작하는 행위’가 ‘영유아나 동물이 운전장치를 조작한다’는 뜻으로 읽히는 심각한 비문이다.","suggestion":"Điều 39 Luật Giao thông đường bộ (phương pháp và giới hạn chở người hoặc hàng hóa): Người điều khiển phương tiện không được lái xe trong tình trạng có nguy cơ gây mất an toàn, chẳng hạn như vừa bế trẻ sơ sinh, trẻ nhỏ hoặc động vật vừa thao tác thiết bị điều khiển, hoặc để đồ vật xung quanh ghế lái."}]

@@ -1,0 +1,126 @@
+Reading additional input from stdin...
+2026-10-10T22:35:09.537828Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127f4-b145-7a61-84db-6f1af289e922
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/310_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/310_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 522ms:
+[
+ {
+  "n": 202,
+  "ko_e": "?꾨줈援먰넻踰???議?蹂댄뻾?먯쓽 ?듯뻾) ??蹂댄뻾?먮뒗 蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?덈뒗 ?꾨줈(?쇰갑???됱씤 寃쎌슦?먮뒗 李⑥꽑?쇰줈 援щ텇???꾨줈瑜??ы븿?쒕떎)?먯꽌??湲?媛?μ옄由??먮뒗 湲?媛?μ옄由?援ъ뿭?쇰줈 ?듯뻾?섏뿬???쒕떎. ??蹂댄뻾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 怨녹뿉?쒕뒗 ?꾨줈????遺遺꾩쑝濡??듯뻾?????덈떎. ??寃쎌슦 蹂댄뻾?먮뒗 怨좎쓽濡?李⑤쭏??吏꾪뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. 1. 蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?녿뒗 ?꾨줈(??諛⑺넻?됱씤 寃쎌슦?먮뒗 李⑥꽑?쇰줈 援щ텇?섏? ?꾨땲???꾨줈???쒖젙?쒕떎. ?댄븯 媛숇떎) 2. 蹂댄뻾?먯슦?좊룄濡?,
+  "tr_e": "Road Traffic Act Article 8 (Passage of Pedestrians) (1) On a road where the sidewalk and roadway are not separated but that has a center line (including, in the case of a one-way road, a road divided by lane lines), a pedestrian must walk on the edge of the road or in the road-edge zone. (2) A pedestrian may walk on all parts of the road in any of the following places. In this case, the pedestrian must not intentionally obstruct the progress of a vehicle or horse: 1. a road where the sidewalk and roadway are not separated and that has no center line (in the case of a one-way road, limited to a road not divided by lane lines; hereinafter the same shall apply); 2. a pedestrian-priority road."
+ },
+ {
+  "n": 203,
+  "ko_e": "<?꾨줈援먰넻踰???8議????? 蹂댄뻾?먯쟾?⑸룄濡쒖쓽 ?듯뻾???덉슜??李⑤쭏???댁쟾?먮뒗 蹂댄뻾?먮? ?꾪뿕?섍쾶 ?섍굅??蹂댄뻾?????듯뻾??諛⑺빐?섏? ?꾨땲?섎룄濡?李⑤쭏瑜?蹂댄뻾?먯쓽 嫄몄쓬 ?띾룄濡??댄뻾?섍굅???쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "<Road Traffic Act Article 28(3)> The driver of a vehicle or horse permitted to pass on a pedestrian-only road must drive the vehicle at the walking speed of pedestrians or come to a complete stop so as not to endanger pedestrians or obstruct their passage."
+ },
+ {
+  "n": 204,
+  "ko_e": "<?꾨줈援먰넻踰???議???0?? 蹂대룄? ?곗꽍?? ?덉쟾?쒖???洹몄? 鍮꾩듂???멸났援ъ“臾쇰줈 寃쎄퀎瑜??쒖떆?섏뿬 蹂댄뻾???좊え李⑥?  ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??蹂댄뻾蹂댁“???섏옄李⑤? ?ы븿?쒕떎. ?댄븯 媛숇떎)媛 ?듯뻾?????덈룄濡????꾨줈??遺遺꾩쓣 留먰븳??",
+  "tr_e": "<Road Traffic Act Article 2 subparagraph 10> A sidewalk means the part of a road demarcated by curb lines, traffic signs, or similar artificial structures so that pedestrians (including baby carriages and walking-aid wheelchairs prescribed by Ordinance of the Ministry of the Interior and Safety; hereinafter the same shall apply) can pass."
+ },
+ {
+  "n": 205,
+  "ko_e": "<?꾨줈援먰넻踰뺤떆?됯퇋移???議????? 蹂꾪몴2> ?좏샇湲곌? ?쒖떆?섎뒗 ?좏샇??醫낅쪟 諛??좏샇????以?蹂댄뻾?좏샇??,
+  "tr_e": "<Enforcement Rule of the Road Traffic Act Article 6(2), Table 2> Among the types and meanings of signals indicated by traffic lights, the pedestrian signal light."
+ },
+ {
+  "n": 206,
+  "ko_e": "<?꾨줈援먰넻踰???7議????? 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?꾨줈???ㅼ튂???덉쟾吏???蹂댄뻾?먭? ?덈뒗 寃쎌슦? 李⑤줈媛 ?ㅼ튂?섏?  ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃쎌슦?먮뒗 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎.",
+  "tr_e": "<Road Traffic Act Article 27(4)> Every driver of a vehicle must, when there are pedestrians on a safety zone installed on the road, or when passing beside a pedestrian on a narrow road with no lanes, keep a safe distance and slow down."
+ },
+ {
+  "n": 207,
+  "ko_e": "怨좎썝???〓떒蹂대룄???쒗븳?띾룄瑜?30km/h?댄븯濡??쒗븳???꾩슂媛 ?덈뒗 ?꾨줈?먯꽌 ?〓떒蹂대룄瑜??몃㈃蹂대떎 ?믨쾶 ?섏뿬 ?댁쟾 ?먯쓽 二쇱쓽瑜??섍린?쒗궗 ?꾩슂媛 ?덈뒗 吏?먯뿉 ?ㅼ튂?쒕떎.(?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 5. 533)",
+  "tr_e": "A raised crosswalk is installed at points on a road where the speed limit needs to be restricted to 30 km/h or less and where it is necessary to raise the crosswalk above the road surface to draw the driver's attention. (Enforcement Rule of the Road Traffic Act Table 6, 5, 533)"
+ },
+ {
+  "n": 208,
+  "ko_e": "?꾨줈援먰넻踰???9議?紐⑤뱺 ?댁쟾?먯쓽 以?섏궗??????젣2?? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴2 李⑤웾 ?좏샇?깆씠 ?⑹깋?깊솕????硫??좏샇???뚮뒗 ?ㅻⅨ 援먰넻 ?먮뒗 ?덉쟾?쒖????쒖떆??二쇱쓽?섎㈃??吏꾪뻾?????덈떎.",
+  "tr_e": "Road Traffic Act Article 49 (Matters to Be Observed by All Drivers) paragraph 1 subparagraph 2; Enforcement Rule of the Road Traffic Act Table 2. When the vehicle traffic light shows a flashing yellow light, a vehicle may proceed while paying attention to other traffic or traffic signs."
+ },
+ {
+  "n": 209,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴6 532??2 ?媛곸꽑 ?〓떒蹂대룄 ?쒖떆          ?꾨줈援먰넻踰뺤떆?됯퇋移???議????? 蹂꾪몴2 ?좏샇湲곌? ?쒖떆?섎뒗 ?좏샇??醫낅쪟 諛??좏샇????以??곸깋???깊솕",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, 532-2, the diagonal crosswalk marking. Enforcement Rule of the Road Traffic Act Article 6(2), Table 2, among the types and meanings of signals indicated by traffic lights, the red light."
+ },
+ {
+  "n": 210,
+  "ko_e": "<?꾨줈援먰넻踰???議???0?? \"?쇱떆?뺤?\"? 李⑥쓽 ?댁쟾?먭? 洹?李⑥쓽 諛뷀대? ?쇱떆?곸쑝濡??꾩쟾???뺤??쒗궎??寃껋쓣 留먰븳??",
+  "tr_e": "<Road Traffic Act Article 2 subparagraph 30> Coming to a complete stop means the driver of a vehicle temporarily and completely stopping the wheels of the vehicle."
+ },
+ {
+  "n": 211,
+  "ko_e": "<?꾨줈援먰넻踰???議????? 蹂댄뻾?먮뒗 蹂대룄? 李⑤룄媛 援щ텇???꾨줈?먯꽌???몄젣??蹂대룄濡??듯뻾?섏뿬???쒕떎. ?ㅻ쭔, 李⑤룄 瑜??〓떒?섎뒗 寃쎌슦, ?꾨줈怨듭궗 ?깆쑝濡?蹂대룄???듯뻾??湲덉???寃쎌슦??洹?諛뽰쓽 遺?앹씠??寃쎌슦?먮뒗 洹몃윭?섏? ?꾨땲?섎떎.",
+  "tr_e": "<Road Traffic Act Article 8(1)> On a road where the sidewalk and roadway are separated, a pedestrian must always walk on the sidewalk. However, this does not apply when crossing the roadway, when passage on the sidewalk is prohibited due to road construction, etc., or in other unavoidable cases."
+ },
+ {
+  "n": 212,
+  "ko_e": "?쇰컲?꾨줈?먯꽌 醫뚰쉶?꾪븯?ㅻ뒗 ?뚯뿉??醫뚰쉶?꾪븯?ㅻ뒗 吏?먯뿉?쒕???30誘명꽣 ?댁긽??吏?먯뿉??諛⑺뼢吏?쒕벑??耳쒖빞 ?섍퀬,  ?꾨줈 以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎ŉ 援먯감濡쒖쓽 以묒떖 ?덉そ?쇰줈 醫뚰쉶?꾪빐???섎ŉ, ?쑣룸룄寃쎌같泥?옣??吏?뺥븳 怨녹뿉?쒕뒗 援먯감 濡쒖쓽 以묒떖 諛붽묑履쎌쑝濡?醫뚰쉶?꾪븷 ???덈떎. 洹몃━怨?醫뚰쉶?꾪븷 ?뚯뿉????긽 ?쒗뻾???섎Т媛 ?덉쑝???쇱떆?뺤????곹솴?? ?곕씪 ???섎룄 ?덇퀬 ?????섎룄 ?덈떎.",
+  "tr_e": "When intending to turn left on an ordinary road, the driver must turn on the turn signal at a point at least 30 meters before the point where they intend to turn left, slow down along the center line of the road, and turn left inside the center of the intersection; at a place designated by the Commissioner of the City/Provincial Police Agency, the driver may turn left outside the center of the intersection. And when turning left, there is always a duty to slow down, but coming to a complete stop may or may not be required depending on the situation."
+ },
+ {
+  "n": 213,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??5議?李⑤줈???ㅼ튂) ???? 李⑤줈???덈퉬??3誘명꽣 ?댁긽?쇰줈 ?섏뿬???섎릺, 醫뚰쉶?꾩쟾?⑹감濡쒖쓽  ?ㅼ튂 ??遺?앹씠?섎떎怨??몄젙?섎뒗 ?뚯뿉??275?쇳떚誘명꽣 ?댁긽?쇰줈 ?????덈떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 15 (Installation of Lanes) paragraph 2. The width of a lane must be at least 3 meters, but where deemed unavoidable, such as for the installation of a left-turn-only lane, it may be at least 275 centimeters."
+ },
+ {
+  "n": 214,
+  "ko_e": "?꾨줈援먰넻踰???3議?李⑤쭏???듯뻾) ????????,
+  "tr_e": "Road Traffic Act Article 13 (Passage of Vehicles and Horses) paragraph 4 subparagraph 3."
+ },
+ {
+  "n": 215,
+  "ko_e": "?꾨줈援먰넻踰???4議?李⑤줈???ㅼ튂 ?? ???? ?쑣룸룄寃쎌같泥?옣? ?쒓컙????곕씪 ?묐갑?μ쓽 ?듯뻾?됱씠 ?쒕졆?섍쾶 ?ㅻⅨ ??濡쒖뿉??援먰넻?됱씠 留롮? 履쎌쑝濡?李⑤줈???섍? ?뺣??????덈룄濡??좏샇湲곗뿉 ?섑븯??李⑤줈??吏꾪뻾諛⑺뼢??吏?쒗븯??媛蹂李?濡쒕? ?ㅼ튂?????덈떎.",
+  "tr_e": "Road Traffic Act Article 14 (Installation of Lanes, etc.) paragraph 1. The Commissioner of the City/Provincial Police Agency may install, on a road where the volume of two-way traffic clearly differs by time of day, a variable lane that indicates the direction of travel of the lane by means of traffic lights so that the number of lanes can be expanded toward the side with heavier traffic."
+ },
+ {
+  "n": 216,
+  "ko_e": "?꾨줈援먰넻踰???5議?援먯감濡??듯뻾諛⑸쾿) ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉???고쉶?꾩쓣 ?섎젮??寃쎌슦?먮뒗 誘몃━ ?꾨줈???곗륫  媛?μ옄由щ? ?쒗뻾?섎㈃???고쉶?꾪븯?ъ빞 ?쒕떎. ??寃쎌슦 ?고쉶?꾪븯??李⑥쓽 ?댁쟾?먮뒗 ?좏샇???곕씪 ?뺤??섍굅??吏꾪뻾?섎뒗 蹂댄뻾?? ?먮뒗 ?먯쟾嫄곕벑??二쇱쓽?섏뿬???쒕떎. <媛쒖젙 2020. 6. 9.>",
+  "tr_e": "Road Traffic Act Article 25 (Method of Passing Through Intersections) (1) Every driver of a vehicle who intends to turn right at an intersection must turn right while slowing down along the right edge of the road in advance. In this case, the driver of the vehicle turning right must pay attention to pedestrians or cyclists, etc. who stop or proceed in accordance with the signal. <Amended June 9, 2020>"
+ },
+ {
+  "n": 217,
+  "ko_e": "?꾨줈???뚯넀 ?깆쑝濡?吏꾪뻾?????놁쓣 寃쎌슦?먮뒗 李⑤줈瑜?蹂寃쏀븯??二쇳뻾?섏뿬???섎ŉ, 李⑤줈蹂寃?湲덉??μ냼?먯꽌???덉쟾??寃?李⑤줈瑜?蹂寃쏀븯?щ룄 踰뺢퇋 ?꾨컲???대떦?쒕떎. 李⑤줈蹂寃?湲덉??좎? ?ㅼ꽑?쇰줈 ?쒖떆?쒕떎.",
+  "tr_e": "When unable to proceed due to damage to the road, etc., the driver must change lanes and drive; changing lanes even safely in a place where lane changes are prohibited still constitutes a violation of the law. The lane-change-prohibition line is marked with a solid line."
+ },
+ {
+  "n": 218,
+  "ko_e": "紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ?좏샇湲곕줈 援먰넻?뺣━瑜??섍퀬 ?덈뒗 援먯감濡쒖뿉 ?ㅼ뼱媛?ㅻ뒗 寃쎌슦?먮뒗 吏꾪뻾?섎젮??吏?濡쒖쓽 ?욎そ???덈뒗 李??먮뒗 ?몃㈃?꾩감???곹솴???곕씪 援먯감濡??뺤??좎씠 ?ㅼ튂?섏뼱 ?덈뒗 寃쎌슦?먮뒗 洹??뺤??좎쓣 ?섏?  遺遺꾩쓣 留먰븳?????뺤??섍쾶 ?섏뼱 ?ㅻⅨ 李??먮뒗 ?몃㈃?꾩감???듯뻾??諛⑺빐媛 ???곕젮媛 ?덈뒗 寃쎌슦?먮뒗 洹?援먯감濡쒖뿉  ?ㅼ뼱媛?쒕뒗 ?꾨땲 ?쒕떎(?꾨줈援먰넻踰???5議?????. ?대? ?꾨컲?섎뒗 寃껋쓣 瑗щ━臾쇨린???쒕떎.",
+  "tr_e": "Every driver of a vehicle or streetcar who intends to enter an intersection where traffic is being controlled by traffic lights must not enter that intersection if, depending on the situation of the vehicle or streetcar ahead in the intended path, they would come to a stop within the intersection (or, where a stop line is installed, the part beyond that stop line) and there is a risk of obstructing the passage of other vehicles or streetcars (Road Traffic Act Article 25(5)). Violating this is called blocking the box (tail-gating into the intersection)."
+ },
+ {
+  "n": 219,
+  "ko_e": "蹂?띿감濡쒕? 怨좎냽 二쇳뻾?섎뒗 ?먮룞李④? 媛먯냽?댁꽌 ?ㅻⅨ ?꾨줈濡?吏꾩엯??寃쎌슦 ?먮뒗 ???二쇳뻾?섎뒗 ?먮룞李④? 怨좎냽 二쇳뻾??怨??덈뒗 ?먮룞李④뎔?쇰줈 ?좎엯??寃쎌슦??蹂몄꽑???ㅻⅨ 怨좎냽 ?먮룞李⑥쓽 二쇳뻾??諛⑺빐?섏? ?딄퀬 ?덉쟾?섍쾶 媛먯냽 ?먮뒗 媛?랁븯 ?꾨줉 ?ㅼ튂?섎뒗 遺媛李⑤줈瑜?留먰븳?? ?쇰컲?곸쑝濡??꾩옄瑜?媛먯냽李⑤줈, ?꾩옄瑜?媛?띿감濡쒕씪 ?쒕떎[?꾨줈??援ъ“?ㅼ떆??湲곗??? 愿??洹쒖튃 ?댁꽕(2020),援?넗援먰넻遺, p.40].",
+  "tr_e": "A speed-change lane means an additional lane installed so that a vehicle traveling at high speed can decelerate safely when entering another road, or a vehicle traveling at low speed can accelerate safely when merging into a group of vehicles traveling at high speed, without obstructing the travel of other high-speed vehicles on the main line. Generally, the former is called a deceleration lane and the latter an acceleration lane [Commentary on the Rules on the Structure and Facility Standards of Roads (2020), Ministry of Land, Infrastructure and Transport, p.40]."
+ },
+ {
+  "n": 220,
+  "ko_e": "怨좎냽?꾨줈??吏꾩엯?????섎せ 吏꾩엯??寃쎌슦 ?ㅼ쓬 異쒓뎄源뚯? 二쇳뻾????鍮좎졇?섏삩??",
+  "tr_e": "If you have entered a highway by mistake, drive to the next exit and then exit."
+ },
+ {
+  "n": 221,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6(?덉쟾?쒖???醫낅쪟, 留뚮뱶??諛⑹떇 諛??ㅼ튂?ㅺ?由ш린以) ?쇰컲湲곗? ???? ?대┛??蹂댄샇援ъ뿭  ?덉뿉 ?ㅼ튂?섎뒗 ?띾룄?쒗븳?쒖떆???뚮몢由ъ꽑? 鍮④컙??,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6 (Types of Traffic Signs, Manufacturing Methods, and Installation/Management Standards), General Standards subparagraph 2. The border line of the speed limit marking installed within a school zone is red."
+ }
+]
+
+codex
+[]
+tokens used
+12,145
+[]

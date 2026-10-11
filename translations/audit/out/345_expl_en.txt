@@ -1,0 +1,254 @@
+Reading additional input from stdin...
+2026-10-11T00:27:47.463549Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 139 column 5
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1285b-cfd5-7462-91ad-82b63ae91a05
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/345_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+codex
+파일의 각 원문·번역 쌍과 자동 지적을 대조해 실질 오류만 추리겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/345_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 546ms:
+[
+ {
+  "n": 912,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 329, 鍮꾨낫?몄쥖?뚯쟾 ?쒖?濡?吏꾪뻾?좏샇 ??諛섎?諛⑸㈃?먯꽌 ?ㅻ뒗 李⑤웾??諛⑺빐媛  ?섏? ?꾨땲?섎룄濡?醫뚰쉶?꾪븷 ???덈떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 329, unprotected-left-turn sign, allowing a left turn on the go signal so as not to obstruct vehicles coming from the opposite direction."
+ },
+ {
+  "n": 913,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 310 醫뚯슦?뚯쟾?쒖??대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 310, left-and-right-turn sign."
+ },
+ {
+  "n": 914,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 309??踰?醫뚰쉶??諛??좏꽩?쒖?濡?李④? 醫뚰쉶???먮뒗 ?좏꽩??寃껋쓣 吏?쒗븯?? 寃껋씠?? 醫뚰쉶???먮뒗 ?좏꽩??????곗꽑?쒖쐞??紐낆떆?섏뼱 ?덉? ?딅떎. ???덉쟾?쒖???李④? 醫뚰쉶???먮뒗 ?좏꽩??吏?먯쓽  ?꾨줈?곗륫 ?먮뒗 以묒븰???ㅼ튂?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 309-2, left-turn-and-U-turn sign, instructing a vehicle to turn left or make a U-turn. The priority between the left turn and the U-turn is not specified. This traffic sign is installed on the right side or center of the road at a point where a vehicle turns left or makes a U-turn."
+ },
+ {
+  "n": 915,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏316, ?고쉶濡쒗몴吏濡?李⑥쓽 醫뚰쉶?꾩씠 湲덉???吏??뿉???고쉶?꾨줈濡??듯뻾??寃껋쓣  吏?쒗븯??寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 316, detour sign, instructing travel via a detour road in an area where a vehicle's left turn is prohibited."
+ },
+ {
+  "n": 916,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 332 ?듯뻾?곗꽑?쒖?濡?諛깆깋 ?붿궡??諛⑺뼢?쇰줈 吏꾪뻾?섎뒗 李⑤웾???곗꽑 ?듯뻾?? ???덈룄濡??쒖떆?섎뒗 寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 332, passage-priority sign, indicating that a vehicle proceeding in the direction of the white arrow may pass with priority."
+ },
+ {
+  "n": 917,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏325, ?먯쟾嫄고슒?⑤룄?쒖??대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 325, bicycle crossing sign."
+ },
+ {
+  "n": 918,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 328 ?쇰갑?듯뻾濡쒗몴吏濡??꾨갑?쇰줈留?吏꾪뻾?????덈뒗 ?쇰갑?듯뻾濡쒖엫??吏?쒗븯 ???쒖??대떎. ?쇰갑?듯뻾 ?꾨줈???낃뎄 諛?援ш컙?댁쓽 ?꾩슂??吏?먯쓽 ?꾨줈?묒륫???ㅼ튂?섍퀬 援ш컙???쒖옉 諛??앹쓽 蹂댁“??吏瑜?遺李㈑룹꽕移섑븯硫?援ш컙 ?댁뿉 援먯감?섎뒗 ?꾨줈媛 ?덉쓣 寃쎌슦?먮뒗 援먯감濡?遺洹쇱쓽 ?꾨줈?묒륫???ㅼ튂?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 328, one-way road sign, a sign instructing that it is a one-way road where one can proceed only forward. Installed on both sides of the road at the entrance of the one-way road and at necessary points within the section, with supplementary signs marking the start and end of the section attached and installed, and where there is an intersecting road within the section, installed on both sides of the road near the intersection."
+ },
+ {
+  "n": 920,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 303踰??먯쟾嫄걔룸낫?됱옄 寃몄슜?꾨줈?쒖?濡??먯쟾嫄결넕蹂댄뻾??寃몄슜?꾨줈??援ш컙 ?????μ냼 ?댁쓽 ?꾩슂??吏???묒륫???ㅼ튂?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 303, bicycle-pedestrian combined road sign, installed on both sides at a necessary point within a section or place of a bicycle-pedestrian combined road."
+ },
+ {
+  "n": 921,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?뚯쟾援먯감濡쒗몴吏(吏?쒗몴吏 304踰? ?뚯쟾援먯감濡?Roundabout)???ㅼ튂?섎뒗 ?뚯쟾援먯감濡쒗몴 吏?대떎. ?뚯쟾援먯감濡?Round About)???뚯쟾援먯감濡쒖뿉 吏꾩엯?섎젮??寃쎌슦 援먯감濡??댁뿉??諛섏떆怨?諛⑺뼢?쇰줈 ?뚯쟾?섎뒗 李????묐낫?댁빞 ?섍퀬, 吏꾩엯 諛?吏꾩텧 ?쒖뿉??諛섎뱶??諛⑺뼢吏?쒕벑???묐룞?댁빞 ?쒕떎. 洹몃━怨?以묒븰援먰넻?ъ쓽 媛?μ옄由ъ뿉 ??뺤옄?숈감 ?먮뒗 ?몃??몃젅?쇰윭媛 諛잕퀬 吏?섍컝 ???덈룄濡?留뚮뱺 ?붾Ъ李???Truck Apron)???덈떎. ?뚯쟾援먯감濡쒖? 濡쒗꽣 由?援щ텇? \"?꾨줈?섍뎄議걔룹떆??湲곗???愿?쒓퇋移??댁꽕\"(援?넗援먰넻遺) 諛?\"?뚯쟾援먯감濡??ㅺ퀎吏移?"(援?넗援먰넻遺)???섍굅 ?ㅼ튂쨌?댁쁺. 援щ텇 ?뚯쟾援먯감濡?Roundabout) 援먰넻?쒗겢(Traffic Circle) 吏꾩엯諛⑹떇 ??쭊?낆옄?숈감媛 ?묐낫 (?뚯쟾?먮룞李④? 吏꾩엯?먮룞李⑥뿉 ??????됱슦?좉텒??媛吏? ??쉶?꾩옄?숈감媛 ?묐낫 吏꾩엯遺 ?????吏꾩엯 ?좊룄 ??퀬??吏꾩엯 ?뚯쟾遺 ??퀬?띿쓽 ?뚯쟾李⑤줈 二쇳뻾諛⑹?瑜??꾪븳 ?ㅺ퀎(?洹쒕え ?뚯쟾諛섏?由?吏?? ???洹쒕え ?뚯쟾遺?먯꽌 怨좎냽 二쇳뻾 遺꾨━援먰넻????컧??諛?諛⑺뼢 遺꾨━瑜??꾪빐 ?꾩닔 ?ㅼ튂 ??꽑???ㅼ튂 以묒븰援먰넻?????由꾩씠 ?遺遺?50m ?대궡 ??룄?쒖???뿉?쒕뒗 吏由꾩씠 理쒖냼 2m??珥덉냼???뚯쟾援먯감濡쒕룄 ?ㅼ튂 媛?????由??쒗븳 ?놁쓬 <?뚯쟾援먯감濡쒖? 援먰넻?쒗겢??李⑥씠??. ?먮즺異쒖쿂:?쒗쉶?꾧탳李⑤줈 ?ㅺ퀎吏移ⓥ?援?넗援먰넻遺)",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, roundabout sign (instruction sign No. 304), the roundabout sign installed at a roundabout. At a roundabout, when intending to enter, one must yield to vehicles circulating counterclockwise within the intersection, and when entering and exiting, one must always operate the turn signal. And there is a truck apron at the edge of the central traffic island, made so that large vehicles or semi-trailers can drive over it. The distinction between a roundabout and a rotary is installed and operated based on the \"Commentary on the Rules on the Structure and Facility Standards of Roads\" (Ministry of Land, Infrastructure and Transport) and the \"Roundabout Design Guidelines\" (Ministry of Land, Infrastructure and Transport). Classification: Roundabout / Traffic Circle. Entry method: Roundabout - entering vehicles yield (circulating vehicles have the right of way over entering vehicles); Traffic Circle - circulating vehicles yield. Entry section: Roundabout - low-speed entry induced; Traffic Circle - high-speed entry. Circulating section: Roundabout - designed to prevent high-speed driving in the circulating lane (avoids large turning radius); Traffic Circle - high-speed driving in a large circulating section. Splitter island: Roundabout - essential installation for deceleration and direction separation; Traffic Circle - optional installation. Central traffic island: Roundabout - the diameter is mostly within 50 m; in urban areas, ultra-small roundabouts with a minimum diameter of 2 m can also be installed; Traffic Circle - no diameter limit. <Differences between a roundabout and a traffic circle>. Source: \"Roundabout Design Guidelines\" (Ministry of Land, Infrastructure and Transport)."
+ },
+ {
+  "n": 922,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 333踰??먯쟾嫄??섎????듯뻾 ?덉슜?쒖?濡??먯쟾嫄곕룄濡쒖뿉??2? ?댁긽 ?먯쟾嫄곕벑 ???섎????듯뻾???덉슜?섎뒗 ?쒖??대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 333, bicycle side-by-side passage permitted sign, a sign permitting two or more bicycles, etc., to travel side by side on a bicycle road."
+ },
+ {
+  "n": 923,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 317踰??먯쟾嫄?諛?蹂댄뻾???듯뻾援щ텇 ?꾨줈?쒖?濡??먯쟾嫄?諛?蹂댄뻾??寃몄슜?꾨줈 ?먯꽌 ?먯쟾嫄곗? 蹂댄뻾?먮? 援щ텇?섏뿬 ?듯뻾?섎룄濡?吏?쒗븯???쒖??대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 317, bicycle and pedestrian passage division road sign, a sign instructing bicycles and pedestrians to travel separately on a bicycle-pedestrian combined road."
+ },
+ {
+  "n": 924,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 吏꾪뻾諛⑺뼢蹂꾪넻?됯뎄遺꾪몴吏(吏?쒗몴吏 315踰? 李④? 醫뚰쉶?꾬쉈吏곸쭊 ?먮뒗 ?고쉶?꾪븷 寃껋쓣 吏???섎뒗 寃껋씠?? ?꾨줈援먰넻踰?25議?援먯감濡??듯뻾諛⑸쾿)????紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉???고쉶?꾩쓣 ?섎젮??寃쎌슦?먮뒗 誘몃━ ?꾨줈???곗륫 媛?μ옄由щ? ?쒗뻾?섎㈃???고쉶?꾪븯?ъ빞 ?쒕떎. ??寃쎌슦 ?고쉶?꾪븯??李⑥쓽 ?댁쟾?먮뒗 ?좏샇???곕씪 ??吏?섍굅??吏꾪뻾?섎뒗 蹂댄뻾???먮뒗 ?먯쟾嫄??깆뿉 二쇱쓽?섏뿬???쒕떎. ????紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉??醫뚰쉶?꾩쓣 ?섎젮??寃쎌슦?먮뒗 誘몃━ ?꾨줈??以묒븰?좎쓣 ?곕씪 ?쒗뻾?섎㈃??援먯감濡쒖쓽 以묒떖 ?덉そ???댁슜?섏뿬 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, passage division by direction of travel sign (instruction sign No. 315). It instructs a vehicle to turn left, go straight, or turn right. Road Traffic Act Article 25 (Method of Passing Through Intersections) Paragraph 1. The driver of every vehicle intending to turn right at an intersection must slow down along the right edge of the road in advance and turn right. In this case, the driver turning right must be careful of pedestrians or bicycles, etc., stopping or proceeding in accordance with the signal. Paragraph 2. The driver of every vehicle intending to turn left at an intersection must slow down along the center line of the road in advance and turn left using the inner side of the center of the intersection."
+ },
+ {
+  "n": 925,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 320??. 媛쒖씤???대룞?μ튂 二쇱감???쒖떆. 媛쒖씤???대룞?μ튂 二쇱감?μ씠 ?덉쓬?? ?뚮━怨?媛쒖씤???대룞?μ튂二쇱감?μ뿉 二쇱감?섎룄濡?吏?쒗븯???쒖??대떎. 二쇱감援ъ뿭? 諛깆깋?ㅼ꽑?쇰줈 ?ㅼ튂?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 320-2. Personal mobility device parking lot marking. A sign notifying that there is a personal mobility device parking lot and instructing parking in the personal mobility device parking lot. The parking area is installed with a white solid line."
+ },
+ {
+  "n": 926,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴6, 4媛쒖쓽 ?덉쟾?쒖? 以묒뿉??洹쒖젣?쒖???3媛? 蹂댁“?쒖???1媛쒖씠??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, among the four traffic signs, three are regulatory signs and one is a supplementary sign."
+ },
+ {
+  "n": 927,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴6, ?먮룞李⑥쟾?⑸룄濡쒗몴吏(吏?쒗몴吏 301踰? ?먮룞李??꾩슜?꾨줈 ?먮뒗 ?꾩슜援ъ뿭?꾩쓣 吏?쒗븯??寃껋씠??           ?꾨줈援먰넻踰뺤뿉 ?곕씪 ?먮룞李??대쪣?먮룞李⑤뒗 湲닿툒?먮룞李⑤쭔 ?대떦?쒕떎.)?몄쓽 李⑤쭏???댁쟾???먮뒗 蹂댄뻾?먮뒗 怨좎냽?꾨줈? ?먮룞 李⑥쟾?⑸룄濡쒕? ?듯뻾?섍굅???〓떒?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?곕씪???대쪣?먮룞李⑤뒗 湲닿툒?먮룞李⑥씤 寃쎌슦留??꾨줈瑜??듯뻾?????덈떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, motor-vehicle-exclusive road sign (instruction sign No. 301). It instructs that it is a motor-vehicle-exclusive road or exclusive section. Under the Road Traffic Act, the driver of a vehicle other than a motor vehicle (motorcycles only apply if they are emergency vehicles) or a pedestrian must not travel or cross an expressway or motor-vehicle-exclusive road. Therefore, a motorcycle may travel on the road only if it is an emergency vehicle."
+ },
+ {
+  "n": 928,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴6, 吏?쒗몴吏 302踰? ?먯쟾嫄곗쟾?⑸룄濡쒗몴吏濡??먯쟾嫄??꾩슜?꾨줈 ?먮뒗 ?꾩슜援ъ뿭?꾩쓣 吏?쒗븯?? 寃껋씠?? ?꾨줈援먰넻踰???議??뺤쓽). ?먯쟾嫄곕벑?대? ?먯쟾嫄곗? 媛쒖씤???대룞?μ튂瑜?留먰븳?? ?먯쟾嫄곕? ?먯쟾嫄??댁슜 ?쒖꽦????愿??踰뺣쪧 ??議곗젣1??諛????몄쓽2???곕Ⅸ ?먯쟾嫄?諛??꾧린?먯쟾嫄곕? 留먰븳?? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??議곗쓽2(媛??명삎 ?대룞?μ튂??湲곗?) 1. ?꾨룞?λ낫??2. ?꾨룞?대쪣?됲뻾李?3. ?꾨룞湲곗쓽 ?숇젰留뚯쑝濡??吏곸씪 ???덈뒗 ?먯쟾嫄?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, instruction sign No. 302, bicycle-exclusive road sign, instructing that it is a bicycle-exclusive road or exclusive section. Road Traffic Act Article 2 (Definitions). \"Bicycle, etc.\" means a bicycle and a personal mobility device. A bicycle means a bicycle and an electric bicycle under Article 2, Subparagraphs 1 and 1-2 of the Act on the Promotion of Bicycle Use. Enforcement Rule of the Road Traffic Act Article 2-2 (Standards for Personal Mobility Devices): 1. Electric kickboard; 2. Electric two-wheeled balancing vehicle; 3. A bicycle that can move solely by the power of the electric motor."
+ },
+ {
+  "n": 929,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 321踰?蹂댄뻾?먯쟾?⑸룄濡쒗몴吏濡?蹂댄뻾???꾩슜?꾨줈?꾩쓣 吏?쒗븯???쒖??대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 321, pedestrian-exclusive road sign, a sign instructing that it is a pedestrian-exclusive road."
+ },
+ {
+  "n": 930,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴6, 吏?쒗몴吏 309踰? 吏곸쭊 諛?醫뚰쉶?꾪몴吏濡?李④? 吏곸쭊 ?먮뒗 醫뚰쉶?꾪븷 寃껋쓣 吏?쒗븯??寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, instruction sign No. 309, straight-and-left-turn sign, instructing a vehicle to go straight or turn left."
+ },
+ {
+  "n": 931,
+  "ko_e": "A??蹂댄뻾???곗꽑 ?꾨줈 吏?쒗몴吏?대ŉ, B???숈씪???섎????몃㈃?쒖떆?대떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6]). 蹂댄뻾???곗꽑 ?꾨줈 ?먯꽌??蹂댄뻾?먭? ?꾨줈????遺遺꾩쓣 ?듯뻾?????덈떎. 諛섎㈃, 蹂댄뻾?먭? ?곗꽑?대뜑?쇰룄 蹂댄뻾?먭? ?꾨줈?먯꽌 怨좎쓽濡?李⑤웾?????됱쓣 諛⑺빐?댁꽌?????쒕떎(?꾨줈援먰넻踰???議?????. ?ｌ? 蹂댄뻾???꾩슜 ?꾨줈??????ㅻ챸?대떎(?꾨줈援먰넻踰???議???1??.",
+  "tr_e": "A is a pedestrian-priority road instruction sign, and B is a road marking with the same meaning (Enforcement Rule of the Road Traffic Act [Table 6]). On a pedestrian-priority road, pedestrians may travel on the entire portion of the road. On the other hand, even though pedestrians have priority, a pedestrian must not intentionally obstruct the passage of vehicles on the road (Road Traffic Act Article 8 Paragraph 3). ??is a description of a pedestrian-exclusive road (Road Traffic Act Article 2 Subparagraph 31)."
+ },
+ {
+  "n": 932,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 吏?쒗몴吏 323踰??몄씤蹂댄샇?쒖?濡쒖꽌 ?몄씤蹂댄샇援ъ뿭 ?덉뿉???몄씤??蹂댄샇瑜?吏?쒗븳??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 323, senior citizen protection sign, instructing the protection of senior citizens within a senior citizen protection zone."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/345_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+    print('\\n###',x['n'])
+    for k,v in x.items():
+        if k.startswith('ko_'):
+            try:
+                print(k, v.encode('cp949').decode('utf-8'))
+            except Exception as e:
+                print(k, 'ERR',e)
+                print(v.encode('cp949',errors='replace').decode('utf-8',errors='replace'))
+        elif k.startswith('tr_') or k in ('check','detail'):
+            print(k,v)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-11T00:28:00.637233Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:18 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 684ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:18 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/345_expl_en.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=New-Object Text.UTF8Encoding($false,$false); foreach($x in $data){ Write-Output "`n### $($x.n)"; foreach($p in $x.PSObject.Properties){ if($p.Name -like '"'ko_*'){ "'$bytes=$cp949.GetBytes($p.Value); Write-Output ($p.Name+'"' '+"'$utf8.GetString($bytes)) } elseif($p.Name -like '"'tr_*' -or "'$p.Name -eq '"'check' -or "'$p.Name -eq '"'detail'){ Write-Output ("'$p.Name+'"' '+"'$p.Value) } } }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 648ms:
+
+### 912
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 329, ��ȣ��ȸ�� ǥ���� �����ȣ �� �ݴ��鿡�� ���� ������ ���ذ�  ���� �ƴ��ϵ��� ��ȸ���� �� �ִ�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 329, unprotected-left-turn sign, allowing a left turn on the go signal so as not to obstruct vehicles coming from the opposite direction.
+
+### 913
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 310 �¿�ȸ��ǥ���̴�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 310, left-and-right-turn sign.
+
+### 914
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 309��2�� ��ȸ�� �� ����ǥ���� ���� ��ȸ�� �Ǵ� ������ ���� �����ϴ�  ���̴�. ��ȸ�� �Ǵ� ���Ͽ� ���� �켱������ ��õǾ� ���� �ʴ�. �� ����ǥ���� ���� ��ȸ�� �Ǵ� ������ ������  ���ο��� �Ǵ� �߾ӿ� ��ġ�Ѵ�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 309-2, left-turn-and-U-turn sign, instructing a vehicle to turn left or make a U-turn. The priority between the left turn and the U-turn is not specified. This traffic sign is installed on the right side or center of the road at a point where a vehicle turns left or makes a U-turn.
+
+### 915
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ��316, ��ȸ��ǥ���� ���� ��ȸ���� ������ �������� ��ȸ���η� ������ ����  �����ϴ� ��
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 316, detour sign, instructing travel via a detour road in an area where a vehicle's left turn is prohibited.
+
+### 916
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 332 ����켱ǥ���� ��� ȭ��ǥ �������� �����ϴ� ������ �켱 ������  �� �ֵ��� ǥ���ϴ� ��
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 332, passage-priority sign, indicating that a vehicle proceeding in the direction of the white arrow may pass with priority.
+
+### 917
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ��325, ������Ⱦ�ܵ�ǥ���̴�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 325, bicycle crossing sign.
+
+### 918
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 328 �Ϲ������ǥ���� �������θ� ������ �� �ִ� �Ϲ���������� ������ �� ǥ���̴�. �Ϲ����� ������ �Ա� �� �������� �ʿ��� ������ ���ξ����� ��ġ�ϰ� ������ ���� �� ���� ����ǥ ���� ��������ġ�ϸ� ���� ���� �����ϴ� ���ΰ� ���� ��쿡�� ������ �α��� ���ξ����� ��ġ�Ѵ�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 328, one-way road sign, a sign instructing that it is a one-way road where one can proceed only forward. Installed on both sides of the road at the entrance of the one-way road and at necessary points within the section, with supplementary signs marking the start and end of the section attached and installed, and where there is an intersecting road within the section, installed on both sides of the road near the intersection.
+
+### 920
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 303�� �����š������� ��뵵��ǥ���� �����Ť������� ��뵵���� ���� �� �� ��� ���� �ʿ��� ���� ������ ��ġ�ȴ�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 303, bicycle-pedestrian combined road sign, installed on both sides at a necessary point within a section or place of a bicycle-pedestrian combined road.
+
+### 921
+ko_e ���α���� �����Ģ ��ǥ6, ȸ��������ǥ��(����ǥ�� 304��) ȸ��������(Roundabout)�� ��ġ�Ǵ� ȸ��������ǥ ���̴�. ȸ��������(Round About)�� ȸ�������ο� �����Ϸ��� ��� ������ ������ �ݽð� �������� ȸ���ϴ� �� �� �纸�ؾ� �ϰ�, ���� �� ���� �ÿ��� �ݵ�� �������õ��� �۵��ؾ� �Ѵ�. �׸��� �߾ӱ��뼶�� �����ڸ��� �����ڵ��� �Ǵ� ����Ʈ���Ϸ��� ��� ������ �� �ֵ��� ���� ȭ���� ��(Truck Apron)�� �ִ�. ȸ�������ο� ���� �� ������ "�����Ǳ������ü� ���ؿ� ���ѱ�Ģ �ؼ�"(���䱳���) �� "ȸ�������� ������ħ"(���䱳���)�� �ǰ� ��ġ���. ���� ȸ��������(Roundabout) ���뼭Ŭ(Traffic Circle) ���Թ�� ?�����ڵ����� �纸 (ȸ���ڵ����� �����ڵ����� ���� �� ��켱���� ����) ?ȸ���ڵ����� �纸 ���Ժ� ?���� ���� ���� ?��� ���� ȸ���� ?����� ȸ������ ��������� ���� ����(��Ը� ȸ�������� ����) ?��Ը� ȸ���ο��� ��� ���� �и����뼶 ?���� �� ���� �и��� ���� �ʼ� ��ġ ?���� ��ġ �߾ӱ��뼶 ?������ ��κ� 50m �̳� ?�������������� ������ �ּ� 2m�� �ʼ��� ȸ�������ε� ��ġ ���� ?���� ���� ���� <ȸ�������ο� ���뼭Ŭ�� ������>. �ڷ���ó:��ȸ�������� ������ħ��(���䱳���)
+tr_e Enforcement Rule of the Road Traffic Act Table 6, roundabout sign (instruction sign No. 304), the roundabout sign installed at a roundabout. At a roundabout, when intending to enter, one must yield to vehicles circulating counterclockwise within the intersection, and when entering and exiting, one must always operate the turn signal. And there is a truck apron at the edge of the central traffic island, made so that large vehicles or semi-trailers can drive over it. The distinction between a roundabout and a rotary is installed and operated based on the "Commentary on the Rules on the Structure and Facility Standards of Roads" (Ministry of Land, Infrastructure and Transport) and the "Roundabout Design Guidelines" (Ministry of Land, Infrastructure and Transport). Classification: Roundabout / Traffic Circle. Entry method: Roundabout - entering vehicles yield (circulating vehicles have the right of way over entering vehicles); Traffic Circle - circulating vehicles yield. Entry section: Roundabout - low-speed entry induced; Traffic Circle - high-speed entry. Circulating section: Roundabout - designed to prevent high-speed driving in the circulating lane (avoids large turning radius); Traffic Circle - high-speed driving in a large circulating section. Splitter island: Roundabout - essential installation for deceleration and direction separation; Traffic Circle - optional installation. Central traffic island: Roundabout - the diameter is mostly within 50 m; in urban areas, ultra-small roundabouts with a minimum diameter of 2 m can also be installed; Traffic Circle - no diameter limit. <Differences between a roundabout and a traffic circle>. Source: "Roundabout Design Guidelines" (Ministry of Land, Infrastructure and Transport).
+
+### 922
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 333�� ������ ������ ���� ���ǥ���� �����ŵ��ο��� 2�� �̻� �����ŵ� �� ������ ������ ����ϴ� ǥ���̴�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 333, bicycle side-by-side passage permitted sign, a sign permitting two or more bicycles, etc., to travel side by side on a bicycle road.
+
+### 923
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 317�� ������ �� ������ ���౸�� ����ǥ���� ������ �� ������ ��뵵�� ���� �����ſ� �����ڸ� �����Ͽ� �����ϵ��� �����ϴ� ǥ���̴�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 317, bicycle and pedestrian passage division road sign, a sign instructing bicycles and pedestrians to travel separately on a bicycle-pedestrian combined road.
+
+### 924
+ko_e ���α���� �����Ģ ��ǥ6, ������⺰���౸��ǥ��(����ǥ�� 315��) ���� ��ȸ��?���� �Ǵ� ��ȸ���� ���� ���� �ϴ� ���̴�. ���α���� 25��(������ ������)��1�� ��� ���� �����ڴ� �����ο��� ��ȸ���� �Ϸ��� ��쿡�� �̸� ������ ���� �����ڸ��� �����ϸ鼭 ��ȸ���Ͽ��� �Ѵ�. �� ��� ��ȸ���ϴ� ���� �����ڴ� ��ȣ�� ���� �� ���ϰų� �����ϴ� ������ �Ǵ� ������ � �����Ͽ��� �Ѵ�. ��2�� ��� ���� �����ڴ� �����ο��� ��ȸ���� �Ϸ��� ��쿡�� �̸� ������ �߾Ӽ��� ���� �����ϸ鼭 �������� �߽� ������ �̿��Ͽ� ��ȸ���Ͽ��� �Ѵ�.
+tr_e Enforcement Rule of the Road Traffic Act Table 6, passage division by direction of travel sign (instruction sign No. 315). It instructs a vehicle to turn left, go straight, or turn right. Road Traffic Act Article 25 (Method of Passing Through Intersections) Paragraph 1. The driver of every vehicle intending to turn right at an intersection must slow down along the right edge of the road in advance and turn right. In this case, the driver turning right must be careful of pedestrians or bicycles, etc., stopping or proceeding in accordance with the signal. Paragraph 2. The driver of every vehicle intending to turn left at an intersection must slow down along the center line of the road in advance and turn left using the inner side of the center of the intersection.
+
+### 925
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 320��2. ������ �̵���ġ ������ ǥ��. ������ �̵���ġ �������� ������  �˸��� ������ �̵���ġ�����忡 �����ϵ��� �����ϴ� ǥ���̴�. ���������� ����Ǽ����� ��ġ�Ѵ�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign 320-2. Personal mobility device parking lot marking. A sign notifying that there is a personal mobility device parking lot and instructing parking in the personal mobility device parking lot. The parking area is installed with a white solid line.
+
+### 926
+ko_e ���α���������Ģ ��ǥ6, 4���� ����ǥ�� �߿��� ����ǥ���� 3��, ����ǥ���� 1���̴�.
+tr_e Enforcement Rule of the Road Traffic Act Table 6, among the four traffic signs, three are regulatory signs and one is a supplementary sign.
+
+### 927
+ko_e ���α���������Ģ ��ǥ6, �ڵ������뵵��ǥ��(����ǥ�� 301��) �ڵ��� ���뵵�� �Ǵ� ���뱸������ �����ϴ� ���̴�.           ���α������ ���� �ڵ���(�̷��ڵ����� ����ڵ����� �ش��Ѵ�.)���� ������ ������ �Ǵ� �����ڴ� ��ӵ��ο� �ڵ� �����뵵�θ� �����ϰų� Ⱦ���Ͽ����� �ƴ� �ȴ�. ���� �̷��ڵ����� ����ڵ����� ��츸 ���θ� ������ �� �ִ�.
+tr_e Enforcement Rule of the Road Traffic Act Table 6, motor-vehicle-exclusive road sign (instruction sign No. 301). It instructs that it is a motor-vehicle-exclusive road or exclusive section. Under the Road Traffic Act, the driver of a vehicle other than a motor vehicle (motorcycles only apply if they are emergency vehicles) or a pedestrian must not travel or cross an expressway or motor-vehicle-exclusive road. Therefore, a motorcycle may travel on the road only if it is an emergency vehicle.
+
+### 928
+ko_e ���α���������Ģ ��ǥ6, ����ǥ�� 302��, ���������뵵��ǥ���� ������ ���뵵�� �Ǵ� ���뱸������ �����ϴ�  ���̴�. ���α���� ��2��(����). �����ŵ��̶� �����ſ� ������ �̵���ġ�� ���Ѵ�. �����Ŷ� ������ �̿� Ȱ��ȭ �� ���� ���� ��2����1ȣ �� ��1ȣ��2�� ���� ������ �� ���������Ÿ� ���Ѵ�. ���α���� �����Ģ ��2����2(�� ���� �̵���ġ�� ����) 1. ����ű���� 2. �����̷������� 3. �������� ���¸����� ������ �� �ִ� ������
+tr_e Enforcement Rule of the Road Traffic Act Table 6, instruction sign No. 302, bicycle-exclusive road sign, instructing that it is a bicycle-exclusive road or exclusive section. Road Traffic Act Article 2 (Definitions). "Bicycle, etc." means a bicycle and a personal mobility device. A bicycle means a bicycle and an electric bicycle under Article 2, Subparagraphs 1 and 1-2 of the Act on the Promotion of Bicycle Use. Enforcement Rule of the Road Traffic Act Article 2-2 (Standards for Personal Mobility Devices): 1. Electric kickboard; 2. Electric two-wheeled balancing vehicle; 3. A bicycle that can move solely by the power of the electric motor.
+
+### 929
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 321�� ���������뵵��ǥ���� ������ ���뵵������ �����ϴ� ǥ���̴�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 321, pedestrian-exclusive road sign, a sign instructing that it is a pedestrian-exclusive road.
+
+### 930
+ko_e ���α���������Ģ ��ǥ6, ����ǥ�� 309��, ���� �� ��ȸ��ǥ���� ���� ���� �Ǵ� ��ȸ���� ���� �����ϴ� ��
+tr_e Enforcement Rule of the Road Traffic Act Table 6, instruction sign No. 309, straight-and-left-turn sign, instructing a vehicle to go straight or turn left.
+
+### 931
+ko_e A�� ������ �켱 ���� ����ǥ���̸�, B�� ������ �ǹ��� ���ǥ���̴�(���α���� �����Ģ [��ǥ6]). ������ �켱 ���� ������ �����ڰ� ������ �� �κ��� ������ �� �ִ�. �ݸ�, �����ڰ� �켱�̴��� �����ڰ� ���ο��� ���Ƿ� ������ �� ���� �����ؼ��� �� �ȴ�(���α���� ��8�� ��3��). ���� ������ ���� ���ο� ���� �����̴�(���α���� ��2�� ��31ȣ).
+tr_e A is a pedestrian-priority road instruction sign, and B is a road marking with the same meaning (Enforcement Rule of the Road Traffic Act [Table 6]). On a pedestrian-priority road, pedestrians may travel on the entire portion of the road. On the other hand, even though pedestrians have priority, a pedestrian must not intentionally obstruct the passage of vehicles on the road (Road Traffic Act Article 8 Paragraph 3). ④ is a description of a pedestrian-exclusive road (Road Traffic Act Article 2 Subparagraph 31).
+
+### 932
+ko_e ���α���� �����Ģ [��ǥ6] ����ǥ�� 323�� ���κ�ȣǥ���μ� ���κ�ȣ���� �ȿ��� ������ ��ȣ�� �����Ѵ�.
+tr_e Enforcement Rule of the Road Traffic Act [Table 6] instruction sign No. 323, senior citizen protection sign, instructing the protection of senior citizens within a senior citizen protection zone.
+
+codex
+[]
+tokens used
+25,386
+[]

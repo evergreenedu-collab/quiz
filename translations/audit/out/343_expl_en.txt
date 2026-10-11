@@ -1,0 +1,127 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12858-e349-75e2-aeca-ae6277e6c64b
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/343_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+codex
+파일의 각 항목을 원문과 번역문 기준으로 대조하고, 자동 지적은 실제 오류 여부까지 판정하겠습니다.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/343_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 545ms:
+[
+ {
+  "n": 871,
+  "ko_e": "?대떦 ?덉쟾?쒖???二쇱쓽?쒖?濡??꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6]???ㅼ튂洹쒖젙 諛??μ냼媛 洹쒖젙?섏뼱 ?덈떎. A ?쒖????≫뭾?? ?곕젮媛 ?덈뒗 吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 137踰?. B ?쒖????곕꼸?낃뎄 ??50誘명꽣  ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 138踰?. C ?쒖????꾪뿕吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫?? ?ㅼ튂?쒕떎(二쇱쓽?쒖? 140踰?. D ?쒖????곸뒿?뺤껜援ш컙 ??50誘명꽣?먯꽌 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎(二쇱쓽?쒖? 141踰?.",
+  "tr_e": "This traffic sign is a caution sign, and its installation rules and locations are prescribed in the Enforcement Rule of the Road Traffic Act [Table 6]. Sign A is installed on the right side of the road 50 to 200 meters before a point where there is a risk of crosswind (caution sign No. 137). Sign B is installed on the right side of the road 50 to 200 meters before a tunnel entrance (caution sign No. 138). Sign C is installed on the right side of the road 50 to 200 meters before a hazard area (caution sign No. 140). Sign D is installed on the right side of the road 50 to 200 meters before a chronic congestion section (caution sign No. 141)."
+ },
+ {
+  "n": 872,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?≫뭾?쒖?(二쇱쓽?쒖? 137踰?, ?쇱깮?숇Ъ蹂댄샇?쒖?(二쇱쓽?쒖? 139踰?  ???ㅻⅤ留됯꼍?ы몴吏?  ?곸뒿?뺤껜援ш컙?쒖???二쇱쓽?쒖??대떎. ??李⑦룺?쒗븳?쒖?? 李④컙嫄곕━?뺣낫?쒖???洹쒖젣?쒖??대떎. ??끂硫댁쟾李⑥쟾?⑸룄濡쒗몴 吏? ?고쉶?꾨줈?쒖???吏?쒗몴吏?대떎. ??鍮꾨낫?몄쥖?뚯쟾?쒖?? 醫뚰쉶??諛??좏꽩?쒖???吏?쒗몴吏?대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, crosswind sign (caution sign No. 137), wild animal protection sign (caution sign No. 139). ??The uphill slope sign and the chronic congestion section sign are caution signs. ??The vehicle-width limit sign and the minimum following-distance sign are regulatory signs. ??The streetcar-exclusive road sign and the detour sign are instruction signs. ??The unprotected-left-turn sign and the left-turn-and-U-turn sign are instruction signs."
+ },
+ {
+  "n": 873,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 130.?숈꽍?꾨줈?쒖?       - ?숈꽍?곕젮吏????30誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫???ㅼ튂",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 130. Falling rocks sign - Installed on the right side of the road 30 to 200 meters before a point where falling rocks are feared."
+ },
+ {
+  "n": 874,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 138??2.援먮웾?쒖? 援먮웾?댁엳?뚯쓣?뚮━??寃? 援먮웾???덈뒗 吏????50誘명꽣?먯꽌 200誘명꽣 ???꾨줈?곗륫???ㅼ튂",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 138-2. Bridge sign. It notifies that there is a bridge; installed on the right side of the road 50 to 200 meters before the point where the bridge is."
+ },
+ {
+  "n": 875,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 123.以묒븰遺꾨━??쒖옉?쒖?",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 123. Median-strip-start sign."
+ },
+ {
+  "n": 876,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 119.?곗륫李⑤줈 ?놁뼱吏??몃룄 2李⑤줈 ?댁긽???꾨줈?먯꽌 ?곗륫李⑤줈媛 ?놁뼱吏????ㅼ튂",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 119. Right lane ends. Installed when the right lane ends on a road with two or more lanes in one direction."
+ },
+ {
+  "n": 877,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 123.以묒븰遺꾨━? ?쒖옉?쒖? 以묒븰遺꾨━?媛?쒖옉?⑥쓣 ?뚮━??寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 123. Median-strip-start sign. It notifies that the median strip begins."
+ },
+ {
+  "n": 878,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 128.?몃㈃怨좊Ⅴ吏紐삵븿?쒖? ?몃㈃?닿퀬瑜댁?紐삵븿?꾩븣由щ뒗 寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 128. Uneven road surface sign. It notifies that the road surface is uneven."
+ },
+ {
+  "n": 879,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 134.?먯쟾嫄고몴吏 ?먯쟾嫄??듯뻾??留롮? 吏?먯씠 ?덉쓬???뚮━??寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 134. Bicycle sign. It notifies that there is a point with heavy bicycle traffic."
+ },
+ {
+  "n": 880,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 6. 116.?ㅻⅤ留됯꼍?ы몴吏 ?ㅻⅤ留됯꼍?ш? ?덉쓬???뚮━??寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6. 116. Uphill slope sign. It notifies that there is an uphill slope."
+ },
+ {
+  "n": 881,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 泥좉만嫄대꼸紐⑺몴吏(二쇱쓽?쒖떆 110踰? 泥좉만嫄대꼸紐⑹씠?덉쓬???뚮━??寃?",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] Railroad crossing sign (caution sign No. 110). It notifies that there is a railroad crossing."
+ },
+ {
+  "n": 882,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?? 媛쒕퀎湲곗?. 1.二쇱쓽?쒖? 106踰? ?곗꽑?꾨줈?먯꽌 ?곗꽑?꾨줈媛 ?꾨땶 ?꾨줈? 援먯감?섎뒗 寃쎌슦",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6 II. Individual Standards. 1. Caution sign No. 106, used where a priority road intersects with a non-priority road."
+ },
+ {
+  "n": 883,
+  "ko_e": "A???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6], ?숈꽍?꾨줈?쒖?(二쇱쓽?쒖? 130踰?. ?숈꽍???곕젮媛 ?덈뒗 吏?먯뿉 ?ㅼ튂?쒕떎. ?숈꽍 ?곕젮 吏????30誘명꽣 ?댁? 200誘명꽣???꾨줈?곗륫???ㅼ튂?쒕떎.          B???꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6], 鍮꾪뻾湲고몴吏(二쇱쓽?쒖? 136踰?. 鍮꾪뻾?μ쓽 鍮꾪뻾湲??댁갑瑜?諛⑺뼢??洹쇱젒???꾨줈??           ?ㅼ튂?쒕떎. 鍮꾪뻾湲??댁갑瑜?吏????50誘명꽣 ?댁? 200誘명꽣???꾨줈 ?곗륫???ㅼ튂?쒕떎.",
+  "tr_e": "A is the Enforcement Rule of the Road Traffic Act [Table 6], falling rocks sign (caution sign No. 130). Installed at a point where falling rocks are feared. Installed on the right side of the road 30 to 200 meters before the point where falling rocks are feared. B is the Enforcement Rule of the Road Traffic Act [Table 6], airplane sign (caution sign No. 136). Installed on a road close to the takeoff and landing direction of aircraft at an airfield. Installed on the right side of the road 50 to 200 meters before the aircraft takeoff and landing point."
+ },
+ {
+  "n": 884,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 媛뺣??꾨줈?쒖?(二쇱쓽?쒖? 127踰? ?꾨줈???쇰???媛뺣??ㅽ빐蹂?ㅺ퀎怨〓벑 異붾씫 ?꾪뿕吏??엫????由щ뒗 寃껋씠??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, riverside road sign (caution sign No. 127). It notifies that one side of the road is a fall-hazard area such as a riverside, seaside, or valley."
+ },
+ {
+  "n": 885,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 122 ?묒륫諛⑺넻?됲몴吏濡??숈씪諛⑺뼢?듯뻾?꾨줈?먯꽌?묒륫諛⑹쑝濡쒗넻?됲븯?ъ빞?좎? ?먯씠?덉쓬?꾩븣由щ뒗寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, caution sign 122 both-sides passage sign, which notifies that there is a point on a same-direction road where one must travel on both sides."
+ },
+ {
+  "n": 886,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 109 ?뚯쟾?뺢탳李⑤줈?쒖?濡?援먯감濡???30誘명꽣?먯꽌 120誘명꽣???꾨줈 ?곗륫???ㅼ튂",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, caution sign 109 roundabout sign, installed on the right side of the road 30 to 120 meters before the intersection."
+ },
+ {
+  "n": 887,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 126 誘몃걚?ъ슫 ?꾨줈?쒖?濡??꾨줈 寃곕튃 ?깆뿉 ?섑빐 ?먮룞李⑤벑??誘몃걚?ъ슫 ?꾨줈?? ?ㅼ튂?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, caution sign 126 slippery road sign, installed on a road that is slippery for vehicles, etc., due to road icing, etc."
+ },
+ {
+  "n": 888,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 二쇱쓽?쒖? 111 ?곕줈援쎌? ?꾨줈?쒖? ?꾨갑 ?곕줈 援쎌? ?꾨줈?????二쇱쓽?쒖??대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, caution sign 111 right-curve road sign. A caution sign for a road curving to the right ahead."
+ },
+ {
+  "n": 890,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 洹쒖젣?쒖? 224. 理쒓퀬?띾룄?쒗븳?쒖? ?쒖??먯뿉 ?쒖떆???띾룄濡??먮룞李⑤벑??理쒓퀬?띾룄瑜?吏 ?뺥븯??寃껋씠?? ?ㅼ튂湲곗? 諛??μ냼???먮룞李??깆쓽 理쒓퀬?띾룄瑜??쒗븳?섎뒗 援ъ뿭, ?꾨줈??援ш컙 ?먮뒗 ?μ냼?댁쓽 ?꾩슂?? 吏???곗륫???ㅼ튂?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, regulatory sign 224. Maximum speed limit sign. It designates the maximum speed of vehicles, etc., at the speed shown on the sign. As for installation standards and locations, it is installed at a necessary point on the right side within a zone, section, or place of the road where the maximum speed of vehicles, etc., is limited."
+ },
+ {
+  "n": 891,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, 洹쒖젣?쒖? 201, ?듯뻾湲덉??쒖?濡?蹂댄뻾??肉??꾨땲??紐⑤뱺 李⑤쭏???듯뻾?????녿떎. ?꾨줈?? 援ш컙 ?먮뒗 ?μ냼???꾨줈??以묒븰 ?먮뒗 ?곗륫???ㅼ튂, ?듯뻾湲덉?援ш컙쨌湲곌컙 諛??댁쑀瑜?紐낆떆??蹂댁“?쒖?瑜?遺李㈑룹꽕移?媛??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, regulatory sign 201, no-passage sign, meaning that not only pedestrians but all vehicles cannot pass. Installed at the center or right side of the road in a section or place of the road; a supplementary sign specifying the no-passage section, period, and reason can be attached and installed."
+ }
+]
+
+codex
+[{"n":885,"field":"e","severity":"major","issue":"‘양측방 통행’을 한 차량이 양쪽 모두로 통행해야 한다는 의미로 오역하여 표지의 통행 방법을 오도한다.","suggestion":"Enforcement Rule of the Road Traffic Act, Table 6, caution sign No. 122, Traffic May Pass on Either Side sign. It indicates a point where traffic traveling in the same direction may proceed on either side."}]
+tokens used
+8,160
+[{"n":885,"field":"e","severity":"major","issue":"‘양측방 통행’을 한 차량이 양쪽 모두로 통행해야 한다는 의미로 오역하여 표지의 통행 방법을 오도한다.","suggestion":"Enforcement Rule of the Road Traffic Act, Table 6, caution sign No. 122, Traffic May Pass on Either Side sign. It indicates a point where traffic traveling in the same direction may proceed on either side."}]

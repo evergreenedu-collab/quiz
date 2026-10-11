@@ -1,0 +1,262 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127f5-e6d9-7751-99ff-31d8d91f05c3
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/311_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/311_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 553ms:
+[
+ {
+  "n": 222,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 9(李⑤줈???곕Ⅸ ?듯뻾李⑥쓽 湲곗?), 怨좎냽?꾨줈 ?몄쓽 ?꾨줈?먯꽌 ?쇱そ李⑤줈???뱀슜?먮룞李?諛?寃쏀삎???뚰삎?ㅼ쨷???뱁빀?먮룞李④? ?듯뻾?????덈뒗 李⑥쥌?대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 9 (Standards for Vehicles Passing by Lane). On roads other than highways, the left lane is the lane on which passenger cars and light/small/medium-sized passenger buses may pass."
+ },
+ {
+  "n": 223,
+  "ko_e": "?꾨줈 以묒븰??諛깆깋 ?먯꽑 ?뺤떇???몃㈃?쒖떆媛 ?ㅼ튂??援ш컙?먯꽌 ?좏꽩???덉슜?쒕떎.",
+  "tr_e": "In a section where a road marking in the form of a white dashed line is installed in the center of the road, a U-turn is permitted."
+ },
+ {
+  "n": 224,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??6議?李⑤줈???곕Ⅸ ?듯뻾援щ텇) - ?쇰갑?듯뻾 ?꾨줈?먯꽌???꾨줈???쇱そ遺??1李⑤줈濡??쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 16 (Classification of Passage by Lane) - On a one-way road, the leftmost lane is counted as the first lane."
+ },
+ {
+  "n": 225,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議??먮룞李⑤벑怨??몃㈃?꾩감???띾룄) ?〓퉬?띿븞媛쒌냽???깆쑝濡??명븳 ?낆쿇???쒖뿉??????뿉  遺덇뎄?섍퀬 ?ㅼ쓬 媛??몄쓽 湲곗????섑븯??媛먯냽 ?댄뻾?섏뿬???쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 19 (Speed of Motor Vehicles, etc. and Streetcars) (2) In adverse weather such as rain, fog, or snow, notwithstanding paragraph (1), the driver must reduce speed in accordance with the following standards."
+ },
+ {
+  "n": 226,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 1. ?꾩슜李⑤줈??醫낅쪟? ?꾩슜李⑤줈濡??듯뻾?????덈뒗 李?        (??議곗젣1??愿?? 3紐??댁긽 ?뱀감???뱀슜쨌?욎듅?⑹옄?숈감         (?ㅼ씤???꾩슜李⑤줈? 踰꾩뒪?꾩슜李⑤줈媛 ?숈떆???ㅼ튂?섎뒗 寃쎌슦?먮뒗 踰꾩뒪 ?꾩슜李⑤줈瑜??듯뻾?????덈뒗 李⑤뒗 ?쒖쇅?쒕떎)",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Table 1. Types of exclusive lanes and vehicles that may pass in exclusive lanes (related to Article 9(1)). A passenger car or passenger bus carrying three or more persons (where a high-occupancy exclusive lane and a bus-exclusive lane are installed at the same time, vehicles that may pass in the bus-exclusive lane are excluded)."
+ },
+ {
+  "n": 227,
+  "ko_e": "?꾨줈援먰넻踰???議??뺤쓽) ??1??湲멸??μ옄由?援ъ뿭), 湲멸??μ옄由ш뎄??"?대? 蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈?먯꽌  蹂댄뻾?먯쓽 ?덉쟾???뺣낫?섍린 ?꾪븯???덉쟾?쒖? ?깆쑝濡?寃쎄퀎瑜??쒖떆???꾨줈??媛?μ옄由?遺遺꾩쓣 留먰븳??",
+  "tr_e": "Road Traffic Act Article 2 (Definitions) subparagraph 11 (road-edge zone). A road-edge zone means the part at the edge of a road, on a road where the sidewalk and roadway are not separated, demarcated by traffic signs, etc. to secure the safety of pedestrians."
+ },
+ {
+  "n": 228,
+  "ko_e": "醫뚰쉶??李⑤줈媛 2媛??댁긽 ?ㅼ튂??援먯감濡쒖뿉??醫뚰쉶?꾪븯?ㅻ뒗 李⑤뒗 洹??ㅼ튂??醫뚰쉶??李⑤줈 ?댁뿉???꾨줈援먰넻踰??쒗뻾洹?移?蹂꾪몴9??怨좎냽?꾨줈?몄쓽 李⑤줈 援щ텇???곕씪 醫뚰쉶?꾪븯?ъ빞 ?쒕떎.",
+  "tr_e": "At an intersection where two or more left-turn lanes are installed, a vehicle intending to turn left must turn left within the installed left-turn lanes in accordance with the lane classification for roads other than highways in Enforcement Rule of the Road Traffic Act Table 9."
+ },
+ {
+  "n": 229,
+  "ko_e": "???꾨줈援먰넻踰???6議????? ???꾨줈援먰넻踰??쒗뻾????1議????? ???? ???꾨줈援먰넻踰???5議????? ???먮룞李??꾩슜?꾨줈?먯꽌??理쒖??띾룄??留ㅼ떆 30?щ줈誘명꽣?대떎.(?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議?????????",
+  "tr_e": "(1) Road Traffic Act Article 26(4); (2) Enforcement Decree of the Road Traffic Act Article 11(1) subparagraph 1; (3) Road Traffic Act Article 25(4); (4) The minimum speed on a motor-vehicle-only road is 30 kilometers per hour. (Enforcement Rule of the Road Traffic Act Article 19(1) subparagraph 2)"
+ },
+ {
+  "n": 230,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議????? ?몃룄 2李⑤줈 ?댁긽 怨좎냽?꾨줈?먯꽌 ?곸옱以묐웾 1.5?ㅼ쓣 珥덇낵?섎뒗 ?붾Ъ?먮룞李⑥쓽 理쒓퀬 ?띾룄??留ㅼ떆 80?щ줈誘명꽣?대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 19(1). On a highway with two or more lanes each way, the maximum speed of a truck with a loading capacity exceeding 1.5 tons is 80 kilometers per hour."
+ },
+ {
+  "n": 231,
+  "ko_e": "?꾨줈援먰넻踰???3議?李⑤쭏???듯뻾) ????,
+  "tr_e": "Road Traffic Act Article 13 (Passage of Vehicles and Horses) paragraph 4."
+ },
+ {
+  "n": 232,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??議????? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴2],           ?꾨줈援먰넻踰뺤긽 李⑤웾??援먯감濡쒖뿉 吏꾩엯?섍린 ?꾩뿉?섑솴?됱쓽 ?깊솕?숇줈 諛붾?寃쎌슦, 李⑤웾? ?뺤??좎씠?섃섍탳李⑤줈??吏?  ?꾟숈뿉  ?뺤??섏뿬???섎뒗吏 ?щ?(?곴레) [?踰뺤썝 2018. 12. 27. ?좉퀬 2018??4262 ?먭껐]",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 6(2), Enforcement Rule of the Road Traffic Act [Table 2]. Whether, under the Road Traffic Act, when the light changes to a yellow light before a vehicle enters an intersection, the vehicle must stop at the stop line or immediately before the intersection (affirmative) [Supreme Court Decision 2018Do14262, decided December 27, 2018]."
+ },
+ {
+  "n": 233,
+  "ko_e": "?좉났二쇨굅由??≪븞?꾧굅由???젣?숆굅由??ｌ젙吏嫄곕━",
+  "tr_e": "(1) reaction distance; (2) safe distance; (3) braking distance; (4) stopping distance."
+ },
+ {
+  "n": 234,
+  "ko_e": "?꾨줈援먰넻踰???2議??욎?瑜닿린 湲덉????쒓린 諛??μ냼), ?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 501 援먯감濡? ?⑹깋?ㅼ꽑 援ш컙, ?곕꼸  ?? ?ㅻ━ ?? ?쒋ㅻ룄寃쎌같泥?옣??吏?뺥븳 怨녹? ?욎?瑜닿린 湲덉? ?μ냼?대떎.",
+  "tr_e": "Road Traffic Act Article 22 (Time and Places Where Overtaking Is Prohibited), Enforcement Rule of the Road Traffic Act [Table 6] 501 intersection. Intersections, sections with yellow solid lines, inside tunnels, on bridges, and places designated by the Commissioner of the City/Provincial Police Agency are places where overtaking is prohibited."
+ },
+ {
+  "n": 235,
+  "ko_e": "?꾨줈援먰넻踰???議??뺤쓽) ??8?? \"?쒗뻾\"(孃먫죱)?대? ?댁쟾?먭? 李⑤? 利됱떆 ?뺤??쒗궗 ???덈뒗 ?뺣룄???먮┛ ?띾룄濡?吏꾪뻾 ?섎뒗 寃껋쓣 留먰븳??",
+  "tr_e": "Road Traffic Act Article 2 (Definitions) subparagraph 28. Slowing down (孃먫죱) means the driver proceeding at a slow speed at which the vehicle can be stopped immediately."
+ },
+ {
+  "n": 236,
+  "ko_e": "?졻몼 ?꾨줈援먰넻踰???51議곗쓽2 ????理쒓퀬?띾룄蹂대떎 ?쒖냽 100?щ줈誘명꽣瑜?珥덇낵???띾룄濡?3???댁긽 ?먮룞李⑤벑???댁쟾?? ?щ엺? 1???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑,           ???꾨줈援먰넻踰???53議?????????理쒓퀬?띾룄蹂대떎 ?쒖냽 100?щ줈誘명꽣瑜?珥덇낵???띾룄濡??먮룞李⑤벑???댁쟾???щ엺?  100留????댄븯??踰뚭툑 ?먮뒗 援щ쪟           ???꾨줈援먰넻踰???54議?????理쒓퀬?띾룄蹂대떎 ?쒖냽 80?щ줈誘명꽣瑜?珥덇낵???띾룄濡??먮룞李??깆쓣 ?댁쟾???щ엺 30留??? ?댄븯??踰뚭툑 ?먮뒗 援щ쪟",
+  "tr_e": "(1)(2) Road Traffic Act Article 151-2 subparagraph 2: a person who drives a motor vehicle, etc. three or more times at a speed exceeding the maximum speed by 100 kilometers per hour shall be punished by imprisonment for up to 1 year or a fine of up to 5 million won; (3) Road Traffic Act Article 153(2) subparagraph 2: a person who drives a motor vehicle, etc. at a speed exceeding the maximum speed by 100 kilometers per hour shall be punished by a fine of up to 1 million won or detention; (4) Road Traffic Act Article 154 subparagraph 9: a person who drives a motor vehicle, etc. at a speed exceeding the maximum speed by 80 kilometers per hour shall be punished by a fine of up to 300,000 won or detention."
+ },
+ {
+  "n": 237,
+  "ko_e": "援먯감濡쒖뿉???고쉶?????뚯뿉???쒗뻾?쇰줈 ?고쉶?꾪빐???섍퀬, ?좎쭊?낇븳 醫뚰쉶??李⑤웾??李⑤줈瑜??묐낫?댁빞 ?쒕떎. 洹몃━怨? ??씠 ?볦? ?꾨줈?먯꽌 醫곸? ?꾨줈濡??고쉶?꾪븷 ?뚯뿉???ㅻⅨ 李⑤웾??二쇱쓽?댁빞 ?쒕떎.",
+  "tr_e": "When turning right at an intersection, you must turn right while slowing down and yield the right-of-way to a left-turning vehicle that entered first. And when turning right from a wide road onto a narrow road, you must also pay attention to other vehicles."
+ },
+ {
+  "n": 238,
+  "ko_e": "?꾨줈援먰넻踰???5議? ?꾨줈援먰넻踰뺤떆?됰졊 蹂꾪몴2, ?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴2 ??李⑤웾?좏샇媛 ?곸깋?깊솕??寃쎌슦, ?〓떒蹂??꾩뿉??蹂댄뻾?먯떊?몄? 愿怨꾩뾾???뺤???吏곸쟾???쇱떆?뺤? ???좏샇???곕씪 吏꾪뻾?섎뒗 ?ㅻⅨ 李⑤웾??援먰넻??諛⑺빐?섏? ?딄퀬 ?고쉶???쒕떎. ??李⑤웾?좏샇媛 ?뱀깋 ?깊솕??寃쎌슦 ?〓떒蹂대룄?먯꽌 ?쇱??뺤? ?섎Т???녿떎. ??李⑤웾?좏샇媛 ?뱀깋?붿궡 ???깊솕(醫뚰쉶????寃쎌슦, ?〓떒蹂대룄?먯꽌 蹂댄뻾?먯떊?몄? 愿怨꾩뾾???뺤???吏곸쟾???쇱떆?뺤? ???좏샇???곕씪 吏꾪뻾?섎뒗 ?ㅻⅨ 李⑤웾??援먰넻??諛⑺빐?섏? ?딄퀬 ?고쉶???쒕떎. ???쇱떆?뺤??섏? ?딅뒗 寃쎌슦 ?좏샇?꾨컲, ?쇱떆?뺤??섏??쇰굹 蹂댄뻾???듯뻾??諛⑺빐??寃쎌슦 蹂댄뻾??蹂댄샇?섎Т?꾨컲?쇰줈 泥섎쾶?쒕떎.",
+  "tr_e": "Road Traffic Act Article 25, Enforcement Decree of the Road Traffic Act Table 2, Enforcement Rule of the Road Traffic Act Table 2. (1) When the vehicle signal is a red light, regardless of the pedestrian signal at the crosswalk, come to a complete stop immediately before the stop line and then turn right without obstructing the traffic of other vehicles proceeding in accordance with the signal. (2) When the vehicle signal is a green light, there is no duty to come to a complete stop at the crosswalk. (3) When the vehicle signal is a green arrow light (left turn), regardless of the pedestrian signal at the crosswalk, come to a complete stop immediately before the stop line and then turn right without obstructing the traffic of other vehicles proceeding in accordance with the signal. * If you do not come to a complete stop, it is punished as a signal violation; if you come to a complete stop but obstruct the passage of pedestrians, it is punished as a violation of the duty to protect pedestrians."
+ },
+ {
+  "n": 239,
+  "ko_e": "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먯감濡쒖뿉???고쉶?꾩쓣 ?섍퀬???섎뒗 ?뚯뿉??誘몃━ ?꾨줈???곗륫 媛?μ옄由щ? ?쒗뻾?섎㈃???고쉶?꾪븯?ъ빞  ?쒕떎. ??寃쎌슦 ?고쉶?꾪븯??李⑥쓽 ?댁쟾?먮뒗 ?좏샇???곕씪 ?뺤? ?먮뒗 吏꾪뻾?섎뒗 蹂댄뻾???먮뒗 ?먯쟾嫄곗뿉 二쇱쓽?섏뿬???쒕떎.",
+  "tr_e": "Every driver of a vehicle who intends to turn right at an intersection must turn right while slowing down along the right edge of the road in advance. In this case, the driver of the vehicle turning right must pay attention to pedestrians or cyclists who stop or proceed in accordance with the signal."
+ },
+ {
+  "n": 240,
+  "ko_e": "???쒕룞 嫄곕━ ???덉쟾嫄곕━ ??怨듭＜嫄곕━",
+  "tr_e": "(1) braking distance; (2) safe distance; (4) reaction distance."
+ },
+ {
+  "n": 241,
+  "ko_e": "援먯감濡쒖뿉?쒕뒗 ?⑹깋 ?먮㈇??寃쎌슦 二쇱쓽?섎ŉ ?듯뻾, ?곸깋?먮㈇??寃쎌슦 ?쇱떆?뺤? ?쒕떎. 援먯감濡??묎렐 ???꾩“?깆쓣 ?곹뼢??濡?耳쒕뒗 寃껋? ?곷?諛⑹쓽 ?덉쟾?댁쟾???꾪삊???쒕떎.",
+  "tr_e": "At an intersection, in the case of flashing yellow, proceed with caution; in the case of flashing red, come to a complete stop. Turning on the high beams when approaching an intersection poses a threat to the safe driving of the other party."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+s='?꾨줈援먰넻踰?'
+for enc in ['cp949','euc_kr']:
+ try: print(enc, s.encode(enc,errors='replace').decode('utf-8',errors='replace'))
+ except Exception as e: print(e)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:36:42.303340Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 684ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:7 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false); Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/311_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 541ms:
+[
+ {
+  "n": 222,
+  "ko_e": "도로교통법 시행규칙 별표 9(차로에 따른 통행차의 기준), 고속도로 외의 도로에서 왼쪽차로는 승용자동차 및 경형․ 소형․중형 승합자동차가 통행할 수 있는 차종이다.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 9 (Standards for Vehicles Passing by Lane). On roads other than highways, the left lane is the lane on which passenger cars and light/small/medium-sized passenger buses may pass."
+ },
+ {
+  "n": 223,
+  "ko_e": "도로 중앙에 백색 점선 형식의 노면표시가 설치된 구간에서 유턴이 허용된다.",
+  "tr_e": "In a section where a road marking in the form of a white dashed line is installed in the center of the road, a U-turn is permitted."
+ },
+ {
+  "n": 224,
+  "ko_e": "도로교통법 시행규칙 제16조(차로에 따른 통행구분) - 일방통행 도로에서는 도로의 왼쪽부터 1차로로 한다.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 16 (Classification of Passage by Lane) - On a one-way road, the leftmost lane is counted as the first lane."
+ },
+ {
+  "n": 225,
+  "ko_e": "도로교통법 시행규칙 제19조(자동차등과 노면전차의 속도) ②비ㆍ안개ㆍ눈 등으로 인한 악천후 시에는 제1항에  불구하고 다음 각 호의 기준에 의하여 감속 운행하여야 한다.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 19 (Speed of Motor Vehicles, etc. and Streetcars) (2) In adverse weather such as rain, fog, or snow, notwithstanding paragraph (1), the driver must reduce speed in accordance with the following standards."
+ },
+ {
+  "n": 226,
+  "ko_e": "도로교통법 시행령 별표 1. 전용차로의 종류와 전용차로로 통행할 수 있는 차         (제9조제1항 관련) 3명 이상 승차한 승용·ᆞ승합자동차         (다인승 전용차로와 버스전용차로가 동시에 설치되는 경우에는 버스 전용차로를 통행할 수 있는 차는 제외한다)",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Table 1. Types of exclusive lanes and vehicles that may pass in exclusive lanes (related to Article 9(1)). A passenger car or passenger bus carrying three or more persons (where a high-occupancy exclusive lane and a bus-exclusive lane are installed at the same time, vehicles that may pass in the bus-exclusive lane are excluded)."
+ },
+ {
+  "n": 227,
+  "ko_e": "도로교통법 제2조(정의) 제11호(길가장자리 구역), 길가장자리구역\"이란 보도와 차도가 구분되지 아니한 도로에서  보행자의 안전을 확보하기 위하여 안전표지 등으로 경계를 표시한 도로의 가장자리 부분을 말한다.",
+  "tr_e": "Road Traffic Act Article 2 (Definitions) subparagraph 11 (road-edge zone). A road-edge zone means the part at the edge of a road, on a road where the sidewalk and roadway are not separated, demarcated by traffic signs, etc. to secure the safety of pedestrians."
+ },
+ {
+  "n": 228,
+  "ko_e": "좌회전 차로가 2개 이상 설치된 교차로에서 좌회전하려는 차는 그 설치된 좌회전 차로 내에서 도로교통법 시행규 칙 별표9의 고속도로외의 차로 구분에 따라 좌회전하여야 한다.",
+  "tr_e": "At an intersection where two or more left-turn lanes are installed, a vehicle intending to turn left must turn left within the installed left-turn lanes in accordance with the lane classification for roads other than highways in Enforcement Rule of the Road Traffic Act Table 9."
+ },
+ {
+  "n": 229,
+  "ko_e": "① 도로교통법 제26조 제4항, ② 도로교통법 시행령 제11조 제1항, 제1호, ③ 도로교통법 제25조 제4항, ④ 자동차 전용도로에서의 최저속도는 매시 30킬로미터이다.(도로교통법 시행규칙 제19조 제1항 제2호)",
+  "tr_e": "(1) Road Traffic Act Article 26(4); (2) Enforcement Decree of the Road Traffic Act Article 11(1) subparagraph 1; (3) Road Traffic Act Article 25(4); (4) The minimum speed on a motor-vehicle-only road is 30 kilometers per hour. (Enforcement Rule of the Road Traffic Act Article 19(1) subparagraph 2)"
+ },
+ {
+  "n": 230,
+  "ko_e": "도로교통법 시행규칙 제19조 제1항, 편도 2차로 이상 고속도로에서 적재중량 1.5톤을 초과하는 화물자동차의 최고 속도는 매시 80킬로미터이다.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 19(1). On a highway with two or more lanes each way, the maximum speed of a truck with a loading capacity exceeding 1.5 tons is 80 kilometers per hour."
+ },
+ {
+  "n": 231,
+  "ko_e": "도로교통법 제13조(차마의 통행) 제4항",
+  "tr_e": "Road Traffic Act Article 13 (Passage of Vehicles and Horses) paragraph 4."
+ },
+ {
+  "n": 232,
+  "ko_e": "도로교통법 시행규칙 제6조 제2항, 도로교통법 시행규칙 [별표2],           도로교통법상 차량이 교차로에 진입하기 전에‘황색의 등화’로 바뀐 경우, 차량은 정지선이나‘교차로의 직   전’에  정지하여야 하는지 여부(적극) [대법원 2018. 12. 27. 선고 2018도14262 판결]",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 6(2), Enforcement Rule of the Road Traffic Act [Table 2]. Whether, under the Road Traffic Act, when the light changes to a yellow light before a vehicle enters an intersection, the vehicle must stop at the stop line or immediately before the intersection (affirmative) [Supreme Court Decision 2018Do14262, decided December 27, 2018]."
+ },
+ {
+  "n": 233,
+  "ko_e": "①공주거리 ②안전거리 ③제동거리 ④정지거리",
+  "tr_e": "(1) reaction distance; (2) safe distance; (3) braking distance; (4) stopping distance."
+ },
+ {
+  "n": 234,
+  "ko_e": "도로교통법 제22조(앞지르기 금지의 시기 및 장소), 도로교통법 시행규칙 [별표6] 501 교차로, 황색실선 구간, 터널  안, 다리 위, 시․도경찰청장이 지정한 곳은 앞지르기 금지 장소이다.",
+  "tr_e": "Road Traffic Act Article 22 (Time and Places Where Overtaking Is Prohibited), Enforcement Rule of the Road Traffic Act [Table 6] 501 intersection. Intersections, sections with yellow solid lines, inside tunnels, on bridges, and places designated by the Commissioner of the City/Provincial Police Agency are places where overtaking is prohibited."
+ },
+ {
+  "n": 235,
+  "ko_e": "도로교통법 제2조(정의) 제28호. \"서행\"(徐行)이란 운전자가 차를 즉시 정지시킬 수 있는 정도의 느린 속도로 진행 하는 것을 말한다.",
+  "tr_e": "Road Traffic Act Article 2 (Definitions) subparagraph 28. Slowing down (徐行) means the driver proceeding at a slow speed at which the vehicle can be stopped immediately."
+ },
+ {
+  "n": 236,
+  "ko_e": "①② 도로교통법 제151조의2 제2호 최고속도보다 시속 100킬로미터를 초과한 속도로 3회 이상 자동차등을 운전한  사람은 1년 이하의 징역이나 500만 원 이하의 벌금,           ③ 도로교통법 제153조 제2항 제2호 최고속도보다 시속 100킬로미터를 초과한 속도로 자동차등을 운전한 사람은  100만 원 이하의 벌금 또는 구류           ④ 도로교통법 제154조 제9호 최고속도보다 시속 80킬로미터를 초과한 속도로 자동차 등을 운전한 사람 30만 원  이하의 벌금 또는 구류",
+  "tr_e": "(1)(2) Road Traffic Act Article 151-2 subparagraph 2: a person who drives a motor vehicle, etc. three or more times at a speed exceeding the maximum speed by 100 kilometers per hour shall be punished by imprisonment for up to 1 year or a fine of up to 5 million won; (3) Road Traffic Act Article 153(2) subparagraph 2: a person who drives a motor vehicle, etc. at a speed exceeding the maximum speed by 100 kilometers per hour shall be punished by a fine of up to 1 million won or detention; (4) Road Traffic Act Article 154 subparagraph 9: a person who drives a motor vehicle, etc. at a speed exceeding the maximum speed by 80 kilometers per hour shall be punished by a fine of up to 300,000 won or detention."
+ },
+ {
+  "n": 237,
+  "ko_e": "교차로에서 우회전 할 때에는 서행으로 우회전해야 하고, 선진입한 좌회전 차량에 차로를 양보해야 한다. 그리고  폭이 넓은 도로에서 좁은 도로로 우회전할 때에도 다른 차량에 주의해야 한다.",
+  "tr_e": "When turning right at an intersection, you must turn right while slowing down and yield the right-of-way to a left-turning vehicle that entered first. And when turning right from a wide road onto a narrow road, you must also pay attention to other vehicles."
+ },
+ {
+  "n": 238,
+  "ko_e": "도로교통법 제25조, 도로교통법시행령 별표2, 도로교통법시행규칙 별표2 ① 차량신호가 적색등화인 경우, 횡단보 도에서 보행자신호와 관계없이 정지선 직전에 일시정지 후 신호에 따라 진행하는 다른 차량의 교통을 방해하지 않고 우회전 한다. ② 차량신호가 녹색 등화인 경우 횡단보도에서 일지정지 의무는 없다. ③ 차량신호가 녹색화살 표 등화(좌회전)인 경우, 횡단보도에서 보행자신호와 관계없이 정지선 직전에 일시정지 후 신호에 따라 진행하는 다른 차량의 교통을 방해하지 않고 우회전 한다. ※ 일시정지하지 않는 경우 신호위반, 일시정지하였으나 보행자 통행을 방해한 경우 보행자 보호의무위반으로 처벌된다.",
+  "tr_e": "Road Traffic Act Article 25, Enforcement Decree of the Road Traffic Act Table 2, Enforcement Rule of the Road Traffic Act Table 2. (1) When the vehicle signal is a red light, regardless of the pedestrian signal at the crosswalk, come to a complete stop immediately before the stop line and then turn right without obstructing the traffic of other vehicles proceeding in accordance with the signal. (2) When the vehicle signal is a green light, there is no duty to come to a complete stop at the crosswalk. (3) When the vehicle signal is a green arrow light (left turn), regardless of the pedestrian signal at the crosswalk, come to a complete stop immediately before the stop line and then turn right without obstructing the traffic of other vehicles proceeding in accordance with the signal. * If you do not come to a complete stop, it is punished as a signal violation; if you come to a complete stop but obstruct the passage of pedestrians, it is punished as a violation of the duty to protect pedestrians."
+ },
+ {
+  "n": 239,
+  "ko_e": "모든 차의 운전자는 교차로에서 우회전을 하고자 하는 때에는 미리 도로의 우측 가장자리를 서행하면서 우회전하여야  한다. 이 경우 우회전하는 차의 운전자는 신호에 따라 정지 또는 진행하는 보행자 또는 자전거에 주의하여야 한다.",
+  "tr_e": "Every driver of a vehicle who intends to turn right at an intersection must turn right while slowing down along the right edge of the road in advance. In this case, the driver of the vehicle turning right must pay attention to pedestrians or cyclists who stop or proceed in accordance with the signal."
+ },
+ {
+  "n": 240,
+  "ko_e": "① 제동 거리 ② 안전거리 ④ 공주거리",
+  "tr_e": "(1) braking distance; (2) safe distance; (4) reaction distance."
+ },
+ {
+  "n": 241,
+  "ko_e": "교차로에서는 황색 점멸인 경우 주의하며 통행, 적색점멸인 경우 일시정지 한다. 교차로 접근 시 전조등을 상향으 로 켜는 것은 상대방의 안전운전에 위협이 된다.",
+  "tr_e": "At an intersection, in the case of flashing yellow, proceed with caution; in the case of flashing red, come to a complete stop. Turning on the high beams when approaching an intersection poses a threat to the safe driving of the other party."
+ }
+]
+
+codex
+[{"n":236,"field":"e","severity":"major","issue":"‘최고속도보다 시속 100킬로미터를 초과’ 및 ‘80킬로미터를 초과’는 제한속도를 각각 100·80km/h보다 더 많이 초과한 경우인데, 번역은 정확히 100·80km/h 초과한 경우처럼 표현하여 처벌 기준을 오도할 수 있다.","suggestion":"(1)(2) Road Traffic Act Article 151-2 subparagraph 2: a person who drives a motor vehicle, etc. three or more times at a speed exceeding the maximum speed by more than 100 kilometers per hour shall be punished by imprisonment for up to 1 year or a fine of up to 5 million won; (3) Road Traffic Act Article 153(2) subparagraph 2: a person who drives a motor vehicle, etc. at a speed exceeding the maximum speed by more than 100 kilometers per hour shall be punished by a fine of up to 1 million won or detention; (4) Road Traffic Act Article 154 subparagraph 9: a person who drives a motor vehicle, etc. at a speed exceeding the maximum speed by more than 80 kilometers per hour shall be punished by a fine of up to 300,000 won or detention."}]
+tokens used
+15,480
+[{"n":236,"field":"e","severity":"major","issue":"‘최고속도보다 시속 100킬로미터를 초과’ 및 ‘80킬로미터를 초과’는 제한속도를 각각 100·80km/h보다 더 많이 초과한 경우인데, 번역은 정확히 100·80km/h 초과한 경우처럼 표현하여 처벌 기준을 오도할 수 있다.","suggestion":"(1)(2) Road Traffic Act Article 151-2 subparagraph 2: a person who drives a motor vehicle, etc. three or more times at a speed exceeding the maximum speed by more than 100 kilometers per hour shall be punished by imprisonment for up to 1 year or a fine of up to 5 million won; (3) Road Traffic Act Article 153(2) subparagraph 2: a person who drives a motor vehicle, etc. at a speed exceeding the maximum speed by more than 100 kilometers per hour shall be punished by a fine of up to 1 million won or detention; (4) Road Traffic Act Article 154 subparagraph 9: a person who drives a motor vehicle, etc. at a speed exceeding the maximum speed by more than 80 kilometers per hour shall be punished by a fine of up to 300,000 won or detention."}]

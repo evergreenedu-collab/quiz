@@ -1,0 +1,231 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12808-f551-7591-869c-8accc6ec673e
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/324_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/324_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 524ms:
+[
+ {
+  "n": 484,
+  "ko_e": "?꾨줈援먰넻踰???4議??ш퀬 諛쒖깮 ?쒖쓽 議곗튂)????湲닿툒?먮룞李? 遺?곸옄瑜??대컲 以묒씤 李? ?고렪臾쇱옄?숈감 諛??몃㈃?꾩감 ?깆쓽  ?댁쟾?먮뒗 湲닿툒??寃쎌슦?먮뒗 ?숈듅???깆쑝濡??섏뿬湲??ш퀬 議곗튂??寃쎌같???좉퀬瑜??섍쾶 ?섍퀬 ?댁쟾??怨꾩냽?????덈떎.",
+  "tr_e": "휂i沼걏 54 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(X沼?l첵 khi x梳즭 ra tai n梳죒) kho梳즢 5: ng튼沼쓎 l찼i xe 튼u ti챗n, xe 휃ang ch沼?ng튼沼쓎 b沼?th튼퉤ng, xe ch沼?b튼u ph梳쯯 v횪 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g v.v. trong tr튼沼쓓g h沼즤 kh梳쯰 c梳쩺 c처 th沼?휃沼?ng튼沼쓎 ng沼밿 c첫ng v.v. x沼?l첵 tai n梳죒 ho梳톍 b찼o c梳즢h s찼t v횪 ti梳퓈 t沼쩭 l찼i xe."
+ },
+ {
+  "n": 485,
+  "ko_e": "湲닿툒?먮룞李??먮뒗 遺?곸옄瑜??꾩넚 以묒씤 李?諛??고렪臾??섏넚 ?먮룞李??깆쓽 ?댁쟾?먮뒗 湲닿툒??寃쎌슦???숈듅?먮줈 ?섏뿬湲? ?꾩슂??議곗튂???좉퀬瑜??섍쾶?섍퀬 ?댁쟾??怨꾩냽?????덈떎.(?꾨줈援먰넻踰???4議?????",
+  "tr_e": "Ng튼沼쓎 l찼i xe 튼u ti챗n ho梳톍 xe 휃ang 휃튼a ng튼沼쓎 b沼?th튼퉤ng 휃i v횪 xe v梳춏 chuy沼긪 b튼u ph梳쯯 v.v. trong tr튼沼쓓g h沼즤 kh梳쯰 c梳쩺 c처 th沼?휃沼?ng튼沼쓎 ng沼밿 c첫ng th沼켧 hi沼뇆 c찼c bi沼뇆 ph찼p c梳쬷 thi梳퓍 ho梳톍 b찼o c찼o v횪 ti梳퓈 t沼쩭 l찼i xe. (휂i沼걏 54 kho梳즢 5 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?"
+ },
+ {
+  "n": 486,
+  "ko_e": "濡쒕뱶?ъ쓽 ?ш퀬?꾪뿕? ?숇Ъ??媛묒옄湲??섑??섏꽌 ?泥섑븯吏 紐삵븯??寃쎌슦?대?濡?異쒗쁽??媛?μ꽦???믪? ?꾨줈?먯꽌??媛먯냽 ?댄뻾?섎뒗 寃껋씠 醫뗫떎.",
+  "tr_e": "Nguy c퉤 tai n梳죒 roadkill l횪 tr튼沼쓓g h沼즤 휃沼셬g v梳춗 휃沼셳 ng沼셳 xu梳쩿 hi沼뇆 khi梳퓆 kh척ng 沼쯰g ph처 k沼땛, n챗n tr챗n nh沼칗g con 휃튼沼쓓g c처 kh梳?n훱ng xu梳쩿 hi沼뇆 cao th챙 t沼몋 nh梳쩿 l횪 ch梳죣 gi梳즡 t沼멵."
+ },
+ {
+  "n": 487,
+  "ko_e": "?쒓뎅?꾨줈怨듭궗(肄쒖꽱??1588-2504)??湲닿툒寃ъ씤 ?쒕퉬?ㅻ뒗 ?ш퀬 ?먮뒗 怨좎옣?쇰줈 怨좎냽?꾨줈???뺤감?섏뿬 2李??ш퀬媛 ?곕젮 ?섎뒗 李⑤웾??媛源뚯슫 ?닿쾶?뚮굹 ?곸뾽?? 議몄쓬?쇳꽣 ???덉쟾吏?源뚯? 臾대즺濡?寃ъ씤??二쇰뒗 ?쒕룄?대떎.",
+  "tr_e": "D沼땉h v沼?c沼쯷 k챕o kh梳쯰 c梳쩺 c沼쬪 T沼븂g c척ng ty 휂튼沼쓓g cao t沼멵 H횪n Qu沼멵 (t沼븂g 휃횪i 1588-2504) l횪 ch梳?휃沼?k챕o mi沼꿳 ph챠 휃梳퓆 khu v沼켧 an to횪n nh튼 tr梳죑 d沼쳌g ngh沼? tr梳죑 thu ph챠 (?곸뾽??, 휃i沼긩 d沼쳌g ch沼몁g bu沼뱊 ng沼?g梳쬷 nh梳쩿 휃沼멼 v沼쌻 xe d沼쳌g tr챗n 휃튼沼쓓g cao t沼멵 do tai n梳죒 ho梳톍 h沼뢮g h처c c처 nguy c퉤 g창y tai n梳죒 th沼?c梳쩺."
+ },
+ {
+  "n": 488,
+  "ko_e": "吏덈퀝愿由ъ껌???섑븯硫??숇Ъ???ъ껜??媛먯뿼???곕젮媛 ?덉쑝誘濡?吏곸젒 嫄대뱶?ㅼ꽌???꾨땲 ?섎ŉ, ?ш퀬媛 諛쒖깮?섍쾶 ?섎㈃ 吏??泥??먮뒗 ?꾨줈愿由ъ껌 諛?吏??쾲??+120踰?肄쒖꽱???앺솢?덈궡 ?곷떞?쒕퉬?????좉퀬?섏뿬 ?꾩???諛쏄퀬, ?ш퀬瑜??뱁븳 ?숇Ъ?  ?꾪뻾踰뺤긽 臾쇨굔???대떦?섎?濡?2李⑥궗怨?諛⑹?瑜??꾪븳 ?꾪뿕諛⑹?? ?먰솢???뚰넻????寃쎌슦?먮뒗 ?좉퀬?섏? ?꾨땲 ?대룄 ?쒕떎.",
+  "tr_e": "Theo C沼쩭 Qu梳즢 l첵 D沼땉h b沼뇆h, x찼c 휃沼셬g v梳춗 c처 nguy c퉤 l창y nhi沼꿲 n챗n kh척ng 휃튼沼즓 tr沼켧 ti梳퓈 ch梳죑 v횪o; khi x梳즭 ra tai n梳죒 th챙 b찼o cho ch챠nh quy沼걆 휃沼땇 ph튼퉤ng ho梳톍 c퉤 quan qu梳즢 l첵 휃튼沼쓓g b沼?v횪 t沼븂g 휃횪i m찾 v첫ng + s沼?120 (d沼땉h v沼?t튼 v梳쩸 h튼沼썀g d梳쳌 휃沼쓎 s沼몁g) 휃沼?휃튼沼즓 tr沼?gi첬p; 휃沼셬g v梳춗 b沼?tai n梳죒 theo lu梳춗 hi沼뇆 h횪nh thu沼셛 lo梳죍 t횪i s梳즢 (휃沼?v梳춗) n챗n n梳퓎 휃찾 th沼켧 hi沼뇆 ph챵ng ng沼첺 nguy hi沼긩 휃沼?tr찼nh tai n梳죒 th沼?c梳쩺 v횪 휃梳즡 b梳즣 l튼u th척ng th척ng su沼몋 th챙 kh척ng c梳쬷 b찼o c찼o c크ng 휃튼沼즓."
+ },
+ {
+  "n": 489,
+  "ko_e": "援먰넻?덉쟾?섏튃 2021??媛쒖젙2??遺꾨끂瑜?議곗젅?섍린 ?꾪븳 ?됰룞湲곕쾿?먮뒗 ??꾩븘?껉린踰? ?ㅽ넲踰꾪듉湲곕쾿, 湲댁옣?댁셿?덈젴湲곕쾿 ???덈떎. ??媛먯젙???볦뼱?ㅻⅤ???곹솴?먯꽌 ?좎떆 鍮좎졇?섏? ?쒓컙???ъ쑀瑜?媛뽮퀬 留덉쓬???덉젙??李얜뒗 遺꾨끂議곗젅諛⑸쾿????꾩븘?껉린踰뺤씠???쒕떎. ??遺꾨끂瑜??좊컻?섎뒗 遺?뺤쟻???ш퀬瑜?以묒??섍퀬 ?됱냼 ?앷컖?????됰났???λ㈃??1-2遺꾧컙 ?좎삱??吏묒쨷?섎뒗 遺꾨끂議곗젅諛⑸쾿???ㅽ넲踰꾪듉湲곕쾿?대씪 ?쒕떎. ??寃쏀뿕?뚯긽吏덈Ц湲곕쾿? 遺꾨끂議곗젅諛⑸쾿???대떦?섏? ?딅뒗 ?? ???묓뙏, ?ㅻ━, ?꾨옯諛? 媛?? ?닿묠 ??紐몄쓽 媛?遺遺꾩쓣 理쒕???湲댁옣?쒖섟?ㅺ? ?댁셿?쒖폒 ?몄븞???곹깭瑜?諛섎났?섎뒗 諛⑸쾿??湲댁옣?댁셿?덈젴湲곕쾿?대씪 ?쒕떎.",
+  "tr_e": "Quy t梳칌 an to횪n giao th척ng, b梳즢 s沼춁 휃沼뷼 l梳쬷 2 n훱m 2021: c찼c k沼?thu梳춗 h횪nh 휃沼셬g 휃沼?ki沼긩 so찼t c퉤n gi梳춏 g沼뱈 k沼?thu梳춗 t梳죑 ngh沼?(time-out), k沼?thu梳춗 n첬t d沼쳌g (stop button), k沼?thu梳춗 luy沼뇆 t梳춑 th튼 gi찾n c훱ng th梳쿻g. ??Ph튼퉤ng ph찼p ki沼긩 so찼t c퉤n gi梳춏 b梳켷g c찼ch t梳죑 tho찼t kh沼뢩 t챙nh hu沼몁g c梳즡 x첬c 휃ang s척i s沼쩭, d횪nh th沼쓎 gian th튼 th梳?휃沼?t챙m l梳죍 s沼?b챙nh t칫nh trong t창m tr챠 g沼뛦 l횪 k沼?thu梳춗 t梳죑 ngh沼? ??Ph튼퉤ng ph찼p ki沼긩 so찼t c퉤n gi梳춏 b梳켷g c찼ch d沼쳌g suy ngh칫 ti챗u c沼켧 g창y ra c퉤n gi梳춏 v횪 g沼즜 l梳죍, t梳춑 trung v횪o m沼셳 c梳즢h h梳죒h ph첬c 휃찾 ngh칫 s梳탇 trong 1-2 ph첬t g沼뛦 l횪 k沼?thu梳춗 n첬t d沼쳌g. ??K沼?thu梳춗 c창u h沼뢩 h沼밿 t튼沼웢g tr梳즜 nghi沼뇅 kh척ng thu沼셛 ph튼퉤ng ph찼p ki沼긩 so찼t c퉤n gi梳춏. ??Ph튼퉤ng ph찼p l梳톚 l梳죍 vi沼놻 c훱ng t沼멼 휃a r沼밿 th튼 gi찾n t沼쳌g b沼?ph梳춏 c퉤 th沼?nh튼 hai c찼nh tay, ch창n, b沼쩸g d튼沼쌻, ng沼켧, vai v.v. 휃沼?휃梳죜 tr梳죒g th찼i tho梳즜 m찼i g沼뛦 l횪 k沼?thu梳춗 luy沼뇆 t梳춑 th튼 gi찾n c훱ng th梳쿻g."
+ },
+ {
+  "n": 490,
+  "ko_e": "??슦濡??명븯??吏?섏감?꾧? 臾쇱뿉 媛먭꺼 李⑤웾??踰뷀띁源뚯? ?먮뒗 李⑤웾 諛뷀댁쓽 ?덈컲 ?댁긽??臾쇱뿉 ?좉릿?ㅻ㈃ 李⑤웾??吏?섍컝  ???녿떎. ?먰븳 ?꾩? 媛숈? 吏??쓣 ?듦낵????鍮좊Ⅸ ?띾룄濡?吏?섍?硫?李④? 臾쇱쓣 諛?대궡硫댁꽌 ?욎そ ?섏쐞媛 ?믪븘???붿쭊?? 臾쇱씠 ?ㅼ뼱???섎룄 ?덈떎. 移⑥닔??吏??뿉???쒕룞??爰쇱?硫??ㅼ떆 ?쒕룞??嫄몃㈃ ?붿쭊??留앷?吏꾨떎.",
+  "tr_e": "N梳퓎 h梳쬶 chui b沼?ng梳춑 n튼沼쌵 휃梳퓆 c梳즢 tr튼沼쌵 xe ho梳톍 h퉤n m沼셳 n沼춁 b찼nh xe b沼?ng梳춑 th챙 xe kh척ng th沼?휃i qua. Ngo횪i ra, khi 휃i qua khu v沼켧 nh튼 tr챗n v沼쌻 t沼멵 휃沼?nhanh, xe 휃梳쯻 n튼沼쌵 ra l횪m m沼켧 n튼沼쌵 ph챠a tr튼沼쌵 d창ng cao khi梳퓆 n튼沼쌵 c처 th沼?l沼뛲 v횪o 휃沼셬g c퉤. N梳퓎 ch梳퓍 m찼y 沼?khu v沼켧 ng梳춑 n튼沼쌵 r沼밿 l梳죍 kh沼웙 휃沼셬g l梳죍 th챙 휃沼셬g c퉤 s梳?h沼뢮g."
+ },
+ {
+  "n": 491,
+  "ko_e": "?묎툒?곹솴 諛쒖깮 ???꾪뿕?щ? ?뺤씤 諛??섏옄??諛섏쓳???댄뵾怨?二쇰????꾩????붿껌?섎ŉ ?꾩슂???곕씪 ?섏옄媛 ?명씉?? ?????덈룄濡?湲곕룄 ?뺣낫媛 ?꾩슂?섎ŉ 援ъ“?붿껌???섏뿬???쒕떎.",
+  "tr_e": "Khi x梳즭 ra t챙nh hu沼몁g kh梳쯰 c梳쩺, ph梳즜 ki沼긩 tra c처 nguy hi沼긩 hay kh척ng v횪 quan s찼t ph梳즢 沼쯰g c沼쬪 b沼뇆h nh창n, y챗u c梳쬾 ng튼沼쓎 xung quanh tr沼?gi첬p; t첫y nhu c梳쬾 c梳쬷 khai th척ng 휃튼沼쓓g th沼?휃沼?b沼뇆h nh창n c처 th沼?th沼?v횪 ph梳즜 g沼뛦 c沼쯷 h沼?"
+ },
+ {
+  "n": 492,
+  "ko_e": "?몃뱾???ы븯寃??⑤━硫???댁뼱 ?묓겕???좎씠 鍮좎쭏 ???덇린 ?뚮Ц??諛섎뱶???덉쟾??怨녹뿉 ?뺤감?섍퀬 ?먭??쒕떎.",
+  "tr_e": "N梳퓎 v척-l훱ng rung l梳칌 m梳죒h th챙 l沼몆 c처 th沼?b沼?th沼쬷g ho梳톍 b찼nh xe (m창m) c처 th沼?v훱ng ra n챗n nh梳쩿 휃沼땙h ph梳즜 d沼쳌g xe 沼?n퉤i an to횪n v횪 ki沼긩 tra."
+ },
+ {
+  "n": 493,
+  "ko_e": "?뚯넀遺??洹쇱젒 珥ъ쁺 諛??먭굅由?珥ъ쁺???섏뿬???섍퀬 李⑤웾??諛뷀닿? ?뚯븘媛 ?덈뒗 寃?源뚯???珥ъ쁺?댁빞 ?섏쨷???ш퀬瑜? 洹쒕챸?섎뒗???꾩????쒕떎.",
+  "tr_e": "Ph梳즜 ch沼쩺 c梳춏 c梳즢h v횪 ch沼쩺 t沼?xa ph梳쬷 b沼?h튼 h沼뢮g, v횪 ph梳즜 ch沼쩺 c梳?t챙nh tr梳죒g b찼nh xe 휃ang xoay (휃찼nh l찼i) v沼?h튼沼썀g n횪o 휃沼?sau n횪y gi첬p 챠ch cho vi沼놻 l횪m r천 tai n梳죒."
+ },
+ {
+  "n": 494,
+  "ko_e": "?κ굅由??댁쟾 ????댁뼱 留덈え?곹깭, 怨듦린?? 媛곸쥌 ?ㅼ씪瑜? ??댄띁? ?뚯뀛?? ?⑦봽瑜??깆쓣 ?먭??섏뿬???쒕떎.",
+  "tr_e": "Tr튼沼쌵 khi l찼i xe 휃튼沼쓓g d횪i, ph梳즜 ki沼긩 tra t챙nh tr梳죒g m챵n l沼몆, 찼p su梳쩿 h퉤i, c찼c lo梳죍 d梳쬾, c梳쬷 g梳죜 n튼沼쌵 v횪 n튼沼쌵 r沼춁 k챠nh, c찼c lo梳죍 휃챔n v.v."
+ },
+ {
+  "n": 495,
+  "ko_e": "??1?????뺤궗 ?낃굔??寃쎌슦?먮뒗 痍⑥냼 ?ъ쑀?대떎. ???먮룞李?愿由щ쾿???곕씪 ?깅줉?섏? ?꾨땲?섍굅???꾩떆 ?댄뻾 ?덇?瑜? 諛쏆? ?꾨땲???먮룞李⑤? ?댁쟾??寃쎌슦???댁쟾硫댄뿀媛 痍⑥냼?섎ŉ, ?깅줉???섏??쇰굹 ?깅줉踰덊샇?먯쓣 遺李⑺븯吏 ?딄퀬 ?댁쟾?? 寃껋? 硫댄뿀 痍⑥냼 ?ъ쑀媛 ?꾨땲?? (?꾨줈援먰넻踰???3議?",
+  "tr_e": "??1 n훱m. ??Tr튼沼쓓g h沼즤 b沼?kh沼웙 t沼?h챙nh s沼?th챙 l횪 l첵 do b沼?h沼쭃 (gi梳쪅 ph챕p). ??Tr튼沼쓓g h沼즤 l찼i xe ch튼a 휃튼沼즓 휃훱ng k첵 theo Lu梳춗 Qu梳즢 l첵 척 t척 ho梳톍 ch튼a 휃튼沼즓 c梳쩺 ph챕p v梳춏 h횪nh t梳죑 th沼쓎 th챙 gi梳쪅 ph챕p l찼i xe b沼?h沼쭃, c챵n tr튼沼쓓g h沼즤 휃찾 휃훱ng k첵 nh튼ng l찼i xe m횪 kh척ng g梳칗 bi沼긪 s沼?휃훱ng k첵 th챙 kh척ng ph梳즜 l횪 l첵 do h沼쭃 gi梳쪅 ph챕p. (휂i沼걏 93 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?"
+ },
+ {
+  "n": 496,
+  "ko_e": "?⑸? 湲곌컙 ?대궡??踰붿튃湲덉쓣 ?⑸??섏? ?꾨땲???щ엺? ?⑸? 湲곌컙??留뚮즺?섎뒗 ?좎쓽 ?ㅼ쓬 ?좊???20???대궡???듦퀬  諛쏆? 踰붿튃湲덉뿉 100遺꾩쓽 20???뷀븳 湲덉븸???⑸??섏뿬???쒕떎. (?꾨줈援먰넻踰???64議곗젣2??",
+  "tr_e": "Ng튼沼쓎 kh척ng n沼셮 ti沼걆 ph梳죜 vi ph梳죑 trong th沼쓎 h梳죒 n沼셮 th챙 trong v챵ng 20 ng횪y k沼?t沼?ng횪y h척m sau c沼쬪 ng횪y h梳퓍 h梳죒 n沼셮 ph梳즜 n沼셮 s沼?ti沼걆 c沼셬g th챗m 20/100 v횪o ti沼걆 ph梳죜 vi ph梳죑 휃찾 휃튼沼즓 th척ng b찼o. (휂i沼걏 164 kho梳즢 2 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?"
+ },
+ {
+  "n": 497,
+  "ko_e": "1?꾧컙 121???댁긽, 2?꾧컙 201???댁긽, 3?꾧컙 271???댁긽?대㈃ 硫댄뿀瑜?痍⑥냼?쒕떎.            (?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28)",
+  "tr_e": "N梳퓎 t沼?121 휃i沼긩 tr沼?l챗n trong 1 n훱m, 201 휃i沼긩 tr沼?l챗n trong 2 n훱m, 271 휃i沼긩 tr沼?l챗n trong 3 n훱m th챙 b沼?h沼쭃 gi梳쪅 ph챕p. (Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g 28)"
+ },
+ {
+  "n": 498,
+  "ko_e": "?좎쓽 寃쎌슦 ?됱젙 泥섎텇??諛쏆쓣 ?댁쟾??蹂몄씤???쇳빐????댁꽌??踰뚯젏???곗젙?섏? ?꾨땲?쒕떎. ?≪쓽 寃쎌슦 2遺꾩쓽 1濡? 媛먭꼍?쒕떎. ??쓽 寃쎌슦 踰뚯젏??遺怨쇳븯吏 ?딅뒗?? (?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28)",
+  "tr_e": "Tr튼沼쓓g h沼즤 ?? 휃沼멼 v沼쌻 thi沼뇍 h梳죍 c沼쬪 ch챠nh ng튼沼쓎 l찼i l횪 ng튼沼쓎 s梳?ch沼땥 x沼?ph梳죜 h횪nh ch챠nh th챙 kh척ng t챠nh 휃i沼긩 ph梳죜. Tr튼沼쓓g h沼즤 ?? gi梳즡 c챵n 1/2. Tr튼沼쓓g h沼즤 ?? kh척ng t챠nh 휃i沼긩 ph梳죜. (Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g 28)"
+ },
+ {
+  "n": 499,
+  "ko_e": "?꾨줈援먰넻踰???3議? ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴6 二쇱감湲덉? ?꾨컲 ???뱀슜李⑤뒗 4留??? ?뱁빀李⑤뒗 5留??먯쓽 怨쇳깭猷뚭? 遺 怨쇰릺硫? 2?쒓컙 ?댁긽 二쇱감?꾨컲??寃쎌슦 1留??먯씠 異붽??섍퀬, 誘몃궔 ??媛?곌툑 諛?以묎??곌툑??遺怨쇰맂??",
+  "tr_e": "휂i沼걏 33 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g 6: khi vi ph梳죑 c梳쩷 휃沼?xe th챙 xe con b沼?ph梳죜 h횪nh ch챠nh 40.000 won, xe kh찼ch 50.000 won; tr튼沼쓓g h沼즤 휃沼?vi ph梳죑 t沼?2 gi沼?tr沼?l챗n th챙 c沼셬g th챗m 10.000 won, v횪 n梳퓎 kh척ng n沼셮 th챙 b沼?t챠nh ti沼걆 ph梳죜 b沼?sung v횪 ti沼걆 ph梳죜 b沼?sung t훱ng n梳톘g."
+ },
+ {
+  "n": 500,
+  "ko_e": "援먰넻?ш퀬泥섎━?밸?踰???議?,
+  "tr_e": "휂i沼걏 4 Lu梳춗 x沼?l첵 휃梳톍 bi沼뇍 tai n梳죒 giao th척ng."
+ },
+ {
+  "n": 501,
+  "ko_e": "?꾨줈援먰넻踰???6議?怨듬룞?꾪뿕?됱쐞??湲덉?)?????먮룞李??깆쓽 ?댁쟾?먮뒗 ?꾨줈?먯꽌 2紐??댁긽??怨듬룞?쇰줈 2? ?댁긽?? ?먮룞李⑤벑???뺣떦???ъ쑀 ?놁씠 ?욌뮘濡??먮뒗 醫뚯슦濡?以꾩????듯뻾?섎㈃???ㅻⅨ ?щ엺?먭쾶 ?꾪빐瑜??쇱튂嫄곕굹 援먰넻?곸쓽  ?꾪뿕??諛쒖깮?섍쾶 ?섏뿬?쒕뒗 ?꾨땶 ?쒕떎.           ?꾨줈援먰넻踰???50議?踰뚯튃)????2???댄븯??吏뺤뿭?대굹 500留????댄븯??踰뚭툑           ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28, 援ъ냽 ???댁쟾硫댄뿀 痍⑥냼, ?뺤궗?낃굔 ??踰뚯젏 40??,
+  "tr_e": "휂i沼걏 46 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(C梳쩷 h횪nh vi g창y nguy hi沼긩 chung) kho梳즢 1: ng튼沼쓎 l찼i xe 척 t척 v.v. kh척ng 휃튼沼즓 t沼?2 ng튼沼쓎 tr沼?l챗n c첫ng nhau 휃i沼걏 khi沼긪 t沼?2 xe 척 t척 tr沼?l챗n x梳퓈 th횪nh h횪ng tr튼沼쌵 sau ho梳톍 tr찼i ph梳즜 tr챗n 휃튼沼쓓g m횪 kh척ng c처 l첵 do ch챠nh 휃찼ng, g창y h梳죍 cho ng튼沼쓎 kh찼c ho梳톍 g창y nguy hi沼긩 v沼?giao th척ng. 휂i沼걏 150 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(H챙nh ph梳죜) m沼쩭 1: ph梳죜 t첫 휃梳퓆 2 n훱m ho梳톍 ph梳죜 ti沼걆 휃梳퓆 5 tri沼뇎 won. Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g 28: khi b沼?giam gi沼?th챙 h沼쭃 gi梳쪅 ph챕p l찼i xe, khi b沼?kh沼웙 t沼?h챙nh s沼?th챙 tr沼?40 휃i沼긩."
+ },
+ {
+  "n": 502,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴28",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g 28."
+ },
+ {
+  "n": 503,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移?蹂꾪몴8 64?? ?좎뿉 痍⑦븳 ?곹깭?먯꽌 ?먯쟾嫄곕? ?댁쟾??寃쎌슦 踰붿튃湲?3留???",
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g 8 m沼쩭 64-2: tr튼沼쓓g h沼즤 l찼i xe 휃梳죖 trong t챙nh tr梳죒g say r튼沼즩 th챙 ph梳죜 ti沼걆 vi ph梳죑 30.000 won."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/324_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 502ms:
+[
+ {
+  "n": 484,
+  "ko_e": "도로교통법 제54조(사고 발생 시의 조치)제5항 긴급자동차, 부상자를 운반 중인 차, 우편물자동차 및 노면전차 등의  운전자는 긴급한 경우에는 동승자 등으로 하여금 사고 조치나 경찰에 신고를 하게 하고 운전을 계속할 수 있다.",
+  "tr_e": "Điều 54 Luật Giao thông đường bộ (Xử lý khi xảy ra tai nạn) khoản 5: người lái xe ưu tiên, xe đang chở người bị thương, xe chở bưu phẩm và tàu điện mặt đường v.v. trong trường hợp khẩn cấp có thể để người ngồi cùng v.v. xử lý tai nạn hoặc báo cảnh sát và tiếp tục lái xe."
+ },
+ {
+  "n": 485,
+  "ko_e": "긴급자동차 또는 부상자를 후송 중인 차 및 우편물 수송 자동차 등의 운전자는 긴급한 경우에 동승자로 하여금  필요한 조치나 신고를 하게하고 운전을 계속할 수 있다.(도로교통법 제54조 제5항)",
+  "tr_e": "Người lái xe ưu tiên hoặc xe đang đưa người bị thương đi và xe vận chuyển bưu phẩm v.v. trong trường hợp khẩn cấp có thể để người ngồi cùng thực hiện các biện pháp cần thiết hoặc báo cáo và tiếp tục lái xe. (Điều 54 khoản 5 Luật Giao thông đường bộ)"
+ },
+ {
+  "n": 486,
+  "ko_e": "로드킬의 사고위험은 동물이 갑자기 나타나서 대처하지 못하는 경우이므로 출현할 가능성이 높은 도로에서는 감속 운행하는 것이 좋다.",
+  "tr_e": "Nguy cơ tai nạn roadkill là trường hợp động vật đột ngột xuất hiện khiến không ứng phó kịp, nên trên những con đường có khả năng xuất hiện cao thì tốt nhất là chạy giảm tốc."
+ },
+ {
+  "n": 487,
+  "ko_e": "한국도로공사(콜센터 1588-2504)의 긴급견인 서비스는 사고 또는 고장으로 고속도로에 정차하여 2차 사고가 우려 되는 차량을 가까운 휴게소나 영업소, 졸음쉼터 등 안전지대까지 무료로 견인해 주는 제도이다.",
+  "tr_e": "Dịch vụ cứu kéo khẩn cấp của Tổng công ty Đường cao tốc Hàn Quốc (tổng đài 1588-2504) là chế độ kéo miễn phí đến khu vực an toàn như trạm dừng nghỉ, trạm thu phí (영업소), điểm dừng chống buồn ngủ gần nhất đối với xe dừng trên đường cao tốc do tai nạn hoặc hỏng hóc có nguy cơ gây tai nạn thứ cấp."
+ },
+ {
+  "n": 488,
+  "ko_e": "질병관리청에 의하면 동물의 사체는 감염의 우려가 있으므로 직접 건드려서는 아니 되며, 사고가 발생하게 되면 지자 체 또는 도로관리청 및 지역번호 +120번 콜센터(생활안내 상담서비스)에 신고하여 도움을 받고, 사고를 당한 동물은  현행법상 물건에 해당하므로 2차사고 방지를 위한 위험방지와 원활한 소통을 한 경우에는 신고하지 아니 해도 된다.",
+  "tr_e": "Theo Cục Quản lý Dịch bệnh, xác động vật có nguy cơ lây nhiễm nên không được trực tiếp chạm vào; khi xảy ra tai nạn thì báo cho chính quyền địa phương hoặc cơ quan quản lý đường bộ và tổng đài mã vùng + số 120 (dịch vụ tư vấn hướng dẫn đời sống) để được trợ giúp; động vật bị tai nạn theo luật hiện hành thuộc loại tài sản (đồ vật) nên nếu đã thực hiện phòng ngừa nguy hiểm để tránh tai nạn thứ cấp và đảm bảo lưu thông thông suốt thì không cần báo cáo cũng được."
+ },
+ {
+  "n": 489,
+  "ko_e": "교통안전수칙 2021년 개정2판 분노를 조절하기 위한 행동기법에는 타임아웃기법, 스톱버튼기법, 긴장이완훈련기법 이 있다. ① 감정이 끓어오르는 상황에서 잠시 빠져나와 시간적 여유를 갖고 마음의 안정을 찾는 분노조절방법을 타임아웃기법이라 한다. ② 분노를 유발하는 부정적인 사고를 중지하고 평소 생각해 둔 행복한 장면을 1-2분간 떠올려 집중하는 분노조절방법을 스톱버튼기법이라 한다. ③ 경험회상질문기법은 분노조절방법에 해당하지 않는 다. ④ 양팔, 다리, 아랫배, 가슴, 어깨 등 몸의 각 부분을 최대한 긴장시켰다가 이완시켜 편안한 상태를 반복하는 방법을 긴장이완훈련기법이라 한다.",
+  "tr_e": "Quy tắc an toàn giao thông, bản sửa đổi lần 2 năm 2021: các kỹ thuật hành động để kiểm soát cơn giận gồm kỹ thuật tạm nghỉ (time-out), kỹ thuật nút dừng (stop button), kỹ thuật luyện tập thư giãn căng thẳng. ① Phương pháp kiểm soát cơn giận bằng cách tạm thoát khỏi tình huống cảm xúc đang sôi sục, dành thời gian thư thả để tìm lại sự bình tĩnh trong tâm trí gọi là kỹ thuật tạm nghỉ. ② Phương pháp kiểm soát cơn giận bằng cách dừng suy nghĩ tiêu cực gây ra cơn giận và gợi lại, tập trung vào một cảnh hạnh phúc đã nghĩ sẵn trong 1-2 phút gọi là kỹ thuật nút dừng. ③ Kỹ thuật câu hỏi hồi tưởng trải nghiệm không thuộc phương pháp kiểm soát cơn giận. ④ Phương pháp lặp lại việc căng tối đa rồi thư giãn từng bộ phận cơ thể như hai cánh tay, chân, bụng dưới, ngực, vai v.v. để đạt trạng thái thoải mái gọi là kỹ thuật luyện tập thư giãn căng thẳng."
+ },
+ {
+  "n": 490,
+  "ko_e": "폭우로 인하여 지하차도가 물에 감겨 차량의 범퍼까지 또는 차량 바퀴의 절반 이상이 물에 잠긴다면 차량이 지나갈  수 없다. 또한 위와 같은 지역을 통과할 때 빠른 속도로 지나가면 차가 물을 밀어내면서 앞쪽 수위가 높아져 엔진에  물이 들어올 수도 있다. 침수된 지역에서 시동이 꺼지면 다시 시동을 걸면 엔진이 망가진다.",
+  "tr_e": "Nếu hầm chui bị ngập nước đến cản trước xe hoặc hơn một nửa bánh xe bị ngập thì xe không thể đi qua. Ngoài ra, khi đi qua khu vực như trên với tốc độ nhanh, xe đẩy nước ra làm mực nước phía trước dâng cao khiến nước có thể lọt vào động cơ. Nếu chết máy ở khu vực ngập nước rồi lại khởi động lại thì động cơ sẽ hỏng."
+ },
+ {
+  "n": 491,
+  "ko_e": "응급상황 발생 시 위험여부 확인 및 환자의 반응을 살피고 주변에 도움을 요청하며 필요에 따라 환자가 호흡을  할 수 있도록 기도 확보가 필요하며 구조요청을 하여야 한다.",
+  "tr_e": "Khi xảy ra tình huống khẩn cấp, phải kiểm tra có nguy hiểm hay không và quan sát phản ứng của bệnh nhân, yêu cầu người xung quanh trợ giúp; tùy nhu cầu cần khai thông đường thở để bệnh nhân có thể thở và phải gọi cứu hộ."
+ },
+ {
+  "n": 492,
+  "ko_e": "핸들이 심하게 떨리면 타이어 펑크나 휠이 빠질 수 있기 때문에 반드시 안전한 곳에 정차하고 점검한다.",
+  "tr_e": "Nếu vô-lăng rung lắc mạnh thì lốp có thể bị thủng hoặc bánh xe (mâm) có thể văng ra nên nhất định phải dừng xe ở nơi an toàn và kiểm tra."
+ },
+ {
+  "n": 493,
+  "ko_e": "파손부위 근접 촬영 및 원거리 촬영을 하여야 하고 차량의 바퀴가 돌아가 있는 것 까지도 촬영해야 나중에 사고를  규명하는데 도움이 된다.",
+  "tr_e": "Phải chụp cận cảnh và chụp từ xa phần bị hư hỏng, và phải chụp cả tình trạng bánh xe đang xoay (đánh lái) về hướng nào để sau này giúp ích cho việc làm rõ tai nạn."
+ },
+ {
+  "n": 494,
+  "ko_e": "장거리 운전 전 타이어 마모상태, 공기압, 각종 오일류, 와이퍼와 워셔액, 램프류 등을 점검하여야 한다.",
+  "tr_e": "Trước khi lái xe đường dài, phải kiểm tra tình trạng mòn lốp, áp suất hơi, các loại dầu, cần gạt nước và nước rửa kính, các loại đèn v.v."
+ },
+ {
+  "n": 495,
+  "ko_e": "① 1년 ② 형사 입건된 경우에는 취소 사유이다. ③ 자동차 관리법에 따라 등록되지 아니하거나 임시 운행 허가를  받지 아니한 자동차를 운전한 경우에 운전면허가 취소되며, 등록을 하였으나 등록번호판을 부착하지 않고 운전한  것은 면허 취소 사유가 아니다. (도로교통법 제93조)",
+  "tr_e": "① 1 năm. ② Trường hợp bị khởi tố hình sự thì là lý do bị hủy (giấy phép). ③ Trường hợp lái xe chưa được đăng ký theo Luật Quản lý ô tô hoặc chưa được cấp phép vận hành tạm thời thì giấy phép lái xe bị hủy, còn trường hợp đã đăng ký nhưng lái xe mà không gắn biển số đăng ký thì không phải là lý do hủy giấy phép. (Điều 93 Luật Giao thông đường bộ)"
+ },
+ {
+  "n": 496,
+  "ko_e": "납부 기간 이내에 범칙금을 납부하지 아니한 사람은 납부 기간이 만료되는 날의 다음 날부터 20일 이내에 통고  받은 범칙금에 100분의 20을 더한 금액을 납부하여야 한다. (도로교통법 제164조제2항)",
+  "tr_e": "Người không nộp tiền phạt vi phạm trong thời hạn nộp thì trong vòng 20 ngày kể từ ngày hôm sau của ngày hết hạn nộp phải nộp số tiền cộng thêm 20/100 vào tiền phạt vi phạm đã được thông báo. (Điều 164 khoản 2 Luật Giao thông đường bộ)"
+ },
+ {
+  "n": 497,
+  "ko_e": "1년간 121점 이상, 2년간 201점 이상, 3년간 271점 이상이면 면허를 취소한다.            (도로교통법 시행규칙 별표28)",
+  "tr_e": "Nếu từ 121 điểm trở lên trong 1 năm, 201 điểm trở lên trong 2 năm, 271 điểm trở lên trong 3 năm thì bị hủy giấy phép. (Thông tư thi hành Luật Giao thông đường bộ Bảng 28)"
+ },
+ {
+  "n": 498,
+  "ko_e": "①의 경우 행정 처분을 받을 운전자 본인의 피해에 대해서는 벌점을 산정하지 아니한다. ②의 경우 2분의 1로  감경한다. ③의 경우 벌점을 부과하지 않는다. (도로교통법 시행규칙 별표28)",
+  "tr_e": "Trường hợp ①, đối với thiệt hại của chính người lái là người sẽ chịu xử phạt hành chính thì không tính điểm phạt. Trường hợp ②, giảm còn 1/2. Trường hợp ③, không tính điểm phạt. (Thông tư thi hành Luật Giao thông đường bộ Bảng 28)"
+ },
+ {
+  "n": 499,
+  "ko_e": "도로교통법 제33조, 도로교통법 시행령 별표6 주차금지 위반 시 승용차는 4만 원, 승합차는 5만 원의 과태료가 부 과되며, 2시간 이상 주차위반의 경우 1만 원이 추가되고, 미납 시 가산금 및 중가산금이 부과된다.",
+  "tr_e": "Điều 33 Luật Giao thông đường bộ, Nghị định thi hành Luật Giao thông đường bộ Bảng 6: khi vi phạm cấm đỗ xe thì xe con bị phạt hành chính 40.000 won, xe khách 50.000 won; trường hợp đỗ vi phạm từ 2 giờ trở lên thì cộng thêm 10.000 won, và nếu không nộp thì bị tính tiền phạt bổ sung và tiền phạt bổ sung tăng nặng."
+ },
+ {
+  "n": 500,
+  "ko_e": "교통사고처리특례법 제4조",
+  "tr_e": "Điều 4 Luật xử lý đặc biệt tai nạn giao thông."
+ },
+ {
+  "n": 501,
+  "ko_e": "도로교통법 제46조(공동위험행위의 금지)제1항 자동차 등의 운전자는 도로에서 2명 이상이 공동으로 2대 이상의  자동차등을 정당한 사유 없이 앞뒤로 또는 좌우로 줄지어 통행하면서 다른 사람에게 위해를 끼치거나 교통상의  위험을 발생하게 하여서는 아닌 된다.           도로교통법 제150조(벌칙)제1호 2년 이하의 징역이나 500만 원 이하의 벌금           도로교통법 시행규칙 별표28, 구속 시 운전면허 취소, 형사입건 시 벌점 40점",
+  "tr_e": "Điều 46 Luật Giao thông đường bộ (Cấm hành vi gây nguy hiểm chung) khoản 1: người lái xe ô tô v.v. không được từ 2 người trở lên cùng nhau điều khiển từ 2 xe ô tô trở lên xếp thành hàng trước sau hoặc trái phải trên đường mà không có lý do chính đáng, gây hại cho người khác hoặc gây nguy hiểm về giao thông. Điều 150 Luật Giao thông đường bộ (Hình phạt) mục 1: phạt tù đến 2 năm hoặc phạt tiền đến 5 triệu won. Thông tư thi hành Luật Giao thông đường bộ Bảng 28: khi bị giam giữ thì hủy giấy phép lái xe, khi bị khởi tố hình sự thì trừ 40 điểm."
+ },
+ {
+  "n": 502,
+  "ko_e": "도로교통법시행규칙 별표28",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ Bảng 28."
+ },
+ {
+  "n": 503,
+  "ko_e": "도로교통법시행규칙 별표8 64의2 술에 취한 상태에서 자전거를 운전한 경우 범칙금 3만 원.",
+  "tr_e": "Thông tư thi hành Luật Giao thông đường bộ Bảng 8 mục 64-2: trường hợp lái xe đạp trong tình trạng say rượu thì phạt tiền vi phạm 30.000 won."
+ }
+]
+
+codex
+[{"n":501,"field":"e","severity":"major","issue":"‘벌점 40점’을 ‘40점 감점(trừ 40 điểm)’으로 번역하여 벌점 부과의 의미를 반대로 전달한다.","suggestion":"Điều 46 Luật Giao thông đường bộ (Cấm hành vi gây nguy hiểm chung) khoản 1: người lái xe ô tô v.v. không được từ 2 người trở lên cùng nhau điều khiển từ 2 xe ô tô trở lên xếp thành hàng trước sau hoặc trái phải trên đường mà không có lý do chính đáng, gây hại cho người khác hoặc gây nguy hiểm về giao thông. Điều 150 Luật Giao thông đường bộ (Hình phạt) mục 1: phạt tù đến 2 năm hoặc phạt tiền đến 5 triệu won. Thông tư thi hành Luật Giao thông đường bộ Bảng 28: khi bị giam giữ thì bị hủy giấy phép lái xe, khi bị khởi tố hình sự thì bị tính 40 điểm phạt."}]
+tokens used
+16,657
+[{"n":501,"field":"e","severity":"major","issue":"‘벌점 40점’을 ‘40점 감점(trừ 40 điểm)’으로 번역하여 벌점 부과의 의미를 반대로 전달한다.","suggestion":"Điều 46 Luật Giao thông đường bộ (Cấm hành vi gây nguy hiểm chung) khoản 1: người lái xe ô tô v.v. không được từ 2 người trở lên cùng nhau điều khiển từ 2 xe ô tô trở lên xếp thành hàng trước sau hoặc trái phải trên đường mà không có lý do chính đáng, gây hại cho người khác hoặc gây nguy hiểm về giao thông. Điều 150 Luật Giao thông đường bộ (Hình phạt) mục 1: phạt tù đến 2 năm hoặc phạt tiền đến 5 triệu won. Thông tư thi hành Luật Giao thông đường bộ Bảng 28: khi bị giam giữ thì bị hủy giấy phép lái xe, khi bị khởi tố hình sự thì bị tính 40 điểm phạt."}]

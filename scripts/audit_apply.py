@@ -87,8 +87,13 @@ def main():
 
     # 대상별 최우선 1건만 (critical > major, 그다음 issue 긴 것)
     rank = {"critical": 0, "major": 1}
+    # 2026-10-11 확정 오탐: Codex가 해설 파일을 읽을 때 자기 쪽 인코딩 깨짐을 '원문 훼손'으로
+    # 오판한 발견 180건 — 실제 expl에는 훼손 흔적(�·한글 혼입) 0건. 전부 제외.
+    ENC_FP = re.compile(r"인코딩|깨져|깨짐|훼손|mojibake|乱码")
     pick = {}
     for it in findings:
+        if str(it.get("field")) == "e" and ENC_FP.search(str(it.get("issue", ""))):
+            continue
         if it.get("severity") not in rank or not str(it.get("suggestion", "")).strip():
             if it.get("severity") in ("critical", "major"):
                 review.append({**it, "skip_reason": "suggestion 없음"})

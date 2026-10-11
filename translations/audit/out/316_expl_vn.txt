@@ -1,0 +1,445 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127fd-8a06-7d50-9774-1e7a3b646ac2
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/316_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/316_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 567ms:
+[
+ {
+  "n": 322,
+  "ko_e": "?몄씤怨쇱쓽 媛꾧꺽??異⑸텇???뺣낫?섎ŉ ?쒗뻾?쇰줈 ?듦낵?쒕떎.",
+  "tr_e": "Gi沼?휃沼?kho梳즢g c찼ch v沼쌻 ng튼沼쓎 cao tu沼뷼 v횪 휃i qua b梳켷g c찼ch 휃i ch梳춎."
+ },
+ {
+  "n": 323,
+  "ko_e": "?대┛?담냽?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?蹂대룄 諛??꾨줈遺?띾Ъ???ㅼ튂)?????쒖옣?깆?  蹂댄샇援ъ뿭???ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?꾨줈遺?띾Ъ???ㅼ튂?섍굅??愿???꾨줈愿由ъ껌???ㅼ튂瑜??붿껌???? ?덈떎. 1. 蹂꾪몴???곕Ⅸ 蹂댄샇援ъ뿭 ?꾨줈?쒖? 2. ?꾨줈諛섏궗寃?3. 怨쇱냽諛⑹??쒖꽕 4. 誘몃걚?쇰갑吏?쒖꽕 5. 諛⑺샇?명?由?6. 洹? 諛뽰뿉 ?쒖옣?깆씠 援먰넻?ш퀬???꾪뿕?쇰줈遺???대┛?는룸끂???먮뒗 ?μ븷?몄쓣 蹂댄샇?섍린 ?꾪븯???꾩슂?섎떎怨??몄젙?섎뒗 ??濡쒕??띾Ъ濡쒖꽌 ?뚮룄濡쒖쓽 援ъ“쨌?쒖꽕 湲곗???愿??洹쒖튃?띿뿉 ?곹빀???쒖꽕",
+  "tr_e": "Quy t梳칌 v沼?Ch沼?휃沼땙h v횪 Qu梳즢 l첵 Khu v沼켧 B梳즣 v沼?Tr梳?em쨌Ng튼沼쓎 cao tu沼뷼 v횪 Ng튼沼쓎 khuy梳퓍 t梳춗 휂i沼걏 7 (L梳칛 휃梳톞 v沼뎎 h챔 v횪 c척ng tr챙nh ph沼?thu沼셛 휃튼沼쓓g) Kho梳즢 2. Th沼?tr튼沼웢g v.v. c처 th沼?l梳칛 휃梳톞 ho梳톍 y챗u c梳쬾 c퉤 quan qu梳즢 l첵 휃튼沼쓓g c처 th梳쯯 quy沼걆 l梳칛 휃梳톞 c척ng tr챙nh ph沼?thu沼셛 휃튼沼쓓g thu沼셛 m沼셳 trong c찼c m沼쩭 sau 휃창y t梳죍 khu v沼켧 b梳즣 v沼? 1. Bi沼긪 b찼o 휃튼沼쓓g khu v沼켧 b梳즣 v沼?theo b梳즢g ph沼?l沼쩭 2. G튼퉤ng c梳쬾 휃튼沼쓓g b沼?3. Thi梳퓍 b沼?ch沼몁g ch梳죣 qu찼 t沼멵 휃沼?4. Thi梳퓍 b沼?ch沼몁g tr퉤n tr튼沼즨 5. R횪o ch梳칗 ph챵ng h沼?6. C척ng tr챙nh ph沼?thu沼셛 휃튼沼쓓g kh찼c m횪 Th沼?tr튼沼웢g v.v. c척ng nh梳춏 l횪 c梳쬷 thi梳퓍 휃沼?b梳즣 v沼?tr梳?em쨌ng튼沼쓎 cao tu沼뷼 ho梳톍 ng튼沼쓎 khuy梳퓍 t梳춗 kh沼뢩 nguy c퉤 tai n梳죒 giao th척ng v횪 ph첫 h沼즤 v沼쌻?똒uy t梳칌 v沼?Ti챗u chu梳쯰 K梳퓍 c梳쪀쨌C퉤 s沼?c沼쬪 휂튼沼쓓g b沼쇻?
+ },
+ {
+  "n": 324,
+  "ko_e": "?쇨컙?먮룄 ?몄씤???듯뻾???덉쓣 ???덉쑝誘濡??쒗뻾?섎ŉ ?듦낵?쒕떎.",
+  "tr_e": "V챙 ban 휃챗m c크ng c처 th沼?c처 ng튼沼쓎 cao tu沼뷼 휃i l梳죍 n챗n 휃i qua b梳켷g c찼ch 휃i ch梳춎."
+ },
+ {
+  "n": 325,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??[蹂꾪몴10] ?몄씤蹂댄샇援ъ뿭?먯꽌 ?뱀슜李??댁쟾?먭? ?좏샇?꾨컲?섎뒗 寃쎌슦 12留??먯쓽 踰붿튃湲덉씠 遺怨쇰릺怨?  ?대쪣李??댁쟾?먭? ?〓떒蹂대룄 蹂댄뻾?먯쓽 ?〓떒??諛⑺빐?섎뒗 寃쎌슦 8留??먯쓽 踰붿튃湲덉씠 遺怨쇰맂??",
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[B梳즢g ph沼?l沼쩭 10] Trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼, tr튼沼쓓g h沼즤 ng튼沼쓎 l찼i xe 척 t척 con vi ph梳죑 t챠n hi沼뇎 th챙 b沼?찼p d沼쩸g ti沼걆 ph梳죜 vi ph梳죑 120 ngh챙n Won, v횪 tr튼沼쓓g h沼즤 ng튼沼쓎 l찼i xe hai b찼nh c梳즢 tr沼?vi沼놻 b훱ng qua c沼쬪 ng튼沼쓎 휃i b沼?t梳죍 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?th챙 b沼?찼p d沼쩸g ti沼걆 ph梳죜 vi ph梳죑 80 ngh챙n Won."
+ },
+ {
+  "n": 326,
+  "ko_e": "?몄씤???좎껜 ?곹깭瑜?怨좊젮?섏뿬 蹂댄뻾?좏샇??湲몄씠???μ븷?몄쓽 ?됯퇏蹂댄뻾?띾룄瑜?湲곗??쇰줈 ?ㅼ젙?섏뼱 ?쇰컲?꾨줈??蹂댄뻾???몃낫????湲몃떎(?대┛?는룸끂??諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議곗젣2?? 2023援먰넻?좏샇湲??ㅼ튂?????낅Т?몃엺 ????????蹂댄뻾 ?좏샇?댁쁺 李몄“). ?좏샇?깆? 洹쒖젙蹂대떎 ?좏샇?깆쓣 ?ш쾶 ?ㅼ튂?????녿떎.",
+  "tr_e": "X챕t 휃梳퓆 t챙nh tr梳죒g c퉤 th沼?c沼쬪 ng튼沼쓎 cao tu沼뷼, 휃沼?d횪i c沼쬪 t챠n hi沼뇎 휃i b沼?휃튼沼즓 thi梳퓍 l梳춑 l梳쪅 t沼멵 휃沼?휃i b沼?trung b챙nh c沼쬪 ng튼沼쓎 khuy梳퓍 t梳춗 l횪m chu梳쯰 n챗n d횪i h퉤n t챠n hi沼뇎 휃i b沼?c沼쬪 휃튼沼쓓g th척ng th튼沼쓓g (tham kh梳즣 Quy t梳칌 v沼?Ch沼?휃沼땙h v횪 Qu梳즢 l첵 Khu v沼켧 B梳즣 v沼?Tr梳?em쨌Ng튼沼쓎 cao tu沼뷼 v횪 Ng튼沼쓎 khuy梳퓍 t梳춗 휂i沼걏 6 Kho梳즢 2, S沼?tay Nghi沼뇈 v沼?L梳칛 휃梳톞쨌V梳춏 h횪nh 휂챔n T챠n hi沼뇎 Giao th척ng 2023 Ph梳쬷 2 Ch튼퉤ng 2 V梳춏 h횪nh t챠n hi沼뇎 휃i b沼?. Kh척ng 휃튼沼즓 l梳칛 휃챔n t챠n hi沼뇎 l沼썀 h퉤n quy 휃沼땙h."
+ },
+ {
+  "n": 327,
+  "ko_e": "?몄씤蹂댄샇援ъ뿭?먯꽌 ?ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 ?쒗븳?띾룄瑜??꾨컲??寃쎌슦 踰뚯젏? 2諛?遺怨쇳븳?? (?꾨줈援먰넻踰??쒗뻾洹?移?蹂꾪몴 28)",
+  "tr_e": "Trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼, tr튼沼쓓g h沼즤 vi ph梳죑 t沼멵 휃沼?gi沼쌻 h梳죒 trong kho梳즢g t沼?8 gi沼?s찼ng 휃梳퓆 8 gi沼?t沼멼 th챙 찼p d沼쩸g 휃i沼긩 ph梳죜 g梳쩺 2 l梳쬷. (Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 28)"
+ },
+ {
+  "n": 328,
+  "ko_e": "蹂댄뻾?먯쓽 蹂댄샇媛 理쒖슦?좎씠硫? ?좏샇?깆씠 ?덈뒗 ?〓떒蹂대룄???묎렐??寃쎌슦 蹂댄뻾?먯쓽 ?덉쟾???꾪븯???쇱떆?뺤??섏뿬 ?덉쟾 ???뺤씤?섍퀬 ?〓떒蹂대룄 ?좏샇媛 蹂寃쎈맂 ??李⑤웾 吏꾪뻾?좏샇???곕씪 吏꾪뻾?쒕떎.",
+  "tr_e": "B梳즣 v沼?ng튼沼쓎 휃i b沼?l횪 튼u ti챗n h횪ng 휃梳쬾, khi ti梳퓈 c梳춏 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?c처 휃챔n t챠n hi沼뇎, v챙 an to횪n c沼쬪 ng튼沼쓎 휃i b沼?h찾y d沼쳌g l梳죍 h梳쿻 x찼c nh梳춏 an to횪n, v횪 sau khi t챠n hi沼뇎 v梳죅h sang 휃튼沼쓓g thay 휃沼뷼 th챙 휃i ti梳퓈 theo t챠n hi沼뇎 cho ph챕p xe 휃i."
+ },
+ {
+  "n": 329,
+  "ko_e": "?몄씤蹂댄샇援ъ뿭???ㅼ튂?섎뒗 蹂댄뻾 ?좏샇?깆쓽 ?뱀깋?좏샇?쒓컙? ?대┛?? ?몄씤 ?먮뒗 ?μ븷?몄쓽 ?됯퇏 蹂댄뻾?띾룄瑜?湲곗??쇰줈  ?섏뿬 ?ㅼ젙?섍퀬 ?덈떎. ?대┛?담냽?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?援먰넻?덉쟾?쒖꽕???ㅼ튂)  ???쒌냽?꾧꼍李곗껌?μ씠??寃쎌같?쒖옣? ??議곗젣6??뿉 ?곕씪 蹂댄샇援ъ뿭?쇰줈 吏?뺥븳 ?쒖꽕 ?먮뒗 ?μ냼??二?異쒖엯臾멸낵 媛?? 媛源뚯슫 嫄곕━???꾩튂??媛꾩꽑?꾨줈???〓떒蹂대룄?먮뒗 ?좏샇湲곕? ?곗꽑?곸쑝濡??ㅼ튂?띻?由ы빐???쒕떎.",
+  "tr_e": "Th沼쓎 gian t챠n hi沼뇎 xanh c沼쬪 휃챔n t챠n hi沼뇎 휃i b沼?휃튼沼즓 l梳칛 trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 휃튼沼즓 thi梳퓍 l梳춑 l梳쪅 t沼멵 휃沼?휃i b沼?trung b챙nh c沼쬪 tr梳?em, ng튼沼쓎 cao tu沼뷼 ho梳톍 ng튼沼쓎 khuy梳퓍 t梳춗 l횪m chu梳쯰. Quy t梳칌 v沼?Ch沼?휃沼땙h v횪 Qu梳즢 l첵 Khu v沼켧 B梳즣 v沼?Tr梳?em쨌Ng튼沼쓎 cao tu沼뷼 v횪 Ng튼沼쓎 khuy梳퓍 t梳춗 휂i沼걏 6 (L梳칛 휃梳톞 c퉤 s沼?an to횪n giao th척ng) ??Gi찼m 휃沼멵 C척ng an t沼뎝h/th횪nh ph沼?ho梳톍 Tr튼沼웢g 휃沼뱊 c척ng an ph梳즜 튼u ti챗n l梳칛 휃梳톞쨌qu梳즢 l첵 휃챔n t챠n hi沼뇎 t梳죍 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?tr챗n 휃튼沼쓓g tr沼쩭 n梳켶 沼?kho梳즢g c찼ch g梳쬷 nh梳쩿 v沼쌻 c沼븂g ra v횪o ch챠nh c沼쬪 c퉤 s沼?ho梳톍 휃沼땇 휃i沼긩 휃튼沼즓 ch沼?휃沼땙h l횪 khu v沼켧 b梳즣 v沼?theo 휂i沼걏 3 Kho梳즢 6."
+ },
+ {
+  "n": 330,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 10 ?대┛??蹂댄샇援ъ뿭 諛??몄씤?ㅼ옣?좎씤 蹂댄샇援ъ뿭?먯꽌??踰붿튃?됱쐞 諛?踰붿튃湲덉븸",
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 10 H횪nh vi vi ph梳죑 v횪 m沼쯢 ti沼걆 ph梳죜 vi ph梳죑 trong khu v沼켧 b梳즣 v沼?tr梳?em v횪 khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼쨌ng튼沼쓎 khuy梳퓍 t梳춗."
+ },
+ {
+  "n": 331,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??[蹂꾪몴10] 2 ?몄씤蹂댄샇援ъ뿭?먯꽌 ?〓떒蹂대룄蹂댄뻾???〓떒??諛⑺빐?섎뒗 寃쎌슦 ?뱀슜李⑥슫?꾩옄??12留??먯쓽  踰붿튃湲덉씠 遺怨쇰맂??          ?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 323 ?몄씤蹂댄샇?쒖????몄씤蹂댄샇援ъ뿭 ?덉뿉???몄씤??蹂댄샇瑜?吏?쒗븯??寃껋쑝濡??몄씤蹂댄샇 援ъ뿭???꾨줈 ?묒륫???ㅼ튂?쒕떎.",
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[B梳즢g ph沼?l沼쩭 10] m沼쩭 2, trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼, tr튼沼쓓g h沼즤 c梳즢 tr沼?vi沼놻 b훱ng qua c沼쬪 ng튼沼쓎 휃i b沼?t梳죍 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?th챙 ng튼沼쓎 l찼i xe 척 t척 con b沼?찼p d沼쩸g ti沼걆 ph梳죜 vi ph梳죑 120 ngh챙n Won. Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[B梳즢g ph沼?l沼쩭 6] 323, bi沼긪 b찼o b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 l횪 ch沼?d梳쳌 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼, 휃튼沼즓 l梳칛 沼?hai ph챠a 휃튼沼쓓g c沼쬪 khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼."
+ },
+ {
+  "n": 332,
+  "ko_e": "?대┛?담냽?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?諛???議? ?댄뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡 濡??쒗븳?????덈뒗 寃껋? ?쑣룸룄寃쎌같泥?옣 ?먮뒗 寃쎌같?쒖옣??沅뚰븳?대떎.",
+  "tr_e": "Quy t梳칌 v沼?Ch沼?휃沼땙h v횪 Qu梳즢 l첵 Khu v沼켧 B梳즣 v沼?Tr梳?em쨌Ng튼沼쓎 cao tu沼뷼 v횪 Ng튼沼쓎 khuy梳퓍 t梳춗 휂i沼걏 3 v횪 휂i沼걏 9, vi沼놻 c처 th沼?gi沼쌻 h梳죒 t沼멵 휃沼?v梳춏 h횪nh trong ph梳죑 vi 30 ki-l척-m챕t/gi沼?l횪 th梳쯯 quy沼걆 c沼쬪 Gi찼m 휃沼멵 C척ng an t沼뎝h/th횪nh ph沼?ho梳톍 Tr튼沼웢g 휃沼뱊 c척ng an."
+ },
+ {
+  "n": 333,
+  "ko_e": "?꾨줈援먰넻踰???議? ??0議??? ?≫슒?⑤낫?꾧? ?ㅼ튂?섏뼱 ?덉? ?딆? ?꾨줈?먯꽌??媛??吏㏃? 嫄곕━濡??〓떒?섏뿬???쒕떎.  ??낫?됱옄??紐⑤뱺 李⑥쓽 ?욎씠???ㅻ줈 ?〓떒?섏뿬?쒕뒗 ???쒕떎. ?ｋ낫?됱옄??蹂대룄?먯꽌 ?곗륫?듯뻾???먯튃?쇰줈 ?쒕떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 8, 휂i沼걏 10. ?? ??Tr챗n 휃튼沼쓓g kh척ng c처 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?th챙 ph梳즜 b훱ng qua b梳켷g qu찾ng 휃튼沼쓓g ng梳칗 nh梳쩿. ??Ng튼沼쓎 휃i b沼?kh척ng 휃튼沼즓 b훱ng qua ph챠a tr튼沼쌵 ho梳톍 ph챠a sau c沼쬪 m沼뛦 lo梳죍 xe. ??Ng튼沼쓎 휃i b沼?tr챗n v沼뎎 h챔 v沼?nguy챗n t梳칌 ph梳즜 휃i b챗n ph梳즜."
+ },
+ {
+  "n": 334,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28, ?뱀슜?먮룞李?湲곗? ???꾨줈援먰넻踰???7議곗젣1??踰붿튃湲?6留??? 踰뚯젏 10?????꾨줈援먰넻 踰???7議곗젣3??踰붿튃湲?6留??? 踰뚯젏 10?? ???꾨줈援먰넻踰???7議곗젣5??踰붿튃湲?4留??? 踰뚯젏 10?????꾨줈援먰넻踰? ??3議곗젣3??踰붿튃湲?6留??? 踰뚯젏 30??,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 28, ti챗u chu梳쯰 xe 척 t척 con. ??Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 27 Kho梳즢 1 ti沼걆 ph梳죜 vi ph梳죑 60 ngh챙n Won, 휃i沼긩 ph梳죜 10 휃i沼긩 ??Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 27 Kho梳즢 3 ti沼걆 ph梳죜 vi ph梳죑 60 ngh챙n Won, 휃i沼긩 ph梳죜 10 휃i沼긩 ??Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 27 Kho梳즢 5 ti沼걆 ph梳죜 vi ph梳죑 40 ngh챙n Won, 휃i沼긩 ph梳죜 10 휃i沼긩 ??Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 13 Kho梳즢 3 ti沼걆 ph梳죜 vi ph梳죑 60 ngh챙n Won, 휃i沼긩 ph梳죜 30 휃i沼긩"
+ },
+ {
+  "n": 335,
+  "ko_e": "援먰넻?쎌옄???대룞?몄쓽 利앹쭊踰???議?????         援먰넻?쎌옄? ?μ븷?? 怨좊졊?? ?꾩궛遺, ?곸쑀?꾨? ?숇컲???щ엺, ?대┛?????쇱긽?앺솢?먯꽌 ?대룞??遺덊렪???먮겮???щ엺?? 留먰븳??",
+  "tr_e": "Lu梳춗 v沼?T훱ng c튼沼쓓g Ti沼뇆 l沼즜 Di chuy沼긪 cho Ng튼沼쓎 Y梳퓎 th梳?Giao th척ng 휂i沼걏 2 M沼쩭 1. Ng튼沼쓎 y梳퓎 th梳?giao th척ng l횪 ng튼沼쓎 c梳즡 th梳쪅 b梳쩿 ti沼뇆 trong vi沼놻 di chuy沼긪 trong 휃沼쓎 s沼몁g h횪ng ng횪y nh튼 ng튼沼쓎 khuy梳퓍 t梳춗, ng튼沼쓎 cao tu沼뷼, ph沼?n沼?mang thai, ng튼沼쓎 휃i c첫ng tr梳?nh沼? tr梳?em v.v."
+ },
+ {
+  "n": 336,
+  "ko_e": "?몄씤? ?쒕젰 諛?泥?젰???쏀솕?섎뒗 ?좎껜???뱀꽦??諛쒖깮?쒕떎.",
+  "tr_e": "Ng튼沼쓎 cao tu沼뷼 c처 휃梳톍 휃i沼긩 c퉤 th沼?l횪 th沼?l沼켧 v횪 th챠nh l沼켧 suy gi梳즡."
+ },
+ {
+  "n": 337,
+  "ko_e": "?몄씤?댁쟾?먮뒗 ?κ굅由??댁쟾?대굹 ?μ떆媛? ?ъ빞 ?댁쟾? ?쇨? ?댁빞 ?쒕떎.",
+  "tr_e": "Ng튼沼쓎 l찼i xe cao tu沼뷼 n챗n tr찼nh l찼i xe 휃튼沼쓓g d횪i, l찼i xe l창u, ho梳톍 l찼i xe ban 휃챗m khuya."
+ },
+ {
+  "n": 338,
+  "ko_e": "?몄씤?댁쟾?먮뒗 ?댁쟾?섍린 ??異⑸텇???댁떇怨?二쇨린?곸씤 嫄닿컯?곹깭瑜??뺤씤?섎뒗 寃껋씠 諛붾엺吏곹븯?? ?댁쟾?섍린 ?꾩뿉 紐⑹쟻吏  寃쎈줈瑜??뺤씤?섍퀬 媛湲됱쟻 ?ъ빞?댁쟾? ?섏? ?딅뒗 寃껋씠 醫뗫떎.",
+  "tr_e": "Ng튼沼쓎 l찼i xe cao tu沼뷼 n챗n ngh沼?ng퉤i 휃梳쭃 휃沼?tr튼沼쌵 khi l찼i xe v횪 ki沼긩 tra t챙nh tr梳죒g s沼쯢 kh沼뢤 휃沼땙h k沼? N챗n x찼c nh梳춏 l沼?tr챙nh 휃梳퓆 휃i沼긩 휃梳퓆 tr튼沼쌵 khi l찼i xe v횪 n梳퓎 c처 th沼?th챙 kh척ng n챗n l찼i xe ban 휃챗m khuya."
+ },
+ {
+  "n": 339,
+  "ko_e": "援먰넻?ш퀬泥섎━ ?밸?踰???議?泥섎쾶???밸?)?????쇳빐?먯쓽 紐낆떆?곸씤 ?섏궗??諛섑븯??怨듭냼(?ц㉣)瑜??쒓린?????녿떎. ??議?醫낇빀蹂댄뿕 ?깆뿉 媛?낅맂 寃쎌슦???밸?)????蹂댄뿕 ?먮뒗 怨듭젣??媛?낅맂 寃쎌슦?먮뒗 ??議곗젣2??蹂몃Ц??洹쒖젙??二꾨? 踰뷀븳 李⑥쓽 ?댁쟾?먯뿉 ??섏뿬 怨듭냼瑜??쒓린?????녿떎. ?ㅻ쭔 援먰넻?ш퀬泥섎━ ?밸?踰???議??????⑥꽌??洹쒖젙????ぉ????섏뿬 ?쇳빐?먯쓽 紐낆떆?곸씤 ?섏궗??諛섑븯嫄곕굹 醫낇빀蹂댄뿕??媛?낅릺???덈뜑?쇰룄 ?뺤궗泥섎쾶 ?????덈떎. ?ㅻ쭔 ?몄씤蹂댄샇援???? 泥섎쾶???밸????대떦?섎?濡?醫낇빀蹂댄뿕 媛?? 泥섎쾶遺덉썝?섏궗媛 ?덈뒗 寃쎌슦 ?뺤궗泥섎쾶 ?섏? ?딅뒗??",
+  "tr_e": "Lu梳춗 x沼?l첵 휃梳톍 bi沼뇍 tai n梳죒 giao th척ng 휂i沼걏 3 (Quy 휃沼땙h 휃梳톍 bi沼뇍 v沼?x沼?ph梳죜) Kho梳즢 2. Kh척ng 휃튼沼즓 truy t沼?(?ц㉣) tr찼i v沼쌻 첵 ch챠 r천 r횪ng c沼쬪 ng튼沼쓎 b沼?h梳죍. 휂i沼걏 4 (Quy 휃沼땙h 휃梳톍 bi沼뇍 trong tr튼沼쓓g h沼즤 휃찾 tham gia b梳즣 hi沼긩 t沼븂g h沼즤 v.v.) Kho梳즢 1. Trong tr튼沼쓓g h沼즤 휃찾 tham gia b梳즣 hi沼긩 ho梳톍 qu沼?t튼퉤ng tr沼?th챙 kh척ng 휃튼沼즓 truy t沼?휃沼멼 v沼쌻 ng튼沼쓎 l찼i xe 휃찾 ph梳죑 t沼셢 quy 휃沼땙h t梳죍 ph梳쬷 ch챠nh c沼쬪 휂i沼걏 3 Kho梳즢 2. Tuy nhi챗n, 휃沼멼 v沼쌻 c찼c h梳죒g m沼쩭 quy 휃沼땙h t梳죍 ph梳쬷 ngo梳죍 l沼?c沼쬪 Lu梳춗 x沼?l첵 휃梳톍 bi沼뇍 tai n梳죒 giao th척ng 휂i沼걏 3 Kho梳즢 2, d첫 tr찼i v沼쌻 첵 ch챠 r천 r횪ng c沼쬪 ng튼沼쓎 b沼?h梳죍 ho梳톍 d첫 휃찾 tham gia b梳즣 hi沼긩 t沼븂g h沼즤 th챙 v梳쳌 c처 th沼?b沼?x沼?ph梳죜 h챙nh s沼? Tuy nhi챗n, khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 thu沼셛 quy 휃沼땙h 휃梳톍 bi沼뇍 v沼?x沼?ph梳죜 n챗n trong tr튼沼쓓g h沼즤 휃찾 tham gia b梳즣 hi沼긩 t沼븂g h沼즤 v횪 c처 첵 ch챠 kh척ng mu沼몁 x沼?ph梳죜 th챙 kh척ng b沼?x沼?ph梳죜 h챙nh s沼?"
+ },
+ {
+  "n": 340,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 10, ?쒗뻾洹쒖튃 蹂꾪몴 28 ?뱀슜?먮룞李?15留??? 踰뚯젏 120??,
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 10, Th척ng t튼 thi h횪nh B梳즢g ph沼?l沼쩭 28. Xe 척 t척 con 150 ngh챙n Won, 휃i沼긩 ph梳죜 120 휃i沼긩."
+ },
+ {
+  "n": 341,
+  "ko_e": "?μ븷?멥냽?몄씤?띿엫?곕? ?깆쓽 ?몄쓽利앹쭊 蹂댁옣??愿??踰뺣쪧 ??7議??????꾧뎄?좎? ????뿉 ?곕Ⅸ ?μ븷?몄쟾?⑹＜李④뎄?? 二쇱감?쒖?媛 遺숈뼱 ?덉? ?꾨땲???먮룞李⑤? ?μ븷?몄쟾?⑹＜李④뎄??뿉 二쇱감?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?μ븷?몄쟾?⑹＜李④뎄??二쇱감 ?쒖?媛 遺숈뼱 ?덈뒗 ?먮룞李⑥뿉 蹂댄뻾???μ븷媛 ?덈뒗 ?щ엺???吏 ?꾨땲??寃쎌슦?먮룄 媛숇떎.",
+  "tr_e": "Lu梳춗 v沼?B梳즣 휃梳즡 T훱ng c튼沼쓓g Ti沼뇆 l沼즜 cho Ng튼沼쓎 khuy梳퓍 t梳춗쨌Ng튼沼쓎 cao tu沼뷼쨌Ph沼?n沼?mang thai v.v. 휂i沼걏 17 Kho梳즢 4. B梳쩿 k沼?ai c크ng kh척ng 휃튼沼즓 휃沼?xe kh척ng d찼n bi沼긪 휃沼?khu v沼켧 휃沼?xe d횪nh ri챗ng cho ng튼沼쓎 khuy梳퓍 t梳춗 theo Kho梳즢 2 v횪o khu v沼켧 휃沼?xe d횪nh ri챗ng cho ng튼沼쓎 khuy梳퓍 t梳춗. Tr튼沼쓓g h沼즤 xe c처 d찼n bi沼긪 휃沼?khu v沼켧 휃沼?xe d횪nh ri챗ng cho ng튼沼쓎 khuy梳퓍 t梳춗 m횪 kh척ng c처 ng튼沼쓎 kh처 kh훱n trong vi沼놻 휃i l梳죍 ng沼밿 tr챗n xe c크ng v梳춞."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/316_expl_vn.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ print('\\n###',x['n'])
+ for k,v in x.items():
+  if k=='n': continue
+  try: v=v.encode('cp949').decode('utf-8')
+  except Exception as e: pass
+  print(k,':',v)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:44:58.578860Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:14 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 685ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:14 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/316_expl_vn.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; foreach($x in $data){ Write-Output "`n### $($x.n)"; foreach($p in $x.PSObject.Properties){ if($p.Name -ne '"'n'){ "'$fixed=$utf8.GetString($cp949.GetBytes([string]$p.Value)); Write-Output "$($p.Name): $fixed" } } }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 774ms:
+ConvertFrom-Json : 잘못된 개체가 전달되었습니다. ':' 또는 '}'가 필요합니다. (1294): [
+ {
+  "n": 322,
+  "ko_e": "?몄씤怨쇱쓽 媛꾧꺽??異⑸텇???뺣낫?섎ŉ ?쒗뻾?쇰줈 ?듦낵?쒕떎.",
+  "tr_e": "Gi沼?휃沼?kho梳즢g c찼ch v沼쌻 ng튼沼쓎 cao tu沼뷼 v횪 휃i qua b梳켷g c찼ch 휃i ch梳춎."
+ },
+ {
+  "n": 323,
+  "ko_e": "?대┛?담냽?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?蹂대룄 諛??꾨줈遺?띾Ъ???ㅼ튂)?????쒖옣?깆?  蹂댄샇援ъ뿭???ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹??
+?대떦?섎뒗 ?꾨줈遺?띾Ъ???ㅼ튂?섍굅??愿???꾨줈愿由ъ껌???ㅼ튂瑜??붿껌???? ?덈떎. 1. 蹂꾪몴???곕Ⅸ 蹂댄샇援ъ뿭 ?꾨줈?쒖? 2. ?꾨줈諛섏궗寃?3. 怨쇱냽諛⑹??쒖꽕 4. 誘몃걚?쇰갑吏?
+쒖꽕 5. 諛⑺샇?명?由?6. 洹? 諛뽰뿉 ?쒖옣?깆씠 援먰넻?ш퀬???꾪뿕?쇰줈遺???대┛?는룸끂???먮뒗 ?μ븷?몄쓣 蹂댄샇?섍린 ?꾪븯???꾩슂?섎떎怨??몄젙?섎뒗 ??濡쒕??띾Ъ濡쒖꽌 ?뚮룄濡쒖쓽 援ъ“쨌
+?쒖꽕 湲곗???愿??洹쒖튃?띿뿉 ?곹빀???쒖꽕",
+  "tr_e": "Quy t梳칌 v沼?Ch沼?휃沼땙h v횪 Qu梳즢 l첵 Khu v沼켧 B梳즣 v沼?Tr梳?em쨌Ng튼沼쓎 cao tu沼뷼 v횪 Ng튼沼쓎 khuy梳퓍 t梳춗 휂i沼걏 7 (L梳칛 휃梳톞 v沼뎎 
+h챔 v횪 c척ng tr챙nh ph沼?thu沼셛 휃튼沼쓓g) Kho梳즢 2. Th沼?tr튼沼웢g v.v. c처 th沼?l梳칛 휃梳톞 ho梳톍 y챗u c梳쬾 c퉤 quan qu梳즢 l첵 휃튼沼쓓g c처 th梳쯯 qu
+y沼걆 l梳칛 휃梳톞 c척ng tr챙nh ph沼?thu沼셛 휃튼沼쓓g thu沼셛 m沼셳 trong c찼c m沼쩭 sau 휃창y t梳죍 khu v沼켧 b梳즣 v沼? 1. Bi沼긪 b찼o 휃튼沼쓓g khu v沼켧 b梳
+즣 v沼?theo b梳즢g ph沼?l沼쩭 2. G튼퉤ng c梳쬾 휃튼沼쓓g b沼?3. Thi梳퓍 b沼?ch沼몁g ch梳죣 qu찼 t沼멵 휃沼?4. Thi梳퓍 b沼?ch沼몁g tr퉤n tr튼沼즨 5. R횪o ch梳칗
+ ph챵ng h沼?6. C척ng tr챙nh ph沼?thu沼셛 휃튼沼쓓g kh찼c m횪 Th沼?tr튼沼웢g v.v. c척ng nh梳춏 l횪 c梳쬷 thi梳퓍 휃沼?b梳즣 v沼?tr梳?em쨌ng튼沼쓎 cao tu沼뷼 
+ho梳톍 ng튼沼쓎 khuy梳퓍 t梳춗 kh沼뢩 nguy c퉤 tai n梳죒 giao th척ng v횪 ph첫 h沼즤 v沼쌻?똒uy t梳칌 v沼?Ti챗u chu梳쯰 K梳퓍 c梳쪀쨌C퉤 s沼?c沼쬪 휂튼沼쓓g b沼쇻
+?
+ },
+ {
+  "n": 324,
+  "ko_e": "?쇨컙?먮룄 ?몄씤???듯뻾???덉쓣 ???덉쑝誘濡??쒗뻾?섎ŉ ?듦낵?쒕떎.",
+  "tr_e": "V챙 ban 휃챗m c크ng c처 th沼?c처 ng튼沼쓎 cao tu沼뷼 휃i l梳죍 n챗n 휃i qua b梳켷g c찼ch 휃i ch梳춎."
+ },
+ {
+  "n": 325,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??[蹂꾪몴10] ?몄씤蹂댄샇援ъ뿭?먯꽌 ?뱀슜李??댁쟾?먭? ?좏샇?꾨컲?섎뒗 寃쎌슦 12留??먯쓽 踰붿튃湲덉씠 遺怨쇰릺怨?  ?대쪣李??댁쟾?먭? ?〓떒蹂대룄 蹂댄뻾?먯
+쓽 ?〓떒??諛⑺빐?섎뒗 寃쎌슦 8留??먯쓽 踰붿튃湲덉씠 遺怨쇰맂??",
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[B梳즢g ph沼?l沼쩭 10] Trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼, tr튼沼쓓g h沼
+즤 ng튼沼쓎 l찼i xe 척 t척 con vi ph梳죑 t챠n hi沼뇎 th챙 b沼?찼p d沼쩸g ti沼걆 ph梳죜 vi ph梳죑 120 ngh챙n Won, v횪 tr튼沼쓓g h沼즤 ng튼沼쓎 l찼i xe hai
+ b찼nh c梳즢 tr沼?vi沼놻 b훱ng qua c沼쬪 ng튼沼쓎 휃i b沼?t梳죍 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?th챙 b沼?찼p d沼쩸g ti沼걆 ph梳죜 vi ph梳죑 80 ngh
+챙n Won."
+ },
+ {
+  "n": 326,
+  "ko_e": "?몄씤???좎껜 ?곹깭瑜?怨좊젮?섏뿬 蹂댄뻾?좏샇??湲몄씠???μ븷?몄쓽 ?됯퇏蹂댄뻾?띾룄瑜?湲곗??쇰줈 ?ㅼ젙?섏뼱 ?쇰컲?꾨줈??蹂댄뻾???몃낫????湲몃떎(?대┛?는룸끂??諛??μ븷??蹂댄
+샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議곗젣2?? 2023援먰넻?좏샇湲??ㅼ튂?????낅Т?몃엺 ????????蹂댄뻾 ?좏샇?댁쁺 李몄“). ?좏샇?깆? 洹쒖젙蹂대떎 ?좏샇?깆쓣 ?ш쾶 ?ㅼ튂?????
+녿떎.",
+  "tr_e": "X챕t 휃梳퓆 t챙nh tr梳죒g c퉤 th沼?c沼쬪 ng튼沼쓎 cao tu沼뷼, 휃沼?d횪i c沼쬪 t챠n hi沼뇎 휃i b沼?휃튼沼즓 thi梳퓍 l梳춑 l梳쪅 t沼멵 휃沼?휃i b沼?trun
+g b챙nh c沼쬪 ng튼沼쓎 khuy梳퓍 t梳춗 l횪m chu梳쯰 n챗n d횪i h퉤n t챠n hi沼뇎 휃i b沼?c沼쬪 휃튼沼쓓g th척ng th튼沼쓓g (tham kh梳즣 Quy t梳칌 v沼?Ch沼?휃沼땙h 
+v횪 Qu梳즢 l첵 Khu v沼켧 B梳즣 v沼?Tr梳?em쨌Ng튼沼쓎 cao tu沼뷼 v횪 Ng튼沼쓎 khuy梳퓍 t梳춗 휂i沼걏 6 Kho梳즢 2, S沼?tay Nghi沼뇈 v沼?L梳칛 휃梳톞쨌V梳춏 h횪nh 휂
+챔n T챠n hi沼뇎 Giao th척ng 2023 Ph梳쬷 2 Ch튼퉤ng 2 V梳춏 h횪nh t챠n hi沼뇎 휃i b沼?. Kh척ng 휃튼沼즓 l梳칛 휃챔n t챠n hi沼뇎 l沼썀 h퉤n quy 휃沼땙h."
+ },
+ {
+  "n": 327,
+  "ko_e": "?몄씤蹂댄샇援ъ뿭?먯꽌 ?ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 ?쒗븳?띾룄瑜??꾨컲??寃쎌슦 踰뚯젏? 2諛?遺怨쇳븳?? (?꾨줈援먰넻踰??쒗뻾洹?移?蹂꾪몴 28)",
+  "tr_e": "Trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼, tr튼沼쓓g h沼즤 vi ph梳죑 t沼멵 휃沼?gi沼쌻 h梳죒 trong kho梳즢g t沼?8 gi沼?s찼ng 휃梳퓆 8 gi沼
+?t沼멼 th챙 찼p d沼쩸g 휃i沼긩 ph梳죜 g梳쩺 2 l梳쬷. (Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 28)"
+ },
+ {
+  "n": 328,
+  "ko_e": "蹂댄뻾?먯쓽 蹂댄샇媛 理쒖슦?좎씠硫? ?좏샇?깆씠 ?덈뒗 ?〓떒蹂대룄???묎렐??寃쎌슦 蹂댄뻾?먯쓽 ?덉쟾???꾪븯???쇱떆?뺤??섏뿬 ?덉쟾 ???뺤씤?섍퀬 ?〓떒蹂대룄 ?좏샇媛 蹂寃쎈맂
+ ??李⑤웾 吏꾪뻾?좏샇???곕씪 吏꾪뻾?쒕떎.",
+  "tr_e": "B梳즣 v沼?ng튼沼쓎 휃i b沼?l횪 튼u ti챗n h횪ng 휃梳쬾, khi ti梳퓈 c梳춏 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?c처 휃챔n t챠n hi沼뇎, v챙 an 
+to횪n c沼쬪 ng튼沼쓎 휃i b沼?h찾y d沼쳌g l梳죍 h梳쿻 x찼c nh梳춏 an to횪n, v횪 sau khi t챠n hi沼뇎 v梳죅h sang 휃튼沼쓓g thay 휃沼뷼 th챙 휃i ti梳퓈 theo t
+챠n hi沼뇎 cho ph챕p xe 휃i."
+ },
+ {
+  "n": 329,
+  "ko_e": "?몄씤蹂댄샇援ъ뿭???ㅼ튂?섎뒗 蹂댄뻾 ?좏샇?깆쓽 ?뱀깋?좏샇?쒓컙? ?대┛?? ?몄씤 ?먮뒗 ?μ븷?몄쓽 ?됯퇏 蹂댄뻾?띾룄瑜?湲곗??쇰줈  ?섏뿬 ?ㅼ젙?섍퀬 ?덈떎. ?대┛?담냽?몄씤 
+諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?援먰넻?덉쟾?쒖꽕???ㅼ튂)  ???쒌냽?꾧꼍李곗껌?μ씠??寃쎌같?쒖옣? ??議곗젣6??뿉 ?곕씪 蹂댄샇援ъ뿭?쇰줈 吏?뺥븳 ?쒖꽕 ?먮뒗 
+?μ냼??二?異쒖엯臾멸낵 媛?? 媛源뚯슫 嫄곕━???꾩튂??媛꾩꽑?꾨줈???〓떒蹂대룄?먮뒗 ?좏샇湲곕? ?곗꽑?곸쑝濡??ㅼ튂?띻?由ы빐???쒕떎.",
+  "tr_e": "Th沼쓎 gian t챠n hi沼뇎 xanh c沼쬪 휃챔n t챠n hi沼뇎 휃i b沼?휃튼沼즓 l梳칛 trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 휃튼沼즓 thi梳퓍 l梳춑 l
+梳쪅 t沼멵 휃沼?휃i b沼?trung b챙nh c沼쬪 tr梳?em, ng튼沼쓎 cao tu沼뷼 ho梳톍 ng튼沼쓎 khuy梳퓍 t梳춗 l횪m chu梳쯰. Quy t梳칌 v沼?Ch沼?휃沼땙h v횪 Qu梳즢 l첵 K
+hu v沼켧 B梳즣 v沼?Tr梳?em쨌Ng튼沼쓎 cao tu沼뷼 v횪 Ng튼沼쓎 khuy梳퓍 t梳춗 휂i沼걏 6 (L梳칛 휃梳톞 c퉤 s沼?an to횪n giao th척ng) ??Gi찼m 휃沼멵 C척ng an t沼
+뎝h/th횪nh ph沼?ho梳톍 Tr튼沼웢g 휃沼뱊 c척ng an ph梳즜 튼u ti챗n l梳칛 휃梳톞쨌qu梳즢 l첵 휃챔n t챠n hi沼뇎 t梳죍 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?tr챗n
+ 휃튼沼쓓g tr沼쩭 n梳켶 沼?kho梳즢g c찼ch g梳쬷 nh梳쩿 v沼쌻 c沼븂g ra v횪o ch챠nh c沼쬪 c퉤 s沼?ho梳톍 휃沼땇 휃i沼긩 휃튼沼즓 ch沼?휃沼땙h l횪 khu v沼켧 b梳즣 v沼?th
+eo 휂i沼걏 3 Kho梳즢 6."
+ },
+ {
+  "n": 330,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 10 ?대┛??蹂댄샇援ъ뿭 諛??몄씤?ㅼ옣?좎씤 蹂댄샇援ъ뿭?먯꽌??踰붿튃?됱쐞 諛?踰붿튃湲덉븸",
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 10 H횪nh vi vi ph梳죑 v횪 m沼쯢 ti沼걆 ph梳죜 vi ph梳죑 trong k
+hu v沼켧 b梳즣 v沼?tr梳?em v횪 khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼쨌ng튼沼쓎 khuy梳퓍 t梳춗."
+ },
+ {
+  "n": 331,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??[蹂꾪몴10] 2 ?몄씤蹂댄샇援ъ뿭?먯꽌 ?〓떒蹂대룄蹂댄뻾???〓떒??諛⑺빐?섎뒗 寃쎌슦 ?뱀슜李⑥슫?꾩옄??12留??먯쓽  踰붿튃湲덉씠 遺怨쇰맂??          ?
+꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 323 ?몄씤蹂댄샇?쒖????몄씤蹂댄샇援ъ뿭 ?덉뿉???몄씤??蹂댄샇瑜?吏?쒗븯??寃껋쑝濡??몄씤蹂댄샇 援ъ뿭???꾨줈 ?묒륫???ㅼ튂?쒕떎.",
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[B梳즢g ph沼?l沼쩭 10] m沼쩭 2, trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼, tr
+튼沼쓓g h沼즤 c梳즢 tr沼?vi沼놻 b훱ng qua c沼쬪 ng튼沼쓎 휃i b沼?t梳죍 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?th챙 ng튼沼쓎 l찼i xe 척 t척 con b沼?찼p d沼쩸g
+ ti沼걆 ph梳죜 vi ph梳죑 120 ngh챙n Won. Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?[B梳즢g ph沼?l沼쩭 6] 323, bi沼긪 b찼o b梳즣 v沼?ng튼沼
+쓎 cao tu沼뷼 l횪 ch沼?d梳쳌 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 trong khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼, 휃튼沼즓 l梳칛 沼?hai ph챠a 휃튼沼쓓g c沼쬪 khu v沼켧 
+b梳즣 v沼?ng튼沼쓎 cao tu沼뷼."
+ },
+ {
+  "n": 332,
+  "ko_e": "?대┛?담냽?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?諛???議? ?댄뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡 濡??쒗븳?????덈뒗 寃껋? ?쑣룸룄寃쎌같泥?옣
+ ?먮뒗 寃쎌같?쒖옣??沅뚰븳?대떎.",
+  "tr_e": "Quy t梳칌 v沼?Ch沼?휃沼땙h v횪 Qu梳즢 l첵 Khu v沼켧 B梳즣 v沼?Tr梳?em쨌Ng튼沼쓎 cao tu沼뷼 v횪 Ng튼沼쓎 khuy梳퓍 t梳춗 휂i沼걏 3 v횪 휂i沼걏 9, vi
+沼놻 c처 th沼?gi沼쌻 h梳죒 t沼멵 휃沼?v梳춏 h횪nh trong ph梳죑 vi 30 ki-l척-m챕t/gi沼?l횪 th梳쯯 quy沼걆 c沼쬪 Gi찼m 휃沼멵 C척ng an t沼뎝h/th횪nh ph沼?ho梳
+톍 Tr튼沼웢g 휃沼뱊 c척ng an."
+ },
+ {
+  "n": 333,
+  "ko_e": "?꾨줈援먰넻踰???議? ??0議??? ?≫슒?⑤낫?꾧? ?ㅼ튂?섏뼱 ?덉? ?딆? ?꾨줈?먯꽌??媛??吏㏃? 嫄곕━濡??〓떒?섏뿬???쒕떎.  ??낫?됱옄??紐⑤뱺 李⑥쓽 ?욎씠???ㅻ줈 ?〓
+떒?섏뿬?쒕뒗 ???쒕떎. ?ｋ낫?됱옄??蹂대룄?먯꽌 ?곗륫?듯뻾???먯튃?쇰줈 ?쒕떎.",
+  "tr_e": "Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 8, 휂i沼걏 10. ?? ??Tr챗n 휃튼沼쓓g kh척ng c처 v梳죅h sang 휃튼沼쓓g cho ng튼沼쓎 휃i b沼?th챙 ph梳즜 
+b훱ng qua b梳켷g qu찾ng 휃튼沼쓓g ng梳칗 nh梳쩿. ??Ng튼沼쓎 휃i b沼?kh척ng 휃튼沼즓 b훱ng qua ph챠a tr튼沼쌵 ho梳톍 ph챠a sau c沼쬪 m沼뛦 lo梳죍 xe. ??Ng튼沼
+쓎 휃i b沼?tr챗n v沼뎎 h챔 v沼?nguy챗n t梳칌 ph梳즜 휃i b챗n ph梳즜."
+ },
+ {
+  "n": 334,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴28, ?뱀슜?먮룞李?湲곗? ???꾨줈援먰넻踰???7議곗젣1??踰붿튃湲?6留??? 踰뚯젏 10?????꾨줈援먰넻 踰???7議곗젣3??踰붿튃湲?6留??? 踰뚯젏 1
+0?? ???꾨줈援먰넻踰???7議곗젣5??踰붿튃湲?4留??? 踰뚯젏 10?????꾨줈援먰넻踰? ??3議곗젣3??踰붿튃湲?6留??? 踰뚯젏 30??,
+  "tr_e": "Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 28, ti챗u chu梳쯰 xe 척 t척 con. ??Lu梳춗 Giao th척ng 휃튼沼쓓g 
+b沼?휂i沼걏 27 Kho梳즢 1 ti沼걆 ph梳죜 vi ph梳죑 60 ngh챙n Won, 휃i沼긩 ph梳죜 10 휃i沼긩 ??Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 27 Kho梳즢 3 ti沼걆 ph
+梳죜 vi ph梳죑 60 ngh챙n Won, 휃i沼긩 ph梳죜 10 휃i沼긩 ??Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 27 Kho梳즢 5 ti沼걆 ph梳죜 vi ph梳죑 40 ngh챙n Won, 휃
+i沼긩 ph梳죜 10 휃i沼긩 ??Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?휂i沼걏 13 Kho梳즢 3 ti沼걆 ph梳죜 vi ph梳죑 60 ngh챙n Won, 휃i沼긩 ph梳죜 30 휃i沼긩"
+ },
+ {
+  "n": 335,
+  "ko_e": "援먰넻?쎌옄???대룞?몄쓽 利앹쭊踰???議?????         援먰넻?쎌옄? ?μ븷?? 怨좊졊?? ?꾩궛遺, ?곸쑀?꾨? ?숇컲???щ엺, ?대┛?????쇱긽?앺솢?먯꽌 ?대룞??遺덊렪?
+??먮겮???щ엺?? 留먰븳??",
+  "tr_e": "Lu梳춗 v沼?T훱ng c튼沼쓓g Ti沼뇆 l沼즜 Di chuy沼긪 cho Ng튼沼쓎 Y梳퓎 th梳?Giao th척ng 휂i沼걏 2 M沼쩭 1. Ng튼沼쓎 y梳퓎 th梳?giao th척ng l횪
+ ng튼沼쓎 c梳즡 th梳쪅 b梳쩿 ti沼뇆 trong vi沼놻 di chuy沼긪 trong 휃沼쓎 s沼몁g h횪ng ng횪y nh튼 ng튼沼쓎 khuy梳퓍 t梳춗, ng튼沼쓎 cao tu沼뷼, ph沼?n沼?man
+g thai, ng튼沼쓎 휃i c첫ng tr梳?nh沼? tr梳?em v.v."
+ },
+ {
+  "n": 336,
+  "ko_e": "?몄씤? ?쒕젰 諛?泥?젰???쏀솕?섎뒗 ?좎껜???뱀꽦??諛쒖깮?쒕떎.",
+  "tr_e": "Ng튼沼쓎 cao tu沼뷼 c처 휃梳톍 휃i沼긩 c퉤 th沼?l횪 th沼?l沼켧 v횪 th챠nh l沼켧 suy gi梳즡."
+ },
+ {
+  "n": 337,
+  "ko_e": "?몄씤?댁쟾?먮뒗 ?κ굅由??댁쟾?대굹 ?μ떆媛? ?ъ빞 ?댁쟾? ?쇨? ?댁빞 ?쒕떎.",
+  "tr_e": "Ng튼沼쓎 l찼i xe cao tu沼뷼 n챗n tr찼nh l찼i xe 휃튼沼쓓g d횪i, l찼i xe l창u, ho梳톍 l찼i xe ban 휃챗m khuya."
+ },
+ {
+  "n": 338,
+  "ko_e": "?몄씤?댁쟾?먮뒗 ?댁쟾?섍린 ??異⑸텇???댁떇怨?二쇨린?곸씤 嫄닿컯?곹깭瑜??뺤씤?섎뒗 寃껋씠 諛붾엺吏곹븯?? ?댁쟾?섍린 ?꾩뿉 紐⑹쟻吏  寃쎈줈瑜??뺤씤?섍퀬 媛湲됱쟻 ?ъ빞?댁쟾?
+ ?섏? ?딅뒗 寃껋씠 醫뗫떎.",
+  "tr_e": "Ng튼沼쓎 l찼i xe cao tu沼뷼 n챗n ngh沼?ng퉤i 휃梳쭃 휃沼?tr튼沼쌵 khi l찼i xe v횪 ki沼긩 tra t챙nh tr梳죒g s沼쯢 kh沼뢤 휃沼땙h k沼? N챗n x찼c
+ nh梳춏 l沼?tr챙nh 휃梳퓆 휃i沼긩 휃梳퓆 tr튼沼쌵 khi l찼i xe v횪 n梳퓎 c처 th沼?th챙 kh척ng n챗n l찼i xe ban 휃챗m khuya."
+ },
+ {
+  "n": 339,
+  "ko_e": "援먰넻?ш퀬泥섎━ ?밸?踰???議?泥섎쾶???밸?)?????쇳빐?먯쓽 紐낆떆?곸씤 ?섏궗??諛섑븯??怨듭냼(?ц㉣)瑜??쒓린?????녿떎. ??議?醫낇빀蹂댄뿕 ?깆뿉 媛?낅맂 寃쎌슦???밸?)
+????蹂댄뿕 ?먮뒗 怨듭젣??媛?낅맂 寃쎌슦?먮뒗 ??議곗젣2??蹂몃Ц??洹쒖젙??二꾨? 踰뷀븳 李⑥쓽 ?댁쟾?먯뿉 ??섏뿬 怨듭냼瑜??쒓린?????녿떎. ?ㅻ쭔 援먰넻?ш퀬泥섎━ ?밸?踰???議??????⑥
+꽌??洹쒖젙????ぉ????섏뿬 ?쇳빐?먯쓽 紐낆떆?곸씤 ?섏궗??諛섑븯嫄곕굹 醫낇빀蹂댄뿕??媛?낅릺???덈뜑?쇰룄 ?뺤궗泥섎쾶 ?????덈떎. ?ㅻ쭔 ?몄씤蹂댄샇援???? 泥섎쾶???밸????대떦?섎?濡?醫낇
+빀蹂댄뿕 媛?? 泥섎쾶遺덉썝?섏궗媛 ?덈뒗 寃쎌슦 ?뺤궗泥섎쾶 ?섏? ?딅뒗??",
+  "tr_e": "Lu梳춗 x沼?l첵 휃梳톍 bi沼뇍 tai n梳죒 giao th척ng 휂i沼걏 3 (Quy 휃沼땙h 휃梳톍 bi沼뇍 v沼?x沼?ph梳죜) Kho梳즢 2. Kh척ng 휃튼沼즓 truy t沼?(?ц
+㉣) tr찼i v沼쌻 첵 ch챠 r천 r횪ng c沼쬪 ng튼沼쓎 b沼?h梳죍. 휂i沼걏 4 (Quy 휃沼땙h 휃梳톍 bi沼뇍 trong tr튼沼쓓g h沼즤 휃찾 tham gia b梳즣 hi沼긩 t沼븂g h沼즤 v.
+v.) Kho梳즢 1. Trong tr튼沼쓓g h沼즤 휃찾 tham gia b梳즣 hi沼긩 ho梳톍 qu沼?t튼퉤ng tr沼?th챙 kh척ng 휃튼沼즓 truy t沼?휃沼멼 v沼쌻 ng튼沼쓎 l찼i xe 휃찾 ph
+梳죑 t沼셢 quy 휃沼땙h t梳죍 ph梳쬷 ch챠nh c沼쬪 휂i沼걏 3 Kho梳즢 2. Tuy nhi챗n, 휃沼멼 v沼쌻 c찼c h梳죒g m沼쩭 quy 휃沼땙h t梳죍 ph梳쬷 ngo梳죍 l沼?c沼쬪 Lu梳춗 
+x沼?l첵 휃梳톍 bi沼뇍 tai n梳죒 giao th척ng 휂i沼걏 3 Kho梳즢 2, d첫 tr찼i v沼쌻 첵 ch챠 r천 r횪ng c沼쬪 ng튼沼쓎 b沼?h梳죍 ho梳톍 d첫 휃찾 tham gia b梳즣 hi
+沼긩 t沼븂g h沼즤 th챙 v梳쳌 c처 th沼?b沼?x沼?ph梳죜 h챙nh s沼? Tuy nhi챗n, khu v沼켧 b梳즣 v沼?ng튼沼쓎 cao tu沼뷼 thu沼셛 quy 휃沼땙h 휃梳톍 bi沼뇍 v沼?x沼?p
+h梳죜 n챗n trong tr튼沼쓓g h沼즤 휃찾 tham gia b梳즣 hi沼긩 t沼븂g h沼즤 v횪 c처 첵 ch챠 kh척ng mu沼몁 x沼?ph梳죜 th챙 kh척ng b沼?x沼?ph梳죜 h챙nh s沼?"
+ },
+ {
+  "n": 340,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾??蹂꾪몴 10, ?쒗뻾洹쒖튃 蹂꾪몴 28 ?뱀슜?먮룞李?15留??? 踰뚯젏 120??,
+  "tr_e": "Ngh沼?휃沼땙h thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?B梳즢g ph沼?l沼쩭 10, Th척ng t튼 thi h횪nh B梳즢g ph沼?l沼쩭 28. Xe 척 t척 con 
+150 ngh챙n Won, 휃i沼긩 ph梳죜 120 휃i沼긩."
+ },
+ {
+  "n": 341,
+  "ko_e": "?μ븷?멥냽?몄씤?띿엫?곕? ?깆쓽 ?몄쓽利앹쭊 蹂댁옣??愿??踰뺣쪧 ??7議??????꾧뎄?좎? ????뿉 ?곕Ⅸ ?μ븷?몄쟾?⑹＜李④뎄?? 二쇱감?쒖?媛 遺숈뼱 ?덉? ?꾨땲???먮룞李⑤
+? ?μ븷?몄쟾?⑹＜李④뎄??뿉 二쇱감?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?μ븷?몄쟾?⑹＜李④뎄??二쇱감 ?쒖?媛 遺숈뼱 ?덈뒗 ?먮룞李⑥뿉 蹂댄뻾???μ븷媛 ?덈뒗 ?щ엺???吏 ?꾨땲??寃쎌슦?먮룄 媛숇떎.",
+  "tr_e": "Lu梳춗 v沼?B梳즣 휃梳즡 T훱ng c튼沼쓓g Ti沼뇆 l沼즜 cho Ng튼沼쓎 khuy梳퓍 t梳춗쨌Ng튼沼쓎 cao tu沼뷼쨌Ph沼?n沼?mang thai v.v. 휂i沼걏 17 Kho梳즢 
+4. B梳쩿 k沼?ai c크ng kh척ng 휃튼沼즓 휃沼?xe kh척ng d찼n bi沼긪 휃沼?khu v沼켧 휃沼?xe d횪nh ri챗ng cho ng튼沼쓎 khuy梳퓍 t梳춗 theo Kho梳즢 2 v횪o khu
+ v沼켧 휃沼?xe d횪nh ri챗ng cho ng튼沼쓎 khuy梳퓍 t梳춗. Tr튼沼쓓g h沼즤 xe c처 d찼n bi沼긪 휃沼?khu v沼켧 휃沼?xe d횪nh ri챗ng cho ng튼沼쓎 khuy梳퓍 t梳춗 
+m횪 kh척ng c처 ng튼沼쓎 kh처 kh훱n trong vi沼놻 휃i l梳죍 ng沼밿 tr챗n xe c크ng v梳춞."
+ }
+]
+위치 줄:2 문자:85
++ ... translations/audit/queue/316_expl_vn.json' | ConvertFrom-Json; $cp949 ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ConvertFrom-Json], ArgumentException
+    + FullyQualifiedErrorId : System.ArgumentException,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$raw=Get-Content -Raw -LiteralPath '"'translations/audit/queue/316_expl_vn.json'; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; $fixed=$utf8.GetString($cp949.GetBytes($raw)); $fixed' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 528ms:
+[
+ {
+  "n": 322,
+  "ko_e": "?�인과의 간격??충분???�보?�며 ?�행?�로 ?�과?�다.",
+  "tr_e": "Gi�?đ�?khoảng cách với người cao tuổi và đi qua bằng cách đi chậm."
+ },
+ {
+  "n": 323,
+  "ko_e": "?�린?�ㆍ?�인 �??�애??보호구역??지??�?관리에 관??규칙 ??�?보도 �??�로부?�물???�치)?????�장?��?  보호구역???�음 �??�의 ?�느 ?�나???�당?�는 ?�로부?�물???�치?�거??관???�로관리청???�치�??�청???? ?�다. 1. 별표???�른 보호구역 ?�로?��? 2. ?�로반사�?3. 과속방�??�설 4. 미끄?�방지?�설 5. 방호?��?�?6. �? 밖에 ?�장?�이 교통?�고???�험?�로부???�린?�·노???�는 ?�애?�을 보호?�기 ?�하???�요?�다�??�정?�는 ??로�??�물로서 ?�도로의 구조·?�설 기�???관??규칙?�에 ?�합???�설",
+  "tr_e": "Quy tắc v�?Ch�?định và Quản lý Khu vực Bảo v�?Tr�?em·Người cao tuổi và Người khuyết tật Điều 7 (Lắp đặt vỉa hè và công trình ph�?thuộc đường) Khoản 2. Th�?trưởng v.v. có th�?lắp đặt hoặc yêu cầu cơ quan quản lý đường có thẩm quyền lắp đặt công trình ph�?thuộc đường thuộc một trong các mục sau đây tại khu vực bảo v�? 1. Biển báo đường khu vực bảo v�?theo bảng ph�?lục 2. Gương cầu đường b�?3. Thiết b�?chống chạy quá tốc đ�?4. Thiết b�?chống trơn trượt 5. Rào chắn phòng h�?6. Công trình ph�?thuộc đường khác mà Th�?trưởng v.v. công nhận là cần thiết đ�?bảo v�?tr�?em·người cao tuổi hoặc người khuyết tật khỏi nguy cơ tai nạn giao thông và phù hợp với?�Quy tắc v�?Tiêu chuẩn Kết cấu·Cơ s�?của Đường bộ�?
+ },
+ {
+  "n": 324,
+  "ko_e": "?�간?�도 ?�인???�행???�을 ???�으므�??�행?�며 ?�과?�다.",
+  "tr_e": "Vì ban đêm cũng có th�?có người cao tuổi đi lại nên đi qua bằng cách đi chậm."
+ },
+ {
+  "n": 325,
+  "ko_e": "?�로교통�??�행??[별표10] ?�인보호구역?�서 ?�용�??�전?��? ?�호?�반?�는 경우 12�??�의 범칙금이 부과되�?  ?�륜�??�전?��? ?�단보도 보행?�의 ?�단??방해?�는 경우 8�??�의 범칙금이 부과된??",
+  "tr_e": "Ngh�?định thi hành Luật Giao thông đường b�?[Bảng ph�?lục 10] Trong khu vực bảo v�?người cao tuổi, trường hợp người lái xe ô tô con vi phạm tín hiệu thì b�?áp dụng tiền phạt vi phạm 120 nghìn Won, và trường hợp người lái xe hai bánh cản tr�?việc băng qua của người đi b�?tại vạch sang đường cho người đi b�?thì b�?áp dụng tiền phạt vi phạm 80 nghìn Won."
+ },
+ {
+  "n": 326,
+  "ko_e": "?�인???�체 ?�태�?고려?�여 보행?�호??길이???�애?�의 ?�균보행?�도�?기�??�로 ?�정?�어 ?�반?�로??보행???�보????길다(?�린?�·노??�??�애??보호구역??지??�?관리에 관??규칙 ??조제2?? 2023교통?�호�??�치?????�무?�람 ????????보행 ?�호?�영 참조). ?�호?��? 규정보다 ?�호?�을 ?�게 ?�치?????�다.",
+  "tr_e": "Xét đến tình trạng cơ th�?của người cao tuổi, đ�?dài của tín hiệu đi b�?được thiết lập lấy tốc đ�?đi b�?trung bình của người khuyết tật làm chuẩn nên dài hơn tín hiệu đi b�?của đường thông thường (tham khảo Quy tắc v�?Ch�?định và Quản lý Khu vực Bảo v�?Tr�?em·Người cao tuổi và Người khuyết tật Điều 6 Khoản 2, S�?tay Nghiệp v�?Lắp đặt·Vận hành Đèn Tín hiệu Giao thông 2023 Phần 2 Chương 2 Vận hành tín hiệu đi b�?. Không được lắp đèn tín hiệu lớn hơn quy định."
+ },
+ {
+  "n": 327,
+  "ko_e": "?�인보호구역?�서 ?�전 8?��????�후 8?�까지 ?�한?�도�??�반??경우 벌점?� 2�?부과한?? (?�로교통�??�행�?�?별표 28)",
+  "tr_e": "Trong khu vực bảo v�?người cao tuổi, trường hợp vi phạm tốc đ�?giới hạn trong khoảng t�?8 gi�?sáng đến 8 gi�?tối thì áp dụng điểm phạt gấp 2 lần. (Thông tư thi hành Luật Giao thông đường b�?Bảng ph�?lục 28)"
+ },
+ {
+  "n": 328,
+  "ko_e": "보행?�의 보호가 최우?�이�? ?�호?�이 ?�는 ?�단보도???�근??경우 보행?�의 ?�전???�하???�시?��??�여 ?�전 ???�인?�고 ?�단보도 ?�호가 변경된 ??차량 진행?�호???�라 진행?�다.",
+  "tr_e": "Bảo v�?người đi b�?là ưu tiên hàng đầu, khi tiếp cận vạch sang đường cho người đi b�?có đèn tín hiệu, vì an toàn của người đi b�?hãy dừng lại hẳn xác nhận an toàn, và sau khi tín hiệu vạch sang đường thay đổi thì đi tiếp theo tín hiệu cho phép xe đi."
+ },
+ {
+  "n": 329,
+  "ko_e": "?�인보호구역???�치?�는 보행 ?�호?�의 ?�색?�호?�간?� ?�린?? ?�인 ?�는 ?�애?�의 ?�균 보행?�도�?기�??�로  ?�여 ?�정?�고 ?�다. ?�린?�ㆍ?�인 �??�애??보호구역??지??�?관리에 관??규칙 ??�?교통?�전?�설???�치)  ???�ㆍ?�경찰청?�이??경찰?�장?� ??조제6??�� ?�라 보호구역?�로 지?�한 ?�설 ?�는 ?�소??�?출입문과 가?? 가까운 거리???�치??간선?�로???�단보도?�는 ?�호기�? ?�선?�으�??�치?��?리해???�다.",
+  "tr_e": "Thời gian tín hiệu xanh của đèn tín hiệu đi b�?được lắp trong khu vực bảo v�?người cao tuổi được thiết lập lấy tốc đ�?đi b�?trung bình của tr�?em, người cao tuổi hoặc người khuyết tật làm chuẩn. Quy tắc v�?Ch�?định và Quản lý Khu vực Bảo v�?Tr�?em·Người cao tuổi và Người khuyết tật Điều 6 (Lắp đặt cơ s�?an toàn giao thông) ??Giám đốc Công an tỉnh/thành ph�?hoặc Trưởng đồn công an phải ưu tiên lắp đặt·quản lý đèn tín hiệu tại vạch sang đường cho người đi b�?trên đường trục nằm �?khoảng cách gần nhất với cổng ra vào chính của cơ s�?hoặc địa điểm được ch�?định là khu vực bảo v�?theo Điều 3 Khoản 6."
+ },
+ {
+  "n": 330,
+  "ko_e": "?�로교통�??�행??별표 10 ?�린??보호구역 �??�인?�장?�인 보호구역?�서??범칙?�위 �?범칙금액",
+  "tr_e": "Ngh�?định thi hành Luật Giao thông đường b�?Bảng ph�?lục 10 Hành vi vi phạm và mức tiền phạt vi phạm trong khu vực bảo v�?tr�?em và khu vực bảo v�?người cao tuổi·người khuyết tật."
+ },
+ {
+  "n": 331,
+  "ko_e": "?�로교통�??�행??[별표10] 2 ?�인보호구역?�서 ?�단보도보행???�단??방해?�는 경우 ?�용차운?�자??12�??�의  범칙금이 부과된??          ?�로교통�??�행규칙 [별표6] 323 ?�인보호?��????�인보호구역 ?�에???�인??보호�?지?�하??것으�??�인보호 구역???�로 ?�측???�치?�다.",
+  "tr_e": "Ngh�?định thi hành Luật Giao thông đường b�?[Bảng ph�?lục 10] mục 2, trong khu vực bảo v�?người cao tuổi, trường hợp cản tr�?việc băng qua của người đi b�?tại vạch sang đường cho người đi b�?thì người lái xe ô tô con b�?áp dụng tiền phạt vi phạm 120 nghìn Won. Thông tư thi hành Luật Giao thông đường b�?[Bảng ph�?lục 6] 323, biển báo bảo v�?người cao tuổi là ch�?dẫn bảo v�?người cao tuổi trong khu vực bảo v�?người cao tuổi, được lắp �?hai phía đường của khu vực bảo v�?người cao tuổi."
+ },
+ {
+  "n": 332,
+  "ko_e": "?�린?�ㆍ?�인 �??�애??보호구역??지??�?관리에 관??규칙 ??�?�???�? ?�행?�도�??�속 30?�로미터 ?�내 �??�한?????�는 것�? ?�·도경찰�?�� ?�는 경찰?�장??권한?�다.",
+  "tr_e": "Quy tắc v�?Ch�?định và Quản lý Khu vực Bảo v�?Tr�?em·Người cao tuổi và Người khuyết tật Điều 3 và Điều 9, việc có th�?giới hạn tốc đ�?vận hành trong phạm vi 30 ki-lô-mét/gi�?là thẩm quyền của Giám đốc Công an tỉnh/thành ph�?hoặc Trưởng đồn công an."
+ },
+ {
+  "n": 333,
+  "ko_e": "?�로교통�???�? ??0�??? ?�횡?�보?��? ?�치?�어 ?��? ?��? ?�로?�서??가??짧�? 거리�??�단?�여???�다.  ??��?�자??모든 차의 ?�이???�로 ?�단?�여?�는 ???�다. ?�보?�자??보도?�서 ?�측?�행???�칙?�로 ?�다.",
+  "tr_e": "Luật Giao thông đường b�?Điều 8, Điều 10. ?? ??Trên đường không có vạch sang đường cho người đi b�?thì phải băng qua bằng quãng đường ngắn nhất. ??Người đi b�?không được băng qua phía trước hoặc phía sau của mọi loại xe. ??Người đi b�?trên vỉa hè v�?nguyên tắc phải đi bên phải."
+ },
+ {
+  "n": 334,
+  "ko_e": "?�로교통�??�행규칙 별표28, ?�용?�동�?기�? ???�로교통�???7조제1??범칙�?6�??? 벌점 10?????�로교통 �???7조제3??범칙�?6�??? 벌점 10?? ???�로교통�???7조제5??범칙�?4�??? 벌점 10?????�로교통�? ??3조제3??범칙�?6�??? 벌점 30??,
+  "tr_e": "Thông tư thi hành Luật Giao thông đường b�?Bảng ph�?lục 28, tiêu chuẩn xe ô tô con. ??Luật Giao thông đường b�?Điều 27 Khoản 1 tiền phạt vi phạm 60 nghìn Won, điểm phạt 10 điểm ??Luật Giao thông đường b�?Điều 27 Khoản 3 tiền phạt vi phạm 60 nghìn Won, điểm phạt 10 điểm ??Luật Giao thông đường b�?Điều 27 Khoản 5 tiền phạt vi phạm 40 nghìn Won, điểm phạt 10 điểm ??Luật Giao thông đường b�?Điều 13 Khoản 3 tiền phạt vi phạm 60 nghìn Won, điểm phạt 30 điểm"
+ },
+ {
+  "n": 335,
+  "ko_e": "교통?�자???�동?�의 증진�???�?????         교통?�자?� ?�애?? 고령?? ?�산부, ?�유?��? ?�반???�람, ?�린?????�상?�활?�서 ?�동??불편???�끼???�람?? 말한??",
+  "tr_e": "Luật v�?Tăng cường Tiện lợi Di chuyển cho Người Yếu th�?Giao thông Điều 2 Mục 1. Người yếu th�?giao thông là người cảm thấy bất tiện trong việc di chuyển trong đời sống hàng ngày như người khuyết tật, người cao tuổi, ph�?n�?mang thai, người đi cùng tr�?nh�? tr�?em v.v."
+ },
+ {
+  "n": 336,
+  "ko_e": "?�인?� ?�력 �?�?��???�화?�는 ?�체???�성??발생?�다.",
+  "tr_e": "Người cao tuổi có đặc điểm cơ th�?là th�?lực và thính lực suy giảm."
+ },
+ {
+  "n": 337,
+  "ko_e": "?�인?�전?�는 ?�거�??�전?�나 ?�시�? ?�야 ?�전?� ?��? ?�야 ?�다.",
+  "tr_e": "Người lái xe cao tuổi nên tránh lái xe đường dài, lái xe lâu, hoặc lái xe ban đêm khuya."
+ },
+ {
+  "n": 338,
+  "ko_e": "?�인?�전?�는 ?�전?�기 ??충분???�식�?주기?�인 건강?�태�??�인?�는 것이 바람직하?? ?�전?�기 ?�에 목적지  경로�??�인?�고 가급적 ?�야?�전?� ?��? ?�는 것이 좋다.",
+  "tr_e": "Người lái xe cao tuổi nên ngh�?ngơi đầy đ�?trước khi lái xe và kiểm tra tình trạng sức khỏe định k�? Nên xác nhận l�?trình đến điểm đến trước khi lái xe và nếu có th�?thì không nên lái xe ban đêm khuya."
+ },
+ {
+  "n": 339,
+  "ko_e": "교통?�고처리 ?��?�???�?처벌???��?)?????�해?�의 명시?�인 ?�사??반하??공소(?�訴)�??�기?????�다. ??�?종합보험 ?�에 가?�된 경우???��?)????보험 ?�는 공제??가?�된 경우?�는 ??조제2??본문??규정??죄�? 범한 차의 ?�전?�에 ?�?�여 공소�??�기?????�다. ?�만 교통?�고처리 ?��?�???�??????�서??규정????��???�?�여 ?�해?�의 명시?�인 ?�사??반하거나 종합보험??가?�되???�더?�도 ?�사처벌 ?????�다. ?�만 ?�인보호�???? 처벌???��????�당?��?�?종합보험 가?? 처벌불원?�사가 ?�는 경우 ?�사처벌 ?��? ?�는??",
+  "tr_e": "Luật x�?lý đặc biệt tai nạn giao thông Điều 3 (Quy định đặc biệt v�?x�?phạt) Khoản 2. Không được truy t�?(?�訴) trái với ý chí rõ ràng của người b�?hại. Điều 4 (Quy định đặc biệt trong trường hợp đã tham gia bảo hiểm tổng hợp v.v.) Khoản 1. Trong trường hợp đã tham gia bảo hiểm hoặc qu�?tương tr�?thì không được truy t�?đối với người lái xe đã phạm tội quy định tại phần chính của Điều 3 Khoản 2. Tuy nhiên, đối với các hạng mục quy định tại phần ngoại l�?của Luật x�?lý đặc biệt tai nạn giao thông Điều 3 Khoản 2, dù trái với ý chí rõ ràng của người b�?hại hoặc dù đã tham gia bảo hiểm tổng hợp thì vẫn có th�?b�?x�?phạt hình s�? Tuy nhiên, khu vực bảo v�?người cao tuổi thuộc quy định đặc biệt v�?x�?phạt nên trong trường hợp đã tham gia bảo hiểm tổng hợp và có ý chí không muốn x�?phạt thì không b�?x�?phạt hình s�?"
+ },
+ {
+  "n": 340,
+  "ko_e": "?�로교통�??�행??별표 10, ?�행규칙 별표 28 ?�용?�동�?15�??? 벌점 120??,
+  "tr_e": "Ngh�?định thi hành Luật Giao thông đường b�?Bảng ph�?lục 10, Thông tư thi hành Bảng ph�?lục 28. Xe ô tô con 150 nghìn Won, điểm phạt 120 điểm."
+ },
+ {
+  "n": 341,
+  "ko_e": "?�애?�ㆍ?�인?�임?��? ?�의 ?�의증진 보장??관??법률 ??7�??????�구?��? ????�� ?�른 ?�애?�전?�주차구?? 주차?��?가 붙어 ?��? ?�니???�동차�? ?�애?�전?�주차구??�� 주차?�여?�는 ?�니 ?�다. ?�애?�전?�주차구??주차 ?��?가 붙어 ?�는 ?�동차에 보행???�애가 ?�는 ?�람???�지 ?�니??경우?�도 같다.",
+  "tr_e": "Luật v�?Bảo đảm Tăng cường Tiện lợi cho Người khuyết tật·Người cao tuổi·Ph�?n�?mang thai v.v. Điều 17 Khoản 4. Bất k�?ai cũng không được đ�?xe không dán biển đ�?khu vực đ�?xe dành riêng cho người khuyết tật theo Khoản 2 vào khu vực đ�?xe dành riêng cho người khuyết tật. Trường hợp xe có dán biển đ�?khu vực đ�?xe dành riêng cho người khuyết tật mà không có người khó khăn trong việc đi lại ngồi trên xe cũng vậy."
+ }
+]
+
+codex
+[{"n":331,"field":"e","severity":"major","issue":"노인보호 표지를 도로의 우측에 설치한다는 원문을 ‘도로 양쪽에 설치한다’고 오역했다.","suggestion":"Theo Phụ lục 6, mục 323 của Quy tắc thi hành Luật Giao thông đường bộ, biển báo bảo vệ người cao tuổi được lắp đặt ở phía bên phải đường trong khu vực bảo vệ người cao tuổi để chỉ dẫn việc bảo vệ người cao tuổi."}]
+tokens used
+31,866
+[{"n":331,"field":"e","severity":"major","issue":"노인보호 표지를 도로의 우측에 설치한다는 원문을 ‘도로 양쪽에 설치한다’고 오역했다.","suggestion":"Theo Phụ lục 6, mục 323 của Quy tắc thi hành Luật Giao thông đường bộ, biển báo bảo vệ người cao tuổi được lắp đặt ở phía bên phải đường trong khu vực bảo vệ người cao tuổi để chỉ dẫn việc bảo vệ người cao tuổi."}]

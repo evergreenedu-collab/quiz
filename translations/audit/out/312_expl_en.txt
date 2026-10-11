@@ -1,0 +1,125 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127f7-05ce-7fb3-8289-03ae5a561632
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/312_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/312_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 547ms:
+[
+ {
+  "n": 242,
+  "ko_e": "?붾Ъ李??섏씠?⑥뒪?좊룄??二쇳솴?? ?쇰컲?섏씠?⑥뒪李⑤줈???뚮??됱씠怨??ㅼ감濡??섏씠?⑥뒪援ш컙? 留ㅼ떆 50??0?щ줈誘명꽣濡? 援ш컙???곕씪 ?ㅻⅤ??",
+  "tr_e": "The hi-pass guide line for trucks is orange, the ordinary hi-pass lane is blue, and the multi-lane hi-pass section is 50-80 kilometers per hour, varying by section."
+ },
+ {
+  "n": 243,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???9議??먮룞李⑤벑怨??몃㈃?꾩감???띾룄)??2??          ?먮룞李⑥쟾?⑸룄濡쒖뿉?쒖쓽 理쒓퀬?띾룄??留ㅼ떆 90?щ줈誘명꽣, 理쒖??띾룄??留ㅼ떆 30?щ줈誘명꽣",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 19 (Speed of Motor Vehicles, etc. and Streetcars) (1) subparagraph 2. On a motor-vehicle-only road, the maximum speed is 90 kilometers per hour and the minimum speed is 30 kilometers per hour."
+ },
+ {
+  "n": 244,
+  "ko_e": "?띾룄 ?媛먯쓣 ?듯빐 ?꾨줈援먰넻 李멸??먯쓽 ?덉쟾???꾪븳 5030?뺤콉???쇳솚?쇰줈 2021. 4. 17???꾨줈援먰넻踰??쒗뻾洹쒖튃???쒗뻾 ?섏뼱 二쇨굅, ?곸뾽, 怨듭뾽吏??쓽 ?쇰컲?꾨줈??留ㅼ떆 50?щ줈誘명꽣 ?대궡, ???쑣룸룄寃쎌같泥?옣???뱁엳 ?꾩슂?섎떎怨??몄젙?섏뿬  吏?뺥븳 ?몄꽑 ?먮뒗 援ш컙?먯꽌??留ㅼ떆 60?щ줈誘명꽣 ?대궡濡??먮룞李⑤벑怨??몃㈃?꾩감???듯뻾?띾룄瑜??뺥븿.",
+  "tr_e": "As part of the 5030 policy for the safety of road traffic participants through speed reduction, the Enforcement Rule of the Road Traffic Act took effect on April 17, 2021, setting the passage speed of motor vehicles, etc. and streetcars on ordinary roads in residential, commercial, and industrial areas at within 50 kilometers per hour, except on routes or sections designated by the Commissioner of the City/Provincial Police Agency who deems it particularly necessary, where it is within 60 kilometers per hour."
+ },
+ {
+  "n": 245,
+  "ko_e": "?섎돱???뺤콉?숈? ?怨듯솴 洹밸났???꾪븯??異붿쭊?섏????쒕컲 ?뺤콉(?먯궛諛깃낵). ?섍탳?듭궗怨?以꾩씠湲??쒕쭏????뚢??쒓뎅??濡쒓탳?듦났?⑥씠 二쇱턀?섍퀬 ?됱젙?덉쟾遺? 寃쎌같泥?씠 ?꾩썝?섎뒗 援먰넻?덉쟾 ?섏떇 怨좎랬 ?됱궗. ?섏??ν삎 援먰넻泥닿퀎?숇뒗 ?꾩옄, ?뺣낫, ?듭떊, ?쒖뼱 ?깆쓽 湲곗닠??援먰넻泥닿퀎???묐ぉ?쒗궓 援먰넻?쒖뒪?쒖쓣 留먰븳???먯궛諛깃낵). 臾몄젣??援먰넻?덉쟾 ?뺤콉? ?섏븞 ?꾩냽??5030?숈씠?? 2019. 4. 16. ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??9議?媛쒖젙???곕씪?뚭뎅?좎쓽 怨꾪쉷 諛??댁슜??愿??踰뺣쪧?띿젣 36議?????????媛紐⑸????ㅻぉ 源뚯???洹쒖젙???곕Ⅸ 二쇨굅吏?? ?곸뾽吏?? 怨듭뾽吏??쓽 ?쇰컲?꾨줈??留ㅼ떆 50?щ줈誘명꽣 ?대궡, ???쑣룸룄寃쎌같泥?옣???뱁엳 ?꾩슂?섎떎怨??몄젙?섏뿬 吏?뺥븳 ?몄꽑 ?먮뒗 援ш컙?먯꽌??留ㅼ떆 60?щ줈誘명꽣 ?대궡濡??먮룞 李⑤벑怨??몃㈃?꾩감???듯뻾?띾룄瑜??뺥뻽?? ?쒗뻾?쇱옄(2021. 4. 17.)",
+  "tr_e": "The New Deal refers to the various policies pursued to overcome the Great Depression (Doosan Encyclopedia). The Traffic Accident Reduction One-Heart Rally is a traffic safety awareness event hosted by the Korea Road Traffic Authority and sponsored by the Ministry of the Interior and Safety and the National Police Agency. The Intelligent Transport System refers to a transport system that combines technologies such as electronics, information, communication, and control with the transport system (Doosan Encyclopedia). The traffic safety policy in this question is Safety Speed 5030. Following the amendment of Article 19 of the Enforcement Rule of the Road Traffic Act on April 16, 2019, the passage speed of motor vehicles, etc. and streetcars on ordinary roads in residential, commercial, and industrial areas under Article 36(1) subparagraph 1 items (a) through (c) of the National Land Planning and Utilization Act was set at within 50 kilometers per hour, except on routes or sections designated by the Commissioner of the City/Provincial Police Agency who deems it particularly necessary, where it is within 60 kilometers per hour. Effective date (April 17, 2021)."
+ },
+ {
+  "n": 246,
+  "ko_e": "?꾨줈援먰넻踰뺤떆?됯퇋移???2議곗쓽 ????愿??蹂꾪몴2 ?좏샇湲곌? ?쒖떆?섎뒗 ?좏샇??醫낅쪟 諛??좏샇????,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 62 paragraph 2 related Table 2, the types and meanings of signals indicated by traffic lights."
+ },
+ {
+  "n": 247,
+  "ko_e": "以묒븰 踰꾩뒪?꾩슜李⑤줈(BRT) 援ш컙 ?쒕궡?꾨줈濡?二쇳뻾 以묒씪 寃쎌슦 踰꾩뒪?뺣쪟?μ씠 以묒븰???꾩튂?섍퀬 ?〓떒蹂대룄 湲몄씠媛 吏㏃븘  蹂댄뻾?먯쓽 臾대떒?〓떒 ?ш퀬媛 留롮쑝誘濡?二쇱쓽?섎ŉ ?쒗뻾?댁빞 ?쒕떎.",
+  "tr_e": "When driving on a city road in a central bus-exclusive lane (BRT) section, because bus stops are located in the center and the crosswalks are short, there are many jaywalking accidents by pedestrians, so you must slow down with caution."
+ },
+ {
+  "n": 248,
+  "ko_e": "李⑤줈 蹂寃쎌? 李⑤줈蹂寃쎌씠 媛?ν븳 援ш컙?먯꽌 ?덉쟾???뺤씤????李⑤줈瑜?蹂寃쏀빐???쒕떎.",
+  "tr_e": "Lane changes must be made after confirming safety in a section where lane changes are allowed."
+ },
+ {
+  "n": 249,
+  "ko_e": "援먯감濡쒖뿉 ?묎렐?섏뿬 諛깆깋 ?ㅼ꽑??洹몃젮???덉쑝硫?洹?援ш컙?먯꽌??吏꾨줈 蹂寃쏀빐?쒕뒗 ???섍퀬, ?ㅻⅨ 援먰넻??二쇱쓽?섎ŉ ?쒗뻾??濡??뚯쟾?댁빞 ?쒕떎. 洹몃━怨??고쉶?꾪븷 ???좏샇???녿뒗 援먯감濡쒖뿉?쒕뒗 ?듯뻾 ?곗꽑沅뚯씠 ?덈뒗 李⑤웾?먭쾶 李⑤줈瑜??묐낫?댁빞 ?쒕떎.",
+  "tr_e": "If a white solid line is drawn as you approach an intersection, you must not change your path in that section, and you must turn while slowing down with attention to other traffic. And when turning right at an intersection without traffic lights, you must yield the right-of-way to vehicles that have the right of way."
+ },
+ {
+  "n": 250,
+  "ko_e": "紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?ㅻⅨ 李⑤? ?욎?瑜닿퀬???섎뒗 ?뚯뿉???욎감??醫뚯륫?쇰줈 ?듯뻾?섏뿬???쒕떎. ?욎?瑜닿퀬???섎뒗 紐⑤뱺  李⑥쓽 ?댁쟾?먮뒗 諛섎? 諛⑺뼢??援먰넻怨??욎감 ?욎そ??援먰넻?먮룄 二쇱쓽瑜?異⑸텇??湲곗슱?ъ빞 ?섎ŉ, ?욎감???띾룄節μ감濡쒖? 洹?諛????꾨줈 ?곹솴???곕씪 諛⑺뼢吏?쒓린節λ벑???먮뒗 寃쎌쓬湲곕? ?ъ슜?섎뒗 ???덉쟾???띾룄? 諛⑸쾿?쇰줈 ?욎?瑜닿린瑜??섏뿬???쒕떎.",
+  "tr_e": "Every driver of a vehicle who intends to overtake another vehicle must pass on the left side of the vehicle ahead. Every driver intending to overtake must also pay sufficient attention to oncoming traffic and to traffic ahead of the vehicle in front, and must overtake at a safe speed and by a safe method, such as using the turn signal, lights, or horn, in accordance with the speed and lane of the vehicle ahead and other road conditions."
+ },
+ {
+  "n": 251,
+  "ko_e": "??李⑤웾??湲됱젣?숉븷 ?뚮? ?鍮꾪븯??異붾룎???쇳븷 ???덈뒗 嫄곕━瑜??뺣낫?섎ŉ ?욎?瑜닿린??寃쎌슦 ??李⑤웾??醫뚯륫?쇰줈  ?듯뻾?쒕떎.",
+  "tr_e": "When overtaking while securing a distance that allows a collision to be avoided in preparation for the vehicle ahead braking suddenly, pass on the left side of the vehicle ahead."
+ },
+ {
+  "n": 252,
+  "ko_e": "?뚮갑?쒖꽕 ?ㅼ튂 諛?愿由ъ뿉 愿??踰뺣쪧 ??1議??먮룞李⑥뿉 ?ㅼ튂 ?먮뒗 鍮꾩튂?섎뒗 ?뚰솕湲?  ?????뚯옄?숈감愿由щ쾿????議?????뿉 ?곕Ⅸ ?먮룞李?以??ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?먮룞李⑤? ?쒖옉?띿“由썬냽?섏엯?랁뙋留ㅽ븯?ㅻ뒗 ???먮뒗 ?????먮룞李⑥쓽 ?뚯쑀?먮뒗 李⑤웾???뚰솕湲곕? ?ㅼ튂?섍굅??鍮꾩튂?섏뿬???쒕떎. 1. 5?몄듅 ?댁긽???뱀슜?먮룞李?2. ?뱁빀?먮룞李?,
+  "tr_e": "Act on Installation and Management of Fire-Fighting Systems Article 11 (Fire Extinguishers Installed or Kept in Motor Vehicles) paragraph 1. A person who intends to manufacture, assemble, import, or sell a motor vehicle under Article 3(1) of the Motor Vehicle Management Act that falls under any of the following, or the owner of such motor vehicle, must install or keep a vehicle fire extinguisher: 1. a passenger car with 5 or more seats; 2. a passenger bus."
+ },
+ {
+  "n": 253,
+  "ko_e": "?꾨줈援먰넻踰???9議?(湲닿툒?먮룞李⑥쓽 ?곗꽑 ?듯뻾) ?ｊ탳李⑤줈??洹?遺洹쇱뿉??湲닿툒?먮룞李④? ?묎렐?섎뒗 寃쎌슦?먮뒗 李⑤쭏?  ?몃㈃?꾩감???댁쟾?먮뒗 援먯감濡쒕? ?쇳븯???쇱떆?뺤??섏뿬???쒕떎.   ?ㅻえ??李⑥? ?몃㈃?꾩감???댁쟾?먮뒗 ????뿉 ?곕Ⅸ 怨??몄쓽 怨녹뿉??湲닿툒?먮룞李④? ?묎렐??寃쎌슦?먮뒗 湲닿툒?먮룞李④? ?곗꽑 ?듯뻾?????덈룄濡?吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 29 (Priority Passage of Emergency Vehicles) (4) When an emergency vehicle approaches at or near an intersection, the driver of a vehicle, horse, or streetcar must avoid the intersection and come to a complete stop. (5) Every driver of a vehicle or streetcar must, when an emergency vehicle approaches at a place other than those under paragraph (4), yield the right-of-way so that the emergency vehicle can pass first."
+ },
+ {
+  "n": 254,
+  "ko_e": "?꾨줈援먰넻踰???9議?(湲닿툒?먮룞李⑥쓽 ?곗꽑 ?듯뻾) ?ｊ탳李⑤줈??洹?遺洹쇱뿉??湲닿툒?먮룞李④? ?묎렐?섎뒗 寃쎌슦?먮뒗 李⑤쭏?  ?몃㈃?꾩감???댁쟾?먮뒗 援먯감濡쒕? ?쇳븯???쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 29 (Priority Passage of Emergency Vehicles) (4) When an emergency vehicle approaches at or near an intersection, the driver of a vehicle, horse, or streetcar must avoid the intersection and come to a complete stop."
+ },
+ {
+  "n": 255,
+  "ko_e": "??0議?湲닿툒?먮룞李⑥뿉 ????밸?) 湲닿툒?먮룞李⑥뿉 ??섏뿬???ㅼ쓬 媛??몄쓽 ?ы빆???곸슜?섏? ?꾨땲?쒕떎. ?ㅻ쭔, ???몃?????2?멸퉴吏???ы빆? 湲닿툒?먮룞李?以???議곗젣22?멸?紐⑸????ㅻぉ源뚯????먮룞李⑥? ??듬졊?뱀쑝濡??뺥븯??寃쎌같???먮룞 李⑥뿉 ??댁꽌留??곸슜?섏? ?꾨땲?쒕떎. <媛쒖젙 2021. 1. 12.> 1. ??7議곗뿉 ?곕Ⅸ ?먮룞李⑤벑???띾룄 ?쒗븳. ?ㅻ쭔, ??7議곗뿉 ?곕씪 湲닿툒?먮룞李⑥뿉 ??섏뿬 ?띾룄瑜??쒗븳??寃쎌슦?먮뒗 媛숈? 議곗쓽 洹쒖젙???곸슜?쒕떎. 2. ??2議곗뿉 ?곕Ⅸ ?욎?瑜닿린??湲덉? 3. ??3議곗뿉 ?곕Ⅸ ?쇱뼱?ㅺ린??湲덉? 4. ??議곗뿉 ?곕Ⅸ ?좏샇?꾨컲 5. ??3議곗젣1??뿉 ?곕Ⅸ 蹂대룄移⑤쾾 6. ??3議곗젣3??뿉 ?곕Ⅸ 以묒븰??移⑤쾾 7. ??8議곗뿉 ?곕Ⅸ ?〓떒 ?깆쓽 湲덉? 8. ??9議곗뿉 ?곕Ⅸ ?덉쟾嫄곕━ ?뺣낫 ??9. ??1議곗젣1??뿉 ?곕Ⅸ ?욎?瑜닿린 諛⑸쾿 ??10. ??2議곗뿉 ?곕Ⅸ ?뺤감 諛?二쇱감??湲덉? 11. ??3議곗뿉 ?곕Ⅸ 二쇱감湲덉? 12. ??6議곗뿉 ?곕Ⅸ 怨좎옣 ?깆쓽 議곗튂",
+  "tr_e": "Article 30 (Special Provisions for Emergency Vehicles) The following matters do not apply to emergency vehicles. However, matters from subparagraph 4 to subparagraph 12 do not apply only to emergency vehicles among those under Article 2 subparagraph 22 items (a) through (c) and police vehicles prescribed by Presidential Decree. <Amended January 12, 2021> 1. Speed limits of motor vehicles, etc. under Article 17. However, where the speed of an emergency vehicle has been limited under Article 17, that Article applies. 2. Prohibition of overtaking under Article 22. 3. Prohibition of cutting in under Article 23. 4. Signal violation under Article 5. 5. Encroachment on the sidewalk under Article 13(1). 6. Encroachment on the center line under Article 13(3). 7. Prohibition of crossing, etc. under Article 18. 8. Securing safe distance, etc. under Article 19. 9. Method of overtaking, etc. under Article 21(1). 10. Prohibition of stopping and parking under Article 32. 11. Prohibition of parking under Article 33. 12. Measures for breakdown, etc. under Article 66."
+ },
+ {
+  "n": 256,
+  "ko_e": "湲닿툒?먮룞李⑤뒗 節?옄?숈감愿由щ쾿節ｌ뿉 ?곕Ⅸ ?먮룞李⑥쓽 ?덉쟾 ?댄뻾???꾩슂??湲곗??먯꽌 ?뺥븳 湲닿툒?먮룞李⑥쓽 援ъ“瑜?媛뽰텛?댁빞  ?섍퀬, ?곗꽑 ?듯뻾 諛?湲닿툒?먮룞李⑥뿉 ????밸?? 洹?諛뽰뿉 踰뺤뿉??洹쒖젙???밸????곸슜??諛쏄퀬???섎뒗 ?뚯뿉???ъ씠?뚯쓣  ?몃━嫄곕굹 寃쎄킅?깆쓣 耳쒖빞 ?쒕떎. ?ㅻ쭔, ?띾룄??愿??洹쒖젙???꾨컲?섎뒗 ?먮룞李??깆쓣 ?⑥냽?섎뒗 寃쎌슦??湲닿툒?먮룞李⑥? 援??댁쇅 ?붿씤?????寃쏀샇 ?낅Т ?섑뻾??怨듬Т濡??ъ슜?섎뒗 ?먮룞李⑤뒗 洹몃윭?섏? ?꾨땲?섎떎.",
+  "tr_e": "An emergency vehicle must be equipped with the structure of an emergency vehicle prescribed in the standards necessary for the safe operation of motor vehicles under the Motor Vehicle Management Act, and when it intends to receive priority passage, the special provisions for emergency vehicles, and other special provisions prescribed by law, it must sound a siren or turn on the warning light. However, this does not apply to an emergency vehicle that is cracking down on a motor vehicle, etc. violating speed regulations, or a motor vehicle used for official duties in performing escort duties for domestic or foreign VIPs."
+ },
+ {
+  "n": 257,
+  "ko_e": "湲닿툒?먮룞李④? ?밸?瑜?諛쏆쑝?ㅻ㈃ ?먮룞李④?由щ쾿???곕Ⅸ ?먮룞李⑥쓽 ?덉쟾 ?댄뻾???꾩슂??援ъ“瑜?媛뽰텛怨??ъ씠?뚯쓣 ?몃━嫄???寃쎄킅?깆쓣 耳쒖빞 ?쒕떎.",
+  "tr_e": "For an emergency vehicle to receive the special provisions, it must be equipped with the structure necessary for the safe operation of a motor vehicle under the Motor Vehicle Management Act and must sound a siren or turn on the warning light."
+ },
+ {
+  "n": 258,
+  "ko_e": "援ш툒?먮룞李⑤? 遺瑜????녿뒗 ?곹솴?먯꽌 ?쇰컲?먮룞李⑤줈 ?앸챸???꾨룆???섏옄瑜??댁넚?댁빞 ?섎뒗 湲닿툒???곹솴?먯꽌 二쇰?  ?먮룞李??댁쟾?먯쓽 ?묐낫瑜?諛쏆쑝硫댁꽌 蹂묒썝 ?깆쑝濡??댄뻾?댁빞 ?섎뒗 寃쎌슦??湲닿툒?먮룞李⑤줈 ?밸?瑜??곸슜 諛쏄린 ?꾪빐?쒕뒗  ?꾩“???먮뒗 鍮꾩긽?깆쓣 耳쒓굅??洹?諛뽰뿉 ?곷떦??諛⑸쾿?쇰줈 湲닿툒??紐⑹쟻?쇰줈 ?댄뻾?섍퀬 ?덉쓬???쒖떆?섏뿬???쒕떎.",
+  "tr_e": "In an urgent situation where an ambulance cannot be called and a patient whose life is in danger must be transported by an ordinary motor vehicle, when driving to a hospital, etc. while receiving the yield of surrounding vehicle drivers, in order to receive the special provisions as an emergency vehicle, the driver must turn on the headlights or hazard lights or otherwise indicate by an appropriate method that the vehicle is being operated for an urgent purpose."
+ },
+ {
+  "n": 259,
+  "ko_e": "?꾨줈援먰넻踰???議???2?? \"湲닿툒?먮룞李?"? ?ㅼ쓬 媛?紐⑹쓽 ?먮룞李⑤줈??洹?蹂몃옒??湲닿툒???⑸룄濡??ъ슜?섍퀬 ?덈뒗 ?먮룞 李⑤? 留먰븳?? 媛. ?뚮갑李? ?? 援ш툒李? ?? ?덉븸 怨듦툒李⑤웾, ?? 洹?諛뽰뿉 ??듬졊?뱀쑝濡??뺥븯???먮룞李?         ?꾨줈援먰넻踰??쒗뻾????議?????援?궡???붿씤(誤곦볶)?????寃쏀샇?낅Т ?섑뻾??怨듬Т(?у떃)濡??ъ슜?섎뒗 ?먮룞李? ??0?? 湲닿툒???고렪臾쇱쓽 ?댁넚???ъ슜?섎뒗 ?먮룞李?,
+  "tr_e": "Road Traffic Act Article 2 subparagraph 22. An emergency vehicle means the following motor vehicles that are being used for their original urgent purposes: (a) fire engines; (b) ambulances; (c) blood supply vehicles; (d) other motor vehicles prescribed by Presidential Decree. Enforcement Decree of the Road Traffic Act Article 2 subparagraph 5, a motor vehicle used for official duties in performing escort duties for domestic or foreign VIPs; subparagraph 10, a motor vehicle used for transporting urgent postal items."
+ },
+ {
+  "n": 260,
+  "ko_e": "??9議?湲닿툒?먮룞李⑥쓽 ?곗꽑 ?듯뻾) ???? 湲닿툒?먮룞李⑤뒗 ??3議곗젣3??뿉??遺덇뎄?섍퀬 湲닿툒?섍퀬 遺?앹씠??寃쎌슦?먮뒗 ??濡쒖쓽 以묒븰?대굹 醫뚯륫 遺遺꾩쓣 ?듯뻾?????덈떎. ???? 湲닿툒?먮룞李⑤뒗 ??踰뺤씠????踰뺤뿉 ?곕Ⅸ 紐낅졊???곕씪 ?뺤??섏뿬?? ?섎뒗 寃쎌슦?먮룄 遺덇뎄?섍퀬 湲닿툒?섍퀬 遺?앹씠??寃쎌슦?먮뒗 ?뺤??섏? ?꾨땲?????덈떎. ????릿湲됱옄?숈감???댁쟾?먮뒗 ?? ??씠??????쓽 寃쎌슦??援먰넻?덉쟾???뱁엳 二쇱쓽?섎㈃???듯뻾?섏뿬???쒕떎.",
+  "tr_e": "Article 29 (Priority Passage of Emergency Vehicles) paragraph 1. Notwithstanding Article 13(3), an emergency vehicle may pass on the center or left part of the road in urgent and unavoidable cases. Paragraph 2. Notwithstanding cases where it must stop under this Act or an order under this Act, an emergency vehicle may refrain from stopping in urgent and unavoidable cases. Paragraph 3. In the cases of paragraph 1 or 2, the driver of an emergency vehicle must pass while paying special attention to traffic safety."
+ },
+ {
+  "n": 261,
+  "ko_e": "??0議?湲닿툒?먮룞李⑥뿉 ????밸?) 湲닿툒?먮룞李⑥뿉 ??섏뿬???ㅼ쓬 媛??몄쓽 ?ы빆???곸슜?섏? ?꾨땲?쒕떎. ?ㅻ쭔, ???몃?????2?멸퉴吏???ы빆? 湲닿툒?먮룞李?以???議곗젣22?멸?紐⑸????ㅻぉ源뚯????먮룞李⑥? ??듬졊?뱀쑝濡??뺥븯??寃쎌같???먮룞 李⑥뿉 ??댁꽌留??곸슜?섏? ?꾨땲?쒕떎. <媛쒖젙 2021. 1. 12.> 1. ??7議곗뿉 ?곕Ⅸ ?먮룞李⑤벑???띾룄 ?쒗븳. ?ㅻ쭔, ??7議곗뿉 ?곕씪 湲닿툒?먮룞李⑥뿉 ??섏뿬 ?띾룄瑜??쒗븳??寃쎌슦?먮뒗 媛숈? 議곗쓽 洹쒖젙???곸슜?쒕떎. 2. ??2議곗뿉 ?곕Ⅸ ?욎?瑜닿린??湲덉? 3. ??3議곗뿉 ?곕Ⅸ ?쇱뼱?ㅺ린??湲덉? 4. ??議곗뿉 ?곕Ⅸ ?좏샇?꾨컲 5. ??3議곗젣1??뿉 ?곕Ⅸ 蹂대룄移⑤쾾 6. ??3議곗젣3??뿉 ?곕Ⅸ 以묒븰??移⑤쾾 7. ??8議곗뿉 ?곕Ⅸ ?〓떒 ?깆쓽 湲덉? 8. ??9議곗뿉 ?곕Ⅸ ?덉쟾嫄곕━ ?뺣낫 ??9. ??1議곗젣1??뿉 ?곕Ⅸ ?욎?瑜닿린 諛⑸쾿 ??10. ??2議곗뿉 ?곕Ⅸ ?뺤감 諛?二쇱감??湲덉? 11. ??3議곗뿉 ?곕Ⅸ 二쇱감湲덉? 12. ??6議곗뿉 ?곕Ⅸ 怨좎옣 ?깆쓽 議곗튂",
+  "tr_e": "Article 30 (Special Provisions for Emergency Vehicles) The following matters do not apply to emergency vehicles. However, matters from subparagraph 4 to subparagraph 12 do not apply only to emergency vehicles among those under Article 2 subparagraph 22 items (a) through (c) and police vehicles prescribed by Presidential Decree. <Amended January 12, 2021> 1. Speed limits of motor vehicles, etc. under Article 17. However, where the speed of an emergency vehicle has been limited under Article 17, that Article applies. 2. Prohibition of overtaking under Article 22. 3. Prohibition of cutting in under Article 23. 4. Signal violation under Article 5. 5. Encroachment on the sidewalk under Article 13(1). 6. Encroachment on the center line under Article 13(3). 7. Prohibition of crossing, etc. under Article 18. 8. Securing safe distance, etc. under Article 19. 9. Method of overtaking, etc. under Article 21(1). 10. Prohibition of stopping and parking under Article 32. 11. Prohibition of parking under Article 33. 12. Measures for breakdown, etc. under Article 66."
+ }
+]
+
+codex
+[{"n":246,"field":"e","severity":"minor","issue":"「제6조제2항」을 「Article 62 paragraph 2」로 잘못 표기하여 조문 번호가 달라졌다.","suggestion":"Enforcement Rule of the Road Traffic Act, attached Table 2 related to Article 6(2): Types and meanings of signals displayed by traffic lights."},{"n":247,"field":"e","severity":"major","issue":"횡단보도의 길이가 ‘길다’는 원문을 ‘short’로 반대로 번역했다.","suggestion":"When driving on an urban road in a median bus rapid transit (BRT) section, exercise caution and drive slowly because bus stops are located in the center and the crosswalks are long, resulting in frequent jaywalking accidents involving pedestrians."},{"n":249,"field":"e","severity":"major","issue":"원문의 ‘좌회전’을 ‘turning right’로 번역하여 회전 방향이 반대로 바뀌었다.","suggestion":"If a white solid line is drawn as you approach an intersection, you must not change lanes in that section and must turn while slowing down and watching for other traffic. When turning left at an intersection without traffic signals, you must yield to vehicles that have the right-of-way."}]
+tokens used
+12,063
+[{"n":246,"field":"e","severity":"minor","issue":"「제6조제2항」을 「Article 62 paragraph 2」로 잘못 표기하여 조문 번호가 달라졌다.","suggestion":"Enforcement Rule of the Road Traffic Act, attached Table 2 related to Article 6(2): Types and meanings of signals displayed by traffic lights."},{"n":247,"field":"e","severity":"major","issue":"횡단보도의 길이가 ‘길다’는 원문을 ‘short’로 반대로 번역했다.","suggestion":"When driving on an urban road in a median bus rapid transit (BRT) section, exercise caution and drive slowly because bus stops are located in the center and the crosswalks are long, resulting in frequent jaywalking accidents involving pedestrians."},{"n":249,"field":"e","severity":"major","issue":"원문의 ‘좌회전’을 ‘turning right’로 번역하여 회전 방향이 반대로 바뀌었다.","suggestion":"If a white solid line is drawn as you approach an intersection, you must not change lanes in that section and must turn while slowing down and watching for other traffic. When turning left at an intersection without traffic signals, you must yield to vehicles that have the right-of-way."}]

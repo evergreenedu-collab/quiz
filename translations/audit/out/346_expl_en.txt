@@ -1,0 +1,157 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a1285c-dd97-78b0-ba07-f353517dc2cc
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/346_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/346_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 531ms:
+[
+ {
+  "n": 933,
+  "ko_e": "?대떦 ?덉쟾?쒖????쒖쥖?뚯쟾 媛먯쓳?좏샇???쒖?濡쒖꽌 吏?쒗몴吏???대떦?쒕떎(?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] 335踰?. 醫뚰쉶 ??媛먯쓳?좏샇??李⑤웾???꾨줈 ???ш컖???쒖떆(寃吏?? ?덉뿉 ?뺤감?섎㈃ ?쇱꽌媛 ?묐룞?섎㈃??李⑤웾??媛먯??섍퀬, 醫뚰쉶?? ?좏샇瑜?遺?ы븯湲??쒖옉?쒕떎. 醫뚰쉶??李⑤웾???놁쓣 ?뚮뒗 吏곸쭊 ?좏샇???쒓컙????遺?ы븷 ???덉뼱, 援먰넻???먮쫫???먰솢 ?섍쾶 ?섍퀬, ?湲곗삤?쇱쓽 媛먯냼 ?④낵媛 湲곕??쒕떎. ?? 怨듯쉶???쒓컙??以꾩뼱?ㅻ㈃???댁쟾?먯쓽 ?좊쪟鍮?媛먯냼 ??寃쎌젣????怨쇰룄 湲곕??????덈떎(援?넗援먰넻遺 蹂대룄?먮즺, ?쒓뎅?꾨줈援먰넻怨듬떒 ?띾낫?먮즺).",
+  "tr_e": "This traffic sign is a \"left-turn responsive signal\" sign and falls under an instruction sign (Enforcement Rule of the Road Traffic Act [Table 6] No. 335). With a left-turn responsive signal, when a vehicle stops within the rectangular marking (detection line) on the road, a sensor operates and detects the vehicle, and begins to grant the left-turn signal. When there is no left-turning vehicle, more time can be granted to the straight-ahead signal, which is expected to smooth the flow of traffic and reduce air pollution. Also, as idling time decreases, economic effects such as reduced fuel costs for drivers can also be expected (Ministry of Land, Infrastructure and Transport press release, Korea Road Traffic Authority promotional material)."
+ },
+ {
+  "n": 934,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?고쉶???쒖?(吏?쒗몴吏 306)?대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, right-turn sign (instruction sign 306)."
+ },
+ {
+  "n": 935,
+  "ko_e": "?꾨줈援먰넻踰???議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??議??좏샇?깆쓽 醫뚰쉶???뱀깋 ?붿궡?쒖떆媛 ?깊솕 ??寃쎌슦 醫뚰쉶?꾪븷 ???덉쑝硫? 吏꾪뻾?좏샇 ??諛섎? 諛⑸㈃?먯꽌 ?ㅻ뒗 李⑤웾??諛⑺빐媛 ?섏? ?꾨땲?섎룄濡?醫뚰쉶?꾪븷 ???덈떎.",
+  "tr_e": "Road Traffic Act Article 5, Enforcement Rule of the Road Traffic Act Article 6, Enforcement Rule of the Road Traffic Act Article 8. When the green left-turn arrow of the traffic light is lit, one may turn left, and one may turn left so as not to obstruct vehicles coming from the opposite direction on the go signal."
+ },
+ {
+  "n": 936,
+  "ko_e": "??臾몄젣???꾨줈?덉쟾?쒖꽕? ?쒖꽑?좊룄遊됱씠?? ?꾨줈?덉쟾?쒖꽕 ?ㅼ튂 諛?愿由ъ?移?援?넗援먰넻遺?덇퇋 ??18??  -?????쒖꽑 ?좊룄?쒖꽕???쒖꽑?좊룄遊됱? 援먰넻?ш퀬 諛쒖깮???꾪뿕???믪? 怨녹쑝濡쒖꽌, ?댁쟾?먯쓽 二쇱쓽媛 ?꾩????붽뎄?섎뒗 ?μ냼???몃㈃???쒕? 蹂댁“?섏뿬 ?숈씪 諛?諛섎?諛⑺뼢 援먰넻瑜섎? 怨듦컙?곸쑝濡?遺꾨━?섍퀬 ?꾪뿕 援ш컙???덇퀬??紐⑹쟻?쇰줈 ?ㅼ튂?섎뒗 ?쒖꽕?대떎.",
+  "tr_e": "??The road safety facility in the problem is a delineator post. Guidelines for the Installation and Management of Road Safety Facilities (Ministry of Land, Infrastructure and Transport Established Rule No. 318) - Part 1, Delineation Facilities. A delineator post is a facility installed, in a place with a high risk of traffic accidents where the driver's attention is markedly required, to supplement road markings by spatially separating same-direction and opposite-direction traffic flows and to give advance warning of a hazardous section."
+ },
+ {
+  "n": 937,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?ㅻⅤ留됯꼍?щ㈃?쒖떆(?몃㈃?쒖떆 544) ?ㅻⅤ留됯꼍?щ㈃ ?몃㈃?쒖떆濡??꾨갑???ㅻⅤ留?寃쎌궗硫?????怨쇱냽諛⑹??깆씠 ?덉쓬???뚮━??寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, uphill slope surface marking (road marking 544). An uphill slope surface road marking notifying that there is an uphill slope surface or a speed bump ahead."
+ },
+ {
+  "n": 938,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?좏꽩湲덉??쒖떆(?몃㈃?쒖떆 514踰? 李⑤쭏???좏꽩??湲덉??섎뒗 ?꾨줈??援ш컙 ?먮뒗 ?μ냼?댁쓽  ?꾩슂??吏?먯뿉 ?ㅼ튂?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, no-U-turn marking (road marking No. 514). Installed at a necessary point within a section or place of the road where vehicle U-turns are prohibited."
+ },
+ {
+  "n": 939,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?몃㈃?쒖떆516?? ?뚮갑?쒖꽕 ?깆씠 ?ㅼ튂??怨녹쑝濡쒕???媛곴컖 5誘명꽣 ?대궡??怨녹뿉???좎냽?? ?뚮갑 ?쒕룞???꾪빐 ?뱁엳 ?꾩슂?섎떎怨??몄젙?섎뒗 怨녹뿉 ?뺤감?ㅼ＜李④툑吏瑜??쒖떆?섎뒗 寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, road marking 516-3. A marking indicating no parking/no stopping at a place within 5 meters, respectively, from where firefighting facilities, etc., are installed, deemed especially necessary for swift firefighting activities."
+ },
+ {
+  "n": 940,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?쒗뻾?쒖떆(?몃㈃?쒖떆 520踰?, ?뺤감?ㅼ＜李④툑吏 ?쒖떆(?몃㈃?쒖떆 516踰?, ?대┛??蹂댄샇援ъ뿭?쒖떆 (?몃㈃?쒖떆 536踰?, ?꾨줈援먰넻踰???議??뺤쓽) ?대┛?대? 13??誘몃쭔???щ엺??留먰븳??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, slow-down marking (road marking No. 520), no-parking/no-stopping marking (road marking No. 516), school zone marking (road marking No. 536). Road Traffic Act Article 2 (Definitions): a child means a person under 13 years of age."
+ },
+ {
+  "n": 941,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 怨좎썝?앺슒?⑤낫?꾪몴???몃㈃?쒖떆 533) ?쒗븳?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?댄븯濡??쒗븳???꾩슂 媛 ?덈뒗 ?꾨줈?먯꽌 ?〓떒蹂대룄?꾩쓣 ?쒖떆?섎뒗 寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, raised crosswalk marking (road marking 533). A marking indicating a crosswalk on a road where the speed limit needs to be restricted to 30 kilometers per hour or less."
+ },
+ {
+  "n": 942,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?〓떒蹂대룄?쒖떆(?몃㈃?쒖떆 529) ?〓떒蹂대룄 ??50誘명꽣?먯꽌 60誘명꽣 ?몄긽???ㅼ튂, ?꾩슂??寃??곗뿉??10誘명꽣?먯꽌 20誘명꽣瑜??뷀븳 嫄곕━??異붽? ?ㅼ튂",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, crosswalk marking (road marking 529). Installed on the road surface 50 to 60 meters before the crosswalk; if necessary, additionally installed at a distance 10 to 20 meters further."
+ },
+ {
+  "n": 943,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?먯쟾嫄고슒?⑤룄?쒖떆(?몃㈃?쒖떆 534) ?꾨줈???먯쟾嫄??〓떒???꾩슂??吏?먯뿉 ?ㅼ튂, ?〓떒蹂대룄 媛 ?덈뒗 援먯감濡쒖뿉?쒕뒗 ?〓떒蹂대룄 痢〓㈃???ㅼ튂",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, bicycle crossing marking (road marking 534). Installed at a point on the road where bicycle crossing is needed; at an intersection with a crosswalk, installed on the side of the crosswalk."
+ },
+ {
+  "n": 944,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?묐낫?쒖떆(?몃㈃?쒖떆 522踰? 李④? ?묐낫?섏뿬?????μ냼?꾩쓣 ?쒖떆?섎뒗 寃껋씠??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, yield marking (road marking No. 522). A marking indicating a place where a vehicle must yield."
+ },
+ {
+  "n": 945,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 ?뺤감湲덉?吏??쒖떆(?몃㈃?쒖떆 524) 愿묒옣?대굹 援먯감濡?以묒븰吏?먮벑???ㅼ튂?쒓뎄?띾?遺꾩뿉李?媛?ㅼ뼱媛?뺤감?섎뒗寃껋쓣 湲덉??섎뒗?쒖떆?대떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, no-stopping-zone marking (road marking 524). A marking prohibiting vehicles from entering and stopping within a demarcated portion installed at a plaza or the center point of an intersection, etc."
+ },
+ {
+  "n": 946,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 5. ?몃㈃?쒖떆 535?? ?먯쟾嫄??곗꽑?꾨줈 ?쒖떆",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, 5. Road marking 535-2, bicycle-priority road marking."
+ },
+ {
+  "n": 947,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6, ?몃㈃?쒖떆516, ?꾨줈援먰넻踰???2議곗뿉 ?곕씪 ?뺤감 諛?二쇱감湲덉?瑜??쒖떆?섎뒗 寃?,
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, road marking 516. A marking indicating no parking and no stopping under Road Traffic Act Article 32."
+ },
+ {
+  "n": 948,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 5. ?몃㈃?쒖떆 525??踰?醫뚰쉶???좊룄李⑤줈 ?쒖떆",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, 5. Road marking 525-2, left-turn guide lane marking."
+ },
+ {
+  "n": 949,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴6 5. ?몃㈃?쒖떆 505踰?湲멸??μ옄由ш뎄??꽑 ?쒖떆",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Table 6, 5. Road marking 505, road edge zone line marking."
+ },
+ {
+  "n": 950,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴6] ?몃㈃?쒖떆 529踰? ?뺤????쒖떆. ?댄뻾 以??뺤?瑜??댁빞??寃쎌슦 ?뺤??댁빞 ??吏?먯쓣 ?쒖떆 ?섎뒗 寃껋씠??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 6] road marking 529. Stop line marking. A marking indicating the point where one must stop when a stop is required while traveling."
+ },
+ {
+  "n": 951,
+  "ko_e": "怨좎냽?꾨줈 湲곗젏?먯꽌 6踰덉㎏ ?섎뱾紐⑹씤 援고룷 ?섎뱾紐?IC)??150m ?욎뿉 ?덇퀬, ?섎뱾紐⑹쑝濡??섍?硫?援고룷 諛?援?룄 47?몄꽑?? 留뚮궇 ???덈떎???섎??대떎.",
+  "tr_e": "It means that the Gunpo Interchange (IC), the sixth interchange from the expressway's starting point, is 150 m ahead, and that exiting at the interchange one can reach Gunpo and National Highway No. 47."
+ },
+ {
+  "n": 952,
+  "ko_e": "?쒖????ㅼ튂 ?꾩튂?먯꽌 ?대떦 吏??퉴吏 ?⑥? 嫄곕━瑜??뚮젮二쇰뒗 怨좎냽?꾨줈 ?댁젙?쒖??먯쑝濡?怨좎냽?꾨줈 ?먯뇙??援ш컙?먯꽌  媛??癒쇱? ?용뒗 洹?吏??쓽 IC 湲곗??쇰줈 嫄곕━瑜??곗젙?쒕떎.",
+  "tr_e": "An expressway distance-marker sign informing the remaining distance from the sign installation location to the relevant area; on a closed-type expressway section, the distance is calculated based on that area's IC, which is reached first."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+p=Path(r'translations/audit/queue/346_expl_en.json')
+b=p.read_bytes()
+print(b[:120])
+print(p.read_text(encoding='utf-8')[:300].encode('unicode_escape').decode())
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-11T00:29:09.085092Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 683ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:8 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+codex
+[]
+tokens used
+8,355
+[]

@@ -1,0 +1,125 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127f8-2606-7fa3-8f09-d0d268b03d4b
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/313_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/313_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 542ms:
+[
+ {
+  "n": 262,
+  "ko_e": "?뺢린 援먰넻?덉쟾援먯쑁竊싰릿湲됱옄?숈감瑜??댁쟾?섎뒗 ?щ엺????곸쑝濡?3?꾨쭏???뺢린?곸쑝濡??ㅼ떆?섎뒗 援먯쑁. ??寃쎌슦 吏곸쟾?? 湲닿툒?먮룞李?援먰넻?덉쟾援먯쑁??諛쏆? ?좊???湲곗궛?섏뿬 3?꾩씠 ?섎뒗 ?좎씠 ?랁븯???댁쓽 1??1?쇰???12??31???ъ씠?? 援먯쑁??諛쏆븘???쒕떎.(?꾨줈援먰넻踰???3議????? ?꾨줈援먰넻踰??쒗뻾????8議곗쓽2 ????????",
+  "tr_e": "Regular traffic safety education: education conducted regularly every 3 years for persons who drive emergency vehicles. In this case, the education must be received between January 1 and December 31 of the year in which the third year, counted from the date on which the person last received emergency-vehicle traffic safety education, falls. (Road Traffic Act Article 73(4), Enforcement Decree of the Road Traffic Act Article 38-2(2) subparagraph 2)"
+ },
+ {
+  "n": 263,
+  "ko_e": "??0議?湲닿툒?먮룞李⑥뿉 ????밸?) 湲닿툒?먮룞李⑥뿉 ??섏뿬???ㅼ쓬 媛??몄쓽 ?ы빆???곸슜?섏? ?꾨땲?쒕떎. ?ㅻ쭔, ???몃?????2?멸퉴吏???ы빆? 湲닿툒?먮룞李?以???議곗젣22?멸?紐⑸????ㅻぉ源뚯????먮룞李⑥? ??듬졊?뱀쑝濡??뺥븯??寃쎌같???먮룞 李⑥뿉 ??댁꽌留??곸슜?섏? ?꾨땲?쒕떎. <媛쒖젙 2021. 1. 12.> 1. ??7議곗뿉 ?곕Ⅸ ?먮룞李⑤벑???띾룄 ?쒗븳. ?ㅻ쭔, ??7議곗뿉 ?곕씪 湲닿툒?먮룞李⑥뿉 ??섏뿬 ?띾룄瑜??쒗븳??寃쎌슦?먮뒗 媛숈? 議곗쓽 洹쒖젙???곸슜?쒕떎. 2. ??2議곗뿉 ?곕Ⅸ ?욎?瑜닿린??湲덉? 3. ??3議곗뿉 ?곕Ⅸ ?쇱뼱?ㅺ린??湲덉? 4. ??議곗뿉 ?곕Ⅸ ?좏샇?꾨컲 5. ??3議곗젣1??뿉 ?곕Ⅸ 蹂대룄移⑤쾾 6. ??3議곗젣3??뿉 ?곕Ⅸ 以묒븰??移⑤쾾 7. ??8議곗뿉 ?곕Ⅸ ?〓떒 ?깆쓽 湲덉? 8. ??9議곗뿉 ?곕Ⅸ ?덉쟾嫄곕━ ?뺣낫 ??9. ??1議곗젣1??뿉 ?곕Ⅸ ?욎?瑜닿린 諛⑸쾿 ??10. ??2議곗뿉 ?곕Ⅸ ?뺤감 諛?二쇱감??湲덉? 11. ??3議곗뿉 ?곕Ⅸ 二쇱감湲덉? 12. ??6議곗뿉 ?곕Ⅸ 怨좎옣 ?깆쓽 議곗튂",
+  "tr_e": "Article 30 (Special Provisions for Emergency Vehicles) The following matters do not apply to emergency vehicles. However, matters from subparagraph 4 to subparagraph 12 do not apply only to emergency vehicles among those under Article 2 subparagraph 22 items (a) through (c) and police vehicles prescribed by Presidential Decree. <Amended January 12, 2021> 1. Speed limits of motor vehicles, etc. under Article 17. However, where the speed of an emergency vehicle has been limited under Article 17, that Article applies. 2. Prohibition of overtaking under Article 22. 3. Prohibition of cutting in under Article 23. 4. Signal violation under Article 5. 5. Encroachment on the sidewalk under Article 13(1). 6. Encroachment on the center line under Article 13(3). 7. Prohibition of crossing, etc. under Article 18. 8. Securing safe distance, etc. under Article 19. 9. Method of overtaking, etc. under Article 21(1). 10. Prohibition of stopping and parking under Article 32. 11. Prohibition of parking under Article 33. 12. Measures for breakdown, etc. under Article 66."
+ },
+ {
+  "n": 264,
+  "ko_e": "?꾨줈援먰넻踰???2議??뺤감 諛?二쇱감??湲덉?) 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 怨녹뿉?쒕뒗 李⑤? ?뺤감?섍굅??二쇱감?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ?ㅻ쭔, ??踰뺤씠????踰뺤뿉 ?곕Ⅸ 紐낅졊 ?먮뒗 寃쎌같怨듬Т?먯쓽 吏?쒕? ?곕Ⅴ??寃쎌슦? ?꾪뿕諛⑹?瑜??꾪븯???쇱떆?뺤??섎뒗 寃쎌슦????洹몃윭?섏? ?꾨땲?섎떎. 6. ?ㅼ쓬 媛?紐⑹쓽 怨녹쑝濡쒕???5誘명꽣 ?대궡??怨녹? 媛. ?뚯냼諛⑷린蹂몃쾿????0議곗뿉 ?곕Ⅸ ?뚮갑?⑹닔?쒖꽕 ?먮뒗 鍮꾩긽?뚰솕?μ튂媛 ?ㅼ튂??怨??? ?뚯냼諛⑹떆???ㅼ튂 諛?愿由ъ뿉 愿??踰뺣쪧????議곗젣1??젣1?몄뿉 ?곕Ⅸ ?뚮갑?쒖꽕濡쒖꽌 ??듬졊?뱀쑝濡??뺥븯???쒖꽕???ㅼ튂??怨?,
+  "tr_e": "Road Traffic Act Article 32 (Prohibition of Stopping and Parking) Every driver of a vehicle must not stop or park the vehicle in any of the following places. However, this does not apply when following this Act, an order under this Act, or the instructions of a police officer, or when coming to a complete stop to prevent danger. 6. Within 5 meters from any of the following places: (a) a place where a fire-fighting water facility or emergency fire-extinguishing device under Article 10 of the Framework Act on Fire Services is installed; (b) a place where a fire-fighting system prescribed by Presidential Decree under Article 2(1) subparagraph 1 of the Act on Installation and Management of Fire-Fighting Systems is installed."
+ },
+ {
+  "n": 265,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????議?湲닿툒?먮룞李⑥쓽 醫낅쪟)  ?좊룄濡쒓탳?듬쾿 ??議??????쇰ぉ?먯꽌 ?쒕??듬졊?뱀쑝濡??뺥븯???먮룞李ⓥ?? 湲닿툒???⑸룄濡??ъ슜?섎뒗 ?ㅼ쓬 媛??몄쓽  ?대뒓 ?섎굹???대떦?섎뒗 ?먮룞李⑤? 留먰븳?? ?ㅻ쭔, ???몃?????1?멸퉴吏???먮룞李⑤뒗 ?대? ?ъ슜?섎뒗 ?щ엺 ?먮뒗 湲곌?  ?깆쓽 ?좎껌???섑븯???쑣룸룄寃쎌같泥?옣??吏?뺥븯??寃쎌슦濡??쒖젙?쒕떎.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 2 (Types of Emergency Vehicles) (1) A motor vehicle prescribed by Presidential Decree in Article 2 subparagraph 2 item (d) of the Road Traffic Act means a motor vehicle that is used for an urgent purpose and falls under any of the following. However, motor vehicles under subparagraphs 6 through 11 are limited to cases designated by the Commissioner of the City/Provincial Police Agency upon application by the person or institution, etc. using them."
+ },
+ {
+  "n": 266,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????議?湲닿툒?먮룞李⑥쓽 醫낅쪟)  ?좊룄濡쒓탳?듬쾿 ??議??????쇰ぉ?먯꽌 ?쒕??듬졊?뱀쑝濡??뺥븯???먮룞李ⓥ?? 湲닿툒???⑸룄濡??ъ슜?섎뒗 ?ㅼ쓬 媛??몄쓽  ?대뒓 ?섎굹???대떦?섎뒗 ?먮룞李⑤? 留먰븳?? ?ㅻ쭔, ???몃?????1?멸퉴吏???먮룞李⑤뒗 ?대? ?ъ슜?섎뒗 ?щ엺 ?먮뒗 湲곌?  ?깆쓽 ?좎껌???섑븯???쑣룸룄寃쎌같泥?옣??吏?뺥븯??寃쎌슦濡??쒖젙?쒕떎.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 2 (Types of Emergency Vehicles) (1) A motor vehicle prescribed by Presidential Decree in Article 2 subparagraph 2 item (d) of the Road Traffic Act means a motor vehicle that is used for an urgent purpose and falls under any of the following. However, motor vehicles under subparagraphs 6 through 11 are limited to cases designated by the Commissioner of the City/Provincial Police Agency upon application by the person or institution, etc. using them."
+ },
+ {
+  "n": 267,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾?? ??0議곗쓽2(湲닿툒???⑸룄 ?몄뿉 寃쎄킅???깆쓣 ?ъ슜?????덈뒗 寃쎌슦) 踰???議???2??媛?紐⑹쓽 ?먮룞 李??댁쟾?먮뒗 踰???9議??????⑥꽌???곕씪 ?대떦 ?먮룞李⑤? 洹?蹂몃옒??湲닿툒???⑸룄濡??댄뻾?섏? ?꾨땲?섎뒗 寃쎌슦?먮룄  ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 寃쎌슦?먮뒗 ?뚯옄?숈감愿由щ쾿?띿뿉 ?곕씪 ?대떦 ?먮룞李⑥뿉 ?ㅼ튂??寃쎄킅?깆쓣 耳쒓굅?? ?ъ씠?뚯쓣 ?묐룞?????덈떎.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 10-2 (Cases Where Warning Lights, etc. May Be Used Other Than for Urgent Purposes) The driver of a motor vehicle under each item of Article 2 subparagraph 22 of the Act may, pursuant to the proviso to Article 29(6) of the Act, turn on the warning light or operate the siren installed on that motor vehicle under the Motor Vehicle Management Act, even when not operating the motor vehicle for its original urgent purpose, in any of the following cases."
+ },
+ {
+  "n": 268,
+  "ko_e": "湲닿툒?먮룞李⑥뿉 ??섏뿬???먮룞李??깆쓽 ?띾룄?쒗븳, ?욎?瑜닿린 湲덉?, ?쇱뼱?ㅺ린??湲덉?瑜??곸슜?섏? ?딅뒗??(?꾨줈援먰넻踰? ??0議?湲닿툒?먮룞李⑥뿉 ????밸?), ?꾨줈援먰넻踰???4議??ш퀬 諛쒖깮 ?쒖쓽 議곗튂) ????",
+  "tr_e": "The speed limit of motor vehicles, etc., the prohibition of overtaking, and the prohibition of cutting in do not apply to emergency vehicles. (Road Traffic Act Article 30 (Special Provisions for Emergency Vehicles), Road Traffic Act Article 54 (Measures at the Time of an Accident) paragraph 5)"
+ },
+ {
+  "n": 269,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????0議곗쓽2(湲닿툒???⑸룄 ?몄뿉 寃쎄킅???깆쓣 ?ъ슜?????덈뒗 寃쎌슦) 踰???議곗젣22??媛?紐⑹쓽 ?먮룞李? ?댁쟾?먮뒗 踰???9議곗젣6???⑥꽌???곕씪 ?대떦 ?먮룞李⑤? 洹?蹂몃옒??湲닿툒???⑸룄濡??댄뻾?섏? ?꾨땲?섎뒗 寃쎌슦?먮룄 ?ㅼ쓬  媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 寃쎌슦?먮뒗 ?뚯옄?숈감愿由щ쾿?띿뿉 ?곕씪 ?대떦 ?먮룞李⑥뿉 ?ㅼ튂??寃쎄킅?깆쓣 耳쒓굅???ъ씠?????묐룞?????덈떎.",
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 10-2 (Cases Where Warning Lights, etc. May Be Used Other Than for Urgent Purposes) The driver of a motor vehicle under each item of Article 2 subparagraph 22 of the Act may, pursuant to the proviso to Article 29(6) of the Act, turn on the warning light or operate the siren installed on that motor vehicle under the Motor Vehicle Management Act, even when not operating the motor vehicle for its original urgent purpose, in any of the following cases."
+ },
+ {
+  "n": 270,
+  "ko_e": "?꾨줈援먰넻踰???9議?湲닿툒?먮룞李⑥쓽 ?곗꽑?듯뻾) ?ｊ탳李⑤줈??洹?遺洹쇱뿉??湲닿툒?먮룞李④? ?묎렐?섎뒗 寃쎌슦?먮뒗 李⑤쭏? ?몃㈃ ?꾩감???댁쟾?먮뒗 援먯감濡쒕? ?쇳븯???쇱떆?뺤??섏뿬???쒕떎.   ?ㅻえ??李⑥? ?몃㈃?꾩감???댁쟾?먮뒗 ????뿉 ?곕Ⅸ 怨??몄쓽 怨녹뿉??湲닿툒?먮룞李④? ?묎렐??寃쎌슦?먮뒗 湲닿툒?먮룞李④? ?곗꽑 ?듯뻾?????덈룄濡?吏꾨줈瑜??묐낫?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 29 (Priority Passage of Emergency Vehicles) (4) When an emergency vehicle approaches at or near an intersection, the driver of a vehicle, horse, or streetcar must avoid the intersection and come to a complete stop. (5) Every driver of a vehicle or streetcar must, when an emergency vehicle approaches at a place other than those under paragraph (4), yield the right-of-way so that the emergency vehicle can pass first."
+ },
+ {
+  "n": 271,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾????議?湲닿툒?먮룞李⑥쓽 醫낅쪟) ???뚮룄濡쒓탳?듬쾿???댄븯 \"踰?"?대씪 ?쒕떎) ??議곗젣22?몃씪紐⑹뿉??\"??듬졊?뱀쑝濡??뺥븯???먮룞李?"? 湲닿툒???⑸룄濡????⑸릺???ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?먮룞李⑤? 留먰븳?? ?ㅻ쭔, ???몃?????1?멸퉴吏???먮룞李⑤뒗 ?대? ???⑺븯???щ엺 ?먮뒗 湲곌? ?깆쓽 ?좎껌???섑븯???쑣룸룄寃쎌같泥?옣??吏?뺥븯??寃쎌슦濡??쒖젙?쒕떎. 1. 寃쎌같???먮룞李?以?踰붿즲?섏궗, 援먰넻?⑥냽, 洹?諛뽰쓽 湲닿툒??寃쎌같?낅Т ?섑뻾???ъ슜?섎뒗 ?먮룞李?2. 援?뎔 諛?二쇳븳 援?젣?고빀援곗슜 ?먮룞李?以?援??대???吏덉꽌 ?좎???遺???吏덉꽌 ?덈뒗 ?대룞???좊룄(沃섇컣)?섎뒗 ???ъ슜?섎뒗 ?먮룞李?3. ?섏궗湲곌????먮룞李?以?踰붿즲?섏궗瑜??꾪븯???ъ슜?섎뒗 ?먮룞李?4. ?ㅼ쓬 媛?紐⑹쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?쒖꽕 ?먮뒗 湲곌????먮룞李?以??꾩＜?먯쓽 泥댄룷 ?먮뒗 ?섏슜?? 蹂댄샇愿李???곸옄 ???몄넚쨌寃쎈퉬瑜??꾪븯???ъ슜?섎뒗 ?먮룞李?媛. 援먮룄?뙿룹냼?꾧탳?꾩냼 ?먮뒗 援ъ튂???? ?뚮뀈???먮뒗 ?뚮뀈遺꾨쪟?ъ궗???? 蹂댄샇愿李곗냼 5. 援?궡???붿씤(誤곦볶)?????寃쏀샇?낅Т ?섑뻾??怨듬Т(?у떃)濡??ъ슜?섎뒗 ?먮룞李?6. ?꾧린?ъ뾽, 媛?ㅼ궗?? 洹?諛뽰쓽 怨듭씡?ъ뾽???섎뒗 湲곌??먯꽌 ?꾪뿕 諛⑹?瑜??꾪븳 ?묎툒?묒뾽???ъ슜?섎뒗 ?먮룞李?7. 誘쇰갑?꾩뾽臾대? ?섑뻾?섎뒗 湲곌??먯꽌 湲닿툒?덈갑 ?먮뒗 蹂듦뎄瑜??꾪븳 異쒕룞???ъ슜?섎뒗 ?먮룞李?8. ?꾨줈愿由щ? ?꾪븯???ъ슜?섎뒗 ?먮룞李?以??꾨줈?곸쓽 ?꾪뿕??諛⑹??섍린 ?꾪븳 ?묎툒?묒뾽???ъ슜?섍굅???댄뻾???쒗븳 ?섎뒗 ?먮룞李⑤? ?⑥냽?섍린 ?꾪븯???ъ슜?섎뒗 ?먮룞李?9. ?꾩떊쨌?꾪솕???섎━怨듭궗 ???묎툒?묒뾽???ъ슜?섎뒗 ?먮룞李?10. 湲닿툒???고렪臾쇱쓽 ?댁넚???ъ슜?섎뒗 ?먮룞李?11. ?꾪뙆媛먯떆?낅Т???ъ슜?섎뒗 ?먮룞李???????媛??몄뿉 ?곕Ⅸ ?먮룞李??몄뿉 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 ?먮룞李⑤뒗 湲닿툒?먮룞李⑤줈 蹂몃떎. 1. ????젣1?몄뿉 ?곕Ⅸ 寃쎌같??湲닿툒?먮룞李⑥뿉 ?섑븯???좊룄?섍퀬 ?덈뒗 ?먮룞李?2. ????젣2?몄뿉 ?곕Ⅸ 援?뎔 諛?二쇳븳 援?젣?고빀援곗슜??湲닿툒?먮룞李⑥뿉 ?섑븯???좊룄?섍퀬 ?덈뒗 援?뎔 諛?二쇳븳 援?젣?고빀 援곗쓽 ?먮룞李?3. ?앸챸???꾧툒???섏옄 ?먮뒗 遺?곸옄???섑삁???꾪븳 ?덉븸???댁넚 以묒씤 ?먮룞李?,
+  "tr_e": "Enforcement Decree of the Road Traffic Act Article 2 (Types of Emergency Vehicles) (1) A motor vehicle prescribed by Presidential Decree in Article 2 subparagraph 22 item (d) of the Road Traffic Act (hereinafter the Act) means a motor vehicle that is used for an urgent purpose and falls under any of the following. However, motor vehicles under subparagraphs 6 through 11 are limited to cases designated by the Commissioner of the City/Provincial Police Agency upon application by the person or institution, etc. using them. 1. Among police motor vehicles, a motor vehicle used for criminal investigation, traffic enforcement, or other urgent police duties. 2. Among motor vehicles for the national armed forces and the United Nations forces stationed in Korea, a motor vehicle used to maintain internal order within the military or to guide the orderly movement of units. 3. Among motor vehicles of investigative agencies, a motor vehicle used for criminal investigation. 4. Among motor vehicles of the following facilities or institutions, a motor vehicle used for the arrest of escapees or the escort/guarding of inmates or persons subject to probation: (a) a prison, juvenile prison, or detention center; (b) a juvenile reformatory or juvenile classification review center; (c) a probation office. 5. A motor vehicle used for official duties in performing escort duties for domestic or foreign VIPs. 6. A motor vehicle used for emergency work to prevent danger by an institution engaged in the electricity business, gas business, or other public utility business. 7. A motor vehicle used for dispatch for emergency prevention or restoration by an institution performing civil defense duties. 8. Among motor vehicles used for road management, a motor vehicle used for emergency work to prevent danger on the road or to crack down on motor vehicles whose operation is restricted. 9. A motor vehicle used for emergency work such as the repair of telegraph or telephone lines. 10. A motor vehicle used for transporting urgent postal items. 11. A motor vehicle used for radio monitoring duties. (2) In addition to the motor vehicles under each subparagraph of paragraph (1), a motor vehicle falling under any of the following is deemed an emergency vehicle: 1. a motor vehicle being guided by a police emergency vehicle under paragraph (1) subparagraph 1; 2. a motor vehicle of the national armed forces or the United Nations forces stationed in Korea being guided by an emergency vehicle for the armed forces or the United Nations forces stationed in Korea under paragraph (1) subparagraph 2; 3. a motor vehicle transporting a patient or injured person whose life is in danger, or blood for transfusion."
+ },
+ {
+  "n": 272,
+  "ko_e": "?꾨줈援먰넻踰???3議곗젣1?? ???? ???? ????,
+  "tr_e": "Road Traffic Act Article 53 paragraphs 1, 2, 6, and 7."
+ },
+ {
+  "n": 273,
+  "ko_e": "?꾨줈援먰넻踰???7議곗젣6??: 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?녿뒗 ?꾨줈, 蹂댄뻾?먯슦 ?좊룄濡? ?꾨줈 ?몄쓽 怨녹뿉??蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃쎌슦?먮뒗 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???섎ŉ, 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐媛 ???뚯뿉???쒗뻾?섍굅???쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?듯뻾?????덈룄濡??섏뿬???쒕떎. <媛쒖젙 2022. 1. 11.> ?꾨줈援먰넻踰???7議곗젣7??: ?댁쟾?먮뒗 ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤??좎쓣 留먰븳???먯꽌??蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 27(6): Every driver of a vehicle must, when passing beside a pedestrian on a road where the sidewalk and roadway are not separated and there is no center line, on a pedestrian-priority road, or at a place off the road, keep a safe distance and slow down, and when the passage of the pedestrian is obstructed, slow down or come to a complete stop so that the pedestrian can pass safely. <Amended January 11, 2022> Road Traffic Act Article 27(7): A driver must, at a crosswalk without a traffic light among the crosswalks installed within a school zone (or at the stop line where one is installed), come to a complete stop regardless of whether a pedestrian is crossing."
+ },
+ {
+  "n": 274,
+  "ko_e": "媛???덉쟾???댁쟾 諛⑸쾿? 2李⑤줈媛 鍮꾩뼱 ?덉뼱???욎?瑜닿린瑜??섏? ?딅뒗 寃껋씠?? 紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛?대굹 ?곸쑀??瑜??쒖슦怨??덈떎???쒖떆瑜????곹깭濡??꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜댁? 紐삵븳?? (?꾨줈援먰넻踰???1議?",
+  "tr_e": "The safest driving method is not to overtake even if the second lane is empty. Every driver of a vehicle must not overtake a school bus that is passing on the road displaying the sign that it is carrying children or infants. (Road Traffic Act Article 51)"
+ },
+ {
+  "n": 275,
+  "ko_e": "?대┛??蹂댄샇援ъ뿭?먯꽌??李⑤웾???듯뻾?띾룄瑜?留ㅼ떆 30?щ줈誘명꽣 ?대궡濡??쒗븳?????덈떎.",
+  "tr_e": "In a school zone, the passage speed of vehicles may be limited to within 30 kilometers per hour."
+ },
+ {
+  "n": 276,
+  "ko_e": "?대┛??蹂댄샇援ъ뿭 ?댁뿉??二쇳뻾 以??대┛?대? ?ㅼ튂寃???寃쎌슦 ?쇳빐?먯쓽 泥섎쾶 ?섏궗??愿怨꾩뾾???뺤궗 泥섎쾶?쒕떎.",
+  "tr_e": "If a driver injures a child while driving in a school zone, the driver is subject to criminal punishment regardless of the victim's intent to punish."
+ },
+ {
+  "n": 277,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??4議??대┛?댄넻?숇쾭?ㅻ줈 ?ъ슜?????덈뒗 ?먮룞李? ?대┛?댄넻?숇쾭?ㅻ줈 ?ъ슜?????덈뒗 ?먮룞李????뱀감?뺤썝 9?몄듅(?대┛??1紐낆쓣 ?뱀감?뺤썝 1紐낆쑝濡?蹂몃떎) ?댁긽???먮룞李⑤줈 ?쒕떎.",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 34 (Motor Vehicles That May Be Used as School Buses) A motor vehicle that may be used as a school bus is a motor vehicle with a seating capacity of 9 or more (one child is counted as one seat)."
+ },
+ {
+  "n": 278,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 [蹂꾪몴28] ?대┛??蹂댄샇援ъ뿭 ?덉뿉???ㅼ쟾 8?쒕????ㅽ썑 8?쒓퉴吏 ?ъ씠???띾룄?꾨컲?????댁쟾?먯뿉  ??댁꽌??踰뚯젏??2諛곗뿉 ?대떦?섎뒗 踰뚯젏??遺怨쇳븳??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act [Table 28] For a driver who commits a speed violation in a school zone between 8 a.m. and 8 p.m., penalty points equivalent to twice the penalty points are imposed."
+ },
+ {
+  "n": 279,
+  "ko_e": "?뱀슜李??댁쟾?먭? ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜??섍퀬 ?꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜닿린?? 寃쎌슦 30?먯쓽 踰뚯젏??遺怨쇰맂??",
+  "tr_e": "If the driver of a passenger car overtakes a school bus that is passing on the road displaying the sign that it is carrying children or infants, 30 penalty points are imposed."
+ },
+ {
+  "n": 280,
+  "ko_e": "?대┛?댄넻?숇쾭?ㅼ쓽 ?덉쟾援먯쑁? 援먰넻?덉쟾???꾪븳 ?대┛???됰룞?뱀꽦, ?대┛?댄넻?숇쾭?ㅼ쓽 ?댁쁺 ?깃낵 愿?⑤맂 踰뺣졊, ?대┛ ???듯븰踰꾩뒪??二쇱슂 ?ш퀬 ?щ? 遺꾩꽍, 洹?諛뽰뿉 ?댁쟾 諛??뱀감?ㅽ븯李?以??대┛??蹂댄샇瑜??꾪븯???꾩슂???ы빆 ?깆뿉 ??섏뿬  媛뺤쓽?ㅼ떆泥?컖援먯쑁 ?깆쓽 諛⑸쾿?쇰줈 3?쒓컙 ?댁긽 ?ㅼ떆?쒕떎.(?꾨줈援먰넻踰??쒗뻾????1議곗쓽2)",
+  "tr_e": "Safety education for school buses is conducted for 3 hours or more by methods such as lectures and audiovisual education on the behavioral characteristics of children for traffic safety, laws related to the operation of school buses, analysis of major accident cases involving school buses, and other matters necessary for the protection of children while driving and during boarding/alighting. (Enforcement Decree of the Road Traffic Act Article 31-2)"
+ },
+ {
+  "n": 281,
+  "ko_e": "?대┛?대뒗 13??誘몃쭔???щ엺??留먰븯硫??꾨줈援먰넻踰???議???3??, ?곸쑀?꾨뒗 6??誘몃쭔???щ엺??留먰븳?? (?꾨줈援먰넻踰? ??1議?",
+  "tr_e": "A child means a person under 13 years of age (Road Traffic Act Article 2 subparagraph 23), and an infant means a person under 6 years of age (Road Traffic Act Article 11)."
+ }
+]
+
+codex
+[{"n":265,"field":"e","severity":"major","issue":"법 조항 번호를 ‘제2조제22호라목’이 아닌 ‘Article 2 subparagraph 2 item (d)’로 번역하여 제22호를 제2호로 잘못 표기했다.","suggestion":"Enforcement Decree of the Road Traffic Act Article 2 (Types of Emergency Vehicles) (1) A motor vehicle prescribed by Presidential Decree in Article 2 subparagraph 22 item (d) of the Road Traffic Act means a motor vehicle that is used for an urgent purpose and falls under any of the following. However, motor vehicles under subparagraphs 6 through 11 are limited to cases designated by the Commissioner of the City/Provincial Police Agency upon application by the person or institution, etc. using them."},{"n":266,"field":"e","severity":"major","issue":"법 조항 번호를 ‘제2조제22호라목’이 아닌 ‘Article 2 subparagraph 2 item (d)’로 번역하여 제22호를 제2호로 잘못 표기했다.","suggestion":"Enforcement Decree of the Road Traffic Act Article 2 (Types of Emergency Vehicles) (1) A motor vehicle prescribed by Presidential Decree in Article 2 subparagraph 22 item (d) of the Road Traffic Act means a motor vehicle that is used for an urgent purpose and falls under any of the following. However, motor vehicles under subparagraphs 6 through 11 are limited to cases designated by the Commissioner of the City/Provincial Police Agency upon application by the person or institution, etc. using them."}]
+tokens used
+13,539
+[{"n":265,"field":"e","severity":"major","issue":"법 조항 번호를 ‘제2조제22호라목’이 아닌 ‘Article 2 subparagraph 2 item (d)’로 번역하여 제22호를 제2호로 잘못 표기했다.","suggestion":"Enforcement Decree of the Road Traffic Act Article 2 (Types of Emergency Vehicles) (1) A motor vehicle prescribed by Presidential Decree in Article 2 subparagraph 22 item (d) of the Road Traffic Act means a motor vehicle that is used for an urgent purpose and falls under any of the following. However, motor vehicles under subparagraphs 6 through 11 are limited to cases designated by the Commissioner of the City/Provincial Police Agency upon application by the person or institution, etc. using them."},{"n":266,"field":"e","severity":"major","issue":"법 조항 번호를 ‘제2조제22호라목’이 아닌 ‘Article 2 subparagraph 2 item (d)’로 번역하여 제22호를 제2호로 잘못 표기했다.","suggestion":"Enforcement Decree of the Road Traffic Act Article 2 (Types of Emergency Vehicles) (1) A motor vehicle prescribed by Presidential Decree in Article 2 subparagraph 22 item (d) of the Road Traffic Act means a motor vehicle that is used for an urgent purpose and falls under any of the following. However, motor vehicles under subparagraphs 6 through 11 are limited to cases designated by the Commissioner of the City/Provincial Police Agency upon application by the person or institution, etc. using them."}]

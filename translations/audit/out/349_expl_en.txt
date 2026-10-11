@@ -1,0 +1,129 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12861-9a60-7ba1-9049-255f4cca2c70
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/349_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/349_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 544ms:
+[
+ {
+  "n": 994,
+  "ko_e": "?꾨줈援먰넻踰???9議??덉쟾嫄곕━ ?뺣낫 ??, ?꾨줈援먰넻踰???0議?吏꾨줈?묐낫?섎Т) ??吏꾩엯濡?遺洹쇱뿉?쒕뒗 吏꾩엯???ㅻ뒗 ?먮룞李⑤? ?쇱컢 諛쒓껄?섏뿬 洹??먮룞李⑥???嫄곕━ 諛??띾룄 李⑥씠瑜?媛먯븞???먭린 李④?  癒쇱? 媛덉?, ?먯떊???욎뿉 吏꾩엯?쒗궗 吏瑜??먮떒?섏뿬???쒕떎. ????寃쎌슦 ?곗륫?먯꽌 吏꾩엯?섎젮??李④? ?덈뒗???ㅼ감媛 ?대? ?욎?瑜닿린 李⑤줈濡?吏꾨줈瑜?蹂寃쏀븯???섍퀬 ?덉뼱, 醫뚯륫?쇰줈  吏꾨줈瑜?蹂寃쏀븯??寃껋? ?꾪뿕?섎떎. 媛?띿감濡쒖쓽 李④? 吏꾩엯?섍린 ?쎈룄濡??띾룄瑜??쇱젙?섍쾶 ?좎??섏뿬 二쇳뻾?섎룄濡??쒕떎.",
+  "tr_e": "Road Traffic Act Article 19 (Securing Safe Distance, etc.), Road Traffic Act Article 20 (Duty to Yield the Way). Near an entrance ramp, one must spot an entering vehicle early and, taking into account the distance from and speed difference with that vehicle, judge whether one's own car will go first or will let it enter ahead of one. In this case, when there is a vehicle intending to enter from the right and the vehicle behind is already about to change course into the overtaking lane, changing lanes to the left is dangerous. Drive while maintaining a constant speed so that the vehicle in the acceleration lane can enter easily."
+ },
+ {
+  "n": 995,
+  "ko_e": "怨좎냽?꾨줈 二쇳뻾? 鍮좊Ⅸ ?띾룄濡??명빐 湲댁옣???댄뻾??????諛뽰뿉 ?녿떎. ?곕씪??蹂몄꽑李⑤줈?먯꽌 吏꾩텧濡쒕줈 鍮좎졇?섏삱 ?? ?ㅻ뵲瑜대뒗 李④? ?덉쑝誘濡?湲됲엳 媛먯냽?섍쾶 ?섎㈃ ?ㅼ감???異붾룎???곕젮???덉뼱 二쇱쓽?섏뿬???쒕떎. 蹂몄꽑李⑤줈?먯꽌 ?섏?  媛먯냽李⑤줈???ㅼ뼱媛硫?媛먭컖???섏〈?섏? 留먭퀬 ?띾룄怨꾨? 蹂대㈃???띾룄瑜??뺤떎??以꾩뿬???쒕떎.",
+  "tr_e": "Expressway driving inevitably involves tense operation due to the high speed. Therefore, when exiting from the main lane to the exit ramp, since there is a vehicle following behind, decelerating suddenly risks a rear-end collision with the vehicle behind, so one must be careful. After leaving the main lane and entering the deceleration lane, one must reduce speed reliably by looking at the speedometer rather than relying on feel."
+ },
+ {
+  "n": 996,
+  "ko_e": "紐낆닚?묒씠? ?대몢??怨녹뿉??媛묒옄湲?諛앹? 怨녹쑝濡???꼈?????쒓컖怨꾨뒗 湲됯꺽??媛먮룄媛 ??섎릺??怨쇱젙??留먰븳?? ?붿닚??? 紐낆닚?묒쓽 諛섎??섎뒗 怨쇱젙?대씪 ?????덈떎. ?댁? 媛숈? ?뱀꽦?쇰줈 吏?섏감???먮뒗 ?곕꼸 ?깆쓽 吏꾩텧???쒕뒗 ?꾨갑??援먰넻?곹솴 ?깆씠 ?쎄쾶 ?뺤씤?섏? ?딅뒗 ?뱀꽦???덈떎. ?곕씪???댁쟾?먮뒗 吏?섏감???먮뒗 ?곕꼸 ?깆쓣 吏꾩텧?낇븯?ㅻ뒗 寃쎌슦 誘몃━ 李⑥쓽 ?띾룄瑜?媛먯냽?섏뿬 ?욎そ??援먰넻?곹솴???鍮꾪븯???댁쟾?쒕룄瑜?寃몃퉬?댁빞 ?쒕떎. ?뱁엳, ?곹븯??湲곗삩?곹깭?먯꽌???꾨줈??(誘몄꽭)癒쇱?, 紐⑤옒? 臾쇱씠 ?ㅼ뿁耳??뉗? ?댁뼹?뚯쓣 ?뺤꽦?섎뒗?? ???댁뼹?뚯? ?댁쟾 以??댁쟾?먯쓽 ?≪븞?쇰줈 ?앸퀎?섎뒗 寃껋씠 ?쎌? ?딅떎. ???댁뼹???쇰챸 釉붾옓?꾩씠??? 吏?댁씠 ?녿뒗 ?ㅻ━?뺥깭??李⑤룄(援먮웾) ?먮뒗 ?곕꼸吏꾩텧?낃뎄???뺤꽦??媛?μ꽦???믩떎. ?곕씪???댁쟾?먮뒗 ?댁뿉 二쇱쓽???꾩슂?깆씠 ?덈떎. ?곸긽?먯꽌???곕꼸 諛?援???援ш컙?먯꽌 ?욎?瑜닿린 ?꾨컲?됱쐞瑜???李⑤뒗 ?놁뿀??",
+  "tr_e": "Light adaptation refers to the process by which the visual system's sensitivity sharply decreases when one suddenly moves from a dark place to a bright place. Dark adaptation can be said to be the process opposite to light adaptation. Due to these characteristics, when entering or exiting an underpass or tunnel, etc., the traffic situation ahead is not easily checked. Therefore, when intending to enter or exit an underpass or tunnel, etc., the driver must have the driving attitude of reducing the vehicle's speed in advance to prepare for the traffic situation ahead. In particular, in sub-zero temperatures, (fine) dust, sand, and water on the road become entangled to form a thin sheet of ice, and this thin ice is not easy for the driver to identify with the naked eye while driving. This thin ice (so-called black ice) is likely to form on bridge-type roadways (bridges) with no geothermal heat or at tunnel entrances and exits. Therefore, the driver needs to be careful of this. In the video, there was no vehicle that committed an overtaking violation in the tunnel and bridge sections."
+ },
+ {
+  "n": 997,
+  "ko_e": "?댁쟾?먮뒗 鍮쀪만?먯꽌 ?댁쟾?섎뒗 ?뚯뿉 ?꾨줈援먰넻踰???7議곗뿉 ?ㅻⅨ ?띾룄瑜?以?섑븯?ъ빞 ?섎굹, ?댁긽湲고썑 ?쒖뿉??1. 理쒓퀬???꾩쓽 100遺꾩쓽 20??以꾩씤 ?띾룄濡??댄뻾?섏뿬???섎뒗 寃쎌슦(鍮꾧? ?대젮 ?몃㈃???뽰뼱?덈뒗 寃쎌슦) 2. 理쒓퀬?띾룄??100遺꾩쓽 50??以꾩씤 ?띾룄濡??댄뻾?섏뿬???섎뒗 寃쎌슦(??슦?랁룺?ㅳ냽?덇컻 ?깆쑝濡?媛?쒓굅由ш? 100誘명꽣 ?대궡??寃쎌슦)???곕씪 媛먯냽 ?댁빞 ?쒕떎. 洹몃윭???댁쟾?먮뒗 怨쇱냽?쇰줈 ?댁쟾?섏??? ???꾨줈援먰넻踰???3議곗뿉 ?곕씪 ?곗륫?듯뻾?댁빞 ?섎굹 以묒븰?좎쓽 醫뚯륫 ?쇰줈 ?듯뻾?섎뒗 ?됰룞???섏??? ?붾텋??鍮쀪만?먮뒗 怨좎씤臾쇱씠 蹂댄뻾?먯뿉寃??吏 ?딅룄濡??댁쟾?먯쓽 以?섏궗??쓣 以?섑븯?????덉쑝???꾨컲?섎뒗 ?됰룞???섑??щ떎.",
+  "tr_e": "A driver must, when driving on a rainy road, comply with the speed under Road Traffic Act Article 17, but in abnormal weather, one must reduce speed in accordance with the following: 1. Cases where one must drive at a speed reduced by 20/100 of the maximum speed (when it is raining and the road surface is wet); 2. Cases where one must drive at a speed reduced by 50/100 of the maximum speed (when visibility is within 100 meters due to heavy rain, heavy snow, fog, etc.). However, the driver drove at excessive speed. Also, under Road Traffic Act Article 13 one must travel on the right, but the driver traveled on the left of the center line. In addition, on a rainy road one should have observed the driver's obligations so that puddle water does not splash onto pedestrians, but a violating behavior appeared."
+ },
+ {
+  "n": 998,
+  "ko_e": "?꾨줈援먰넻踰???9議??덉쟾嫄곕━ ?뺣낫 ??, ?꾨줈援먰넻踰???0議?吏꾨줈?묐낫???섎Т), ?꾨줈援먰넻踰???1議??쒗뻾 ?먮뒗 ?쇱떆??吏 ?μ냼) ?꾨줈援먰넻踰???7議?李⑥? ?몃㈃?꾩감???깊솕) ???쇨컙? ?꾩“?깆씠 鍮꾩튂??踰붿쐞 ?덉뿉??蹂??섎컰???녾린 ?뚮Ц???꾪뿕???먮떒?섎뒗???쒓퀎媛 ?덉뼱 ?띾룄瑜?以꾩씠怨?  ?ㅻⅨ 援먰넻??媛묒옉?ㅻ윭???吏곸엫???泥섑븷 ???덈룄濡?異⑸텇??怨듦컙怨??덉쟾嫄곕━ ?뺣낫媛 以묒슂?섎떎.",
+  "tr_e": "Road Traffic Act Article 19 (Securing Safe Distance, etc.), Road Traffic Act Article 20 (Duty to Yield the Way), Road Traffic Act Article 31 (Places to Slow Down or Come to a Complete Stop), Road Traffic Act Article 37 (Lights of Vehicles and Streetcars). At night, one can only see within the range the headlights illuminate, so there is a limit to judging hazards; it is important to reduce speed and to secure sufficient space and safe distance so as to be able to respond to sudden movements of other traffic."
+ },
+ {
+  "n": 999,
+  "ko_e": "?꾨줈援먰넻踰???7議?蹂댄뻾?먮낫?? ?좏샇?깆씠 ?녿뒗 ?〓떒蹂대룄?먯꽌??蹂댄뻾?먭? ?덉쓬?먮룄 遺덇뎄?섍퀬 蹂댄뻾?먮뱾 ?ъ씠濡?吏?섍? 踰꾨━??李⑤웾??二쇱쓽?섏뿬?? ?쒕떎. ?〓떒蹂대룄 ??遺덈쾿?쇰줈 二쇱감??李⑤웾?쇰줈 ?명빐 蹂댄뻾?먮? 誘몄쿂 諛쒓껄?섏? 紐삵븷 ???덇린 ?뚮Ц??二쇱쓽?섏뿬???쒕떎.  媛묒옄湲??곌린 ?쒖옉?섏뿬 ?〓떒?섎뒗 蹂댄뻾?먯뿉 二쇱쓽?섏뿬???쒕떎. ?〓떒蹂대룄瑜??〓떒???뚮뒗 ?뱀뿰??李④? ?쇱떆 ?뺤???寃껋쑝 濡??앷컖?섍퀬 ?〓떒?섎뒗 蹂댄뻾?먯뿉 二쇱쓽?섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 27 (Protection of Pedestrians). At a crosswalk without a traffic light, one must be careful of vehicles that pass between pedestrians despite the presence of pedestrians. Since one may fail to spot a pedestrian due to a vehicle illegally parked within the crosswalk, one must be careful. One must be careful of a pedestrian who suddenly starts running to cross. One must be careful of a pedestrian who crosses assuming, as a matter of course, that the vehicle will come to a complete stop when they cross the crosswalk."
+ },
+ {
+  "n": 1000,
+  "ko_e": "?꾨줈援먰넻踰???議??좏샇 諛?吏?쒖뿉 ?곕? ?섎Т), ??7議?蹂댄뻾?먯쓽 蹂댄샇), ??7議??먮룞李⑤벑怨??몃㈃?꾩감???띾룄) 臾몄젣???쒖떆???곸긽?먯꽌 ?댁쟾?먮뒗 ???꾨줈援먰넻踰뺤쓣 ?꾨컲??寃껋쑝濡??뺤씤?쒕떎.",
+  "tr_e": "Road Traffic Act Article 5 (Duty to Obey Signals and Instructions), Article 27 (Protection of Pedestrians), Article 17 (Speed of Vehicles, etc., and Streetcars). In the video presented in the problem, the driver is confirmed to have violated the above Road Traffic Act."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/349_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ print('\\n',x['n'])
+ s=x['ko_e']
+ try: print(s.encode('cp949').decode('utf-8'))
+ except Exception as e: print('ERR',e)
+ print(x['tr_e'])
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-11T00:34:17.384673Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:13 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 684ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:13 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/349_expl_en.json' | ConvertFrom-Json; "'$cp949=[Text.Encoding]::GetEncoding(949); $utf8=[Text.Encoding]::UTF8; foreach($x in $data){ Write-Output "`n$($x.n)"; Write-Output ($utf8.GetString($cp949.GetBytes($x.ko_e))); Write-Output $x.tr_e }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 630ms:
+
+994
+?�로교통�???9�??�전거리 ?�보 ??, ?�로교통�???0�?진로?�보?�무) ??진입�?부근에?�는 진입???�는 ?�동차�? ?�찍 발견?�여 �??�동차�???거리 �??�도 차이�?감안???�기 차�?  먼�? 갈�?, ?�신???�에 진입?�킬 지�??�단?�여???�다. ????경우 ?�측?�서 진입?�려??차�? ?�는???�차가 ?��? ?��?르기 차로�?진로�?변경하???�고 ?�어, 좌측?�로  진로�?변경하??것�? ?�험?�다. 가?�차로의 차�? 진입?�기 ?�도�??�도�??�정?�게 ?��??�여 주행?�도�??�다.
+Road Traffic Act Article 19 (Securing Safe Distance, etc.), Road Traffic Act Article 20 (Duty to Yield the Way). Near an entrance ramp, one must spot an entering vehicle early and, taking into account the distance from and speed difference with that vehicle, judge whether one's own car will go first or will let it enter ahead of one. In this case, when there is a vehicle intending to enter from the right and the vehicle behind is already about to change course into the overtaking lane, changing lanes to the left is dangerous. Drive while maintaining a constant speed so that the vehicle in the acceleration lane can enter easily.
+
+995
+고속?�로 주행?� 빠른 ?�도�??�해 긴장???�행??????밖에 ?�다. ?�라??본선차로?�서 진출로로 빠져?�올 ?? ?�따르는 차�? ?�으므�?급히 감속?�게 ?�면 ?�차?�??추돌???�려???�어 주의?�여???�다. 본선차로?�서 ?��?  감속차로???�어가�?감각???�존?��? 말고 ?�도계�? 보면???�도�??�실??줄여???�다.
+Expressway driving inevitably involves tense operation due to the high speed. Therefore, when exiting from the main lane to the exit ramp, since there is a vehicle following behind, decelerating suddenly risks a rear-end collision with the vehicle behind, so one must be careful. After leaving the main lane and entering the deceleration lane, one must reduce speed reliably by looking at the speedometer rather than relying on feel.
+
+996
+명순?�이?� ?�두??곳에??갑자�?밝�? 곳으�???��?????�각계는 급격??감도가 ?�?�되??과정??말한?? ?�순???� 명순?�의 반�??�는 과정?�라 ?????�다. ?��? 같�? ?�성?�로 지?�차???�는 ?�널 ?�의 진출???�는 ?�방??교통?�황 ?�이 ?�게 ?�인?��? ?�는 ?�성???�다. ?�라???�전?�는 지?�차???�는 ?�널 ?�을 진출?�하?�는 경우 미리 차의 ?�도�?감속?�여 ?�쪽??교통?�황???�비하???�전?�도�?겸비?�야 ?�다. ?�히, ?�하??기온?�태?�서???�로??(미세)먼�?, 모래?� 물이 ?�엉�??��? ?�얼?�을 ?�성?�는?? ???�얼?��? ?�전 �??�전?�의 ?�안?�로 ?�별?�는 것이 ?��? ?�다. ???�얼???�명 블랙?�이???� 지?�이 ?�는 ?�리?�태??차도(교량) ?�는 ?�널진출?�구???�성??가?�성???�다. ?�라???�전?�는 ?�에 주의???�요?�이 ?�다. ?�상?�서???�널 �?�???구간?�서 ?��?르기 ?�반?�위�???차는 ?�었??
+Light adaptation refers to the process by which the visual system's sensitivity sharply decreases when one suddenly moves from a dark place to a bright place. Dark adaptation can be said to be the process opposite to light adaptation. Due to these characteristics, when entering or exiting an underpass or tunnel, etc., the traffic situation ahead is not easily checked. Therefore, when intending to enter or exit an underpass or tunnel, etc., the driver must have the driving attitude of reducing the vehicle's speed in advance to prepare for the traffic situation ahead. In particular, in sub-zero temperatures, (fine) dust, sand, and water on the road become entangled to form a thin sheet of ice, and this thin ice is not easy for the driver to identify with the naked eye while driving. This thin ice (so-called black ice) is likely to form on bridge-type roadways (bridges) with no geothermal heat or at tunnel entrances and exits. Therefore, the driver needs to be careful of this. In the video, there was no vehicle that committed an overtaking violation in the tunnel and bridge sections.
+
+997
+?�전?�는 빗길?�서 ?�전?�는 ?�에 ?�로교통�???7조에 ?�른 ?�도�?준?�하?�야 ?�나, ?�상기후 ?�에??1. 최고???�의 100분의 20??줄인 ?�도�??�행?�여???�는 경우(비�? ?�려 ?�면???�어?�는 경우) 2. 최고?�도??100분의 50??줄인 ?�도�??�행?�여???�는 경우(??��?�폭?�ㆍ?�개 ?�으�?가?�거리�? 100미터 ?�내??경우)???�라 감속 ?�야 ?�다. 그러???�전?�는 과속?�로 ?�전?��??? ???�로교통�???3조에 ?�라 ?�측?�행?�야 ?�나 중앙?�의 좌측 ?�로 ?�행?�는 ?�동???��??? ?�불??빗길?�는 고인물이 보행?�에�??�지 ?�도�??�전?�의 준?�사??�� 준?�하?????�으???�반?�는 ?�동???��??�다.
+A driver must, when driving on a rainy road, comply with the speed under Road Traffic Act Article 17, but in abnormal weather, one must reduce speed in accordance with the following: 1. Cases where one must drive at a speed reduced by 20/100 of the maximum speed (when it is raining and the road surface is wet); 2. Cases where one must drive at a speed reduced by 50/100 of the maximum speed (when visibility is within 100 meters due to heavy rain, heavy snow, fog, etc.). However, the driver drove at excessive speed. Also, under Road Traffic Act Article 13 one must travel on the right, but the driver traveled on the left of the center line. In addition, on a rainy road one should have observed the driver's obligations so that puddle water does not splash onto pedestrians, but a violating behavior appeared.
+
+998
+?�로교통�???9�??�전거리 ?�보 ??, ?�로교통�???0�?진로?�보???�무), ?�로교통�???1�??�행 ?�는 ?�시??지 ?�소) ?�로교통�???7�?차�? ?�면?�차???�화) ???�간?� ?�조?�이 비치??범위 ?�에??�??�밖???�기 ?�문???�험???�단?�는???�계가 ?�어 ?�도�?줄이�?  ?�른 교통??갑작?�러???�직임???�처할 ???�도�?충분??공간�??�전거리 ?�보가 중요?�다.
+Road Traffic Act Article 19 (Securing Safe Distance, etc.), Road Traffic Act Article 20 (Duty to Yield the Way), Road Traffic Act Article 31 (Places to Slow Down or Come to a Complete Stop), Road Traffic Act Article 37 (Lights of Vehicles and Streetcars). At night, one can only see within the range the headlights illuminate, so there is a limit to judging hazards; it is important to reduce speed and to secure sufficient space and safe distance so as to be able to respond to sudden movements of other traffic.
+
+999
+?�로교통�???7�?보행?�보?? ?�호?�이 ?�는 ?�단보도?�서??보행?��? ?�음?�도 불구?�고 보행?�들 ?�이�?지?��? 버리??차량??주의?�여?? ?�다. ?�단보도 ??불법?�로 주차??차량?�로 ?�해 보행?��? 미처 발견?��? 못할 ???�기 ?�문??주의?�여???�다.  갑자�??�기 ?�작?�여 ?�단?�는 보행?�에 주의?�여???�다. ?�단보도�??�단???�는 ?�연??차�? ?�시 ?��???것으 �??�각?�고 ?�단?�는 보행?�에 주의?�여???�다.
+Road Traffic Act Article 27 (Protection of Pedestrians). At a crosswalk without a traffic light, one must be careful of vehicles that pass between pedestrians despite the presence of pedestrians. Since one may fail to spot a pedestrian due to a vehicle illegally parked within the crosswalk, one must be careful. One must be careful of a pedestrian who suddenly starts running to cross. One must be careful of a pedestrian who crosses assuming, as a matter of course, that the vehicle will come to a complete stop when they cross the crosswalk.
+
+1000
+?�로교통�???�??�호 �?지?�에 ?��? ?�무), ??7�?보행?�의 보호), ??7�??�동차등�??�면?�차???�도) 문제???�시???�상?�서 ?�전?�는 ???�로교통법을 ?�반??것으�??�인?�다.
+Road Traffic Act Article 5 (Duty to Obey Signals and Instructions), Article 27 (Protection of Pedestrians), Article 17 (Speed of Vehicles, etc., and Streetcars). In the video presented in the problem, the driver is confirmed to have violated the above Road Traffic Act.
+
+codex
+[{"n":999,"field":"e","severity":"minor","issue":"원문의 ‘횡단보도 옆에 불법 주차된 차량’을 ‘횡단보도 안에 주차된 차량’으로 번역하여 위험 차량의 위치가 달라졌다.","suggestion":"Since an illegally parked vehicle beside the crosswalk may prevent the driver from spotting a pedestrian in time, one must exercise caution."}]
+tokens used
+10,683
+[{"n":999,"field":"e","severity":"minor","issue":"원문의 ‘횡단보도 옆에 불법 주차된 차량’을 ‘횡단보도 안에 주차된 차량’으로 번역하여 위험 차량의 위치가 달라졌다.","suggestion":"Since an illegally parked vehicle beside the crosswalk may prevent the driver from spotting a pedestrian in time, one must exercise caution."}]

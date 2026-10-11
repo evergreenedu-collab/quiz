@@ -1,0 +1,207 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a127fb-85a9-7af1-8149-d876a2810d97
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/315_expl_en.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/315_expl_en.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 529ms:
+[
+ {
+  "n": 302,
+  "ko_e": "?먮룞李?諛??먮룞李⑤??덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃 ??8議??깊솕?????洹?諛뽰쓽 湲곗?) ????????,
+  "tr_e": "Rules on the Performance and Standards of Motor Vehicles and Motor Vehicle Parts Article 48 (Other Standards on Lights) paragraph 4 subparagraph 5."
+ },
+ {
+  "n": 303,
+  "ko_e": "?꾨줈援먰넻踰???2議????좎븘援먯쑁踰? 珥댿ㅼ쨷?깃탳?〓쾿, ?숈썝???ㅻ┰?ㅼ슫??諛?怨쇱쇅援먯뒿??愿??踰뺣쪧 ?깆씠 ?대┛??蹂댄샇援???쓽 吏??洹쇨굅 踰뺣쪧濡?紐낆떆?섏뼱 ?덈떎.",
+  "tr_e": "In Road Traffic Act Article 12, the Early Childhood Education Act, the Elementary and Secondary Education Act, and the Act on the Establishment and Operation of Private Teaching Institutes and Extracurricular Lessons, etc. are specified as the legal grounds for designating school zones."
+ },
+ {
+  "n": 304,
+  "ko_e": "?꾨줈援먰넻踰???2議????? 援먰넻?ш퀬泥섎━?밸?踰???議???????1?? ?꾨줈援먰넻踰??쒗뻾??蹂꾪몴10 ?대┛??蹂댄샇援ъ뿭  諛??몄씤 ?μ븷?몃낫?멸뎄??뿉?쒖쓽 踰붿튃?됱쐞 諛?踰붿튃湲덉븸",
+  "tr_e": "Road Traffic Act Article 12 paragraph 1, Act on Special Cases Concerning the Settlement of Traffic Accidents Article 3(2) subparagraph 11, Enforcement Decree of the Road Traffic Act Table 10, offenses and penalty amounts in school zones and senior/disabled protection zones."
+ },
+ {
+  "n": 305,
+  "ko_e": "蹂댄뻾?먮뒗 蹂는?李⑤룄媛 援щ텇???꾨줈?먯꽌???몄젣??蹂대룄濡??듯뻾?섏뿬???쒕떎. 蹂는?李⑤룄媛 援щ텇?섏? ?딆? ?꾨줈?먯꽌?? 湲멸??μ옄由??먮뒗 湲멸??μ옄由?援ъ뿭?쇰줈 ?듯뻾?섏뿬???쒕떎. 蹂댄뻾?먮뒗 蹂대룄?먯꽌???곗륫?듯뻾???먯튃?쇰줈 ?쒕떎(?꾨줈援먰넻 踰???議?.",
+  "tr_e": "A pedestrian must always walk on the sidewalk on a road where the sidewalk and roadway are separated. On a road where the sidewalk and roadway are not separated, a pedestrian must walk on the edge of the road or in the road-edge zone. As a rule, a pedestrian walks on the right side of the sidewalk (Road Traffic Act Article 8)."
+ },
+ {
+  "n": 306,
+  "ko_e": "?꾨줈援먰넻踰???7議?蹂댄뻾?먯쓽 蹂댄샇) ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 蹂댄뻾????3議곗쓽2????뿉 ?곕씪 ?먯쟾嫄곕벑 ?먯꽌 ?대젮???먯쟾嫄곕벑???뚭굅???ㅺ퀬 ?듯뻾?섎뒗 ?먯쟾嫄곕벑???댁쟾?먮? ?ы븿?쒕떎)媛 ?〓떒蹂대룄瑜??듯뻾?섍퀬 ?덇굅?????됲븯?ㅺ퀬 ?섎뒗 ?뚯뿉??蹂댄뻾?먯쓽 ?〓떒??諛⑺빐?섍굅???꾪뿕??二쇱? ?꾨땲?섎룄濡?洹??〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂?섏뼱 ?덈뒗 怨녹뿉?쒕뒗 洹??뺤??좎쓣 留먰븳???먯꽌 ?쇱떆?뺤??섏뿬???쒕떎. ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 援먰넻?뺣━瑜??섍퀬 ?덈뒗 援먯감濡쒖뿉??醫뚰쉶?꾩씠???고쉶?꾩쓣 ?섎젮??寃쎌슦?먮뒗 ?좏샇湲??먮뒗 寃쎌같怨듬Т?먮벑???좏샇??吏?쒖뿉 ?곕씪 ??濡쒕? ?〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 援먰넻?뺣━瑜??섍퀬 ?덉? ?꾨땲?섎뒗 援먯감濡??먮뒗 洹?遺洹쇱쓽 ?꾨줈瑜??〓떒?섎뒗 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐?섏뿬?쒕뒗 ?꾨땲 ?쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?꾨줈???ㅼ튂???덉쟾吏???蹂댄뻾?먭? ?덈뒗 寃쎌슦? 李⑤줈媛 ?ㅼ튂?섏? ?꾨땲??醫곸? ?꾨줈?먯꽌 蹂댄뻾?먯쓽 ?놁쓣 吏?섎뒗 寃쎌슦?먮뒗 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???쒕떎. ??紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 蹂댄뻾?먭? ??0議곗젣3??뿉 ?곕씪 ?〓떒蹂??꾧? ?ㅼ튂?섏뼱 ?덉? ?꾨땲???꾨줈瑜??〓떒?섍퀬 ?덉쓣 ?뚯뿉???덉쟾嫄곕━瑜??먭퀬 ?쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?〓떒 ?????덈룄濡??섏뿬???쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 怨녹뿉??蹂댄뻾?먯쓽 ?놁쓣 吏????寃쎌슦?먮뒗 ?덉쟾??嫄곕━瑜??먭퀬 ?쒗뻾?섏뿬???섎ŉ, 蹂댄뻾?먯쓽 ?듯뻾??諛⑺빐媛 ???뚯뿉???쒗뻾?섍굅???쇱떆?뺤??섏뿬 蹂댄뻾?먭? ?덉쟾?섍쾶 ?듯뻾?????덈룄濡??섏뿬???쒕떎. 1. 蹂대룄? 李⑤룄媛 援щ텇?섏? ?꾨땲???꾨줈 以?以묒븰?좎씠 ?녿뒗 ?꾨줈 2. 蹂댄뻾?먯슦?좊룄濡?3. ?꾨줈 ?몄쓽 怨???紐⑤뱺 李??먮뒗 ?몃㈃?꾩감???댁쟾?먮뒗 ??2議곗젣1??뿉 ?곕Ⅸ ?대┛??蹂댄샇援ъ뿭 ?댁뿉 ?ㅼ튂???〓떒蹂대룄 以??좏샇湲곌? ?ㅼ튂?섏? ?꾨땲???〓떒蹂대룄 ???뺤??좎씠 ?ㅼ튂??寃쎌슦?먮뒗 洹??뺤??좎쓣 留먰븳?????쒕뒗 蹂댄뻾?먯쓽 ?〓떒 ?щ?? 愿怨꾩뾾???쇱떆?뺤??섏뿬???쒕떎.",
+  "tr_e": "Road Traffic Act Article 27 (Protection of Pedestrians) (1) Every driver of a vehicle or streetcar must, when a pedestrian (including a cyclist who, pursuant to Article 13-2(6), dismounts and pushes or carries a bicycle, etc.) is crossing or about to cross a crosswalk, come to a complete stop before that crosswalk (or at the stop line where one is installed) so as not to obstruct or endanger the crossing of the pedestrian. (2) Every driver of a vehicle or streetcar who intends to turn left or right at an intersection where traffic is being controlled must not obstruct the passage of pedestrians crossing the road in accordance with the signals or instructions of a traffic light or a police officer, etc. (3) Every driver of a vehicle must not obstruct the passage of pedestrians crossing an intersection where traffic is not being controlled or a road in its vicinity. (4) Every driver of a vehicle must, when there are pedestrians on a safety zone installed on the road, or when passing beside a pedestrian on a narrow road with no lanes, keep a safe distance and slow down. (5) Every driver of a vehicle or streetcar must, when a pedestrian is crossing a road on which no crosswalk is installed pursuant to Article 10(3), keep a safe distance and come to a complete stop so that the pedestrian can cross safely. (6) Every driver of a vehicle must, when passing beside a pedestrian in any of the following places, keep a safe distance and slow down, and when the passage of the pedestrian is obstructed, slow down or come to a complete stop so that the pedestrian can pass safely: 1. a road where the sidewalk and roadway are not separated and there is no center line; 2. a pedestrian-priority road; 3. a place off the road. (7) Every driver of a vehicle or streetcar must, at a crosswalk without a traffic light among the crosswalks installed within a school zone under Article 12(1) (or at the stop line where one is installed), come to a complete stop regardless of whether a pedestrian is crossing."
+ },
+ {
+  "n": 307,
+  "ko_e": "?꾨줈援먰넻踰???議???9?? ?꾨줈援먰넻踰???1議? ?먮룞李④?由щ쾿, ?먮룞李?諛??먮룞李?遺?덉쓽 ?깅뒫怨?湲곗???愿??洹쒖튃 ???대┛?댄넻?숇쾭?ㅺ? ?꾨줈???뺤감?섏뿬 ?대┛?대굹 ?곸쑀?꾧? ?怨??대━??以묒엫???쒖떆?섎뒗 ?먮㈇???깆쓽 ?μ튂瑜??묐룞 以묒씪 ?뚯뿉???대┛?댄넻?숇쾭?ㅺ? ?뺤감??李⑤줈? 洹?李⑤줈??諛붾줈 ??李⑤줈濡??듯뻾?섎뒗 李⑥쓽 ?댁쟾?먮뒗 ?대┛?댄넻?숇쾭?????대Ⅴ湲??꾩뿉 ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎. ??????쓽 寃쎌슦 以묒븰?좎씠 ?ㅼ튂?섏? ?꾨땲???꾨줈? ?몃룄 1李⑤줈???꾨줈?먯꽌??諛섎? 諛⑺뼢?먯꽌 吏꾪뻾?섎뒗 李⑥쓽 ?댁쟾?????대┛?댄넻?숇쾭?ㅼ뿉 ?대Ⅴ湲??꾩뿉 ?쇱떆?뺤??섏뿬 ?덉쟾???뺤씤?????쒗뻾?섏뿬???쒕떎. ??紐⑤뱺 李⑥쓽 ?댁쟾?먮뒗 ?대┛?대굹 ?곸쑀?꾨? ?쒖슦怨??덈떎???쒖떆瑜????곹깭濡??꾨줈瑜??듯뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅻ? ?욎?瑜댁? 紐삵븳?? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴 28. ?대┛?댄넻?숇쾭???밸퀎蹂댄샇 ?섎Т ?꾨컲 ?쒕뒗 ?댁쟾硫댄뿀 踰뚯젏 30?먯씠 遺怨쇰맂??",
+  "tr_e": "Road Traffic Act Article 2 subparagraph 19, Road Traffic Act Article 51, Motor Vehicle Management Act, Rules on the Performance and Standards of Motor Vehicles and Motor Vehicle Parts. (1) When a school bus has stopped on the road and is operating a device such as a flashing light indicating that children or infants are boarding or alighting, the driver of a vehicle passing in the lane where the school bus has stopped and in the lane immediately next to it must come to a complete stop before reaching the school bus, confirm safety, and then slow down. (2) In the case of paragraph (1), on a road with no center line installed and on a two-lane (one each way) road, the driver of a vehicle proceeding in the opposite direction must also come to a complete stop before reaching the school bus, confirm safety, and then slow down. (3) Every driver of a vehicle must not overtake a school bus that is passing on the road displaying the sign that it is carrying children or infants. Enforcement Rule of the Road Traffic Act Table 28. In the case of a violation of the duty of special protection of school buses, 30 penalty points are imposed on the driver's license."
+ },
+ {
+  "n": 308,
+  "ko_e": "?대┛?댁쓽 蹂댄샇?먮뒗 ?꾨줈?먯꽌 ?대┛?닿? 媛쒖씤???대룞?μ튂瑜??댁쟾?섍쾶 ?섏뿬?쒕뒗 ?꾨땲 ?섍퀬(?꾨줈援먰넻踰???1議?????,  ?대? ?꾨컲?섎㈃ 20留뚯썝 ?댄븯??怨쇳깭猷뚮? 遺怨쇰컺?붾떎(?꾨줈援먰넻踰???60議?????????.",
+  "tr_e": "A child's guardian must not let the child operate a personal mobility device on the road (Road Traffic Act Article 11(4)), and violating this results in an administrative fine of up to 200,000 won (Road Traffic Act Article 160(2) subparagraph 9)."
+ },
+ {
+  "n": 309,
+  "ko_e": "?뱀젙踰붿즲媛以묒쿂踰뚮벑?먭???踰뺣쪧 ??議곗쓽 13 ?꾨줈援먰넻踰???2議곗젣3???대┛??蹂댄샇援ъ뿭?먯꽌 媛숈? 議?????뿉 ?곕Ⅸ  議곗튂瑜?以?섑빐???섎ŉ, ?뱀젙踰붿즲媛以묒쿂踰뚮벑?먭???踰뺣쪧 ??議곗쓽 13 ?곕씪 ?곹빐???대Ⅸ 寃쎌슦??1???댁긽 15???댄븯?? 吏뺤뿭 ?먮뒗 5諛깅쭔 ???댁긽 3泥쒕쭔 ???댄븯??踰뚭툑?대떎.",
+  "tr_e": "Act on the Aggravated Punishment, etc. of Specific Crimes Article 5-13, Road Traffic Act Article 12(3). In a school zone, the measures under Article 12(1) must be observed, and pursuant to Article 5-13 of the Act on the Aggravated Punishment, etc. of Specific Crimes, in the case of causing bodily injury, the punishment is imprisonment for not less than 1 year and not more than 15 years, or a fine of not less than 5 million won and not more than 30 million won."
+ },
+ {
+  "n": 310,
+  "ko_e": "?꾨줈援먰넻踰???3議????? ?????대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎뒗 ?먮뒗 ?대┛?댄넻?숇쾭?ㅼ뿉 ?대┛?대굹 ?곸쑀?꾨? ?쒖슱 ?뚯뿉 ???깅뀈???щ엺 以??대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎뒗 ?먭? 吏紐낇븳 蹂댄샇?먮? ?④퍡 ?쒖슦怨??댄뻾?섏뿬???섎ŉ, ?숈듅??蹂댄샇?????대┛?대굹 ?곸쑀?꾧? ?뱀감 ?먮뒗 ?섏감?섎뒗 ?뚯뿉???먮룞李⑥뿉???대젮???대┛?대굹 ?곸쑀?꾧? ?덉쟾?섍쾶 ?뱁븯李⑦븯??寃????뺤씤?섍퀬 ?댄뻾 以묒뿉???대┛?대굹 ?곸쑀?꾧? 醫뚯꽍???됱븘 醫뚯꽍?덉쟾?좊? 留ㅺ퀬 ?덈룄濡??섎뒗 ???대┛??蹂댄샇???꾩슂??議곗튂瑜??섏뿬???쒕떎. ?꾨줈援먰넻踰???3議????? ?대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎뒗 ?먮뒗 ????뿉 ?곕씪 蹂댄샇?먮? ?④퍡 ?쒖슦 怨??댄뻾?섎뒗 寃쎌슦?먮뒗 ?됱젙?덉쟾遺?뱀쑝濡??뺥븯??蹂댄샇???숈듅???쒖떆?섎뒗 ?쒖?(?댄븯 \"蹂댄샇???숈듅?쒖?\"???쒕떎)瑜?遺李⑺븷 ???덉쑝硫? ?꾧뎄?좎? 蹂댄샇?먮? ?④퍡 ?쒖슦吏 ?꾨땲?섍퀬 ?댄뻾?섎뒗 寃쎌슦?먮뒗 蹂댄샇???숈듅?쒖?瑜?遺李⑺븯?ъ꽌???꾨땲 ?쒕떎. ??7???대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎뒗 ?먮뒗 醫뚯꽍?덉쟾??李⑹슜 諛?蹂댄샇???숈듅 ?뺤씤 湲곕줉(?댄븯 \"?덉쟾?댄뻾 湲곕줉\"?대씪 ?쒕떎)???묒꽦?띾낫愿?섍퀬 留?遺꾧린 ?대┛?댄넻?숇쾭?ㅻ? ?댁쁺?섎뒗 ?쒖꽕??媛먮룆?섎뒗 二쇰Т湲곌????μ뿉寃??덉쟾 ?댄뻾湲곕줉???쒖텧?섏뿬???쒕떎. ?〓뒗 ?대┛?댄넻?숇쾭???댁쟾?먯쓽 ?섎Т?대떎.",
+  "tr_e": "Road Traffic Act Article 53 paragraphs 3 and 6. A person operating a school bus must, when boarding children or infants on the school bus, have an adult guardian designated by the operator ride along, and the accompanying guardian must, when children or infants board or alight, get off the motor vehicle to confirm that the children or infants board or alight safely, and during operation must take measures necessary for child protection, such as having the children or infants seated with their seat belts fastened. Road Traffic Act Article 53 paragraph 6: A person operating a school bus may, when operating with a guardian aboard under paragraph 3, attach a sign indicating that a guardian is aboard (hereinafter guardian-aboard sign) prescribed by Ordinance of the Ministry of the Interior and Safety, and no one may attach a guardian-aboard sign when operating without a guardian aboard. Paragraph 7: A person operating a school bus must prepare and keep a record of seat belt use and guardian-aboard confirmation (hereinafter safe operation record) and submit the safe operation record every quarter to the head of the competent authority supervising the facility operating the school bus. (2) is a duty of the school bus driver."
+ },
+ {
+  "n": 311,
+  "ko_e": "?꾨줈援먰넻踰???3議? ??54議??대┛?댄넻?숇쾭??蹂댄샇?먮? ?쒖슦吏 ?꾨땲?섍퀬 ?댄뻾?섎뒗 ?대┛?댄넻?숇쾭?ㅼ뿉 蹂댄샇???숈듅 ?쒖?瑜?遺李⑺븳 ?щ엺? 30留????댄븯??踰뚭툑?대굹 援щ쪟??泥섑븳??",
+  "tr_e": "Road Traffic Act Article 53, Article 154. A person who attaches a guardian-aboard sign to a school bus operating without a guardian aboard shall be punished by a fine of up to 300,000 won or detention."
+ },
+ {
+  "n": 312,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議곗쓽2(怨좊졊?댁쟾???쒖????쒖옉 諛?諛곕?) ??寃쎌같泥?옣? 踰???議곗쓽2????뿉 ?곕씪 ?댁쟾硫??덈? 諛쏆? 65???댁긽???щ엺???댁쟾?섎뒗 李⑥엫???섑??대뒗 ?쒖?(?댄븯 ?쒓퀬?뱀슫?꾩옄 ?쒖??앸씪 ?쒕떎)瑜??쒖옉?섏뿬 諛곕??????덈떎. ?꾨줈援먰넻踰??쒗뻾洹쒖튃 蹂꾪몴8?? <?쒖옉諛⑸쾿> 媛. 諛뷀깢? ?섎뒛?? 湲?⑤뒗 ?곗깋?쇰줈 ?쒕떎. ?? ?욌㈃? 諛섏궗吏濡??쒖옉?섍퀬, ?룸㈃? ?덈?李⑹씠 媛?ν븯?꾨줉 怨좊Т?먯꽍?쇰줈 ?쒖옉?쒕떎. ?? 湲?⑥껜??臾몄껜遺 ?쒕ぉ ?뗭?泥대줈 ?쒕떎. ?? ?쒖? 洹쒓꺽 諛?湲???ш린瑜?蹂寃쏀븯吏 ?딅뒗 踰붿쐞?먯꽌 ?꾩슂??臾멸뎄 ?깆쓣 ?쎌엯?????덈떎. <遺李⑹옣?? 李⑥쓽 ?룸㈃ 以??덉쟾?댁쟾??吏?μ쓣 二쇱? ?딄퀬, ?쒖씤?깆쓣 ?뺣낫?????덈뒗 ?μ냼??遺李⑺븳??",
+  "tr_e": "Enforcement Rule of the Road Traffic Act Article 10-2 (Production and Distribution of Elderly Driver Signs) (1) The Commissioner General of the National Police Agency may, pursuant to Article 7-2(1) of the Act, produce and distribute a sign indicating that the vehicle is being driven by a person aged 65 or older who has obtained a driver's license (hereinafter elderly driver sign). Enforcement Rule of the Road Traffic Act Table 8-2 <Production Method> (a) The background is sky blue and the letters are white. (b) The front is made of reflective paper, and the back is made of rubber magnet so that it can be attached and detached. (c) The font is the Ministry of Culture, Sports and Tourism title Dotum typeface. (d) Necessary phrases, etc. may be inserted within the scope of not changing the sign specifications and letter size. <Attachment Location> Attach it to a location on the rear of the vehicle that does not interfere with safe driving and that ensures visibility."
+ },
+ {
+  "n": 313,
+  "ko_e": "?대┛?댐쉈?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?蹂댄샇援ъ뿭?먯꽌???꾩슂??議곗튂) ????뿉 ?섑븯硫? ?쑣룸룄寃쎌같泥?씠??寃쎌같?쒖옣? 蹂댄샇援ъ뿭?먯꽌 援ш컙蹂꾬쉈?쒓컙?蹂꾨줈 ?ㅼ쓬 媛??몄쓽 議곗튂瑜??????덈떎 1. 李⑤쭏???듯뻾?? 湲덉??섍굅???쒗븳?섎뒗 寃? 2. 李⑤쭏???뺤감??二쇱감瑜?湲덉??섎뒗 寃? 3. ?댄뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳?섎뒗  寃? 4. ?대㈃?꾨줈瑜??쇰갑?듯뻾濡쒕줈 吏?뺧쉈?댁쁺?섎뒗 寃?,
+  "tr_e": "Rules on the Designation and Management of Child, Senior, and Disabled Protection Zones Article 9 (Necessary Measures in Protection Zones) paragraph 1. The City/Provincial Police Agency or the head of a police station may take the following measures in a protection zone by section and by time of day: 1. prohibiting or restricting the passage of vehicles or horses; 2. prohibiting the stopping or parking of vehicles or horses; 3. limiting the operating speed to within 30 kilometers per hour; 4. designating and operating side roads as one-way roads."
+ },
+ {
+  "n": 314,
+  "ko_e": "?꾨줈援먰넻踰???2議곗쓽2(?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏?뺛냽?댁젣 諛?愿由? ???쒖옣?깆? 援먰넻?ш퀬???꾪뿕?쇰줈遺???????먮뒗 ?μ븷?몄쓣 蹂댄샇?섍린 ?꾪븯???꾩슂?섎떎怨??몄젙?섎뒗 寃쎌슦?먮뒗 ???몃??????멸퉴吏 諛????몄쓽2???곕Ⅸ ?쒖꽕  ?먮뒗 ?μ냼??二쇰??꾨줈 媛?대뜲 ?쇱젙 援ш컙???몄씤 蹂댄샇援ъ뿭?쇰줈, ???몄뿉 ?곕Ⅸ ?쒖꽕??二쇰??꾨줈 媛?대뜲 ?쇱젙 援ш컙?? ?μ븷??蹂댄샇援ъ뿭?쇰줈 媛곴컖 吏?뺥븯??李⑤쭏? ?몃㈃?꾩감???듯뻾???쒗븳?섍굅??湲덉??섎뒗 ???꾩슂??議곗튂瑜??????덈떎.  ?먯쟾嫄곕룄 李⑤쭏???대떦?쒕떎.",
+  "tr_e": "Road Traffic Act Article 12-2 (Designation, Cancellation, and Management of Senior and Disabled Protection Zones) (1) The mayor, etc. may, when deemed necessary to protect the elderly or the disabled from the danger of traffic accidents, designate a certain section of the roads around the facilities or places under subparagraphs 1 through 3 and subparagraph 3-2 as a senior protection zone, and a certain section of the roads around the facilities under subparagraph 4 as a disabled protection zone, respectively, and take necessary measures such as restricting or prohibiting the passage of vehicles, horses, and streetcars. A bicycle also falls under vehicles and horses."
+ },
+ {
+  "n": 315,
+  "ko_e": "?좏샇?꾨컲(?ㅽ봽?몃윮 13留???, ?〓떒蹂대룄蹂댄뻾???〓떒諛⑺빐(?뱀슜李?12留??? ?먯쟾嫄?6留???, 蹂댄뻾?먰넻?됰갑???먮뒗 蹂댄샇 遺덉씠???뱀슜李?8留??? ?먯쟾嫄?4留?????踰붿튃湲덉씠 遺怨쇰맂??",
+  "tr_e": "Penalties are imposed for signal violation (dump truck 130,000 won), obstruction of pedestrian crossing at a crosswalk (passenger car 120,000 won, bicycle 60,000 won), and obstruction of pedestrian passage or failure to protect pedestrians (passenger car 80,000 won, bicycle 40,000 won)."
+ },
+ {
+  "n": 316,
+  "ko_e": "?몄씤 蹂댄샇援ъ뿭 ?먮뒗 ?μ븷??蹂댄샇援ъ뿭??吏?뺛냽?댁젣 ?덉감 諛?湲곗? ?깆뿉 愿?섏뿬 ?꾩슂???ы빆? ?됱젙?덉쟾遺, 蹂닿굔蹂듭? 遺 諛?援?넗援먰넻遺??怨듬룞遺?뱀쑝濡??뺥븳??",
+  "tr_e": "Matters necessary for the procedures and standards for designating and canceling senior protection zones or disabled protection zones shall be prescribed by joint ordinance of the Ministry of the Interior and Safety, the Ministry of Health and Welfare, and the Ministry of Land, Infrastructure and Transport."
+ },
+ {
+  "n": 317,
+  "ko_e": "?대┛?는룸끂??諛??μ븷?몃낫?멸뎄??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?????,
+  "tr_e": "Rules on the Designation and Management of Child, Senior, and Disabled Protection Zones Article 3 paragraph 1."
+ },
+ {
+  "n": 318,
+  "ko_e": "怨좊졊?먯쓽 ?쇰컲?곸씤 ?뱀꽦? 諛섏궗 ?좉꼍???뷀솕?섍퀬 ?쒕젰 諛?泥?젰???쏀솕?섎ŉ, ?좎껜?곹깭媛 ?명솕?좎닔濡??뚮컻?ы깭 ?????諛??몄??λ젰???쒖꽌????섎맂??",
+  "tr_e": "The general characteristics of the elderly are that reflexes become dull and eyesight and hearing weaken; as the physical condition ages, the ability to respond to sudden situations and cognitive ability also gradually decline."
+ },
+ {
+  "n": 319,
+  "ko_e": "?꾨줈援먰넻踰???2議곗쓽2(?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏?빧룻빐??諛?愿由??????쒖옣?깆? 蹂댄샇援ъ뿭?쇰줈 媛곴컖 吏?뺥븯 ??李⑤쭏? ?몃㈃?꾩감???듯뻾???쒗븳?섍굅??湲덉??섎뒗 ???꾩슂??議곗튂瑜??????덈떎. [?쒗뻾?? 2023. 10. 19.]",
+  "tr_e": "Road Traffic Act Article 12-2 (Designation, Cancellation, and Management of Senior and Disabled Protection Zones) paragraph 1. The mayor, etc. may designate protection zones and take necessary measures such as restricting or prohibiting the passage of vehicles, horses, and streetcars. [Effective date: October 19, 2023]"
+ },
+ {
+  "n": 320,
+  "ko_e": "?〓떒蹂대룄 援먰넻?ш퀬濡??댁쟾?먯뿉寃?誘쇱궗 諛??뺤궗 梨낆엫???덈떎.",
+  "tr_e": "For a traffic accident at a crosswalk, the driver bears civil and criminal liability."
+ },
+ {
+  "n": 321,
+  "ko_e": "?대┛?담냽?몄씤 諛??μ븷??蹂댄샇援ъ뿭??吏??諛?愿由ъ뿉 愿??洹쒖튃 ??議?蹂댄샇援ъ뿭?먯꽌???꾩슂??議곗튂) 1. 李⑤쭏(邕딃━)?? ?듯뻾??湲덉??섍굅???쒗븳?섎뒗 寃?2. 李⑤쭏???뺤감??二쇱감瑜?湲덉??섎뒗 寃?3. ?댄뻾?띾룄瑜??쒖냽 30?щ줈誘명꽣 ?대궡濡??쒗븳 ?섎뒗 寃?4. ?대㈃?꾨줈(?꾩떆吏??뿉 ?덉뼱??媛꾩꽑?꾨줈媛 ?꾨땶 ?꾨줈濡쒖꽌 ?쇰컲??援먰넻???ъ슜?섎뒗 ?꾨줈瑜?留먰븳??瑜??쇰갑 ?듯뻾濡쒕줈 吏?뺛냽?댁쁺?섎뒗 寃?,
+  "tr_e": "Rules on the Designation and Management of Child, Senior, and Disabled Protection Zones Article 9 (Necessary Measures in Protection Zones) 1. prohibiting or restricting the passage of vehicles or horses (邕딃━); 2. prohibiting the stopping or parking of vehicles or horses; 3. limiting the operating speed to within 30 kilometers per hour; 4. designating and operating side roads (roads in urban areas that are not arterial roads and are used for general traffic) as one-way roads."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Format-Hex -LiteralPath 'translations/audit/queue/315_expl_en.json' | Select-Object -First 12 | Out-String -Width 240" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 659ms:
+
+
+           경로: C:\Users\user\projects\외국인-학과시험-AI튜터\translations\audit\queue\315_expl_en.json
+
+           00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+
+00000000   5B 0D 0A 20 7B 0D 0A 20 20 22 6E 22 3A 20 33 30  [.. {..  "n": 30
+00000010   32 2C 0D 0A 20 20 22 6B 6F 5F 65 22 3A 20 22 EC  2,..  "ko_e": "ì
+00000020   9E 90 EB 8F 99 EC B0 A8 20 EB B0 8F 20 EC 9E 90  ëì°¨ ë° ì
+00000030   EB 8F 99 EC B0 A8 EB B6 80 ED 92 88 EC 9D 98 20  ëì°¨ë¶íì 
+00000040   EC 84 B1 EB 8A A5 EA B3 BC 20 EA B8 B0 EC A4 80  ì±ë¥ê³¼ ê¸°ì¤
+00000050   EC 97 90 20 EA B4 80 ED 95 9C 20 EA B7 9C EC B9  ì ê´í ê·ì¹
+00000060   99 20 EC A0 9C 34 38 EC A1 B0 28 EB 93 B1 ED 99   ì 48ì¡°(ë±í
+00000070   94 EC 97 90 20 EB 8C 80 ED 95 9C 20 EA B7 B8 20  ì ëí ê·¸ 
+00000080   EB B0 96 EC 9D 98 20 EA B8 B0 EC A4 80 29 20 EC  ë°ì ê¸°ì¤) ì
+00000090   A0 9C 34 ED 95 AD 20 EC A0 9C 35 ED 98 B8 22 2C   4í­ ì 5í¸",
+000000A0   0D 0A 20 20 22 74 72 5F 65 22 3A 20 22 52 75 6C  ..  "tr_e": "Rul
+000000B0   65 73 20 6F 6E 20 74 68 65 20 50 65 72 66 6F 72  es on the Perfor
+
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/315_expl_en.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ print(json.dumps(x, ensure_ascii=True))
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:42:49.857458Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:9 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 702ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:9 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -Encoding UTF8 -LiteralPath '"'translations/audit/queue/315_expl_en.json' | ConvertFrom-Json; foreach ("'$x in $data) { $s=$x.ko_e; $escaped = -join ($s.ToCharArray() | ForEach-Object { if ([int]$_ -gt 127) { '"'\\u{0:x4}' -f [int]"'$_ } else { [string]$_ } }); Write-Output (('"'{0}: ' -f "'$x.n) + $escaped) }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 901ms:
+302: \uc790\ub3d9\ucc28 \ubc0f \uc790\ub3d9\ucc28\ubd80\ud488\uc758 \uc131\ub2a5\uacfc \uae30\uc900\uc5d0 \uad00\ud55c \uaddc\uce59 \uc81c48\uc870(\ub4f1\ud654\uc5d0 \ub300\ud55c \uadf8 \ubc16\uc758 \uae30\uc900) \uc81c4\ud56d \uc81c5\ud638
+303: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c12\uc870 \uc5d0 \uc720\uc544\uad50\uc721\ubc95, \ucd08\u2024\uc911\ub4f1\uad50\uc721\ubc95, \ud559\uc6d0\uc758 \uc124\ub9bd\u2024\uc6b4\uc601 \ubc0f \uacfc\uc678\uad50\uc2b5\uc5d0 \uad00\ud55c \ubc95\ub960 \ub4f1\uc774 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c \uc5ed\uc758 \uc9c0\uc815 \uadfc\uac70 \ubc95\ub960\ub85c \uba85\uc2dc\ub418\uc5b4 \uc788\ub2e4.
+304: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c12\uc870 \uc81c1\ud56d, \uad50\ud1b5\uc0ac\uace0\ucc98\ub9ac\ud2b9\ub840\ubc95 \uc81c3\uc870 \uc81c2\ud56d \uc81c11\ud638, \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\ub839 \ubcc4\ud45c10 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed  \ubc0f \ub178\uc778 \uc7a5\uc560\uc778\ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c\uc758 \ubc94\uce59\ud589\uc704 \ubc0f \ubc94\uce59\uae08\uc561
+305: \ubcf4\ud589\uc790\ub294 \ubcf4\u00b7 \ucc28\ub3c4\uac00 \uad6c\ubd84\ub41c \ub3c4\ub85c\uc5d0\uc11c\ub294 \uc5b8\uc81c\ub098 \ubcf4\ub3c4\ub85c \ud1b5\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4. \ubcf4\u00b7 \ucc28\ub3c4\uac00 \uad6c\ubd84\ub418\uc9c0 \uc54a\uc740 \ub3c4\ub85c\uc5d0\uc11c\ub294  \uae38\uac00\uc7a5\uc790\ub9ac \ub610\ub294 \uae38\uac00\uc7a5\uc790\ub9ac \uad6c\uc5ed\uc73c\ub85c \ud1b5\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4. \ubcf4\ud589\uc790\ub294 \ubcf4\ub3c4\uc5d0\uc11c\ub294 \uc6b0\uce21\ud1b5\ud589\uc744 \uc6d0\uce59\uc73c\ub85c \ud55c\ub2e4(\ub3c4\ub85c\uad50\ud1b5 \ubc95 \uc81c8\uc870).
+306: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c27\uc870(\ubcf4\ud589\uc790\uc758 \ubcf4\ud638) \u2460 \ubaa8\ub4e0 \ucc28 \ub610\ub294 \ub178\uba74\uc804\ucc28\uc758 \uc6b4\uc804\uc790\ub294 \ubcf4\ud589\uc790(\uc81c13\uc870\uc7582\uc81c6\ud56d\uc5d0 \ub530\ub77c \uc790\uc804\uac70\ub4f1 \uc5d0\uc11c \ub0b4\ub824\uc11c \uc790\uc804\uac70\ub4f1\uc744 \ub04c\uac70\ub098 \ub4e4\uace0 \ud1b5\ud589\ud558\ub294 \uc790\uc804\uac70\ub4f1\uc758 \uc6b4\uc804\uc790\ub97c \ud3ec\ud568\ud55c\ub2e4)\uac00 \ud6a1\ub2e8\ubcf4\ub3c4\ub97c \ud1b5\ud589\ud558\uace0 \uc788\uac70\ub098 \ud1b5 \ud589\ud558\ub824\uace0 \ud558\ub294 \ub54c\uc5d0\ub294 \ubcf4\ud589\uc790\uc758 \ud6a1\ub2e8\uc744 \ubc29\ud574\ud558\uac70\ub098 \uc704\ud5d8\uc744 \uc8fc\uc9c0 \uc544\ub2c8\ud558\ub3c4\ub85d \uadf8 \ud6a1\ub2e8\ubcf4\ub3c4 \uc55e(\uc815\uc9c0\uc120\uc774 \uc124\uce58\ub418\uc5b4 \uc788\ub294 \uacf3\uc5d0\uc11c\ub294 \uadf8 \uc815\uc9c0\uc120\uc744 \ub9d0\ud55c\ub2e4)\uc5d0\uc11c \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec\uc57c \ud55c\ub2e4. \u2461 \ubaa8\ub4e0 \ucc28 \ub610\ub294 \ub178\uba74\uc804\ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uad50\ud1b5\uc815\ub9ac\ub97c \ud558\uace0 \uc788\ub294 \uad50\ucc28\ub85c\uc5d0\uc11c \uc88c\ud68c\uc804\uc774\ub098 \uc6b0\ud68c\uc804\uc744 \ud558\ub824\ub294 \uacbd\uc6b0\uc5d0\ub294 \uc2e0\ud638\uae30 \ub610\ub294 \uacbd\ucc30\uacf5\ubb34\uc6d0\ub4f1\uc758 \uc2e0\ud638\ub098 \uc9c0\uc2dc\uc5d0 \ub530\ub77c \ub3c4 \ub85c\ub97c \ud6a1\ub2e8\ud558\ub294 \ubcf4\ud589\uc790\uc758 \ud1b5\ud589\uc744 \ubc29\ud574\ud558\uc5ec\uc11c\ub294 \uc544\ub2c8 \ub41c\ub2e4. \u2462 \ubaa8\ub4e0 \ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uad50\ud1b5\uc815\ub9ac\ub97c \ud558\uace0 \uc788\uc9c0 \uc544\ub2c8\ud558\ub294 \uad50\ucc28\ub85c \ub610\ub294 \uadf8 \ubd80\uadfc\uc758 \ub3c4\ub85c\ub97c \ud6a1\ub2e8\ud558\ub294 \ubcf4\ud589\uc790\uc758 \ud1b5\ud589\uc744 \ubc29\ud574\ud558\uc5ec\uc11c\ub294 \uc544\ub2c8 \ub41c\ub2e4. \u2463 \ubaa8\ub4e0 \ucc28\uc758 \uc6b4\uc804\uc790\ub294 \ub3c4\ub85c\uc5d0 \uc124\uce58\ub41c \uc548\uc804\uc9c0\ub300\uc5d0 \ubcf4\ud589\uc790\uac00 \uc788\ub294 \uacbd\uc6b0\uc640 \ucc28\ub85c\uac00 \uc124\uce58\ub418\uc9c0 \uc544\ub2c8\ud55c \uc881\uc740 \ub3c4\ub85c\uc5d0\uc11c \ubcf4\ud589\uc790\uc758 \uc606\uc744 \uc9c0\ub098\ub294 \uacbd\uc6b0\uc5d0\ub294 \uc548\uc804\ud55c \uac70\ub9ac\ub97c \ub450\uace0 \uc11c\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4. \u2464 \ubaa8\ub4e0 \ucc28 \ub610\ub294 \ub178\uba74\uc804\ucc28\uc758 \uc6b4\uc804\uc790\ub294 \ubcf4\ud589\uc790\uac00 \uc81c10\uc870\uc81c3\ud56d\uc5d0 \ub530\ub77c \ud6a1\ub2e8\ubcf4 \ub3c4\uac00 \uc124\uce58\ub418\uc5b4 \uc788\uc9c0 \uc544\ub2c8\ud55c \ub3c4\ub85c\ub97c \ud6a1\ub2e8\ud558\uace0 \uc788\uc744 \ub54c\uc5d0\ub294 \uc548\uc804\uac70\ub9ac\ub97c \ub450\uace0 \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec \ubcf4\ud589\uc790\uac00 \uc548\uc804\ud558\uac8c \ud6a1\ub2e8 \ud560 \uc218 \uc788\ub3c4\ub85d \ud558\uc5ec\uc57c \ud55c\ub2e4. \u2465 \ubaa8\ub4e0 \ucc28\uc758 \uc6b4\uc804\uc790\ub294 \ub2e4\uc74c \uac01 \ud638\uc758 \uc5b4\ub290 \ud558\ub098\uc5d0 \ud574\ub2f9\ud558\ub294 \uacf3\uc5d0\uc11c \ubcf4\ud589\uc790\uc758 \uc606\uc744 \uc9c0\ub098 \ub294 \uacbd\uc6b0\uc5d0\ub294 \uc548\uc804\ud55c \uac70\ub9ac\ub97c \ub450\uace0 \uc11c\ud589\ud558\uc5ec\uc57c \ud558\uba70, \ubcf4\ud589\uc790\uc758 \ud1b5\ud589\uc5d0 \ubc29\ud574\uac00 \ub420 \ub54c\uc5d0\ub294 \uc11c\ud589\ud558\uac70\ub098 \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec \ubcf4\ud589\uc790\uac00 \uc548\uc804\ud558\uac8c \ud1b5\ud589\ud560 \uc218 \uc788\ub3c4\ub85d \ud558\uc5ec\uc57c \ud55c\ub2e4. 1. \ubcf4\ub3c4\uc640 \ucc28\ub3c4\uac00 \uad6c\ubd84\ub418\uc9c0 \uc544\ub2c8\ud55c \ub3c4\ub85c \uc911 \uc911\uc559\uc120\uc774 \uc5c6\ub294 \ub3c4\ub85c 2. \ubcf4\ud589\uc790\uc6b0\uc120\ub3c4\ub85c 3. \ub3c4\ub85c \uc678\uc758 \uacf3 \u2466 \ubaa8\ub4e0 \ucc28 \ub610\ub294 \ub178\uba74\uc804\ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uc81c12\uc870\uc81c1\ud56d\uc5d0 \ub530\ub978 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \ub0b4\uc5d0 \uc124\uce58\ub41c \ud6a1\ub2e8\ubcf4\ub3c4 \uc911 \uc2e0\ud638\uae30\uac00 \uc124\uce58\ub418\uc9c0 \uc544\ub2c8\ud55c \ud6a1\ub2e8\ubcf4\ub3c4 \uc55e(\uc815\uc9c0\uc120\uc774 \uc124\uce58\ub41c \uacbd\uc6b0\uc5d0\ub294 \uadf8 \uc815\uc9c0\uc120\uc744 \ub9d0\ud55c\ub2e4)\uc5d0 \uc11c\ub294 \ubcf4\ud589\uc790\uc758 \ud6a1\ub2e8 \uc5ec\ubd80\uc640 \uad00\uacc4\uc5c6\uc774 \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec\uc57c \ud55c\ub2e4.
+307: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c2\uc870 \uc81c19\ud638, \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c51\uc870, \uc790\ub3d9\ucc28\uad00\ub9ac\ubc95, \uc790\ub3d9\ucc28 \ubc0f \uc790\ub3d9\ucc28 \ubd80\ud488\uc758 \uc131\ub2a5\uacfc \uae30\uc900\uc5d0 \uad00\ud55c \uaddc\uce59 \u2460 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uac00 \ub3c4\ub85c\uc5d0 \uc815\ucc28\ud558\uc5ec \uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\uac00 \ud0c0\uace0 \ub0b4\ub9ac\ub294 \uc911\uc784\uc744 \ud45c\uc2dc\ud558\ub294 \uc810\uba78\ub4f1 \ub4f1\uc758 \uc7a5\uce58\ub97c \uc791\ub3d9 \uc911\uc77c \ub54c\uc5d0\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uac00 \uc815\ucc28\ud55c \ucc28\ub85c\uc640 \uadf8 \ucc28\ub85c\uc758 \ubc14\ub85c \uc606 \ucc28\ub85c\ub85c \ud1b5\ud589\ud558\ub294 \ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc5d0 \uc774\ub974\uae30 \uc804\uc5d0 \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec \uc548\uc804\uc744 \ud655\uc778\ud55c \ud6c4 \uc11c\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4. \u2461 \uc81c1\ud56d\uc758 \uacbd\uc6b0 \uc911\uc559\uc120\uc774 \uc124\uce58\ub418\uc9c0 \uc544\ub2c8\ud55c \ub3c4\ub85c\uc640 \ud3b8\ub3c4 1\ucc28\ub85c\uc778 \ub3c4\ub85c\uc5d0\uc11c\ub294 \ubc18\ub300 \ubc29\ud5a5\uc5d0\uc11c \uc9c4\ud589\ud558\ub294 \ucc28\uc758 \uc6b4\uc804\uc790 \ub3c4 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uc5d0 \uc774\ub974\uae30 \uc804\uc5d0 \uc77c\uc2dc\uc815\uc9c0\ud558\uc5ec \uc548\uc804\uc744 \ud655\uc778\ud55c \ud6c4 \uc11c\ud589\ud558\uc5ec\uc57c \ud55c\ub2e4. \u2462 \ubaa8\ub4e0 \ucc28\uc758 \uc6b4\uc804\uc790\ub294 \uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\ub97c \ud0dc\uc6b0\uace0 \uc788\ub2e4\ub294 \ud45c\uc2dc\ub97c \ud55c \uc0c1\ud0dc\ub85c \ub3c4\ub85c\ub97c \ud1b5\ud589\ud558\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc55e\uc9c0\ub974\uc9c0 \ubabb\ud55c\ub2e4. \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c 28. \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \ud2b9\ubcc4\ubcf4\ud638 \uc758\ubb34 \uc704\ubc18 \uc2dc\ub294 \uc6b4\uc804\uba74\ud5c8 \ubc8c\uc810 30\uc810\uc774 \ubd80\uacfc\ub41c\ub2e4.
+308: \uc5b4\ub9b0\uc774\uc758 \ubcf4\ud638\uc790\ub294 \ub3c4\ub85c\uc5d0\uc11c \uc5b4\ub9b0\uc774\uac00 \uac1c\uc778\ud615 \uc774\ub3d9\uc7a5\uce58\ub97c \uc6b4\uc804\ud558\uac8c \ud558\uc5ec\uc11c\ub294 \uc544\ub2c8 \ub418\uace0(\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c11\uc870 \uc81c4\ud56d),  \uc774\ub97c \uc704\ubc18\ud558\uba74 20\ub9cc\uc6d0 \uc774\ud558\uc758 \uacfc\ud0dc\ub8cc\ub97c \ubd80\uacfc\ubc1b\ub294\ub2e4(\ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c160\uc870 \uc81c2\ud56d \uc81c9\ud638).
+309: \ud2b9\uc815\ubc94\uc8c4\uac00\uc911\ucc98\ubc8c\ub4f1\uc5d0\uad00\ud55c \ubc95\ub960 \uc81c5\uc870\uc758 13 \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c12\uc870\uc81c3\ud56d \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c \uac19\uc740 \uc870 \uc81c1\ud56d\uc5d0 \ub530\ub978  \uc870\uce58\ub97c \uc900\uc218\ud574\uc57c \ud558\uba70, \ud2b9\uc815\ubc94\uc8c4\uac00\uc911\ucc98\ubc8c\ub4f1\uc5d0\uad00\ud55c \ubc95\ub960 \uc81c5\uc870\uc758 13 \ub530\ub77c \uc0c1\ud574\uc5d0 \uc774\ub978 \uacbd\uc6b0\ub294 1\ub144 \uc774\uc0c1 15\ub144 \uc774\ud558\uc758  \uc9d5\uc5ed \ub610\ub294 5\ubc31\ub9cc \uc6d0 \uc774\uc0c1 3\ucc9c\ub9cc \uc6d0 \uc774\ud558\uc758 \ubc8c\uae08\uc774\ub2e4.
+310: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c53\uc870 \uc81c3\ud56d, \uc81c6\ud56d \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc6b4\uc601\ud558\ub294 \uc790\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uc5d0 \uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\ub97c \ud0dc\uc6b8 \ub54c\uc5d0 \ub294 \uc131\ub144\uc778 \uc0ac\ub78c \uc911 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc6b4\uc601\ud558\ub294 \uc790\uac00 \uc9c0\uba85\ud55c \ubcf4\ud638\uc790\ub97c \ud568\uaed8 \ud0dc\uc6b0\uace0 \uc6b4\ud589\ud558\uc5ec\uc57c \ud558\uba70, \ub3d9\uc2b9\ud55c \ubcf4\ud638\uc790 \ub294 \uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\uac00 \uc2b9\ucc28 \ub610\ub294 \ud558\ucc28\ud558\ub294 \ub54c\uc5d0\ub294 \uc790\ub3d9\ucc28\uc5d0\uc11c \ub0b4\ub824\uc11c \uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\uac00 \uc548\uc804\ud558\uac8c \uc2b9\ud558\ucc28\ud558\ub294 \uac83 \uc744 \ud655\uc778\ud558\uace0 \uc6b4\ud589 \uc911\uc5d0\ub294 \uc5b4\ub9b0\uc774\ub098 \uc601\uc720\uc544\uac00 \uc88c\uc11d\uc5d0 \uc549\uc544 \uc88c\uc11d\uc548\uc804\ub760\ub97c \ub9e4\uace0 \uc788\ub3c4\ub85d \ud558\ub294 \ub4f1 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uc5d0 \ud544\uc694\ud55c \uc870\uce58\ub97c \ud558\uc5ec\uc57c \ud55c\ub2e4. \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c53\uc870 \uc81c6\ud56d, \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc6b4\uc601\ud558\ub294 \uc790\ub294 \uc81c3\ud56d\uc5d0 \ub530\ub77c \ubcf4\ud638\uc790\ub97c \ud568\uaed8 \ud0dc\uc6b0 \uace0 \uc6b4\ud589\ud558\ub294 \uacbd\uc6b0\uc5d0\ub294 \ud589\uc815\uc548\uc804\ubd80\ub839\uc73c\ub85c \uc815\ud558\ub294 \ubcf4\ud638\uc790 \ub3d9\uc2b9\uc744 \ud45c\uc2dc\ud558\ub294 \ud45c\uc9c0(\uc774\ud558 "\ubcf4\ud638\uc790 \ub3d9\uc2b9\ud45c\uc9c0"\ub77c \ud55c\ub2e4)\ub97c \ubd80\ucc29\ud560 \uc218 \uc788\uc73c\uba70, \ub204\uad6c\ub4e0\uc9c0 \ubcf4\ud638\uc790\ub97c \ud568\uaed8 \ud0dc\uc6b0\uc9c0 \uc544\ub2c8\ud558\uace0 \uc6b4\ud589\ud558\ub294 \uacbd\uc6b0\uc5d0\ub294 \ubcf4\ud638\uc790 \ub3d9\uc2b9\ud45c\uc9c0\ub97c \ubd80\ucc29\ud558\uc5ec\uc11c\ub294 \uc544\ub2c8 \ub41c\ub2e4. \uc81c 7\ud56d \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc6b4\uc601\ud558\ub294 \uc790\ub294 \uc88c\uc11d\uc548\uc804\ub760 \ucc29\uc6a9 \ubc0f \ubcf4\ud638\uc790 \ub3d9\uc2b9 \ud655\uc778 \uae30\ub85d(\uc774\ud558 "\uc548\uc804\uc6b4\ud589 \uae30\ub85d"\uc774\ub77c \ud55c\ub2e4)\uc744 \uc791\uc131\u318d\ubcf4\uad00\ud558\uace0 \ub9e4 \ubd84\uae30 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\ub97c \uc6b4\uc601\ud558\ub294 \uc2dc\uc124\uc744 \uac10\ub3c5\ud558\ub294 \uc8fc\ubb34\uae30\uad00\uc758 \uc7a5\uc5d0\uac8c \uc548\uc804 \uc6b4\ud589\uae30\ub85d\uc744 \uc81c\ucd9c\ud558\uc5ec\uc57c \ud55c\ub2e4. \u2461\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \uc6b4\uc804\uc790\uc758 \uc758\ubb34\uc774\ub2e4.
+311: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c53\uc870, \uc81c154\uc870 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4 \ubcf4\ud638\uc790\ub97c \ud0dc\uc6b0\uc9c0 \uc544\ub2c8\ud558\uace0 \uc6b4\ud589\ud558\ub294 \uc5b4\ub9b0\uc774\ud1b5\ud559\ubc84\uc2a4\uc5d0 \ubcf4\ud638\uc790 \ub3d9\uc2b9 \ud45c\uc9c0\ub97c \ubd80\ucc29\ud55c \uc0ac\ub78c\uc740 30\ub9cc \uc6d0 \uc774\ud558\uc758 \ubc8c\uae08\uc774\ub098 \uad6c\ub958\uc5d0 \ucc98\ud55c\ub2e4.
+312: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \uc81c10\uc870\uc7582(\uace0\ub839\uc6b4\uc804\uc790 \ud45c\uc9c0\uc758 \uc81c\uc791 \ubc0f \ubc30\ubd80) \u2460 \uacbd\ucc30\uccad\uc7a5\uc740 \ubc95 \uc81c7\uc870\uc7582\uc81c1\ud56d\uc5d0 \ub530\ub77c \uc6b4\uc804\uba74 \ud5c8\ub97c \ubc1b\uc740 65\uc138 \uc774\uc0c1\uc778 \uc0ac\ub78c\uc774 \uc6b4\uc804\ud558\ub294 \ucc28\uc784\uc744 \ub098\ud0c0\ub0b4\ub294 \ud45c\uc9c0(\uc774\ud558 \u201c\uace0\ub839\uc6b4\uc804\uc790 \ud45c\uc9c0\u201d\ub77c \ud55c\ub2e4)\ub97c \uc81c\uc791\ud558\uc5ec \ubc30\ubd80\ud560 \uc218 \uc788\ub2e4. \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc2dc\ud589\uaddc\uce59 \ubcc4\ud45c8\uc7582 <\uc81c\uc791\ubc29\ubc95> \uac00. \ubc14\ud0d5\uc740 \ud558\ub298\uc0c9, \uae00\uc528\ub294 \ud770\uc0c9\uc73c\ub85c \ud55c\ub2e4. \ub098. \uc55e\uba74\uc740 \ubc18\uc0ac\uc9c0\ub85c \uc81c\uc791\ud558\uace0, \ub4b7\uba74\uc740 \ud0c8\ubd80\ucc29\uc774 \uac00\ub2a5\ud558\ub3c4\ub85d \uace0\ubb34\uc790\uc11d\uc73c\ub85c \uc81c\uc791\ud55c\ub2e4. \ub2e4. \uae00\uc528\uccb4\ub294 \ubb38\uccb4\ubd80 \uc81c\ubaa9 \ub3cb\uc6c0\uccb4\ub85c \ud55c\ub2e4. \ub77c. \ud45c\uc9c0 \uaddc\uaca9 \ubc0f \uae00\uc528 \ud06c\uae30\ub97c \ubcc0\uacbd\ud558\uc9c0 \uc54a\ub294 \ubc94\uc704\uc5d0\uc11c \ud544\uc694\ud55c \ubb38\uad6c \ub4f1\uc744 \uc0bd\uc785\ud560 \uc218 \uc788\ub2e4. <\ubd80\ucc29\uc7a5\uc18c> \ucc28\uc758 \ub4b7\uba74 \uc911 \uc548\uc804\uc6b4\uc804\uc5d0 \uc9c0\uc7a5\uc744 \uc8fc\uc9c0 \uc54a\uace0, \uc2dc\uc778\uc131\uc744 \ud655\ubcf4\ud560 \uc218 \uc788\ub294 \uc7a5\uc18c\uc5d0 \ubd80\ucc29\ud55c\ub2e4.
+313: \uc5b4\ub9b0\uc774\uff65\ub178\uc778 \ubc0f \uc7a5\uc560\uc778 \ubcf4\ud638\uad6c\uc5ed\uc758 \uc9c0\uc815 \ubc0f \uad00\ub9ac\uc5d0 \uad00\ud55c \uaddc\uce59 \uc81c9\uc870(\ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c\uc758 \ud544\uc694\ud55c \uc870\uce58) \uc81c1\ud56d\uc5d0 \uc758\ud558\uba74  \uc2dc\u00b7\ub3c4\uacbd\ucc30\uccad\uc774\ub098 \uacbd\ucc30\uc11c\uc7a5\uc740 \ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c \uad6c\uac04\ubcc4\uff65\uc2dc\uac04\ub300\ubcc4\ub85c \ub2e4\uc74c \uac01 \ud638\uc758 \uc870\uce58\ub97c \ud560 \uc218 \uc788\ub2e4 1. \ucc28\ub9c8\uc758 \ud1b5\ud589\uc744  \uae08\uc9c0\ud558\uac70\ub098 \uc81c\ud55c\ud558\ub294 \uac83. 2. \ucc28\ub9c8\uc758 \uc815\ucc28\ub098 \uc8fc\ucc28\ub97c \uae08\uc9c0\ud558\ub294 \uac83. 3. \uc6b4\ud589\uc18d\ub3c4\ub97c \uc2dc\uc18d 30\ud0ac\ub85c\ubbf8\ud130 \uc774\ub0b4\ub85c \uc81c\ud55c\ud558\ub294  \uac83. 4. \uc774\uba74\ub3c4\ub85c\ub97c \uc77c\ubc29\ud1b5\ud589\ub85c\ub85c \uc9c0\uc815\uff65\uc6b4\uc601\ud558\ub294 \uac83
+314: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c12\uc870\uc7582(\ub178\uc778 \ubc0f \uc7a5\uc560\uc778 \ubcf4\ud638\uad6c\uc5ed\uc758 \uc9c0\uc815\u318d\ud574\uc81c \ubc0f \uad00\ub9ac) \u2460 \uc2dc\uc7a5\ub4f1\uc740 \uad50\ud1b5\uc0ac\uace0\uc758 \uc704\ud5d8\uc73c\ub85c\ubd80\ud130 \ub178 \uc778 \ub610\ub294 \uc7a5\uc560\uc778\uc744 \ubcf4\ud638\ud558\uae30 \uc704\ud558\uc5ec \ud544\uc694\ud558\ub2e4\uace0 \uc778\uc815\ud558\ub294 \uacbd\uc6b0\uc5d0\ub294 \uc81c1\ud638\ubd80\ud130 \uc81c3\ud638\uae4c\uc9c0 \ubc0f \uc81c3\ud638\uc7582\uc5d0 \ub530\ub978 \uc2dc\uc124  \ub610\ub294 \uc7a5\uc18c\uc758 \uc8fc\ubcc0\ub3c4\ub85c \uac00\uc6b4\ub370 \uc77c\uc815 \uad6c\uac04\uc744 \ub178\uc778 \ubcf4\ud638\uad6c\uc5ed\uc73c\ub85c, \uc81c4\ud638\uc5d0 \ub530\ub978 \uc2dc\uc124\uc758 \uc8fc\ubcc0\ub3c4\ub85c \uac00\uc6b4\ub370 \uc77c\uc815 \uad6c\uac04\uc744  \uc7a5\uc560\uc778 \ubcf4\ud638\uad6c\uc5ed\uc73c\ub85c \uac01\uac01 \uc9c0\uc815\ud558\uc5ec \ucc28\ub9c8\uc640 \ub178\uba74\uc804\ucc28\uc758 \ud1b5\ud589\uc744 \uc81c\ud55c\ud558\uac70\ub098 \uae08\uc9c0\ud558\ub294 \ub4f1 \ud544\uc694\ud55c \uc870\uce58\ub97c \ud560 \uc218 \uc788\ub2e4.  \uc790\uc804\uac70\ub3c4 \ucc28\ub9c8\uc5d0 \ud574\ub2f9\ud55c\ub2e4.
+315: \uc2e0\ud638\uc704\ubc18(\ub364\ud504\ud2b8\ub7ed 13\ub9cc \uc6d0), \ud6a1\ub2e8\ubcf4\ub3c4\ubcf4\ud589\uc790 \ud6a1\ub2e8\ubc29\ud574(\uc2b9\uc6a9\ucc28 12\ub9cc \uc6d0, \uc790\uc804\uac70 6\ub9cc \uc6d0), \ubcf4\ud589\uc790\ud1b5\ud589\ubc29\ud574 \ub610\ub294 \ubcf4\ud638 \ubd88\uc774\ud589(\uc2b9\uc6a9\ucc28 8\ub9cc \uc6d0, \uc790\uc804\uac70 4\ub9cc \uc6d0)\uc758 \ubc94\uce59\uae08\uc774 \ubd80\uacfc\ub41c\ub2e4.
+316: \ub178\uc778 \ubcf4\ud638\uad6c\uc5ed \ub610\ub294 \uc7a5\uc560\uc778 \ubcf4\ud638\uad6c\uc5ed\uc758 \uc9c0\uc815\u318d\ud574\uc81c \uc808\ucc28 \ubc0f \uae30\uc900 \ub4f1\uc5d0 \uad00\ud558\uc5ec \ud544\uc694\ud55c \uc0ac\ud56d\uc740 \ud589\uc815\uc548\uc804\ubd80, \ubcf4\uac74\ubcf5\uc9c0 \ubd80 \ubc0f \uad6d\ud1a0\uad50\ud1b5\ubd80\uc758 \uacf5\ub3d9\ubd80\ub839\uc73c\ub85c \uc815\ud55c\ub2e4.
+317: \uc5b4\ub9b0\uc774\u00b7\ub178\uc778 \ubc0f \uc7a5\uc560\uc778\ubcf4\ud638\uad6c\uc5ed \uc9c0\uc815 \ubc0f \uad00\ub9ac\uc5d0 \uad00\ud55c \uaddc\uce59 \uc81c3\uc870 \uc81c1\ud56d
+318: \uace0\ub839\uc790\uc758 \uc77c\ubc18\uc801\uc778 \ud2b9\uc131\uc740 \ubc18\uc0ac \uc2e0\uacbd\uc774 \ub454\ud654\ub418\uace0 \uc2dc\ub825 \ubc0f \uccad\ub825\uc774 \uc57d\ud654\ub418\uba70, \uc2e0\uccb4\uc0c1\ud0dc\uac00 \ub178\ud654\ub420\uc218\ub85d \ub3cc\ubc1c\uc0ac\ud0dc \ub300\uc751 \ub825 \ubc0f \uc778\uc9c0\ub2a5\ub825\ub3c4 \uc11c\uc11c\ud788 \uc800\ud558\ub41c\ub2e4.
+319: \ub3c4\ub85c\uad50\ud1b5\ubc95 \uc81c12\uc870\uc7582(\ub178\uc778 \ubc0f \uc7a5\uc560\uc778 \ubcf4\ud638\uad6c\uc5ed\uc758 \uc9c0\uc815\u00b7\ud574\uc81c \ubc0f \uad00\ub9ac)\uc81c1\ud56d \uc2dc\uc7a5\ub4f1\uc740 \ubcf4\ud638\uad6c\uc5ed\uc73c\ub85c \uac01\uac01 \uc9c0\uc815\ud558 \uc5ec \ucc28\ub9c8\uc640 \ub178\uba74\uc804\ucc28\uc758 \ud1b5\ud589\uc744 \uc81c\ud55c\ud558\uac70\ub098 \uae08\uc9c0\ud558\ub294 \ub4f1 \ud544\uc694\ud55c \uc870\uce58\ub97c \ud560 \uc218 \uc788\ub2e4. [\uc2dc\ud589\uc77c: 2023. 10. 19.]
+320: \ud6a1\ub2e8\ubcf4\ub3c4 \uad50\ud1b5\uc0ac\uace0\ub85c \uc6b4\uc804\uc790\uc5d0\uac8c \ubbfc\uc0ac \ubc0f \ud615\uc0ac \ucc45\uc784\uc774 \uc788\ub2e4.
+321: \uc5b4\ub9b0\uc774\u318d\ub178\uc778 \ubc0f \uc7a5\uc560\uc778 \ubcf4\ud638\uad6c\uc5ed\uc758 \uc9c0\uc815 \ubc0f \uad00\ub9ac\uc5d0 \uad00\ud55c \uaddc\uce59 \uc81c9\uc870(\ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c\uc758 \ud544\uc694\ud55c \uc870\uce58) 1. \ucc28\ub9c8(\u8eca\u99ac)\uc758  \ud1b5\ud589\uc744 \uae08\uc9c0\ud558\uac70\ub098 \uc81c\ud55c\ud558\ub294 \uac83 2. \ucc28\ub9c8\uc758 \uc815\ucc28\ub098 \uc8fc\ucc28\ub97c \uae08\uc9c0\ud558\ub294 \uac83 3. \uc6b4\ud589\uc18d\ub3c4\ub97c \uc2dc\uc18d 30\ud0ac\ub85c\ubbf8\ud130 \uc774\ub0b4\ub85c \uc81c\ud55c \ud558\ub294 \uac83 4. \uc774\uba74\ub3c4\ub85c(\ub3c4\uc2dc\uc9c0\uc5ed\uc5d0 \uc788\uc5b4\uc11c \uac04\uc120\ub3c4\ub85c\uac00 \uc544\ub2cc \ub3c4\ub85c\ub85c\uc11c \uc77c\ubc18\uc758 \uad50\ud1b5\uc5d0 \uc0ac\uc6a9\ub418\ub294 \ub3c4\ub85c\ub97c \ub9d0\ud55c\ub2e4)\ub97c \uc77c\ubc29 \ud1b5\ud589\ub85c\ub85c \uc9c0\uc815\u318d\uc6b4\uc601\ud558\ub294 \uac83
+
+codex
+[{"n":321,"field":"e","severity":"minor","issue":"‘vehicles or horses’ 뒤 괄호의 ‘邕딃━’는 ‘車馬’가 깨진 인코딩 오류다.","suggestion":"Rules on the Designation and Management of Child, Senior, and Disabled Protection Zones Article 9 (Necessary Measures in Protection Zones): 1. prohibiting or restricting the passage of vehicles or horses; 2. prohibiting the stopping or parking of vehicles or horses; 3. limiting the operating speed to 30 kilometers per hour or less; 4. designating and operating side roads (roads in urban areas that are not arterial roads and are used for general traffic) as one-way roads."}]
+tokens used
+27,420
+[{"n":321,"field":"e","severity":"minor","issue":"‘vehicles or horses’ 뒤 괄호의 ‘邕딃━’는 ‘車馬’가 깨진 인코딩 오류다.","suggestion":"Rules on the Designation and Management of Child, Senior, and Disabled Protection Zones Article 9 (Necessary Measures in Protection Zones): 1. prohibiting or restricting the passage of vehicles or horses; 2. prohibiting the stopping or parking of vehicles or horses; 3. limiting the operating speed to 30 kilometers per hour or less; 4. designating and operating side roads (roads in urban areas that are not arterial roads and are used for general traffic) as one-way roads."}]

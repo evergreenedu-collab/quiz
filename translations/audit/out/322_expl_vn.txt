@@ -1,0 +1,529 @@
+Reading additional input from stdin...
+OpenAI Codex v0.144.1
+--------
+workdir: C:\Users\user\projects\외국인-학과시험-AI튜터
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a12806-8003-7a80-bc5d-0dc8d6f796c6
+--------
+user
+너는 한국 운전면허 학과시험의 번역 품질 감사자다. 파일 translations/audit/queue/322_expl_vn.json 를 읽어라. 각 항목의 한국어 원문(ko_*)과 번역(tr_*)을 대조해 **학습자를 오도하는 실질 오류만** 보고하라: 의미 반전·방향(좌/우) 오류·숫자/단위 오류·부정어 소실·정답 판단을 바꾸는 오역·심각한 비문. 단순 직역투·사소한 어색함은 제외. check/detail 필드가 있으면 그 자동 지적이 '실제 오류인지 오탐인지'를 판정하라. 출력은 반드시 순수 JSON 배열만: [{"n": 번호, "field": "b|c[k]|e", "severity": "critical|major|minor|false_positive", "issue": "한국어 한 줄", "suggestion": "수정 번역문 (해당 언어)"}] — 오류가 없으면 [].
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -LiteralPath 'translations/audit/queue/322_expl_vn.json'" in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 520ms:
+[
+ {
+  "n": 442,
+  "ko_e": "???李⑤웾???꾩“?깆뿉 ?섑빐 ?덉씠 遺??寃쎌슦?먮뒗 ?꾩“?깆쓽 遺덈튆???뺣㈃?쇰줈 蹂댁? 留먭퀬, ?꾨줈 ?곗륫??媛?μ옄由?履쎌쓣  蹂대㈃???댁쟾?섎뒗 寃껋씠 諛붾엺吏곹븯??",
+  "tr_e": "Khi b沼?l처a m梳칣 do 휃챔n pha c沼쬪 xe chi沼걏 ng튼沼즓 l梳죍, 휃沼쳌g nh챙n th梳쿻g v횪o 찼nh 휃챔n pha m횪 n챗n v沼첺 nh챙n v沼?ph챠a m챕p ph梳즜 c沼쬪 휃튼沼쓓g v沼첺 l찼i xe l횪 c찼ch t沼몋."
+ },
+ {
+  "n": 443,
+  "ko_e": "?꾨줈援먰넻踰???6議? ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議?怨좎옣?먮룞李⑥쓽 ?쒖떆",
+  "tr_e": "휂i沼걏 66 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? 휂i沼걏 40 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼? bi沼긪 b찼o xe h沼뢮g."
+ },
+ {
+  "n": 444,
+  "ko_e": "?꾨줈援먰넻踰???7議?李⑥? ?몃㈃?꾩감???깊솕) ?좊え??李⑥쓽 ?댁쟾?먮뒗 ?ㅼ쓬 媛??몄쓽 ?대뒓 ?섎굹???대떦?섎뒗 寃쎌슦?먮뒗  ??듬졊?뱀쑝濡??뺥븯??諛붿뿉 ?곕씪 ?꾩“?? 李⑦룺?? 誘몃벑怨?洹?諛뽰쓽 ?깊솕瑜?耳쒖빞 ?쒕떎.",
+  "tr_e": "휂i沼걏 37 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(휂챔n c沼쬪 xe v횪 t횪u 휃i沼뇆 m梳톞 휃튼沼쓓g) kho梳즢 1: ng튼沼쓎 l찼i m沼뛦 xe khi thu沼셛 m沼셳 trong c찼c tr튼沼쓓g h沼즤 sau 휃창y th챙 ph梳즜 b梳춗 휃챔n pha, 휃챔n k챠ch th튼沼쌵, 휃챔n h梳춙 v횪 c찼c 휃챔n kh찼c theo quy 휃沼땙h c沼쬪 Ngh沼?휃沼땙h c沼쬪 T沼븂g th沼몁g."
+ },
+ {
+  "n": 445,
+  "ko_e": "?꾨줈援먰넻踰???6議?怨좎옣?깆쓽 議곗튂), ??7議??댁쟾?먯쓽 怨좎냽?꾨줈 ?깆뿉?쒖쓽 以?섏궗??, ?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議?怨????먮룞李⑥쓽 ?쒖?) 怨좎옣 ?먮룞李⑥쓽 ?대룞??媛?ν븯硫?媛볤만濡???꺼 ?볤퀬 ?덉쟾???μ냼?먯꽌 ?꾩????붿껌?쒕떎.",
+  "tr_e": "휂i沼걏 66 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(X沼?l첵 khi h沼뢮g h처c v.v.), 휂i沼걏 67 (휂i沼걏 c梳쬷 tu창n th沼?c沼쬪 ng튼沼쓎 l찼i tr챗n 휃튼沼쓓g cao t沼멵 v.v.), 휂i沼걏 40 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Bi沼긪 b찼o xe h沼뢮g): n梳퓎 xe h沼뢮g c처 th沼?di chuy沼긪 휃튼沼즓 th챙 d沼쓎 sang l횪n kh梳쯰 c梳쩺 v횪 y챗u c梳쬾 tr沼?gi첬p 沼?n퉤i an to횪n."
+ },
+ {
+  "n": 446,
+  "ko_e": "?몃뱾???쒖そ?쇰줈 ?좊━??寃쎌슦 ????댁뼱???묓겕??媛?μ꽦???믨린 ?뚮Ц???뗫툕?덉씠?щ? 諛잛쑝硫?寃쎈줈瑜??댄깉??媛???깆씠 ?믩떎.",
+  "tr_e": "Tr튼沼쓓g h沼즤 v척-l훱ng b沼?l沼놻h v沼?m沼셳 b챗n th챙 kh梳?n훱ng l沼몆 tr튼沼쌵 b沼?th沼쬷g cao, n챗n n梳퓎 휃梳죖 phanh ch창n th챙 kh梳?n훱ng l沼놻h kh沼뢩 l沼?tr챙nh cao."
+ },
+ {
+  "n": 447,
+  "ko_e": "?꾨줈援먰넻踰??쒗뻾洹쒖튃 ??0議?怨좎옣?먮룞李⑥쓽 ?쒖?)???곕씪 諛ㅼ뿉 怨좎냽?꾨줈?먯꽌???덉쟾?쇨컖?? ?④퍡 ?щ갑 500誘명꽣  吏?먯뿉???앸퀎?????덈뒗 ?곸깋???ш킅?좏샇, ?꾧린?쒕벑 ?먮뒗 遺덇퐙?좏샇瑜?異붽?濡??ㅼ튂?섏뿬???쒕떎.",
+  "tr_e": "Theo 휂i沼걏 40 Th척ng t튼 thi h횪nh Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(Bi沼긪 b찼o xe h沼뢮g), v횪o ban 휃챗m tr챗n 휃튼沼쓓g cao t沼멵, ngo횪i tam gi찼c c梳즢h b찼o an to횪n c챵n ph梳즜 l梳칛 휃梳톞 th챗m t챠n hi沼뇎 ch沼썂 m횪u 휃沼? 휃챔n 휃i沼뇆 ho梳톍 t챠n hi沼뇎 ph찼o s찼ng c처 th沼?nh梳춏 di沼뇆 휃튼沼즓 t沼?휃i沼긩 c찼ch 500 m챕t v沼?m沼뛦 h튼沼썀g."
+ },
+ {
+  "n": 448,
+  "ko_e": "??댁뼱媛 ?곗?硫?湲됱젣?숈쓣 ?쇨?硫? 李⑤웾??吏곸쭊 二쇳뻾???섎룄濡??섍퀬, ?붿쭊 釉뚮젅?댄겕瑜??댁슜?섏뿬 ?덉쟾??怨녹뿉 ?뺤? ?섎룄濡??쒕떎.",
+  "tr_e": "Khi l沼몆 n沼? h찾y tr찼nh phanh g梳쩺, cho xe ch梳죣 th梳쿻g v횪 d첫ng phanh 휃沼셬g c퉤 휃沼?d沼쳌g l梳죍 沼?n퉤i an to횪n."
+ },
+ {
+  "n": 449,
+  "ko_e": "?꾨줈援먰넻踰???7議??댁쟾?먯쓽 怨좎냽?꾨줈?깆뿉?쒖쓽 以?섏궗?? ??怨좎냽?꾨줈?깆쓣 ?댄뻾?섎뒗 ?먮룞李⑥쓽 ?댁쟾?먮뒗 援먰넻?? ?덉쟾怨??먰솢???뚰넻???뺣낫?섍린 ?꾪븯????6議곗뿉 ?곕Ⅸ 怨좎옣?먮룞李⑥쓽 ?쒖?瑜???긽 鍮꾩튂?섎ŉ, 怨좎옣?대굹 洹?諛뽰쓽 遺???댄븳 ?ъ쑀濡??먮룞李⑤? ?댄뻾?????녾쾶 ?섏뿀???뚯뿉???먮룞李⑤? ?꾨줈???곗륫 媛?μ옄由ъ뿉 ?뺤??쒗궎怨??됱젙?덉쟾遺???쇰줈 ?뺥븯??諛붿뿉 ?곕씪 洹??쒖?瑜??ㅼ튂?섏뿬???쒕떎.",
+  "tr_e": "휂i沼걏 67 Lu梳춗 Giao th척ng 휃튼沼쓓g b沼?(휂i沼걏 c梳쬷 tu창n th沼?c沼쬪 ng튼沼쓎 l찼i tr챗n 휃튼沼쓓g cao t沼멵 v.v.) kho梳즢 2: ng튼沼쓎 l찼i xe 척 t척 휃i tr챗n 휃튼沼쓓g cao t沼멵 v.v. ph梳즜 lu척n mang theo bi沼긪 b찼o xe h沼뢮g theo 휂i沼걏 66 휃沼?휃梳즡 b梳즣 an to횪n giao th척ng v횪 l튼u th척ng th척ng su沼몋; khi kh척ng th沼?v梳춏 h횪nh xe do h沼뢮g h처c ho梳톍 l첵 do b梳쩿 kh梳?kh찼ng kh찼c th챙 ph梳즜 d沼쳌g xe v횪o s찼t m챕p ph梳즜 c沼쬪 휃튼沼쓓g v횪 l梳칛 휃梳톞 bi沼긪 b찼o 휃처 theo quy 휃沼땙h c沼쬪 B沼?H횪nh ch챠nh v횪 An to횪n."
+ },
+ {
+  "n": 450,
+  "ko_e": "怨듭궗援ш컙??寃쎌슦 援ш컙蹂꾨줈 ?쒖냽 80?щ줈誘명꽣? ?쒖냽 60?щ줈誘명꽣濡??쒗븳?섏뼱 ?덉뼱 ?띾룄?쒗븳?쒖?瑜??몄??섍퀬 異⑸텇?? 媛먯냽?섏뿬 ?댄뻾?섏뿬???쒕떎.(援?넗遺 ?꾨줈怨듭궗??援먰넻愿由ъ?移? 援먰넻怨좎냽?꾨줈 怨듭궗??援먰넻愿由ш린以)",
+  "tr_e": "휂沼멼 v沼쌻 khu v沼켧 thi c척ng, t沼멵 휃沼?휃튼沼즓 gi沼쌻 h梳죒 沼?80 km/h v횪 60 km/h theo t沼쳌g 휃o梳죒 n챗n ph梳즜 nh梳춏 bi梳퓍 bi沼긪 gi沼쌻 h梳죒 t沼멵 휃沼?v횪 gi梳즡 t沼멵 휃梳쭃 휃沼?khi v梳춏 h횪nh. (H튼沼썀g d梳쳌 qu梳즢 l첵 giao th척ng c척ng tr튼沼쓓g 휃튼沼쓓g b沼?c沼쬪 B沼?휂梳쩿 휃ai, H梳?t梳쬷g v횪 Giao th척ng, Ti챗u chu梳쯰 qu梳즢 l첵 giao th척ng c척ng tr튼沼쓓g 휃튼沼쓓g cao t沼멵)"
+ },
+ {
+  "n": 451,
+  "ko_e": "紐⑹쟻吏 ?붽툑?뚯뿉???뺤궛?대떦?먯뿉寃?吏꾩엯???μ냼瑜??ㅻ챸?섍퀬 ?뺤궛?쒕떎.",
+  "tr_e": "Gi梳즜 th챠ch v沼쌻 nh창n vi챗n thu ph챠 沼?tr梳죑 thu ph챠 휃챠ch 휃梳퓆 v沼?n퉤i 휃찾 v횪o 휃튼沼쓓g v횪 thanh to찼n."
+ },
+ {
+  "n": 452,
+  "ko_e": "?곕꼸 ???붿옱????쇨? 理쒖슦?좎씠誘濡??꾪뿕??怨쇱냼?됯??섏뿬 李⑤웾 ?덉뿉 癒몃Т瑜대뒗 寃껋? ?꾪뿕???됰룞?대ŉ, ?붿쭊???? ???ㅻ? 苑귥븘??梨??좎냽?섍쾶 ?섏감?섍퀬 ??쇳빐???쒕떎.",
+  "tr_e": "H沼뢠 ho梳죒 trong h梳쬶 th챙 l찼nh n梳죒 l횪 튼u ti챗n h횪ng 휃梳쬾, n챗n vi沼놻 휃찼nh gi찼 th梳쩺 nguy hi沼긩 m횪 沼?l梳죍 trong xe l횪 h횪nh 휃沼셬g nguy hi沼긩; ph梳즜 t梳칣 m찼y, 휃沼?nguy챗n ch챙a kh처a r沼밿 nhanh ch처ng xu沼몁g xe v횪 l찼nh n梳죒."
+ },
+ {
+  "n": 453,
+  "ko_e": "?붿닚??諛앹? 怨녹뿉???대몢??怨녹쑝濡??ㅼ뼱媛???泥섏쓬?먮뒗 蹂댁씠吏 ?딅뜕 寃껋씠 ?쒓컙??吏??蹂댁씠湲??쒖옉?섎뒗 ?꾩긽) 諛? 紐낆닚???대몢??怨녹뿉??諛앹? 怨녹쑝濡??섏솕?????먯감 諛앹? 鍮쏆뿉 ?곸쓳?섎뒗 ?꾩긽)?쇰줈 ?명븳 ?ш퀬?덈갑???꾪빐 ?곕꼸?? ?듯뻾???쒖뿉???됱냼蹂대떎 10~20% 媛먯냽?섍퀬 ?꾩“?? 李⑦룺?? 誘몃벑 ?깆쓽 ?깊솕瑜?諛섎뱶??耳쒖빞 ?쒕떎. ?? 寃곕튃怨?2李⑥궗怨? ?깆쓣 ?덈갑?섍린 ?꾪빐 ?쇰컲?꾨줈 蹂대떎 ???덉쟾嫄곕━瑜??뺣낫?섍퀬 湲됱젣?숈뿉 ????鍮꾨룄 ?꾩슂?섎떎.",
+  "tr_e": "휂沼?ph챵ng ng沼첺 tai n梳죒 do th챠ch nghi b처ng t沼멼 (hi沼뇆 t튼沼즢g khi v횪o ch沼?t沼멼 t沼?ch沼?s찼ng, ban 휃梳쬾 kh척ng nh챙n th梳쪅 nh튼ng sau m沼셳 th沼쓎 gian b梳칣 휃梳쬾 nh챙n th梳쪅) v횪 th챠ch nghi 찼nh s찼ng (hi沼뇆 t튼沼즢g khi ra ch沼?s찼ng t沼?ch沼?t沼멼, d梳쬷 d梳쬷 th챠ch nghi v沼쌻 찼nh s찼ng), khi 휃i qua h梳쬶 ph梳즜 gi梳즡 t沼멵 10~20% so v沼쌻 b챙nh th튼沼쓓g v횪 nh梳쩿 휃沼땙h ph梳즜 b梳춗 c찼c 휃챔n nh튼 휃챔n pha, 휃챔n k챠ch th튼沼쌵, 휃챔n h梳춙. Ngo횪i ra, 휃沼?ph챵ng ng沼첺 휃처ng b훱ng v횪 tai n梳죒 th沼?c梳쩺, c梳쬷 휃梳즡 b梳즣 kho梳즢g c찼ch an to횪n h퉤n so v沼쌻 휃튼沼쓓g th튼沼쓓g v횪 chu梳쯰 b沼?ph챵ng khi ph梳즜 phanh g梳쩺."
+ },
+ {
+  "n": 454,
+  "ko_e": "???쒕룞?μ씠 ?⑥뼱吏꾨떎. ???몄젣?숈쑝濡??명빐 ?놁쑝濡?誘몃걚?ъ쭏 ???덈떎. ??ABS??鍮쀪만 ?먯떖??媛먯냼, ?쇱젙 ?띾룄?먯꽌  ?쒕룞 嫄곕━媛 ?대뒓 ?뺣룄 媛먯냼?쒕떎.",
+  "tr_e": "??L沼켧 phanh gi梳즡. ??C처 th沼?tr튼沼즨 sang ngang do phanh l沼놻h. ??ABS gi첬p gi梳즡 l沼켧 ly t창m tr챗n 휃튼沼쓓g 튼沼썇, v횪 沼?t沼멵 휃沼?nh梳쩿 휃沼땙h th챙 c沼?ly phanh gi梳즡 沼?m沼쯢 n횪o 휃처."
+ },
+ {
+  "n": 455,
+  "ko_e": "吏吏꾩씠 諛쒖깮??寃쎌슦 李⑤? ?댁쟾?섎뒗 寃껋? 留ㅼ슦 ?꾪뿕?섎떎. 異⑸텇??二쇱쓽瑜??섎㈃??援먯감濡쒕? ?쇳빐???꾨줈 ?곗륫???뺤감 ?쒗궎怨? ?쇰뵒?ㅼ쓽 ?뺣낫瑜????ｊ퀬 遺洹쇱뿉 寃쎌같愿???덉쑝硫?吏?쒖뿉 ?곕씪???됰룞?쒕떎. 李⑤? ?먭퀬 ??쇳븷 寃쎌슦 李⑥쓽  ?쒕룞? ?꾧퀬 ?댁뇿瑜?苑귥? 梨???쇳븳??",
+  "tr_e": "Khi x梳즭 ra 휃沼셬g 휃梳쩿, vi沼놻 l찼i xe r梳쩿 nguy hi沼긩. H찾y ch첬 첵 휃梳쭃 휃沼? tr찼nh giao l沼?v횪 d沼쳌g xe v횪o b챗n ph梳즜 휃튼沼쓓g, nghe k沼?th척ng tin tr챗n radio, n梳퓎 g梳쬷 휃처 c처 c梳즢h s찼t th챙 h횪nh 휃沼셬g theo ch沼?d梳쳌. Khi b沼?xe l찼nh n梳죒, h찾y t梳칣 m찼y v횪 휃沼?nguy챗n ch챙a kh처a r沼밿 l찼nh n梳죒."
+ },
+ {
+  "n": 457,
+  "ko_e": "????컻 ?깆쓽 ?꾪뿕???鍮꾪빐 ?쒕룞??爰쇱빞 ?쒕떎. ??痢〓꼍 履쎌쑝濡??뺤감?쒖폒???묎툒 李⑤웾 ?깆씠 ?뚰넻?????덈떎. ?? ?먮룞李??댁뇿瑜?苑귥븘 ?먯뼱?쇰쭔 ?ㅻⅨ ?곹솴 諛쒖깮 ??議곗튂 媛?ν븯??",
+  "tr_e": "??Ph梳즜 t梳칣 m찼y 휃沼?휃沼?ph챵ng nguy c퉤 n沼?v.v. ??Ph梳즜 d沼쳌g xe s찼t v찼ch b챗n 휃沼?xe c梳쩺 c沼쯷 v.v. c처 th沼?l튼u th척ng. ??Ph梳즜 휃沼?nguy챗n ch챙a kh처a xe m沼쌻 c처 th沼?x沼?l첵 khi c처 t챙nh hu沼몁g kh찼c ph찼t sinh."
+ },
+ {
+  "n": 458,
+  "ko_e": "??怨좎냽 ?댄뻾 ?쒖뿉 二쇰줈 諛쒖깮?쒕떎. ??誘몃걚?ъ쭚 ?꾩긽???섑븳 ?몃㈃ ?붿쟻? ?ш퀬 泥섎━??以묒슂???먮즺媛 ?쒕떎.",
+  "tr_e": "??Ch沼?y梳퓎 x梳즭 ra khi ch梳죣 t沼멵 휃沼?cao. ??V梳퓍 tr챗n m梳톞 휃튼沼쓓g do hi沼뇆 t튼沼즢g tr튼沼즨 l횪 t튼 li沼뇎 quan tr沼뛫g trong vi沼놻 x沼?l첵 tai n梳죒."
+ },
+ {
+  "n": 459,
+  "ko_e": "?먮룞李④? 李⑤줈瑜??댄깉?섎뒗 寃쎌슦??而ㅻ툕 湲몄뿉??湲됲엳 ?몃뱾??議곗옉???뚯뿉 二쇰줈 諛쒖깮?쒕떎. ?먰븳 ??댁뼱 ?몃젅?쒓?  ?녹븯嫄곕굹 ??댁뼱 怨듦린?뺤씠 ?덈Т ?믨굅???몃㈃??誘몃걚?ъ슦硫??몃㈃怨???댁뼱??留덉같?μ씠 ?⑥뼱??李④? ?꾨줈瑜??댄깉??嫄곕굹 以묒븰?좎쓣 移⑤쾾?????덈떎.",
+  "tr_e": "Tr튼沼쓓g h沼즤 xe v훱ng ra kh沼뢩 l횪n ch沼?y梳퓎 x梳즭 ra khi 휃찼nh l찼i g梳쩺 沼?휃튼沼쓓g cong. Ngo횪i ra, n梳퓎 gai l沼몆 b沼?m챵n, 찼p su梳쩿 h퉤i l沼몆 qu찼 cao ho梳톍 m梳톞 휃튼沼쓓g tr퉤n th챙 l沼켧 ma s찼t gi沼칊 m梳톞 휃튼沼쓓g v횪 l沼몆 gi梳즡, xe c처 th沼?v훱ng ra kh沼뢩 휃튼沼쓓g ho梳톍 l梳쩸 qua v梳죅h tim 휃튼沼쓓g."
+ },
+ {
+  "n": 460,
+  "ko_e": "怨좎냽?꾨줈 二쇳뻾 以?李⑤웾???붿옱媛 諛쒖깮????議곗튂 ?붾졊 1. 李⑤웾??媛볤만濡??대룞?쒕떎. 2. ?쒕룞???꾧퀬 李⑤웾?먯꽌 ?щ묠由? ?대┛?? 3. 珥덇린 ?붿옱 吏꾪솕媛 媛?ν븯硫?李⑤웾??鍮꾩튂???뚰솕湲곕? ?ъ슜?섏뿬 遺덉쓣 ?덈떎. 4. 珥덇린 ?붿옱 吏꾪솕???ㅽ뙣?덉쓣  ?뚮뒗 李⑤웾????컻?????덉쑝誘濡?硫由???쇳븳?? 5. 119 ?깆뿉 李⑤웾 ?붿옱 ?좉퀬瑜??쒕떎.",
+  "tr_e": "C찼ch x沼?l첵 khi xe b沼멵 ch찼y trong l첬c ch梳죣 tr챗n 휃튼沼쓓g cao t沼멵 1. Di chuy沼긪 xe sang l횪n kh梳쯰 c梳쩺. 2. T梳칣 m찼y v횪 nhanh ch처ng xu沼몁g xe. 3. N梳퓎 c처 th沼?d梳춑 ch찼y ban 휃梳쬾 th챙 d첫ng b챙nh ch沼칊 ch찼y trang b沼?tr챗n xe 휃沼?d梳춑 l沼춁. 4. Khi d梳춑 ch찼y ban 휃梳쬾 th梳쩿 b梳죍, xe c처 th沼?ph찼t n沼?n챗n h찾y l찼nh ra xa. 5. G沼뛦 b찼o h沼뢠 ho梳죒 xe cho 119 v.v."
+ },
+ {
+  "n": 461,
+  "ko_e": "?꾨줈 怨듭궗?μ? 二쇱쓽-?꾪솕-?묒뾽-醫낃껐援ш컙?쇰줈 援ъ꽦?섏뼱 ?덈떎.                洹?以??꾪솕援ш컙? 李⑤줈?섍? 媛먯냼?섎뒗 援ш컙?쇰줈 李⑥꽑蹂寃쎌씠 ?꾩슂??援ш컙?대떎. ?덉쟾???듯뻾???꾪빐?쒕뒗 ?ъ쟾 李⑥꽑蹂 寃?諛??쒗뻾???꾩닔?곸씠??",
+  "tr_e": "C척ng tr튼沼쓓g 휃튼沼쓓g b沼?g沼뱈 c찼c 휃o梳죒 c梳즢h b찼o - chuy沼긪 ti梳퓈 - thi c척ng - k梳퓍 th첬c. Trong 휃처, 휃o梳죒 chuy沼긪 ti梳퓈 l횪 휃o梳죒 gi梳즡 s沼?l횪n, l횪 휃o梳죒 c梳쬷 chuy沼긪 l횪n 휃튼沼쓓g. 휂沼?휃i l梳죍 an to횪n, vi沼놻 chuy沼긪 l횪n 휃튼沼쓓g tr튼沼쌵 v횪 휃i ch梳춎 l횪 b梳칣 bu沼셛."
+ },
+ {
+  "n": 462,
+  "ko_e": "利앸컻?꾩긽??留됯린 ?꾪빐?쒕뒗 諛섎???李⑤웾??遺덈튆???뺣㈃?쇰줈 爾먮떎蹂댁? ?딅뒗??",
+  "tr_e": "휂沼?ng훱n hi沼뇆 t튼沼즢g bi梳퓆 m梳쩿 (ch처i l처a che khu梳쩿), kh척ng nh챙n th梳쿻g v횪o 찼nh 휃챔n c沼쬪 xe chi沼걏 ng튼沼즓 l梳죍."
+ }
+]
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+p=Path(r'translations/audit/queue/322_expl_vn.json')
+data=json.loads(p.read_text(encoding='utf-8'))
+for x in data:
+ print('\\n',x['n'])
+ for k,v in x.items():
+  if k=='n': continue
+  try: s=v.encode('cp949').decode('utf-8')
+  except Exception as e: s='ERR '+repr(e)
+  print(k, s)
+'@ | python -" in C:\Users\user\projects\외국인-학과시험-AI튜터
+2026-10-10T22:54:47.089400Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0.7 seconds
+Output:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:14 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+ exited 1 in 681ms:
+'python.exe' 프로그램을 실행하지 못했습니다. 지정한 로그온 세션이 없습니다. 이미 종료되었을 수도 있습니다위치 줄:14 문자:6
++ '@ | python -
++      ~~~~~~~~.
+위치 줄:2 문자:1
++ @'
++ ~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$data = Get-Content -Raw -LiteralPath '"'translations/audit/queue/322_expl_vn.json' | ConvertFrom-Json; "'$cp=[Text.Encoding]::GetEncoding(949); $utf=[Text.Encoding]::UTF8; foreach($x in $data){ Write-Output "`n$($x.n)"; foreach($p in $x.PSObject.Properties){ if($p.Name -ne '"'n'){ "'$s=$utf.GetString($cp.GetBytes([string]$p.Value)); Write-Output "$($p.Name): $s" } } }' in C:\Users\user\projects\외국인-학과시험-AI튜터
+ succeeded in 648ms:
+
+442
+ko_e: ?�??차량???�조?�에 ?�해 ?�이 부??경우?�는 ?�조?�의 불빛???�면?�로 보�? 말고, ?�로 ?�측??가?�자�?쪽을  보면???�전?�는 것이 바람직하??
+tr_e: Khi b�?lóa mắt do đèn pha của xe chiều ngược lại, đừng nhìn thẳng vào ánh đèn pha mà nên vừa nhìn v�?phía mép phải của đường vừa lái xe là cách tốt.
+
+443
+ko_e: ?�로교통�???6�? ?�로교통�??�행규칙 ??0�?고장?�동차의 ?�시
+tr_e: Điều 66 Luật Giao thông đường b�? Điều 40 Thông tư thi hành Luật Giao thông đường b�? biển báo xe hỏng.
+
+444
+ko_e: ?�로교통�???7�?차�? ?�면?�차???�화) ?�모??차의 ?�전?�는 ?�음 �??�의 ?�느 ?�나???�당?�는 경우?�는  ?�?�령?�으�??�하??바에 ?�라 ?�조?? 차폭?? 미등�?�?밖의 ?�화�?켜야 ?�다.
+tr_e: Điều 37 Luật Giao thông đường b�?(Đèn của xe và tàu điện mặt đường) khoản 1: người lái mọi xe khi thuộc một trong các trường hợp sau đây thì phải bật đèn pha, đèn kích thước, đèn hậu và các đèn khác theo quy định của Ngh�?định của Tổng thống.
+
+445
+ko_e: ?�로교통�???6�?고장?�의 조치), ??7�??�전?�의 고속?�로 ?�에?�의 준?�사??, ?�로교통�??�행규칙 ??0�?�????�동차의 ?��?) 고장 ?�동차의 ?�동??가?�하�?갓길�???�� ?�고 ?�전???�소?�서 ?��????�청?�다.
+tr_e: Điều 66 Luật Giao thông đường b�?(X�?lý khi hỏng hóc v.v.), Điều 67 (Điều cần tuân th�?của người lái trên đường cao tốc v.v.), Điều 40 Thông tư thi hành Luật Giao thông đường b�?(Biển báo xe hỏng): nếu xe hỏng có th�?di chuyển được thì dời sang làn khẩn cấp và yêu cầu tr�?giúp �?nơi an toàn.
+
+446
+ko_e: ?�들???�쪽?�로 ?�리??경우 ???�?�어???�크??가?�성???�기 ?�문???�브?�이?��? 밟으�?경로�??�탈??가???�이 ?�다.
+tr_e: Trường hợp vô-lăng b�?lệch v�?một bên thì kh�?năng lốp trước b�?thủng cao, nên nếu đạp phanh chân thì kh�?năng lệch khỏi l�?trình cao.
+
+447
+ko_e: ?�로교통�??�행규칙 ??0�?고장?�동차의 ?��?)???�라 밤에 고속?�로?�서???�전?�각?�?� ?�께 ?�방 500미터  지?�에???�별?????�는 ?�색???�광?�호, ?�기?�등 ?�는 불꽃?�호�?추�?�??�치?�여???�다.
+tr_e: Theo Điều 40 Thông tư thi hành Luật Giao thông đường b�?(Biển báo xe hỏng), vào ban đêm trên đường cao tốc, ngoài tam giác cảnh báo an toàn còn phải lắp đặt thêm tín hiệu chớp màu đ�? đèn điện hoặc tín hiệu pháo sáng có th�?nhận diện được t�?điểm cách 500 mét v�?mọi hướng.
+
+448
+ko_e: ?�?�어가 ?��?�?급제?�을 ?��?�? 차량??직진 주행???�도�??�고, ?�진 브레?�크�??�용?�여 ?�전??곳에 ?��? ?�도�??�다.
+tr_e: Khi lốp n�? hãy tránh phanh gấp, cho xe chạy thẳng và dùng phanh động cơ đ�?dừng lại �?nơi an toàn.
+
+449
+ko_e: ?�로교통�???7�??�전?�의 고속?�로?�에?�의 준?�사?? ??고속?�로?�을 ?�행?�는 ?�동차의 ?�전?�는 교통?? ?�전�??�활???�통???�보?�기 ?�하????6조에 ?�른 고장?�동차의 ?��?�???�� 비치?�며, 고장?�나 �?밖의 부???�한 ?�유�??�동차�? ?�행?????�게 ?�었???�에???�동차�? ?�로???�측 가?�자리에 ?��??�키�??�정?�전부???�로 ?�하??바에 ?�라 �??��?�??�치?�여???�다.
+tr_e: Điều 67 Luật Giao thông đường b�?(Điều cần tuân th�?của người lái trên đường cao tốc v.v.) khoản 2: người lái xe ô tô đi trên đường cao tốc v.v. phải luôn mang theo biển báo xe hỏng theo Điều 66 đ�?đảm bảo an toàn giao thông và lưu thông thông suốt; khi không th�?vận hành xe do hỏng hóc hoặc lý do bất kh�?kháng khác thì phải dừng xe vào sát mép phải của đường và lắp đặt biển báo đó theo quy định của B�?Hành chính và An toàn.
+
+450
+ko_e: 공사구간??경우 구간별로 ?�속 80?�로미터?� ?�속 60?�로미터�??�한?�어 ?�어 ?�도?�한?��?�??��??�고 충분?? 감속?�여 ?�행?�여???�다.(�?��부 ?�로공사??교통관리�?�? 교통고속?�로 공사??교통관리기준)
+tr_e: Đối với khu vực thi công, tốc đ�?được giới hạn �?80 km/h và 60 km/h theo từng đoạn nên phải nhận biết biển giới hạn tốc đ�?và giảm tốc đầy đ�?khi vận hành. (Hướng dẫn quản lý giao thông công trường đường b�?của B�?Đất đai, H�?tầng và Giao thông, Tiêu chuẩn quản lý giao thông công trường đường cao tốc)
+
+451
+ko_e: 목적지 ?�금?�에???�산?�당?�에�?진입???�소�??�명?�고 ?�산?�다.
+tr_e: Giải thích với nhân viên thu phí �?trạm thu phí đích đến v�?nơi đã vào đường và thanh toán.
+
+452
+ko_e: ?�널 ???�재???�?��? 최우?�이므�??�험??과소?��??�여 차량 ?�에 머무르는 것�? ?�험???�동?�며, ?�진???? ???��? 꽂아??�??�속?�게 ?�차?�고 ?�?�해???�다.
+tr_e: Hỏa hoạn trong hầm thì lánh nạn là ưu tiên hàng đầu, nên việc đánh giá thấp nguy hiểm mà �?lại trong xe là hành động nguy hiểm; phải tắt máy, đ�?nguyên chìa khóa rồi nhanh chóng xuống xe và lánh nạn.
+
+453
+ko_e: ?�순??밝�? 곳에???�두??곳으�??�어�???처음?�는 보이지 ?�던 것이 ?�간??지??보이�??�작?�는 ?�상) �? 명순???�두??곳에??밝�? 곳으�??�왔?????�차 밝�? 빛에 ?�응?�는 ?�상)?�로 ?�한 ?�고?�방???�해 ?�널?? ?�행???�에???�소보다 10~20% 감속?�고 ?�조?? 차폭?? 미등 ?�의 ?�화�?반드??켜야 ?�다. ?? 결빙�?2차사�? ?�을 ?�방?�기 ?�해 ?�반?�로 보다 ???�전거리�??�보?�고 급제?�에 ?�???�비도 ?�요?�다.
+tr_e: Đ�?phòng ngừa tai nạn do thích nghi bóng tối (hiện tượng khi vào ch�?tối t�?ch�?sáng, ban đầu không nhìn thấy nhưng sau một thời gian bắt đầu nhìn thấy) và thích nghi ánh sáng (hiện tượng khi ra ch�?sáng t�?ch�?tối, dần dần thích nghi với ánh sáng), khi đi qua hầm phải giảm tốc 10~20% so với bình thường và nhất định phải bật các đèn như đèn pha, đèn kích thước, đèn hậu. Ngoài ra, đ�?phòng ngừa đóng băng và tai nạn th�?cấp, cần đảm bảo khoảng cách an toàn hơn so với đường thường và chuẩn b�?phòng khi phải phanh gấp.
+
+454
+ko_e: ???�동?�이 ?�어진다. ???�제?�으�??�해 ?�으�?미끄?�질 ???�다. ??ABS??빗길 ?�심??감소, ?�정 ?�도?�서  ?�동 거리가 ?�느 ?�도 감소?�다.
+tr_e: ??Lực phanh giảm. ??Có th�?trượt sang ngang do phanh lệch. ??ABS giúp giảm lực ly tâm trên đường ướt, và �?tốc đ�?nhất định thì c�?ly phanh giảm �?mức nào đó.
+
+455
+ko_e: 지진이 발생??경우 차�? ?�전?�는 것�? 매우 ?�험?�다. 충분??주의�??�면??교차로�? ?�해???�로 ?�측???�차 ?�키�? ?�디?�의 ?�보�????�고 부근에 경찰관???�으�?지?�에 ?�라???�동?�다. 차�? ?�고 ?�?�할 경우 차의  ?�동?� ?�고 ?�쇠�?꽂�? �??�?�한??
+tr_e: Khi xảy ra động đất, việc lái xe rất nguy hiểm. Hãy chú ý đầy đ�? tránh giao l�?và dừng xe vào bên phải đường, nghe k�?thông tin trên radio, nếu gần đó có cảnh sát thì hành động theo ch�?dẫn. Khi b�?xe lánh nạn, hãy tắt máy và đ�?nguyên chìa khóa rồi lánh nạn.
+
+457
+ko_e: ????�� ?�의 ?�험???�비해 ?�동??꺼야 ?�다. ??측벽 쪽으�??�차?�켜???�급 차량 ?�이 ?�통?????�다. ?? ?�동�??�쇠�?꽂아 ?�어?�만 ?�른 ?�황 발생 ??조치 가?�하??
+tr_e: ??Phải tắt máy đ�?đ�?phòng nguy cơ n�?v.v. ??Phải dừng xe sát vách bên đ�?xe cấp cứu v.v. có th�?lưu thông. ??Phải đ�?nguyên chìa khóa xe mới có th�?x�?lý khi có tình huống khác phát sinh.
+
+458
+ko_e: ??고속 ?�행 ?�에 주로 발생?�다. ??미끄?�짐 ?�상???�한 ?�면 ?�적?� ?�고 처리??중요???�료가 ?�다.
+tr_e: ??Ch�?yếu xảy ra khi chạy tốc đ�?cao. ??Vết trên mặt đường do hiện tượng trượt là tư liệu quan trọng trong việc x�?lý tai nạn.
+
+459
+ko_e: ?�동차�? 차로�??�탈?�는 경우??커브 길에??급히 ?�들??조작???�에 주로 발생?�다. ?�한 ?�?�어 ?�레?��?  ?�았거나 ?�?�어 공기?�이 ?�무 ?�거???�면??미끄?�우�??�면�??�?�어??마찰?�이 ?�어??차�? ?�로�??�탈??거나 중앙?�을 침범?????�다.
+tr_e: Trường hợp xe văng ra khỏi làn ch�?yếu xảy ra khi đánh lái gấp �?đường cong. Ngoài ra, nếu gai lốp b�?mòn, áp suất hơi lốp quá cao hoặc mặt đường trơn thì lực ma sát giữa mặt đường và lốp giảm, xe có th�?văng ra khỏi đường hoặc lấn qua vạch tim đường.
+
+460
+ko_e: 고속?�로 주행 �?차량???�재가 발생????조치 ?�령 1. 차량??갓길�??�동?�다. 2. ?�동???�고 차량?�서 ?�빨�? ?�린?? 3. 초기 ?�재 진화가 가?�하�?차량??비치???�화기�? ?�용?�여 불을 ?�다. 4. 초기 ?�재 진화???�패?�을  ?�는 차량????��?????�으므�?멀�??�?�한?? 5. 119 ?�에 차량 ?�재 ?�고�??�다.
+tr_e: Cách x�?lý khi xe bốc cháy trong lúc chạy trên đường cao tốc 1. Di chuyển xe sang làn khẩn cấp. 2. Tắt máy và nhanh chóng xuống xe. 3. Nếu có th�?dập cháy ban đầu thì dùng bình chữa cháy trang b�?trên xe đ�?dập lửa. 4. Khi dập cháy ban đầu thất bại, xe có th�?phát n�?nên hãy lánh ra xa. 5. Gọi báo hỏa hoạn xe cho 119 v.v.
+
+461
+ko_e: ?�로 공사?��? 주의-?�화-?�업-종결구간?�로 구성?�어 ?�다.                �?�??�화구간?� 차로?��? 감소?�는 구간?�로 차선변경이 ?�요??구간?�다. ?�전???�행???�해?�는 ?�전 차선변 �?�??�행???�수?�이??
+tr_e: Công trường đường b�?gồm các đoạn cảnh báo - chuyển tiếp - thi công - kết thúc. Trong đó, đoạn chuyển tiếp là đoạn giảm s�?làn, là đoạn cần chuyển làn đường. Đ�?đi lại an toàn, việc chuyển làn đường trước và đi chậm là bắt buộc.
+
+462
+ko_e: 증발?�상??막기 ?�해?�는 반�???차량??불빛???�면?�로 쳐다보�? ?�는??
+tr_e: Đ�?ngăn hiện tượng biến mất (chói lóa che khuất), không nhìn thẳng vào ánh đèn của xe chiều ngược lại.
+
+codex
+[
+  {
+    "n": 442,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 광범위하게 깨져 학습자가 내용을 정상적으로 읽을 수 없다.",
+    "suggestion": "Khi bị chói mắt do đèn pha của xe đi ngược chiều, không nhìn thẳng vào ánh đèn mà nên vừa nhìn về phía mép phải của đường vừa lái xe."
+  },
+  {
+    "n": 443,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 법령명과 설명을 정상적으로 읽을 수 없다.",
+    "suggestion": "Điều 66 Luật Giao thông đường bộ; Điều 40 Quy tắc thi hành Luật Giao thông đường bộ (biển báo xe bị hỏng)."
+  },
+  {
+    "n": 444,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 법령 내용과 등화 종류를 정상적으로 읽을 수 없다.",
+    "suggestion": "Khoản 1 Điều 37 Luật Giao thông đường bộ (đèn của xe và tàu điện mặt đường): Người lái xe phải bật đèn pha, đèn kích thước, đèn hậu và các đèn khác trong những trường hợp do nghị định của Tổng thống quy định."
+  },
+  {
+    "n": 445,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 고장 차량의 조치 방법을 정상적으로 읽을 수 없다.",
+    "suggestion": "Theo Điều 66 và Điều 67 Luật Giao thông đường bộ cùng Điều 40 Quy tắc thi hành luật, nếu xe bị hỏng vẫn có thể di chuyển thì phải đưa xe vào làn dừng khẩn cấp và yêu cầu trợ giúp tại nơi an toàn."
+  },
+  {
+    "n": 446,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 타이어 이상 시의 위험을 정상적으로 읽을 수 없다.",
+    "suggestion": "Nếu vô-lăng bị lệch sang một bên thì có khả năng cao lốp trước đã bị thủng; khi đó, đạp phanh chân có thể làm xe lệch khỏi hướng đi."
+  },
+  {
+    "n": 447,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 야간 고장표지 설치 기준을 정상적으로 읽을 수 없다.",
+    "suggestion": "Theo Điều 40 Quy tắc thi hành Luật Giao thông đường bộ, vào ban đêm trên đường cao tốc, ngoài tam giác cảnh báo an toàn còn phải đặt tín hiệu chớp màu đỏ, đèn điện hoặc tín hiệu pháo sáng có thể được nhận biết từ khoảng cách 500 mét theo mọi hướng."
+  },
+  {
+    "n": 448,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 타이어 파열 시의 대처 방법을 정상적으로 읽을 수 없다.",
+    "suggestion": "Khi lốp bị nổ, tránh phanh gấp, giữ cho xe chạy thẳng và sử dụng phanh động cơ để dừng xe tại nơi an toàn."
+  },
+  {
+    "n": 449,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 고속도로 고장 차량의 정차 및 표지 설치 의무를 정상적으로 읽을 수 없다.",
+    "suggestion": "Theo khoản 2 Điều 67 Luật Giao thông đường bộ, người lái xe trên đường cao tốc phải luôn mang theo biển báo xe bị hỏng. Khi xe không thể chạy do hỏng hóc hoặc lý do bất khả kháng khác, phải dừng xe sát mép phải của đường và đặt biển báo theo quy định."
+  },
+  {
+    "n": 450,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 공사 구간의 제한속도 80 km/h와 60 km/h를 정상적으로 읽기 어렵다.",
+    "suggestion": "Tại khu vực thi công, tốc độ được giới hạn ở mức 80 km/h hoặc 60 km/h tùy từng đoạn. Vì vậy, phải nhận biết biển giới hạn tốc độ, giảm tốc đầy đủ rồi mới lưu thông."
+  },
+  {
+    "n": 451,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 통행료 정산 방법을 정상적으로 읽을 수 없다.",
+    "suggestion": "Tại trạm thu phí ở điểm đến, hãy giải thích cho nhân viên thu phí biết địa điểm đã đi vào đường và thanh toán phí."
+  },
+  {
+    "n": 452,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 터널 화재 시 대피 절차를 정상적으로 읽을 수 없다.",
+    "suggestion": "Khi xảy ra hỏa hoạn trong đường hầm, việc sơ tán là ưu tiên hàng đầu. Ở lại trong xe vì đánh giá thấp nguy hiểm là hành động nguy hiểm; phải tắt máy, để nguyên chìa khóa, nhanh chóng xuống xe và sơ tán."
+  },
+  {
+    "n": 453,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 터널 통행 시 감속 비율과 등화 사용 지침을 정상적으로 읽을 수 없다.",
+    "suggestion": "Để phòng ngừa tai nạn do hiện tượng thích nghi với bóng tối và ánh sáng, khi đi qua đường hầm phải giảm tốc độ 10–20% so với bình thường và 반드시 bật đèn pha, đèn kích thước, đèn hậu cùng các đèn cần thiết. Ngoài ra, cần giữ khoảng cách an toàn lớn hơn bình thường và chuẩn bị cho tình huống phanh gấp để phòng ngừa đóng băng và tai nạn thứ cấp."
+  },
+  {
+    "n": 454,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 제동 및 ABS 관련 설명을 정상적으로 읽을 수 없다.",
+    "suggestion": "Lực phanh giảm. Xe có thể trượt sang bên do lực phanh không đều. ABS giúp giảm lực ly tâm trên đường ướt và, ở một tốc độ nhất định, làm giảm khoảng cách phanh ở một mức độ nhất định."
+  },
+  {
+    "n": 455,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 지진 발생 시 운전자 행동요령을 정상적으로 읽을 수 없다.",
+    "suggestion": "Khi xảy ra động đất, lái xe là việc rất nguy hiểm. Hãy chú ý, tránh giao lộ, dừng xe ở bên phải đường, nghe kỹ thông tin trên radio và làm theo hướng dẫn của cảnh sát nếu có. Khi bỏ xe để sơ tán, hãy tắt máy, để nguyên chìa khóa rồi rời đi."
+  },
+  {
+    "n": 457,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 화재·폭발 대비 및 긴급차량 통행 조치를 정상적으로 읽을 수 없다.",
+    "suggestion": "Phải tắt máy để phòng nguy cơ nổ. Phải dừng xe sát vách bên để xe cấp cứu có thể lưu thông. Phải để nguyên chìa khóa trong xe để có thể xử lý khi phát sinh tình huống khác."
+  },
+  {
+    "n": 458,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 고속 주행 중 미끄러짐 현상과 사고 흔적의 의미를 정상적으로 읽을 수 없다.",
+    "suggestion": "Hiện tượng này chủ yếu xảy ra khi chạy ở tốc độ cao. Dấu vết trên mặt đường do xe trượt là tài liệu quan trọng để xử lý tai nạn."
+  },
+  {
+    "n": 459,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 차량의 차로 이탈 원인과 위험을 정상적으로 읽을 수 없다.",
+    "suggestion": "Xe chủ yếu bị văng khỏi làn khi người lái đánh lái gấp trên đường cong. Ngoài ra, nếu gai lốp bị mòn, áp suất lốp quá cao hoặc mặt đường trơn, lực ma sát giữa lốp và mặt đường sẽ giảm, khiến xe có thể văng khỏi đường hoặc lấn qua vạch tim đường."
+  },
+  {
+    "n": 460,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 고속도로 차량 화재 시의 조치 순서를 정상적으로 읽을 수 없다.",
+    "suggestion": "Cách xử lý khi xe bốc cháy trên đường cao tốc: 1. Di chuyển xe vào làn dừng khẩn cấp. 2. Tắt máy và nhanh chóng xuống xe. 3. Nếu có thể dập đám cháy ban đầu, dùng bình chữa cháy trang bị trên xe để dập lửa. 4. Nếu không dập được, hãy tránh xa vì xe có thể phát nổ. 5. Gọi 119 để báo cháy xe."
+  },
+  {
+    "n": 461,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 도로 공사 구간의 구성과 차로 변경 의무를 정상적으로 읽을 수 없다.",
+    "suggestion": "Khu vực thi công đường bộ gồm các đoạn cảnh báo, chuyển tiếp, thi công và kết thúc. Trong đó, đoạn chuyển tiếp là nơi số làn đường giảm nên cần chuyển làn. Để lưu thông an toàn, phải chuyển làn trước và giảm tốc độ."
+  },
+  {
+    "n": 462,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 증발현상 예방 방법을 정상적으로 읽을 수 없다.",
+    "suggestion": "Để phòng tránh hiện tượng biến mất do chói lóa, không được nhìn thẳng vào ánh đèn của xe đi ngược chiều."
+  }
+]
+tokens used
+19,288
+[
+  {
+    "n": 442,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 광범위하게 깨져 학습자가 내용을 정상적으로 읽을 수 없다.",
+    "suggestion": "Khi bị chói mắt do đèn pha của xe đi ngược chiều, không nhìn thẳng vào ánh đèn mà nên vừa nhìn về phía mép phải của đường vừa lái xe."
+  },
+  {
+    "n": 443,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 법령명과 설명을 정상적으로 읽을 수 없다.",
+    "suggestion": "Điều 66 Luật Giao thông đường bộ; Điều 40 Quy tắc thi hành Luật Giao thông đường bộ (biển báo xe bị hỏng)."
+  },
+  {
+    "n": 444,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 법령 내용과 등화 종류를 정상적으로 읽을 수 없다.",
+    "suggestion": "Khoản 1 Điều 37 Luật Giao thông đường bộ (đèn của xe và tàu điện mặt đường): Người lái xe phải bật đèn pha, đèn kích thước, đèn hậu và các đèn khác trong những trường hợp do nghị định của Tổng thống quy định."
+  },
+  {
+    "n": 445,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 고장 차량의 조치 방법을 정상적으로 읽을 수 없다.",
+    "suggestion": "Theo Điều 66 và Điều 67 Luật Giao thông đường bộ cùng Điều 40 Quy tắc thi hành luật, nếu xe bị hỏng vẫn có thể di chuyển thì phải đưa xe vào làn dừng khẩn cấp và yêu cầu trợ giúp tại nơi an toàn."
+  },
+  {
+    "n": 446,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 타이어 이상 시의 위험을 정상적으로 읽을 수 없다.",
+    "suggestion": "Nếu vô-lăng bị lệch sang một bên thì có khả năng cao lốp trước đã bị thủng; khi đó, đạp phanh chân có thể làm xe lệch khỏi hướng đi."
+  },
+  {
+    "n": 447,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 야간 고장표지 설치 기준을 정상적으로 읽을 수 없다.",
+    "suggestion": "Theo Điều 40 Quy tắc thi hành Luật Giao thông đường bộ, vào ban đêm trên đường cao tốc, ngoài tam giác cảnh báo an toàn còn phải đặt tín hiệu chớp màu đỏ, đèn điện hoặc tín hiệu pháo sáng có thể được nhận biết từ khoảng cách 500 mét theo mọi hướng."
+  },
+  {
+    "n": 448,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 타이어 파열 시의 대처 방법을 정상적으로 읽을 수 없다.",
+    "suggestion": "Khi lốp bị nổ, tránh phanh gấp, giữ cho xe chạy thẳng và sử dụng phanh động cơ để dừng xe tại nơi an toàn."
+  },
+  {
+    "n": 449,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 고속도로 고장 차량의 정차 및 표지 설치 의무를 정상적으로 읽을 수 없다.",
+    "suggestion": "Theo khoản 2 Điều 67 Luật Giao thông đường bộ, người lái xe trên đường cao tốc phải luôn mang theo biển báo xe bị hỏng. Khi xe không thể chạy do hỏng hóc hoặc lý do bất khả kháng khác, phải dừng xe sát mép phải của đường và đặt biển báo theo quy định."
+  },
+  {
+    "n": 450,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 공사 구간의 제한속도 80 km/h와 60 km/h를 정상적으로 읽기 어렵다.",
+    "suggestion": "Tại khu vực thi công, tốc độ được giới hạn ở mức 80 km/h hoặc 60 km/h tùy từng đoạn. Vì vậy, phải nhận biết biển giới hạn tốc độ, giảm tốc đầy đủ rồi mới lưu thông."
+  },
+  {
+    "n": 451,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 통행료 정산 방법을 정상적으로 읽을 수 없다.",
+    "suggestion": "Tại trạm thu phí ở điểm đến, hãy giải thích cho nhân viên thu phí biết địa điểm đã đi vào đường và thanh toán phí."
+  },
+  {
+    "n": 452,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 터널 화재 시 대피 절차를 정상적으로 읽을 수 없다.",
+    "suggestion": "Khi xảy ra hỏa hoạn trong đường hầm, việc sơ tán là ưu tiên hàng đầu. Ở lại trong xe vì đánh giá thấp nguy hiểm là hành động nguy hiểm; phải tắt máy, để nguyên chìa khóa, nhanh chóng xuống xe và sơ tán."
+  },
+  {
+    "n": 453,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 터널 통행 시 감속 비율과 등화 사용 지침을 정상적으로 읽을 수 없다.",
+    "suggestion": "Để phòng ngừa tai nạn do hiện tượng thích nghi với bóng tối và ánh sáng, khi đi qua đường hầm phải giảm tốc độ 10–20% so với bình thường và 반드시 bật đèn pha, đèn kích thước, đèn hậu cùng các đèn cần thiết. Ngoài ra, cần giữ khoảng cách an toàn lớn hơn bình thường và chuẩn bị cho tình huống phanh gấp để phòng ngừa đóng băng và tai nạn thứ cấp."
+  },
+  {
+    "n": 454,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 제동 및 ABS 관련 설명을 정상적으로 읽을 수 없다.",
+    "suggestion": "Lực phanh giảm. Xe có thể trượt sang bên do lực phanh không đều. ABS giúp giảm lực ly tâm trên đường ướt và, ở một tốc độ nhất định, làm giảm khoảng cách phanh ở một mức độ nhất định."
+  },
+  {
+    "n": 455,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 지진 발생 시 운전자 행동요령을 정상적으로 읽을 수 없다.",
+    "suggestion": "Khi xảy ra động đất, lái xe là việc rất nguy hiểm. Hãy chú ý, tránh giao lộ, dừng xe ở bên phải đường, nghe kỹ thông tin trên radio và làm theo hướng dẫn của cảnh sát nếu có. Khi bỏ xe để sơ tán, hãy tắt máy, để nguyên chìa khóa rồi rời đi."
+  },
+  {
+    "n": 457,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 화재·폭발 대비 및 긴급차량 통행 조치를 정상적으로 읽을 수 없다.",
+    "suggestion": "Phải tắt máy để phòng nguy cơ nổ. Phải dừng xe sát vách bên để xe cấp cứu có thể lưu thông. Phải để nguyên chìa khóa trong xe để có thể xử lý khi phát sinh tình huống khác."
+  },
+  {
+    "n": 458,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 고속 주행 중 미끄러짐 현상과 사고 흔적의 의미를 정상적으로 읽을 수 없다.",
+    "suggestion": "Hiện tượng này chủ yếu xảy ra khi chạy ở tốc độ cao. Dấu vết trên mặt đường do xe trượt là tài liệu quan trọng để xử lý tai nạn."
+  },
+  {
+    "n": 459,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 차량의 차로 이탈 원인과 위험을 정상적으로 읽을 수 없다.",
+    "suggestion": "Xe chủ yếu bị văng khỏi làn khi người lái đánh lái gấp trên đường cong. Ngoài ra, nếu gai lốp bị mòn, áp suất lốp quá cao hoặc mặt đường trơn, lực ma sát giữa lốp và mặt đường sẽ giảm, khiến xe có thể văng khỏi đường hoặc lấn qua vạch tim đường."
+  },
+  {
+    "n": 460,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 고속도로 차량 화재 시의 조치 순서를 정상적으로 읽을 수 없다.",
+    "suggestion": "Cách xử lý khi xe bốc cháy trên đường cao tốc: 1. Di chuyển xe vào làn dừng khẩn cấp. 2. Tắt máy và nhanh chóng xuống xe. 3. Nếu có thể dập đám cháy ban đầu, dùng bình chữa cháy trang bị trên xe để dập lửa. 4. Nếu không dập được, hãy tránh xa vì xe có thể phát nổ. 5. Gọi 119 để báo cháy xe."
+  },
+  {
+    "n": 461,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 도로 공사 구간의 구성과 차로 변경 의무를 정상적으로 읽을 수 없다.",
+    "suggestion": "Khu vực thi công đường bộ gồm các đoạn cảnh báo, chuyển tiếp, thi công và kết thúc. Trong đó, đoạn chuyển tiếp là nơi số làn đường giảm nên cần chuyển làn. Để lưu thông an toàn, phải chuyển làn trước và giảm tốc độ."
+  },
+  {
+    "n": 462,
+    "field": "e",
+    "severity": "major",
+    "issue": "베트남어 문자 인코딩이 깨져 증발현상 예방 방법을 정상적으로 읽을 수 없다.",
+    "suggestion": "Để phòng tránh hiện tượng biến mất do chói lóa, không được nhìn thẳng vào ánh đèn của xe đi ngược chiều."
+  }
+]
