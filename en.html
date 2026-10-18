@@ -95,7 +95,11 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 .splash-ov .sfoot{position:absolute;left:0;right:0;bottom:36px;font-size:11px;color:#9AA6BC;font-weight:700}
 @media (prefers-reduced-motion:reduce){.splash-ov{transition:none}.splash-ov .sload span::after{animation:none;left:0;width:100%}}
 </style>
-<noscript><style>.splash-ov{display:none!important}</style></noscript>
+<noscript><style>.splash-ov{display:none!important}.visit-badge{display:none;align-items:center;gap:5px;margin-left:8px;padding:4px 11px;border-radius:14px;background:linear-gradient(135deg,#0D7C3F,#13A05A);color:#fff;font-size:11.5px;font-weight:600;white-space:nowrap;vertical-align:middle}
+.visit-badge .vb-n{font-size:13px;font-weight:800;letter-spacing:.3px}
+.visit-badge .vb-l{opacity:.78;font-weight:500;font-size:10.5px}
+@media(max-width:480px){.visit-badge .vb-l{display:none}}
+</style></noscript>
 </head>
 <body>
 <div id="splash" class="splash-ov" role="status" aria-label="Driver's License Written Test AI Tutor, loading">
@@ -117,7 +121,7 @@ s.addEventListener('click',close);setTimeout(close,1800);
 <div class="sticky-top">
 <div class="lsw"><a href="index.html" class="lg">🇰🇷 한국어</a><a href="en.html" class="lg on">🇺🇸 English</a><a href="cn.html" class="lg">🇨🇳 中文</a><a href="vn.html" class="lg">🇻🇳 Tiếng Việt</a></div>
 <div class="hd">
-<div class="hd-row"><div class="hd-title"><h1 class="hd-en">🚗 Driver's License Test · AI Tutor</h1><div class="hd-ko">운전면허 학과시험 AI 튜터</div></div><span class="badge">Effective 2026.3.9</span></div>
+<div class="hd-row"><div class="hd-title"><h1 class="hd-en">🚗 Driver's License Test · AI Tutor</h1><div class="hd-ko">운전면허 학과시험 AI 튜터</div></div><span class="badge">Effective 2026.3.9</span><span class="visit-badge" id="visitBadge" title="2026.10.18부터 실측 집계"><span aria-hidden="true">👀</span><span class="vb-n">0</span><span class="vb-l">Visits · ’26.10.18~</span></span></div>
 <div class="sb"><input type="text" id="si" placeholder="Number or keyword search"><button onclick="go()">Search</button></div>
 </div>
 </div>
@@ -216,6 +220,20 @@ x.addEventListener('click',function(){bar.hidden=true;markDismiss();});
 sc.addEventListener('click',closeSheet);
 sheet.addEventListener('click',function(e){if(e.target===sheet)closeSheet();});
 });
+})();
+</script>
+<script>
+(function(){
+  var el=document.getElementById('visitBadge');if(!el)return;
+  var API='https://road-traffic-law-viewer.vercel.app/api/hit?site=quiz';
+  var m='POST';
+  try{if(sessionStorage.getItem('vc1'))m='GET';}catch(e){}
+  fetch(API,{method:m}).then(function(r){return r.json();}).then(function(d){
+    if(typeof d.count!=='number')return;
+    if(m==='POST'){try{sessionStorage.setItem('vc1','1');}catch(e){}}
+    el.querySelector('.vb-n').textContent=d.count.toLocaleString();
+    el.style.display='inline-flex';
+  }).catch(function(){});
 })();
 </script>
 </body>
