@@ -4,9 +4,10 @@
       title: 'AI 튜터 이용 안내',
       sub: 'ChatGPT로 이동하기 전에 확인해 주세요',
       s1t: '빠른 답변 받기',
-      s1b: '입력창 오른쪽의 모델 이름을 눌러 <b>GPT-5.6</b>을 선택하세요. 답변이 약 5초 만에 나옵니다.',
+      s1b: '입력창 오른쪽의 모델 이름을 눌러 <b>GPT-5.6</b>을 선택하면 더 빠르게 답변을 받을 수 있습니다.',
       s2t: '‘이제 플러그인입니다’ 안내가 보이면',
       s2b: 'OpenAI의 정책 변경 안내입니다. <b>[GPT 계속 사용하기]</b>를 누르거나 안내를 닫고 바로 질문하세요.',
+      note: 'ℹ️ 이 안내는 OpenAI가 GPT 서비스를 플러그인으로 전환하면서 생긴 것으로, <b>2026년 12월 11일</b>까지는 불가피하게 표시됩니다. 이후 새 방식으로 전환할 예정입니다.',
       go: 'AI 튜터 열기',
       close: '닫기'
     },
@@ -14,9 +15,10 @@
       title: 'Before you start',
       sub: 'Please check this before opening ChatGPT',
       s1t: 'Get faster answers',
-      s1b: 'Tap the model name next to the message box and choose <b>GPT-5.6</b>. Answers appear in about 5 seconds.',
+      s1b: 'Tap the model name next to the message box and choose <b>GPT-5.6</b> to get faster answers.',
       s2t: 'If you see “…is now a plugin”',
       s2b: 'This is an OpenAI policy notice. Tap <b>[Keep using GPT]</b> or close it, then ask your question.',
+      note: 'ℹ️ This notice appears because OpenAI is moving GPTs to plugins. It cannot be avoided until <b>December 11, 2026</b>; a new setup will follow.',
       go: 'Open AI Tutor',
       close: 'Close'
     },
@@ -24,9 +26,10 @@
       title: 'AI 导师使用说明',
       sub: '打开 ChatGPT 之前请先确认',
       s1t: '更快获得回答',
-      s1b: '点击输入框右侧的模型名称，选择 <b>GPT-5.6</b>，约 5 秒即可得到回答。',
+      s1b: '点击输入框右侧的模型名称，选择 <b>GPT-5.6</b>，可以更快获得回答。',
       s2t: '如果看到“现已成为插件”的提示',
       s2b: '这是 OpenAI 的政策变更通知。请点击 <b>[继续使用 GPT]</b> 或关闭提示，然后直接提问。',
+      note: 'ℹ️ 由于 OpenAI 正将 GPT 转为插件，此提示在 <b>2026 年 12 月 11 日</b>前无法避免，之后将切换为新方式。',
       go: '打开 AI 导师',
       close: '关闭'
     },
@@ -34,9 +37,10 @@
       title: 'Hướng dẫn sử dụng gia sư AI',
       sub: 'Vui lòng xem trước khi mở ChatGPT',
       s1t: 'Nhận câu trả lời nhanh hơn',
-      s1b: 'Nhấn vào tên mô hình bên cạnh ô nhập và chọn <b>GPT-5.6</b>. Câu trả lời xuất hiện sau khoảng 5 giây.',
+      s1b: 'Nhấn vào tên mô hình bên cạnh ô nhập và chọn <b>GPT-5.6</b> để nhận câu trả lời nhanh hơn.',
       s2t: 'Nếu thấy thông báo “…hiện là plugin”',
       s2b: 'Đây là thông báo thay đổi chính sách của OpenAI. Nhấn <b>[Tiếp tục dùng GPT]</b> hoặc đóng thông báo rồi đặt câu hỏi.',
+      note: 'ℹ️ Thông báo này xuất hiện do OpenAI chuyển GPT sang plugin và không thể tránh cho đến <b>ngày 11/12/2026</b>; sau đó sẽ chuyển sang cách mới.',
       go: 'Mở gia sư AI',
       close: 'Đóng'
     }
@@ -60,6 +64,8 @@
     '.gg-st b{color:#003FA2}' +
     '.gg-pill{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:5px 12px;border-radius:999px;background:#F3F4F8;border:1px solid #E2E5EF;font-size:13px;font-weight:700;color:#6E7191}' +
     '.gg-pill i{font-style:normal;color:#00923F}' +
+    '.gg-note{margin:-4px 0 12px;padding:10px 12px;border-radius:10px;background:#F3F4F8;font-size:12.5px;line-height:1.5;color:#6E7191}' +
+    '.gg-note b{color:#4A4F6A}' +
     '.gg-ft{display:flex;gap:10px;padding:8px 20px 20px}' +
     '.gg-ft button{min-height:48px;border-radius:14px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;border:0}' +
     '.gg-close{flex:0 0 auto;padding:0 18px;background:#F3F4F8;color:#4A4F6A}' +
@@ -87,6 +93,7 @@
       '<div class="gg-st"><div class="gg-n">1</div><div><h3>⚡ ' + t.s1t + '</h3><p>' + t.s1b + '</p>' +
       '<span class="gg-pill">GPT-6 ⌄ <i>→</i> GPT-5.6 ✓</span></div></div>' +
       '<div class="gg-st"><div class="gg-n">2</div><div><h3>💬 ' + t.s2t + '</h3><p>' + t.s2b + '</p></div></div>' +
+      '<p class="gg-note">' + t.note + '</p>' +
       '</div>' +
       '<div class="gg-ft"><button type="button" class="gg-close">' + t.close + '</button>' +
       '<button type="button" class="gg-go">' + t.go + ' →</button></div>' +
