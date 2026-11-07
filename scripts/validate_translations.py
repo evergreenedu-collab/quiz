@@ -22,7 +22,7 @@ from json import JSONDecoder
 from pathlib import Path
 
 PROJ = Path(__file__).parent.parent
-HTML = {"ko": "index.html", "en": "en.html", "cn": "cn.html", "vn": "vn.html"}
+HTML = {"ko": "index.html", "en": "en.html", "cn": "cn.html", "vn": "vn.html", "mn": "mn.html"}
 
 DIR = {
     "ko": {"L": re.compile(r"좌측|왼쪽|좌회전|좌로"), "R": re.compile(r"우측|오른쪽|우회전|우로"),
@@ -33,12 +33,15 @@ DIR = {
     "en": {"L": re.compile(r"\bleft\b", re.I), "R": re.compile(r"\bright(?!s\b| of way|-of-way)\b", re.I),
            "BOTH": re.compile(r"left and right|both sides", re.I)},
     "cn": {"L": re.compile(r"左"), "R": re.compile(r"右"), "BOTH": re.compile(r"左右|两侧|兩側")},
+    "mn": {"L": re.compile(r"зүүн(?!ий дагуу)", re.I), "R": re.compile(r"баруун", re.I),
+           "BOTH": re.compile(r"зүүн.{0,8}баруун|баруун.{0,8}зүүн|хоёр тал", re.I)},
 }
 NEG = {
     "ko": re.compile(r"않|금지|없|말아야|아니"),
     "vn": re.compile(r"không|cấm|chưa|đừng", re.I),
     "en": re.compile(r"\bnot\b|\bno\b|prohibit|never|cannot|n't|\bnor\b|without|forbidden|banned|\bavoid", re.I),
     "cn": re.compile(r"不|禁|没|勿|无|非|莫"),
+    "mn": re.compile(r"гүй|хориг|биш|үгүй|болохгүй|бүү|үл хамаар|хамаарахгүй", re.I),
 }
 HANGUL = re.compile(r"[가-힣]")
 
@@ -76,12 +79,13 @@ def dir_state(lang, text):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--strict", action="store_true")
+    ap.add_argument("--lang", default="vn,en,cn,mn", help="검사 언어 (콤마)")
     args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
     ko = load_q(PROJ / HTML["ko"])
     report = {}
-    for lang in ("vn", "en", "cn"):
+    for lang in args.lang.split(","):
         tr = load_q(PROJ / HTML[lang])
         issues = []
         for n, kq in ko.items():

@@ -4,9 +4,9 @@
 
 ## 프로젝트 개요
 
-- **목적**: 외국인 운전면허 학과시험 학습용 4개 언어(한·영·중·베) 웹 사이트
+- **목적**: 외국인 운전면허 학과시험 학습용 5개 언어(한·영·중·베·몽) 웹 사이트
 - **배포**: GitHub Pages (https://evergreenedu-collab.github.io/quiz/)
-- **데이터 규모**: 4개 언어 × 1000문항 (1~1000번, 결번 없음)
+- **데이터 규모**: 5개 언어 × 1000문항 (1~1000번, 결번 없음)
 - **운영**: 한국도로교통공단 부산광역시지부 교육본부
 
 ## 핵심 파일 구조
@@ -17,17 +17,19 @@
 ├── en.html             # 영어
 ├── cn.html             # 중국어
 ├── vn.html             # 베트남어
+├── mn.html             # 몽골어 (2026-11 추가, scripts/build_mn_page.py 로 생성 — 교재·진단평가 없음)
 ├── textbook.html       # 한국어 교재 (동영상 무관)
 ├── textbook_en/cn/vn.html
 ├── images/             # 사진형·표지판형 문항 이미지 (291개)
-├── 원본_PDF/           # 4개 언어 PDF 원본 (.gitignore 처리, 영구 보존)
+├── 원본_PDF/           # 5개 언어 PDF 원본 (.gitignore 처리, 영구 보존)
 ├── movie/              # 동영상 35개 (.gitignore 처리, GitHub Releases에 업로드)
 ├── scripts/            # 자동화 스크립트 (이 가이드의 핵심)
 │   ├── refresh_pdf.py   # PDF → HTML 데이터 자동 갱신
+│   ├── build_mn_page.py # 몽골어 PDF + index.html(imgs·t) + translations/expl_mn.json → mn.html 생성
 │   └── match_images.py  # 이미지 위치 매칭·추출
 ├── html_to_txt.py      # HTML → gpt_files/quiz_bank_*.txt 변환 (GPTs 동기화)
-├── gpt_files/         # ChatGPT GPTs 학습 텍스트 (4개 언어, HTML 정본 추출본)
-│   └── quiz_bank_{ko,en,cn,vn}.txt
+├── gpt_files/         # ChatGPT GPTs 학습 텍스트 (5개 언어, HTML 정본 추출본)
+│   └── quiz_bank_{ko,en,cn,vn,mn}.txt
 └── UPDATE_GUIDE.md     # 사용자분용 한국어 갱신 가이드 (꼭 함께 읽으세요)
 ```
 
@@ -47,7 +49,7 @@
 }
 ```
 
-**카운터 라인** (4개 언어 동일): 1000 / 문장 680 / 사진 185 / 표지판 100 / 동영상 35
+**카운터 라인** (5개 언어 동일): 1000 / 문장 680 / 사진 185 / 표지판 100 / 동영상 35
 
 ## 주요 동영상·이미지 호스팅
 
@@ -66,6 +68,7 @@
 | 영어 | `■ Answer：N` |
 | 중국어 | `■ 正确答案 : N` |
 | 베트남어 | `■ Đáp án đúng : N` ← `đúng :` 까지 포함되니 추출 시 제거 필요 |
+| 몽골어 | `■ зөв хариулт：N` (공백·콜론 변형 있음). 해설 없음, 사진형 ⑤ 보기 있음, Q39는 `ⓛ`→`①` 보정, 사진 설명줄(`n …`)은 보기에서 제거 |
 
 ### 알고리즘 단계
 1. PDF 전체 텍스트 추출 (PyMuPDF `fitz`)
@@ -91,21 +94,21 @@ PDF 페이지에서 어떤 이미지가 어느 문항인지 자동 매칭:
 
 ## GPTs 텍스트 동기화 (html_to_txt.py 안에 구현)
 
-ChatGPT GPTs 학습용 4개 언어 텍스트 (`gpt_files/quiz_bank_{ko,en,cn,vn}.txt`) 를 HTML 정본에서 자동 생성:
+ChatGPT GPTs 학습용 5개 언어 텍스트 (`gpt_files/quiz_bank_{ko,en,cn,vn,mn}.txt`) 를 HTML 정본에서 자동 생성:
 
-1. 4개 HTML 의 `const Q=[...]` 추출 → 1000문항씩 sort
+1. 5개 HTML 의 `const Q=[...]` 추출 → 1000문항씩 sort
 2. **한국어 해설(`e`)·이미지(`imgs`) 매핑**을 만들어 비한국어 HTML 의 빈 필드에 자동 주입
    - en/cn/vn 의 `e` 는 전부 빈 문자열 → 한국어 해설 그대로 복사 (GPTs 가 사용자 질문 언어로 번역 응답)
    - en HTML 5개(Q737/Q789/Q841/Q863/Q865), cn HTML 2개(Q889/Q919) 의 `imgs` 누락 → 한국어 imgs 복사
 3. 사용자 양식 (`===== 문제 N =====` / `유형` / `질문` / `이미지` / `①~④` / `정답` / `해설`) 으로 출력, UTF-8/LF
 
-**향후 갱신 시**: HTML 갱신이 완료되면 **반드시 `py html_to_txt.py` 를 실행** 해서 4개 txt 를 동시 갱신할 것. 같은 PR 에 묶어 머지.
+**향후 갱신 시**: HTML 갱신이 완료되면 **반드시 `py html_to_txt.py` 를 실행** 해서 5개 txt 를 동시 갱신할 것. 같은 PR 에 묶어 머지.
 
 ## 안전 절차 (모든 작업의 표준)
 
 1. **작업 시작 전 백업**:
    - 로컬: `Copy-Item -LiteralPath` 로 폴더 통째 복사 (OneDrive 환경 주의: `-LiteralPath` 필수)
-   - 4개 HTML `.bak` 사본
+   - 5개 HTML `.bak` 사본
    - GitHub 백업 브랜치 생성 (`backup-before-XXX-YYYY-MM-DD`)
 2. **작업은 별도 브랜치에서**: main 직접 푸시 금지
 3. **사용자가 PR 검토 후 머지**: Claude가 자동 머지하지 않음 (사용자가 명시 동의 시 도와드림)
@@ -128,12 +131,12 @@ ChatGPT GPTs 학습용 4개 언어 텍스트 (`gpt_files/quiz_bank_{ko,en,cn,vn}
 
 1. 백업 + 작업 브랜치
 2. `python scripts/refresh_pdf.py` → PDF 1000문항 추출·비교, 사용자 승인
-3. HTML 4개 갱신 + 카운터 재계산 + (필요 시) `python scripts/match_images.py`
-4. **`py html_to_txt.py` 자동 실행 → `gpt_files/quiz_bank_*.txt` 4개 동기화** (절대 빠뜨리지 말 것)
-5. 검증 (4파일 Q=1000, V=35, E≈996, I=285 일관) → PR 생성 (HTML + gpt_files 같은 PR)
+3. HTML 5개 갱신(몽골어는 build_mn_page.py) + 카운터 재계산 + (필요 시) `python scripts/match_images.py`
+4. **`py html_to_txt.py` 자동 실행 → `gpt_files/quiz_bank_*.txt` 5개 동기화** (절대 빠뜨리지 말 것). 몽골어는 `py scripts/build_mn_page.py` 로 mn.html 먼저 재생성
+5. 검증 (5파일 Q=1000, V=35, E≈996, I=285 일관) → PR 생성 (HTML + gpt_files 같은 PR)
 6. 사용자분 PR 검토·머지
 7. 머지 후 바탕화면(`C:\Users\user\OneDrive\바탕 화면\`) 에 새 4 파일 자동 복사
-8. 사용자분에게 ChatGPT GPTs Knowledge 재업로드 절차 안내 (기존 4파일 삭제 → 새 4파일 업로드 → Save)
+8. 사용자분에게 ChatGPT GPTs Knowledge 재업로드 절차 안내 (기존 5파일 삭제 → 새 5파일 업로드 → Save)
 
 ## 관련 GitHub 저장소
 

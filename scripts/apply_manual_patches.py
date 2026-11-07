@@ -9,7 +9,7 @@ from json import JSONDecoder
 from pathlib import Path
 
 PROJ = Path(__file__).parent.parent
-HTML = {"ko": "index.html", "en": "en.html", "cn": "cn.html", "vn": "vn.html"}
+HTML = {"ko": "index.html", "en": "en.html", "cn": "cn.html", "vn": "vn.html", "mn": "mn.html"}
 
 
 def main():
@@ -38,8 +38,17 @@ def main():
                     if q["c"][ci] != text:
                         q["c"][ci] = text
                         applied += 1
-            if patch.get("b"):
+                elif ci == len(q.get("c", [])):
+                    q["c"].append(text)
+                    applied += 1
+            if patch.get("b") and q.get("b") != patch["b"]:
                 q["b"] = patch["b"]
+                applied += 1
+            if patch.get("e") and q.get("e") != patch["e"]:
+                q["e"] = patch["e"]
+                applied += 1
+            if patch.get("imgs") is not None and q.get("imgs") != patch["imgs"]:
+                q["imgs"] = list(patch["imgs"])
                 applied += 1
         html_path.write_text(html[:s] + json.dumps(Q, ensure_ascii=False, separators=(",", ":"))
                              + html[s + end:], encoding="utf-8")
@@ -51,6 +60,10 @@ def main():
                 t = jby.get(q["n"])
                 if t:
                     t["b"], t["c"] = q.get("b"), q.get("c")
+                    if "e" in q:
+                        t["e"] = q["e"]
+                    if "imgs" in q:
+                        t["imgs"] = q["imgs"]
             jd_path.write_text(json.dumps(jd, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"[{lang}] 수동 패치 {applied}건 적용")
 
