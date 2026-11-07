@@ -19,7 +19,10 @@ sys.path.insert(0, str(PROJ))
 from html_to_txt import extract_Q  # 기존 파서 재사용
 
 # 사용자·조사로 확인된 기대 위험 문항 (회귀 감지용)
-EXPECTED_RISKY = {39, 456, 466, 509, 737, 789, 841, 842, 863, 865, 889, 919}
+# 2026-11-07: 12문항 전부 원본 데이터 정정(manual_patches.json) → 0. 456은 ALLOWED 참조.
+EXPECTED_RISKY = set()
+# 허용 예외: 영·중 공식 PDF가 한국어(4지)와 달리 보기 5개를 싣고 있음(⑤ 비상점멸등). 해설은 보기 번호를 인용하지 않아 이식 안전.
+ALLOWED = {456: {"en:보기수(5≠4)", "cn:보기수(5≠4)"}}
 
 
 def digit_set(a):
@@ -37,7 +40,7 @@ def marker_polluted(e):
 
 
 def load_all():
-    files = {"ko": "index.html", "en": "en.html", "cn": "cn.html", "vn": "vn.html"}
+    files = {"ko": "index.html", "en": "en.html", "cn": "cn.html", "vn": "vn.html", "mn": "mn.html"}
     return {lang: {q["n"]: q for q in extract_Q(str(PROJ / f))} for lang, f in files.items()}
 
 
@@ -46,7 +49,7 @@ def classify(Qs):
     risky = {}
     for n, kq in ko.items():
         reasons = []
-        for lang in ("en", "cn", "vn"):
+        for lang in ("en", "cn", "vn", "mn"):
             q = Qs[lang].get(n)
             if not q:
                 reasons.append(f"{lang}:문항없음")
@@ -59,6 +62,7 @@ def classify(Qs):
                 reasons.append(f"{lang}:imgs")
         if marker_polluted(kq.get("e", "")):
             reasons.append("ko:마커오염")
+        reasons = [r for r in reasons if r not in ALLOWED.get(n, set())]
         if reasons:
             risky[n] = reasons
     safe = [n for n in ko if n not in risky]
@@ -88,7 +92,7 @@ def main():
     print("\n기록: translations/risky_questions.json")
 
     if set(risky) == EXPECTED_RISKY:
-        print("✅ 기대 RISKY 12문항과 정확히 일치")
+        print(f"✅ 기대 RISKY 목록과 정확히 일치 ({len(EXPECTED_RISKY)}문항)")
         return 0
     print(f"⚠️ 기대와 차이 — 추가:{sorted(set(risky) - EXPECTED_RISKY)}, 누락:{sorted(EXPECTED_RISKY - set(risky))}")
     return 1

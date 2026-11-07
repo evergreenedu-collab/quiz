@@ -3,7 +3,7 @@
 
 사용법 (PowerShell):
     cd "c:\\Users\\user\\projects\\외국인-학과시험-AI튜터"
-    python scripts/refresh_pdf.py [--dry-run] [--lang ko,en,cn,vn]
+    python scripts/refresh_pdf.py [--dry-run] [--lang ko,en,cn,vn,mn]
 
 옵션:
     --dry-run           실제 HTML을 수정하지 않고 추출 결과만 보고
@@ -46,6 +46,8 @@ def find_pdfs(pdf_dir):
             found["en"] = str(p)
         elif "Chinese" in name or "中文" in name or "중국어" in name:
             found["cn"] = str(p)
+        elif "Mongolian" in name or "몽골" in name:
+            found["mn"] = str(p)
         elif "Vietnamese" in name or "베트남" in name or "Tieng" in name.lower():
             found["vn"] = str(p)
     return found
@@ -58,12 +60,14 @@ ANSWER_LABELS = {
     "en": r"■\s*Answer",
     "cn": r"■\s*正确答案",
     "vn": r"■\s*Đáp\s*án",
+    "mn": r"■\s*зөв\s*хариулт",
 }
 EXPLANATION_LABELS = {
     "ko": r"■\s*해설",
     "en": r"■\s*Explanation|■\s*Description",
     "cn": r"■\s*解析|■\s*解释",
     "vn": r"■\s*Giải\s*thích|■\s*Giải\s*đáp",
+    "mn": r"■\s*Тайлбар",
 }
 
 
@@ -180,7 +184,7 @@ def parse_record(rec):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true", help="추출만 하고 저장 안 함")
-    parser.add_argument("--lang", default="ko,en,cn,vn", help="처리 언어 (콤마)")
+    parser.add_argument("--lang", default="ko,en,cn,vn,mn", help="처리 언어 (콤마)")
     parser.add_argument("--out-dir", default=None, help="추출 JSON 저장 폴더 (기본: %TEMP%/quiz_extract)")
     args = parser.parse_args()
 
@@ -191,6 +195,7 @@ def main():
         "en": project_root / "en.html",
         "cn": project_root / "cn.html",
         "vn": project_root / "vn.html",
+        "mn": project_root / "mn.html",
     }
 
     if args.out_dir:
@@ -206,11 +211,11 @@ def main():
     # 1. PDF 식별
     pdfs = find_pdfs(pdf_dir)
     print(f"\n[1/3] 원본_PDF/ 에서 PDF 자동 식별:")
-    for lang in ("ko", "en", "cn", "vn"):
+    for lang in ("ko", "en", "cn", "vn", "mn"):
         if lang in pdfs:
             print(f"  ✅ {lang}: {Path(pdfs[lang]).name}")
         else:
-            print(f"  ❌ {lang}: 못 찾음 (파일명에 '한국어'/'English'/'Chinese'/'Vietnamese' 포함되어야 함)")
+            print(f"  ❌ {lang}: 못 찾음 (파일명에 '한국어'/'English'/'Chinese'/'Vietnamese'/'Mongolian' 포함되어야 함)")
 
     target_langs = [l for l in args.lang.split(",") if l in pdfs]
     if not target_langs:

@@ -5,9 +5,9 @@
 ## 🎯 결론부터 — 갱신은 "PDF만 다운받으면 끝" (+ GPTs 재업로드 1분)
 
 새 PDF가 도착하면 사용자분이 하실 일은 **딱 세 가지**:
-1. **PDF 4개 파일을 `원본_PDF/` 폴더에 넣기** (덮어쓰기 OK)
+1. **PDF 5개(한·영·중·베·몽) 파일을 `원본_PDF/` 폴더에 넣기** (덮어쓰기 OK)
 2. **Claude에게 "갱신 시작하자" 한마디**
-3. **PR 머지 후, ChatGPT GPTs Knowledge 에 새 `quiz_bank_*.txt` 4파일 재업로드** (UI 작업 1분, Claude 안내)
+3. **PR 머지 후, ChatGPT GPTs Knowledge 에 새 `quiz_bank_*.txt` 5파일 재업로드** (UI 작업 1분, Claude 안내)
 
 그 다음은 Claude가 자동화 스크립트를 돌리고, 매 단계 결과를 보여드립니다. 사용자분은 **확인·승인·머지·GPTs 재업로드**만 하시면 됩니다.
 
@@ -16,8 +16,9 @@
 ## 📋 사용자분이 준비해야 할 것 (Claude에게 갱신 시작 전)
 
 ### 필수
-- [ ] **새 PDF 4개**: 한국어·영어·중국어·베트남어 (도로교통공단 배포본)
-- [ ] PDF 파일명에 다음 키워드 중 하나 포함: `한국어`, `English`, `Chinese`, `Vietnamese`
+- [ ] **새 PDF 5개**: 한국어·영어·중국어·베트남어·몽골어 (도로교통공단 배포본)
+- [ ] PDF 파일명에 다음 키워드 중 하나 포함: `한국어`, `English`, `Chinese`, `Vietnamese`, `Mongolian`
+  - 몽골어는 해설 번역(`translations/expl_mn.json`)을 다시 만든 뒤 `py scripts/build_mn_page.py` 로 mn.html 을 재생성
   - 예: `(1,2종) 학과시험 문제은행[한국어]_(2027.3.9.시행).pdf`
   - 자동 식별 가능한 형식이라 사용자가 직접 매핑 안 해도 됨
 - [ ] 기존 `원본_PDF/` 폴더의 옛 PDF는 백업하거나 덮어쓰기 (Claude가 안내)
@@ -41,7 +42,7 @@
 ```powershell
 python scripts/refresh_pdf.py
 ```
-- 4개 PDF에서 1000개씩 자동 파싱
+- 5개 PDF에서 1000개씩 자동 파싱
 - 현재 HTML과 비교 → 추가·삭제·변경 번호 자동 식별
 
 **사용자분 확인 사항** (Claude가 보고드림):
@@ -52,7 +53,7 @@ python scripts/refresh_pdf.py
 여기서 사용자분이 **승인**해주시면 다음 단계.
 
 ### 3단계: HTML 갱신 (Claude 자동)
-- 추출된 데이터로 4개 HTML의 객체 배열 갱신
+- 추출된 데이터로 5개 HTML의 객체 배열 갱신
 - 카운터 자동 재계산
 - 새 객체의 유형(t) 자동 추론 (사진/표지판/문장/동영상형)
 
@@ -70,21 +71,21 @@ python scripts/match_images.py --pdf ko --num 1001 --num 1002
 ```powershell
 py html_to_txt.py
 ```
-- → `gpt_files/quiz_bank_{ko,en,cn,vn}.txt` 4파일 재생성 (한국어 해설·이미지를 비한국어에도 자동 채움)
-- 검증: 4파일 모두 문항=1000, 동영상형=35, 해설≈996, 이미지=285 일치 확인
-- **이 4파일은 HTML과 같은 PR에 함께 포함** (별도 PR 만들지 않음)
+- → `gpt_files/quiz_bank_{ko,en,cn,vn,mn}.txt` 5파일 재생성 (한국어 해설·이미지를 비한국어에도 자동 채움)
+- 검증: 5파일 모두 문항=1000, 동영상형=35, 해설≈996, 이미지=285 일치 확인
+- **이 5파일은 HTML과 같은 PR에 함께 포함** (별도 PR 만들지 않음)
 
 ### 6단계: 검증 + PR
-- Claude가 자동 검증: 4개 언어 카운트 일관성, 정답 형식, 데이터 무결성, gpt_files 동기화 상태
+- Claude가 자동 검증: 5개 언어 카운트 일관성, 정답 형식, 데이터 무결성, gpt_files 동기화 상태
 - 모두 통과하면 PR 생성 (예: `refresh-2027`)
 - 사용자분에게 PR URL 전달 → **사용자분이 GitHub에서 검토 후 머지**
 
 ### 7단계: 바탕화면 + GPTs 재업로드 (Claude 안내 + 사용자분 수행)
-- 머지 후 Claude가 바탕화면(`C:\Users\user\OneDrive\바탕 화면\`)에 새 4파일 자동 복사
+- 머지 후 Claude가 바탕화면(`C:\Users\user\OneDrive\바탕 화면\`)에 새 5파일 자동 복사
 - 사용자분이 ChatGPT GPTs UI에서 (1~2분):
   1. ChatGPT → 본인 GPTs 편집 화면 → Configure → Knowledge
-  2. 기존 `quiz_bank_{ko,en,cn,vn}.txt` 4파일 **삭제**
-  3. 바탕화면의 새 4파일 **업로드** → **Save**
+  2. 기존 `quiz_bank_{ko,en,cn,vn,mn}.txt` 5파일 **삭제**
+  3. 바탕화면의 새 5파일 **업로드** → **Save**
 - 검증 프롬프트로 확인: "966번 해설해줘" / "Explain question 970" / "Câu 1000 giải thích"
 
 ### 8단계: 사이트 검증 (사용자분)
@@ -141,7 +142,7 @@ A. CLAUDE.md 와 분리된 별도 작업입니다. Claude에게 "새 기능 추�
 │   └── match_images.py            # 이미지 자동 매칭·추출
 ├── images/                        # 사진형·표지판형 그림 (291개)
 ├── movie/                         # 동영상 35개 (GitHub에 업로드 안 됨)
-├── index.html / en.html / cn.html / vn.html  # 4개 언어 학습 페이지
+├── index.html / en.html / cn.html / vn.html  # 5개 언어 학습 페이지
 ├── CLAUDE.md                      # Claude 자동 참조 (수정 X)
 └── UPDATE_GUIDE.md                # 본 가이드 (사용자분용)
 ```
@@ -151,17 +152,17 @@ A. CLAUDE.md 와 분리된 별도 작업입니다. Claude에게 "새 기능 추�
 ## ✅ 체크리스트 (갱신 시작할 때 사용)
 
 ```
-[ ] 새 PDF 4개를 원본_PDF/ 폴더에 배치
+[ ] 새 PDF 5개를 원본_PDF/ 폴더에 배치
 [ ] 파일명에 한국어/English/Chinese/Vietnamese 키워드 포함 확인
 [ ] Claude에게 "갱신 시작하자" 입력
 [ ] (Claude 보고) 백업 완료 확인
 [ ] (Claude 보고) PDF 추출 결과 확인 → 승인
 [ ] (Claude 보고) HTML 갱신 결과 확인
 [ ] (필요 시) 이미지 매칭 검증
-[ ] (Claude 보고) gpt_files/*.txt 4파일 동기화 완료 (문항=1000, 동영상=35, 해설≈996, 이미지=285)
+[ ] (Claude 보고) gpt_files/*.txt 5파일 동기화 완료 (문항=1000, 동영상=35, 해설≈996, 이미지=285)
 [ ] PR 검토 + 머지 (HTML + gpt_files 같은 PR)
-[ ] (Claude 자동) 바탕화면에 새 4파일 복사 확인
-[ ] ChatGPT GPTs Knowledge 에 새 4파일 재업로드 (기존 삭제 → 신규 업로드 → Save)
+[ ] (Claude 자동) 바탕화면에 새 5파일 복사 확인
+[ ] ChatGPT GPTs Knowledge 에 새 5파일 재업로드 (기존 삭제 → 신규 업로드 → Save)
 [ ] GPTs 검증 프롬프트 테스트 ("966번 해설해줘" 등)
 [ ] GitHub Pages 빌드 후 사이트 검증
 [ ] 일주일 안정 확인 후 백업 자료 정리 (Claude 도와드림)

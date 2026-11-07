@@ -13,6 +13,7 @@ TARGETS = [
     ("en.html",    "quiz_bank_en.txt", "en"),
     ("cn.html",    "quiz_bank_cn.txt", "cn"),
     ("vn.html",    "quiz_bank_vn.txt", "vn"),
+    ("mn.html",    "quiz_bank_mn.txt", "mn"),
 ]
 
 DATA_VERSION = "2026.3.9"
