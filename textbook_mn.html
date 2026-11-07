@@ -1,0 +1,3156 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="manifest" href="manifest_mn.json">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#003FA2">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Жолооны шалгалт">
+<title>Жолооны онолын шалгалтын сурах бичиг — Гадаад иргэдэд</title>
+<style>
+  /* ===== CSS VARIABLES ===== */
+  :root {
+    --bg: #f8f6f1;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text-sub: #555;
+    --accent: #1e40af;
+    --accent-light: #dbeafe;
+    --green: #059669;
+    --green-light: #d1fae5;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --yellow: #d97706;
+    --yellow-light: #fef3c7;
+    --orange: #ea580c;
+    --orange-light: #fff7ed;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --border: #e5e2d9;
+    --shadow: 0 1px 3px rgba(0,0,0,.08);
+    --radius: 12px;
+    --font-title: 'Noto Sans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Noto Sans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .ci-bar { display:flex; align-items:center; justify-content:center; padding:10px 14px 9px; background:#fff; max-width:640px; margin:0 auto; }
+  .ci-bar img { height:26px; width:auto; }
+  /* ===== HEADER ===== */
+  .header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+    color: #fff;
+    padding: 2rem 1.25rem;
+    text-align: center;
+  }
+  .header h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: .25rem; }
+  .header p { font-size: .85rem; opacity: .85; }
+
+  /* ===== NAV TABS ===== */
+  .nav-tabs {
+    display: flex;
+    justify-content: safe center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    padding: 0 .5rem;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tabs a {
+    flex-shrink: 0;
+    padding: .75rem 1rem;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--text-sub);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all .2s;
+  }
+  .nav-tabs a:hover,
+  .nav-tabs a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ===== MAIN CONTENT ===== */
+  .content { max-width: 720px; margin: 0 auto; padding: 0 1rem 3rem; }
+
+  /* ===== CHAPTER HEADER ===== */
+  .chapter-header {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow);
+  }
+  .chapter-header .ch-num {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .chapter-header h2 { font-size: 1.35rem; font-weight: 800; margin: .25rem 0; }
+  .chapter-header .ch-desc { font-size: .9rem; color: var(--text-sub); }
+  .chapter-header .ch-stars { color: var(--yellow); margin-top: .5rem; font-size: .85rem; }
+
+  /* ===== SECTION ===== */
+  .section {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+  }
+  .section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: .75rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1rem 0 .5rem;
+  }
+  .section p { margin-bottom: .75rem; font-size: .95rem; }
+  .section ul, .section ol { padding-left: 1.25rem; margin-bottom: .75rem; }
+  .section li { margin-bottom: .35rem; font-size: .93rem; }
+
+  /* ===== INFO BOXES ===== */
+  .box {
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin: .75rem 0;
+    font-size: .9rem;
+    line-height: 1.65;
+  }
+  .box-law { background: var(--accent-light); border-left: 3px solid var(--accent); }
+  .box-warn { background: var(--red-light); border-left: 3px solid var(--red); }
+  .box-tip { background: var(--green-light); border-left: 3px solid var(--green); }
+  .box-foreign { background: var(--orange-light); border-left: 3px solid var(--orange); }
+  .box-compare { background: var(--purple-light); border-left: 3px solid var(--purple); }
+  .box-exam { background: var(--yellow-light); border-left: 3px solid var(--yellow); }
+  .box .box-title {
+    font-weight: 700;
+    margin-bottom: .35rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
+
+  /* ===== TABLES ===== */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: .75rem 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .88rem;
+    min-width: 320px;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    padding: .6rem .75rem;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  td {
+    padding: .55rem .75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fafaf7; }
+
+  /* ===== SIGNAL CARDS ===== */
+  .signal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+    margin: .75rem 0;
+  }
+  @media (min-width: 480px) {
+    .signal-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .signal-card {
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .signal-card .signal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 0 auto .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .signal-card .signal-name { font-weight: 700; font-size: .95rem; margin-bottom: .25rem; }
+  .signal-card .signal-desc { font-size: .83rem; color: var(--text-sub); line-height: 1.5; }
+
+  .sig-green { background: #ecfdf5; }
+  .sig-green .signal-icon { background: #22c55e; color: #fff; }
+  .sig-green .signal-icon.signal-arrow { background: transparent; }
+  .sig-yellow { background: #fffbeb; }
+  .sig-yellow .signal-icon { background: #eab308; color: #fff; }
+  .sig-red { background: #fef2f2; }
+  .sig-red .signal-icon { background: #ef4444; color: #fff; }
+
+  /* ===== FLOW DIAGRAM ===== */
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: .75rem 0;
+    font-size: .88rem;
+  }
+  .flow-step {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 700;
+    padding: .5rem .9rem;
+    border-radius: 8px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .flow-step.step-red { background: var(--red-light); color: var(--red); }
+  .flow-step.step-green { background: var(--green-light); color: var(--green); }
+  .flow-step.step-yellow { background: var(--yellow-light); color: var(--yellow); }
+  .flow-arrow { font-size: 1.1rem; color: var(--text-sub); flex-shrink: 0; }
+
+  /* ===== SIGN SHAPES ===== */
+  .sign-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+    margin: .75rem 0;
+  }
+  @media (min-width: 480px) {
+    .sign-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .sign-item { text-align: center; }
+  .sign-item svg { margin: 0 auto .4rem; display: block; }
+  .sign-label { font-size: .82rem; font-weight: 600; }
+  .sign-sub { font-size: .75rem; color: var(--text-sub); }
+
+  /* ===== QUIZ ===== */
+  .quiz {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: .75rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .quiz-q {
+    font-weight: 700;
+    font-size: .95rem;
+    margin-bottom: .75rem;
+    display: flex;
+    gap: .5rem;
+  }
+  .quiz-q .q-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .78rem;
+  }
+  .quiz-opts { margin-bottom: .75rem; }
+  .quiz-opt {
+    display: block;
+    padding: .5rem .75rem;
+    margin-bottom: .35rem;
+    border-radius: 8px;
+    font-size: .9rem;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: all .2s;
+  }
+  .quiz-opt:hover { background: var(--accent-light); }
+  .quiz-opt.selected { background: var(--accent-light); border-color: var(--accent); }
+  .quiz-opt.correct { background: var(--green-light); border-color: var(--green); }
+  .quiz-opt.wrong { background: var(--red-light); border-color: var(--red); }
+  .quiz-answer {
+    display: none;
+    padding: .75rem;
+    border-radius: 8px;
+    background: var(--green-light);
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+  .quiz-answer.show { display: block; }
+
+  /* ===== COMPARISON TABLE ===== */
+  .compare-table { margin: .75rem 0; }
+  .compare-table th { font-size: .8rem; }
+  .compare-table td { font-size: .83rem; }
+  .compare-table .flag { font-size: 1.1rem; }
+
+  /* ===== SCENARIO CARDS ===== */
+  .scenario {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: .75rem 0;
+  }
+  .scenario-title {
+    font-weight: 700;
+    font-size: .92rem;
+    color: var(--accent);
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+  }
+  .scenario-body { font-size: .88rem; }
+  .scenario-body .do { color: var(--green); font-weight: 600; }
+  .scenario-body .dont { color: var(--red); font-weight: 600; }
+
+  /* ===== FOOTER RESOURCES ===== */
+  .resources {
+    background: linear-gradient(135deg, #1e3a5f, #1e40af);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .resources h4 { font-size: 1rem; margin-bottom: .75rem; }
+  .resources a {
+    display: block;
+    background: rgba(255,255,255,.15);
+    color: #fff;
+    text-decoration: none;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: background .2s;
+  }
+  .resources a:hover { background: rgba(255,255,255,.25); }
+
+  /* ===== PRIORITY INDICATOR ===== */
+  .priority {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: .78rem;
+    font-weight: 700;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+  }
+  .priority-high { background: #fee2e2; color: #dc2626; }
+  .priority-mid { background: #fef3c7; color: #d97706; }
+
+  /* ===== STEP INDICATOR ===== */
+  .steps { margin: .75rem 0; }
+  .step-item {
+    display: flex;
+    gap: .75rem;
+    padding: .75rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .step-item:last-child { border-bottom: none; }
+  .step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .85rem;
+  }
+  .step-content { flex: 1; font-size: .9rem; }
+  .step-content strong { color: var(--accent); }
+
+  /* ===== MOBILE OPTIMIZATIONS ===== */
+  @media (max-width: 480px) {
+    body { font-size: 15px; }
+    .header { padding: 1.25rem 1rem; }
+    .header h1 { font-size: 1.15rem; }
+    .content { padding: 0 .75rem 2rem; }
+    .section { padding: 1rem; }
+    .chapter-header { padding: 1.25rem; }
+    .chapter-header h2 { font-size: 1.2rem; }
+    table { font-size: .82rem; }
+    th, td { padding: .45rem .5rem; }
+    .signal-card { padding: .75rem; }
+    .sign-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .header, .nav-tabs { position: static; }
+    .quiz-answer { display: block !important; }
+    body { font-size: 12pt; }
+  }
+
+  /* ===== LANGUAGE SWITCHER ===== */
+  .lsw{display:flex;gap:4px;padding:6px 12px;background:#00204D;overflow-x:auto;-webkit-overflow-scrolling:touch;position:sticky;top:0;z-index:101}
+  .lsw::-webkit-scrollbar{display:none}
+  .lsw .lg{padding:4px 10px;border-radius:14px;font-size:11px;color:rgba(255,255,255,.6);text-decoration:none;white-space:nowrap;font-weight:500;flex-shrink:0}
+  .lsw .lg.on{background:rgba(255,255,255,.15);color:#fff}
+.nav-strip{display:flex;gap:8px;padding:8px 12px;max-width:640px;margin:0 auto;background:#fff;border-bottom:1px solid #E2E5EF}
+.nav-strip .chip{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:44px;box-sizing:border-box;padding:10px;border-radius:18px;font-size:13px;font-weight:700;text-decoration:none;font-family:inherit;line-height:1.25}
+.nav-strip .chip-sib{background:#F3F4F8;color:#4A4D63;border:1.5px solid #E2E5EF}
+.nav-strip .chip-ai{background:linear-gradient(135deg,#003FA2,#2563EB);color:#fff;box-shadow:0 2px 8px rgba(0,32,77,.22)}
+.diag-banner{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;max-width:640px;margin:0 auto;padding:10px 12px;background:linear-gradient(135deg,#0D7C3F,#13A05A);color:#fff;font-size:13px;font-weight:700;text-decoration:none;text-align:center;line-height:1.35}
+.diag-banner span{font-weight:500;opacity:.9;font-size:12px}
+.tt{position:fixed;bottom:18px;right:18px;width:46px;height:46px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:18px;cursor:pointer;box-shadow:0 3px 10px rgba(0,32,77,.25);display:none;z-index:100}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="lsw"><a href="textbook.html" class="lg">🇰🇷 한국어</a><a href="textbook_en.html" class="lg">🇺🇸 English</a><a href="textbook_cn.html" class="lg">🇨🇳 中文</a><a href="textbook_vn.html" class="lg">🇻🇳 Tiếng Việt</a><a href="textbook_mn.html" class="lg on">🇲🇳 Монгол</a></div>
+<div class="ci-bar"><img src="images/koroad-ci.png" alt="한국도로교통공단 KOROAD"></div>
+
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <h1>🚗 Жолооны онолын шалгалтын сурах бичиг — Гадаад иргэдэд</h1>
+  <p>Солонгосын Замын хөдөлгөөний газар (KoRoad) — Боловсролын газар</p>
+</div>
+
+<div class="nav-strip">
+<a class="chip chip-sib" href="mn.html">📝 1000 асуултын сан бодох</a>
+<a class="chip chip-ai" href="https://chatgpt.com/g/g-69db8d23db70819186a5872bbc3ea890-driver-s-license-ai-tutor-for-foreigners" target="_blank" rel="noopener" aria-label="AI багшаас асуух, шинэ цонхонд нээгдэнэ">🤖 AI багшаас асуух</a>
+</div>
+
+<a class="diag-banner" href="diagnostic.html?lang=mn">📊 Суралцахуйн үр дүнгийн үнэлгээ <span>Урьдчилсан·дараах оношилгоогоор ахицаа хэмжинэ</span></a>
+
+<!-- ===== NAV ===== -->
+<div class="nav-tabs">
+  <a href="#ch1">1-р бүлэг</a>
+  <a href="#ch2" class="active">2-р бүлэг</a>
+  <a href="#ch3">3-р бүлэг</a>
+  <a href="#ch4">4-р бүлэг</a>
+  <a href="#ch5">5-р бүлэг</a>
+  <a href="#ch6">6-р бүлэг</a>
+  <a href="#ch7">7-р бүлэг</a>
+  <a href="#ch8">8-р бүлэг</a>
+  <a href="#ch9">9-р бүлэг</a>
+  <a href="#ch10">10-р бүлэг</a>
+</div>
+
+<div class="content">
+
+<!-- ============================================================ -->
+<!-- CHAPTER 01 — -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch1">
+  <span class="ch-num">CHAPTER 01</span>
+  <h2>Онолын шалгалтын танилцуулга ба жолоодох эрхийн тогтолцоо</h2>
+  <p class="ch-desc">Жолоодох эрхийн төрөл, гадаад жолоодох эрх солих, шалгалтын бүтэц·зардал·тэнцэх босго</p>
+  <p class="ch-stars">★ Шалгалтын өмнө заавал ойлгох ёстой үндэс</p>
+</div>
+
+<!-- 1-1 Жолоодох эрхийн төрөл -->
+<div class="section" id="s1-1">
+  <h3>1-1. Жолоодох эрхийн төрөл (Замын хөдөлгөөний тухай хуулийн 80 дугаар зүйл)</h3>
+  <p>Солонгосын жолоодох эрх нь үндсэндээ <strong>1-р ангилал·2-р ангилал·дадлагын жолоодох эрх</strong> гэж хуваагддаг бөгөөд эрхийн төрлөөс хамаарч жолоодож болох тээврийн хэрэгсэл өөр байдаг.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Эрхийн төрөл</th><th>Дэд ангилал</th><th>Жолоодож болох тээврийн хэрэгсэл</th></tr>
+      <tr>
+        <td rowspan="4"><strong>1-р ангилал</strong><br>(ажил хэргийн·том оврын)</td>
+        <td>Том оврын</td>
+        <td>Суудлын автомашин, олон суудалт автомашин, ачааны автомашин (даацын хязгаарлалтгүй), зарим барилгын машин механизм, тусгай автомашин (том оврын чирэгч, аврах чирэгч автомашинаас бусад)</td>
+      </tr>
+      <tr>
+        <td>Ердийн</td>
+        <td>Суудлын автомашин, 15 хүртэл суудалтай олон суудалт автомашин, 12 тонноос бага даацтай ачааны автомашин, 10 тонноос бага тусгай автомашин</td>
+      </tr>
+      <tr>
+        <td>Жижиг оврын</td>
+        <td>3 дугуйт ачааны автомашин, 3 дугуйт суудлын автомашин</td>
+      </tr>
+      <tr>
+        <td>Тусгай</td>
+        <td>Том оврын чирэгч автомашин, жижиг оврын чирэгч автомашин, аврах чирэгч автомашин (구난차)</td>
+      </tr>
+      <tr>
+        <td rowspan="3"><strong>2-р ангилал</strong><br>(хувийн хэрэглээний)</td>
+        <td>Ердийн</td>
+        <td>Суудлын автомашин, 10 хүртэл суудалтай олон суудалт автомашин, 4 тонн хүртэл даацтай ачааны автомашин</td>
+      </tr>
+      <tr>
+        <td>Жижиг оврын</td>
+        <td>Моторын багтаамж 125cc-ээс дээш хоёр дугуйт тээврийн хэрэгсэл</td>
+      </tr>
+      <tr>
+        <td>Моторт унадаг дугуй</td>
+        <td>125cc хүртэлх хоёр дугуйт тээврийн хэрэгсэл, цахилгаан скутер (PM) зэрэг</td>
+      </tr>
+      <tr>
+        <td><strong>Дадлагын жолоодох эрх</strong></td>
+        <td>1-р·2-р ангиллын ердийн</td>
+        <td>Замын жолоодлогын шалгалтад орох зорилгоор олгох түр эрх (1 жил хүчинтэй)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 1-р ангилал vs 2-р ангилал — алийг нь авах вэ?</div>
+    <strong>Зөвхөн хувийн суудлын автомашин жолоодох</strong> бол <strong>2-р ангиллын ердийн жолоодох эрх</strong> хангалттай. Шалгалт нь харьцангуй хялбар, зардал нь ижил.<br>
+    <strong>Ачааны автомашин, олон суудалт автомашин (11~15 суудалтай), ажил хэргийн тээврийн хэрэгсэл</strong> жолоодох шаардлагатай бол <strong>1-р ангиллын ердийн жолоодох эрх</strong> авахыг зөвлөж байна.<br>
+    ⚠️ 2-р ангиллын эрхээр 11 ба түүнээс дээш суудалтай олон суудалт автомашин (11 суудалтай Carnival орно) жолоодох боломжгүй.
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — автомат (AT) vs механик (MT)</div>
+    Солонгосын жолоодох эрх нь <strong>автомат хурдны хайрцагтай тээврийн хэрэгслээр хязгаарлагдсан (AT) эрх</strong> ба <strong>ердийн (механик орсон) эрх</strong> гэж хуваагддаг.<br>
+    • AT эрх: зөвхөн автомат хурдны хайрцагтай тээврийн хэрэгсэл жолоодож болно. Шалгалт илүү хялбар бөгөөд гадаад иргэдийн ихэнх нь сонгодог.<br>
+    • Ердийн эрх: механик, автомат хоёуланг нь жолоодож болно.<br>
+    Эх орондоо механик хурдны хайрцгийн эрхтэй бол Солонгост ч ердийн эрх авах нь ашигтай.
+  </div>
+</div>
+
+<!-- 1-2 Гадаад жолоодох эрх солих -->
+<div class="section" id="s1-2">
+  <h3>1-2. Гадаад жолоодох эрхийг солих (хүлээн зөвшөөрөх) тогтолцоо</h3>
+  <p>Эх орондоо жолоодох эрх авсан гадаад иргэн тодорхой нөхцөлийг хангасан бол <strong>онол, ур чадвар, замын жолоодлогын шалгалт өгөхгүйгээр</strong> Солонгосын жолоодох эрхээр сольж авч болно (Замын хөдөлгөөний тухай хуулийн 84 дүгээр зүйл).</p>
+
+  <h4>Солих боломжтой нөхцөл</h4>
+  <ol>
+    <li>Эх орноосоо олгосон <strong>хүчинтэй жолоодох эрхийн үнэмлэх</strong> эзэмшиж байх (Солонгосын 2-р ангиллын ердийн эрхтэй дүйцэх буюу түүнээс дээш)</li>
+    <li>Солонгостой <strong>жолоодох эрх харилцан хүлээн зөвшөөрөх гэрээ байгуулсан</strong> улсын эрх байх (улс, мужаар ялгаатай)</li>
+    <li>Гадаад иргэний бүртгэл (F/E/D визний төрөл зэрэг) эсвэл хилийн чанадад оршин суугч Солонгос иргэний оршин суух газрын бүртгэл хийлгэсэн байх</li>
+    <li>Эх орондоо <strong>бодитоор оршин сууж байхдаа эрх авсан</strong> гэдгийг нотлох (гадаад паспортын хил нэвтрэлтийн бүртгэл зэрэг)</li>
+  </ol>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Улс бүрт солих хүрээ өөр байдаг</div>
+    • <strong>Бүрэн хүлээн зөвшөөрдөг улс (онол, ур чадвар, замын жолоодлогын шалгалтаас чөлөөлнө)</strong>: Япон, Герман, Франц, Их Британи, Австрали зэрэг OECD-ийн ихэнх улс, Тайвань — <strong>2-р ангиллын ердийн эрхээр</strong> шууд сольдог<br>
+    • <strong>Хэсэгчлэн хүлээн зөвшөөрдөг улс (зөвхөн онолын шалгалт өгнө)</strong>: улс бүрт өөр. KoROAD-аас (Солонгосын Замын хөдөлгөөний газар) лавлах шаардлагатай<br>
+    • <strong>Хүлээн зөвшөөрдөггүй улс</strong>: онол, ур чадвар, замын жолоодлогын шалгалтыг бүгдийг эхнээс нь өгөх ёстой<br><br>
+    ※ <strong>АНУ, Хятад, Вьетнам</strong>-ын хувьд муж, аймаг бүрээр гэрээний байдал өөр тул заавал шалгах хэрэгтэй.
+  </div>
+
+  <h4>Солихдоо бүрдүүлэх бичиг баримт</h4>
+  <ul>
+    <li>Гадаад жолоодох эрхийн үнэмлэхийн эх хувь + солонгос хэл дээрх нотариатаар баталгаажуулсан орчуулга (эсвэл апостиль)</li>
+    <li>Гадаад паспортын эх хувь ба хуулбар (хил нэвтрэлтийн бүртгэл орсон)</li>
+    <li>Гадаад иргэний бүртгэлийн үнэмлэх</li>
+    <li>Цээж зураг (3.5×4.5cm) 2 хувь</li>
+    <li>Хураамж ойролцоогоор <strong>10,000 вон</strong></li>
+    <li>Хараа, эрүүл мэндийн үзлэг (жолоодох эрхийн шалгалтын төвийн үзлэгийн өрөө)</li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Сольсны дараа анхаарах зүйл</div>
+    Гадаад жолоодох эрхийг сольсон бол эх үнэмлэхийг <strong>KoROAD-д хураалгах</strong> бөгөөд эх орондоо буцахдаа дахин авч болно. Солилтоор олгосон Солонгосын жолоодох эрх зөвхөн Солонгос дотор хүчинтэй бөгөөд олон улсын жолоодох эрхийн үнэмлэх (IDP) авахыг хүсвэл тусад нь хүсэлт гаргах ёстой.
+  </div>
+</div>
+
+<!-- 1-3 Онолын шалгалтын бүтэц -->
+<div class="section" id="s1-3">
+  <h3>1-3. Онолын шалгалтын бүтэц ба тэнцэх босго</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Ангилал</th><th>1-р ангиллын ердийн</th><th>2-р ангиллын ердийн</th></tr>
+      <tr><td>Асуултын тоо</td><td>40 асуулт</td><td>40 асуулт</td></tr>
+      <tr><td>Шалгалтын хугацаа</td><td>40 минут</td><td>40 минут</td></tr>
+      <tr><td>Асуултын хэлбэр</td><td colspan="2">4 сонголттой (нэг хариулт) + 5 сонголттой (аюулгүйн тэмдэг, видео) холимог</td></tr>
+      <tr><td>Тэнцэх босго</td><td><strong>70 оноо ба түүнээс дээш</strong></td><td><strong>60 оноо ба түүнээс дээш</strong></td></tr>
+      <tr><td>Хэлний сонголт</td><td colspan="2">Солонгос, англи, хятад, вьетнам, монгол хэл (нийт 5 хэл)</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Онолын шалгалтын сэдвийн хүрээ (1,000 асуултын санд үндэслэсэн)</div>
+    ① Жолоодох эрхийн тогтолцоо, зохицуулалт (ойролцоогоор 5%)<br>
+    ② Замын хөдөлгөөний дүрэм, шийтгэл (ойролцоогоор 30%) — <strong>хамгийн их асуугддаг</strong><br>
+    ③ Аюулгүй жолоодлого (ойролцоогоор 20%)<br>
+    ④ Автомашины арчилгаа, бүтэц (ойролцоогоор 5%)<br>
+    ⑤ Зам тээврийн осол шийдвэрлэх, анхны тусламж (ойролцоогоор 10%)<br>
+    ⑥ Гэрлэн дохио, тэмдэг, замын гадаргуугийн тэмдэглэгээ (ойролцоогоор 15%) — 2 дугаар бүлгийг заавал судлах<br>
+    ⑦ Уулзвараар нэвтрэх, зам тавьж өгөх (ойролцоогоор 10%) — 3 дугаар бүлгийг заавал судлах<br>
+    ⑧ Аюулгүйн тэмдэг, видео асуулт (ойролцоогоор 5%)
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — орчуулгын чанар</div>
+    Онолын шалгалтын орчуулсан хувилбарууд (англи, хятад, вьетнам зэрэг) <strong>Солонгосын хууль зүйн нэр томьёог</strong> үгчлэн орчуулсан тохиолдол олон тул эвгүй сонсогдож болно. Эргэлзээтэй бол солонгос эх бичвэрийг хамт шалгаарай. Ялангуяа <strong>«удаан явах (서행)», «түр зогсох (일시정지)», «зам тавьж өгөх (양보)»</strong> зэрэг нэр томьёоны хууль зүйн нарийн утгыг ойлгосон байж л буруу хариултаас зайлсхийж чадна.
+  </div>
+</div>
+
+<!-- 1-4 Жолоодох эрх авах үе шат ба зардал -->
+<div class="section" id="s1-4">
+  <h3>1-4. Жолоодох эрх авах үе шат ба зардал</h3>
+
+  <div class="flow">
+    <div class="flow-step step-green">① Замын хөдөлгөөний аюулгүй байдлын сургалт</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step">② Эрүүл мэндийн үзлэг</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">③ Онолын шалгалт</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">④ Ур чадварын шалгалт</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">⑤ Дадлагын жолоодох эрх</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-red">⑥ Замын жолоодлогын шалгалт</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">⑦ Жолоодох эрхийн үнэмлэх олгох</div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Үе шат</th><th>Агуулга</th><th>Хураамж (вон)</th></tr>
+      <tr><td>Замын хөдөлгөөний аюулгүй байдлын сургалт</td><td>Шинээр шалгуулагчид заавал 1 цаг (шалгалтын төв дээр дүрс бичлэгийн сургалт)</td><td>Үнэгүй</td></tr>
+      <tr><td>Эрүүл мэндийн үзлэг</td><td>Хараа, өнгө ялгах чадвар, сонсгол зэрэг (шалгалтын төвийн үзлэгийн өрөө)</td><td>ойролцоогоор 6,000</td></tr>
+      <tr><td><strong>Онолын шалгалт</strong></td><td>40 асуулт, 70 оноо (1-р ангилал) / 60 оноо (2-р ангилал)</td><td><strong>10,000</strong></td></tr>
+      <tr><td><strong>Ур чадварын шалгалт</strong></td><td>Шалгалтын төвийн талбайд жолоодох (T хэлбэрийн зогсоол, налуу зам зэрэг)</td><td><strong>25,000</strong></td></tr>
+      <tr><td><strong>Дадлагын жолоодох эрх олгох</strong></td><td>Замын жолоодлогын шалгалтад орох түр эрх (1 жил хүчинтэй)</td><td><strong>4,000</strong></td></tr>
+      <tr><td><strong>Замын жолоодлогын шалгалт</strong></td><td>Бодит зам дээр ойролцоогоор 5km жолоодох</td><td><strong>30,000</strong></td></tr>
+      <tr><td><strong>Жолоодох эрхийн үнэмлэх олгох</strong></td><td>Ердийн үнэмлэх 10,000 вон / мобайл үнэмлэх 15,000 вон</td><td><strong>10,000</strong></td></tr>
+      <tr><td colspan="2" style="text-align:right;"><strong>Нийт дүн (дахин шалгалтгүй, ердийн үнэмлэхийн хувьд)</strong></td><td><strong>ойролцоогоор 85,000</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Дахин шалгалтын зардал</div>
+    Тэнцээгүй тохиолдолд үе шат бүрийн шалгалтад <strong>дахин орох хураамж</strong> дахин төлөх ёстой. Жишээлбэл замын жолоодлогын шалгалтад 3 удаа унавал замын жолоодлогын хураамж 30,000 вон × 3 = 90,000 вон нэмэлт зардал гарна. Нэг удаад тэнцэх нь зардал, цаг хоёуланг нь хэмнэнэ.
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — замын жолоодлогын шалгалтын хэл</div>
+    Ур чадварын шалгалт нь <strong>автомат дуут системтэй</strong> бөгөөд солонгос, англи, хятад, вьетнам зэрэг олон хэлээр дэмжигддэг. Гэвч <strong>замын жолоодлогын шалгалтыг зөвхөн солонгос, англи хэлээр</strong> өгөх боломжтой (зарим шалгалтын төвд англи хэлтэй шалгагчийг урьдчилан захиалах шаардлагатай). Вьетнам, хятад зэрэг эх хэлээрээ шалгалт өгөх боломжгүй тул жолоодлогын үндсэн солонгос нэр томьёог — «шулуун явах, зүүн тийш эргэх, баруун тийш эргэх, зогсох, удаан явах» (직진·좌회전·우회전·정지·서행) — урьдчилан сурчихаарай.
+  </div>
+</div>
+
+<!-- 1-5 Жолоодох эрхийн зохицуулалт, сунгалт -->
+<div class="section" id="s1-5">
+  <h3>1-5. Жолоодох эрхийн зохицуулалт ба сунгалт (87 дугаар зүйл)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Ангилал</th><th>1-р ангиллын ердийн</th><th>2-р ангиллын ердийн</th></tr>
+      <tr><td>Анхны сунгалтын хугацаа</td><td>Авснаас хойш 10 жил</td><td>Авснаас хойш 10 жил</td></tr>
+      <tr><td>Дараагийн сунгалтын давтамж</td><td><strong>10 жил тутам</strong></td><td><strong>10 жил тутам</strong></td></tr>
+      <tr><td>Чадварын шалгалт</td><td>Сунгалтын үед эрүүл мэндийн үзлэг орно</td><td>75 нас хүрснээс хойш 5 жил тутам</td></tr>
+      <tr><td>65~74 нас</td><td colspan="2">Сунгалтын давтамж <strong>5 жил</strong> болж богиносно</td></tr>
+      <tr><td>75 нас ба түүнээс дээш</td><td colspan="2">Сунгалтын давтамж <strong>3 жил</strong>, танин мэдэхүйн шалгалт, сургалт заавал</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Сунгалтын хугацаа хэтэрсэн тохиолдолд</div>
+    Сунгалтын хугацаа хэтэрвэл <strong>захиргааны торгууль (20,000 вон)</strong> ногдуулах бөгөөд дахиад 1 жил хэтэрвэл жолоодох эрх <strong>хүчингүй</strong> болно. Хүчингүй болсон эрхийг сэргээхэд онол, ур чадвар, замын жолоодлогын шалгалтыг дахин өгөх ёстой.
+  </div>
+</div>
+
+<!-- 1-6 Дасгал асуулт -->
+<div class="section" id="s1-6">
+  <h3>1-6. Дасгал асуулт</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>2-р ангиллын ердийн онолын шалгалтын тэнцэх оноо хэд вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 50 оноо</label>
+      <label class="quiz-opt" data-idx="2">② 60 оноо</label>
+      <label class="quiz-opt" data-idx="3">③ 70 оноо</label>
+      <label class="quiz-opt" data-idx="4">④ 80 оноо</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — 2-р ангиллын ердийн 60 оноо ба түүнээс дээш, 1-р ангиллын ердийн 70 оноо ба түүнээс дээш бол тэнцэнэ.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>11 суудалтай Carnival жолоодож болох эрх аль нь вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 2-р ангиллын ердийн</label>
+      <label class="quiz-opt" data-idx="2">② 2-р ангиллын жижиг оврын</label>
+      <label class="quiz-opt" data-idx="3">③ 1-р ангиллын ердийн ба түүнээс дээш</label>
+      <label class="quiz-opt" data-idx="4">④ Моторт унадаг дугуй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — 2-р ангиллын ердийн эрхээр 10 суудал хүртэл л боломжтой. 11 ба түүнээс дээш суудалтай олон суудалт автомашинд 1-р ангиллын ердийн ба түүнээс дээш эрх шаардлагатай.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Замын жолоодлогын шалгалт өгөхийн тулд заавал урьдчилан авах ёстой зүйл юу вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Олон улсын жолоодох эрхийн үнэмлэх</label>
+      <label class="quiz-opt" data-idx="2">② Дадлагын жолоодох эрх</label>
+      <label class="quiz-opt" data-idx="3">③ Албан ёсны жолоодох эрхийн үнэмлэх</label>
+      <label class="quiz-opt" data-idx="4">④ Түр жолоодох гэрчилгээ</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Онол, ур чадварын шалгалтад тэнцсэний дараа дадлагын жолоодох эрх авч байж замын жолоодлогын шалгалтад орж болно.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Онолын шалгалтын хураамж хэд вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 5,000 вон</label>
+      <label class="quiz-opt" data-idx="2">② 10,000 вон</label>
+      <label class="quiz-opt" data-idx="3">③ 30,000 вон</label>
+      <label class="quiz-opt" data-idx="4">④ 25,000 вон</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Онол 10,000 вон, ур чадвар 25,000 вон (онолынхоос 2.5 дахин их), дадлагын эрх 4,000 вон, замын жолоодлого 30,000 вон, үнэмлэх олгох 10,000 вон.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Гадаад жолоодох эрхийг Солонгосын эрхээр солихдоо шаардлагагүй зүйл аль нь вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Гадаад жолоодох эрхийн үнэмлэхийн эх хувь + нотариатаар баталгаажуулсан орчуулга</label>
+      <label class="quiz-opt" data-idx="2">② Гадаад паспорт ба хил нэвтрэлтийн бүртгэл</label>
+      <label class="quiz-opt" data-idx="3">③ Гадаад иргэний бүртгэлийн үнэмлэх</label>
+      <label class="quiz-opt" data-idx="4">④ Эх орны цагдаагийн байгууллагаас олгосон осолгүй жолоодсон тодорхойлолт</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — Осолгүй жолоодсон тодорхойлолт шаардлагатай бичиг баримт биш. Гэхдээ эх орондоо бодитоор оршин сууж эрх авсан гэдгийг гадаад паспортын хил нэвтрэлтийн бүртгэлээр шалгана.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>75 ба түүнээс дээш насны жолоочийн жолоодох эрхийн сунгалтын давтамж хэд вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10 жил</label>
+      <label class="quiz-opt" data-idx="2">② 5 жил</label>
+      <label class="quiz-opt" data-idx="3">③ 3 жил</label>
+      <label class="quiz-opt" data-idx="4">④ 1 жил</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — 75 ба түүнээс дээш насныхан 3 жил тутам сунгуулах + танин мэдэхүйн шалгалт, замын хөдөлгөөний аюулгүй байдлын сургалт заавал.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 02 — Гэрлэн дохио ба аюулгүйн тэмдгийг бүрэн эзэмших -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch2">
+  <span class="ch-num">CHAPTER 02</span>
+  <h2>Гэрлэн дохио ба аюулгүйн тэмдэглэгээг бүрэн эзэмших</h2>
+  <p class="ch-desc">Тээврийн хэрэгсэл, явган зорчигчийн дохио, анивчих гэрэл, аюулгүйн тэмдгийн 4 төрөл, замын гадаргуугийн тэмдэглэгээ — онолын шалгалтад ойролцоогоор 10~12 асуулт гарна</p>
+  <p class="ch-stars">★★★ Хамгийн их асуулт гардаг хэсэг</p>
+</div>
+
+<!-- 2-1 Дохионы дараалал -->
+<div class="section" id="s2-1">
+  <h3>2-1. Дохионы үндсэн зарчим — дараалал</h3>
+  <p>Замын хөдөлгөөний тухай хуулийн <strong>5 дугаар зүйл</strong>-д заасны дагуу замын хөдөлгөөнд оролцогч бүр замын хөдөлгөөний аюулгүй байдлын байгууламжийн дохиог дагах ёстой. <strong>Гэрлэн дохио зөрчих (신호위반) нь 12 ноцтой зөрчлийн (중과실) нэг</strong> бөгөөд даатгалд хамрагдсан эсэхээс үл хамааран эрүүгийн хариуцлага хүлээж болно.</p>
+
+  <div class="flow">
+    <div class="flow-step step-red">① Гарын дохио (хамгийн түрүүнд)</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">② Гэрлэн дохио</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">③ Аюулгүйн тэмдэг</div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Шалгалтын гол санаа</div>
+    <strong>Q. Гэрлэн дохио (신호기) ба цагдаагийн алба хаагчийн гарын дохио (수신호) зөрөх үед?</strong><br>
+    → <strong>Гарын дохио давуу</strong> (5 дугаар зүйлийн 2 дахь хэсэг)<br><br>
+    <strong>Q. Цагдаагийн туслахын хүрээ?</strong> (Хэрэгжүүлэх журмын (시행령) 6 дугаар зүйл)<br>
+    ✅ Цагдаагийн туслах: үлгэр жишээ жолооч, цэргийн цагдаа, гал түймрийн алба хаагч<br>
+    ❌ Цагдаагийн туслах биш: барилгын талбайн сайн дурын ажилтан, хурдны замын аюулгүй байдлын эргүүл, зогсоолын зохицуулагч
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд</div>
+    Олон оронд замын цагдаагийн гарын дохиог зөвхөн онцгой нөхцөлд ашигладаг. Солонгост <strong>ажилд ирэх, буцах ачаалалтай цагаар ч</strong> цагдаагийн алба хаагч гарын дохиогоор хөдөлгөөн зохицуулах нь элбэг. Энэ үед гэрлэн дохио болон гарын дохио зөрсөн ч <strong>заавал гарын дохиог дагана уу</strong>.
+  </div>
+</div>
+
+<!-- 2-2 Тээврийн хэрэгслийн гэрлэн дохио -->
+<div class="section" id="s2-2">
+  <h3>2-2. Тээврийн хэрэгслийн гэрлэн дохио (Хэрэгжүүлэх дүрмийн (시행규칙) [Хавсралт 2])</h3>
+  <p>Солонгосын тээврийн хэрэгслийн гэрлэн дохио үндсэндээ <strong>хэвтээ байрлалтай</strong>. Зүүн талаас улаан → шар → ногоон дарааллаар байрлах бөгөөд зүүн эргэлтийн сум зэрэг нэмэгдсэн байх нь бий.</p>
+
+  <div class="signal-grid">
+    <div class="signal-card sig-green">
+      <div class="signal-icon"></div>
+      <div class="signal-name">Ногоон гэрэл</div>
+      <div class="signal-desc"><strong>Чигээрээ явах буюу баруун эргэх</strong> боломжтой<br>Хамгаалалтгүй зүүн эргэлтийн (비보호좌회전) тэмдэг байвал зүүн эргэж болно</div>
+    </div>
+    <div class="signal-card sig-yellow">
+      <div class="signal-icon"></div>
+      <div class="signal-name">Шар гэрэл</div>
+      <div class="signal-desc"><strong>Зогсох шугамын өмнө зогсох</strong><br>Аль хэдийн орсон бол түргэн нэвтрэх</div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-icon"></div>
+      <div class="signal-name">Улаан гэрэл</div>
+      <div class="signal-desc"><strong>Зогсох</strong><br>Түр зогссоны (일시정지) дараа баруун эргэж болно (нөхцөлтэй)</div>
+    </div>
+    <div class="signal-card sig-green">
+      <div class="signal-icon signal-arrow"><svg viewBox="0 0 56 56" width="56" height="56"><circle cx="28" cy="28" r="25" fill="none" stroke="#22c55e" stroke-width="4"/><path d="M40 28H18M18 28L26 20M18 28L26 36" fill="none" stroke="#22c55e" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="signal-name">Ногоон сум</div>
+      <div class="signal-desc"><strong>Зөвхөн сумын чиглэлд</strong> явж болно<br>Өөр чиглэлд явахыг хориглоно</div>
+    </div>
+  </div>
+
+  <!-- Ногоон гэрлийн дэлгэрэнгүй -->
+  <h4>🟢 Ногоон гэрлийн утга — зүүн эргэж болохгүй!</h4>
+  <p>Ногоон гэрэл нь <strong>"чигээрээ явах буюу баруун эргэх"</strong> гэсэн утгатай. Олон гадаад иргэн ногоон гэрэлд бүх чиглэлд явж болно гэж андуурдаг ч <strong>хамгаалалтгүй зүүн эргэлтийн тэмдэггүй уулзварт ногоон гэрлээр зүүн эргэвэл гэрлэн дохио зөрчсөнд тооцогдоно</strong>.</p>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Дээд шүүхийн шийдвэр (2004Do5848)</div>
+    Ногоон, шар, улаан гурван өнгийн гэрлэн дохио байрлуулсан бөгөөд хамгаалалтгүй зүүн эргэлт болон буцаж эргэх (유턴) тэмдэглэгээгүй уулзварт тээврийн хэрэгслийн (차마) <strong>зүүн эргэх буюу буцаж эргэхийг зөвшөөрөхгүй</strong>.
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 Бусад орнуудтай харьцуулахад</div>
+    <strong>АНУ, Канад:</strong> ногоон гэрэлд зүүн эргэж болно (эсрэг урсгалын тээврийн хэрэгсэлд зам тавьж өгсний (양보) дараа)<br>
+    <strong>Хятад:</strong> ногоон гэрэлд зүүн эргэж болно<br>
+    <strong>Европ, Япон:</strong> зүүн эргэлтийн сумтай дохио байх үед л зүүн эргэнэ<br>
+    <strong>Солонгос:</strong> зүүн эргэлтийн сум буюу хамгаалалтгүй зүүн эргэлтийн тэмдэг байх үед л боломжтой
+  </div>
+
+  <!-- Хамгаалалтгүй зүүн эргэлт -->
+  <h4>🟢 Хамгаалалтгүй зүүн эргэлт гэж юу вэ?</h4>
+  <p>"Хамгаалалтгүй" гэдэг нь <strong>дохиогоор хамгаалагдахгүй</strong> гэсэн утгатай. Хамгаалалтгүй зүүн эргэлтийн тэмдэгтэй уулзварт <strong>чигээрээ явах дохио (ногоон)</strong> асаалттай үед <strong>эсрэг талаас чигээрээ явж буй тээврийн хэрэгсэл байхгүй бол</strong> зүүн эргэж болно.</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Онцгой анхаарах</div>
+    • Хамгаалалтгүй зүүн эргэлт <strong>зөвхөн чигээрээ явах дохио (ногоон) асаалттай үед</strong> боломжтой<br>
+    • <strong>Улаан гэрэлд хамгаалалтгүй зүүн эргэх = гэрлэн дохио зөрчих</strong> (зөрчлийн торгууль 60,000 вон, торгуулийн оноо 15)<br>
+    • Осол гарвал хамгаалалтгүй зүүн эргэсэн тээврийн хэрэгслийн буруу <strong>80% ба түүнээс дээш</strong>
+  </div>
+
+  <!-- Шар гэрлийн дэлгэрэнгүй -->
+  <h4>🟡 Шар гэрэл — "Зогсох уу, явах уу?"</h4>
+  <p><strong>Зарчим: зогсох шугамын өмнө зогсох</strong> ёстой. Харин зогсох шугамд хэт ойртсон тул аюулгүй зогсох боломжгүй үед (уулзварт аль хэдийн орсон тохиолдолд) <strong>түргэн нэвтэрнэ</strong>.</p>
+  <p>⚠️ Шар гэрэлд <strong>хурдаа нэмж албадан орох нь гэрлэн дохио зөрчих</strong> болно. "Шар гэрэл байна, түргэн гараад гарчихъя" гэдэг нь <strong>аюултай төөрөгдөл</strong> юм.</p>
+
+  <!-- Улаан гэрэлд баруун эргэх дэлгэрэнгүй -->
+  <h4 id="rtor">🔴 Улаан гэрэлд баруун эргэх (RTOR) — хамгийн чухал!</h4>
+  <p>Солонгос бол улаан гэрэлд <strong>баруун эргэхийг зөвшөөрдөг</strong> орон (Right Turn On Red). Гэхдээ ямар ч нөхцөлд болно гэсэн үг биш, <strong>хатуу нөхцөл</strong> бий.</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Заавал түр зогсох</strong> — зогсох шугам, явган хүний гарц, уулзварын өмнө дугуй бүрэн зогсох ёстой (хурд заагч 0km/h)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Явган зорчигчийг шалгах</strong> — явган хүний гарц дээр явган зорчигч <strong>байгаа буюу гарах гэж байвал</strong> бүрэн гарч дуустал хүлээх</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Бусад тээврийн хэрэгслийг шалгах</strong> — дохиогоор явж буй бусад тээврийн хэрэгслийн хөдөлгөөнд <strong>саад болохгүй байх</strong> ёстой</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>Удаан явж баруун эргэх</strong> — бүх нөхцөл хангагдсан бол удаан явж (서행) баруун эргэнэ</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Баруун эргэх боломжгүй нөхцөл</div>
+    <strong>① Баруун эргэлтийн гурван өнгийн гэрэл улаан</strong> — баруун эргэлтийн тусгай гэрлэн дохио байрлуулсан газарт улаан асаалттай бол <strong>баруун эргэхийг бүрмөсөн хориглоно!</strong> ([Хавсралт 2] тайлбарын 3 дахь заалт)<br>
+    <strong>② "Баруун эргэхийг хориглох" аюулгүйн тэмдэг</strong> — тэмдэг байвал ямар ч дохионд баруун эргэж болохгүй<br>
+    <strong>③ Чигээрээ явах тээврийн хэрэгсэл баруун эргэлтийг хааж байх үед</strong> — дохио хүлээж буй тээврийн хэрэгсэлд дуут дохио өгвөл зөрчлийн торгууль 40,000 вон
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 Улаан гэрэлд баруун эргэх — улс орнуудын харьцуулалт</div>
+    <div class="table-wrap">
+      <table class="compare-table">
+        <tr><th>Улс</th><th>Улаан гэрэлд баруун эргэх</th><th>Тайлбар</th></tr>
+        <tr><td><span class="flag">🇰🇷</span> Солонгос</td><td>✅ Болно (түр зогссоны дараа)</td><td>2023 оноос зогсох үүргийг чангатгасан</td></tr>
+        <tr><td><span class="flag">🇺🇸</span> АНУ</td><td>✅ Болно (ихэнх мужид)</td><td>Нью-Йорк хот зэрэг зарим газарт хориглоно</td></tr>
+        <tr><td><span class="flag">🇨🇳</span> Хятад</td><td>✅ Болно</td><td>Тусгай тэмдэг байхгүй бол зөвшөөрнө</td></tr>
+        <tr><td><span class="flag">🇻🇳</span> Вьетнам</td><td>⚠️ Тэмдгээс хамаарна</td><td>Баруун эргэхийг зөвшөөрөх тэмдэг байх үед л</td></tr>
+        <tr><td><span class="flag">🇯🇵</span> Япон</td><td>❌ Зарчмын хувьд хориглоно</td><td>Зүүн талын хөдөлгөөн, зүүн эргэлтэд тохирно</td></tr>
+        <tr><td><span class="flag">🇬🇧</span> Их Британи</td><td>❌ Хориглоно</td><td>Зүүн талын хөдөлгөөн</td></tr>
+        <tr><td><span class="flag">🇩🇪</span> Герман</td><td>❌ Зарчмын хувьд хориглоно</td><td>Ногоон сумтай тэмдэг байвал болно</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Бодит нөхцөл -->
+  <h4>📍 Бодит нөхцөлөөр ойлгох</h4>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 Нөхцөл 1: Улаан гэрэл, явган хүний гарц дээр явган зорчигч байхгүй</div>
+    <div class="scenario-body">
+      <span class="do">✅ Зөв үйлдэл:</span> зогсох шугам дээр түр зогсох → зүүн, баруун талд явган зорчигч байхгүйг шалгах → бусад тээврийн хэрэгслийн хөдөлгөөнд саад болохгүйг шалгах → удаан явж баруун эргэх<br>
+      <span class="dont">❌ Буруу үйлдэл:</span> зогсолгүй шууд баруун эргэх → <strong>гэрлэн дохио зөрчсөнөөр торгуулна</strong>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 Нөхцөл 2: Ногоон гэрэл, баруун эргэсний дараах хоёр дахь явган хүний гарц дээр явган зорчигч байна</div>
+    <div class="scenario-body">
+      <span class="do">✅ Зөв үйлдэл:</span> эхний явган хүний гарцыг удаан явж нэвтрэх → хоёр дахь явган хүний гарцын өмнө <strong>түр зогсох</strong> → явган зорчигч гарч дууссаны дараа явах<br>
+      <span class="dont">❌ Буруу үйлдэл:</span> "Ногоон гэрэл байна, зүгээр байх" → явган зорчигчийг хамгаалах үүрэг зөрчих (осол гарвал <strong>100% буруутай</strong>)
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-title">🚦 Нөхцөл 3: Баруун эргэлтийн гурван өнгийн гэрэл улаан</div>
+    <div class="scenario-body">
+      <span class="do">✅ Зөв үйлдэл:</span> зогсох шугам дээр зогсоод <strong>ногоон сум асахыг хүлээх</strong><br>
+      <span class="dont">❌ Буруу үйлдэл:</span> "Явган зорчигч ч, машин ч байхгүй юм чинь…" → <strong>огт болохгүй! Гэрлэн дохио зөрчих</strong>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Шалгалтад байнга гардаг — заавал тогтоо!</div>
+    <strong>1.</strong> Улаан гэрэлд баруун эргэх = заавал <strong>түр зогссоны дараа</strong> боломжтой<br>
+    <strong>2.</strong> Баруун эргэлтийн гурван өнгийн гэрэл улаан = <strong>баруун эргэх огт боломжгүй</strong><br>
+    <strong>3.</strong> Явган зорчигч байхгүй ч явган хүний дохио ногоон бол? → 2022 оны нэмэлт өөрчлөлтөөр <strong>нэвтэрч болно</strong> (гэхдээ явган зорчигч гарах гэж байвал түр зогсох)
+  </div>
+</div>
+
+<!-- 2-3 Анивчих гэрэл -->
+<div class="section" id="s2-3">
+  <h3>2-3. Анивчих гэрэл</h3>
+  <p>Анивчих гэрлийг ихэвчлэн <strong>хөдөлгөөн багатай цагаар</strong> (шөнө дөл, үүрээр) эсвэл <strong>туслах зам</strong> дээр ашигладаг.</p>
+
+  <div class="signal-grid">
+    <div class="signal-card sig-yellow">
+      <div class="signal-icon" style="animation: blink 1s infinite;"></div>
+      <div class="signal-name">Шар анивчих</div>
+      <div class="signal-desc"><strong>Анхаарал тавьж явах</strong><br>"Шар анивчсан = анхааралтай GO"<br>Ихэвчлэн гол зам (өргөн зам) дээр байрлуулна</div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-icon" style="animation: blink 1s infinite;"></div>
+      <div class="signal-name">Улаан анивчих</div>
+      <div class="signal-desc"><strong>Түр зогссоны дараа явах</strong><br>"Улаан анивчсан = зогсоод GO"<br>Ихэвчлэн туслах зам (нарийн зам) дээр байрлуулна</div>
+    </div>
+  </div>
+  <style>@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }</style>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Цээжлэх арга</div>
+    Шар анивчих = <strong>"анхаарал"</strong> тавьж удаан явж нэвтрэх (зогсох шаардлагагүй)<br>
+    Улаан анивчих = <strong>"зогссоны"</strong> дараа аюулгүй байдлыг шалгаад явах (заавал зогсоно)<br><br>
+    ⚠️ Уулзварт нэг тал нь шар анивчих, нөгөө тал нь улаан анивчих байх нь олонтаа. <strong>Улаан анивчих тал нь зам тавьж өгнө</strong>.
+  </div>
+</div>
+
+<!-- 2-4 Явган зорчигчийн дохио -->
+<div class="section" id="s2-4">
+  <h3>2-4. Явган зорчигчийн гэрлэн дохио</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Гэрэл</th><th>Утга</th><th>Явган зорчигчийн үйлдэл</th></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 Ногоон</td><td>Гарч болно</td><td>Явган хүний гарцаар гарч болно</td></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 Ногоон анивчих</td><td><strong>Гарч эхлэхийг хориглоно</strong></td><td>Гарч <strong>эхлэх ёсгүй</strong>. Гарч явж байгаа бол түргэн дуусгах буюу явган хүний зам руу буцах</td></tr>
+      <tr><td style="color:#ef4444;font-weight:700;">🔴 Улаан</td><td>Гарахыг хориглоно</td><td>Гарч болохгүй</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэд хамгийн их андуурдаг асуулт</div>
+    <strong>"Ногоон анивчиж байвал одоо ч ногоон учир түргэн гараад болох уу?"</strong><br>
+    → <strong>Үгүй!</strong> Ногоон анивчих нь <strong>шинээр гарч эхлэх ёсгүй</strong> дохио юм.<br>
+    Аль хэдийн гарч явж байгаа хүн түргэн гарах буюу ойрын явган хүний зам руу буцах ёстой.<br><br>
+    <strong>Жолоочийн хувьд:</strong> явган зорчигчийн дохио ногоон анивчиж байна гээд шууд хөдлөх ёсгүй. Гарч явж байгаа явган зорчигч байж болзошгүй.
+  </div>
+
+  <h4>Явган зорчигчийн дохио ба тээврийн хэрэгслийн хамаарал (2022 оны нэмэлт өөрчлөлтийн гол агуулга)</h4>
+  <p>2022 оны нэмэлт өөрчлөлтөөр <strong>явган зорчигчийг хамгаалах үүргийг эрс чангатгасан</strong>:</p>
+  <ul>
+    <li>Явган зорчигч явган хүний гарцаар <strong>"гарах гэж байх үед"</strong> (явган хүний зам дээр зогсож байх үед) ч жолооч түр зогсох ёстой</li>
+    <li>Хүүхдийн хамгаалалтын бүс дотор дохиогүй явган хүний гарц дээр явган зорчигч <strong>байхгүй байсан ч түр зогсох</strong></li>
+    <li>Явган зорчигч байхгүй бол явган хүний дохио ногоон байсан ч <strong>тээврийн хэрэгсэл явган хүний гарцаар нэвтэрч болно</strong></li>
+  </ul>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Гол хуулийн заалт</div>
+    <strong>27 дугаар зүйлийн 1 дэх хэсэг:</strong> явган зорчигч явган хүний гарцаар явж байх үед → түр зогсох<br>
+    <strong>27 дугаар зүйлийн 6 дахь хэсэг:</strong> гэрлэн дохиогүй явган хүний гарцаар явган зорчигч гарч байгаа буюу <strong>гарах гэж байх үед</strong> → түр зогсох<br>
+    Зөрчвөл = <strong>12 төрлийн ноцтой зөрчил</strong> (эрүүгийн хариуцлага)
+  </div>
+</div>
+
+<!-- 2-5 Унадаг дугуйн дохио -->
+<div class="section" id="s2-5">
+  <h3>2-5. Унадаг дугуйн гэрлэн дохио</h3>
+  <p>Унадаг дугуй ч <strong>тээврийн хэрэгсэлд</strong> тооцогдох тул дохиог дагах ёстой.</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Нөхцөл</th><th>Дагах дохио</th><th>Үндэслэл</th></tr>
+      <tr><td>Унадаг дугуйн тусгай гэрлэн дохио байгаа</td><td><strong>Унадаг дугуйн гэрлэн дохио</strong></td><td>[Хавсралт 2] тайлбарын 1 дэх заалт</td></tr>
+      <tr><td>Унадаг дугуйн гэрлэн дохио байхгүй, зорчих хэсгээр явж байгаа</td><td><strong>Тээврийн хэрэгслийн гэрлэн дохио</strong></td><td>[Хавсралт 2] тайлбарын 1 дэх заалт</td></tr>
+      <tr><td>Унадаг дугуйн гарц, тусгай дохио байхгүй</td><td><strong>Явган зорчигчийн гэрлэн дохио</strong></td><td>[Хавсралт 2] тайлбарын 2 дахь заалт</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 2-6 Аюулгүйн тэмдэг -->
+<div class="section" id="s2-6">
+  <h3>2-6. Аюулгүйн тэмдгийн 4 төрөл (Хэрэгжүүлэх дүрмийн [Хавсралт 6])</h3>
+  <p><strong>Аюулгүйн тэмдэглэгээ (안전표지)</strong> гэдэг нь замын хөдөлгөөний аюулгүй байдалд шаардлагатай анхааруулга, хориглолт, заавар зэргийг илэрхийлэх тэмдэг буюу замын гадаргуугийн тэмдэглэгээ юм (2 дугаар зүйлийн 16 дахь заалт). Шалгалтад <strong>зөвхөн хэлбэр, өнгөөр нь төрлийг ялгах</strong> асуулт гардаг.</p>
+
+  <div class="sign-grid">
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <!-- Анхааруулах: улаан хүрээтэй гурвалжин + шар (улбар шар) дотор -->
+        <polygon points="36,6 66,62 6,62" fill="#fbbf24" stroke="#dc2626" stroke-width="4" stroke-linejoin="round"/>
+        <text x="36" y="48" text-anchor="middle" font-size="14" font-weight="800" fill="#1a1a1a">!</text>
+      </svg>
+      <div class="sign-label">Анхааруулах тэмдэг (주의표지)</div>
+      <div class="sign-sub">Шар гурвалжин<br>+ улаан хүрээ</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <!-- Хориглох: цагаан дугуй + улаан хүрээ + улаан ташуу зураас (хориглох) -->
+        <circle cx="36" cy="36" r="28" fill="#fff" stroke="#dc2626" stroke-width="5"/>
+        <line x1="16" y1="16" x2="56" y2="56" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="sign-label">Хориглох тэмдэг (규제표지)</div>
+      <div class="sign-sub">Цагаан дугуй<br>+ улаан хүрээ + ташуу зураас</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <!-- Заах: цэнхэр дугуй (бүтэн дүүргэсэн) -->
+        <circle cx="36" cy="36" r="30" fill="#2563eb"/>
+      </svg>
+      <div class="sign-label">Заах тэмдэг (지시표지)</div>
+      <div class="sign-sub">Цэнхэр дугуй, дөрвөлжин<br>+ цагаан тэмдэгт</div>
+    </div>
+    <div class="sign-item">
+      <svg viewBox="0 0 72 72" width="72" height="72">
+        <!-- Нэмэлт: цагаан тэгш өнцөгт + хар хүрээ -->
+        <rect x="8" y="16" width="56" height="40" rx="4" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+        <text x="36" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Нэмэлт</text>
+      </svg>
+      <div class="sign-label">Нэмэлт тэмдэг (보조표지)</div>
+      <div class="sign-sub">Цагаан тэгш өнцөгт<br>+ хар бичиг</div>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Шалгалтын томьёо — 3 секундын ялгах арга</div>
+    <strong>Гурвалжин + шар → анхааруулах</strong> (аюулыг сануулах)<br>
+    <strong>Дугуй + улаан хүрээ → хориглох</strong> (хориглох, хязгаарлах)<br>
+    <strong>Дугуй, дөрвөлжин + цэнхэр → заах</strong> (чиглэл, арга заах)<br>
+    <strong>Тэгш өнцөгт + цагаан → нэмэлт</strong> (үндсэн тэмдгийг нөхөн тайлбарлах)<br><br>
+    💡 <strong>"Шар гурвалжин / улаан дугуй / цэнхэр заавар / цагаан нэмэлт"</strong> гэж цээжлээрэй!
+  </div>
+
+  <h4>Шалгалтад байнга гардаг аюулгүйн тэмдгүүд</h4>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Төрөл</th><th>Төлөөлөх тэмдэг</th><th>Шалгалтын гол санаа</th></tr>
+      <tr>
+        <td><strong>Анхааруулах</strong></td>
+        <td>Уулзвар, муруй зам, халтиргаатай зам, чулуу нурах, хүүхэд хамгаалах, замын ажил</td>
+        <td>"Аюултай, анхаарна уу" = удаан явах, анхаарал тавих</td>
+      </tr>
+      <tr>
+        <td><strong>Хориглох</strong></td>
+        <td>Нэвтрэхийг хориглох, орохыг хориглох, зогсох (정차) ба зогсоол (주차) хориглох, зогсоол хориглох, хурдны хязгаар, гүйцэж түрүүлэхийг (앞지르기) хориглох, өндрийн хязгаар, жингийн хязгаар</td>
+        <td>"Хийж болохгүй" = зөрчвөл хариуцлага хүлээлгэнэ</td>
+      </tr>
+      <tr>
+        <td><strong>Заах</strong></td>
+        <td>Чигээрээ явах, баруун эргэх, зүүн эргэх, автомашины зориулалтын зам, явган хүний гарц, нэг чигийн хөдөлгөөн, унадаг дугуйн зориулалтын, тойрог уулзвар</td>
+        <td>"Ингэж хийгээрэй" = чиглэл, арга заах</td>
+      </tr>
+      <tr>
+        <td><strong>Нэмэлт</strong></td>
+        <td>Зайн тэмдэглэгээ, бүсийн тэмдэглэгээ, цагийн хязгаар, тээврийн хэрэгслийн төрлийн хязгаар</td>
+        <td>Анхааруулах, хориглох, заах тэмдэгтэй хамт байрлуулна</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — зөвхөн Солонгост байдаг тусгай тэмдгүүд</div>
+    <strong>① Хүүхдийн хамгаалалтын бүсийн (сургуулийн бүс) тэмдэг:</strong> бусад орноос хатуу зохицуулалттай. 30km/h + осол гарвал 12 төрлийн ноцтой зөрчил + зөрчлийн торгууль 2 дахин<br>
+    <strong>② "Удаан явах" тэмдэг:</strong> Солонгост удаан явах гэдэг нь "шууд зогсох боломжтой бага хурд" бөгөөд тодорхой тоон утга биш<br>
+    <strong>③ Автомашины зориулалтын замын тэмдэг:</strong> автомашины зориулалтын зам дээр явган зорчигч, унадаг дугуй, хоёр дугуйт тээврийн хэрэгсэл (125cc-ээс доош) явахыг хориглоно
+  </div>
+</div>
+
+<!-- 2-7 Замын гадаргуугийн тэмдэглэгээ -->
+<div class="section" id="s2-7">
+  <h3>2-7. Замын гадаргуугийн тэмдэглэгээ — төвийн шугам ба эгнээний шугам</h3>
+  <p>Замын гадаргуу дээр зурсан шугам (замын гадаргуугийн тэмдэглэгээ) нь <strong>өнгө, хэлбэрээс</strong> хамаарч утга нь бүрмөсөн өөр болдог. Энэ нь шалгалтад маш олон гардаг.</p>
+
+  <h4>Гол ялгаа: төвийн шугам = шар / эгнээний шугам = цагаан</h4>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Ангилал</th><th>Өнгө</th><th>Тасралтгүй шугам</th><th>Тасархай шугам</th></tr>
+      <tr>
+        <td><strong>Төвийн шугам (중앙선)</strong><br>(эсрэг чиглэлийг ялгах)</td>
+        <td style="color:#d97706;font-weight:700;">Шар</td>
+        <td>Давахыг хориглоно<br><span class="priority priority-high">12 төрлийн ноцтой зөрчил</span></td>
+        <td>Гүйцэж түрүүлж болно<br>(эсрэг тал руу давж)</td>
+      </tr>
+      <tr>
+        <td><strong>Эгнээний шугам (차선)</strong><br>(нэг чиглэлийн эгнээг ялгах)</td>
+        <td style="font-weight:700;">Цагаан</td>
+        <td>Эгнээ солихыг хязгаарлана</td>
+        <td>Эгнээ сольж болно</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Төвийн шугам давах = 12 төрлийн ноцтой зөрчил</div>
+    Шар тасралтгүй төвийн шугамыг давбал <strong>12 төрлийн ноцтой зөрчилд</strong> тооцогдож эрүүгийн хариуцлага хүлээнэ. Гүйцэж түрүүлэх гэж төвийн шугам давах нь маш аюултай бөгөөд <strong>хуулийн ноцтой зөрчил</strong> юм.<br><br>
+    <strong>Нэг чиглэлд 1 эгнээ</strong> = дан төвийн шугам (шар тасралтгүй 1 зураас)<br>
+    <strong>Нэг чиглэлд 2 ба түүнээс дээш эгнээ</strong> = давхар төвийн шугам (шар тасралтгүй 2 зураас)
+  </div>
+
+  <h4>Бусад чухал замын гадаргуугийн тэмдэглэгээ</h4>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Тэмдэглэгээ</th><th>Утга</th><th>Шалгалтын гол санаа</th></tr>
+      <tr><td>Цагаан зогсох шугам</td><td>Дохио хүлээх байрлал</td><td>Зогсох шугамыг давж зогсвол зөрчил</td></tr>
+      <tr><td>Цагаан зигзаг шугам</td><td>Удаан явах хэсэг</td><td>Ихэвчлэн явган хүний гарцын өмнө байрлуулна</td></tr>
+      <tr><td>Шар давхар шугам</td><td>Зогсох, зогсоол хориглох</td><td>Замын захад шар давхар зураас</td></tr>
+      <tr><td>Шар дан шугам (тасархай)</td><td>Зогсох, зогсоолын цагийн хязгаар</td><td>Уян хатан хориглолт (цагаас хамаарч)</td></tr>
+      <tr><td>Цэнхэр шугам</td><td><strong>Автобусны зориулалтын эгнээ</strong></td><td>Цэнхэр тасралтгүй шугамаар ялгасан эгнээгээр зөвхөн автобус явж болно. Ердийн тээврийн хэрэгсэл орвол зөрчлийн торгууль ногдуулна</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Нэр томьёонд анхаар!</div>
+    <strong>Эгнээ солих (차로변경) (○)</strong> эгнээний шугам солих (차선변경) (✕) — "эгнээ (차로)" нь машин явах зам, "эгнээний шугам (차선)" нь эгнээг ялгах шугам<br>
+    <strong>Эсрэг талын эгнээ (반대편 차로) (○)</strong> эсрэг эгнээний шугам (반대차선) (✕) — эсрэг чиглэлийн эгнээг хэлэх үед<br>
+    Шалгалтад энэ нэр томьёог хольж андуурвал буруу хариулт болно!
+  </div>
+</div>
+
+<!-- 2-8 Хувьсах эгнээ, баруун эргэлтийн тусгай гэрлэн дохио (NEW) -->
+<div class="section" id="s2-8">
+  <h3>2-8. Баруун эргэлтийн тусгай гэрлэн дохио ба хувьсах эгнээ (NEW)</h3>
+
+  <h4>Баруун эргэлтийн тусгай гэрлэн дохио (2023 онд нэвтрүүлсэн)</h4>
+  <p>Явган зорчигч ба баруун эргэх тээврийн хэрэгслийн хооронд осол их гардаг байсан уулзваруудад <strong>баруун эргэлтийн тусгай гурван өнгийн гэрэл</strong> байрлуулж байна. Замын баруун захад байрладаг.</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Дохио</th><th>Утга</th></tr>
+      <tr><td style="color:#22c55e;font-weight:700;">🟢 Ногоон сум</td><td>Баруун эргэж болно (явган зорчигчид анхаар)</td></tr>
+      <tr><td style="color:#eab308;font-weight:700;">🟡 Шар</td><td>Зогсохоор бэлтгэх</td></tr>
+      <tr><td style="color:#ef4444;font-weight:700;">🔴 Улаан</td><td><strong>Баруун эргэхийг бүрмөсөн хориглоно</strong> — ердийн баруун эргэлтийн дүрмээс ялгаатай!</td></tr>
+    </table>
+  </div>
+
+  <h4>Хувьсах эгнээ</h4>
+  <p>Ажилд ирэх, буцах цагаас хамаарч эгнээний хөдөлгөөний чиглэл өөрчлөгддөг зам. Хувьсах эгнээний тэмдэглэгээг (цахим самбар) заавал шалгах ёстой.</p>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд</div>
+    Солонгосын хотуудад 1 дүгээр эгнээ (хамгийн зүүн) уулзвар дээр гэнэт <strong>зүүн эргэлтийн тусгай эгнээ</strong> болж хувирах нь маш элбэг. Чигээрээ явах бол 2 дугаар буюу түүнээс баруун талын эгнээгээр явах нь аюулгүй. Замын гадаргуугийн сумыг үргэлж шалгаарай.
+  </div>
+</div>
+
+<!-- 2-9 Дасгал бодлого (нэмэлт) -->
+<div class="section" id="s2-9">
+  <h3>2-9. Дасгал бодлого</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Гэрлэн дохио ба цагдаагийн алба хаагчийн гарын дохио зөрөх үед дагах ёстой нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Гэрлэн дохио</label>
+      <label class="quiz-opt" data-idx="2">② Гарын дохио</label>
+      <label class="quiz-opt" data-idx="3">③ Хоёуланг нь үл тоох</label>
+      <label class="quiz-opt" data-idx="4">④ Өөрийн үзэмжээр</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ②</strong> — гарын дохио хамгийн түрүүнд (5 дугаар зүйлийн 2 дахь хэсэг)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Улаан гэрэлд баруун эргэхийн тулд яах ёстой вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Шууд нэвтрэх</label>
+      <label class="quiz-opt" data-idx="2">② Түр зогсож аюулгүй байдлыг шалгасны дараа болно</label>
+      <label class="quiz-opt" data-idx="3">③ Огт болохгүй</label>
+      <label class="quiz-opt" data-idx="4">④ Удаан явж нэвтрэх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ②</strong> — заавал түр зогсож, явган зорчигч, бусад тээврийн хэрэгслийг шалгасны дараа баруун эргэж болно. Гэхдээ баруун эргэлтийн гурван өнгийн гэрэл улаан бол болохгүй!</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Баруун эргэлтийн гурван өнгийн гэрэл (баруун эргэлтийн тусгай гэрлэн дохио) улаан байх үед баруун эргэх нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Болно</label>
+      <label class="quiz-opt" data-idx="2">② Түр зогссоны дараа болно</label>
+      <label class="quiz-opt" data-idx="3">③ Удаан явсны дараа болно</label>
+      <label class="quiz-opt" data-idx="4">④ Болохгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ④</strong> — баруун эргэлтийн гурван өнгийн гэрэл улаан бол баруун эргэх огт болохгүй! ([Хавсралт 2] тайлбарын 3 дахь заалт)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Явган зорчигчийн ногоон анивчих дохионд явган зорчигчийн зөв үйлдэл нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Түргэн гарч эхлэх</label>
+      <label class="quiz-opt" data-idx="2">② Гарч эхлэхгүй, гарч явж байгаа бол түргэн дуусгах</label>
+      <label class="quiz-opt" data-idx="3">③ Байрандаа зогсох</label>
+      <label class="quiz-opt" data-idx="4">④ Гүйж гарах</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ②</strong> — ногоон анивчих = шинээр гарч эхлэхийг хориглоно. Гарч явж байгаа бол түргэн дуусгах буюу явган хүний зам руу буцах.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Шар гурвалжин аюулгүйн тэмдгийн төрөл нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Хориглох тэмдэг</label>
+      <label class="quiz-opt" data-idx="2">② Заах тэмдэг</label>
+      <label class="quiz-opt" data-idx="3">③ Анхааруулах тэмдэг</label>
+      <label class="quiz-opt" data-idx="4">④ Нэмэлт тэмдэг</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ③</strong> — шар гурвалжин + улаан хүрээ = анхааруулах тэмдэг (аюулыг сануулах)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Төвийн шугамын өнгө нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Цагаан</label>
+      <label class="quiz-opt" data-idx="2">② Шар</label>
+      <label class="quiz-opt" data-idx="3">③ Улаан</label>
+      <label class="quiz-opt" data-idx="4">④ Цэнхэр</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ②</strong> — төвийн шугам = шар, эгнээний шугам = цагаан</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>Шар анивчих гэрлийн утга нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Түр зогссоны дараа явах</label>
+      <label class="quiz-opt" data-idx="2">② Анхаарал тавьж явах</label>
+      <label class="quiz-opt" data-idx="3">③ Зогсох</label>
+      <label class="quiz-opt" data-idx="4">④ Түргэн нэвтрэх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ②</strong> — шар анивчих = анхаарал тавьж явах / улаан анивчих = түр зогссоны дараа явах</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q8</span><span>Хамгаалалтгүй зүүн эргэлт хийж болох үед нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Чигээрээ явах дохио (ногоон) асаалттай, эсрэг талаас тээврийн хэрэгсэл байхгүй үед</label>
+      <label class="quiz-opt" data-idx="2">② Улаан гэрэлд тээврийн хэрэгсэл байхгүй үед</label>
+      <label class="quiz-opt" data-idx="3">③ Шар гэрэлд</label>
+      <label class="quiz-opt" data-idx="4">④ Ямар ч дохионд болно</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ①</strong> — хамгаалалтгүй зүүн эргэлт зөвхөн чигээрээ явах дохио (ногоон) асаалттай үед л боломжтой. Улаан гэрэлд зүүн эргэх = гэрлэн дохио зөрчих!</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q9</span><span>Цагдаагийн туслах биш хүн нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Үлгэр жишээ жолооч</label>
+      <label class="quiz-opt" data-idx="2">② Цэргийн цагдаа</label>
+      <label class="quiz-opt" data-idx="3">③ Гал түймрийн алба хаагч</label>
+      <label class="quiz-opt" data-idx="4">④ Барилгын талбайн сайн дурын ажилтан</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ④</strong> — цагдаагийн туслах: үлгэр жишээ жолооч, цэргийн цагдаа, гал түймрийн алба хаагч (Хэрэгжүүлэх журмын 6 дугаар зүйл). Барилгын талбайн сайн дурын ажилтан, хурдны замын аюулгүй байдлын эргүүл зэрэг нь хамаарахгүй.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q10</span><span>Ногоон гэрэлд хийж болохгүй зүйл нь? (хамгаалалтгүй зүүн эргэлтийн тэмдэггүй уулзвар)</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Чигээрээ явах</label>
+      <label class="quiz-opt" data-idx="2">② Баруун эргэх</label>
+      <label class="quiz-opt" data-idx="3">③ Зүүн эргэх</label>
+      <label class="quiz-opt" data-idx="4">④ Чигээрээ явсны дараа эгнээ солих</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Зөв хариулт: ③</strong> — ногоон гэрэл = зөвхөн чигээрээ явах буюу баруун эргэх боломжтой. Хамгаалалтгүй зүүн эргэлтийн тэмдэг байхгүй бол зүүн эргэх = гэрлэн дохио зөрчих!</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 03 — Уулзвараар нэвтрэх -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch3">
+  <span class="ch-num">CHAPTER 03</span>
+  <h2>Уулзвараар нэвтрэх</h2>
+  <p class="ch-desc">Зүүн, баруун эргэлт хийх арга, зам тавьж өгөх дүрэм, буцаж эргэх, тойрог уулзвар, уулзвар бөглөх хориглох</p>
+  <p class="ch-stars">★★★ Хамгийн олон асуулт гардаг хэсэг</p>
+</div>
+
+<!-- 3-1 Зүүн эргэлт -->
+<div class="section" id="s3-1">
+  <h3>3-1. Зүүн эргэлт хийх арга (25 дугаар зүйлийн 2 дахь хэсэг)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Хуулийн эх бичвэр</div>
+    "Бүх тээврийн хэрэгслийн жолооч уулзвар (교차로) дээр зүүн тийш эргэхийг хүсвэл <strong>урьдчилан замын төвийн шугамын дагуу удаан явж (서행)</strong> уулзварын <strong>төвийн дотор талыг</strong> ашиглан зүүн тийш эргэх ёстой."
+  </div>
+
+  <p>Энгийнээр хэлбэл 3 алхамтай:</p>
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Урьдчилан зүүн эгнээнд шилжих</strong> — Зүүн тийш эргэхийн өмнө хамгийн дотор талын (төвийн шугамын талын) эгнээнд урьдчилан эгнээ солино. Уулзварын яг өмнө гэнэт эгнээ солих нь аюултай.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Зүүн эргэлтийн дохиог шалгах</strong> — Зүүн эргэлтийн сумтай дохио гартал зогсох шугам дээр хүлээнэ.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Уулзварын төвийн дотор талаар удаан явах</strong> — Уулзварын төвийн <strong>дотор талаар</strong> тойрч зүүн тийш эргэнэ. Гадна талаар том тойрч болохгүй (аймаг, нийслэлийн Цагдаагийн газрын даргын тогтоосон газар үл хамаарна).</div>
+    </div>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — Зүүн эргэлтийн дохионы систем</div>
+    Солонгост ихэнх уулзварт <strong>зүүн эргэлтийн тусдаа дохио (ногоон сум)</strong> байдаг. АНУ, Канад шиг ногоон гэрлэнд чөлөөтэй зүүн тийш эргэх нь <strong>зөвшөөрөгдөхгүй</strong>.<br><br>
+    <strong>Зүүн эргэлтийн дохионы дараалал (ерөнхийдөө):</strong><br>
+    ① Зүүн эргэлтийн сум → ② Чигээрээ явах ногоон → ③ Шар → ④ Улаан<br>
+    (Зарим уулзварт чигээрээ явсны дараа зүүн эргэлт гэсэн дараалалтай)
+  </div>
+</div>
+
+<!-- 3-2 Баруун эргэлт -->
+<div class="section" id="s3-2">
+  <h3>3-2. Баруун эргэлт хийх арга (25 дугаар зүйлийн 1 дэх хэсэг)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 Хуулийн эх бичвэр</div>
+    "Бүх тээврийн хэрэгслийн жолооч уулзвар дээр баруун тийш эргэхийг хүсвэл урьдчилан замын <strong>баруун захаар</strong> удаан явж баруун тийш эргэх ёстой. Энэ тохиолдолд баруун тийш эргэж буй тээврийн хэрэгслийн жолооч дохионы дагуу зогсож буй болон явж буй <strong>явган зорчигч буюу унадаг дугуй зэрэгт</strong> анхаарал тавих ёстой."
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Урьдчилан баруун эгнээнд шилжих</strong> — Баруун эргэлтээс 30 м-ийн өмнө чиг заах дохио асааж баруун захын эгнээнд шилжинэ</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Эхний явган хүний гарцыг шалгах</strong> — Улаан дохио бол түр зогсох (일시정지), ногоон бол явган зорчигчийг шалгасны дараа удаан явна</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Удаан явж баруун тийш эргэх</strong> — Замын баруун захын дагуу удаан явна</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>Хоёр дахь явган хүний гарцыг шалгах</strong> — Явган зорчигч байгаа буюу гарах гэж байвал <strong>түр зогсоно</strong></div>
+    </div>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Баруун эргэлтийн хураангуй хүснэгт</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Урд талын тээврийн хэрэгслийн дохио</th><th>Явган зорчигчийн байдал</th><th>Жолоочийн үйлдэл</th></tr>
+        <tr><td style="color:#ef4444;font-weight:700;">Улаан</td><td>Хамаарахгүй</td><td><strong>Заавал түр зогсож</strong> аюулгүй байдлыг шалгасны дараа баруун тийш эргэнэ</td></tr>
+        <tr><td style="color:#22c55e;font-weight:700;">Ногоон</td><td>Явган зорчигч байхгүй</td><td><strong>Удаан явж</strong> баруун тийш эргэнэ</td></tr>
+        <tr><td style="color:#22c55e;font-weight:700;">Ногоон</td><td>Явган зорчигч байгаа/гарах гэж байгаа</td><td><strong>Түр зогсох</strong> → явган зорчигч гарч дууссаны дараа явна</td></tr>
+        <tr><td colspan="2">Баруун эргэлтийн гурван өнгийн гэрлэн дохио улаан</td><td><strong>Баруун тийш эргэхийг хатуу хориглоно</strong></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 3-3 Буцаж эргэх (NEW) -->
+<div class="section" id="s3-3">
+  <h3>3-3. Буцаж эргэх (U-Turn) дүрэм (NEW)</h3>
+  <p>Буцаж эргэхийг <strong>хаана ч хийж болохгүй</strong>. Зөвхөн буцаж эргэхийг зөвшөөрсөн тэмдэг байгаа газарт л боломжтой.</p>
+
+  <h4>Буцаж эргэж болох нөхцөл</h4>
+  <ol>
+    <li><strong>Буцаж эргэхийг зөвшөөрсөн аюулгүйн тэмдэглэгээ</strong> байрлуулсан газар</li>
+    <li>Төвийн шугам <strong>тасархай</strong> (давж болно) хэсэг</li>
+    <li>Зүүн эргэлтийн дохио буюу <strong>явган зорчигчийн дохио ногоон</strong> байх үед (явган зорчигч байхгүй бол)</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Буцаж эргэхийг хориглох</div>
+    • Буцаж эргэхийг хориглосон тэмдэг байгаа газар<br>
+    • Төвийн шугам <strong>шар үргэлжилсэн</strong> газар (давахыг хориглоно = 12 ноцтой зөрчлийн нэг)<br>
+    • Уулзварын дотор буцаж эргэх (буцаж эргэх тэмдэг уулзварт байгаа тохиолдол үл хамаарна)<br>
+    • Улаан дохионд буцаж эргэх
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд</div>
+    <strong>АНУ:</strong> Ихэнх уулзварт буцаж эргэж болно (хориглосон тэмдэг байхгүй бол)<br>
+    <strong>Солонгос:</strong> Зөвхөн буцаж эргэхийг зөвшөөрсөн тэмдэг байгаа үед л боломжтой (зарчмын хувьд хориотой)<br><br>
+    Солонгосын буцаж эргэх дүрэм АНУ-тай <strong>яг эсрэг</strong>! «Хориглосон тэмдэг байхгүй учраас зүгээр байх» гэж бус, <strong>«зөвшөөрсөн тэмдэг байхгүй бол болохгүй»</strong> гэж бодоорой.
+  </div>
+</div>
+
+<!-- 3-4 Зам тавьж өгөх дүрэм -->
+<div class="section" id="s3-4">
+  <h3>3-4. Замын хөдөлгөөний зохицуулалтгүй уулзвар — Зам тавьж өгөх дүрэм (26 дугаар зүйл)</h3>
+  <p>Гэрлэн дохиогүй уулзварт хэн түрүүлж өнгөрөхийг тогтоох <strong>зам тавьж өгөх (양보) 4 дүрэм</strong> байдаг. Дарааллаар нь хэрэглэнэ.</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Аль хэдийн орсон тээврийн хэрэгсэл давуу эрхтэй</strong> (26 дугаар зүйлийн 1 дэх хэсэг)<br>Уулзварт аль хэдийн орж ирсэн тээврийн хэрэгсэл орох гэж байгаа тээврийн хэрэгслээс давуу эрхтэй.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Өргөн зам давуу эрхтэй</strong> (26 дугаар зүйлийн 2 дахь хэсэг)<br>Өргөн замаас ирж буй тээврийн хэрэгсэл нарийн замаас ирж буй тээврийн хэрэгслээс давуу эрхтэй.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Баруун талын тээврийн хэрэгсэлд зам тавьж өгөх</strong> (26 дугаар зүйлийн 3 дахь хэсэг)<br>Замын өргөн ижил үед нэгэн зэрэг ирвэл <strong>баруун талаас ирж буй тээврийн хэрэгсэлд</strong> зам тавьж өгнө.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>Чигээрээ явах, баруун эргэлт > зүүн эргэлт</strong> (26 дугаар зүйлийн 4 дэх хэсэг)<br>Зүүн тийш эргэх гэж буй тээврийн хэрэгсэл чигээрээ явах болон баруун тийш эргэх гэж буй тээврийн хэрэгсэлд зам тавьж өгнө.</div>
+    </div>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Цээжлэх арга</div>
+    <strong>«Түрүүлж орсон → өргөн зам → баруун тал → чигээрээ явах нь зүүн эргэлтээс давуу»</strong><br><br>
+    Шалгалтын асуултын хэв маяг: «Замын хөдөлгөөний зохицуулалтгүй, <strong>замын өргөн ижил</strong> уулзварт нэгэн зэрэг орох үед давуу эрх хэнд байх вэ?» → <strong>Баруун талаас ирж буй тээврийн хэрэгсэл</strong> (26 дугаар зүйлийн 3 дахь хэсэг)
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 Бусад улстай харьцуулах</div>
+    <strong>АНУ:</strong> «Right of way» — түрүүлж ирсэн тээврийн хэрэгсэл давуу, нэгэн зэрэг ирвэл баруун талын тээврийн хэрэгсэл<br>
+    <strong>Европ:</strong> «Priority to the right» — баруун талаас ирж буй тээврийн хэрэгсэл давуу (Солонгостой төстэй)<br>
+    <strong>Их Британи, Япон:</strong> Зүүн талын хөдөлгөөнтэй тул зүүн талын тээврийн хэрэгсэл давуу<br>
+    <strong>Солонгос:</strong> Европтой төстэй боловч «аль хэдийн орсон > өргөн зам > баруун тал > чигээрээ явах» дараалалтай
+  </div>
+</div>
+
+<!-- 3-5 Тойрог уулзвар -->
+<div class="section" id="s3-5">
+  <h3>3-5. Тойрог уулзвар (25-2 дугаар зүйл)</h3>
+  <p>Тойрог уулзвар (회전교차로) гэдэг нь гэрлэн дохиогүйгээр тээврийн хэрэгсэл тойрог хэлбэрээр эргэж явах уулзвар юм.</p>
+
+  <div class="flow">
+    <div class="flow-step">Цагийн зүүний эсрэг явах</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-yellow">Орохдоо удаан явах/түр зогсох</div>
+    <span class="flow-arrow">▸</span>
+    <div class="flow-step step-green">Дотор байгаа тээврийн хэрэгсэл давуу эрхтэй</div>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Тойрог уулзварын гол дүрэм</div>
+    • <strong>Цагийн зүүний эсрэг</strong> чиглэлд явна (Солонгос баруун талын хөдөлгөөнтэй тул)<br>
+    • Орохдоо <strong>удаан явах буюу түр зогсох</strong><br>
+    • Аль хэдийн тойрч явж буй тээврийн хэрэгсэлд <strong>зам тавьж өгөх</strong><br>
+    • Эсрэг чиглэлд явбал <strong>зөрчил</strong> (Дээд шүүх 2017Do9392)<br>
+    • Тойрог уулзварын дотор <strong>бусад тээврийн хэрэгслийг гүйцэж түрүүлэхийг (앞지르기) хориглоно</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд</div>
+    <strong>Их Британи, Австрали:</strong> Цагийн зүүний дагуу эргэнэ (зүүн талын хөдөлгөөнтэй тул)<br>
+    <strong>Солонгос, АНУ, Европ:</strong> Цагийн зүүний эсрэг эргэнэ<br><br>
+    Их Британи, Австрали, Япон зэргээс ирсэн хүмүүсийн хувьд эргэх чиглэл <strong>эсрэгээрээ</strong>! Эхэндээ маш эвгүй санагдаж болох тул ялангуяа анхаараарай.
+  </div>
+</div>
+
+<!-- 3-6 Удаан явах, түр зогсох газар -->
+<div class="section" id="s3-6">
+  <h3>3-6. Удаан явах, түр зогсох газар (31 дүгээр зүйл)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Ангилал</th><th>Газар</th><th>Цээжлэх арга</th></tr>
+      <tr>
+        <td><strong>Удаан явах</strong><br>(31 дүгээр зүйлийн 1 дэх хэсэг)</td>
+        <td>
+          • Замын хөдөлгөөний зохицуулалтгүй уулзвар<br>
+          • Замын тахир хэсэг<br>
+          • Даваан оройн орчим<br>
+          • Эгц уруу зам<br>
+          • Аюулгүйн тэмдэглэгээгээр «удаан явах» гэж заасан газар
+        </td>
+        <td>«Уулзвар, тахир, даваа, эгц»<br>(уулзвар, тахир зам, даваан орой, эгц уруу)</td>
+      </tr>
+      <tr>
+        <td><strong>Түр зогсох</strong><br>(31 дүгээр зүйлийн 2 дахь хэсэг)</td>
+        <td>
+          • Зүүн, баруун талыг харах боломжгүй уулзвар<br>
+          • Хөдөлгөөн ихтэй уулзвар<br>
+          • Аюулгүйн тэмдэглэгээгээр «түр зогсох» гэж заасан газар
+        </td>
+        <td>«Зүүн, баруун тал харагдахгүй буюу машин олон бол зогс»</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Шалгалтын урхи</div>
+    Q. «Замын хөдөлгөөний зохицуулалтгүй уулзварт?» → <strong>Удаан явах</strong> (түр зогсох биш!)<br>
+    Q. «Замын хөдөлгөөний зохицуулалтгүй, хөдөлгөөн ихтэй уулзварт?» → <strong>Түр зогсох</strong><br>
+    Q. «Зүүн, баруун талыг харахад хүндрэлтэй уулзварт?» → <strong>Түр зогсох</strong><br><br>
+    Зөвхөн «зохицуулалтгүй» гэвэл удаан явах, «хөдөлгөөн ихтэй» буюу «зүүн, баруун тал харагдахгүй» гэж нэмэгдвэл түр зогсох!
+  </div>
+</div>
+
+<!-- 3-7 Уулзварт сүүл дагаж орох -->
+<div class="section" id="s3-7">
+  <h3>3-7. Уулзварт сүүл дагаж орохыг хориглох (25 дугаар зүйлийн 5 дахь хэсэг)</h3>
+  <p>Явах гэж буй чиглэлийн урд талын нөхцөл байдлаас болж уулзварын дотор зогсох болж <strong>бусад тээврийн хэрэгслийн хөдөлгөөнд саад учруулах магадлалтай бол</strong> тэр уулзварт орж болохгүй.</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Бодит зам дээр</div>
+    Солонгост ажилд явах, тарах цагаар уулзвар бөглөх нь маш түгээмэл. Гэвч энэ нь <strong>илт хууль зөрчсөн үйлдэл</strong> бөгөөд шалгалтанд ч олонтаа гардаг. Ногоон дохио байсан ч уулзварын цаад тал бөглөрсөн байвал <strong>орж болохгүй</strong>.
+  </div>
+</div>
+
+<!-- 3-8 Унадаг дугуйн уулзвар дээрх зүүн эргэлт (NEW) -->
+<div class="section" id="s3-8">
+  <h3>3-8. Унадаг дугуйн уулзвар дээрх зүүн эргэлт (25 дугаар зүйлийн 3 дахь хэсэг) (NEW)</h3>
+  <p>Унадаг дугуй ердийн тээврийн хэрэгслээс <strong>зүүн эргэлт хийх аргаар ялгаатай</strong>:</p>
+  <ul>
+    <li>Унадаг дугуй: Замын <strong>баруун захад</strong> ойртон удаан явж, уулзварын <strong>захын хэсгийг</strong> ашиглан зүүн тийш эргэнэ (2 шаттай зүүн эргэлт)</li>
+    <li>Ердийн тээврийн хэрэгсэл: Төвийн шугамын дагуу уулзварын төвийн дотор талаар зүүн тийш эргэнэ</li>
+  </ul>
+  <div class="box box-tip">
+    <div class="box-title">💡 Унадаг дугуйн 2 шаттай зүүн эргэлт</div>
+    ① Чигээрээ явах чиглэлд уулзварыг гатална → ② Зогсож чиглэлээ зүүн тийш өөрчилнө → ③ Дахин дохионы дагуу чигээрээ явна<br>
+    Энэ арга нь унадаг дугуйн жолоочийн аюулгүй байдлын төлөө юм.
+  </div>
+</div>
+
+<!-- 3-9 Дасгал бодлого -->
+<div class="section" id="s3-9">
+  <h3>3-9. Дасгал бодлого</h3>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Замын хөдөлгөөний зохицуулалтгүй уулзварт замын өргөн ижил үед давуу эрх хэнд байх вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Түрүүлж ирсэн тээврийн хэрэгсэл</label>
+      <label class="quiz-opt" data-idx="2">② Зүүн талаас ирж буй тээврийн хэрэгсэл</label>
+      <label class="quiz-opt" data-idx="3">③ Баруун талаас ирж буй тээврийн хэрэгсэл</label>
+      <label class="quiz-opt" data-idx="4">④ Том тээврийн хэрэгсэл</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Замын өргөн ижил үед баруун талын замын тээврийн хэрэгсэлд зам тавьж өгнө (26 дугаар зүйлийн 3 дахь хэсэг)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Тойрог уулзварын хөдөлгөөний чиглэл?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Цагийн зүүний дагуу</label>
+      <label class="quiz-opt" data-idx="2">② Цагийн зүүний эсрэг</label>
+      <label class="quiz-opt" data-idx="3">③ Хоёр чиглэлд</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн чигээрээ</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Солонгос баруун талын хөдөлгөөнтэй тул цагийн зүүний эсрэг (25-2 дугаар зүйл)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Зүүн тийш эргэх үед уулзварын аль талыг ашиглах ёстой вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Төвийн гадна тал</label>
+      <label class="quiz-opt" data-idx="2">② Төвийн дотор тал</label>
+      <label class="quiz-opt" data-idx="3">③ Баруун зах</label>
+      <label class="quiz-opt" data-idx="4">④ Зүүн зах</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Урьдчилан төвийн шугамын дагуу удаан явж, уулзварын төвийн дотор талыг ашиглана (25 дугаар зүйлийн 2 дахь хэсэг)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Зүүн тийш эргэх тээврийн хэрэгсэл болон чигээрээ явах тээврийн хэрэгсэл тулгарвал?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Зүүн эргэлт давуу</label>
+      <label class="quiz-opt" data-idx="2">② Чигээрээ явах нь давуу</label>
+      <label class="quiz-opt" data-idx="3">③ Том тээврийн хэрэгсэл давуу</label>
+      <label class="quiz-opt" data-idx="4">④ Нэгэн зэрэг явна</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Чигээрээ явах, баруун тийш эргэх тээврийн хэрэгсэл зүүн тийш эргэх тээврийн хэрэгслээс давуу эрхтэй (26 дугаар зүйлийн 4 дэх хэсэг)</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Замын хөдөлгөөний зохицуулалтгүй, хөдөлгөөн ихтэй уулзвар дээрх үүрэг нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Удаан явах</label>
+      <label class="quiz-opt" data-idx="2">② Түр зогсох</label>
+      <label class="quiz-opt" data-idx="3">③ Хурдаа хадгалах</label>
+      <label class="quiz-opt" data-idx="4">④ Дуут дохио хэрэглэх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Хөдөлгөөн ихтэй буюу зүүн, баруун талыг харах боломжгүй уулзвар = түр зогсох (31 дүгээр зүйлийн 2 дахь хэсэг)</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Солонгост буцаж эргэж болох газар?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Буцаж эргэхийг зөвшөөрсөн аюулгүйн тэмдэглэгээ байгаа газар</label>
+      <label class="quiz-opt" data-idx="2">② Хориглосон тэмдэг байхгүй бол хаана ч</label>
+      <label class="quiz-opt" data-idx="3">③ Бүх уулзвар</label>
+      <label class="quiz-opt" data-idx="4">④ Өргөн зам дээр чөлөөтэй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Солонгост буцаж эргэх нь зөвшөөрсөн тэмдэг байгаа газарт л боломжтой. АНУ-тай эсрэг!</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>Ногоон дохионд уулзварын цаад тал бөглөрсөн байвал?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Хурдан орж байр эзлэх</label>
+      <label class="quiz-opt" data-idx="2">② Удаан явж орох</label>
+      <label class="quiz-opt" data-idx="3">③ Уулзварт орохгүй</label>
+      <label class="quiz-opt" data-idx="4">④ Дуут дохиогоор урд машинд дохио өгөх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Уулзварын дотор зогсож бусад тээврийн хэрэгслийн хөдөлгөөнд саад учруулах магадлалтай бол орохыг хориглоно (25 дугаар зүйлийн 5 дахь хэсэг, сүүл дагаж орохыг хориглох)</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 04 — Хурд, аюулгүй зай, гүйцэж түрүүлэх -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch4">
+  <span class="ch-num">CHAPTER 04</span>
+  <h2>Хурд, аюулгүй зай ба гүйцэж түрүүлэх (앞지르기)</h2>
+  <p class="ch-desc">Замын төрлөөр хурдны хязгаар, цаг агаар муу үед хурд хасах, зогсох зай, гүйцэж түрүүлэх арга ба хориглолт — онолын шалгалтад 7~9 асуулт гардаг</p>
+  <p class="ch-stars">★★★ Өндөр давтамжтай, 12 төрлийн ноцтой зөрчилтэй холбоотой</p>
+</div>
+
+<!-- 4-1 Хуулиар тогтоосон хурд -->
+<div class="section" id="s4-1">
+  <h3>4-1. Замын төрлөөр хуулиар тогтоосон хурд (Хэрэгжүүлэх дүрмийн 19 дүгээр зүйл)</h3>
+  <p>Замын хөдөлгөөний тухай хууль нь замын төрөл, эгнээний тооноос хамаарч <strong>хурдны дээд хязгаар</strong> болон <strong>хурдны доод хязгаарыг</strong> тогтоосон байдаг. Аюулгүйн тэмдэглэгээнд тусад нь заасан бол тэр хурд давуу эрхтэй.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Замын төрөл</th><th>Дээд хурд</th><th>Доод хурд</th></tr>
+      <tr><td>Ердийн зам (орон сууц, худалдаа, үйлдвэрийн бүс)</td><td>50km/h хүртэл<br>(заасан бол 60km/h)</td><td>Байхгүй</td></tr>
+      <tr><td>Ердийн зам (бусад)</td><td>60km/h хүртэл</td><td>Байхгүй</td></tr>
+      <tr><td>Автомашины зориулалтын зам</td><td>90km/h</td><td>30km/h</td></tr>
+      <tr><td>Хурдны зам, нэг чиглэлд 1 эгнээ</td><td>80km/h</td><td>50km/h</td></tr>
+      <tr><td>Хурдны зам, нэг чиглэлд 2 ба түүнээс дээш эгнээ</td><td><strong>100km/h</strong><br>(ачааны, тусгай машин 80km/h)</td><td>50km/h</td></tr>
+      <tr><td>Тусгайлан заасан хурдны зам</td><td><strong>110~120km/h</strong></td><td>50km/h</td></tr>
+      <tr><td><strong>Хүүхдийн хамгаалалтын бүс</strong></td><td><strong>30km/h</strong></td><td>—</td></tr>
+      <tr><td><strong>Ахмад настан, хөгжлийн бэрхшээлтэй иргэний хамгаалалтын бүс</strong></td><td><strong>30km/h</strong></td><td>—</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-law">
+    <div class="box-title">📜 17 дугаар зүйлийн 3 дахь хэсэг</div>
+    "Автомашин зэргийн жолооч 1 дэх хэсэг, 2 дахь хэсэгт заасан хурдны дээд хязгаараас хурдан, эсвэл хурдны доод хязгаараас удаан жолоодож болохгүй."
+  </div>
+</div>
+
+<!-- 4-2 Цаг агаар муу үед хурд хасах -->
+<div class="section" id="s4-2">
+  <h3>4-2. Цаг агаар муу үед хурд хасах үүрэг (Хэрэгжүүлэх дүрмийн 19 дүгээр зүйлийн 2 дахь хэсэг)</h3>
+  <p>Бороо, цас, манан зэргээс замын гадаргуу халтиргаатай болох буюу харагдац муудвал <strong>хуулиар тогтоосон дээд хурднаас автоматаар хасаж</strong> явах ёстой. Тэмдэг байхгүй ч хуулиар хурд хасах үүрэг хүлээнэ.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Цаг агаарын нөхцөл</th><th>Хурд хасах хувь</th><th>Жишээ (дээд хурд 100km/h зам)</th></tr>
+      <tr><td>Бороо орж замын гадаргуу нойтон байх үед</td><td><strong>20% хасах</strong></td><td>80km/h</td></tr>
+      <tr><td>Цас 20mm-ээс бага зузаантай хуримтлагдсан үед</td><td><strong>20% хасах</strong></td><td>80km/h</td></tr>
+      <tr><td>Аадар бороо, их цас, манангаар харагдах зай 100m-ээс дотор</td><td><strong>50% хасах</strong></td><td>50km/h</td></tr>
+      <tr><td>Замын гадаргуу мөстсөн үед</td><td><strong>50% хасах</strong></td><td>50km/h</td></tr>
+      <tr><td>Цас 20mm ба түүнээс дээш хуримтлагдсан үед</td><td><strong>50% хасах</strong></td><td>50km/h</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 Шалгалтын урхи — 20% vs 50%</div>
+    "Бороо орж нойтон болсон" = <strong>20%</strong><br>
+    "Аадар борооноос харагдах зай 100m-ээс дотор" = <strong>50%</strong><br>
+    "Цас 20mm-ээс бага" = <strong>20%</strong> / "20mm ба түүнээс дээш" = <strong>50%</strong><br>
+    "Замын гадаргуу мөстсөн" = <strong>ямар ч тохиолдолд 50%</strong><br><br>
+    💡 Цээжлэх арга: <strong>"Нойтон бол 20 хувь, мөстсөн ба харагдахгүй бол хагас"</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд</div>
+    АНУ, Европын зарим оронд хурд хасах нь "зөвлөмж" байдаг бол Солонгост энэ нь <strong>хуулиар хүлээсэн үүрэг</strong> юм. Бороотой өдөр 100km/h хурдны замаар 100km/h хурдтайгаа явбал <strong>хурд хэтрүүлсэн зөрчил</strong> болно (хяналтын практикт мэдрэгдэх нь өөр ч, осол гарвал бурууг тогтооход шийдвэрлэх нөлөө үзүүлнэ).
+  </div>
+</div>
+
+<!-- 4-3 Аюулгүй зай -->
+<div class="section" id="s4-3">
+  <h3>4-3. Аюулгүй зай ба зогсох зай (19 дүгээр зүйл)</h3>
+  <p>Аюулгүй зай (안전거리) гэдэг нь <strong>урд явах машин гэнэт зогссон ч мөргөхгүй байх зай</strong> юм. Ерөнхийдөө хурдны (km/h) тоотой тэнцүү метрийн зайг барих гэж санавал болно.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Хурд</th><th>Хариу үйлдлийн зай<br>(ойлгох, хариу үйлдэл)</th><th>Тоормосны зай<br>(тоормос)</th><th>Зогсох зай<br>(нийлбэр)</th><th>Зөвлөх аюулгүй зай</th></tr>
+      <tr><td>60km/h</td><td>17m орчим</td><td>23m орчим</td><td>40m орчим</td><td><strong>60m орчим</strong> (хуурай зам)</td></tr>
+      <tr><td>80km/h</td><td>22m орчим</td><td>38m орчим</td><td>60m орчим</td><td><strong>80m орчим</strong></td></tr>
+      <tr><td>100km/h</td><td>28m орчим</td><td>52m орчим</td><td>80m орчим</td><td><strong>100m орчим</strong></td></tr>
+      <tr><td>120km/h</td><td>33m орчим</td><td>67m орчим</td><td>100m орчим</td><td><strong>120m орчим</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Хялбар цээжлэх арга — "Хурдны тоо = метр"</div>
+    <strong>Цагт 60 → 60m, цагт 100 → 100m</strong> зай<br>
+    Нойтон зам: <strong>2 дахин</strong> (100km/h → 200m)<br>
+    Мөстсөн зам: <strong>3 дахин ба түүнээс дээш</strong><br><br>
+    💡 3 секундын дүрэм: урд машин тодорхой цэгийг давснаас хойш миний машин мөн тэр цэгт хүрэх хүртэл <strong>"нэг, хоёр, гурав"</strong> гэж тоолж чадвал аюулгүй.
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — Араас мөргөсөн осолд хойно явсан машин 100% буруутай</div>
+    Солонгост ерөнхийдөө <strong>урд машиныг араас мөргөх = хойно явсан машин 100% буруутай</strong> гэж тооцдог. "Урд машин гэнэт тоормослосон" гэх тайлбар бараг хүлээн зөвшөөрөгддөггүй. Аюулгүй зайг заавал барьж яваарай.
+  </div>
+</div>
+
+<!-- 4-4 Гүйцэж түрүүлэх -->
+<div class="section" id="s4-4">
+  <h3>4-4. Гүйцэж түрүүлэх арга ба хориглолт (21 дүгээр зүйл, 22 дугаар зүйл)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 21 дүгээр зүйл — Гүйцэж түрүүлэх арга</div>
+    ① Бүх тээврийн хэрэгслийн жолооч өөр тээврийн хэрэгслийг гүйцэж түрүүлэхдээ урд машины <strong>зүүн талаар</strong> явах ёстой.<br>
+    ② Унадаг дугуй зэргийн жолооч урд машин өөр машиныг гүйцэж түрүүлж байгаа буюу түрүүлэх гэж байгаа тохиолдолд урд машины <strong>баруун талаар</strong> явж болно.<br>
+    ③ Гүйцэж түрүүлүүлж байгаа машины жолооч <strong>хурдаа нэмэх, замыг хаах зэргээр саад учруулах үйлдэл</strong> хийж болохгүй.
+  </div>
+
+  <h4>Гүйцэж түрүүлэх аргын хураангуй</h4>
+  <ol>
+    <li>Чиг заах дохио (зүүн) асааж <strong>арын, хажуугийн машиныг шалгах</strong></li>
+    <li>Эсрэг чиглэлийн эгнээний аюулгүй байдлыг шалгах (зөвхөн нэг чиглэлд 1 эгнээтэй замд хамаарна)</li>
+    <li><strong>Зүүн тийш</strong> шилжиж гүйцэж түрүүлэх</li>
+    <li>Урд машинаас <strong>хангалттай зай</strong> авсны дараа баруун тийш буцаж орох</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Гүйцэж түрүүлэхийг хориглосон газар (22 дугаар зүйлийн 3 дахь хэсэг) — 12 төрлийн ноцтой зөрчил</div>
+    ① <strong>Уулзвар</strong><br>
+    ② <strong>Хонгил дотор</strong><br>
+    ③ <strong>Гүүрэн дээр</strong><br>
+    ④ <strong>Аюулгүйн тэмдэглэгээгээр заасан газар</strong> (замын тахир хэсэг, өгсүүрийн оройн орчим, эгц уруудах зам зэрэг)<br><br>
+    💡 Цээжлэх арга: <strong>"Уулзвар–Хонгил–Гүүр–Тэмдэг"</strong> (교 터 다 표) — уулзвар, хонгил, гүүр, тэмдгээр заасан газар
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Гүйцэж түрүүлэхийг хориглосон тохиолдол, цаг үе (22 дугаар зүйлийн 1 дэх хэсэг, 2 дахь хэсэг)</div>
+    • <strong>Тусгай зориулалтын тээврийн хэрэгслийг</strong> гүйцэж түрүүлэх → хориглоно<br>
+    • Урд машин өөр машиныг <strong>гүйцэж түрүүлж байх үед</strong> → хориглоно<br>
+    • Урд машин <strong>зүүн тийш чиглэлээ өөрчлөх гэж байх үед</strong> (жишээ: зүүн эргэлт хүлээж байх) → хориглоно. Гэхдээ энэ тохиолдолд урд машины <strong>баруун талаар</strong> гүйцэж түрүүлж болно<br>
+    • Эсрэг чиглэлийн болон араас ирэх машины хөдөлгөөнд саад учруулж болзошгүй үед → хориглоно<br>
+    • Хойно явах машин өөрийг нь гүйцэж түрүүлж байх үед → хориглоно<br><br>
+    Гүйцэж түрүүлэх арга, цаг үе, газрын зөрчил нь <strong>12 төрлийн ноцтой зөрчилд</strong> багтах тул осол гарвал эрүүгийн хариуцлага хүлээлгэнэ.
+  </div>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 Гүйцэж түрүүлэх — улс орнуудын харьцуулалт</div>
+    <strong>🇰🇷 Солонгос:</strong> Зүүн талаар гүйцэж түрүүлэх зарчим. Уулзвар, хонгил, гүүр, заасан газарт хориглоно<br>
+    <strong>🇺🇸 АНУ:</strong> Муж бүрт өөр боловч ихэнхдээ зүүн талын зарчим. Хурдны замд баруун талаар гүйцэж түрүүлэхийг зөвшөөрдөг муж олон<br>
+    <strong>🇩🇪 Герман:</strong> Хурдны хязгааргүй хэсэгт (автобан) ч баруун талаар гүйцэж түрүүлэхийг хориглоно, зүүн талын зарчим хатуу<br>
+    <strong>🇯🇵 Япон, 🇬🇧 Их Британи:</strong> Зүүн талын хөдөлгөөн → <strong>баруун талаар</strong> гүйцэж түрүүлнэ (чиглэл эсрэгээрээ!)
+  </div>
+</div>
+
+<!-- 4-5 Хурдны хяналт -->
+<div class="section" id="s4-5">
+  <h3>4-5. Хурдны хяналтын систем</h3>
+  <p>Солонгосын хурдны хяналт дэлхийд <strong>нягт, хатуу</strong> гэдгээрээ алдартай. Гадаад жолооч нарын хамгийн их илрүүлэгддэг зөрчил.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Хяналтын төрөл</th><th>Ажиллах зарчим</th><th>Онцлог</th></tr>
+      <tr><td><strong>Суурин камер</strong></td><td>Тодорхой цэгт агшин зуурын хурдыг хэмжинэ</td><td>Навигацийн апп ихэвчлэн анхааруулдаг</td></tr>
+      <tr><td><strong>Зөөврийн камер</strong></td><td>Лазер эсвэл цагдаагийн машинд суурилуулсан</td><td>Урьдчилан мэдэгдэлгүй байрлуулж, шилжүүлдэг</td></tr>
+      <tr><td><strong>Хэсэгчилсэн хяналт</strong></td><td>Хэсэгт орох, гарах хугацаагаар <strong>дундаж хурдыг</strong> тооцоолно</td><td>Хонгил, хурдны замд өргөжиж байна</td></tr>
+      <tr><td><strong>Нууц эргүүлийн машин</strong></td><td>Ердийн суудлын машин шиг далдалсан, машин дотор камертай</td><td>Голдуу хурдны замд</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Хурд хэтрүүлсний зөрчлийн торгууль, торгуулийн оноо (суудлын автомашинд)</div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Хэтрүүлсэн хурд</th><th>Зөрчлийн торгууль</th><th>Торгуулийн оноо</th></tr>
+        <tr><td>20km/h хүртэл</td><td>30,000 вон</td><td>0</td></tr>
+        <tr><td>20~40km/h</td><td>60,000 вон</td><td>15 оноо</td></tr>
+        <tr><td>40~60km/h</td><td>90,000 вон</td><td>30 оноо</td></tr>
+        <tr><td>60~80km/h</td><td>120,000 вон</td><td>60 оноо</td></tr>
+        <tr><td><strong>80km/h-ээс дээш</strong></td><td><strong>Эрүүгийн хариуцлага</strong></td><td>Торгуулийн оноо 80</td></tr>
+      </table>
+    </div>
+    ⚠️ <strong>20km/h-ээс дээш хэтрүүлэх = 12 төрлийн ноцтой зөрчил</strong> → осол гарвал эрүүгийн хариуцлага<br>
+    ⚠️ Хүүхдийн хамгаалалтын бүсэд (30km/h бүс) <strong>зөрчлийн торгууль, торгуулийн оноо 2 дахин</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — Навигацийн апп заавал хэрэгтэй</div>
+    <strong>T-map, Kakao Map, Naver Map</strong> нь Солонгосын гол навигацийн аппууд. Бүгд хяналтын камерын байршлыг бодит цагт анхааруулдаг. Англи хэлний дэмжлэгтэй тул заавал суулгаарай. Түрээсийн машинд ч ихэнхдээ байдаг.<br><br>
+    Google Maps-ийн <strong>автомашины навигацийн</strong> функц Солонгост бараг ажилладаггүй (засгийн газрын газрын зургийн мэдээлэл гадагш гаргах хязгаарлалт).
+  </div>
+</div>
+
+<!-- 4-6 Дасгалын асуулт -->
+<div class="section" id="s4-6">
+  <h3>4-6. Дасгалын асуулт</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Бороо орж замын гадаргуу нойтон байх үед дээд хурдны хэдэн %-ийг хасах ёстой вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ Хурд хасах үүрэг байхгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Борооноос нойтон болсон зам, цас 20mm-ээс бага = 20% хасах.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Аадар борооноос харагдах зай 100m-ээс дотор байх үед хурд хасах хувь хэд вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ Явахыг хориглоно</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Харагдах зай 100m-ээс дотор, замын гадаргуу мөстсөн, цас 20mm ба түүнээс дээш = 50% хасах.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Гүйцэж түрүүлэхийг хориглосон газар биш нь аль вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Уулзвар</label>
+      <label class="quiz-opt" data-idx="2">② Хонгил дотор</label>
+      <label class="quiz-opt" data-idx="3">③ Нэг чиглэлд 2 ба түүнээс дээш эгнээтэй хурдны замын шулуун хэсэг</label>
+      <label class="quiz-opt" data-idx="4">④ Гүүрэн дээр</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Уулзвар, хонгил, гүүр, аюулгүйн тэмдэглэгээгээр заасан газар нь хориглосон газар. Хурдны замын шулуун хэсэгт гүйцэж түрүүлж болно.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Гүйцэж түрүүлэх зарчмын чиглэл аль вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Зүүн тал</label>
+      <label class="quiz-opt" data-idx="2">② Баруун тал</label>
+      <label class="quiz-opt" data-idx="3">③ Ойр тал</label>
+      <label class="quiz-opt" data-idx="4">④ Сул тал</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — 21 дүгээр зүйлийн 1 дэх хэсэг, гүйцэж түрүүлэхийг зарчмын хувьд зүүн талаар хийнэ.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Нэг чиглэлд 2 ба түүнээс дээш эгнээтэй хурдны замд суудлын автомашины дээд хурд хэд вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 80km/h</label>
+      <label class="quiz-opt" data-idx="2">② 100km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 110km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 120km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Үндсэн 100km/h. Тусгайлан заасан хэсэгт 110~120km/h, ачааны ба тусгай машин 80km/h.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Гүйцэж түрүүлүүлж байгаа машины үүрэг юу вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Хурдаа нэмж саад хийх</label>
+      <label class="quiz-opt" data-idx="2">② Дуут дохио өгөх</label>
+      <label class="quiz-opt" data-idx="3">③ Төвийн шугам давж зайлах</label>
+      <label class="quiz-opt" data-idx="4">④ Хурдаа нэмэхгүй, саад хийхгүй байх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — 21 дүгээр зүйлийн 3 дахь хэсэг. Гүйцэж түрүүлүүлж байгаа машин хурдаа нэмэх зэргээр саад учруулах үйлдэл хийж болохгүй.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 05 — Явган зорчигчийн хамгаалалт -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch5">
+  <span class="ch-num">CHAPTER 05</span>
+  <h2>Явган зорчигчийг хамгаалах үүрэг</h2>
+  <p class="ch-desc">Явган хүний гарц, явган зорчигчийн давуу эрхтэй зам, хүүхдийн·ахмад настны хамгаалалтын бүс — 2022 оны нэмэлт өөрчлөлтийн гол агуулга</p>
+  <p class="ch-stars">★★★ 12 төрлийн ноцтой зөрчил (중과실)·их асуугддаг</p>
+</div>
+
+<!-- 5-1 2022 оны нэмэлт өөрчлөлтийн гол агуулга -->
+<div class="section" id="s5-1">
+  <h3>5-1. 2022 оны явган зорчигчийг хамгаалах нэмэлт өөрчлөлтийн гол агуулга (27 дугаар зүйл)</h3>
+  <p>2022 оны 7 сард Замын хөдөлгөөний тухай хуульд нэмэлт өөрчлөлт орж <strong>явган зорчигчийг хамгаалах үүрэг эрс чангарсан</strong>. Гадаад иргэд хамгийн их алдаа гаргадаг хэсэг юм.</p>
+
+  <div class="box box-law">
+    <div class="box-title">📜 27 дугаар зүйл — Явган зорчигчийг хамгаалах</div>
+    ① Бүх тээврийн хэрэгслийн жолооч явган зорчигч явган хүний гарцаар явж байх үед тухайн явган хүний гарцын өмнө <strong>түр зогсох (일시정지)</strong> ёстой.<br>
+    ③ Бүх тээврийн хэрэгслийн жолооч хөдөлгөөн зохицуулаагүй уулзвар болон түүний орчимд явган зорчигч замыг хөндлөн гарч байх үед <strong>явган зорчигчийн хөдөлгөөнд саад учруулж болохгүй</strong>.<br>
+    ⑥ Бүх тээврийн хэрэгслийн жолооч гэрлэн дохио зэрэг байхгүй явган хүний гарцын орчимд явган зорчигч замыг хөндлөн гарч байх, эсвэл <strong>хөндлөн гарах гэж байх үед</strong> түр зогсох ёстой.<br>
+    ⑦ Замаас гадуур газар (орон сууцны хороолол, зогсоол зэрэг) жолоодох үед ч явган зорчигчийн аюулгүй байдалд анхаарах ёстой.
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Гол өөрчлөлт — «гарах гэж байх үед» ч хамгаалагдана</div>
+    Өмнө: <strong>гарч байгаа</strong> явган зорчигчийг л хамгаалдаг байсан<br>
+    Одоо: явган хүний зам дээр зогсоод <strong>гарах гэж байх үеэс</strong> хамгаална → жолооч түр зогсох үүрэгтэй<br><br>
+    ⚠️ Явган хүний гарцын өмнө <strong>явган зорчигч явган хүний зам дээр зогсож байвал</strong> хөл тавиагүй байсан ч зогсох ёстой. Зөрчсөний дараа осол гарвал <strong>12 төрлийн ноцтой зөрчилд</strong> тооцно.
+  </div>
+</div>
+
+<!-- 5-2 Хүүхдийн·ахмад настны·хөгжлийн бэрхшээлтэй иргэдийн хамгаалалтын бүс -->
+<div class="section" id="s5-2">
+  <h3>5-2. Хүүхдийн, ахмад настны, хөгжлийн бэрхшээлтэй иргэдийн хамгаалалтын бүс (12 дугаар зүйл, 12-2 дугаар зүйл)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Ангилал</th><th>Тогтоох хүрээ</th><th>Хурдны дээд хязгаар</th><th>Үндсэн хориг</th></tr>
+      <tr><td><strong>Хүүхдийн хамгаалалтын бүс</strong></td><td>Бага сургууль, цэцэрлэг, хүүхэд харах үйлчилгээний орчим <strong>300m радиус</strong></td><td><strong>30km/h</strong></td><td>Зогсоол (주차), зогсох (정차) хориотой; гэрлэн дохиогүй явган хүний гарцын өмнө түр зогсох үүрэгтэй</td></tr>
+      <tr><td>Ахмад настны хамгаалалтын бүс</td><td>Ахмадын төв, ахмад настны байгууллагын орчим 300m</td><td>30km/h</td><td>Зогсоол, зогсохыг хязгаарлаж болно</td></tr>
+      <tr><td>Хөгжлийн бэрхшээлтэй иргэдийн хамгаалалтын бүс</td><td>Тусгай сургууль, хөгжлийн бэрхшээлтэй иргэдийн байгууллагын орчим</td><td>30km/h</td><td>Зогсоол, зогсохыг хязгаарлаж болно</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Минсикийн хууль — хүүхдийн хамгаалалтын бүсэд гарсан ослын хүндрүүлсэн шийтгэл</div>
+    Хүүхдийн хамгаалалтын бүсэд <strong>хүүхдийг (13 хүртэлх насны) гэмтээвэл</strong>: 1 жилээс 15 жил хүртэл хорих ял эсвэл 5,000,000~30,000,000 вон торгууль<br>
+    <strong>Нас барсан</strong> тохиолдолд: бүх насаар нь эсвэл 3 жилээс дээш хорих ял<br><br>
+    ⚠️ Зөрчлийн торгууль, торгуулийн оноо <strong>2 дахин</strong> ногдуулна (жишээ: 30km/h бүсэд 20km/h-аар хэтрүүлэх → зөрчлийн торгууль 120,000 вон)<br>
+    ⚠️ Гэрлэн дохиогүй явган хүний гарцын өмнө <strong>явган зорчигч байгаа эсэхээс үл хамааран түр зогсох</strong>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — сургуулийн бүсэд хурд хэтрүүлэх огт хориотой</div>
+    Солонгосын хүүхдийн хамгаалалтын бүс дэлхийд хамгийн хатуу зохицуулалттайд тооцогддог. Өглөө, оройн хичээлд явах, тарах цагаар санамсаргүй 30km/h-ээс хэтрүүлбэл <strong>их хэмжээний зөрчлийн торгууль</strong> болон торгуулийн оноо авна. Навигацийн апп «хүүхдийн хамгаалалтын бүсэд орж байна» гэж мэдэгдвэл заавал хурд хэмжигчээ шалгаарай.
+  </div>
+</div>
+
+<!-- 5-3 Явган зорчигчийн давуу эрхтэй зам -->
+<div class="section" id="s5-3">
+  <h3>5-3. Явган зорчигчийн давуу эрхтэй зам (2 дугаар зүйлийн 31-2 дахь заалт, 27-2 дугаар зүйл) — 2022 онд шинээр нэмэгдсэн</h3>
+  <p>Зорчих хэсэг ба явган хүний зам нь тусгаарлагдаагүй зам дээр явган зорчигчийн аюулгүй байдлыг хангах зорилгоор <strong>«явган зорчигчийн давуу эрхтэй зам»</strong> гэсэн тогтолцоо шинээр бий болсон.</p>
+
+  <ul>
+    <li>Явган зорчигч замын <strong>бүх хэсгээр</strong> явж болно</li>
+    <li>Тээврийн хэрэгсэл явган зорчигчийн хажуугаар өнгөрөхдөө <strong>аюулгүй зай</strong> барьж удаан явах (서행)</li>
+    <li>Явган зорчигчийн хөдөлгөөнд саад учруулах, аюул үүсгэхийг хориглоно</li>
+    <li>Хурдны хязгаар: <strong>20km/h хүртэл</strong></li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Явган зорчигчийн давуу эрхтэй замыг таних арга</div>
+    Ихэвчлэн <strong>зорчих хэсэг, явган хүний зам нь тусгаарлагдаагүй</strong> нарийн гудамжийг тогтоодог. Замын гадаргуу дээрх «явган зорчигчийн давуу эрхтэй зам» гэсэн тэмдэглэгээ эсвэл аюулгүйн тэмдгээр мэдэгддэг.
+  </div>
+</div>
+
+<!-- 5-4 Явган зорчигчийн явах журам -->
+<div class="section" id="s5-4">
+  <h3>5-4. Явган зорчигчийн явах журам (8 дугаар зүйл, 10 дугаар зүйл)</h3>
+  <ul>
+    <li>Явган хүний замтай зам → <strong>явган хүний замаар</strong> явна</li>
+    <li>Явган хүний замгүй зам → замын захаар (<strong>зүүн талаар</strong>) явна — өөдөөс ирэх тээврийн хэрэгслийг харж чадахаар</li>
+    <li>Явган хүний гарц байвал заавал явган хүний гарцаар хөндлөн гарна</li>
+    <li>Явган хүний гарцгүй газар → <strong>хамгийн богино зайгаар</strong> хөндлөн гарах, тээврийн хэрэгслийн хөдөлгөөнд саад учруулахгүй байх</li>
+  </ul>
+
+  <div class="box box-compare">
+    <div class="box-title">🌍 Явган зорчигчийн нас баралтын түвшин — Солонгосын бодит байдал</div>
+    Солонгосын зам тээврийн ослоор нас барагсдын дунд <strong>явган зорчигчийн эзлэх хувь</strong> OECD-ийн дунджаас ойролцоогоор <strong>2 дахин</strong> их. Ялангуяа өндөр настай явган зорчигчийн нас баралт их тул явган зорчигчийг хамгаалах нь замын хөдөлгөөний бодлогын тэргүүн зорилт болдог.<br><br>
+    <strong>🇺🇸 АНУ:</strong> явган зорчигчийн нас баралтын хувь бага ч явган явдаг хүн ам өөрөө цөөн<br>
+    <strong>🇪🇺 Европ:</strong> явган зорчигчийг хамгаалах соёл хүчтэй, тээврийн хэрэгсэл эхэлж зогсдог<br>
+    <strong>🇰🇷 Солонгос:</strong> хотын төвд нарийн гудамж олон тул ослын эрсдэл өндөр → жолооч урьдчилан сэргийлэх жолоодлого заавал хийх
+  </div>
+</div>
+
+<!-- 5-5 Дасгал асуулт -->
+<div class="section" id="s5-5">
+  <h3>5-5. Дасгал асуулт</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Явган зорчигч явган хүний гарцын өмнөх явган хүний зам дээр зогсоод гарах гэж байх үед жолоочийн үүрэг юу вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Шууд өнгөрөх</label>
+      <label class="quiz-opt" data-idx="2">② Түр зогсоод явган зорчигчийг түрүүлж гаргах</label>
+      <label class="quiz-opt" data-idx="3">③ Дуут дохиогоор анхааруулах</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн удаан явах</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — 2022 оны нэмэлт өөрчлөлт, 27 дугаар зүйлийн 6 дахь хэсэг. Гарах гэж байх үеэс хамгаалагдана.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Хүүхдийн хамгаалалтын бүсийн хурдны дээд хязгаар хэд вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 20km/h</label>
+      <label class="quiz-opt" data-idx="2">② 25km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 30km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 40km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Хүүхдийн, ахмад настны, хөгжлийн бэрхшээлтэй иргэдийн хамгаалалтын бүс бүгд 30km/h.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Явган хүний замгүй зам дээр явган зорчигчийн явах байрлал хаана вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Зүүн зах (өөдөөс ирэх тээврийн хэрэгслийг харж чадахаар)</label>
+      <label class="quiz-opt" data-idx="2">② Баруун зах</label>
+      <label class="quiz-opt" data-idx="3">③ Замын гол</label>
+      <label class="quiz-opt" data-idx="4">④ Аль талаар ч чөлөөтэй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — 8 дугаар зүйл. Өөдөөс ирэх тээврийн хэрэгслийг харж чадахаар зүүн захаар явна.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Хүүхдийн хамгаалалтын бүсэд хурд хэтрүүлсний зөрчлийн торгууль, торгуулийн оноо хэд вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Ердийн замтай ижил</label>
+      <label class="quiz-opt" data-idx="2">② Ердийн замынхаас 2 дахин</label>
+      <label class="quiz-opt" data-idx="3">③ Ердийн замынхаас хагас</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн торгуулийн оноо ногдуулна</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Хүүхдийн хамгаалалтын бүсийн зөрчилд зөрчлийн торгууль, торгуулийн оноо хоёулаа 2 дахин.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Орон сууцны хорооллын доторх зам дээр явган зорчигчийг хамгаалах үүрэг хэрхэн хамаарах вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Замын хөдөлгөөний тухай хуулийн дагуу явган зорчигчийн аюулгүй байдалд анхаарах үүрэгтэй</label>
+      <label class="quiz-opt" data-idx="2">② Зам биш тул үүрэггүй</label>
+      <label class="quiz-opt" data-idx="3">③ Зөвхөн байрны захиргааны дүрэм үйлчилнэ</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн хорооллын оршин суугчдад хамаарна</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — 2022 оны нэмэлт өөрчлөлт, 27 дугаар зүйлийн 7 дахь хэсэг. Замаас гадуур газар (орон сууцны хороолол, зогсоол) ч явган зорчигчийг хамгаалах үүрэгтэй.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Явган зорчигчийн давуу эрхтэй замын хурдны дээд хязгаар хэд вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10km/h</label>
+      <label class="quiz-opt" data-idx="2">② 15km/h</label>
+      <label class="quiz-opt" data-idx="3">③ 20km/h</label>
+      <label class="quiz-opt" data-idx="4">④ 30km/h</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Явган зорчигчийн давуу эрхтэй замд 20km/h хүртэл удаан явах бөгөөд явган зорчигч замын бүх хэсгээр явж болно.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 06 — Согтуугаар, мансууруулах бодис хэрэглэж жолоо барих ба шийтгэл -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch6">
+  <span class="ch-num">CHAPTER 06</span>
+  <h2>Согтуугаар болон мансууруулах бодис хэрэглэж жолоо барих, түүний хариуцлага</h2>
+  <p class="ch-desc">Цусан дахь спиртийн агууламжийн хязгаар, хариуцлагын хэмжээ, Юн Чан Хогийн хууль ба 2 дахь удаагийн зөрчилд ял хүндрүүлэх, мансууруулах бодис хэрэглэж жолоо барих</p>
+  <p class="ch-stars">★★★ 12 ноцтой зөрчлийн нэг, хамгийн хүнд хариуцлага</p>
+</div>
+
+<!-- 6-1 Цусан дахь спиртийн хязгаар -->
+<div class="section" id="s6-1">
+  <h3>6-1. Цусан дахь спиртийн агууламжийн хязгаар (44 дүгээр зүйл)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 44 дүгээр зүйлийн 4 дэх хэсэг</div>
+    "Согтуу байдлын хязгаарыг жолоочийн цусан дахь спиртийн агууламж (혈중알코올농도) <strong>0.03% ба түүнээс дээш</strong> байх тохиолдлоор тогтооно."
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Цусан дахь спиртийн агууламж</th><th>Ангилал</th><th>Хариуцлага</th></tr>
+      <tr><td><strong>0.03% ба түүнээс дээш, 0.08%-иас доош</strong></td><td>Ердийн согтуу</td><td>1 жил хүртэл хорих ял (징역) буюу 5,000,000 вон хүртэл торгууль (벌금), жолоодох эрх <strong>100 хоног түдгэлзүүлэх</strong></td></tr>
+      <tr><td><strong>0.08% ба түүнээс дээш, 0.2%-иас доош</strong></td><td>Дунд зэрэг</td><td>1~2 жил хорих ял буюу 5,000,000~10,000,000 вон торгууль, жолоодох эрх <strong>хүчингүй болгох</strong></td></tr>
+      <tr><td><strong>0.2% ба түүнээс дээш</strong></td><td>Хүнд согтуу</td><td>2~5 жил хорих ял буюу 10,000,000~20,000,000 вон торгууль, жолоодох эрх <strong>хүчингүй болгох</strong></td></tr>
+      <tr><td><strong>Шалгуулахаас татгалзах</strong></td><td>—</td><td>1~5 жил хорих ял буюу 5,000,000~20,000,000 вон торгууль, жолоодох эрх <strong>хүчингүй болгох</strong></td></tr>
+      <tr><td><strong>2 ба түүнээс дээш удаа зөрчсөн</strong></td><td>Юн Чан Хогийн хууль</td><td>2~6 жил хорих ял буюу 10,000,000~30,000,000 вон торгууль</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — 0.03% бол маш хатуу хязгаар</div>
+    Солонгосын 0.03%-ийн хязгаар дэлхийд хамгийн хатуу хязгаарын нэг. Насанд хүрсэн эрэгтэй <strong>сожү 1~2 хундага</strong> уусан ч хэтэрч болно. «Жаахан уусан болохоор зүгээр байх» гэдэг нь хамгийн аюултай бодол.<br><br>
+    <strong>🇺🇸 АНУ:</strong> Ихэнх мужид 0.08% (арилжааны жолооч 0.04%)<br>
+    <strong>🇯🇵 Япон:</strong> 0.03%<br>
+    <strong>🇨🇳 Хятад:</strong> 0.02% (Солонгосоос ч хатуу)<br>
+    <strong>🇩🇪 Герман:</strong> 0.05%<br>
+    <strong>🇻🇳 Вьетнам:</strong> <strong>0.00%</strong> (ямар ч хэмжээний согтууруулах ундаа хориотой)
+  </div>
+</div>
+
+<!-- 6-2 Шалгах явц -->
+<div class="section" id="s6-2">
+  <h3>6-2. Согтуурлын шалгалтын явц ба татгалзах</h3>
+  <ol>
+    <li><strong>Амьсгалаар шалгах</strong> — Цагдаагийн согтуурал мэдрэгч (спиртийн мэдрэгч)-д амьсгалаа үлээж шалгуулна</li>
+    <li>Илэрсэн тохиолдолд <strong>нарийвчилсан амьсгалын шалгуур</strong>аар (цус авах арга) дахин шалгана</li>
+    <li>Жолооч амьсгалын шалгалтын дүнг эсэргүүцвэл <strong>цусны шинжилгээ</strong> (өөрийн зөвшөөрлөөр)</li>
+    <li>Цусны шинжилгээний дүн эцсийн нотлох баримт болно</li>
+  </ol>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Шалгуулахаас татгалзсан ч хариуцлага хүлээнэ</div>
+    Цагдаагийн алба хаагчийн согтуурлын шалгалт хийх шаардлагад хариу өгөхгүй бол <strong>согтуурлын шалгалтаас татгалзсан гэмт хэрэг</strong>ээр 0.08~0.2%-ийн түвшний хариуцлага (1~5 жил хорих ял, жолоодох эрх хүчингүй болгох) хүлээнэ. Мултарч чадна гэж бодож болохгүй.
+  </div>
+</div>
+
+<!-- 6-3 Согтуугаар жолоо барихтай холбоотой хариуцлагын хүрээ -->
+<div class="section" id="s6-3">
+  <h3>6-3. Хамжих, мансууруулах бодис, замаас гадуурх газар</h3>
+
+  <h4>Хамт сууж яваа хүний хариуцлага (согтуугаар жолоо барихад хамжих)</h4>
+  <p>Согтуугаар жолоо барих (음주운전) гэдгийг мэдсээр байж <strong>тээврийн хэрэгсэл өгсөн буюу хамт суусан</strong> хүн ч согтуугаар жолоо барихад хамжсан гэмт хэргээр хариуцлага хүлээнэ (Эрүүгийн хуулийн 32 дугаар зүйл + Замын хөдөлгөөний тухай хуулийн 44 дүгээр зүйл).</p>
+
+  <h4>Мансууруулах бодис хэрэглэж жолоо барих (45 дугаар зүйл)</h4>
+  <div class="box box-law">
+    <div class="box-title">📜 45 дугаар зүйл</div>
+    "Автомашин зэргийн жолооч согтуу байдлаас гадна <strong>хэт ядралт, өвчин буюу эм, мансууруулах бодис</strong>-ын нөлөө болон бусад шалтгаанаар хэвийн жолоодох боломжгүй болох магадлалтай байдалд автомашин зэргийг жолоодож болохгүй."
+  </div>
+  <p>Хамаарах бодис: мансууруулах бодис, каннабис, хий үзэгдэл үүсгэгч бодис, <strong>ханиадны эм, нойрны эм, тайвшруулах эм</strong> зэрэг ч багтана. Зөрчвөл 3 жил хүртэл хорих ял буюу 10,000,000 вон хүртэл торгууль.</p>
+
+  <h4>Замаас гадуурх газарт ч тооцогдоно</h4>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — Зогсоол дээр ч согтуугаар жолоо барьсанд тооцно</div>
+    2011 оны хуулийн нэмэлт өөрчлөлтөөр <strong>орон сууцны хорооллын зогсоол, хувийн эзэмшлийн зогсоол</strong> дээр ч согтуугаар жолоо барьсанд тооцогдоно. «Зогсоол дээр машинаа л зөөсөн» гэх шалтаг хүчингүй (Дээд шүүх 2017Do17762).
+  </div>
+</div>
+
+<!-- 6-4 Орлон жолоодох үйлчилгээний соёл -->
+<div class="section" id="s6-4">
+  <h3>6-4. Солонгосын орлон жолоодох үйлчилгээний соёл</h3>
+  <p>Солонгос орлон жолоодох үйлчилгээ (대리운전) маш хөгжсөн орон. Согтууруулах ундаа уусан хүн машинаа өөрөө жолоодох боломжгүй үед <strong>орлон жолоочийг</strong> дуудаж гэр хүртлээ жолоодуулна.</p>
+
+  <ul>
+    <li>Ашиглах арга: Ухаалаг утасны апп (Kakao T Daeri, TMAP Daeri зэрэг) буюу утсаар дуудах</li>
+    <li>Үнэ: Зайнаас хамаарч ихэвчлэн 15,000~40,000 вон</li>
+    <li>Ресторан, баарны өмнө орлон жолоодох үйлчилгээний зарын хуудас, утасны дугаар олон</li>
+  </ul>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Гадаад иргэд ч хялбар ашиглаж болно</div>
+    Kakao T апп англи хэл дэмждэг. Өөрийн машины дугаар, очих газрыг л оруулбал жолооч газар дээр нь ирнэ. Төлбөрийг аппаар буюу бэлнээр төлнө. Солонгост амьдардаг гадаад иргэд заавал суулгаж аваарай.
+  </div>
+</div>
+
+<!-- 6-5 Дасгал бодлого -->
+<div class="section" id="s6-5">
+  <h3>6-5. Дасгал бодлого</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Солонгосын согтуугаар жолоо барихад хариуцлага хүлээлгэх цусан дахь спиртийн агууламжийн хязгаар?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 0.02% ба түүнээс дээш</label>
+      <label class="quiz-opt" data-idx="2">② 0.03% ба түүнээс дээш</label>
+      <label class="quiz-opt" data-idx="3">③ 0.05% ба түүнээс дээш</label>
+      <label class="quiz-opt" data-idx="4">④ 0.08% ба түүнээс дээш</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Солонгост 0.03%-иас эхлэн согтуугаар жолоо барьсанд тооцно. Дэлхийд хатуу хязгаарын нэг.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Согтуурлын шалгалтаас татгалзсан тохиолдлын хариуцлага?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Хариуцлага байхгүй</label>
+      <label class="quiz-opt" data-idx="2">② Зөвхөн зөрчлийн торгууль</label>
+      <label class="quiz-opt" data-idx="3">③ 1~5 жил хорих ял буюу 5,000,000~20,000,000 вон торгууль + жолоодох эрх хүчингүй болгох</label>
+      <label class="quiz-opt" data-idx="4">④ Сануулга өгсний дараа дахин шалгах</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Шалгуулахаас татгалзвал 0.08~0.2%-ийн түвшний хариуцлага хүлээнэ.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Орон сууцны хорооллын зогсоол дээр согтуу байж машинаа жаахан зөөсөн. Хариуцлага?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Согтуугаар жолоо барьсанд тооцогдож хариуцлага хүлээнэ</label>
+      <label class="quiz-opt" data-idx="2">② Зам биш тул хариуцлага байхгүй</label>
+      <label class="quiz-opt" data-idx="3">③ Зөвхөн сануулга</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн машины эзэнд мэдэгдэнэ</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Замаас гадуурх газарт ч согтуугаар жолоо барьсанд тооцогдоно (Замын хөдөлгөөний тухай хуулийн 44 дүгээр зүйл).</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Ханиадны эм уусны дараа нойрмоглон жолоодож байгаад осол гаргав. Үүнд хамаарах заалт нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 44 дүгээр зүйл (согтуугаар жолоо барих)</label>
+      <label class="quiz-opt" data-idx="2">② 45 дугаар зүйл (хэт ядралт, эм, мансууруулах бодисын нөлөөнд жолоо барих)</label>
+      <label class="quiz-opt" data-idx="3">③ 46 дугаар зүйл (хамтын аюултай үйлдэл)</label>
+      <label class="quiz-opt" data-idx="4">④ Хамаарах заалт байхгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — 45 дугаар зүйл нь хэт ядралт, өвчин, эм, мансууруулах бодисын улмаас хэвийн жолоодох боломжгүй байдалд жолоо барихыг хориглодог.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Согтуугаар жолоо барьж байгааг мэдсээр байж тээврийн хэрэгсэл өгсөн буюу хамт суусан хүний хариуцлага?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Согтуугаар жолоо барихад хамжсан гэмт хэргээр хариуцлага хүлээнэ</label>
+      <label class="quiz-opt" data-idx="2">② Хариуцлага байхгүй</label>
+      <label class="quiz-opt" data-idx="3">③ Зөрчлийн торгууль 50,000 вон</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн даатгалын хураамж өснө</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Хамжсан хүн гол гэмт хэрэгтэнтэй адил түвшний хариуцлага хүлээж болно.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 07 — Зам тээврийн осол, онцгой нөхцөлд авах арга хэмжээ -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch7">
+  <span class="ch-num">CHAPTER 07</span>
+  <h2>Зам тээврийн осол ба яаралтай нөхцөл байдлын үед авах арга хэмжээ</h2>
+  <p class="ch-desc">Ослын дараах арга хэмжээ, хоёрдогч ослоос сэргийлэх, 12 төрлийн ноцтой зөрчил, тусгай зориулалтын тээврийн хэрэгсэлд зам тавьж өгөх (양보), эвдрэл, галын үед авах арга хэмжээ</p>
+  <p class="ch-stars">★★★ 12 төрлийн ноцтой зөрчлийг бүрэн багтаасан</p>
+</div>
+
+<!-- 7-1 Ослын дараах арга хэмжээ -->
+<div class="section" id="s7-1">
+  <h3>7-1. Зам тээврийн ослын дараах арга хэмжээ (54 дүгээр зүйл)</h3>
+
+  <div class="box box-law">
+    <div class="box-title">📜 54 дүгээр зүйлийн 1 дэх хэсэг, 2 дахь хэсэг</div>
+    ① Тээврийн хэрэгслийн жолооч болон бусад багийн гишүүд зам тээврийн осол гарсан үед нэн даруй зогсож (정차) <strong>нас барсан, гэмтсэн хүнийг аврах зэрэг шаардлагатай арга хэмжээ</strong> авах ёстой.<br>
+    ② Жолооч зэрэг нь цагдаагийн алба хаагч газар дээр байвал тухайн цагдаагийн алба хаагчид, цагдаагийн алба хаагч газар дээр байхгүй бол <strong>хамгийн ойрын цагдаагийн байгууллагад</strong> саадгүй мэдэгдэх ёстой.
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Нэн даруй зогсох</strong> — Ослын газрыг орхивол "зугтсан" (뺑소니) гэж тооцогдож болно.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content"><strong>Гэмтсэн хүнийг шалгах, 119 дуудах</strong> — Хүний амь насанд хохирол учирсан бол хамгийн түрүүнд</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Хоёрдогч ослоос сэргийлэх</strong> — Ослын дохио асаах → гурвалжин анхааруулах тэмдэг тавих → машины гадна аюулгүй газар (хамгаалалтын хашлагын гадна) руу гарах</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content"><strong>112-т мэдэгдэх</strong> — Цагдаад ослыг мэдэгдэнэ. Хоёр тал хөнгөн гэмтэлтэй бол даатгалын компанид мэдэгдсэний дараа цагдаа дуудах эсэх нь сонголт</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content"><strong>Газар дээрх нотлох баримтыг хадгалах</strong> — Зураг авах (олон өнцгөөс), нөгөө машины дугаар, даатгалын компанийг шалгах</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Зугтах (Тодорхой төрлийн гэмт хэрэгт оногдуулах ялыг хүндрүүлэх тухай хууль) — хамгийн хүнд шийтгэл</div>
+    Ослын дараа зугтвал <strong>Тодорхой төрлийн гэмт хэрэгт оногдуулах ялыг хүндрүүлэх тухай хууль</strong> хэрэглэнэ:<br>
+    • Гэмтээгээд зугтсан: 1 жилээс дээш хорих ял эсвэл 5,000,000~30,000,000 вон торгууль<br>
+    • <strong>Нас баруулаад зугтсан</strong>: 5 жилээс дээш хорих ял эсвэл <strong>бүх насаар хорих ял</strong> хүртэл боломжтой<br>
+    • Цогцсыг хаяад зугтсан: цаазаар авах ял, бүх насаар эсвэл 5 жилээс дээш хорих ял<br><br>
+    ⚠️ Гадаад иргэнд ч онцгой тохиолдол байхгүй. Эх орондоо буцсан ч Интерполоор эрэн сурвалжлагдаж болно.
+  </div>
+</div>
+
+<!-- 7-2 12 төрлийн ноцтой зөрчил -->
+<div class="section" id="s7-2">
+  <h3>7-2. Зам тээврийн ослыг шийдвэрлэх тусгай журмын тухай хуулийн 12 төрлийн ноцтой зөрчил</h3>
+  <p>Зам тээврийн ослыг шийдвэрлэх тусгай журмын тухай хууль нь <strong>даатгалд хамрагдсан бол ихэнх хөнгөн болгоомжгүй осолд</strong> эрүүгийн хариуцлагаас чөлөөлдөг. Гэвч дараах 12 тохиолдолд даатгалтай эсэхээс үл хамааран <strong>заавал эрүүгийн хариуцлага</strong> хүлээлгэнэ.</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 12 төрлийн ноцтой зөрчлийн бүрэн жагсаалт</div>
+    <ol>
+      <li><strong>Гэрлэн дохио зөрчих</strong> — Гэрлэн дохио, гар дохио, аюулгүйн тэмдэглэгээ зөрчих</li>
+      <li><strong>Төвийн шугам давах</strong> — Шар үргэлжилсэн шугам давах, эсрэг урсгалын эгнээнд орох</li>
+      <li><strong>Хурд хэтрүүлэх (хурдны дээд хязгаараас 20km/h-ээс дээш)</strong></li>
+      <li><strong>Гүйцэж түрүүлэх (앞지르기) арга, хориглосон цаг үе, хориглосон газрын зөрчил</strong> (уулзвар, хонгил, гүүр зэрэг)</li>
+      <li><strong>Төмөр замын гарам нэвтрэх аргын зөрчил</strong> — түр зогсох (일시정지) үүргийн зөрчил</li>
+      <li><strong>Явган хүний гарц дээр явган зорчигчийг хамгаалах үүргийн зөрчил</strong></li>
+      <li><strong>Жолоодох эрхгүй жолоодох</strong> — эрхгүй, эрх хүчингүй болсон, түдгэлзүүлсэн хугацаанд жолоодох</li>
+      <li><strong>Согтуугаар жолоо барих</strong> (0.03% ба түүнээс дээш), мансууруулах бодис хэрэглээд жолоодох</li>
+      <li><strong>Явган хүний зам давах</strong> — явган хүний замаар явах зөрчил</li>
+      <li><strong>Зорчигч унахаас сэргийлэх үүргийн зөрчил</strong> — хаалгаа онгорхой хөдлөх зэрэг</li>
+      <li><strong>Хүүхдийн хамгаалалтын бүсэд аюулгүй жолоодох үүргийн зөрчил</strong> — 13-аас доош насны хүүхдийг гэмтээх</li>
+      <li><strong>Ачааг бэхлэх арга хэмжээний зөрчил</strong> (ачаалалт зохисгүй) — 2017 онд нэмэгдсэн</li>
+    </ol>
+    💡 Цээжлэх арга: <strong>солонгос нэрийн эхний үеүдээр</strong> (신중속앞철 횡무음보 승어화)
+  </div>
+</div>
+
+<!-- 7-3 Хоёрдогч ослоос сэргийлэх -->
+<div class="section" id="s7-3">
+  <h3>7-3. Хоёрдогч ослоос сэргийлэх (хурдны зам)</h3>
+  <p>Хурдны замд анхны ослын дараа зам дээр үлдвэл <strong>араас ирэх машинд мөргүүлэх хоёрдогч ослын</strong> эрсдэл маш өндөр. Хоёрдогч осол нь анхны ослоос хамаагүй их нас баралттай (6 дахин орчим).</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content"><strong>Ослын дохио асаах</strong> — нэн даруй</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">Боломжтой бол машинаа <strong>замын зах</strong> руу гаргах</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content"><strong>Гурвалжин анхааруулах тэмдэг</strong> тавих: өдрийн цагаар машины ард <strong>100m</strong>, шөнө <strong>200m</strong> (хурдны замд боломжтой бол 500m)</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">Бүх зорчигч <strong>хамгаалалтын хашлагын гадна</strong> гарах</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">Солонгосын Хурдны замын корпорацийн дуудлагын төв <strong>1588-2504</strong> эсвэл 112-т мэдэгдэх</div>
+    </div>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — Машин дотор бүү суу</div>
+    Ослын дараа машин дотроо сууж даатгалын компанийг хүлээх нь маш аюултай. Ялангуяа хурдны замд <strong>машины гадна, хамгаалалтын хашлагын цаана</strong> нэн даруй гарч зайлаарай.
+  </div>
+</div>
+
+<!-- 7-4 Тусгай зориулалтын тээврийн хэрэгсэлд зам тавьж өгөх -->
+<div class="section" id="s7-4">
+  <h3>7-4. Тусгай зориулалтын тээврийн хэрэгсэлд зам тавьж өгөх (29 дүгээр зүйл)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Нөхцөл байдал</th><th>Ердийн тээврийн хэрэгслийн үүрэг</th></tr>
+      <tr><td>Уулзвар буюу түүний ойролцоо тусгай зориулалтын тээврийн хэрэгсэл ойртох үед</td><td><strong>Уулзвараас зайлж</strong> замын баруун захад түр зогсох</td></tr>
+      <tr><td>Уулзвараас бусад замд тусгай зориулалтын тээврийн хэрэгсэл ойртох үед</td><td>Тусгай зориулалтын тээврийн хэрэгслийг түрүүлж нэвтрүүлэхийн тулд <strong>зам тавьж өгөх</strong> (удаан явах (서행) эсвэл зогсох)</td></tr>
+      <tr><td>Нэг чиглэлийн замд</td><td>Баруун зах руу зайлах боломжгүй бол <strong>зүүн</strong> зах руу зайлах</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Тусгай зориулалтын тээврийн хэрэгслийн төрөл</div>
+    Гал унтраах машин, түргэн тусламжийн машин, цус нийлүүлэх машин, цагдаагийн эргүүлийн машин, цэргийн үүрэг гүйцэтгэж буй машин зэрэг. <strong>Анхааруулах гэрэл + сирен</strong> ажиллуулсан үед л тусгай зориулалтын тээврийн хэрэгсэл гэж тооцно.
+  </div>
+</div>
+
+<!-- 7-5 Эвдрэлийн үед авах арга хэмжээ -->
+<div class="section" id="s7-5">
+  <h3>7-5. Эвдрэл, галын үед авах арга хэмжээ (Хэрэгжүүлэх дүрмийн 40 дүгээр зүйл)</h3>
+  <ul>
+    <li>Эвдэрсэн үед аюулгүй газар (замын зах) руу гаргаж, ослын дохио асаах</li>
+    <li><strong>Гурвалжин анхааруулах тэмдэг</strong>: машины ард 100m ба түүнээс дээш зайд, шөнө 200m ба түүнээс дээш зайд</li>
+    <li>Шөнийн цагаар <strong>улаан анивчих дохио</strong>, <strong>цахилгаан гэрлэн дохиог</strong> машины ард 500m-ийн зайд тавих</li>
+    <li>Хөдөлгүүр галын үед: машинаас нэн даруй гарах → 119-д мэдэгдэх → араас ирэх машинд анхааруулах</li>
+    <li>Төмөр замын гарам дээр эвдэрсэн үед: <strong>машин доторх зорчигчдыг гаргах → гарамны аваарийн товчлуурыг</strong> дарах → дохио эсвэл дарцгаар галт тэрэгний машинистад мэдэгдэх</li>
+  </ul>
+</div>
+
+<!-- 7-6 Гадаад иргэний мэдэгдэл -->
+<div class="section" id="s7-6">
+  <h3>7-6. Гадаад иргэн осол мэдэгдэх ба орчуулга</h3>
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — Яаралтай холбоо барих дугаар</div>
+    <strong>☎ 112</strong> — Цагдаа (англи, хятад, япон хэлний орчуулагчтай холбож өгнө)<br>
+    <strong>☎ 119</strong> — Гал унтраах, түргэн тусламж (олон хэлний орчуулга)<br>
+    <strong>☎ 1588-5644</strong> — BBB Korea олон хэлний орчуулгын үйлчилгээ (24 цаг, 20 хэл)<br>
+    <strong>☎ 1345</strong> — Хууль зүйн яамны Гадаад иргэдийн нэгдсэн мэдээллийн төв<br>
+    <strong>☎ 1588-2504</strong> — Солонгосын Хурдны замын корпорацийн хурдны замын дуудлагын төв
+  </div>
+</div>
+
+<!-- 7-7 Дасгалын асуулт -->
+<div class="section" id="s7-7">
+  <h3>7-7. Дасгалын асуулт</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Зам тээврийн ослын дараа жолоочийн хамгийн түрүүнд хийх зүйл юу вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Даатгалын компанид залгах</label>
+      <label class="quiz-opt" data-idx="2">② Зогсож нас барсан, гэмтсэн хүнийг аврах</label>
+      <label class="quiz-opt" data-idx="3">③ Газар дээр нь зураг авах</label>
+      <label class="quiz-opt" data-idx="4">④ Нөгөө талтай тохиролцох</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — 54 дүгээр зүйлийн 1 дэх хэсэг. Нэн даруй зогсож, гэмтсэн хүнийг аврах нь хамгийн түрүүнд.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>12 төрлийн ноцтой зөрчилд хамаарахгүй нь аль вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Гэрлэн дохио зөрчих</label>
+      <label class="quiz-opt" data-idx="2">② Төвийн шугам давах</label>
+      <label class="quiz-opt" data-idx="3">③ Зогсоол (주차), зогсох зөрчил</label>
+      <label class="quiz-opt" data-idx="4">④ Жолоодох эрхгүй жолоодох</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Зогсоол, зогсох зөрчил нь 12 төрлийн ноцтой зөрчилд ордоггүй.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Хурдны замд осол гарсны дараа хамгийн түрүүнд авах хоёрдогч ослоос сэргийлэх арга хэмжээ юу вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Машин дотор хүлээх</label>
+      <label class="quiz-opt" data-idx="2">② Ослын дохио асааж, гурвалжин анхааруулах тэмдэг тавьсны дараа хамгаалалтын хашлагын гадна гарах</label>
+      <label class="quiz-opt" data-idx="3">③ Нөгөө талтай маргалдах</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн машиныг зургаар авах</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Ослын дохио → гурвалжин анхааруулах тэмдэг → машины гадна аюулгүй газар гарах нь зарчим.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Уулзварын ойролцоо тусгай зориулалтын тээврийн хэрэгсэл ойртох үед ердийн тээврийн хэрэгслийн үүрэг юу вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Уулзвараас зайлж баруун захад түр зогсох</label>
+      <label class="quiz-opt" data-idx="2">② Хэвээр нэвтрэх</label>
+      <label class="quiz-opt" data-idx="3">③ Тусгай зориулалтын тээврийн хэрэгслийн араас дагах</label>
+      <label class="quiz-opt" data-idx="4">④ Төвийн шугам руу зайлах</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — 29 дүгээр зүйл. Уулзварын ойролцоо бол уулзвараас зайлж баруун захад түр зогсоно.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Өдрийн цагаар эвдэрсэн үед гурвалжин анхааруулах тэмдгийг хаана тавих вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Машины яг ард</label>
+      <label class="quiz-opt" data-idx="2">② Машины ард 100m ба түүнээс дээш зайд</label>
+      <label class="quiz-opt" data-idx="3">③ Машины урд</label>
+      <label class="quiz-opt" data-idx="4">④ Тавих үүрэг байхгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Өдөр 100m, шөнө 200m (хурдны замд 500m зөвлөдөг).</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Гадаад жолооч осол гарсан үед ашиглаж болох 24 цагийн олон хэлний орчуулгын дугаар аль вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 119</label>
+      <label class="quiz-opt" data-idx="2">② 112</label>
+      <label class="quiz-opt" data-idx="3">③ 1588-5644 (BBB)</label>
+      <label class="quiz-opt" data-idx="4">④ 1345</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — BBB Korea нь 24 цагийн үнэгүй олон хэлний орчуулгын үйлчилгээ үзүүлдэг.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 08 — Солонгосын замын хөдөлгөөний соёлыг ойлгох -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch8">
+  <span class="ch-num">CHAPTER 08</span>
+  <h2>Зогсоол, зогсолт, гэрэл, Солонгосын замын хөдөлгөөний соёл</h2>
+  <p class="ch-desc">Зогсоол, зогсолт хориглох, зогсоолын соёл, урд гэрлийн журам, дуут дохио хэрэглэх, навигацийн апп</p>
+  <p class="ch-stars">★★ Өдөр тутмын амьдрал, шалгалтын аль алинд зайлшгүй</p>
+</div>
+
+<!-- 8-1 Зогсоол, зогсолтын ялгаа -->
+<div class="section" id="s8-1">
+  <h3>8-1. Зогсоол ба зогсолтын ялгаа (2 дугаар зүйл)</h3>
+  <div class="box box-law">
+    <div class="box-title">📜 2 дугаар зүйлийн 24, 25 дахь заалт</div>
+    <strong>Зогсолт (정차)</strong>: тээврийн хэрэгсэл <strong>5 минутаас хэтрэхгүй</strong> хугацаанд зогсох бөгөөд зогсоолоос бусад зогссон байдал<br>
+    <strong>Зогсоол (주차)</strong>: тээврийн хэрэгслийг үргэлжлүүлэн зогсоох, <strong>5 минутаас хэтрэх</strong> буюу жолооч тээврийн хэрэгслээс холдож нэн даруй жолоодох боломжгүй байдал
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 5 минутын дүрэм</div>
+    Жолооч тээврийн хэрэгсэлд <strong>байгаа</strong> бөгөөд 5 минутын дотор = зогсолт<br>
+    Жолооч тээврийн хэрэгсэлд <strong>байхгүй</strong> буюу 5 минутаас хэтэрсэн = зогсоол<br>
+    Ачаа буулгах богино хугацаанд ч жолооч тээврийн хэрэгслээс холдвол зогсоолд тооцогдоно.
+  </div>
+</div>
+
+<!-- 8-2 Зогсоол, зогсолт хориглох -->
+<div class="section" id="s8-2">
+  <h3>8-2. Зогсоол, зогсолт хориглосон газар (32, 33 дугаар зүйл)</h3>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Зогсолт, зогсоол хориглосон газар (32 дугаар зүйл)</div>
+    ① <strong>Уулзвар, явган хүний гарц, төмөр замын гарам</strong> эсвэл явган хүний зам ба зорчих хэсэг тусгаарлагдсан замын <strong>явган хүний зам</strong><br>
+    ② Уулзварын зах буюу замын булангаас <strong>5 м-ийн дотор</strong><br>
+    ③ Аюулгүйн бүсийн дөрвөн талаас <strong>10 м-ийн дотор</strong><br>
+    ④ <strong>Автобусны буудлын</strong> тэмдэг, шугамаас <strong>10 м-ийн дотор</strong><br>
+    ⑤ <strong>Төмөр замын гарамын зах</strong>, явган хүний гарцаас <strong>10 м-ийн дотор</strong><br>
+    ⑥ Аюулгүйн тэмдэглэгээгээр зогсоол, зогсолт хориглосныг заасан газар<br>
+    ⑦ Аймаг, нийслэлийн Цагдаагийн газрын дарга тогтоосон газар
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Зогсоол хориглосон газар (33 дугаар зүйл) — зогсолт хийж болно</div>
+    ① <strong>Хонгил дотор</strong> болон <strong>гүүр дээр</strong><br>
+    ② <strong>Гал унтраах байгууламж</strong> (гал унтраах усны цорго, газар доорх болон өнгөн цорго гэх мэт)-аас <strong>5 м-ийн дотор</strong><br>
+    ③ Замын засварын бүсийн хоёр талын захаас 5 м-ийн дотор<br>
+    ④ Аймаг, нийслэлийн Цагдаагийн газрын дарга тогтоосон газар
+  </div>
+
+  <div class="box box-exam">
+    <div class="box-title">📝 5 м / 10 м цээжлэх арга</div>
+    <strong>5 м-ийн дотор зогсолт, зогсоол хориотой</strong>: уулзварын булан<br>
+    <strong>5 м-ийн дотор зогсоол хориотой</strong>: гал унтраах байгууламж<br>
+    <strong>10 м-ийн дотор зогсолт, зогсоол хориотой</strong>: аюулгүйн бүс, автобусны буудал, төмөр замын гарам, явган хүний гарц<br><br>
+    💡 <strong>«Уулзвар 5, гал 5, автобус, аюулгүйн бүс, гарам нь 10»</strong>
+  </div>
+</div>
+
+<!-- 8-3 Солонгосын зогсоолын соёл -->
+<div class="section" id="s8-3">
+  <h3>8-3. Солонгосын зогсоолын соёл</h3>
+
+  <ul>
+    <li><strong>Ухарч зогсоох</strong> (арын дугуйг эхлээд оруулах) нь үндсэн арга — явцуу зогсоолоос гарахад харааны талбайг хангах зорилгоор</li>
+    <li><strong>Давхар зогсоол</strong>: зай хүрэлцэхгүй үед өөр машины урд түр зогсоох. Заавал <strong>утасны дугаарыг хянах самбар дээр тавьж</strong>, гар тоормосыг суллан машиныг түлхэж болохоор үлдээнэ</li>
+    <li><strong>Механик зогсоол</strong>: хажуугийн толийг эвхэх, нарийн зэрэгцүүлэх шаардлагатай. Алдаа гаргавал хэдэн сая воны засварын зардал гарна</li>
+    <li><strong>Валет зогсоол</strong>: тансаг зэрэглэлийн ресторан, зочид буудалд үзүүлдэг, ихэвчлэн 3,000~5,000 воны цайны мөнгө өгдөг</li>
+    <li><strong>Нийтийн болон хувийн зогсоол</strong>: цагт 1,000~4,000 вон. Сөүлийн төвд илүү үнэтэй</li>
+  </ul>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — давхар зогсоолын дугаар тавих</div>
+    Дугаараа тавилгүй давхар зогсоол хийвэл <strong>зогсоолд саад учруулсан</strong> гэж гомдол, захиргааны торгуулийн объект болж болзошгүй. Сүүлийн үед QR код, гар утсаар дугаар ил болгох үйлчилгээ (Kakao, T map зогсоол) ч хэрэглэгддэг. Ухаалаг утсанд апп-аа урьдчилан бэлдээрэй.
+  </div>
+</div>
+
+<!-- 8-4 Гэрлийн журам -->
+<div class="section" id="s8-4">
+  <h3>8-4. Гэрэл (урд гэрэл) хэрэглэх журам (37 дугаар зүйл)</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Нөхцөл байдал</th><th>Асаах ёстой гэрэл</th></tr>
+      <tr><td>Шөнө (нар жаргаснаас хойш ~ нар мандахаас өмнө)</td><td>Урд гэрэл, оврын гэрэл, арын гэрэл, улсын дугаарын гэрэл</td></tr>
+      <tr><td>Хонгил дотор</td><td>Урд гэрэл, оврын гэрэл, арын гэрэл, улсын дугаарын гэрэл</td></tr>
+      <tr><td>Бороо, цас, манангаар харанхуй үед</td><td>Урд гэрэл, оврын гэрэл, арын гэрэл</td></tr>
+      <tr><td>Шөнө зогсоол, зогсолт хийх үед</td><td>Оврын гэрэл, арын гэрэл</td></tr>
+      <tr><td>Урдаас ирэх машинтай зөрөх үед</td><td><strong>Ойрын гэрэл</strong> рүү шилжүүлэх (холын гэрэл хориотой)</td></tr>
+      <tr><td>Урд машины яг ард дагаж явах үед</td><td><strong>Ойрын гэрэл</strong> рүү шилжүүлэх</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — холын гэрэл (High Beam) хэрэглэх</div>
+    Солонгост <strong>эсрэг талын харааг саатуулах холын гэрэл хэрэглэх</strong> нь хууль зөрчсөн үйлдэл болно (37 дугаар зүйлийн 2 дахь хэсэг). Хотод бараг хэрэглэдэггүй, зөвхөн эзгүй хөдөөгийн замд хэрэглээрэй. Эсрэг машин холын гэрлээр дохио өгвөл «холын гэрлээ унтраа» эсвэл «урд аюул байна» гэсэн утгатай байж болно.
+  </div>
+</div>
+
+<!-- 8-5 Дуут дохио -->
+<div class="section" id="s8-5">
+  <h3>8-5. Дуут дохио (경음기) хэрэглэх (49 дүгээр зүйлийн 1 дэх хэсгийн 8 дахь заалт)</h3>
+  <div class="box box-law">
+    <div class="box-title">📜 49 дүгээр зүйл</div>
+    «Жолооч жолоо барих явцад <strong>хүндэтгэн үзэх шалтгаангүйгээр</strong> дараах заалтуудын аль нэгэнд хамаарах үйлдэл хийж болохгүй... 8. Дуут дохио өгөх, хурд нэмэх болон бусад үйлдлээр бусдад <strong>хор хөнөөл учруулах буюу замын хөдөлгөөний аюул</strong> үүсгэх үйлдэл»
+  </div>
+  <p>Дуут дохиог <strong>аюулаас сэргийлэхэд зайлшгүй шаардлагатай тохиолдолд</strong> л хэрэглэх ёстой. Урд машин хойшлогдсонд уурлаж, гэрлэн дохио хүлээх үед хөдлөхийг шаардах зэрэг <strong>өдөр тутмын хэрэглээ нь хууль зөрчсөн</strong> үйлдэл.</p>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Солонгосын замд сонсогдох дуут дохио</div>
+    Бодит байдал дээр Солонгосын замд дуут дохио байнга сонсогддог. Гэвч тэдгээрийн дийлэнх нь <strong>хууль зөрчсөн</strong> үйлдэл. Дуут дохионы зөрчлийн торгууль 40,000 вон + торгуулийн оноо 10 оноо. Гэрлэн дохио хүлээх үед дуут дохиогоор хөдлөхийг шаардах = зөрчлийн торгууль 40,000 вон.
+  </div>
+</div>
+
+<!-- 8-6 Дадлагын бодлого -->
+<div class="section" id="s8-6">
+  <h3>8-6. Дадлагын бодлого</h3>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Зогсоол ба зогсолтыг ялгах хугацааны шалгуур нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3 минут</label>
+      <label class="quiz-opt" data-idx="2">② 5 минут</label>
+      <label class="quiz-opt" data-idx="3">③ 10 минут</label>
+      <label class="quiz-opt" data-idx="4">④ Хугацаанаас хамаарахгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — 5 минутаас доош, жолооч тээврийн хэрэгсэлд байгаа = зогсолт, бусад тохиолдол = зогсоол.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Гал унтраах байгууламжаас зогсоол хориглох зай нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3 м</label>
+      <label class="quiz-opt" data-idx="2">② 4 м</label>
+      <label class="quiz-opt" data-idx="3">③ 5 м</label>
+      <label class="quiz-opt" data-idx="4">④ 10 м</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — 33 дугаар зүйл, гал унтраах байгууламжаас 5 м-ийн дотор зогсоол хориотой.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Автобусны буудлаас зогсолт, зогсоол хориглох зай нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 3 м</label>
+      <label class="quiz-opt" data-idx="2">② 5 м</label>
+      <label class="quiz-opt" data-idx="3">③ 7 м</label>
+      <label class="quiz-opt" data-idx="4">④ 10 м</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — 32 дугаар зүйл, автобусны буудал, төмөр замын гарам, явган хүний гарцаас 10 м-ийн дотор зогсолт, зогсоол хориотой.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Урдаас ирэх машинтай зөрөх үеийн гэрэл нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Холын гэрэл</label>
+      <label class="quiz-opt" data-idx="2">② Ойрын гэрэл</label>
+      <label class="quiz-opt" data-idx="3">③ Урд гэрлийг унтраах</label>
+      <label class="quiz-opt" data-idx="4">④ Ослын дохио</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Холын гэрэл эсрэг талын харааг саатуулна. Ойрын гэрэл рүү шилжүүлнэ.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Гэрлэн дохио хүлээх үед урд машинд дуут дохиогоор хөдлөхийг шаардсан тохиолдолд?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Зөрчлийн торгуулийн объект (49 дүгээр зүйл зөрчсөн)</label>
+      <label class="quiz-opt" data-idx="2">② Дуут дохионы зүй зохистой хэрэглээ</label>
+      <label class="quiz-opt" data-idx="3">③ Заншлын хувьд зөвшөөрөгддөг</label>
+      <label class="quiz-opt" data-idx="4">④ Шийтгэлгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Хүндэтгэн үзэх шалтгаангүй дуут дохио хэрэглэх нь 49 дүгээр зүйлийг зөрчсөн үйлдэл (зөрчлийн торгууль 40,000 вон).</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Хонгил дотор авах арга хэмжээ нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Урд гэрлийг унтраах</label>
+      <label class="quiz-opt" data-idx="2">② Урд гэрэл, оврын гэрэл, арын гэрэл асаах; зогсоол, гүйцэж түрүүлэх (앞지르기) хориотой</label>
+      <label class="quiz-opt" data-idx="3">③ Холын гэрэл асаах</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн ослын дохио</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Хонгил дотор гэрэл асаах + зогсоол, гүйцэж түрүүлэх хориотой.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 09 — Ур чадварын шалгалт, замын жолоодлогын шалгалтад тэнцэх стратеги -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch9">
+  <span class="ch-num">CHAPTER 09</span>
+  <h2>Ур чадварын шалгалт, замын жолоодлогын шалгалтад тэнцэх стратеги</h2>
+  <p class="ch-desc">Шалгалтын маршрутын дэлгэрэнгүй зөвлөгөө, оноо хасах болон хасагдах заалт, дуут зааварчилгааг ойлгох</p>
+  <p class="ch-stars">★★ Дадлагын шалгалтад бэлтгэх гол зүйл</p>
+</div>
+
+<!-- 9-1 Ур чадварын шалгалт -->
+<div class="section" id="s9-1">
+  <h3>9-1. Ур чадварын шалгалт (талбайн ур чадвар) тойм</h3>
+  <p>Онолын шалгалтад тэнцсэний дараа <strong>шалгалтын талбайн маршрут</strong> дээр тээврийн хэрэгслийг өөрөө жолоодож, үндсэн удирдлагын чадварыг үнэлэх шалгалт юм. 2-р ангиллын ердийн жолоодох эрхийн хувьд <strong>80 ба түүнээс дээш оноо</strong> авбал тэнцэнэ.</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Маршрут</th><th>Агуулга</th><th>Анхаарах зүйл</th></tr>
+      <tr><td>Хөдлөхийн өмнөх төхөөрөмжийн удирдлага</td><td>Хамгаалах бүс, чиг заах дохио, араа солих, урд гэрэл, шил арчигч, ослын дохио</td><td>Дуут зааварт яг таг хариу үйлдэл үзүүлэх. Дараалал, нэршлийг сурах</td></tr>
+      <tr><td><strong>Тэгш өнцөгт зогсоол (T зогсоол)</strong></td><td>Зогсоолын талбайд ухарч орох</td><td>Хажуугийн толиор шугамыг шалгах, нэг удаад зогсоолд амжилттай тавих нь хамгийн сайн</td></tr>
+      <tr><td><strong>Налуу зам</strong></td><td>Өгсүүр дээр зогссоны дараа дахин хөдлөх (ухрахаас сэргийлэх)</td><td>Гар тоормос ашиглах, <strong>50 см ба түүнээс дээш</strong> ухарвал шалгалтаас хасагдана</td></tr>
+      <tr><td><strong>Уулзвар нэвтрэх</strong></td><td>Гэрлэн дохио дагах, зүүн, баруунаа харах</td><td>Улаан гэрэлд зогсох шугамыг давбал хасагдана</td></tr>
+      <tr><td><strong>Хурдлах хэсэг</strong></td><td>Заасан хурдад (20 км/ц ба түүнээс дээш) хүрэх</td><td>Хурд хүрэлцэхгүй бол оноо хасна</td></tr>
+    </table>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Ур чадварын шалгалтын гол хасагдах (шууд хасагдах) заалтууд</div>
+    ① Хамгаалах бүс зүүгээгүй<br>
+    ② Гэрлэн дохио зөрчих (улаан гэрэлд зогсох шугамыг давах)<br>
+    ③ Налуу замд <strong>50 см ба түүнээс дээш ухрах</strong><br>
+    ④ Маршрутаас гарах (хязгаарын шугамыг давах)<br>
+    ⑤ Заасан хугацаа (6 минут) хэтрүүлэх<br>
+    ⑥ Төхөөрөмжийн удирдлагын алдаа (хөдөлгүүр 3 ба түүнээс дээш удаа унтрах)
+  </div>
+</div>
+
+<!-- 9-2 Замын жолоодлогын шалгалт -->
+<div class="section" id="s9-2">
+  <h3>9-2. Замын жолоодлогын шалгалтын тойм</h3>
+  <p>Дадлагын жолоодох эрх авсны дараа <strong>бодит зам</strong> дээр шалгагчийг хамт суулган ойролцоогоор 5 км жолоодож үнэлүүлнэ. <strong>70 ба түүнээс дээш оноо</strong> авбал тэнцэнэ.</p>
+
+  <div class="box box-warn">
+    <div class="box-title">🚫 Замын жолоодлогын шалгалтын гол хасагдах, их оноо хасагдах заалтууд</div>
+    <strong>Хасагдах (шууд тэнцэхгүй)</strong><br>
+    ① Гэрлэн дохио зөрчих<br>
+    ② Төвийн шугам давах<br>
+    ③ Явган зорчигчийг хамгаалах үүргээ зөрчих<br>
+    ④ Согтуу, мансуурсан байдалтай шалгалт өгөх<br>
+    ⑤ Шалгагчийн зааврыг биелүүлэхгүй байх<br>
+    ⑥ Аюулгүй зай баримтлаагүйгээс ардаас мөргөх аюултай нөхцөл үүсгэх<br><br>
+    <strong>Их оноо хасах (5~10 оноо)</strong><br>
+    • Эгнээ солих үед чиг заах дохио өгөөгүй<br>
+    • Хурд хэтрүүлэх (10 км/ц-ээс дээш)<br>
+    • Зогсоолд тавих үед хашлага, саадтай шүргэлцэх<br>
+    • Огцом зогсох, огцом хөдлөх
+  </div>
+
+  <div class="box box-tip">
+    <div class="box-title">💡 Тэнцэх зөвлөгөө — «хамгаалалтын жолоодлогын сэтгэлгээ»</div>
+    Замын жолоодлогын шалгалтад <strong>аюулгүй байдлыг</strong> хамгийн түрүүнд харна. Хурдан явахаас илүү <strong>аюулгүй хурд, хангалттай аюулгүй зай, чиг заах дохиог 100% хэрэглэх</strong> нь чухал. Эргэлзвэл <strong>удаан явах (서행), түр зогсох (일시정지)</strong> нь зөв хариулт.
+  </div>
+</div>
+
+<!-- 9-3 Гадаад иргэдийн хэл -->
+<div class="section" id="s9-3">
+  <h3>9-3. Гадаад иргэдийн шалгалт өгөх хэл, дуут зааварчилгаа</h3>
+  <ul>
+    <li><strong>Ур чадварын шалгалтын дуут зааварчилгаа</strong>: солонгос, англи, хятад, вьетнам зэрэг олон хэлээр дэмжигдэнэ. Шалгалт өгөхийн өмнө хэлээ сонгоно.</li>
+    <li><strong>Замын жолоодлогын шалгалт</strong>: зөвхөн солонгос, англи хэлээр. Вьетнам, хятад хэлтэй шалгуулагчид үндсэн солонгос жолоодлогын нэр томьёог урьдчилан цээжлэх ёстой.</li>
+    <li>Байнга хэрэглэгддэг заавар: «чигээрээ» (직진), «зүүн эргэх» (좌회전), «баруун эргэх» (우회전), «зогс» (정지), «удаан яв» (서행), «эгнээ солих» (차로 변경), «зогсоолд тавих» (주차), «хөдөл» (출발)</li>
+  </ul>
+
+  <div class="box box-foreign">
+    <div class="box-title">⚠️ Гадаад иргэдийн анхааралд — шалгалтын өмнөх өдрийн бэлтгэл</div>
+    • Шалгалтын талбайн машин (шалгалтын машин) нь өөрийн машинаас удирдлагын хувьд ялгаатай байж болно → шалгалтын талбайд урьдчилан дадлага хийх<br>
+    • Замын жолоодлогын <strong>шалгалтын маршрут тогтмол биш</strong> (тухайн өдөр сугалаагаар). Шалгалтын талбайн орчмын 1~2 маршрутыг жолооны сургуульд дадлага хийх нь найдвартай<br>
+    • Жолооны мэргэжлийн сургуульд <strong>«сургуулийн машинаар шалгалт өгөх»</strong> сонголтоор дассан машинаараа шалгалт өгөх боломжтой
+  </div>
+</div>
+
+<!-- 9-4 Дадлагын бодлого -->
+<div class="section" id="s9-4">
+  <h3>9-4. Дадлагын бодлого</h3>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Ур чадварын шалгалтад налуу замаас дахин хөдлөх үед хасагдах ухралтын шалгуур нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10 см ба түүнээс дээш</label>
+      <label class="quiz-opt" data-idx="2">② 30 см ба түүнээс дээш</label>
+      <label class="quiz-opt" data-idx="3">③ 50 см ба түүнээс дээш</label>
+      <label class="quiz-opt" data-idx="4">④ 1 м ба түүнээс дээш</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Налуу замд 50 см ба түүнээс дээш ухарвал шууд хасагдана.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Замын жолоодлогын шалгалтад тэнцэх онооны шалгуур нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 60 оноо</label>
+      <label class="quiz-opt" data-idx="2">② 70 оноо</label>
+      <label class="quiz-opt" data-idx="3">③ 80 оноо</label>
+      <label class="quiz-opt" data-idx="4">④ 90 оноо</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Замын жолоодлого 70 оноо, ур чадвар 80 оноо.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Замын жолоодлогын шалгалтад шууд хасагдах үйлдэл биш нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Гэрлэн дохио зөрчих</label>
+      <label class="quiz-opt" data-idx="2">② Төвийн шугам давах</label>
+      <label class="quiz-opt" data-idx="3">③ Явган зорчигчийг хамгаалах үүргээ зөрчих</label>
+      <label class="quiz-opt" data-idx="4">④ Чиг заах дохиог 1 удаа өгөөгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — Чиг заах дохио өгөөгүй нь их оноо хасагдах боловч шууд хасагдахгүй.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Замын жолоодлогын шалгалтад дэмжигддэг хэл нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Зөвхөн солонгос хэл</label>
+      <label class="quiz-opt" data-idx="2">② Солонгос, англи хэл</label>
+      <label class="quiz-opt" data-idx="3">③ 8 хэл</label>
+      <label class="quiz-opt" data-idx="4">④ Бүх гадаад хэл</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Ур чадварын шалгалт олон хэлээр, замын жолоодлого зөвхөн солонгос, англи хэлээр боломжтой.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>Ур чадварын шалгалтад хамгаалах бүсээ зүүгээгүй бол?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Шууд хасагдана</label>
+      <label class="quiz-opt" data-idx="2">② 5 оноо хасна</label>
+      <label class="quiz-opt" data-idx="3">③ Сануулсны дараа үргэлжлүүлнэ</label>
+      <label class="quiz-opt" data-idx="4">④ Нөлөөгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Хамгаалах бүс зүүгээгүй нь шууд хасагдах заалт.</div>
+  </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CHAPTER 10 — Бодит шалгалтын бодлого бодох -->
+<!-- ============================================================ -->
+<div class="chapter-header" id="ch10">
+  <span class="ch-num">CHAPTER 10</span>
+  <h2>Бодит шалгалтын бодлого бодох</h2>
+  <p class="ch-desc">Шалгалтад их гардаг гол сэдвийн 30 бодлого — хамгаалалтгүй зүүн эргэлт, буцаж эргэх, 2022 оны нэмэлт өөрчлөлт, баруун эргэлтийн гурван өнгийн гэрлэн дохио, хоёрдогч осол, зам тавьж өгөх нийлмэл бодлого</p>
+  <p class="ch-stars">★★★ Шалгалтын өмнөх эцсийн шалгалт</p>
+</div>
+
+<div class="section" id="s10-1">
+  <h3>10-1. Гол 30 бодлого</h3>
+  <p>Бодлого бүр өмнөх бүлгүүдэд үзсэн гол агуулгыг нэгтгэсэн. Буруу хариулсан бодлогоо тухайн бүлэгт буцаж дахин судлаарай.</p>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q1</span><span>Хамгаалалтгүй зүүн эргэлт (비보호좌회전)-ийн тэмдэгтэй уулзварт зүүн эргэх боломжтой гэрлэн дохио нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Чигээрээ явах ногоон гэрэл, эсрэг талд машингүй</label>
+      <label class="quiz-opt" data-idx="2">② Улаан</label>
+      <label class="quiz-opt" data-idx="3">③ Шар</label>
+      <label class="quiz-opt" data-idx="4">④ Бүх дохио</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Хамгаалалтгүй зүүн эргэлтийг зөвхөн ногоон гэрэлд хийж болно. Улаан гэрэлд зүүн эргэх = гэрлэн дохио зөрчих.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q2</span><span>Хамгаалалтгүй зүүн эргэлтийн үед осол гарвал зүүн эргэж буй машины буруутай хувь нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 30%</label>
+      <label class="quiz-opt" data-idx="2">② 50%</label>
+      <label class="quiz-opt" data-idx="3">③ 80% ба түүнээс дээш</label>
+      <label class="quiz-opt" data-idx="4">④ 0%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Ихэвчлэн хамгаалалтгүй зүүн эргэлт хийж буй машины буруу 80% ба түүнээс дээш гэж тооцогддог.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q3</span><span>Солонгост буцаж эргэх (유턴) боломжтой тохиолдол нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Буцаж эргэхийг зөвшөөрсөн тэмдэгтэй бөгөөд холбогдох дохио, нөхцөлийг хангасан үед</label>
+      <label class="quiz-opt" data-idx="2">② Хориглосон тэмдэг байхгүй бол хаана ч</label>
+      <label class="quiz-opt" data-idx="3">③ Бүх уулзварт</label>
+      <label class="quiz-opt" data-idx="4">④ Машин цөөн цагаар хаана ч</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Солонгост зөвхөн буцаж эргэхийг зөвшөөрсөн тэмдэгтэй газарт л боломжтой. АНУ-аас яг эсрэг.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q4</span><span>Буцаж эргэх тэмдэг байгаа ч төвийн шугам шар үргэлжилсэн шугам бол?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Буцаж эргэж болно</label>
+      <label class="quiz-opt" data-idx="2">② Удаан явж (서행) эргэж болно</label>
+      <label class="quiz-opt" data-idx="3">③ Явган зорчигчгүй бол болно</label>
+      <label class="quiz-opt" data-idx="4">④ Буцаж эргэж болохгүй (төвийн шугам давах = 12 төрлийн ноцтой зөрчил)</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — Тэмдэг байсан ч зөвхөн бодитоор заасан хэсэгт л хүчинтэй. Энгийн шар үргэлжилсэн шугамыг давахыг хориглоно.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q5</span><span>2022 оны явган зорчигчийн хамгаалалтын нэмэлт өөрчлөлтийн гол нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Явган зорчигчийг үл тоохыг зөвшөөрсөн</label>
+      <label class="quiz-opt" data-idx="2">② «Гарах гэж байгаа үед» ч хамгаалах, замаас гадуурх газарт ч үүргийг өргөжүүлсэн</label>
+      <label class="quiz-opt" data-idx="3">③ Гэрлэн дохиогүй явган хүний гарцыг халсан</label>
+      <label class="quiz-opt" data-idx="4">④ Хүүхдийн хамгаалалтын бүсийг халсан</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Гарч байх үед төдийгүй гарах гэж байгаа үеэс эхлэн хамгаална, орон сууцны хороолол, зогсоол зэрэгт ч үүрэгтэй.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q6</span><span>Хүүхдийн хамгаалалтын бүс доторх гэрлэн дохиогүй явган хүний гарцад жолоочийн үүрэг нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Явган зорчигч байгаа эсэхээс үл хамааран түр зогсох (일시정지)</label>
+      <label class="quiz-opt" data-idx="2">② Удаан явах</label>
+      <label class="quiz-opt" data-idx="3">③ Явган зорчигч байгаа үед л зогсох</label>
+      <label class="quiz-opt" data-idx="4">④ Дуут дохио хэрэглэх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Хүүхдийн хамгаалалтын бүс доторх гэрлэн дохиогүй явган хүний гарц = ямар ч нөхцөлд түр зогсох.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q7</span><span>Баруун эргэлтийн зориулалтын гурван өнгийн гэрлэн дохио улаан байх үед баруун эргэлт нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Түр зогссоны дараа болно</label>
+      <label class="quiz-opt" data-idx="2">② Удаан явсны дараа болно</label>
+      <label class="quiz-opt" data-idx="3">③ Явган зорчигчгүй бол болно</label>
+      <label class="quiz-opt" data-idx="4">④ Огт болохгүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — Баруун эргэлтийн гурван өнгийн гэрлэн дохио улаан бол баруун эргэхийг бүрэн хориглоно. Энгийн баруун эргэлтийн дүрмээс ялгаатай.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q8</span><span>Хурдны замд осол гарсны дараа хоёрдогч ослоос сэргийлэх зөв дараалал нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Машин дотор хүлээх → даатгалын компанид залгах</label>
+      <label class="quiz-opt" data-idx="2">② Ослын дохио → гурвалжин анхааруулах тэмдэг → хамгаалалтын хашлагын гадна гарах → мэдэгдэх</label>
+      <label class="quiz-opt" data-idx="3">③ Эсрэг талтай тохиролцох → зураг авах</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн машинаа зөөх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Хоёрдогч ослоос сэргийлэхэд ослын дохио, анхааруулах тэмдэг, аюулгүй газар руу гарах нь гол.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q9</span><span>Замын хөдөлгөөний зохицуулалтгүй уулзварт замын өргөн ялгаатай үед давуу эрх нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Нарийн зам</label>
+      <label class="quiz-opt" data-idx="2">② Эхлээд харсан машин</label>
+      <label class="quiz-opt" data-idx="3">③ Өргөн зам</label>
+      <label class="quiz-opt" data-idx="4">④ Том машин</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — 26 дугаар зүйлийн 2 дахь хэсэг. Өргөн зам давуу эрхтэй.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q10</span><span>Замын өргөн ижил бөгөөд зүүн эргэх, чигээрээ явах, баруун эргэх машин зэрэг ирэв. Давуу эрхийн дараалал нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Зүүн эргэлт > чигээрээ > баруун эргэлт</label>
+      <label class="quiz-opt" data-idx="2">② Чигээрээ, баруун эргэлт > зүүн эргэлт, зэрэг ирвэл баруун талын машин</label>
+      <label class="quiz-opt" data-idx="3">③ Зэрэг явна</label>
+      <label class="quiz-opt" data-idx="4">④ Зүүн эргэлт давуу</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Чигээрээ явах, баруун эргэх нь зүүн эргэхээс давуу (26 дугаар зүйлийн 4 дэх хэсэг), зэрэг ирсэн үед баруун талын машинд зам тавьж өгнө (양보) (3 дахь хэсэг).</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q11</span><span>Хурдны замын нэг чиглэлд 2 ба түүнээс дээш эгнээтэй хэсэгт суудлын автомашины дээд хурд нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 80 км/ц</label>
+      <label class="quiz-opt" data-idx="2">② 100 км/ц</label>
+      <label class="quiz-opt" data-idx="3">③ 110 км/ц</label>
+      <label class="quiz-opt" data-idx="4">④ Хязгааргүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Үндсэн нь 100 км/ц, заасан газарт 110~120.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q12</span><span>Замын гадаргуу мөстсөн үед хуулиар хурд бууруулах хувь нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10%</label>
+      <label class="quiz-opt" data-idx="2">② 20%</label>
+      <label class="quiz-opt" data-idx="3">③ 50%</label>
+      <label class="quiz-opt" data-idx="4">④ Хурд бууруулах үүрэггүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Замын гадаргуу мөстөх, харагдах зай 100 м-ээс бага, цас 20 мм ба түүнээс дээш = 50% хурд бууруулна.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q13</span><span>Согтуугаар жолоо барих (음주운전) шийтгэлийн шалгуур (цусан дахь спиртийн агууламж) нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 0.02%</label>
+      <label class="quiz-opt" data-idx="2">② 0.03%</label>
+      <label class="quiz-opt" data-idx="3">③ 0.05%</label>
+      <label class="quiz-opt" data-idx="4">④ 0.08%</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Солонгост 0.03% ба түүнээс дээш.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q14</span><span>Шар үргэлжилсэн төвийн шугамыг давж гүйцэж түрүүлэх (앞지르기) үед осол гарав. Энэ нь юунд хамаарах вэ?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 12 төрлийн ноцтой зөрчил (төвийн шугам давах + гүйцэж түрүүлэх зөрчил)</label>
+      <label class="quiz-opt" data-idx="2">② Энгийн зөрчил</label>
+      <label class="quiz-opt" data-idx="3">③ Зөвхөн даатгалаар шийдвэрлэх боломжтой</label>
+      <label class="quiz-opt" data-idx="4">④ Торгуулийн оноогүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Шар үргэлжилсэн төвийн шугам давах нь 12 төрлийн ноцтой зөрчил, гүйцэж түрүүлэх аргыг зөрчих нь мөн 12 төрлийн ноцтой зөрчил.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q15</span><span>Тойрог уулзварт хөдөлгөөнд оролцох зарчим нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Орж буй машин давуу</label>
+      <label class="quiz-opt" data-idx="2">② Том машин давуу</label>
+      <label class="quiz-opt" data-idx="3">③ Цагийн зүүний дагуу эргэх</label>
+      <label class="quiz-opt" data-idx="4">④ Цагийн зүүний эсрэг эргэх, эргэж буй машин давуу</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — Цагийн зүүний эсрэг, эргэж буй машин давуу (25-2 дугаар зүйл).</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q16</span><span>Ногоон гэрэлд уулзварын цаад тал бүрэн түгжирсэн бол?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Орж байр эзлэх</label>
+      <label class="quiz-opt" data-idx="2">② Удаан явж орох</label>
+      <label class="quiz-opt" data-idx="3">③ Уулзварт орохгүй (уулзвар бөглөх хориотой)</label>
+      <label class="quiz-opt" data-idx="4">④ Дуут дохио хэрэглэх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — 25 дугаар зүйлийн 5 дахь хэсэг, уулзвар бөглөхийг хориглоно.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q17</span><span>Дараахаас 12 төрлийн ноцтой зөрчилд хамаарахгүй нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Гэрлэн дохио зөрчих</label>
+      <label class="quiz-opt" data-idx="2">② Согтуугаар жолоо барих</label>
+      <label class="quiz-opt" data-idx="3">③ Ачаа бэхлэх арга хэмжээг зөрчих</label>
+      <label class="quiz-opt" data-idx="4">④ Зогсоол (주차), зогсолтын (정차) зөрчил</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — Зогсоол, зогсолтын зөрчил 12 төрлийн ноцтой зөрчилд ордоггүй.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q18</span><span>Шар анивчих дохионы утга нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Түр зогсох</label>
+      <label class="quiz-opt" data-idx="2">② Анхааралтай явах</label>
+      <label class="quiz-opt" data-idx="3">③ Зогсох</label>
+      <label class="quiz-opt" data-idx="4">④ Хурдаа хадгалах</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Шар анивчих = анхааралтай явах / улаан анивчих = түр зогссоны дараа явах.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q19</span><span>Төвийн шугамын өнгө нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Цагаан</label>
+      <label class="quiz-opt" data-idx="2">② Шар</label>
+      <label class="quiz-opt" data-idx="3">③ Цэнхэр</label>
+      <label class="quiz-opt" data-idx="4">④ Улаан</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Төвийн шугам = шар, эгнээний шугам = цагаан.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q20</span><span>Цэнхэр (хөх) өнгийн замын гадаргуугийн тэмдэглэгээний утга нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Хөгжлийн бэрхшээлтэй иргэдийн зогсоол</label>
+      <label class="quiz-opt" data-idx="2">② Ачааны машины зориулалт</label>
+      <label class="quiz-opt" data-idx="3">③ Автобусны тусгай эгнээ</label>
+      <label class="quiz-opt" data-idx="4">④ Унадаг дугуйн зориулалт</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Цэнхэр үргэлжилсэн шугам нь автобусны тусгай эгнээ. Энгийн машин орвол зөрчлийн торгууль.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q21</span><span>Аюулгүйн бүсийн дөрвөн талаас зогсолт, зогсоол хориглох зай нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10 м</label>
+      <label class="quiz-opt" data-idx="2">② 5 м</label>
+      <label class="quiz-opt" data-idx="3">③ 3 м</label>
+      <label class="quiz-opt" data-idx="4">④ Зайн хязгааргүй</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — 32 дугаар зүйл. Аюулгүйн бүс, автобусны буудал, төмөр замын гарам, явган хүний гарц = 10 м.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q22</span><span>Хурд хэтрүүлснээр 12 төрлийн ноцтой зөрчил болох хэтрүүлэлтийн шалгуур нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① 10 км/ц-ээс дээш</label>
+      <label class="quiz-opt" data-idx="2">② 20 км/ц-ээс дээш</label>
+      <label class="quiz-opt" data-idx="3">③ 40 км/ц-ээс дээш</label>
+      <label class="quiz-opt" data-idx="4">④ 60 км/ц-ээс дээш</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — Хурдны дээд хязгаарыг 20 км/ц-ээс дээш хэтрүүлэх нь 12 төрлийн ноцтой зөрчил.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q23</span><span>Явган зорчигчийн ногоон анивчих дохионд явган зорчигчийн үйлдэл нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Хурдан гарч эхлэх</label>
+      <label class="quiz-opt" data-idx="2">② Байрандаа зогсох</label>
+      <label class="quiz-opt" data-idx="3">③ Гарч эхлэхийг хориглох, гарч байгаа бол түргэн дуусгах</label>
+      <label class="quiz-opt" data-idx="4">④ Дуут дохио өгөх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Ногоон анивчих нь шинээр гарч эхлэхийг хориглоно.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q24</span><span>Хүүхдийн хамгаалалтын бүсийн зөрчлийн торгууль, торгуулийн оноо нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Энгийнтэй ижил</label>
+      <label class="quiz-opt" data-idx="2">② Энгийнээс 2 дахин</label>
+      <label class="quiz-opt" data-idx="3">③ 1.5 дахин</label>
+      <label class="quiz-opt" data-idx="4">④ Чөлөөлнө</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — 2 дахин ногдуулна.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz-q"><span class="q-num">Q25</span><span>Улаан гэрэлд энгийн баруун эргэлт хийх нөхцөл биш нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Түр зогсох</label>
+      <label class="quiz-opt" data-idx="2">② Явган зорчигчийн хөдөлгөөнд саад учруулахгүй байх</label>
+      <label class="quiz-opt" data-idx="3">③ Бусад машины хөдөлгөөнд саад учруулахгүй байх</label>
+      <label class="quiz-opt" data-idx="4">④ Дуут дохио хэрэглэх</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ④</strong> — Дуут дохио хэрэглэх нь нөхцөл биш, харин ч хэрэглэвэл зөрчлийн торгуулийн объект болно.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q26</span><span>Зам тээврийн ослын үед хохирогчдыг аврах арга хэмжээ авсны дараа хамгийн түрүүнд хийх зүйл нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Цагдаа (112), түргэн тусламж (119)-д мэдэгдэх</label>
+      <label class="quiz-opt" data-idx="2">② Даатгалын компанид залгах</label>
+      <label class="quiz-opt" data-idx="3">③ Ослын газраас явах</label>
+      <label class="quiz-opt" data-idx="4">④ Эсрэг талтай тохиролцох</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — 54 дүгээр зүйлийн 2 дахь хэсгийн дагуух мэдэгдэх үүрэг.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q27</span><span>Орон сууцны хорооллын доторх замд явган зорчигчийг мөргөсөн тохиолдолд?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Зам биш тул хариуцлага хүлээхгүй</label>
+      <label class="quiz-opt" data-idx="2">② Зөвхөн удирдах албаны дүрэм үйлчилнэ</label>
+      <label class="quiz-opt" data-idx="3">③ 2022 оны нэмэлт өөрчлөлтөөр явган зорчигчийг хамгаалах үүрэг үйлчилнэ</label>
+      <label class="quiz-opt" data-idx="4">④ Зөвхөн иргэний хариуцлага</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — 27 дугаар зүйлийн 7 дахь хэсэг, замаас гадуурх газарт ч хамгаалах үүрэгтэй.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz-q"><span class="q-num">Q28</span><span>Урдаас ирэх машинтай зөрөх үеийн гэрэл нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Холын гэрэл</label>
+      <label class="quiz-opt" data-idx="2">② Ойрын гэрэл</label>
+      <label class="quiz-opt" data-idx="3">③ Унтраах</label>
+      <label class="quiz-opt" data-idx="4">④ Ослын дохио</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ②</strong> — 37 дугаар зүйл, эсрэг талын харааг саатуулахаас сэргийлнэ.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz-q"><span class="q-num">Q29</span><span>Урд машин зүүн эргэх гэж байх үед гүйцэж түрүүлэх чиглэл нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Баруун талаар гүйцэж түрүүлж болно</label>
+      <label class="quiz-opt" data-idx="2">② Зүүн талаар</label>
+      <label class="quiz-opt" data-idx="3">③ Гүйцэж түрүүлэх хориотой</label>
+      <label class="quiz-opt" data-idx="4">④ Төвийн шугам давах</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ①</strong> — Урд машин зүүн тийш чиглэлээ өөрчилж байх үед онцгой тохиолдлоор баруун талаар гүйцэж түрүүлэхийг зөвшөөрнө.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz-q"><span class="q-num">Q30</span><span>Цагдаагийн туслахад хамаарахгүй хүн нь?</span></div>
+    <div class="quiz-opts">
+      <label class="quiz-opt" data-idx="1">① Үлгэр жишээ жолооч</label>
+      <label class="quiz-opt" data-idx="2">② Цэргийн цагдаа</label>
+      <label class="quiz-opt" data-idx="3">③ Хурдны замын аюулгүй байдлын эргүүл</label>
+      <label class="quiz-opt" data-idx="4">④ Гал унтраах албаны ажилтан</label>
+    </div>
+    <div class="quiz-answer">✅ <strong>Хариулт: ③</strong> — Хэрэгжүүлэх журмын 6 дугаар зүйл. Зөвхөн үлгэр жишээ жолооч, цэргийн цагдаа, гал унтраах албаны ажилтан цагдаагийн туслах болно.</div>
+  </div>
+</div>
+
+
+<!-- ===== RESOURCES FOOTER ===== -->
+<div class="resources">
+  <h4>📚 Суралцах материал</h4>
+  <a href="https://evergreenedu-collab.github.io/quiz/textbook_mn.html">📖 Сурах бичгээр суралцах</a>
+  <a href="https://evergreenedu-collab.github.io/quiz/mn.html">✏️ Бодлогын сангийн 1,000 бодлогоор дадлага хийх</a>
+  <p style="font-size:.8rem;opacity:.7;margin-top:.5rem;">Солонгосын Замын хөдөлгөөний газар (KoRoad) Сургалтын төв | © 2026</p>
+</div>
+
+</div><!-- end .content -->
+
+<!-- ===== QUIZ INTERACTION JS ===== -->
+<script>
+document.querySelectorAll('.quiz').forEach(quiz => {
+  const answer = parseInt(quiz.dataset.answer);
+  const answerBox = quiz.querySelector('.quiz-answer');
+  quiz.querySelectorAll('.quiz-opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      //
+      if (answerBox.classList.contains('show')) return;
+      const idx = parseInt(opt.dataset.idx);
+      //
+      quiz.querySelectorAll('.quiz-opt').forEach(o => {
+        o.style.pointerEvents = 'none';
+      });
+      if (idx === answer) {
+        opt.classList.add('correct');
+      } else {
+        opt.classList.add('wrong');
+        //
+        quiz.querySelector(`[data-idx="${answer}"]`).classList.add('correct');
+      }
+      answerBox.classList.add('show');
+    });
+  });
+});
+
+// Nav tab active state
+const sections = document.querySelectorAll('.chapter-header');
+const navLinks = document.querySelectorAll('.nav-tabs a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(s => observer.observe(s));
+</script>
+<button class="tt" id="tt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Дээш очих">↑</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('tt').style.display=window.scrollY>400?'block':'none';});</script>
+<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!window.twemoji)return;var n=document.querySelector('.lsw');if(!n)return;twemoji.parse(n,{base:'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/',folder:'svg',ext:'.svg'});var s=document.createElement('style');s.textContent='.lsw img.emoji{height:14px;width:auto;vertical-align:-2px;margin-right:2px}';document.head.appendChild(s);});</script>
+<script src="gpt-guide.js?v=3"></script>
+</body>
+</html>

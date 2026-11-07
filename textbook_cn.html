@@ -48,6 +48,8 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  .ci-bar { display:flex; align-items:center; justify-content:center; padding:10px 14px 9px; background:#fff; max-width:640px; margin:0 auto; }
+  .ci-bar img { height:26px; width:auto; }
   /* ===== HEADER ===== */
   .header {
     background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
@@ -439,7 +441,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="lsw"><a href="textbook.html" class="lg">🇰🇷 한국어</a><a href="textbook_en.html" class="lg">🇺🇸 English</a><a href="textbook_cn.html" class="lg on">🇨🇳 中文</a><a href="textbook_vn.html" class="lg">🇻🇳 Tiếng Việt</a></div>
+<div class="lsw"><a href="textbook.html" class="lg">🇰🇷 한국어</a><a href="textbook_en.html" class="lg">🇺🇸 English</a><a href="textbook_cn.html" class="lg on">🇨🇳 中文</a><a href="textbook_vn.html" class="lg">🇻🇳 Tiếng Việt</a><a href="textbook_mn.html" class="lg">🇲🇳 Монгол</a></div>
+<div class="ci-bar"><img src="images/koroad-ci.png" alt="한국도로교통공단 KOROAD"></div>
 
 
 <!-- ===== HEADER ===== -->
@@ -591,7 +594,7 @@
       <tr><td>考试时间</td><td>40分钟</td><td>40分钟</td></tr>
       <tr><td>题型</td><td colspan="2">4选1（文字）+ 5选1（标志·视频）混合</td></tr>
       <tr><td>合格标准</td><td><strong>70分以上</strong></td><td><strong>60分以上</strong></td></tr>
-      <tr><td>支持语言</td><td colspan="2">韩语、英语、中文、越南语（共4种语言）</td></tr>
+      <tr><td>支持语言</td><td colspan="2">韩语、英语、中文、越南语、蒙古语（共5种语言）</td></tr>
     </table>
   </div>
 
@@ -3093,6 +3096,6 @@ sections.forEach(s => observer.observe(s));
 <script>window.addEventListener('scroll',function(){document.getElementById('tt').style.display=window.scrollY>400?'block':'none';});</script>
 <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 <script>document.addEventListener('DOMContentLoaded',function(){if(!window.twemoji)return;var n=document.querySelector('.lsw');if(!n)return;twemoji.parse(n,{base:'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/',folder:'svg',ext:'.svg'});var s=document.createElement('style');s.textContent='.lsw img.emoji{height:14px;width:auto;vertical-align:-2px;margin-right:2px}';document.head.appendChild(s);});</script>
-<script src="gpt-guide.js?v=2"></script>
+<script src="gpt-guide.js?v=3"></script>
 </body>
 </html>
