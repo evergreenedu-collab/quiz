@@ -31,6 +31,9 @@
 
 ## 🚦 갱신 절차 (Claude와 함께)
 
+> **2026-11-07부터는 `REFRESH_PIPELINE.md`의 원커맨드 절차(`py scripts/refresh_all.py`)가 표준입니다.** 아래 단계는 Claude가 그 명령 하나로 자동 수행하며, 사용자분은 PDF 배치 → "갱신 시작" → PR 머지 → 플러그인 txt 업로드만 하시면 됩니다.
+
+
 ### 1단계: 안전 백업 (Claude 자동)
 - 현재 `index.html`, `en.html`, `cn.html`, `vn.html` 의 백업 사본 (`*.bak`)
 - 작업 전 GitHub `main` 브랜치 좌표를 백업 브랜치로 보존 (예: `backup-before-refresh-2027-03-15`)
