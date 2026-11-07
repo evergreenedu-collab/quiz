@@ -17,7 +17,7 @@ from pathlib import Path
 
 from refresh_pdf import extract_pdf
 
-EXTRACTOR_VERSION = "2026-11-07.1"
+EXTRACTOR_VERSION = "2026-11-07.2"
 MARKERS = "①②③④⑤"
 MARKER_FIX = {"ⓛ": "①", "➀": "①", "➁": "②", "➂": "③", "➃": "④", "➄": "⑤"}
 CAPTION_RE = re.compile(r"(?m)^\s*■")
@@ -55,14 +55,17 @@ def _fix_markers(body):
 def parse_body(body, lang="ko"):
     """추출 body → (b, c, err). 마커는 ①부터 연속·각 1회."""
     body = _fix_markers(body)
-    cap = (CAPTION_RE_MN if lang == "mn" else CAPTION_RE).search(body)
     counts = {m: body.count(m) for m in MARKERS}
-    if cap:
-        # 사진 설명줄은 마지막 마커 뒤에만 허용 — 그 앞에서 나오면 본문 일부이므로 유지
-        last = max((body.rfind(m) for m in MARKERS if counts[m]), default=-1)
-        if cap.start() > last:
+    last = max((body.rfind(m) for m in MARKERS if counts[m]), default=-1)
+    for cap in (CAPTION_RE_MN if lang == "mn" else CAPTION_RE).finditer(body):
+        # 사진 설명줄: 마지막 마커 뒤 + 직전 보기가 문장 종결 부호로 끝난 경우에만 제거
+        if cap.start() <= last:
+            continue
+        # 실측(5개 PDF 1000문항): ■/n 설명줄은 항상 마지막 보기 뒤에만 나타나며, 보기는 명사구로 끝나는 경우가 많아 종결부호 조건은 쓰지 않음
+        if True:
             body = body[:cap.start()]
             counts = {m: body.count(m) for m in MARKERS}
+            break
     dup = [m for m, c in counts.items() if c > 1]
     if dup:
         return None, None, f"마커 중복 {dup}"
@@ -102,7 +105,7 @@ def cut_explanation(e, n):
     """ko 해설: 다음 문항('N+1. ' 또는 아무 'NNN. ') 줄에서 절단, 공백 정규화."""
     if not e:
         return ""
-    m = re.search(r"(?:^|\n)\s*%d\.\s" % (n + 1), e) or re.search(r"\n\s*\d{1,4}\.\s", e)
+    m = re.search(r"(?:^|\n)\s*%d\.\s" % (n + 1), e)
     if m:
         e = e[:m.start()]
     return clean(e)

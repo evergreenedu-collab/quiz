@@ -15,6 +15,7 @@ phase 순서: preflight → extract → diff → apply → patches → integrity
 종료코드: 0 성공 / 2 추출·검증 실패(HTML 미변경) / 3 번역 대기
 """
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -96,7 +97,11 @@ def preflight(args, M):
         if rc != 0:
             raise SystemExit("[preflight] Playwright 없음: pip install playwright && python -m playwright install chromium (또는 --no-browser)")
     M["extractor"] = EXTRACTOR_VERSION
-    log(f"[preflight] PDF 5개 확인, git {M['git']['branch']}@{M['git']['base']}, 추출기 {EXTRACTOR_VERSION}")
+    M["run_id"] = hashlib.sha256(("|".join(M["pdfs"][l]["sha256"] for l in LANGS) + EXTRACTOR_VERSION).encode()).hexdigest()[:12]
+    for f in STAGE.glob("*"):
+        if f.is_file():
+            f.unlink()  # 이전 실행의 스테이징(특히 delta_*_done.json) 제거 — 오래된 번역본 재사용 방지
+    log(f"[preflight] PDF 5개 확인, git {M['git']['branch']}@{M['git']['base']}, 추출기 {EXTRACTOR_VERSION}, run {M['run_id']}")
 
 
 def extract(args, M):
@@ -204,7 +209,29 @@ def integrity(args, M):
     log("[integrity] 5개 언어 정답·보기수·이미지 일치 (RISKY 0)")
 
 
+def _verify_resume(args, M):
+    """--resume: 원 실행과 PDF·브랜치·HEAD·추출기·작업트리가 같은지 확인 (다르면 중단)"""
+    pdfs = find_pdfs(PROJ / "원본_PDF")
+    for l in LANGS:
+        if l not in pdfs or file_sha256(pdfs[l]) != M["pdfs"][l]["sha256"]:
+            raise SystemExit(f"[resume] {l} PDF가 원 실행과 다릅니다 — 처음부터 다시 실행하세요")
+    _, br = run(["git", "rev-parse", "--abbrev-ref", "HEAD"])
+    _, sha = run(["git", "rev-parse", "--short", "HEAD"])
+    if br.strip() != M["git"]["branch"] or sha.strip() != M["git"]["base"]:
+        raise SystemExit(f"[resume] 브랜치/HEAD가 원 실행({M['git']['branch']}@{M['git']['base']})과 다릅니다")
+    if M.get("extractor") != EXTRACTOR_VERSION:
+        raise SystemExit("[resume] 추출기 버전이 바뀌었습니다 — 처음부터 다시 실행하세요")
+    _, st = run(["git", "status", "--porcelain"], check=False)
+    managed = set(HTML.values()) | {"textbook_mn.html", "manifest_mn.json"} | {f"quiz_data_{l}.json" for l in LANGS} | {f"gpt_files/quiz_bank_{l}.txt" for l in LANGS} \
+        | {"translations/manual_patches.json", "translations/risky_questions.json", "translations/risky_mn.json"} | {f"translations/expl_{l}.json" for l in LANGS if l != "ko"}
+    foreign = [x for x in st.splitlines() if x and not x.startswith("??") and x[3:].strip().strip('"') not in managed and not x[3:].strip().startswith("translations/pdf_snapshot")]
+    if foreign:
+        raise SystemExit("[resume] 파이프라인과 무관한 추적 파일 변경이 있습니다 (번역 대기 중 수정?):\n" + "\n".join(foreign[:10]))
+
+
 def translate(args, M):
+    if args.resume:
+        _verify_resume(args, M)
     ko = load_q("ko")
     pre = M.get("pre_ko_e") or {}
     delta = sorted(n for n, q in ko.items() if (q.get("e") or "").strip() and normalize(q.get("e", "")) != pre.get(str(n), normalize(q.get("e", ""))))
@@ -215,9 +242,10 @@ def translate(args, M):
         ns = [n for n in delta] + [n for n, q in ko.items() if (q.get("e") or "").strip() and str(n) not in c]
         ns = sorted(set(ns))
         need[l] = ns
-        if ns:
+        if ns and not (STAGE / f"delta_{l}.json").exists():
             jsave(STAGE / f"delta_{l}.json", {str(n): {"ko": ko[n]["e"], "question": H[n]["b"], "choices": H[n]["c"], "answer": H[n]["a"]} for n in ns})
     M["translate"] = {l: {"count": len(ns), "numbers": ns[:50]} for l, ns in need.items()}
+    M["delta_ko_hash"] = {str(n): hashlib.sha256(normalize(ko[n]["e"]).encode()).hexdigest() for ns in need.values() for n in ns}
     pending = {l: ns for l, ns in need.items() if ns and not (STAGE / f"delta_{l}_done.json").exists()}
     if pending:
         log("[translate] 번역 필요: " + ", ".join(f"{l} {len(ns)}건" for l, ns in pending.items()))
@@ -229,6 +257,10 @@ def translate(args, M):
         if not ns:
             continue
         done = jload(STAGE / f"delta_{l}_done.json")
+        src = jload(STAGE / f"delta_{l}.json")
+        drift = [n for n in ns if hashlib.sha256(normalize(src.get(str(n), {}).get("ko", "")).encode()).hexdigest() != M["delta_ko_hash"].get(str(n))]
+        if drift:
+            raise SystemExit(f"[translate] {l} 번역 원문(ko)이 델타 생성 시점과 다릅니다 {drift[:10]} — 처음부터 다시 실행하세요")
         miss = [n for n in ns if str(n) not in done or not done[str(n)].strip() or re.search(r"[가-힣]", done[str(n)])]
         if miss:
             raise SystemExit(f"[translate] {l} 번역본 누락/한글잔존: {miss[:10]}")
@@ -246,6 +278,7 @@ def inject(args, M):
     run([sys.executable, "-X", "utf8", "scripts/inject_translations.py"])
     _, out = run([sys.executable, "-X", "utf8", "scripts/build_mn_page.py"])
     M["inject_mn"] = [x for x in out.splitlines() if x.startswith("[")]
+    run([sys.executable, "-X", "utf8", "scripts/apply_manual_patches.py"])  # mn.html 재생성 후 몽골어 수동 패치 유지
     if (PROJ / "scripts" / "build_mn_textbook.py").exists() and (PROJ / "translations" / "_tb" / "mn_ch1.html").exists():
         run([sys.executable, "-X", "utf8", "scripts/build_mn_textbook.py"])
     log("[inject] en/cn/vn 해설 주입, mn.html·textbook_mn.html 재생성")
@@ -274,7 +307,24 @@ def snapshot(args, M):
         return
     SNAP.mkdir(parents=True, exist_ok=True)
     for l in LANGS:
-        items = jload(STAGE / f"extract_{l}.json")
+        new = jload(STAGE / f"extract_{l}.json")
+        d = jload(STAGE / f"diff_{l}.json")
+        applied = M.get("apply", {}).get(l, {}).get("applied", {})
+        base, _ = _baseline(l, args)
+        unapplied = {n: [f for f in ch if f != "new" and f not in applied.get(n, [])] for n, ch in d.items() if not ch.get("new")}
+        unapplied = {n: fs for n, fs in unapplied.items() if fs}
+        pending_new = [n for n, ch in d.items() if ch.get("new")]
+        if (unapplied or pending_new) and not args.accept_unapplied and l != "mn":
+            raise SystemExit(f"[snapshot] {l}: 미반영 변경 {len(unapplied)}문항·신규 {len(pending_new)}건이 있어 스냅샷을 쓰지 않습니다. "
+                             f"반영하거나(--fields) 의도적 미반영이면 --accept-unapplied 로 재실행하세요 (리포트 참조)")
+        items = {}
+        for n in sorted(set(int(k) for k in new) | set(base)):
+            q = dict(base.get(n) or new[str(n)])
+            if str(n) in new:
+                for f in ("b", "c", "a", "e"):
+                    if f in new[str(n)] and (f in applied.get(str(n), []) or args.accept_unapplied or l == "mn" or n not in base):
+                        q[f] = new[str(n)][f]
+            items[str(n)] = {k: q[k] for k in ("n", "b", "c", "a", "e") if k in q}
         jsave(SNAP / f"{l}.json", {"pdf": M["pdfs"][l]["name"], "sha256": M["pdfs"][l]["sha256"], "extractor": EXTRACTOR_VERSION,
                                    "date": str(date.today()), "items": items})
     log("[snapshot] translations/pdf_snapshot/{ko,en,cn,vn,mn}.json 갱신 (다음 갱신의 비교 기준)")
@@ -303,10 +353,15 @@ def pr(args, M):
         log("[pr] dry-run: 생략")
         return
     branch = f"feat/quiz-refresh-{date.today()}"
-    if M["git"]["branch"] in ("main", "master"):
+    cur = M["git"]["branch"]
+    if cur in ("main", "master"):
         run(["git", "checkout", "-b", branch])
-    run(["git", "add", "-u"])
-    run(["git", "add", "translations/pdf_snapshot", "mn.html", "textbook_mn.html", "gpt_files", "원본_PDF"], check=False)
+    elif not cur.startswith("feat/quiz-refresh"):
+        raise SystemExit(f"[pr] 현재 브랜치 {cur} 는 갱신 브랜치가 아닙니다 — main 에서 실행하거나 feat/quiz-refresh-* 브랜치에서 실행하세요")
+    allow = list(HTML.values()) + ["textbook_mn.html", "manifest_mn.json", "translations/pdf_snapshot", "translations/manual_patches.json",
+                                   "translations/risky_questions.json", "translations/risky_mn.json"] + [f"translations/expl_{l}.json" for l in ("en", "cn", "vn", "mn")] \
+        + [f"quiz_data_{l}.json" for l in LANGS] + [f"gpt_files/quiz_bank_{l}.txt" for l in LANGS] + [M["pdfs"][l]["path"] for l in LANGS]
+    run(["git", "add", "--"] + allow)
     msg = f"chore: 학과시험 문제은행 갱신 {date.today()} (PDF 5개, 자동 파이프라인)\n\n" + "\n".join(LOG[-20:]) + "\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n"
     (STAGE / "commit_msg.txt").write_text(msg, encoding="utf-8")
     run(["git", "commit", "-q", "-F", str(STAGE / "commit_msg.txt")])
@@ -319,7 +374,8 @@ def pr(args, M):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true", help="추출·비교·리포트만 (HTML/파일 미변경)")
+    ap.add_argument("--dry-run", action="store_true", help="추출·비교·리포트만 (git 추적 데이터 미변경; translations/_refresh/ 스테이징은 기록)")
+    ap.add_argument("--accept-unapplied", action="store_true", help="의도적으로 반영하지 않은 변경을 스냅샷에 PDF값으로 수용")
     ap.add_argument("--resume", action="store_true", help="번역 완료 후 translate 단계부터 재개")
     ap.add_argument("--phase", default=None, help="특정 단계만 실행")
     ap.add_argument("--fields", default="b,c,a,e", help="apply 단계에서 반영할 필드")

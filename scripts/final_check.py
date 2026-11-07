@@ -46,7 +46,11 @@ def main():
         print("  ❌", msg)
 
     # A. 데이터
-    L = {l: {q["n"]: q for q in extract_Q(str(PROJ / f))} for l, f in QUIZ.items()}
+    RAW = {l: extract_Q(str(PROJ / f)) for l, f in QUIZ.items()}
+    L = {l: {q["n"]: q for q in arr} for l, arr in RAW.items()}
+    for l, arr in RAW.items():
+        if len(arr) != len(L[l]):
+            fail(f"{l}: 중복 문항 번호 {len(arr) - len(L[l])}건")
     ko = L["ko"]
     allow = json.loads(HANGUL_ALLOW.read_text(encoding="utf-8")) if HANGUL_ALLOW.exists() else {}
     for l, Q in L.items():
@@ -124,6 +128,12 @@ def main():
         nq, ne = t.count("===== 문제 "), t.count("\n해설: ")
         if nq != 1000 or j.get("count") != 1000:
             fail(f"gpt {l}: 문제 {nq} json {j.get('count')}")
+        jq = {x["n"]: x for x in j.get("questions", [])}
+        stale = [n for n, q in L[l].items() if n not in jq or any(jq[n].get(k) != q.get(k) for k in ("b", "c", "a"))]
+        if stale:
+            fail(f"gpt {l}: quiz_data 가 HTML과 불일치 {stale[:5]} — html_to_txt.py 재실행 필요")
+        if any(f"===== 문제 {n} =====" not in t for n in L[l]):
+            fail(f"gpt {l}: txt 에 누락된 문제 있음")
         print(f"[gpt {l}] 문제 {nq} 해설 {ne}")
 
     # E. 브라우저
