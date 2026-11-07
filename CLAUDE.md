@@ -17,15 +17,16 @@
 ├── en.html             # 영어
 ├── cn.html             # 중국어
 ├── vn.html             # 베트남어
-├── mn.html             # 몽골어 (2026-11 추가, scripts/build_mn_page.py 로 생성 — 교재·진단평가 없음)
+├── mn.html             # 몽골어 (2026-11 추가, scripts/build_mn_page.py 로 생성)
 ├── textbook.html       # 한국어 교재 (동영상 무관)
-├── textbook_en/cn/vn.html
+├── textbook_en/cn/vn/mn.html   # 몽골어 교재는 scripts/build_mn_textbook.py 로 조립 (translations/_tb/mn_ch1~10.html 번역 조각 + textbook.html 구조)
 ├── images/             # 사진형·표지판형 문항 이미지 (291개)
 ├── 원본_PDF/           # 5개 언어 PDF 원본 (.gitignore 처리, 영구 보존)
 ├── movie/              # 동영상 35개 (.gitignore 처리, GitHub Releases에 업로드)
 ├── scripts/            # 자동화 스크립트 (이 가이드의 핵심)
 │   ├── refresh_pdf.py   # PDF → HTML 데이터 자동 갱신
 │   ├── build_mn_page.py # 몽골어 PDF + index.html(imgs·t) + translations/expl_mn.json → mn.html 생성
+│   ├── build_mn_textbook.py # 교재 조각(translations/_tb) 조립 → textbook_mn.html (태그 구조 동일성 검증 포함)
 │   └── match_images.py  # 이미지 위치 매칭·추출
 ├── html_to_txt.py      # HTML → gpt_files/quiz_bank_*.txt 변환 (GPTs 동기화)
 ├── gpt_files/         # ChatGPT GPTs 학습 텍스트 (5개 언어, HTML 정본 추출본)

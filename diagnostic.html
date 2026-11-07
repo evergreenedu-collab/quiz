@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>진단평가 — 외국인 운전면허 학과시험</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--kb:#003FA2;--kb2:#2563EB;--kd:#00204D;--bg:#F3F4F8;--card:#FFF;--txt:#1A1D2E;--txt2:#6E7191;--bdr:#E2E5EF;--ok:#0D7C3F;--ok-bg:#E6F4EC;--no:#C0392B;--no-bg:#FBEAE8;--t-txt:#3366CC;--t-txt-bg:#EBF0FA;--t-photo:#D35400;--t-photo-bg:#FDF0E6;--t-sign:#7D3C98;--t-sign-bg:#F3EBF9;--r:14px}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt);font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Noto Sans','Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt);font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%}
 #app{max-width:640px;margin:0 auto;padding:16px 14px 60px}
 h1{font-size:1.25rem;font-weight:900;margin:.2rem 0}
 h2{font-size:1.05rem;font-weight:700;margin:1.2rem 0 .5rem}
@@ -63,6 +63,7 @@ select,input[type=text]{width:100%;padding:11px 10px;border:1.5px solid var(--bd
 .reset-card .btn-r{display:inline-block;background:#F3F4F8;color:#4A4D63;border:1.5px solid var(--bdr);border-radius:10px;padding:10px 18px;font-size:.92rem;font-weight:700;cursor:pointer;text-decoration:none;font-family:inherit}
 .center{text-align:center}
 .muted{color:var(--txt2);font-size:.86rem}
+.ci-bar{display:flex;align-items:center;justify-content:center;padding:10px 14px 9px;background:#fff;max-width:640px;margin:0 auto}.ci-bar img{height:26px;width:auto}
 .lsw{display:flex;gap:4px;padding:6px 12px;background:var(--kd);overflow-x:auto;-webkit-overflow-scrolling:touch}
 .lsw::-webkit-scrollbar{display:none}
 .lg{padding:5px 11px;border-radius:14px;font-size:11px;color:rgba(255,255,255,.6);text-decoration:none;white-space:nowrap;font-weight:500;cursor:pointer;font-family:inherit;background:transparent;border:none}
@@ -98,7 +99,9 @@ select,input[type=text]{width:100%;padding:11px 10px;border:1.5px solid var(--bd
 <button type="button" class="lg" data-l="en" aria-label="English">🇺🇸 English</button>
 <button type="button" class="lg" data-l="cn" aria-label="中文">🇨🇳 中文</button>
 <button type="button" class="lg" data-l="vn" aria-label="Tiếng Việt">🇻🇳 Tiếng Việt</button>
+<button type="button" class="lg" data-l="mn" aria-label="Монгол">🇲🇳 Монгол</button>
 </div>
+<div class="ci-bar"><img src="images/koroad-ci.png" alt="한국도로교통공단 KOROAD"></div>
 <div class="nav-strip hidden" id="navStrip">
 <a class="chip chip-sib" id="navQuizLink" href="index.html"></a>
 <a class="chip chip-sib" id="navBookLink" href="textbook.html"></a>
@@ -215,34 +218,61 @@ reset:"🔄 Bắt đầu như người dùng mới",resetHint:"Người khác đ
 done:"Hoàn tất chẩn đoán",doneBody:"Bạn đã hoàn thành cả chẩn đoán trước và sau. Có thể xem lại kết quả bên dưới.",
 viewResult:"📊 Tổng hợp trước & sau",viewPreResult:"📋 Kết quả trước",viewPostItems:"📈 Kết quả sau",
 imgAlt:"Hình câu {n}",totop:"Lên đầu trang",navQuiz:"📝 Ngân hàng 1000 câu hỏi",navBook:"📘 Học với giáo trình số",
-T:{"문장형":"Chữ","사진형":"Ảnh","표지판형":"Biển báo"}}
+T:{"문장형":"Chữ","사진형":"Ảnh","표지판형":"Biển báo"}},
+mn:{title:"Суралцахуйн үр дүнгийн оношилгооны үнэлгээ",sub:"Гадаадын иргэдэд зориулсан жолоодох эрхийн онолын шалгалтын AI багш",tagline:"Урьдчилсан болон дараах оношилгоогоор суралцахуйн үр дүнгээ шууд шалгаарай",
+loading:"Асуултуудыг ачаалж байна…",loadErr:"Асуултуудыг ачаалж чадсангүй. Түр хүлээгээд хуудсыг дахин ачаална уу.",
+formTitle:"Эхлэхийн өмнөх мэдээлэл",
+notice:"<ol><li><b>Цуглуулах зорилго</b> — Суралцахуйн үр дүнгийн шинжилгээ (урьдчилсан болон дараах оношилгооны оноог харьцуулах)</li><li><b>Цуглуулах мэдээлэл</b> — Нэргүй ID (автоматаар үүсдэг), иргэншил, насны бүлэг, оношилгооны цаг, оноо, гарсан асуултын дугаар, таны хариулт</li><li><b>Хадгалах байршил</b> — Зөвхөн энэ хөтөч дээр хадгалагдах бөгөөд гадаад сервер рүү илгээгдэхгүй (нэргүй, хувь хүнийг тодорхойлохгүй)</li><li><b>Татгалзах эрх</b> — Зөвшөөрөхгүй байсан ч асуултын сан, сурах бичгийг чөлөөтэй ашиглаж болно</li><li><b>Устгах арга</b> — Хуудасны доод хэсэгт байрлах ‘🔄 Шинэ хэрэглэгчээр эхлэх’ товчоор хүссэн үедээ устгах боломжтой</li></ol>",
+agree:"Дээрх агуулгатай санал нийлж, оношилгооны үнэлгээнд оролцоно.",
+nat:"Иргэншил",natPick:"— Сонгох —",age:"Насны бүлэг",
+ages:["10–19","20–29","30–39","40–49","50–59","60-аас дээш"],
+toPre:"Урьдчилсан оношилгоо эхлэх",
+preTitle:"Урьдчилсан оношилгоо (суралцахын өмнө)",preBody:"Одоогийн түвшингээ эхлээд шалгана. Санамсаргүй 10 асуулт, ойролцоогоор 3–4 минут. Суралцсаны дараа ‘дараах оношилгоо’-той харьцуулж ахицаа харах боломжтой.",
+postTitle:"Дараах оношилгоо (суралцсаны дараа)",postBody:"Энэ хооронд суралцсан уу? Дараах оношилгоогоор ахицаа шалгаарай. Урьдчилсан оношилгоотой давхцахгүй 10 асуулт гарна.",
+start:"Оношилгоо эхлэх",
+multi:"Олон хариулттай — тохирох бүгдийг сонгоно уу",single:"Нэгийг сонгоно уу",
+submit:"Дүгнэх",
+unanswered:" асуултад хариулаагүй байна. Ингээд дүгнэх үү?",
+resultPre:"Урьдчилсан оношилгооны дүн",resultPost:"Дараах оношилгооны дүн",
+gainUp:"Урьдчилсантай харьцуулахад {g}%p ахисан!",gainFlat:"Урьдчилсантай ижил",gainDown:"Урьдчилсантай харьцуулахад {g}%p",
+preWas:"Урьдчилсан оношилгоо: {s} оноо ({p}%)",
+review:"Асуулт тус бүрээр харах",ansCorrect:"Зөв",ansWrong:"Буруу",ansNone:"Хариулаагүй",
+yours:"Миний хариулт",correct:"Зөв хариулт",expl:"Тайлбар",
+afterPre:"Одоо суралцах цаг боллоо. Асуултын сан, сурах бичгээр суралцсаны дараа дахин ирж дараах оношилгоо хийгээрэй.",
+afterPost:"Сайн ажиллалаа! Үргэлжлүүлэн суралцахыг хүсвэл доош шилжээрэй.",
+goQuiz:"✏️ Онолын шалгалтын 1000 асуултын сан бодох",goBook:"📘 Цахим сурах бичгээр суралцах",
+reset:"🔄 Шинэ хэрэглэгчээр эхлэх",resetHint:"Энэ төхөөрөмжийг өөр хүн ашиглаж байна уу?",resetAsk:"Хадгалсан оношилгооны бүртгэлийг устгаж, эхнээс нь эхлэх үү?",
+done:"Оношилгоо дууссан",doneBody:"Та урьдчилсан болон дараах оношилгоог аль хэдийн дуусгасан байна. Дүнгээ доороос дахин харах боломжтой.",
+viewResult:"📊 Суралцахуйн үр дүнгийн нэгдсэн дүн",viewPreResult:"📋 Урьдчилсан оношилгооны дүн харах",viewPostItems:"📈 Дараах оношилгооны дүн харах",
+imgAlt:"Асуулт {n}-ийн зураг",totop:"Дээш очих",navQuiz:"📝 Онолын шалгалтын 1000 асуултын сан бодох",navBook:"📘 Цахим сурах бичгээр суралцах",
+T:{"문장형":"Текст","사진형":"Зураг","표지판형":"Тэмдэг"}}
 };
 var COUNTRIES=[
-{c:"KR",ko:"대한민국",en:"South Korea",cn:"韩国",vn:"Hàn Quốc"},
-{c:"VN",ko:"베트남",en:"Vietnam",cn:"越南",vn:"Việt Nam"},
-{c:"CN",ko:"중국",en:"China",cn:"中国",vn:"Trung Quốc"},
-{c:"US",ko:"미국",en:"USA",cn:"美国",vn:"Hoa Kỳ"},
-{c:"GB",ko:"영국",en:"UK",cn:"英国",vn:"Anh"},
-{c:"CA",ko:"캐나다",en:"Canada",cn:"加拿大",vn:"Canada"},
-{c:"AU",ko:"호주",en:"Australia",cn:"澳大利亚",vn:"Úc"},
-{c:"NZ",ko:"뉴질랜드",en:"New Zealand",cn:"新西兰",vn:"New Zealand"},
-{c:"JP",ko:"일본",en:"Japan",cn:"日本",vn:"Nhật Bản"},
-{c:"UZ",ko:"우즈베키스탄",en:"Uzbekistan",cn:"乌兹别克斯坦",vn:"Uzbekistan"},
-{c:"KH",ko:"캄보디아",en:"Cambodia",cn:"柬埔寨",vn:"Campuchia"},
-{c:"NP",ko:"네팔",en:"Nepal",cn:"尼泊尔",vn:"Nepal"},
-{c:"MM",ko:"미얀마",en:"Myanmar",cn:"缅甸",vn:"Myanmar"},
-{c:"PH",ko:"필리핀",en:"Philippines",cn:"菲律宾",vn:"Philippines"},
-{c:"TH",ko:"태국",en:"Thailand",cn:"泰国",vn:"Thái Lan"},
-{c:"ID",ko:"인도네시아",en:"Indonesia",cn:"印度尼西亚",vn:"Indonesia"},
-{c:"MN",ko:"몽골",en:"Mongolia",cn:"蒙古",vn:"Mông Cổ"},
-{c:"LK",ko:"스리랑카",en:"Sri Lanka",cn:"斯里兰卡",vn:"Sri Lanka"},
-{c:"BD",ko:"방글라데시",en:"Bangladesh",cn:"孟加拉国",vn:"Bangladesh"},
-{c:"RU",ko:"러시아",en:"Russia",cn:"俄罗斯",vn:"Nga"},
-{c:"OTHER",ko:"기타",en:"Other",cn:"其他",vn:"Khác"}
+{c:"KR",ko:"대한민국",en:"South Korea",cn:"韩国",vn:"Hàn Quốc",mn:"Өмнөд Солонгос"},
+{c:"VN",ko:"베트남",en:"Vietnam",cn:"越南",vn:"Việt Nam",mn:"Вьетнам"},
+{c:"CN",ko:"중국",en:"China",cn:"中国",vn:"Trung Quốc",mn:"Хятад"},
+{c:"US",ko:"미국",en:"USA",cn:"美国",vn:"Hoa Kỳ",mn:"Америкийн Нэгдсэн Улс"},
+{c:"GB",ko:"영국",en:"UK",cn:"英国",vn:"Anh",mn:"Их Британи"},
+{c:"CA",ko:"캐나다",en:"Canada",cn:"加拿大",vn:"Canada",mn:"Канад"},
+{c:"AU",ko:"호주",en:"Australia",cn:"澳大利亚",vn:"Úc",mn:"Австрали"},
+{c:"NZ",ko:"뉴질랜드",en:"New Zealand",cn:"新西兰",vn:"New Zealand",mn:"Шинэ Зеланд"},
+{c:"JP",ko:"일본",en:"Japan",cn:"日本",vn:"Nhật Bản",mn:"Япон"},
+{c:"UZ",ko:"우즈베키스탄",en:"Uzbekistan",cn:"乌兹别克斯坦",vn:"Uzbekistan",mn:"Узбекистан"},
+{c:"KH",ko:"캄보디아",en:"Cambodia",cn:"柬埔寨",vn:"Campuchia",mn:"Камбож"},
+{c:"NP",ko:"네팔",en:"Nepal",cn:"尼泊尔",vn:"Nepal",mn:"Балба"},
+{c:"MM",ko:"미얀마",en:"Myanmar",cn:"缅甸",vn:"Myanmar",mn:"Мьянмар"},
+{c:"PH",ko:"필리핀",en:"Philippines",cn:"菲律宾",vn:"Philippines",mn:"Филиппин"},
+{c:"TH",ko:"태국",en:"Thailand",cn:"泰国",vn:"Thái Lan",mn:"Тайланд"},
+{c:"ID",ko:"인도네시아",en:"Indonesia",cn:"印度尼西亚",vn:"Indonesia",mn:"Индонез"},
+{c:"MN",ko:"몽골",en:"Mongolia",cn:"蒙古",vn:"Mông Cổ",mn:"Монгол"},
+{c:"LK",ko:"스리랑카",en:"Sri Lanka",cn:"斯里兰卡",vn:"Sri Lanka",mn:"Шри Ланка"},
+{c:"BD",ko:"방글라데시",en:"Bangladesh",cn:"孟加拉国",vn:"Bangladesh",mn:"Бангладеш"},
+{c:"RU",ko:"러시아",en:"Russia",cn:"俄罗斯",vn:"Nga",mn:"Орос"},
+{c:"OTHER",ko:"기타",en:"Other",cn:"其他",vn:"Khác",mn:"Бусад"}
 ];
-var LOCALE_MAP={ko:"ko",en:"en",cn:"zh-CN",vn:"vi"};
-var QUIZ_LINK={ko:"index.html",en:"en.html",cn:"cn.html",vn:"vn.html"};
-var BOOK_LINK={ko:"textbook.html",en:"textbook_en.html",cn:"textbook_cn.html",vn:"textbook_vn.html"};
+var LOCALE_MAP={ko:"ko",en:"en",cn:"zh-CN",vn:"vi",mn:"mn"};
+var QUIZ_LINK={ko:"index.html",en:"en.html",cn:"cn.html",vn:"vn.html",mn:"mn.html"};
+var BOOK_LINK={ko:"textbook.html",en:"textbook_en.html",cn:"textbook_cn.html",vn:"textbook_vn.html",mn:"textbook_mn.html"};
 var CIRCLED=["①","②","③","④","⑤","⑥"];
 var PLAN={"문장형":7,"사진형":2,"표지판형":1};
 var TARGET_N=10;
@@ -261,7 +291,7 @@ function sendToSheet(s,phase){
   }catch(e){}
 }
 
-var LANG=(function(){var p=new URLSearchParams(location.search).get("lang");return ["ko","en","cn","vn"].indexOf(p)>=0?p:"ko";})();
+var LANG=(function(){var p=new URLSearchParams(location.search).get("lang");return ["ko","en","cn","vn","mn"].indexOf(p)>=0?p:"ko";})();
 var T=I18N[LANG];
 document.documentElement.lang=LANG==="cn"?"zh-CN":(LANG==="vn"?"vi":LANG);
 document.title=T.title;
@@ -285,7 +315,7 @@ var app=document.getElementById("app");
 var esc=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");};
 
 function loadState(){
-  try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.uid)return s;}catch(e){}
+  try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.uid){if(s.lang!==LANG){s.lang=LANG;saveState(s);}return s;}}catch(e){}
   return null;
 }
 function saveState(s){s.updatedAt=Date.now();try{localStorage.setItem(KEY,JSON.stringify(s));}catch(e){}}

@@ -32,8 +32,8 @@
     --border: #e5e2d9;
     --shadow: 0 1px 3px rgba(0,0,0,.08);
     --radius: 12px;
-    --font-title: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-title: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   /* ===== RESET & BASE ===== */
@@ -48,6 +48,8 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  .ci-bar { display:flex; align-items:center; justify-content:center; padding:10px 14px 9px; background:#fff; max-width:640px; margin:0 auto; }
+  .ci-bar img { height:26px; width:auto; }
   /* ===== HEADER ===== */
   .header {
     background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
@@ -434,11 +436,11 @@
 .diag-banner span{font-weight:500;opacity:.9;font-size:12px}
 .tt{position:fixed;bottom:18px;right:18px;width:46px;height:46px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:18px;cursor:pointer;box-shadow:0 3px 10px rgba(0,32,77,.25);display:none;z-index:100}
 </style>
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="lsw"><a href="textbook.html" class="lg">🇰🇷 한국어</a><a href="textbook_en.html" class="lg">🇺🇸 English</a><a href="textbook_cn.html" class="lg">🇨🇳 中文</a><a href="textbook_vn.html" class="lg on">🇻🇳 Tiếng Việt</a></div>
+<div class="lsw"><a href="textbook.html" class="lg">🇰🇷 한국어</a><a href="textbook_en.html" class="lg">🇺🇸 English</a><a href="textbook_cn.html" class="lg">🇨🇳 中文</a><a href="textbook_vn.html" class="lg on">🇻🇳 Tiếng Việt</a><a href="textbook_mn.html" class="lg">🇲🇳 Монгол</a></div>
+<div class="ci-bar"><img src="images/koroad-ci.png" alt="한국도로교통공단 KOROAD"></div>
 
 
 <!-- ===== HEADER ===== -->
@@ -590,7 +592,7 @@
       <tr><td>Thời gian</td><td>40 phút</td><td>40 phút</td></tr>
       <tr><td>Hình thức</td><td colspan="2">Trắc nghiệm 4 lựa chọn + 5 lựa chọn (biển báo / video)</td></tr>
       <tr><td>Tiêu chuẩn đậu</td><td><strong>70 điểm trở lên</strong></td><td><strong>60 điểm trở lên</strong></td></tr>
-      <tr><td>Ngôn ngữ hỗ trợ</td><td colspan="2">Hàn, Anh, Trung, Việt (chỉ 4 ngôn ngữ)</td></tr>
+      <tr><td>Ngôn ngữ hỗ trợ</td><td colspan="2">Hàn, Anh, Trung, Việt, Mông Cổ (5 ngôn ngữ)</td></tr>
     </table>
   </div>
 
@@ -2971,6 +2973,6 @@ sections.forEach(s => observer.observe(s));
 <script>window.addEventListener('scroll',function(){document.getElementById('tt').style.display=window.scrollY>400?'block':'none';});</script>
 <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 <script>document.addEventListener('DOMContentLoaded',function(){if(!window.twemoji)return;var n=document.querySelector('.lsw');if(!n)return;twemoji.parse(n,{base:'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/',folder:'svg',ext:'.svg'});var s=document.createElement('style');s.textContent='.lsw img.emoji{height:14px;width:auto;vertical-align:-2px;margin-right:2px}';document.head.appendChild(s);});</script>
-<script src="gpt-guide.js?v=2"></script>
+<script src="gpt-guide.js?v=3"></script>
 </body>
 </html>
