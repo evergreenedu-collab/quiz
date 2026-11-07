@@ -130,6 +130,9 @@ ChatGPT GPTs 학습용 5개 언어 텍스트 (`gpt_files/quiz_bank_{ko,en,cn,vn,
 
 ### 다음 갱신 시 Claude 가 자동으로 수행할 순서
 
+> **표준은 `py scripts/refresh_all.py`** (REFRESH_PIPELINE.md). 번역 대기(종료코드 3)에서는 `translations/_refresh/delta_{lang}.json` 을 서브에이전트로 번역해 `delta_{lang}_done.json` 을 만든 뒤 `--resume`. 아래 수동 순서는 참고용.
+
+
 1. 백업 + 작업 브랜치
 2. `python scripts/refresh_pdf.py` → PDF 1000문항 추출·비교, 사용자 승인
 3. HTML 5개 갱신(몽골어는 build_mn_page.py) + 카운터 재계산 + (필요 시) `python scripts/match_images.py`
