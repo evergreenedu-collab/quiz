@@ -20,47 +20,20 @@ sys.path.insert(0, str(PROJ))
 sys.path.insert(0, str(PROJ / "scripts"))
 from html_to_txt import extract_Q
 from refresh_pdf import find_pdfs, extract_pdf
+from pdfq import parse_body, parse_answer
 
 T = PROJ / "translations"
-MARKERS = "①②③④⑤"
 
 
 def parse_choices(rec):
-    """PDF record → b, c(4~5개), a. 마커가 ①부터 순서대로 나타나야 함."""
-    body = rec["body"]
-    if "①" not in body and "ⓛ" in body:
-        body = body.replace("ⓛ", "①", 1)
-    cap = re.search(r"(?m)^n (?=\S)", body)
-    if cap:
-        body = body[:cap.start()]
-    counts = {m: body.count(m) for m in MARKERS}
-    dup = [m for m, c in counts.items() if c > 1]
-    if dup:
-        return None, f"마커 중복 {dup}"
-    positions = [body.find(m) for m in MARKERS]
-    present = [(p, i) for i, p in enumerate(positions) if p >= 0]
-    if not present:
-        return None, "보기 마커 없음"
-    present.sort()
-    idxs = [i for _, i in present]
-    if idxs != list(range(len(idxs))):
-        return None, f"마커 순서 이상 {idxs}"
-    first = present[0][0]
-    head = body[:first].strip()
-    qm = re.match(r"^\s*(\d+)\.?\s*(.*)", head, re.DOTALL)
-    question = re.sub(r"\s+", " ", (qm.group(2) if qm else head)).strip()
-    choices = []
-    for k, (p, _) in enumerate(present):
-        end = present[k + 1][0] if k + 1 < len(present) else len(body)
-        choices.append(re.sub(r"\s+", " ", body[p + 1:end]).strip())
-    answer = re.sub(r"^\s*[:：]\s*", "", rec["a"].strip())
-    nums = re.findall(r"\d+", answer)
-    if not nums or not re.fullmatch(r"[\d\s,.，]+", answer):
-        return None, f"정답 형식 이상 {answer!r}"
-    if len(set(nums)) != len(nums):
-        return None, f"정답 중복 {answer!r}"
-    answer = ", ".join(sorted(nums, key=int))
-    return {"b": question, "c": choices, "a": answer}, None
+    """PDF record → b, c(4~5개), a (공통 추출기 pdfq 사용)."""
+    b, c, err = parse_body(rec["body"], "mn")
+    if err:
+        return None, err
+    a, err = parse_answer(rec["a"], len(c))
+    if err:
+        return None, err
+    return {"b": b, "c": c, "a": a}, None
 
 
 def digit_set(a):
