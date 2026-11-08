@@ -1,6 +1,6 @@
 # 플러그인 Knowledge 갱신 — Plugin Creator에 붙여 넣는 문장
 
-ChatGPT → 플러그인 → "Driver's License AI Tutor for Foreigners" → [플러그인 편집] → 입력창 "+"로 바탕화면의
+ChatGPT → 플러그인 → "Driver's License AI Tutor for Foreigners" → [플러그인 편집] → 입력창 "+"로 프로젝트 폴더 `gpt_files\`(`C:\Users\user\projects\외국인-학과시험-AI튜터\gpt_files\`)의
 `quiz_bank_ko.txt`, `quiz_bank_en.txt`, `quiz_bank_cn.txt`, `quiz_bank_vn.txt`, `quiz_bank_mn.txt` 5개를 첨부한 뒤 아래를 붙여 넣으세요.
 
 ```

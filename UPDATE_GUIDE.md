@@ -83,12 +83,12 @@ py html_to_txt.py
 - 모두 통과하면 PR 생성 (예: `refresh-2027`)
 - 사용자분에게 PR URL 전달 → **사용자분이 GitHub에서 검토 후 머지**
 
-### 7단계: 바탕화면 + GPTs 재업로드 (Claude 안내 + 사용자분 수행)
-- 머지 후 Claude가 바탕화면(`C:\Users\user\OneDrive\바탕 화면\`)에 새 5파일 자동 복사
+### 7단계: 플러그인 Knowledge 재업로드 (사용자분 수행)
+- 업로드할 파일은 프로젝트 폴더 `gpt_files\`(`C:\Users\user\projects\외국인-학과시험-AI튜터\gpt_files\`)에 있음 (바탕화면 복사 단계 폐지, 2026-11-08)
 - 사용자분이 ChatGPT GPTs UI에서 (1~2분):
   1. ChatGPT → 본인 GPTs 편집 화면 → Configure → Knowledge
   2. 기존 `quiz_bank_{ko,en,cn,vn,mn}.txt` 5파일 **삭제**
-  3. 바탕화면의 새 5파일 **업로드** → **Save**
+  3. `gpt_files/`의 새 5파일 **업로드** → **Save**
 - 검증 프롬프트로 확인: "966번 해설해줘" / "Explain question 970" / "Câu 1000 giải thích"
 
 ### 8단계: 사이트 검증 (사용자분)
@@ -164,7 +164,7 @@ A. CLAUDE.md 와 분리된 별도 작업입니다. Claude에게 "새 기능 추�
 [ ] (필요 시) 이미지 매칭 검증
 [ ] (Claude 보고) gpt_files/*.txt 5파일 동기화 완료 (문항=1000, 동영상=35, 해설≈996, 이미지=285)
 [ ] PR 검토 + 머지 (HTML + gpt_files 같은 PR)
-[ ] (Claude 자동) 바탕화면에 새 5파일 복사 확인
+[ ] `gpt_files/quiz_bank_*.txt` 5개가 최신인지 확인(final_check 통과)
 [ ] ChatGPT GPTs Knowledge 에 새 5파일 재업로드 (기존 삭제 → 신규 업로드 → Save)
 [ ] GPTs 검증 프롬프트 테스트 ("966번 해설해줘" 등)
 [ ] GitHub Pages 빌드 후 사이트 검증
