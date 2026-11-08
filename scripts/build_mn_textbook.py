@@ -66,6 +66,7 @@ HEAD_PAIRS = [
     ('<title>외국인 운전면허 학과시험 교재</title>', '<title>Жолооны онолын шалгалтын сурах бичиг — Гадаад иргэдэд</title>'),
     ("--font-title: 'Noto Sans KR',", "--font-title: 'Noto Sans', 'Noto Sans KR',"),
     ("--font-body: 'Noto Sans KR',", "--font-body: 'Noto Sans', 'Noto Sans KR',"),
+    (".lsw{display:flex;", ".lsw .lg{font-family:'Noto Sans KR',sans-serif}.lsw{display:flex;"),
     ('css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap',
      'css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap'),
 ]

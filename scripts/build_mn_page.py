@@ -91,6 +91,7 @@ REPLACEMENTS = [
     ('css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap',
      'css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap'),
     ("body{font-family:'Noto Sans KR',sans-serif;", "body{font-family:'Noto Sans','Noto Sans KR',sans-serif;"),
+    (".lg{padding:4px 10px;", ".lsw .lg,.hd-en,.hd-ko,.sen,.sko,.ssub,.sfoot{font-family:'Noto Sans KR',sans-serif}.lg{padding:4px 10px;"),
     ('aria-label="AI Luyện thi lý thuyết lái xe, đang tải"', 'aria-label="Жолооны онолын шалгалтын AI багш, ачааллаж байна"'),
     ('<a href="vn.html" class="lg on">🇻🇳 Tiếng Việt</a><a href="mn.html" class="lg">🇲🇳 Монгол</a></div>',
      '<a href="vn.html" class="lg">🇻🇳 Tiếng Việt</a><a href="mn.html" class="lg on">🇲🇳 Монгол</a></div>'),

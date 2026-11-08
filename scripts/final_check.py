@@ -7,7 +7,7 @@
   B. 페이지 일관성(11개): CI 바(언어 선택줄보다 위), 글꼴(Noto Sans 계열), 언어 스위처 5개, gpt-guide 캐시 버전 동일, manifest 연결
   C. 인라인 스크립트 node --check
   D. GPTs 산출물: quiz_bank_*.txt 문제 1000·해설 수, quiz_data_*.json count 1000 (HTML과 동일 해설 수)
-  E. (옵션) Playwright 11개 페이지 렌더링 오류 0  (--no-browser 로 생략)
+  E. (옵션) Playwright 11개 페이지 렌더링 오류 0 + 언어 라벨·헤더 제목 실제 글꼴 Noto Sans KR(5개 언어 동일)  (--no-browser 로 생략)
 
 사용: py scripts/final_check.py [--no-browser]
 종료코드 0=ALL OK, 1=실패
@@ -186,6 +186,11 @@ def main():
                         pg.wait_for_timeout(1500)
                         if errs:
                             fail(f"{f}: 브라우저 오류 {errs[0][:100]}")
+                        fonts = pg.evaluate("""() => ['.lsw .lg', '.hd-en', '.hd-ko'].map(sel => {
+                            const el = document.querySelector(sel); return el ? sel + '=' + getComputedStyle(el).fontFamily : null; }).filter(Boolean)""")
+                        bad = [x for x in fonts if not x.split("=", 1)[1].startswith('"Noto Sans KR"')]
+                        if bad:
+                            fail(f"{f}: 상단 고정 요소 글꼴이 Noto Sans KR 아님 {bad[:2]}")
                         pg.close()
                     b.close()
             finally:
