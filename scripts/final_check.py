@@ -3,7 +3,7 @@
 
 검사 항목
   A. 데이터: 5개 언어 Q=1000(1~1000 결번·중복 0), 정답·보기수·이미지·유형이 한국어와 일치(ALLOWED 예외만 허용),
-     본문/보기 빈값 0, 해설 빈값 0(1000/1000), cn 해설 법령 단위 条-款-项(ko 정렬 문항)·第N号 0, 보기에 사진 설명줄(■) 누출 0, 비한국어 페이지 한글 잔존은 허용목록(translations/hangul_allow.json)만
+     본문/보기 빈값 0, 해설 빈값 0(1000/1000), cn 해설 법령 단위 条-款-项(ko 정렬 문항, 문서번호는 号)·인용 사슬 내 第N号 0, 964 보충표시 ※, 보기에 사진 설명줄(■) 누출 0, 비한국어 페이지 한글 잔존은 허용목록(translations/hangul_allow.json)만
   B. 페이지 일관성(11개): CI 바(언어 선택줄보다 위), 글꼴(Noto Sans 계열), 언어 스위처 5개, gpt-guide 캐시 버전 동일, manifest 연결
   C. 인라인 스크립트 node --check
   D. GPTs 산출물: quiz_bank_*.txt 문제 1000·해설 수, quiz_data_*.json count 1000 (HTML과 동일 해설 수)
@@ -80,15 +80,31 @@ def main():
                 if re.search(r"[가-힣]", txt) and str(n) not in set(map(str, allow.get(l, []))):
                     fail(f"{l} Q{n}: 한글 잔존(허용목록 외)")
     KO_T = re.compile(r"제(\d+)(조|항|호)"); CN_T = re.compile(r"第(\d+)(条|款|项|号)"); UNIT = {"조": "条", "항": "款", "호": "项"}
+    DOC_CTX = ("예규", "고시", "별지", "서식", "공고", "훈령", "지침")  # '예규 제318호'·'별지 제59호 서식' 등 문서 고유번호 → 号 유지
+    SUPPLEMENT = {964}  # 운영자 보충 해설: 5개 언어 모두 '※'로 시작
+
+    def ko_units(e):
+        out = []
+        for m in KO_T.finditer(e):
+            ku = m.group(2)
+            doc = ku == "호" and any(w in e[max(0, m.start() - 6):m.start()] for w in DOC_CTX)
+            out.append(("号" if doc else UNIT[ku], m.group(1)))
+        return out
+
     for n, q in L["cn"].items():
-        c = list(CN_T.finditer(q.get("e") or ""))
-        k = KO_T.findall(ko[n].get("e") or "")
-        if c and [x for x, _ in k] == [m.group(1) for m in c]:
-            bad = [m.group(0) for (_, ku), m in zip(k, c) if m.group(2) != UNIT[ku]]
+        e = q.get("e") or ""
+        c = list(CN_T.finditer(e))
+        k = ko_units(ko[n].get("e") or "")
+        if c and [x for _, x in k] == [m.group(1) for m in c]:
+            bad = [m.group(0) for (want, _), m in zip(k, c) if m.group(2) != want]
             if bad:
-                fail(f"cn Q{n}: 법령 단위 표기 불일치(조-항-호=条-款-项) {bad[:3]}")
-        if re.search(r"第\d+号", q.get("e") or ""):
-            fail(f"cn Q{n}: 해설에 '第N号' 잔존 (호는 项으로)")
+                fail(f"cn Q{n}: 법령 단위 표기 불일치(조-항-호=条-款-项, 문서번호=号) {bad[:3]}")
+        if re.search(r"第\d+(?:条|款)(?:之\d+)?第\d+号", e):
+            fail(f"cn Q{n}: 인용 사슬 안의 '第N号' (호는 项으로)")
+    for n in SUPPLEMENT:
+        for l, Q in L.items():
+            if not (Q[n].get("e") or "").startswith("※"):
+                fail(f"{l} Q{n}: 운영자 보충 해설 표시(※) 없음")
     for n, k in ko.items():
         if re.search(r"(?<![\d.])%d\.\s" % (n + 1), k.get("e") or ""):
             fail(f"ko Q{n}: 해설에 다음 문항 번호 패턴 '{n+1}.' — 혼입 의심")
