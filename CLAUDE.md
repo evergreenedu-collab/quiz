@@ -139,7 +139,7 @@ ChatGPT GPTs 학습용 5개 언어 텍스트 (`gpt_files/quiz_bank_{ko,en,cn,vn,
 4. **`py html_to_txt.py` 자동 실행 → `gpt_files/quiz_bank_*.txt` 5개 동기화** (절대 빠뜨리지 말 것). 몽골어는 `py scripts/build_mn_page.py` 로 mn.html 먼저 재생성
 5. 검증 (5파일 Q=1000, V=35, E≈996, I=285 일관) → PR 생성 (HTML + gpt_files 같은 PR)
 6. 사용자분 PR 검토·머지
-7. 머지 후 바탕화면(`C:\Users\user\OneDrive\바탕 화면\`) 에 새 4 파일 자동 복사
+7. 머지 후 플러그인 Knowledge 재업로드 안내 — `gpt_files/quiz_bank_*.txt` 5개를 프로젝트 폴더에서 직접 첨부(바탕화면 복사 없음)
 8. 사용자분에게 ChatGPT GPTs Knowledge 재업로드 절차 안내 (기존 5파일 삭제 → 새 5파일 업로드 → Save)
 
 ## 관련 GitHub 저장소

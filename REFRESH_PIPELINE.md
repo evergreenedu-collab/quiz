@@ -8,7 +8,7 @@
    - 옛 PDF는 지워도 되고 두어도 됩니다(같은 언어가 2개면 나중 것을 씁니다 — 헷갈리지 않게 지우는 걸 권장).
 2. Claude에게 **"갱신 시작"**
 3. Claude가 올린 PR의 검증 리포트를 보고 **Merge**
-4. 플러그인 Knowledge 갱신: Claude가 만들어 주는 문장을 ChatGPT Plugin Creator에 붙여 넣고 바탕화면의 `quiz_bank_*.txt` 5개 첨부 (약 2분, `gpt_files/PLUGIN_UPDATE_MESSAGE.md` 참조)
+4. 플러그인 Knowledge 갱신: Claude가 만들어 주는 문장을 ChatGPT Plugin Creator에 붙여 넣고 `gpt_files/quiz_bank_*.txt` 5개를 프로젝트 폴더에서 직접 첨부(바탕화면 복사 없음) (약 2분, `gpt_files/PLUGIN_UPDATE_MESSAGE.md` 참조)
 
 ## Claude가 자동으로 하는 일 (`py scripts/refresh_all.py`)
 | 단계 | 내용 | 실패 시 |
