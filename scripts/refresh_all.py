@@ -360,7 +360,7 @@ def pr(args, M):
         raise SystemExit(f"[pr] 현재 브랜치 {cur} 는 갱신 브랜치가 아닙니다 — main 에서 실행하거나 feat/quiz-refresh-* 브랜치에서 실행하세요")
     allow = list(HTML.values()) + ["textbook_mn.html", "manifest_mn.json", "translations/pdf_snapshot", "translations/manual_patches.json",
                                    "translations/risky_questions.json", "translations/risky_mn.json"] + [f"translations/expl_{l}.json" for l in ("en", "cn", "vn", "mn")] \
-        + [f"quiz_data_{l}.json" for l in LANGS] + [f"gpt_files/quiz_bank_{l}.txt" for l in LANGS] + [M["pdfs"][l]["path"] for l in LANGS]
+        + [f"quiz_data_{l}.json" for l in LANGS] + [f"gpt_files/quiz_bank_{l}.txt" for l in LANGS]
     run(["git", "add", "--"] + allow)
     msg = f"chore: 학과시험 문제은행 갱신 {date.today()} (PDF 5개, 자동 파이프라인)\n\n" + "\n".join(LOG[-20:]) + "\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n"
     (STAGE / "commit_msg.txt").write_text(msg, encoding="utf-8")

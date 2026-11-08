@@ -5,6 +5,7 @@
 ## 사용자분이 하실 일
 1. 공단에서 받은 PDF **5개**(한국어·English·Chinese·Vietnamese·Mongolian)를 `원본_PDF/` 에 넣기
    - 파일명에 언어 키워드(`한국어` / `English` / `Chinese` / `Vietnamese` / `Mongolian`)가 들어 있어야 자동 식별됩니다.
+   - PDF는 git에 올리지 않습니다(.gitignore). 백업은 `C:\Users\user\OneDrive\문서\학과시험_원본PDF_백업\`에 한 벌 복사해 두세요(2026-11-08부터).
    - 옛 PDF는 지워도 되고 두어도 됩니다(같은 언어가 2개면 나중 것을 씁니다 — 헷갈리지 않게 지우는 걸 권장).
 2. Claude에게 **"갱신 시작"**
 3. Claude가 올린 PR의 검증 리포트를 보고 **Merge**
