@@ -3,7 +3,7 @@
 
 검사 항목
   A. 데이터: 5개 언어 Q=1000(1~1000 결번·중복 0), 정답·보기수·이미지·유형이 한국어와 일치(ALLOWED 예외만 허용),
-     본문/보기 빈값 0, 보기에 사진 설명줄(■) 누출 0, 비한국어 페이지 한글 잔존은 허용목록(translations/hangul_allow.json)만
+     본문/보기 빈값 0, 해설 빈값 0(1000/1000), 보기에 사진 설명줄(■) 누출 0, 비한국어 페이지 한글 잔존은 허용목록(translations/hangul_allow.json)만
   B. 페이지 일관성(11개): CI 바(언어 선택줄보다 위), 글꼴(Noto Sans 계열), 언어 스위처 5개, gpt-guide 캐시 버전 동일, manifest 연결
   C. 인라인 스크립트 node --check
   D. GPTs 산출물: quiz_bank_*.txt 문제 1000·해설 수, quiz_data_*.json count 1000 (HTML과 동일 해설 수)
@@ -71,6 +71,8 @@ def main():
                 fail(f"{l} Q{n}: 유형 불일치")
             if not q["b"].strip() or any(not c.strip() for c in q["c"]):
                 fail(f"{l} Q{n}: 본문/보기 빈값")
+            if not (q.get("e") or "").strip():
+                fail(f"{l} Q{n}: 해설 빈값 (2026-11-08부터 5개 언어 1000문항 모두 해설 필수 — 964는 운영자 보충 해설)")
             if any("■" in c for c in q["c"]) or "■" in q["b"]:
                 fail(f"{l} Q{n}: 사진 설명줄(■) 누출")
             if l != "ko":
